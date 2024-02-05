@@ -40,7 +40,7 @@ If you like what you see, please ⭐ the repo.
 - [x] Loop Songs Feature
 - [x] Ability to Filter and Select From a Particular Artist
 - [x] Ability to Select Albums
-- [] Background Notification Control
+- [x] Background Notification Control
 - [] Caching Metadata of the songs for faster boot up times
 - [] Vibration when clicking buttons and scrolling through the scroll wheel
 - [] Click Wheel Sounds

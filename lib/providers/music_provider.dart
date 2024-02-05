@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:retropod/core/extensions.dart';
 import 'package:retropod/models/album_details.dart';
@@ -113,7 +114,16 @@ class MusicNotifier extends Notifier<MusicDetails> {
 
     for (int i = 0; i < state.musicFilesMetaDataList.length; i++) {
       songSourcePlaylist.add(
-          AudioSource.file(state.musicFilesMetaDataList[i].filePath ?? ""));
+        AudioSource.file(
+          state.musicFilesMetaDataList[i].filePath ?? "",
+          tag: MediaItem(
+            id: '$i',
+            title: state.musicFilesMetaDataList[i].trackName ?? "Unknown Song",
+            album: state.musicFilesMetaDataList[i].albumName ?? "Unknown Album",
+            artist: state.musicFilesMetaDataList[i].getTrackArtistNames,
+          ),
+        ),
+      );
     }
 
     await player.setAudioSource(

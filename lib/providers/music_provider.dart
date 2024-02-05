@@ -81,10 +81,12 @@ class MusicNotifier extends Notifier<MusicDetails> {
     await setPlaylist();
   }
 
-  Future<void> shuffleAllSongs() async {
+  Future<void> shuffleAllSongs({bool isShuffle = true}) async {
     state =
         state.copyWith(musicFilesMetaDataList: completeMusicFileMetaDataList);
-    await setPlaylist(shuffle: true);
+    if (isShuffle) {
+      await setPlaylist(shuffle: true);
+    }
     if (!player.playing) {
       await player.play();
     }
@@ -158,10 +160,14 @@ class MusicNotifier extends Notifier<MusicDetails> {
   }
 
   Future<void> playAtIndex(int index) async {
-    await player.seek(Duration.zero, index: index);
-    if (!state.isPlaying) {
-      await player.play();
+    if (state.isPlaying) {
+      await player.stop();
+      state =
+          state.copyWith(musicFilesMetaDataList: completeMusicFileMetaDataList);
+      await setPlaylist();
     }
+    await player.seek(Duration.zero, index: index);
+    await player.play();
   }
 
   Future<void> togglePlayback() async {

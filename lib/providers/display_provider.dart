@@ -73,11 +73,28 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   }
 
   void navigateToMenu(BuildContext context) {
-    state = state.copyWith(
-      selectedDisplayListItem: 0,
-      displayScreenType: DisplayScreenType.menu,
-    );
-    context.go("/menu");
+    if (state.displayScreenType == DisplayScreenType.coverFlow ||
+        state.displayScreenType == DisplayScreenType.artistsSelection ||
+        state.displayScreenType == DisplayScreenType.albums ||
+        state.displayScreenType == DisplayScreenType.songs) {
+      state = state.copyWith(
+        selectedDisplayListItem: 0,
+        displayScreenType: DisplayScreenType.musicMenu,
+      );
+      context.go("/menu/music");
+    } else if (state.displayScreenType == DisplayScreenType.artistSongs) {
+      state = state.copyWith(
+        selectedDisplayListItem: 0,
+        displayScreenType: DisplayScreenType.artistsSelection,
+      );
+      context.go("/menu/music/artists");
+    } else {
+      state = state.copyWith(
+        selectedDisplayListItem: 0,
+        displayScreenType: DisplayScreenType.menu,
+      );
+      context.go("/menu");
+    }
   }
 
   void selectButton(BuildContext context) {
@@ -119,9 +136,11 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
             displayScreenType: DisplayScreenType.albums);
         context.go("/menu/music/albums/");
       } else if (state.selectedDisplayListItem == 3) {
+        ref.read(musicProvider.notifier);
         state = state.copyWith(
-            selectedDisplayListItem: 0,
-            displayScreenType: DisplayScreenType.songs);
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.songs,
+        );
         context.go("/menu/music/songs/");
       }
     }
@@ -237,7 +256,11 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     //If Forward Seek Button is Clicked in Songs Screen
     else if (state.displayScreenType == DisplayScreenType.songs) {
       if (state.selectedDisplayListItem !=
-          ref.read(musicProvider).musicFilesMetaDataList.length - 1) {
+          ref
+                  .read(musicProvider.notifier)
+                  .completeMusicFileMetaDataList
+                  .length -
+              1) {
         state = state.copyWith(
             selectedDisplayListItem: state.selectedDisplayListItem + 1);
         if (((state.selectedDisplayListItem + 2) * 40) >

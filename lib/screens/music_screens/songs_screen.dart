@@ -19,7 +19,8 @@ class _SongsScreenState extends ConsumerState<SongsScreen> {
 
   @override
   void initState() {
-    musicFilesMetaDataList = ref.read(musicProvider).musicFilesMetaDataList;
+    musicFilesMetaDataList =
+        ref.read(musicProvider.notifier).completeMusicFileMetaDataList;
     ref.listenManual(displayProvider.select((value) => value.scrollOffset),
         (previous, next) {
       _scrollController.animateTo(next,

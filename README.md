@@ -44,7 +44,6 @@ If you like what you see, please ⭐ the repo.
 - [] Caching Metadata of the songs for faster boot up times
 - [] Vibration when clicking buttons and scrolling through the scroll wheel
 - [] Click Wheel Sounds
-- [] More Fun Design Colors (Eg. Red, Pink and etc)
 - [] Reflective Cover Art
 - [] Ability to Create and Store Custom User Created Playlists
 - [] Ability to search songs

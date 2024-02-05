@@ -33,25 +33,28 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen> {
   Widget build(BuildContext context) {
     final selectedDisplayListItem = ref.watch(
         displayProvider.select((value) => value.selectedDisplayListItem));
-    return CupertinoScrollbar(
-      controller: _scrollController,
-      child: ListView.builder(
+    return CupertinoPageScaffold(
+      backgroundColor: CupertinoColors.white,
+      child: CupertinoScrollbar(
         controller: _scrollController,
-        itemCount: artistSongsIndexes.length,
-        itemBuilder: (context, index) => AlbumArtSongListTile(
-          albumArt: ref
-              .read(musicProvider.notifier)
-              .completeMusicFileMetaDataList[artistSongsIndexes[index]]
-              .albumArt,
-          songName: ref
-              .read(musicProvider.notifier)
-              .completeMusicFileMetaDataList[artistSongsIndexes[index]]
-              .trackName,
-          trackArtistNames: ref
-              .read(musicProvider.notifier)
-              .completeMusicFileMetaDataList[artistSongsIndexes[index]]
-              .getTrackArtistNames,
-          isSelected: selectedDisplayListItem == index,
+        child: ListView.builder(
+          controller: _scrollController,
+          itemCount: artistSongsIndexes.length,
+          itemBuilder: (context, index) => AlbumArtSongListTile(
+            albumArt: ref
+                .read(musicProvider.notifier)
+                .completeMusicFileMetaDataList[artistSongsIndexes[index]]
+                .albumArt,
+            songName: ref
+                .read(musicProvider.notifier)
+                .completeMusicFileMetaDataList[artistSongsIndexes[index]]
+                .trackName,
+            trackArtistNames: ref
+                .read(musicProvider.notifier)
+                .completeMusicFileMetaDataList[artistSongsIndexes[index]]
+                .getTrackArtistNames,
+            isSelected: selectedDisplayListItem == index,
+          ),
         ),
       ),
     );

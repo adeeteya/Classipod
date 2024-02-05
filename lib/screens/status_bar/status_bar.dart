@@ -41,7 +41,6 @@ class StatusBar extends ConsumerWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: CupertinoColors.black,
                   ),
                 ),
                 Spacer(),
@@ -68,7 +67,6 @@ class StatusBar extends ConsumerWidget {
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: CupertinoColors.black,
                   ),
                 ),
                 const BatteryIndicator(),

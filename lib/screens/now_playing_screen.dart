@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:retropod/core/extensions.dart';
 import 'package:retropod/core/widgets/box_progress_bar.dart';
 import 'package:retropod/core/widgets/now_playing_page.dart';
 import 'package:retropod/providers/music_provider.dart';
-import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 
 class NowPlayingScreen extends ConsumerStatefulWidget {
   const NowPlayingScreen({super.key});
@@ -39,77 +39,80 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       );
     }
 
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
-      child: Column(
-        children: [
-          Flexible(
-            child: PageView.builder(
-              controller: _pageController,
-              itemCount: musicFilesMetaDataList.length,
-              itemBuilder: (context, index) => NowPlayingPage(
-                albumArt: musicFilesMetaDataList[index].albumArt,
-                trackName: musicFilesMetaDataList[index].trackName,
-                artistNames: musicFilesMetaDataList[index].getTrackArtistNames,
-                albumName: musicFilesMetaDataList[index].albumName,
-                currentTrackNumber: index + 1,
-                totalTrackNumber: musicFilesMetaDataList.length,
+    return CupertinoPageScaffold(
+      backgroundColor: CupertinoColors.white,
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
+        child: Column(
+          children: [
+            Flexible(
+              child: PageView.builder(
+                controller: _pageController,
+                itemCount: musicFilesMetaDataList.length,
+                itemBuilder: (context, index) => NowPlayingPage(
+                  albumArt: musicFilesMetaDataList[index].albumArt,
+                  trackName: musicFilesMetaDataList[index].trackName,
+                  artistNames:
+                      musicFilesMetaDataList[index].getTrackArtistNames,
+                  albumName: musicFilesMetaDataList[index].albumName,
+                  currentTrackNumber: index + 1,
+                  totalTrackNumber: musicFilesMetaDataList.length,
+                ),
               ),
             ),
-          ),
-          StreamBuilder<Duration>(
-            stream: ref.read(musicProvider.notifier).getPositionStream(),
-            builder: (context, snapshot) {
-              double totalDuration = (ref
-                          .read(musicProvider)
-                          .musicFilesMetaDataList[
-                              ref.read(musicProvider).currentSongIndex]
-                          .trackDuration ??
-                      1000) /
-                  1000;
-              double currentDuration = snapshot.data?.inSeconds.toDouble() ?? 0;
+            StreamBuilder<Duration>(
+              stream: ref.read(musicProvider.notifier).getPositionStream(),
+              builder: (context, snapshot) {
+                double totalDuration = (ref
+                            .read(musicProvider)
+                            .musicFilesMetaDataList[
+                                ref.read(musicProvider).currentSongIndex]
+                            .trackDuration ??
+                        1000) /
+                    1000;
+                double currentDuration =
+                    snapshot.data?.inSeconds.toDouble() ?? 0;
 
-              int elapsedTimeInMinutes = currentDuration ~/ 60;
-              int elapsedTimeInSeconds = (currentDuration).toInt() % 60;
+                int elapsedTimeInMinutes = currentDuration ~/ 60;
+                int elapsedTimeInSeconds = (currentDuration).toInt() % 60;
 
-              int remainingTimeInMinutes =
-                  (totalDuration - currentDuration) ~/ 60;
-              int remainingTimeInSeconds =
-                  (totalDuration - currentDuration).toInt() % 60;
+                int remainingTimeInMinutes =
+                    (totalDuration - currentDuration) ~/ 60;
+                int remainingTimeInSeconds =
+                    (totalDuration - currentDuration).toInt() % 60;
 
-              return Row(
-                children: [
-                  SizedBox(
-                    width: 35,
-                    child: Text(
-                      "$elapsedTimeInMinutes:${elapsedTimeInSeconds < 10 ? "0$elapsedTimeInSeconds" : elapsedTimeInSeconds}",
-                      style: const TextStyle(
-                        color: CupertinoColors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                return Row(
+                  children: [
+                    SizedBox(
+                      width: 35,
+                      child: Text(
+                        "$elapsedTimeInMinutes:${elapsedTimeInSeconds < 10 ? "0$elapsedTimeInSeconds" : elapsedTimeInSeconds}",
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                  BoxProgressBar(
-                    max: totalDuration,
-                    value: currentDuration,
-                  ),
-                  SizedBox(
-                    width: 40,
-                    child: Text(
-                      "- $remainingTimeInMinutes:${remainingTimeInSeconds < 10 ? "0$remainingTimeInSeconds" : remainingTimeInSeconds}",
-                      style: const TextStyle(
-                        color: CupertinoColors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                    BoxProgressBar(
+                      max: totalDuration,
+                      value: currentDuration,
+                    ),
+                    SizedBox(
+                      width: 40,
+                      child: Text(
+                        "- $remainingTimeInMinutes:${remainingTimeInSeconds < 10 ? "0$remainingTimeInSeconds" : remainingTimeInSeconds}",
+                        style: const TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              );
-            },
-          ),
-        ],
+                  ],
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

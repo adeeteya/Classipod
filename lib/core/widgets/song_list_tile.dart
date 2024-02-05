@@ -39,12 +39,14 @@ class SongListTile extends StatelessWidget {
                   (isSelected) ? CupertinoColors.white : CupertinoColors.black,
               overflow: TextOverflow.ellipsis,
             ),
+            maxLines: 1,
           ),
           Text(
             trackArtistNames ?? "Unknown Artist",
             style: TextStyle(
               color: (isSelected) ? CupertinoColors.white : hintTextColor,
             ),
+            maxLines: 1,
           ),
         ],
       ),

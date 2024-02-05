@@ -30,7 +30,8 @@ class RetroPodApp extends ConsumerWidget {
       theme: CupertinoThemeData(
         brightness: (isDark) ? Brightness.dark : Brightness.light,
         textTheme: const CupertinoTextThemeData(
-          textStyle: TextStyle(fontFamily: 'Myriad'),
+          textStyle:
+              TextStyle(color: CupertinoColors.black, fontFamily: 'Myriad'),
         ),
       ),
       routerConfig: router,

@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+
 import 'package:flutter/cupertino.dart';
 import 'package:retropod/core/constants.dart';
 import 'package:retropod/core/widgets/marquee_text.dart';
@@ -44,7 +45,6 @@ class NowPlayingPage extends StatelessWidget {
               MarqueeText(
                 trackName ?? "Unknown Track",
                 style: const TextStyle(
-                  color: CupertinoColors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
@@ -76,7 +76,6 @@ class NowPlayingPage extends StatelessWidget {
               Text(
                 "$currentTrackNumber of $totalTrackNumber",
                 style: const TextStyle(
-                  color: CupertinoColors.black,
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),

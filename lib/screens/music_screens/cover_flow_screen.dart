@@ -41,51 +41,54 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen> {
   Widget build(BuildContext context) {
     int currentSongIndex =
         ref.watch(musicProvider.select((value) => value.currentSongIndex));
-    return Column(
-      children: [
-        const SizedBox(height: 20),
-        Flexible(
-          child: PageView.builder(
-            controller: _pageController,
-            itemCount: musicFilesMetaDataList.length,
-            itemBuilder: (context, index) {
-              double relativePosition = index - currentPage;
-              return SizedBox(
-                width: 250,
-                child: Transform(
-                  transform: Matrix4.identity()
-                    ..setEntry(3, 2, 0.003)
-                    ..scale((1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4)
-                    ..rotateY(relativePosition),
-                  alignment: relativePosition >= 0
-                      ? Alignment.centerLeft
-                      : Alignment.centerRight,
-                  child: (musicFilesMetaDataList[index].albumArt != null)
-                      ? Image.memory(musicFilesMetaDataList[index].albumArt!)
-                      : Image.asset("assets/images/default_album_cover.jpeg"),
-                ),
-              );
-            },
+    return CupertinoPageScaffold(
+      backgroundColor: CupertinoColors.white,
+      child: Column(
+        children: [
+          const SizedBox(height: 20),
+          Flexible(
+            child: PageView.builder(
+              controller: _pageController,
+              itemCount: musicFilesMetaDataList.length,
+              itemBuilder: (context, index) {
+                double relativePosition = index - currentPage;
+                return SizedBox(
+                  width: 250,
+                  child: Transform(
+                    transform: Matrix4.identity()
+                      ..setEntry(3, 2, 0.003)
+                      ..scale(
+                          (1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4)
+                      ..rotateY(relativePosition),
+                    alignment: relativePosition >= 0
+                        ? Alignment.centerLeft
+                        : Alignment.centerRight,
+                    child: (musicFilesMetaDataList[index].albumArt != null)
+                        ? Image.memory(musicFilesMetaDataList[index].albumArt!)
+                        : Image.asset("assets/images/default_album_cover.jpeg"),
+                  ),
+                );
+              },
+            ),
           ),
-        ),
-        const SizedBox(height: 10),
-        Text(
-          musicFilesMetaDataList[currentSongIndex].trackName ?? "Unknown Track",
-          style: const TextStyle(
-            color: CupertinoColors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+          const SizedBox(height: 10),
+          Text(
+            musicFilesMetaDataList[currentSongIndex].trackName ??
+                "Unknown Track",
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-        Text(
-          musicFilesMetaDataList[currentSongIndex].getTrackArtistNames,
-          style: const TextStyle(
-            color: CupertinoColors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+          Text(
+            musicFilesMetaDataList[currentSongIndex].getTrackArtistNames,
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

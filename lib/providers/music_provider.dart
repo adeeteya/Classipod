@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
@@ -129,10 +130,10 @@ class MusicNotifier extends Notifier<MusicDetails> {
     }
   }
 
-  void fetchArtistSongs(String artistNames) {
+  void fetchArtistSongs(String artistName) {
     artistSongsIndexes.clear();
     for (int i = 0; i < completeMusicFileMetaDataList.length; i++) {
-      if (completeMusicFileMetaDataList[i].getTrackArtistNames == artistNames) {
+      if (completeMusicFileMetaDataList[i].getTrackArtistNames == artistName) {
         artistSongsIndexes.add(i);
       }
     }

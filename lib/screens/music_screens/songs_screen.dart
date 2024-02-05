@@ -37,6 +37,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> {
       child: ListView.builder(
         controller: _scrollController,
         itemCount: musicFilesMetaDataList.length,
+        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) => SongListTile(
           songName: musicFilesMetaDataList[index].trackName,
           trackArtistNames: musicFilesMetaDataList[index].getTrackArtistNames,

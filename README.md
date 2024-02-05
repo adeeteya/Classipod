@@ -1,24 +1,24 @@
 # 🎵 Retropod
 
+Introducing "Retropod" – Your Timeless Audio Experience
 
+Step back in time with Retropod, a local music player app designed to capture the nostalgic essence of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the joy of navigating your music library with a touch of retro charm.
 
-## 💻 Installation links
+Intuitive Navigation: Navigate through your music library effortlessly using the virtual click wheel. Scroll, click, and feel the tactile response as you rediscover the joy of selecting your favorite tracks with the same ease as the original iPod.
 
-<table>
-  <tr>
-    <th>Platform</th>
-    <th>Package/Installation Method</th>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>
-      <a href="https://github.com/adityar224/Retropod/releases/download/1.0.0/Retropod-android-1.0.0.apk">
-        <img width="220" alt="APK download" src="https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png">
-      </a>
-    </td>
-  </tr>
+Local Music Library: Retropod is focused on your locally stored music files, ensuring that your personal music collection takes center stage. Organize your tracks, albums, and playlists just like you did on your trusty iPod Classic.
 
-</table>
+Customizable Themes: Personalize your Retropod experience with the option of silver or grey device frame. Choose from the two different color schemes to tailor the app's appearance to your unique style.
+
+Cover Art Display: Immerse yourself in your music by appreciating album artwork on the vibrant display. Retropod pays homage to the visual appeal of classic iPods by showcasing your favorite album covers in a retro-inspired format.
+
+No Frills, Just Music: Retropod stays true to the essence of a music player – no distractions, no unnecessary features. Focus solely on the joy of listening to your favorite tunes without the complexities of a modern streaming service.
+
+Offline Listening: Enjoy your music without relying on an internet connection. Retropod is perfect for those moments when you want to disconnect and savor the tunes stored locally on your device.
+
+Relive the magic of the iPod Classic with Retropod – where timeless design meets the convenience of today. Download now and embark on a journey down memory lane with your music in the palm of your hand.
+
+If you like what you see, please ⭐ the repo.
 
 ## ✨ Features
 
@@ -40,13 +40,34 @@
 - [x] Loop Songs Feature
 - [x] Ability to Filter and Select From a Particular Artist
 - [x] Ability to Select Albums
+- [] Background Notification Control
+- [] Caching Metadata of the songs for faster boot up times
+- [] Vibration when clicking buttons and scrolling through the scroll wheel
+- [] Click Wheel Sounds
 - [] More Fun Design Colors (Eg. Red, Pink and etc)
 - [] Reflective Cover Art
 - [] Ability to Create and Store Custom User Created Playlists
 - [] Ability to search songs
 - [] Ipod Built-in Games
 - [] Ability to View Photos and Videos from the device
-- [] Click Wheel Sounds
+
+## 💻 Installation links
+
+<table>
+  <tr>
+    <th>Platform</th>
+    <th>Package/Installation Method</th>
+  </tr>
+  <tr>
+    <td>Android</td>
+    <td>
+      <a href="https://github.com/adityar224/Retropod/releases/download/1.0.0/Retropod-android-1.0.0.apk">
+        <img width="220" alt="APK download" src="https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png">
+      </a>
+    </td>
+  </tr>
+
+</table>
 
 ## 📸 Screenshots
 

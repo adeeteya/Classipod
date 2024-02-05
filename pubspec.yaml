@@ -20,7 +20,7 @@ dependencies:
   battery_plus: ^5.0.2
   permission_handler: ^11.2.0
   flutter_media_metadata: ^1.0.0+1
-  go_router: ^13.0.1
+  go_router: ^13.1.0
 
 dev_dependencies:
   flutter_test:

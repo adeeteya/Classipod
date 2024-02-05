@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:retropod/models/settings_details.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -11,8 +10,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
   SettingsDetails build() {
     getSettingsPreferences();
     return SettingsDetails(
-      isDarkMode:
-          PlatformDispatcher.instance.platformBrightness == Brightness.dark,
+      isDarkMode: true,
       repeat: false,
     );
   }

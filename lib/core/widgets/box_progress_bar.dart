@@ -14,20 +14,24 @@ class BoxProgressBar extends StatelessWidget {
       child: LayoutBuilder(builder: (context, constraints) {
         return Stack(
           children: [
-            Container(
-              height: 20,
-              width: constraints.maxWidth,
-              margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    inActiveSliderGradientColor1,
-                    inActiveSliderGradientColor2,
-                  ],
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+              child: SizedBox(
+                height: 20,
+                width: constraints.maxWidth,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        inActiveSliderGradientColor1,
+                        inActiveSliderGradientColor2,
+                      ],
+                    ),
+                    border: Border.all(color: sliderBorderColor),
+                  ),
                 ),
-                border: Border.all(color: sliderBorderColor),
               ),
             ),
             AnimatedContainer(

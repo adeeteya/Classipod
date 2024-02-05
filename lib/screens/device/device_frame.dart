@@ -9,7 +9,7 @@ class DeviceFrame extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    return Container(
+    return DecoratedBox(
       decoration: BoxDecoration(
         image: DecorationImage(
           image: const AssetImage("assets/images/noise.png"),

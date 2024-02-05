@@ -16,61 +16,66 @@ class AlbumArtSongListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 50,
       width: double.infinity,
-      decoration: BoxDecoration(
-        gradient: (isSelected)
-            ? const LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [primaryBlueGradientColor1, primaryBlueGradientColor2],
-              )
-            : null,
-      ),
-      child: Row(
-        children: [
-          (albumArt != null)
-              ? Image.memory(
-                  albumArt!,
-                  height: 50,
-                  width: 50,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          gradient: (isSelected)
+              ? const LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    primaryBlueGradientColor1,
+                    primaryBlueGradientColor2
+                  ],
                 )
-              : Image.asset(
-                  "assets/images/default_album_cover.jpeg",
-                  height: 50,
-                  width: 50,
+              : null,
+        ),
+        child: Row(
+          children: [
+            (albumArt != null)
+                ? Image.memory(
+                    albumArt!,
+                    height: 50,
+                    width: 50,
+                  )
+                : Image.asset(
+                    "assets/images/default_album_cover.jpeg",
+                    height: 50,
+                    width: 50,
+                  ),
+            const SizedBox(width: 5),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  songName ?? "Unknown Song",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: (isSelected)
+                        ? CupertinoColors.white
+                        : CupertinoColors.black,
+                    overflow: TextOverflow.ellipsis,
+                  ),
                 ),
-          const SizedBox(width: 5),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                songName ?? "Unknown Song",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: (isSelected)
-                      ? CupertinoColors.white
-                      : CupertinoColors.black,
-                  overflow: TextOverflow.ellipsis,
+                Text(
+                  trackArtistNames ?? "Unknown Artist",
+                  style: TextStyle(
+                    color: (isSelected) ? CupertinoColors.white : hintTextColor,
+                  ),
                 ),
-              ),
-              Text(
-                trackArtistNames ?? "Unknown Artist",
-                style: TextStyle(
-                  color: (isSelected) ? CupertinoColors.white : hintTextColor,
-                ),
-              ),
-            ],
-          ),
-          if (isSelected) ...[
-            const Spacer(),
-            const Icon(CupertinoIcons.right_chevron,
-                color: CupertinoColors.white),
-          ]
-        ],
+              ],
+            ),
+            if (isSelected) ...[
+              const Spacer(),
+              const Icon(CupertinoIcons.right_chevron,
+                  color: CupertinoColors.white),
+            ]
+          ],
+        ),
       ),
     );
   }

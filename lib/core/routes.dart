@@ -25,7 +25,7 @@ final router = GoRouter(
     ShellRoute(
       pageBuilder: (context, state, child) {
         final size = MediaQuery.of(context).size;
-        return NoTransitionPage(
+        return CupertinoPage(
           child: CupertinoPageScaffold(
             child: DeviceFrame(
               child: Column(

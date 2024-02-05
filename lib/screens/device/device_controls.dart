@@ -85,32 +85,34 @@ class DeviceControls extends ConsumerWidget {
                 GestureDetector(
                   onTap: () =>
                       ref.read(displayProvider.notifier).selectButton(context),
-                  child: Container(
+                  child: SizedBox(
                     height: size.width * 0.2175,
                     width: size.width * 0.2175,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: context.isDarkMode
-                            ? CupertinoColors.black
-                            : lightDeviceControlBorderColor,
-                      ),
-                      image: const DecorationImage(
-                        image: AssetImage("assets/images/noise.png"),
-                        fit: BoxFit.cover,
-                      ),
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: context.isDarkMode
-                            ? [
-                                darkDeviceControlInnerButtonGradientColor1,
-                                darkDeviceControlInnerButtonGradientColor2
-                              ]
-                            : [
-                                lightDeviceControlInnerButtonGradientColor1,
-                                lightDeviceControlInnerButtonGradientColor2
-                              ],
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: context.isDarkMode
+                              ? CupertinoColors.black
+                              : lightDeviceControlBorderColor,
+                        ),
+                        image: const DecorationImage(
+                          image: AssetImage("assets/images/noise.png"),
+                          fit: BoxFit.cover,
+                        ),
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: context.isDarkMode
+                              ? [
+                                  darkDeviceControlInnerButtonGradientColor1,
+                                  darkDeviceControlInnerButtonGradientColor2
+                                ]
+                              : [
+                                  lightDeviceControlInnerButtonGradientColor1,
+                                  lightDeviceControlInnerButtonGradientColor2
+                                ],
+                        ),
                       ),
                     ),
                   ),

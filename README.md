@@ -60,7 +60,7 @@ If you like what you see, please ⭐ the repo.
   <tr>
     <td>Android</td>
     <td>
-      <a href="https://github.com/adityar224/Retropod/releases/download/1.0.0/Retropod-android-1.0.0.apk">
+      <a href="https://github.com/adeeteya/Retropod/releases/download/1.0.0/Retropod-android-1.0.0.apk">
         <img width="220" alt="APK download" src="https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png">
       </a>
     </td>
@@ -89,11 +89,11 @@ If you like what you see, please ⭐ the repo.
 
 ## 🤓 Author
 
-**[Aditya R](https://github.com/adityar224)**
+**[Aditya R](https://github.com/adeeteya)**
 
 ## 🔖 LICENCE
 Copyright (c) 2024 Aditya R
-[MIT LICENCE](https://github.com/adityar224/Retropod/blob/master/LICENSE)
+[MIT LICENCE](https://github.com/adeeteya/Retropod/blob/master/LICENSE)
 
 ## 🙏 Attributions
 <a href="https://www.flaticon.com/free-icons/ipod" title="ipod icons">Ipod icons created by Freepik - Flaticon</a>

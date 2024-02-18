@@ -13,6 +13,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     "Albums",
     "Songs",
   ];
+  int previousSelectedDisplayListItem = 0;
 
   @override
   DisplayDetails build() {
@@ -21,6 +22,26 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       selectedDisplayListItem: 0,
       displayScreenType: DisplayScreenType.menu,
     );
+  }
+
+  void scrollScreenDown(double screenHeight, double scrollValue) {
+    state = state.copyWith(
+        selectedDisplayListItem: state.selectedDisplayListItem + 1);
+
+    if (((state.selectedDisplayListItem + 2) * scrollValue) >
+        screenHeight * 0.3865) {
+      state = state.copyWith(scrollOffset: state.scrollOffset + scrollValue);
+    }
+  }
+
+  void scrollScreenUp(double scrollValue) {
+    if (state.selectedDisplayListItem != 0) {
+      state = state.copyWith(
+          selectedDisplayListItem: state.selectedDisplayListItem - 1);
+    }
+    if (((state.selectedDisplayListItem) * scrollValue) < state.scrollOffset) {
+      state = state.copyWith(scrollOffset: state.scrollOffset - scrollValue);
+    }
   }
 
   void onClickWheelScroll(
@@ -56,43 +77,48 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     if (rotationalChange > 8) {
       if (state.displayScreenType == DisplayScreenType.nowPlaying) {
         ref.read(musicProvider.notifier).seekForward();
-      } else if (state.displayScreenType == DisplayScreenType.settings) {
-        //Do Nothing for now because not enough elements
       } else {
         seekForwardButton(height);
       }
     } else if (rotationalChange < -8) {
       if (state.displayScreenType == DisplayScreenType.nowPlaying) {
         ref.read(musicProvider.notifier).seekBackward();
-      } else if (state.displayScreenType == DisplayScreenType.settings) {
-        //Do Nothing for now because not enough elements
       } else {
         seekBackButton();
       }
     }
   }
 
-  void navigateToMenu(BuildContext context) {
+  void menuButton(BuildContext context) {
+    //If Menu Button Clicked on the Cover Flow or Albums or Songs Screen
     if (state.displayScreenType == DisplayScreenType.coverFlow ||
-        state.displayScreenType == DisplayScreenType.artistsSelection ||
         state.displayScreenType == DisplayScreenType.albums ||
+        state.displayScreenType == DisplayScreenType.artistsSelection ||
         state.displayScreenType == DisplayScreenType.songs) {
       state = state.copyWith(
-        selectedDisplayListItem: 0,
+        selectedDisplayListItem: previousSelectedDisplayListItem,
         displayScreenType: DisplayScreenType.musicMenu,
       );
       context.go("/menu/music");
-    } else if (state.displayScreenType == DisplayScreenType.artistSongs) {
+    }
+    //If Menu Button Clicked on the Artist Songs Screen
+    else if (state.displayScreenType == DisplayScreenType.artistSongs) {
+      context.go("/menu/music/artists");
       state = state.copyWith(
         selectedDisplayListItem: 0,
         displayScreenType: DisplayScreenType.artistsSelection,
       );
-      context.go("/menu/music/artists");
-    } else {
+    }
+    //If Menu Button Clicked on Any Other Screen
+    else {
+      if (previousSelectedDisplayListItem > 3) {
+        previousSelectedDisplayListItem = 0;
+      }
       state = state.copyWith(
-        selectedDisplayListItem: 0,
+        selectedDisplayListItem: previousSelectedDisplayListItem,
         displayScreenType: DisplayScreenType.menu,
       );
+      previousSelectedDisplayListItem = 0;
       context.go("/menu");
     }
   }
@@ -101,10 +127,12 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     //if the display is in Menu screen
     if (state.displayScreenType == DisplayScreenType.menu) {
       if (state.selectedDisplayListItem == 0) {
+        previousSelectedDisplayListItem = 0;
         state = state.copyWith(displayScreenType: DisplayScreenType.musicMenu);
         context.go("/menu/music");
       } else if (state.selectedDisplayListItem == 1) {
         //Now Playing Button Clicked
+        previousSelectedDisplayListItem = 1;
         state = state.copyWith(displayScreenType: DisplayScreenType.nowPlaying);
         context.go("/menu/now-playing");
       } else if (state.selectedDisplayListItem == 2) {
@@ -112,6 +140,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
         ref.read(musicProvider.notifier).shuffleAllSongs();
       } else if (state.selectedDisplayListItem == 3) {
         //Settings Button Clicked
+        previousSelectedDisplayListItem = 3;
         state = state.copyWith(
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.settings,
@@ -123,20 +152,23 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     //if the display is in Music Menu screen
     else if (state.displayScreenType == DisplayScreenType.musicMenu) {
       if (state.selectedDisplayListItem == 0) {
+        previousSelectedDisplayListItem = 0;
         state = state.copyWith(displayScreenType: DisplayScreenType.coverFlow);
         context.go("/menu/music/cover-flow/");
       } else if (state.selectedDisplayListItem == 1) {
+        previousSelectedDisplayListItem = 1;
         state = state.copyWith(
             selectedDisplayListItem: 0,
             displayScreenType: DisplayScreenType.artistsSelection);
         context.go("/menu/music/artists/");
       } else if (state.selectedDisplayListItem == 2) {
+        previousSelectedDisplayListItem = 2;
         state = state.copyWith(
             selectedDisplayListItem: 0,
             displayScreenType: DisplayScreenType.albums);
         context.go("/menu/music/albums/");
       } else if (state.selectedDisplayListItem == 3) {
-        ref.read(musicProvider.notifier);
+        previousSelectedDisplayListItem = 3;
         state = state.copyWith(
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.songs,
@@ -159,6 +191,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       ref.read(musicProvider.notifier).playAtIndex(ref
           .read(musicProvider.notifier)
           .artistSongsIndexes[state.selectedDisplayListItem]);
+      previousSelectedDisplayListItem = 1;
       state = state.copyWith(displayScreenType: DisplayScreenType.nowPlaying);
       context.go("/menu/now-playing");
     }
@@ -169,6 +202,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           .read(musicProvider.notifier)
           .albumNames
           .elementAt(state.selectedDisplayListItem));
+      previousSelectedDisplayListItem = 1;
       state = state.copyWith(displayScreenType: DisplayScreenType.nowPlaying);
       context.go("/menu/now-playing");
     }
@@ -178,6 +212,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       ref
           .read(musicProvider.notifier)
           .playAtIndex(state.selectedDisplayListItem);
+      previousSelectedDisplayListItem = 1;
       state = state.copyWith(displayScreenType: DisplayScreenType.nowPlaying);
       context.go("/menu/now-playing");
     }
@@ -204,13 +239,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     //If Forward Seek Button is Clicked in the Music Menu Screen
     if (state.displayScreenType == DisplayScreenType.musicMenu) {
       if (state.selectedDisplayListItem != musicListDisplayItems.length - 1) {
-        state = state.copyWith(
-            selectedDisplayListItem: state.selectedDisplayListItem + 1);
-
-        if (((state.selectedDisplayListItem + 2) * 30) >
-            screenHeight * 0.3865) {
-          state = state.copyWith(scrollOffset: state.scrollOffset + 30);
-        }
+        scrollScreenDown(screenHeight, 30);
       }
     }
 
@@ -218,12 +247,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     else if (state.displayScreenType == DisplayScreenType.artistsSelection) {
       if (state.selectedDisplayListItem !=
           ref.read(musicProvider.notifier).artistNames.length - 1) {
-        state = state.copyWith(
-            selectedDisplayListItem: state.selectedDisplayListItem + 1);
-        if (((state.selectedDisplayListItem + 2) * 30) >
-            screenHeight * 0.3865) {
-          state = state.copyWith(scrollOffset: state.scrollOffset + 30);
-        }
+        scrollScreenDown(screenHeight, 30);
       }
     }
 
@@ -231,12 +255,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     else if (state.displayScreenType == DisplayScreenType.artistSongs) {
       if (state.selectedDisplayListItem !=
           ref.read(musicProvider.notifier).artistSongsIndexes.length - 1) {
-        state = state.copyWith(
-            selectedDisplayListItem: state.selectedDisplayListItem + 1);
-        if (((state.selectedDisplayListItem + 2) * 50) >
-            screenHeight * 0.3865) {
-          state = state.copyWith(scrollOffset: state.scrollOffset + 50);
-        }
+        scrollScreenDown(screenHeight, 50);
       }
     }
 
@@ -244,12 +263,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     else if (state.displayScreenType == DisplayScreenType.albums) {
       if (state.selectedDisplayListItem !=
           ref.read(musicProvider.notifier).artistNames.length - 1) {
-        state = state.copyWith(
-            selectedDisplayListItem: state.selectedDisplayListItem + 1);
-        if (((state.selectedDisplayListItem + 2) * 50) >
-            screenHeight * 0.3865) {
-          state = state.copyWith(scrollOffset: state.scrollOffset + 50);
-        }
+        scrollScreenDown(screenHeight, 50);
       }
     }
 
@@ -261,12 +275,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
                   .completeMusicFileMetaDataList
                   .length -
               1) {
-        state = state.copyWith(
-            selectedDisplayListItem: state.selectedDisplayListItem + 1);
-        if (((state.selectedDisplayListItem + 2) * 40) >
-            screenHeight * 0.3865) {
-          state = state.copyWith(scrollOffset: state.scrollOffset + 40);
-        }
+        scrollScreenDown(screenHeight, 40);
       }
     }
 
@@ -292,36 +301,26 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   }
 
   Future<void> seekBackButton() async {
+    //When Clicked In Now Playing or Cover Flow Screen
     if (state.displayScreenType == DisplayScreenType.nowPlaying ||
         state.displayScreenType == DisplayScreenType.coverFlow) {
       await ref.read(musicProvider.notifier).previousSong();
       return;
     }
+
+    //When Clicked In Songs Screen
     if (state.displayScreenType == DisplayScreenType.songs) {
-      if (state.selectedDisplayListItem != 0) {
-        state = state.copyWith(
-            selectedDisplayListItem: state.selectedDisplayListItem - 1);
-      }
-      if (((state.selectedDisplayListItem) * 40) < state.scrollOffset) {
-        state = state.copyWith(scrollOffset: state.scrollOffset - 40);
-      }
-    } else if (state.displayScreenType == DisplayScreenType.artistSongs ||
+      scrollScreenUp(40);
+    }
+    //When Clicked In Artist Songs Screen
+    else if (state.displayScreenType == DisplayScreenType.artistSongs ||
         state.displayScreenType == DisplayScreenType.albums) {
-      if (state.selectedDisplayListItem != 0) {
-        state = state.copyWith(
-            selectedDisplayListItem: state.selectedDisplayListItem - 1);
-      }
-      if (((state.selectedDisplayListItem) * 50) < state.scrollOffset) {
-        state = state.copyWith(scrollOffset: state.scrollOffset - 50);
-      }
-    } else {
-      if (state.selectedDisplayListItem != 0) {
-        state = state.copyWith(
-            selectedDisplayListItem: state.selectedDisplayListItem - 1);
-      }
-      if (((state.selectedDisplayListItem) * 30) < state.scrollOffset) {
-        state = state.copyWith(scrollOffset: state.scrollOffset - 30);
-      }
+      scrollScreenUp(50);
+    }
+
+    //When Clicked In Any Other Screen
+    else {
+      scrollScreenUp(30);
     }
   }
 }

@@ -4,27 +4,44 @@ import 'package:retropod/core/widgets/settings_list_tile.dart';
 import 'package:retropod/providers/display_provider.dart';
 import 'package:retropod/providers/settings_provider.dart';
 
-class SettingsScreen extends ConsumerWidget {
+class SettingsScreen extends ConsumerStatefulWidget {
   const SettingsScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final selectedDisplayItem = ref.watch(
+  ConsumerState createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends ConsumerState<SettingsScreen> {
+  final ScrollController _scrollController = ScrollController();
+  late final List<String> settingsTiles;
+
+  @override
+  void initState() {
+    settingsTiles = ref.read(settingsProvider.notifier).settingsListTiles;
+    ref.listenManual(displayProvider.select((value) => value.scrollOffset),
+        (previous, next) {
+      _scrollController.animateTo(next,
+          duration: const Duration(milliseconds: 10), curve: Curves.ease);
+    });
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final selectedDisplayListItem = ref.watch(
         displayProvider.select((value) => value.selectedDisplayListItem));
-    final settingsData = ref.watch(settingsProvider);
-    return ListView(
-      children: [
-        SettingsListTile(
-          text: "Dark Mode",
-          isOn: settingsData.isDarkMode,
-          isSelected: selectedDisplayItem == 0,
+    ref.watch(settingsProvider);
+    return CupertinoScrollbar(
+      controller: _scrollController,
+      child: ListView.builder(
+        controller: _scrollController,
+        itemCount: settingsTiles.length,
+        itemBuilder: (context, index) => SettingsListTile(
+          text: settingsTiles[index],
+          isOn: ref.read(settingsProvider.notifier).isOn(index),
+          isSelected: selectedDisplayListItem == index,
         ),
-        SettingsListTile(
-          text: "Repeat",
-          isOn: settingsData.repeat,
-          isSelected: selectedDisplayItem == 1,
-        ),
-      ],
+      ),
     );
   }
 }

@@ -1,4 +1,4 @@
-github: [adityar224]
+github: [adeeteya]
 patreon: adeeteya
 ko_fi: adeeteya
 liberapay: adeeteya

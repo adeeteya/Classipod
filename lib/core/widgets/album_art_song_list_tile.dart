@@ -46,34 +46,36 @@ class AlbumArtSongListTile extends StatelessWidget {
                     width: 50,
                   ),
             const SizedBox(width: 5),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  songName ?? "Unknown Song",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: (isSelected)
-                        ? CupertinoColors.white
-                        : CupertinoColors.black,
-                    overflow: TextOverflow.ellipsis,
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    songName ?? "Unknown Song",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: (isSelected)
+                          ? CupertinoColors.white
+                          : CupertinoColors.black,
+                    ),
+                    maxLines: 1,
                   ),
-                ),
-                Text(
-                  trackArtistNames ?? "Unknown Artist",
-                  style: TextStyle(
-                    color: (isSelected) ? CupertinoColors.white : hintTextColor,
+                  Text(
+                    trackArtistNames ?? "Unknown Artist",
+                    style: TextStyle(
+                      color:
+                          (isSelected) ? CupertinoColors.white : hintTextColor,
+                    ),
+                    maxLines: 1,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-            if (isSelected) ...[
-              const Spacer(),
+            if (isSelected)
               const Icon(CupertinoIcons.right_chevron,
                   color: CupertinoColors.white),
-            ]
           ],
         ),
       ),

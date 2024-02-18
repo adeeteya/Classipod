@@ -30,15 +30,17 @@ class DisplayListTile extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                text,
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: (isSelected)
-                      ? CupertinoColors.white
-                      : CupertinoColors.black,
-                  overflow: TextOverflow.ellipsis,
+              Flexible(
+                child: Text(
+                  text,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: (isSelected)
+                        ? CupertinoColors.white
+                        : CupertinoColors.black,
+                  ),
+                  maxLines: 1,
                 ),
               ),
               if (isSelected)

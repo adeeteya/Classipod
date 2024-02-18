@@ -26,11 +26,6 @@ class DeviceControls extends ConsumerWidget {
           color: context.isDarkMode
               ? darkDeviceControlBackgroundColor
               : CupertinoColors.white,
-          border: Border.all(
-            color: context.isDarkMode
-                ? transparentColor
-                : lightDeviceControlBorderColor,
-          ),
         ),
         clipBehavior: Clip.hardEdge,
         child: Column(
@@ -40,7 +35,7 @@ class DeviceControls extends ConsumerWidget {
             Expanded(
               child: GestureDetector(
                 onTap: () =>
-                    ref.read(displayProvider.notifier).navigateToMenu(context),
+                    ref.read(displayProvider.notifier).menuButton(context),
                 child: ColoredBox(
                   color: context.isDarkMode
                       ? darkDeviceControlBackgroundColor

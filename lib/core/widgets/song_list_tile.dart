@@ -43,7 +43,6 @@ class SongListTile extends StatelessWidget {
                   color: (isSelected)
                       ? CupertinoColors.white
                       : CupertinoColors.black,
-                  overflow: TextOverflow.ellipsis,
                 ),
                 maxLines: 1,
               ),
@@ -61,5 +60,3 @@ class SongListTile extends StatelessWidget {
     );
   }
 }
-
-//TODO: Optimize the use of containers throughout the app.

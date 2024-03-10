@@ -1,3 +1,4 @@
+import 'package:filesystem_picker/filesystem_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -31,17 +32,19 @@ class RetroPodApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isDark =
         ref.watch(settingsProvider.select((value) => value.isDarkMode));
-    return CupertinoApp.router(
-      title: 'RetroPod',
-      debugShowCheckedModeBanner: false,
-      theme: CupertinoThemeData(
-        brightness: (isDark) ? Brightness.dark : Brightness.light,
-        textTheme: const CupertinoTextThemeData(
-          textStyle:
-              TextStyle(color: CupertinoColors.black, fontFamily: 'Myriad'),
+    return FilesystemPickerDefaultOptions(
+      child: CupertinoApp.router(
+        title: 'RetroPod',
+        debugShowCheckedModeBanner: false,
+        theme: CupertinoThemeData(
+          brightness: (isDark) ? Brightness.dark : Brightness.light,
+          textTheme: const CupertinoTextThemeData(
+            textStyle:
+                TextStyle(color: CupertinoColors.black, fontFamily: 'Myriad'),
+          ),
         ),
+        routerConfig: router,
       ),
-      routerConfig: router,
     );
   }
 }

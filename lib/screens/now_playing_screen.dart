@@ -33,9 +33,11 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   @override
   Widget build(BuildContext context) {
     if (musicFilesMetaDataList.isEmpty) {
-      return const Center(
-        child: Text(
-            "No Music Files Present☹️.\nPlease Store it in the 'Music' Directory in the root of the phone."),
+      return const CupertinoPageScaffold(
+        backgroundColor: CupertinoColors.white,
+        child: Center(
+          child: Text("No Music Files Present from the Selected Directory☹️"),
+        ),
       );
     }
 

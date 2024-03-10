@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
@@ -41,6 +40,10 @@ class MusicNotifier extends Notifier<MusicDetails> {
     );
   }
 
+  void setLoading(bool isLoading) {
+    state = state.copyWith(isLoading: isLoading);
+  }
+
   Future<void> requestStoragePermissions() async {
     var status = await Permission.storage.status;
     if (!status.isGranted) {
@@ -53,8 +56,14 @@ class MusicNotifier extends Notifier<MusicDetails> {
   }
 
   Future<void> getAllAudioFiles() async {
+    completeMusicFileMetaDataList.clear();
+    artistNames.clear();
+    albumNames.clear();
+    albumDetails.clear();
+    artistSongsIndexes.clear();
     await requestStoragePermissions();
-    final Directory storageDir = Directory("/storage/emulated/0/Music");
+    final Directory storageDir =
+        Directory(ref.read(settingsProvider).musicFolderPath);
     final List<FileSystemEntity> files;
     files = storageDir.listSync(recursive: true, followLinks: false);
     Metadata songFileMetadata;
@@ -113,7 +122,6 @@ class MusicNotifier extends Notifier<MusicDetails> {
     if (shuffle) {
       state.musicFilesMetaDataList.shuffle();
     }
-
     for (int i = 0; i < state.musicFilesMetaDataList.length; i++) {
       songSourcePlaylist.add(
         AudioSource.file(
@@ -127,7 +135,6 @@ class MusicNotifier extends Notifier<MusicDetails> {
         ),
       );
     }
-
     await player.setAudioSource(
       ConcatenatingAudioSource(
         useLazyPreparation: true,
@@ -137,8 +144,14 @@ class MusicNotifier extends Notifier<MusicDetails> {
       initialIndex: 0,
       initialPosition: Duration.zero,
     );
+    await setLoopMode();
+  }
+
+  Future<void> setLoopMode() async {
     if (ref.read(settingsProvider).repeat) {
       await player.setLoopMode(LoopMode.all);
+    } else {
+      await player.setLoopMode(LoopMode.off);
     }
   }
 

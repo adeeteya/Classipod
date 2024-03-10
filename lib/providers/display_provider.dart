@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:retropod/models/display_details.dart';
 import 'package:retropod/providers/music_provider.dart';
 import 'package:retropod/providers/settings_provider.dart';
+import 'package:vibration/vibration.dart';
 
 class DisplayNotifier extends Notifier<DisplayDetails> {
   DisplayNotifier() : super();
@@ -24,10 +25,25 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     );
   }
 
-  void scrollScreenDown(double screenHeight, double scrollValue) {
+  void restartApp(BuildContext context) {
+    ref.read(musicProvider.notifier).setLoading(true);
+    ref.read(musicProvider.notifier).getAllAudioFiles();
+    state = state.copyWith(
+      selectedDisplayListItem: 0,
+      displayScreenType: DisplayScreenType.menu,
+    );
+    context.go("/menu");
+  }
+
+  void buttonPressVibrate() {
+    if (ref.read(settingsProvider).vibrate) {
+      Vibration.vibrate(duration: 3);
+    }
+  }
+
+  void scrollScreenDown(double screenHeight, double scrollValue) async {
     state = state.copyWith(
         selectedDisplayListItem: state.selectedDisplayListItem + 1);
-
     if (((state.selectedDisplayListItem + 2) * scrollValue) >
         screenHeight * 0.3865) {
       state = state.copyWith(scrollOffset: state.scrollOffset + scrollValue);
@@ -90,6 +106,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   }
 
   void menuButton(BuildContext context) {
+    buttonPressVibrate();
     //If Menu Button Clicked on the Cover Flow or Albums or Songs Screen
     if (state.displayScreenType == DisplayScreenType.coverFlow ||
         state.displayScreenType == DisplayScreenType.albums ||
@@ -124,6 +141,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   }
 
   void selectButton(BuildContext context) {
+    buttonPressVibrate();
     //if the display is in Menu screen
     if (state.displayScreenType == DisplayScreenType.menu) {
       if (state.selectedDisplayListItem == 0) {
@@ -231,11 +249,18 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       } else if (state.selectedDisplayListItem == 1) {
         //Repeat Toggle Button Clicked
         ref.read(settingsProvider.notifier).toggleRepeat();
+      } else if (state.selectedDisplayListItem == 2) {
+        //Repeat Toggle Button Clicked
+        ref.read(settingsProvider.notifier).toggleVibrate();
+      } else if (state.selectedDisplayListItem == 3) {
+        //Repeat Toggle Button Clicked
+        ref.read(settingsProvider.notifier).getMusicFolderPath(context);
       }
     }
   }
 
   Future<void> seekForwardButton(double screenHeight) async {
+    buttonPressVibrate();
     //If Forward Seek Button is Clicked in the Music Menu Screen
     if (state.displayScreenType == DisplayScreenType.musicMenu) {
       if (state.selectedDisplayListItem != musicListDisplayItems.length - 1) {
@@ -294,13 +319,15 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
     //If Forward Seek Button is Clicked in the Settings Screen
     else if (state.displayScreenType == DisplayScreenType.settings &&
-        state.selectedDisplayListItem != 1) {
+        state.selectedDisplayListItem !=
+            ref.read(settingsProvider.notifier).settingsListTiles.length - 1) {
       state = state.copyWith(
           selectedDisplayListItem: state.selectedDisplayListItem + 1);
     }
   }
 
   Future<void> seekBackButton() async {
+    buttonPressVibrate();
     //When Clicked In Now Playing or Cover Flow Screen
     if (state.displayScreenType == DisplayScreenType.nowPlaying ||
         state.displayScreenType == DisplayScreenType.coverFlow) {

@@ -3,13 +3,10 @@ import 'package:retropod/core/constants.dart';
 
 class SettingsListTile extends StatelessWidget {
   final String text;
-  final bool isOn;
+  final bool? isOn;
   final bool isSelected;
   const SettingsListTile(
-      {super.key,
-      required this.text,
-      required this.isSelected,
-      required this.isOn});
+      {super.key, required this.text, required this.isSelected, this.isOn});
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +42,8 @@ class SettingsListTile extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
-              Text(
-                (isOn) ? "On" : "Off",
+              if(isOn!=null)Text(
+                (isOn!) ? "On" : "Off",
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,

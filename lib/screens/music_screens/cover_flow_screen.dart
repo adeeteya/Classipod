@@ -72,19 +72,29 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen> {
             ),
           ),
           const SizedBox(height: 10),
-          Text(
-            musicFilesMetaDataList[currentSongIndex].trackName ??
-                "Unknown Track",
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              musicFilesMetaDataList[currentSongIndex].trackName ??
+                  "Unknown Track",
+              maxLines: 1,
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ),
-          Text(
-            musicFilesMetaDataList[currentSongIndex].getTrackArtistNames,
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              musicFilesMetaDataList[currentSongIndex].getTrackArtistNames,
+              maxLines: 1,
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ),
         ],

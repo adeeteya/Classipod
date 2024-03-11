@@ -9,7 +9,7 @@ const Color darkDeviceControlInnerButtonGradientColor2 = Color(0xFF676467);
 
 const Color lightDeviceFrameGradientColor1 = Color(0xFFF2F2F2);
 const Color lightDeviceFrameGradientColor2 = Color(0xFFADADAD);
-const Color lightDeviceScreenColor = Color(0xFF6D6D6D); //TODO :unused right now
+// const Color lightDeviceScreenColor = Color(0xFF6D6D6D);
 const Color lightDeviceScreenBorderColor = Color(0xFF2F2F2F);
 const Color lightDeviceControlBorderColor = Color(0xFFAEADAD);
 const Color lightDeviceButtonColor = Color(0xFF8793A0);

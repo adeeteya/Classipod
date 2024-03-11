@@ -61,6 +61,11 @@ class DeviceControls extends ConsumerWidget {
                 Expanded(
                   child: GestureDetector(
                     onTap: ref.read(displayProvider.notifier).seekBackButton,
+                    onLongPress: ref
+                        .read(displayProvider.notifier)
+                        .seekBackButtonLongPress,
+                    onLongPressEnd:
+                        ref.read(displayProvider.notifier).longPressEnd,
                     child: SizedBox(
                       height: size.width * 0.2175,
                       child: ColoredBox(
@@ -117,6 +122,11 @@ class DeviceControls extends ConsumerWidget {
                     onTap: () => ref
                         .read(displayProvider.notifier)
                         .seekForwardButton(size.height),
+                    onLongPress: ref
+                        .read(displayProvider.notifier)
+                        .seekForwardButtonLongPress,
+                    onLongPressEnd:
+                        ref.read(displayProvider.notifier).longPressEnd,
                     child: SizedBox(
                       height: size.width * 0.2175,
                       child: ColoredBox(

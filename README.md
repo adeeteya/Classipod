@@ -1,8 +1,17 @@
+<div align="center">
+
 # 🎵 Retropod
+
+![Retropod Banner](screenshots/retropod_banner.jpeg)
+
+![Retropod App Screenshots](screenshots/combined.png)
 
 Introducing "Retropod" – Your Timeless Audio Experience
 
 Step back in time with Retropod, a local music player app designed to capture the nostalgic essence of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the joy of navigating your music library with a touch of retro charm.
+
+
+</div>
 
 🧭 Intuitive Navigation: Navigate through your music library effortlessly using the virtual click wheel. Scroll, click, and feel the tactile response as you rediscover the joy of selecting your favorite tracks with the same ease as the original iPod.
 
@@ -22,45 +31,49 @@ If you like what you see, please ⭐ the repo.
 
 ## ✨ Features
 
-- [x] Ability to play .mp3, .wav and .ogg files
-- [x] Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root of the application)
-- [x] Dark and Light Colored Ipod Classic Theme
-- [x] Displays the Music Metadata (Album Art, Artist Names)
-- [x] Ability to seek forward and backwards on a audio file
-- [x] Ability to go to previous and next track in the playlist
-- [x] Ipod Classic User Interface
-- [x] Cover Flow View
-- [x] Click Wheel with Scrollable Rotation Enabled (Scrollable Rotation Could be Smoother)
-- [x] Now Playing Screen with current music progress displayed
-- [x] Songs Screen with all the possible songs in the system
-- [x] Responsive Design For all Different Types of Screen Sizes
-- [x] Displays the current device battery level and charging status on the status bar
-- [x] Background Playback
-- [x] Shuffle Songs Feature
-- [x] Loop Songs Feature
-- [x] Ability to Filter and Select From a Particular Artist
-- [x] Ability to Select Albums
-- [x] Background Notification Control
-- [x] Vibration when clicking buttons and scrolling through the scroll wheel
-- [] Click Wheel Sounds
-- [] Caching Metadata of the songs for faster boot up times
-- [] Reflective Cover Art
-- [] Ability to Create and Store Custom User Created Playlists
-- [] Ability to search songs
-- [] Ipod Built-in Games
-- [] Ability to View Photos and Videos from the device
+- 🗃️ Ability to play .mp3, .wav and .ogg files
+- 🔎 Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root of the application)
+- 🎨 Dark and Light Colored Ipod Classic Theme
+- 🖼️ Displays the Music Metadata (Album Art, Artist Names)
+- ⏩ Ability to seek forward and backwards on a audio file
+- ⏮️ Ability to go to previous and next track in the playlist
+- 📱 Ipod Classic User Interface
+- 🎞️ Cover Flow View
+- 🎡 Click Wheel with Scrollable Rotation Enabled (Scrollable Rotation Could be Smoother)
+- 💿 Now Playing Screen with current music progress displayed
+- 🎶 Songs Screen with all the possible songs in the system
+- 📲 Responsive Design For all Different Types of Screen Sizes
+- 🔋 Displays the current device battery level and charging status on the status bar
+- 🎧 Background Playback with Notification Control
+- 🔀 Shuffle Songs Feature
+- ➰ Loop Songs Feature
+- 🧑‍🎤 Ability to Filter and Select From a Particular Artist or Albums
+- 📳 Vibration when clicking buttons and scrolling through the scroll wheel
+
+### 🔜 Upcoming Features
+- 🔉 Click Wheel Sounds
+- ⬇️ Caching Metadata of the songs for faster boot up times
+- 🪞 Reflective Cover Art
+- 📃 Ability to Create and Store Custom User Created Playlists
+- 🔍 Ability to search songs
+- 🎮 Ipod Built-in Games
+- 📸 Ability to View Photos and Videos from the device
 
 ## 💻 Installation links
 
 <table>
   <tr>
     <th>Platform</th>
-    <th>Package/Installation Method</th>
+    <th>Installation Links</th>
   </tr>
   <tr>
     <td>Android</td>
     <td>
-      <a href="https://github.com/adeeteya/Retropod/releases/download/1.0.0/Retropod-android-1.0.0.apk">
+    <a href="https://play.google.com/store/apps/details?id=com.adeeteya.retropod">
+        <img width="220" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+      </a>
+      <br>
+      <a href="https://github.com/adeeteya/Retropod/releases/latest/retropod-android.apk">
         <img width="220" alt="APK download" src="https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png">
       </a>
     </td>
@@ -68,9 +81,6 @@ If you like what you see, please ⭐ the repo.
 
 </table>
 
-## 📸 Screenshots
-
-<img alt="Light Mode Image" src="screenshots/screenshot_1.png" height="587px" width="256px"/> <img alt="Dark Mode Image" src="screenshots/screenshot_2.png" height="587px" width="256px"/> <img alt="File Explorer Image" src="screenshots/screenshot_3.png" height="587px" width="256px"/> <img alt="Add Link Image" src="screenshots/screenshot_4.png" height="587px" width="256px"/> <img alt="Markdown Preview Image" src="screenshots/screenshot_5.png" height="587px" width="256px"/> <img alt="Markdown Editor Image" src="screenshots/screenshot_6.png" height="587px" width="256px"/>
 
 ## 🔌 Plugins
 
@@ -97,7 +107,7 @@ If you like what you see, please ⭐ the repo.
 
 ## 🔖 LICENCE
 Copyright (c) 2024 Aditya R
-[MIT LICENCE](https://github.com/adeeteya/Retropod/blob/master/LICENSE)
+[BSD-4-Clause LICENCE](https://github.com/adeeteya/Retropod/blob/master/LICENSE)
 
 ## 🙏 Attributions
 <a href="https://www.flaticon.com/free-icons/ipod" title="ipod icons">Ipod icons created by Freepik - Flaticon</a>

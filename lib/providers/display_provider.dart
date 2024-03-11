@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -15,6 +16,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     "Songs",
   ];
   int previousSelectedDisplayListItem = 0;
+  late Timer _longPressTimer;
 
   @override
   DisplayDetails build() {
@@ -348,6 +350,34 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     //When Clicked In Any Other Screen
     else {
       scrollScreenUp(30);
+    }
+  }
+
+  void seekBackButtonLongPress() {
+    //When Clicked In Now Playing or Cover Flow Screen
+    if (state.displayScreenType == DisplayScreenType.nowPlaying) {
+      buttonPressVibrate();
+      _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (_) {
+        ref.read(musicProvider.notifier).seekBackward();
+      });
+      return;
+    }
+  }
+
+  void seekForwardButtonLongPress() {
+    //When Clicked In Now Playing or Cover Flow Screen
+    if (state.displayScreenType == DisplayScreenType.nowPlaying) {
+      buttonPressVibrate();
+      _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (_) {
+        ref.read(musicProvider.notifier).seekForward();
+      });
+      return;
+    }
+  }
+
+  void longPressEnd(LongPressEndDetails _) {
+    if (_longPressTimer.isActive) {
+      _longPressTimer.cancel();
     }
   }
 }

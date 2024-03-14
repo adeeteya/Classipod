@@ -17,6 +17,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     "Songs",
   ];
   int previousSelectedDisplayListItem = 0;
+  double previousScrollOffset = 0;
   Duration durationSinceLastScroll = Duration.zero;
   late Timer _longPressTimer;
 
@@ -142,10 +143,11 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     else if (state.displayScreenType == DisplayScreenType.artistSongs) {
       context.go("/menu/music/artists");
       state = state.copyWith(
-        selectedDisplayListItem: 0,
+        selectedDisplayListItem: previousSelectedDisplayListItem,
         displayScreenType: DisplayScreenType.artistsSelection,
-        scrollOffset: 0,
+        scrollOffset: previousScrollOffset,
       );
+      previousSelectedDisplayListItem = 1;
     }
     //If Menu Button Clicked on Any Other Screen
     else {
@@ -219,6 +221,8 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
     //if the display is in Artists Selection screen
     else if (state.displayScreenType == DisplayScreenType.artistsSelection) {
+      previousSelectedDisplayListItem = state.selectedDisplayListItem;
+      previousScrollOffset = state.scrollOffset;
       context.go(
           "/menu/music/artists/${ref.read(musicProvider.notifier).artistNames.elementAt(state.selectedDisplayListItem)}");
       state = state.copyWith(
@@ -400,7 +404,8 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   }
 
   void longPressEnd(LongPressEndDetails _) {
-    if (_longPressTimer.isActive) {
+    if (state.displayScreenType == DisplayScreenType.nowPlaying &&
+        _longPressTimer.isActive) {
       _longPressTimer.cancel();
     }
   }

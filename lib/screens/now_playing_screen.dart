@@ -62,57 +62,101 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                 ),
               ),
             ),
-            StreamBuilder<Duration>(
-              stream: ref.read(musicProvider.notifier).getPositionStream(),
-              builder: (context, snapshot) {
-                double totalDuration = (ref
-                            .read(musicProvider)
-                            .musicFilesMetaDataList[
-                                ref.read(musicProvider).currentSongIndex]
-                            .trackDuration ??
-                        1000) /
-                    1000;
-                double currentDuration =
-                    snapshot.data?.inSeconds.toDouble() ?? 0;
+            Consumer(builder: (context, ref, _) {
+              bool isVolumeChanging = ref.watch(
+                  musicProvider.select((value) => value.isVolumeChanging));
+              Widget animatedWidget = (isVolumeChanging)
+                  ? Row(
+                      children: [
+                        const Icon(CupertinoIcons.volume_down),
+                        StreamBuilder<double>(
+                            stream: ref
+                                .read(musicProvider.notifier)
+                                .getVolumeStream(),
+                            builder: (context, snapshot) {
+                              return BoxProgressBar(
+                                max: 1.0,
+                                value: snapshot.data ?? 0.0,
+                              );
+                            }),
+                        const Icon(CupertinoIcons.volume_up),
+                      ],
+                    )
+                  : StreamBuilder<Duration>(
+                      stream:
+                          ref.read(musicProvider.notifier).getPositionStream(),
+                      builder: (context, snapshot) {
+                        double totalDuration = (ref
+                                    .read(musicProvider)
+                                    .musicFilesMetaDataList[ref
+                                        .read(musicProvider)
+                                        .currentSongIndex]
+                                    .trackDuration ??
+                                1000) /
+                            1000;
+                        double currentDuration =
+                            snapshot.data?.inSeconds.toDouble() ?? 0;
 
-                int elapsedTimeInMinutes = currentDuration ~/ 60;
-                int elapsedTimeInSeconds = (currentDuration).toInt() % 60;
+                        int elapsedTimeInMinutes = currentDuration ~/ 60;
+                        int elapsedTimeInSeconds =
+                            (currentDuration).toInt() % 60;
 
-                int remainingTimeInMinutes =
-                    (totalDuration - currentDuration) ~/ 60;
-                int remainingTimeInSeconds =
-                    (totalDuration - currentDuration).toInt() % 60;
+                        int remainingTimeInMinutes =
+                            (totalDuration - currentDuration) ~/ 60;
+                        int remainingTimeInSeconds =
+                            (totalDuration - currentDuration).toInt() % 60;
 
-                return Row(
-                  children: [
-                    SizedBox(
-                      width: 35,
-                      child: Text(
-                        "$elapsedTimeInMinutes:${elapsedTimeInSeconds < 10 ? "0$elapsedTimeInSeconds" : elapsedTimeInSeconds}",
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                        return Row(
+                          children: [
+                            SizedBox(
+                              width: 35,
+                              child: Text(
+                                "$elapsedTimeInMinutes:${elapsedTimeInSeconds < 10 ? "0$elapsedTimeInSeconds" : elapsedTimeInSeconds}",
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            BoxProgressBar(
+                              max: totalDuration,
+                              value: currentDuration,
+                            ),
+                            SizedBox(
+                              width: 40,
+                              child: Text(
+                                "- $remainingTimeInMinutes:${remainingTimeInSeconds < 10 ? "0$remainingTimeInSeconds" : remainingTimeInSeconds}",
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+
+              return AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                transitionBuilder: (child, animation) {
+                  final begin = Offset((isVolumeChanging) ? 1.0 : -0.5, 0.0);
+                  final tween = Tween(begin: begin, end: Offset.zero);
+                  final offsetAnimation = animation.drive(tween);
+
+                  return FadeTransition(
+                    key: ValueKey<Key?>(child.key),
+                    opacity: animation,
+                    child: SlideTransition(
+                      key: ValueKey<Key?>(child.key),
+                      position: offsetAnimation,
+                      child: child,
                     ),
-                    BoxProgressBar(
-                      max: totalDuration,
-                      value: currentDuration,
-                    ),
-                    SizedBox(
-                      width: 40,
-                      child: Text(
-                        "- $remainingTimeInMinutes:${remainingTimeInSeconds < 10 ? "0$remainingTimeInSeconds" : remainingTimeInSeconds}",
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
-                );
-              },
-            ),
+                  );
+                },
+                child: animatedWidget,
+              );
+            }),
           ],
         ),
       ),

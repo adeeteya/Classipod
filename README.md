@@ -48,9 +48,9 @@ If you like what you see, please ⭐ the repo.
 - ➰ Loop Songs Feature
 - 🧑‍🎤 Ability to Filter and Select From a Particular Artist or Albums
 - 📳 Vibration when clicking buttons and scrolling through the scroll wheel
+- 🔇 Volume Control
 
 ### 🔜 Upcoming Features
-- 🔇 Volume Control
 - 🔉 Click Wheel Sounds
 - ⬇️ Caching Metadata of the songs for faster boot up times
 - 🪞 Reflective Cover Art

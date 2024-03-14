@@ -48,3 +48,5 @@ class _SongsScreenState extends ConsumerState<SongsScreen> {
     );
   }
 }
+
+//TODO: Fix Scrolling Animation to be less jittery

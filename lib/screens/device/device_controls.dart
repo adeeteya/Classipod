@@ -42,7 +42,8 @@ class DeviceControls extends ConsumerWidget {
                     color: context.isDarkMode
                         ? darkDeviceControlBackgroundColor
                         : CupertinoColors.white,
-                    child: Center(
+                    child: Align(
+                      alignment: Alignment.topCenter,
                       child: Text(
                         "MENU",
                         style: TextStyle(
@@ -78,6 +79,7 @@ class DeviceControls extends ConsumerWidget {
                             context.isDarkMode
                                 ? "assets/icons/last.svg"
                                 : "assets/icons/last-grey.svg",
+                            alignment: Alignment.centerLeft,
                             fit: BoxFit.scaleDown,
                           ),
                         ),
@@ -140,6 +142,7 @@ class DeviceControls extends ConsumerWidget {
                             context.isDarkMode
                                 ? "assets/icons/next.svg"
                                 : "assets/icons/next-grey.svg",
+                            alignment: Alignment.centerRight,
                             fit: BoxFit.scaleDown,
                           ),
                         ),
@@ -155,7 +158,8 @@ class DeviceControls extends ConsumerWidget {
                     color: context.isDarkMode
                         ? darkDeviceControlBackgroundColor
                         : CupertinoColors.white,
-                    child: Center(
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
                       child: SvgPicture.asset(
                         context.isDarkMode
                             ? "assets/icons/play.svg"

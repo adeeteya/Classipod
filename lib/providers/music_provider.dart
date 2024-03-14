@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,6 +18,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
   final Set<String> albumNames = {};
   final List<AlbumDetails> albumDetails = [];
   final List<int> artistSongsIndexes = [];
+  Timer lastVolumeChangeTimer = Timer(Duration.zero, () {});
 
   @override
   MusicDetails build() {
@@ -37,6 +39,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
       musicFilesMetaDataList: [],
       isPlaying: false,
       isLoading: true,
+      isVolumeChanging: false,
     );
   }
 
@@ -208,6 +211,42 @@ class MusicNotifier extends Notifier<MusicDetails> {
   Future<void> seekBackward() async {
     if (player.position.inSeconds > 3) {
       await player.seek(Duration(seconds: player.position.inSeconds - 1));
+    }
+  }
+
+  Stream<double> getVolumeStream() {
+    return player.volumeStream;
+  }
+
+  void startVolumeTimer() {
+    if (lastVolumeChangeTimer.isActive) {
+      lastVolumeChangeTimer.cancel();
+    }
+    lastVolumeChangeTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (timer.tick >= 3) {
+        state = state.copyWith(isVolumeChanging: false);
+        timer.cancel();
+      }
+    });
+  }
+
+  Future<void> decreaseVolume() async {
+    if (player.volume > 0) {
+      state = state.copyWith(isVolumeChanging: true);
+      if (player.volume <= 0.02) {
+        await player.setVolume(0);
+      } else {
+        await player.setVolume(player.volume - 0.02);
+      }
+      startVolumeTimer();
+    }
+  }
+
+  Future<void> increaseVolume() async {
+    if (player.volume < 1) {
+      state = state.copyWith(isVolumeChanging: true);
+      await player.setVolume(player.volume + 0.02);
+      startVolumeTimer();
     }
   }
 }

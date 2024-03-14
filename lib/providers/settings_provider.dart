@@ -13,7 +13,8 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     "Dark Mode",
     "Repeat",
     "Vibrate",
-    "Change Directory"
+    "Change Directory",
+    "Donate"
   ];
 
   @override

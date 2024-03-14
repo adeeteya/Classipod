@@ -25,6 +25,7 @@ dependencies:
   go_router: ^13.2.0
   vibration: ^1.8.4
   file_picker: ^6.2.0
+  url_launcher: ^6.2.5
 
 dev_dependencies:
   flutter_test:

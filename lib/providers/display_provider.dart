@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:retropod/models/display_details.dart';
 import 'package:retropod/providers/music_provider.dart';
 import 'package:retropod/providers/settings_provider.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import 'package:vibration/vibration.dart';
 
 class DisplayNotifier extends Notifier<DisplayDetails> {
@@ -271,11 +273,15 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
         //Repeat Toggle Button Clicked
         ref.read(settingsProvider.notifier).toggleRepeat();
       } else if (state.selectedDisplayListItem == 2) {
-        //Repeat Toggle Button Clicked
+        //Vibrate Toggle Button Clicked
         ref.read(settingsProvider.notifier).toggleVibrate();
       } else if (state.selectedDisplayListItem == 3) {
-        //Repeat Toggle Button Clicked
+        //Change Directory Button Clicked
         ref.read(settingsProvider.notifier).getMusicFolderPath(context);
+      } else if (state.selectedDisplayListItem == 4) {
+        //Change Directory Button Clicked
+        launchUrlString("https://www.buymeacoffee.com/adeeteya",
+            mode: LaunchMode.externalApplication);
       }
     }
   }

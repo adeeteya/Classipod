@@ -99,6 +99,7 @@ If you like what you see, please ⭐ the repo.
 | [**go_router**](https://pub.dev/packages/go_router)                           | To handle routing within the app                               |
 | [**vibration**](https://pub.dev/packages/vibration)                           | Used for vibration while using device controls                 |
 | [**file_picker**](https://pub.dev/packages/file_picker)                       | To select the directory from which the music files are scanned |
+| [**url_launcher**](https://pub.dev/packages/url_launcher)                     | For Launching the Donation Page Link                           |
 | [**flutter_lints**](https://pub.dev/packages/flutter_lints)                   | For linting                                                    |
 
 ## 🤓 Author

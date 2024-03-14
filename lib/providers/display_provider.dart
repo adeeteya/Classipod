@@ -313,7 +313,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     //If Forward Seek Button is Clicked in Albums Screen
     else if (state.displayScreenType == DisplayScreenType.albums) {
       if (state.selectedDisplayListItem !=
-          ref.read(musicProvider.notifier).artistNames.length - 1) {
+          ref.read(musicProvider.notifier).albumNames.length - 1) {
         scrollScreenDown(screenHeight, 50);
       }
     }
@@ -365,7 +365,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     if (state.displayScreenType == DisplayScreenType.songs) {
       scrollScreenUp(40);
     }
-    //When Clicked In Artist Songs Screen
+    //When Clicked In Artist Songs or Albums Screen
     else if (state.displayScreenType == DisplayScreenType.artistSongs ||
         state.displayScreenType == DisplayScreenType.albums) {
       scrollScreenUp(50);

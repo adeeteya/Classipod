@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:retropod/core/constants.dart';
+import 'package:retropod/core/custom_scroll_behavior.dart';
 import 'package:retropod/core/extensions.dart';
 import 'package:retropod/providers/music_provider.dart';
 import 'package:retropod/screens/device/device_controls.dart';
@@ -26,49 +27,52 @@ final router = GoRouter(
       pageBuilder: (context, state, child) {
         final size = MediaQuery.of(context).size;
         return CupertinoPage(
-          child: CupertinoPageScaffold(
-            child: DeviceFrame(
-              child: Column(
-                children: [
-                  IgnorePointer(
-                    child: Container(
-                      height: size.height * 0.3865,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: CupertinoColors.white,
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: context.isDarkMode
-                              ? darkDeviceScreenColor
-                              : lightDeviceScreenBorderColor,
-                          width: 5,
+          child: ScrollConfiguration(
+            behavior: CustomScrollBehavior(),
+            child: CupertinoPageScaffold(
+              child: DeviceFrame(
+                child: Column(
+                  children: [
+                    IgnorePointer(
+                      child: Container(
+                        height: size.height * 0.3865,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: CupertinoColors.white,
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: context.isDarkMode
+                                ? darkDeviceScreenColor
+                                : lightDeviceScreenBorderColor,
+                            width: 5,
+                          ),
+                        ),
+                        child: Consumer(
+                          builder: (context, ref, _) {
+                            bool isLoading = ref.watch(musicProvider
+                                .select((value) => value.isLoading));
+                            if (isLoading) {
+                              return Center(
+                                child: SvgPicture.asset(
+                                    "assets/icons/apple_logo.svg"),
+                              );
+                            } else {
+                              return Column(
+                                children: [
+                                  const StatusBar(),
+                                  Expanded(child: child),
+                                ],
+                              );
+                            }
+                          },
                         ),
                       ),
-                      child: Consumer(
-                        builder: (context, ref, _) {
-                          bool isLoading = ref.watch(
-                              musicProvider.select((value) => value.isLoading));
-                          if (isLoading) {
-                            return Center(
-                              child: SvgPicture.asset(
-                                  "assets/icons/apple_logo.svg"),
-                            );
-                          } else {
-                            return Column(
-                              children: [
-                                const StatusBar(),
-                                Expanded(child: child),
-                              ],
-                            );
-                          }
-                        },
-                      ),
                     ),
-                  ),
-                  const Spacer(flex: 2),
-                  const DeviceControls(),
-                  const Spacer(),
-                ],
+                    const Spacer(flex: 2),
+                    const DeviceControls(),
+                    const Spacer(),
+                  ],
+                ),
               ),
             ),
           ),

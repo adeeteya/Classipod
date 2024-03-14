@@ -21,8 +21,7 @@ class _ArtistsSelectionScreenState
     artistNames = ref.read(musicProvider.notifier).artistNames.toList();
     ref.listenManual(displayProvider.select((value) => value.scrollOffset),
         (previous, next) {
-      _scrollController.animateTo(next,
-          duration: const Duration(milliseconds: 10), curve: Curves.ease);
+      _scrollController.jumpTo(next);
     });
     super.initState();
   }

@@ -23,8 +23,7 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen> {
     artistSongsIndexes = ref.read(musicProvider.notifier).artistSongsIndexes;
     ref.listenManual(displayProvider.select((value) => value.scrollOffset),
         (previous, next) {
-      _scrollController.animateTo(next,
-          duration: const Duration(milliseconds: 10), curve: Curves.ease);
+      _scrollController.jumpTo(next);
     });
     super.initState();
   }

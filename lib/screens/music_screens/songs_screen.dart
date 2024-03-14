@@ -23,8 +23,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> {
         ref.read(musicProvider.notifier).completeMusicFileMetaDataList;
     ref.listenManual(displayProvider.select((value) => value.scrollOffset),
         (previous, next) {
-      _scrollController.animateTo(next,
-          duration: const Duration(milliseconds: 10), curve: Curves.ease);
+      _scrollController.jumpTo(next);
     });
     super.initState();
   }
@@ -38,7 +37,6 @@ class _SongsScreenState extends ConsumerState<SongsScreen> {
       child: ListView.builder(
         controller: _scrollController,
         itemCount: musicFilesMetaDataList.length,
-        physics: const NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) => SongListTile(
           songName: musicFilesMetaDataList[index].trackName,
           trackArtistNames: musicFilesMetaDataList[index].getTrackArtistNames,
@@ -48,5 +46,3 @@ class _SongsScreenState extends ConsumerState<SongsScreen> {
     );
   }
 }
-
-//TODO: Fix Scrolling Animation to be less jittery

@@ -42,14 +42,15 @@ class SettingsListTile extends StatelessWidget {
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
-              if(isOn!=null)Text(
-                (isOn!) ? "On" : "Off",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: (isSelected) ? CupertinoColors.white : hintTextColor,
+              if (isOn != null)
+                Text(
+                  (isOn!) ? "On" : "Off",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: (isSelected) ? CupertinoColors.white : hintTextColor,
+                  ),
                 ),
-              ),
             ],
           ),
         ),

@@ -20,8 +20,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
     settingsTiles = ref.read(settingsProvider.notifier).settingsListTiles;
     ref.listenManual(displayProvider.select((value) => value.scrollOffset),
         (previous, next) {
-      _scrollController.animateTo(next,
-          duration: const Duration(milliseconds: 10), curve: Curves.ease);
+      _scrollController.jumpTo(next);
     });
     super.initState();
   }

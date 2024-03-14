@@ -269,20 +269,28 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
     //if the display is in Settings Screen
     else if (state.displayScreenType == DisplayScreenType.settings) {
+      //Dark Mode Toggle Button Clicked
       if (state.selectedDisplayListItem == 0) {
-        //Dark Mode Toggle Button Clicked
         ref.read(settingsProvider.notifier).toggleTheme();
-      } else if (state.selectedDisplayListItem == 1) {
-        //Repeat Toggle Button Clicked
+      }
+      //Repeat Toggle Button Clicked
+      else if (state.selectedDisplayListItem == 1) {
         ref.read(settingsProvider.notifier).toggleRepeat();
-      } else if (state.selectedDisplayListItem == 2) {
-        //Vibrate Toggle Button Clicked
+      }
+      //Vibrate Toggle Button Clicked
+      else if (state.selectedDisplayListItem == 2) {
         ref.read(settingsProvider.notifier).toggleVibrate();
-      } else if (state.selectedDisplayListItem == 3) {
-        //Change Directory Button Clicked
+      }
+      //Immersive Mode Button Clicked
+      else if (state.selectedDisplayListItem == 3) {
+        ref.read(settingsProvider.notifier).toggleImmersiveMode();
+      }
+      //Change Directory Button Clicked
+      else if (state.selectedDisplayListItem == 4) {
         ref.read(settingsProvider.notifier).getMusicFolderPath(context);
-      } else if (state.selectedDisplayListItem == 4) {
-        //Change Directory Button Clicked
+      }
+      //Donate Button Clicked
+      else if (state.selectedDisplayListItem == 5) {
         launchUrl(Uri.parse("https://www.buymeacoffee.com/adeeteya"),
             mode: LaunchMode.externalApplication);
       }

@@ -14,7 +14,6 @@ Future<void> main() async {
       statusBarColor: transparentColor,
     ),
   );
-  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
   );

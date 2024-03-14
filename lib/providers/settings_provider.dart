@@ -1,5 +1,6 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:retropod/models/settings_details.dart';
 import 'package:retropod/providers/display_provider.dart';
@@ -13,6 +14,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     "Dark Mode",
     "Repeat",
     "Vibrate",
+    "Immersive Mode",
     "Change Directory",
     "Donate"
   ];
@@ -24,6 +26,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
       isDarkMode: true,
       repeat: false,
       vibrate: true,
+      immersiveMode: true,
       musicFolderPath: "/storage/emulated/0/Music",
     );
   }
@@ -33,6 +36,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     bool isDarkMode = _sharedPreferences.getBool("isDarkMode") ?? false;
     bool repeat = _sharedPreferences.getBool("repeat") ?? false;
     bool vibrate = _sharedPreferences.getBool("vibrate") ?? true;
+    bool immersiveMode = _sharedPreferences.getBool("immersiveMode") ?? true;
     String musicFolderPath = _sharedPreferences.getString("musicFolderPath") ??
         state.musicFolderPath;
 
@@ -40,7 +44,18 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
         isDarkMode: isDarkMode,
         repeat: repeat,
         vibrate: vibrate,
+        immersiveMode: immersiveMode,
         musicFolderPath: musicFolderPath);
+
+    await setSystemUiMode();
+  }
+
+  Future<void> setSystemUiMode() async {
+    if (state.immersiveMode) {
+      await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    } else {
+      await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    }
   }
 
   Future<void> toggleTheme() async {
@@ -57,6 +72,12 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
   Future<void> toggleVibrate() async {
     await _sharedPreferences.setBool("vibrate", !state.vibrate);
     state = state.copyWith(vibrate: !state.vibrate);
+  }
+
+  Future<void> toggleImmersiveMode() async {
+    await _sharedPreferences.setBool("immersiveMode", !state.immersiveMode);
+    state = state.copyWith(immersiveMode: !state.immersiveMode);
+    await setSystemUiMode();
   }
 
   Future<void> getMusicFolderPath(BuildContext context) async {
@@ -79,6 +100,8 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
         return state.repeat;
       case 2:
         return state.vibrate;
+      case 3:
+        return state.immersiveMode;
       default:
         return null;
     }

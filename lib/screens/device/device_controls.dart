@@ -12,158 +12,162 @@ class DeviceControls extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.of(context).size;
-    return GestureDetector(
-      onPanUpdate: (dragUpdateDetails) => ref
-          .read(displayProvider.notifier)
-          .onClickWheelScroll(
-              dragUpdateDetails, (size.width * 0.61) / 2, size.height),
-      child: Container(
-        height: size.width * 0.61,
-        width: size.width * 0.61,
-        padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: context.isDarkMode
-              ? darkDeviceControlBackgroundColor
-              : CupertinoColors.white,
-        ),
-        clipBehavior: Clip.hardEdge,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: GestureDetector(
-                onTap: () =>
-                    ref.read(displayProvider.notifier).menuButton(context),
-                child: ColoredBox(
-                  color: context.isDarkMode
-                      ? darkDeviceControlBackgroundColor
-                      : CupertinoColors.white,
-                  child: Center(
-                    child: Text(
-                      "MENU",
-                      style: TextStyle(
-                        color: context.isDarkMode
-                            ? CupertinoColors.white
-                            : lightDeviceButtonColor,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'SF Pro Text',
+    return AbsorbPointer(
+      absorbing: ref.watch(musicProvider).isLoading,
+      child: GestureDetector(
+        onPanUpdate: (dragUpdateDetails) => ref
+            .read(displayProvider.notifier)
+            .onClickWheelScroll(
+                dragUpdateDetails, (size.width * 0.61) / 2, size.height),
+        child: Container(
+          height: size.width * 0.61,
+          width: size.width * 0.61,
+          padding: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: context.isDarkMode
+                ? darkDeviceControlBackgroundColor
+                : CupertinoColors.white,
+          ),
+          clipBehavior: Clip.hardEdge,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: () =>
+                      ref.read(displayProvider.notifier).menuButton(context),
+                  child: ColoredBox(
+                    color: context.isDarkMode
+                        ? darkDeviceControlBackgroundColor
+                        : CupertinoColors.white,
+                    child: Center(
+                      child: Text(
+                        "MENU",
+                        style: TextStyle(
+                          color: context.isDarkMode
+                              ? CupertinoColors.white
+                              : lightDeviceButtonColor,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'SF Pro Text',
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: GestureDetector(
-                    onTap: ref.read(displayProvider.notifier).seekBackButton,
-                    onLongPress: ref
-                        .read(displayProvider.notifier)
-                        .seekBackButtonLongPress,
-                    onLongPressEnd:
-                        ref.read(displayProvider.notifier).longPressEnd,
-                    child: SizedBox(
-                      height: size.width * 0.2175,
-                      child: ColoredBox(
-                        color: context.isDarkMode
-                            ? darkDeviceControlBackgroundColor
-                            : CupertinoColors.white,
-                        child: SvgPicture.asset(
-                          context.isDarkMode
-                              ? "assets/icons/last.svg"
-                              : "assets/icons/last-grey.svg",
-                          fit: BoxFit.scaleDown,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () =>
-                      ref.read(displayProvider.notifier).selectButton(context),
-                  child: SizedBox(
-                    height: size.width * 0.2175,
-                    width: size.width * 0.2175,
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
+              Row(
+                children: [
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: ref.read(displayProvider.notifier).seekBackButton,
+                      onLongPress: ref
+                          .read(displayProvider.notifier)
+                          .seekBackButtonLongPress,
+                      onLongPressEnd:
+                          ref.read(displayProvider.notifier).longPressEnd,
+                      child: SizedBox(
+                        height: size.width * 0.2175,
+                        child: ColoredBox(
                           color: context.isDarkMode
-                              ? CupertinoColors.black
-                              : lightDeviceControlBorderColor,
-                        ),
-                        image: const DecorationImage(
-                          image: AssetImage("assets/images/noise.png"),
-                          fit: BoxFit.cover,
-                        ),
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: context.isDarkMode
-                              ? [
-                                  darkDeviceControlInnerButtonGradientColor1,
-                                  darkDeviceControlInnerButtonGradientColor2
-                                ]
-                              : [
-                                  lightDeviceControlInnerButtonGradientColor1,
-                                  lightDeviceControlInnerButtonGradientColor2
-                                ],
+                              ? darkDeviceControlBackgroundColor
+                              : CupertinoColors.white,
+                          child: SvgPicture.asset(
+                            context.isDarkMode
+                                ? "assets/icons/last.svg"
+                                : "assets/icons/last-grey.svg",
+                            fit: BoxFit.scaleDown,
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Expanded(
-                  child: GestureDetector(
+                  GestureDetector(
                     onTap: () => ref
                         .read(displayProvider.notifier)
-                        .seekForwardButton(size.height),
-                    onLongPress: ref
-                        .read(displayProvider.notifier)
-                        .seekForwardButtonLongPress,
-                    onLongPressEnd:
-                        ref.read(displayProvider.notifier).longPressEnd,
+                        .selectButton(context),
                     child: SizedBox(
                       height: size.width * 0.2175,
-                      child: ColoredBox(
-                        color: context.isDarkMode
-                            ? darkDeviceControlBackgroundColor
-                            : CupertinoColors.white,
-                        child: SvgPicture.asset(
-                          context.isDarkMode
-                              ? "assets/icons/next.svg"
-                              : "assets/icons/next-grey.svg",
-                          fit: BoxFit.scaleDown,
+                      width: size.width * 0.2175,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: context.isDarkMode
+                                ? CupertinoColors.black
+                                : lightDeviceControlBorderColor,
+                          ),
+                          image: const DecorationImage(
+                            image: AssetImage("assets/images/noise.png"),
+                            fit: BoxFit.cover,
+                          ),
+                          gradient: LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: context.isDarkMode
+                                ? [
+                                    darkDeviceControlInnerButtonGradientColor1,
+                                    darkDeviceControlInnerButtonGradientColor2
+                                  ]
+                                : [
+                                    lightDeviceControlInnerButtonGradientColor1,
+                                    lightDeviceControlInnerButtonGradientColor2
+                                  ],
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            Expanded(
-              child: GestureDetector(
-                onTap: ref.read(musicProvider.notifier).togglePlayback,
-                child: ColoredBox(
-                  color: context.isDarkMode
-                      ? darkDeviceControlBackgroundColor
-                      : CupertinoColors.white,
-                  child: Center(
-                    child: SvgPicture.asset(
-                      context.isDarkMode
-                          ? "assets/icons/play.svg"
-                          : "assets/icons/play-grey.svg",
-                      fit: BoxFit.scaleDown,
+                  Expanded(
+                    child: GestureDetector(
+                      onTap: () => ref
+                          .read(displayProvider.notifier)
+                          .seekForwardButton(size.height),
+                      onLongPress: ref
+                          .read(displayProvider.notifier)
+                          .seekForwardButtonLongPress,
+                      onLongPressEnd:
+                          ref.read(displayProvider.notifier).longPressEnd,
+                      child: SizedBox(
+                        height: size.width * 0.2175,
+                        child: ColoredBox(
+                          color: context.isDarkMode
+                              ? darkDeviceControlBackgroundColor
+                              : CupertinoColors.white,
+                          child: SvgPicture.asset(
+                            context.isDarkMode
+                                ? "assets/icons/next.svg"
+                                : "assets/icons/next-grey.svg",
+                            fit: BoxFit.scaleDown,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Expanded(
+                child: GestureDetector(
+                  onTap: ref.read(musicProvider.notifier).togglePlayback,
+                  child: ColoredBox(
+                    color: context.isDarkMode
+                        ? darkDeviceControlBackgroundColor
+                        : CupertinoColors.white,
+                    child: Center(
+                      child: SvgPicture.asset(
+                        context.isDarkMode
+                            ? "assets/icons/play.svg"
+                            : "assets/icons/play-grey.svg",
+                        fit: BoxFit.scaleDown,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

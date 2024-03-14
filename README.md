@@ -10,7 +10,6 @@ Introducing "Retropod" – Your Timeless Audio Experience
 
 Step back in time with Retropod, a local music player app designed to capture the nostalgic essence of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the joy of navigating your music library with a touch of retro charm.
 
-
 </div>
 
 🧭 Intuitive Navigation: Navigate through your music library effortlessly using the virtual click wheel. Scroll, click, and feel the tactile response as you rediscover the joy of selecting your favorite tracks with the same ease as the original iPod.
@@ -35,11 +34,11 @@ If you like what you see, please ⭐ the repo.
 - 🔎 Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root of the application)
 - 🎨 Dark and Light Colored Ipod Classic Theme
 - 🖼️ Displays the Music Metadata (Album Art, Artist Names)
-- ⏩ Ability to seek forward and backwards on a audio file
+- ⏩ Ability to seek forward and backwards on a audio file (By Long Pressing the seek forward/backwards buttons)
 - ⏮️ Ability to go to previous and next track in the playlist
 - 📱 Ipod Classic User Interface
 - 🎞️ Cover Flow View
-- 🎡 Click Wheel with Scrollable Rotation Enabled (Scrollable Rotation Could be Smoother)
+- 🎡 Click Wheel with Scrollable Rotation Enabled
 - 💿 Now Playing Screen with current music progress displayed
 - 🎶 Songs Screen with all the possible songs in the system
 - 📲 Responsive Design For all Different Types of Screen Sizes
@@ -51,6 +50,7 @@ If you like what you see, please ⭐ the repo.
 - 📳 Vibration when clicking buttons and scrolling through the scroll wheel
 
 ### 🔜 Upcoming Features
+- 🔇 Volume Control
 - 🔉 Click Wheel Sounds
 - ⬇️ Caching Metadata of the songs for faster boot up times
 - 🪞 Reflective Cover Art
@@ -84,22 +84,22 @@ If you like what you see, please ⭐ the repo.
 
 ## 🔌 Plugins
 
-| Name                                                                          | Usage                                               |
-|-------------------------------------------------------------------------------|-----------------------------------------------------|
-| [**cupertino_icons**](https://pub.dev/packages/cupertino_icons)               | For ios style icons                                 |
-| [**flutter_riverpod**](https://pub.dev/packages/flutter_riverpod)             | For State Management                                |
-| [**shared_preferences**](https://pub.dev/packages/shared_preferences)         | To store system settings                            |
-| [**audio_service**](https://pub.dev/packages/audio_service)                   | To play audio in the background of the app          |
-| [**just_audio**](https://pub.dev/packages/just_audio)                         | To play audio files                                 |
-| [**just_audio_background**](https://pub.dev/packages/just_audio_background)   | To control audio through media notification         |
-| [**flutter_svg**](https://pub.dev/packages/flutter_svg)                       | To display svg files                                |
-| [**battery_plus**](https://pub.dev/packages/battery_plus)                     | Shows phone battery level and status                |
-| [**permission_handler**](https://pub.dev/packages/permission_handler)         | To check and request for file access permissions    |
-| [**flutter_media_metadata**](https://pub.dev/packages/flutter_media_metadata) | To extract metadata from audio files                |
-| [**go_router**](https://pub.dev/packages/go_router)                           | To handle routing within the app                    |
-| [**vibration**](https://pub.dev/packages/vibration)                           | Used for vibration while using device controls      |
-| [**file_picker**](https://pub.dev/packages/file_picker)                       | Used to select the directory to be scan music files |
-| [**flutter_lints**](https://pub.dev/packages/flutter_lints)                   | For linting                                         |
+| Name                                                                          | Usage                                                          |
+|-------------------------------------------------------------------------------|----------------------------------------------------------------|
+| [**cupertino_icons**](https://pub.dev/packages/cupertino_icons)               | For ios style icons                                            |
+| [**flutter_riverpod**](https://pub.dev/packages/flutter_riverpod)             | For State Management                                           |
+| [**shared_preferences**](https://pub.dev/packages/shared_preferences)         | To store system settings                                       |
+| [**audio_service**](https://pub.dev/packages/audio_service)                   | To play audio in the background of the app                     |
+| [**just_audio**](https://pub.dev/packages/just_audio)                         | To play audio files                                            |
+| [**just_audio_background**](https://pub.dev/packages/just_audio_background)   | To control audio through media notification                    |
+| [**flutter_svg**](https://pub.dev/packages/flutter_svg)                       | To display svg files                                           |
+| [**battery_plus**](https://pub.dev/packages/battery_plus)                     | Shows phone battery level and status                           |
+| [**permission_handler**](https://pub.dev/packages/permission_handler)         | To check and request for file access permissions               |
+| [**flutter_media_metadata**](https://pub.dev/packages/flutter_media_metadata) | To extract metadata from audio files                           |
+| [**go_router**](https://pub.dev/packages/go_router)                           | To handle routing within the app                               |
+| [**vibration**](https://pub.dev/packages/vibration)                           | Used for vibration while using device controls                 |
+| [**file_picker**](https://pub.dev/packages/file_picker)                       | To select the directory from which the music files are scanned |
+| [**flutter_lints**](https://pub.dev/packages/flutter_lints)                   | For linting                                                    |
 
 ## 🤓 Author
 

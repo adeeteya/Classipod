@@ -16,6 +16,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     "Songs",
   ];
   int previousSelectedDisplayListItem = 0;
+  Duration durationSinceLastScroll = Duration.zero;
   late Timer _longPressTimer;
 
   @override
@@ -90,19 +91,34 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
     // Total computed change
     double rotationalChange = (verticalRotation + horizontalRotation) *
-        (dragUpdateDetails.delta.distance * 0.1);
+        (dragUpdateDetails.delta.distance * 0.8);
 
-    if (rotationalChange > 8) {
+    int millisecondsSinceLastScroll = 0;
+    if (durationSinceLastScroll.inMinutes ==
+            dragUpdateDetails.sourceTimeStamp?.inMinutes &&
+        durationSinceLastScroll.inSeconds ==
+            dragUpdateDetails.sourceTimeStamp?.inSeconds) {
+      millisecondsSinceLastScroll =
+          dragUpdateDetails.sourceTimeStamp!.inMilliseconds -
+              durationSinceLastScroll.inMilliseconds;
+    } else {
+      durationSinceLastScroll =
+          dragUpdateDetails.sourceTimeStamp ?? Duration.zero;
+    }
+
+    if (rotationalChange > 8 && millisecondsSinceLastScroll > 75) {
       if (state.displayScreenType == DisplayScreenType.nowPlaying) {
         ref.read(musicProvider.notifier).seekForward();
       } else {
         seekForwardButton(height);
+        durationSinceLastScroll = Duration.zero;
       }
-    } else if (rotationalChange < -8) {
+    } else if (rotationalChange < -8 && millisecondsSinceLastScroll > 75) {
       if (state.displayScreenType == DisplayScreenType.nowPlaying) {
         ref.read(musicProvider.notifier).seekBackward();
       } else {
         seekBackButton();
+        durationSinceLastScroll = Duration.zero;
       }
     }
   }
@@ -117,6 +133,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       state = state.copyWith(
         selectedDisplayListItem: previousSelectedDisplayListItem,
         displayScreenType: DisplayScreenType.musicMenu,
+        scrollOffset: 0,
       );
       context.go("/menu/music");
     }
@@ -126,6 +143,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       state = state.copyWith(
         selectedDisplayListItem: 0,
         displayScreenType: DisplayScreenType.artistsSelection,
+        scrollOffset: 0,
       );
     }
     //If Menu Button Clicked on Any Other Screen
@@ -136,6 +154,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       state = state.copyWith(
         selectedDisplayListItem: previousSelectedDisplayListItem,
         displayScreenType: DisplayScreenType.menu,
+        scrollOffset: 0,
       );
       previousSelectedDisplayListItem = 0;
       context.go("/menu");

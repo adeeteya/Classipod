@@ -49,15 +49,16 @@ If you like what you see, please ⭐ the repo.
 - 🧑‍🎤 Ability to Filter and Select From a Particular Artist or Albums
 - 📳 Vibration when clicking buttons and scrolling through the scroll wheel
 - 🔇 Volume Control
+- 🪞 Reflective Cover Art
 
 ### 🔜 Upcoming Features
 - 🔉 Click Wheel Sounds
 - ⬇️ Caching Metadata of the songs for faster boot up times
-- 🪞 Reflective Cover Art
 - 📃 Ability to Create and Store Custom User Created Playlists
 - 🔍 Ability to search songs
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
+- 📖 App Usage Tutorial
 
 ## 💻 Installation links
 

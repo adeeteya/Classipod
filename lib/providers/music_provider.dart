@@ -233,10 +233,10 @@ class MusicNotifier extends Notifier<MusicDetails> {
   Future<void> decreaseVolume() async {
     if (player.volume > 0) {
       state = state.copyWith(isVolumeChanging: true);
-      if (player.volume <= 0.02) {
+      if (player.volume <= 0.05) {
         await player.setVolume(0);
       } else {
-        await player.setVolume(player.volume - 0.02);
+        await player.setVolume(player.volume - 0.05);
       }
       startVolumeTimer();
     }
@@ -245,7 +245,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
   Future<void> increaseVolume() async {
     if (player.volume < 1) {
       state = state.copyWith(isVolumeChanging: true);
-      await player.setVolume(player.volume + 0.02);
+      await player.setVolume(player.volume + 0.05);
       startVolumeTimer();
     }
   }

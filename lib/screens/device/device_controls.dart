@@ -11,7 +11,7 @@ class DeviceControls extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     return AbsorbPointer(
       absorbing: ref.watch(musicProvider).isLoading,
       child: GestureDetector(

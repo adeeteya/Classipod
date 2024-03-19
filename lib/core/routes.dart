@@ -25,7 +25,7 @@ final router = GoRouter(
   routes: [
     ShellRoute(
       pageBuilder: (context, state, child) {
-        final size = MediaQuery.of(context).size;
+        final size = MediaQuery.sizeOf(context);
         return CupertinoPage(
           child: ScrollConfiguration(
             behavior: CustomScrollBehavior(),

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:retropod/models/display_details.dart';
@@ -42,7 +43,13 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
   void buttonPressVibrate() {
     if (ref.read(settingsProvider).vibrate) {
-      Vibration.vibrate(duration: 3);
+      Vibration.vibrate(duration: 2);
+    }
+  }
+
+  Future<void> clickWheelSound() async {
+    if (ref.read(settingsProvider).clickWheelSound) {
+      await SystemSound.play(SystemSoundType.click);
     }
   }
 
@@ -108,14 +115,14 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           dragUpdateDetails.sourceTimeStamp ?? Duration.zero;
     }
 
-    if (rotationalChange > 8 && millisecondsSinceLastScroll > 75) {
+    if (rotationalChange > 4 && millisecondsSinceLastScroll > 75) {
       if (state.displayScreenType == DisplayScreenType.nowPlaying) {
         ref.read(musicProvider.notifier).increaseVolume();
       } else {
         seekForwardButton(height);
       }
       durationSinceLastScroll = Duration.zero;
-    } else if (rotationalChange < -8 && millisecondsSinceLastScroll > 75) {
+    } else if (rotationalChange < -4 && millisecondsSinceLastScroll > 75) {
       if (state.displayScreenType == DisplayScreenType.nowPlaying) {
         ref.read(musicProvider.notifier).decreaseVolume();
       } else {
@@ -127,6 +134,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
   void menuButton(BuildContext context) {
     buttonPressVibrate();
+    clickWheelSound();
     //If Menu Button Clicked on the Cover Flow or Albums or Songs Screen
     if (state.displayScreenType == DisplayScreenType.coverFlow ||
         state.displayScreenType == DisplayScreenType.albums ||
@@ -166,6 +174,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
   void selectButton(BuildContext context) {
     buttonPressVibrate();
+    clickWheelSound();
     //if the display is in Menu screen
     if (state.displayScreenType == DisplayScreenType.menu) {
       if (state.selectedDisplayListItem == 0) {
@@ -281,16 +290,20 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       else if (state.selectedDisplayListItem == 2) {
         ref.read(settingsProvider.notifier).toggleVibrate();
       }
-      //Immersive Mode Button Clicked
+      //Click Wheel Sound Button Clicked
       else if (state.selectedDisplayListItem == 3) {
+        ref.read(settingsProvider.notifier).toggleClickWheelSound();
+      }
+      //Immersive Mode Button Clicked
+      else if (state.selectedDisplayListItem == 4) {
         ref.read(settingsProvider.notifier).toggleImmersiveMode();
       }
       //Change Directory Button Clicked
-      else if (state.selectedDisplayListItem == 4) {
+      else if (state.selectedDisplayListItem == 5) {
         ref.read(settingsProvider.notifier).getMusicFolderPath(context);
       }
       //Donate Button Clicked
-      else if (state.selectedDisplayListItem == 5) {
+      else if (state.selectedDisplayListItem == 6) {
         launchUrl(Uri.parse("https://www.buymeacoffee.com/adeeteya"),
             mode: LaunchMode.externalApplication);
       }
@@ -299,6 +312,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
   Future<void> seekForwardButton(double screenHeight) async {
     buttonPressVibrate();
+    clickWheelSound();
     //If Forward Seek Button is Clicked in the Music Menu Screen
     if (state.displayScreenType == DisplayScreenType.musicMenu) {
       if (state.selectedDisplayListItem != musicListDisplayItems.length - 1) {
@@ -366,6 +380,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
   Future<void> seekBackButton() async {
     buttonPressVibrate();
+    clickWheelSound();
     //When Clicked In Now Playing or Cover Flow Screen
     if (state.displayScreenType == DisplayScreenType.nowPlaying ||
         state.displayScreenType == DisplayScreenType.coverFlow) {
@@ -393,6 +408,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     //When Clicked In Now Playing or Cover Flow Screen
     if (state.displayScreenType == DisplayScreenType.nowPlaying) {
       buttonPressVibrate();
+      clickWheelSound();
       _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (_) {
         ref.read(musicProvider.notifier).seekBackward();
       });
@@ -404,6 +420,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     //When Clicked In Now Playing or Cover Flow Screen
     if (state.displayScreenType == DisplayScreenType.nowPlaying) {
       buttonPressVibrate();
+      clickWheelSound();
       _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (_) {
         ref.read(musicProvider.notifier).seekForward();
       });

@@ -11,7 +11,7 @@ class StatusBar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     final displayDetails = ref.watch(displayProvider);
     return SizedBox(
       height: size.height * 0.03,

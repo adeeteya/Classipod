@@ -8,7 +8,7 @@ class DeviceFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     return DecoratedBox(
       decoration: BoxDecoration(
         image: DecorationImage(

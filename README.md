@@ -50,15 +50,16 @@ If you like what you see, please ⭐ the repo.
 - 📳 Vibration when clicking buttons and scrolling through the scroll wheel
 - 🔇 Volume Control
 - 🪞 Reflective Cover Art
+- 🔉 Click Wheel Sounds
 
 ### 🔜 Upcoming Features
-- 🔉 Click Wheel Sounds
 - ⬇️ Caching Metadata of the songs for faster boot up times
 - 📃 Ability to Create and Store Custom User Created Playlists
 - 🔍 Ability to search songs
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
 - 📖 App Usage Tutorial
+- ℹ️ About Page
 
 ## 💻 Installation links
 

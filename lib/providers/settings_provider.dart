@@ -14,6 +14,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     "Dark Mode",
     "Repeat",
     "Vibrate",
+    "Click Wheel Sound",
     "Immersive Mode",
     "Change Directory",
     "Donate"
@@ -26,6 +27,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
       isDarkMode: true,
       repeat: false,
       vibrate: true,
+      clickWheelSound: true,
       immersiveMode: true,
       musicFolderPath: "/storage/emulated/0/Music",
     );
@@ -36,6 +38,8 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     bool isDarkMode = _sharedPreferences.getBool("isDarkMode") ?? false;
     bool repeat = _sharedPreferences.getBool("repeat") ?? false;
     bool vibrate = _sharedPreferences.getBool("vibrate") ?? true;
+    bool clickWheelSound =
+        _sharedPreferences.getBool("clickWheelSound") ?? true;
     bool immersiveMode = _sharedPreferences.getBool("immersiveMode") ?? true;
     String musicFolderPath = _sharedPreferences.getString("musicFolderPath") ??
         state.musicFolderPath;
@@ -44,6 +48,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
         isDarkMode: isDarkMode,
         repeat: repeat,
         vibrate: vibrate,
+        clickWheelSound: clickWheelSound,
         immersiveMode: immersiveMode,
         musicFolderPath: musicFolderPath);
 
@@ -74,6 +79,11 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     state = state.copyWith(vibrate: !state.vibrate);
   }
 
+  Future<void> toggleClickWheelSound() async {
+    await _sharedPreferences.setBool("clickWheelSound", !state.clickWheelSound);
+    state = state.copyWith(clickWheelSound: !state.clickWheelSound);
+  }
+
   Future<void> toggleImmersiveMode() async {
     await _sharedPreferences.setBool("immersiveMode", !state.immersiveMode);
     state = state.copyWith(immersiveMode: !state.immersiveMode);
@@ -101,6 +111,8 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
       case 2:
         return state.vibrate;
       case 3:
+        return state.clickWheelSound;
+      case 4:
         return state.immersiveMode;
       default:
         return null;

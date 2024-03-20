@@ -1,10 +1,10 @@
+import 'package:classipod/models/settings_details.dart';
+import 'package:classipod/providers/display_provider.dart';
+import 'package:classipod/providers/music_provider.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:retropod/models/settings_details.dart';
-import 'package:retropod/providers/display_provider.dart';
-import 'package:retropod/providers/music_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsNotifier extends Notifier<SettingsDetails> {
@@ -27,8 +27,8 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
       isDarkMode: true,
       repeat: false,
       vibrate: true,
-      clickWheelSound: true,
-      immersiveMode: true,
+      clickWheelSound: false,
+      immersiveMode: false,
       musicFolderPath: "/storage/emulated/0/Music",
     );
   }
@@ -39,8 +39,8 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     bool repeat = _sharedPreferences.getBool("repeat") ?? false;
     bool vibrate = _sharedPreferences.getBool("vibrate") ?? true;
     bool clickWheelSound =
-        _sharedPreferences.getBool("clickWheelSound") ?? true;
-    bool immersiveMode = _sharedPreferences.getBool("immersiveMode") ?? true;
+        _sharedPreferences.getBool("clickWheelSound") ?? false;
+    bool immersiveMode = _sharedPreferences.getBool("immersiveMode") ?? false;
     String musicFolderPath = _sharedPreferences.getString("musicFolderPath") ??
         state.musicFolderPath;
 
@@ -79,9 +79,30 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     state = state.copyWith(vibrate: !state.vibrate);
   }
 
-  Future<void> toggleClickWheelSound() async {
-    await _sharedPreferences.setBool("clickWheelSound", !state.clickWheelSound);
-    state = state.copyWith(clickWheelSound: !state.clickWheelSound);
+  Future<void> toggleClickWheelSound(BuildContext context) async {
+    await _sharedPreferences
+        .setBool("clickWheelSound", !state.clickWheelSound)
+        .then((value) async {
+      state = state.copyWith(clickWheelSound: !state.clickWheelSound);
+      if (state.clickWheelSound) {
+        await showCupertinoDialog(
+          context: context,
+          barrierDismissible: true,
+          builder: (context) => CupertinoAlertDialog(
+            title: const Text("Touch Sounds"),
+            content: const Text(
+                "Please Enable Touch Sounds from System Settings to hear the click wheel sounds"),
+            actions: [
+              CupertinoDialogAction(
+                isDefaultAction: true,
+                onPressed: () => Navigator.pop(context),
+                child: const Text("OK"),
+              )
+            ],
+          ),
+        );
+      }
+    });
   }
 
   Future<void> toggleImmersiveMode() async {

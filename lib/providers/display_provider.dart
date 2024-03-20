@@ -1,11 +1,12 @@
 import 'dart:async';
+
+import 'package:classipod/models/display_details.dart';
+import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/providers/settings_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:retropod/models/display_details.dart';
-import 'package:retropod/providers/music_provider.dart';
-import 'package:retropod/providers/settings_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:vibration/vibration.dart';
 
@@ -292,7 +293,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       }
       //Click Wheel Sound Button Clicked
       else if (state.selectedDisplayListItem == 3) {
-        ref.read(settingsProvider.notifier).toggleClickWheelSound();
+        ref.read(settingsProvider.notifier).toggleClickWheelSound(context);
       }
       //Immersive Mode Button Clicked
       else if (state.selectedDisplayListItem == 4) {

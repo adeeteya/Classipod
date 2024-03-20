@@ -1,8 +1,8 @@
+import 'package:classipod/core/widgets/display_list_tile.dart';
+import 'package:classipod/providers/display_provider.dart';
+import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:retropod/core/widgets/display_list_tile.dart';
-import 'package:retropod/providers/display_provider.dart';
-import 'package:retropod/providers/music_provider.dart';
 
 class ArtistsSelectionScreen extends ConsumerStatefulWidget {
   const ArtistsSelectionScreen({super.key});

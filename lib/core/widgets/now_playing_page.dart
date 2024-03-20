@@ -1,7 +1,8 @@
 import 'dart:typed_data';
+
+import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:retropod/core/constants.dart';
-import 'package:retropod/core/widgets/marquee_text.dart';
 
 class NowPlayingPage extends StatelessWidget {
   final Uint8List? albumArt;

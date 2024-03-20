@@ -1,8 +1,8 @@
+import 'package:classipod/core/widgets/settings_list_tile.dart';
+import 'package:classipod/providers/display_provider.dart';
+import 'package:classipod/providers/settings_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:retropod/core/widgets/settings_list_tile.dart';
-import 'package:retropod/providers/display_provider.dart';
-import 'package:retropod/providers/settings_provider.dart';
 
 class SettingsScreen extends ConsumerStatefulWidget {
   const SettingsScreen({super.key});

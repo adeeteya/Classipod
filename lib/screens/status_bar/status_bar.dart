@@ -1,10 +1,10 @@
+import 'package:classipod/core/constants.dart';
+import 'package:classipod/models/display_details.dart';
+import 'package:classipod/providers/display_provider.dart';
+import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/screens/status_bar/battery_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:retropod/core/constants.dart';
-import 'package:retropod/models/display_details.dart';
-import 'package:retropod/providers/display_provider.dart';
-import 'package:retropod/providers/music_provider.dart';
-import 'package:retropod/screens/status_bar/battery_indicator.dart';
 
 class StatusBar extends ConsumerWidget {
   const StatusBar({super.key});

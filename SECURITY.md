@@ -8,4 +8,4 @@
 
 ## Reporting a Vulnerability
 
-Either mail to me at lightningbolt340@gmail.com or open a [Issue](www.github.com/Retropod/issues)
+Either mail to me at lightningbolt340@gmail.com or open a [Issue](www.github.com/Classipod/issues)

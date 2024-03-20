@@ -1,6 +1,6 @@
+import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:retropod/core/constants.dart';
-import 'package:retropod/core/extensions.dart';
 
 class DeviceFrame extends StatelessWidget {
   final Widget child;

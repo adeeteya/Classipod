@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.adeeteya" "\0"
-            VALUE "FileDescription", "retropod" "\0"
+            VALUE "FileDescription", "classipod" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "retropod" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.adeeteya. All rights reserved." "\0"
-            VALUE "OriginalFilename", "retropod.exe" "\0"
-            VALUE "ProductName", "retropod" "\0"
+            VALUE "InternalName", "classipod" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 com.adeeteya. All rights reserved." "\0"
+            VALUE "OriginalFilename", "classipod.exe" "\0"
+            VALUE "ProductName", "classipod" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

@@ -1,9 +1,9 @@
 import 'package:battery_plus/battery_plus.dart';
+import 'package:classipod/core/constants.dart';
+import 'package:classipod/models/battery_details.dart';
+import 'package:classipod/providers/battery_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:retropod/core/constants.dart';
-import 'package:retropod/models/battery_details.dart';
-import 'package:retropod/providers/battery_provider.dart';
 
 class BatteryIndicator extends ConsumerWidget {
   const BatteryIndicator({super.key});

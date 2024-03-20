@@ -1,9 +1,9 @@
+import 'package:classipod/core/extensions.dart';
+import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
+import 'package:classipod/providers/display_provider.dart';
+import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:retropod/core/extensions.dart';
-import 'package:retropod/core/widgets/album_art_song_list_tile.dart';
-import 'package:retropod/providers/display_provider.dart';
-import 'package:retropod/providers/music_provider.dart';
 
 class ArtistSongsScreen extends ConsumerStatefulWidget {
   final String artistName;

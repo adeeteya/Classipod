@@ -1,14 +1,15 @@
 import 'dart:async';
 import 'dart:io';
+
+import 'package:classipod/core/extensions.dart';
+import 'package:classipod/models/album_details.dart';
+import 'package:classipod/models/music_details.dart';
+import 'package:classipod/providers/settings_provider.dart';
 import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:retropod/core/extensions.dart';
-import 'package:retropod/models/album_details.dart';
-import 'package:retropod/models/music_details.dart';
-import 'package:retropod/providers/settings_provider.dart';
 
 class MusicNotifier extends Notifier<MusicDetails> {
   MusicNotifier() : super();
@@ -231,23 +232,23 @@ class MusicNotifier extends Notifier<MusicDetails> {
   }
 
   Future<void> decreaseVolume() async {
+    state = state.copyWith(isVolumeChanging: true);
     if (player.volume > 0) {
-      state = state.copyWith(isVolumeChanging: true);
       if (player.volume <= 0.05) {
         await player.setVolume(0);
       } else {
         await player.setVolume(player.volume - 0.05);
       }
-      startVolumeTimer();
     }
+    startVolumeTimer();
   }
 
   Future<void> increaseVolume() async {
+    state = state.copyWith(isVolumeChanging: true);
     if (player.volume < 1) {
-      state = state.copyWith(isVolumeChanging: true);
       await player.setVolume(player.volume + 0.05);
-      startVolumeTimer();
     }
+    startVolumeTimer();
   }
 }
 

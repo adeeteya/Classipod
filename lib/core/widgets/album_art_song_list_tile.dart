@@ -1,6 +1,6 @@
+import 'package:classipod/core/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
-import 'package:retropod/core/constants.dart';
 
 class AlbumArtSongListTile extends StatelessWidget {
   final Uint8List? albumArt;

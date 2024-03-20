@@ -1,6 +1,6 @@
 import 'package:battery_plus/battery_plus.dart';
+import 'package:classipod/models/battery_details.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:retropod/models/battery_details.dart';
 
 class BatteryDetailsNotifier extends AsyncNotifier<BatteryDetails> {
   final battery = Battery();

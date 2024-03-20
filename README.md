@@ -1,30 +1,30 @@
 <div align="center">
 
-# 🎵 Retropod
+# 🎵 ClassiPod
 
-![Retropod Banner](screenshots/retropod_banner.jpeg)
+![Classipod Banner](screenshots/classipod_banner.png)
 
-![Retropod App Screenshots](screenshots/combined.png)
+![Classipod App Screenshots](screenshots/combined.png)
 
-Introducing "Retropod" – Your Timeless Audio Experience
+Introducing "Classipod" – Your Timeless Audio Experience
 
-Step back in time with Retropod, a local music player app designed to capture the nostalgic essence of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the joy of navigating your music library with a touch of retro charm.
+Step back in time with Classipod, a local music player app designed to capture the nostalgic essence of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the joy of navigating your music library with a touch of retro charm.
 
 </div>
 
 🧭 Intuitive Navigation: Navigate through your music library effortlessly using the virtual click wheel. Scroll, click, and feel the tactile response as you rediscover the joy of selecting your favorite tracks with the same ease as the original iPod.
 
-🗃️ Local Music Library: Retropod is focused on your locally stored music files, ensuring that your personal music collection takes center stage. Organize your tracks, albums, and playlists just like you did on your trusty iPod Classic.
+🗃️ Local Music Library: Classipod is focused on your locally stored music files, ensuring that your personal music collection takes center stage. Organize your tracks, albums, and playlists just like you did on your trusty iPod Classic.
 
-🖌️ Customizable Themes: Personalize your Retropod experience with the option of silver or grey device frame. Choose from the two different color schemes to tailor the app's appearance to your unique style.
+🖌️ Customizable Themes: Personalize your Classipod experience with the option of silver or grey device frame. Choose from the two different color schemes to tailor the app's appearance to your unique style.
 
-🖼️ Cover Art Display: Immerse yourself in your music by appreciating album artwork on the vibrant display. Retropod pays homage to the visual appeal of classic iPods by showcasing your favorite album covers in a retro-inspired format.
+🖼️ Cover Art Display: Immerse yourself in your music by appreciating album artwork on the vibrant display. Classipod pays homage to the visual appeal of classic iPods by showcasing your favorite album covers in a retro-inspired format.
 
-🎼 No Frills, Just Music: Retropod stays true to the essence of a music player – no distractions, no unnecessary features. Focus solely on the joy of listening to your favorite tunes without the complexities of a modern streaming service.
+🎼 No Frills, Just Music: Classipod stays true to the essence of a music player – no distractions, no unnecessary features. Focus solely on the joy of listening to your favorite tunes without the complexities of a modern streaming service.
 
-🎧 Offline Listening: Enjoy your music without relying on an internet connection. Retropod is perfect for those moments when you want to disconnect and savor the tunes stored locally on your device.
+🎧 Offline Listening: Enjoy your music without relying on an internet connection. Classipod is perfect for those moments when you want to disconnect and savor the tunes stored locally on your device.
 
-Relive the magic of the iPod Classic with Retropod – where timeless design meets the convenience of today. Download now and embark on a journey down memory lane with your music in the palm of your hand.
+Relive the magic of the iPod Classic with Classipod – where timeless design meets the convenience of today. Download now and embark on a journey down memory lane with your music in the palm of your hand.
 
 If you like what you see, please ⭐ the repo.
 
@@ -71,11 +71,11 @@ If you like what you see, please ⭐ the repo.
   <tr>
     <td>Android</td>
     <td>
-    <a href="https://play.google.com/store/apps/details?id=com.adeeteya.retropod">
+    <a href="https://play.google.com/store/apps/details?id=com.adeeteya.Classipod">
         <img width="220" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
       </a>
       <br>
-      <a href="https://github.com/adeeteya/Retropod/releases/latest/retropod-android.apk">
+      <a href="https://github.com/adeeteya/Classipod/releases/latest/Classipod-android.apk">
         <img width="220" alt="APK download" src="https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png">
       </a>
     </td>
@@ -110,7 +110,7 @@ If you like what you see, please ⭐ the repo.
 
 ## 🔖 LICENCE
 Copyright (c) 2024 Aditya R
-[BSD-4-Clause LICENCE](https://github.com/adeeteya/Retropod/blob/master/LICENSE)
+[BSD-4-Clause LICENCE](https://github.com/adeeteya/Classipod/blob/master/LICENSE)
 
 ## 🙏 Attributions
 <a href="https://www.flaticon.com/free-icons/ipod" title="ipod icons">Ipod icons created by Freepik - Flaticon</a>

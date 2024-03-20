@@ -1,10 +1,10 @@
+import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/routes.dart';
+import 'package:classipod/providers/settings_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import 'package:retropod/core/constants.dart';
-import 'package:retropod/core/routes.dart';
-import 'package:retropod/providers/settings_provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,18 +23,18 @@ Future<void> main() async {
     androidNotificationChannelDescription: 'IPod Classic Audio Clone',
     androidNotificationOngoing: true,
   );
-  runApp(const ProviderScope(child: RetroPodApp()));
+  runApp(const ProviderScope(child: ClassipodApp()));
 }
 
-class RetroPodApp extends ConsumerWidget {
-  const RetroPodApp({super.key});
+class ClassipodApp extends ConsumerWidget {
+  const ClassipodApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isDark =
         ref.watch(settingsProvider.select((value) => value.isDarkMode));
     return CupertinoApp.router(
-      title: 'RetroPod',
+      title: 'Classipod',
       debugShowCheckedModeBanner: false,
       theme: CupertinoThemeData(
         brightness: (isDark) ? Brightness.dark : Brightness.light,

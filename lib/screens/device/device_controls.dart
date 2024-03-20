@@ -1,10 +1,10 @@
+import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/extensions.dart';
+import 'package:classipod/providers/display_provider.dart';
+import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:retropod/core/constants.dart';
-import 'package:retropod/core/extensions.dart';
-import 'package:retropod/providers/display_provider.dart';
-import 'package:retropod/providers/music_provider.dart';
 
 class DeviceControls extends ConsumerWidget {
   const DeviceControls({super.key});

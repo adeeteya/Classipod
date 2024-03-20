@@ -1,23 +1,23 @@
+import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/custom_scroll_behavior.dart';
+import 'package:classipod/core/extensions.dart';
+import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/screens/device/device_controls.dart';
+import 'package:classipod/screens/device/device_frame.dart';
+import 'package:classipod/screens/menu_screen.dart';
+import 'package:classipod/screens/music_screens/album_selection_screen.dart';
+import 'package:classipod/screens/music_screens/artist_songs_screen.dart';
+import 'package:classipod/screens/music_screens/artists_selection_screen.dart';
+import 'package:classipod/screens/music_screens/cover_flow_screen.dart';
+import 'package:classipod/screens/music_screens/music_menu_screen.dart';
+import 'package:classipod/screens/music_screens/songs_screen.dart';
+import 'package:classipod/screens/now_playing_screen.dart';
+import 'package:classipod/screens/settings_screen.dart';
+import 'package:classipod/screens/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:retropod/core/constants.dart';
-import 'package:retropod/core/custom_scroll_behavior.dart';
-import 'package:retropod/core/extensions.dart';
-import 'package:retropod/providers/music_provider.dart';
-import 'package:retropod/screens/device/device_controls.dart';
-import 'package:retropod/screens/device/device_frame.dart';
-import 'package:retropod/screens/menu_screen.dart';
-import 'package:retropod/screens/music_screens/album_selection_screen.dart';
-import 'package:retropod/screens/music_screens/artist_songs_screen.dart';
-import 'package:retropod/screens/music_screens/artists_selection_screen.dart';
-import 'package:retropod/screens/music_screens/cover_flow_screen.dart';
-import 'package:retropod/screens/music_screens/music_menu_screen.dart';
-import 'package:retropod/screens/music_screens/songs_screen.dart';
-import 'package:retropod/screens/now_playing_screen.dart';
-import 'package:retropod/screens/settings_screen.dart';
-import 'package:retropod/screens/status_bar/status_bar.dart';
 
 // GoRouter configuration
 final router = GoRouter(

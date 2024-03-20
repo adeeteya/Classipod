@@ -34,7 +34,7 @@ Examples of unacceptable behavior by participants include:
 First, clone the repository with the 'clone' command, or just download the zip.
 
 ```
-$ git clone git@github.com:adeeteya/Retropod.git
+$ git clone git@github.com:adeeteya/Classipod.git
 ```
 
 Then, download either Android Studio or Visual Studio Code, with their respective [Flutter editor plugins](https://flutter.io/get-started/editor/). For more information about Flutter installation procedure, check the [official install guide](https://flutter.io/get-started/install/).
@@ -47,6 +47,6 @@ There you go, you can now open & edit the project. Enjoy!
 
 ## How to Report Bugs and Request Feature
 
-Please open [a new issue in the GitHub repository](https://github.com/adeeteya/Retropod/issues) with steps to reproduce the problem you're experiencing.
+Please open [a new issue in the GitHub repository](https://github.com/adeeteya/Classipod/issues) with steps to reproduce the problem you're experiencing.
 
 Be sure to include as much information including screenshots, text output, and both your expected and actual results.

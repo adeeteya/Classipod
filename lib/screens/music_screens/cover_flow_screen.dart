@@ -1,8 +1,8 @@
+import 'package:classipod/core/extensions.dart';
+import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:retropod/core/extensions.dart';
-import 'package:retropod/providers/music_provider.dart';
 
 class CoverFlowScreen extends ConsumerStatefulWidget {
   const CoverFlowScreen({super.key});

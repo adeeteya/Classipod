@@ -1,5 +1,5 @@
+import 'package:classipod/core/constants.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:retropod/core/constants.dart';
 
 class BoxProgressBar extends StatelessWidget {
   final double min;

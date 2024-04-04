@@ -15,7 +15,7 @@ class BoxProgressBar extends StatelessWidget {
         return Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               child: SizedBox(
                 height: 20,
                 width: constraints.maxWidth,
@@ -35,9 +35,9 @@ class BoxProgressBar extends StatelessWidget {
               ),
             ),
             AnimatedContainer(
-              height: 19,
+              height: 20,
               width: (value / (max - min)) * constraints.maxWidth,
-              margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 8),
               duration: const Duration(milliseconds: 10),
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
@@ -45,9 +45,8 @@ class BoxProgressBar extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     primaryBlueGradientColor1,
-                    primaryBlueGradientColor2
+                    primaryBlueGradientColor2,
                   ],
-                  stops: [0.5, 1],
                 ),
               ),
             ),

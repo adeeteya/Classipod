@@ -1,6 +1,7 @@
 import 'package:classipod/core/extensions.dart';
-import 'package:classipod/core/widgets/box_progress_bar.dart';
 import 'package:classipod/core/widgets/now_playing_page.dart';
+import 'package:classipod/core/widgets/seek_bar.dart';
+import 'package:classipod/core/widgets/volume_bar.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_media_metadata/flutter_media_metadata.dart';
@@ -44,7 +45,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     return CupertinoPageScaffold(
       backgroundColor: CupertinoColors.white,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
+        padding: const EdgeInsets.fromLTRB(10, 40, 10, 30),
         child: Column(
           children: [
             Flexible(
@@ -65,77 +66,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
             Consumer(builder: (context, ref, _) {
               bool isVolumeChanging = ref.watch(
                   musicProvider.select((value) => value.isVolumeChanging));
-              Widget animatedWidget = (isVolumeChanging)
-                  ? Row(
-                      children: [
-                        const Icon(CupertinoIcons.volume_down),
-                        StreamBuilder<double>(
-                            stream: ref
-                                .read(musicProvider.notifier)
-                                .getVolumeStream(),
-                            builder: (context, snapshot) {
-                              return BoxProgressBar(
-                                max: 1.0,
-                                value: snapshot.data ?? 0.0,
-                              );
-                            }),
-                        const Icon(CupertinoIcons.volume_up),
-                      ],
-                    )
-                  : StreamBuilder<Duration>(
-                      stream:
-                          ref.read(musicProvider.notifier).getPositionStream(),
-                      builder: (context, snapshot) {
-                        double totalDuration = (ref
-                                    .read(musicProvider)
-                                    .musicFilesMetaDataList[ref
-                                        .read(musicProvider)
-                                        .currentSongIndex]
-                                    .trackDuration ??
-                                1000) /
-                            1000;
-                        double currentDuration =
-                            snapshot.data?.inSeconds.toDouble() ?? 0;
-
-                        int elapsedTimeInMinutes = currentDuration ~/ 60;
-                        int elapsedTimeInSeconds =
-                            (currentDuration).toInt() % 60;
-
-                        int remainingTimeInMinutes =
-                            (totalDuration - currentDuration) ~/ 60;
-                        int remainingTimeInSeconds =
-                            (totalDuration - currentDuration).toInt() % 60;
-
-                        return Row(
-                          children: [
-                            SizedBox(
-                              width: 35,
-                              child: Text(
-                                "$elapsedTimeInMinutes:${elapsedTimeInSeconds < 10 ? "0$elapsedTimeInSeconds" : elapsedTimeInSeconds}",
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                            BoxProgressBar(
-                              max: totalDuration,
-                              value: currentDuration,
-                            ),
-                            SizedBox(
-                              width: 40,
-                              child: Text(
-                                "- $remainingTimeInMinutes:${remainingTimeInSeconds < 10 ? "0$remainingTimeInSeconds" : remainingTimeInSeconds}",
-                                style: const TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ],
-                        );
-                      },
-                    );
+              Widget animatedWidget =
+                  (isVolumeChanging) ? const VolumeBar() : const SeekBar();
 
               return AnimatedSwitcher(
                 duration: const Duration(milliseconds: 300),

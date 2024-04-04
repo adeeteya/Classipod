@@ -1,5 +1,4 @@
 import 'dart:typed_data';
-
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:flutter/cupertino.dart';
@@ -26,7 +25,7 @@ class NowPlayingPage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Flexible(
-          flex: 3,
+          flex: 7,
           child: Transform(
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.003)
@@ -52,14 +51,14 @@ class NowPlayingPage extends StatelessWidget {
                               filterQuality: FilterQuality.low,
                               child: Image.memory(
                                 albumArt!,
-                                height: 30,
+                                height: 50,
                                 alignment: Alignment.bottomCenter,
                                 fit: BoxFit.fitWidth,
                               ),
                             ),
                           ),
                           SizedBox(
-                            height: 30,
+                            height: 50,
                             width: double.infinity,
                             child: DecoratedBox(
                               decoration: BoxDecoration(
@@ -97,11 +96,11 @@ class NowPlayingPage extends StatelessWidget {
           ),
         ),
         Flexible(
-          flex: 2,
+          flex: 6,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Spacer(flex: 2),
+              const SizedBox(height: 10),
               MarqueeText(
                 trackName ?? "Unknown Track",
                 style: const TextStyle(
@@ -112,6 +111,7 @@ class NowPlayingPage extends StatelessWidget {
                 pauseBetween: const Duration(seconds: 2),
                 pauseOnBounce: const Duration(seconds: 2),
               ),
+              const SizedBox(height: 5),
               MarqueeText(
                 artistNames ?? "Unknown Artist",
                 style: const TextStyle(
@@ -122,6 +122,7 @@ class NowPlayingPage extends StatelessWidget {
                 pauseBetween: const Duration(seconds: 2),
                 pauseOnBounce: const Duration(seconds: 2),
               ),
+              const SizedBox(height: 5),
               MarqueeText(
                 albumName ?? "Unknown Album",
                 style: const TextStyle(
@@ -140,7 +141,7 @@ class NowPlayingPage extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const Spacer(flex: 2),
+              const Spacer(flex: 3),
             ],
           ),
         ),

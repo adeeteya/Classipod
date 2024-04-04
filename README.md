@@ -31,7 +31,7 @@ If you like what you see, please ⭐ the repo.
 ## ✨ Features
 
 - 🗃️ Ability to play .mp3, .wav and .ogg files
-- 🔎 Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root of the application)
+- 🔎 Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root folder of the device)
 - 🎨 Dark and Light Colored Ipod Classic Theme
 - 🖼️ Displays the Music Metadata (Album Art, Artist Names)
 - ⏩ Ability to seek forward and backwards on a audio file (By Long Pressing the seek forward/backwards buttons)
@@ -41,16 +41,16 @@ If you like what you see, please ⭐ the repo.
 - 🎡 Click Wheel with Scrollable Rotation Enabled
 - 💿 Now Playing Screen with current music progress displayed
 - 🎶 Songs Screen with all the possible songs in the system
+- 🧑‍🎤 Ability to Filter and Select From a Particular Artist or Albums
 - 📲 Responsive Design For all Different Types of Screen Sizes
 - 🔋 Displays the current device battery level and charging status on the status bar
 - 🎧 Background Playback with Notification Control
 - 🔀 Shuffle Songs Feature
 - ➰ Loop Songs Feature
-- 🧑‍🎤 Ability to Filter and Select From a Particular Artist or Albums
+- 🔉 Click Wheel Sounds
 - 📳 Vibration when clicking buttons and scrolling through the scroll wheel
 - 🔇 Volume Control
 - 🪞 Reflective Cover Art
-- 🔉 Click Wheel Sounds
 
 ### 🔜 Upcoming Features
 - ⬇️ Caching Metadata of the songs for faster boot up times
@@ -59,6 +59,7 @@ If you like what you see, please ⭐ the repo.
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
 - 📖 App Usage Tutorial
+- 📺 Split Screen View
 - ℹ️ About Page
 
 ## 💻 Installation links
@@ -71,7 +72,7 @@ If you like what you see, please ⭐ the repo.
   <tr>
     <td>Android</td>
     <td>
-    <a href="https://play.google.com/store/apps/details?id=com.adeeteya.Classipod">
+    <a href="https://play.google.com/store/apps/details?id=com.adeeteya.classipod">
         <img width="220" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
       </a>
       <br>

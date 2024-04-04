@@ -1,6 +1,11 @@
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
+import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/screens/device/device_controls.dart';
+import 'package:classipod/screens/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class DeviceFrame extends StatelessWidget {
   final Widget child;
@@ -103,7 +108,48 @@ class DeviceFrame extends StatelessWidget {
               )),
           SafeArea(
             minimum: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
-            child: child,
+            child: Column(
+              children: [
+                IgnorePointer(
+                  child: Container(
+                    height: size.height * 0.3865,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: CupertinoColors.white,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: context.isDarkMode
+                            ? darkDeviceScreenColor
+                            : lightDeviceScreenBorderColor,
+                        width: 5,
+                      ),
+                    ),
+                    child: Consumer(
+                      builder: (context, ref, _) {
+                        bool isLoading = ref.watch(
+                            musicProvider.select((value) => value.isLoading));
+                        if (isLoading) {
+                          return Center(
+                            child:
+                                SvgPicture.asset("assets/icons/apple_logo.svg"),
+                          );
+                        } else {
+                          return Column(
+                            children: [
+                              const StatusBar(),
+                              Expanded(child: child),
+                            ],
+                          );
+                        }
+                      },
+                    ),
+                  ),
+                ),
+                const Spacer(flex: 2),
+                const DeviceControls(),
+                const Spacer(),
+              ],
+            ),
           ),
         ],
       ),

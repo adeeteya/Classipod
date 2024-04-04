@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/models/album_details.dart';
 import 'package:classipod/models/music_details.dart';
@@ -77,12 +76,14 @@ class MusicNotifier extends Notifier<MusicDetails> {
           path.endsWith('.ogg') ||
           path.endsWith('.wav')) {
         songFileMetadata = await MetadataRetriever.fromFile(File(entity.path));
-        artistNames.add(songFileMetadata.getTrackArtistNames);
+        artistNames.add(songFileMetadata.getMainArtistName);
         if (albumNames.add(songFileMetadata.albumName ?? "Unknown Album")) {
-          albumDetails.add(AlbumDetails(
-              albumName: songFileMetadata.albumName ?? "Unknown Album",
-              albumArt: songFileMetadata.albumArt,
-              albumArtistName: songFileMetadata.getTrackArtistNames));
+          albumDetails.add(
+            AlbumDetails(
+                albumName: songFileMetadata.albumName ?? "Unknown Album",
+                albumArt: songFileMetadata.albumArt,
+                albumArtistName: songFileMetadata.getTrackArtistNames),
+          );
         }
         completeMusicFileMetaDataList.add(songFileMetadata);
       }
@@ -102,6 +103,15 @@ class MusicNotifier extends Notifier<MusicDetails> {
     }
     if (!player.playing) {
       await player.play();
+    }
+  }
+
+  void fetchArtistSongs(String artistName) {
+    artistSongsIndexes.clear();
+    for (int i = 0; i < completeMusicFileMetaDataList.length; i++) {
+      if (completeMusicFileMetaDataList[i].getMainArtistName == artistName) {
+        artistSongsIndexes.add(i);
+      }
     }
   }
 
@@ -156,15 +166,6 @@ class MusicNotifier extends Notifier<MusicDetails> {
       await player.setLoopMode(LoopMode.all);
     } else {
       await player.setLoopMode(LoopMode.off);
-    }
-  }
-
-  void fetchArtistSongs(String artistName) {
-    artistSongsIndexes.clear();
-    for (int i = 0; i < completeMusicFileMetaDataList.length; i++) {
-      if (completeMusicFileMetaDataList[i].getTrackArtistNames == artistName) {
-        artistSongsIndexes.add(i);
-      }
     }
   }
 

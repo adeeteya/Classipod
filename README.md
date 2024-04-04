@@ -60,7 +60,8 @@ If you like what you see, please ⭐ the repo.
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
 - 📖 App Usage Tutorial
-- 📺 Split Screen View
+- 📺 Split Screen View (6th and 7th Gen iPod Classics)
+- 🌍 Multi Language Support
 
 ## 💻 Installation links
 

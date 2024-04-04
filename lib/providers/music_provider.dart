@@ -60,6 +60,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
   }
 
   Future<void> getAllAudioFiles() async {
+    final List<String> artistNamesList = [];
     completeMusicFileMetaDataList.clear();
     artistNames.clear();
     albumNames.clear();
@@ -75,7 +76,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
       String path = entity.path;
       if (isSupportedAudioFormat(path)) {
         songFileMetadata = await MetadataRetriever.fromFile(File(entity.path));
-        artistNames.add(songFileMetadata.getMainArtistName);
+        artistNamesList.add(songFileMetadata.getMainArtistName);
         if (albumNames.add(songFileMetadata.albumName ?? "Unknown Album")) {
           albumDetails.add(
             AlbumDetails(
@@ -87,6 +88,11 @@ class MusicNotifier extends Notifier<MusicDetails> {
         completeMusicFileMetaDataList.add(songFileMetadata);
       }
     }
+    artistNamesList.sort();
+    artistNames.addAll(artistNamesList);
+    albumDetails.sort((a, b) => a.albumName.compareTo(b.albumName));
+    albumNames.clear();
+    albumNames.addAll(albumDetails.map((e) => e.albumName));
     state = state.copyWith(
       musicFilesMetaDataList: completeMusicFileMetaDataList,
       isLoading: false,

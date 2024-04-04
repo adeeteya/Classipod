@@ -30,7 +30,7 @@ If you like what you see, please ⭐ the repo.
 
 ## ✨ Features
 
-- 🗃️ Ability to play .mp3, .wav and .ogg files
+- 🗃️ Ability to play multiple audio formats:- .mp3, .wav, .ogg, .flac, .m4a and .aac
 - 🔎 Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root folder of the device)
 - 🎨 Dark and Light Colored Ipod Classic Theme
 - 🖼️ Displays the Music Metadata (Album Art, Artist Names)

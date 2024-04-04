@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:classipod/core/extensions.dart';
+import 'package:classipod/core/helper_functions.dart';
 import 'package:classipod/models/album_details.dart';
 import 'package:classipod/models/music_details.dart';
 import 'package:classipod/providers/settings_provider.dart';
@@ -72,9 +73,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
     Metadata songFileMetadata;
     for (FileSystemEntity entity in files) {
       String path = entity.path;
-      if (path.endsWith('.mp3') ||
-          path.endsWith('.ogg') ||
-          path.endsWith('.wav')) {
+      if (isSupportedAudioFormat(path)) {
         songFileMetadata = await MetadataRetriever.fromFile(File(entity.path));
         artistNames.add(songFileMetadata.getMainArtistName);
         if (albumNames.add(songFileMetadata.albumName ?? "Unknown Album")) {

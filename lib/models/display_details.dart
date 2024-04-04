@@ -30,7 +30,8 @@ enum DisplayScreenType {
   albums,
   songs,
   settings,
-  nowPlaying;
+  nowPlaying,
+  about;
 
   @override
   String toString() {
@@ -53,6 +54,8 @@ enum DisplayScreenType {
         return "Settings";
       case DisplayScreenType.nowPlaying:
         return "Now Playing";
+      case DisplayScreenType.about:
+        return "About";
     }
   }
 }

@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:classipod/models/display_details.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/providers/settings_provider.dart';
@@ -136,6 +135,10 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   void menuButton(BuildContext context) {
     buttonPressVibrate();
     clickWheelSound();
+    //If the Menu Button is Clicked on the Menu Screen only
+    if (state.displayScreenType == DisplayScreenType.menu) {
+      return;
+    }
     //If Menu Button Clicked on the Cover Flow or Albums or Songs Screen
     if (state.displayScreenType == DisplayScreenType.coverFlow ||
         state.displayScreenType == DisplayScreenType.albums ||
@@ -157,6 +160,15 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
         scrollOffset: previousScrollOffset,
       );
       previousSelectedDisplayListItem = 1;
+    }
+    //If Menu Button Clicked on the About Screen
+    else if (state.displayScreenType == DisplayScreenType.about) {
+      context.go("/menu/settings");
+      state = state.copyWith(
+        selectedDisplayListItem: previousSelectedDisplayListItem,
+        displayScreenType: DisplayScreenType.settings,
+      );
+      previousSelectedDisplayListItem = 3;
     }
     //If Menu Button Clicked on Any Other Screen
     else {
@@ -194,7 +206,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
         //Settings Button Clicked
         previousSelectedDisplayListItem = 3;
         state = state.copyWith(
-          selectedDisplayListItem: 0,
+          selectedDisplayListItem: 1,
           displayScreenType: DisplayScreenType.settings,
         );
         context.go("/menu/settings");
@@ -279,33 +291,39 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
     //if the display is in Settings Screen
     else if (state.displayScreenType == DisplayScreenType.settings) {
-      //Dark Mode Toggle Button Clicked
+      //About Button Clicked
       if (state.selectedDisplayListItem == 0) {
+        previousSelectedDisplayListItem = 0;
+        state = state.copyWith(displayScreenType: DisplayScreenType.about);
+        context.go("/menu/settings/about");
+      }
+      //Dark Mode Toggle Button Clicked
+      else if (state.selectedDisplayListItem == 1) {
         ref.read(settingsProvider.notifier).toggleTheme();
       }
       //Repeat Toggle Button Clicked
-      else if (state.selectedDisplayListItem == 1) {
+      else if (state.selectedDisplayListItem == 2) {
         ref.read(settingsProvider.notifier).toggleRepeat();
       }
       //Vibrate Toggle Button Clicked
-      else if (state.selectedDisplayListItem == 2) {
+      else if (state.selectedDisplayListItem == 3) {
         ref.read(settingsProvider.notifier).toggleVibrate();
       }
       //Click Wheel Sound Button Clicked
-      else if (state.selectedDisplayListItem == 3) {
+      else if (state.selectedDisplayListItem == 4) {
         ref.read(settingsProvider.notifier).toggleClickWheelSound(context);
       }
       //Immersive Mode Button Clicked
-      else if (state.selectedDisplayListItem == 4) {
+      else if (state.selectedDisplayListItem == 5) {
         ref.read(settingsProvider.notifier).toggleImmersiveMode();
       }
       //Change Directory Button Clicked
-      else if (state.selectedDisplayListItem == 5) {
+      else if (state.selectedDisplayListItem == 6) {
         ref.read(settingsProvider.notifier).getMusicFolderPath(context);
       }
       //Donate Button Clicked
-      else if (state.selectedDisplayListItem == 6) {
-        launchUrl(Uri.parse("https://www.buymeacoffee.com/adeeteya"),
+      else if (state.selectedDisplayListItem == 7) {
+        launchUrl(Uri.parse("https://www.paypal.me/adeeteya"),
             mode: LaunchMode.externalApplication);
       }
     }

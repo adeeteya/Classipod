@@ -51,6 +51,11 @@ class SettingsListTile extends StatelessWidget {
                     color: (isSelected) ? CupertinoColors.white : hintTextColor,
                   ),
                 ),
+              if (isOn == null && isSelected)
+                const Icon(
+                  CupertinoIcons.right_chevron,
+                  color: CupertinoColors.white,
+                ),
             ],
           ),
         ),

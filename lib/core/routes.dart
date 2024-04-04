@@ -1,4 +1,5 @@
 import 'package:classipod/core/custom_scroll_behavior.dart';
+import 'package:classipod/screens/about_screen.dart';
 import 'package:classipod/screens/device/device_frame.dart';
 import 'package:classipod/screens/menu_screen.dart';
 import 'package:classipod/screens/music_screens/album_selection_screen.dart';
@@ -38,14 +39,24 @@ final router = GoRouter(
           ),
           routes: [
             GoRoute(
-              path: "settings",
-              name: "Settings",
-              pageBuilder: (context, state) => CupertinoPage(
-                key: state.pageKey,
-                maintainState: false,
-                child: const SettingsScreen(),
-              ),
-            ),
+                path: "settings",
+                name: "Settings",
+                pageBuilder: (context, state) => CupertinoPage(
+                      key: state.pageKey,
+                      maintainState: false,
+                      child: const SettingsScreen(),
+                    ),
+                routes: [
+                  GoRoute(
+                    path: "about",
+                    name: "About",
+                    pageBuilder: (context, state) => CupertinoPage(
+                      key: state.pageKey,
+                      maintainState: false,
+                      child: const AboutScreen(),
+                    ),
+                  ),
+                ]),
             GoRoute(
               path: "now-playing",
               name: "Now Playing",

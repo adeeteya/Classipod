@@ -11,13 +11,14 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
   SettingsNotifier() : super();
   late final SharedPreferences _sharedPreferences;
   final List<String> settingsListTiles = [
+    "About",
     "Dark Mode",
     "Repeat",
     "Vibrate",
     "Click Wheel Sound",
     "Immersive Mode",
     "Change Directory",
-    "Donate"
+    "Donate",
   ];
 
   @override
@@ -125,15 +126,15 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
 
   bool? isOn(int index) {
     switch (index) {
-      case 0:
-        return state.isDarkMode;
       case 1:
-        return state.repeat;
+        return state.isDarkMode;
       case 2:
-        return state.vibrate;
+        return state.repeat;
       case 3:
-        return state.clickWheelSound;
+        return state.vibrate;
       case 4:
+        return state.clickWheelSound;
+      case 5:
         return state.immersiveMode;
       default:
         return null;

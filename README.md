@@ -51,6 +51,7 @@ If you like what you see, please ⭐ the repo.
 - 📳 Vibration when clicking buttons and scrolling through the scroll wheel
 - 🔇 Volume Control
 - 🪞 Reflective Cover Art
+- ℹ️ About Screen
 
 ### 🔜 Upcoming Features
 - ⬇️ Caching Metadata of the songs for faster boot up times
@@ -60,7 +61,6 @@ If you like what you see, please ⭐ the repo.
 - 📸 Ability to View Photos and Videos from the device
 - 📖 App Usage Tutorial
 - 📺 Split Screen View
-- ℹ️ About Page
 
 ## 💻 Installation links
 

@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/widgets/album_reflective_art.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -30,69 +31,7 @@ class NowPlayingPage extends StatelessWidget {
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.003)
               ..rotateY(-0.1),
-            child: (albumArt != null)
-                ? Column(
-                    children: [
-                      Flexible(
-                        child: SizedBox(
-                          width: double.infinity,
-                          child: Image.memory(
-                            albumArt!,
-                            fit: BoxFit.fitWidth,
-                          ),
-                        ),
-                      ),
-                      Stack(
-                        children: [
-                          SizedBox(
-                            width: double.infinity,
-                            child: Transform.flip(
-                              flipY: true,
-                              filterQuality: FilterQuality.low,
-                              child: Image.memory(
-                                albumArt!,
-                                height: 50,
-                                alignment: Alignment.bottomCenter,
-                                fit: BoxFit.fitWidth,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 50,
-                            width: double.infinity,
-                            child: DecoratedBox(
-                              decoration: BoxDecoration(
-                                border: const Border(
-                                  left: BorderSide(
-                                    color: CupertinoColors.white,
-                                    width: 0,
-                                  ),
-                                  right: BorderSide(
-                                    color: CupertinoColors.white,
-                                    width: 0,
-                                  ),
-                                  bottom: BorderSide(
-                                    color: CupertinoColors.white,
-                                    width: 0,
-                                    strokeAlign: -1,
-                                  ),
-                                ),
-                                gradient: LinearGradient(
-                                  begin: Alignment.topCenter,
-                                  end: Alignment.bottomCenter,
-                                  colors: [
-                                    CupertinoColors.white.withOpacity(0.4),
-                                    CupertinoColors.white.withOpacity(1),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  )
-                : Image.asset("assets/images/default_album_cover.jpeg"),
+            child: AlbumReflectiveArt(albumArt: albumArt),
           ),
         ),
         Flexible(

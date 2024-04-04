@@ -29,7 +29,7 @@ class AppBarTitleNotifier extends Notifier<String> {
   String getTimeString() {
     final DateTime now = DateTime.now();
     final bool isPostMeridiem = now.hour >= 12;
-    return "${now.hour}:${(now.minute) < 0 ? '0${now.minute}' : '${now.minute}'} ${(isPostMeridiem) ? 'PM' : 'AM'}";
+    return "${now.hour}:${(now.minute) < 10 ? '0${now.minute}' : '${now.minute}'} ${(isPostMeridiem) ? 'PM' : 'AM'}";
   }
 
   void watchScreenChanges() {

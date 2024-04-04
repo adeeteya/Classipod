@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions.dart';
+import 'package:classipod/core/widgets/album_reflective_art.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_media_metadata/flutter_media_metadata.dart';
@@ -22,7 +23,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen> {
     currentPage = ref.read(musicProvider).currentSongIndex.toDouble();
     _pageController = PageController(
       initialPage: currentPage.toInt(),
-      viewportFraction: 0.6,
+      viewportFraction: 0.58,
     );
     _pageController.addListener(() {
       setState(() {
@@ -45,33 +46,28 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen> {
       backgroundColor: CupertinoColors.white,
       child: Column(
         children: [
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           Flexible(
             child: PageView.builder(
               controller: _pageController,
               itemCount: musicFilesMetaDataList.length,
               itemBuilder: (context, index) {
                 double relativePosition = index - currentPage;
-                return SizedBox(
-                  width: 250,
-                  child: Transform(
-                    transform: Matrix4.identity()
-                      ..setEntry(3, 2, 0.003)
-                      ..scale(
-                          (1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4)
-                      ..rotateY(relativePosition),
-                    alignment: relativePosition >= 0
-                        ? Alignment.centerLeft
-                        : Alignment.centerRight,
-                    child: (musicFilesMetaDataList[index].albumArt != null)
-                        ? Image.memory(musicFilesMetaDataList[index].albumArt!)
-                        : Image.asset("assets/images/default_album_cover.jpeg"),
+                return Transform(
+                  transform: Matrix4.identity()
+                    ..setEntry(3, 2, 0.003)
+                    ..scale((1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4)
+                    ..rotateY(relativePosition),
+                  alignment: relativePosition >= 0
+                      ? Alignment.centerLeft
+                      : Alignment.centerRight,
+                  child: AlbumReflectiveArt(
+                    albumArt: musicFilesMetaDataList[index].albumArt,
                   ),
                 );
               },
             ),
           ),
-          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
@@ -97,6 +93,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen> {
               ),
             ),
           ),
+          const SizedBox(height: 10),
         ],
       ),
     );

@@ -58,17 +58,34 @@ class NowPlayingPage extends StatelessWidget {
                               ),
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             height: 30,
                             width: double.infinity,
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topCenter,
-                                end: Alignment.bottomCenter,
-                                colors: [
-                                  CupertinoColors.white.withOpacity(0.4),
-                                  CupertinoColors.white.withOpacity(1),
-                                ],
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                border: const Border(
+                                  left: BorderSide(
+                                    color: CupertinoColors.white,
+                                    width: 0,
+                                  ),
+                                  right: BorderSide(
+                                    color: CupertinoColors.white,
+                                    width: 0,
+                                  ),
+                                  bottom: BorderSide(
+                                    color: CupertinoColors.white,
+                                    width: 0,
+                                    strokeAlign: -1,
+                                  ),
+                                ),
+                                gradient: LinearGradient(
+                                  begin: Alignment.topCenter,
+                                  end: Alignment.bottomCenter,
+                                  colors: [
+                                    CupertinoColors.white.withOpacity(0.4),
+                                    CupertinoColors.white.withOpacity(1),
+                                  ],
+                                ),
                               ),
                             ),
                           ),

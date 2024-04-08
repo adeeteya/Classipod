@@ -161,6 +161,19 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       );
       previousSelectedDisplayListItem = 1;
     }
+
+    //If Menu Button Clicked on the Cover Flow Album Selection Screen
+    else if (state.displayScreenType ==
+        DisplayScreenType.coverFlowAlbumSelection) {
+      context.go("/menu/music/cover-flow");
+      state = state.copyWith(
+        selectedDisplayListItem: previousSelectedDisplayListItem,
+        displayScreenType: DisplayScreenType.coverFlow,
+        scrollOffset: previousScrollOffset,
+      );
+      previousSelectedDisplayListItem = 0;
+    }
+
     //If Menu Button Clicked on the About Screen
     else if (state.displayScreenType == DisplayScreenType.about) {
       context.go("/menu/settings");
@@ -283,10 +296,34 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       context.go("/menu/now-playing");
     }
 
-    //if the display is in Now Playing or the Cover Flow Screen
-    else if (state.displayScreenType == DisplayScreenType.nowPlaying ||
-        state.displayScreenType == DisplayScreenType.coverFlow) {
+    //if the display is in Now Playing Screen
+    else if (state.displayScreenType == DisplayScreenType.nowPlaying) {
       ref.read(musicProvider.notifier).togglePlayback();
+    }
+
+    //if the display is in Cover Flow Screen
+    else if (state.displayScreenType == DisplayScreenType.coverFlow) {
+      previousSelectedDisplayListItem = state.selectedDisplayListItem;
+      previousScrollOffset = state.scrollOffset;
+      ref.read(musicProvider.notifier).getCoverFlowAlbumDetails(ref
+          .read(musicProvider.notifier)
+          .albumNames
+          .elementAt(state.selectedDisplayListItem));
+      state = state.copyWith(
+        selectedDisplayListItem: 0,
+        scrollOffset: 0,
+        displayScreenType: DisplayScreenType.coverFlowAlbumSelection,
+      );
+    }
+
+    //if the display is in Cover Flow Song Selection Screen
+    else if (state.displayScreenType ==
+        DisplayScreenType.coverFlowAlbumSelection) {
+      ref.read(musicProvider.notifier).playAtIndex(ref
+          .read(musicProvider.notifier)
+          .coverFlowAlbumDetails
+          .elementAt(state.selectedDisplayListItem)
+          .songIndex);
     }
 
     //if the display is in Settings Screen
@@ -375,10 +412,27 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
       }
     }
 
-    //If Forward Seek Button is Clicked in Now Playing or Cover Flow Screen
-    else if (state.displayScreenType == DisplayScreenType.nowPlaying ||
-        state.displayScreenType == DisplayScreenType.coverFlow) {
+    //If Forward Seek Button is Clicked in Now Playing Screen
+    else if (state.displayScreenType == DisplayScreenType.nowPlaying) {
       await ref.read(musicProvider.notifier).nextSong();
+    }
+
+    //If Forward Seek Button is Clicked in Cover Flow Screen
+    else if (state.displayScreenType == DisplayScreenType.coverFlow) {
+      if (state.selectedDisplayListItem !=
+          ref.read(musicProvider.notifier).albumNames.length - 1) {
+        state = state.copyWith(
+            selectedDisplayListItem: state.selectedDisplayListItem + 1);
+      }
+    }
+
+    //If Forward Seek Button is Clicked in Cover Flow Album Screen
+    else if (state.displayScreenType ==
+        DisplayScreenType.coverFlowAlbumSelection) {
+      if (state.selectedDisplayListItem !=
+          ref.read(musicProvider.notifier).coverFlowAlbumDetails.length - 1) {
+        scrollScreenDown(screenHeight, 30);
+      }
     }
 
     //If Forward Seek Button is Clicked in the Menu Screen
@@ -400,15 +454,28 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   Future<void> seekBackButton() async {
     buttonPressVibrate();
     clickWheelSound();
-    //When Clicked In Now Playing or Cover Flow Screen
-    if (state.displayScreenType == DisplayScreenType.nowPlaying ||
-        state.displayScreenType == DisplayScreenType.coverFlow) {
+    //When Clicked on the Now Playing Screen
+    if (state.displayScreenType == DisplayScreenType.nowPlaying) {
       await ref.read(musicProvider.notifier).previousSong();
       return;
     }
 
+    //If Backward Seek Button is Clicked in Cover Flow Screen
+    else if (state.displayScreenType == DisplayScreenType.coverFlow) {
+      if (state.selectedDisplayListItem != 0) {
+        state = state.copyWith(
+            selectedDisplayListItem: state.selectedDisplayListItem - 1);
+      }
+    }
+
+    //If Backward Seek Button is Clicked in Cover Flow Album Selection Screen
+    else if (state.displayScreenType ==
+        DisplayScreenType.coverFlowAlbumSelection) {
+      scrollScreenUp(30);
+    }
+
     //When Clicked In Songs Screen
-    if (state.displayScreenType == DisplayScreenType.songs) {
+    else if (state.displayScreenType == DisplayScreenType.songs) {
       scrollScreenUp(40);
     }
     //When Clicked In Artist Songs or Albums Screen

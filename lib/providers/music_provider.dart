@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/helper_functions.dart';
 import 'package:classipod/models/album_details.dart';
+import 'package:classipod/models/cover_flow_album_details.dart';
 import 'package:classipod/models/music_details.dart';
 import 'package:classipod/providers/settings_provider.dart';
 import 'package:flutter_media_metadata/flutter_media_metadata.dart';
@@ -19,6 +20,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
   final Set<String> albumNames = {};
   final List<AlbumDetails> albumDetails = [];
   final List<int> artistSongsIndexes = [];
+  final List<CoverFlowAlbumDetails> coverFlowAlbumDetails = [];
   Timer lastVolumeChangeTimer = Timer(Duration.zero, () {});
 
   @override
@@ -121,7 +123,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
   }
 
   Future<void> playAlbum(String albumName) async {
-    List<Metadata> albumPlaylistMetaData = [];
+    final List<Metadata> albumPlaylistMetaData = [];
     for (int i = 0; i < completeMusicFileMetaDataList.length; i++) {
       if ((completeMusicFileMetaDataList[i].albumName ?? "Unknown Album") ==
           albumName) {
@@ -134,6 +136,20 @@ class MusicNotifier extends Notifier<MusicDetails> {
     );
     await setPlaylist();
     await player.play();
+  }
+
+  void getCoverFlowAlbumDetails(String albumName) {
+    coverFlowAlbumDetails.clear();
+    for (int i = 0; i < completeMusicFileMetaDataList.length; i++) {
+      if ((completeMusicFileMetaDataList[i].albumName ?? "Unknown Album") ==
+          albumName) {
+        coverFlowAlbumDetails.add(CoverFlowAlbumDetails(
+            songIndex: i,
+            trackDuration: completeMusicFileMetaDataList[i].trackDuration ?? 0,
+            songName:
+                completeMusicFileMetaDataList[i].trackName ?? "Unknown Track"));
+      }
+    }
   }
 
   Future<void> setPlaylist({bool shuffle = false}) async {

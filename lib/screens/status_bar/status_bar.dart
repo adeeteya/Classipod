@@ -33,18 +33,7 @@ class StatusBar extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Consumer(builder: (context, ref, child) {
-                final isPlaying =
-                    ref.watch(musicProvider.select((value) => value.isPlaying));
-                return Icon(
-                  (isPlaying)
-                      ? CupertinoIcons.play_fill
-                      : CupertinoIcons.pause_fill,
-                  color: primaryBlueGradientColor1,
-                );
-              }),
               Consumer(builder: (context, ref, child) {
                 final title = ref.watch(appBarTitleProvider);
                 return Text(
@@ -55,6 +44,18 @@ class StatusBar extends StatelessWidget {
                   ),
                 );
               }),
+              const Spacer(),
+              Consumer(builder: (context, ref, child) {
+                final isPlaying =
+                    ref.watch(musicProvider.select((value) => value.isPlaying));
+                return Icon(
+                  (isPlaying)
+                      ? CupertinoIcons.play_fill
+                      : CupertinoIcons.pause_fill,
+                  color: primaryBlueGradientColor1,
+                );
+              }),
+              const SizedBox(width: 2),
               const BatteryIndicator(),
             ],
           ),

@@ -25,6 +25,7 @@ enum DisplayScreenType {
   menu,
   musicMenu,
   coverFlow,
+  coverFlowAlbumSelection,
   artistsSelection,
   artistSongs,
   albums,
@@ -41,6 +42,8 @@ enum DisplayScreenType {
       case DisplayScreenType.musicMenu:
         return "Music";
       case DisplayScreenType.coverFlow:
+        return "Cover Flow";
+      case DisplayScreenType.coverFlowAlbumSelection:
         return "Cover Flow";
       case DisplayScreenType.artistsSelection:
         return "Artists";

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:classipod/core/extensions.dart';
 import 'package:classipod/providers/display_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -20,16 +21,10 @@ class AppBarTitleNotifier extends Notifier<String> {
     Timer(nextMinute.difference(now), () {
       Timer.periodic(const Duration(minutes: 1), (timer) {
         if (!_threeSecondTimer.isActive) {
-          state = getTimeString();
+          state = DateTime.now().getTimeOfTheDayString;
         }
       });
     });
-  }
-
-  String getTimeString() {
-    final DateTime now = DateTime.now();
-    final bool isPostMeridiem = now.hour >= 12;
-    return "${now.hour}:${(now.minute) < 10 ? '0${now.minute}' : '${now.minute}'} ${(isPostMeridiem) ? 'PM' : 'AM'}";
   }
 
   void watchScreenChanges() {
@@ -39,7 +34,7 @@ class AppBarTitleNotifier extends Notifier<String> {
       _threeSecondTimer.cancel();
     }
     _threeSecondTimer = Timer(const Duration(seconds: 3), () {
-      state = getTimeString();
+      state = DateTime.now().getTimeOfTheDayString;
       _threeSecondTimer.cancel();
     });
   }

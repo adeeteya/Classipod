@@ -270,7 +270,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
         else if (previousDisplayScreenType ==
             DisplayScreenType.coverFlowAlbumSelection) {
           context.go("/menu/music/cover-flow");
-          Future.delayed(const Duration(milliseconds: 10), () {
+          Future.delayed(const Duration(milliseconds: 50), () {
             state = state.copyWith(
               scrollOffset: 0,
               selectedDisplayListItem: previousCoverFlowPage,

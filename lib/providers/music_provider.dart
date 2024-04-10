@@ -199,8 +199,9 @@ class MusicNotifier extends Notifier<MusicDetails> {
   }
 
   Future<void> playAtIndex(int index) async {
-    if (state.isPlaying) {
-      await player.stop();
+    await player.pause();
+    if (state.musicFilesMetaDataList.length !=
+        completeMusicFileMetaDataList.length) {
       state =
           state.copyWith(musicFilesMetaDataList: completeMusicFileMetaDataList);
       await setPlaylist();

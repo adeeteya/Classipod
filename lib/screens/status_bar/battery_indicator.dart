@@ -66,23 +66,21 @@ class BatteryIndicatorWidget extends StatelessWidget {
   }
 
   Widget _buildTrack(BuildContext context) {
-    final borderRadius = BorderRadius.circular(trackHeight / 4);
-
     final bar = _buildBar(context, trackHeight * 5 / 6);
     final icon = _buildIcon();
-
-    final children = [bar, icon];
 
     return SizedBox(
       height: trackHeight,
       width: trackHeight * trackAspectRatio,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          borderRadius: borderRadius,
-          border: Border.all(color: batteryOutlineColor),
+          border: Border.all(
+            color: batteryOutlineColor,
+            width: 0.5,
+          ),
         ),
         child: Stack(
-          children: children,
+          children: [bar, icon],
         ),
       ),
     );
@@ -93,27 +91,21 @@ class BatteryIndicatorWidget extends StatelessWidget {
     double barHeight,
   ) {
     final barWidth = trackHeight * trackAspectRatio;
-    final borderRadius = barHeight / 5;
     final currentColor = batteryDetails.getBatteryColor();
 
     return Padding(
-      padding: EdgeInsets.all(trackHeight / 12),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(borderRadius),
-        child: Stack(
-          children: [
-            const SizedBox.expand(),
-            AnimatedContainer(
-              duration: duration,
-              width: barWidth * batteryDetails.level / 100,
-              height: double.infinity,
-              curve: curve,
-              decoration: BoxDecoration(
-                color: currentColor,
-              ),
-            ),
-          ],
-        ),
+      padding: const EdgeInsets.all(0.5),
+      child: Stack(
+        children: [
+          const SizedBox.expand(),
+          AnimatedContainer(
+            duration: duration,
+            width: barWidth * batteryDetails.level / 100,
+            height: double.infinity,
+            curve: curve,
+            color: currentColor,
+          ),
+        ],
       ),
     );
   }
@@ -148,22 +140,12 @@ class BatteryIndicatorWidget extends StatelessWidget {
 
   Widget _buildKnob(BuildContext context) {
     final knobHeight = trackHeight / 3;
-    final knobWidth = knobHeight / 2;
+    final knobWidth = knobHeight / 1.5;
 
-    return Padding(
-      padding: EdgeInsets.only(left: trackHeight / 20),
-      child: SizedBox(
-        width: knobWidth,
-        height: knobHeight,
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            color: batteryOutlineColor,
-            borderRadius: BorderRadius.horizontal(
-              right: Radius.circular(knobWidth / 3),
-            ),
-          ),
-        ),
-      ),
+    return SizedBox(
+      width: knobWidth,
+      height: knobHeight,
+      child: const ColoredBox(color: batteryOutlineColor),
     );
   }
 }

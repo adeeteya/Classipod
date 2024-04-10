@@ -63,32 +63,34 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                 ),
               ),
             ),
-            Consumer(builder: (context, ref, _) {
-              bool isVolumeChanging = ref.watch(
-                  musicProvider.select((value) => value.isVolumeChanging));
-              Widget animatedWidget =
-                  (isVolumeChanging) ? const VolumeBar() : const SeekBar();
+            Consumer(
+              builder: (context, ref, _) {
+                bool isVolumeChanging = ref.watch(
+                    musicProvider.select((value) => value.isVolumeChanging));
+                Widget animatedWidget =
+                    (isVolumeChanging) ? const VolumeBar() : const SeekBar();
 
-              return AnimatedSwitcher(
-                duration: const Duration(milliseconds: 300),
-                transitionBuilder: (child, animation) {
-                  final begin = Offset((isVolumeChanging) ? 1.0 : -0.5, 0.0);
-                  final tween = Tween(begin: begin, end: Offset.zero);
-                  final offsetAnimation = animation.drive(tween);
+                return AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 300),
+                  transitionBuilder: (child, animation) {
+                    final begin = Offset((isVolumeChanging) ? 1.0 : -0.5, 0.0);
+                    final tween = Tween(begin: begin, end: Offset.zero);
+                    final offsetAnimation = animation.drive(tween);
 
-                  return FadeTransition(
-                    key: ValueKey<Key?>(child.key),
-                    opacity: animation,
-                    child: SlideTransition(
+                    return FadeTransition(
                       key: ValueKey<Key?>(child.key),
-                      position: offsetAnimation,
-                      child: child,
-                    ),
-                  );
-                },
-                child: animatedWidget,
-              );
-            }),
+                      opacity: animation,
+                      child: SlideTransition(
+                        key: ValueKey<Key?>(child.key),
+                        position: offsetAnimation,
+                        child: child,
+                      ),
+                    );
+                  },
+                  child: animatedWidget,
+                );
+              },
+            ),
           ],
         ),
       ),

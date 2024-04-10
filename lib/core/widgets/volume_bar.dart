@@ -10,7 +10,10 @@ class VolumeBar extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Row(
       children: [
-        const Icon(CupertinoIcons.volume_down),
+        const Icon(
+          CupertinoIcons.volume_down,
+          size: 18,
+        ),
         StreamBuilder<double>(
             stream: ref.read(musicProvider.notifier).getVolumeStream(),
             builder: (context, snapshot) {
@@ -19,7 +22,10 @@ class VolumeBar extends ConsumerWidget {
                 value: snapshot.data ?? 0.0,
               );
             }),
-        const Icon(CupertinoIcons.volume_up),
+        const Icon(
+          CupertinoIcons.volume_up,
+          size: 18,
+        ),
       ],
     );
   }

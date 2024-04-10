@@ -17,6 +17,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     "Albums",
     "Songs",
   ];
+  DisplayScreenType previousDisplayScreenType = DisplayScreenType.menu;
   int previousSelectedDisplayListItem = 0;
   double previousScrollOffset = 0;
   Duration durationSinceLastScroll = Duration.zero;
@@ -34,11 +35,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   void restartApp(BuildContext context) {
     ref.read(musicProvider.notifier).setLoading(true);
     ref.read(musicProvider.notifier).getAllAudioFiles();
-    state = state.copyWith(
-      selectedDisplayListItem: 0,
-      displayScreenType: DisplayScreenType.menu,
-    );
-    context.go("/menu");
+    navigateToScreen(context, displayScreenType: DisplayScreenType.menu);
   }
 
   void buttonPressVibrate() {
@@ -132,191 +129,274 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     }
   }
 
+  void navigateToScreen(BuildContext context,
+      {required DisplayScreenType displayScreenType, String artistName = ""}) {
+    previousDisplayScreenType = state.displayScreenType;
+    previousSelectedDisplayListItem = state.selectedDisplayListItem;
+    previousScrollOffset = state.scrollOffset;
+
+    switch (displayScreenType) {
+      case DisplayScreenType.menu:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.menu,
+        );
+        context.go("/menu");
+        break;
+      case DisplayScreenType.musicMenu:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.musicMenu,
+        );
+        context.go("/menu/music");
+        break;
+      case DisplayScreenType.coverFlow:
+        state = state.copyWith(displayScreenType: DisplayScreenType.coverFlow);
+        context.go("/menu/music/cover-flow");
+        break;
+      case DisplayScreenType.artistsSelection:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.artistsSelection,
+        );
+        context.go("/menu/music/artists");
+        break;
+      case DisplayScreenType.artistSongs:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.artistSongs,
+        );
+        context.go("/menu/music/artists/$artistName");
+        break;
+      case DisplayScreenType.coverFlowAlbumSelection:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.coverFlowAlbumSelection,
+        );
+        break;
+      case DisplayScreenType.albums:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.albums,
+        );
+        context.go("/menu/music/albums");
+        break;
+      case DisplayScreenType.songs:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.songs,
+        );
+        context.go("/menu/music/songs");
+        break;
+      case DisplayScreenType.settings:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 1,
+          displayScreenType: DisplayScreenType.settings,
+        );
+        context.go("/menu/settings");
+        break;
+      case DisplayScreenType.nowPlaying:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.nowPlaying,
+        );
+        context.go("/menu/now-playing");
+        break;
+      case DisplayScreenType.about:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.about,
+        );
+        context.go("/menu/settings/about");
+        break;
+    }
+  }
+
   void menuButton(BuildContext context) {
     buttonPressVibrate();
     clickWheelSound();
-    //If the Menu Button is Clicked on the Menu Screen only
-    if (state.displayScreenType == DisplayScreenType.menu) {
-      return;
-    }
-    //If Menu Button Clicked on the Cover Flow or Albums or Songs Screen
-    if (state.displayScreenType == DisplayScreenType.coverFlow ||
-        state.displayScreenType == DisplayScreenType.albums ||
-        state.displayScreenType == DisplayScreenType.artistsSelection ||
-        state.displayScreenType == DisplayScreenType.songs) {
-      state = state.copyWith(
-        selectedDisplayListItem: previousSelectedDisplayListItem,
-        displayScreenType: DisplayScreenType.musicMenu,
-        scrollOffset: 0,
-      );
-      context.go("/menu/music");
-    }
-    //If Menu Button Clicked on the Artist Songs Screen
-    else if (state.displayScreenType == DisplayScreenType.artistSongs) {
-      context.go("/menu/music/artists");
-      state = state.copyWith(
-        selectedDisplayListItem: previousSelectedDisplayListItem,
-        displayScreenType: DisplayScreenType.artistsSelection,
-        scrollOffset: previousScrollOffset,
-      );
-      previousSelectedDisplayListItem = 1;
-    }
-
-    //If Menu Button Clicked on the Cover Flow Album Selection Screen
-    else if (state.displayScreenType ==
-        DisplayScreenType.coverFlowAlbumSelection) {
-      context.go("/menu/music/cover-flow");
-      state = state.copyWith(
-        selectedDisplayListItem: previousSelectedDisplayListItem,
-        displayScreenType: DisplayScreenType.coverFlow,
-        scrollOffset: previousScrollOffset,
-      );
-      previousSelectedDisplayListItem = 0;
-    }
-
-    //If Menu Button Clicked on the About Screen
-    else if (state.displayScreenType == DisplayScreenType.about) {
-      context.go("/menu/settings");
-      state = state.copyWith(
-        selectedDisplayListItem: previousSelectedDisplayListItem,
-        displayScreenType: DisplayScreenType.settings,
-      );
-      previousSelectedDisplayListItem = 3;
-    }
-    //If Menu Button Clicked on Any Other Screen
-    else {
-      if (previousSelectedDisplayListItem > 3) {
+    switch (state.displayScreenType) {
+      case DisplayScreenType.menu:
+        return;
+      case DisplayScreenType.musicMenu:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 0,
+          displayScreenType: DisplayScreenType.menu,
+        );
+        context.go("/menu");
+        break;
+      case DisplayScreenType.nowPlaying:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 1,
+          displayScreenType: DisplayScreenType.menu,
+        );
+        context.go("/menu");
+        break;
+      case DisplayScreenType.settings:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 3,
+          displayScreenType: DisplayScreenType.menu,
+        );
+        context.go("/menu");
+        break;
+      case DisplayScreenType.coverFlow ||
+            DisplayScreenType.artistsSelection ||
+            DisplayScreenType.albums ||
+            DisplayScreenType.songs:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: previousSelectedDisplayListItem,
+          displayScreenType: DisplayScreenType.musicMenu,
+        );
+        context.go("/menu/music");
+      case DisplayScreenType.artistSongs:
+        context.go("/menu/music/artists");
+        state = state.copyWith(
+          scrollOffset: previousScrollOffset,
+          selectedDisplayListItem: previousSelectedDisplayListItem,
+          displayScreenType: DisplayScreenType.artistsSelection,
+        );
+        previousSelectedDisplayListItem = 1;
+        break;
+      case DisplayScreenType.coverFlowAlbumSelection:
+        context.go("/menu/music/cover-flow");
+        state = state.copyWith(
+          scrollOffset: previousScrollOffset,
+          selectedDisplayListItem: previousSelectedDisplayListItem,
+          displayScreenType: DisplayScreenType.coverFlow,
+        );
         previousSelectedDisplayListItem = 0;
-      }
-      state = state.copyWith(
-        selectedDisplayListItem: previousSelectedDisplayListItem,
-        displayScreenType: DisplayScreenType.menu,
-        scrollOffset: 0,
-      );
-      previousSelectedDisplayListItem = 0;
-      context.go("/menu");
+        break;
+      case DisplayScreenType.about:
+        context.go("/menu/settings");
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: previousSelectedDisplayListItem,
+          displayScreenType: DisplayScreenType.settings,
+        );
+        previousSelectedDisplayListItem = 3;
+        break;
     }
   }
 
   void selectButton(BuildContext context) {
     buttonPressVibrate();
     clickWheelSound();
-    //if the display is in Menu screen
+
+    //If the display is in Menu screen
     if (state.displayScreenType == DisplayScreenType.menu) {
+      //Music Button Clicked
       if (state.selectedDisplayListItem == 0) {
-        previousSelectedDisplayListItem = 0;
-        state = state.copyWith(displayScreenType: DisplayScreenType.musicMenu);
-        context.go("/menu/music");
-      } else if (state.selectedDisplayListItem == 1) {
-        //Now Playing Button Clicked
-        previousSelectedDisplayListItem = 1;
-        state = state.copyWith(displayScreenType: DisplayScreenType.nowPlaying);
-        context.go("/menu/now-playing");
-      } else if (state.selectedDisplayListItem == 2) {
-        //Shuffle Songs Button Clicked
+        navigateToScreen(context,
+            displayScreenType: DisplayScreenType.musicMenu);
+      }
+      //Now Playing Button Clicked
+      else if (state.selectedDisplayListItem == 1) {
+        navigateToScreen(context,
+            displayScreenType: DisplayScreenType.nowPlaying);
+      }
+      //Shuffle Songs Button Clicked
+      else if (state.selectedDisplayListItem == 2) {
         ref.read(musicProvider.notifier).shuffleAllSongs();
-      } else if (state.selectedDisplayListItem == 3) {
-        //Settings Button Clicked
-        previousSelectedDisplayListItem = 3;
-        state = state.copyWith(
-          selectedDisplayListItem: 1,
-          displayScreenType: DisplayScreenType.settings,
-        );
-        context.go("/menu/settings");
+      }
+      //Settings Button Clicked
+      else if (state.selectedDisplayListItem == 3) {
+        navigateToScreen(context,
+            displayScreenType: DisplayScreenType.settings);
       }
     }
 
-    //if the display is in Music Menu screen
+    //If the display is in Music Menu screen
     else if (state.displayScreenType == DisplayScreenType.musicMenu) {
+      //If the Cover Flow Button is Clicked
       if (state.selectedDisplayListItem == 0) {
-        previousSelectedDisplayListItem = 0;
-        state = state.copyWith(displayScreenType: DisplayScreenType.coverFlow);
-        context.go("/menu/music/cover-flow/");
-      } else if (state.selectedDisplayListItem == 1) {
-        previousSelectedDisplayListItem = 1;
-        state = state.copyWith(
-            selectedDisplayListItem: 0,
+        navigateToScreen(context,
+            displayScreenType: DisplayScreenType.coverFlow);
+      }
+      //If the Artists Button is Clicked
+      else if (state.selectedDisplayListItem == 1) {
+        navigateToScreen(context,
             displayScreenType: DisplayScreenType.artistsSelection);
-        context.go("/menu/music/artists/");
-      } else if (state.selectedDisplayListItem == 2) {
-        previousSelectedDisplayListItem = 2;
-        state = state.copyWith(
-            selectedDisplayListItem: 0,
-            displayScreenType: DisplayScreenType.albums);
-        context.go("/menu/music/albums/");
-      } else if (state.selectedDisplayListItem == 3) {
-        previousSelectedDisplayListItem = 3;
-        state = state.copyWith(
-          selectedDisplayListItem: 0,
-          displayScreenType: DisplayScreenType.songs,
-        );
-        context.go("/menu/music/songs/");
+      }
+      //If the Albums Button is Clicked
+      else if (state.selectedDisplayListItem == 2) {
+        navigateToScreen(context, displayScreenType: DisplayScreenType.albums);
+      }
+      //If the Songs Button is Clicked
+      else if (state.selectedDisplayListItem == 3) {
+        navigateToScreen(context, displayScreenType: DisplayScreenType.songs);
       }
     }
 
-    //if the display is in Artists Selection screen
+    //If the display is in Artists Selection screen
     else if (state.displayScreenType == DisplayScreenType.artistsSelection) {
-      previousSelectedDisplayListItem = state.selectedDisplayListItem;
-      previousScrollOffset = state.scrollOffset;
-      context.go(
-          "/menu/music/artists/${ref.read(musicProvider.notifier).artistNames.elementAt(state.selectedDisplayListItem)}");
-      state = state.copyWith(
-          selectedDisplayListItem: 0,
-          displayScreenType: DisplayScreenType.artistSongs);
+      navigateToScreen(
+        context,
+        displayScreenType: DisplayScreenType.artistSongs,
+        artistName: ref
+            .read(musicProvider.notifier)
+            .artistNames
+            .elementAt(state.selectedDisplayListItem),
+      );
     }
 
-    //if the display is in Artist Songs Screen
+    //If the display is in Artist Songs Screen
     else if (state.displayScreenType == DisplayScreenType.artistSongs) {
       ref.read(musicProvider.notifier).playAtIndex(ref
           .read(musicProvider.notifier)
           .artistSongsIndexes[state.selectedDisplayListItem]);
-      previousSelectedDisplayListItem = 1;
-      state = state.copyWith(displayScreenType: DisplayScreenType.nowPlaying);
-      context.go("/menu/now-playing");
+      navigateToScreen(context,
+          displayScreenType: DisplayScreenType.nowPlaying);
     }
 
-    //if the display is in Albums Screen
+    //If the display is in Albums Screen
     else if (state.displayScreenType == DisplayScreenType.albums) {
       ref.read(musicProvider.notifier).playAlbum(ref
           .read(musicProvider.notifier)
           .albumNames
           .elementAt(state.selectedDisplayListItem));
-      previousSelectedDisplayListItem = 1;
-      state = state.copyWith(displayScreenType: DisplayScreenType.nowPlaying);
-      context.go("/menu/now-playing");
+      navigateToScreen(context,
+          displayScreenType: DisplayScreenType.nowPlaying);
     }
 
-    //if the display is in Songs Screen
+    //If the display is in Songs Screen
     else if (state.displayScreenType == DisplayScreenType.songs) {
       ref
           .read(musicProvider.notifier)
           .playAtIndex(state.selectedDisplayListItem);
-      previousSelectedDisplayListItem = 1;
-      state = state.copyWith(displayScreenType: DisplayScreenType.nowPlaying);
-      context.go("/menu/now-playing");
+      navigateToScreen(context,
+          displayScreenType: DisplayScreenType.nowPlaying);
     }
 
-    //if the display is in Now Playing Screen
+    //If the display is in Now Playing Screen
     else if (state.displayScreenType == DisplayScreenType.nowPlaying) {
       ref.read(musicProvider.notifier).togglePlayback();
     }
 
-    //if the display is in Cover Flow Screen
+    //If the display is in Cover Flow Screen
     else if (state.displayScreenType == DisplayScreenType.coverFlow) {
-      previousSelectedDisplayListItem = state.selectedDisplayListItem;
-      previousScrollOffset = state.scrollOffset;
       ref.read(musicProvider.notifier).getCoverFlowAlbumDetails(ref
           .read(musicProvider.notifier)
           .albumNames
           .elementAt(state.selectedDisplayListItem));
-      state = state.copyWith(
-        selectedDisplayListItem: 0,
-        scrollOffset: 0,
-        displayScreenType: DisplayScreenType.coverFlowAlbumSelection,
-      );
+      navigateToScreen(context,
+          displayScreenType: DisplayScreenType.coverFlowAlbumSelection);
     }
 
-    //if the display is in Cover Flow Song Selection Screen
+    //If the display is in Cover Flow Song Selection Screen
     else if (state.displayScreenType ==
         DisplayScreenType.coverFlowAlbumSelection) {
       ref.read(musicProvider.notifier).playAtIndex(ref
@@ -326,39 +406,37 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           .songIndex);
     }
 
-    //if the display is in Settings Screen
+    //If the display is in Settings Screen
     else if (state.displayScreenType == DisplayScreenType.settings) {
-      //About Button Clicked
+      //If the About Button is Clicked
       if (state.selectedDisplayListItem == 0) {
-        previousSelectedDisplayListItem = 0;
-        state = state.copyWith(displayScreenType: DisplayScreenType.about);
-        context.go("/menu/settings/about");
+        navigateToScreen(context, displayScreenType: DisplayScreenType.about);
       }
-      //Dark Mode Toggle Button Clicked
+      //If the Dark Mode Toggle Button is Clicked
       else if (state.selectedDisplayListItem == 1) {
         ref.read(settingsProvider.notifier).toggleTheme();
       }
-      //Repeat Toggle Button Clicked
+      //If the Repeat Toggle Button is Clicked
       else if (state.selectedDisplayListItem == 2) {
         ref.read(settingsProvider.notifier).toggleRepeat();
       }
-      //Vibrate Toggle Button Clicked
+      //If the Vibrate Toggle Button is Clicked
       else if (state.selectedDisplayListItem == 3) {
         ref.read(settingsProvider.notifier).toggleVibrate();
       }
-      //Click Wheel Sound Button Clicked
+      //If the Click Wheel Sound Toggle Button is Clicked
       else if (state.selectedDisplayListItem == 4) {
         ref.read(settingsProvider.notifier).toggleClickWheelSound(context);
       }
-      //Immersive Mode Button Clicked
+      //If the Immersive Mode Toggle Button is Clicked
       else if (state.selectedDisplayListItem == 5) {
         ref.read(settingsProvider.notifier).toggleImmersiveMode();
       }
-      //Change Directory Button Clicked
+      //If the Change Directory Button is Clicked
       else if (state.selectedDisplayListItem == 6) {
         ref.read(settingsProvider.notifier).getMusicFolderPath(context);
       }
-      //Donate Button Clicked
+      //If the Donate Button is Clicked
       else if (state.selectedDisplayListItem == 7) {
         launchUrl(Uri.parse("https://www.paypal.me/adeeteya"),
             mode: LaunchMode.externalApplication);

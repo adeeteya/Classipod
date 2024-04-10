@@ -20,6 +20,8 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   DisplayScreenType previousDisplayScreenType = DisplayScreenType.menu;
   int previousSelectedDisplayListItem = 0;
   double previousScrollOffset = 0;
+  String selectedArtistName = "";
+  int previousCoverFlowPage = 0;
   Duration durationSinceLastScroll = Duration.zero;
   late Timer _longPressTimer;
 
@@ -130,7 +132,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   }
 
   void navigateToScreen(BuildContext context,
-      {required DisplayScreenType displayScreenType, String artistName = ""}) {
+      {required DisplayScreenType displayScreenType}) {
     previousDisplayScreenType = state.displayScreenType;
     previousSelectedDisplayListItem = state.selectedDisplayListItem;
     previousScrollOffset = state.scrollOffset;
@@ -170,7 +172,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.artistSongs,
         );
-        context.go("/menu/music/artists/$artistName");
+        context.go("/menu/music/artists/$selectedArtistName");
         break;
       case DisplayScreenType.coverFlowAlbumSelection:
         state = state.copyWith(
@@ -237,12 +239,54 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
         context.go("/menu");
         break;
       case DisplayScreenType.nowPlaying:
-        state = state.copyWith(
-          scrollOffset: 0,
-          selectedDisplayListItem: 1,
-          displayScreenType: DisplayScreenType.menu,
-        );
-        context.go("/menu");
+        //If Previous Screen was the Songs Screen
+        if (previousDisplayScreenType == DisplayScreenType.songs) {
+          state = state.copyWith(
+            scrollOffset: previousScrollOffset,
+            selectedDisplayListItem: previousSelectedDisplayListItem,
+            displayScreenType: DisplayScreenType.songs,
+          );
+          context.go("/menu/music/songs");
+        }
+        //If Previous Screen was the Albums Screen
+        else if (previousDisplayScreenType == DisplayScreenType.albums) {
+          state = state.copyWith(
+            scrollOffset: previousScrollOffset,
+            selectedDisplayListItem: previousSelectedDisplayListItem,
+            displayScreenType: DisplayScreenType.albums,
+          );
+          context.go("/menu/music/albums");
+        }
+        //If Previous Screen was the Artists Songs Screen
+        else if (previousDisplayScreenType == DisplayScreenType.artistSongs) {
+          state = state.copyWith(
+            scrollOffset: previousScrollOffset,
+            selectedDisplayListItem: previousSelectedDisplayListItem,
+            displayScreenType: DisplayScreenType.artistSongs,
+          );
+          context.go("/menu/music/artists/$selectedArtistName");
+        }
+        //If Previous Screen was the Cover Flow Album Selection  Screen
+        else if (previousDisplayScreenType ==
+            DisplayScreenType.coverFlowAlbumSelection) {
+          context.go("/menu/music/cover-flow");
+          Future.delayed(const Duration(milliseconds: 10), () {
+            state = state.copyWith(
+              scrollOffset: 0,
+              selectedDisplayListItem: previousCoverFlowPage,
+              displayScreenType: DisplayScreenType.coverFlow,
+            );
+          });
+        }
+        //If Previous Screen was the Any Other Screen (Mostly Menu)
+        else {
+          state = state.copyWith(
+            scrollOffset: 0,
+            selectedDisplayListItem: 1,
+            displayScreenType: DisplayScreenType.menu,
+          );
+          context.go("/menu");
+        }
         break;
       case DisplayScreenType.settings:
         state = state.copyWith(
@@ -252,24 +296,55 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
         );
         context.go("/menu");
         break;
-      case DisplayScreenType.coverFlow ||
-            DisplayScreenType.artistsSelection ||
-            DisplayScreenType.albums ||
-            DisplayScreenType.songs:
+      case DisplayScreenType.coverFlow:
         state = state.copyWith(
           scrollOffset: 0,
-          selectedDisplayListItem: previousSelectedDisplayListItem,
+          selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.musicMenu,
         );
         context.go("/menu/music");
+        break;
+      case DisplayScreenType.artistsSelection:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 1,
+          displayScreenType: DisplayScreenType.musicMenu,
+        );
+        context.go("/menu/music");
+        break;
+      case DisplayScreenType.albums:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 2,
+          displayScreenType: DisplayScreenType.musicMenu,
+        );
+        context.go("/menu/music");
+        break;
+      case DisplayScreenType.songs:
+        state = state.copyWith(
+          scrollOffset: 0,
+          selectedDisplayListItem: 3,
+          displayScreenType: DisplayScreenType.musicMenu,
+        );
+        context.go("/menu/music");
+        break;
       case DisplayScreenType.artistSongs:
+        previousSelectedDisplayListItem = ref
+            .read(musicProvider.notifier)
+            .artistNames
+            .toList()
+            .indexOf(selectedArtistName);
+        previousScrollOffset = previousSelectedDisplayListItem * 30;
+        if (previousSelectedDisplayListItem == -1) {
+          previousSelectedDisplayListItem = 0;
+          previousScrollOffset = 0;
+        }
         context.go("/menu/music/artists");
         state = state.copyWith(
           scrollOffset: previousScrollOffset,
           selectedDisplayListItem: previousSelectedDisplayListItem,
           displayScreenType: DisplayScreenType.artistsSelection,
         );
-        previousSelectedDisplayListItem = 1;
         break;
       case DisplayScreenType.coverFlowAlbumSelection:
         context.go("/menu/music/cover-flow");
@@ -278,7 +353,6 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: previousSelectedDisplayListItem,
           displayScreenType: DisplayScreenType.coverFlow,
         );
-        previousSelectedDisplayListItem = 0;
         break;
       case DisplayScreenType.about:
         context.go("/menu/settings");
@@ -287,7 +361,6 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: previousSelectedDisplayListItem,
           displayScreenType: DisplayScreenType.settings,
         );
-        previousSelectedDisplayListItem = 3;
         break;
     }
   }
@@ -343,13 +416,13 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
     //If the display is in Artists Selection screen
     else if (state.displayScreenType == DisplayScreenType.artistsSelection) {
+      selectedArtistName = ref
+          .read(musicProvider.notifier)
+          .artistNames
+          .elementAt(state.selectedDisplayListItem);
       navigateToScreen(
         context,
         displayScreenType: DisplayScreenType.artistSongs,
-        artistName: ref
-            .read(musicProvider.notifier)
-            .artistNames
-            .elementAt(state.selectedDisplayListItem),
       );
     }
 
@@ -388,6 +461,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
 
     //If the display is in Cover Flow Screen
     else if (state.displayScreenType == DisplayScreenType.coverFlow) {
+      previousCoverFlowPage = state.selectedDisplayListItem;
       ref.read(musicProvider.notifier).getCoverFlowAlbumDetails(ref
           .read(musicProvider.notifier)
           .albumNames
@@ -404,6 +478,8 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           .coverFlowAlbumDetails
           .elementAt(state.selectedDisplayListItem)
           .songIndex);
+      navigateToScreen(context,
+          displayScreenType: DisplayScreenType.nowPlaying);
     }
 
     //If the display is in Settings Screen

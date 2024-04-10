@@ -13,11 +13,13 @@ class AlbumsSelectionScreen extends ConsumerStatefulWidget {
 }
 
 class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen> {
-  final ScrollController _scrollController = ScrollController();
+  late final ScrollController _scrollController;
   late final List<AlbumDetails> albumDetails;
 
   @override
   void initState() {
+    _scrollController = ScrollController(
+        initialScrollOffset: ref.read(displayProvider).scrollOffset);
     albumDetails = ref.read(musicProvider.notifier).albumDetails;
     ref.listenManual(displayProvider.select((value) => value.scrollOffset),
         (previous, next) {
@@ -30,16 +32,19 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen> {
   Widget build(BuildContext context) {
     final selectedDisplayListItem = ref.watch(
         displayProvider.select((value) => value.selectedDisplayListItem));
-    return CupertinoScrollbar(
-      controller: _scrollController,
-      child: ListView.builder(
+    return CupertinoPageScaffold(
+      backgroundColor: CupertinoColors.white,
+      child: CupertinoScrollbar(
         controller: _scrollController,
-        itemCount: albumDetails.length,
-        itemBuilder: (context, index) => AlbumArtSongListTile(
-          albumArt: albumDetails[index].albumArt,
-          songName: albumDetails[index].albumName,
-          trackArtistNames: albumDetails[index].albumArtistName,
-          isSelected: index == selectedDisplayListItem,
+        child: ListView.builder(
+          controller: _scrollController,
+          itemCount: albumDetails.length,
+          itemBuilder: (context, index) => AlbumArtSongListTile(
+            albumArt: albumDetails[index].albumArt,
+            songName: albumDetails[index].albumName,
+            trackArtistNames: albumDetails[index].albumArtistName,
+            isSelected: index == selectedDisplayListItem,
+          ),
         ),
       ),
     );

@@ -14,11 +14,13 @@ class ArtistSongsScreen extends ConsumerStatefulWidget {
 }
 
 class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen> {
-  final ScrollController _scrollController = ScrollController();
+  late final ScrollController _scrollController;
   late final List<int> artistSongsIndexes;
 
   @override
   void initState() {
+    _scrollController = ScrollController(
+        initialScrollOffset: ref.read(displayProvider).scrollOffset);
     ref.read(musicProvider.notifier).fetchArtistSongs(widget.artistName);
     artistSongsIndexes = ref.read(musicProvider.notifier).artistSongsIndexes;
     ref.listenManual(displayProvider.select((value) => value.scrollOffset),

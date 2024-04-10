@@ -14,11 +14,13 @@ class SongsScreen extends ConsumerStatefulWidget {
 }
 
 class _SongsScreenState extends ConsumerState<SongsScreen> {
-  final ScrollController _scrollController = ScrollController();
+  late final ScrollController _scrollController;
   late final List<Metadata> musicFilesMetaDataList;
 
   @override
   void initState() {
+    _scrollController = ScrollController(
+        initialScrollOffset: ref.read(displayProvider).scrollOffset);
     musicFilesMetaDataList =
         ref.read(musicProvider.notifier).completeMusicFileMetaDataList;
     ref.listenManual(displayProvider.select((value) => value.scrollOffset),
@@ -32,15 +34,18 @@ class _SongsScreenState extends ConsumerState<SongsScreen> {
   Widget build(BuildContext context) {
     final selectedDisplayListItem = ref.watch(
         displayProvider.select((value) => value.selectedDisplayListItem));
-    return CupertinoScrollbar(
-      controller: _scrollController,
-      child: ListView.builder(
+    return CupertinoPageScaffold(
+      backgroundColor: CupertinoColors.white,
+      child: CupertinoScrollbar(
         controller: _scrollController,
-        itemCount: musicFilesMetaDataList.length,
-        itemBuilder: (context, index) => SongListTile(
-          songName: musicFilesMetaDataList[index].trackName,
-          trackArtistNames: musicFilesMetaDataList[index].getTrackArtistNames,
-          isSelected: selectedDisplayListItem == index,
+        child: ListView.builder(
+          controller: _scrollController,
+          itemCount: musicFilesMetaDataList.length,
+          itemBuilder: (context, index) => SongListTile(
+            songName: musicFilesMetaDataList[index].trackName,
+            trackArtistNames: musicFilesMetaDataList[index].getTrackArtistNames,
+            isSelected: selectedDisplayListItem == index,
+          ),
         ),
       ),
     );

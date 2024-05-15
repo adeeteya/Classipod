@@ -25,8 +25,12 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
         PageController(initialPage: ref.read(musicProvider).currentSongIndex);
     ref.listenManual(musicProvider.select((value) => value.currentSongIndex),
         (previous, next) {
-      _pageController.animateToPage(next,
-          duration: const Duration(milliseconds: 1000), curve: Curves.easeOut);
+      if ((next - (previous ?? 0)).abs() > 10) {
+        _pageController.jumpToPage(next);
+      } else {
+        _pageController.animateToPage(next,
+            duration: const Duration(milliseconds: 1000), curve: Curves.ease);
+      }
     });
     super.initState();
   }

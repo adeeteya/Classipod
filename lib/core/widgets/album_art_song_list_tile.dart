@@ -21,6 +21,9 @@ class AlbumArtSongListTile extends StatelessWidget {
       width: double.infinity,
       child: DecoratedBox(
         decoration: BoxDecoration(
+          border: const Border(
+            bottom: BorderSide(width: 0.5, color: statusBarBorderColor),
+          ),
           gradient: (isSelected)
               ? const LinearGradient(
                   begin: Alignment.topCenter,
@@ -45,10 +48,10 @@ class AlbumArtSongListTile extends StatelessWidget {
                     height: 50,
                     width: 50,
                   ),
-            const SizedBox(width: 5),
+            const SizedBox(width: 10),
             Expanded(
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
@@ -62,6 +65,7 @@ class AlbumArtSongListTile extends StatelessWidget {
                     ),
                     maxLines: 1,
                   ),
+                  const SizedBox(height: 2),
                   Text(
                     trackArtistNames ?? "Unknown Artist",
                     style: TextStyle(

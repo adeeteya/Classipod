@@ -3,14 +3,14 @@ import 'package:classipod/models/battery_details.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class BatteryDetailsNotifier extends AsyncNotifier<BatteryDetails> {
-  final Battery battery = Battery();
+  final Battery _battery = Battery();
 
   @override
   Future<BatteryDetails> build() async {
     ref.watch(onBatteryStateChangeProvider);
     return BatteryDetails(
-      level: await battery.batteryLevel,
-      batteryState: await battery.batteryState,
+      level: await _battery.batteryLevel,
+      batteryState: await _battery.batteryState,
     );
   }
 }

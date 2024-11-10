@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/widgets/album_reflective_art.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';

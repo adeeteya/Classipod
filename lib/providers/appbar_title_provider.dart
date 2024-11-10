@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/providers/display_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

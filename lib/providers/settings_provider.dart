@@ -86,7 +86,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
         .setBool("clickWheelSound", !state.clickWheelSound)
         .then((value) async {
       state = state.copyWith(clickWheelSound: !state.clickWheelSound);
-      if (state.clickWheelSound) {
+      if (state.clickWheelSound && context.mounted) {
         await showCupertinoDialog(
           context: context,
           barrierDismissible: true,
@@ -119,9 +119,11 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     if (newMusicFolderPath != '/' &&
         newMusicFolderPath != state.musicFolderPath) {
       state = state.copyWith(musicFolderPath: newMusicFolderPath);
-      await _sharedPreferences
-          .setString("musicFolderPath", state.musicFolderPath)
-          .then((_) => ref.read(displayProvider.notifier).restartApp(context));
+      await _sharedPreferences.setString(
+          "musicFolderPath", state.musicFolderPath);
+      if (context.mounted) {
+        ref.read(displayProvider.notifier).restartApp(context);
+      }
     }
   }
 

@@ -5,6 +5,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsNotifier extends Notifier<SettingsDetails> {
@@ -96,7 +97,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
             actions: [
               CupertinoDialogAction(
                 isDefaultAction: true,
-                onPressed: () => Navigator.pop(context),
+                onPressed: () => context.pop(),
                 child: const Text("OK"),
               )
             ],

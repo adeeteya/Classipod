@@ -1,4 +1,6 @@
 import 'dart:async';
+
+import 'package:classipod/core/routes.dart';
 import 'package:classipod/models/display_details.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/providers/settings_provider.dart';
@@ -144,7 +146,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.menu,
         );
-        context.go("/menu");
+        context.goNamed(Routes.menu.name);
         break;
       case DisplayScreenType.musicMenu:
         state = state.copyWith(
@@ -152,11 +154,11 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.musicMenu,
         );
-        context.go("/menu/music");
+        context.goNamed(Routes.music.name);
         break;
       case DisplayScreenType.coverFlow:
         state = state.copyWith(displayScreenType: DisplayScreenType.coverFlow);
-        context.go("/menu/music/cover-flow");
+        context.goNamed(Routes.coverFlow.name);
         break;
       case DisplayScreenType.artistsSelection:
         state = state.copyWith(
@@ -164,7 +166,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.artistsSelection,
         );
-        context.go("/menu/music/artists");
+        context.goNamed(Routes.artists.name);
         break;
       case DisplayScreenType.artistSongs:
         state = state.copyWith(
@@ -172,7 +174,9 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.artistSongs,
         );
-        context.go("/menu/music/artists/$selectedArtistName");
+        // context.go("/menu/music/artists/$selectedArtistName");
+        context.goNamed(Routes.artistSongs.name,
+            pathParameters: {"artistName": selectedArtistName});
         break;
       case DisplayScreenType.coverFlowAlbumSelection:
         state = state.copyWith(
@@ -187,7 +191,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.albums,
         );
-        context.go("/menu/music/albums");
+        context.goNamed(Routes.albums.name);
         break;
       case DisplayScreenType.songs:
         state = state.copyWith(
@@ -195,7 +199,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.songs,
         );
-        context.go("/menu/music/songs");
+        context.goNamed(Routes.songs.name);
         break;
       case DisplayScreenType.settings:
         state = state.copyWith(
@@ -203,7 +207,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 1,
           displayScreenType: DisplayScreenType.settings,
         );
-        context.go("/menu/settings");
+        context.goNamed(Routes.settings.name);
         break;
       case DisplayScreenType.nowPlaying:
         state = state.copyWith(
@@ -211,7 +215,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.nowPlaying,
         );
-        context.go("/menu/now-playing");
+        context.goNamed(Routes.nowPlaying.name);
         break;
       case DisplayScreenType.about:
         state = state.copyWith(
@@ -219,7 +223,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.about,
         );
-        context.go("/menu/settings/about");
+        context.goNamed(Routes.about.name);
         break;
     }
   }
@@ -236,7 +240,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.menu,
         );
-        context.go("/menu");
+        context.goNamed(Routes.menu.name);
         break;
       case DisplayScreenType.nowPlaying:
         //If Previous Screen was the Songs Screen
@@ -246,7 +250,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
             selectedDisplayListItem: previousSelectedDisplayListItem,
             displayScreenType: DisplayScreenType.songs,
           );
-          context.go("/menu/music/songs");
+          context.goNamed(Routes.songs.name);
         }
         //If Previous Screen was the Albums Screen
         else if (previousDisplayScreenType == DisplayScreenType.albums) {
@@ -255,7 +259,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
             selectedDisplayListItem: previousSelectedDisplayListItem,
             displayScreenType: DisplayScreenType.albums,
           );
-          context.go("/menu/music/albums");
+          context.goNamed(Routes.albums.name);
         }
         //If Previous Screen was the Artists Songs Screen
         else if (previousDisplayScreenType == DisplayScreenType.artistSongs) {
@@ -264,12 +268,14 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
             selectedDisplayListItem: previousSelectedDisplayListItem,
             displayScreenType: DisplayScreenType.artistSongs,
           );
-          context.go("/menu/music/artists/$selectedArtistName");
+          // context.go("/menu/music/artists/$selectedArtistName");
+          context.goNamed(Routes.artistSongs.name,
+              pathParameters: {"artistName": selectedArtistName});
         }
         //If Previous Screen was the Cover Flow Album Selection  Screen
         else if (previousDisplayScreenType ==
             DisplayScreenType.coverFlowAlbumSelection) {
-          context.go("/menu/music/cover-flow");
+          context.goNamed(Routes.coverFlow.name);
           Future.delayed(const Duration(milliseconds: 50), () {
             state = state.copyWith(
               scrollOffset: 0,
@@ -285,7 +291,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
             selectedDisplayListItem: 1,
             displayScreenType: DisplayScreenType.menu,
           );
-          context.go("/menu");
+          context.goNamed(Routes.menu.name);
         }
         break;
       case DisplayScreenType.settings:
@@ -294,7 +300,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 3,
           displayScreenType: DisplayScreenType.menu,
         );
-        context.go("/menu");
+        context.goNamed(Routes.menu.name);
         break;
       case DisplayScreenType.coverFlow:
         state = state.copyWith(
@@ -302,7 +308,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 0,
           displayScreenType: DisplayScreenType.musicMenu,
         );
-        context.go("/menu/music");
+        context.goNamed(Routes.music.name);
         break;
       case DisplayScreenType.artistsSelection:
         state = state.copyWith(
@@ -310,7 +316,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 1,
           displayScreenType: DisplayScreenType.musicMenu,
         );
-        context.go("/menu/music");
+        context.goNamed(Routes.music.name);
         break;
       case DisplayScreenType.albums:
         state = state.copyWith(
@@ -318,7 +324,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 2,
           displayScreenType: DisplayScreenType.musicMenu,
         );
-        context.go("/menu/music");
+        context.goNamed(Routes.music.name);
         break;
       case DisplayScreenType.songs:
         state = state.copyWith(
@@ -326,7 +332,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           selectedDisplayListItem: 3,
           displayScreenType: DisplayScreenType.musicMenu,
         );
-        context.go("/menu/music");
+        context.goNamed(Routes.music.name);
         break;
       case DisplayScreenType.artistSongs:
         previousSelectedDisplayListItem = ref
@@ -339,7 +345,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
           previousSelectedDisplayListItem = 0;
           previousScrollOffset = 0;
         }
-        context.go("/menu/music/artists");
+        context.goNamed(Routes.artists.name);
         state = state.copyWith(
           scrollOffset: previousScrollOffset,
           selectedDisplayListItem: previousSelectedDisplayListItem,
@@ -347,7 +353,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
         );
         break;
       case DisplayScreenType.coverFlowAlbumSelection:
-        context.go("/menu/music/cover-flow");
+        context.goNamed(Routes.coverFlow.name);
         state = state.copyWith(
           scrollOffset: previousScrollOffset,
           selectedDisplayListItem: previousSelectedDisplayListItem,
@@ -355,7 +361,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
         );
         break;
       case DisplayScreenType.about:
-        context.go("/menu/settings");
+        context.goNamed(Routes.settings.name);
         state = state.copyWith(
           scrollOffset: 0,
           selectedDisplayListItem: previousSelectedDisplayListItem,

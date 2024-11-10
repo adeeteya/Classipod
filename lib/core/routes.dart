@@ -13,9 +13,27 @@ import 'package:classipod/screens/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 
+enum Routes {
+  menu,
+  settings,
+  about,
+  nowPlaying,
+  music,
+  coverFlow,
+  artists,
+  artistSongs,
+  albums,
+  songs;
+
+  @override
+  String toString() {
+    return "/$name";
+  }
+}
+
 // GoRouter configuration
 final router = GoRouter(
-  initialLocation: "/menu",
+  initialLocation: Routes.menu.toString(),
   routes: [
     ShellRoute(
       pageBuilder: (context, state, child) {
@@ -30,8 +48,8 @@ final router = GoRouter(
       },
       routes: [
         GoRoute(
-          path: "/menu",
-          name: "Menu",
+          path: Routes.menu.toString(),
+          name: Routes.menu.name,
           pageBuilder: (context, state) => CupertinoPage(
             key: state.pageKey,
             maintainState: false,
@@ -39,8 +57,8 @@ final router = GoRouter(
           ),
           routes: [
             GoRoute(
-                path: "settings",
-                name: "Settings",
+                path: Routes.settings.name,
+                name: Routes.settings.name,
                 pageBuilder: (context, state) => CupertinoPage(
                       key: state.pageKey,
                       maintainState: false,
@@ -48,8 +66,8 @@ final router = GoRouter(
                     ),
                 routes: [
                   GoRoute(
-                    path: "about",
-                    name: "About",
+                    path: Routes.about.name,
+                    name: Routes.about.name,
                     pageBuilder: (context, state) => CupertinoPage(
                       key: state.pageKey,
                       maintainState: false,
@@ -58,8 +76,8 @@ final router = GoRouter(
                   ),
                 ]),
             GoRoute(
-              path: "now-playing",
-              name: "Now Playing",
+              path: Routes.nowPlaying.name,
+              name: Routes.nowPlaying.name,
               pageBuilder: (context, state) => CupertinoPage(
                 key: state.pageKey,
                 maintainState: false,
@@ -67,8 +85,8 @@ final router = GoRouter(
               ),
             ),
             GoRoute(
-              path: "music",
-              name: "Music",
+              path: Routes.music.name,
+              name: Routes.music.name,
               pageBuilder: (context, state) => CupertinoPage(
                 key: state.pageKey,
                 maintainState: false,
@@ -76,8 +94,8 @@ final router = GoRouter(
               ),
               routes: [
                 GoRoute(
-                  path: "cover-flow",
-                  name: "Cover Flow",
+                  path: Routes.coverFlow.name,
+                  name: Routes.coverFlow.name,
                   pageBuilder: (context, state) => CupertinoPage(
                     key: state.pageKey,
                     maintainState: false,
@@ -85,8 +103,8 @@ final router = GoRouter(
                   ),
                 ),
                 GoRoute(
-                  path: "artists",
-                  name: "Artists",
+                  path: Routes.artists.name,
+                  name: Routes.artists.name,
                   pageBuilder: (context, state) => CupertinoPage(
                     key: state.pageKey,
                     maintainState: false,
@@ -95,7 +113,7 @@ final router = GoRouter(
                   routes: [
                     GoRoute(
                       path: ":artistName",
-                      name: "Artist Songs Screen",
+                      name: Routes.artistSongs.name,
                       pageBuilder: (context, state) => CupertinoPage(
                         key: state.pageKey,
                         maintainState: false,
@@ -107,8 +125,8 @@ final router = GoRouter(
                   ],
                 ),
                 GoRoute(
-                  path: "albums",
-                  name: "Albums",
+                  path: Routes.albums.name,
+                  name: Routes.albums.name,
                   pageBuilder: (context, state) => CupertinoPage(
                     key: state.pageKey,
                     maintainState: false,
@@ -116,8 +134,8 @@ final router = GoRouter(
                   ),
                 ),
                 GoRoute(
-                  path: "songs",
-                  name: "Songs",
+                  path: Routes.songs.name,
+                  name: Routes.songs.name,
                   pageBuilder: (context, state) => CupertinoPage(
                     key: state.pageKey,
                     maintainState: false,

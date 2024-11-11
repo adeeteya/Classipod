@@ -1,9 +1,9 @@
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/widgets/song_list_tile.dart';
+import 'package:classipod/models/metadata.dart';
 import 'package:classipod/providers/display_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SongsScreen extends ConsumerStatefulWidget {

@@ -1,5 +1,5 @@
+import 'package:classipod/models/metadata.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 
 extension DarkMode on BuildContext {
   bool get isDarkMode {

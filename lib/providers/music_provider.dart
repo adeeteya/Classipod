@@ -1,13 +1,14 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/helper_functions.dart';
 import 'package:classipod/models/album_details.dart';
 import 'package:classipod/models/cover_flow_album_details.dart';
+import 'package:classipod/models/metadata.dart';
 import 'package:classipod/models/music_details.dart';
 import 'package:classipod/providers/settings_provider.dart';
-import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:permission_handler/permission_handler.dart';
@@ -73,21 +74,43 @@ class MusicNotifier extends Notifier<MusicDetails> {
         Directory(ref.read(settingsProvider).musicFolderPath);
     final List<FileSystemEntity> files;
     files = storageDir.listSync(recursive: true, followLinks: false);
-    Metadata songFileMetadata;
     for (FileSystemEntity entity in files) {
       String path = entity.path;
       if (isSupportedAudioFormat(path)) {
-        songFileMetadata = await MetadataRetriever.fromFile(File(entity.path));
-        artistNamesList.add(songFileMetadata.getMainArtistName);
-        if (albumNames.add(songFileMetadata.albumName ?? "Unknown Album")) {
+        final metadata = readMetadata(File(path), getImage: true);
+        artistNamesList.add(metadata.artist ?? "Unknown Artist");
+        if (albumNames.add(metadata.album ?? "Unknown Album")) {
+          // Custom Sublist since .mp3 files have additional 0,0 elements at the start
           albumDetails.add(
             AlbumDetails(
-                albumName: songFileMetadata.albumName ?? "Unknown Album",
-                albumArt: songFileMetadata.albumArt,
-                albumArtistName: songFileMetadata.getTrackArtistNames),
+                albumName: metadata.album ?? "Unknown Album",
+                albumArt: metadata.pictures.isEmpty
+                    ? null
+                    : (path.endsWith('.mp3'))
+                        ? metadata.pictures[0].bytes.sublist(2)
+                        : metadata.pictures[0].bytes,
+                albumArtistName: metadata.artist ?? "Unknown Artist"),
           );
         }
-        completeMusicFileMetaDataList.add(songFileMetadata);
+        completeMusicFileMetaDataList.add(
+          Metadata(
+            filePath: path,
+            trackName: metadata.title ?? "Unknown Song",
+            albumName: metadata.album ?? "Unknown Album",
+            trackDuration: metadata.duration?.inMilliseconds,
+            trackArtistNames: [metadata.artist ?? "Unknown Artist"],
+            discNumber: metadata.discNumber,
+            trackNumber: metadata.trackNumber,
+            genre:
+                metadata.genres.isEmpty ? "Unknown Genre" : metadata.genres[0],
+            bitrate: metadata.bitrate,
+            albumArt: metadata.pictures.isEmpty
+                ? null
+                : (path.endsWith('.mp3'))
+                    ? metadata.pictures[0].bytes.sublist(2)
+                    : metadata.pictures[0].bytes,
+          ),
+        );
       }
     }
     artistNamesList.sort();

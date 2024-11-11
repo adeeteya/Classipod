@@ -2,9 +2,9 @@ import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/widgets/now_playing_page.dart';
 import 'package:classipod/core/widgets/seek_bar.dart';
 import 'package:classipod/core/widgets/volume_bar.dart';
+import 'package:classipod/models/metadata.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_media_metadata/flutter_media_metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class NowPlayingScreen extends ConsumerStatefulWidget {

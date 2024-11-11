@@ -16,7 +16,6 @@ dependencies:
   flutter_riverpod: ^2.6.1
   shared_preferences: ^2.3.3
   just_audio: ^0.9.42
-  just_audio_background: ^0.0.1-beta.13
   battery_plus: ^6.2.0
   permission_handler: ^11.3.1
   flutter_media_metadata: ^1.0.0+1

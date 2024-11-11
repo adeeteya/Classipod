@@ -4,7 +4,6 @@ import 'package:classipod/providers/settings_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:just_audio_background/just_audio_background.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,12 +15,6 @@ Future<void> main() async {
   );
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
-  );
-  await JustAudioBackground.init(
-    androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
-    androidNotificationChannelName: 'Audio playback',
-    androidNotificationChannelDescription: 'Classipod Music Player',
-    androidNotificationOngoing: true,
   );
   runApp(const ProviderScope(child: ClassipodApp()));
 }

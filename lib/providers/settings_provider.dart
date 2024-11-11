@@ -8,6 +8,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+enum SharedPreferencesKeys {
+  darkMode,
+  repeat,
+  vibrate,
+  clickWheelSound,
+  immersiveMode,
+  musicFolderPath,
+}
+
 class SettingsNotifier extends Notifier<SettingsDetails> {
   SettingsNotifier() : super();
   late final SharedPreferencesWithCache _sharedPreferences;
@@ -39,22 +48,31 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     _sharedPreferences = await SharedPreferencesWithCache.create(
       cacheOptions: SharedPreferencesWithCacheOptions(),
     );
-    bool isDarkMode = _sharedPreferences.getBool("isDarkMode") ?? false;
-    bool repeat = _sharedPreferences.getBool("repeat") ?? false;
-    bool vibrate = _sharedPreferences.getBool("vibrate") ?? true;
-    bool clickWheelSound =
-        _sharedPreferences.getBool("clickWheelSound") ?? false;
-    bool immersiveMode = _sharedPreferences.getBool("immersiveMode") ?? false;
-    String musicFolderPath = _sharedPreferences.getString("musicFolderPath") ??
+    bool isDarkMode =
+        _sharedPreferences.getBool(SharedPreferencesKeys.darkMode.name) ??
+            false;
+    bool repeat =
+        _sharedPreferences.getBool(SharedPreferencesKeys.repeat.name) ?? false;
+    bool vibrate =
+        _sharedPreferences.getBool(SharedPreferencesKeys.vibrate.name) ?? true;
+    bool clickWheelSound = _sharedPreferences
+            .getBool(SharedPreferencesKeys.clickWheelSound.name) ??
+        false;
+    bool immersiveMode =
+        _sharedPreferences.getBool(SharedPreferencesKeys.immersiveMode.name) ??
+            false;
+    String musicFolderPath = _sharedPreferences
+            .getString(SharedPreferencesKeys.musicFolderPath.name) ??
         state.musicFolderPath;
 
     state = state.copyWith(
-        isDarkMode: isDarkMode,
-        repeat: repeat,
-        vibrate: vibrate,
-        clickWheelSound: clickWheelSound,
-        immersiveMode: immersiveMode,
-        musicFolderPath: musicFolderPath);
+      isDarkMode: isDarkMode,
+      repeat: repeat,
+      vibrate: vibrate,
+      clickWheelSound: clickWheelSound,
+      immersiveMode: immersiveMode,
+      musicFolderPath: musicFolderPath,
+    );
 
     await setSystemUiMode();
   }
@@ -68,24 +86,28 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
   }
 
   Future<void> toggleTheme() async {
-    await _sharedPreferences.setBool("isDarkMode", !state.isDarkMode);
+    await _sharedPreferences.setBool(
+        SharedPreferencesKeys.darkMode.name, !state.isDarkMode);
     state = state.copyWith(isDarkMode: !state.isDarkMode);
   }
 
   Future<void> toggleRepeat() async {
-    await _sharedPreferences.setBool("repeat", !state.repeat);
+    await _sharedPreferences.setBool(
+        SharedPreferencesKeys.repeat.name, !state.repeat);
     state = state.copyWith(repeat: !state.repeat);
     await ref.read(musicProvider.notifier).setLoopMode();
   }
 
   Future<void> toggleVibrate() async {
-    await _sharedPreferences.setBool("vibrate", !state.vibrate);
+    await _sharedPreferences.setBool(
+        SharedPreferencesKeys.vibrate.name, !state.vibrate);
     state = state.copyWith(vibrate: !state.vibrate);
   }
 
   Future<void> toggleClickWheelSound(BuildContext context) async {
     await _sharedPreferences
-        .setBool("clickWheelSound", !state.clickWheelSound)
+        .setBool(
+            SharedPreferencesKeys.clickWheelSound.name, !state.clickWheelSound)
         .then((value) async {
       state = state.copyWith(clickWheelSound: !state.clickWheelSound);
       if (state.clickWheelSound && context.mounted) {
@@ -110,7 +132,8 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
   }
 
   Future<void> toggleImmersiveMode() async {
-    await _sharedPreferences.setBool("immersiveMode", !state.immersiveMode);
+    await _sharedPreferences.setBool(
+        SharedPreferencesKeys.immersiveMode.name, !state.immersiveMode);
     state = state.copyWith(immersiveMode: !state.immersiveMode);
     await setSystemUiMode();
   }
@@ -122,7 +145,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
         newMusicFolderPath != state.musicFolderPath) {
       state = state.copyWith(musicFolderPath: newMusicFolderPath);
       await _sharedPreferences.setString(
-          "musicFolderPath", state.musicFolderPath);
+          SharedPreferencesKeys.musicFolderPath.name, state.musicFolderPath);
       if (context.mounted) {
         ref.read(displayProvider.notifier).restartApp(context);
       }

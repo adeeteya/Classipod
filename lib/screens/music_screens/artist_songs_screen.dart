@@ -41,10 +41,10 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen> {
           controller: _scrollController,
           itemCount: artistSongsIndexes.length,
           itemBuilder: (context, index) => AlbumArtSongListTile(
-            albumArt: ref
+            thumbnailPath: ref
                 .read(musicProvider.notifier)
                 .completeMusicFileMetaDataList[artistSongsIndexes[index]]
-                .albumArt,
+                .thumbnailPath,
             songName: ref
                 .read(musicProvider.notifier)
                 .completeMusicFileMetaDataList[artistSongsIndexes[index]]

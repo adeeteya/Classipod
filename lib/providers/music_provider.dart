@@ -8,10 +8,10 @@ import 'package:classipod/models/cover_flow_album_details.dart';
 import 'package:classipod/models/metadata.dart';
 import 'package:classipod/models/music_details.dart';
 import 'package:classipod/providers/settings_provider.dart';
+import 'package:classipod/providers/temp_directory_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class MusicNotifier extends Notifier<MusicDetails> {
@@ -75,25 +75,57 @@ class MusicNotifier extends Notifier<MusicDetails> {
         Directory(ref.read(settingsProvider).musicFolderPath);
     final List<FileSystemEntity> files;
     files = storageDir.listSync(recursive: true, followLinks: false);
+
+    String tempPath = ref.read(tempDirectoryPathProvider);
+    AudioMetadata audioMetadata;
+
     for (FileSystemEntity entity in files) {
       String path = entity.path;
       if (isSupportedAudioFormat(path)) {
-        final metadata = readMetadata(File(path), getImage: true);
-        artistNamesList.add(metadata.artist ?? "Unknown Artist");
-        if (albumNames.add(metadata.album ?? "Unknown Album")) {
-          // Custom Sublist since .mp3 files have additional 0,0 elements at the start
+        String thumbnailFileName = path
+            .replaceAll('/', '-')
+            .replaceAll(' ', '')
+            .replaceAll(".mp3", '.jpg');
+        bool thumbnailExists =
+            File('$tempPath/$thumbnailFileName').existsSync();
+
+        //Fetch album art if it doesn't exist
+        if (!thumbnailExists) {
+          audioMetadata = readMetadata(File(path), getImage: true);
+          if (audioMetadata.pictures.isNotEmpty) {
+            File thumbnailFile = await File('$tempPath/$thumbnailFileName')
+                .create(recursive: true);
+            if (path.endsWith('.mp3')) {
+              // Store only the image data without the 0,0 elements at the start
+              thumbnailFile
+                  .writeAsBytesSync(audioMetadata.pictures[0].bytes.sublist(2));
+            } else {
+              // Store the image data as it is
+              thumbnailFile.writeAsBytesSync(audioMetadata.pictures[0].bytes);
+            }
+          }
+        }
+
+        //No need to fetch album art as it already exists
+        else {
+          audioMetadata = readMetadata(File(path), getImage: false);
+        }
+
+        artistNamesList.add(audioMetadata.artist ?? "Unknown Artist");
+        if (albumNames.add(audioMetadata.album ?? "Unknown Album")) {
           albumDetails.add(
             AlbumDetails(
-                albumName: metadata.album ?? "Unknown Album",
-                albumArt: metadata.pictures.isEmpty
-                    ? null
-                    : (path.endsWith('.mp3'))
-                        ? metadata.pictures[0].bytes.sublist(2)
-                        : metadata.pictures[0].bytes,
-                albumArtistName: metadata.artist ?? "Unknown Artist"),
+                albumName: audioMetadata.album ?? "Unknown Album",
+                thumbnailPath: "$tempPath/$thumbnailFileName",
+                albumArtistName: audioMetadata.artist ?? "Unknown Artist"),
           );
         }
-        completeMusicFileMetaDataList.add(Metadata.fromAudioMetadata(metadata));
+        completeMusicFileMetaDataList.add(
+          Metadata.fromAudioMetadata(
+            audioMetadata,
+            "$tempPath/$thumbnailFileName",
+          ),
+        );
       }
     }
     artistNamesList.sort();
@@ -163,20 +195,8 @@ class MusicNotifier extends Notifier<MusicDetails> {
     if (shuffle) {
       state.musicFilesMetaDataList.shuffle();
     }
-    final tempDir = await getTemporaryDirectory();
-    File newFile;
-    for (int i = 0; i < state.musicFilesMetaDataList.length; i++) {
-      String filePath =
-          '${tempDir.path}/${state.musicFilesMetaDataList[i].trackName}-${state.musicFilesMetaDataList[i].getMainArtistName}.jpg';
-      if (File(filePath).existsSync()) {
-        newFile = File(filePath);
-      } else {
-        newFile = await File(filePath).create();
-        if (state.musicFilesMetaDataList[i].albumArt != null) {
-          newFile.writeAsBytesSync(state.musicFilesMetaDataList[i].albumArt!);
-        }
-      }
 
+    for (int i = 0; i < state.musicFilesMetaDataList.length; i++) {
       songSourcePlaylist.add(
         AudioSource.file(
           state.musicFilesMetaDataList[i].filePath ?? "",
@@ -188,10 +208,10 @@ class MusicNotifier extends Notifier<MusicDetails> {
             genre: state.musicFilesMetaDataList[i].genres.isEmpty
                 ? null
                 : state.musicFilesMetaDataList[i].genres[0],
-            artUri: state.musicFilesMetaDataList[i].albumArt == null
+            artUri: state.musicFilesMetaDataList[i].thumbnailPath == null
                 ? Uri.parse(
                     'https://files.radio.co/humorous-skink/staging/default-artwork.png')
-                : Uri.file(newFile.path),
+                : Uri.file(state.musicFilesMetaDataList[i].thumbnailPath!),
           ),
         ),
       );

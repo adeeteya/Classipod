@@ -78,7 +78,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen> {
                           ? Alignment.centerLeft
                           : Alignment.centerRight,
                       child: AlbumReflectiveArt(
-                        albumArt: albumDetails[index].albumArt,
+                        thumbnailPath: albumDetails[index].thumbnailPath,
                       ),
                     );
                   },

@@ -1,12 +1,10 @@
-import 'dart:typed_data';
-
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/widgets/album_reflective_art.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:flutter/cupertino.dart';
 
 class NowPlayingPage extends StatelessWidget {
-  final Uint8List? albumArt;
+  final String? thumbnailPath;
   final String? trackName;
   final String? artistNames;
   final String? albumName;
@@ -14,7 +12,7 @@ class NowPlayingPage extends StatelessWidget {
   final int totalTrackNumber;
   const NowPlayingPage(
       {super.key,
-      this.albumArt,
+      this.thumbnailPath,
       required this.trackName,
       this.artistNames,
       this.albumName,
@@ -32,7 +30,7 @@ class NowPlayingPage extends StatelessWidget {
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.003)
               ..rotateY(-0.1),
-            child: AlbumReflectiveArt(albumArt: albumArt),
+            child: AlbumReflectiveArt(thumbnailPath: thumbnailPath),
           ),
         ),
         Flexible(

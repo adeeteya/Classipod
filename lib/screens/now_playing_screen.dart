@@ -56,7 +56,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                 controller: _pageController,
                 itemCount: musicFilesMetaDataList.length,
                 itemBuilder: (context, index) => NowPlayingPage(
-                  albumArt: musicFilesMetaDataList[index].albumArt,
+                  thumbnailPath: musicFilesMetaDataList[index].thumbnailPath,
                   trackName: musicFilesMetaDataList[index].trackName,
                   artistNames:
                       musicFilesMetaDataList[index].getTrackArtistNames,

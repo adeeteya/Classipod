@@ -1,4 +1,4 @@
-import 'dart:typed_data';
+import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 
@@ -39,11 +39,11 @@ class Metadata {
   /// Bitrate of the track.
   final int? bitrate;
 
-  /// [Uint8List] having album art data.
-  final Uint8List? albumArt;
-
   /// File path of the media file. `null` on web.
   final String? filePath;
+
+  /// File path of the thumbnail album art file.
+  final String? thumbnailPath;
 
   const Metadata({
     this.trackName,
@@ -58,11 +58,13 @@ class Metadata {
     this.mimeType,
     this.trackDuration,
     this.bitrate,
-    this.albumArt,
     this.filePath,
+    this.thumbnailPath,
   });
 
-  factory Metadata.fromAudioMetadata(AudioMetadata audioMetadata) => Metadata(
+  factory Metadata.fromAudioMetadata(
+          AudioMetadata audioMetadata, String thumbnailPath) =>
+      Metadata(
         trackName: audioMetadata.title ?? "Unknown Song",
         trackArtistNames:
             audioMetadata.artist?.split(", ").toList() ?? ["Unknown Artist"],
@@ -79,12 +81,8 @@ class Metadata {
             : audioMetadata.pictures[0].mimetype,
         trackDuration: audioMetadata.duration?.inMilliseconds,
         bitrate: audioMetadata.bitrate,
-        albumArt: audioMetadata.pictures.isEmpty
-            ? null
-            : (audioMetadata.file.path.endsWith('.mp3'))
-                ? audioMetadata.pictures[0].bytes.sublist(2)
-                : audioMetadata.pictures[0].bytes,
         filePath: audioMetadata.file.path,
+        thumbnailPath: thumbnailPath,
       );
 
   factory Metadata.fromJson(dynamic map) => Metadata(
@@ -100,7 +98,6 @@ class Metadata {
         mimeType: map['metadata']['mimeType'],
         trackDuration: parseInteger(map['metadata']['trackDuration']),
         bitrate: parseInteger(map['metadata']['bitrate']),
-        albumArt: map['albumArt'],
         filePath: map['filePath'],
       );
 
@@ -133,6 +130,10 @@ class Metadata {
               trackArtistNames.toString().length - 1,
             ) ??
         "Unknown Artist";
+  }
+
+  String getTemporaryThumbnailPath(Directory tempDir) {
+    return '${tempDir.path}/$trackName-$getMainArtistName.jpg';
   }
 }
 

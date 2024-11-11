@@ -40,7 +40,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen> {
           controller: _scrollController,
           itemCount: albumDetails.length,
           itemBuilder: (context, index) => AlbumArtSongListTile(
-            albumArt: albumDetails[index].albumArt,
+            thumbnailPath: albumDetails[index].thumbnailPath,
             songName: albumDetails[index].albumName,
             trackArtistNames: albumDetails[index].albumArtistName,
             isSelected: index == selectedDisplayListItem,

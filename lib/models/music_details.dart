@@ -7,12 +7,13 @@ class MusicDetails {
   final bool isLoading;
   final bool isVolumeChanging;
 
-  MusicDetails(
-      {required this.currentSongIndex,
-      required this.musicFilesMetaDataList,
-      required this.isPlaying,
-      this.isLoading = true,
-      required this.isVolumeChanging});
+  MusicDetails({
+    required this.currentSongIndex,
+    required this.musicFilesMetaDataList,
+    required this.isPlaying,
+    this.isLoading = true,
+    required this.isVolumeChanging,
+  });
 
   MusicDetails copyWith({
     int? currentSongIndex,

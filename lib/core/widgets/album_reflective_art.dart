@@ -1,10 +1,10 @@
-import 'dart:typed_data';
+import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 
 class AlbumReflectiveArt extends StatelessWidget {
-  final Uint8List? albumArt;
-  const AlbumReflectiveArt({super.key, this.albumArt});
+  final String? thumbnailPath;
+  const AlbumReflectiveArt({super.key, this.thumbnailPath});
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +14,8 @@ class AlbumReflectiveArt extends StatelessWidget {
           child: SizedBox(
             width: double.infinity,
             child: Image(
-              image: (albumArt != null)
-                  ? MemoryImage(albumArt!)
+              image: (thumbnailPath != null)
+                  ? FileImage(File(thumbnailPath!))
                   : AssetImage("assets/images/default_album_cover.jpeg"),
               errorBuilder: (_, __, ___) => Image.asset(
                 "assets/images/default_album_cover.jpeg",
@@ -33,8 +33,8 @@ class AlbumReflectiveArt extends StatelessWidget {
                 flipY: true,
                 filterQuality: FilterQuality.low,
                 child: Image(
-                  image: (albumArt != null)
-                      ? MemoryImage(albumArt!)
+                  image: (thumbnailPath != null)
+                      ? FileImage(File(thumbnailPath!))
                       : AssetImage("assets/images/default_album_cover.jpeg"),
                   errorBuilder: (_, __, ___) => Image.asset(
                     "assets/images/default_album_cover.jpeg",

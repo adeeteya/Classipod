@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
-/// Metadata of a media file.
+import 'package:audio_metadata_reader/audio_metadata_reader.dart';
+
 class Metadata {
   /// Name of the track.
   final String? trackName;
@@ -23,14 +24,8 @@ class Metadata {
   /// Year of the track.
   final int? year;
 
-  /// Genre of the track.
-  final String? genre;
-
-  /// Author of the track.
-  final String? authorName;
-
-  /// Writer of the track.
-  final String? writerName;
+  /// Genres of the track.
+  final List<String>? genres;
 
   /// Number of the disc.
   final int? discNumber;
@@ -58,9 +53,7 @@ class Metadata {
     this.trackNumber,
     this.albumLength,
     this.year,
-    this.genre,
-    this.authorName,
-    this.writerName,
+    this.genres,
     this.discNumber,
     this.mimeType,
     this.trackDuration,
@@ -68,6 +61,31 @@ class Metadata {
     this.albumArt,
     this.filePath,
   });
+
+  factory Metadata.fromAudioMetadata(AudioMetadata audioMetadata) => Metadata(
+        trackName: audioMetadata.title ?? "Unknown Song",
+        trackArtistNames:
+            audioMetadata.artist?.split(", ").toList() ?? ["Unknown Artist"],
+        albumName: audioMetadata.album ?? "Unknown Album",
+        albumArtistName:
+            audioMetadata.artist?.split(", ")[0] ?? "Unknown Artist",
+        trackNumber: audioMetadata.trackNumber,
+        albumLength: audioMetadata.trackTotal,
+        year: audioMetadata.year?.year,
+        genres: audioMetadata.genres,
+        discNumber: audioMetadata.discNumber,
+        mimeType: audioMetadata.pictures.isEmpty
+            ? null
+            : audioMetadata.pictures[0].mimetype,
+        trackDuration: audioMetadata.duration?.inMilliseconds,
+        bitrate: audioMetadata.bitrate,
+        albumArt: audioMetadata.pictures.isEmpty
+            ? null
+            : (audioMetadata.file.path.endsWith('.mp3'))
+                ? audioMetadata.pictures[0].bytes.sublist(2)
+                : audioMetadata.pictures[0].bytes,
+        filePath: audioMetadata.file.path,
+      );
 
   factory Metadata.fromJson(dynamic map) => Metadata(
         trackName: map['metadata']['trackName'],
@@ -77,9 +95,7 @@ class Metadata {
         trackNumber: parseInteger(map['metadata']['trackNumber']),
         albumLength: parseInteger(map['metadata']['albumLength']),
         year: parseInteger(map['metadata']['year']),
-        genre: map['genre'],
-        authorName: map['metadata']['authorName'],
-        writerName: map['metadata']['writerName'],
+        genres: map['genres'],
         discNumber: parseInteger(map['metadata']['discNumber']),
         mimeType: map['metadata']['mimeType'],
         trackDuration: parseInteger(map['metadata']['trackDuration']),
@@ -96,9 +112,7 @@ class Metadata {
         'trackNumber': trackNumber,
         'albumLength': albumLength,
         'year': year,
-        'genre': genre,
-        'authorName': authorName,
-        'writerName': writerName,
+        'genres': genres,
         'discNumber': discNumber,
         'mimeType': mimeType,
         'trackDuration': trackDuration,

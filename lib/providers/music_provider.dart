@@ -91,25 +91,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
                 albumArtistName: metadata.artist ?? "Unknown Artist"),
           );
         }
-        completeMusicFileMetaDataList.add(
-          Metadata(
-            filePath: path,
-            trackName: metadata.title ?? "Unknown Song",
-            albumName: metadata.album ?? "Unknown Album",
-            trackDuration: metadata.duration?.inMilliseconds,
-            trackArtistNames: [metadata.artist ?? "Unknown Artist"],
-            discNumber: metadata.discNumber,
-            trackNumber: metadata.trackNumber,
-            genre:
-                metadata.genres.isEmpty ? "Unknown Genre" : metadata.genres[0],
-            bitrate: metadata.bitrate,
-            albumArt: metadata.pictures.isEmpty
-                ? null
-                : (path.endsWith('.mp3'))
-                    ? metadata.pictures[0].bytes.sublist(2)
-                    : metadata.pictures[0].bytes,
-          ),
-        );
+        completeMusicFileMetaDataList.add(Metadata.fromAudioMetadata(metadata));
       }
     }
     artistNamesList.sort();

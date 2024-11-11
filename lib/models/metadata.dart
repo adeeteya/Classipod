@@ -25,7 +25,7 @@ class Metadata {
   final int? year;
 
   /// Genres of the track.
-  final List<String>? genres;
+  final List<String> genres;
 
   /// Number of the disc.
   final int? discNumber;
@@ -53,7 +53,7 @@ class Metadata {
     this.trackNumber,
     this.albumLength,
     this.year,
-    this.genres,
+    this.genres = const [],
     this.discNumber,
     this.mimeType,
     this.trackDuration,

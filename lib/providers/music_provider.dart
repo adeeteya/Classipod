@@ -10,6 +10,7 @@ import 'package:classipod/models/music_details.dart';
 import 'package:classipod/providers/settings_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class MusicNotifier extends Notifier<MusicDetails> {
@@ -165,12 +166,19 @@ class MusicNotifier extends Notifier<MusicDetails> {
       songSourcePlaylist.add(
         AudioSource.file(
           state.musicFilesMetaDataList[i].filePath ?? "",
-          // tag: MediaItem(
-          //   id: '$i',
-          //   title: state.musicFilesMetaDataList[i].trackName ?? "Unknown Song",
-          //   album: state.musicFilesMetaDataList[i].albumName ?? "Unknown Album",
-          //   artist: state.musicFilesMetaDataList[i].getTrackArtistNames,
-          // ),
+          tag: MediaItem(
+            id: '$i',
+            title: state.musicFilesMetaDataList[i].trackName ?? "Unknown Song",
+            album: state.musicFilesMetaDataList[i].albumName ?? "Unknown Album",
+            artist: state.musicFilesMetaDataList[i].getTrackArtistNames,
+            genre: state.musicFilesMetaDataList[i].genres.isEmpty
+                ? null
+                : state.musicFilesMetaDataList[i].genres[0],
+            artUri: state.musicFilesMetaDataList[i].albumArt == null
+                ? null
+                : Uri.parse(
+                    'https://files.radio.co/humorous-skink/staging/default-artwork.png'),
+          ),
         ),
       );
     }

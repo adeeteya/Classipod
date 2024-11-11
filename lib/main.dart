@@ -20,7 +20,7 @@ Future<void> main() async {
   await JustAudioBackground.init(
     androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
     androidNotificationChannelName: 'Audio playback',
-    androidNotificationChannelDescription: 'IPod Classic Audio Clone',
+    androidNotificationChannelDescription: 'Classipod Music Player',
     androidNotificationOngoing: true,
   );
   runApp(const ProviderScope(child: ClassipodApp()));

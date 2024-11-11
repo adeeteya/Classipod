@@ -11,6 +11,7 @@ import 'package:classipod/providers/settings_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class MusicNotifier extends Notifier<MusicDetails> {
@@ -162,7 +163,20 @@ class MusicNotifier extends Notifier<MusicDetails> {
     if (shuffle) {
       state.musicFilesMetaDataList.shuffle();
     }
+    final tempDir = await getTemporaryDirectory();
+    File newFile;
     for (int i = 0; i < state.musicFilesMetaDataList.length; i++) {
+      String filePath =
+          '${tempDir.path}/${state.musicFilesMetaDataList[i].trackName}-${state.musicFilesMetaDataList[i].getMainArtistName}.jpg';
+      if (File(filePath).existsSync()) {
+        newFile = File(filePath);
+      } else {
+        newFile = await File(filePath).create();
+        if (state.musicFilesMetaDataList[i].albumArt != null) {
+          newFile.writeAsBytesSync(state.musicFilesMetaDataList[i].albumArt!);
+        }
+      }
+
       songSourcePlaylist.add(
         AudioSource.file(
           state.musicFilesMetaDataList[i].filePath ?? "",
@@ -175,9 +189,9 @@ class MusicNotifier extends Notifier<MusicDetails> {
                 ? null
                 : state.musicFilesMetaDataList[i].genres[0],
             artUri: state.musicFilesMetaDataList[i].albumArt == null
-                ? null
-                : Uri.parse(
-                    'https://files.radio.co/humorous-skink/staging/default-artwork.png'),
+                ? Uri.parse(
+                    'https://files.radio.co/humorous-skink/staging/default-artwork.png')
+                : Uri.file(newFile.path),
           ),
         ),
       );

@@ -4,7 +4,7 @@ import 'package:classipod/providers/display_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 class DeviceControls extends ConsumerWidget {
   const DeviceControls({super.key});
@@ -75,10 +75,14 @@ class DeviceControls extends ConsumerWidget {
                           color: context.isDarkMode
                               ? darkDeviceControlBackgroundColor
                               : CupertinoColors.white,
-                          child: SvgPicture.asset(
-                            context.isDarkMode
-                                ? "assets/icons/last.svg"
-                                : "assets/icons/last-grey.svg",
+                          child: VectorGraphic(
+                            loader: AssetBytesLoader("assets/icons/last.svg"),
+                            colorFilter: context.isDarkMode
+                                ? null
+                                : ColorFilter.mode(
+                                    lightDeviceButtonColor,
+                                    BlendMode.srcIn,
+                                  ),
                             alignment: Alignment.centerLeft,
                             fit: BoxFit.scaleDown,
                           ),
@@ -138,10 +142,14 @@ class DeviceControls extends ConsumerWidget {
                           color: context.isDarkMode
                               ? darkDeviceControlBackgroundColor
                               : CupertinoColors.white,
-                          child: SvgPicture.asset(
-                            context.isDarkMode
-                                ? "assets/icons/next.svg"
-                                : "assets/icons/next-grey.svg",
+                          child: VectorGraphic(
+                            loader: AssetBytesLoader("assets/icons/next.svg"),
+                            colorFilter: context.isDarkMode
+                                ? null
+                                : ColorFilter.mode(
+                                    lightDeviceButtonColor,
+                                    BlendMode.srcIn,
+                                  ),
                             alignment: Alignment.centerRight,
                             fit: BoxFit.scaleDown,
                           ),
@@ -160,10 +168,14 @@ class DeviceControls extends ConsumerWidget {
                         : CupertinoColors.white,
                     child: Align(
                       alignment: Alignment.bottomCenter,
-                      child: SvgPicture.asset(
-                        context.isDarkMode
-                            ? "assets/icons/play.svg"
-                            : "assets/icons/play-grey.svg",
+                      child: VectorGraphic(
+                        loader: AssetBytesLoader("assets/icons/play.svg"),
+                        colorFilter: context.isDarkMode
+                            ? null
+                            : ColorFilter.mode(
+                                lightDeviceButtonColor,
+                                BlendMode.srcIn,
+                              ),
                         fit: BoxFit.scaleDown,
                       ),
                     ),

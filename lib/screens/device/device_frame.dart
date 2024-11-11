@@ -5,7 +5,7 @@ import 'package:classipod/screens/device/device_controls.dart';
 import 'package:classipod/screens/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:vector_graphics/vector_graphics.dart';
 
 class DeviceFrame extends StatelessWidget {
   final Widget child;
@@ -130,8 +130,11 @@ class DeviceFrame extends StatelessWidget {
                             musicProvider.select((value) => value.isLoading));
                         if (isLoading) {
                           return Center(
-                            child:
-                                SvgPicture.asset("assets/icons/apple_logo.svg"),
+                            child: VectorGraphic(
+                              loader: AssetBytesLoader(
+                                "assets/icons/apple_logo.svg",
+                              ),
+                            ),
                           );
                         } else {
                           return Column(

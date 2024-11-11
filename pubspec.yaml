@@ -15,7 +15,6 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_riverpod: ^2.6.1
   shared_preferences: ^2.3.3
-  audio_service: ^0.18.15
   just_audio: ^0.9.42
   just_audio_background: ^0.0.1-beta.13
   battery_plus: ^6.2.0

@@ -10,7 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingsNotifier extends Notifier<SettingsDetails> {
   SettingsNotifier() : super();
-  late final SharedPreferences _sharedPreferences;
+  late final SharedPreferencesWithCache _sharedPreferences;
   final List<String> settingsListTiles = [
     "About",
     "Dark Mode",
@@ -36,7 +36,9 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
   }
 
   Future<void> getSettingsPreferences() async {
-    _sharedPreferences = await SharedPreferences.getInstance();
+    _sharedPreferences = await SharedPreferencesWithCache.create(
+      cacheOptions: SharedPreferencesWithCacheOptions(),
+    );
     bool isDarkMode = _sharedPreferences.getBool("isDarkMode") ?? false;
     bool repeat = _sharedPreferences.getBool("repeat") ?? false;
     bool vibrate = _sharedPreferences.getBool("vibrate") ?? true;
@@ -146,4 +148,5 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
 }
 
 final settingsProvider = NotifierProvider<SettingsNotifier, SettingsDetails>(
-    () => SettingsNotifier());
+  () => SettingsNotifier(),
+);

@@ -1,4 +1,3 @@
-import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
 import 'package:classipod/providers/display_provider.dart';
 import 'package:classipod/providers/music_provider.dart';

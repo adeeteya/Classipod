@@ -1,4 +1,3 @@
-import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/widgets/now_playing_page.dart';
 import 'package:classipod/core/widgets/seek_bar.dart';
 import 'package:classipod/core/widgets/volume_bar.dart';

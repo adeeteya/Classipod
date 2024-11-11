@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
-import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/helper_functions.dart';
 import 'package:classipod/models/album_details.dart';
 import 'package:classipod/models/cover_flow_album_details.dart';

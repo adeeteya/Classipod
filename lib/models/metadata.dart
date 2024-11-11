@@ -108,6 +108,18 @@ class Metadata {
 
   @override
   String toString() => toJson().toString();
+
+  String get getMainArtistName {
+    return trackArtistNames?[0].split(", ").first ?? "Unknown Artist";
+  }
+
+  String get getTrackArtistNames {
+    return trackArtistNames?.toString().substring(
+              1,
+              trackArtistNames.toString().length - 1,
+            ) ??
+        "Unknown Artist";
+  }
 }
 
 int? parseInteger(dynamic value) {

@@ -1,8 +1,17 @@
 import 'package:flutter/cupertino.dart';
+import 'package:go_router/go_router.dart';
 
-extension DarkMode on BuildContext {
+extension BuildContextExtensions on BuildContext {
   bool get isDarkMode {
     return CupertinoTheme.of(this).brightness == Brightness.dark;
+  }
+
+  Size get screenSize {
+    return MediaQuery.sizeOf(this);
+  }
+
+  GoRouter get router {
+    return GoRouter.of(this);
   }
 }
 
@@ -31,5 +40,31 @@ extension DurationStringHelpers on Duration {
   String get getMinuteAndSecondString {
     int seconds = inSeconds - (inMinutes * 60);
     return "$inMinutes:${seconds < 10 ? '0$seconds' : '$seconds'}";
+  }
+}
+
+extension StringHelpers on Enum {
+  String get title {
+    final words = name.split(RegExp(r'(?=[A-Z])'));
+    return words
+        .map((word) =>
+            word.substring(0, 1).toUpperCase() +
+            word.substring(1).toLowerCase())
+        .join(' ');
+  }
+}
+
+extension GoRouterExtension on GoRouter {
+  String get location {
+    final RouteMatch lastMatch = routerDelegate.currentConfiguration.last;
+    final RouteMatchList matchList = lastMatch is ImperativeRouteMatch
+        ? lastMatch.matches
+        : routerDelegate.currentConfiguration;
+    final String location = matchList.uri.toString();
+    return location;
+  }
+
+  String get locationNamed {
+    return location.split("/").last;
   }
 }

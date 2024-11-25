@@ -117,7 +117,7 @@ class DeviceFrame extends ConsumerWidget {
               children: [
                 IgnorePointer(
                   child: Container(
-                    height: size.height * 0.3865,
+                    height: size.height * kScreenHeightRatio,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: CupertinoColors.white,

@@ -21,17 +21,6 @@ enum SharedPreferencesKeys {
 class SettingsNotifier extends Notifier<SettingsDetails> {
   SettingsNotifier() : super();
 
-  final List<String> settingsListTiles = [
-    "About",
-    "Dark Mode",
-    "Repeat",
-    "Vibrate",
-    "Click Wheel Sound",
-    "Immersive Mode",
-    "Change Directory",
-    "Donate",
-  ];
-
   @override
   SettingsDetails build() {
     return getSettingsPreferences();
@@ -151,23 +140,6 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
       if (context.mounted) {
         ref.read(displayProvider.notifier).restartApp(context);
       }
-    }
-  }
-
-  bool? isOn(int index) {
-    switch (index) {
-      case 1:
-        return state.isDarkMode;
-      case 2:
-        return state.repeat;
-      case 3:
-        return state.vibrate;
-      case 4:
-        return state.clickWheelSound;
-      case 5:
-        return state.immersiveMode;
-      default:
-        return null;
     }
   }
 }

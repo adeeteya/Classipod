@@ -4,8 +4,12 @@ import 'package:flutter/cupertino.dart';
 class DisplayListTile extends StatelessWidget {
   final String text;
   final bool isSelected;
+  final VoidCallback? onSelected;
   const DisplayListTile(
-      {super.key, required this.text, required this.isSelected});
+      {super.key,
+      required this.text,
+      required this.isSelected,
+      this.onSelected});
 
   @override
   Widget build(BuildContext context) {

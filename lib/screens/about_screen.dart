@@ -52,5 +52,3 @@ class AboutScreen extends ConsumerWidget {
     );
   }
 }
-
-//TODO: Update App Version Before Upload

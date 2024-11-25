@@ -1,24 +1,66 @@
+import 'package:classipod/core/custom_screen.dart';
+import 'package:classipod/core/extensions.dart';
+import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
-import 'package:classipod/providers/display_provider.dart';
+import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
-class MenuScreen extends ConsumerWidget {
+enum _MenuDisplayItems {
+  music,
+  nowPlaying,
+  shuffleSongs,
+  settings,
+}
+
+class MenuScreen extends ConsumerStatefulWidget {
   const MenuScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final selectedDisplayItem = ref.watch(
-        displayProvider.select((value) => value.selectedDisplayListItem));
-    return ListView(
-      children: [
-        DisplayListTile(text: "Music", isSelected: selectedDisplayItem == 0),
-        DisplayListTile(
-            text: "Now Playing", isSelected: selectedDisplayItem == 1),
-        DisplayListTile(
-            text: "Shuffle Songs", isSelected: selectedDisplayItem == 2),
-        DisplayListTile(text: "Settings", isSelected: selectedDisplayItem == 3),
-      ],
+  ConsumerState createState() => _MenuScreenState();
+}
+
+class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
+  @override
+  String get routeName => Routes.menu.name;
+
+  @override
+  List<String> get displayItems =>
+      _MenuDisplayItems.values.map((e) => e.title).toList();
+
+  @override
+  void onSelectPressed() {
+    switch (_MenuDisplayItems.values[selectedDisplayItem]) {
+      case _MenuDisplayItems.music:
+        context.goNamed(Routes.music.name);
+        break;
+      case _MenuDisplayItems.nowPlaying:
+        context.goNamed(Routes.nowPlaying.name);
+        break;
+      case _MenuDisplayItems.shuffleSongs:
+        ref.read(musicProvider.notifier).shuffleAllSongs();
+        break;
+      case _MenuDisplayItems.settings:
+        context.goNamed(Routes.settings.name);
+        break;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoPageScaffold(
+      child: CupertinoScrollbar(
+        controller: scrollController,
+        child: ListView.builder(
+          controller: scrollController,
+          itemCount: displayItems.length,
+          itemBuilder: (context, index) => DisplayListTile(
+            text: displayItems[index],
+            isSelected: selectedDisplayItem == index,
+          ),
+        ),
+      ),
     );
   }
 }

@@ -30,3 +30,5 @@ const Color sliderBorderColor = Color(0xFFE2E2E2);
 const Color batteryBarColor = Color(0xFF6EA447);
 
 const String kDefaultMusicFolderPath = "/storage/emulated/0/Music";
+const int kMilliSecondsBeforeNextScroll = 75;
+const double kScreenHeightRatio = 0.3865;

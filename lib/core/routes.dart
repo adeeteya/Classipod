@@ -52,7 +52,6 @@ final router = GoRouter(
           name: Routes.menu.name,
           pageBuilder: (context, state) => CupertinoPage(
             key: state.pageKey,
-            maintainState: false,
             child: const MenuScreen(),
           ),
           routes: [
@@ -61,7 +60,6 @@ final router = GoRouter(
                 name: Routes.settings.name,
                 pageBuilder: (context, state) => CupertinoPage(
                       key: state.pageKey,
-                      maintainState: false,
                       child: const SettingsScreen(),
                     ),
                 routes: [

@@ -56,6 +56,7 @@ class ClassipodApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       theme: CupertinoThemeData(
         brightness: (isDark) ? Brightness.dark : Brightness.light,
+        scaffoldBackgroundColor: CupertinoColors.white,
         textTheme: const CupertinoTextThemeData(
           textStyle:
               TextStyle(color: CupertinoColors.black, fontFamily: 'Myriad'),

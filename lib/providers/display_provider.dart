@@ -74,7 +74,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
   }
 
   void onClickWheelScroll(
-      DragUpdateDetails dragUpdateDetails, double radius, double height) {
+      DragUpdateDetails dragUpdateDetails, double height, double radius) {
     /// Pan location on the wheel
     bool onTop = dragUpdateDetails.localPosition.dy <= radius;
     bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;
@@ -603,9 +603,9 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     }
 
     //If Forward Seek Button is Clicked in the Settings Screen
-    else if (state.displayScreenType == DisplayScreenType.settings &&
-        state.selectedDisplayListItem !=
-            ref.read(settingsProvider.notifier).settingsListTiles.length - 1) {
+    else if (state.displayScreenType == DisplayScreenType.settings) {
+      // && state.selectedDisplayListItem !=
+      //     ref.read(settingsProvider.notifier).settingsListTiles.length - 1) {
       state = state.copyWith(
           selectedDisplayListItem: state.selectedDisplayListItem + 1);
     }

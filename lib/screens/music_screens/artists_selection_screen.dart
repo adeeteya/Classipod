@@ -1,8 +1,10 @@
+import 'package:classipod/core/custom_screen.dart';
+import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
-import 'package:classipod/providers/display_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class ArtistsSelectionScreen extends ConsumerStatefulWidget {
   const ArtistsSelectionScreen({super.key});
@@ -11,29 +13,28 @@ class ArtistsSelectionScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _ArtistsSelectionScreenState();
 }
 
-class _ArtistsSelectionScreenState
-    extends ConsumerState<ArtistsSelectionScreen> {
-  late final ScrollController _scrollController;
-  late final List<String> artistNames;
+class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
+    with CustomScreen {
+  @override
+  String get routeName => Routes.artists.name;
 
   @override
-  void initState() {
-    _scrollController = ScrollController(
-        initialScrollOffset: ref.read(displayProvider).scrollOffset);
-    artistNames = ref.read(musicProvider.notifier).artistNames.toList();
-    ref.listenManual(displayProvider.select((value) => value.scrollOffset),
-        (previous, next) {
-      _scrollController.jumpTo(next);
-    });
-    super.initState();
+  List<String> get displayItems =>
+      ref.read(musicProvider.notifier).artistNames.toList();
+
+  @override
+  void onSelectPressed() {
+    final selectedArtistName = ref
+        .read(musicProvider.notifier)
+        .artistNames
+        .elementAt(selectedDisplayItem);
+    context.goNamed(Routes.artistSongs.name,
+        pathParameters: {"artistName": selectedArtistName});
   }
 
   @override
   Widget build(BuildContext context) {
-    final selectedDisplayListItem = ref.watch(
-        displayProvider.select((value) => value.selectedDisplayListItem));
-
-    if (artistNames.isEmpty) {
+    if (displayItems.isEmpty) {
       return const CupertinoPageScaffold(
         backgroundColor: CupertinoColors.white,
         child: Center(
@@ -42,14 +43,16 @@ class _ArtistsSelectionScreenState
       );
     }
 
-    return CupertinoScrollbar(
-      controller: _scrollController,
-      child: ListView.builder(
-        controller: _scrollController,
-        itemCount: artistNames.length,
-        itemBuilder: (context, index) => DisplayListTile(
-          text: artistNames[index],
-          isSelected: index == selectedDisplayListItem,
+    return CupertinoPageScaffold(
+      child: CupertinoScrollbar(
+        controller: scrollController,
+        child: ListView.builder(
+          controller: scrollController,
+          itemCount: displayItems.length,
+          itemBuilder: (context, index) => DisplayListTile(
+            text: displayItems[index],
+            isSelected: selectedDisplayItem == index,
+          ),
         ),
       ),
     );

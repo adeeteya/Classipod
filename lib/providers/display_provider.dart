@@ -13,12 +13,6 @@ import 'package:vibration/vibration.dart';
 
 class DisplayNotifier extends Notifier<DisplayDetails> {
   DisplayNotifier() : super();
-  final List<String> musicListDisplayItems = [
-    "Cover Flow",
-    "Artists",
-    "Albums",
-    "Songs",
-  ];
   DisplayScreenType previousDisplayScreenType = DisplayScreenType.menu;
   int previousSelectedDisplayListItem = 0;
   double previousScrollOffset = 0;
@@ -531,9 +525,7 @@ class DisplayNotifier extends Notifier<DisplayDetails> {
     clickWheelSound();
     //If Forward Seek Button is Clicked in the Music Menu Screen
     if (state.displayScreenType == DisplayScreenType.musicMenu) {
-      if (state.selectedDisplayListItem != musicListDisplayItems.length - 1) {
-        scrollScreenDown(screenHeight, 30);
-      }
+      scrollScreenDown(screenHeight, 30);
     }
 
     //If Forward Seek Button is Clicked in Artist Selection Screen

@@ -68,7 +68,6 @@ final router = GoRouter(
                     name: Routes.about.name,
                     pageBuilder: (context, state) => CupertinoPage(
                       key: state.pageKey,
-                      maintainState: false,
                       child: const AboutScreen(),
                     ),
                   ),
@@ -78,7 +77,6 @@ final router = GoRouter(
               name: Routes.nowPlaying.name,
               pageBuilder: (context, state) => CupertinoPage(
                 key: state.pageKey,
-                maintainState: false,
                 child: const NowPlayingScreen(),
               ),
             ),
@@ -87,7 +85,6 @@ final router = GoRouter(
               name: Routes.music.name,
               pageBuilder: (context, state) => CupertinoPage(
                 key: state.pageKey,
-                maintainState: false,
                 child: const MusicMenuScreen(),
               ),
               routes: [
@@ -96,7 +93,6 @@ final router = GoRouter(
                   name: Routes.coverFlow.name,
                   pageBuilder: (context, state) => CupertinoPage(
                     key: state.pageKey,
-                    maintainState: false,
                     child: const CoverFlowScreen(),
                   ),
                 ),
@@ -105,7 +101,6 @@ final router = GoRouter(
                   name: Routes.artists.name,
                   pageBuilder: (context, state) => CupertinoPage(
                     key: state.pageKey,
-                    maintainState: false,
                     child: const ArtistsSelectionScreen(),
                   ),
                   routes: [
@@ -127,7 +122,6 @@ final router = GoRouter(
                   name: Routes.albums.name,
                   pageBuilder: (context, state) => CupertinoPage(
                     key: state.pageKey,
-                    maintainState: false,
                     child: const AlbumsSelectionScreen(),
                   ),
                 ),
@@ -136,7 +130,6 @@ final router = GoRouter(
                   name: Routes.songs.name,
                   pageBuilder: (context, state) => CupertinoPage(
                     key: state.pageKey,
-                    maintainState: false,
                     child: const SongsScreen(),
                   ),
                 ),

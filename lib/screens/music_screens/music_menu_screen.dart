@@ -1,7 +1,17 @@
+import 'package:classipod/core/custom_screen.dart';
+import 'package:classipod/core/extensions.dart';
+import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
-import 'package:classipod/providers/display_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+enum _MusicListDisplayItems {
+  coverFlow,
+  artists,
+  albums,
+  songs,
+}
 
 class MusicMenuScreen extends ConsumerStatefulWidget {
   const MusicMenuScreen({super.key});
@@ -10,29 +20,46 @@ class MusicMenuScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _MusicMenuScreenState();
 }
 
-class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen> {
-  final ScrollController _scrollController = ScrollController();
+class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
+    with CustomScreen {
+  @override
+  String get routeName => Routes.music.name;
 
   @override
-  void initState() {
-    ref.listenManual(displayProvider.select((value) => value.scrollOffset),
-        (previous, next) {
-      _scrollController.jumpTo(next);
-    });
-    super.initState();
+  List<String> get displayItems =>
+      _MusicListDisplayItems.values.map((e) => e.title).toList();
+
+  @override
+  void onSelectPressed() {
+    switch (_MusicListDisplayItems.values[selectedDisplayItem]) {
+      case _MusicListDisplayItems.coverFlow:
+        context.goNamed(Routes.coverFlow.name);
+        break;
+      case _MusicListDisplayItems.artists:
+        context.goNamed(Routes.artists.name);
+        break;
+      case _MusicListDisplayItems.albums:
+        context.goNamed(Routes.albums.name);
+        break;
+      case _MusicListDisplayItems.songs:
+        context.goNamed(Routes.songs.name);
+        break;
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    final selectedDisplayListItem = ref.watch(
-        displayProvider.select((value) => value.selectedDisplayListItem));
-    return ListView.builder(
-      controller: _scrollController,
-      itemCount:
-          ref.read(displayProvider.notifier).musicListDisplayItems.length,
-      itemBuilder: (context, index) => DisplayListTile(
-        text: ref.read(displayProvider.notifier).musicListDisplayItems[index],
-        isSelected: selectedDisplayListItem == index,
+    return CupertinoPageScaffold(
+      child: CupertinoScrollbar(
+        controller: scrollController,
+        child: ListView.builder(
+          controller: scrollController,
+          itemCount: displayItems.length,
+          itemBuilder: (context, index) => DisplayListTile(
+            text: displayItems[index],
+            isSelected: selectedDisplayItem == index,
+          ),
+        ),
       ),
     );
   }

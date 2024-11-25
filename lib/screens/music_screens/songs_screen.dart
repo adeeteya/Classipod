@@ -1,9 +1,11 @@
+import 'package:classipod/core/custom_screen.dart';
+import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/song_list_tile.dart';
 import 'package:classipod/models/metadata.dart';
-import 'package:classipod/providers/display_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class SongsScreen extends ConsumerStatefulWidget {
   const SongsScreen({super.key});
@@ -12,29 +14,26 @@ class SongsScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _SongsScreenState();
 }
 
-class _SongsScreenState extends ConsumerState<SongsScreen> {
-  late final ScrollController _scrollController;
-  late final List<Metadata> musicFilesMetaDataList;
+class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
+  @override
+  double get displayTileHeight => 40;
 
   @override
-  void initState() {
-    _scrollController = ScrollController(
-        initialScrollOffset: ref.read(displayProvider).scrollOffset);
-    musicFilesMetaDataList =
-        ref.read(musicProvider.notifier).completeMusicFileMetaDataList;
-    ref.listenManual(displayProvider.select((value) => value.scrollOffset),
-        (previous, next) {
-      _scrollController.jumpTo(next);
-    });
-    super.initState();
+  String get routeName => Routes.songs.name;
+
+  @override
+  List<Metadata> get displayItems =>
+      ref.read(musicProvider.notifier).completeMusicFileMetaDataList;
+
+  @override
+  void onSelectPressed() {
+    ref.read(musicProvider.notifier).playAtIndex(selectedDisplayItem);
+    context.pushNamed(Routes.nowPlaying.name);
   }
 
   @override
   Widget build(BuildContext context) {
-    final selectedDisplayListItem = ref.watch(
-        displayProvider.select((value) => value.selectedDisplayListItem));
-
-    if (musicFilesMetaDataList.isEmpty) {
+    if (displayItems.isEmpty) {
       return const CupertinoPageScaffold(
         backgroundColor: CupertinoColors.white,
         child: Center(
@@ -44,16 +43,15 @@ class _SongsScreenState extends ConsumerState<SongsScreen> {
     }
 
     return CupertinoPageScaffold(
-      backgroundColor: CupertinoColors.white,
       child: CupertinoScrollbar(
-        controller: _scrollController,
+        controller: scrollController,
         child: ListView.builder(
-          controller: _scrollController,
-          itemCount: musicFilesMetaDataList.length,
+          controller: scrollController,
+          itemCount: displayItems.length,
           itemBuilder: (context, index) => SongListTile(
-            songName: musicFilesMetaDataList[index].trackName,
-            trackArtistNames: musicFilesMetaDataList[index].getTrackArtistNames,
-            isSelected: selectedDisplayListItem == index,
+            songName: displayItems[index].trackName,
+            trackArtistNames: displayItems[index].getTrackArtistNames,
+            isSelected: selectedDisplayItem == index,
           ),
         ),
       ),

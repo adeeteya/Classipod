@@ -6,11 +6,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
+  abstract final String routeName;
+  abstract final List displayItems;
   int selectedDisplayItem = 0;
   final double displayTileHeight = 30.0;
   final ScrollController scrollController = ScrollController();
-  abstract final List<String> displayItems;
-  abstract final String routeName;
 
   void onSelectPressed();
 
@@ -20,8 +20,10 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         selectedDisplayItem++;
       });
 
-      if (((selectedDisplayItem + 2) * displayTileHeight) >
-          context.screenSize.height * kScreenHeightRatio) {
+      if (selectedDisplayItem != displayItems.length - 1 &&
+          (((selectedDisplayItem + 2) * displayTileHeight) >
+              ((context.screenSize.height * kScreenHeightRatio) +
+                  scrollController.offset))) {
         scrollController.jumpTo(scrollController.offset + displayTileHeight);
       }
     }
@@ -58,8 +60,10 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         scrollBackward();
         break;
       case DeviceAction.seekForward:
+        scrollForward();
         break;
       case DeviceAction.seekBackward:
+        scrollBackward();
         break;
       case DeviceAction.seekForwardLongPress:
         break;

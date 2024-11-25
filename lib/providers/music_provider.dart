@@ -156,13 +156,14 @@ class MusicNotifier extends Notifier<MusicDetails> {
     }
   }
 
-  void fetchArtistSongs(String artistName) {
+  List<int> fetchArtistSongs(String artistName) {
     artistSongsIndexes.clear();
     for (int i = 0; i < completeMusicFileMetaDataList.length; i++) {
       if (completeMusicFileMetaDataList[i].getMainArtistName == artistName) {
         artistSongsIndexes.add(i);
       }
     }
+    return artistSongsIndexes;
   }
 
   Future<void> playAlbum(String albumName) async {

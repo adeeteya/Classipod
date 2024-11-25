@@ -1,8 +1,10 @@
+import 'package:classipod/core/custom_screen.dart';
+import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
-import 'package:classipod/providers/display_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class ArtistSongsScreen extends ConsumerStatefulWidget {
   final String artistName;
@@ -12,48 +14,49 @@ class ArtistSongsScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _ArtistSongsScreenState();
 }
 
-class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen> {
-  late final ScrollController _scrollController;
-  late final List<int> artistSongsIndexes;
+class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
+    with CustomScreen {
+  @override
+  double get displayTileHeight => 50;
 
   @override
-  void initState() {
-    _scrollController = ScrollController(
-        initialScrollOffset: ref.read(displayProvider).scrollOffset);
-    ref.read(musicProvider.notifier).fetchArtistSongs(widget.artistName);
-    artistSongsIndexes = ref.read(musicProvider.notifier).artistSongsIndexes;
-    ref.listenManual(displayProvider.select((value) => value.scrollOffset),
-        (previous, next) {
-      _scrollController.jumpTo(next);
-    });
-    super.initState();
+  String get routeName => widget.artistName;
+
+  @override
+  List<int> get displayItems =>
+      ref.read(musicProvider.notifier).fetchArtistSongs(widget.artistName);
+
+  @override
+  void onSelectPressed() {
+    ref
+        .read(musicProvider.notifier)
+        .playAtIndex(displayItems[selectedDisplayItem]);
+    context.pushNamed(Routes.nowPlaying.name);
   }
 
   @override
   Widget build(BuildContext context) {
-    final selectedDisplayListItem = ref.watch(
-        displayProvider.select((value) => value.selectedDisplayListItem));
     return CupertinoPageScaffold(
       backgroundColor: CupertinoColors.white,
       child: CupertinoScrollbar(
-        controller: _scrollController,
+        controller: scrollController,
         child: ListView.builder(
-          controller: _scrollController,
-          itemCount: artistSongsIndexes.length,
+          controller: scrollController,
+          itemCount: displayItems.length,
           itemBuilder: (context, index) => AlbumArtSongListTile(
             thumbnailPath: ref
                 .read(musicProvider.notifier)
-                .completeMusicFileMetaDataList[artistSongsIndexes[index]]
+                .completeMusicFileMetaDataList[displayItems[index]]
                 .thumbnailPath,
             songName: ref
                 .read(musicProvider.notifier)
-                .completeMusicFileMetaDataList[artistSongsIndexes[index]]
+                .completeMusicFileMetaDataList[displayItems[index]]
                 .trackName,
             trackArtistNames: ref
                 .read(musicProvider.notifier)
-                .completeMusicFileMetaDataList[artistSongsIndexes[index]]
+                .completeMusicFileMetaDataList[displayItems[index]]
                 .getTrackArtistNames,
-            isSelected: selectedDisplayListItem == index,
+            isSelected: selectedDisplayItem == index,
           ),
         ),
       ),

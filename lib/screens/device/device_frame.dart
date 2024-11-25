@@ -7,13 +7,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vector_graphics/vector_graphics.dart';
 
-class DeviceFrame extends StatelessWidget {
+class DeviceFrame extends ConsumerWidget {
   final Widget child;
   const DeviceFrame({super.key, required this.child});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.sizeOf(context);
+    final isLoading = ref.watch(musicProvider.select((val) => val.isLoading));
     return DecoratedBox(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -39,73 +40,77 @@ class DeviceFrame extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Positioned(
-              top: 0,
-              child: SizedBox(
-                height: 20,
-                width: size.width,
-                child: const DecoratedBox(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: CupertinoColors.black,
-                        blurRadius: 100,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                  ),
+            top: 0,
+            child: SizedBox(
+              height: 20,
+              width: size.width,
+              child: const DecoratedBox(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: CupertinoColors.black,
+                      blurRadius: 100,
+                      spreadRadius: 1,
+                    ),
+                  ],
                 ),
-              )),
+              ),
+            ),
+          ),
           Positioned(
-              bottom: 0,
-              child: SizedBox(
-                height: 20,
-                width: size.width,
-                child: const DecoratedBox(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: CupertinoColors.black,
-                        blurRadius: 100,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                  ),
+            bottom: 0,
+            child: SizedBox(
+              height: 20,
+              width: size.width,
+              child: const DecoratedBox(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: CupertinoColors.black,
+                      blurRadius: 100,
+                      spreadRadius: 1,
+                    ),
+                  ],
                 ),
-              )),
+              ),
+            ),
+          ),
           Positioned(
-              left: 0,
-              child: SizedBox(
-                height: size.height,
-                width: 20,
-                child: const DecoratedBox(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: CupertinoColors.black,
-                        blurRadius: 100,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                  ),
+            left: 0,
+            child: SizedBox(
+              height: size.height,
+              width: 20,
+              child: const DecoratedBox(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: CupertinoColors.black,
+                      blurRadius: 100,
+                      spreadRadius: 1,
+                    ),
+                  ],
                 ),
-              )),
+              ),
+            ),
+          ),
           Positioned(
-              right: 0,
-              child: SizedBox(
-                height: size.height,
-                width: 20,
-                child: const DecoratedBox(
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: CupertinoColors.black,
-                        blurRadius: 100,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                  ),
+            right: 0,
+            child: SizedBox(
+              height: size.height,
+              width: 20,
+              child: const DecoratedBox(
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: CupertinoColors.black,
+                      blurRadius: 100,
+                      spreadRadius: 1,
+                    ),
+                  ],
                 ),
-              )),
+              ),
+            ),
+          ),
           SafeArea(
             minimum: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
             child: Column(
@@ -124,28 +129,20 @@ class DeviceFrame extends StatelessWidget {
                         width: 5,
                       ),
                     ),
-                    child: Consumer(
-                      builder: (context, ref, _) {
-                        bool isLoading = ref.watch(
-                            musicProvider.select((value) => value.isLoading));
-                        if (isLoading) {
-                          return Center(
+                    child: (isLoading)
+                        ? Center(
                             child: VectorGraphic(
                               loader: AssetBytesLoader(
                                 "assets/icons/apple_logo.svg",
                               ),
                             ),
-                          );
-                        } else {
-                          return Column(
+                          )
+                        : Column(
                             children: [
                               const StatusBar(),
                               Expanded(child: child),
                             ],
-                          );
-                        }
-                      },
-                    ),
+                          ),
                   ),
                 ),
                 const Spacer(flex: 2),

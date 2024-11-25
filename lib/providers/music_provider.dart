@@ -3,12 +3,12 @@ import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/helper_functions.dart';
+import 'package:classipod/core/providers.dart';
 import 'package:classipod/models/album_details.dart';
 import 'package:classipod/models/cover_flow_album_details.dart';
 import 'package:classipod/models/metadata.dart';
 import 'package:classipod/models/music_details.dart';
 import 'package:classipod/providers/settings_provider.dart';
-import 'package:classipod/providers/temp_directory_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
@@ -53,34 +53,21 @@ class MusicNotifier extends Notifier<MusicDetails> {
   }
 
   Future<void> requestStoragePermissions() async {
-    var status = await Permission.storage.status;
-    if (!status.isGranted) {
-      await Permission.storage.request();
-    }
-    status = await Permission.audio.status;
-    if (!status.isGranted) {
-      await Permission.audio.request();
-    }
+    // var status = await Permission.storage.status;
+    // if (!status.isGranted) {
+    //   await Permission.storage.request();
+    // }
+    // status = await Permission.audio.status;
+    // if (!status.isGranted) {
+    //   await Permission.audio.request();
+    // }
+    await [Permission.storage, Permission.audio].request();
   }
 
-  Future<void> getAllAudioFiles() async {
-    final List<String> artistNamesList = [];
-    completeMusicFileMetaDataList.clear();
-    artistNames.clear();
-    albumNames.clear();
-    albumDetails.clear();
-    artistSongsIndexes.clear();
-    await requestStoragePermissions();
-    final Directory storageDir =
-        Directory(ref.read(settingsProvider).musicFolderPath);
-    final List<FileSystemEntity> files;
-    files = storageDir.listSync(recursive: true, followLinks: false);
-
-    String tempPath = ref.read(tempDirectoryPathProvider);
+  Future<void> getFilesMetadata(List<String> filePaths) async {
+    final String tempPath = ref.read(tempDirectoryPathProvider);
     AudioMetadata audioMetadata;
-
-    for (FileSystemEntity entity in files) {
-      String path = entity.path;
+    for (String path in filePaths) {
       if (isSupportedAudioFormat(path)) {
         String thumbnailFileName = path
             .replaceAll('/', '-')
@@ -111,7 +98,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
           audioMetadata = readMetadata(File(path), getImage: false);
         }
 
-        artistNamesList.add(audioMetadata.artist ?? "Unknown Artist");
+        artistNames.add(audioMetadata.artist ?? "Unknown Artist");
         if (albumNames.add(audioMetadata.album ?? "Unknown Album")) {
           albumDetails.add(
             AlbumDetails(
@@ -128,7 +115,25 @@ class MusicNotifier extends Notifier<MusicDetails> {
         );
       }
     }
-    artistNamesList.sort();
+  }
+
+  Future<void> getAllAudioFiles() async {
+    completeMusicFileMetaDataList.clear();
+    artistNames.clear();
+    albumNames.clear();
+    albumDetails.clear();
+    artistSongsIndexes.clear();
+    await requestStoragePermissions();
+    final Directory storageDir =
+        Directory(ref.read(settingsProvider).musicFolderPath);
+    final List<FileSystemEntity> files =
+        storageDir.listSync(recursive: true, followLinks: false);
+    final List<String> filePaths = files.map((e) => e.path).toList();
+
+    await getFilesMetadata(filePaths);
+
+    final artistNamesList = artistNames.toList()..sort();
+    artistNames.clear();
     artistNames.addAll(artistNamesList);
     albumDetails.sort((a, b) => a.albumName.compareTo(b.albumName));
     albumNames.clear();

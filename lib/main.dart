@@ -1,12 +1,13 @@
 import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/providers.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/providers/settings_provider.dart';
-import 'package:classipod/providers/temp_directory_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -27,11 +28,16 @@ Future<void> main() async {
   );
 
   final tempDirectory = await getTemporaryDirectory();
+  final sharedPreferencesWithCache = await SharedPreferencesWithCache.create(
+    cacheOptions: SharedPreferencesWithCacheOptions(),
+  );
 
   runApp(
     ProviderScope(
       overrides: [
-        tempDirectoryPathProvider.overrideWithValue(tempDirectory.path)
+        tempDirectoryPathProvider.overrideWithValue(tempDirectory.path),
+        sharedPreferencesWithCacheProvider
+            .overrideWithValue(sharedPreferencesWithCache),
       ],
       child: const ClassipodApp(),
     ),

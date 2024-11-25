@@ -28,3 +28,5 @@ const Color inActiveSliderGradientColor1 = Color(0xFFFBFBFB);
 const Color inActiveSliderGradientColor2 = Color(0xFFEFEFEF);
 const Color sliderBorderColor = Color(0xFFE2E2E2);
 const Color batteryBarColor = Color(0xFF6EA447);
+
+const String kDefaultMusicFolderPath = "/storage/emulated/0/Music";

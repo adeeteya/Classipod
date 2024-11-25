@@ -33,6 +33,16 @@ class _SongsScreenState extends ConsumerState<SongsScreen> {
   Widget build(BuildContext context) {
     final selectedDisplayListItem = ref.watch(
         displayProvider.select((value) => value.selectedDisplayListItem));
+
+    if (musicFilesMetaDataList.isEmpty) {
+      return const CupertinoPageScaffold(
+        backgroundColor: CupertinoColors.white,
+        child: Center(
+          child: Text("No Music Files Present from the Selected Directory☹️"),
+        ),
+      );
+    }
+
     return CupertinoPageScaffold(
       backgroundColor: CupertinoColors.white,
       child: CupertinoScrollbar(

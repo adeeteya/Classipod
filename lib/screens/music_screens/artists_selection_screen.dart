@@ -32,6 +32,16 @@ class _ArtistsSelectionScreenState
   Widget build(BuildContext context) {
     final selectedDisplayListItem = ref.watch(
         displayProvider.select((value) => value.selectedDisplayListItem));
+
+    if (artistNames.isEmpty) {
+      return const CupertinoPageScaffold(
+        backgroundColor: CupertinoColors.white,
+        child: Center(
+          child: Text("No Music Files Present from the Selected Directory☹️"),
+        ),
+      );
+    }
+
     return CupertinoScrollbar(
       controller: _scrollController,
       child: ListView.builder(

@@ -55,6 +55,15 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen> {
     final int selectedDisplayListItem = ref.watch(
         displayProvider.select((value) => value.selectedDisplayListItem));
 
+    if (albumDetails.isEmpty) {
+      return const CupertinoPageScaffold(
+        backgroundColor: CupertinoColors.white,
+        child: Center(
+          child: Text("No Music Files Present from the Selected Directory☹️"),
+        ),
+      );
+    }
+
     return CupertinoPageScaffold(
       backgroundColor: CupertinoColors.white,
       child: Stack(

@@ -41,7 +41,6 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
       return const CupertinoPageScaffold(
-        backgroundColor: CupertinoColors.white,
         child: Center(
           child: Text("No Music Files Present from the Selected Directory☹️"),
         ),

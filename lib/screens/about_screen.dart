@@ -9,7 +9,6 @@ class AboutScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return CupertinoPageScaffold(
-      backgroundColor: CupertinoColors.white,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(

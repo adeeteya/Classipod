@@ -1,44 +1,39 @@
-import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/models/device_action.dart';
 import 'package:classipod/providers/device_buttons_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
+mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   abstract final String routeName;
   abstract final List displayItems;
+  late final PageController pageController;
+  final double viewPortFraction = 1;
+  double currentPage = 0;
   int selectedDisplayItem = 0;
-  final double displayTileHeight = 30.0;
-  final ScrollController scrollController = ScrollController();
 
   void onSelectPressed();
 
   void scrollForward() {
-    if (selectedDisplayItem < displayItems.length - 1) {
-      setState(() {
-        selectedDisplayItem++;
-      });
-
-      if (((selectedDisplayItem + 2) * displayTileHeight) >
-          ((context.screenSize.height * kScreenHeightRatio) +
-              scrollController.offset)) {
-        scrollController.jumpTo(scrollController.offset + displayTileHeight);
-      }
+    if (selectedDisplayItem < displayItems.length - 2) {
+      pageController.nextPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
     }
   }
 
   void scrollBackward() {
     if (selectedDisplayItem > 0) {
-      setState(() {
-        selectedDisplayItem--;
-      });
-    }
-    if (selectedDisplayItem != 0 &&
-        (selectedDisplayItem * displayTileHeight) - displayTileHeight <
-            scrollController.offset) {
-      scrollController
-          .jumpTo(displayTileHeight * selectedDisplayItem - displayTileHeight);
+      // pageController.animateToPage(
+      //   selectedDisplayItem - 1,
+      //   duration: const Duration(milliseconds: 300),
+      //   curve: Curves.ease,
+      // );
+      pageController.previousPage(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
     }
   }
 
@@ -75,6 +70,16 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   @override
   void initState() {
+    pageController = PageController(
+      viewportFraction: viewPortFraction,
+      keepPage: false,
+    );
+    pageController.addListener(() {
+      setState(() {
+        currentPage = pageController.page ?? currentPage;
+        selectedDisplayItem = currentPage.toInt();
+      });
+    });
     super.initState();
     ref.listenManual(
       deviceButtonProvider,
@@ -84,7 +89,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   @override
   void dispose() {
-    scrollController.dispose();
+    pageController.dispose();
     super.dispose();
   }
 }

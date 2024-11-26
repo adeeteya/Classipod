@@ -38,7 +38,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   Widget build(BuildContext context) {
     if (musicFilesMetaDataList.isEmpty) {
       return const CupertinoPageScaffold(
-        backgroundColor: CupertinoColors.white,
         child: Center(
           child: Text("No Music Files Present from the Selected Directory☹️"),
         ),
@@ -46,7 +45,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     }
 
     return CupertinoPageScaffold(
-      backgroundColor: CupertinoColors.white,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(10, 40, 10, 30),
         child: Column(

@@ -37,7 +37,6 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      backgroundColor: CupertinoColors.white,
       child: CupertinoScrollbar(
         controller: scrollController,
         child: ListView.builder(

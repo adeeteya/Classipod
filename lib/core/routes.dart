@@ -1,10 +1,12 @@
 import 'package:classipod/core/custom_scroll_behavior.dart';
+import 'package:classipod/core/cupertino_modal_page.dart';
 import 'package:classipod/screens/about_screen.dart';
 import 'package:classipod/screens/device/device_frame.dart';
 import 'package:classipod/screens/menu_screen.dart';
 import 'package:classipod/screens/music_screens/album_selection_screen.dart';
 import 'package:classipod/screens/music_screens/artist_songs_screen.dart';
 import 'package:classipod/screens/music_screens/artists_selection_screen.dart';
+import 'package:classipod/screens/music_screens/cover_flow_album_selection.dart';
 import 'package:classipod/screens/music_screens/cover_flow_screen.dart';
 import 'package:classipod/screens/music_screens/music_menu_screen.dart';
 import 'package:classipod/screens/music_screens/songs_screen.dart';
@@ -20,6 +22,7 @@ enum Routes {
   nowPlaying,
   music,
   coverFlow,
+  coverFlowSelection,
   artists,
   artistSongs,
   albums,
@@ -95,6 +98,17 @@ final router = GoRouter(
                     key: state.pageKey,
                     child: const CoverFlowScreen(),
                   ),
+                  routes: [
+                    GoRoute(
+                      path: Routes.coverFlowSelection.name,
+                      name: Routes.coverFlowSelection.name,
+                      pageBuilder: (context, state) => CupertinoModalPage(
+                        context: context,
+                        useRootNavigator: false,
+                        builder: (context) => CoverFlowAlbumSelectionScreen(),
+                      ),
+                    ),
+                  ],
                 ),
                 GoRoute(
                   path: Routes.artists.name,

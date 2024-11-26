@@ -1,10 +1,13 @@
 import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/custom_screen.dart';
+import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/cover_flow_album_song_list_tile.dart';
 import 'package:classipod/models/cover_flow_album_details.dart';
 import 'package:classipod/providers/display_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
   const CoverFlowAlbumSelectionScreen({super.key});
@@ -14,25 +17,26 @@ class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
 }
 
 class _CoverFlowAlbumSelectionScreenState
-    extends ConsumerState<CoverFlowAlbumSelectionScreen> {
-  late final List<CoverFlowAlbumDetails> coverFlowAlbumDetails;
-  final ScrollController _scrollController = ScrollController();
+    extends ConsumerState<CoverFlowAlbumSelectionScreen> with CustomScreen {
+  @override
+  String get routeName => Routes.coverFlowSelection.name;
 
   @override
-  void initState() {
-    coverFlowAlbumDetails =
-        ref.read(musicProvider.notifier).coverFlowAlbumDetails;
-    ref.listenManual(displayProvider, (previous, next) {
-      _scrollController.jumpTo(next.scrollOffset);
-    });
-    super.initState();
+  List<CoverFlowAlbumDetails> get displayItems =>
+      ref.read(musicProvider.notifier).coverFlowAlbumDetails;
+
+  @override
+  void onSelectPressed() {
+    ref.read(musicProvider.notifier).playAtIndex(ref
+        .read(musicProvider.notifier)
+        .coverFlowAlbumDetails
+        .elementAt(selectedDisplayItem)
+        .songIndex);
+    context.pushNamed(Routes.nowPlaying.name);
   }
 
   @override
   Widget build(BuildContext context) {
-    final int selectedDisplayListItem = ref.watch(
-        displayProvider.select((value) => value.selectedDisplayListItem));
-
     return Padding(
       padding: const EdgeInsets.fromLTRB(40, 10, 40, 0),
       child: DecoratedBox(
@@ -95,16 +99,15 @@ class _CoverFlowAlbumSelectionScreenState
             ),
             Flexible(
               child: CupertinoScrollbar(
-                controller: _scrollController,
+                controller: scrollController,
                 child: ListView.builder(
-                  controller: _scrollController,
-                  itemCount: coverFlowAlbumDetails.length,
+                  controller: scrollController,
+                  itemCount: displayItems.length,
                   itemBuilder: (context, index) => CoverFlowAlbumSongListTile(
-                    songName: coverFlowAlbumDetails[index].songName,
+                    songName: displayItems[index].songName,
                     songDuration: Duration(
-                        milliseconds:
-                            coverFlowAlbumDetails[index].trackDuration),
-                    isSelected: selectedDisplayListItem == index,
+                        milliseconds: displayItems[index].trackDuration),
+                    isSelected: selectedDisplayItem == index,
                   ),
                 ),
               ),

@@ -23,6 +23,9 @@ class MusicNotifier extends Notifier<MusicDetails> {
   final List<AlbumDetails> albumDetails = [];
   final List<int> artistSongsIndexes = [];
   final List<CoverFlowAlbumDetails> coverFlowAlbumDetails = [];
+  String albumName = "";
+  String artistName = "";
+
   @override
   MusicDetails build() {
     getAllAudioFiles();

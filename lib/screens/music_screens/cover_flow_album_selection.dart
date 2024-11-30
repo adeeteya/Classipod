@@ -3,7 +3,6 @@ import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/cover_flow_album_song_list_tile.dart';
 import 'package:classipod/models/cover_flow_album_details.dart';
-import 'package:classipod/providers/display_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -67,25 +66,16 @@ class _CoverFlowAlbumSelectionScreenState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        ref
-                            .read(musicProvider.notifier)
-                            .albumDetails[ref
-                                .read(displayProvider.notifier)
-                                .previousSelectedDisplayListItem]
-                            .albumName,
+                        ref.read(musicProvider.notifier).albumName,
                         style: const TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: CupertinoColors.white),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: CupertinoColors.white,
+                        ),
                         maxLines: 1,
                       ),
                       Text(
-                        ref
-                            .read(musicProvider.notifier)
-                            .albumDetails[ref
-                                .read(displayProvider.notifier)
-                                .previousSelectedDisplayListItem]
-                            .albumArtistName,
+                        ref.read(musicProvider.notifier).artistName,
                         style: const TextStyle(
                           fontSize: 16,
                           color: CupertinoColors.white,

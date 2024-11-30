@@ -24,6 +24,8 @@ class NowPlayingScreen extends ConsumerStatefulWidget {
 class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     with CustomPageScreen {
   late Timer _longPressTimer;
+  Timer _lastVolumeChangeTimer = Timer(Duration.zero, () {});
+  bool _isVolumeChanging = false;
 
   @override
   String get routeName => Routes.nowPlaying.name;
@@ -38,6 +40,37 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   @override
   void onSelectPressed() {
     ref.read(musicProvider.notifier).togglePlayback();
+  }
+
+  void startVolumeTimer() {
+    if (_lastVolumeChangeTimer.isActive) {
+      _lastVolumeChangeTimer.cancel();
+    }
+    _lastVolumeChangeTimer =
+        Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (timer.tick >= 3) {
+        setState(() {
+          _isVolumeChanging = false;
+        });
+        timer.cancel();
+      }
+    });
+  }
+
+  void rotateForward() {
+    setState(() {
+      _isVolumeChanging = true;
+    });
+    ref.read(musicProvider.notifier).increaseVolume();
+    startVolumeTimer();
+  }
+
+  void rotateBackward() {
+    setState(() {
+      _isVolumeChanging = true;
+    });
+    ref.read(musicProvider.notifier).decreaseVolume();
+    startVolumeTimer();
   }
 
   void seekForwardButtonLongPress() {
@@ -72,10 +105,10 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
         onSelectPressed();
         break;
       case DeviceAction.rotateForward:
-        ref.read(musicProvider.notifier).increaseVolume();
+        rotateForward();
         break;
       case DeviceAction.rotateBackward:
-        ref.read(musicProvider.notifier).decreaseVolume();
+        rotateBackward();
         break;
       case DeviceAction.seekForward:
         ref.read(musicProvider.notifier).nextSong();
@@ -140,33 +173,24 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
                 ),
               ),
             ),
-            Consumer(
-              builder: (context, ref, _) {
-                bool isVolumeChanging = ref.watch(
-                    musicProvider.select((value) => value.isVolumeChanging));
-                Widget animatedWidget =
-                    (isVolumeChanging) ? const VolumeBar() : const SeekBar();
+            AnimatedSwitcher(
+              duration: const Duration(milliseconds: 300),
+              transitionBuilder: (child, animation) {
+                final begin = Offset(_isVolumeChanging ? 1.0 : -0.5, 0.0);
+                final tween = Tween(begin: begin, end: Offset.zero);
+                final offsetAnimation = animation.drive(tween);
 
-                return AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 300),
-                  transitionBuilder: (child, animation) {
-                    final begin = Offset((isVolumeChanging) ? 1.0 : -0.5, 0.0);
-                    final tween = Tween(begin: begin, end: Offset.zero);
-                    final offsetAnimation = animation.drive(tween);
-
-                    return FadeTransition(
-                      key: ValueKey<Key?>(child.key),
-                      opacity: animation,
-                      child: SlideTransition(
-                        key: ValueKey<Key?>(child.key),
-                        position: offsetAnimation,
-                        child: child,
-                      ),
-                    );
-                  },
-                  child: animatedWidget,
+                return FadeTransition(
+                  key: ValueKey<Key?>(child.key),
+                  opacity: animation,
+                  child: SlideTransition(
+                    key: ValueKey<Key?>(child.key),
+                    position: offsetAnimation,
+                    child: child,
+                  ),
                 );
               },
+              child: _isVolumeChanging ? const VolumeBar() : const SeekBar(),
             ),
           ],
         ),

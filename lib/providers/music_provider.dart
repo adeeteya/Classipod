@@ -23,8 +23,6 @@ class MusicNotifier extends Notifier<MusicDetails> {
   final List<AlbumDetails> albumDetails = [];
   final List<int> artistSongsIndexes = [];
   final List<CoverFlowAlbumDetails> coverFlowAlbumDetails = [];
-  Timer lastVolumeChangeTimer = Timer(Duration.zero, () {});
-
   @override
   MusicDetails build() {
     getAllAudioFiles();
@@ -44,7 +42,6 @@ class MusicNotifier extends Notifier<MusicDetails> {
       musicFilesMetaDataList: [],
       isPlaying: false,
       isLoading: true,
-      isVolumeChanging: false,
     );
   }
 
@@ -294,20 +291,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
     return player.volumeStream;
   }
 
-  void startVolumeTimer() {
-    if (lastVolumeChangeTimer.isActive) {
-      lastVolumeChangeTimer.cancel();
-    }
-    lastVolumeChangeTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
-      if (timer.tick >= 3) {
-        state = state.copyWith(isVolumeChanging: false);
-        timer.cancel();
-      }
-    });
-  }
-
   Future<void> decreaseVolume() async {
-    state = state.copyWith(isVolumeChanging: true);
     if (player.volume > 0) {
       if (player.volume <= 0.05) {
         await player.setVolume(0);
@@ -315,15 +299,12 @@ class MusicNotifier extends Notifier<MusicDetails> {
         await player.setVolume(player.volume - 0.05);
       }
     }
-    startVolumeTimer();
   }
 
   Future<void> increaseVolume() async {
-    state = state.copyWith(isVolumeChanging: true);
     if (player.volume < 1) {
       await player.setVolume(player.volume + 0.05);
     }
-    startVolumeTimer();
   }
 }
 

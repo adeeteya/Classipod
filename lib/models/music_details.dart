@@ -5,14 +5,12 @@ class MusicDetails {
   final List<Metadata> musicFilesMetaDataList;
   final bool isPlaying;
   final bool isLoading;
-  final bool isVolumeChanging;
 
   MusicDetails({
     required this.currentSongIndex,
     required this.musicFilesMetaDataList,
     required this.isPlaying,
     this.isLoading = true,
-    required this.isVolumeChanging,
   });
 
   MusicDetails copyWith({
@@ -28,7 +26,6 @@ class MusicDetails {
           musicFilesMetaDataList ?? this.musicFilesMetaDataList,
       isPlaying: isPlaying ?? this.isPlaying,
       isLoading: isLoading ?? this.isLoading,
-      isVolumeChanging: isVolumeChanging ?? this.isVolumeChanging,
     );
   }
 }

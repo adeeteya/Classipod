@@ -1,6 +1,7 @@
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/models/device_action.dart';
+import 'package:classipod/providers/appbar_title_provider.dart';
 import 'package:classipod/providers/device_buttons_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
@@ -88,6 +89,9 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(appBarTitleProvider.notifier).changeTitle(routeName);
+    });
     ref.listenManual(
       deviceButtonProvider,
       deviceControlHandler,

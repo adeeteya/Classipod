@@ -2,8 +2,10 @@ import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/models/device_action.dart';
 import 'package:classipod/providers/device_buttons_provider.dart';
+import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   abstract final String routeName;
@@ -42,12 +44,21 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     }
   }
 
+  void onMenuButtonPressed() {
+    context.pop();
+  }
+
+  void onPlayPauseButtonPressed() {
+    ref.read(musicProvider.notifier).togglePlayback();
+  }
+
   void deviceControlHandler(prevState, newState) {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
     }
     switch (newState) {
       case DeviceAction.menu:
+        onMenuButtonPressed();
         break;
       case DeviceAction.select:
         onSelectPressed();
@@ -69,6 +80,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
       case DeviceAction.seekBackwardLongPress:
         break;
       case DeviceAction.playPause:
+        onPlayPauseButtonPressed();
         break;
     }
   }

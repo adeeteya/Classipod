@@ -1,17 +1,11 @@
-import 'dart:async';
-
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/models/device_action.dart';
 import 'package:classipod/providers/device_buttons_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
-import 'package:classipod/providers/settings_provider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:vector_graphics/vector_graphics.dart';
-import 'package:vibration/vibration.dart';
 
 class DeviceControls extends ConsumerStatefulWidget {
   const DeviceControls({super.key});
@@ -21,76 +15,7 @@ class DeviceControls extends ConsumerStatefulWidget {
 }
 
 class _DeviceControlsState extends ConsumerState<DeviceControls> {
-  // late Timer _longPressTimer;
   Duration durationSinceLastScroll = Duration.zero;
-
-  void buttonPressVibrate() {
-    if (ref.read(settingsProvider).vibrate) {
-      Vibration.vibrate(duration: 2);
-    }
-  }
-
-  Future<void> clickWheelSound() async {
-    if (ref.read(settingsProvider).clickWheelSound) {
-      await SystemSound.play(SystemSoundType.click);
-    }
-  }
-
-  void onMenuButtonPressed() {
-    buttonPressVibrate();
-    clickWheelSound();
-    context.pop();
-  }
-
-  void onSeekBackButtonPressed() {
-    buttonPressVibrate();
-    clickWheelSound();
-    ref
-        .read(deviceButtonProvider.notifier)
-        .setDeviceAction(DeviceAction.seekBackward);
-  }
-
-  void onSeekBackwardButtonLongPress() {
-    buttonPressVibrate();
-    clickWheelSound();
-    ref
-        .read(deviceButtonProvider.notifier)
-        .setDeviceAction(DeviceAction.seekBackwardLongPress);
-  }
-
-  void onSeekForwardButtonPressed() {
-    buttonPressVibrate();
-    clickWheelSound();
-    ref
-        .read(deviceButtonProvider.notifier)
-        .setDeviceAction(DeviceAction.seekForward);
-  }
-
-  void onSeekForwardButtonLongPress() {
-    buttonPressVibrate();
-    clickWheelSound();
-    ref
-        .read(deviceButtonProvider.notifier)
-        .setDeviceAction(DeviceAction.seekForwardLongPress);
-  }
-
-  void longPressEnd(LongPressEndDetails _) {
-    ref.read(deviceButtonProvider.notifier).resetDeviceAction();
-  }
-
-  void onSelectButtonPressed() {
-    buttonPressVibrate();
-    clickWheelSound();
-    ref
-        .read(deviceButtonProvider.notifier)
-        .setDeviceAction(DeviceAction.select);
-  }
-
-  void onPlayPauseButtonPressed() {
-    buttonPressVibrate();
-    clickWheelSound();
-    ref.read(musicProvider.notifier).togglePlayback();
-  }
 
   void onClickWheelScroll(
       DragUpdateDetails dragUpdateDetails, double radius, double height) {
@@ -139,8 +64,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
 
     if (rotationalChange > 4 &&
         millisecondsSinceLastScroll > kMilliSecondsBeforeNextScroll) {
-      buttonPressVibrate();
-      clickWheelSound();
+      ref.read(deviceButtonProvider.notifier).buttonPressVibrate();
+      ref.read(deviceButtonProvider.notifier).clickWheelSound();
       ref
           .read(deviceButtonProvider.notifier)
           .setDeviceAction(DeviceAction.rotateForward);
@@ -149,8 +74,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
       });
     } else if (rotationalChange < -4 &&
         millisecondsSinceLastScroll > kMilliSecondsBeforeNextScroll) {
-      buttonPressVibrate();
-      clickWheelSound();
+      ref.read(deviceButtonProvider.notifier).buttonPressVibrate();
+      ref.read(deviceButtonProvider.notifier).clickWheelSound();
       ref
           .read(deviceButtonProvider.notifier)
           .setDeviceAction(DeviceAction.rotateBackward);
@@ -185,7 +110,9 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
             children: [
               Expanded(
                 child: GestureDetector(
-                  onTap: onMenuButtonPressed,
+                  onTap: () => ref
+                      .read(deviceButtonProvider.notifier)
+                      .setDeviceAction(DeviceAction.menu),
                   child: ColoredBox(
                     color: context.isDarkMode
                         ? darkDeviceControlBackgroundColor
@@ -211,9 +138,15 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                 children: [
                   Expanded(
                     child: GestureDetector(
-                      onTap: onSeekBackButtonPressed,
-                      onLongPress: onSeekBackwardButtonLongPress,
-                      onLongPressEnd: longPressEnd,
+                      onTap: () => ref
+                          .read(deviceButtonProvider.notifier)
+                          .setDeviceAction(DeviceAction.seekBackward),
+                      onLongPress: () => ref
+                          .read(deviceButtonProvider.notifier)
+                          .setDeviceAction(DeviceAction.seekBackwardLongPress),
+                      onLongPressEnd: (_) => ref
+                          .read(deviceButtonProvider.notifier)
+                          .setDeviceAction(DeviceAction.longPressEnd),
                       child: SizedBox(
                         height: size.width * 0.2175,
                         child: ColoredBox(
@@ -236,7 +169,9 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: onSelectButtonPressed,
+                    onTap: () => ref
+                        .read(deviceButtonProvider.notifier)
+                        .setDeviceAction(DeviceAction.select),
                     child: SizedBox(
                       height: size.width * 0.2175,
                       width: size.width * 0.2175,
@@ -271,9 +206,15 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                   ),
                   Expanded(
                     child: GestureDetector(
-                      onTap: onSeekForwardButtonPressed,
-                      onLongPress: onSeekForwardButtonLongPress,
-                      onLongPressEnd: longPressEnd,
+                      onTap: () => ref
+                          .read(deviceButtonProvider.notifier)
+                          .setDeviceAction(DeviceAction.seekForward),
+                      onLongPress: () => ref
+                          .read(deviceButtonProvider.notifier)
+                          .setDeviceAction(DeviceAction.seekForwardLongPress),
+                      onLongPressEnd: (_) => ref
+                          .read(deviceButtonProvider.notifier)
+                          .setDeviceAction(DeviceAction.longPressEnd),
                       child: SizedBox(
                         height: size.width * 0.2175,
                         child: ColoredBox(
@@ -299,7 +240,9 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
               ),
               Expanded(
                 child: GestureDetector(
-                  onTap: onPlayPauseButtonPressed,
+                  onTap: () => ref
+                      .read(deviceButtonProvider.notifier)
+                      .setDeviceAction(DeviceAction.playPause),
                   child: ColoredBox(
                     color: context.isDarkMode
                         ? darkDeviceControlBackgroundColor

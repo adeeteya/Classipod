@@ -7,5 +7,6 @@ enum DeviceAction {
   seekBackward,
   seekForwardLongPress,
   seekBackwardLongPress,
+  longPressEnd,
   playPause,
 }

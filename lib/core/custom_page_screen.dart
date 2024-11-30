@@ -1,14 +1,17 @@
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/models/device_action.dart';
 import 'package:classipod/providers/device_buttons_provider.dart';
+import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   abstract final String routeName;
   abstract final List displayItems;
   late final PageController pageController;
   final double viewPortFraction = 1;
+  final int initialPage = 0;
   double currentPage = 0;
   int selectedDisplayItem = 0;
 
@@ -37,12 +40,21 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     }
   }
 
+  void onMenuButtonPressed() {
+    context.pop();
+  }
+
+  void onPlayPauseButtonPressed() {
+    ref.read(musicProvider.notifier).togglePlayback();
+  }
+
   void deviceControlHandler(prevState, newState) {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
     }
     switch (newState) {
       case DeviceAction.menu:
+        onMenuButtonPressed();
         break;
       case DeviceAction.select:
         onSelectPressed();
@@ -64,6 +76,7 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
       case DeviceAction.seekBackwardLongPress:
         break;
       case DeviceAction.playPause:
+        onPlayPauseButtonPressed();
         break;
     }
   }
@@ -71,6 +84,7 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   @override
   void initState() {
     pageController = PageController(
+      initialPage: initialPage,
       viewportFraction: viewPortFraction,
       keepPage: false,
     );

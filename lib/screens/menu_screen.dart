@@ -30,6 +30,11 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
       _MenuDisplayItems.values.map((e) => e.title).toList();
 
   @override
+  void onMenuButtonPressed() {
+    return;
+  }
+
+  @override
   void onSelectPressed() {
     switch (_MenuDisplayItems.values[selectedDisplayItem]) {
       case _MenuDisplayItems.music:

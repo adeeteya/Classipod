@@ -1,10 +1,18 @@
+import 'dart:async';
+
+import 'package:classipod/core/custom_page_screen.dart';
+import 'package:classipod/core/extensions.dart';
+import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/now_playing_page.dart';
 import 'package:classipod/core/widgets/seek_bar.dart';
 import 'package:classipod/core/widgets/volume_bar.dart';
+import 'package:classipod/models/device_action.dart';
 import 'package:classipod/models/metadata.dart';
+import 'package:classipod/providers/device_buttons_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class NowPlayingScreen extends ConsumerStatefulWidget {
   const NowPlayingScreen({super.key});
@@ -13,36 +21,105 @@ class NowPlayingScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _NowPlayingScreenState();
 }
 
-class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
-  late final PageController _pageController;
-  late final List<Metadata> musicFilesMetaDataList;
+class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
+    with CustomPageScreen {
+  late Timer _longPressTimer;
 
   @override
-  void initState() {
-    musicFilesMetaDataList = ref.read(musicProvider).musicFilesMetaDataList;
-    _pageController =
-        PageController(initialPage: ref.read(musicProvider).currentSongIndex);
-    ref.listenManual(musicProvider.select((value) => value.currentSongIndex),
-        (previous, next) {
-      if ((next - (previous ?? 0)).abs() > 10) {
-        _pageController.jumpToPage(next);
-      } else {
-        _pageController.animateToPage(next,
-            duration: const Duration(milliseconds: 1000), curve: Curves.ease);
-      }
+  String get routeName => Routes.nowPlaying.name;
+
+  @override
+  int get initialPage => ref.read(musicProvider).currentSongIndex;
+
+  @override
+  List<Metadata> get displayItems =>
+      ref.read(musicProvider).musicFilesMetaDataList;
+
+  @override
+  void onSelectPressed() {
+    ref.read(musicProvider.notifier).togglePlayback();
+  }
+
+  void seekForwardButtonLongPress() {
+    _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (_) {
+      ref.read(musicProvider.notifier).seekForward();
     });
-    super.initState();
+  }
+
+  void seekBackwardButtonLongPress() {
+    _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (_) {
+      ref.read(musicProvider.notifier).seekBackward();
+    });
+  }
+
+  void longPressEnd() {
+    if (_longPressTimer.isActive) {
+      _longPressTimer.cancel();
+      ref.read(deviceButtonProvider.notifier).resetDeviceAction();
+    }
+  }
+
+  @override
+  void deviceControlHandler(prevState, newState) {
+    if (newState == null || context.router.locationNamed != routeName) {
+      return;
+    }
+    switch (newState) {
+      case DeviceAction.menu:
+        context.pop();
+        break;
+      case DeviceAction.select:
+        onSelectPressed();
+        break;
+      case DeviceAction.rotateForward:
+        ref.read(musicProvider.notifier).increaseVolume();
+        break;
+      case DeviceAction.rotateBackward:
+        ref.read(musicProvider.notifier).decreaseVolume();
+        break;
+      case DeviceAction.seekForward:
+        ref.read(musicProvider.notifier).nextSong();
+        break;
+      case DeviceAction.seekBackward:
+        ref.read(musicProvider.notifier).previousSong();
+        break;
+      case DeviceAction.seekForwardLongPress:
+        seekForwardButtonLongPress();
+        break;
+      case DeviceAction.seekBackwardLongPress:
+        seekBackwardButtonLongPress();
+        break;
+      case DeviceAction.longPressEnd:
+        longPressEnd();
+        break;
+      case DeviceAction.playPause:
+        onSelectPressed();
+        break;
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    if (musicFilesMetaDataList.isEmpty) {
+    if (displayItems.isEmpty) {
       return const CupertinoPageScaffold(
         child: Center(
           child: Text("No Music Files Present from the Selected Directory☹️"),
         ),
       );
     }
+
+    ref.listen(musicProvider.select((value) => value.currentSongIndex),
+        (previous, next) {
+      if ((next - (previous ?? 0)).abs() > 10) {
+        pageController.jumpToPage(next);
+      } else {
+        pageController.animateToPage(
+          next,
+          duration: const Duration(milliseconds: 1000),
+          curve: Curves.ease,
+        );
+      }
+    });
 
     return CupertinoPageScaffold(
       child: Padding(
@@ -51,16 +128,15 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
           children: [
             Flexible(
               child: PageView.builder(
-                controller: _pageController,
-                itemCount: musicFilesMetaDataList.length,
+                controller: pageController,
+                itemCount: displayItems.length,
                 itemBuilder: (context, index) => NowPlayingPage(
-                  thumbnailPath: musicFilesMetaDataList[index].thumbnailPath,
-                  trackName: musicFilesMetaDataList[index].trackName,
-                  artistNames:
-                      musicFilesMetaDataList[index].getTrackArtistNames,
-                  albumName: musicFilesMetaDataList[index].albumName,
+                  thumbnailPath: displayItems[index].thumbnailPath,
+                  trackName: displayItems[index].trackName,
+                  artistNames: displayItems[index].getTrackArtistNames,
+                  albumName: displayItems[index].albumName,
                   currentTrackNumber: index + 1,
-                  totalTrackNumber: musicFilesMetaDataList.length,
+                  totalTrackNumber: displayItems.length,
                 ),
               ),
             ),

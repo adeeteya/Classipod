@@ -1,7 +1,6 @@
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/providers.dart';
 import 'package:classipod/models/settings_details.dart';
-import 'package:classipod/providers/display_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
@@ -129,7 +128,12 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     await setSystemUiMode(state.immersiveMode);
   }
 
-  Future<void> getMusicFolderPath(BuildContext context) async {
+  void restartApp() {
+    ref.read(musicProvider.notifier).setLoading(true);
+    ref.read(musicProvider.notifier).getAllAudioFiles();
+  }
+
+  Future<void> getMusicFolderPath() async {
     String newMusicFolderPath =
         await FilePicker.platform.getDirectoryPath() ?? '/';
     if (newMusicFolderPath != '/' &&
@@ -137,9 +141,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
       state = state.copyWith(musicFolderPath: newMusicFolderPath);
       await ref.read(sharedPreferencesWithCacheProvider).setString(
           SharedPreferencesKeys.musicFolderPath.name, state.musicFolderPath);
-      if (context.mounted) {
-        ref.read(displayProvider.notifier).restartApp(context);
-      }
+      restartApp();
     }
   }
 }

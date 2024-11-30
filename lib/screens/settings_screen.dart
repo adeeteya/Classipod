@@ -58,7 +58,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         ref.read(settingsProvider.notifier).toggleImmersiveMode();
         break;
       case _SettingsDisplayItems.changeDirectory:
-        ref.read(settingsProvider.notifier).getMusicFolderPath(context);
+        ref.read(settingsProvider.notifier).getMusicFolderPath();
+        context.goNamed(Routes.menu.name);
         break;
       case _SettingsDisplayItems.donate:
         launchUrl(

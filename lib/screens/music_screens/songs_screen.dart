@@ -1,9 +1,11 @@
 import 'package:classipod/core/custom_screen.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/song_list_tile.dart';
 import 'package:classipod/models/metadata.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/no_music_screen.dart';
+import 'package:classipod/screens/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -35,21 +37,32 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return const NoMusicScreen();
+      return NoMusicScreen(
+        title: Routes.songs.title,
+      );
     }
 
     return CupertinoPageScaffold(
-      child: CupertinoScrollbar(
-        controller: scrollController,
-        child: ListView.builder(
-          controller: scrollController,
-          itemCount: displayItems.length,
-          itemBuilder: (context, index) => SongListTile(
-            songName: displayItems[index].trackName,
-            trackArtistNames: displayItems[index].getTrackArtistNames,
-            isSelected: selectedDisplayItem == index,
+      child: Column(
+        children: [
+          StatusBar(
+            title: Routes.songs.title,
           ),
-        ),
+          Flexible(
+            child: CupertinoScrollbar(
+              controller: scrollController,
+              child: ListView.builder(
+                controller: scrollController,
+                itemCount: displayItems.length,
+                itemBuilder: (context, index) => SongListTile(
+                  songName: displayItems[index].trackName,
+                  trackArtistNames: displayItems[index].getTrackArtistNames,
+                  isSelected: selectedDisplayItem == index,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

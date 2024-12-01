@@ -2,6 +2,7 @@ import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
+import 'package:classipod/screens/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -50,16 +51,25 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      child: CupertinoScrollbar(
-        controller: scrollController,
-        child: ListView.builder(
-          controller: scrollController,
-          itemCount: displayItems.length,
-          itemBuilder: (context, index) => DisplayListTile(
-            text: displayItems[index],
-            isSelected: selectedDisplayItem == index,
+      child: Column(
+        children: [
+          StatusBar(
+            title: Routes.music.title,
           ),
-        ),
+          Flexible(
+            child: CupertinoScrollbar(
+              controller: scrollController,
+              child: ListView.builder(
+                controller: scrollController,
+                itemCount: displayItems.length,
+                itemBuilder: (context, index) => DisplayListTile(
+                  text: displayItems[index],
+                  isSelected: selectedDisplayItem == index,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

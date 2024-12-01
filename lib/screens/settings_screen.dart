@@ -4,6 +4,7 @@ import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/settings_list_tile.dart';
 import 'package:classipod/models/settings_details.dart';
 import 'package:classipod/providers/settings_provider.dart';
+import 'package:classipod/screens/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -103,17 +104,27 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   Widget build(BuildContext context) {
     final settingsState = ref.watch(settingsProvider);
     return CupertinoPageScaffold(
-      child: CupertinoScrollbar(
-        controller: scrollController,
-        child: ListView.builder(
-          controller: scrollController,
-          itemCount: displayItems.length,
-          itemBuilder: (context, index) => SettingsListTile(
-            text: displayItems[index],
-            isOn: isOn(settingsState, _SettingsDisplayItems.values[index]),
-            isSelected: selectedDisplayItem == index,
+      child: Column(
+        children: [
+          StatusBar(
+            title: Routes.settings.title,
           ),
-        ),
+          Flexible(
+            child: CupertinoScrollbar(
+              controller: scrollController,
+              child: ListView.builder(
+                controller: scrollController,
+                itemCount: displayItems.length,
+                itemBuilder: (context, index) => SettingsListTile(
+                  text: displayItems[index],
+                  isOn:
+                      isOn(settingsState, _SettingsDisplayItems.values[index]),
+                  isSelected: selectedDisplayItem == index,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

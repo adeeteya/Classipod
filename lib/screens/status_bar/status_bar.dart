@@ -1,12 +1,12 @@
 import 'package:classipod/core/constants.dart';
-import 'package:classipod/providers/appbar_title_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/status_bar/battery_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class StatusBar extends StatelessWidget {
-  const StatusBar({super.key});
+  final String title;
+  const StatusBar({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -34,17 +34,12 @@ class StatusBar extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Row(
             children: [
-              Consumer(
-                builder: (context, ref, child) {
-                  final title = ref.watch(appBarTitleProvider);
-                  return Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  );
-                },
+              Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const Spacer(),
               Consumer(

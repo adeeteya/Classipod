@@ -2,7 +2,6 @@ import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/device/device_controls.dart';
-import 'package:classipod/screens/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vector_graphics/vector_graphics.dart';
@@ -137,12 +136,7 @@ class DeviceFrame extends ConsumerWidget {
                               ),
                             ),
                           )
-                        : Column(
-                            children: [
-                              const StatusBar(),
-                              Expanded(child: child),
-                            ],
-                          ),
+                        : child,
                   ),
                 ),
                 const Spacer(flex: 2),

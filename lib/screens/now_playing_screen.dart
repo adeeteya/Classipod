@@ -11,6 +11,7 @@ import 'package:classipod/models/metadata.dart';
 import 'package:classipod/providers/device_buttons_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/no_music_screen.dart';
+import 'package:classipod/screens/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -135,7 +136,9 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return const NoMusicScreen();
+      return NoMusicScreen(
+        title: Routes.nowPlaying.title,
+      );
     }
 
     ref.listen(musicProvider.select((value) => value.currentSongIndex),
@@ -152,45 +155,55 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     });
 
     return CupertinoPageScaffold(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 40, 10, 30),
-        child: Column(
-          children: [
-            Flexible(
-              child: PageView.builder(
-                controller: pageController,
-                itemCount: displayItems.length,
-                itemBuilder: (context, index) => NowPlayingPage(
-                  thumbnailPath: displayItems[index].thumbnailPath,
-                  trackName: displayItems[index].trackName,
-                  artistNames: displayItems[index].getTrackArtistNames,
-                  albumName: displayItems[index].albumName,
-                  currentTrackNumber: index + 1,
-                  totalTrackNumber: displayItems.length,
-                ),
+      child: Column(
+        children: [
+          StatusBar(
+            title: Routes.nowPlaying.title,
+          ),
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10, 40, 10, 30),
+              child: Column(
+                children: [
+                  Flexible(
+                    child: PageView.builder(
+                      controller: pageController,
+                      itemCount: displayItems.length,
+                      itemBuilder: (context, index) => NowPlayingPage(
+                        thumbnailPath: displayItems[index].thumbnailPath,
+                        trackName: displayItems[index].trackName,
+                        artistNames: displayItems[index].getTrackArtistNames,
+                        albumName: displayItems[index].albumName,
+                        currentTrackNumber: index + 1,
+                        totalTrackNumber: displayItems.length,
+                      ),
+                    ),
+                  ),
+                  AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 300),
+                    transitionBuilder: (child, animation) {
+                      final begin = Offset(_isVolumeChanging ? 1.0 : -0.5, 0.0);
+                      final tween = Tween(begin: begin, end: Offset.zero);
+                      final offsetAnimation = animation.drive(tween);
+
+                      return FadeTransition(
+                        key: ValueKey<Key?>(child.key),
+                        opacity: animation,
+                        child: SlideTransition(
+                          key: ValueKey<Key?>(child.key),
+                          position: offsetAnimation,
+                          child: child,
+                        ),
+                      );
+                    },
+                    child:
+                        _isVolumeChanging ? const VolumeBar() : const SeekBar(),
+                  ),
+                ],
               ),
             ),
-            AnimatedSwitcher(
-              duration: const Duration(milliseconds: 300),
-              transitionBuilder: (child, animation) {
-                final begin = Offset(_isVolumeChanging ? 1.0 : -0.5, 0.0);
-                final tween = Tween(begin: begin, end: Offset.zero);
-                final offsetAnimation = animation.drive(tween);
-
-                return FadeTransition(
-                  key: ValueKey<Key?>(child.key),
-                  opacity: animation,
-                  child: SlideTransition(
-                    key: ValueKey<Key?>(child.key),
-                    position: offsetAnimation,
-                    child: child,
-                  ),
-                );
-              },
-              child: _isVolumeChanging ? const VolumeBar() : const SeekBar(),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

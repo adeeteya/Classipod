@@ -3,6 +3,7 @@ import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/album_reflective_art.dart';
 import 'package:classipod/models/album_details.dart';
 import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/screens/no_music_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -42,11 +43,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return const CupertinoPageScaffold(
-        child: Center(
-          child: Text("No Music Files Present from the Selected Directory☹️"),
-        ),
-      );
+      return const NoMusicScreen();
     }
 
     return CupertinoPageScaffold(

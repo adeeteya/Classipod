@@ -2,6 +2,7 @@ import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/screens/no_music_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -35,11 +36,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return const CupertinoPageScaffold(
-        child: Center(
-          child: Text("No Music Files Present from the Selected Directory☹️"),
-        ),
-      );
+      return const NoMusicScreen();
     }
 
     return CupertinoPageScaffold(

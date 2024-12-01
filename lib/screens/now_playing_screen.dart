@@ -10,6 +10,7 @@ import 'package:classipod/models/device_action.dart';
 import 'package:classipod/models/metadata.dart';
 import 'package:classipod/providers/device_buttons_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/screens/no_music_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -134,11 +135,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return const CupertinoPageScaffold(
-        child: Center(
-          child: Text("No Music Files Present from the Selected Directory☹️"),
-        ),
-      );
+      return const NoMusicScreen();
     }
 
     ref.listen(musicProvider.select((value) => value.currentSongIndex),

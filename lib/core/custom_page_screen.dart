@@ -19,7 +19,7 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   void onSelectPressed();
 
   void scrollForward() {
-    if (selectedDisplayItem < displayItems.length - 2) {
+    if (selectedDisplayItem < displayItems.length - 1) {
       pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.ease,

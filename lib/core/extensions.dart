@@ -1,3 +1,4 @@
+import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 
@@ -65,6 +66,18 @@ extension GoRouterExtension on GoRouter {
   }
 
   String get locationNamed {
-    return location.split("/").last;
+    return location.split("/").last.split("?").first;
+  }
+}
+
+extension MetadataStringHelpers on AudioMetadata {
+  String get getMainArtistName {
+    String delimiter = ', ';
+    if (artist?.contains(', ') ?? false) {
+      delimiter = ', ';
+    } else if (artist?.contains('/') ?? false) {
+      delimiter = '/';
+    }
+    return artist?.split(delimiter).first ?? "Unknown Artist";
   }
 }

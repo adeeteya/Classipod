@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/helper_functions.dart';
 import 'package:classipod/core/providers.dart';
 import 'package:classipod/models/album_details.dart';
@@ -16,7 +17,7 @@ import 'package:permission_handler/permission_handler.dart';
 
 class MusicNotifier extends Notifier<MusicDetails> {
   MusicNotifier() : super();
-  final player = AudioPlayer();
+  final _player = AudioPlayer();
   final List<Metadata> completeMusicFileMetaDataList = [];
   final Set<String> artistNames = {};
   final Set<String> albumNames = {};
@@ -30,13 +31,13 @@ class MusicNotifier extends Notifier<MusicDetails> {
   MusicDetails build() {
     getAllAudioFiles();
 
-    player.currentIndexStream.listen((event) {
+    _player.currentIndexStream.listen((event) {
       if (event != null) {
         state = state.copyWith(currentSongIndex: event);
       }
     });
 
-    player.playerStateStream.listen((event) {
+    _player.playerStateStream.listen((event) {
       state = state.copyWith(isPlaying: event.playing);
     });
 
@@ -84,8 +85,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
                 .create(recursive: true);
             if (path.endsWith('.mp3')) {
               // Store only the image data without the 0,0 elements at the start
-              thumbnailFile
-                  .writeAsBytesSync(audioMetadata.pictures[0].bytes.sublist(2));
+              thumbnailFile.writeAsBytesSync(audioMetadata.pictures[0].bytes);
             } else {
               // Store the image data as it is
               thumbnailFile.writeAsBytesSync(audioMetadata.pictures[0].bytes);
@@ -98,13 +98,13 @@ class MusicNotifier extends Notifier<MusicDetails> {
           audioMetadata = readMetadata(File(path), getImage: false);
         }
 
-        artistNames.add(audioMetadata.artist ?? "Unknown Artist");
+        artistNames.add(audioMetadata.getMainArtistName);
         if (albumNames.add(audioMetadata.album ?? "Unknown Album")) {
           albumDetails.add(
             AlbumDetails(
                 albumName: audioMetadata.album ?? "Unknown Album",
                 thumbnailPath: "$tempPath/$thumbnailFileName",
-                albumArtistName: audioMetadata.artist ?? "Unknown Artist"),
+                albumArtistName: audioMetadata.getMainArtistName),
           );
         }
         completeMusicFileMetaDataList.add(
@@ -151,8 +151,8 @@ class MusicNotifier extends Notifier<MusicDetails> {
     if (isShuffle) {
       await setPlaylist(shuffle: true);
     }
-    if (!player.playing) {
-      await player.play();
+    if (!_player.playing) {
+      await _player.play();
     }
   }
 
@@ -179,7 +179,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
       isLoading: false,
     );
     await setPlaylist();
-    await player.play();
+    await _player.play();
   }
 
   void getCoverFlowAlbumDetails(String albumName) {
@@ -222,7 +222,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
         ),
       );
     }
-    await player.setAudioSource(
+    await _player.setAudioSource(
       ConcatenatingAudioSource(
         useLazyPreparation: true,
         shuffleOrder: DefaultShuffleOrder(),
@@ -236,77 +236,77 @@ class MusicNotifier extends Notifier<MusicDetails> {
 
   Future<void> setLoopMode() async {
     if (ref.read(settingsProvider).repeat) {
-      await player.setLoopMode(LoopMode.all);
+      await _player.setLoopMode(LoopMode.all);
     } else {
-      await player.setLoopMode(LoopMode.off);
+      await _player.setLoopMode(LoopMode.off);
     }
   }
 
   Future<void> nextSong() async {
-    await player.seekToNext();
+    await _player.seekToNext();
   }
 
   Future<void> previousSong() async {
-    await player.seekToPrevious();
+    await _player.seekToPrevious();
   }
 
   Future<void> playAtIndex(int index) async {
-    await player.pause();
+    await _player.pause();
     if (state.musicFilesMetaDataList.length !=
         completeMusicFileMetaDataList.length) {
       state =
           state.copyWith(musicFilesMetaDataList: completeMusicFileMetaDataList);
       await setPlaylist();
     }
-    await player.seek(Duration.zero, index: index);
-    await player.play();
+    await _player.seek(Duration.zero, index: index);
+    await _player.play();
   }
 
   Future<void> togglePlayback() async {
     if (state.isPlaying) {
-      await player.pause();
+      await _player.pause();
     } else {
-      await player.play();
+      await _player.play();
     }
   }
 
   Stream<Duration> getPositionStream() {
-    return player.positionStream;
+    return _player.positionStream;
   }
 
   Future<void> seekForward() async {
-    if (player.position.inSeconds <=
+    if (_player.position.inSeconds <=
         ((state.musicFilesMetaDataList[state.currentSongIndex].trackDuration ??
                     0) /
                 1000) -
             3) {
-      await player.seek(Duration(seconds: player.position.inSeconds + 1));
+      await _player.seek(Duration(seconds: _player.position.inSeconds + 1));
     }
   }
 
   Future<void> seekBackward() async {
-    if (player.position.inSeconds > 3) {
-      await player.seek(Duration(seconds: player.position.inSeconds - 1));
+    if (_player.position.inSeconds > 3) {
+      await _player.seek(Duration(seconds: _player.position.inSeconds - 1));
     }
   }
 
   Stream<double> getVolumeStream() {
-    return player.volumeStream;
+    return _player.volumeStream;
   }
 
   Future<void> decreaseVolume() async {
-    if (player.volume > 0) {
-      if (player.volume <= 0.05) {
-        await player.setVolume(0);
+    if (_player.volume > 0) {
+      if (_player.volume <= 0.05) {
+        await _player.setVolume(0);
       } else {
-        await player.setVolume(player.volume - 0.05);
+        await _player.setVolume(_player.volume - 0.05);
       }
     }
   }
 
   Future<void> increaseVolume() async {
-    if (player.volume < 1) {
-      await player.setVolume(player.volume + 0.05);
+    if (_player.volume < 1) {
+      await _player.setVolume(_player.volume + 0.05);
     }
   }
 }

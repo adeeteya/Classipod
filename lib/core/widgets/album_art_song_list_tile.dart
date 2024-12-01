@@ -42,6 +42,10 @@ class AlbumArtSongListTile extends StatelessWidget {
               image: (thumbnailPath != null)
                   ? FileImage(File(thumbnailPath!))
                   : AssetImage("assets/images/default_album_cover.jpeg"),
+              errorBuilder: (_, __, ___) => Image.asset(
+                "assets/images/default_album_cover.jpeg",
+                fit: BoxFit.fitWidth,
+              ),
               height: 50,
               width: 50,
             ),

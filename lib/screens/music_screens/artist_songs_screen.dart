@@ -20,7 +20,7 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
   double get displayTileHeight => 50;
 
   @override
-  String get routeName => widget.artistName;
+  String get routeName => Routes.artistSongs.name;
 
   @override
   List<int> get displayItems =>
@@ -36,6 +36,7 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
 
   @override
   Widget build(BuildContext context) {
+    print(widget.artistName);
     return CupertinoPageScaffold(
       child: CupertinoScrollbar(
         controller: scrollController,

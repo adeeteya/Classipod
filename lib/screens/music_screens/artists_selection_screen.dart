@@ -30,7 +30,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
         .artistNames
         .elementAt(selectedDisplayItem);
     context.goNamed(Routes.artistSongs.name,
-        pathParameters: {"artistName": selectedArtistName});
+        queryParameters: {"artistName": selectedArtistName});
   }
 
   @override

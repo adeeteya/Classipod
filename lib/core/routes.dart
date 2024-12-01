@@ -119,14 +119,14 @@ final router = GoRouter(
                   ),
                   routes: [
                     GoRoute(
-                      path: ":artistName",
+                      path: Routes.artistSongs.name,
                       name: Routes.artistSongs.name,
                       pageBuilder: (context, state) => CupertinoPage(
                         key: state.pageKey,
-                        maintainState: false,
                         child: ArtistSongsScreen(
-                            artistName: state.pathParameters["artistName"] ??
-                                "Unknown Artist"),
+                          artistName: state.uri.queryParameters["artistName"] ??
+                              "Unknown Artist",
+                        ),
                       ),
                     ),
                   ],

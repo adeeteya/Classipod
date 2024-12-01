@@ -36,6 +36,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   List<String> get displayItems =>
       _SettingsDisplayItems.values.map((e) => e.title).toList();
 
+  Future<void> changeDirectory() async {
+    await ref.read(settingsProvider.notifier).getMusicFolderPath().then((_) {
+      if (mounted) {
+        context.goNamed(Routes.menu.name);
+      }
+    });
+  }
+
   @override
   void onSelectPressed() {
     switch (_SettingsDisplayItems.values[selectedDisplayItem]) {
@@ -58,8 +66,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         ref.read(settingsProvider.notifier).toggleImmersiveMode();
         break;
       case _SettingsDisplayItems.changeDirectory:
-        ref.read(settingsProvider.notifier).getMusicFolderPath();
-        context.goNamed(Routes.menu.name);
+        changeDirectory();
         break;
       case _SettingsDisplayItems.donate:
         launchUrl(

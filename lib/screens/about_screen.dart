@@ -1,13 +1,27 @@
+import 'package:classipod/core/extensions.dart';
+import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/about_list_tile.dart';
+import 'package:classipod/models/device_action.dart';
+import 'package:classipod/providers/device_buttons_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 class AboutScreen extends ConsumerWidget {
   const AboutScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    ref.listen(deviceButtonProvider, (prevState, newState) {
+      if (newState == null ||
+          context.router.locationNamed != Routes.about.name) {
+        return;
+      } else if (newState == DeviceAction.menu) {
+        context.pop();
+      }
+    });
+
     return CupertinoPageScaffold(
       child: Padding(
         padding: const EdgeInsets.all(8.0),

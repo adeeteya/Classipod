@@ -17,31 +17,43 @@ Future<void> main() async {
       statusBarColor: transparentColor,
     ),
   );
-  await SystemChrome.setPreferredOrientations(
-    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
-  );
-  await JustAudioBackground.init(
-    androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
-    androidNotificationChannelName: 'Audio playback',
-    androidNotificationChannelDescription: 'Classipod Audio Notification',
-    androidNotificationOngoing: true,
-  );
+  try {
+    await SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+    );
+    await JustAudioBackground.init(
+      androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
+      androidNotificationChannelName: 'Audio playback',
+      androidNotificationChannelDescription: 'Classipod Audio Notification',
+      androidNotificationOngoing: true,
+    );
+    final tempDirectory = await getTemporaryDirectory();
+    final sharedPreferencesWithCache = await SharedPreferencesWithCache.create(
+      cacheOptions: SharedPreferencesWithCacheOptions(),
+    );
 
-  final tempDirectory = await getTemporaryDirectory();
-  final sharedPreferencesWithCache = await SharedPreferencesWithCache.create(
-    cacheOptions: SharedPreferencesWithCacheOptions(),
-  );
-
-  runApp(
-    ProviderScope(
-      overrides: [
-        tempDirectoryPathProvider.overrideWithValue(tempDirectory.path),
-        sharedPreferencesWithCacheProvider
-            .overrideWithValue(sharedPreferencesWithCache),
-      ],
-      child: const ClassipodApp(),
-    ),
-  );
+    runApp(
+      ProviderScope(
+        overrides: [
+          tempDirectoryPathProvider.overrideWithValue(tempDirectory.path),
+          sharedPreferencesWithCacheProvider
+              .overrideWithValue(sharedPreferencesWithCache),
+        ],
+        child: const ClassipodApp(),
+      ),
+    );
+  } catch (e) {
+    // ignore: missing_provider_scope
+    runApp(
+      CupertinoApp(
+        home: CupertinoPageScaffold(
+          child: Center(
+            child: Text('Error: $e'),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 class ClassipodApp extends ConsumerWidget {

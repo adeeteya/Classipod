@@ -62,58 +62,65 @@ class MusicNotifier extends Notifier<MusicDetails> {
     // if (!status.isGranted) {
     //   await Permission.audio.request();
     // }
-    await [Permission.storage, Permission.audio].request();
+    try {
+      await [Permission.storage, Permission.audio].request();
+    } catch (e) {
+      throw Exception('Permission request failed');
+    }
   }
 
   Future<void> getFilesMetadata(List<String> filePaths) async {
     final String tempPath = ref.read(tempDirectoryPathProvider);
     AudioMetadata audioMetadata;
-    for (String path in filePaths) {
-      if (isSupportedAudioFormat(path)) {
-        String thumbnailFileName = path
-            .replaceAll('/', '-')
-            .replaceAll(' ', '')
-            .replaceAll(".mp3", '.jpg');
-        bool thumbnailExists =
-            File('$tempPath/$thumbnailFileName').existsSync();
-
-        //Fetch album art if it doesn't exist
-        if (!thumbnailExists) {
-          audioMetadata = readMetadata(File(path), getImage: true);
-          if (audioMetadata.pictures.isNotEmpty) {
-            File thumbnailFile = await File('$tempPath/$thumbnailFileName')
-                .create(recursive: true);
-            if (path.endsWith('.mp3')) {
-              // Store only the image data without the 0,0 elements at the start
-              thumbnailFile.writeAsBytesSync(audioMetadata.pictures[0].bytes);
-            } else {
-              // Store the image data as it is
-              thumbnailFile.writeAsBytesSync(audioMetadata.pictures[0].bytes);
+    try {
+      for (String path in filePaths) {
+        if (isSupportedAudioFormat(path)) {
+          String thumbnailFileName = path
+              .replaceAll('/', '-')
+              .replaceAll(' ', '')
+              .replaceAll(".mp3", '.jpg');
+          bool thumbnailExists =
+              File('$tempPath/$thumbnailFileName').existsSync();
+          //Fetch album art if it doesn't exist
+          if (!thumbnailExists) {
+            audioMetadata = await readMetadata(File(path), getImage: true);
+            if (audioMetadata.pictures.isNotEmpty) {
+              File thumbnailFile = await File('$tempPath/$thumbnailFileName')
+                  .create(recursive: true);
+              if (path.endsWith('.mp3')) {
+                // Store only the image data without the 0,0 elements at the start
+                thumbnailFile.writeAsBytesSync(audioMetadata.pictures[0].bytes);
+              } else {
+                // Store the image data as it is
+                thumbnailFile.writeAsBytesSync(audioMetadata.pictures[0].bytes);
+              }
             }
           }
-        }
 
-        //No need to fetch album art as it already exists
-        else {
-          audioMetadata = readMetadata(File(path), getImage: false);
-        }
+          //No need to fetch album art as it already exists
+          else {
+            audioMetadata = await readMetadata(File(path), getImage: false);
+          }
 
-        artistNames.add(audioMetadata.getMainArtistName);
-        if (albumNames.add(audioMetadata.album ?? "Unknown Album")) {
-          albumDetails.add(
-            AlbumDetails(
-                albumName: audioMetadata.album ?? "Unknown Album",
-                thumbnailPath: "$tempPath/$thumbnailFileName",
-                albumArtistName: audioMetadata.getMainArtistName),
+          artistNames.add(audioMetadata.getMainArtistName);
+          if (albumNames.add(audioMetadata.album ?? "Unknown Album")) {
+            albumDetails.add(
+              AlbumDetails(
+                  albumName: audioMetadata.album ?? "Unknown Album",
+                  thumbnailPath: "$tempPath/$thumbnailFileName",
+                  albumArtistName: audioMetadata.getMainArtistName),
+            );
+          }
+          completeMusicFileMetaDataList.add(
+            Metadata.fromAudioMetadata(
+              audioMetadata,
+              "$tempPath/$thumbnailFileName",
+            ),
           );
         }
-        completeMusicFileMetaDataList.add(
-          Metadata.fromAudioMetadata(
-            audioMetadata,
-            "$tempPath/$thumbnailFileName",
-          ),
-        );
       }
+    } catch (e) {
+      throw Exception('Error reading metadata: $e');
     }
   }
 

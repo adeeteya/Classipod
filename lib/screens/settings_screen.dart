@@ -75,8 +75,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
           mode: LaunchMode.externalApplication,
         );
         break;
-      default:
-        break;
     }
   }
 

@@ -72,8 +72,8 @@ class AlbumReflectiveArt extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      CupertinoColors.white.withOpacity(0.4),
-                      CupertinoColors.white.withOpacity(1),
+                      CupertinoColors.white.withValues(alpha: 0.4),
+                      CupertinoColors.white,
                     ],
                   ),
                 ),

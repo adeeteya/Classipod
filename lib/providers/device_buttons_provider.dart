@@ -10,9 +10,9 @@ class DeviceButtonNotifier extends Notifier<DeviceAction?> {
     return null;
   }
 
-  void buttonPressVibrate() {
+  Future<void> buttonPressVibrate() async {
     if (ref.read(settingsProvider).vibrate) {
-      Vibration.vibrate(duration: 2);
+      await Vibration.vibrate(duration: 2);
     }
   }
 
@@ -22,9 +22,9 @@ class DeviceButtonNotifier extends Notifier<DeviceAction?> {
     }
   }
 
-  void setDeviceAction(DeviceAction action) {
-    buttonPressVibrate();
-    clickWheelSound();
+  Future<void> setDeviceAction(DeviceAction action) async {
+    await buttonPressVibrate();
+    await clickWheelSound();
     state = null;
     state = action;
   }

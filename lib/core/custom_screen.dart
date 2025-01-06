@@ -51,11 +51,11 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     context.pop();
   }
 
-  void onPlayPauseButtonPressed() {
-    ref.read(musicProvider.notifier).togglePlayback();
+  Future<void> onPlayPauseButtonPressed() async {
+    await ref.read(musicProvider.notifier).togglePlayback();
   }
 
-  void deviceControlHandler(_, DeviceAction? newState) {
+  Future<void> deviceControlHandler(_, DeviceAction? newState) async {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
     }
@@ -83,7 +83,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
       case DeviceAction.seekBackwardLongPress:
         break;
       case DeviceAction.playPause:
-        onPlayPauseButtonPressed();
+        await onPlayPauseButtonPressed();
         break;
       case DeviceAction.longPressEnd:
         break;

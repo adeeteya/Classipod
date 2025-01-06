@@ -35,10 +35,9 @@ linter:
     avoid_void_async: true
     constant_identifier_names: false
     directives_ordering: true
-    discarded_futures: false
+    discarded_futures: true
     eol_at_end_of_file: true
     literal_only_boolean_expressions: true
-    lines_longer_than_80_chars: false
     matching_super_parameters: true
     no_literal_bool_comparisons: true
     only_throw_errors: true
@@ -56,15 +55,14 @@ linter:
     unnecessary_await_in_return: true
     unnecessary_lambdas: true
     unnecessary_parenthesis: true
-
-#      unnecessary_statements: true
-#      unreachable_from_main: true
-#      unawaited_futures: true
-#      use_colored_box: true
-#      use_decorated_box: true
-#      use_enums: true
-#      use_named_constants: true
-#      use_setters_to_change_properties: true
+    unnecessary_statements: true
+    unreachable_from_main: true
+    unawaited_futures: true
+    use_colored_box: true
+    use_decorated_box: true
+    use_enums: true
+    use_named_constants: true
+    use_setters_to_change_properties: true
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

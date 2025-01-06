@@ -40,8 +40,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
       ref.read(musicProvider).musicFilesMetaDataList;
 
   @override
-  void onSelectPressed() {
-    ref.read(musicProvider.notifier).togglePlayback();
+  Future<void> onSelectPressed() async {
+    await ref.read(musicProvider.notifier).togglePlayback();
   }
 
   void startVolumeTimer() {
@@ -59,31 +59,33 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     });
   }
 
-  void rotateForward() {
+  Future<void> rotateForward() async {
     setState(() {
       _isVolumeChanging = true;
     });
-    ref.read(musicProvider.notifier).increaseVolume();
+    await ref.read(musicProvider.notifier).increaseVolume();
     startVolumeTimer();
   }
 
-  void rotateBackward() {
+  Future<void> rotateBackward() async {
     setState(() {
       _isVolumeChanging = true;
     });
-    ref.read(musicProvider.notifier).decreaseVolume();
+    await ref.read(musicProvider.notifier).decreaseVolume();
     startVolumeTimer();
   }
 
   void seekForwardButtonLongPress() {
-    _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (_) {
-      ref.read(musicProvider.notifier).seekForward();
+    _longPressTimer =
+        Timer.periodic(const Duration(milliseconds: 50), (_) async {
+      await ref.read(musicProvider.notifier).seekForward();
     });
   }
 
   void seekBackwardButtonLongPress() {
-    _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (_) {
-      ref.read(musicProvider.notifier).seekBackward();
+    _longPressTimer =
+        Timer.periodic(const Duration(milliseconds: 50), (_) async {
+      await ref.read(musicProvider.notifier).seekBackward();
     });
   }
 
@@ -95,7 +97,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   }
 
   @override
-  void deviceControlHandler(_, DeviceAction? newState) {
+  Future<void> deviceControlHandler(_, DeviceAction? newState) async {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
     }
@@ -104,19 +106,19 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
         context.pop();
         break;
       case DeviceAction.select:
-        onSelectPressed();
+        await onSelectPressed();
         break;
       case DeviceAction.rotateForward:
-        rotateForward();
+        await rotateForward();
         break;
       case DeviceAction.rotateBackward:
-        rotateBackward();
+        await rotateBackward();
         break;
       case DeviceAction.seekForward:
-        ref.read(musicProvider.notifier).nextSong();
+        await ref.read(musicProvider.notifier).nextSong();
         break;
       case DeviceAction.seekBackward:
-        ref.read(musicProvider.notifier).previousSong();
+        await ref.read(musicProvider.notifier).previousSong();
         break;
       case DeviceAction.seekForwardLongPress:
         seekForwardButtonLongPress();
@@ -128,7 +130,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
         longPressEnd();
         break;
       case DeviceAction.playPause:
-        onSelectPressed();
+        await onSelectPressed();
         break;
     }
   }
@@ -142,11 +144,11 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     }
 
     ref.listen(musicProvider.select((value) => value.currentSongIndex),
-        (previous, next) {
+        (previous, next) async {
       if ((next - (previous ?? 0)).abs() > 10) {
         pageController.jumpToPage(next);
       } else {
-        pageController.animateToPage(
+        await pageController.animateToPage(
           next,
           duration: const Duration(milliseconds: 1000),
           curve: Curves.ease,

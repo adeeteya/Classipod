@@ -71,8 +71,7 @@ class AlbumArtSongListTile extends StatelessWidget {
                   Text(
                     trackArtistNames ?? "Unknown Artist",
                     style: TextStyle(
-                      color:
-                          isSelected ? CupertinoColors.white : hintTextColor,
+                      color: isSelected ? CupertinoColors.white : hintTextColor,
                     ),
                     maxLines: 1,
                   ),

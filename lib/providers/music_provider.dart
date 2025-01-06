@@ -29,7 +29,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
 
   @override
   MusicDetails build() {
-    getAllAudioFiles();
+    unawaited(getAllAudioFiles());
 
     _player.currentIndexStream.listen((event) {
       if (event != null) {

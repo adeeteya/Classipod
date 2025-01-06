@@ -17,11 +17,11 @@ class DeviceControls extends ConsumerStatefulWidget {
 class _DeviceControlsState extends ConsumerState<DeviceControls> {
   Duration durationSinceLastScroll = Duration.zero;
 
-  void onClickWheelScroll(
+  Future<void> onClickWheelScroll(
     DragUpdateDetails dragUpdateDetails,
     double radius,
     double height,
-  ) {
+  ) async {
     /// Pan location on the wheel
     final bool onTop = dragUpdateDetails.localPosition.dy <= radius;
     final bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;
@@ -68,9 +68,9 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
 
     if (rotationalChange > 4 &&
         millisecondsSinceLastScroll > kMilliSecondsBeforeNextScroll) {
-      ref.read(deviceButtonProvider.notifier).buttonPressVibrate();
-      ref.read(deviceButtonProvider.notifier).clickWheelSound();
-      ref
+      await ref.read(deviceButtonProvider.notifier).buttonPressVibrate();
+      await ref.read(deviceButtonProvider.notifier).clickWheelSound();
+      await ref
           .read(deviceButtonProvider.notifier)
           .setDeviceAction(DeviceAction.rotateForward);
       setState(() {
@@ -78,9 +78,9 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
       });
     } else if (rotationalChange < -4 &&
         millisecondsSinceLastScroll > kMilliSecondsBeforeNextScroll) {
-      ref.read(deviceButtonProvider.notifier).buttonPressVibrate();
-      ref.read(deviceButtonProvider.notifier).clickWheelSound();
-      ref
+      await ref.read(deviceButtonProvider.notifier).buttonPressVibrate();
+      await ref.read(deviceButtonProvider.notifier).clickWheelSound();
+      await ref
           .read(deviceButtonProvider.notifier)
           .setDeviceAction(DeviceAction.rotateBackward);
       setState(() {
@@ -95,7 +95,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
     return AbsorbPointer(
       absorbing: ref.watch(musicProvider).isLoading,
       child: GestureDetector(
-        onPanUpdate: (dragUpdateDetails) => onClickWheelScroll(
+        onPanUpdate: (dragUpdateDetails) async => onClickWheelScroll(
           dragUpdateDetails,
           (size.width * 0.61) / 2,
           size.height,
@@ -117,7 +117,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
             children: [
               Expanded(
                 child: GestureDetector(
-                  onTap: () => ref
+                  onTap: () async => ref
                       .read(deviceButtonProvider.notifier)
                       .setDeviceAction(DeviceAction.menu),
                   child: ColoredBox(
@@ -145,13 +145,13 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                 children: [
                   Expanded(
                     child: GestureDetector(
-                      onTap: () => ref
+                      onTap: () async => ref
                           .read(deviceButtonProvider.notifier)
                           .setDeviceAction(DeviceAction.seekBackward),
-                      onLongPress: () => ref
+                      onLongPress: () async => ref
                           .read(deviceButtonProvider.notifier)
                           .setDeviceAction(DeviceAction.seekBackwardLongPress),
-                      onLongPressEnd: (_) => ref
+                      onLongPressEnd: (_) async => ref
                           .read(deviceButtonProvider.notifier)
                           .setDeviceAction(DeviceAction.longPressEnd),
                       child: SizedBox(
@@ -177,7 +177,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () => ref
+                    onTap: () async => ref
                         .read(deviceButtonProvider.notifier)
                         .setDeviceAction(DeviceAction.select),
                     child: SizedBox(
@@ -214,13 +214,13 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                   ),
                   Expanded(
                     child: GestureDetector(
-                      onTap: () => ref
+                      onTap: () async => ref
                           .read(deviceButtonProvider.notifier)
                           .setDeviceAction(DeviceAction.seekForward),
-                      onLongPress: () => ref
+                      onLongPress: () async => ref
                           .read(deviceButtonProvider.notifier)
                           .setDeviceAction(DeviceAction.seekForwardLongPress),
-                      onLongPressEnd: (_) => ref
+                      onLongPressEnd: (_) async => ref
                           .read(deviceButtonProvider.notifier)
                           .setDeviceAction(DeviceAction.longPressEnd),
                       child: SizedBox(
@@ -249,7 +249,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
               ),
               Expanded(
                 child: GestureDetector(
-                  onTap: () => ref
+                  onTap: () async => ref
                       .read(deviceButtonProvider.notifier)
                       .setDeviceAction(DeviceAction.playPause),
                   child: ColoredBox(

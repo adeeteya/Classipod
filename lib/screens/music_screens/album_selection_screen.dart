@@ -30,14 +30,16 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
       ref.read(musicProvider.notifier).albumDetails;
 
   @override
-  void onSelectPressed() {
-    ref.read(musicProvider.notifier).playAlbum(
+  Future<void> onSelectPressed() async {
+    await ref.read(musicProvider.notifier).playAlbum(
           ref
               .read(musicProvider.notifier)
               .albumNames
               .elementAt(selectedDisplayItem),
         );
-    context.pushNamed(Routes.nowPlaying.name);
+    if (mounted) {
+      await context.pushNamed(Routes.nowPlaying.name);
+    }
   }
 
   @override

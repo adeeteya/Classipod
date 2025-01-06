@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/providers.dart';
 import 'package:classipod/models/settings_details.dart';
@@ -51,7 +53,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
             .getString(SharedPreferencesKeys.musicFolderPath.name) ??
         kDefaultMusicFolderPath;
 
-    setSystemUiMode(immersiveMode);
+    unawaited(setSystemUiMode(immersiveMode));
 
     return SettingsDetails(
       isDarkMode: isDarkMode,
@@ -133,9 +135,9 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     await setSystemUiMode(state.immersiveMode);
   }
 
-  void restartApp() {
+  Future<void> restartApp() async {
     ref.read(musicProvider.notifier).setLoading(true);
-    ref.read(musicProvider.notifier).getAllAudioFiles();
+    await ref.read(musicProvider.notifier).getAllAudioFiles();
   }
 
   Future<void> getMusicFolderPath() async {
@@ -148,7 +150,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
             SharedPreferencesKeys.musicFolderPath.name,
             state.musicFolderPath,
           );
-      restartApp();
+      await restartApp();
     }
   }
 }

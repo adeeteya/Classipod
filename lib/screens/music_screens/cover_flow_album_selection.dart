@@ -28,15 +28,17 @@ class _CoverFlowAlbumSelectionScreenState
       ref.read(musicProvider.notifier).coverFlowAlbumDetails;
 
   @override
-  void onSelectPressed() {
-    ref.read(musicProvider.notifier).playAtIndex(
+  Future<void> onSelectPressed() async {
+    await ref.read(musicProvider.notifier).playAtIndex(
           ref
               .read(musicProvider.notifier)
               .coverFlowAlbumDetails
               .elementAt(selectedDisplayItem)
               .songIndex,
         );
-    context.pushNamed(Routes.nowPlaying.name);
+    if (mounted) {
+      await context.pushNamed(Routes.nowPlaying.name);
+    }
   }
 
   @override

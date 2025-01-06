@@ -46,31 +46,33 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   }
 
   @override
-  void onSelectPressed() {
+  Future<void> onSelectPressed() async {
     switch (_SettingsDisplayItems.values[selectedDisplayItem]) {
       case _SettingsDisplayItems.about:
         context.goNamed(Routes.about.name);
         break;
       case _SettingsDisplayItems.darkMode:
-        ref.read(settingsProvider.notifier).toggleTheme();
+        await ref.read(settingsProvider.notifier).toggleTheme();
         break;
       case _SettingsDisplayItems.repeat:
-        ref.read(settingsProvider.notifier).toggleRepeat();
+        await ref.read(settingsProvider.notifier).toggleRepeat();
         break;
       case _SettingsDisplayItems.vibrate:
-        ref.read(settingsProvider.notifier).toggleVibrate();
+        await ref.read(settingsProvider.notifier).toggleVibrate();
         break;
       case _SettingsDisplayItems.clickWheelSound:
-        ref.read(settingsProvider.notifier).toggleClickWheelSound(context);
+        await ref
+            .read(settingsProvider.notifier)
+            .toggleClickWheelSound(context);
         break;
       case _SettingsDisplayItems.immersiveMode:
-        ref.read(settingsProvider.notifier).toggleImmersiveMode();
+        await ref.read(settingsProvider.notifier).toggleImmersiveMode();
         break;
       case _SettingsDisplayItems.changeDirectory:
-        changeDirectory();
+        await changeDirectory();
         break;
       case _SettingsDisplayItems.donate:
-        launchUrl(
+        await launchUrl(
           Uri.parse("https://www.paypal.me/adeeteya"),
           mode: LaunchMode.externalApplication,
         );

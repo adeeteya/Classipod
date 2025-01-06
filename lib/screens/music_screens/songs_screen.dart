@@ -29,9 +29,11 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
       ref.read(musicProvider.notifier).completeMusicFileMetaDataList;
 
   @override
-  void onSelectPressed() {
-    ref.read(musicProvider.notifier).playAtIndex(selectedDisplayItem);
-    context.pushNamed(Routes.nowPlaying.name);
+  Future<void> onSelectPressed() async {
+    await ref.read(musicProvider.notifier).playAtIndex(selectedDisplayItem);
+    if (mounted) {
+      await context.pushNamed(Routes.nowPlaying.name);
+    }
   }
 
   @override

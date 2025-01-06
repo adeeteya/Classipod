@@ -28,11 +28,13 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
       ref.read(musicProvider.notifier).fetchArtistSongs(widget.artistName);
 
   @override
-  void onSelectPressed() {
-    ref
+  Future<void> onSelectPressed() async {
+    await ref
         .read(musicProvider.notifier)
         .playAtIndex(displayItems[selectedDisplayItem]);
-    context.pushNamed(Routes.nowPlaying.name);
+    if (mounted) {
+      await context.pushNamed(Routes.nowPlaying.name);
+    }
   }
 
   @override

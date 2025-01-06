@@ -18,23 +18,23 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   void onSelectPressed();
 
-  void scrollForward() {
+  Future<void> scrollForward() async {
     if (selectedDisplayItem < displayItems.length - 1) {
-      pageController.nextPage(
+      await pageController.nextPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.ease,
       );
     }
   }
 
-  void scrollBackward() {
+  Future<void> scrollBackward() async {
     if (selectedDisplayItem > 0) {
       // pageController.animateToPage(
       //   selectedDisplayItem - 1,
       //   duration: const Duration(milliseconds: 300),
       //   curve: Curves.ease,
       // );
-      pageController.previousPage(
+      await pageController.previousPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.ease,
       );
@@ -45,11 +45,11 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     context.pop();
   }
 
-  void onPlayPauseButtonPressed() {
-    ref.read(musicProvider.notifier).togglePlayback();
+  Future<void> onPlayPauseButtonPressed() async {
+    await ref.read(musicProvider.notifier).togglePlayback();
   }
 
-  void deviceControlHandler(_, DeviceAction? newState) {
+  Future<void> deviceControlHandler(_, DeviceAction? newState) async {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
     }
@@ -61,23 +61,23 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         onSelectPressed();
         break;
       case DeviceAction.rotateForward:
-        scrollForward();
+        await scrollForward();
         break;
       case DeviceAction.rotateBackward:
-        scrollBackward();
+        await scrollBackward();
         break;
       case DeviceAction.seekForward:
-        scrollForward();
+        await scrollForward();
         break;
       case DeviceAction.seekBackward:
-        scrollBackward();
+        await scrollBackward();
         break;
       case DeviceAction.seekForwardLongPress:
         break;
       case DeviceAction.seekBackwardLongPress:
         break;
       case DeviceAction.playPause:
-        onPlayPauseButtonPressed();
+        await onPlayPauseButtonPressed();
         break;
       case DeviceAction.longPressEnd:
         break;

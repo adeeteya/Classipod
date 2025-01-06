@@ -215,7 +215,7 @@ class _MarqueeTextState extends State<MarqueeText> {
     ///Reset [_running] to allow for updates on changed velocity
     _running = false;
 
-    _timer = Timer.periodic(const Duration(milliseconds: 50), (timer) {
+    _timer = Timer.periodic(const Duration(milliseconds: 50), (timer) async {
       if (!_available) {
         _timer?.cancel();
         _timer = null;
@@ -229,7 +229,7 @@ class _MarqueeTextState extends State<MarqueeText> {
         return;
       }
 
-      if (!_running) _run();
+      if (!_running) await _run();
     });
   }
 

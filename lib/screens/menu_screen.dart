@@ -36,7 +36,7 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
   }
 
   @override
-  void onSelectPressed() {
+  Future<void> onSelectPressed() async {
     switch (_MenuDisplayItems.values[selectedDisplayItem]) {
       case _MenuDisplayItems.music:
         context.goNamed(Routes.music.name);
@@ -45,7 +45,7 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
         context.goNamed(Routes.nowPlaying.name);
         break;
       case _MenuDisplayItems.shuffleSongs:
-        ref.read(musicProvider.notifier).shuffleAllSongs().then((value) {
+        await ref.read(musicProvider.notifier).shuffleAllSongs().then((value) {
           if (mounted) {
             context.goNamed(Routes.nowPlaying.name);
           }

@@ -106,9 +106,10 @@ class MusicNotifier extends Notifier<MusicDetails> {
           if (albumNames.add(audioMetadata.album ?? "Unknown Album")) {
             albumDetails.add(
               AlbumDetails(
-                  albumName: audioMetadata.album ?? "Unknown Album",
-                  thumbnailPath: "$tempPath/$thumbnailFileName",
-                  albumArtistName: audioMetadata.getMainArtistName),
+                albumName: audioMetadata.album ?? "Unknown Album",
+                thumbnailPath: "$tempPath/$thumbnailFileName",
+                albumArtistName: audioMetadata.getMainArtistName,
+              ),
             );
           }
           completeMusicFileMetaDataList.add(
@@ -194,11 +195,14 @@ class MusicNotifier extends Notifier<MusicDetails> {
     for (int i = 0; i < completeMusicFileMetaDataList.length; i++) {
       if ((completeMusicFileMetaDataList[i].albumName ?? "Unknown Album") ==
           albumName) {
-        coverFlowAlbumDetails.add(CoverFlowAlbumDetails(
+        coverFlowAlbumDetails.add(
+          CoverFlowAlbumDetails(
             songIndex: i,
             trackDuration: completeMusicFileMetaDataList[i].trackDuration ?? 0,
             songName:
-                completeMusicFileMetaDataList[i].trackName ?? "Unknown Track"));
+                completeMusicFileMetaDataList[i].trackName ?? "Unknown Track",
+          ),
+        );
       }
     }
   }
@@ -223,7 +227,8 @@ class MusicNotifier extends Notifier<MusicDetails> {
                 : state.musicFilesMetaDataList[i].genres[0],
             artUri: state.musicFilesMetaDataList[i].thumbnailPath == null
                 ? Uri.parse(
-                    'https://files.radio.co/humorous-skink/staging/default-artwork.png')
+                    'https://files.radio.co/humorous-skink/staging/default-artwork.png',
+                  )
                 : Uri.file(state.musicFilesMetaDataList[i].thumbnailPath!),
           ),
         ),

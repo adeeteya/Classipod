@@ -59,22 +59,23 @@ final router = GoRouter(
           ),
           routes: [
             GoRoute(
-                path: Routes.settings.name,
-                name: Routes.settings.name,
-                pageBuilder: (context, state) => CupertinoPage(
-                      key: state.pageKey,
-                      child: const SettingsScreen(),
-                    ),
-                routes: [
-                  GoRoute(
-                    path: Routes.about.name,
-                    name: Routes.about.name,
-                    pageBuilder: (context, state) => CupertinoPage(
-                      key: state.pageKey,
-                      child: const AboutScreen(),
-                    ),
+              path: Routes.settings.name,
+              name: Routes.settings.name,
+              pageBuilder: (context, state) => CupertinoPage(
+                key: state.pageKey,
+                child: const SettingsScreen(),
+              ),
+              routes: [
+                GoRoute(
+                  path: Routes.about.name,
+                  name: Routes.about.name,
+                  pageBuilder: (context, state) => CupertinoPage(
+                    key: state.pageKey,
+                    child: const AboutScreen(),
                   ),
-                ]),
+                ),
+              ],
+            ),
             GoRoute(
               path: Routes.nowPlaying.name,
               name: Routes.nowPlaying.name,

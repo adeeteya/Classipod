@@ -29,11 +29,13 @@ class _CoverFlowAlbumSelectionScreenState
 
   @override
   void onSelectPressed() {
-    ref.read(musicProvider.notifier).playAtIndex(ref
-        .read(musicProvider.notifier)
-        .coverFlowAlbumDetails
-        .elementAt(selectedDisplayItem)
-        .songIndex);
+    ref.read(musicProvider.notifier).playAtIndex(
+          ref
+              .read(musicProvider.notifier)
+              .coverFlowAlbumDetails
+              .elementAt(selectedDisplayItem)
+              .songIndex,
+        );
     context.pushNamed(Routes.nowPlaying.name);
   }
 
@@ -58,7 +60,7 @@ class _CoverFlowAlbumSelectionScreenState
                     end: Alignment.bottomCenter,
                     colors: [
                       primaryBlueGradientColor1,
-                      primaryBlueGradientColor2
+                      primaryBlueGradientColor2,
                     ],
                   ),
                 ),
@@ -99,7 +101,8 @@ class _CoverFlowAlbumSelectionScreenState
                   itemBuilder: (context, index) => CoverFlowAlbumSongListTile(
                     songName: displayItems[index].songName,
                     songDuration: Duration(
-                        milliseconds: displayItems[index].trackDuration),
+                      milliseconds: displayItems[index].trackDuration,
+                    ),
                     isSelected: selectedDisplayItem == index,
                   ),
                 ),

@@ -3,8 +3,11 @@ import 'package:flutter/cupertino.dart';
 class AboutListTile extends StatelessWidget {
   final String titleText;
   final String valueText;
-  const AboutListTile(
-      {super.key, required this.titleText, required this.valueText});
+  const AboutListTile({
+    super.key,
+    required this.titleText,
+    required this.valueText,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -36,7 +36,8 @@ class AlbumReflectiveArt extends StatelessWidget {
                   image: (thumbnailPath != null)
                       ? FileImage(File(thumbnailPath!))
                       : const AssetImage(
-                          "assets/images/default_album_cover.jpeg"),
+                          "assets/images/default_album_cover.jpeg",
+                        ),
                   errorBuilder: (_, __, ___) => Image.asset(
                     "assets/images/default_album_cover.jpeg",
                     height: 50,

@@ -5,8 +5,12 @@ class SettingsListTile extends StatelessWidget {
   final String text;
   final bool? isOn;
   final bool isSelected;
-  const SettingsListTile(
-      {super.key, required this.text, required this.isSelected, this.isOn});
+  const SettingsListTile({
+    super.key,
+    required this.text,
+    required this.isSelected,
+    this.isOn,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +25,7 @@ class SettingsListTile extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     primaryBlueGradientColor1,
-                    primaryBlueGradientColor2
+                    primaryBlueGradientColor2,
                   ],
                 )
               : null,

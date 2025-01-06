@@ -49,11 +49,9 @@ linter:
     prefer_final_in_for_each: true
     prefer_final_locals: true
     prefer_null_aware_method_calls: true
+    require_trailing_commas: true
     sort_pub_dependencies: true
 
-
-
-#      require_trailing_commas: true
 #      sort_unnamed_constructors_first: true
 #      type_annotate_public_apis: true
 #      unnecessary_await_in_return: true

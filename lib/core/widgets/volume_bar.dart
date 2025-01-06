@@ -15,12 +15,13 @@ class VolumeBar extends ConsumerWidget {
           size: 18,
         ),
         StreamBuilder<double>(
-            stream: ref.read(musicProvider.notifier).getVolumeStream(),
-            builder: (context, snapshot) {
-              return BoxProgressBar(
-                value: snapshot.data ?? 0.0,
-              );
-            }),
+          stream: ref.read(musicProvider.notifier).getVolumeStream(),
+          builder: (context, snapshot) {
+            return BoxProgressBar(
+              value: snapshot.data ?? 0.0,
+            );
+          },
+        ),
         const Icon(
           CupertinoIcons.volume_up,
           size: 18,

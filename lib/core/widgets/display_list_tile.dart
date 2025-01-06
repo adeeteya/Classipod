@@ -5,11 +5,12 @@ class DisplayListTile extends StatelessWidget {
   final String text;
   final bool isSelected;
   final VoidCallback? onSelected;
-  const DisplayListTile(
-      {super.key,
-      required this.text,
-      required this.isSelected,
-      this.onSelected});
+  const DisplayListTile({
+    super.key,
+    required this.text,
+    required this.isSelected,
+    this.onSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class DisplayListTile extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     primaryBlueGradientColor1,
-                    primaryBlueGradientColor2
+                    primaryBlueGradientColor2,
                   ],
                 )
               : null,

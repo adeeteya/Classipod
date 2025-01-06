@@ -31,8 +31,10 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
         .read(musicProvider.notifier)
         .artistNames
         .elementAt(selectedDisplayItem);
-    context.goNamed(Routes.artistSongs.name,
-        queryParameters: {"artistName": selectedArtistName});
+    context.goNamed(
+      Routes.artistSongs.name,
+      queryParameters: {"artistName": selectedArtistName},
+    );
   }
 
   @override

@@ -18,7 +18,10 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
   Duration durationSinceLastScroll = Duration.zero;
 
   void onClickWheelScroll(
-      DragUpdateDetails dragUpdateDetails, double radius, double height) {
+    DragUpdateDetails dragUpdateDetails,
+    double radius,
+    double height,
+  ) {
     /// Pan location on the wheel
     final bool onTop = dragUpdateDetails.localPosition.dy <= radius;
     final bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;
@@ -93,7 +96,10 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
       absorbing: ref.watch(musicProvider).isLoading,
       child: GestureDetector(
         onPanUpdate: (dragUpdateDetails) => onClickWheelScroll(
-            dragUpdateDetails, (size.width * 0.61) / 2, size.height),
+          dragUpdateDetails,
+          (size.width * 0.61) / 2,
+          size.height,
+        ),
         child: Container(
           height: size.width * 0.61,
           width: size.width * 0.61,
@@ -195,11 +201,11 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                             colors: context.isDarkMode
                                 ? [
                                     darkDeviceControlInnerButtonGradientColor1,
-                                    darkDeviceControlInnerButtonGradientColor2
+                                    darkDeviceControlInnerButtonGradientColor2,
                                   ]
                                 : [
                                     lightDeviceControlInnerButtonGradientColor1,
-                                    lightDeviceControlInnerButtonGradientColor2
+                                    lightDeviceControlInnerButtonGradientColor2,
                                   ],
                           ),
                         ),

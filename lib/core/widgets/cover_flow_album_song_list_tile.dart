@@ -7,11 +7,12 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
   final String songName;
   final Duration songDuration;
   final bool isSelected;
-  const CoverFlowAlbumSongListTile(
-      {super.key,
-      required this.songName,
-      required this.songDuration,
-      required this.isSelected});
+  const CoverFlowAlbumSongListTile({
+    super.key,
+    required this.songName,
+    required this.songDuration,
+    required this.isSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     primaryBlueGradientColor1,
-                    primaryBlueGradientColor2
+                    primaryBlueGradientColor2,
                   ],
                 )
               : null,

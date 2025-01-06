@@ -10,14 +10,15 @@ class NowPlayingPage extends StatelessWidget {
   final String? albumName;
   final int currentTrackNumber;
   final int totalTrackNumber;
-  const NowPlayingPage(
-      {super.key,
-      this.thumbnailPath,
-      required this.trackName,
-      this.artistNames,
-      this.albumName,
-      required this.currentTrackNumber,
-      required this.totalTrackNumber});
+  const NowPlayingPage({
+    super.key,
+    this.thumbnailPath,
+    required this.trackName,
+    this.artistNames,
+    this.albumName,
+    required this.currentTrackNumber,
+    required this.totalTrackNumber,
+  });
 
   @override
   Widget build(BuildContext context) {

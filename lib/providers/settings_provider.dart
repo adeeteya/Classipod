@@ -97,7 +97,9 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
     await ref
         .read(sharedPreferencesWithCacheProvider)
         .setBool(
-            SharedPreferencesKeys.clickWheelSound.name, !state.clickWheelSound)
+          SharedPreferencesKeys.clickWheelSound.name,
+          !state.clickWheelSound,
+        )
         .then((value) async {
       state = state.copyWith(clickWheelSound: !state.clickWheelSound);
       if (state.clickWheelSound && context.mounted) {
@@ -107,13 +109,14 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
           builder: (context) => CupertinoAlertDialog(
             title: const Text("Touch Sounds"),
             content: const Text(
-                "Please Enable Touch Sounds from System Settings to hear the click wheel sounds"),
+              "Please Enable Touch Sounds from System Settings to hear the click wheel sounds",
+            ),
             actions: [
               CupertinoDialogAction(
                 isDefaultAction: true,
                 onPressed: () => context.pop(),
                 child: const Text("OK"),
-              )
+              ),
             ],
           ),
         );
@@ -123,7 +126,9 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
 
   Future<void> toggleImmersiveMode() async {
     await ref.read(sharedPreferencesWithCacheProvider).setBool(
-        SharedPreferencesKeys.immersiveMode.name, !state.immersiveMode);
+          SharedPreferencesKeys.immersiveMode.name,
+          !state.immersiveMode,
+        );
     state = state.copyWith(immersiveMode: !state.immersiveMode);
     await setSystemUiMode(state.immersiveMode);
   }
@@ -140,7 +145,9 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
         newMusicFolderPath != state.musicFolderPath) {
       state = state.copyWith(musicFolderPath: newMusicFolderPath);
       await ref.read(sharedPreferencesWithCacheProvider).setString(
-          SharedPreferencesKeys.musicFolderPath.name, state.musicFolderPath);
+            SharedPreferencesKeys.musicFolderPath.name,
+            state.musicFolderPath,
+          );
       restartApp();
     }
   }

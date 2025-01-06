@@ -5,11 +5,12 @@ class SongListTile extends StatelessWidget {
   final String? songName;
   final String? trackArtistNames;
   final bool isSelected;
-  const SongListTile(
-      {super.key,
-      required this.songName,
-      required this.trackArtistNames,
-      required this.isSelected});
+  const SongListTile({
+    super.key,
+    required this.songName,
+    required this.trackArtistNames,
+    required this.isSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class SongListTile extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     primaryBlueGradientColor1,
-                    primaryBlueGradientColor2
+                    primaryBlueGradientColor2,
                   ],
                 )
               : null,

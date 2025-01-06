@@ -35,10 +35,12 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
         displayItems[selectedDisplayItem].albumArtistName;
     ref.read(musicProvider.notifier).albumName =
         displayItems[selectedDisplayItem].albumName;
-    ref.read(musicProvider.notifier).getCoverFlowAlbumDetails(ref
-        .read(musicProvider.notifier)
-        .albumNames
-        .elementAt(selectedDisplayItem));
+    ref.read(musicProvider.notifier).getCoverFlowAlbumDetails(
+          ref
+              .read(musicProvider.notifier)
+              .albumNames
+              .elementAt(selectedDisplayItem),
+        );
     context.goNamed(Routes.coverFlowSelection.name);
   }
 

@@ -95,15 +95,17 @@ class _MarqueeTextState extends State<MarqueeText> {
   @override
   Widget build(BuildContext context) {
     assert(
-        widget.intervalSpaces == null || widget.mode == TextScrollMode.endless,
-        'intervalSpaces is only available in TextScrollMode.endless mode');
+      widget.intervalSpaces == null || widget.mode == TextScrollMode.endless,
+      'intervalSpaces is only available in TextScrollMode.endless mode',
+    );
     assert(
-        !widget.fadedBorder ||
-            (widget.fadedBorder &&
-                widget.fadedBorderWidth != null &&
-                widget.fadedBorderWidth! > 0 &&
-                widget.fadedBorderWidth! <= 1),
-        'fadedBorderInterval must be between 0 and 1 when fadedBorder is true');
+      !widget.fadedBorder ||
+          (widget.fadedBorder &&
+              widget.fadedBorderWidth != null &&
+              widget.fadedBorderWidth! > 0 &&
+              widget.fadedBorderWidth! <= 1),
+      'fadedBorderInterval must be between 0 and 1 when fadedBorder is true',
+    );
 
     final Widget baseWidget = Directionality(
       textDirection: widget.textDirection,

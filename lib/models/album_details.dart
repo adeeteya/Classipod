@@ -3,8 +3,9 @@ class AlbumDetails {
   final String? thumbnailPath;
   final String albumArtistName;
 
-  AlbumDetails(
-      {required this.albumName,
-      required this.thumbnailPath,
-      required this.albumArtistName});
+  AlbumDetails({
+    required this.albumName,
+    required this.thumbnailPath,
+    required this.albumArtistName,
+  });
 }

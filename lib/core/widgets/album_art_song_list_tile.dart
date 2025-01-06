@@ -8,12 +8,13 @@ class AlbumArtSongListTile extends StatelessWidget {
   final String? songName;
   final String? trackArtistNames;
   final bool isSelected;
-  const AlbumArtSongListTile(
-      {super.key,
-      required this.thumbnailPath,
-      required this.songName,
-      required this.trackArtistNames,
-      required this.isSelected});
+  const AlbumArtSongListTile({
+    super.key,
+    required this.thumbnailPath,
+    required this.songName,
+    required this.trackArtistNames,
+    required this.isSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class AlbumArtSongListTile extends StatelessWidget {
                   end: Alignment.bottomCenter,
                   colors: [
                     primaryBlueGradientColor1,
-                    primaryBlueGradientColor2
+                    primaryBlueGradientColor2,
                   ],
                 )
               : null,
@@ -79,8 +80,10 @@ class AlbumArtSongListTile extends StatelessWidget {
               ),
             ),
             if (isSelected)
-              const Icon(CupertinoIcons.right_chevron,
-                  color: CupertinoColors.white),
+              const Icon(
+                CupertinoIcons.right_chevron,
+                color: CupertinoColors.white,
+              ),
           ],
         ),
       ),

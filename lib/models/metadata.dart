@@ -63,7 +63,9 @@ class Metadata {
   });
 
   factory Metadata.fromAudioMetadata(
-          AudioMetadata audioMetadata, String thumbnailPath) =>
+    AudioMetadata audioMetadata,
+    String thumbnailPath,
+  ) =>
       Metadata(
         trackName: audioMetadata.title ?? "Unknown Song",
         trackArtistNames:

@@ -48,9 +48,11 @@ extension StringHelpers on Enum {
   String get title {
     final words = name.split(RegExp(r'(?=[A-Z])'));
     return words
-        .map((word) =>
-            word.substring(0, 1).toUpperCase() +
-            word.substring(1).toLowerCase())
+        .map(
+          (word) =>
+              word.substring(0, 1).toUpperCase() +
+              word.substring(1).toLowerCase(),
+        )
         .join(' ');
   }
 }

@@ -34,19 +34,20 @@ class LocalFileService {
     final tempPath = tempDirectory.path;
     for (String path in filePaths) {
       if (isSupportedAudioFormat(path)) {
-        String thumbnailFileName = path
+        final String thumbnailFileName = path
             .replaceAll('/', '-')
             .replaceAll(' ', '')
             .replaceAll(".mp3", '.jpg');
-        bool thumbnailExists =
+        final bool thumbnailExists =
             File('$tempPath/$thumbnailFileName').existsSync();
 
         //Fetch album art if it doesn't exist
         if (!thumbnailExists) {
           audioMetadata = await readMetadata(File(path), getImage: true);
           if (audioMetadata.pictures.isNotEmpty) {
-            File thumbnailFile = await File('$tempPath/$thumbnailFileName')
-                .create(recursive: true);
+            final File thumbnailFile =
+                await File('$tempPath/$thumbnailFileName')
+                    .create(recursive: true);
             if (path.endsWith('.mp3')) {
               // Store only the image data without the 0,0 elements at the start
               thumbnailFile.writeAsBytesSync(audioMetadata.pictures[0].bytes);

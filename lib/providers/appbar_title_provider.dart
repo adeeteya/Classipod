@@ -19,8 +19,8 @@ class AppBarTitleNotifier extends Notifier<String> {
   }
 
   void executeEveryMinute() {
-    var now = DateTime.now();
-    var nextMinute =
+    final now = DateTime.now();
+    final nextMinute =
         DateTime(now.year, now.month, now.day, now.hour, now.minute + 1);
     Timer(nextMinute.difference(now), () {
       Timer.periodic(const Duration(minutes: 1), (timer) {

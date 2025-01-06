@@ -62,7 +62,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
               controller: pageController,
               itemCount: displayItems.length,
               itemBuilder: (context, index) {
-                double relativePosition = index - currentPage;
+                final double relativePosition = index - currentPage;
                 return Transform(
                   transform: Matrix4.identity()
                     ..setEntry(3, 2, 0.003)

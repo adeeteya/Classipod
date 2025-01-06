@@ -39,7 +39,7 @@ extension DateTimeStringHelpers on DateTime {
 
 extension DurationStringHelpers on Duration {
   String get getMinuteAndSecondString {
-    int seconds = inSeconds - (inMinutes * 60);
+    final int seconds = inSeconds - (inMinutes * 60);
     return "$inMinutes:${seconds < 10 ? '0$seconds' : '$seconds'}";
   }
 }

@@ -26,27 +26,27 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
   }
 
   SettingsDetails getSettingsPreferences() {
-    bool isDarkMode = ref
+    final bool isDarkMode = ref
             .read(sharedPreferencesWithCacheProvider)
             .getBool(SharedPreferencesKeys.darkMode.name) ??
         false;
-    bool repeat = ref
+    final bool repeat = ref
             .read(sharedPreferencesWithCacheProvider)
             .getBool(SharedPreferencesKeys.repeat.name) ??
         false;
-    bool vibrate = ref
+    final bool vibrate = ref
             .read(sharedPreferencesWithCacheProvider)
             .getBool(SharedPreferencesKeys.vibrate.name) ??
         true;
-    bool clickWheelSound = ref
+    final bool clickWheelSound = ref
             .read(sharedPreferencesWithCacheProvider)
             .getBool(SharedPreferencesKeys.clickWheelSound.name) ??
         false;
-    bool immersiveMode = ref
+    final bool immersiveMode = ref
             .read(sharedPreferencesWithCacheProvider)
             .getBool(SharedPreferencesKeys.immersiveMode.name) ??
         false;
-    String musicFolderPath = ref
+    final String musicFolderPath = ref
             .read(sharedPreferencesWithCacheProvider)
             .getString(SharedPreferencesKeys.musicFolderPath.name) ??
         kDefaultMusicFolderPath;
@@ -134,7 +134,7 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
   }
 
   Future<void> getMusicFolderPath() async {
-    String newMusicFolderPath =
+    final String newMusicFolderPath =
         await FilePicker.platform.getDirectoryPath() ?? '/';
     if (newMusicFolderPath != '/' &&
         newMusicFolderPath != state.musicFolderPath) {

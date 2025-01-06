@@ -11,20 +11,21 @@ class SeekBar extends ConsumerWidget {
     return StreamBuilder<Duration>(
       stream: ref.read(musicProvider.notifier).getPositionStream(),
       builder: (context, snapshot) {
-        double totalDuration = (ref
+        final double totalDuration = (ref
                     .read(musicProvider)
                     .musicFilesMetaDataList[
                         ref.read(musicProvider).currentSongIndex]
                     .trackDuration ??
                 1000) /
             1000;
-        double currentDuration = snapshot.data?.inSeconds.toDouble() ?? 0;
+        final double currentDuration = snapshot.data?.inSeconds.toDouble() ?? 0;
 
-        int elapsedTimeInMinutes = currentDuration ~/ 60;
-        int elapsedTimeInSeconds = (currentDuration).toInt() % 60;
+        final int elapsedTimeInMinutes = currentDuration ~/ 60;
+        final int elapsedTimeInSeconds = (currentDuration).toInt() % 60;
 
-        int remainingTimeInMinutes = (totalDuration - currentDuration) ~/ 60;
-        int remainingTimeInSeconds =
+        final int remainingTimeInMinutes =
+            (totalDuration - currentDuration) ~/ 60;
+        final int remainingTimeInSeconds =
             (totalDuration - currentDuration).toInt() % 60;
 
         return Row(

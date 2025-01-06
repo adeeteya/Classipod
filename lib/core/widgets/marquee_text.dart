@@ -105,7 +105,7 @@ class _MarqueeTextState extends State<MarqueeText> {
                 widget.fadedBorderWidth! <= 1),
         'fadedBorderInterval must be between 0 and 1 when fadedBorder is true');
 
-    Widget baseWidget = Directionality(
+    final Widget baseWidget = Directionality(
       textDirection: widget.textDirection,
       child: SingleChildScrollView(
         controller: _scrollController,

@@ -20,31 +20,32 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
   void onClickWheelScroll(
       DragUpdateDetails dragUpdateDetails, double radius, double height) {
     /// Pan location on the wheel
-    bool onTop = dragUpdateDetails.localPosition.dy <= radius;
-    bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;
-    bool onRightSide = !onLeftSide;
-    bool onBottom = !onTop;
+    final bool onTop = dragUpdateDetails.localPosition.dy <= radius;
+    final bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;
+    final bool onRightSide = !onLeftSide;
+    final bool onBottom = !onTop;
 
     /// Pan movements
-    bool panUp = dragUpdateDetails.delta.dy <= 0.0;
-    bool panLeft = dragUpdateDetails.delta.dx <= 0.0;
-    bool panRight = !panLeft;
-    bool panDown = !panUp;
+    final bool panUp = dragUpdateDetails.delta.dy <= 0.0;
+    final bool panLeft = dragUpdateDetails.delta.dx <= 0.0;
+    final bool panRight = !panLeft;
+    final bool panDown = !panUp;
 
     /// Absolute change on axis
-    double yChange = dragUpdateDetails.delta.dy.abs();
-    double xChange = dragUpdateDetails.delta.dx.abs();
+    final double yChange = dragUpdateDetails.delta.dy.abs();
+    final double xChange = dragUpdateDetails.delta.dx.abs();
 
     /// Directional change on wheel
-    double verticalRotation = (onRightSide && panDown) || (onLeftSide && panUp)
-        ? yChange
-        : yChange * -1;
+    final double verticalRotation =
+        (onRightSide && panDown) || (onLeftSide && panUp)
+            ? yChange
+            : yChange * -1;
 
-    double horizontalRotation =
+    final double horizontalRotation =
         (onTop && panRight) || (onBottom && panLeft) ? xChange : xChange * -1;
 
     // Total computed change
-    double rotationalChange = (verticalRotation + horizontalRotation) *
+    final double rotationalChange = (verticalRotation + horizontalRotation) *
         (dragUpdateDetails.delta.distance * 0.8);
 
     int millisecondsSinceLastScroll = 0;

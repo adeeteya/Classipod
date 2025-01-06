@@ -95,7 +95,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   }
 
   @override
-  void deviceControlHandler(prevState, newState) {
+  void deviceControlHandler(_, DeviceAction? newState) {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
     }

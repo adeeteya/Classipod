@@ -49,7 +49,7 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     ref.read(musicProvider.notifier).togglePlayback();
   }
 
-  void deviceControlHandler(prevState, newState) {
+  void deviceControlHandler(_, DeviceAction? newState) {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
     }
@@ -78,6 +78,8 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         break;
       case DeviceAction.playPause:
         onPlayPauseButtonPressed();
+        break;
+      case DeviceAction.longPressEnd:
         break;
     }
   }

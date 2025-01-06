@@ -1,5 +1,5 @@
-import 'package:classipod/core/custom_scroll_behavior.dart';
 import 'package:classipod/core/cupertino_modal_page.dart';
+import 'package:classipod/core/custom_scroll_behavior.dart';
 import 'package:classipod/screens/about_screen.dart';
 import 'package:classipod/screens/device/device_frame.dart';
 import 'package:classipod/screens/menu_screen.dart';

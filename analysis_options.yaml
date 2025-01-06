@@ -30,12 +30,13 @@ linter:
     avoid_escaping_inner_quotes: true
     avoid_relative_lib_imports: true
     avoid_redundant_argument_values: true
+    avoid_single_cascade_in_expression_statements: true
+    avoid_unused_constructor_parameters: true
+    avoid_void_async: true
+    constant_identifier_names: false
+    directives_ordering: true
     sort_pub_dependencies: true
-#      avoid_single_cascade_in_expression_statements: true
-#      avoid_unused_constructor_parameters: true
-#      avoid_void_async: true
-#      constant_identifier_names: false
-#      directives_ordering: true
+
 #      discarded_futures: false
 #      eol_at_end_of_file: true
 #      literal_only_boolean_expressions: true

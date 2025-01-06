@@ -32,7 +32,7 @@ class LocalFileService {
     AudioMetadata audioMetadata;
     final tempDirectory = await getTemporaryDirectory();
     final tempPath = tempDirectory.path;
-    for (String path in filePaths) {
+    for (final String path in filePaths) {
       if (isSupportedAudioFormat(path)) {
         final String thumbnailFileName = path
             .replaceAll('/', '-')

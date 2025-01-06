@@ -72,7 +72,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
     final String tempPath = ref.read(tempDirectoryPathProvider);
     AudioMetadata audioMetadata;
     try {
-      for (String path in filePaths) {
+      for (final String path in filePaths) {
         if (isSupportedAudioFormat(path)) {
           final String thumbnailFileName = path
               .replaceAll('/', '-')

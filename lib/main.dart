@@ -29,7 +29,7 @@ Future<void> main() async {
     );
     final tempDirectory = await getTemporaryDirectory();
     final sharedPreferencesWithCache = await SharedPreferencesWithCache.create(
-      cacheOptions: SharedPreferencesWithCacheOptions(),
+      cacheOptions: const SharedPreferencesWithCacheOptions(),
     );
 
     runApp(

@@ -125,7 +125,7 @@ class DeviceFrame extends ConsumerWidget {
                       ),
                     ),
                     child: (isLoading)
-                        ? Center(
+                        ? const Center(
                             child: VectorGraphic(
                               loader: AssetBytesLoader(
                                 "assets/icons/apple_logo.svg",

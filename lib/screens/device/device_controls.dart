@@ -154,10 +154,11 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                               ? darkDeviceControlBackgroundColor
                               : CupertinoColors.white,
                           child: VectorGraphic(
-                            loader: AssetBytesLoader("assets/icons/last.svg"),
+                            loader:
+                                const AssetBytesLoader("assets/icons/last.svg"),
                             colorFilter: context.isDarkMode
                                 ? null
-                                : ColorFilter.mode(
+                                : const ColorFilter.mode(
                                     lightDeviceButtonColor,
                                     BlendMode.srcIn,
                                   ),
@@ -222,10 +223,11 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                               ? darkDeviceControlBackgroundColor
                               : CupertinoColors.white,
                           child: VectorGraphic(
-                            loader: AssetBytesLoader("assets/icons/next.svg"),
+                            loader:
+                                const AssetBytesLoader("assets/icons/next.svg"),
                             colorFilter: context.isDarkMode
                                 ? null
-                                : ColorFilter.mode(
+                                : const ColorFilter.mode(
                                     lightDeviceButtonColor,
                                     BlendMode.srcIn,
                                   ),
@@ -250,10 +252,10 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     child: Align(
                       alignment: Alignment.bottomCenter,
                       child: VectorGraphic(
-                        loader: AssetBytesLoader("assets/icons/play.svg"),
+                        loader: const AssetBytesLoader("assets/icons/play.svg"),
                         colorFilter: context.isDarkMode
                             ? null
-                            : ColorFilter.mode(
+                            : const ColorFilter.mode(
                                 lightDeviceButtonColor,
                                 BlendMode.srcIn,
                               ),

@@ -105,7 +105,8 @@ final router = GoRouter(
                       pageBuilder: (context, state) => CupertinoModalPage(
                         context: context,
                         useRootNavigator: false,
-                        builder: (context) => CoverFlowAlbumSelectionScreen(),
+                        builder: (context) =>
+                            const CoverFlowAlbumSelectionScreen(),
                       ),
                     ),
                   ],

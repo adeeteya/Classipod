@@ -13,8 +13,8 @@ class NoMusicScreen extends StatelessWidget {
       child: Column(
         children: [
           StatusBar(title: title),
-          Center(
-            child: Column(
+          const Center(
+            child: const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 VectorGraphic(

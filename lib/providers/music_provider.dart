@@ -323,4 +323,4 @@ class MusicNotifier extends Notifier<MusicDetails> {
 }
 
 final musicProvider =
-    NotifierProvider<MusicNotifier, MusicDetails>(() => MusicNotifier());
+    NotifierProvider<MusicNotifier, MusicDetails>(MusicNotifier.new);

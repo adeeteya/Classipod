@@ -51,12 +51,12 @@ linter:
     prefer_null_aware_method_calls: true
     require_trailing_commas: true
     sort_pub_dependencies: true
+    sort_unnamed_constructors_first: true
+    type_annotate_public_apis: true
+    unnecessary_await_in_return: true
+    unnecessary_lambdas: true
+    unnecessary_parenthesis: true
 
-#      sort_unnamed_constructors_first: true
-#      type_annotate_public_apis: true
-#      unnecessary_await_in_return: true
-#      unnecessary_lambdas: true
-#      unnecessary_parenthesis: true
 #      unnecessary_statements: true
 #      unreachable_from_main: true
 #      unawaited_futures: true

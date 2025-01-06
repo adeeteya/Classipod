@@ -33,4 +33,4 @@ class AppBarTitleNotifier extends Notifier<String> {
 }
 
 final appBarTitleProvider =
-    NotifierProvider<AppBarTitleNotifier, String>(() => AppBarTitleNotifier());
+    NotifierProvider<AppBarTitleNotifier, String>(AppBarTitleNotifier.new);

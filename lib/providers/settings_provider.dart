@@ -154,5 +154,5 @@ class SettingsNotifier extends Notifier<SettingsDetails> {
 }
 
 final settingsProvider = NotifierProvider<SettingsNotifier, SettingsDetails>(
-  () => SettingsNotifier(),
+  SettingsNotifier.new,
 );

@@ -36,5 +36,5 @@ class DeviceButtonNotifier extends Notifier<DeviceAction?> {
 
 final deviceButtonProvider =
     NotifierProvider<DeviceButtonNotifier, DeviceAction?>(
-  () => DeviceButtonNotifier(),
+  DeviceButtonNotifier.new,
 );

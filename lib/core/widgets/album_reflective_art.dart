@@ -65,7 +65,6 @@ class AlbumReflectiveArt extends StatelessWidget {
                     bottom: BorderSide(
                       color: CupertinoColors.white,
                       width: 0,
-                      strokeAlign: -1,
                     ),
                   ),
                   gradient: LinearGradient(

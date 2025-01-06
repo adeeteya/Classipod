@@ -133,7 +133,7 @@ class _MarqueeTextState extends State<MarqueeText> {
       final List<Color> colors =
           List.generate(1 ~/ widget.fadedBorderWidth! - 1, (index) {
         return transparentColor;
-      }, growable: true);
+      });
 
       ///Add black color to add gradient fade out
       if (widget.fadeBorderSide == FadeBorderSide.both ||
@@ -153,7 +153,7 @@ class _MarqueeTextState extends State<MarqueeText> {
       final List<double> stops =
           List.generate(1 ~/ widget.fadedBorderWidth!, (index) {
         return (index + 1) * widget.fadedBorderWidth!;
-      }, growable: true);
+      });
 
       ///Add first stop to list
       stops.insert(0, 0);
@@ -179,8 +179,6 @@ class _MarqueeTextState extends State<MarqueeText> {
               blendMode: BlendMode.dstOut,
               shaderCallback: (rect) {
                 return LinearGradient(
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
                   colors: colors,
                   stops: stops,
                 ).createShader(rect);

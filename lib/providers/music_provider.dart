@@ -45,7 +45,6 @@ class MusicNotifier extends Notifier<MusicDetails> {
       currentSongIndex: 0,
       musicFilesMetaDataList: [],
       isPlaying: false,
-      isLoading: true,
     );
   }
 
@@ -99,7 +98,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
 
           //No need to fetch album art as it already exists
           else {
-            audioMetadata = await readMetadata(File(path), getImage: false);
+            audioMetadata = await readMetadata(File(path));
           }
 
           artistNames.add(audioMetadata.getMainArtistName);
@@ -231,7 +230,6 @@ class MusicNotifier extends Notifier<MusicDetails> {
     }
     await _player.setAudioSource(
       ConcatenatingAudioSource(
-        useLazyPreparation: true,
         shuffleOrder: DefaultShuffleOrder(),
         children: songSourcePlaylist,
       ),

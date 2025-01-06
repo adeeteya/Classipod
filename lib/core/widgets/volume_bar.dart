@@ -18,7 +18,6 @@ class VolumeBar extends ConsumerWidget {
             stream: ref.read(musicProvider.notifier).getVolumeStream(),
             builder: (context, snapshot) {
               return BoxProgressBar(
-                max: 1.0,
                 value: snapshot.data ?? 0.0,
               );
             }),

@@ -25,14 +25,12 @@ linter:
   # `// ignore_for_file: name_of_lint` syntax on the line or in the file
   # producing the lint.
   rules:
+    always_declare_return_types: true
+    always_use_package_imports: true
+    avoid_escaping_inner_quotes: true
+    avoid_relative_lib_imports: true
+    avoid_redundant_argument_values: true
     sort_pub_dependencies: true
-#     avoid_print: false  # Uncomment to disable the `avoid_print` rule
-#     prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
-#     always_declare_return_types: true
-#     always_use_package_imports: true
-#     avoid_escaping_inner_quotes: true
-#     avoid_relative_lib_imports: true
-#      avoid_redundant_argument_values: true
 #      avoid_single_cascade_in_expression_statements: true
 #      avoid_unused_constructor_parameters: true
 #      avoid_void_async: true

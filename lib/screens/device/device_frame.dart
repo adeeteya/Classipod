@@ -47,7 +47,6 @@ class DeviceFrame extends ConsumerWidget {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: CupertinoColors.black,
                       blurRadius: 100,
                       spreadRadius: 1,
                     ),
@@ -65,7 +64,6 @@ class DeviceFrame extends ConsumerWidget {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: CupertinoColors.black,
                       blurRadius: 100,
                       spreadRadius: 1,
                     ),
@@ -83,7 +81,6 @@ class DeviceFrame extends ConsumerWidget {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: CupertinoColors.black,
                       blurRadius: 100,
                       spreadRadius: 1,
                     ),
@@ -101,7 +98,6 @@ class DeviceFrame extends ConsumerWidget {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: CupertinoColors.black,
                       blurRadius: 100,
                       spreadRadius: 1,
                     ),

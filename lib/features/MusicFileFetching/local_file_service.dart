@@ -59,7 +59,7 @@ class LocalFileService {
 
         //No need to fetch album art as it already exists
         else {
-          audioMetadata = await readMetadata(File(path), getImage: false);
+          audioMetadata = await readMetadata(File(path));
         }
       }
     }

@@ -19,7 +19,7 @@ class SettingsListTile extends StatelessWidget {
       width: double.infinity,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          gradient: (isSelected)
+          gradient: isSelected
               ? const LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -40,7 +40,7 @@ class SettingsListTile extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: (isSelected)
+                  color: isSelected
                       ? CupertinoColors.white
                       : CupertinoColors.black,
                   overflow: TextOverflow.ellipsis,
@@ -52,7 +52,7 @@ class SettingsListTile extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: (isSelected) ? CupertinoColors.white : hintTextColor,
+                    color: isSelected ? CupertinoColors.white : hintTextColor,
                   ),
                 ),
               if (isOn == null && isSelected)

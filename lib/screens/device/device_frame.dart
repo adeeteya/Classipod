@@ -124,7 +124,7 @@ class DeviceFrame extends ConsumerWidget {
                         width: 5,
                       ),
                     ),
-                    child: (isLoading)
+                    child: isLoading
                         ? const Center(
                             child: VectorGraphic(
                               loader: AssetBytesLoader(

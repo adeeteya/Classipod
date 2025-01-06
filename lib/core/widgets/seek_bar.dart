@@ -21,6 +21,7 @@ class SeekBar extends ConsumerWidget {
         final double currentDuration = snapshot.data?.inSeconds.toDouble() ?? 0;
 
         final int elapsedTimeInMinutes = currentDuration ~/ 60;
+        // ignore: unnecessary_parenthesis
         final int elapsedTimeInSeconds = (currentDuration).toInt() % 60;
 
         final int remainingTimeInMinutes =

@@ -67,6 +67,7 @@ class ClassipodApp extends ConsumerWidget {
       title: 'Classipod',
       debugShowCheckedModeBanner: false,
       theme: CupertinoThemeData(
+        // ignore: unnecessary_parenthesis
         brightness: (isDark) ? Brightness.dark : Brightness.light,
         scaffoldBackgroundColor: CupertinoColors.white,
         textTheme: const CupertinoTextThemeData(

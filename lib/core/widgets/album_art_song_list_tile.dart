@@ -26,7 +26,7 @@ class AlbumArtSongListTile extends StatelessWidget {
           border: const Border(
             bottom: BorderSide(width: 0.5, color: statusBarBorderColor),
           ),
-          gradient: (isSelected)
+          gradient: isSelected
               ? const LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -61,7 +61,7 @@ class AlbumArtSongListTile extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: (isSelected)
+                      color: isSelected
                           ? CupertinoColors.white
                           : CupertinoColors.black,
                     ),
@@ -72,7 +72,7 @@ class AlbumArtSongListTile extends StatelessWidget {
                     trackArtistNames ?? "Unknown Artist",
                     style: TextStyle(
                       color:
-                          (isSelected) ? CupertinoColors.white : hintTextColor,
+                          isSelected ? CupertinoColors.white : hintTextColor,
                     ),
                     maxLines: 1,
                   ),

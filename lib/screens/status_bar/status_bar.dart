@@ -47,7 +47,7 @@ class StatusBar extends StatelessWidget {
                   final isPlaying = ref
                       .watch(musicProvider.select((value) => value.isPlaying));
                   return Icon(
-                    (isPlaying)
+                    isPlaying
                         ? CupertinoIcons.play_fill
                         : CupertinoIcons.pause_fill,
                     color: primaryBlueGradientColor1,

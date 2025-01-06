@@ -19,7 +19,7 @@ class SongListTile extends StatelessWidget {
       width: double.infinity,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          gradient: (isSelected)
+          gradient: isSelected
               ? const LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -41,7 +41,7 @@ class SongListTile extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: (isSelected)
+                  color: isSelected
                       ? CupertinoColors.white
                       : CupertinoColors.black,
                 ),
@@ -50,7 +50,7 @@ class SongListTile extends StatelessWidget {
               Text(
                 trackArtistNames ?? "Unknown Artist",
                 style: TextStyle(
-                  color: (isSelected) ? CupertinoColors.white : hintTextColor,
+                  color: isSelected ? CupertinoColors.white : hintTextColor,
                 ),
                 maxLines: 1,
               ),

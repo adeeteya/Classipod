@@ -33,7 +33,7 @@ extension DateTimeStringHelpers on DateTime {
     } else {
       minute = '${this.minute}';
     }
-    return "$hour:$minute ${(isPostMeridiem) ? 'PM' : 'AM'}";
+    return "$hour:$minute ${isPostMeridiem ? 'PM' : 'AM'}";
   }
 }
 

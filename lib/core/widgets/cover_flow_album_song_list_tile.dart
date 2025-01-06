@@ -21,7 +21,7 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
       width: double.infinity,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          gradient: (isSelected)
+          gradient: isSelected
               ? const LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -44,7 +44,7 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: (isSelected)
+                    color: isSelected
                         ? CupertinoColors.white
                         : CupertinoColors.black,
                   ),
@@ -56,7 +56,7 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: (isSelected)
+                    color: isSelected
                         ? CupertinoColors.white
                         : CupertinoColors.black,
                   ),

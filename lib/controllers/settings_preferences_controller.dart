@@ -1,7 +1,8 @@
+import 'package:classipod/core/dialogs.dart';
 import 'package:classipod/core/routes.dart';
-import 'package:classipod/providers/audio_player.dart';
 import 'package:classipod/providers/settings_preferences_provider.dart';
 import 'package:classipod/repositories/settings_preferences_repository.dart';
+import 'package:classipod/services/audio_player_service.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -54,9 +55,13 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
           .setRepeat(isRepeat: !isRepeat);
       isRepeat = ref.refresh(settingsPreferencesProvider).repeat;
       if (isRepeat) {
-        await ref.read(audioPlayerProvider).setLoopMode(LoopMode.all);
+        await ref
+            .read(audioPlayerServiceProvider.notifier)
+            .setLoopMode(LoopMode.all);
       } else {
-        await ref.read(audioPlayerProvider).setLoopMode(LoopMode.off);
+        await ref
+            .read(audioPlayerServiceProvider.notifier)
+            .setLoopMode(LoopMode.off);
       }
     });
   }
@@ -86,22 +91,11 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
           ref.refresh(settingsPreferencesProvider).clickWheelSound;
 
       if (isClickWheelSoundEnabled && context.mounted) {
-        await showCupertinoDialog(
+        await Dialogs.showInfoDialog(
           context: context,
-          barrierDismissible: true,
-          builder: (context) => CupertinoAlertDialog(
-            title: const Text("Touch Sounds"),
-            content: const Text(
+          title: "Touch Sounds",
+          content:
               "Please Enable Touch Sounds from System Settings to hear the click wheel sounds",
-            ),
-            actions: [
-              CupertinoDialogAction(
-                isDefaultAction: true,
-                onPressed: () => ref.read(routerProvider).pop(),
-                child: const Text("OK"),
-              ),
-            ],
-          ),
         );
       }
     });
@@ -120,11 +114,6 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
     });
   }
 
-  // Future<void> restartApp() async {
-  //   ref.read(musicProvider.notifier).setLoading(true);
-  //   await ref.read(musicProvider.notifier).getAllAudioFiles();
-  // }
-
   Future<void> setNewMusicFolderPath() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
@@ -138,7 +127,7 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
             .read(settingsPreferencesRepositoryProvider)
             .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
         ref.invalidate(settingsPreferencesProvider);
-        ref.read(routerProvider).goNamed(Routes.menu.name);
+        ref.read(routerProvider).goNamed(Routes.splash.name);
       }
     });
   }

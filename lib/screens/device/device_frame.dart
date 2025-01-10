@@ -1,19 +1,15 @@
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
-import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/device/device_controls.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vector_graphics/vector_graphics.dart';
 
-class DeviceFrame extends ConsumerWidget {
+class DeviceFrame extends StatelessWidget {
   final Widget child;
   const DeviceFrame({super.key, required this.child});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-    final isLoading = ref.watch(musicProvider.select((val) => val.isLoading));
     return DecoratedBox(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -124,15 +120,7 @@ class DeviceFrame extends ConsumerWidget {
                         width: 5,
                       ),
                     ),
-                    child: isLoading
-                        ? const Center(
-                            child: VectorGraphic(
-                              loader: AssetBytesLoader(
-                                "assets/icons/apple_logo.svg",
-                              ),
-                            ),
-                          )
-                        : child,
+                    child: child,
                   ),
                 ),
                 const Spacer(flex: 2),

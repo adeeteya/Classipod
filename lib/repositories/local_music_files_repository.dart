@@ -5,7 +5,6 @@ import 'package:classipod/core/helper_functions.dart';
 import 'package:classipod/models/metadata.dart';
 import 'package:classipod/repositories/local_album_art_cache_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 final localMusicFileRepositoryProvider =
     Provider.autoDispose<LocalMusicFilesRepository>((ref) {
@@ -18,14 +17,6 @@ class LocalMusicFilesRepository {
   final LocalAlbumArtCacheRepository _localAlbumArtCacheRepository;
 
   LocalMusicFilesRepository(this._localAlbumArtCacheRepository);
-
-  Future<Map<Permission, PermissionStatus>> requestStoragePermissions() async {
-    try {
-      return await [Permission.storage, Permission.audio].request();
-    } catch (e) {
-      throw Exception('Permission request failed');
-    }
-  }
 
   Future<List<Metadata>> getMusicFilesMetadata({
     required String musicFolderPath,

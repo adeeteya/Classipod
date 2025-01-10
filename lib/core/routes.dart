@@ -12,11 +12,13 @@ import 'package:classipod/screens/music_screens/music_menu_screen.dart';
 import 'package:classipod/screens/music_screens/songs_screen.dart';
 import 'package:classipod/screens/now_playing_screen.dart';
 import 'package:classipod/screens/settings_screen.dart';
+import 'package:classipod/screens/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 enum Routes {
+  splash,
   menu,
   settings,
   about,
@@ -38,7 +40,7 @@ enum Routes {
 // GoRouter configuration
 final routerProvider = Provider(
   (ref) => GoRouter(
-    initialLocation: Routes.menu.toString(),
+    initialLocation: Routes.splash.toString(),
     routes: [
       ShellRoute(
         pageBuilder: (context, state, child) {
@@ -52,6 +54,14 @@ final routerProvider = Provider(
           );
         },
         routes: [
+          GoRoute(
+            path: Routes.splash.toString(),
+            name: Routes.splash.name,
+            pageBuilder: (context, state) => CupertinoPage(
+              key: state.pageKey,
+              child: const SplashScreen(),
+            ),
+          ),
           GoRoute(
             path: Routes.menu.toString(),
             name: Routes.menu.name,

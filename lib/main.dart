@@ -1,13 +1,8 @@
 import 'package:classipod/core/constants.dart';
-import 'package:classipod/core/providers.dart';
-import 'package:classipod/core/routes.dart';
-import 'package:classipod/providers/settings_provider.dart';
+import 'package:classipod/screens/app_startup/app_startup_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:just_audio_background/just_audio_background.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,66 +12,52 @@ Future<void> main() async {
       statusBarColor: transparentColor,
     ),
   );
-  try {
-    await SystemChrome.setPreferredOrientations(
-      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
-    );
-    await JustAudioBackground.init(
-      androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
-      androidNotificationChannelName: 'Audio playback',
-      androidNotificationChannelDescription: 'Classipod Audio Notification',
-      androidNotificationOngoing: true,
-    );
-    final tempDirectory = await getTemporaryDirectory();
-    final sharedPreferencesWithCache = await SharedPreferencesWithCache.create(
-      cacheOptions: const SharedPreferencesWithCacheOptions(),
-    );
 
-    runApp(
-      ProviderScope(
-        overrides: [
-          tempDirectoryPathProvider.overrideWithValue(tempDirectory.path),
-          sharedPreferencesWithCacheProvider
-              .overrideWithValue(sharedPreferencesWithCache),
-        ],
-        child: const ClassipodApp(),
-      ),
-    );
-  } catch (e) {
-    // ignore: missing_provider_scope
-    runApp(
-      CupertinoApp(
-        home: CupertinoPageScaffold(
-          child: Center(
-            child: Text('Error: $e'),
-          ),
-        ),
-      ),
-    );
-  }
-}
+  runApp(
+    const ProviderScope(
+      child: AppStartupWidget(),
+    ),
+  );
 
-class ClassipodApp extends ConsumerWidget {
-  const ClassipodApp({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final isDark =
-        ref.watch(settingsProvider.select((value) => value.isDarkMode));
-    final router = ref.watch(routerProvider);
-    return CupertinoApp.router(
-      title: 'Classipod',
-      debugShowCheckedModeBanner: false,
-      theme: CupertinoThemeData(
-        // ignore: unnecessary_parenthesis
-        brightness: (isDark) ? Brightness.dark : Brightness.light,
-        scaffoldBackgroundColor: CupertinoColors.white,
-        textTheme: const CupertinoTextThemeData(
-          textStyle:
-              TextStyle(color: CupertinoColors.black, fontFamily: 'Myriad'),
-        ),
-      ),
-      routerConfig: router,
-    );
-  }
+  // try {
+  //   await SystemChrome.setPreferredOrientations(
+  //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+  //   );
+  //   await JustAudioBackground.init(
+  //     androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
+  //     androidNotificationChannelName: 'Audio playback',
+  //     androidNotificationChannelDescription: 'Classipod Audio Notification',
+  //     androidNotificationOngoing: true,
+  //   );
+  //   final tempDirectory = await getTemporaryDirectory();
+  //   final sharedPreferencesWithCache = await SharedPreferencesWithCache.create(
+  //     cacheOptions: const SharedPreferencesWithCacheOptions(),
+  //   );
+  //   final container = ProviderContainer(
+  //     overrides: [
+  //       tempDirectoryPathProvider.overrideWithValue(tempDirectory.path),
+  //       sharedPreferencesWithCacheProvider
+  //           .overrideWithValue(sharedPreferencesWithCache),
+  //     ],
+  //   );
+  //
+  //
+  //   runApp(
+  //     UncontrolledProviderScope(
+  //       container: container,
+  //       child: const ClassipodApp(),
+  //     ),
+  //   );
+  // } catch (e) {
+  //   // ignore: missing_provider_scope
+  //   runApp(
+  //     CupertinoApp(
+  //       home: CupertinoPageScaffold(
+  //         child: Center(
+  //           child: Text('Error: $e'),
+  //         ),
+  //       ),
+  //     ),
+  //   );
+  // }
 }

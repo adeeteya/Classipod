@@ -1,9 +1,10 @@
+import 'package:classipod/controllers/settings_preferences_controller.dart';
 import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/settings_list_tile.dart';
 import 'package:classipod/models/settings_details.dart';
-import 'package:classipod/providers/settings_provider.dart';
+import 'package:classipod/providers/settings_preferences_provider.dart';
 import 'package:classipod/screens/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -37,14 +38,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   List<String> get displayItems =>
       _SettingsDisplayItems.values.map((e) => e.title).toList();
 
-  Future<void> changeDirectory() async {
-    await ref.read(settingsProvider.notifier).getMusicFolderPath().then((_) {
-      if (mounted) {
-        context.goNamed(Routes.menu.name);
-      }
-    });
-  }
-
   @override
   Future<void> onSelectPressed() async {
     switch (_SettingsDisplayItems.values[selectedDisplayItem]) {
@@ -52,24 +45,34 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         context.goNamed(Routes.about.name);
         break;
       case _SettingsDisplayItems.darkMode:
-        await ref.read(settingsProvider.notifier).toggleTheme();
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleTheme();
         break;
       case _SettingsDisplayItems.repeat:
-        await ref.read(settingsProvider.notifier).toggleRepeat();
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleRepeat();
         break;
       case _SettingsDisplayItems.vibrate:
-        await ref.read(settingsProvider.notifier).toggleVibrate();
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleVibrate();
         break;
       case _SettingsDisplayItems.clickWheelSound:
         await ref
-            .read(settingsProvider.notifier)
+            .read(settingsPreferencesControllerProvider.notifier)
             .toggleClickWheelSound(context);
         break;
       case _SettingsDisplayItems.immersiveMode:
-        await ref.read(settingsProvider.notifier).toggleImmersiveMode();
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleImmersiveMode();
         break;
       case _SettingsDisplayItems.changeDirectory:
-        await changeDirectory();
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .setNewMusicFolderPath();
         break;
       case _SettingsDisplayItems.donate:
         await launchUrl(
@@ -81,7 +84,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   }
 
   bool? isOn(
-    SettingsDetails settingsState,
+    SettingsPreferences settingsState,
     _SettingsDisplayItems settingsItem,
   ) {
     switch (settingsItem) {
@@ -102,7 +105,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
 
   @override
   Widget build(BuildContext context) {
-    final settingsState = ref.watch(settingsProvider);
+    final settingsState = ref.watch(settingsPreferencesProvider);
     return CupertinoPageScaffold(
       child: Column(
         children: [

@@ -1,4 +1,4 @@
-class SettingsDetails {
+class SettingsPreferences {
   final bool isDarkMode;
   final bool repeat;
   final bool vibrate;
@@ -6,7 +6,7 @@ class SettingsDetails {
   final bool immersiveMode;
   final String musicFolderPath;
 
-  SettingsDetails({
+  SettingsPreferences({
     required this.isDarkMode,
     required this.repeat,
     required this.vibrate,
@@ -15,7 +15,7 @@ class SettingsDetails {
     required this.musicFolderPath,
   });
 
-  SettingsDetails copyWith({
+  SettingsPreferences copyWith({
     bool? isDarkMode,
     bool? repeat,
     bool? vibrate,
@@ -23,7 +23,7 @@ class SettingsDetails {
     bool? immersiveMode,
     String? musicFolderPath,
   }) {
-    return SettingsDetails(
+    return SettingsPreferences(
       isDarkMode: isDarkMode ?? this.isDarkMode,
       repeat: repeat ?? this.repeat,
       vibrate: vibrate ?? this.vibrate,

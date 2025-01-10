@@ -4,12 +4,12 @@ import 'dart:io';
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/helper_functions.dart';
-import 'package:classipod/core/providers.dart';
 import 'package:classipod/models/album_details.dart';
 import 'package:classipod/models/cover_flow_album_details.dart';
 import 'package:classipod/models/metadata.dart';
 import 'package:classipod/models/music_details.dart';
-import 'package:classipod/providers/settings_provider.dart';
+import 'package:classipod/providers/settings_preferences_provider.dart';
+import 'package:classipod/providers/temp_directory_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
@@ -69,7 +69,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
   }
 
   Future<void> getFilesMetadata(List<String> filePaths) async {
-    final String tempPath = ref.read(tempDirectoryPathProvider);
+    final String tempPath = ref.read(tempDirectoryProvider).requireValue.path;
     AudioMetadata audioMetadata;
     try {
       for (final String path in filePaths) {
@@ -133,7 +133,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
     artistSongsIndexes.clear();
     await requestStoragePermissions();
     final Directory storageDir =
-        Directory(ref.read(settingsProvider).musicFolderPath);
+        Directory(ref.read(settingsPreferencesProvider).musicFolderPath);
     final List<FileSystemEntity> files =
         storageDir.listSync(recursive: true, followLinks: false);
     final List<String> filePaths = files.map((e) => e.path).toList();
@@ -246,7 +246,7 @@ class MusicNotifier extends Notifier<MusicDetails> {
   }
 
   Future<void> setLoopMode() async {
-    if (ref.read(settingsProvider).repeat) {
+    if (ref.read(settingsPreferencesProvider).repeat) {
       await _player.setLoopMode(LoopMode.all);
     } else {
       await _player.setLoopMode(LoopMode.off);

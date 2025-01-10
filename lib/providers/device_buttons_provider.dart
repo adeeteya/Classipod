@@ -1,5 +1,5 @@
 import 'package:classipod/models/device_action.dart';
-import 'package:classipod/providers/settings_provider.dart';
+import 'package:classipod/providers/settings_preferences_provider.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vibration/vibration.dart';
@@ -11,13 +11,13 @@ class DeviceButtonNotifier extends Notifier<DeviceAction?> {
   }
 
   Future<void> buttonPressVibrate() async {
-    if (ref.read(settingsProvider).vibrate) {
+    if (ref.read(settingsPreferencesProvider).vibrate) {
       await Vibration.vibrate(duration: 2);
     }
   }
 
   Future<void> clickWheelSound() async {
-    if (ref.read(settingsProvider).clickWheelSound) {
+    if (ref.read(settingsPreferencesProvider).clickWheelSound) {
       await SystemSound.play(SystemSoundType.click);
     }
   }

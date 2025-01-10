@@ -1,12 +1,14 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:classipod/core/providers.dart';
+import 'package:classipod/providers/temp_directory_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final localAlbumArtCacheRepositoryProvider =
     Provider.autoDispose<LocalAlbumArtCacheRepository>((ref) {
-  return LocalAlbumArtCacheRepository(ref.read(tempDirectoryPathProvider));
+  return LocalAlbumArtCacheRepository(
+    ref.read(tempDirectoryProvider).requireValue.path,
+  );
 });
 
 class LocalAlbumArtCacheRepository {

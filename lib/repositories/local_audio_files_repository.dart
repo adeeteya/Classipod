@@ -6,23 +6,23 @@ import 'package:classipod/models/metadata.dart';
 import 'package:classipod/repositories/local_album_art_cache_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final localMusicFileRepositoryProvider =
-    Provider.autoDispose<LocalMusicFilesRepository>((ref) {
-  return LocalMusicFilesRepository(
+final localAudioFileRepositoryProvider =
+    Provider.autoDispose<LocalAudioFilesRepository>((ref) {
+  return LocalAudioFilesRepository(
     ref.read(localAlbumArtCacheRepositoryProvider),
   );
 });
 
-class LocalMusicFilesRepository {
+class LocalAudioFilesRepository {
   final LocalAlbumArtCacheRepository _localAlbumArtCacheRepository;
 
-  LocalMusicFilesRepository(this._localAlbumArtCacheRepository);
+  LocalAudioFilesRepository(this._localAlbumArtCacheRepository);
 
-  Future<List<Metadata>> getMusicFilesMetadata({
-    required String musicFolderPath,
+  Future<List<Metadata>> getAudioFilesMetadata({
+    required String audioFileFolderPath,
     required String cacheParentDirectory,
   }) async {
-    final Directory storageDir = Directory(musicFolderPath);
+    final Directory storageDir = Directory(audioFileFolderPath);
     final List<FileSystemEntity> files = storageDir.listSync(
       recursive: true,
       followLinks: false,

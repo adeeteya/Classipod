@@ -64,7 +64,7 @@ class Metadata {
 
   factory Metadata.fromAudioMetadata(
     AudioMetadata audioMetadata,
-    String thumbnailPath,
+    String? thumbnailPath,
   ) =>
       Metadata(
         trackName: audioMetadata.title ?? "Unknown Song",

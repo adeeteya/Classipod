@@ -63,6 +63,7 @@ class ClassipodApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isDark =
         ref.watch(settingsProvider.select((value) => value.isDarkMode));
+    final router = ref.watch(routerProvider);
     return CupertinoApp.router(
       title: 'Classipod',
       debugShowCheckedModeBanner: false,

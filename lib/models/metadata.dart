@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:just_audio_background/just_audio_background.dart';
 
 class Metadata {
   /// Name of the track.
@@ -118,6 +120,24 @@ class Metadata {
         'bitrate': bitrate,
         'filePath': filePath,
       };
+
+  AudioSource toAudioSource() {
+    return AudioSource.file(
+      filePath ?? '',
+      tag: MediaItem(
+        id: filePath ?? '',
+        title: trackName ?? "Unknown Song",
+        album: albumName ?? "Unknown Album",
+        artist: getTrackArtistNames,
+        genre: genres.isEmpty ? null : genres[0],
+        artUri: thumbnailPath == null
+            ? Uri.parse(
+                'https://files.radio.co/humorous-skink/staging/default-artwork.png',
+              )
+            : Uri.file(thumbnailPath!),
+      ),
+    );
+  }
 
   @override
   String toString() => toJson().toString();

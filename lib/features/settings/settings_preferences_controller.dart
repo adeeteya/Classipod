@@ -1,6 +1,6 @@
 import 'package:classipod/core/dialogs.dart';
 import 'package:classipod/core/routes.dart';
-import 'package:classipod/providers/settings_preferences_provider.dart';
+import 'package:classipod/features/settings/settings_preferences_provider.dart';
 import 'package:classipod/repositories/settings_preferences_repository.dart';
 import 'package:classipod/services/audio_player_service.dart';
 import 'package:file_picker/file_picker.dart';

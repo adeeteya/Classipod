@@ -8,7 +8,7 @@ import 'package:classipod/models/album_details.dart';
 import 'package:classipod/models/cover_flow_album_details.dart';
 import 'package:classipod/models/metadata.dart';
 import 'package:classipod/models/music_details.dart';
-import 'package:classipod/providers/settings_preferences_provider.dart';
+import 'package:classipod/features/settings/settings_preferences_provider.dart';
 import 'package:classipod/providers/temp_directory_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';

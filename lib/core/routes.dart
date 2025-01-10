@@ -11,7 +11,7 @@ import 'package:classipod/screens/music_screens/cover_flow_screen.dart';
 import 'package:classipod/screens/music_screens/music_menu_screen.dart';
 import 'package:classipod/screens/music_screens/songs_screen.dart';
 import 'package:classipod/screens/now_playing_screen.dart';
-import 'package:classipod/screens/settings_screen.dart';
+import 'package:classipod/features/settings/settings_preferences_screen.dart';
 import 'package:classipod/screens/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

@@ -1,5 +1,5 @@
 import 'package:classipod/models/device_action.dart';
-import 'package:classipod/providers/settings_preferences_provider.dart';
+import 'package:classipod/features/settings/settings_preferences_provider.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vibration/vibration.dart';

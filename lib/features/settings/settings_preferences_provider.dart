@@ -1,4 +1,4 @@
-import 'package:classipod/models/settings_details.dart';
+import 'package:classipod/features/settings/settings_preferences.dart';
 import 'package:classipod/repositories/settings_preferences_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

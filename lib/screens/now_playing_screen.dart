@@ -12,6 +12,7 @@ import 'package:classipod/providers/device_buttons_provider.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/no_music_screen.dart';
 import 'package:classipod/screens/status_bar/status_bar.dart';
+import 'package:classipod/services/audio_files_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -37,7 +38,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
 
   @override
   List<Metadata> get displayItems =>
-      ref.read(musicProvider).musicFilesMetaDataList;
+      ref.read(audioFilesServiceProvider).requireValue;
 
   @override
   Future<void> onSelectPressed() async {

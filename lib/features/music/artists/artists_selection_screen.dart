@@ -2,8 +2,8 @@ import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
+import 'package:classipod/features/music/artists/artist_names_provider.dart';
 import 'package:classipod/features/status_bar/status_bar.dart';
-import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/no_music_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -22,15 +22,12 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   String get routeName => Routes.artists.name;
 
   @override
-  List<String> get displayItems =>
-      ref.read(musicProvider.notifier).artistNames.toList();
+  List<String> get displayItems => ref.read(artistNamesProvider).toList();
 
   @override
   void onSelectPressed() {
-    final selectedArtistName = ref
-        .read(musicProvider.notifier)
-        .artistNames
-        .elementAt(selectedDisplayItem);
+    final selectedArtistName =
+        ref.read(artistNamesProvider).elementAt(selectedDisplayItem);
     context.goNamed(
       Routes.artistSongs.name,
       queryParameters: {"artistName": selectedArtistName},

@@ -31,7 +31,7 @@ class AlbumReflectiveArt extends StatelessWidget {
               width: double.infinity,
               child: Transform.flip(
                 flipY: true,
-                filterQuality: FilterQuality.low,
+                filterQuality: FilterQuality.high,
                 child: Image(
                   image: (thumbnailPath != null)
                       ? FileImage(File(thumbnailPath!))

@@ -1,5 +1,5 @@
 import 'package:classipod/core/constants.dart';
-import 'package:classipod/core/widgets/album_reflective_art.dart';
+import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:flutter/cupertino.dart';
 

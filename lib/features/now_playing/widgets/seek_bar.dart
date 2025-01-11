@@ -1,5 +1,6 @@
-import 'package:classipod/core/widgets/box_progress_bar.dart';
-import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/features/now_playing/widgets/box_progress_bar.dart';
+import 'package:classipod/features/now_playing/now_playing_provider.dart';
+import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -9,12 +10,11 @@ class SeekBar extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return StreamBuilder<Duration>(
-      stream: ref.read(musicProvider.notifier).getPositionStream(),
+      stream: ref.read(audioPlayerProvider).positionStream,
       builder: (context, snapshot) {
         final double totalDuration = (ref
-                    .read(musicProvider)
-                    .musicFilesMetaDataList[
-                        ref.read(musicProvider).currentSongIndex]
+                    .read(nowPlayingMetadataListProvider)[
+                        ref.read(audioPlayerProvider).currentIndex ?? 0]
                     .trackDuration ??
                 1000) /
             1000;

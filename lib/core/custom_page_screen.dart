@@ -2,7 +2,7 @@ import 'package:classipod/core/extensions.dart';
 import 'package:classipod/models/device_action.dart';
 import 'package:classipod/providers/appbar_title_provider.dart';
 import 'package:classipod/providers/device_buttons_provider.dart';
-import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -46,7 +46,7 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   }
 
   Future<void> onPlayPauseButtonPressed() async {
-    await ref.read(musicProvider.notifier).togglePlayback();
+    await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
   }
 
   Future<void> deviceControlHandler(_, DeviceAction? newState) async {

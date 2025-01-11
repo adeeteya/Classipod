@@ -10,7 +10,7 @@ class BoxProgressBar extends StatelessWidget {
     this.min = 0,
     this.max = 1,
     this.value = 0.5,
-  });
+  }) : assert(max > min);
 
   @override
   Widget build(BuildContext context) {

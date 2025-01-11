@@ -1,9 +1,10 @@
 import 'package:classipod/core/cupertino_modal_page.dart';
 import 'package:classipod/core/custom_scroll_behavior.dart';
+import 'package:classipod/features/about/about_screen.dart';
+import 'package:classipod/features/app_startup/splash_screen.dart';
 import 'package:classipod/features/menu/menu_screen.dart';
 import 'package:classipod/features/now_playing/now_playing_screen.dart';
 import 'package:classipod/features/settings/settings_preferences_screen.dart';
-import 'package:classipod/screens/about_screen.dart';
 import 'package:classipod/screens/device/device_frame.dart';
 import 'package:classipod/screens/music_screens/album_selection_screen.dart';
 import 'package:classipod/screens/music_screens/artist_songs_screen.dart';
@@ -12,7 +13,6 @@ import 'package:classipod/screens/music_screens/cover_flow_album_selection.dart'
 import 'package:classipod/screens/music_screens/cover_flow_screen.dart';
 import 'package:classipod/screens/music_screens/music_menu_screen.dart';
 import 'package:classipod/screens/music_screens/songs_screen.dart';
-import 'package:classipod/screens/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

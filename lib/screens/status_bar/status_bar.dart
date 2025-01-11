@@ -1,6 +1,6 @@
 import 'package:classipod/core/constants.dart';
-import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/status_bar/battery_indicator.dart';
+import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -44,8 +44,7 @@ class StatusBar extends StatelessWidget {
               const Spacer(),
               Consumer(
                 builder: (context, ref, child) {
-                  final isPlaying = ref
-                      .watch(musicProvider.select((value) => value.isPlaying));
+                  final isPlaying = ref.read(audioPlayerProvider).playing;
                   return Icon(
                     isPlaying
                         ? CupertinoIcons.play_fill

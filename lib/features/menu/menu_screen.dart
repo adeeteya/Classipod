@@ -2,8 +2,8 @@ import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
-import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/status_bar/status_bar.dart';
+import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -45,7 +45,10 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
         context.goNamed(Routes.nowPlaying.name);
         break;
       case _MenuDisplayItems.shuffleSongs:
-        await ref.read(musicProvider.notifier).shuffleAllSongs().then((value) {
+        await ref
+            .read(audioPlayerServiceProvider.notifier)
+            .shuffle()
+            .then((value) {
           if (mounted) {
             context.goNamed(Routes.nowPlaying.name);
           }

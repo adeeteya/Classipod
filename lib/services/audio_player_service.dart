@@ -1,11 +1,16 @@
 import 'dart:async';
 
+import 'package:classipod/features/now_playing/now_playing_provider.dart';
 import 'package:classipod/models/metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
 final audioPlayerProvider = Provider<AudioPlayer>((_) {
   return AudioPlayer();
+});
+
+final currentAudioPlayerIndexStreamProvider = StreamProvider<int?>((ref) {
+  return ref.read(audioPlayerProvider).currentIndexStream;
 });
 
 final audioPlayerServiceProvider =
@@ -61,6 +66,9 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
             initialIndex: 0,
             initialPosition: Duration.zero,
           );
+
+      ref.read(nowPlayingMetadataListProvider.notifier).setMetadataList =
+          musicMetadataList;
     });
   }
 

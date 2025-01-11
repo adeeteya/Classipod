@@ -1,5 +1,5 @@
-import 'package:classipod/core/widgets/box_progress_bar.dart';
-import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/features/now_playing/widgets/box_progress_bar.dart';
+import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -15,7 +15,7 @@ class VolumeBar extends ConsumerWidget {
           size: 18,
         ),
         StreamBuilder<double>(
-          stream: ref.read(musicProvider.notifier).getVolumeStream(),
+          stream: ref.read(audioPlayerProvider).volumeStream,
           builder: (context, snapshot) {
             return BoxProgressBar(
               value: snapshot.data ?? 0.0,

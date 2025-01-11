@@ -1,7 +1,7 @@
 import 'package:classipod/core/custom_page_screen.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
-import 'package:classipod/core/widgets/album_reflective_art.dart';
+import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:classipod/models/album_details.dart';
 import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/no_music_screen.dart';

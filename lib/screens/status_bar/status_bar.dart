@@ -44,7 +44,14 @@ class StatusBar extends StatelessWidget {
               const Spacer(),
               Consumer(
                 builder: (context, ref, child) {
-                  final isPlaying = ref.read(audioPlayerProvider).playing;
+                  final playingStreamProvider =
+                      ref.watch(currentAudioPlayerPlayingStreamProvider);
+                  late final bool isPlaying;
+                  if (playingStreamProvider is AsyncData) {
+                    isPlaying = playingStreamProvider.value ?? false;
+                  } else {
+                    isPlaying = false;
+                  }
                   return Icon(
                     isPlaying
                         ? CupertinoIcons.play_fill

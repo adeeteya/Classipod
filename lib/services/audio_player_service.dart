@@ -9,6 +9,10 @@ final audioPlayerProvider = Provider<AudioPlayer>((_) {
   return AudioPlayer();
 });
 
+final currentAudioPlayerPlayingStreamProvider = StreamProvider<bool>((ref) {
+  return ref.read(audioPlayerProvider).playingStream;
+});
+
 final currentAudioPlayerIndexStreamProvider = StreamProvider<int?>((ref) {
   return ref.read(audioPlayerProvider).currentIndexStream;
 });

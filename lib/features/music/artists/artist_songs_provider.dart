@@ -1,14 +1,16 @@
+import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final artistSongIndexesProvider =
-    Provider.autoDispose.family<List<int>, String>((ref, artistName) {
-  final List<int> artistSongIndexes = [];
-  final metadataList = ref.read(audioFilesServiceProvider).requireValue;
-  for (int i = 0; i < metadataList.length; i++) {
-    if (metadataList[i].getMainArtistName == artistName) {
-      artistSongIndexes.add(i);
+final artistSongsMetadataListProvider =
+    Provider.autoDispose.family<List<Metadata>, String>((ref, artistName) {
+  final List<Metadata> artistSongsMetadataList = [];
+
+  ref.read(audioFilesServiceProvider).requireValue.forEach((metadata) {
+    if (metadata.getMainArtistName == artistName) {
+      artistSongsMetadataList.add(metadata);
     }
-  }
-  return artistSongIndexes;
+  });
+
+  return artistSongsMetadataList;
 });

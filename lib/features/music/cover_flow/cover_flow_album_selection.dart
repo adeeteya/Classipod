@@ -12,8 +12,11 @@ import 'package:go_router/go_router.dart';
 class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
   final String albumName;
   final String artistName;
-  const CoverFlowAlbumSelectionScreen(
-      {super.key, required this.albumName, required this.artistName});
+  const CoverFlowAlbumSelectionScreen({
+    super.key,
+    required this.albumName,
+    required this.artistName,
+  });
 
   @override
   ConsumerState createState() => _CoverFlowAlbumSelectionScreenState();
@@ -33,10 +36,11 @@ class _CoverFlowAlbumSelectionScreenState
 
   @override
   Future<void> onSelectPressed() async {
-    final songIndex = displayItems[selectedDisplayItem].songIndex;
+    final originalSongIndex =
+        displayItems[selectedDisplayItem].originalSongIndex;
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .playSongAtIndex(songIndex);
+        .playSongAtOriginalIndex(originalSongIndex);
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
     }

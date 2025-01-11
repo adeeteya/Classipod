@@ -1,6 +1,6 @@
 import 'package:classipod/core/custom_screen.dart';
+import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/routes.dart';
-import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
 import 'package:classipod/features/music/artists/artist_songs_provider.dart';
@@ -26,14 +26,14 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
   String get routeName => Routes.artistSongs.name;
 
   @override
-  List<int> get displayItems =>
-      ref.read(artistSongIndexesProvider(widget.artistName));
+  List<Metadata> get displayItems =>
+      ref.read(artistSongsMetadataListProvider(widget.artistName));
 
   @override
   Future<void> onSelectPressed() async {
-    await ref
-        .read(audioPlayerServiceProvider.notifier)
-        .playSongAtIndex(displayItems[selectedDisplayItem]);
+    await ref.read(audioPlayerServiceProvider.notifier).playSongAtOriginalIndex(
+          displayItems[selectedDisplayItem].originalSongIndex,
+        );
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
     }
@@ -54,18 +54,9 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
                 controller: scrollController,
                 itemCount: displayItems.length,
                 itemBuilder: (context, index) => AlbumArtSongListTile(
-                  thumbnailPath: ref
-                      .read(audioFilesServiceProvider)
-                      .requireValue[displayItems[index]]
-                      .thumbnailPath,
-                  songName: ref
-                      .read(audioFilesServiceProvider)
-                      .requireValue[displayItems[index]]
-                      .trackName,
-                  trackArtistNames: ref
-                      .read(audioFilesServiceProvider)
-                      .requireValue[displayItems[index]]
-                      .getTrackArtistNames,
+                  thumbnailPath: displayItems[index].thumbnailPath,
+                  songName: displayItems[index].trackName,
+                  trackArtistNames: displayItems[index].getTrackArtistNames,
                   isSelected: selectedDisplayItem == index,
                 ),
               ),

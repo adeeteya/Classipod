@@ -103,7 +103,7 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
     });
   }
 
-  Future<void> playSongAtIndex(int index) async {
+  Future<void> playSongAtOriginalIndex(int originalIndex) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       if (ref.read(audioPlayerProvider).effectiveIndices?.length !=
@@ -111,6 +111,9 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
         await setAudioSource(ref.read(audioFilesServiceProvider).requireValue);
       }
       await pause();
+      final int index = ref
+          .read(nowPlayingMetadataListProvider)
+          .indexWhere((element) => element.originalSongIndex == originalIndex);
       await ref.read(audioPlayerProvider).seek(Duration.zero, index: index);
       await play();
     });

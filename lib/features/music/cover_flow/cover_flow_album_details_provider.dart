@@ -12,7 +12,7 @@ final coverFlowAlbumDetailsProvider =
       if (metadataList[i].getAlbumName == albumName) {
         coverFlowAlbumDetailsList.add(
           CoverFlowAlbumDetails(
-            songIndex: i,
+            originalSongIndex: metadataList[i].originalSongIndex,
             trackDuration: metadataList[i].getTrackDuration,
             songName: metadataList[i].getTrackName,
           ),

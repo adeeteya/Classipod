@@ -47,6 +47,9 @@ class Metadata {
   /// File path of the thumbnail album art file.
   final String? thumbnailPath;
 
+  /// Original Song Index
+  final int originalSongIndex;
+
   const Metadata({
     this.trackName,
     this.trackArtistNames,
@@ -62,11 +65,13 @@ class Metadata {
     this.bitrate,
     this.filePath,
     this.thumbnailPath,
+    this.originalSongIndex = 0,
   });
 
   factory Metadata.fromAudioMetadata(
     AudioMetadata audioMetadata,
     String? thumbnailPath,
+    int originalSongIndex,
   ) =>
       Metadata(
         trackName: audioMetadata.title ?? "Unknown Song",
@@ -87,6 +92,7 @@ class Metadata {
         bitrate: audioMetadata.bitrate,
         filePath: audioMetadata.file.path,
         thumbnailPath: thumbnailPath,
+        originalSongIndex: originalSongIndex,
       );
 
   factory Metadata.fromJson(dynamic map) => Metadata(

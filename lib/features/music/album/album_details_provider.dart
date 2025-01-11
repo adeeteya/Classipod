@@ -17,14 +17,14 @@ class AlbumDetailsNotifier extends Notifier<List<AlbumDetails>> {
   }
 
   List<AlbumDetails> getAlbumDetails() {
-    final Set<String> albumNames = {};
-    final Set<AlbumDetails> albumDetails = {};
+    final Set<String> albumNamesSet = {};
+    final Set<AlbumDetails> albumDetailsSet = {};
     final metadataList = ref.read(audioFilesServiceProvider).requireValue;
 
     for (int i = 0; i < metadataList.length; i++) {
-      if (!albumNames.contains(metadataList[i].getAlbumName)) {
-        albumNames.add(metadataList[i].getAlbumName);
-        albumDetails.add(
+      if (!albumNamesSet.contains(metadataList[i].getAlbumName)) {
+        albumNamesSet.add(metadataList[i].getAlbumName);
+        albumDetailsSet.add(
           AlbumDetails(
             albumName: metadataList[i].getAlbumName,
             albumArtistName: metadataList[i].getAlbumArtistName,
@@ -34,7 +34,10 @@ class AlbumDetailsNotifier extends Notifier<List<AlbumDetails>> {
       }
     }
 
-    return albumDetails.toList();
+    final List<AlbumDetails> albumDetails = albumDetailsSet.toList();
+    albumDetails.sort((a, b) => a.albumName.compareTo(b.albumName));
+
+    return albumDetails;
   }
 
   List<Metadata> getAlbumMetadataList(String albumName) {

@@ -60,6 +60,7 @@ class LocalAudioFilesRepository {
           Metadata.fromAudioMetadata(
             audioMetadata,
             thumbnailFilePath,
+            metadataList.length,
           ),
         );
       }

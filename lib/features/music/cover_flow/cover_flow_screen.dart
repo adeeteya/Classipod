@@ -1,9 +1,9 @@
 import 'package:classipod/core/custom_page_screen.dart';
 import 'package:classipod/core/extensions.dart';
-import 'package:classipod/core/providers/music_provider.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/screens/no_music_screen.dart';
 import 'package:classipod/features/music/album/album_details.dart';
+import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:classipod/features/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -26,22 +26,19 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   double get viewPortFraction => 0.58;
 
   @override
-  List<AlbumDetails> get displayItems =>
-      ref.read(musicProvider.notifier).albumDetails;
+  List<AlbumDetails> get displayItems => ref.read(albumDetailsProvider);
 
   @override
   void onSelectPressed() {
-    ref.read(musicProvider.notifier).artistName =
-        displayItems[selectedDisplayItem].albumArtistName;
-    ref.read(musicProvider.notifier).albumName =
-        displayItems[selectedDisplayItem].albumName;
-    ref.read(musicProvider.notifier).getCoverFlowAlbumDetails(
-          ref
-              .read(musicProvider.notifier)
-              .albumNames
-              .elementAt(selectedDisplayItem),
-        );
-    context.goNamed(Routes.coverFlowSelection.name);
+    final albumDetails =
+        ref.read(albumDetailsProvider).elementAt(selectedDisplayItem);
+    context.goNamed(
+      Routes.coverFlowSelection.name,
+      queryParameters: {
+        'albumName': albumDetails.albumName,
+        'artistName': albumDetails.albumArtistName,
+      },
+    );
   }
 
   @override

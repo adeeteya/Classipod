@@ -118,8 +118,12 @@ final routerProvider = Provider(
                         pageBuilder: (context, state) => CupertinoModalPage(
                           context: context,
                           useRootNavigator: false,
-                          builder: (context) =>
-                              const CoverFlowAlbumSelectionScreen(),
+                          builder: (context) => CoverFlowAlbumSelectionScreen(
+                            albumName:
+                                state.uri.queryParameters['albumName'] ?? '',
+                            artistName:
+                                state.uri.queryParameters['artistName'] ?? '',
+                          ),
                         ),
                       ),
                     ],

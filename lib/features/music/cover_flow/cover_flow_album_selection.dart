@@ -1,15 +1,19 @@
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/custom_screen.dart';
-import 'package:classipod/core/providers/music_provider.dart';
 import 'package:classipod/core/routes.dart';
+import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/cover_flow_album_song_list_tile.dart';
 import 'package:classipod/features/music/cover_flow/cover_flow_album_details.dart';
+import 'package:classipod/features/music/cover_flow/cover_flow_album_details_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
-  const CoverFlowAlbumSelectionScreen({super.key});
+  final String albumName;
+  final String artistName;
+  const CoverFlowAlbumSelectionScreen(
+      {super.key, required this.albumName, required this.artistName});
 
   @override
   ConsumerState createState() => _CoverFlowAlbumSelectionScreenState();
@@ -25,17 +29,14 @@ class _CoverFlowAlbumSelectionScreenState
 
   @override
   List<CoverFlowAlbumDetails> get displayItems =>
-      ref.read(musicProvider.notifier).coverFlowAlbumDetails;
+      ref.read(coverFlowAlbumDetailsProvider(widget.albumName));
 
   @override
   Future<void> onSelectPressed() async {
-    await ref.read(musicProvider.notifier).playAtIndex(
-          ref
-              .read(musicProvider.notifier)
-              .coverFlowAlbumDetails
-              .elementAt(selectedDisplayItem)
-              .songIndex,
-        );
+    final songIndex = displayItems[selectedDisplayItem].songIndex;
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .playSongAtIndex(songIndex);
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
     }
@@ -73,7 +74,7 @@ class _CoverFlowAlbumSelectionScreenState
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        ref.read(musicProvider.notifier).albumName,
+                        widget.albumName,
                         style: const TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -82,7 +83,7 @@ class _CoverFlowAlbumSelectionScreenState
                         maxLines: 1,
                       ),
                       Text(
-                        ref.read(musicProvider.notifier).artistName,
+                        widget.artistName,
                         style: const TextStyle(
                           fontSize: 16,
                           color: CupertinoColors.white,

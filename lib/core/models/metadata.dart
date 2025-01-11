@@ -145,12 +145,20 @@ class Metadata {
   @override
   String toString() => toJson().toString();
 
+  String get getTrackName {
+    return trackName ?? 'Unknown Song';
+  }
+
   String get getAlbumName {
     return albumName ?? "Unknown Album";
   }
 
   String get getAlbumArtistName {
     return albumArtistName ?? "Unknown Album Artist";
+  }
+
+  int get getTrackDuration {
+    return trackDuration ?? 0;
   }
 
   String get getMainArtistName {

@@ -102,9 +102,13 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
     });
   }
 
-  Future<void> playAtIndex(int index) async {
+  Future<void> playSongAtIndex(int index) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
+      if (ref.read(audioPlayerProvider).effectiveIndices?.length !=
+          ref.read(audioFilesServiceProvider).requireValue.length) {
+        await setAudioSource(ref.read(audioFilesServiceProvider).requireValue);
+      }
       await pause();
       await ref.read(audioPlayerProvider).seek(Duration.zero, index: index);
       await play();

@@ -37,7 +37,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   int get initialPage => ref.read(audioPlayerProvider).currentIndex ?? 0;
 
   @override
-  List<Metadata> get displayItems => ref.watch(nowPlayingMetadataListProvider);
+  List<Metadata> get displayItems => ref.read(nowPlayingMetadataListProvider);
 
   @override
   Future<void> onSelectPressed() async {

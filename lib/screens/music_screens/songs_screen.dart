@@ -4,8 +4,9 @@ import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/song_list_tile.dart';
 import 'package:classipod/features/status_bar/status_bar.dart';
 import 'package:classipod/models/metadata.dart';
-import 'package:classipod/providers/music_provider.dart';
 import 'package:classipod/screens/no_music_screen.dart';
+import 'package:classipod/services/audio_files_service.dart';
+import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -26,11 +27,13 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
 
   @override
   List<Metadata> get displayItems =>
-      ref.read(musicProvider.notifier).completeMusicFileMetaDataList;
+      ref.read(audioFilesServiceProvider).requireValue;
 
   @override
   Future<void> onSelectPressed() async {
-    await ref.read(musicProvider.notifier).playAtIndex(selectedDisplayItem);
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .playSongAtIndex(selectedDisplayItem);
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
     }

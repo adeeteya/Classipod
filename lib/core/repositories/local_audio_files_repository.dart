@@ -1,3 +1,4 @@
+import 'dart:collection';
 import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
@@ -18,7 +19,7 @@ class LocalAudioFilesRepository {
 
   LocalAudioFilesRepository(this._localAlbumArtCacheRepository);
 
-  Future<List<Metadata>> getAudioFilesMetadata({
+  Future<UnmodifiableListView<Metadata>> getAudioFilesMetadata({
     required String audioFileFolderPath,
     required String cacheParentDirectory,
   }) async {
@@ -64,6 +65,6 @@ class LocalAudioFilesRepository {
       }
     }
 
-    return metadataList;
+    return UnmodifiableListView(metadataList);
   }
 }

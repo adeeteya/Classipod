@@ -130,6 +130,9 @@ class Metadata {
         album: albumName ?? "Unknown Album",
         artist: getTrackArtistNames,
         genre: genres.isEmpty ? null : genres[0],
+        duration: trackDuration != null
+            ? Duration(milliseconds: trackDuration!)
+            : null,
         artUri: thumbnailPath == null
             ? Uri.parse(
                 'https://files.radio.co/humorous-skink/staging/default-artwork.png',
@@ -141,6 +144,14 @@ class Metadata {
 
   @override
   String toString() => toJson().toString();
+
+  String get getAlbumName {
+    return albumName ?? "Unknown Album";
+  }
+
+  String get getAlbumArtistName {
+    return albumArtistName ?? "Unknown Album Artist";
+  }
 
   String get getMainArtistName {
     return trackArtistNames?[0].split(", ").first ?? "Unknown Artist";

@@ -1,10 +1,11 @@
 import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/extensions.dart';
-import 'package:classipod/core/providers/music_provider.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/screens/no_music_screen.dart';
+import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
 import 'package:classipod/features/music/album/album_details.dart';
+import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:classipod/features/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -26,17 +27,20 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   String get routeName => Routes.albums.name;
 
   @override
-  List<AlbumDetails> get displayItems =>
-      ref.read(musicProvider.notifier).albumDetails;
+  List<AlbumDetails> get displayItems => ref.read(albumDetailsProvider);
 
   @override
   Future<void> onSelectPressed() async {
-    await ref.read(musicProvider.notifier).playAlbum(
-          ref
-              .read(musicProvider.notifier)
-              .albumNames
-              .elementAt(selectedDisplayItem),
-        );
+    final albumName =
+        ref.read(albumDetailsProvider).elementAt(selectedDisplayItem).albumName;
+
+    final albumMetadataList =
+        ref.read(albumDetailsProvider.notifier).getAlbumMetadataList(albumName);
+
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .setAudioSource(albumMetadataList);
+
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
     }

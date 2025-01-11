@@ -22,7 +22,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   String get routeName => Routes.artists.name;
 
   @override
-  List<String> get displayItems => ref.read(artistNamesProvider).toList();
+  List<String> get displayItems => ref.read(artistNamesProvider);
 
   @override
   void onSelectPressed() {

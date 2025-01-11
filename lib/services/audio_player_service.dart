@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:classipod/features/now_playing/now_playing_provider.dart';
+import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:classipod/models/metadata.dart';
-import 'package:classipod/repositories/settings_preferences_repository.dart';
 import 'package:classipod/services/audio_files_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';

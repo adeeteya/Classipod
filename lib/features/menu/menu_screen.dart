@@ -2,7 +2,7 @@ import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
-import 'package:classipod/screens/status_bar/status_bar.dart';
+import 'package:classipod/features/status_bar/status_bar.dart';
 import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

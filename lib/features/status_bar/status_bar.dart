@@ -1,5 +1,5 @@
 import 'package:classipod/core/constants.dart';
-import 'package:classipod/screens/status_bar/battery_indicator.dart';
+import 'package:classipod/features/status_bar/battery_indicator.dart';
 import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

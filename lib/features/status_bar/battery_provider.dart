@@ -1,5 +1,5 @@
 import 'package:battery_plus/battery_plus.dart';
-import 'package:classipod/models/battery_details.dart';
+import 'package:classipod/features/status_bar/battery_details.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class BatteryDetailsNotifier extends AsyncNotifier<BatteryDetails> {

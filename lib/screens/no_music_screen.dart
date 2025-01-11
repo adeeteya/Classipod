@@ -1,5 +1,5 @@
 import 'package:classipod/core/constants.dart';
-import 'package:classipod/screens/status_bar/status_bar.dart';
+import 'package:classipod/features/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:vector_graphics/vector_graphics.dart';
 

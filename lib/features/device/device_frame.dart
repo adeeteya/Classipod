@@ -1,6 +1,6 @@
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
-import 'package:classipod/screens/device/device_controls.dart';
+import 'package:classipod/features/device/device_controls.dart';
 import 'package:flutter/cupertino.dart';
 
 class DeviceFrame extends StatelessWidget {

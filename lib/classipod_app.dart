@@ -1,5 +1,5 @@
 import 'package:classipod/core/routes.dart';
-import 'package:classipod/features/settings/settings_preferences_provider.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

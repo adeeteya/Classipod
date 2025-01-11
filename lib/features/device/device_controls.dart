@@ -1,7 +1,7 @@
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
-import 'package:classipod/models/device_action.dart';
-import 'package:classipod/providers/device_buttons_provider.dart';
+import 'package:classipod/features/device/device_action.dart';
+import 'package:classipod/features/device/device_buttons_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vector_graphics/vector_graphics.dart';

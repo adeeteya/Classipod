@@ -1,11 +1,11 @@
 import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
-import 'package:classipod/core/widgets/settings_list_tile.dart';
-import 'package:classipod/features/settings/settings_preferences.dart';
-import 'package:classipod/features/settings/settings_preferences_controller.dart';
-import 'package:classipod/features/settings/settings_preferences_provider.dart';
-import 'package:classipod/screens/status_bar/status_bar.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_provider.dart';
+import 'package:classipod/features/settings/model/settings_preferences.dart';
+import 'package:classipod/features/settings/presentation/settings_list_tile.dart';
+import 'package:classipod/features/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

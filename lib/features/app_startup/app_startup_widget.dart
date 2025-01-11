@@ -1,7 +1,7 @@
 import 'package:classipod/classipod_app.dart';
-import 'package:classipod/features/app_startup/app_startup_provider.dart';
 import 'package:classipod/features/app_startup/app_startup_error_screen.dart';
 import 'package:classipod/features/app_startup/app_startup_loading_screen.dart';
+import 'package:classipod/features/app_startup/app_startup_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

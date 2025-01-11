@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:classipod/models/metadata.dart';
 import 'package:classipod/features/settings/settings_preferences_provider.dart';
+import 'package:classipod/models/metadata.dart';
 import 'package:classipod/providers/temp_directory_provider.dart';
 import 'package:classipod/repositories/local_audio_files_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

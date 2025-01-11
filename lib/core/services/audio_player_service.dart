@@ -47,9 +47,10 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   Future<void> shuffle() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      final newMetadataList = ref.read(audioFilesServiceProvider).requireValue;
-      newMetadataList.shuffle();
-      await setAudioSource(newMetadataList);
+      final metadataList =
+          ref.read(audioFilesServiceProvider).requireValue.toList();
+      metadataList.shuffle();
+      await setAudioSource(metadataList);
 
       final isLoopModeEnabled =
           ref.read(settingsPreferencesRepositoryProvider).getRepeat();

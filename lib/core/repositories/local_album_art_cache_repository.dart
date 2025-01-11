@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:classipod/providers/temp_directory_provider.dart';
+import 'package:classipod/core/providers/temp_directory_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final localAlbumArtCacheRepositoryProvider =

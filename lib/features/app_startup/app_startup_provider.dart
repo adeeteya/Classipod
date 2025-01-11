@@ -1,8 +1,8 @@
 import 'dart:async';
 
+import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
+import 'package:classipod/core/providers/temp_directory_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
-import 'package:classipod/providers/shared_preferences_with_cache_provider.dart';
-import 'package:classipod/providers/temp_directory_provider.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio_background/just_audio_background.dart';

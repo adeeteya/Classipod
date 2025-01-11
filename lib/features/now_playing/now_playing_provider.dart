@@ -1,4 +1,4 @@
-import 'package:classipod/models/metadata.dart';
+import 'package:classipod/core/models/metadata.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final nowPlayingMetadataListProvider =

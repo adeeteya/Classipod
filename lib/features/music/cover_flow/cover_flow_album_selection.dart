@@ -1,9 +1,9 @@
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/custom_screen.dart';
+import 'package:classipod/core/providers/music_provider.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/widgets/cover_flow_album_song_list_tile.dart';
-import 'package:classipod/models/cover_flow_album_details.dart';
-import 'package:classipod/providers/music_provider.dart';
+import 'package:classipod/features/music/cover_flow/cover_flow_album_details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

@@ -1,6 +1,6 @@
+import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/now_playing/now_playing_provider.dart';
 import 'package:classipod/features/now_playing/widgets/box_progress_bar.dart';
-import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

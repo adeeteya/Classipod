@@ -1,10 +1,10 @@
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
+import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/widgets/about_list_tile.dart';
 import 'package:classipod/features/device/device_action.dart';
 import 'package:classipod/features/device/device_buttons_provider.dart';
 import 'package:classipod/features/status_bar/status_bar.dart';
-import 'package:classipod/services/audio_files_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

@@ -1,4 +1,4 @@
-import 'package:classipod/models/metadata.dart';
+import 'package:classipod/core/models/metadata.dart';
 
 class MusicDetails {
   final int currentSongIndex;

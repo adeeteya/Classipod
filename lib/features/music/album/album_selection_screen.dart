@@ -1,11 +1,11 @@
 import 'package:classipod/core/custom_screen.dart';
 import 'package:classipod/core/extensions.dart';
+import 'package:classipod/core/providers/music_provider.dart';
 import 'package:classipod/core/routes.dart';
+import 'package:classipod/core/screens/no_music_screen.dart';
 import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
+import 'package:classipod/features/music/album/album_details.dart';
 import 'package:classipod/features/status_bar/status_bar.dart';
-import 'package:classipod/models/album_details.dart';
-import 'package:classipod/providers/music_provider.dart';
-import 'package:classipod/screens/no_music_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

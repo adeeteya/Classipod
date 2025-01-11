@@ -2,8 +2,8 @@ import 'dart:async';
 
 import 'package:classipod/core/dialogs.dart';
 import 'package:classipod/core/routes.dart';
-import 'package:classipod/services/audio_files_service.dart';
-import 'package:classipod/services/audio_player_service.dart';
+import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';

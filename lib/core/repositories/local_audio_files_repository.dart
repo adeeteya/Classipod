@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/helper_functions.dart';
-import 'package:classipod/models/metadata.dart';
-import 'package:classipod/repositories/local_album_art_cache_repository.dart';
+import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/repositories/local_album_art_cache_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final localAudioFileRepositoryProvider =

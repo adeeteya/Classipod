@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:classipod/core/custom_page_screen.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
-import 'package:classipod/features/now_playing/widgets/now_playing_page.dart';
 import 'package:classipod/features/now_playing/now_playing_provider.dart';
+import 'package:classipod/features/now_playing/widgets/now_playing_page.dart';
 import 'package:classipod/features/now_playing/widgets/seek_bar.dart';
 import 'package:classipod/features/now_playing/widgets/volume_bar.dart';
 import 'package:classipod/models/device_action.dart';
@@ -37,9 +37,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   int get initialPage => ref.read(audioPlayerProvider).currentIndex ?? 0;
 
   @override
-  List<Metadata> get displayItems => ref
-      .read(nowPlayingMetadataListProvider.notifier)
-      .getEffectiveMetadataList();
+  List<Metadata> get displayItems => ref.watch(nowPlayingMetadataListProvider);
 
   @override
   Future<void> onSelectPressed() async {

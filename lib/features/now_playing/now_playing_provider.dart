@@ -1,5 +1,4 @@
 import 'package:classipod/models/metadata.dart';
-import 'package:classipod/services/audio_player_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final nowPlayingMetadataListProvider =
@@ -17,16 +16,5 @@ class NowPlayingMetadataListNotifier extends Notifier<List<Metadata>> {
 
   set setMetadataList(List<Metadata> value) {
     super.state = value;
-  }
-
-  List<Metadata> getEffectiveMetadataList() {
-    final effectiveIndices = ref.read(audioPlayerProvider).effectiveIndices;
-    if (effectiveIndices != null && effectiveIndices.isNotEmpty) {
-      return effectiveIndices.map((index) {
-        return state[index];
-      }).toList();
-    } else {
-      return [];
-    }
   }
 }

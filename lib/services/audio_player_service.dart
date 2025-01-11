@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:classipod/features/now_playing/now_playing_provider.dart';
 import 'package:classipod/models/metadata.dart';
+import 'package:classipod/repositories/settings_preferences_repository.dart';
+import 'package:classipod/services/audio_files_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -45,7 +47,17 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   Future<void> shuffle() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      await ref.read(audioPlayerProvider).shuffle();
+      final newMetadataList = ref.read(audioFilesServiceProvider).requireValue;
+      newMetadataList.shuffle();
+      await setAudioSource(newMetadataList);
+
+      final isLoopModeEnabled =
+          ref.read(settingsPreferencesRepositoryProvider).getRepeat();
+      if (isLoopModeEnabled) {
+        await setLoopMode(LoopMode.all);
+      } else {
+        await setLoopMode(LoopMode.off);
+      }
     });
   }
 

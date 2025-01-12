@@ -1,12 +1,14 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/custom_painter/next_button_custom_painter.dart';
+import 'package:classipod/core/custom_painter/play_pause_button_custom_painter.dart';
+import 'package:classipod/core/custom_painter/previous_button_custom_painter.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:vector_graphics/vector_graphics.dart';
 
 class DeviceControls extends ConsumerStatefulWidget {
   const DeviceControls({super.key});
@@ -157,24 +159,12 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     onLongPressEnd: (_) async => ref
                         .read(deviceButtonsServiceProvider.notifier)
                         .setDeviceAction(DeviceAction.longPressEnd),
-                    child: SizedBox(
-                      height: size.width * 0.2175,
-                      child: ColoredBox(
+                    child: CustomPaint(
+                      size: const Size(20, 10),
+                      painter: PreviousButtonCustomPainter(
                         color: context.isDarkMode
-                            ? AppPalette.darkDeviceControlBackgroundColor
-                            : CupertinoColors.white,
-                        child: VectorGraphic(
-                          loader:
-                              const AssetBytesLoader(Assets.previousButtonIcon),
-                          colorFilter: context.isDarkMode
-                              ? null
-                              : const ColorFilter.mode(
-                                  AppPalette.lightDeviceButtonColor,
-                                  BlendMode.srcIn,
-                                ),
-                          alignment: Alignment.centerLeft,
-                          fit: BoxFit.scaleDown,
-                        ),
+                            ? null
+                            : AppPalette.lightDeviceButtonColor,
                       ),
                     ),
                   ),
@@ -230,23 +220,12 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     onLongPressEnd: (_) async => ref
                         .read(deviceButtonsServiceProvider.notifier)
                         .setDeviceAction(DeviceAction.longPressEnd),
-                    child: SizedBox(
-                      height: size.width * 0.2175,
-                      child: ColoredBox(
+                    child: CustomPaint(
+                      size: const Size(20, 10),
+                      painter: NextButtonCustomPainter(
                         color: context.isDarkMode
-                            ? AppPalette.darkDeviceControlBackgroundColor
-                            : CupertinoColors.white,
-                        child: VectorGraphic(
-                          loader: const AssetBytesLoader(Assets.nextButtonIcon),
-                          colorFilter: context.isDarkMode
-                              ? null
-                              : const ColorFilter.mode(
-                                  AppPalette.lightDeviceButtonColor,
-                                  BlendMode.srcIn,
-                                ),
-                          alignment: Alignment.centerRight,
-                          fit: BoxFit.scaleDown,
-                        ),
+                            ? null
+                            : AppPalette.lightDeviceButtonColor,
                       ),
                     ),
                   ),
@@ -264,16 +243,13 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                       : CupertinoColors.white,
                   child: Align(
                     alignment: Alignment.bottomCenter,
-                    child: VectorGraphic(
-                      loader:
-                          const AssetBytesLoader(Assets.playPauseButtonIcon),
-                      colorFilter: context.isDarkMode
-                          ? null
-                          : const ColorFilter.mode(
-                              AppPalette.lightDeviceButtonColor,
-                              BlendMode.srcIn,
-                            ),
-                      fit: BoxFit.scaleDown,
+                    child: CustomPaint(
+                      size: const Size(26, 12),
+                      painter: PlayPauseButtonCustomPainter(
+                        color: context.isDarkMode
+                            ? null
+                            : AppPalette.lightDeviceButtonColor,
+                      ),
                     ),
                   ),
                 ),

@@ -1,6 +1,7 @@
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/settings/model/settings_preferences.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
@@ -133,16 +134,19 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
   Future<void> setNewMusicFolderPath() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      final String newMusicFolderPath =
-          await FilePicker.platform.getDirectoryPath() ?? '/';
       final oldMusicFolderPath =
           ref.read(currentSettingsPreferencesProvider).musicFolderPath;
+      final String newMusicFolderPath =
+          await FilePicker.platform.getDirectoryPath() ?? '/';
+
       if (newMusicFolderPath != '/' &&
           newMusicFolderPath != oldMusicFolderPath) {
         await ref
             .read(settingsPreferencesRepositoryProvider)
             .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
+        await ref.read(audioPlayerProvider).stop();
         ref.invalidate(currentSettingsPreferencesProvider);
+        ref.invalidate(audioFilesServiceProvider);
         ref.read(routerProvider).goNamed(Routes.splash.name);
       }
     });

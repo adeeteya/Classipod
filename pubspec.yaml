@@ -3,7 +3,7 @@ description: "A ipod Classic Emulator"
 
 publish_to: 'none'
 
-version: 1.0.0+1
+version: 1.1.0+1
 
 environment:
   sdk: ^3.5.4
@@ -26,7 +26,6 @@ dependencies:
   permission_handler: ^11.3.1
   shared_preferences: ^2.3.5
   url_launcher: ^6.3.1
-  vector_graphics: ^1.1.15
   vibration: ^2.0.1
 
 dev_dependencies:
@@ -35,7 +34,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   riverpod_lint: ^2.6.4
-  vector_graphics_compiler: ^1.1.16
 
 flutter:
   generate: true
@@ -45,9 +43,6 @@ flutter:
    - assets/
    - assets/fonts/
    - assets/images/
-   - path: assets/icons/
-     transformers:
-       - package: vector_graphics_compiler
 
   fonts:
    - family: Myriad

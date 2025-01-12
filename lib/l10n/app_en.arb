@@ -88,13 +88,13 @@
     "description": "The title of the click wheel sound setting"
   },
   "touchSoundsDialogTitle": "Touch Sounds",
-    "@touchSoundsDialogTitle": {
-        "description": "The title of the touch sounds dialog"
-    },
+  "@touchSoundsDialogTitle": {
+    "description": "The title of the touch sounds dialog"
+  },
   "touchSoundsDialogContent": "Please Enable Touch Sounds from System Settings to hear the click wheel sounds",
-    "@touchSoundsDialogContent": {
-        "description": "The contents of the touch sounds dialog"
-    },
+  "@touchSoundsDialogContent": {
+    "description": "The contents of the touch sounds dialog"
+  },
   "immersiveModeSettingTitle": "Immersive Mode",
   "@immersiveModeSettingTitle": {
     "description": "The title of the immersive mode setting"
@@ -140,23 +140,27 @@
     "description": "The text of the confirm button"
   },
   "tileValueOn": "On",
-    "@tileValueOn": {
-        "description": "The value of the tile when it is on"
-    },
-    "tileValueOff": "Off",
-    "@tileValueOff": {
-        "description": "The value of the tile when it is off"
-    },
+  "@tileValueOn": {
+    "description": "The value of the tile when it is on"
+  },
+  "tileValueOff": "Off",
+  "@tileValueOff": {
+    "description": "The value of the tile when it is off"
+  },
   "commonOfText": "of",
-    "@commonOfText": {
-        "description": "The text 'of'"
-    },
+  "@commonOfText": {
+    "description": "The text 'of'"
+  },
   "commonErrorText": "Error",
-    "@commonErrorText": {
-        "description": "The text 'Error'"
-    },
+  "@commonErrorText": {
+    "description": "The text 'Error'"
+  },
   "retryButtonText": "Retry",
-    "@retryButtonText": {
-        "description": "The text of the retry button"
-    }
+  "@retryButtonText": {
+    "description": "The text of the retry button"
+  },
+  "filePickerDialogTitle": "Select a Directory to Scan for Music",
+  "@filePickerDialogTitle": {
+    "description": "The title of the file picker dialog"
+  }
 }

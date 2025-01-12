@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:classipod/core/alerts/dialogs.dart';
-import 'package:classipod/core/constants/assets.dart';
+import 'package:classipod/core/custom_painter/apple_logo_custom_painter.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
@@ -9,7 +9,6 @@ import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:vector_graphics/vector_graphics.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});
@@ -59,12 +58,11 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const CupertinoPageScaffold(
+    return CupertinoPageScaffold(
       child: Center(
-        child: VectorGraphic(
-          loader: AssetBytesLoader(
-            Assets.appleLogoIcon,
-          ),
+        child: CustomPaint(
+          size: const Size(64, 64),
+          foregroundPainter: AppleCustomPainter(),
         ),
       ),
     );

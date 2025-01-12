@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:flutter/cupertino.dart';
@@ -41,7 +42,7 @@ class NowPlayingPage extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
               MarqueeText(
-                trackName ?? "Unknown Track",
+                trackName ?? context.localization.unknownSong,
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -52,7 +53,7 @@ class NowPlayingPage extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               MarqueeText(
-                artistNames ?? "Unknown Artist",
+                artistNames ?? context.localization.unknownArtist,
                 style: const TextStyle(
                   color: hintTextColor,
                   fontSize: 16,
@@ -63,7 +64,7 @@ class NowPlayingPage extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               MarqueeText(
-                albumName ?? "Unknown Album",
+                albumName ?? context.localization.unknownAlbum,
                 style: const TextStyle(
                   color: hintTextColor,
                   fontSize: 16,
@@ -74,7 +75,7 @@ class NowPlayingPage extends StatelessWidget {
               ),
               const Spacer(),
               Text(
-                "$currentTrackNumber of $totalTrackNumber",
+                "$currentTrackNumber ${context.localization.commonOfText} $totalTrackNumber",
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,

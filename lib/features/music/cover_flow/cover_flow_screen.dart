@@ -1,5 +1,4 @@
 import 'package:classipod/core/custom_page_screen.dart';
-import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/screens/no_music_screen.dart';
 import 'package:classipod/features/music/album/album_details.dart';
@@ -53,7 +52,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
       child: Column(
         children: [
           StatusBar(
-            title: Routes.coverFlow.title,
+            title: Routes.coverFlow.title(context),
           ),
           const SizedBox(height: 10),
           Flexible(

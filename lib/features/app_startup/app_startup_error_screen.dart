@@ -1,3 +1,4 @@
+import 'package:classipod/core/extensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class AppStartupError extends StatelessWidget {
@@ -16,10 +17,10 @@ class AppStartupError extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              Text('Error: $error'),
+              Text('${context.localization.commonErrorText} $error'),
               CupertinoButton(
                 onPressed: onRetry,
-                child: const Text('Retry'),
+                child: Text(context.localization.retryButtonText),
               ),
             ],
           ),

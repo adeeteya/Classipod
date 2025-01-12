@@ -1,4 +1,5 @@
 import 'package:classipod/core/dialogs.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_provider.dart';
@@ -93,9 +94,8 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
       if (isClickWheelSoundEnabled && context.mounted) {
         await Dialogs.showInfoDialog(
           context: context,
-          title: "Touch Sounds",
-          content:
-              "Please Enable Touch Sounds from System Settings to hear the click wheel sounds",
+          title: context.localization.touchSoundsDialogTitle,
+          content: context.localization.touchSoundsDialogContent,
         );
       }
     });

@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class SettingsListTile extends StatelessWidget {
@@ -48,7 +49,9 @@ class SettingsListTile extends StatelessWidget {
               ),
               if (isOn != null)
                 Text(
-                  (isOn!) ? "On" : "Off",
+                  (isOn!)
+                      ? context.localization.tileValueOn
+                      : context.localization.tileValueOff,
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,

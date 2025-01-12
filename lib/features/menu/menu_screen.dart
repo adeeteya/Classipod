@@ -12,7 +12,20 @@ enum _MenuDisplayItems {
   music,
   nowPlaying,
   shuffleSongs,
-  settings,
+  settings;
+
+  String title(BuildContext context) {
+    switch (this) {
+      case music:
+        return context.localization.musicMenuScreenTitle;
+      case nowPlaying:
+        return context.localization.nowPlayingScreenTitle;
+      case shuffleSongs:
+        return context.localization.shuffleSongsMenuTitle;
+      case settings:
+        return context.localization.settingsScreenTitle;
+    }
+  }
 }
 
 class MenuScreen extends ConsumerStatefulWidget {
@@ -28,7 +41,7 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
 
   @override
   List<String> get displayItems =>
-      _MenuDisplayItems.values.map((e) => e.title).toList();
+      _MenuDisplayItems.values.map((e) => e.title(context)).toList();
 
   @override
   void onMenuButtonPressed() {
@@ -66,7 +79,7 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
       child: Column(
         children: [
           StatusBar(
-            title: Routes.menu.title,
+            title: Routes.menu.title(context),
           ),
           Expanded(
             child: CupertinoScrollbar(

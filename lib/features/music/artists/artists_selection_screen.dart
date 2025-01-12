@@ -1,5 +1,4 @@
 import 'package:classipod/core/custom_screen.dart';
-import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/screens/no_music_screen.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
@@ -38,7 +37,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
       return NoMusicScreen(
-        title: Routes.artists.title,
+        title: Routes.artists.title(context),
       );
     }
 
@@ -46,7 +45,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
       child: Column(
         children: [
           StatusBar(
-            title: Routes.artists.title,
+            title: Routes.artists.title(context),
           ),
           Flexible(
             child: CupertinoScrollbar(

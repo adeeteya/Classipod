@@ -52,6 +52,7 @@ If you like what you see, please ⭐ the repo.
 - 🔇 Volume Control
 - 🪞 Reflective Cover Art
 - ℹ️ About Screen
+- 🌍 Multi Language Support
 
 ### 🔜 Upcoming Features
 - ⬇️ Caching Metadata of the songs for faster boot up times
@@ -61,7 +62,6 @@ If you like what you see, please ⭐ the repo.
 - 📸 Ability to View Photos and Videos from the device
 - 📖 App Usage Tutorial
 - 📺 Split Screen View (6th and 7th Gen iPod Classics)
-- 🌍 Multi Language Support
 
 ## 💻 Installation links
 

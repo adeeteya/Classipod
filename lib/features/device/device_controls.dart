@@ -1,3 +1,4 @@
+import 'package:classipod/core/assets.dart';
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/features/device/device_action.dart';
@@ -124,14 +125,14 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                   child: Align(
                     alignment: Alignment.topCenter,
                     child: Text(
-                      "MENU",
+                      context.localization.menuButtonText,
                       style: TextStyle(
                         color: context.isDarkMode
                             ? CupertinoColors.white
                             : lightDeviceButtonColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        fontFamily: 'SF Pro Text',
+                        fontFamily: Assets.sfProTextFont,
                       ),
                     ),
                   ),
@@ -159,7 +160,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                             : CupertinoColors.white,
                         child: VectorGraphic(
                           loader:
-                              const AssetBytesLoader("assets/icons/last.svg"),
+                              const AssetBytesLoader(Assets.previousButtonIcon),
                           colorFilter: context.isDarkMode
                               ? null
                               : const ColorFilter.mode(
@@ -189,7 +190,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                               : lightDeviceControlBorderColor,
                         ),
                         image: const DecorationImage(
-                          image: AssetImage("assets/images/noise.png"),
+                          image: AssetImage(Assets.noiseImage),
                           fit: BoxFit.cover,
                         ),
                         gradient: LinearGradient(
@@ -227,8 +228,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                             ? darkDeviceControlBackgroundColor
                             : CupertinoColors.white,
                         child: VectorGraphic(
-                          loader:
-                              const AssetBytesLoader("assets/icons/next.svg"),
+                          loader: const AssetBytesLoader(Assets.nextButtonIcon),
                           colorFilter: context.isDarkMode
                               ? null
                               : const ColorFilter.mode(
@@ -256,7 +256,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: VectorGraphic(
-                      loader: const AssetBytesLoader("assets/icons/play.svg"),
+                      loader:
+                          const AssetBytesLoader(Assets.playPauseButtonIcon),
                       colorFilter: context.isDarkMode
                           ? null
                           : const ColorFilter.mode(

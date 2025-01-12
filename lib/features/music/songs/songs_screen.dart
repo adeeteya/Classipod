@@ -1,5 +1,4 @@
 import 'package:classipod/core/custom_screen.dart';
-import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/screens/no_music_screen.dart';
@@ -44,7 +43,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
       return NoMusicScreen(
-        title: Routes.songs.title,
+        title: Routes.songs.title(context),
       );
     }
 
@@ -52,7 +51,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
       child: Column(
         children: [
           StatusBar(
-            title: Routes.songs.title,
+            title: Routes.songs.title(context),
           ),
           Flexible(
             child: CupertinoScrollbar(

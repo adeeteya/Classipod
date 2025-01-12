@@ -1,6 +1,8 @@
 import 'dart:async';
 
+import 'package:classipod/core/assets.dart';
 import 'package:classipod/core/dialogs.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -28,9 +30,8 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
     if (audioPermission.isDenied && mounted) {
       await Dialogs.showInfoDialog(
         context: context,
-        title: "Audio Access Permission Required",
-        content:
-            "Please grant audio files access to allow us to play your music files.",
+        title: context.localization.audioAccessPermissionTitle,
+        content: context.localization.audioAccessPermissionContent,
       );
       await _requestStoragePermissions();
       return;
@@ -38,9 +39,9 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
     if (audioPermission.isPermanentlyDenied && mounted) {
       await Dialogs.showInfoDialog(
         context: context,
-        title: "Audio Access Permission Denied",
+        title: context.localization.audioAccessPermissionPermanentlyDeniedTitle,
         content:
-            "Please grant audio files access for this app in the device settings to allow us to play your music files.",
+            context.localization.audioAccessPermissionPermanentlyDeniedContent,
       );
       return;
     }
@@ -62,7 +63,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
       child: Center(
         child: VectorGraphic(
           loader: AssetBytesLoader(
-            "assets/icons/apple_logo.svg",
+            Assets.appleLogoIcon,
           ),
         ),
       ),

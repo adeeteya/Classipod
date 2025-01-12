@@ -1,4 +1,6 @@
+import 'package:classipod/core/assets.dart';
 import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:classipod/features/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:vector_graphics/vector_graphics.dart';
@@ -13,12 +15,12 @@ class NoMusicScreen extends StatelessWidget {
       child: Column(
         children: [
           StatusBar(title: title),
-          const Center(
+          Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                VectorGraphic(
-                  loader: AssetBytesLoader("assets/icons/music_note.svg"),
+                const VectorGraphic(
+                  loader: AssetBytesLoader(Assets.musicNoteIcon),
                   colorFilter: ColorFilter.mode(
                     lightDeviceFrameGradientColor2,
                     BlendMode.srcIn,
@@ -26,10 +28,10 @@ class NoMusicScreen extends StatelessWidget {
                   width: 125,
                   height: 125,
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
-                  "No Music",
-                  style: TextStyle(
+                  context.localization.noMusicFilesFound,
+                  style: const TextStyle(
                     fontSize: 18,
                     color: lightDeviceFrameGradientColor2,
                     fontWeight: FontWeight.bold,

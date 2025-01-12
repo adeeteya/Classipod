@@ -1,6 +1,8 @@
 import 'dart:io';
 
+import 'package:classipod/core/assets.dart';
 import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class AlbumArtSongListTile extends StatelessWidget {
@@ -42,9 +44,9 @@ class AlbumArtSongListTile extends StatelessWidget {
             Image(
               image: (thumbnailPath != null)
                   ? FileImage(File(thumbnailPath!))
-                  : const AssetImage("assets/images/default_album_cover.jpeg"),
+                  : const AssetImage(Assets.defaultAlbumCoverImage),
               errorBuilder: (_, __, ___) => Image.asset(
-                "assets/images/default_album_cover.jpeg",
+                Assets.defaultAlbumCoverImage,
                 fit: BoxFit.fitWidth,
               ),
               height: 50,
@@ -57,7 +59,7 @@ class AlbumArtSongListTile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    songName ?? "Unknown Song",
+                    songName ?? context.localization.unknownSong,
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -69,7 +71,7 @@ class AlbumArtSongListTile extends StatelessWidget {
                   ),
                   const SizedBox(height: 2),
                   Text(
-                    trackArtistNames ?? "Unknown Artist",
+                    trackArtistNames ?? context.localization.unknownArtist,
                     style: TextStyle(
                       color: isSelected ? CupertinoColors.white : hintTextColor,
                     ),

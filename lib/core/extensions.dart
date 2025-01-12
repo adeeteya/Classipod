@@ -1,5 +1,6 @@
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
 
 extension BuildContextExtensions on BuildContext {
@@ -13,6 +14,10 @@ extension BuildContextExtensions on BuildContext {
 
   GoRouter get router {
     return GoRouter.of(this);
+  }
+
+  AppLocalizations get localization {
+    return AppLocalizations.of(this)!;
   }
 }
 
@@ -45,16 +50,16 @@ extension DurationStringHelpers on Duration {
 }
 
 extension StringHelpers on Enum {
-  String get title {
-    final words = name.split(RegExp(r'(?=[A-Z])'));
-    return words
-        .map(
-          (word) =>
-              word.substring(0, 1).toUpperCase() +
-              word.substring(1).toLowerCase(),
-        )
-        .join(' ');
-  }
+  // String get title {
+  //   final words = name.split(RegExp(r'(?=[A-Z])'));
+  //   return words
+  //       .map(
+  //         (word) =>
+  //             word.substring(0, 1).toUpperCase() +
+  //             word.substring(1).toLowerCase(),
+  //       )
+  //       .join(' ');
+  // }
 }
 
 extension GoRouterExtension on GoRouter {

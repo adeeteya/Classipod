@@ -19,7 +19,28 @@ enum _SettingsDisplayItems {
   clickWheelSound,
   immersiveMode,
   changeDirectory,
-  donate,
+  donate;
+
+  String title(BuildContext context) {
+    switch (this) {
+      case about:
+        return context.localization.aboutScreenTitle;
+      case darkMode:
+        return context.localization.darkModeSettingTitle;
+      case repeat:
+        return context.localization.repeatModeSettingTitle;
+      case vibrate:
+        return context.localization.vibrateSettingTitle;
+      case clickWheelSound:
+        return context.localization.clickWheelSettingTitle;
+      case immersiveMode:
+        return context.localization.immersiveModeSettingTitle;
+      case changeDirectory:
+        return context.localization.changeDirectorySettingTitle;
+      case donate:
+        return context.localization.donateSettingTitle;
+    }
+  }
 }
 
 class SettingsScreen extends ConsumerStatefulWidget {
@@ -36,7 +57,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
 
   @override
   List<String> get displayItems =>
-      _SettingsDisplayItems.values.map((e) => e.title).toList();
+      _SettingsDisplayItems.values.map((e) => e.title(context)).toList();
 
   @override
   Future<void> onSelectPressed() async {
@@ -110,7 +131,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       child: Column(
         children: [
           StatusBar(
-            title: Routes.settings.title,
+            title: Routes.settings.title(context),
           ),
           Flexible(
             child: CupertinoScrollbar(

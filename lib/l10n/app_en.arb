@@ -1,0 +1,162 @@
+{
+  "appTitle": "ClassiPod",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "menuButtonText": "MENU",
+  "@menuButtonText": {
+    "description": "The text of the menu button"
+  },
+  "audioAccessPermissionTitle": "Audio Access Permission Required",
+  "@audioAccessPermissionTitle": {
+    "description": "The title of the audio access permission dialog"
+  },
+  "audioAccessPermissionContent": "Please grant audio files access to allow us to play your music files.",
+  "@audioAccessPermissionContent": {
+    "description": "The content of the audio files access permission dialog"
+  },
+  "audioAccessPermissionPermanentlyDeniedTitle": "Audio Access Permission Denied",
+  "@audioAccessPermissionPermanentlyDeniedTitle": {
+    "description": "The title of the audio access permission permanently denied dialog"
+  },
+  "audioAccessPermissionPermanentlyDeniedContent": "Please grant audio files access for this app in the device settings to allow us to play your music files.",
+  "@audioAccessPermissionPermanentlyDeniedContent": {
+    "description": "The content of the audio files access permission permanently denied dialog"
+  },
+  "menuScreenTitle": "Menu",
+  "@menuScreenTitle": {
+    "description": "The title of the menu screen"
+  },
+  "musicMenuScreenTitle": "Music",
+  "@musicMenuScreenTitle": {
+    "description": "The title of the music menu screen"
+  },
+  "nowPlayingScreenTitle": "Now Playing",
+  "@nowPlayingScreenTitle": {
+    "description": "The title of the now playing screen"
+  },
+  "shuffleSongsMenuTitle": "Shuffle Songs",
+  "@shuffleSongsMenuTitle": {
+    "description": "The title of shuffle songs feature"
+  },
+  "settingsScreenTitle": "Settings",
+  "@settingsScreenTitle": {
+    "description": "The title of the settings screen"
+  },
+  "aboutScreenTitle": "About",
+  "@aboutScreenTitle": {
+    "description": "The title of the about screen"
+  },
+  "coverFlowScreenTitle": "Cover Flow",
+  "@coverFlowScreenTitle": {
+    "description": "The title of the cover flow screen"
+  },
+  "coverFlowSelectionScreenTitle": "Cover Flow Selection",
+  "@coverFlowSelectionScreenTitle": {
+    "description": "The title of the cover flow selection screen"
+  },
+  "artistsScreenTitle": "Artists",
+  "@artistScreenTitle": {
+    "description": "The title of the artists screen"
+  },
+  "artistSongsScreenTitle": "Artist Songs",
+  "@artistSongsScreenTitle": {
+    "description": "The title of the artist songs screen"
+  },
+  "albumsScreenTitle": "Albums",
+  "@albumsScreenTitle": {
+    "description": "The title of the albums screen"
+  },
+  "songsScreenTitle": "Songs",
+  "@songsScreenTitle": {
+    "description": "The title of the songs screen"
+  },
+  "darkModeSettingTitle": "Dark Mode",
+  "@darkModeSettingTitle": {
+    "description": "The title of the dark mode setting"
+  },
+  "repeatModeSettingTitle": "Repeat Mode",
+  "@repeatModeSettingTitle": {
+    "description": "The title of the repeat mode setting"
+  },
+  "vibrateSettingTitle": "Vibrate",
+  "@vibrateSettingTitle": {
+    "description": "The title of the vibrate setting"
+  },
+  "clickWheelSettingTitle": "Click Wheel",
+  "@clickWheelSettingTitle": {
+    "description": "The title of the click wheel setting"
+  },
+  "touchSoundsDialogTitle": "Touch Sounds",
+    "@touchSoundsDialogTitle": {
+        "description": "The title of the touch sounds dialog"
+    },
+  "touchSoundsDialogContent": "Please Enable Touch Sounds from System Settings to hear the click wheel sounds",
+    "@touchSoundsDialogContent": {
+        "description": "The contents of the touch sounds dialog"
+    },
+  "immersiveModeSettingTitle": "Immersive Mode",
+  "@immersiveModeSettingTitle": {
+    "description": "The title of the immersive mode setting"
+  },
+  "changeDirectorySettingTitle": "Change Directory",
+  "@changeDirectorySettingTitle": {
+    "description": "The title of the change directory setting"
+  },
+  "donateSettingTitle": "Donate",
+  "@donateSettingTitle": {
+    "description": "The title of the donate setting"
+  },
+  "versionAboutScreenTitle": "Version",
+  "@versionAboutScreenTitle": {
+    "description": "The title of the version tile in the about screen"
+  },
+  "madeWithLoveTitle": "Made with ❤️ by",
+  "@madeWithLoveTitle": {
+    "description": "The title of the made with love section in the about screen"
+  },
+  "noMusicFilesFound": "No Music",
+  "@noMusicFilesFound": {
+    "description": "The message displayed when no music files are found"
+  },
+  "unknownSong": "Unknown Song",
+  "@unknownSong": {
+    "description": "When the name of a song is unknown"
+  },
+  "unknownArtist": "Unknown Artist",
+  "@unknownArtist": {
+    "description": "When the artist of a song is unknown"
+  },
+  "unknownAlbum": "Unknown Album",
+  "@unknownAlbum": {
+    "description": "When the album of a song is unknown"
+  },
+  "unknownGenre": "Unknown Genre",
+  "@unknownGenre": {
+    "description": "When the genre of a song is unknown"
+  },
+  "buttonConfirmText": "OK",
+  "@buttonConfirmText": {
+    "description": "The text of the confirm button"
+  },
+  "tileValueOn": "On",
+    "@tileValueOn": {
+        "description": "The value of the tile when it is on"
+    },
+    "tileValueOff": "Off",
+    "@tileValueOff": {
+        "description": "The value of the tile when it is off"
+    },
+  "commonOfText": "of",
+    "@commonOfText": {
+        "description": "The text 'of'"
+    },
+  "commonErrorText": "Error",
+    "@commonErrorText": {
+        "description": "The text 'Error'"
+    },
+  "retryButtonText": "Retry",
+    "@retryButtonText": {
+        "description": "The text of the retry button"
+    }
+}

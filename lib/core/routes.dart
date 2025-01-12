@@ -1,5 +1,6 @@
 import 'package:classipod/core/cupertino_modal_page.dart';
 import 'package:classipod/core/custom_scroll_behavior.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:classipod/features/about/about_screen.dart';
 import 'package:classipod/features/app_startup/splash_screen.dart';
 import 'package:classipod/features/device/device_frame.dart';
@@ -34,6 +35,35 @@ enum Routes {
   @override
   String toString() {
     return "/$name";
+  }
+
+  String title(BuildContext context) {
+    switch (this) {
+      case splash:
+        return "";
+      case menu:
+        return context.localization.menuScreenTitle;
+      case settings:
+        return context.localization.settingsScreenTitle;
+      case about:
+        return context.localization.aboutScreenTitle;
+      case nowPlaying:
+        return context.localization.nowPlayingScreenTitle;
+      case music:
+        return context.localization.musicMenuScreenTitle;
+      case coverFlow:
+        return context.localization.coverFlowScreenTitle;
+      case coverFlowSelection:
+        return context.localization.coverFlowSelectionScreenTitle;
+      case artists:
+        return context.localization.artistsScreenTitle;
+      case artistSongs:
+        return context.localization.artistSongsScreenTitle;
+      case albums:
+        return context.localization.albumsScreenTitle;
+      case songs:
+        return context.localization.songsScreenTitle;
+    }
   }
 }
 
@@ -144,7 +174,7 @@ final routerProvider = Provider(
                           child: ArtistSongsScreen(
                             artistName:
                                 state.uri.queryParameters["artistName"] ??
-                                    "Unknown Artist",
+                                    context.localization.unknownArtist,
                           ),
                         ),
                       ),

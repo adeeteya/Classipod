@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/extensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class SongListTile extends StatelessWidget {
@@ -37,7 +38,7 @@ class SongListTile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                songName ?? "Unknown Song",
+                songName ?? context.localization.unknownSong,
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -48,7 +49,7 @@ class SongListTile extends StatelessWidget {
                 maxLines: 1,
               ),
               Text(
-                trackArtistNames ?? "Unknown Artist",
+                trackArtistNames ?? context.localization.unknownArtist,
                 style: TextStyle(
                   color: isSelected ? CupertinoColors.white : hintTextColor,
                 ),

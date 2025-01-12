@@ -1,5 +1,4 @@
 import 'package:classipod/core/custom_screen.dart';
-import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/routes.dart';
 import 'package:classipod/core/screens/no_music_screen.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -56,7 +55,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
       child: Column(
         children: [
           StatusBar(
-            title: Routes.albums.title,
+            title: Routes.albums.title(context),
           ),
           Flexible(
             child: CupertinoScrollbar(

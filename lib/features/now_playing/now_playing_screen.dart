@@ -147,7 +147,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
       return NoMusicScreen(
-        title: Routes.nowPlaying.title,
+        title: Routes.nowPlaying.title(context),
       );
     }
 
@@ -171,7 +171,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
       child: Column(
         children: [
           StatusBar(
-            title: Routes.nowPlaying.title,
+            title: Routes.nowPlaying.title(context),
           ),
           Flexible(
             child: Padding(

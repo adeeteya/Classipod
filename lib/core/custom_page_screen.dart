@@ -2,7 +2,6 @@ import 'package:classipod/core/extensions.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/device/device_action.dart';
 import 'package:classipod/features/device/device_buttons_provider.dart';
-import 'package:classipod/features/status_bar/appbar_title_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -98,9 +97,6 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
       });
     });
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(appBarTitleProvider.notifier).changeTitle(routeName);
-    });
     ref.listenManual(
       deviceButtonProvider,
       deviceControlHandler,

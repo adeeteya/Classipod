@@ -18,46 +18,4 @@ Future<void> main() async {
       child: AppStartupWidget(),
     ),
   );
-
-  // try {
-  //   await SystemChrome.setPreferredOrientations(
-  //     [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
-  //   );
-  //   await JustAudioBackground.init(
-  //     androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
-  //     androidNotificationChannelName: 'Audio playback',
-  //     androidNotificationChannelDescription: 'Classipod Audio Notification',
-  //     androidNotificationOngoing: true,
-  //   );
-  //   final tempDirectory = await getTemporaryDirectory();
-  //   final sharedPreferencesWithCache = await SharedPreferencesWithCache.create(
-  //     cacheOptions: const SharedPreferencesWithCacheOptions(),
-  //   );
-  //   final container = ProviderContainer(
-  //     overrides: [
-  //       tempDirectoryPathProvider.overrideWithValue(tempDirectory.path),
-  //       sharedPreferencesWithCacheProvider
-  //           .overrideWithValue(sharedPreferencesWithCache),
-  //     ],
-  //   );
-  //
-  //
-  //   runApp(
-  //     UncontrolledProviderScope(
-  //       container: container,
-  //       child: const ClassipodApp(),
-  //     ),
-  //   );
-  // } catch (e) {
-  //   // ignore: missing_provider_scope
-  //   runApp(
-  //     CupertinoApp(
-  //       home: CupertinoPageScaffold(
-  //         child: Center(
-  //           child: Text('Error: $e'),
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
 }

@@ -4,6 +4,8 @@ import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/widgets/about_list_tile.dart';
 import 'package:classipod/features/device/device_action.dart';
 import 'package:classipod/features/device/device_buttons_provider.dart';
+import 'package:classipod/features/music/album/album_details_provider.dart';
+import 'package:classipod/features/music/artists/artist_names_provider.dart';
 import 'package:classipod/features/status_bar/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -27,15 +29,15 @@ class AboutScreen extends ConsumerWidget {
       child: Column(
         children: [
           StatusBar(
-            title: Routes.about.title,
+            title: Routes.about.title(context),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                const Text(
-                  "ClassiPod",
-                  style: TextStyle(
+                Text(
+                  context.localization.appTitle,
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: CupertinoColors.black,
@@ -43,26 +45,24 @@ class AboutScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: 10),
                 AboutListTile(
-                  titleText: "Songs",
+                  titleText: context.localization.songsScreenTitle,
                   valueText:
                       "${ref.read(audioFilesServiceProvider).requireValue.length}",
                 ),
                 AboutListTile(
-                  titleText: "Artists",
-                  valueText:
-                      "${ref.read(audioFilesServiceProvider).requireValue.length}",
+                  titleText: context.localization.artistsScreenTitle,
+                  valueText: "${ref.read(artistNamesProvider).length}",
                 ),
                 AboutListTile(
-                  titleText: "Albums",
-                  valueText:
-                      "${ref.read(audioFilesServiceProvider).requireValue.length}",
+                  titleText: context.localization.albumsScreenTitle,
+                  valueText: "${ref.read(albumDetailsProvider).length}",
                 ),
-                const AboutListTile(
-                  titleText: "Version",
+                AboutListTile(
+                  titleText: context.localization.versionAboutScreenTitle,
                   valueText: "1.00",
                 ),
-                const AboutListTile(
-                  titleText: "Made with ❤️ by",
+                AboutListTile(
+                  titleText: context.localization.madeWithLoveTitle,
                   valueText: "Aditya",
                 ),
               ],

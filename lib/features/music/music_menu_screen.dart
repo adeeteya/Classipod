@@ -11,7 +11,20 @@ enum _MusicListDisplayItems {
   coverFlow,
   artists,
   albums,
-  songs,
+  songs;
+
+  String title(BuildContext context) {
+    switch (this) {
+      case coverFlow:
+        return context.localization.coverFlowScreenTitle;
+      case artists:
+        return context.localization.artistsScreenTitle;
+      case albums:
+        return context.localization.albumsScreenTitle;
+      case songs:
+        return context.localization.songsScreenTitle;
+    }
+  }
 }
 
 class MusicMenuScreen extends ConsumerStatefulWidget {
@@ -28,7 +41,7 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
 
   @override
   List<String> get displayItems =>
-      _MusicListDisplayItems.values.map((e) => e.title).toList();
+      _MusicListDisplayItems.values.map((e) => e.title(context)).toList();
 
   @override
   void onSelectPressed() {
@@ -54,7 +67,7 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
       child: Column(
         children: [
           StatusBar(
-            title: Routes.music.title,
+            title: Routes.music.title(context),
           ),
           Flexible(
             child: CupertinoScrollbar(

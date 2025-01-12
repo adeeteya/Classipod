@@ -41,6 +41,7 @@ class _CoverFlowAlbumSelectionScreenState
     await ref
         .read(audioPlayerServiceProvider.notifier)
         .playSongAtOriginalIndex(originalSongIndex);
+
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
     }

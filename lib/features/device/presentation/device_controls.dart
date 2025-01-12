@@ -159,12 +159,23 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     onLongPressEnd: (_) async => ref
                         .read(deviceButtonsServiceProvider.notifier)
                         .setDeviceAction(DeviceAction.longPressEnd),
-                    child: CustomPaint(
-                      size: const Size(20, 10),
-                      painter: PreviousButtonCustomPainter(
+                    child: SizedBox(
+                      height: size.width * 0.2175,
+                      child: ColoredBox(
                         color: context.isDarkMode
-                            ? null
-                            : AppPalette.lightDeviceButtonColor,
+                            ? AppPalette.darkDeviceControlBackgroundColor
+                            : CupertinoColors.white,
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: CustomPaint(
+                            size: const Size(20, 10),
+                            painter: PreviousButtonCustomPainter(
+                              color: context.isDarkMode
+                                  ? null
+                                  : AppPalette.lightDeviceButtonColor,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -220,12 +231,23 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     onLongPressEnd: (_) async => ref
                         .read(deviceButtonsServiceProvider.notifier)
                         .setDeviceAction(DeviceAction.longPressEnd),
-                    child: CustomPaint(
-                      size: const Size(20, 10),
-                      painter: NextButtonCustomPainter(
+                    child: SizedBox(
+                      height: size.width * 0.2175,
+                      child: ColoredBox(
                         color: context.isDarkMode
-                            ? null
-                            : AppPalette.lightDeviceButtonColor,
+                            ? AppPalette.darkDeviceControlBackgroundColor
+                            : CupertinoColors.white,
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: CustomPaint(
+                            size: const Size(20, 10),
+                            painter: NextButtonCustomPainter(
+                              color: context.isDarkMode
+                                  ? null
+                                  : AppPalette.lightDeviceButtonColor,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),

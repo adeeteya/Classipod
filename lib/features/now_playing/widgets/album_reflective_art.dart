@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:math';
 
 import 'package:classipod/core/constants/assets.dart';
 import 'package:flutter/cupertino.dart';
@@ -31,8 +30,8 @@ class AlbumReflectiveArt extends StatelessWidget {
           children: [
             SizedBox(
               width: double.infinity,
-              child: Transform.rotate(
-                angle: pi,
+              child: Transform.flip(
+                flipY: true,
                 child: Image(
                   image: (thumbnailPath != null)
                       ? FileImage(File(thumbnailPath!))

@@ -1,4 +1,4 @@
-import 'package:classipod/core/constants.dart';
+import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';

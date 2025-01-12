@@ -1,9 +1,9 @@
-import 'package:classipod/core/custom_screen.dart';
-import 'package:classipod/core/routes.dart';
-import 'package:classipod/core/screens/no_music_screen.dart';
+import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
+import 'package:classipod/core/widgets/no_music_widget.dart';
+import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/artists/artist_names_provider.dart';
-import 'package:classipod/features/status_bar/status_bar.dart';
+import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -36,7 +36,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return NoMusicScreen(
+      return NoMusicWidget(
         title: Routes.artists.title(context),
       );
     }

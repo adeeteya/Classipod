@@ -1,11 +1,11 @@
-import 'package:classipod/core/custom_screen.dart';
-import 'package:classipod/core/routes.dart';
-import 'package:classipod/core/screens/no_music_screen.dart';
+import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
+import 'package:classipod/core/widgets/no_music_widget.dart';
+import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
+import 'package:classipod/features/music/album/album_art_song_list_tile.dart';
 import 'package:classipod/features/music/album/album_details.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
-import 'package:classipod/features/status_bar/status_bar.dart';
+import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -48,7 +48,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return NoMusicScreen(title: Routes.albums.title(context));
+      return NoMusicWidget(title: Routes.albums.title(context));
     }
 
     return CupertinoPageScaffold(

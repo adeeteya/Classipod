@@ -1,10 +1,10 @@
-import 'package:classipod/core/custom_page_screen.dart';
-import 'package:classipod/core/routes.dart';
-import 'package:classipod/core/screens/no_music_screen.dart';
+import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/widgets/no_music_widget.dart';
+import 'package:classipod/features/custom_screen_widgets/custom_page_screen.dart';
 import 'package:classipod/features/music/album/album_details.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
-import 'package:classipod/features/status_bar/status_bar.dart';
+import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -43,7 +43,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return NoMusicScreen(
+      return NoMusicWidget(
         title: Routes.coverFlow.title(context),
       );
     }

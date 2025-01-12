@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:math';
 
-import 'package:classipod/core/assets.dart';
+import 'package:classipod/core/constants/assets.dart';
 import 'package:flutter/cupertino.dart';
 
 class AlbumReflectiveArt extends StatelessWidget {

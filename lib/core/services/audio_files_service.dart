@@ -4,7 +4,7 @@ import 'dart:collection';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/providers/temp_directory_provider.dart';
 import 'package:classipod/core/repositories/local_audio_files_repository.dart';
-import 'package:classipod/features/settings/controller/settings_preferences_provider.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final audioFilesServiceProvider = AsyncNotifierProvider<
@@ -26,7 +26,7 @@ class AudioFilesServiceNotifier
           .read(localAudioFileRepositoryProvider)
           .getAudioFilesMetadata(
             audioFileFolderPath:
-                ref.read(settingsPreferencesProvider).musicFolderPath,
+                ref.read(currentSettingsPreferencesProvider).musicFolderPath,
             cacheParentDirectory:
                 ref.read(tempDirectoryProvider).requireValue.path,
           );

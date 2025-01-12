@@ -1,8 +1,8 @@
-import 'package:classipod/core/dialogs.dart';
-import 'package:classipod/core/extensions.dart';
-import 'package:classipod/core/routes.dart';
+import 'package:classipod/core/alerts/dialogs.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/features/settings/controller/settings_preferences_provider.dart';
+import 'package:classipod/features/settings/model/settings_preferences.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,6 +13,21 @@ import 'package:just_audio/just_audio.dart';
 final settingsPreferencesControllerProvider =
     AsyncNotifierProvider<SettingsPreferencesControllerNotifier, void>(
   SettingsPreferencesControllerNotifier.new,
+);
+
+final currentSettingsPreferencesProvider = Provider<SettingsPreferences>(
+  (ref) {
+    final settingsPreferencesRepository =
+        ref.read(settingsPreferencesRepositoryProvider);
+    return SettingsPreferences(
+      isDarkMode: settingsPreferencesRepository.getThemeMode(),
+      repeat: settingsPreferencesRepository.getRepeat(),
+      vibrate: settingsPreferencesRepository.getVibrate(),
+      clickWheelSound: settingsPreferencesRepository.getClickWheelSound(),
+      immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
+      musicFolderPath: settingsPreferencesRepository.getMusicFolderPath(),
+    );
+  },
 );
 
 class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
@@ -27,7 +42,7 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       final bool setImmersive =
-          ref.read(settingsPreferencesProvider).immersiveMode;
+          ref.read(currentSettingsPreferencesProvider).immersiveMode;
       if (setImmersive) {
         await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
       } else {
@@ -39,22 +54,23 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
   Future<void> toggleTheme() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      final bool isDarkMode = ref.read(settingsPreferencesProvider).isDarkMode;
+      final bool isDarkMode =
+          ref.read(currentSettingsPreferencesProvider).isDarkMode;
       await ref
           .read(settingsPreferencesRepositoryProvider)
           .setThemeMode(isDarkMode: !isDarkMode);
-      ref.invalidate(settingsPreferencesProvider);
+      ref.invalidate(currentSettingsPreferencesProvider);
     });
   }
 
   Future<void> toggleRepeat() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      bool isRepeat = ref.read(settingsPreferencesProvider).repeat;
+      bool isRepeat = ref.read(currentSettingsPreferencesProvider).repeat;
       await ref
           .read(settingsPreferencesRepositoryProvider)
           .setRepeat(isRepeat: !isRepeat);
-      isRepeat = ref.refresh(settingsPreferencesProvider).repeat;
+      isRepeat = ref.refresh(currentSettingsPreferencesProvider).repeat;
       if (isRepeat) {
         await ref
             .read(audioPlayerServiceProvider.notifier)
@@ -71,11 +87,11 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       final bool isVibrateEnabled =
-          ref.read(settingsPreferencesProvider).vibrate;
+          ref.read(currentSettingsPreferencesProvider).vibrate;
       await ref
           .read(settingsPreferencesRepositoryProvider)
           .setVibrate(isVibrateEnabled: !isVibrateEnabled);
-      ref.invalidate(settingsPreferencesProvider);
+      ref.invalidate(currentSettingsPreferencesProvider);
     });
   }
 
@@ -83,13 +99,13 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       bool isClickWheelSoundEnabled =
-          ref.read(settingsPreferencesProvider).clickWheelSound;
+          ref.read(currentSettingsPreferencesProvider).clickWheelSound;
       await ref.read(settingsPreferencesRepositoryProvider).setClickWheelSound(
             isClickWheelSoundEnabled: !isClickWheelSoundEnabled,
           );
 
       isClickWheelSoundEnabled =
-          ref.refresh(settingsPreferencesProvider).clickWheelSound;
+          ref.refresh(currentSettingsPreferencesProvider).clickWheelSound;
 
       if (isClickWheelSoundEnabled && context.mounted) {
         await Dialogs.showInfoDialog(
@@ -105,11 +121,11 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       final bool isImmersiveModeEnabled =
-          ref.read(settingsPreferencesProvider).immersiveMode;
+          ref.read(currentSettingsPreferencesProvider).immersiveMode;
       await ref
           .read(settingsPreferencesRepositoryProvider)
           .setImmersiveMode(isImmersiveModeEnabled: !isImmersiveModeEnabled);
-      ref.invalidate(settingsPreferencesProvider);
+      ref.invalidate(currentSettingsPreferencesProvider);
       await setSystemUiMode();
     });
   }
@@ -120,13 +136,13 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
       final String newMusicFolderPath =
           await FilePicker.platform.getDirectoryPath() ?? '/';
       final oldMusicFolderPath =
-          ref.read(settingsPreferencesProvider).musicFolderPath;
+          ref.read(currentSettingsPreferencesProvider).musicFolderPath;
       if (newMusicFolderPath != '/' &&
           newMusicFolderPath != oldMusicFolderPath) {
         await ref
             .read(settingsPreferencesRepositoryProvider)
             .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
-        ref.invalidate(settingsPreferencesProvider);
+        ref.invalidate(currentSettingsPreferencesProvider);
         ref.read(routerProvider).goNamed(Routes.splash.name);
       }
     });

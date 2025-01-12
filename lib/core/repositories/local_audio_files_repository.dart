@@ -2,7 +2,6 @@ import 'dart:collection';
 import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
-import 'package:classipod/core/helper_functions.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/repositories/local_album_art_cache_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,6 +17,19 @@ class LocalAudioFilesRepository {
   final LocalAlbumArtCacheRepository _localAlbumArtCacheRepository;
 
   LocalAudioFilesRepository(this._localAlbumArtCacheRepository);
+
+  bool isSupportedAudioFormat(String path) {
+    if (path.endsWith('.mp3') ||
+        path.endsWith('.ogg') ||
+        path.endsWith('.wav') ||
+        path.endsWith('.flac') ||
+        path.endsWith('.m4a') ||
+        path.endsWith('.aac')) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   Future<UnmodifiableListView<Metadata>> getAudioFilesMetadata({
     required String audioFileFolderPath,
@@ -41,7 +53,7 @@ class LocalAudioFilesRepository {
 
         //Cache album art if it doesn't exist
         if (thumbnailFilePath == null) {
-          audioMetadata = await readMetadata(File(path), getImage: true);
+          audioMetadata = readMetadata(File(path), getImage: true);
           if (audioMetadata.pictures.isNotEmpty) {
             thumbnailFilePath =
                 await _localAlbumArtCacheRepository.cacheAlbumArt(
@@ -53,7 +65,7 @@ class LocalAudioFilesRepository {
 
         //No need to fetch album art as it already exists
         else {
-          audioMetadata = await readMetadata(File(path));
+          audioMetadata = readMetadata(File(path));
         }
 
         metadataList.add(

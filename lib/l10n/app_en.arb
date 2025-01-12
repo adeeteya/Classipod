@@ -83,9 +83,9 @@
   "@vibrateSettingTitle": {
     "description": "The title of the vibrate setting"
   },
-  "clickWheelSettingTitle": "Click Wheel",
+  "clickWheelSettingTitle": "Click Wheel Sounds",
   "@clickWheelSettingTitle": {
-    "description": "The title of the click wheel setting"
+    "description": "The title of the click wheel sound setting"
   },
   "touchSoundsDialogTitle": "Touch Sounds",
     "@touchSoundsDialogTitle": {

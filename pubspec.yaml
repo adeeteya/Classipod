@@ -38,7 +38,7 @@ dev_dependencies:
   vector_graphics_compiler: ^1.1.16
 
 dependency_overrides:
-  audio_metadata_reader: 0.0.5
+  audio_metadata_reader: ^1.1.0
 
 flutter:
   generate: true

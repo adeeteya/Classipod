@@ -48,7 +48,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return NoMusicScreen(title: Routes.albums.name);
+      return NoMusicScreen(title: Routes.albums.title(context));
     }
 
     return CupertinoPageScaffold(

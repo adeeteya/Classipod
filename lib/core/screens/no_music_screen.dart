@@ -15,7 +15,7 @@ class NoMusicScreen extends StatelessWidget {
       child: Column(
         children: [
           StatusBar(title: title),
-          Center(
+          Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

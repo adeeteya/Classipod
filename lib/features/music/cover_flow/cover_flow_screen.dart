@@ -44,7 +44,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
       return NoMusicScreen(
-        title: Routes.coverFlow.name,
+        title: Routes.coverFlow.title(context),
       );
     }
 

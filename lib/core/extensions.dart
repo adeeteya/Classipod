@@ -1,4 +1,3 @@
-import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
@@ -49,19 +48,6 @@ extension DurationStringHelpers on Duration {
   }
 }
 
-extension StringHelpers on Enum {
-  // String get title {
-  //   final words = name.split(RegExp(r'(?=[A-Z])'));
-  //   return words
-  //       .map(
-  //         (word) =>
-  //             word.substring(0, 1).toUpperCase() +
-  //             word.substring(1).toLowerCase(),
-  //       )
-  //       .join(' ');
-  // }
-}
-
 extension GoRouterExtension on GoRouter {
   String get location {
     final RouteMatch lastMatch = routerDelegate.currentConfiguration.last;
@@ -74,17 +60,5 @@ extension GoRouterExtension on GoRouter {
 
   String get locationNamed {
     return location.split("/").last.split("?").first;
-  }
-}
-
-extension MetadataStringHelpers on AudioMetadata {
-  String get getMainArtistName {
-    String delimiter = ', ';
-    if (artist?.contains(', ') ?? false) {
-      delimiter = ', ';
-    } else if (artist?.contains('/') ?? false) {
-      delimiter = '/';
-    }
-    return artist?.split(delimiter).first ?? "Unknown Artist";
   }
 }

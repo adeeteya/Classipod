@@ -1,3 +1,4 @@
+import 'package:classipod/core/assets.dart';
 import 'package:classipod/core/constants.dart';
 import 'package:classipod/core/extensions.dart';
 import 'package:classipod/features/device/device_controls.dart';
@@ -13,7 +14,7 @@ class DeviceFrame extends StatelessWidget {
     return DecoratedBox(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: const AssetImage("assets/images/noise.png"),
+          image: const AssetImage(Assets.noiseImage),
           fit: BoxFit.cover,
           opacity: context.isDarkMode ? 0.3 : 1,
         ),

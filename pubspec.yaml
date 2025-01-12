@@ -42,7 +42,7 @@ dependency_overrides:
 
 flutter:
   generate: true
-  uses-material-design: false
+  uses-material-design: true
 
   assets:
    - assets/

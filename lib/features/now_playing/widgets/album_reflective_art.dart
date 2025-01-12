@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:classipod/core/assets.dart';
 import 'package:flutter/cupertino.dart';
 
 class AlbumReflectiveArt extends StatelessWidget {
@@ -16,9 +17,9 @@ class AlbumReflectiveArt extends StatelessWidget {
             child: Image(
               image: (thumbnailPath != null)
                   ? FileImage(File(thumbnailPath!))
-                  : const AssetImage("assets/images/default_album_cover.jpeg"),
+                  : const AssetImage(Assets.defaultAlbumCoverImage),
               errorBuilder: (_, __, ___) => Image.asset(
-                "assets/images/default_album_cover.jpeg",
+                Assets.defaultAlbumCoverImage,
                 fit: BoxFit.fitWidth,
               ),
               fit: BoxFit.fitWidth,
@@ -36,10 +37,10 @@ class AlbumReflectiveArt extends StatelessWidget {
                   image: (thumbnailPath != null)
                       ? FileImage(File(thumbnailPath!))
                       : const AssetImage(
-                          "assets/images/default_album_cover.jpeg",
+                          Assets.defaultAlbumCoverImage,
                         ),
                   errorBuilder: (_, __, ___) => Image.asset(
-                    "assets/images/default_album_cover.jpeg",
+                    Assets.defaultAlbumCoverImage,
                     height: 50,
                     alignment: Alignment.bottomCenter,
                     fit: BoxFit.fitWidth,

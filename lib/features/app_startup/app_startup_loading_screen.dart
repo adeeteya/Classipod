@@ -1,3 +1,4 @@
+import 'package:classipod/core/assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:vector_graphics/vector_graphics.dart';
 
@@ -10,7 +11,7 @@ class AppStartupLoading extends StatelessWidget {
       home: CupertinoPageScaffold(
         child: Center(
           child: VectorGraphic(
-            loader: AssetBytesLoader("assets/icons/apple_logo.svg"),
+            loader: AssetBytesLoader(Assets.appleLogoIcon),
           ),
         ),
       ),

@@ -1,5 +1,5 @@
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
-import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,7 +22,7 @@ class NoMusicWidget extends StatelessWidget {
                 const VectorGraphic(
                   loader: AssetBytesLoader(Assets.musicNoteIcon),
                   colorFilter: ColorFilter.mode(
-                    lightDeviceFrameGradientColor2,
+                    AppPalette.lightDeviceFrameGradientColor2,
                     BlendMode.srcIn,
                   ),
                   width: 125,
@@ -33,7 +33,7 @@ class NoMusicWidget extends StatelessWidget {
                   context.localization.noMusicFilesFound,
                   style: const TextStyle(
                     fontSize: 18,
-                    color: lightDeviceFrameGradientColor2,
+                    color: AppPalette.lightDeviceFrameGradientColor2,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

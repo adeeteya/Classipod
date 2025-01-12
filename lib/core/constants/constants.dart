@@ -1,34 +1,13 @@
-import 'package:flutter/cupertino.dart';
+class Constants {
+  Constants._();
 
-const Color darkDeviceFrameGradientColor1 = Color(0xFF939295);
-const Color darkDeviceFrameGradientColor2 = Color(0xFF262527);
-const Color darkDeviceScreenColor = Color(0xFF121212);
-const Color darkDeviceControlBackgroundColor = Color(0xFF212122);
-const Color darkDeviceControlInnerButtonGradientColor1 = Color(0xFF282829);
-const Color darkDeviceControlInnerButtonGradientColor2 = Color(0xFF676467);
+  static const String defaultMusicFolderPath = "/storage/emulated/0/Music";
+  static const String defaultNotificationAlbumArtImageUrl =
+      "'https://files.radio.co/humorous-skink/staging/default-artwork.png'";
 
-const Color lightDeviceFrameGradientColor1 = Color(0xFFF2F2F2);
-const Color lightDeviceFrameGradientColor2 = Color(0xFFADADAD);
-// const Color lightDeviceScreenColor = Color(0xFF6D6D6D);
-const Color lightDeviceScreenBorderColor = Color(0xFF2F2F2F);
-const Color lightDeviceControlBorderColor = Color(0xFFAEADAD);
-const Color lightDeviceButtonColor = Color(0xFF8793A0);
-const Color lightDeviceControlInnerButtonGradientColor1 = Color(0xFFB1B1B0);
-const Color lightDeviceControlInnerButtonGradientColor2 = Color(0xFFE1E1E1);
+  //If you are seeing this please consider donating to the below link😉
+  static const String donationLinkUrl = "https://www.paypal.me/adeeteya";
 
-const Color transparentColor = Color(0x00000000);
-const Color batteryOutlineColor = Color(0xFF79747E);
-const Color primaryBlueGradientColor1 = Color(0xFF4491C1);
-const Color primaryBlueGradientColor2 = Color(0xFF2D6089);
-const Color statusBarGradientColor1 = Color(0xFFFCFCFC);
-const Color statusBarGradientColor2 = Color(0xFF999EA1);
-const Color statusBarBorderColor = Color(0xFF8A8E90);
-const Color hintTextColor = Color(0xFF4B4B4B);
-const Color inActiveSliderGradientColor1 = Color(0xFFFBFBFB);
-const Color inActiveSliderGradientColor2 = Color(0xFFEFEFEF);
-const Color sliderBorderColor = Color(0xFFE2E2E2);
-const Color batteryBarColor = Color(0xFF6EA447);
-
-const String kDefaultMusicFolderPath = "/storage/emulated/0/Music";
-const int kMilliSecondsBeforeNextScroll = 75;
-const double kScreenHeightRatio = 0.3865;
+  static const int milliSecondsBeforeNextScroll = 75;
+  static const double screenHeightRatio = 0.3865;
+}

@@ -1,7 +1,7 @@
 import 'dart:io';
 
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
-import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -26,15 +26,16 @@ class AlbumArtSongListTile extends StatelessWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
           border: const Border(
-            bottom: BorderSide(width: 0.5, color: statusBarBorderColor),
+            bottom:
+                BorderSide(width: 0.5, color: AppPalette.statusBarBorderColor),
           ),
           gradient: isSelected
               ? const LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    primaryBlueGradientColor1,
-                    primaryBlueGradientColor2,
+                    AppPalette.primaryBlueGradientColor1,
+                    AppPalette.primaryBlueGradientColor2,
                   ],
                 )
               : null,
@@ -73,7 +74,9 @@ class AlbumArtSongListTile extends StatelessWidget {
                   Text(
                     trackArtistNames ?? context.localization.unknownArtist,
                     style: TextStyle(
-                      color: isSelected ? CupertinoColors.white : hintTextColor,
+                      color: isSelected
+                          ? CupertinoColors.white
+                          : AppPalette.hintTextColor,
                     ),
                     maxLines: 1,
                   ),

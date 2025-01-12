@@ -1,4 +1,4 @@
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
@@ -66,8 +66,8 @@ class _CoverFlowAlbumSelectionScreenState
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      primaryBlueGradientColor1,
-                      primaryBlueGradientColor2,
+                      AppPalette.primaryBlueGradientColor1,
+                      AppPalette.primaryBlueGradientColor2,
                     ],
                   ),
                 ),

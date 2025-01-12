@@ -1,3 +1,4 @@
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
@@ -23,12 +24,12 @@ class DeviceFrame extends StatelessWidget {
           end: Alignment.bottomCenter,
           colors: (context.isDarkMode)
               ? [
-                  darkDeviceFrameGradientColor1,
-                  darkDeviceFrameGradientColor2,
+                  AppPalette.darkDeviceFrameGradientColor1,
+                  AppPalette.darkDeviceFrameGradientColor2,
                 ]
               : [
-                  lightDeviceFrameGradientColor1,
-                  lightDeviceFrameGradientColor2,
+                  AppPalette.lightDeviceFrameGradientColor1,
+                  AppPalette.lightDeviceFrameGradientColor2,
                 ],
         ),
       ),
@@ -109,15 +110,15 @@ class DeviceFrame extends StatelessWidget {
               children: [
                 IgnorePointer(
                   child: Container(
-                    height: size.height * kScreenHeightRatio,
+                    height: size.height * Constants.screenHeightRatio,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: CupertinoColors.white,
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
                         color: context.isDarkMode
-                            ? darkDeviceScreenColor
-                            : lightDeviceScreenBorderColor,
+                            ? AppPalette.darkDeviceScreenColor
+                            : AppPalette.lightDeviceScreenBorderColor,
                         width: 5,
                       ),
                     ),

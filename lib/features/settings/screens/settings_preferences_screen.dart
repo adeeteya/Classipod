@@ -1,3 +1,4 @@
+import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
@@ -96,7 +97,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         break;
       case _SettingsDisplayItems.donate:
         await launchUrl(
-          Uri.parse("https://www.paypal.me/adeeteya"),
+          Uri.parse(Constants.donationLinkUrl),
           mode: LaunchMode.externalApplication,
         );
         break;

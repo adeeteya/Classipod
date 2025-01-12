@@ -1,4 +1,4 @@
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:flutter/cupertino.dart';
 
 class BoxProgressBar extends StatelessWidget {
@@ -30,11 +30,11 @@ class BoxProgressBar extends StatelessWidget {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          inActiveSliderGradientColor1,
-                          inActiveSliderGradientColor2,
+                          AppPalette.inActiveSliderGradientColor1,
+                          AppPalette.inActiveSliderGradientColor2,
                         ],
                       ),
-                      border: Border.all(color: sliderBorderColor),
+                      border: Border.all(color: AppPalette.sliderBorderColor),
                     ),
                   ),
                 ),
@@ -49,8 +49,8 @@ class BoxProgressBar extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      primaryBlueGradientColor1,
-                      primaryBlueGradientColor2,
+                      AppPalette.primaryBlueGradientColor1,
+                      AppPalette.primaryBlueGradientColor2,
                     ],
                   ),
                 ),

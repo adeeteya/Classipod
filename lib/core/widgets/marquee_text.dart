@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:flutter/cupertino.dart';
 
 class MarqueeText extends StatefulWidget {
@@ -134,7 +134,7 @@ class _MarqueeTextState extends State<MarqueeText> {
       ///Fill list with amount of transparent colors to make the text visible
       final List<Color> colors =
           List.generate(1 ~/ widget.fadedBorderWidth! - 1, (index) {
-        return transparentColor;
+        return AppPalette.transparentColor;
       });
 
       ///Add black color to add gradient fade out
@@ -142,13 +142,13 @@ class _MarqueeTextState extends State<MarqueeText> {
           widget.fadeBorderSide == FadeBorderSide.left) {
         colors.insert(0, CupertinoColors.black);
       } else {
-        colors.add(transparentColor);
+        colors.add(AppPalette.transparentColor);
       }
       if (widget.fadeBorderSide == FadeBorderSide.both ||
           widget.fadeBorderSide == FadeBorderSide.right) {
         colors.add(CupertinoColors.black);
       } else {
-        colors.add(transparentColor);
+        colors.add(AppPalette.transparentColor);
       }
 
       ///Calculate the stops for the gradient

@@ -1,4 +1,4 @@
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -25,8 +25,8 @@ class SettingsListTile extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    primaryBlueGradientColor1,
-                    primaryBlueGradientColor2,
+                    AppPalette.primaryBlueGradientColor1,
+                    AppPalette.primaryBlueGradientColor2,
                   ],
                 )
               : null,
@@ -55,7 +55,9 @@ class SettingsListTile extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    color: isSelected ? CupertinoColors.white : hintTextColor,
+                    color: isSelected
+                        ? CupertinoColors.white
+                        : AppPalette.hintTextColor,
                   ),
                 ),
               if (isOn == null && isSelected)

@@ -57,7 +57,7 @@ class SettingsPreferencesRepository {
   String getMusicFolderPath() {
     return _sharedPreferencesWithCache
             .getString(SharedPreferencesKeys.musicFolderPath.name) ??
-        kDefaultMusicFolderPath;
+        Constants.defaultMusicFolderPath;
   }
 
   Future<void> setThemeMode({required bool isDarkMode}) async {

@@ -1,4 +1,4 @@
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
@@ -55,7 +55,7 @@ class NowPlayingPage extends StatelessWidget {
               MarqueeText(
                 artistNames ?? context.localization.unknownArtist,
                 style: const TextStyle(
-                  color: hintTextColor,
+                  color: AppPalette.hintTextColor,
                   fontSize: 16,
                 ),
                 delayBefore: const Duration(seconds: 2),
@@ -66,7 +66,7 @@ class NowPlayingPage extends StatelessWidget {
               MarqueeText(
                 albumName ?? context.localization.unknownAlbum,
                 style: const TextStyle(
-                  color: hintTextColor,
+                  color: AppPalette.hintTextColor,
                   fontSize: 16,
                 ),
                 delayBefore: const Duration(seconds: 2),

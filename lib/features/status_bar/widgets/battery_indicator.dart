@@ -1,5 +1,5 @@
 import 'package:battery_plus/battery_plus.dart';
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/features/status_bar/controller/battery_provider.dart';
 import 'package:classipod/features/status_bar/model/battery_details.dart';
 import 'package:flutter/cupertino.dart';
@@ -75,7 +75,7 @@ class BatteryIndicatorWidget extends StatelessWidget {
       child: DecoratedBox(
         decoration: BoxDecoration(
           border: Border.all(
-            color: batteryOutlineColor,
+            color: AppPalette.batteryOutlineColor,
             width: 0.5,
           ),
         ),
@@ -145,7 +145,7 @@ class BatteryIndicatorWidget extends StatelessWidget {
     return SizedBox(
       width: knobWidth,
       height: knobHeight,
-      child: const ColoredBox(color: batteryOutlineColor),
+      child: const ColoredBox(color: AppPalette.batteryOutlineColor),
     );
   }
 }

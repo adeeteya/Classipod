@@ -26,7 +26,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
       if (((selectedDisplayItem + maxScrollDownDisplayItems) *
               displayTileHeight) >
-          ((context.screenSize.height * kScreenHeightRatio) +
+          ((context.screenSize.height * Constants.screenHeightRatio) +
               scrollController.offset)) {
         scrollController.jumpTo(scrollController.offset + displayTileHeight);
       }

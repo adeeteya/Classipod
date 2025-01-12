@@ -1,5 +1,5 @@
 import 'package:battery_plus/battery_plus.dart';
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:flutter/cupertino.dart';
 
 class BatteryDetails {
@@ -20,16 +20,16 @@ class BatteryDetails {
 
   Color getBatteryColor() {
     if (batteryState == BatteryState.unknown) {
-      return batteryBarColor;
+      return AppPalette.batteryBarColor;
     }
     if (batteryState == BatteryState.charging) {
-      return batteryBarColor;
+      return AppPalette.batteryBarColor;
     }
     if (batteryState == BatteryState.connectedNotCharging) {
       return CupertinoColors.activeOrange;
     }
     return 0 <= level && level <= 20
         ? CupertinoColors.destructiveRed
-        : batteryBarColor;
+        : AppPalette.batteryBarColor;
   }
 }

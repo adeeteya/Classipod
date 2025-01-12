@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
+import 'package:classipod/core/constants/constants.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 
@@ -141,7 +142,7 @@ class Metadata {
             : null,
         artUri: thumbnailPath == null
             ? Uri.parse(
-                'https://files.radio.co/humorous-skink/staging/default-artwork.png',
+                Constants.defaultNotificationAlbumArtImageUrl,
               )
             : Uri.file(thumbnailPath!),
       ),

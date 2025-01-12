@@ -1,3 +1,4 @@
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
@@ -67,7 +68,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
     }
 
     if (rotationalChange > 4 &&
-        millisecondsSinceLastScroll > kMilliSecondsBeforeNextScroll) {
+        millisecondsSinceLastScroll > Constants.milliSecondsBeforeNextScroll) {
       await ref
           .read(deviceButtonsServiceProvider.notifier)
           .buttonPressVibrate();
@@ -79,7 +80,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         durationSinceLastScroll = Duration.zero;
       });
     } else if (rotationalChange < -4 &&
-        millisecondsSinceLastScroll > kMilliSecondsBeforeNextScroll) {
+        millisecondsSinceLastScroll > Constants.milliSecondsBeforeNextScroll) {
       await ref
           .read(deviceButtonsServiceProvider.notifier)
           .buttonPressVibrate();
@@ -109,7 +110,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: context.isDarkMode
-              ? darkDeviceControlBackgroundColor
+              ? AppPalette.darkDeviceControlBackgroundColor
               : CupertinoColors.white,
         ),
         clipBehavior: Clip.hardEdge,
@@ -124,7 +125,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     .setDeviceAction(DeviceAction.menu),
                 child: ColoredBox(
                   color: context.isDarkMode
-                      ? darkDeviceControlBackgroundColor
+                      ? AppPalette.darkDeviceControlBackgroundColor
                       : CupertinoColors.white,
                   child: Align(
                     alignment: Alignment.topCenter,
@@ -133,7 +134,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                       style: TextStyle(
                         color: context.isDarkMode
                             ? CupertinoColors.white
-                            : lightDeviceButtonColor,
+                            : AppPalette.lightDeviceButtonColor,
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                         fontFamily: Assets.sfProTextFont,
@@ -160,7 +161,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                       height: size.width * 0.2175,
                       child: ColoredBox(
                         color: context.isDarkMode
-                            ? darkDeviceControlBackgroundColor
+                            ? AppPalette.darkDeviceControlBackgroundColor
                             : CupertinoColors.white,
                         child: VectorGraphic(
                           loader:
@@ -168,7 +169,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                           colorFilter: context.isDarkMode
                               ? null
                               : const ColorFilter.mode(
-                                  lightDeviceButtonColor,
+                                  AppPalette.lightDeviceButtonColor,
                                   BlendMode.srcIn,
                                 ),
                           alignment: Alignment.centerLeft,
@@ -191,7 +192,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                         border: Border.all(
                           color: context.isDarkMode
                               ? CupertinoColors.black
-                              : lightDeviceControlBorderColor,
+                              : AppPalette.lightDeviceControlBorderColor,
                         ),
                         image: const DecorationImage(
                           image: AssetImage(Assets.noiseImage),
@@ -202,12 +203,16 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                           end: Alignment.bottomCenter,
                           colors: context.isDarkMode
                               ? [
-                                  darkDeviceControlInnerButtonGradientColor1,
-                                  darkDeviceControlInnerButtonGradientColor2,
+                                  AppPalette
+                                      .darkDeviceControlInnerButtonGradientColor1,
+                                  AppPalette
+                                      .darkDeviceControlInnerButtonGradientColor2,
                                 ]
                               : [
-                                  lightDeviceControlInnerButtonGradientColor1,
-                                  lightDeviceControlInnerButtonGradientColor2,
+                                  AppPalette
+                                      .lightDeviceControlInnerButtonGradientColor1,
+                                  AppPalette
+                                      .lightDeviceControlInnerButtonGradientColor2,
                                 ],
                         ),
                       ),
@@ -229,14 +234,14 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                       height: size.width * 0.2175,
                       child: ColoredBox(
                         color: context.isDarkMode
-                            ? darkDeviceControlBackgroundColor
+                            ? AppPalette.darkDeviceControlBackgroundColor
                             : CupertinoColors.white,
                         child: VectorGraphic(
                           loader: const AssetBytesLoader(Assets.nextButtonIcon),
                           colorFilter: context.isDarkMode
                               ? null
                               : const ColorFilter.mode(
-                                  lightDeviceButtonColor,
+                                  AppPalette.lightDeviceButtonColor,
                                   BlendMode.srcIn,
                                 ),
                           alignment: Alignment.centerRight,
@@ -255,7 +260,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     .setDeviceAction(DeviceAction.playPause),
                 child: ColoredBox(
                   color: context.isDarkMode
-                      ? darkDeviceControlBackgroundColor
+                      ? AppPalette.darkDeviceControlBackgroundColor
                       : CupertinoColors.white,
                   child: Align(
                     alignment: Alignment.bottomCenter,
@@ -265,7 +270,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                       colorFilter: context.isDarkMode
                           ? null
                           : const ColorFilter.mode(
-                              lightDeviceButtonColor,
+                              AppPalette.lightDeviceButtonColor,
                               BlendMode.srcIn,
                             ),
                       fit: BoxFit.scaleDown,

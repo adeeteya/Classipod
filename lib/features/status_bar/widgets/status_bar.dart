@@ -1,4 +1,4 @@
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/status_bar/widgets/battery_indicator.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,13 +20,13 @@ class StatusBar extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              statusBarGradientColor1,
-              statusBarGradientColor2,
+              AppPalette.statusBarGradientColor1,
+              AppPalette.statusBarGradientColor2,
             ],
           ),
           border: Border(
             bottom: BorderSide(
-              color: statusBarBorderColor,
+              color: AppPalette.statusBarBorderColor,
             ),
           ),
         ),
@@ -56,7 +56,7 @@ class StatusBar extends StatelessWidget {
                     isPlaying
                         ? CupertinoIcons.play_fill
                         : CupertinoIcons.pause_fill,
-                    color: primaryBlueGradientColor1,
+                    color: AppPalette.primaryBlueGradientColor1,
                   );
                 },
               ),

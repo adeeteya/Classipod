@@ -1,4 +1,4 @@
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/duration_extensions.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:flutter/cupertino.dart';
@@ -26,8 +26,8 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    primaryBlueGradientColor1,
-                    primaryBlueGradientColor2,
+                    AppPalette.primaryBlueGradientColor1,
+                    AppPalette.primaryBlueGradientColor2,
                   ],
                 )
               : null,

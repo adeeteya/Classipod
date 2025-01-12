@@ -1,4 +1,4 @@
-import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/features/app_startup/screens/app_startup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -8,8 +8,8 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      systemNavigationBarColor: transparentColor,
-      statusBarColor: transparentColor,
+      systemNavigationBarColor: AppPalette.transparentColor,
+      statusBarColor: AppPalette.transparentColor,
     ),
   );
 

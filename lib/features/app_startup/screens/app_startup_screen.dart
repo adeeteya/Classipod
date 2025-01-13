@@ -1,4 +1,3 @@
-import 'package:classipod/classipod_app.dart';
 import 'package:classipod/features/app_startup/controller/app_startup_controller.dart';
 import 'package:classipod/features/app_startup/screens/app_startup_error_screen.dart';
 import 'package:classipod/features/app_startup/screens/app_startup_loading_screen.dart';
@@ -6,7 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AppStartupScreen extends ConsumerWidget {
-  const AppStartupScreen({super.key});
+  final Widget app;
+  const AppStartupScreen({super.key, required this.app});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -17,7 +17,7 @@ class AppStartupScreen extends ConsumerWidget {
         error: e,
         onRetry: () => ref.invalidate(appStartupControllerProvider),
       ),
-      data: (_) => const ClassipodApp(),
+      data: (_) => app,
     );
   }
 }

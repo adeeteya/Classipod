@@ -42,10 +42,30 @@ android {
     }
 
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
         release {
             signingConfig = signingConfigs.release
         }
     }
+
+    flavorDimensions "default"
+    productFlavors {
+        create("production") {
+            dimension "default"
+            resValue "string", "app_name", "Classipod"
+            applicationIdSuffix = ""
+        }
+        create("dev") {
+            dimension "default"
+            resValue "string", "app_name", "Classipod Dev"
+            applicationIdSuffix = ".dev"
+            versionNameSuffix = "-dev"
+        }
+    }
+
+
 }
 
 flutter {

@@ -115,6 +115,7 @@ class BatteryIndicatorWidget extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return AnimatedSwitcher(
+            key: UniqueKey(),
             duration: Duration(milliseconds: duration.inMilliseconds ~/ 5),
             switchInCurve: curve,
             switchOutCurve: curve,

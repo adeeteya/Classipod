@@ -1,3 +1,4 @@
+import 'package:classipod/classipod_app.dart';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/features/app_startup/screens/app_startup_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,7 +16,9 @@ Future<void> main() async {
 
   runApp(
     const ProviderScope(
-      child: AppStartupScreen(),
+      child: AppStartupScreen(
+        app: ClassipodApp(),
+      ),
     ),
   );
 }

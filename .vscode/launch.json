@@ -1,25 +1,53 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "classipod",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "classipod (profile mode)",
+            "name": "Classipod",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "program": "lib/main.dart",
+            "flutterMode": "debug",
+            "args": ["--flavor", "production","--target","lib/main.dart"],
         },
         {
-            "name": "classipod (release mode)",
+            "name": "Classipod (profile mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
+            "program": "lib/main.dart",
+            "flutterMode": "profile",
+            "args": ["--flavor", "production","--target","lib/main.dart"],
+        },
+        {
+            "name": "Classipod (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "flutterMode": "release",
+            "args": ["--flavor", "production","--target","lib/main.dart"],
+        },
+        {
+            "name": "Classipod Development",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_development.dart",
+            "flutterMode": "debug",
+            "args": ["--flavor", "dev","--target","lib/main_development.dart"],
+        },
+        {
+            "name": "Classipod Development Profile Mode",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_development.dart",
+            "flutterMode": "profile",
+            "args": ["--flavor", "dev","--target","lib/main_development.dart"],
+        },
+        {
+            "name": "Classipod Development Release Mode",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_development.dart",
+            "flutterMode": "release",
+            "args": ["--flavor", "dev","--target","lib/main_development.dart"],
         }
     ]
 }

@@ -145,6 +145,12 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   }
 
   @override
+  void dispose() {
+    _lastVolumeChangeTimer.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
       return NoMusicWidget(

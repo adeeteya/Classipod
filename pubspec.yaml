@@ -13,7 +13,7 @@ dependencies:
   audio_metadata_reader: ^1.1.0
   battery_plus: ^6.2.1
   cupertino_icons: ^1.0.8
-  device_preview_plus: ^2.2.3
+  device_preview_plus: ^2.2.4
   file_picker: ^8.1.7
   flutter:
     sdk: flutter
@@ -28,7 +28,7 @@ dependencies:
   permission_handler: ^11.3.1
   shared_preferences: ^2.3.5
   url_launcher: ^6.3.1
-  vibration: ^2.0.1
+  vibration: ^3.0.0
 
 dev_dependencies:
   custom_lint: ^0.7.1

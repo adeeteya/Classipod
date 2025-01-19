@@ -11,20 +11,22 @@ final audioPlayerProvider = Provider<AudioPlayer>((_) {
   return AudioPlayer();
 });
 
-final currentAudioPlayerPlayingStreamProvider = StreamProvider<bool>((ref) {
+final currentAudioPlayerPlayingStreamProvider =
+    StreamProvider.autoDispose<bool>((ref) {
   return ref.read(audioPlayerProvider).playingStream;
 });
 
-final currentAudioPlayerIndexStreamProvider = StreamProvider<int?>((ref) {
+final currentAudioPlayerIndexStreamProvider =
+    StreamProvider.autoDispose<int?>((ref) {
   return ref.read(audioPlayerProvider).currentIndexStream;
 });
 
 final audioPlayerServiceProvider =
-    AsyncNotifierProvider<AudioPlayerServiceNotifier, void>(
+    AutoDisposeAsyncNotifierProvider<AudioPlayerServiceNotifier, void>(
   AudioPlayerServiceNotifier.new,
 );
 
-class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
+class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
   AudioPlayerServiceNotifier() : super();
 
   @override

@@ -53,6 +53,8 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
     await ref
         .read(audioPlayerServiceProvider.notifier)
         .setAudioSource(audioFilesMetadata);
+
+    // Navigate to the menu screen
     ref.read(routerProvider).goNamed(Routes.menu.name);
   }
 

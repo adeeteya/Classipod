@@ -29,11 +29,6 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   Future<void> scrollBackward() async {
     if (selectedDisplayItem > 0) {
-      // pageController.animateToPage(
-      //   selectedDisplayItem - 1,
-      //   duration: const Duration(milliseconds: 300),
-      //   curve: Curves.ease,
-      // );
       await pageController.previousPage(
         duration: const Duration(milliseconds: 300),
         curve: Curves.ease,
@@ -84,6 +79,13 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     }
   }
 
+  void _updatePage() {
+    setState(() {
+      currentPage = pageController.page ?? currentPage;
+      selectedDisplayItem = currentPage.toInt();
+    });
+  }
+
   @override
   void initState() {
     pageController = PageController(
@@ -91,12 +93,7 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
       viewportFraction: viewPortFraction,
       keepPage: false,
     );
-    pageController.addListener(() {
-      setState(() {
-        currentPage = pageController.page ?? currentPage;
-        selectedDisplayItem = currentPage.toInt();
-      });
-    });
+    pageController.addListener(_updatePage);
     super.initState();
     ref.listenManual(
       deviceButtonsServiceProvider,
@@ -106,6 +103,7 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   @override
   void dispose() {
+    pageController.removeListener(_updatePage);
     pageController.dispose();
     super.dispose();
   }

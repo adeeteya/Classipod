@@ -4,6 +4,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vibration/vibration.dart';
 
+final deviceButtonsServiceProvider =
+    NotifierProvider<DeviceButtonsServiceNotifier, DeviceAction?>(
+  DeviceButtonsServiceNotifier.new,
+);
+
 class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
   @override
   DeviceAction? build() {
@@ -33,8 +38,3 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
     state = null;
   }
 }
-
-final deviceButtonsServiceProvider =
-    NotifierProvider<DeviceButtonsServiceNotifier, DeviceAction?>(
-  DeviceButtonsServiceNotifier.new,
-);

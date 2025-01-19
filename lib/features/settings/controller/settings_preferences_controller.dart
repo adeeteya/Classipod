@@ -1,8 +1,8 @@
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/features/app_startup/controller/app_startup_controller.dart';
 import 'package:classipod/features/settings/model/settings_preferences.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:file_picker/file_picker.dart';
@@ -11,8 +11,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
-final settingsPreferencesControllerProvider =
-    AsyncNotifierProvider<SettingsPreferencesControllerNotifier, void>(
+final settingsPreferencesControllerProvider = AutoDisposeAsyncNotifierProvider<
+    SettingsPreferencesControllerNotifier, void>(
   SettingsPreferencesControllerNotifier.new,
 );
 
@@ -31,13 +31,12 @@ final currentSettingsPreferencesProvider = Provider<SettingsPreferences>(
   },
 );
 
-class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
+class SettingsPreferencesControllerNotifier
+    extends AutoDisposeAsyncNotifier<void> {
   SettingsPreferencesControllerNotifier() : super();
 
   @override
-  Future<void> build() async {
-    await setSystemUiMode();
-  }
+  Future<void> build() async {}
 
   Future<void> setSystemUiMode() async {
     state = const AsyncLoading();
@@ -144,10 +143,8 @@ class SettingsPreferencesControllerNotifier extends AsyncNotifier<void> {
         await ref
             .read(settingsPreferencesRepositoryProvider)
             .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
-        await ref.read(audioPlayerProvider).stop();
-        ref.invalidate(currentSettingsPreferencesProvider);
-        ref.invalidate(audioFilesServiceProvider);
         ref.read(routerProvider).goNamed(Routes.splash.name);
+        ref.invalidate(appStartupControllerProvider);
       }
     });
   }

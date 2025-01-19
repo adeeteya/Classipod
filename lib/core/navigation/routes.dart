@@ -95,9 +95,16 @@ final routerProvider = Provider(
           GoRoute(
             path: Routes.menu.toString(),
             name: Routes.menu.name,
-            pageBuilder: (context, state) => CupertinoPage(
+            pageBuilder: (context, state) => CustomTransitionPage(
               key: state.pageKey,
               child: const MenuScreen(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: animation,
+                  child: child,
+                );
+              },
             ),
             routes: [
               GoRoute(

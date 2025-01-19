@@ -89,6 +89,7 @@ class _MarqueeTextState extends State<MarqueeText> {
   @override
   void dispose() {
     _timer?.cancel();
+    _scrollController.dispose();
     super.dispose();
   }
 

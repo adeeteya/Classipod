@@ -32,7 +32,10 @@ class NowPlayingPage extends StatelessWidget {
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.003)
               ..rotateY(-0.1),
-            child: AlbumReflectiveArt(thumbnailPath: thumbnailPath),
+            child: AlbumReflectiveArt(
+              thumbnailPath: thumbnailPath,
+              reflectedImageHeight: 50,
+            ),
           ),
         ),
         Flexible(

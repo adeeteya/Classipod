@@ -9,5 +9,6 @@ class Constants {
   static const String donationLinkUrl = "https://www.paypal.me/adeeteya";
 
   static const int milliSecondsBeforeNextScroll = 75;
-  static const double screenHeightRatio = 0.3865;
+  static const double smallScreenHeightRatio = 0.450;
+  static const double screenHeightRatio = 0.4;
 }

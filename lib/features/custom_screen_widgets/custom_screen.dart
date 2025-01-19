@@ -19,6 +19,15 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   void onSelectPressed();
 
   void scrollForward() {
+    final size = MediaQuery.sizeOf(context);
+
+    late final double screenHeight;
+    if (size.height < 800) {
+      screenHeight = Constants.smallScreenHeightRatio;
+    } else {
+      screenHeight = Constants.screenHeightRatio;
+    }
+
     if (selectedDisplayItem < displayItems.length - 1) {
       setState(() {
         selectedDisplayItem++;
@@ -26,7 +35,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
       if (((selectedDisplayItem + maxScrollDownDisplayItems) *
               displayTileHeight) >
-          ((context.screenSize.height * Constants.screenHeightRatio) +
+          ((context.screenSize.height * screenHeight) +
               scrollController.offset)) {
         scrollController.jumpTo(scrollController.offset + displayTileHeight);
       }

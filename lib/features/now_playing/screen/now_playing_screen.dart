@@ -174,6 +174,14 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
       }
     });
 
+    final size = MediaQuery.sizeOf(context);
+    late final double verticalPadding;
+    if (size.height < 800) {
+      verticalPadding = 10;
+    } else {
+      verticalPadding = 20;
+    }
+
     return CupertinoPageScaffold(
       child: Column(
         children: [
@@ -182,7 +190,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
           ),
           Flexible(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(10, 40, 10, 30),
+              padding:
+                  EdgeInsets.fromLTRB(10, verticalPadding, 10, verticalPadding),
               child: Column(
                 children: [
                   Flexible(

@@ -5,7 +5,9 @@ import 'package:flutter/cupertino.dart';
 
 class AlbumReflectiveArt extends StatelessWidget {
   final String? thumbnailPath;
-  const AlbumReflectiveArt({super.key, this.thumbnailPath});
+  final double reflectedImageHeight;
+  const AlbumReflectiveArt(
+      {super.key, this.thumbnailPath, required this.reflectedImageHeight});
 
   @override
   Widget build(BuildContext context) {
@@ -40,18 +42,18 @@ class AlbumReflectiveArt extends StatelessWidget {
                         ),
                   errorBuilder: (_, __, ___) => Image.asset(
                     Assets.defaultAlbumCoverImage,
-                    height: 50,
+                    height: reflectedImageHeight,
                     alignment: Alignment.bottomCenter,
                     fit: BoxFit.fitWidth,
                   ),
-                  height: 50,
+                  height: reflectedImageHeight,
                   alignment: Alignment.bottomCenter,
                   fit: BoxFit.fitWidth,
                 ),
               ),
             ),
             SizedBox(
-              height: 50,
+              height: reflectedImageHeight,
               width: double.infinity,
               child: DecoratedBox(
                 decoration: BoxDecoration(

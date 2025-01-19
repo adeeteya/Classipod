@@ -48,6 +48,17 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
       );
     }
 
+    final size = MediaQuery.sizeOf(context);
+    late final double fontSize;
+    late final double reflectedImageHeight;
+    if (size.height < 800) {
+      fontSize = 14;
+      reflectedImageHeight = 30;
+    } else {
+      fontSize = 18;
+      reflectedImageHeight = 40;
+    }
+
     return CupertinoPageScaffold(
       child: Column(
         children: [
@@ -71,6 +82,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                       : Alignment.centerRight,
                   child: AlbumReflectiveArt(
                     thumbnailPath: displayItems[index].thumbnailPath,
+                    reflectedImageHeight: reflectedImageHeight,
                   ),
                 );
               },
@@ -81,8 +93,8 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
             child: Text(
               displayItems[selectedDisplayItem].albumName,
               maxLines: 1,
-              style: const TextStyle(
-                fontSize: 20,
+              style: TextStyle(
+                fontSize: fontSize,
                 fontWeight: FontWeight.bold,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -93,8 +105,8 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
             child: Text(
               displayItems[selectedDisplayItem].albumArtistName,
               maxLines: 1,
-              style: const TextStyle(
-                fontSize: 20,
+              style: TextStyle(
+                fontSize: fontSize,
                 fontWeight: FontWeight.bold,
                 overflow: TextOverflow.ellipsis,
               ),

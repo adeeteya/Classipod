@@ -12,6 +12,14 @@ class DeviceFrame extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
+
+    late final double screenHeight;
+    if (size.height < 800) {
+      screenHeight = Constants.smallScreenHeightRatio;
+    } else {
+      screenHeight = Constants.screenHeightRatio;
+    }
+
     return DecoratedBox(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -110,7 +118,7 @@ class DeviceFrame extends StatelessWidget {
               children: [
                 IgnorePointer(
                   child: Container(
-                    height: size.height * Constants.screenHeightRatio,
+                    height: size.height * screenHeight,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: CupertinoColors.white,

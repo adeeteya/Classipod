@@ -10,9 +10,8 @@ class StatusBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.sizeOf(context);
     return SizedBox(
-      height: size.height * 0.03,
+      height: 30,
       width: double.infinity,
       child: DecoratedBox(
         decoration: const BoxDecoration(

@@ -10,6 +10,8 @@ import 'package:classipod/features/music/artists/artist_songs_screen.dart';
 import 'package:classipod/features/music/artists/artists_selection_screen.dart';
 import 'package:classipod/features/music/cover_flow/cover_flow_album_selection_screen.dart';
 import 'package:classipod/features/music/cover_flow/cover_flow_screen.dart';
+import 'package:classipod/features/music/genres/genre_songs_screen.dart';
+import 'package:classipod/features/music/genres/genres_screen.dart';
 import 'package:classipod/features/music/music_menu_screen.dart';
 import 'package:classipod/features/music/songs/songs_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
@@ -30,7 +32,9 @@ enum Routes {
   artists,
   artistSongs,
   albums,
-  songs;
+  songs,
+  genres,
+  genreSongs;
 
   @override
   String toString() {
@@ -63,6 +67,10 @@ enum Routes {
         return context.localization.albumsScreenTitle;
       case songs:
         return context.localization.songsScreenTitle;
+      case genres:
+        return context.localization.genresScreenTitle;
+      case genreSongs:
+        return context.localization.genreSongsScreenTitle;
     }
   }
 }
@@ -202,6 +210,26 @@ final routerProvider = Provider(
                       key: state.pageKey,
                       child: const SongsScreen(),
                     ),
+                  ),
+                  GoRoute(
+                    path: Routes.genres.name,
+                    name: Routes.genres.name,
+                    pageBuilder: (context, state) => CupertinoPage(
+                      key: state.pageKey,
+                      child: const GenresScreen(),
+                    ),
+                    routes: [
+                      GoRoute(
+                        path: ":genreName",
+                        name: Routes.genreSongs.name,
+                        pageBuilder: (context, state) => CupertinoPage(
+                          key: state.pageKey,
+                          child: GenreSongsScreen(
+                            genreName: state.pathParameters["genreName"] ?? '',
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

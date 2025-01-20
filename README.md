@@ -41,7 +41,7 @@ If you like what you see, please ⭐ the repo.
 - 🎡 Click Wheel with Scrollable Rotation Enabled
 - 💿 Now Playing Screen with current music progress displayed
 - 🎶 Songs Screen with all the possible songs in the system
-- 🧑‍🎤 Ability to Filter and Select From a Particular Artist or Albums
+- 🧑‍🎤 Ability to Filter and Select From a Particular Artist, Album or Genre
 - 📲 Responsive Design For all Different Types of Screen Sizes
 - 🔋 Displays the current device battery level and charging status on the status bar
 - 🎧 Background Playback with Notification Control

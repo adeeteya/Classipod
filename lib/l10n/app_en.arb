@@ -71,6 +71,14 @@
   "@songsScreenTitle": {
     "description": "The title of the songs screen"
   },
+  "genresScreenTitle": "Genres",
+  "@genresScreenTitle": {
+    "description": "The title of the genres screen"
+  },
+    "genreSongsScreenTitle": "Genre Songs",
+    "@genreSongsScreenTitle": {
+        "description": "The title of the genre songs screen"
+    },
   "darkModeSettingTitle": "Dark Mode",
   "@darkModeSettingTitle": {
     "description": "The title of the dark mode setting"

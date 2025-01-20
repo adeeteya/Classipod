@@ -80,7 +80,8 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                     transform: Matrix4.identity()
                       ..setEntry(3, 2, 0.003)
                       ..scale(
-                          (1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4)
+                        (1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4,
+                      )
                       ..rotateY(relativePosition),
                     alignment: relativePosition >= 0
                         ? Alignment.centerLeft

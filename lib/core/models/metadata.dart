@@ -180,6 +180,10 @@ class Metadata {
         "Unknown Artist";
   }
 
+  String get getMainGenre {
+    return genres.isNotEmpty ? genres[0] : "Unknown Genre";
+  }
+
   String getTemporaryThumbnailPath(Directory tempDir) {
     return '${tempDir.path}/$trackName-$getMainArtistName.jpg';
   }

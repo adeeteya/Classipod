@@ -11,8 +11,8 @@ import 'package:go_router/go_router.dart';
 enum _MenuDisplayItems {
   music,
   nowPlaying,
-  shuffleSongs,
-  settings;
+  settings,
+  shuffleSongs;
 
   String title(BuildContext context) {
     switch (this) {
@@ -20,10 +20,10 @@ enum _MenuDisplayItems {
         return context.localization.musicMenuScreenTitle;
       case nowPlaying:
         return context.localization.nowPlayingScreenTitle;
-      case shuffleSongs:
-        return context.localization.shuffleSongsMenuTitle;
       case settings:
         return context.localization.settingsScreenTitle;
+      case shuffleSongs:
+        return context.localization.shuffleSongsMenuTitle;
     }
   }
 }
@@ -60,6 +60,9 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
       case _MenuDisplayItems.nowPlaying:
         context.goNamed(Routes.nowPlaying.name);
         break;
+      case _MenuDisplayItems.settings:
+        context.goNamed(Routes.settings.name);
+        break;
       case _MenuDisplayItems.shuffleSongs:
         await ref
             .read(audioPlayerServiceProvider.notifier)
@@ -69,9 +72,6 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
             context.goNamed(Routes.nowPlaying.name);
           }
         });
-        break;
-      case _MenuDisplayItems.settings:
-        context.goNamed(Routes.settings.name);
         break;
     }
   }

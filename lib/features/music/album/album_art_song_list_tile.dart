@@ -29,10 +29,6 @@ class AlbumArtSongListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            border: const Border(
-              bottom: BorderSide(
-                  width: 0.5, color: AppPalette.statusBarBorderColor),
-            ),
             gradient: isSelected
                 ? const LinearGradient(
                     begin: Alignment.topCenter,

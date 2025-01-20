@@ -65,6 +65,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   }
 
   Future<void> deviceControlHandler(_, DeviceAction? newState) async {
+    print(context.router.locationNamed);
     if (newState == null || context.router.locationNamed != routeName) {
       return;
     }

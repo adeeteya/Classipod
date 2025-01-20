@@ -11,7 +11,8 @@ enum _MusicListDisplayItems {
   coverFlow,
   artists,
   albums,
-  songs;
+  songs,
+  genres;
 
   String title(BuildContext context) {
     switch (this) {
@@ -23,6 +24,8 @@ enum _MusicListDisplayItems {
         return context.localization.albumsScreenTitle;
       case songs:
         return context.localization.songsScreenTitle;
+      case genres:
+        return context.localization.genresScreenTitle;
     }
   }
 }
@@ -63,6 +66,9 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
         break;
       case _MusicListDisplayItems.songs:
         context.goNamed(Routes.songs.name);
+        break;
+      case _MusicListDisplayItems.genres:
+        context.goNamed(Routes.genres.name);
         break;
     }
   }

@@ -1,8 +1,8 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
-import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/features/device/presentation/device_controls.dart';
+import 'package:classipod/features/device/presentation/device_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 class DeviceFrame extends StatelessWidget {
@@ -12,13 +12,6 @@ class DeviceFrame extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-
-    late final double screenHeight;
-    if (size.height < 800) {
-      screenHeight = Constants.smallScreenHeightRatio;
-    } else {
-      screenHeight = Constants.screenHeightRatio;
-    }
 
     return DecoratedBox(
       decoration: BoxDecoration(
@@ -116,23 +109,7 @@ class DeviceFrame extends StatelessWidget {
             minimum: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
             child: Column(
               children: [
-                IgnorePointer(
-                  child: Container(
-                    height: size.height * screenHeight,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: CupertinoColors.white,
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(
-                        color: context.isDarkMode
-                            ? AppPalette.darkDeviceScreenColor
-                            : AppPalette.lightDeviceScreenBorderColor,
-                        width: 5,
-                      ),
-                    ),
-                    child: child,
-                  ),
-                ),
+                DeviceScreen(child: child),
                 const Spacer(flex: 2),
                 const DeviceControls(),
                 const Spacer(),

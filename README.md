@@ -53,6 +53,7 @@ If you like what you see, please ⭐ the repo.
 - 🪞 Reflective Cover Art
 - ℹ️ About Screen
 - 🌍 Multi Language Support
+- 👆 Touch Screen Support
 
 ### 🔜 Upcoming Features
 - ⬇️ Caching Metadata of the songs for faster boot up times

@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 enum SharedPreferencesKeys {
   darkMode,
+  isTouchScreenEnabled,
   repeat,
   vibrate,
   clickWheelSound,
@@ -28,6 +29,12 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache
             .getBool(SharedPreferencesKeys.darkMode.name) ??
         false;
+  }
+
+  bool getTouchScreenEnabled() {
+    return _sharedPreferencesWithCache
+            .getBool(SharedPreferencesKeys.isTouchScreenEnabled.name) ??
+        true;
   }
 
   bool getRepeat() {
@@ -64,6 +71,15 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache.setBool(
       SharedPreferencesKeys.darkMode.name,
       isDarkMode,
+    );
+  }
+
+  Future<void> setTouchScreenEnabled({
+    required bool isTouchScreenEnabled,
+  }) async {
+    return _sharedPreferencesWithCache.setBool(
+      SharedPreferencesKeys.isTouchScreenEnabled.name,
+      isTouchScreenEnabled,
     );
   }
 

@@ -29,9 +29,12 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   List<AlbumDetails> get displayItems => ref.read(albumDetailsProvider);
 
   @override
-  Future<void> onSelectPressed() async {
-    final albumName =
-        ref.read(albumDetailsProvider).elementAt(selectedDisplayItem).albumName;
+  Future<void> onSelectPressed() async => _playAlbum(selectedDisplayItem);
+
+  Future<void> _playAlbum(int index) async {
+    setState(() => selectedDisplayItem = index);
+
+    final albumName = ref.read(albumDetailsProvider).elementAt(index).albumName;
 
     final albumMetadataList =
         ref.read(albumDetailsProvider.notifier).getAlbumMetadataList(albumName);
@@ -68,6 +71,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
                   songName: displayItems[index].albumName,
                   trackArtistNames: displayItems[index].albumArtistName,
                   isSelected: selectedDisplayItem == index,
+                  onTap: () async => _playAlbum(index),
                 ),
               ),
             ),

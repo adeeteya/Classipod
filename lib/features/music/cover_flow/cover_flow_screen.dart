@@ -28,9 +28,10 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   List<AlbumDetails> get displayItems => ref.read(albumDetailsProvider);
 
   @override
-  void onSelectPressed() {
-    final albumDetails =
-        ref.read(albumDetailsProvider).elementAt(selectedDisplayItem);
+  void onSelectPressed() => _chooseAlbum(selectedDisplayItem);
+
+  void _chooseAlbum(int index) {
+    final albumDetails = ref.read(albumDetailsProvider).elementAt(index);
     context.goNamed(
       Routes.coverFlowSelection.name,
       queryParameters: {
@@ -72,17 +73,22 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
               itemCount: displayItems.length,
               itemBuilder: (context, index) {
                 final double relativePosition = index - currentPage;
-                return Transform(
-                  transform: Matrix4.identity()
-                    ..setEntry(3, 2, 0.003)
-                    ..scale((1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4)
-                    ..rotateY(relativePosition),
-                  alignment: relativePosition >= 0
-                      ? Alignment.centerLeft
-                      : Alignment.centerRight,
-                  child: AlbumReflectiveArt(
-                    thumbnailPath: displayItems[index].thumbnailPath,
-                    reflectedImageHeight: reflectedImageHeight,
+                return GestureDetector(
+                  onTap:
+                      relativePosition == 0 ? () => _chooseAlbum(index) : null,
+                  child: Transform(
+                    transform: Matrix4.identity()
+                      ..setEntry(3, 2, 0.003)
+                      ..scale(
+                          (1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4)
+                      ..rotateY(relativePosition),
+                    alignment: relativePosition >= 0
+                        ? Alignment.centerLeft
+                        : Alignment.centerRight,
+                    child: AlbumReflectiveArt(
+                      thumbnailPath: displayItems[index].thumbnailPath,
+                      reflectedImageHeight: reflectedImageHeight,
+                    ),
                   ),
                 );
               },

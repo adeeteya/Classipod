@@ -41,9 +41,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   List<Metadata> get displayItems => ref.read(nowPlayingMetadataListProvider);
 
   @override
-  Future<void> onSelectPressed() async {
-    await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
-  }
+  Future<void> onSelectPressed() =>
+      ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
 
   void startVolumeTimer() {
     if (_lastVolumeChangeTimer.isActive) {

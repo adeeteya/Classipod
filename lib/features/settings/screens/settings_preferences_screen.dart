@@ -14,6 +14,7 @@ import 'package:url_launcher/url_launcher.dart';
 enum _SettingsDisplayItems {
   about,
   darkMode,
+  isTouchScreenEnabled,
   repeat,
   vibrate,
   clickWheelSound,
@@ -25,6 +26,8 @@ enum _SettingsDisplayItems {
     switch (this) {
       case about:
         return context.localization.aboutScreenTitle;
+      case isTouchScreenEnabled:
+        return context.localization.touchScreenSettingTitle;
       case darkMode:
         return context.localization.darkModeSettingTitle;
       case repeat:
@@ -56,14 +59,22 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   String get routeName => Routes.settings.name;
 
   @override
-  List<String> get displayItems =>
-      _SettingsDisplayItems.values.map((e) => e.title(context)).toList();
+  List<_SettingsDisplayItems> get displayItems => _SettingsDisplayItems.values;
 
   @override
-  Future<void> onSelectPressed() async {
-    switch (_SettingsDisplayItems.values[selectedDisplayItem]) {
+  Future<void> onSelectPressed() =>
+      _settingAction(displayItems[selectedDisplayItem]);
+
+  Future<void> _settingAction(_SettingsDisplayItems settingItem) async {
+    setState(() => selectedDisplayItem = displayItems.indexOf(settingItem));
+    switch (settingItem) {
       case _SettingsDisplayItems.about:
         context.goNamed(Routes.about.name);
+        break;
+      case _SettingsDisplayItems.isTouchScreenEnabled:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleTouchScreen();
         break;
       case _SettingsDisplayItems.darkMode:
         await ref
@@ -111,6 +122,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     switch (settingsItem) {
       case _SettingsDisplayItems.darkMode:
         return settingsState.isDarkMode;
+      case _SettingsDisplayItems.isTouchScreenEnabled:
+        return settingsState.isTouchScreenEnabled;
       case _SettingsDisplayItems.repeat:
         return settingsState.repeat;
       case _SettingsDisplayItems.vibrate:
@@ -140,10 +153,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
                 controller: scrollController,
                 itemCount: displayItems.length,
                 itemBuilder: (context, index) => SettingsListTile(
-                  text: displayItems[index],
+                  text: displayItems[index].title(context),
                   isOn:
                       isOn(settingsState, _SettingsDisplayItems.values[index]),
                   isSelected: selectedDisplayItem == index,
+                  onTap: () async => _settingAction(displayItems[index]),
                 ),
               ),
             ),

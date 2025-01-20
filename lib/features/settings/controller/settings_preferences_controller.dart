@@ -22,6 +22,8 @@ final currentSettingsPreferencesProvider = Provider<SettingsPreferences>(
         ref.read(settingsPreferencesRepositoryProvider);
     return SettingsPreferences(
       isDarkMode: settingsPreferencesRepository.getThemeMode(),
+      isTouchScreenEnabled:
+          settingsPreferencesRepository.getTouchScreenEnabled(),
       repeat: settingsPreferencesRepository.getRepeat(),
       vibrate: settingsPreferencesRepository.getVibrate(),
       clickWheelSound: settingsPreferencesRepository.getClickWheelSound(),
@@ -59,6 +61,18 @@ class SettingsPreferencesControllerNotifier
       await ref
           .read(settingsPreferencesRepositoryProvider)
           .setThemeMode(isDarkMode: !isDarkMode);
+      ref.invalidate(currentSettingsPreferencesProvider);
+    });
+  }
+
+  Future<void> toggleTouchScreen() async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      final bool isTouchScreenEnabled =
+          ref.read(currentSettingsPreferencesProvider).isTouchScreenEnabled;
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setTouchScreenEnabled(isTouchScreenEnabled: !isTouchScreenEnabled);
       ref.invalidate(currentSettingsPreferencesProvider);
     });
   }

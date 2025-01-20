@@ -49,3 +49,4 @@ google_service_account.json
 **/fastlane/Preview.html
 **/fastlane/screenshots
 **/fastlane/test_output
+/untranslated_messages.json

@@ -28,9 +28,11 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
   List<Metadata> get displayItems => ref.read(songsProvider);
 
   @override
-  Future<void> onSelectPressed() async {
-    final int originalSongIndex =
-        displayItems[selectedDisplayItem].originalSongIndex;
+  Future<void> onSelectPressed() => _playSong(selectedDisplayItem);
+
+  Future<void> _playSong(int displayIndex) async {
+    setState(() => selectedDisplayItem = displayIndex);
+    final int originalSongIndex = displayItems[displayIndex].originalSongIndex;
 
     await ref
         .read(audioPlayerServiceProvider.notifier)
@@ -65,6 +67,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
                   songName: displayItems[index].trackName,
                   trackArtistNames: displayItems[index].getTrackArtistNames,
                   isSelected: selectedDisplayItem == index,
+                  onTap: () async => _playSong(index),
                 ),
               ),
             ),

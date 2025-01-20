@@ -75,6 +75,10 @@
   "@darkModeSettingTitle": {
     "description": "The title of the dark mode setting"
   },
+  "touchScreenSettingTitle": "Touch Screen Enabled",
+    "@touchScreenSettingTitle": {
+        "description": "The title of the touch screen setting"
+    },
   "repeatModeSettingTitle": "Repeat Mode",
   "@repeatModeSettingTitle": {
     "description": "The title of the repeat mode setting"

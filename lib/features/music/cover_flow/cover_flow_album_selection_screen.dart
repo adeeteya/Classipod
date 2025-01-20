@@ -35,9 +35,11 @@ class _CoverFlowAlbumSelectionScreenState
       ref.read(coverFlowAlbumDetailsProvider(widget.albumName));
 
   @override
-  Future<void> onSelectPressed() async {
-    final originalSongIndex =
-        displayItems[selectedDisplayItem].originalSongIndex;
+  Future<void> onSelectPressed() => _playSong(selectedDisplayItem);
+
+  Future<void> _playSong(int index) async {
+    setState(() => selectedDisplayItem = index);
+    final originalSongIndex = displayItems[index].originalSongIndex;
     await ref
         .read(audioPlayerServiceProvider.notifier)
         .playSongAtOriginalIndex(originalSongIndex);
@@ -112,6 +114,7 @@ class _CoverFlowAlbumSelectionScreenState
                       milliseconds: displayItems[index].trackDuration,
                     ),
                     isSelected: selectedDisplayItem == index,
+                    onTap: () async => _playSong(index),
                   ),
                 ),
               ),

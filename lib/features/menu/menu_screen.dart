@@ -40,8 +40,7 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
   String get routeName => Routes.menu.name;
 
   @override
-  List<String> get displayItems =>
-      _MenuDisplayItems.values.map((e) => e.title(context)).toList();
+  List<_MenuDisplayItems> get displayItems => _MenuDisplayItems.values;
 
   @override
   void onMenuButtonPressed() {
@@ -49,8 +48,12 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
   }
 
   @override
-  Future<void> onSelectPressed() async {
-    switch (_MenuDisplayItems.values[selectedDisplayItem]) {
+  Future<void> onSelectPressed() =>
+      _navigateToScreen(_MenuDisplayItems.values[selectedDisplayItem]);
+
+  Future<void> _navigateToScreen(_MenuDisplayItems menuItem) async {
+    setState(() => selectedDisplayItem = displayItems.indexOf(menuItem));
+    switch (menuItem) {
       case _MenuDisplayItems.music:
         context.goNamed(Routes.music.name);
         break;
@@ -88,8 +91,9 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
                 controller: scrollController,
                 itemCount: displayItems.length,
                 itemBuilder: (context, index) => DisplayListTile(
-                  text: displayItems[index],
+                  text: displayItems[index].title(context),
                   isSelected: selectedDisplayItem == index,
+                  onTap: () async => _navigateToScreen(displayItems[index]),
                 ),
               ),
             ),

@@ -24,9 +24,11 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   List<String> get displayItems => ref.read(artistNamesProvider);
 
   @override
-  void onSelectPressed() {
-    final selectedArtistName =
-        ref.read(artistNamesProvider).elementAt(selectedDisplayItem);
+  void onSelectPressed() => _selectArtist(selectedDisplayItem);
+
+  void _selectArtist(int index) {
+    setState(() => selectedDisplayItem = index);
+    final selectedArtistName = ref.read(artistNamesProvider).elementAt(index);
     context.goNamed(
       Routes.artistSongs.name,
       queryParameters: {"artistName": selectedArtistName},
@@ -56,6 +58,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
                 itemBuilder: (context, index) => DisplayListTile(
                   text: displayItems[index],
                   isSelected: selectedDisplayItem == index,
+                  onTap: () => _selectArtist(index),
                 ),
               ),
             ),

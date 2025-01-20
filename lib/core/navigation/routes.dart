@@ -8,7 +8,7 @@ import 'package:classipod/features/menu/menu_screen.dart';
 import 'package:classipod/features/music/album/album_selection_screen.dart';
 import 'package:classipod/features/music/artists/artist_songs_screen.dart';
 import 'package:classipod/features/music/artists/artists_selection_screen.dart';
-import 'package:classipod/features/music/cover_flow/cover_flow_album_selection.dart';
+import 'package:classipod/features/music/cover_flow/cover_flow_album_selection_screen.dart';
 import 'package:classipod/features/music/cover_flow/cover_flow_screen.dart';
 import 'package:classipod/features/music/music_menu_screen.dart';
 import 'package:classipod/features/music/songs/songs_screen.dart';

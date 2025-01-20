@@ -30,9 +30,12 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
       ref.read(artistSongsMetadataListProvider(widget.artistName));
 
   @override
-  Future<void> onSelectPressed() async {
+  Future<void> onSelectPressed() => _playSong(selectedDisplayItem);
+
+  Future<void> _playSong(int index) async {
+    setState(() => selectedDisplayItem = index);
     await ref.read(audioPlayerServiceProvider.notifier).playSongAtOriginalIndex(
-          displayItems[selectedDisplayItem].originalSongIndex,
+          displayItems[index].originalSongIndex,
         );
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
@@ -58,6 +61,7 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
                   songName: displayItems[index].trackName,
                   trackArtistNames: displayItems[index].getTrackArtistNames,
                   isSelected: selectedDisplayItem == index,
+                  onTap: () async => _playSong(index),
                 ),
               ),
             ),

@@ -40,12 +40,18 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
   String get routeName => Routes.music.name;
 
   @override
-  List<String> get displayItems =>
-      _MusicListDisplayItems.values.map((e) => e.title(context)).toList();
+  List<_MusicListDisplayItems> get displayItems =>
+      _MusicListDisplayItems.values;
 
   @override
-  void onSelectPressed() {
-    switch (_MusicListDisplayItems.values[selectedDisplayItem]) {
+  void onSelectPressed() =>
+      _navigateToScreen(_MusicListDisplayItems.values[selectedDisplayItem]);
+
+  void _navigateToScreen(_MusicListDisplayItems musicDisplayItem) {
+    setState(
+      () => selectedDisplayItem = displayItems.indexOf(musicDisplayItem),
+    );
+    switch (musicDisplayItem) {
       case _MusicListDisplayItems.coverFlow:
         context.goNamed(Routes.coverFlow.name);
         break;
@@ -76,8 +82,9 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
                 controller: scrollController,
                 itemCount: displayItems.length,
                 itemBuilder: (context, index) => DisplayListTile(
-                  text: displayItems[index],
+                  text: displayItems[index].title(context),
                   isSelected: selectedDisplayItem == index,
+                  onTap: () => _navigateToScreen(displayItems[index]),
                 ),
               ),
             ),

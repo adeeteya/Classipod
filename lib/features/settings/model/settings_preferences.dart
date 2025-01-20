@@ -1,5 +1,6 @@
 class SettingsPreferences {
   final bool isDarkMode;
+  final bool isTouchScreenEnabled;
   final bool repeat;
   final bool vibrate;
   final bool clickWheelSound;
@@ -8,6 +9,7 @@ class SettingsPreferences {
 
   SettingsPreferences({
     required this.isDarkMode,
+    required this.isTouchScreenEnabled,
     required this.repeat,
     required this.vibrate,
     required this.clickWheelSound,
@@ -17,6 +19,7 @@ class SettingsPreferences {
 
   SettingsPreferences copyWith({
     bool? isDarkMode,
+    bool? isTouchScreenEnabled,
     bool? repeat,
     bool? vibrate,
     bool? clickWheelSound,
@@ -25,6 +28,7 @@ class SettingsPreferences {
   }) {
     return SettingsPreferences(
       isDarkMode: isDarkMode ?? this.isDarkMode,
+      isTouchScreenEnabled: isTouchScreenEnabled ?? this.isTouchScreenEnabled,
       repeat: repeat ?? this.repeat,
       vibrate: vibrate ?? this.vibrate,
       clickWheelSound: clickWheelSound ?? this.clickWheelSound,

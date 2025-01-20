@@ -23,7 +23,7 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
   double get displayTileHeight => 50;
 
   @override
-  String get routeName => Routes.artistSongs.name;
+  String get routeName => Uri.parse(widget.artistName).path;
 
   @override
   List<Metadata> get displayItems =>

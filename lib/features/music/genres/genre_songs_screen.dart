@@ -23,7 +23,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
   double get displayTileHeight => 50;
 
   @override
-  String get routeName => widget.genreName.replaceAll(" ", "%20");
+  String get routeName => Uri.parse(widget.genreName).path;
 
   @override
   List<Metadata> get displayItems =>

@@ -197,6 +197,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
                     child: PageView.builder(
                       controller: pageController,
                       itemCount: displayItems.length,
+                      physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) => NowPlayingPage(
                         thumbnailPath: displayItems[index].thumbnailPath,
                         trackName: displayItems[index].trackName,

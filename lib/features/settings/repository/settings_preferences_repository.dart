@@ -9,6 +9,7 @@ enum SharedPreferencesKeys {
   repeat,
   vibrate,
   clickWheelSound,
+  splitScreenEnabled,
   immersiveMode,
   musicFolderPath,
 }
@@ -46,6 +47,12 @@ class SettingsPreferencesRepository {
   bool getVibrate() {
     return _sharedPreferencesWithCache
             .getBool(SharedPreferencesKeys.vibrate.name) ??
+        true;
+  }
+
+  bool getSplitScreenEnabled() {
+    return _sharedPreferencesWithCache
+            .getBool(SharedPreferencesKeys.splitScreenEnabled.name) ??
         true;
   }
 
@@ -103,6 +110,14 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache.setBool(
       SharedPreferencesKeys.clickWheelSound.name,
       isClickWheelSoundEnabled,
+    );
+  }
+
+  Future<void> setSplitScreenEnabled(
+      {required bool isSplitScreenEnabled}) async {
+    return _sharedPreferencesWithCache.setBool(
+      SharedPreferencesKeys.splitScreenEnabled.name,
+      isSplitScreenEnabled,
     );
   }
 

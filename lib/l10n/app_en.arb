@@ -75,18 +75,18 @@
   "@genresScreenTitle": {
     "description": "The title of the genres screen"
   },
-    "genreSongsScreenTitle": "Genre Songs",
-    "@genreSongsScreenTitle": {
-        "description": "The title of the genre songs screen"
-    },
+  "genreSongsScreenTitle": "Genre Songs",
+  "@genreSongsScreenTitle": {
+    "description": "The title of the genre songs screen"
+  },
   "darkModeSettingTitle": "Dark Mode",
   "@darkModeSettingTitle": {
     "description": "The title of the dark mode setting"
   },
   "touchScreenSettingTitle": "Touch Screen Enabled",
-    "@touchScreenSettingTitle": {
-        "description": "The title of the touch screen setting"
-    },
+  "@touchScreenSettingTitle": {
+    "description": "The title of the touch screen setting"
+  },
   "repeatModeSettingTitle": "Repeat Mode",
   "@repeatModeSettingTitle": {
     "description": "The title of the repeat mode setting"
@@ -98,6 +98,10 @@
   "clickWheelSettingTitle": "Click Wheel Sounds",
   "@clickWheelSettingTitle": {
     "description": "The title of the click wheel sound setting"
+  },
+  "splitScreenSettingTitle": "Split Screen Mode",
+  "@splitScreenSettingTitle": {
+    "description": "The title of the split screen mode setting"
   },
   "touchSoundsDialogTitle": "Touch Sounds",
   "@touchSoundsDialogTitle": {

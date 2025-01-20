@@ -18,6 +18,7 @@ enum _SettingsDisplayItems {
   repeat,
   vibrate,
   clickWheelSound,
+  splitScreenEnabled,
   immersiveMode,
   changeDirectory,
   donate;
@@ -36,6 +37,8 @@ enum _SettingsDisplayItems {
         return context.localization.vibrateSettingTitle;
       case clickWheelSound:
         return context.localization.clickWheelSettingTitle;
+      case splitScreenEnabled:
+        return context.localization.splitScreenSettingTitle;
       case immersiveMode:
         return context.localization.immersiveModeSettingTitle;
       case changeDirectory:
@@ -96,6 +99,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleClickWheelSound(context);
         break;
+      case _SettingsDisplayItems.splitScreenEnabled:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleSplitScreen();
+        break;
       case _SettingsDisplayItems.immersiveMode:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
@@ -130,6 +138,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         return settingsState.vibrate;
       case _SettingsDisplayItems.clickWheelSound:
         return settingsState.clickWheelSound;
+      case _SettingsDisplayItems.splitScreenEnabled:
+        return settingsState.splitScreenEnabled;
       case _SettingsDisplayItems.immersiveMode:
         return settingsState.immersiveMode;
       default:

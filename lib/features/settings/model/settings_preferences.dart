@@ -4,6 +4,7 @@ class SettingsPreferences {
   final bool repeat;
   final bool vibrate;
   final bool clickWheelSound;
+  final bool splitScreenEnabled;
   final bool immersiveMode;
   final String musicFolderPath;
 
@@ -13,6 +14,7 @@ class SettingsPreferences {
     required this.repeat,
     required this.vibrate,
     required this.clickWheelSound,
+    required this.splitScreenEnabled,
     required this.immersiveMode,
     required this.musicFolderPath,
   });
@@ -23,6 +25,7 @@ class SettingsPreferences {
     bool? repeat,
     bool? vibrate,
     bool? clickWheelSound,
+    bool? splitScreenEnabled,
     bool? immersiveMode,
     String? musicFolderPath,
   }) {
@@ -32,6 +35,7 @@ class SettingsPreferences {
       repeat: repeat ?? this.repeat,
       vibrate: vibrate ?? this.vibrate,
       clickWheelSound: clickWheelSound ?? this.clickWheelSound,
+      splitScreenEnabled: splitScreenEnabled ?? this.splitScreenEnabled,
       immersiveMode: immersiveMode ?? this.immersiveMode,
       musicFolderPath: musicFolderPath ?? this.musicFolderPath,
     );

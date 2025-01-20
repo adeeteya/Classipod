@@ -1,8 +1,10 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/widgets/animated_album_art_scroller.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -78,26 +80,38 @@ class _MenuScreenState extends ConsumerState<MenuScreen> with CustomScreen {
 
   @override
   Widget build(BuildContext context) {
+    final splitScreenEnabled = ref.watch(
+      currentSettingsPreferencesProvider.select((e) => e.splitScreenEnabled),
+    );
     return CupertinoPageScaffold(
-      child: Column(
+      child: Row(
         children: [
-          StatusBar(
-            title: Routes.menu.title(context),
-          ),
           Expanded(
-            child: CupertinoScrollbar(
-              controller: scrollController,
-              child: ListView.builder(
-                controller: scrollController,
-                itemCount: displayItems.length,
-                itemBuilder: (context, index) => DisplayListTile(
-                  text: displayItems[index].title(context),
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () async => _navigateToScreen(displayItems[index]),
+            child: Column(
+              children: [
+                StatusBar(
+                  title: Routes.menu.title(context),
                 ),
-              ),
+                Expanded(
+                  child: CupertinoScrollbar(
+                    controller: scrollController,
+                    child: ListView.builder(
+                      controller: scrollController,
+                      itemCount: displayItems.length,
+                      itemBuilder: (context, index) => DisplayListTile(
+                        text: displayItems[index].title(context),
+                        isSelected: selectedDisplayItem == index,
+                        onTap: () async =>
+                            _navigateToScreen(displayItems[index]),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
+          if (splitScreenEnabled)
+            const Expanded(child: AnimatedAlbumArtScroller()),
         ],
       ),
     );

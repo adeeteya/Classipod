@@ -54,6 +54,7 @@ If you like what you see, please ⭐ the repo.
 - ℹ️ About Screen
 - 🌍 Multi Language Support
 - 👆 Touch Screen Support
+- 📺 Split Screen View (6th and 7th Gen iPod Classics)
 
 ### 🔜 Upcoming Features
 - ⬇️ Caching Metadata of the songs for faster boot up times
@@ -62,7 +63,6 @@ If you like what you see, please ⭐ the repo.
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
 - 📖 App Usage Tutorial
-- 📺 Split Screen View (6th and 7th Gen iPod Classics)
 
 ## 💻 Installation links
 

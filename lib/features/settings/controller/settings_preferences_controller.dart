@@ -27,6 +27,7 @@ final currentSettingsPreferencesProvider = Provider<SettingsPreferences>(
       repeat: settingsPreferencesRepository.getRepeat(),
       vibrate: settingsPreferencesRepository.getVibrate(),
       clickWheelSound: settingsPreferencesRepository.getClickWheelSound(),
+      splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
       musicFolderPath: settingsPreferencesRepository.getMusicFolderPath(),
     );
@@ -128,6 +129,18 @@ class SettingsPreferencesControllerNotifier
           content: context.localization.touchSoundsDialogContent,
         );
       }
+    });
+  }
+
+  Future<void> toggleSplitScreen() async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      final bool isSplitScreenEnabled =
+          ref.read(currentSettingsPreferencesProvider).splitScreenEnabled;
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setSplitScreenEnabled(isSplitScreenEnabled: !isSplitScreenEnabled);
+      ref.invalidate(currentSettingsPreferencesProvider);
     });
   }
 

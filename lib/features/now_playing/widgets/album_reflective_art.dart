@@ -6,8 +6,11 @@ import 'package:flutter/cupertino.dart';
 class AlbumReflectiveArt extends StatelessWidget {
   final String? thumbnailPath;
   final double reflectedImageHeight;
-  const AlbumReflectiveArt(
-      {super.key, this.thumbnailPath, required this.reflectedImageHeight});
+  const AlbumReflectiveArt({
+    super.key,
+    this.thumbnailPath,
+    required this.reflectedImageHeight,
+  });
 
   @override
   Widget build(BuildContext context) {

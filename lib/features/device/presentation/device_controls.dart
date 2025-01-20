@@ -102,12 +102,12 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
     return GestureDetector(
       onPanUpdate: (dragUpdateDetails) async => onClickWheelScroll(
         dragUpdateDetails,
-        (size.width * 0.61) / 2,
+        (size.width * Constants.deviceClickWheelRadiusRatio) / 2,
         size.height,
       ),
       child: Container(
-        height: size.width * 0.61,
-        width: size.width * 0.61,
+        height: size.width * Constants.deviceClickWheelRadiusRatio,
+        width: size.width * Constants.deviceClickWheelRadiusRatio,
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
@@ -185,8 +185,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                       .read(deviceButtonsServiceProvider.notifier)
                       .setDeviceAction(DeviceAction.select),
                   child: SizedBox(
-                    height: size.width * 0.2175,
-                    width: size.width * 0.2175,
+                    height: size.width * Constants.deviceButtonSizeRatio,
+                    width: size.width * Constants.deviceButtonSizeRatio,
                     child: DecoratedBox(
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
@@ -232,7 +232,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                         .read(deviceButtonsServiceProvider.notifier)
                         .setDeviceAction(DeviceAction.longPressEnd),
                     child: SizedBox(
-                      height: size.width * 0.2175,
+                      height: size.width * Constants.deviceButtonSizeRatio,
                       child: ColoredBox(
                         color: context.isDarkMode
                             ? AppPalette.darkDeviceControlBackgroundColor

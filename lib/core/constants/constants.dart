@@ -11,4 +11,6 @@ class Constants {
   static const int milliSecondsBeforeNextScroll = 75;
   static const double smallScreenHeightRatio = 0.450;
   static const double screenHeightRatio = 0.4;
+  static const double deviceClickWheelRadiusRatio = 0.61;
+  static const double deviceButtonSizeRatio = 0.2175;
 }

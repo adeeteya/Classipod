@@ -33,16 +33,16 @@ class _AnimatedAlbumArtScrollerState
   }
 
   void _setRandomAnimationDirection() {
-    final _randomNumber = Random().nextInt(4);
-    if (_randomNumber == 0) {
+    final randomNumber = Random().nextInt(4);
+    if (randomNumber == 0) {
       _alignmentAnimation =
           Tween<Alignment>(begin: Alignment.topLeft, end: Alignment.bottomRight)
               .animate(_animationController);
-    } else if (_randomNumber == 1) {
+    } else if (randomNumber == 1) {
       _alignmentAnimation =
           Tween<Alignment>(begin: Alignment.topRight, end: Alignment.bottomLeft)
               .animate(_animationController);
-    } else if (_randomNumber == 2) {
+    } else if (randomNumber == 2) {
       _alignmentAnimation =
           Tween<Alignment>(begin: Alignment.bottomLeft, end: Alignment.topRight)
               .animate(_animationController);
@@ -55,8 +55,8 @@ class _AnimatedAlbumArtScrollerState
 
   void _repeatAnimation() {
     if (_animationController.isCompleted) {
-      _getRandomAlbumArt();
       _setRandomAnimationDirection();
+      _getRandomAlbumArt();
       _animationController.repeat(count: 1);
     }
   }
@@ -85,8 +85,12 @@ class _AnimatedAlbumArtScrollerState
   Widget build(BuildContext context) {
     return AnimatedAlbumArt(
       animation: _alignmentAnimation,
-      child: Image(
-        image: _albumArtImage,
+      child: AnimatedSwitcher(
+        duration: const Duration(seconds: 1),
+        child: Image(
+          key: ValueKey(_albumArtImage),
+          image: _albumArtImage,
+        ),
       ),
     );
   }

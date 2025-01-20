@@ -113,8 +113,9 @@ class SettingsPreferencesRepository {
     );
   }
 
-  Future<void> setSplitScreenEnabled(
-      {required bool isSplitScreenEnabled}) async {
+  Future<void> setSplitScreenEnabled({
+    required bool isSplitScreenEnabled,
+  }) async {
     return _sharedPreferencesWithCache.setBool(
       SharedPreferencesKeys.splitScreenEnabled.name,
       isSplitScreenEnabled,

@@ -44,7 +44,7 @@ class PlayPauseButtonCustomPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
+  bool shouldRepaint(PlayPauseButtonCustomPainter oldDelegate) {
+    return oldDelegate.color != color;
   }
 }

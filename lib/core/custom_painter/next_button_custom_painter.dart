@@ -42,7 +42,7 @@ class NextButtonCustomPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
+  bool shouldRepaint(NextButtonCustomPainter oldDelegate) {
+    return oldDelegate.color != color;
   }
 }

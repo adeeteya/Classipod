@@ -158,7 +158,7 @@ class AppleCustomPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    return true;
+  bool shouldRepaint(AppleCustomPainter oldDelegate) {
+    return false;
   }
 }

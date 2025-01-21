@@ -28,9 +28,11 @@ Future<void> main() async {
     ),
     JustAudioBackground.init(
       androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
-      androidNotificationChannelName: 'Audio playback',
-      androidNotificationChannelDescription: 'Classipod Audio Notification',
+      androidNotificationChannelName: 'ClassiPod Audio playback',
+      androidNotificationChannelDescription:
+          'Notification to control the currently playing music files',
       androidNotificationOngoing: true,
+      androidNotificationIcon: 'drawable/ic_stat_name',
     ),
   ]);
 

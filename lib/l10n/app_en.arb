@@ -178,5 +178,21 @@
   "filePickerDialogTitle": "Select a Directory to Scan for Music",
   "@filePickerDialogTitle": {
     "description": "The title of the file picker dialog"
+  },
+  "searchScreenTitle": "Search",
+  "@searchScreenTitle": {
+    "description": "The title of the search screen"
+  },
+  "searchEmptyText": "No Search Results",
+  "@searchEmptyText": {
+    "description": "The message displayed when no search results are found"
+  },
+  "searchResultsText": "Search Results: ",
+  "@searchResultsText": {
+    "description": "The text 'Search Results: ' for the title of the search screen"
+  },
+  "resultsForText": "Results for: ",
+  "@resultsForText": {
+    "description": "The text 'Results for: ' for the found searches"
   }
 }

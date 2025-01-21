@@ -13,6 +13,7 @@ import 'package:classipod/features/music/cover_flow/cover_flow_screen.dart';
 import 'package:classipod/features/music/genres/genre_songs_screen.dart';
 import 'package:classipod/features/music/genres/genres_screen.dart';
 import 'package:classipod/features/music/music_menu_screen.dart';
+import 'package:classipod/features/music/search/search_screen.dart';
 import 'package:classipod/features/music/songs/songs_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
@@ -34,7 +35,8 @@ enum Routes {
   albums,
   songs,
   genres,
-  genreSongs;
+  genreSongs,
+  search;
 
   @override
   String toString() {
@@ -71,6 +73,8 @@ enum Routes {
         return context.localization.genresScreenTitle;
       case genreSongs:
         return context.localization.genreSongsScreenTitle;
+      case search:
+        return context.localization.searchScreenTitle;
     }
   }
 }
@@ -229,6 +233,14 @@ final routerProvider = Provider(
                         ),
                       ),
                     ],
+                  ),
+                  GoRoute(
+                    path: Routes.search.name,
+                    name: Routes.search.name,
+                    pageBuilder: (context, state) => CupertinoPage(
+                      key: state.pageKey,
+                      child: const SearchScreen(),
+                    ),
                   ),
                 ],
               ),

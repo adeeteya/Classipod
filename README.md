@@ -55,11 +55,11 @@ If you like what you see, please ⭐ the repo.
 - 🌍 Multi Language Support
 - 👆 Touch Screen Support
 - 📺 Split Screen View (6th and 7th Gen iPod Classics)
+- 🔍 Ability to search songs
 
 ### 🔜 Upcoming Features
 - ⬇️ Caching Metadata of the songs for faster boot up times
 - 📃 Ability to Create and Store Custom User Created Playlists
-- 🔍 Ability to search songs
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
 - 📖 App Usage Tutorial

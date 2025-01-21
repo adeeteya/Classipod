@@ -61,6 +61,30 @@ platform :android do
     end
   end
 
+  # Release to Play Store using Fastlane Supply (https://docs.fastlane.tools/actions/supply/)
+  desc "Upload Artifacts to Github"
+  lane :upload_artifacts do |options|
+    begin
+      build(
+        type: 'apk',
+        no_codesign: options[:no_codesign],
+        config_only: options[:config_only],
+        build_number: options[:build_number],
+        version_number: options[:version_number]
+      )
+
+      set_github_release(
+        repository_name: "adeeteya/Classipod",
+        api_token: ENV["GH_TOKEN"],
+        name: options[:version_number],
+        tag_name: options[:version_number],
+        is_generate_release_notes: true,
+        commitish: "master",
+        upload_assets: ["#{root_path}/build/app/outputs/flutter-apk/app-production-release.apk"]
+      )
+    end
+  end
+
   # Release to Play Store using Firebase App Distribution (https://docs.fastlane.tools/actions/firebase_app_distribution/)
   desc "Release to Play Store using Firebase App Distribution"
   lane :release_play_store_using_firebase do |options|

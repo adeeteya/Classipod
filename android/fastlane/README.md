@@ -90,6 +90,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Release to Play Store
 
+### android upload_artifacts
+
+```sh
+[bundle exec] fastlane android upload_artifacts
+```
+
+Upload Artifacts to Github
+
 ### android release_play_store_using_firebase
 
 ```sh

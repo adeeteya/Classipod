@@ -43,7 +43,7 @@ lane :build_flutter_app do |options|
   config_only = options[:config_only] || false
   commit = last_git_commit
 
-  command = "flutter build #{type}  --release --no-pub --suppress-analytics"
+  command = "flutter build #{type} --release --no-pub --suppress-analytics"
   command += " --build-number=#{build_number}" if build_number.to_s != ""
   command += " --build-name=#{version_number}" if version_number.to_s != ""
   command += " --flavor=#{flavor}" if flavor.to_s != ""

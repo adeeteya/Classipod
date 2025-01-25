@@ -47,7 +47,7 @@ jobs:
   build_android:
     name: Build Android
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -92,3 +92,12 @@ jobs:
           options: '{ "version_number": "${{ github.ref_name }}" }'
         env:
           APP_PACKAGE_NAME: ${{ secrets.APP_PACKAGE_NAME }}
+
+      - name: Upload artifacts
+        uses: maierj/fastlane-action@v3.1.0
+        with:
+          lane: 'upload_artifacts'
+          subdirectory: android
+          options: '{ "version_number": "${{ github.ref_name }}" }'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

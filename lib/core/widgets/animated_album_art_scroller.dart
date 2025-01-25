@@ -2,6 +2,8 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:classipod/core/constants/assets.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -21,9 +23,19 @@ class _AnimatedAlbumArtScrollerState
   late final AnimationController _animationController;
   late Animation<Alignment> _alignmentAnimation;
   double alignment = 0;
+  bool _isEmptyState = false;
 
   void _getRandomAlbumArt() {
-    final albumDetails = ref.read(albumDetailsProvider);
+    final albumDetails = ref
+        .read(albumDetailsProvider)
+        .where((album) => album.thumbnailPath != null)
+        .toList();
+    if (albumDetails.length < 2) {
+      setState(() {
+        _isEmptyState = true;
+      });
+      return;
+    }
     final randomAlbum = albumDetails[Random().nextInt(albumDetails.length)];
     if (randomAlbum.thumbnailPath != null) {
       setState(() {
@@ -69,9 +81,11 @@ class _AnimatedAlbumArtScrollerState
       vsync: this,
       duration: const Duration(seconds: 10),
     );
-    _setRandomAnimationDirection();
-    _animationController.forward();
-    _animationController.addListener(_repeatAnimation);
+    if (!_isEmptyState) {
+      _setRandomAnimationDirection();
+      _animationController.forward();
+      _animationController.addListener(_repeatAnimation);
+    }
   }
 
   @override
@@ -83,13 +97,21 @@ class _AnimatedAlbumArtScrollerState
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedAlbumArt(
-      animation: _alignmentAnimation,
-      child: AnimatedSwitcher(
-        duration: const Duration(seconds: 1),
-        child: Image(
-          key: ValueKey(_albumArtImage),
-          image: _albumArtImage,
+    if (_isEmptyState) {
+      return EmptyStateWidget(
+        emptyDescription: context.localization.noMusicFilesFound,
+      );
+    }
+
+    return RepaintBoundary(
+      child: AnimatedAlbumArt(
+        animation: _alignmentAnimation,
+        child: AnimatedSwitcher(
+          duration: const Duration(seconds: 1),
+          child: Image(
+            key: ValueKey(_albumArtImage),
+            image: _albumArtImage,
+          ),
         ),
       ),
     );

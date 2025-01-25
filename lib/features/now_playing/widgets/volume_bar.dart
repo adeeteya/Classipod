@@ -8,25 +8,27 @@ class VolumeBar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Row(
-      children: [
-        const Icon(
-          CupertinoIcons.volume_down,
-          size: 18,
-        ),
-        StreamBuilder<double>(
-          stream: ref.read(audioPlayerProvider).volumeStream,
-          builder: (context, snapshot) {
-            return BoxProgressBar(
-              value: snapshot.data ?? 0.0,
-            );
-          },
-        ),
-        const Icon(
-          CupertinoIcons.volume_up,
-          size: 18,
-        ),
-      ],
+    return RepaintBoundary(
+      child: Row(
+        children: [
+          const Icon(
+            CupertinoIcons.volume_down,
+            size: 18,
+          ),
+          StreamBuilder<double>(
+            stream: ref.read(audioPlayerProvider).volumeStream,
+            builder: (context, snapshot) {
+              return BoxProgressBar(
+                value: snapshot.data ?? 0.0,
+              );
+            },
+          ),
+          const Icon(
+            CupertinoIcons.volume_up,
+            size: 18,
+          ),
+        ],
+      ),
     );
   }
 }

@@ -60,7 +60,7 @@ class StatusBar extends StatelessWidget {
                 },
               ),
               const SizedBox(width: 2),
-              const BatteryIndicator(),
+              const RepaintBoundary(child: BatteryIndicator()),
             ],
           ),
         ),

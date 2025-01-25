@@ -36,6 +36,6 @@ class AppPalette {
   static const Color inActiveSliderGradientColor2 = Color(0xFFEFEFEF);
   static const Color sliderBorderColor = Color(0xFFE2E2E2);
   static const Color batteryBarColor = Color(0xFF6EA447);
-  static const Color searchBarGradient1 = Color(0xFF2F5287);
-  static const Color searchBarGradient2 = Color(0xFF171A2B);
+  static const Color emptyScreenGradient1 = Color(0xFFCDDBF0);
+  static const Color emptyScreenGradient2 = Color(0xFF738499);
 }

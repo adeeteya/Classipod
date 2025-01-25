@@ -135,6 +135,14 @@
   "@noMusicFilesFound": {
     "description": "The message displayed when no music files are found"
   },
+  "noArtistsFound": "No Artists",
+    "@noArtistsFound": {
+        "description": "The message displayed when no artists are found"
+    },
+  "noAlbumsFound": "No Albums",
+    "@noAlbumsFound": {
+        "description": "The message displayed when no albums are found"
+    },
   "unknownSong": "Unknown Song",
   "@unknownSong": {
     "description": "When the name of a song is unknown"

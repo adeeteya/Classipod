@@ -6,9 +6,6 @@ platform :android do
 
   # Build flutter Android app
   lane :build do |options|
-    verify_env(envs: [
-      "APP_PACKAGE_NAME"
-    ])
 
     # Verify 'firebase_app_distribution_service_account.json' file exists
     unless File.exist?(google_service_account_json_path)

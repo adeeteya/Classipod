@@ -1,5 +1,6 @@
+import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/widgets/no_music_widget.dart';
+import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_page_screen.dart';
 import 'package:classipod/features/music/album/album_details.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
@@ -44,8 +45,17 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return NoMusicWidget(
-        title: Routes.coverFlow.title(context),
+      return CupertinoPageScaffold(
+        child: Column(
+          children: [
+            StatusBar(title: Routes.coverFlow.title(context)),
+            Expanded(
+              child: EmptyStateWidget(
+                emptyDescription: context.localization.noMusicFilesFound,
+              ),
+            ),
+          ],
+        ),
       );
     }
 

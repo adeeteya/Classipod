@@ -5,7 +5,7 @@ import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/core/widgets/no_music_widget.dart';
+import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_page_screen.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
@@ -152,8 +152,17 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return NoMusicWidget(
-        title: Routes.nowPlaying.title(context),
+      return CupertinoPageScaffold(
+        child: Column(
+          children: [
+            StatusBar(title: Routes.nowPlaying.title(context)),
+            Expanded(
+              child: EmptyStateWidget(
+                emptyDescription: context.localization.noMusicFilesFound,
+              ),
+            ),
+          ],
+        ),
       );
     }
 

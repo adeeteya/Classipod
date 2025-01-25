@@ -1,6 +1,7 @@
+import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
-import 'package:classipod/core/widgets/no_music_widget.dart';
+import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/artists/artist_names_provider.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
@@ -38,8 +39,17 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
-      return NoMusicWidget(
-        title: Routes.artists.title(context),
+      return CupertinoPageScaffold(
+        child: Column(
+          children: [
+            StatusBar(title: Routes.artists.title(context)),
+            Expanded(
+              child: EmptyStateWidget(
+                emptyDescription: context.localization.noMusicFilesFound,
+              ),
+            ),
+          ],
+        ),
       );
     }
 

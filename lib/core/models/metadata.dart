@@ -73,28 +73,39 @@ class Metadata {
     AudioMetadata audioMetadata,
     String? thumbnailPath,
     int originalSongIndex,
-  ) =>
-      Metadata(
-        trackName: audioMetadata.title ?? "Unknown Song",
-        trackArtistNames:
-            audioMetadata.artist?.split(", ").toList() ?? ["Unknown Artist"],
-        albumName: audioMetadata.album ?? "Unknown Album",
-        albumArtistName:
-            audioMetadata.artist?.split(", ")[0] ?? "Unknown Artist",
-        trackNumber: audioMetadata.trackNumber,
-        albumLength: audioMetadata.trackTotal,
-        year: audioMetadata.year?.year,
-        genres: audioMetadata.genres,
-        discNumber: audioMetadata.discNumber,
-        mimeType: audioMetadata.pictures.isEmpty
-            ? null
-            : audioMetadata.pictures[0].mimetype,
-        trackDuration: audioMetadata.duration?.inMilliseconds,
-        bitrate: audioMetadata.bitrate,
-        filePath: audioMetadata.file.path,
-        thumbnailPath: thumbnailPath,
-        originalSongIndex: originalSongIndex,
-      );
+  ) {
+    final artist = audioMetadata.artist ?? "Unknown Artist";
+    late final List<String> trackArtistNames;
+    if (artist.contains(',')) {
+      trackArtistNames = artist.split(',').toList();
+    } else if (artist.contains('/')) {
+      trackArtistNames = artist.split('/').toList();
+    } else if (artist.contains(';')) {
+      trackArtistNames = artist.split(';').toList();
+    } else {
+      trackArtistNames = [artist];
+    }
+
+    return Metadata(
+      trackName: audioMetadata.title ?? "Unknown Song",
+      trackArtistNames: trackArtistNames,
+      albumName: audioMetadata.album ?? "Unknown Album",
+      albumArtistName: trackArtistNames[0],
+      trackNumber: audioMetadata.trackNumber,
+      albumLength: audioMetadata.trackTotal,
+      year: audioMetadata.year?.year,
+      genres: audioMetadata.genres,
+      discNumber: audioMetadata.discNumber,
+      mimeType: audioMetadata.pictures.isEmpty
+          ? null
+          : audioMetadata.pictures[0].mimetype,
+      trackDuration: audioMetadata.duration?.inMilliseconds,
+      bitrate: audioMetadata.bitrate,
+      filePath: audioMetadata.file.path,
+      thumbnailPath: thumbnailPath,
+      originalSongIndex: originalSongIndex,
+    );
+  }
 
   factory Metadata.fromJson(dynamic map) => Metadata(
         trackName: map['metadata']['trackName'],
@@ -169,7 +180,7 @@ class Metadata {
   }
 
   String get getMainArtistName {
-    return trackArtistNames?[0].split(", ").first ?? "Unknown Artist";
+    return trackArtistNames?[0] ?? "Unknown Artist";
   }
 
   String get getTrackArtistNames {

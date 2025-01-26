@@ -2,7 +2,6 @@ import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/features/app_startup/controller/app_startup_controller.dart';
 import 'package:classipod/features/settings/model/settings_preferences.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:file_picker/file_picker.dart';
@@ -170,8 +169,8 @@ class SettingsPreferencesControllerNotifier
         await ref
             .read(settingsPreferencesRepositoryProvider)
             .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
+        ref.invalidate(currentSettingsPreferencesProvider);
         ref.read(routerProvider).goNamed(Routes.splash.name);
-        ref.invalidate(appStartupControllerProvider);
       }
     });
   }

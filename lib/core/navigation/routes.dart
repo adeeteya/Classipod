@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/navigation/page_not_found_screen.dart';
 import 'package:classipod/features/about/screen/about_screen.dart';
 import 'package:classipod/features/app_startup/screens/splash_screen.dart';
 import 'package:classipod/features/custom_screen_widgets/cupertino_modal_page.dart';
@@ -79,10 +80,14 @@ enum Routes {
   }
 }
 
+final _rootNavigatorKey = GlobalKey<NavigatorState>();
+
 // GoRouter configuration
 final routerProvider = Provider(
   (ref) => GoRouter(
+    navigatorKey: _rootNavigatorKey,
     initialLocation: Routes.splash.toString(),
+    errorBuilder: (context, state) => const PageNotFoundScreen(),
     routes: [
       ShellRoute(
         pageBuilder: (context, state, child) {

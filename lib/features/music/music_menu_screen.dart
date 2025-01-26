@@ -1,9 +1,7 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/widgets/animated_album_art_scroller.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
-import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -45,7 +43,7 @@ class MusicMenuScreen extends ConsumerStatefulWidget {
 class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
     with CustomScreen {
   @override
-  String get routeName => Routes.music.name;
+  String get routeName => Routes.musicMenu.name;
 
   @override
   List<_MusicListDisplayItems> get displayItems =>
@@ -83,37 +81,26 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
 
   @override
   Widget build(BuildContext context) {
-    final splitScreenEnabled = ref.watch(
-      currentSettingsPreferencesProvider.select((e) => e.splitScreenEnabled),
-    );
     return CupertinoPageScaffold(
-      child: Row(
+      child: Column(
         children: [
-          Expanded(
-            child: Column(
-              children: [
-                StatusBar(
-                  title: Routes.music.title(context),
+          StatusBar(
+            title: Routes.musicMenu.title(context),
+          ),
+          Flexible(
+            child: CupertinoScrollbar(
+              controller: scrollController,
+              child: ListView.builder(
+                controller: scrollController,
+                itemCount: displayItems.length,
+                itemBuilder: (context, index) => DisplayListTile(
+                  text: displayItems[index].title(context),
+                  isSelected: selectedDisplayItem == index,
+                  onTap: () => _navigateToScreen(displayItems[index]),
                 ),
-                Flexible(
-                  child: CupertinoScrollbar(
-                    controller: scrollController,
-                    child: ListView.builder(
-                      controller: scrollController,
-                      itemCount: displayItems.length,
-                      itemBuilder: (context, index) => DisplayListTile(
-                        text: displayItems[index].title(context),
-                        isSelected: selectedDisplayItem == index,
-                        onTap: () => _navigateToScreen(displayItems[index]),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
-          if (splitScreenEnabled)
-            const Expanded(child: AnimatedAlbumArtScroller()),
         ],
       ),
     );

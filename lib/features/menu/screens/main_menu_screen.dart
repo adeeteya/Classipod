@@ -3,6 +3,8 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
+import 'package:classipod/features/menu/controller/split_screen_controller.dart';
+import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -77,8 +79,30 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
     }
   }
 
+  void _changeSplitScreenType() {
+    if (displayItems[selectedDisplayItem] == _MainMenuDisplayItems.settings) {
+      Future.delayed(const Duration(milliseconds: 150), () {
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.settings;
+      });
+    } else if (displayItems[selectedDisplayItem] ==
+        _MainMenuDisplayItems.shuffleSongs) {
+      Future.delayed(const Duration(milliseconds: 150), () {
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.shuffle;
+      });
+    } else {
+      Future.delayed(const Duration(milliseconds: 150), () {
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.albumArt;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    _changeSplitScreenType();
+
     return CupertinoPageScaffold(
       child: Column(
         children: [
@@ -91,11 +115,14 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => DisplayListTile(
-                  text: displayItems[index].title(context),
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () async => _navigateToScreen(displayItems[index]),
-                ),
+                itemBuilder: (context, index) {
+                  return DisplayListTile(
+                    key: ValueKey(displayItems[index]),
+                    text: displayItems[index].title(context),
+                    isSelected: selectedDisplayItem == index,
+                    onTap: () async => _navigateToScreen(displayItems[index]),
+                  );
+                },
               ),
             ),
           ),

@@ -5,8 +5,9 @@ import 'package:classipod/features/app_startup/screens/splash_screen.dart';
 import 'package:classipod/features/custom_screen_widgets/cupertino_modal_page.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_scroll_behavior.dart';
 import 'package:classipod/features/device/presentation/device_frame.dart';
-import 'package:classipod/features/menu/main_menu_screen.dart';
-import 'package:classipod/features/menu/menu_screen.dart';
+import 'package:classipod/features/menu/screens/main_menu_screen.dart';
+import 'package:classipod/features/menu/screens/music_menu_screen.dart';
+import 'package:classipod/features/menu/screens/split_screen_placeholder.dart';
 import 'package:classipod/features/music/album/album_selection_screen.dart';
 import 'package:classipod/features/music/artists/artist_songs_screen.dart';
 import 'package:classipod/features/music/artists/artists_selection_screen.dart';
@@ -14,7 +15,6 @@ import 'package:classipod/features/music/cover_flow/cover_flow_album_selection_s
 import 'package:classipod/features/music/cover_flow/cover_flow_screen.dart';
 import 'package:classipod/features/music/genres/genre_songs_screen.dart';
 import 'package:classipod/features/music/genres/genres_screen.dart';
-import 'package:classipod/features/music/music_menu_screen.dart';
 import 'package:classipod/features/music/search/search_screen.dart';
 import 'package:classipod/features/music/songs/songs_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
@@ -88,7 +88,6 @@ final _menuNavigatorKey = GlobalKey<NavigatorState>();
 final routerProvider = Provider(
   (ref) => GoRouter(
     initialLocation: Routes.splash.toString(),
-    debugLogDiagnostics: true,
     errorBuilder: (context, state) => const PageNotFoundScreen(),
     routes: [
       ShellRoute(
@@ -117,7 +116,7 @@ final routerProvider = Provider(
             navigatorKey: _menuNavigatorKey,
             pageBuilder: (context, state, child) => CustomTransitionPage(
               key: state.pageKey,
-              child: MenuScreen(child: child),
+              child: SplitScreenPlaceholder(child: child),
               transitionsBuilder:
                   (context, animation, secondaryAnimation, child) {
                 return FadeTransition(

@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
+import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -104,6 +105,7 @@ class _AnimatedAlbumArtScrollerState
     }
 
     return RepaintBoundary(
+      key: const ValueKey(SplitScreenType.albumArt),
       child: AnimatedAlbumArt(
         animation: _alignmentAnimation,
         child: AnimatedSwitcher(
@@ -129,16 +131,19 @@ class AnimatedAlbumArt extends AnimatedWidget {
   @override
   Widget build(BuildContext context) {
     final animation = listenable as Animation<Alignment>;
-    return AspectRatio(
-      aspectRatio: 1 / 2,
-      child: FittedBox(
-        fit: BoxFit.cover,
-        clipBehavior: Clip.hardEdge,
-        alignment: animation.value,
-        child: Transform.scale(
-          scale: 1.5,
+    return SizedBox(
+      width: double.infinity,
+      child: AspectRatio(
+        aspectRatio: 1 / 2,
+        child: FittedBox(
+          fit: BoxFit.cover,
+          clipBehavior: Clip.hardEdge,
           alignment: animation.value,
-          child: child,
+          child: Transform.scale(
+            scale: 1.5,
+            alignment: animation.value,
+            child: child,
+          ),
         ),
       ),
     );

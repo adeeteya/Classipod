@@ -82,10 +82,10 @@ packages:
     dependency: transitive
     description:
       name: audio_session
-      sha256: b2a26ba8b7efa1790d6460e82971fde3e398cfbe2295df9dea22f3499d2c12a7
+      sha256: a92eed06a93721bcc8a8b57d0a623e3fb9d2e4e11cef0a08ed448c73886700b7
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.23"
+    version: "0.1.24"
   battery_plus:
     dependency: "direct main"
     description:
@@ -278,6 +278,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.5"
+  disable_battery_optimization:
+    dependency: "direct main"
+    description:
+      name: disable_battery_optimization
+      sha256: "6b2ba802f984af141faf1b6b5fb956d5ef01f9cd555597c35b9cc335a03185ba"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.1"
   fake_async:
     dependency: transitive
     description:
@@ -1075,10 +1083,10 @@ packages:
     dependency: transitive
     description:
       name: win32
-      sha256: "154360849a56b7b67331c21f09a386562d88903f90a1099c5987afc1912e1f29"
+      sha256: daf97c9d80197ed7b619040e86c8ab9a9dad285e7671ee7390f9180cc828a51e
       url: "https://pub.dev"
     source: hosted
-    version: "5.10.0"
+    version: "5.10.1"
   win32_registry:
     dependency: transitive
     description:

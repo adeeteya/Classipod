@@ -1,4 +1,5 @@
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/providers/battery_optimization_provider.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
@@ -51,6 +52,12 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
       ref.invalidate(artistNamesProvider);
       ref.invalidate(songsProvider);
 
+      final isBatteryOptimizationDisabled =
+          await ref.read(batteryOptimizationProvider.future);
+      if (!isBatteryOptimizationDisabled) {
+        throw const BatteryOptimizationEnabledException();
+      }
+
       // Navigate to the menu screen
       ref.read(routerProvider).goNamed(Routes.menu.name);
     });
@@ -63,4 +70,8 @@ class AudioPermissionDeniedException implements Exception {
 
 class AudioPermissionPermanentlyDeniedException implements Exception {
   const AudioPermissionPermanentlyDeniedException();
+}
+
+class BatteryOptimizationEnabledException implements Exception {
+  const BatteryOptimizationEnabledException();
 }

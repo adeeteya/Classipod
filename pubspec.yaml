@@ -14,6 +14,7 @@ dependencies:
   battery_plus: ^6.2.1
   cupertino_icons: ^1.0.8
   device_preview_plus: ^2.2.5
+  disable_battery_optimization: ^1.1.1
   file_picker: ^8.1.7
   flutter:
     sdk: flutter

@@ -17,7 +17,7 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
 
   Future<void> buttonPressVibrate() async {
     if (ref.read(currentSettingsPreferencesProvider).vibrate) {
-      await Vibration.vibrate(duration: 2);
+      await Vibration.vibrate(duration: 3);
     }
   }
 

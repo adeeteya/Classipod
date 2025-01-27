@@ -206,5 +206,13 @@
   "resultsForText": "Results for: ",
   "@resultsForText": {
     "description": "The text 'Results for: ' for the found searches"
+  },
+  "disableBatteryOptimizationTitle": "Disable Battery Optimization",
+  "@disableBatteryOptimizationTitle": {
+    "description": "The title of the disable battery optimization dialog"
+  },
+  "disableBatteryOptimizationContent": "Please disable battery optimization for this app in the device settings to allow background playback of music.",
+  "@disableBatteryOptimizationContent": {
+    "description": "The content of the disable battery optimization dialog"
   }
 }

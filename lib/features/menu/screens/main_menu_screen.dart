@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -12,20 +14,20 @@ import 'package:go_router/go_router.dart';
 
 enum _MainMenuDisplayItems {
   music,
-  nowPlaying,
   settings,
-  shuffleSongs;
+  shuffleSongs,
+  nowPlaying;
 
   String title(BuildContext context) {
     switch (this) {
       case music:
         return context.localization.musicMenuScreenTitle;
-      case nowPlaying:
-        return context.localization.nowPlayingScreenTitle;
       case settings:
         return context.localization.settingsScreenTitle;
       case shuffleSongs:
         return context.localization.shuffleSongsMenuTitle;
+      case nowPlaying:
+        return context.localization.nowPlayingScreenTitle;
     }
   }
 }
@@ -79,29 +81,31 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
     }
   }
 
-  void _changeSplitScreenType() {
-    if (displayItems[selectedDisplayItem] == _MainMenuDisplayItems.settings) {
-      Future.delayed(const Duration(milliseconds: 150), () {
-        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
-            SplitScreenType.settings;
-      });
-    } else if (displayItems[selectedDisplayItem] ==
-        _MainMenuDisplayItems.shuffleSongs) {
-      Future.delayed(const Duration(milliseconds: 150), () {
-        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
-            SplitScreenType.shuffle;
-      });
-    } else {
-      Future.delayed(const Duration(milliseconds: 150), () {
+  Future<void> _changeSplitScreenType() async {
+    await Future.delayed(const Duration(milliseconds: 150));
+    switch (displayItems[selectedDisplayItem]) {
+      case _MainMenuDisplayItems.music:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.albumArt;
-      });
+        break;
+      case _MainMenuDisplayItems.settings:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.settings;
+        break;
+      case _MainMenuDisplayItems.shuffleSongs:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.shuffle;
+        break;
+      case _MainMenuDisplayItems.nowPlaying:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.nowPlaying;
+        break;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    _changeSplitScreenType();
+    unawaited(_changeSplitScreenType());
 
     return CupertinoPageScaffold(
       child: Column(

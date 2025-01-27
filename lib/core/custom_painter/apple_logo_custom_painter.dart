@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 
 class AppleCustomPainter extends CustomPainter {
+  final Color color;
+  AppleCustomPainter({this.color = CupertinoColors.black});
   @override
   void paint(Canvas canvas, Size size) {
     final Path path_0 = Path();
@@ -35,7 +37,7 @@ class AppleCustomPainter extends CustomPainter {
     path_0.moveTo(44.316406, 0);
 
     final Paint paint0Fill = Paint()..style = PaintingStyle.fill;
-    paint0Fill.color = const Color.fromRGBO(0, 0, 0, 1);
+    paint0Fill.color = color;
     canvas.drawPath(path_0, paint0Fill);
 
     final Path path_1 = Path();
@@ -153,7 +155,7 @@ class AppleCustomPainter extends CustomPainter {
     path_1.moveTo(58.089844, 46.976562);
 
     final Paint paint1Fill = Paint()..style = PaintingStyle.fill;
-    paint1Fill.color = const Color.fromRGBO(0, 0, 0, 1.0);
+    paint1Fill.color = color;
     canvas.drawPath(path_1, paint1Fill);
   }
 

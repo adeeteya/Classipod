@@ -1,5 +1,4 @@
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:classipod/core/custom_painter/music_note_custom_painter.dart';
 import 'package:flutter/cupertino.dart';
 
 class EmptyStateWidget extends StatelessWidget {
@@ -24,11 +23,10 @@ class EmptyStateWidget extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomPaint(
-              size: const Size(125, 125),
-              painter: MusicNoteCustomPainter(
-                color: CupertinoColors.white,
-              ),
+            const Icon(
+              CupertinoIcons.music_note_2,
+              size: 65,
+              color: CupertinoColors.white,
             ),
             const SizedBox(height: 20),
             Text(

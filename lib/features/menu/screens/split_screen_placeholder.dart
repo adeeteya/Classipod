@@ -1,6 +1,7 @@
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/menu/widgets/animated_album_art_scroller.dart';
+import 'package:classipod/features/menu/widgets/now_playing_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/settings_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/shuffle_preview_widget.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -24,6 +25,8 @@ class SplitScreenPlaceholder extends ConsumerWidget {
         splitScreenWidget = const ShufflePreviewWidget();
       } else if (splitScreenType == SplitScreenType.settings) {
         splitScreenWidget = const SettingsPreviewWidget();
+      } else if (splitScreenType == SplitScreenType.nowPlaying) {
+        splitScreenWidget = const NowPlayingPreviewWidget();
       } else {
         splitScreenWidget = const AnimatedAlbumArtScroller();
       }
@@ -38,21 +41,22 @@ class SplitScreenPlaceholder extends ConsumerWidget {
                   child: AnimatedSwitcher(
                     duration: const Duration(milliseconds: 500),
                     transitionBuilder: (widget, animation) {
-                      final slideAnimation = Tween<Offset>(
-                        begin: Offset(
-                          splitScreenType == SplitScreenType.albumArt ? 1 : -1,
-                          0,
-                        ),
-                        end: Offset.zero,
-                      ).animate(animation);
-                      return ClipRect(
-                        child: FadeTransition(
+                      if (splitScreenType == SplitScreenType.albumArt) {
+                        final slideAnimation = Tween<Offset>(
+                          begin: const Offset(1, 0),
+                          end: Offset.zero,
+                        ).animate(animation);
+                        return FadeTransition(
                           opacity: animation,
                           child: SlideTransition(
                             position: slideAnimation,
                             child: widget,
                           ),
-                        ),
+                        );
+                      }
+                      return FadeTransition(
+                        opacity: animation,
+                        child: widget,
                       );
                     },
                     child: splitScreenWidget,

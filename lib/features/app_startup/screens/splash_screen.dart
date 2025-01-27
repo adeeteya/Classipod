@@ -1,4 +1,5 @@
 import 'package:classipod/core/alerts/dialogs.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/custom_painter/apple_logo_custom_painter.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/features/app_startup/controller/splash_controller.dart';
@@ -34,10 +35,27 @@ class SplashScreen extends ConsumerWidget {
     });
 
     return CupertinoPageScaffold(
-      child: Center(
-        child: CustomPaint(
-          size: const Size(64, 64),
-          foregroundPainter: AppleCustomPainter(),
+      backgroundColor: AppPalette.emptyScreenGradient2,
+      child: SizedBox(
+        width: double.infinity,
+        child: DecoratedBox(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                AppPalette.emptyScreenGradient1,
+                AppPalette.emptyScreenGradient2,
+              ],
+            ),
+          ),
+          child: Center(
+            child: CustomPaint(
+              size: const Size(64, 64),
+              foregroundPainter:
+                  AppleCustomPainter(color: CupertinoColors.white),
+            ),
+          ),
         ),
       ),
     );

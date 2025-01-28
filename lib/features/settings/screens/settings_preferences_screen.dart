@@ -14,7 +14,7 @@ import 'package:url_launcher/url_launcher.dart';
 enum _SettingsDisplayItems {
   about,
   language,
-  darkMode,
+  deviceColor,
   isTouchScreenEnabled,
   repeat,
   vibrate,
@@ -32,8 +32,8 @@ enum _SettingsDisplayItems {
         return context.localization.languageScreenTitle;
       case isTouchScreenEnabled:
         return context.localization.touchScreenSettingTitle;
-      case darkMode:
-        return context.localization.darkModeSettingTitle;
+      case deviceColor:
+        return context.localization.deviceColorSettingTitle;
       case repeat:
         return context.localization.repeatModeSettingTitle;
       case vibrate:
@@ -80,15 +80,15 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.language:
         context.goNamed(Routes.language.name);
         break;
+      case _SettingsDisplayItems.deviceColor:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleDeviceColor();
+        break;
       case _SettingsDisplayItems.isTouchScreenEnabled:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleTouchScreen();
-        break;
-      case _SettingsDisplayItems.darkMode:
-        await ref
-            .read(settingsPreferencesControllerProvider.notifier)
-            .toggleTheme();
         break;
       case _SettingsDisplayItems.repeat:
         await ref
@@ -129,13 +129,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     }
   }
 
-  bool? isOn(
+  bool? _isOn(
     SettingsPreferences settingsState,
     _SettingsDisplayItems settingsItem,
   ) {
     switch (settingsItem) {
-      case _SettingsDisplayItems.darkMode:
-        return settingsState.isDarkMode;
       case _SettingsDisplayItems.isTouchScreenEnabled:
         return settingsState.isTouchScreenEnabled;
       case _SettingsDisplayItems.repeat:
@@ -149,6 +147,29 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.immersiveMode:
         return settingsState.immersiveMode;
       default:
+        return null;
+    }
+  }
+
+  String? _getValue(
+    SettingsPreferences settingsState,
+    _SettingsDisplayItems settingsItem,
+  ) {
+    switch (settingsItem) {
+      case _SettingsDisplayItems.deviceColor:
+        return ref
+            .read(currentSettingsPreferencesProvider)
+            .deviceColor
+            .title(context);
+      default:
+        final bool? isOn = _isOn(settingsState, settingsItem);
+        if (isOn != null) {
+          if (isOn) {
+            return context.localization.tileValueOn;
+          } else {
+            return context.localization.tileValueOff;
+          }
+        }
         return null;
     }
   }
@@ -170,8 +191,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
                 itemCount: displayItems.length,
                 itemBuilder: (context, index) => SettingsListTile(
                   text: displayItems[index].title(context),
-                  isOn:
-                      isOn(settingsState, _SettingsDisplayItems.values[index]),
+                  value: _getValue(settingsState, displayItems[index]),
                   isSelected: selectedDisplayItem == index,
                   onTap: () async => _settingAction(displayItems[index]),
                 ),

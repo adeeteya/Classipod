@@ -1,11 +1,12 @@
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
+import 'package:classipod/features/settings/model/device_color.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum SharedPreferencesKeys {
   languageLocaleCode,
-  darkMode,
+  deviceColor,
   isTouchScreenEnabled,
   repeat,
   vibrate,
@@ -33,10 +34,10 @@ class SettingsPreferencesRepository {
         Constants.defaultLanguageLocaleCode;
   }
 
-  bool getThemeMode() {
+  String getDeviceColor() {
     return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.darkMode.name) ??
-        false;
+            .getString(SharedPreferencesKeys.deviceColor.name) ??
+        DeviceColor.silver.name;
   }
 
   bool getTouchScreenEnabled() {
@@ -90,10 +91,10 @@ class SettingsPreferencesRepository {
     );
   }
 
-  Future<void> setThemeMode({required bool isDarkMode}) async {
-    return _sharedPreferencesWithCache.setBool(
-      SharedPreferencesKeys.darkMode.name,
-      isDarkMode,
+  Future<void> setDeviceColor({required String deviceColorName}) async {
+    return _sharedPreferencesWithCache.setString(
+      SharedPreferencesKeys.deviceColor.name,
+      deviceColorName,
     );
   }
 

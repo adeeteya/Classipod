@@ -1,8 +1,9 @@
 name: Publish iOS and Android release
 
 on:
-  release:
-    types: [published]
+  create:
+    tags:
+      - '*'
 
 env:
   FLUTTER_CHANNEL: "stable"

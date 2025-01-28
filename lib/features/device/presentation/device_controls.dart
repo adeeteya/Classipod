@@ -7,6 +7,8 @@ import 'package:classipod/core/custom_painter/previous_button_custom_painter.dar
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/model/device_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -99,6 +101,9 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
+    final deviceColor = ref
+        .watch(currentSettingsPreferencesProvider.select((e) => e.deviceColor));
+
     return GestureDetector(
       onPanUpdate: (dragUpdateDetails) async => onClickWheelScroll(
         dragUpdateDetails,
@@ -111,7 +116,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: context.isDarkMode
+          color: deviceColor == DeviceColor.black
               ? AppPalette.darkDeviceControlBackgroundColor
               : CupertinoColors.white,
         ),
@@ -126,7 +131,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     .read(deviceButtonsServiceProvider.notifier)
                     .setDeviceAction(DeviceAction.menu),
                 child: ColoredBox(
-                  color: context.isDarkMode
+                  color: deviceColor == DeviceColor.black
                       ? AppPalette.darkDeviceControlBackgroundColor
                       : CupertinoColors.white,
                   child: Align(
@@ -134,7 +139,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     child: Text(
                       context.localization.menuButtonText,
                       style: TextStyle(
-                        color: context.isDarkMode
+                        color: deviceColor == DeviceColor.black
                             ? CupertinoColors.white
                             : AppPalette.lightDeviceButtonColor,
                         fontSize: 16,
@@ -162,7 +167,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     child: SizedBox(
                       height: size.width * 0.2175,
                       child: ColoredBox(
-                        color: context.isDarkMode
+                        color: deviceColor == DeviceColor.black
                             ? AppPalette.darkDeviceControlBackgroundColor
                             : CupertinoColors.white,
                         child: Align(
@@ -170,7 +175,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                           child: CustomPaint(
                             size: const Size(20, 10),
                             painter: PreviousButtonCustomPainter(
-                              color: context.isDarkMode
+                              color: deviceColor == DeviceColor.black
                                   ? null
                                   : AppPalette.lightDeviceButtonColor,
                             ),
@@ -191,7 +196,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         border: Border.all(
-                          color: context.isDarkMode
+                          color: deviceColor == DeviceColor.black
                               ? CupertinoColors.black
                               : AppPalette.lightDeviceControlBorderColor,
                         ),
@@ -202,7 +207,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                         gradient: LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
-                          colors: context.isDarkMode
+                          colors: deviceColor == DeviceColor.black
                               ? [
                                   AppPalette
                                       .darkDeviceControlInnerButtonGradientColor1,
@@ -234,7 +239,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     child: SizedBox(
                       height: size.width * Constants.deviceButtonSizeRatio,
                       child: ColoredBox(
-                        color: context.isDarkMode
+                        color: deviceColor == DeviceColor.black
                             ? AppPalette.darkDeviceControlBackgroundColor
                             : CupertinoColors.white,
                         child: Align(
@@ -242,7 +247,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                           child: CustomPaint(
                             size: const Size(20, 10),
                             painter: NextButtonCustomPainter(
-                              color: context.isDarkMode
+                              color: deviceColor == DeviceColor.black
                                   ? null
                                   : AppPalette.lightDeviceButtonColor,
                             ),
@@ -260,7 +265,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     .read(deviceButtonsServiceProvider.notifier)
                     .setDeviceAction(DeviceAction.playPause),
                 child: ColoredBox(
-                  color: context.isDarkMode
+                  color: deviceColor == DeviceColor.black
                       ? AppPalette.darkDeviceControlBackgroundColor
                       : CupertinoColors.white,
                   child: Align(
@@ -268,7 +273,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     child: CustomPaint(
                       size: const Size(26, 12),
                       painter: PlayPauseButtonCustomPainter(
-                        color: context.isDarkMode
+                        color: deviceColor == DeviceColor.black
                             ? null
                             : AppPalette.lightDeviceButtonColor,
                       ),

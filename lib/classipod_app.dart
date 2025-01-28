@@ -11,12 +11,10 @@ class ClassipodApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isDark = ref.watch(
-      currentSettingsPreferencesProvider.select((value) => value.isDarkMode),
-    );
     final languageLocaleCode = ref.watch(
-      currentSettingsPreferencesProvider
-          .select((value) => value.languageLocaleCode),
+      currentSettingsPreferencesProvider.select(
+        (value) => value.languageLocaleCode,
+      ),
     );
     final router = ref.watch(routerProvider);
     return CupertinoApp.router(
@@ -26,10 +24,10 @@ class ClassipodApp extends ConsumerWidget {
       debugShowCheckedModeBanner: false,
       routerConfig: router,
       locale: Locale(languageLocaleCode),
-      theme: CupertinoThemeData(
-        brightness: isDark ? Brightness.dark : Brightness.light,
+      theme: const CupertinoThemeData(
+        brightness: Brightness.light,
         scaffoldBackgroundColor: CupertinoColors.white,
-        textTheme: const CupertinoTextThemeData(
+        textTheme: CupertinoTextThemeData(
           textStyle: TextStyle(
             color: CupertinoColors.black,
             fontFamily: Assets.myriadFont,

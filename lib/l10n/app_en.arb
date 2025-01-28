@@ -79,9 +79,9 @@
   "@genreSongsScreenTitle": {
     "description": "The title of the genre songs screen"
   },
-  "darkModeSettingTitle": "Dark Mode",
-  "@darkModeSettingTitle": {
-    "description": "The title of the dark mode setting"
+  "deviceColorSettingTitle": "Device Color",
+  "@deviceColorSettingTitle": {
+    "description": "The title of the device color setting"
   },
   "touchScreenSettingTitle": "Touch Screen Enabled",
   "@touchScreenSettingTitle": {
@@ -218,5 +218,13 @@
   "languageScreenTitle": "Language",
   "@languageScreenTitle": {
     "description": "The title of the language screen"
-  }
+  },
+  "silverDeviceColor": "Silver",
+    "@silverDeviceColor": {
+        "description": "The name of the silver device color"
+    },
+  "blackDeviceColor": "Black",
+    "@blackDeviceColor": {
+        "description": "The name of the black device color"
+    }
 }

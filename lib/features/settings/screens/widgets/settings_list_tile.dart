@@ -1,17 +1,16 @@
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class SettingsListTile extends StatelessWidget {
   final String text;
-  final bool? isOn;
+  final String? value;
   final bool isSelected;
   final VoidCallback onTap;
   const SettingsListTile({
     super.key,
     required this.text,
+    this.value,
     required this.isSelected,
-    this.isOn,
     required this.onTap,
   });
 
@@ -51,11 +50,9 @@ class SettingsListTile extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
-                if (isOn != null)
+                if (value != null)
                   Text(
-                    (isOn!)
-                        ? context.localization.tileValueOn
-                        : context.localization.tileValueOff,
+                    value!,
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -64,7 +61,7 @@ class SettingsListTile extends StatelessWidget {
                           : AppPalette.hintTextColor,
                     ),
                   ),
-                if (isOn == null && isSelected)
+                if (value == null && isSelected)
                   const Icon(
                     CupertinoIcons.right_chevron,
                     color: CupertinoColors.white,

@@ -2,6 +2,7 @@ import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/features/settings/model/device_color.dart';
 import 'package:classipod/features/settings/model/settings_preferences.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:file_picker/file_picker.dart';
@@ -21,7 +22,8 @@ final currentSettingsPreferencesProvider = Provider<SettingsPreferences>(
         ref.read(settingsPreferencesRepositoryProvider);
     return SettingsPreferences(
       languageLocaleCode: settingsPreferencesRepository.getLanguageLocaleCode(),
-      isDarkMode: settingsPreferencesRepository.getThemeMode(),
+      deviceColor: DeviceColor.values
+          .byName(settingsPreferencesRepository.getDeviceColor()),
       isTouchScreenEnabled:
           settingsPreferencesRepository.getTouchScreenEnabled(),
       repeat: settingsPreferencesRepository.getRepeat(),
@@ -64,14 +66,23 @@ class SettingsPreferencesControllerNotifier
     });
   }
 
-  Future<void> toggleTheme() async {
+  Future<void> toggleDeviceColor() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      final bool isDarkMode =
-          ref.read(currentSettingsPreferencesProvider).isDarkMode;
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setThemeMode(isDarkMode: !isDarkMode);
+      final DeviceColor deviceColor =
+          ref.read(currentSettingsPreferencesProvider).deviceColor;
+      switch (deviceColor) {
+        case DeviceColor.silver:
+          await ref
+              .read(settingsPreferencesRepositoryProvider)
+              .setDeviceColor(deviceColorName: DeviceColor.black.name);
+          break;
+        case DeviceColor.black:
+          await ref
+              .read(settingsPreferencesRepositoryProvider)
+              .setDeviceColor(deviceColorName: DeviceColor.silver.name);
+          break;
+      }
       ref.invalidate(currentSettingsPreferencesProvider);
     });
   }

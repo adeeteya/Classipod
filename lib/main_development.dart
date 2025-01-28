@@ -56,9 +56,6 @@ class DevelopmentClassipodApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isDark = ref.watch(
-      currentSettingsPreferencesProvider.select((value) => value.isDarkMode),
-    );
     final languageLocaleCode = ref.watch(
       currentSettingsPreferencesProvider
           .select((value) => value.languageLocaleCode),
@@ -83,10 +80,9 @@ class DevelopmentClassipodApp extends ConsumerWidget {
       checkerboardRasterCacheImages:
           debuggerTools.checkerboardRasterCacheImages,
       routerConfig: router,
-      theme: CupertinoThemeData(
-        brightness: isDark ? Brightness.dark : Brightness.light,
+      theme: const CupertinoThemeData(
         scaffoldBackgroundColor: CupertinoColors.white,
-        textTheme: const CupertinoTextThemeData(
+        textTheme: CupertinoTextThemeData(
           textStyle: TextStyle(
             color: CupertinoColors.black,
             fontFamily: Assets.myriadFont,

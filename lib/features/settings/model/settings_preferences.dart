@@ -1,6 +1,8 @@
+import 'package:classipod/features/settings/model/device_color.dart';
+
 class SettingsPreferences {
   final String languageLocaleCode;
-  final bool isDarkMode;
+  final DeviceColor deviceColor;
   final bool isTouchScreenEnabled;
   final bool repeat;
   final bool vibrate;
@@ -11,7 +13,7 @@ class SettingsPreferences {
 
   SettingsPreferences({
     required this.languageLocaleCode,
-    required this.isDarkMode,
+    required this.deviceColor,
     required this.isTouchScreenEnabled,
     required this.repeat,
     required this.vibrate,
@@ -23,7 +25,7 @@ class SettingsPreferences {
 
   SettingsPreferences copyWith({
     String? languageLocaleCode,
-    bool? isDarkMode,
+    DeviceColor? deviceColor,
     bool? isTouchScreenEnabled,
     bool? repeat,
     bool? vibrate,
@@ -34,7 +36,7 @@ class SettingsPreferences {
   }) {
     return SettingsPreferences(
       languageLocaleCode: languageLocaleCode ?? this.languageLocaleCode,
-      isDarkMode: isDarkMode ?? this.isDarkMode,
+      deviceColor: deviceColor ?? this.deviceColor,
       isTouchScreenEnabled: isTouchScreenEnabled ?? this.isTouchScreenEnabled,
       repeat: repeat ?? this.repeat,
       vibrate: vibrate ?? this.vibrate,

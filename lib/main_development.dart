@@ -59,6 +59,10 @@ class DevelopmentClassipodApp extends ConsumerWidget {
     final isDark = ref.watch(
       currentSettingsPreferencesProvider.select((value) => value.isDarkMode),
     );
+    final languageLocaleCode = ref.watch(
+      currentSettingsPreferencesProvider
+          .select((value) => value.languageLocaleCode),
+    );
     final router = ref.watch(routerProvider);
     final debuggerTools = ref.watch(debuggerToolsProvider);
     debugRepaintRainbowEnabled = debuggerTools.debugRepaintRainbowEnabled;
@@ -68,7 +72,7 @@ class DevelopmentClassipodApp extends ConsumerWidget {
     debugPaintLayerBordersEnabled = debuggerTools.debugPaintLayerBordersEnabled;
 
     return CupertinoApp.router(
-      locale: DevicePreview.locale(context),
+      locale: Locale(languageLocaleCode),
       builder: DevicePreview.appBuilder,
       onGenerateTitle: (context) => context.localization.appTitle,
       localizationsDelegates: AppLocalizations.localizationsDelegates,

@@ -1,6 +1,7 @@
 class Constants {
   Constants._();
 
+  static const String defaultLanguageLocaleCode = "en";
   static const String defaultMusicFolderPath = "/storage/emulated/0/Music";
   static const String defaultNotificationAlbumArtImageUrl =
       "'https://files.radio.co/humorous-skink/staging/default-artwork.png'";

@@ -13,6 +13,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 enum _SettingsDisplayItems {
   about,
+  language,
   darkMode,
   isTouchScreenEnabled,
   repeat,
@@ -27,6 +28,8 @@ enum _SettingsDisplayItems {
     switch (this) {
       case about:
         return context.localization.aboutScreenTitle;
+      case language:
+        return context.localization.languageScreenTitle;
       case isTouchScreenEnabled:
         return context.localization.touchScreenSettingTitle;
       case darkMode:
@@ -73,6 +76,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     switch (settingItem) {
       case _SettingsDisplayItems.about:
         context.goNamed(Routes.about.name);
+        break;
+      case _SettingsDisplayItems.language:
+        context.goNamed(Routes.language.name);
         break;
       case _SettingsDisplayItems.isTouchScreenEnabled:
         await ref

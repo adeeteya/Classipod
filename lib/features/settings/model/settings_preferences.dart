@@ -1,4 +1,5 @@
 class SettingsPreferences {
+  final String languageLocaleCode;
   final bool isDarkMode;
   final bool isTouchScreenEnabled;
   final bool repeat;
@@ -9,6 +10,7 @@ class SettingsPreferences {
   final String musicFolderPath;
 
   SettingsPreferences({
+    required this.languageLocaleCode,
     required this.isDarkMode,
     required this.isTouchScreenEnabled,
     required this.repeat,
@@ -20,6 +22,7 @@ class SettingsPreferences {
   });
 
   SettingsPreferences copyWith({
+    String? languageLocaleCode,
     bool? isDarkMode,
     bool? isTouchScreenEnabled,
     bool? repeat,
@@ -30,6 +33,7 @@ class SettingsPreferences {
     String? musicFolderPath,
   }) {
     return SettingsPreferences(
+      languageLocaleCode: languageLocaleCode ?? this.languageLocaleCode,
       isDarkMode: isDarkMode ?? this.isDarkMode,
       isTouchScreenEnabled: isTouchScreenEnabled ?? this.isTouchScreenEnabled,
       repeat: repeat ?? this.repeat,

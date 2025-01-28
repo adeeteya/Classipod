@@ -58,7 +58,6 @@ platform :android do
     end
   end
 
-  # Release to Play Store using Fastlane Supply (https://docs.fastlane.tools/actions/supply/)
   desc "Upload Artifacts to Github"
   lane :upload_artifacts do |options|
     begin

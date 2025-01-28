@@ -214,5 +214,9 @@
   "disableBatteryOptimizationContent": "Please disable battery optimization for this app in the device settings to allow background playback of music.",
   "@disableBatteryOptimizationContent": {
     "description": "The content of the disable battery optimization dialog"
+  },
+  "languageScreenTitle": "Language",
+  "@languageScreenTitle": {
+    "description": "The title of the language screen"
   }
 }

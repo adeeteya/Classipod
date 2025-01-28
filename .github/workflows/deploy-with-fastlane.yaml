@@ -85,7 +85,8 @@ jobs:
         env:
           ANDROID_KEY_STORE_PASSWORD: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
 
-      - uses: maierj/fastlane-action@v3.1.0
+      - name: Release To Play Store
+        uses: maierj/fastlane-action@v3.1.0
         with:
           lane: 'release_play_store'
           subdirectory: android

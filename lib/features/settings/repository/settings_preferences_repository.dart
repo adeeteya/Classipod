@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum SharedPreferencesKeys {
+  languageLocaleCode,
   darkMode,
   isTouchScreenEnabled,
   repeat,
@@ -25,6 +26,12 @@ class SettingsPreferencesRepository {
   final SharedPreferencesWithCache _sharedPreferencesWithCache;
 
   SettingsPreferencesRepository(this._sharedPreferencesWithCache);
+
+  String getLanguageLocaleCode() {
+    return _sharedPreferencesWithCache
+            .getString(SharedPreferencesKeys.languageLocaleCode.name) ??
+        Constants.defaultLanguageLocaleCode;
+  }
 
   bool getThemeMode() {
     return _sharedPreferencesWithCache
@@ -72,6 +79,15 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache
             .getString(SharedPreferencesKeys.musicFolderPath.name) ??
         Constants.defaultMusicFolderPath;
+  }
+
+  Future<void> setLanguageLocaleCode({
+    required String languageLocaleCode,
+  }) async {
+    return _sharedPreferencesWithCache.setString(
+      SharedPreferencesKeys.languageLocaleCode.name,
+      languageLocaleCode,
+    );
   }
 
   Future<void> setThemeMode({required bool isDarkMode}) async {

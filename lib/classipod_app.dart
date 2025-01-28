@@ -14,6 +14,10 @@ class ClassipodApp extends ConsumerWidget {
     final isDark = ref.watch(
       currentSettingsPreferencesProvider.select((value) => value.isDarkMode),
     );
+    final languageLocaleCode = ref.watch(
+      currentSettingsPreferencesProvider
+          .select((value) => value.languageLocaleCode),
+    );
     final router = ref.watch(routerProvider);
     return CupertinoApp.router(
       onGenerateTitle: (context) => context.localization.appTitle,
@@ -21,6 +25,7 @@ class ClassipodApp extends ConsumerWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
       routerConfig: router,
+      locale: Locale(languageLocaleCode),
       theme: CupertinoThemeData(
         brightness: isDark ? Brightness.dark : Brightness.light,
         scaffoldBackgroundColor: CupertinoColors.white,

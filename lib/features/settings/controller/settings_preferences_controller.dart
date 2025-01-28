@@ -20,6 +20,7 @@ final currentSettingsPreferencesProvider = Provider<SettingsPreferences>(
     final settingsPreferencesRepository =
         ref.read(settingsPreferencesRepositoryProvider);
     return SettingsPreferences(
+      languageLocaleCode: settingsPreferencesRepository.getLanguageLocaleCode(),
       isDarkMode: settingsPreferencesRepository.getThemeMode(),
       isTouchScreenEnabled:
           settingsPreferencesRepository.getTouchScreenEnabled(),
@@ -50,6 +51,16 @@ class SettingsPreferencesControllerNotifier
       } else {
         await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
       }
+    });
+  }
+
+  Future<void> setLanguage(Locale locale) async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setLanguageLocaleCode(languageLocaleCode: locale.languageCode);
+      ref.invalidate(currentSettingsPreferencesProvider);
     });
   }
 

@@ -73,7 +73,6 @@ platform :android do
         repository_name: "adeeteya/Classipod",
         api_token: ENV["GH_TOKEN"],
         name: options[:version_number],
-        description: change_log_since_last_tag || "ClassiPod"
         tag_name: options[:version_number],
         is_generate_release_notes: true,
         commitish: "master",

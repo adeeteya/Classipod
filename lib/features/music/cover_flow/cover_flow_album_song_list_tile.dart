@@ -30,8 +30,8 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      AppPalette.primaryBlueGradientColor1,
-                      AppPalette.primaryBlueGradientColor2,
+                      AppPalette.selectedTileGradientColor1,
+                      AppPalette.selectedTileGradientColor2,
                     ],
                   )
                 : null,

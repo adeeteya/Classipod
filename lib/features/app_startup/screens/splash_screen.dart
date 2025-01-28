@@ -52,7 +52,7 @@ class SplashScreen extends ConsumerWidget {
     });
 
     return CupertinoPageScaffold(
-      backgroundColor: AppPalette.emptyScreenGradient2,
+      backgroundColor: AppPalette.darkScreenBackgroundGradient2,
       child: SizedBox(
         width: double.infinity,
         child: DecoratedBox(
@@ -61,8 +61,8 @@ class SplashScreen extends ConsumerWidget {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                AppPalette.emptyScreenGradient1,
-                AppPalette.emptyScreenGradient2,
+                AppPalette.darkScreenBackgroundGradient1,
+                AppPalette.darkScreenBackgroundGradient2,
               ],
             ),
           ),

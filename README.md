@@ -32,7 +32,7 @@ If you like what you see, please ⭐ the repo.
 
 - 🗃️ Ability to play multiple audio formats:- .mp3, .wav, .ogg, .flac, .m4a and .aac
 - 🔎 Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root folder of the device)
-- 🎨 Dark and Light Colored Ipod Classic Theme
+- 🎨 Multiple Ipod Classic Device Colors (Silver and Black)
 - 🖼️ Displays the Music Metadata (Album Art, Artist Names)
 - ⏩ Ability to seek forward and backwards on a audio file (By Long Pressing the seek forward/backwards buttons)
 - ⏮️ Ability to go to previous and next track in the playlist
@@ -56,13 +56,13 @@ If you like what you see, please ⭐ the repo.
 - 👆 Touch Screen Support
 - 📺 Split Screen View (6th and 7th Gen iPod Classics)
 - 🔍 Ability to search songs
+- 📖 App Usage Tutorial
 
 ### 🔜 Upcoming Features
 - ⬇️ Caching Metadata of the songs for faster boot up times
 - 📃 Ability to Create and Store Custom User Created Playlists
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
-- 📖 App Usage Tutorial
 
 ## 💻 Installation links
 

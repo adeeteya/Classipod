@@ -74,8 +74,16 @@ class BatteryIndicatorWidget extends StatelessWidget {
       width: trackHeight * trackAspectRatio,
       child: DecoratedBox(
         decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              AppPalette.batteryBarBackgroundGradientColor1,
+              AppPalette.batteryBarBackgroundGradientColor2,
+            ],
+          ),
           border: Border.all(
-            color: AppPalette.batteryOutlineColor,
+            color: AppPalette.batteryBarOutlineColor,
             width: 0.5,
           ),
         ),
@@ -91,21 +99,35 @@ class BatteryIndicatorWidget extends StatelessWidget {
     double barHeight,
   ) {
     final barWidth = trackHeight * trackAspectRatio;
-    final currentColor = batteryDetails.getBatteryColor();
 
     return Padding(
-      padding: const EdgeInsets.all(0.5),
-      child: Stack(
-        children: [
-          const SizedBox.expand(),
-          AnimatedContainer(
-            duration: duration,
-            width: barWidth * batteryDetails.level / 100,
-            height: double.infinity,
-            curve: curve,
-            color: currentColor,
+      padding: const EdgeInsets.all(0.55),
+      child: AnimatedContainer(
+        duration: duration,
+        width: barWidth * batteryDetails.level / 100,
+        height: double.infinity,
+        curve: curve,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: (batteryDetails.level <= 20)
+                ? [
+                    AppPalette.lowBatteryBarGradientColor1,
+                    AppPalette.lowBatteryBarGradientColor2,
+                  ]
+                : [
+                    AppPalette.batteryBarGradientColor1,
+                    AppPalette.batteryBarGradientColor2,
+                    AppPalette.batteryBarGradientColor3,
+                    AppPalette.batteryBarGradientColor4,
+                    AppPalette.batteryBarGradientColor5,
+                    AppPalette.batteryBarGradientColor6,
+                    AppPalette.batteryBarGradientColor7,
+                    AppPalette.batteryBarGradientColor6,
+                  ],
           ),
-        ],
+        ),
       ),
     );
   }
@@ -121,16 +143,9 @@ class BatteryIndicatorWidget extends StatelessWidget {
             switchOutCurve: curve,
             child: batteryDetails.batteryState == BatteryState.charging
                 ? Icon(
-                    CupertinoIcons.bolt,
-                    color: CupertinoColors.white,
+                    CupertinoIcons.bolt_fill,
+                    color: AppPalette.batteryBarIconColor,
                     size: constraints.maxHeight,
-                    shadows: const [
-                      Shadow(blurRadius: 0.5),
-                      Shadow(
-                        color: CupertinoColors.white,
-                        blurRadius: 1,
-                      ),
-                    ],
                   )
                 : null,
           );
@@ -146,7 +161,7 @@ class BatteryIndicatorWidget extends StatelessWidget {
     return SizedBox(
       width: knobWidth,
       height: knobHeight,
-      child: const ColoredBox(color: AppPalette.batteryOutlineColor),
+      child: const ColoredBox(color: AppPalette.batteryBarOutlineColor),
     );
   }
 }

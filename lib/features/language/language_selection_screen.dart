@@ -78,8 +78,8 @@ class _LanguageSelectionScreenState
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
                       colors: [
-                        AppPalette.emptyScreenGradient1,
-                        AppPalette.emptyScreenGradient2,
+                        AppPalette.darkScreenBackgroundGradient1,
+                        AppPalette.darkScreenBackgroundGradient2,
                       ],
                     ),
                   ),
@@ -95,7 +95,7 @@ class _LanguageSelectionScreenState
                             "Bienvenue",
                             style: TextStyle(
                               fontSize: 20,
-                              color: AppPalette.emptyScreenLightIconColor
+                              color: AppPalette.darkScreenLightIconColor
                                   .withValues(alpha: 0.5),
                               fontWeight: FontWeight.bold,
                             ),
@@ -108,7 +108,7 @@ class _LanguageSelectionScreenState
                             "欢迎",
                             style: TextStyle(
                               fontSize: 30,
-                              color: AppPalette.emptyScreenLightIconColor
+                              color: AppPalette.darkScreenLightIconColor
                                   .withValues(alpha: 0.5),
                               fontWeight: FontWeight.bold,
                             ),
@@ -121,7 +121,7 @@ class _LanguageSelectionScreenState
                             "Willkomen",
                             style: TextStyle(
                               fontSize: 20,
-                              color: AppPalette.emptyScreenLightIconColor
+                              color: AppPalette.darkScreenLightIconColor
                                   .withValues(alpha: 0.5),
                               fontWeight: FontWeight.bold,
                             ),

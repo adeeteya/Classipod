@@ -15,8 +15,8 @@ class EmptyStateWidget extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              AppPalette.emptyScreenGradient1,
-              AppPalette.emptyScreenGradient2,
+              AppPalette.darkScreenBackgroundGradient1,
+              AppPalette.darkScreenBackgroundGradient2,
             ],
           ),
         ),

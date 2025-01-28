@@ -55,7 +55,7 @@ class StatusBar extends StatelessWidget {
                     isPlaying
                         ? CupertinoIcons.play_fill
                         : CupertinoIcons.pause_fill,
-                    color: AppPalette.primaryBlueGradientColor1,
+                    color: AppPalette.selectedTileGradientColor1,
                   );
                 },
               ),

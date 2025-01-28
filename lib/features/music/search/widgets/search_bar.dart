@@ -155,7 +155,7 @@ class _SearchBarState extends State<SearchBar> {
                                 FontFeature.tabularFigures(),
                               ],
                               backgroundColor: (_currentSelectedIndex == index)
-                                  ? AppPalette.primaryBlueGradientColor1
+                                  ? AppPalette.selectedTileGradientColor1
                                   : null,
                             ),
                           ),

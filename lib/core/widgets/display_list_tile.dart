@@ -21,13 +21,23 @@ class DisplayListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
+            border: isSelected
+                ? const Border(
+                    top: BorderSide(
+                      color: AppPalette.selectedTileTopBorderColor,
+                    ),
+                    bottom: BorderSide(
+                      color: AppPalette.selectedTileBottomBorderColor,
+                    ),
+                  )
+                : null,
             gradient: isSelected
                 ? const LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      AppPalette.primaryBlueGradientColor1,
-                      AppPalette.primaryBlueGradientColor2,
+                      AppPalette.selectedTileGradientColor1,
+                      AppPalette.selectedTileGradientColor2,
                     ],
                   )
                 : null,

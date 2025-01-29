@@ -12,6 +12,10 @@ class SearchBarController {
   void moveBackToPreviousAlphabet() => _state?._moveBackToPreviousAlphabet();
 
   void selectAlphabet() => _state?._selectAlphabet();
+
+  void addSpace() => _state?._addSpace();
+
+  void removeCharacter() => _state?._removeCharacter();
 }
 
 class SearchBar extends StatefulWidget {
@@ -91,6 +95,15 @@ class _SearchBarState extends State<SearchBar> {
 
   void _selectAlphabet() {
     _searchController.text += alphabets[_currentSelectedIndex].toLowerCase();
+  }
+
+  void _addSpace() {
+    _searchController.text += ' ';
+  }
+
+  void _removeCharacter() {
+    _searchController.text =
+        _searchController.text.substring(0, _searchController.text.length - 1);
   }
 
   @override

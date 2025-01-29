@@ -81,6 +81,7 @@ class DevelopmentClassipodApp extends ConsumerWidget {
           debuggerTools.checkerboardRasterCacheImages,
       routerConfig: router,
       theme: const CupertinoThemeData(
+        brightness: Brightness.light,
         scaffoldBackgroundColor: CupertinoColors.white,
         textTheme: CupertinoTextThemeData(
           textStyle: TextStyle(

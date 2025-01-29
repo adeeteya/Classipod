@@ -101,6 +101,16 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
   }
 
   @override
+  Future<void> seekForward() async {
+    _searchBarController.addSpace();
+  }
+
+  @override
+  Future<void> seekBackward() async {
+    _searchBarController.removeCharacter();
+  }
+
+  @override
   void scrollForward() {
     if (_isSearchBarActive) {
       _searchBarController.moveToNextAlphabet();

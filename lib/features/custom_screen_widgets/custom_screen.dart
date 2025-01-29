@@ -64,6 +64,14 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
   }
 
+  Future<void> seekForward() async {
+    await ref.read(audioPlayerServiceProvider.notifier).nextSong();
+  }
+
+  Future<void> seekBackward() async {
+    await ref.read(audioPlayerServiceProvider.notifier).previousSong();
+  }
+
   Future<void> deviceControlHandler(_, DeviceAction? newState) async {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
@@ -82,10 +90,10 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         scrollBackward();
         break;
       case DeviceAction.seekForward:
-        scrollForward();
+        await seekForward();
         break;
       case DeviceAction.seekBackward:
-        scrollBackward();
+        await seekBackward();
         break;
       case DeviceAction.seekForwardLongPress:
         break;

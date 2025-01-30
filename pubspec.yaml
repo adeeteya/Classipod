@@ -27,7 +27,7 @@ dependencies:
   just_audio_background: ^0.0.1-beta.14
   path_provider: ^2.1.5
   permission_handler: ^11.3.1
-  shared_preferences: ^2.4.0
+  shared_preferences: ^2.5.1
   tutorial_coach_mark: ^1.2.12
   url_launcher: ^6.3.1
   vibration: ^3.1.2

@@ -1,11 +1,13 @@
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
 import 'package:classipod/features/now_playing/widgets/box_progress_bar.dart';
+import 'package:classipod/features/now_playing/widgets/scrubber_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SeekBar extends ConsumerWidget {
-  const SeekBar({super.key});
+  final bool showScrubber;
+  const SeekBar({super.key, this.showScrubber = false});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,8 +27,7 @@ class SeekBar extends ConsumerWidget {
           }
 
           final int elapsedTimeInMinutes = currentDuration ~/ 60;
-          // ignore: unnecessary_parenthesis
-          final int elapsedTimeInSeconds = (currentDuration).toInt() % 60;
+          final int elapsedTimeInSeconds = currentDuration.toInt() % 60;
 
           final int remainingTimeInMinutes =
               (totalDuration - currentDuration) ~/ 60;
@@ -45,10 +46,16 @@ class SeekBar extends ConsumerWidget {
                   ),
                 ),
               ),
-              BoxProgressBar(
-                max: totalDuration,
-                value: currentDuration,
-              ),
+              if (showScrubber)
+                ScrubberBar(
+                  max: totalDuration,
+                  value: currentDuration,
+                ),
+              if (!showScrubber)
+                BoxProgressBar(
+                  max: totalDuration,
+                  value: currentDuration,
+                ),
               SizedBox(
                 width: 40,
                 child: Text(

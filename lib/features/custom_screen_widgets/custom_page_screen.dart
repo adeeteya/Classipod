@@ -44,6 +44,28 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
   }
 
+  Future<void> seekForward() async {
+    await scrollForward();
+  }
+
+  Future<void> seekBackward() async {
+    await scrollBackward();
+  }
+
+  Future<void> rotateForward() async {
+    await scrollForward();
+  }
+
+  Future<void> rotateBackward() async {
+    await scrollBackward();
+  }
+
+  void seekForwardLongPress() {}
+
+  void seekBackwardLongPress() {}
+
+  void onLongPressEnd() {}
+
   Future<void> deviceControlHandler(_, DeviceAction? newState) async {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
@@ -56,25 +78,28 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         onSelectPressed();
         break;
       case DeviceAction.rotateForward:
-        await scrollForward();
+        await rotateForward();
         break;
       case DeviceAction.rotateBackward:
-        await scrollBackward();
+        await rotateBackward();
         break;
       case DeviceAction.seekForward:
-        await scrollForward();
+        await seekForward();
         break;
       case DeviceAction.seekBackward:
-        await scrollBackward();
+        await seekBackward();
         break;
       case DeviceAction.seekForwardLongPress:
+        seekForwardLongPress();
         break;
       case DeviceAction.seekBackwardLongPress:
+        seekBackwardLongPress();
         break;
       case DeviceAction.playPause:
         await onPlayPauseButtonPressed();
         break;
       case DeviceAction.longPressEnd:
+        onLongPressEnd();
         break;
     }
   }

@@ -63,6 +63,7 @@ If you like what you see, please ⭐ the repo.
 - 📃 Ability to Create and Store Custom User Created Playlists
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
+- 📝 Lyrics Support
 
 ## 💻 Installation links
 

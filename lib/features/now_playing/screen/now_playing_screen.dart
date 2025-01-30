@@ -1,13 +1,11 @@
 import 'dart:async';
 
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_page_screen.dart';
-import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_page.dart';
@@ -16,7 +14,11 @@ import 'package:classipod/features/now_playing/widgets/volume_bar.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
+
+enum _NowPlayingBottomBarPage {
+  seekBar,
+  scrubberBar,
+}
 
 class NowPlayingScreen extends ConsumerStatefulWidget {
   const NowPlayingScreen({super.key});
@@ -27,9 +29,11 @@ class NowPlayingScreen extends ConsumerStatefulWidget {
 
 class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     with CustomPageScreen {
+  final PageController _bottomBarPageController = PageController();
   late Timer _longPressTimer;
   Timer _lastVolumeChangeTimer = Timer(Duration.zero, () {});
   bool _isVolumeChanging = false;
+  _NowPlayingBottomBarPage _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
 
   @override
   String get routeName => Routes.nowPlaying.name;
@@ -41,8 +45,27 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   List<Metadata> get displayItems => ref.read(nowPlayingMetadataListProvider);
 
   @override
-  Future<void> onSelectPressed() =>
-      ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
+  Future<void> onSelectPressed() async {
+    if (_bottomBarPage == _NowPlayingBottomBarPage.seekBar) {
+      await _bottomBarPageController.animateToPage(
+        1,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+      setState(() {
+        _bottomBarPage = _NowPlayingBottomBarPage.scrubberBar;
+      });
+    } else {
+      await _bottomBarPageController.animateToPage(
+        0,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+      setState(() {
+        _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
+      });
+    }
+  }
 
   void startVolumeTimer() {
     if (_lastVolumeChangeTimer.isActive) {
@@ -59,7 +82,12 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     });
   }
 
+  @override
   Future<void> rotateForward() async {
+    if (_bottomBarPage == _NowPlayingBottomBarPage.scrubberBar) {
+      await ref.read(audioPlayerServiceProvider.notifier).seekForward();
+      return;
+    }
     setState(() {
       _isVolumeChanging = true;
     });
@@ -67,7 +95,12 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     startVolumeTimer();
   }
 
+  @override
   Future<void> rotateBackward() async {
+    if (_bottomBarPage == _NowPlayingBottomBarPage.scrubberBar) {
+      await ref.read(audioPlayerServiceProvider.notifier).seekBackward();
+      return;
+    }
     setState(() {
       _isVolumeChanging = true;
     });
@@ -75,29 +108,34 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     startVolumeTimer();
   }
 
+  @override
   Future<void> seekForward() async {
     await ref.read(audioPlayerServiceProvider.notifier).nextSong();
   }
 
+  @override
   Future<void> seekBackward() async {
     await ref.read(audioPlayerServiceProvider.notifier).previousSong();
   }
 
-  void seekForwardButtonLongPress() {
+  @override
+  void seekForwardLongPress() {
     _longPressTimer =
         Timer.periodic(const Duration(milliseconds: 50), (_) async {
       await ref.read(audioPlayerServiceProvider.notifier).seekForward();
     });
   }
 
-  void seekBackwardButtonLongPress() {
+  @override
+  void seekBackwardLongPress() {
     _longPressTimer =
         Timer.periodic(const Duration(milliseconds: 50), (_) async {
       await ref.read(audioPlayerServiceProvider.notifier).seekBackward();
     });
   }
 
-  void longPressEnd() {
+  @override
+  void onLongPressEnd() {
     if (_longPressTimer.isActive) {
       _longPressTimer.cancel();
       ref.read(deviceButtonsServiceProvider.notifier).resetDeviceAction();
@@ -105,47 +143,9 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
   }
 
   @override
-  Future<void> deviceControlHandler(_, DeviceAction? newState) async {
-    if (newState == null || context.router.locationNamed != routeName) {
-      return;
-    }
-    switch (newState) {
-      case DeviceAction.menu:
-        context.pop();
-        break;
-      case DeviceAction.select:
-        await onSelectPressed();
-        break;
-      case DeviceAction.rotateForward:
-        await rotateForward();
-        break;
-      case DeviceAction.rotateBackward:
-        await rotateBackward();
-        break;
-      case DeviceAction.seekForward:
-        await seekForward();
-        break;
-      case DeviceAction.seekBackward:
-        await seekBackward();
-        break;
-      case DeviceAction.seekForwardLongPress:
-        seekForwardButtonLongPress();
-        break;
-      case DeviceAction.seekBackwardLongPress:
-        seekBackwardButtonLongPress();
-        break;
-      case DeviceAction.longPressEnd:
-        longPressEnd();
-        break;
-      case DeviceAction.playPause:
-        await onSelectPressed();
-        break;
-    }
-  }
-
-  @override
   void dispose() {
     _lastVolumeChangeTimer.cancel();
+    _bottomBarPageController.dispose();
     super.dispose();
   }
 
@@ -203,6 +203,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
               child: Column(
                 children: [
                   Flexible(
+                    flex: 7,
                     child: PageView.builder(
                       controller: pageController,
                       itemCount: displayItems.length,
@@ -217,25 +218,36 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
                       ),
                     ),
                   ),
-                  AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 300),
-                    transitionBuilder: (child, animation) {
-                      final begin = Offset(_isVolumeChanging ? 1.0 : -0.5, 0.0);
-                      final tween = Tween(begin: begin, end: Offset.zero);
-                      final offsetAnimation = animation.drive(tween);
+                  Flexible(
+                    child: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 300),
+                      transitionBuilder: (child, animation) {
+                        final begin =
+                            Offset(_isVolumeChanging ? 1.0 : -0.5, 0.0);
+                        final tween = Tween(begin: begin, end: Offset.zero);
+                        final offsetAnimation = animation.drive(tween);
 
-                      return FadeTransition(
-                        key: ValueKey<Key?>(child.key),
-                        opacity: animation,
-                        child: SlideTransition(
+                        return FadeTransition(
                           key: ValueKey<Key?>(child.key),
-                          position: offsetAnimation,
-                          child: child,
-                        ),
-                      );
-                    },
-                    child:
-                        _isVolumeChanging ? const VolumeBar() : const SeekBar(),
+                          opacity: animation,
+                          child: SlideTransition(
+                            key: ValueKey<Key?>(child.key),
+                            position: offsetAnimation,
+                            child: child,
+                          ),
+                        );
+                      },
+                      child: _isVolumeChanging
+                          ? const VolumeBar()
+                          : PageView(
+                              controller: _bottomBarPageController,
+                              physics: const NeverScrollableScrollPhysics(),
+                              children: const [
+                                SeekBar(),
+                                SeekBar(showScrubber: true),
+                              ],
+                            ),
+                    ),
                   ),
                 ],
               ),

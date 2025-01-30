@@ -69,7 +69,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   }
 
   Future<void> seekBackward() async {
-    await ref.read(audioPlayerServiceProvider.notifier).previousSong();
+    await ref.read(audioPlayerServiceProvider.notifier).seekBackwards();
   }
 
   Future<void> deviceControlHandler(_, DeviceAction? newState) async {

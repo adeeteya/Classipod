@@ -115,7 +115,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
 
   @override
   Future<void> seekBackward() async {
-    await ref.read(audioPlayerServiceProvider.notifier).previousSong();
+    await ref.read(audioPlayerServiceProvider.notifier).seekBackwards();
   }
 
   @override

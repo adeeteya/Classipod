@@ -98,10 +98,14 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
     });
   }
 
-  Future<void> previousSong() async {
+  Future<void> seekBackwards() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      await ref.read(audioPlayerProvider).seekToPrevious();
+      if (ref.read(audioPlayerProvider).position.inSeconds > 3) {
+        await ref.read(audioPlayerProvider).seek(Duration.zero);
+      } else {
+        await ref.read(audioPlayerProvider).seekToPrevious();
+      }
     });
   }
 

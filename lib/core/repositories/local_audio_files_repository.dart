@@ -48,16 +48,17 @@ class LocalAudioFilesRepository {
       if (isSupportedAudioFormat(path)) {
         late final AudioMetadata audioMetadata;
 
-        String? thumbnailFilePath =
-            _localAlbumArtCacheRepository.getCachedAlbumArtPath(filePath: path);
+        final String thumbnailPath =
+            _localAlbumArtCacheRepository.thumbnailPathName(path);
 
         //Cache album art if it doesn't exist
-        if (thumbnailFilePath == null) {
+        if (!_localAlbumArtCacheRepository.isThumbnailFileExists(
+          thumbnailPath: thumbnailPath,
+        )) {
           audioMetadata = readMetadata(File(path), getImage: true);
           if (audioMetadata.pictures.isNotEmpty) {
-            thumbnailFilePath =
-                await _localAlbumArtCacheRepository.cacheAlbumArt(
-              filePath: path,
+            await _localAlbumArtCacheRepository.cacheAlbumArt(
+              thumbnailPath: thumbnailPath,
               bytes: audioMetadata.pictures[0].bytes,
             );
           }
@@ -71,7 +72,7 @@ class LocalAudioFilesRepository {
         metadataList.add(
           Metadata.fromAudioMetadata(
             audioMetadata,
-            thumbnailFilePath,
+            thumbnailPath,
             metadataList.length,
           ),
         );

@@ -16,32 +16,25 @@ class LocalAlbumArtCacheRepository {
 
   LocalAlbumArtCacheRepository(this.cacheParentDirectory);
 
-  Future<String> cacheAlbumArt({
-    required String filePath,
-    required Uint8List bytes,
-  }) async {
+  String thumbnailPathName(String filePath) {
     final String albumArtFileName =
         filePath.replaceAll('/', '-').replaceAll(' ', '');
-    final String albumArtFilePath =
-        '$cacheParentDirectory/$albumArtFileName.jpg';
-
-    final File albumArtFile =
-        await File(albumArtFilePath).create(recursive: true);
-    albumArtFile.writeAsBytesSync(bytes);
-
-    return albumArtFilePath;
+    return '$cacheParentDirectory/$albumArtFileName.jpg';
   }
 
-  String? getCachedAlbumArtPath({required String filePath}) {
-    final String albumArtFileName =
-        filePath.replaceAll('/', '-').replaceAll(' ', '');
-    final String albumArtFilePath =
-        '$cacheParentDirectory/$albumArtFileName.jpg';
+  Future<void> cacheAlbumArt({
+    required String thumbnailPath,
+    required Uint8List bytes,
+  }) async {
+    final File albumArtFile = await File(thumbnailPath).create(recursive: true);
+    albumArtFile.writeAsBytesSync(bytes);
+  }
 
-    if (File(albumArtFilePath).existsSync()) {
-      return albumArtFilePath;
+  bool isThumbnailFileExists({required String thumbnailPath}) {
+    if (File(thumbnailPath).existsSync()) {
+      return true;
     } else {
-      return null;
+      return false;
     }
   }
 }

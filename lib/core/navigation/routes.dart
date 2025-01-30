@@ -101,6 +101,7 @@ final routerProvider = Provider(
             child: ScrollConfiguration(
               behavior: CustomScrollBehavior(),
               child: CupertinoPageScaffold(
+                resizeToAvoidBottomInset: false,
                 child: DeviceFrame(child: child),
               ),
             ),

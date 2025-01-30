@@ -1,4 +1,5 @@
 import 'package:classipod/core/alerts/dialogs.dart';
+import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -194,6 +195,39 @@ class SettingsPreferencesControllerNotifier
         ref.invalidate(currentSettingsPreferencesProvider);
         ref.read(routerProvider).goNamed(Routes.splash.name);
       }
+    });
+  }
+
+  Future<void> resetSettings() async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setLanguageLocaleCode(languageLocaleCode: 'en');
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setDeviceColor(deviceColorName: DeviceColor.silver.name);
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setTouchScreenEnabled(isTouchScreenEnabled: true);
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setRepeat(isRepeat: false);
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setVibrate(isVibrateEnabled: true);
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setClickWheelSound(isClickWheelSoundEnabled: false);
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setSplitScreenEnabled(isSplitScreenEnabled: true);
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setImmersiveMode(isImmersiveModeEnabled: false);
+      await ref.read(settingsPreferencesRepositoryProvider).setMusicFolderPath(
+          musicFolderPath: Constants.defaultMusicFolderPath);
+      ref.invalidate(currentSettingsPreferencesProvider);
     });
   }
 }

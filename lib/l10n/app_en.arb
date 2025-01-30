@@ -226,5 +226,9 @@
   "blackDeviceColor": "Black",
     "@blackDeviceColor": {
         "description": "The name of the black device color"
+    },
+  "resetSettingsTitle": "Reset Settings",
+    "@resetSettingsTitle": {
+        "description": "The title of the reset settings dialog"
     }
 }

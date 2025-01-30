@@ -22,6 +22,7 @@ enum _SettingsDisplayItems {
   splitScreenEnabled,
   immersiveMode,
   changeDirectory,
+  resetSettings,
   donate;
 
   String title(BuildContext context) {
@@ -46,6 +47,8 @@ enum _SettingsDisplayItems {
         return context.localization.immersiveModeSettingTitle;
       case changeDirectory:
         return context.localization.changeDirectorySettingTitle;
+      case resetSettings:
+        return context.localization.resetSettingsTitle;
       case donate:
         return context.localization.donateSettingTitle;
     }
@@ -119,6 +122,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .setNewMusicFolderPath();
+        break;
+      case _SettingsDisplayItems.resetSettings:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .resetSettings();
         break;
       case _SettingsDisplayItems.donate:
         await launchUrl(

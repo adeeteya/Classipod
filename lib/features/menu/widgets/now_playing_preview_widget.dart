@@ -11,11 +11,12 @@ class NowPlayingPreviewWidget extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final currentIndex = ref.watch(audioPlayerProvider).currentIndex;
+    final currentIndex =
+        ref.watch(currentAudioPlayerIndexStreamProvider).value ?? 0;
     final nowPlayingListMetadata = ref.watch(nowPlayingMetadataListProvider);
     final Metadata? currentMetadata = nowPlayingListMetadata.isEmpty
         ? null
-        : nowPlayingListMetadata[currentIndex ?? 0];
+        : nowPlayingListMetadata[currentIndex];
     return SizedBox(
       key: const ValueKey(SplitScreenType.nowPlaying),
       width: double.infinity,

@@ -28,8 +28,10 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
   }
 
   Future<void> setDeviceAction(DeviceAction action) async {
-    await buttonPressVibrate();
-    await clickWheelSound();
+    await Future.wait([
+      buttonPressVibrate(),
+      clickWheelSound(),
+    ]);
     state = null;
     state = action;
   }

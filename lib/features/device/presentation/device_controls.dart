@@ -132,7 +132,19 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                 onTap: () async => ref
                     .read(deviceButtonsServiceProvider.notifier)
                     .setDeviceAction(DeviceAction.menu),
-                onLongPress: () => context.goNamed(Routes.menu.name),
+                onLongPress: () async {
+                  await Future.wait([
+                    ref
+                        .read(deviceButtonsServiceProvider.notifier)
+                        .buttonPressVibrate(),
+                    ref
+                        .read(deviceButtonsServiceProvider.notifier)
+                        .clickWheelSound(),
+                  ]);
+                  if (context.mounted) {
+                    context.goNamed(Routes.menu.name);
+                  }
+                },
                 child: ColoredBox(
                   color: deviceColor == DeviceColor.black
                       ? AppPalette.darkDeviceControlBackgroundColor

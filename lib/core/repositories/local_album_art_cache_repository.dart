@@ -22,12 +22,11 @@ class LocalAlbumArtCacheRepository {
     return '$cacheParentDirectory/$albumArtFileName.jpg';
   }
 
-  Future<void> cacheAlbumArt({
+  void cacheAlbumArt({
     required String thumbnailPath,
     required Uint8List bytes,
-  }) async {
-    final File albumArtFile = await File(thumbnailPath).create(recursive: true);
-    albumArtFile.writeAsBytesSync(bytes);
+  }) {
+    File(thumbnailPath).writeAsBytesSync(bytes);
   }
 
   bool isThumbnailFileExists({required String thumbnailPath}) {

@@ -31,10 +31,9 @@ class LocalAudioFilesRepository {
     }
   }
 
-  Future<UnmodifiableListView<Metadata>> getAudioFilesMetadata({
-    required String audioFileFolderPath,
-    required String cacheParentDirectory,
-  }) async {
+  UnmodifiableListView<Metadata> getAudioFilesMetadata(
+    String audioFileFolderPath,
+  ) {
     final Directory storageDir = Directory(audioFileFolderPath);
     final List<FileSystemEntity> files = storageDir.listSync(
       recursive: true,
@@ -57,7 +56,7 @@ class LocalAudioFilesRepository {
         )) {
           audioMetadata = readMetadata(File(path), getImage: true);
           if (audioMetadata.pictures.isNotEmpty) {
-            await _localAlbumArtCacheRepository.cacheAlbumArt(
+            _localAlbumArtCacheRepository.cacheAlbumArt(
               thumbnailPath: thumbnailPath,
               bytes: audioMetadata.pictures[0].bytes,
             );

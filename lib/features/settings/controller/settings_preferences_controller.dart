@@ -1,7 +1,6 @@
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/settings/model/device_color.dart';
 import 'package:classipod/features/settings/model/settings_preferences.dart';
@@ -193,7 +192,6 @@ class SettingsPreferencesControllerNotifier
             .read(settingsPreferencesRepositoryProvider)
             .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
         ref.invalidate(currentSettingsPreferencesProvider);
-        ref.read(routerProvider).goNamed(Routes.splash.name);
       }
     });
   }
@@ -226,7 +224,8 @@ class SettingsPreferencesControllerNotifier
           .read(settingsPreferencesRepositoryProvider)
           .setImmersiveMode(isImmersiveModeEnabled: false);
       await ref.read(settingsPreferencesRepositoryProvider).setMusicFolderPath(
-          musicFolderPath: Constants.defaultMusicFolderPath);
+            musicFolderPath: Constants.defaultMusicFolderPath,
+          );
       ref.invalidate(currentSettingsPreferencesProvider);
     });
   }

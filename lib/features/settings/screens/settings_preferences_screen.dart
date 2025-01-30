@@ -122,6 +122,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .setNewMusicFolderPath();
+        if (mounted) {
+          context.goNamed(Routes.splash.name);
+        }
         break;
       case _SettingsDisplayItems.resetSettings:
         await ref

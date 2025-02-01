@@ -99,6 +99,8 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                     child: AlbumReflectiveArt(
                       thumbnailPath: displayItems[index].thumbnailPath,
                       reflectedImageHeight: reflectedImageHeight,
+                      heroTag:
+                          "${displayItems[index].albumName}-${displayItems[index].albumArtistName}",
                     ),
                   ),
                 );

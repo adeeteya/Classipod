@@ -6,29 +6,38 @@ import 'package:flutter/cupertino.dart';
 class AlbumReflectiveArt extends StatelessWidget {
   final String? thumbnailPath;
   final double reflectedImageHeight;
+  final String? heroTag;
   const AlbumReflectiveArt({
     super.key,
     this.thumbnailPath,
     required this.reflectedImageHeight,
+    this.heroTag,
   });
+
+  Widget _buildImage() {
+    return SizedBox(
+      width: double.infinity,
+      child: Image(
+        image: (thumbnailPath != null)
+            ? FileImage(File(thumbnailPath!))
+            : const AssetImage(Assets.defaultAlbumCoverImage),
+        errorBuilder: (_, __, ___) => Image.asset(
+          Assets.defaultAlbumCoverImage,
+          fit: BoxFit.fitWidth,
+        ),
+        fit: BoxFit.fitWidth,
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Flexible(
-          child: SizedBox(
-            width: double.infinity,
-            child: Image(
-              image: (thumbnailPath != null)
-                  ? FileImage(File(thumbnailPath!))
-                  : const AssetImage(Assets.defaultAlbumCoverImage),
-              errorBuilder: (_, __, ___) => Image.asset(
-                Assets.defaultAlbumCoverImage,
-                fit: BoxFit.fitWidth,
-              ),
-              fit: BoxFit.fitWidth,
-            ),
+          child: Hero(
+            tag: heroTag ?? thumbnailPath!,
+            child: _buildImage(),
           ),
         ),
         Stack(

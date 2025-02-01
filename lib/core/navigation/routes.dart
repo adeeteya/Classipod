@@ -2,7 +2,6 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/page_not_found_screen.dart';
 import 'package:classipod/features/about/screen/about_screen.dart';
 import 'package:classipod/features/app_startup/screens/splash_screen.dart';
-import 'package:classipod/features/custom_screen_widgets/cupertino_modal_page.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_scroll_behavior.dart';
 import 'package:classipod/features/device/presentation/device_frame.dart';
 import 'package:classipod/features/language/language_selection_screen.dart';
@@ -200,11 +199,18 @@ final routerProvider = Provider(
                             path: Routes.coverFlowSelection.name,
                             name: Routes.coverFlowSelection.name,
                             parentNavigatorKey: _rootNavigatorKey,
-                            pageBuilder: (context, state) => CupertinoModalPage(
-                              context: context,
-                              useRootNavigator: false,
-                              builder: (context) =>
-                                  CoverFlowAlbumSelectionScreen(
+                            pageBuilder: (context, state) =>
+                                CustomTransitionPage(
+                              maintainState: false,
+                              opaque: false,
+                              barrierColor: kCupertinoModalBarrierColor,
+                              transitionDuration:
+                                  const Duration(milliseconds: 500),
+                              reverseTransitionDuration:
+                                  const Duration(milliseconds: 500),
+                              transitionsBuilder: (context, _, __, child) =>
+                                  child,
+                              child: CoverFlowAlbumSelectionScreen(
                                 albumName:
                                     state.uri.queryParameters['albumName'] ??
                                         '',

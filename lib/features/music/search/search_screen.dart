@@ -158,6 +158,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
     }
 
     return CupertinoPageScaffold(
+      resizeToAvoidBottomInset: false,
       child: Stack(
         children: [
           Column(

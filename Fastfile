@@ -52,7 +52,7 @@ lane :build_flutter_app do |options|
   command += " --no-codesign" if no_codesign
   command += " --config-only" if config_only
   command += " --obfuscate" if obfuscate
-  command += " --split-debug-info=./build/app/outputs/nativeSymbols" if obfuscate
+  command += " --split-debug-info=./build/app/outputs/symbols" if obfuscate
 
 	UI.message("Building #{type} - version: #{version_number} - build: #{build_number} - commit: #{commit[:abbreviated_commit_hash]}")
 

@@ -16,10 +16,11 @@ class LocalAlbumArtCacheRepository {
 
   LocalAlbumArtCacheRepository(this.cacheParentDirectory);
 
-  String thumbnailPath(
-      {required String? albumName,
-      required String? artistName,
-      required String filePath}) {
+  String thumbnailPath({
+    required String? albumName,
+    required String? artistName,
+    required String filePath,
+  }) {
     String albumArtFileName;
     if (albumName == null || artistName == null) {
       albumArtFileName = filePath;

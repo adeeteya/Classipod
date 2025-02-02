@@ -41,6 +41,7 @@ lane :build_flutter_app do |options|
   target = options[:target] || "lib/main.dart"
   no_codesign = options[:no_codesign] || false
   config_only = options[:config_only] || false
+  obfuscate = options[:obfuscate] || true
   commit = last_git_commit
 
   command = "flutter build #{type} --release --no-pub --suppress-analytics"
@@ -50,6 +51,8 @@ lane :build_flutter_app do |options|
   command += " --target=#{target}" if target.to_s != ""
   command += " --no-codesign" if no_codesign
   command += " --config-only" if config_only
+  command += " --obfuscate" if obfuscate
+  command += " --split-debug-info=./build/app/outputs/nativeSymbols" if obfuscate
 
 	UI.message("Building #{type} - version: #{version_number} - build: #{build_number} - commit: #{commit[:abbreviated_commit_hash]}")
 

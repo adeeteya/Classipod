@@ -1,22 +1,17 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:flutter/cupertino.dart';
 
 class NowPlayingPage extends StatelessWidget {
-  final String? thumbnailPath;
-  final String? trackName;
-  final String? artistNames;
-  final String? albumName;
+  final Metadata songMetadata;
   final int currentTrackNumber;
   final int totalTrackNumber;
   const NowPlayingPage({
     super.key,
-    this.thumbnailPath,
-    required this.trackName,
-    this.artistNames,
-    this.albumName,
+    required this.songMetadata,
     required this.currentTrackNumber,
     required this.totalTrackNumber,
   });
@@ -33,8 +28,10 @@ class NowPlayingPage extends StatelessWidget {
               ..setEntry(3, 2, 0.003)
               ..rotateY(-0.1),
             child: AlbumReflectiveArt(
-              thumbnailPath: thumbnailPath,
+              thumbnailPath: songMetadata.thumbnailPath,
               reflectedImageHeight: 50,
+              heroTag:
+                  "${songMetadata.albumName}-${songMetadata.albumArtistName}",
             ),
           ),
         ),
@@ -45,7 +42,7 @@ class NowPlayingPage extends StatelessWidget {
             children: [
               const SizedBox(height: 10),
               MarqueeText(
-                trackName ?? context.localization.unknownSong,
+                songMetadata.trackName ?? context.localization.unknownSong,
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -56,7 +53,9 @@ class NowPlayingPage extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               MarqueeText(
-                artistNames ?? context.localization.unknownArtist,
+                (songMetadata.getTrackArtistNames == "Unknown Artist")
+                    ? context.localization.unknownArtist
+                    : songMetadata.getTrackArtistNames,
                 style: const TextStyle(
                   color: AppPalette.hintTextColor,
                   fontSize: 16,
@@ -67,7 +66,7 @@ class NowPlayingPage extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               MarqueeText(
-                albumName ?? context.localization.unknownAlbum,
+                songMetadata.albumName ?? context.localization.unknownAlbum,
                 style: const TextStyle(
                   color: AppPalette.hintTextColor,
                   fontSize: 16,

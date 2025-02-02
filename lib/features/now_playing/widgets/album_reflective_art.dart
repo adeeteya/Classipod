@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 import 'package:classipod/core/constants/assets.dart';
 import 'package:flutter/cupertino.dart';
@@ -6,29 +7,13 @@ import 'package:flutter/cupertino.dart';
 class AlbumReflectiveArt extends StatelessWidget {
   final String? thumbnailPath;
   final double reflectedImageHeight;
-  final String? heroTag;
+  final String heroTag;
   const AlbumReflectiveArt({
     super.key,
     this.thumbnailPath,
     required this.reflectedImageHeight,
-    this.heroTag,
+    required this.heroTag,
   });
-
-  Widget _buildImage() {
-    return SizedBox(
-      width: double.infinity,
-      child: Image(
-        image: (thumbnailPath != null)
-            ? FileImage(File(thumbnailPath!))
-            : const AssetImage(Assets.defaultAlbumCoverImage),
-        errorBuilder: (_, __, ___) => Image.asset(
-          Assets.defaultAlbumCoverImage,
-          fit: BoxFit.fitWidth,
-        ),
-        fit: BoxFit.fitWidth,
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +21,55 @@ class AlbumReflectiveArt extends StatelessWidget {
       children: [
         Flexible(
           child: Hero(
-            tag: heroTag ?? thumbnailPath!,
-            child: _buildImage(),
+            tag: heroTag,
+            flightShuttleBuilder: (
+              flightContext,
+              animation,
+              flightDirection,
+              fromHeroContext,
+              toHeroContext,
+            ) {
+              late final Widget sourceWidget;
+              late final Widget destinationWidget;
+              switch (flightDirection) {
+                case HeroFlightDirection.push:
+                  sourceWidget = fromHeroContext.widget;
+                  destinationWidget = toHeroContext.widget;
+                case HeroFlightDirection.pop:
+                  sourceWidget = toHeroContext.widget;
+                  destinationWidget = fromHeroContext.widget;
+              }
+              return AnimatedBuilder(
+                animation: animation,
+                builder: (context, child) {
+                  return Transform(
+                    transform: Matrix4.identity()
+                      ..rotateY(animation.value * pi),
+                    alignment: Alignment.center,
+                    child: (animation.value > 0.5)
+                        ? Transform.flip(
+                            flipX: true,
+                            child: destinationWidget,
+                          )
+                        : child,
+                  );
+                },
+                child: sourceWidget,
+              );
+            },
+            child: SizedBox(
+              width: double.infinity,
+              child: Image(
+                image: (thumbnailPath != null)
+                    ? FileImage(File(thumbnailPath!))
+                    : const AssetImage(Assets.defaultAlbumCoverImage),
+                errorBuilder: (_, __, ___) => Image.asset(
+                  Assets.defaultAlbumCoverImage,
+                  fit: BoxFit.fitWidth,
+                ),
+                fit: BoxFit.fitWidth,
+              ),
+            ),
           ),
         ),
         Stack(

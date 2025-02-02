@@ -209,10 +209,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
                       itemCount: displayItems.length,
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) => NowPlayingPage(
-                        thumbnailPath: displayItems[index].thumbnailPath,
-                        trackName: displayItems[index].trackName,
-                        artistNames: displayItems[index].getTrackArtistNames,
-                        albumName: displayItems[index].albumName,
+                        songMetadata: displayItems[index],
                         currentTrackNumber: index + 1,
                         totalTrackNumber: displayItems.length,
                       ),

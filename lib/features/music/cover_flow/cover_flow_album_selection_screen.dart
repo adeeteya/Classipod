@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -55,40 +53,6 @@ class _CoverFlowAlbumSelectionScreenState
   Widget build(BuildContext context) {
     return Hero(
       tag: "${widget.albumName}-${widget.artistName}",
-      flightShuttleBuilder: (
-        flightContext,
-        animation,
-        flightDirection,
-        fromHeroContext,
-        toHeroContext,
-      ) {
-        late final Widget sourceWidget;
-        late final Widget destinationWidget;
-        switch (flightDirection) {
-          case HeroFlightDirection.push:
-            sourceWidget = fromHeroContext.widget;
-            destinationWidget = toHeroContext.widget;
-          case HeroFlightDirection.pop:
-            sourceWidget = toHeroContext.widget;
-            destinationWidget = fromHeroContext.widget;
-        }
-        return AnimatedBuilder(
-          animation: animation,
-          builder: (context, child) {
-            return Transform(
-              transform: Matrix4.identity()..rotateY(animation.value * pi),
-              alignment: Alignment.center,
-              child: (animation.value > 0.5)
-                  ? Transform.flip(
-                      flipX: true,
-                      child: destinationWidget,
-                    )
-                  : child,
-            );
-          },
-          child: sourceWidget,
-        );
-      },
       child: SizedBox(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(40, 10, 40, 0),

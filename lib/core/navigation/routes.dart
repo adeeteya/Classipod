@@ -201,7 +201,6 @@ final routerProvider = Provider(
                             parentNavigatorKey: _rootNavigatorKey,
                             pageBuilder: (context, state) =>
                                 CustomTransitionPage(
-                              maintainState: false,
                               opaque: false,
                               barrierColor: kCupertinoModalBarrierColor,
                               transitionDuration:

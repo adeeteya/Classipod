@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:just_audio/just_audio.dart';
@@ -193,10 +191,6 @@ class Metadata {
 
   String get getMainGenre {
     return genres.isNotEmpty ? genres[0] : "Unknown Genre";
-  }
-
-  String getTemporaryThumbnailPath(Directory tempDir) {
-    return '${tempDir.path}/$trackName-$getMainArtistName.jpg';
   }
 }
 

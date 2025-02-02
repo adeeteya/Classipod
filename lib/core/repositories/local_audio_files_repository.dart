@@ -43,12 +43,18 @@ class LocalAudioFilesRepository {
 
     final List<Metadata> metadataList = [];
 
+    AudioMetadata audioMetadata;
+
     for (final String path in filePaths) {
       if (isSupportedAudioFormat(path)) {
-        late final AudioMetadata audioMetadata;
+        audioMetadata = readMetadata(File(path));
 
         final String thumbnailPath =
-            _localAlbumArtCacheRepository.thumbnailPathName(path);
+            _localAlbumArtCacheRepository.thumbnailPath(
+          albumName: audioMetadata.album,
+          artistName: audioMetadata.artist,
+          filePath: path,
+        );
 
         //Cache album art if it doesn't exist
         if (!_localAlbumArtCacheRepository.isThumbnailFileExists(
@@ -61,11 +67,6 @@ class LocalAudioFilesRepository {
               bytes: audioMetadata.pictures[0].bytes,
             );
           }
-        }
-
-        //No need to fetch album art as it already exists
-        else {
-          audioMetadata = readMetadata(File(path));
         }
 
         metadataList.add(

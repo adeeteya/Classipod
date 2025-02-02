@@ -16,9 +16,18 @@ class LocalAlbumArtCacheRepository {
 
   LocalAlbumArtCacheRepository(this.cacheParentDirectory);
 
-  String thumbnailPathName(String filePath) {
-    final String albumArtFileName =
-        filePath.replaceAll('/', '-').replaceAll(' ', '');
+  String thumbnailPath(
+      {required String? albumName,
+      required String? artistName,
+      required String filePath}) {
+    String albumArtFileName;
+    if (albumName == null || artistName == null) {
+      albumArtFileName = filePath;
+    } else {
+      albumArtFileName = '${albumName}by$artistName';
+    }
+    albumArtFileName =
+        albumArtFileName.replaceAll('/', '-').replaceAll(' ', '');
     return '$cacheParentDirectory/$albumArtFileName.jpg';
   }
 

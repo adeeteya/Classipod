@@ -238,5 +238,9 @@
   "browseAlbum": "Browse Album",
   "@browseAlbum": {
     "description": "The text of the browse album option"
-  }
+  },
+  "cancelText": "Cancel",
+    "@cancelText": {
+        "description": "The text of the cancel list tile"
+    }
 }

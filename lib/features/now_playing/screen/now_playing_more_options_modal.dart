@@ -8,15 +8,18 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 enum _NowPlayingMoreOptions {
+  browseAlbum,
   browseArtist,
-  browseAlbum;
+  cancel;
 
   String title(BuildContext context) {
     switch (this) {
-      case browseArtist:
-        return context.localization.browseArtist;
       case browseAlbum:
         return context.localization.browseAlbum;
+      case browseArtist:
+        return context.localization.browseArtist;
+      case cancel:
+        return context.localization.cancelText;
     }
   }
 }
@@ -45,8 +48,11 @@ class _NowPlayingMoreOptionsModalState
     setState(() => selectedDisplayItem = displayItems.indexOf(optionItem));
     final currentSongMetadata = ref.read(currentSongMetadataProvider);
     switch (optionItem) {
+      case _NowPlayingMoreOptions.browseAlbum:
+        context.pushReplacementNamed(Routes.albums.name);
+        break;
       case _NowPlayingMoreOptions.browseArtist:
-        context.goNamed(
+        context.pushReplacementNamed(
           Routes.artistSongs.name,
           pathParameters: {
             "artistName":
@@ -54,8 +60,8 @@ class _NowPlayingMoreOptionsModalState
           },
         );
         break;
-      case _NowPlayingMoreOptions.browseAlbum:
-        context.goNamed(Routes.albums.name);
+      case _NowPlayingMoreOptions.cancel:
+        context.pop();
         break;
     }
   }

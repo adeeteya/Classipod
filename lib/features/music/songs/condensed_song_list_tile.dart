@@ -62,11 +62,6 @@ class CondensedSongListTile extends StatelessWidget {
                     maxLines: 1,
                   ),
                 ),
-                if (isSelected && !isCurrentlyPlaying)
-                  const Icon(
-                    CupertinoIcons.right_chevron,
-                    color: CupertinoColors.white,
-                  ),
                 if (isCurrentlyPlaying)
                   Icon(
                     CupertinoIcons.volume_up,

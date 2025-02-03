@@ -1,55 +1,35 @@
-import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
-import 'package:classipod/features/music/album/album_details.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final albumDetailsProvider =
-    NotifierProvider<AlbumDetailsNotifier, List<AlbumDetails>>(
-  AlbumDetailsNotifier.new,
-);
+final albumDetailsProvider = Provider<List<AlbumDetail>>((ref) {
+  final List<AlbumDetail> albumDetails = [];
+  final metadataList = ref.read(audioFilesServiceProvider).requireValue;
 
-class AlbumDetailsNotifier extends Notifier<List<AlbumDetails>> {
-  AlbumDetailsNotifier() : super();
+  for (int i = 0; i < metadataList.length; i++) {
+    final albumDetail = AlbumDetail(
+      albumName: metadataList[i].getAlbumName,
+      albumArtPath: metadataList[i].thumbnailPath,
+      albumArtistName: metadataList[i].getAlbumArtistName,
+      albumSongs: [metadataList[i]],
+    );
 
-  @override
-  List<AlbumDetails> build() {
-    return getAlbumDetails();
-  }
-
-  List<AlbumDetails> getAlbumDetails() {
-    final Set<String> albumNamesSet = {};
-    final Set<AlbumDetails> albumDetailsSet = {};
-    final metadataList = ref.read(audioFilesServiceProvider).requireValue;
-
-    for (int i = 0; i < metadataList.length; i++) {
-      if (!albumNamesSet.contains(metadataList[i].getAlbumName)) {
-        albumNamesSet.add(metadataList[i].getAlbumName);
-        albumDetailsSet.add(
-          AlbumDetails(
-            albumName: metadataList[i].getAlbumName,
-            albumArtistName: metadataList[i].getAlbumArtistName,
-            thumbnailPath: metadataList[i].thumbnailPath,
-          ),
-        );
-      }
+    // If album does not exist, add the album
+    if (!albumDetails.contains(albumDetail)) {
+      albumDetails.add(albumDetail);
     }
 
-    final List<AlbumDetails> albumDetails = albumDetailsSet.toList();
-    albumDetails.sort((a, b) => a.albumName.compareTo(b.albumName));
-
-    return albumDetails;
-  }
-
-  List<Metadata> getAlbumMetadataList(String albumName) {
-    final List<Metadata> albumMetadataList = [];
-    final metadataList = ref.read(audioFilesServiceProvider).requireValue;
-
-    for (int i = 0; i < metadataList.length; i++) {
-      if (metadataList[i].getAlbumName == albumName) {
-        albumMetadataList.add(metadataList[i]);
+    // If album already exists, add the song to the album
+    else {
+      final int existingIdx = albumDetails.indexWhere((e) => e == albumDetail);
+      if (existingIdx != -1) {
+        albumDetails[existingIdx].albumSongs.add(metadataList[i]);
       }
     }
-
-    return albumMetadataList;
   }
-}
+
+  // Sort the album details by album name
+  albumDetails.sort((a, b) => a.albumName.compareTo(b.albumName));
+
+  return albumDetails;
+});

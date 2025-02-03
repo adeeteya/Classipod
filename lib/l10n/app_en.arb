@@ -51,17 +51,9 @@
   "@coverFlowScreenTitle": {
     "description": "The title of the cover flow screen"
   },
-  "coverFlowSelectionScreenTitle": "Cover Flow Selection",
-  "@coverFlowSelectionScreenTitle": {
-    "description": "The title of the cover flow selection screen"
-  },
   "artistsScreenTitle": "Artists",
   "@artistScreenTitle": {
     "description": "The title of the artists screen"
-  },
-  "artistSongsScreenTitle": "Artist Songs",
-  "@artistSongsScreenTitle": {
-    "description": "The title of the artist songs screen"
   },
   "albumsScreenTitle": "Albums",
   "@albumsScreenTitle": {

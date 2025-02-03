@@ -4,8 +4,7 @@ import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
-import 'package:classipod/features/music/album/album_details.dart';
-import 'package:classipod/features/music/album/album_details_provider.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/music/search/search_model.dart';
 import 'package:classipod/features/music/search/search_provider.dart';
 import 'package:classipod/features/music/search/widgets/search_bar.dart';
@@ -79,13 +78,10 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
           pathParameters: {"artistName": selectedArtistName},
         );
       } else if (searchResult.searchResultType == SearchResultType.album) {
-        final albumDetails = searchResult.result as AlbumDetails;
-        final albumMetadataList = ref
-            .read(albumDetailsProvider.notifier)
-            .getAlbumMetadataList(albumDetails.albumName);
+        final albumDetails = searchResult.result as AlbumDetail;
         await ref
             .read(audioPlayerServiceProvider.notifier)
-            .setAudioSource(albumMetadataList);
+            .setAudioSource(albumDetails.albumSongs);
         if (mounted) {
           await context.pushNamed(Routes.nowPlaying.name);
         }

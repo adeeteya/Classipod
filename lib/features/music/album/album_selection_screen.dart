@@ -3,7 +3,7 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
-import 'package:classipod/features/music/album/album_details.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:classipod/features/music/album/album_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
@@ -29,7 +29,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   String get routeName => Routes.albums.name;
 
   @override
-  List<AlbumDetails> get displayItems => ref.read(albumDetailsProvider);
+  List<AlbumDetail> get displayItems => ref.read(albumDetailsProvider);
 
   @override
   Future<void> onSelectPressed() async => _playAlbum(selectedDisplayItem);
@@ -37,17 +37,14 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   Future<void> _playAlbum(int index) async {
     setState(() => selectedDisplayItem = index);
 
-    final albumName = ref.read(albumDetailsProvider).elementAt(index).albumName;
-
     final albumMetadataList =
-        ref.read(albumDetailsProvider.notifier).getAlbumMetadataList(albumName);
+        ref.read(albumDetailsProvider).elementAt(index).albumSongs;
 
-    //If Current album is already playing, then do nothing
-    if (listEquals(
+    // If Current album is already playing, then do nothing
+    if (!listEquals(
       ref.read(nowPlayingMetadataListProvider),
       albumMetadataList,
     )) {
-    } else {
       await ref
           .read(audioPlayerServiceProvider.notifier)
           .setAudioSource(albumMetadataList);

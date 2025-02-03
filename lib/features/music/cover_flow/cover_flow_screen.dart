@@ -2,7 +2,7 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_page_screen.dart';
-import 'package:classipod/features/music/album/album_details.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
@@ -26,7 +26,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   double get viewPortFraction => 0.58;
 
   @override
-  List<AlbumDetails> get displayItems => ref.read(albumDetailsProvider);
+  List<AlbumDetail> get displayItems => ref.read(albumDetailsProvider);
 
   @override
   void onSelectPressed() => _chooseAlbum(selectedDisplayItem);
@@ -97,7 +97,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                         ? Alignment.centerLeft
                         : Alignment.centerRight,
                     child: AlbumReflectiveArt(
-                      thumbnailPath: displayItems[index].thumbnailPath,
+                      thumbnailPath: displayItems[index].albumArtPath,
                       reflectedImageHeight: reflectedImageHeight,
                       heroTag:
                           "${displayItems[index].albumName}-${displayItems[index].albumArtistName}",

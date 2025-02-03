@@ -29,7 +29,7 @@ class _AnimatedAlbumArtScrollerState
   void _getRandomAlbumArt() {
     final albumDetails = ref
         .read(albumDetailsProvider)
-        .where((album) => album.thumbnailPath != null)
+        .where((album) => album.albumArtPath != null)
         .toList();
     if (albumDetails.length < 2) {
       setState(() {
@@ -38,9 +38,9 @@ class _AnimatedAlbumArtScrollerState
       return;
     }
     final randomAlbum = albumDetails[Random().nextInt(albumDetails.length)];
-    if (randomAlbum.thumbnailPath != null) {
+    if (randomAlbum.albumArtPath != null) {
       setState(() {
-        _albumArtImage = FileImage(File(randomAlbum.thumbnailPath!));
+        _albumArtImage = FileImage(File(randomAlbum.albumArtPath!));
       });
     }
   }

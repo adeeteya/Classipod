@@ -43,10 +43,7 @@ final searchProvider =
     final albumDetails = ref.read(albumDetailsProvider);
     for (final album in albumDetails) {
       if (album.albumName.toLowerCase().contains(searchQuery.toLowerCase())) {
-        final int numberOfSongs = ref
-            .read(albumDetailsProvider.notifier)
-            .getAlbumMetadataList(album.albumName)
-            .length;
+        final int numberOfSongs = album.albumSongs.length;
         searchResults.add(
           SearchResultsModel(
             searchResultType: SearchResultType.album,

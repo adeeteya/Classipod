@@ -2,11 +2,11 @@ import 'dart:io';
 
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
-import 'package:classipod/features/music/album/album_details.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:flutter/cupertino.dart';
 
 class AlbumListTile extends StatelessWidget {
-  final AlbumDetails albumDetails;
+  final AlbumDetail albumDetails;
   final bool isSelected;
   final VoidCallback onTap;
   const AlbumListTile({
@@ -39,8 +39,8 @@ class AlbumListTile extends StatelessWidget {
           child: Row(
             children: [
               Image(
-                image: (albumDetails.thumbnailPath != null)
-                    ? FileImage(File(albumDetails.thumbnailPath!))
+                image: (albumDetails.albumArtPath != null)
+                    ? FileImage(File(albumDetails.albumArtPath!))
                     : const AssetImage(Assets.defaultAlbumCoverImage),
                 errorBuilder: (_, __, ___) => Image.asset(
                   Assets.defaultAlbumCoverImage,

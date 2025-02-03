@@ -39,6 +39,7 @@ enum Routes {
   artists,
   artistSongs,
   albums,
+  albumSongs,
   songs,
   genres,
   genreSongs,
@@ -70,12 +71,14 @@ enum Routes {
       case coverFlow:
         return context.localization.coverFlowScreenTitle;
       case coverFlowSelection:
-        return context.localization.coverFlowSelectionScreenTitle;
+        return context.localization.coverFlowScreenTitle;
       case artists:
         return context.localization.artistsScreenTitle;
       case artistSongs:
-        return context.localization.artistSongsScreenTitle;
+        return context.localization.artistsScreenTitle;
       case albums:
+        return context.localization.albumsScreenTitle;
+      case albumSongs:
         return context.localization.albumsScreenTitle;
       case songs:
         return context.localization.songsScreenTitle;
@@ -270,6 +273,20 @@ final routerProvider = Provider(
                           key: state.pageKey,
                           child: const AlbumsSelectionScreen(),
                         ),
+                        routes: [
+                          // GoRoute(
+                          //   path: Routes.albumSongs.name,
+                          //   name: Routes.albumSongs.name,
+                          //   parentNavigatorKey: _rootNavigatorKey,
+                          //   pageBuilder: (context, state) => CupertinoPage(
+                          //     key: state.pageKey,
+                          //     child: AlbumSongsScreen(
+                          //       albumName: state.pathParameters["albumName"] ?? "",
+                          //       artistName:
+                          //           state.uri.queryParameters['artistName'] ?? '',
+                          //     ),
+                          //   ),
+                        ],
                       ),
                       GoRoute(
                         path: Routes.songs.name,

@@ -33,14 +33,16 @@ class StatusBar extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Row(
             children: [
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+              Expanded(
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  maxLines: 1,
                 ),
               ),
-              const Spacer(),
               Consumer(
                 builder: (context, ref, child) {
                   final playingStreamProvider =

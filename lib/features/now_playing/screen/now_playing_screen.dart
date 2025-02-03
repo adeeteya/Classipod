@@ -14,6 +14,7 @@ import 'package:classipod/features/now_playing/widgets/volume_bar.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 enum _NowPlayingBottomBarPage {
   seekBar,
@@ -65,6 +66,11 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
         _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
       });
     }
+  }
+
+  @override
+  void onSelectLongPress() {
+    context.goNamed(Routes.nowPlayingMoreOptions.name);
   }
 
   void startVolumeTimer() {

@@ -18,6 +18,8 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   void onSelectPressed();
 
+  void onSelectLongPress() {}
+
   void scrollForward() {
     final size = MediaQuery.sizeOf(context);
 
@@ -82,6 +84,9 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         break;
       case DeviceAction.select:
         onSelectPressed();
+        break;
+      case DeviceAction.selectLongPress:
+        onSelectLongPress();
         break;
       case DeviceAction.rotateForward:
         scrollForward();

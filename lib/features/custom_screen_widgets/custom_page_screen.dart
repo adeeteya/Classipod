@@ -18,6 +18,8 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   void onSelectPressed();
 
+  void onSelectLongPress() {}
+
   Future<void> scrollForward() async {
     if (selectedDisplayItem < displayItems.length - 1) {
       await pageController.nextPage(
@@ -76,6 +78,9 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         break;
       case DeviceAction.select:
         onSelectPressed();
+        break;
+      case DeviceAction.selectLongPress:
+        onSelectLongPress();
         break;
       case DeviceAction.rotateForward:
         await rotateForward();

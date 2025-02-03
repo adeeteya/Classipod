@@ -3,6 +3,7 @@ import 'package:classipod/core/navigation/page_not_found_screen.dart';
 import 'package:classipod/features/about/screen/about_screen.dart';
 import 'package:classipod/features/app_startup/screens/splash_screen.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_scroll_behavior.dart';
+import 'package:classipod/features/custom_screen_widgets/options_modal_page.dart';
 import 'package:classipod/features/device/presentation/device_frame.dart';
 import 'package:classipod/features/language/language_selection_screen.dart';
 import 'package:classipod/features/menu/screens/main_menu_screen.dart';
@@ -17,6 +18,7 @@ import 'package:classipod/features/music/genres/genre_songs_screen.dart';
 import 'package:classipod/features/music/genres/genres_screen.dart';
 import 'package:classipod/features/music/search/search_screen.dart';
 import 'package:classipod/features/music/songs/songs_screen.dart';
+import 'package:classipod/features/now_playing/screen/now_playing_more_options_modal.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -30,6 +32,7 @@ enum Routes {
   about,
   language,
   nowPlaying,
+  nowPlayingMoreOptions,
   musicMenu,
   coverFlow,
   coverFlowSelection,
@@ -59,6 +62,8 @@ enum Routes {
       case language:
         return context.localization.languageScreenTitle;
       case nowPlaying:
+        return context.localization.nowPlayingScreenTitle;
+      case nowPlayingMoreOptions:
         return context.localization.nowPlayingScreenTitle;
       case musicMenu:
         return context.localization.musicMenuScreenTitle;
@@ -176,6 +181,19 @@ final routerProvider = Provider(
                       key: state.pageKey,
                       child: const NowPlayingScreen(),
                     ),
+                    routes: [
+                      GoRoute(
+                        path: Routes.nowPlayingMoreOptions.name,
+                        name: Routes.nowPlayingMoreOptions.name,
+                        parentNavigatorKey: _rootNavigatorKey,
+                        pageBuilder: (context, state) => OptionsModalPage(
+                          context: context,
+                          title: Routes.nowPlayingMoreOptions.title(context),
+                          builder: (context) =>
+                              const NowPlayingMoreOptionsModal(),
+                        ),
+                      ),
+                    ],
                   ),
                   GoRoute(
                     path: Routes.musicMenu.toString(),

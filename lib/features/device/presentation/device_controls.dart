@@ -204,6 +204,12 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                   onTap: () async => ref
                       .read(deviceButtonsServiceProvider.notifier)
                       .setDeviceAction(DeviceAction.select),
+                  onLongPress: () async => ref
+                      .read(deviceButtonsServiceProvider.notifier)
+                      .setDeviceAction(DeviceAction.selectLongPress),
+                  onLongPressEnd: (_) async => ref
+                      .read(deviceButtonsServiceProvider.notifier)
+                      .setDeviceAction(DeviceAction.longPressEnd),
                   child: SizedBox(
                     height: size.width * Constants.deviceButtonSizeRatio,
                     width: size.width * Constants.deviceButtonSizeRatio,

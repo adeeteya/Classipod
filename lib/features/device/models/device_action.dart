@@ -1,6 +1,7 @@
 enum DeviceAction {
   menu,
   select,
+  selectLongPress,
   rotateForward,
   rotateBackward,
   seekForward,

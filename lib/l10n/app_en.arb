@@ -220,15 +220,23 @@
     "description": "The title of the language screen"
   },
   "silverDeviceColor": "Silver",
-    "@silverDeviceColor": {
-        "description": "The name of the silver device color"
-    },
+  "@silverDeviceColor": {
+    "description": "The name of the silver device color"
+  },
   "blackDeviceColor": "Black",
-    "@blackDeviceColor": {
-        "description": "The name of the black device color"
-    },
+  "@blackDeviceColor": {
+    "description": "The name of the black device color"
+  },
   "resetSettingsTitle": "Reset Settings",
-    "@resetSettingsTitle": {
-        "description": "The title of the reset settings dialog"
-    }
+  "@resetSettingsTitle": {
+    "description": "The title of the reset settings dialog"
+  },
+  "browseArtist": "Browse Artist",
+  "@browseArtist": {
+    "description": "The text of the browse artist option"
+  },
+  "browseAlbum": "Browse Album",
+  "@browseAlbum": {
+    "description": "The text of the browse album option"
+  }
 }

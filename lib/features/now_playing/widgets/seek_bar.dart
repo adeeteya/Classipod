@@ -1,68 +1,86 @@
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
-import 'package:classipod/features/now_playing/widgets/box_progress_bar.dart';
-import 'package:classipod/features/now_playing/widgets/scrubber_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SeekBar extends ConsumerWidget {
-  final bool showScrubber;
-  const SeekBar({super.key, this.showScrubber = false});
+  final double max;
+  final double value;
+  const SeekBar({
+    super.key,
+    required this.max,
+    required this.value,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return RepaintBoundary(
-      child: StreamBuilder<Duration>(
-        stream: ref.read(audioPlayerProvider).positionStream,
-        builder: (context, snapshot) {
-          final double totalDuration = (ref
-                      .read(nowPlayingMetadataListProvider)[
-                          ref.read(audioPlayerProvider).currentIndex ?? 0]
-                      .trackDuration ??
-                  1000) /
-              1000;
-          double currentDuration = snapshot.data?.inSeconds.toDouble() ?? 0;
-          if (currentDuration < 0) {
-            currentDuration = 0;
-          }
-
-          final int elapsedTimeInMinutes = currentDuration ~/ 60;
-          final int elapsedTimeInSeconds = currentDuration.toInt() % 60;
-
-          final int remainingTimeInMinutes =
-              (totalDuration - currentDuration) ~/ 60;
-          final int remainingTimeInSeconds =
-              (totalDuration - currentDuration).toInt() % 60;
-
-          return Row(
+    return Expanded(
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          return Stack(
             children: [
-              SizedBox(
-                width: 35,
-                child: Text(
-                  "$elapsedTimeInMinutes:${elapsedTimeInSeconds < 10 ? "0$elapsedTimeInSeconds" : elapsedTimeInSeconds}",
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: GestureDetector(
+                  onTapDown: (tapDownDetails) async {
+                    final targetSeekValue =
+                        (tapDownDetails.localPosition.dx * max) /
+                            constraints.maxWidth;
+                    await ref
+                        .read(audioPlayerServiceProvider.notifier)
+                        .seekToDuration(
+                          targetSeekValue.floor(),
+                        );
+                  },
+                  child: SizedBox(
+                    height: 20,
+                    width: constraints.maxWidth,
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [
+                            AppPalette.inActiveSliderGradientColor1,
+                            AppPalette.inActiveSliderGradientColor2,
+                          ],
+                        ),
+                        border: Border.all(color: AppPalette.sliderBorderColor),
+                      ),
+                    ),
                   ),
                 ),
               ),
-              if (showScrubber)
-                ScrubberBar(
-                  max: totalDuration,
-                  value: currentDuration,
-                ),
-              if (!showScrubber)
-                BoxProgressBar(
-                  max: totalDuration,
-                  value: currentDuration,
-                ),
-              SizedBox(
-                width: 40,
-                child: Text(
-                  "- $remainingTimeInMinutes:${remainingTimeInSeconds < 10 ? "0$remainingTimeInSeconds" : remainingTimeInSeconds}",
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+              IgnorePointer(
+                child: AnimatedContainer(
+                  height: 20,
+                  width: (value / max) * constraints.maxWidth,
+                  margin: const EdgeInsets.symmetric(horizontal: 8),
+                  duration: const Duration(milliseconds: 10),
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        AppPalette.nowProgressBarGradientColor1,
+                        AppPalette.nowProgressBarGradientColor2,
+                        AppPalette.nowProgressBarGradientColor1,
+                        AppPalette.nowProgressBarGradientColor3,
+                        AppPalette.nowProgressBarGradientColor4,
+                        AppPalette.nowProgressBarGradientColor5,
+                        AppPalette.nowProgressBarGradientColor6,
+                        AppPalette.nowProgressBarGradientColor7,
+                        AppPalette.nowProgressBarGradientColor8,
+                      ],
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: AppPalette.nowProgressBarShadowColor,
+                        spreadRadius: 1,
+                        blurRadius: 2,
+                        offset: Offset(0, 8),
+                      ),
+                    ],
                   ),
                 ),
               ),

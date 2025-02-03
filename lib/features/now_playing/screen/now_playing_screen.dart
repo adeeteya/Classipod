@@ -8,8 +8,8 @@ import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_page_screen.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
+import 'package:classipod/features/now_playing/widgets/now_playing_bottom_bar.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_page.dart';
-import 'package:classipod/features/now_playing/widgets/seek_bar.dart';
 import 'package:classipod/features/now_playing/widgets/volume_bar.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -246,8 +246,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
                               controller: _bottomBarPageController,
                               physics: const NeverScrollableScrollPhysics(),
                               children: const [
-                                SeekBar(),
-                                SeekBar(showScrubber: true),
+                                NowPlayingBottomBar(),
+                                NowPlayingBottomBar(showScrubber: true),
                               ],
                             ),
                     ),

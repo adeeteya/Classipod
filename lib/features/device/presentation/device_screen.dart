@@ -26,8 +26,8 @@ class DeviceScreen extends ConsumerWidget {
       screenHeight = Constants.screenHeightRatio;
     }
 
-    return IgnorePointer(
-      ignoring: !isTouchScreenEnabled,
+    return AbsorbPointer(
+      absorbing: !isTouchScreenEnabled,
       child: Container(
         height: size.height * screenHeight,
         width: double.infinity,

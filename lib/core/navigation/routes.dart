@@ -12,7 +12,7 @@ import 'package:classipod/features/menu/screens/split_screen_placeholder.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/music/album/album_selection_screen.dart';
 import 'package:classipod/features/music/album/album_songs_screen.dart';
-import 'package:classipod/features/music/artists/artist_songs_screen.dart';
+import 'package:classipod/features/music/artists/artist_albums_screen.dart';
 import 'package:classipod/features/music/artists/artists_selection_screen.dart';
 import 'package:classipod/features/music/cover_flow/cover_flow_album_selection_screen.dart';
 import 'package:classipod/features/music/cover_flow/cover_flow_screen.dart';
@@ -39,7 +39,7 @@ enum Routes {
   coverFlow,
   coverFlowSelection,
   artists,
-  artistSongs,
+  artistAlbums,
   albums,
   albumSongs,
   songs,
@@ -76,7 +76,7 @@ enum Routes {
         return context.localization.coverFlowScreenTitle;
       case artists:
         return context.localization.artistsScreenTitle;
-      case artistSongs:
+      case artistAlbums:
         return context.localization.artistsScreenTitle;
       case albums:
         return context.localization.albumsScreenTitle;
@@ -250,11 +250,11 @@ final routerProvider = Provider(
                         routes: [
                           GoRoute(
                             path: ":artistName",
-                            name: Routes.artistSongs.name,
+                            name: Routes.artistAlbums.name,
                             parentNavigatorKey: _rootNavigatorKey,
                             pageBuilder: (context, state) => CupertinoPage(
                               key: state.pageKey,
-                              child: ArtistSongsScreen(
+                              child: ArtistAlbumsScreen(
                                 artistName:
                                     state.pathParameters["artistName"] ?? "",
                               ),

@@ -1,6 +1,6 @@
 import 'package:classipod/features/music/album/album_details_provider.dart';
+import 'package:classipod/features/music/artists/artist_albums_provider.dart';
 import 'package:classipod/features/music/artists/artist_names_provider.dart';
-import 'package:classipod/features/music/artists/artist_songs_provider.dart';
 import 'package:classipod/features/music/search/search_model.dart';
 import 'package:classipod/features/music/songs/songs_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -29,7 +29,7 @@ final searchProvider =
     for (final artist in artistsNames) {
       if (artist.toLowerCase().contains(searchQuery.toLowerCase())) {
         final numberOfSongs =
-            ref.read(artistSongsMetadataListProvider(artist)).length;
+            ref.read(artistAlbumDetailListProvider(artist)).length;
         searchResults.add(
           SearchResultsModel(
             searchResultType: SearchResultType.artist,

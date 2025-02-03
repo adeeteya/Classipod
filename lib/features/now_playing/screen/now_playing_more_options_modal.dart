@@ -62,7 +62,7 @@ class _NowPlayingMoreOptionsModalState
         break;
       case _NowPlayingMoreOptions.browseArtist:
         context.pushReplacementNamed(
-          Routes.artistSongs.name,
+          Routes.artistAlbums.name,
           pathParameters: {
             "artistName":
                 currentSongMetadata?.getMainArtistName ?? "Unknown Artist",

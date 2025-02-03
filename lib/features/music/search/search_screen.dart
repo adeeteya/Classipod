@@ -74,7 +74,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
       } else if (searchResult.searchResultType == SearchResultType.artist) {
         final selectedArtistName = searchResult.result as String;
         await context.pushNamed(
-          Routes.artistSongs.name,
+          Routes.artistAlbums.name,
           pathParameters: {"artistName": selectedArtistName},
         );
       } else if (searchResult.searchResultType == SearchResultType.album) {

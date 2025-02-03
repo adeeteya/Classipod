@@ -31,7 +31,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
     setState(() => selectedDisplayItem = index);
     final selectedArtistName = ref.read(artistNamesProvider).elementAt(index);
     context.goNamed(
-      Routes.artistSongs.name,
+      Routes.artistAlbums.name,
       pathParameters: {"artistName": selectedArtistName},
     );
   }

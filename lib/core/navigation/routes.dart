@@ -9,7 +9,9 @@ import 'package:classipod/features/language/language_selection_screen.dart';
 import 'package:classipod/features/menu/screens/main_menu_screen.dart';
 import 'package:classipod/features/menu/screens/music_menu_screen.dart';
 import 'package:classipod/features/menu/screens/split_screen_placeholder.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/music/album/album_selection_screen.dart';
+import 'package:classipod/features/music/album/album_songs_screen.dart';
 import 'package:classipod/features/music/artists/artist_songs_screen.dart';
 import 'package:classipod/features/music/artists/artists_selection_screen.dart';
 import 'package:classipod/features/music/cover_flow/cover_flow_album_selection_screen.dart';
@@ -231,12 +233,7 @@ final routerProvider = Provider(
                               transitionsBuilder: (context, _, __, child) =>
                                   child,
                               child: CoverFlowAlbumSelectionScreen(
-                                albumName:
-                                    state.uri.queryParameters['albumName'] ??
-                                        '',
-                                artistName:
-                                    state.uri.queryParameters['artistName'] ??
-                                        '',
+                                albumDetail: state.extra as AlbumDetail,
                               ),
                             ),
                           ),
@@ -274,18 +271,17 @@ final routerProvider = Provider(
                           child: const AlbumsSelectionScreen(),
                         ),
                         routes: [
-                          // GoRoute(
-                          //   path: Routes.albumSongs.name,
-                          //   name: Routes.albumSongs.name,
-                          //   parentNavigatorKey: _rootNavigatorKey,
-                          //   pageBuilder: (context, state) => CupertinoPage(
-                          //     key: state.pageKey,
-                          //     child: AlbumSongsScreen(
-                          //       albumName: state.pathParameters["albumName"] ?? "",
-                          //       artistName:
-                          //           state.uri.queryParameters['artistName'] ?? '',
-                          //     ),
-                          //   ),
+                          GoRoute(
+                            path: Routes.albumSongs.name,
+                            name: Routes.albumSongs.name,
+                            parentNavigatorKey: _rootNavigatorKey,
+                            pageBuilder: (context, state) => CupertinoPage(
+                              key: state.pageKey,
+                              child: AlbumSongsScreen(
+                                albumDetail: state.extra as AlbumDetail,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       GoRoute(

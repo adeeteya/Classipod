@@ -32,13 +32,10 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   void onSelectPressed() => _chooseAlbum(selectedDisplayItem);
 
   void _chooseAlbum(int index) {
-    final albumDetails = ref.read(albumDetailsProvider).elementAt(index);
+    final albumDetail = ref.read(albumDetailsProvider).elementAt(index);
     context.goNamed(
       Routes.coverFlowSelection.name,
-      queryParameters: {
-        'albumName': albumDetails.albumName,
-        'artistName': albumDetails.albumArtistName,
-      },
+      extra: albumDetail,
     );
   }
 

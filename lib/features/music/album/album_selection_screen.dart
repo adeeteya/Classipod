@@ -1,15 +1,12 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:classipod/features/music/album/album_list_tile.dart';
-import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -32,27 +29,15 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   List<AlbumDetail> get displayItems => ref.read(albumDetailsProvider);
 
   @override
-  Future<void> onSelectPressed() async => _playAlbum(selectedDisplayItem);
+  Future<void> onSelectPressed() async =>
+      _navigateToAlbumSelectionScreen(selectedDisplayItem);
 
-  Future<void> _playAlbum(int index) async {
+  void _navigateToAlbumSelectionScreen(int index) {
     setState(() => selectedDisplayItem = index);
-
-    final albumMetadataList =
-        ref.read(albumDetailsProvider).elementAt(index).albumSongs;
-
-    // If Current album is already playing, then do nothing
-    if (!listEquals(
-      ref.read(nowPlayingMetadataListProvider),
-      albumMetadataList,
-    )) {
-      await ref
-          .read(audioPlayerServiceProvider.notifier)
-          .setAudioSource(albumMetadataList);
-    }
-
-    if (mounted) {
-      await context.pushNamed(Routes.nowPlaying.name);
-    }
+    context.goNamed(
+      Routes.albumSongs.name,
+      extra: displayItems[index],
+    );
   }
 
   @override
@@ -87,7 +72,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
                 itemBuilder: (context, index) => AlbumListTile(
                   albumDetails: displayItems[index],
                   isSelected: selectedDisplayItem == index,
-                  onTap: () async => _playAlbum(index),
+                  onTap: () async => _navigateToAlbumSelectionScreen(index),
                 ),
               ),
             ),

@@ -1,21 +1,19 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
-import 'package:classipod/features/music/cover_flow/cover_flow_album_details.dart';
-import 'package:classipod/features/music/cover_flow/cover_flow_album_details_provider.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/music/cover_flow/cover_flow_album_song_list_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
-  final String albumName;
-  final String artistName;
+  final AlbumDetail albumDetail;
   const CoverFlowAlbumSelectionScreen({
     super.key,
-    required this.albumName,
-    required this.artistName,
+    required this.albumDetail,
   });
 
   @override
@@ -31,8 +29,7 @@ class _CoverFlowAlbumSelectionScreenState
   String get routeName => Routes.coverFlowSelection.name;
 
   @override
-  List<CoverFlowAlbumDetails> get displayItems =>
-      ref.read(coverFlowAlbumDetailsProvider(widget.albumName));
+  List<Metadata> get displayItems => widget.albumDetail.albumSongs;
 
   @override
   Future<void> onSelectPressed() => _playSong(selectedDisplayItem);
@@ -54,7 +51,8 @@ class _CoverFlowAlbumSelectionScreenState
     final int? currentlyPlayingOriginalIndex =
         ref.watch(currentSongMetadataProvider)?.originalSongIndex;
     return Hero(
-      tag: "${widget.albumName}-${widget.artistName}",
+      tag:
+          "${widget.albumDetail.albumName}-${widget.albumDetail.albumArtistName}",
       child: SizedBox(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(40, 10, 40, 0),
@@ -86,7 +84,7 @@ class _CoverFlowAlbumSelectionScreenState
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            widget.albumName,
+                            widget.albumDetail.albumName,
                             style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -95,7 +93,7 @@ class _CoverFlowAlbumSelectionScreenState
                             maxLines: 1,
                           ),
                           Text(
-                            widget.artistName,
+                            widget.albumDetail.albumArtistName,
                             style: const TextStyle(
                               fontSize: 16,
                               color: CupertinoColors.white,
@@ -115,9 +113,9 @@ class _CoverFlowAlbumSelectionScreenState
                       itemCount: displayItems.length,
                       itemBuilder: (context, index) =>
                           CoverFlowAlbumSongListTile(
-                        songName: displayItems[index].songName,
+                        songName: displayItems[index].getTrackName,
                         songDuration: Duration(
-                          milliseconds: displayItems[index].trackDuration,
+                          milliseconds: displayItems[index].getTrackDuration,
                         ),
                         isSelected: selectedDisplayItem == index,
                         isCurrentlyPlaying: currentlyPlayingOriginalIndex ==

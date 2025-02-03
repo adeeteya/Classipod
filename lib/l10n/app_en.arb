@@ -63,6 +63,26 @@
   "@songsScreenTitle": {
     "description": "The title of the songs screen"
   },
+  "nSongs": "{count, plural, =0{No Songs} =1{1 Song} other{{count} Songs}}",
+  "@nSongs": {
+    "description": "A message to show number of songs",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "nAlbums": "{count, plural, =0{No Albums} =1{1 Album} other{{count} Albums}}",
+  "@nAlbums": {
+    "description": "A message to show number of albums",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
   "genresScreenTitle": "Genres",
   "@genresScreenTitle": {
     "description": "The title of the genres screen"

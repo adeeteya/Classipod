@@ -30,13 +30,11 @@ class SearchListTile extends StatelessWidget {
       description = metadata.getMainArtistName;
     } else if (searchResult.searchResultType == SearchResultType.artist) {
       title = searchResult.result as String;
-      description =
-          "${searchResult.count} ${context.localization.songsScreenTitle}";
+      description = context.localization.nAlbums(searchResult.count);
     } else if (searchResult.searchResultType == SearchResultType.album) {
       final albumDetails = searchResult.result as AlbumDetail;
       title = albumDetails.albumName;
-      description =
-          "${searchResult.count} ${context.localization.songsScreenTitle}";
+      description = context.localization.nSongs(searchResult.count);
       imageFilePath = albumDetails.albumArtPath;
     } else {
       title = context.localization.searchScreenTitle;

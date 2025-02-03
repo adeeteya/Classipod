@@ -1,7 +1,7 @@
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
-import 'package:classipod/features/music/album/album_list_tile.dart';
+import 'package:classipod/features/music/artists/artist_album_list_tile.dart';
 import 'package:classipod/features/music/artists/artist_albums_provider.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -54,7 +54,7 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => AlbumListTile(
+                itemBuilder: (context, index) => ArtistAlbumListTile(
                   albumDetails: displayItems[index],
                   isSelected: selectedDisplayItem == index,
                   onTap: () async => _navigateToAlbumSelectionScreen(index),

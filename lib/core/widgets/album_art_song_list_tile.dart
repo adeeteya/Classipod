@@ -3,20 +3,19 @@ import 'dart:io';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/models/metadata.dart';
 import 'package:flutter/cupertino.dart';
 
 class AlbumArtSongListTile extends StatelessWidget {
-  final String? thumbnailPath;
-  final String? songName;
-  final String? trackArtistNames;
+  final Metadata songMetadata;
   final bool isSelected;
+  final bool isCurrentlyPlaying;
   final VoidCallback onTap;
   const AlbumArtSongListTile({
     super.key,
-    required this.thumbnailPath,
-    required this.songName,
-    required this.trackArtistNames,
+    required this.songMetadata,
     required this.isSelected,
+    required this.isCurrentlyPlaying,
     required this.onTap,
   });
 
@@ -43,8 +42,8 @@ class AlbumArtSongListTile extends StatelessWidget {
           child: Row(
             children: [
               Image(
-                image: (thumbnailPath != null)
-                    ? FileImage(File(thumbnailPath!))
+                image: (songMetadata.thumbnailPath != null)
+                    ? FileImage(File(songMetadata.thumbnailPath!))
                     : const AssetImage(Assets.defaultAlbumCoverImage),
                 errorBuilder: (_, __, ___) => Image.asset(
                   Assets.defaultAlbumCoverImage,
@@ -60,7 +59,8 @@ class AlbumArtSongListTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      songName ?? context.localization.unknownSong,
+                      songMetadata.trackName ??
+                          context.localization.unknownSong,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -72,7 +72,8 @@ class AlbumArtSongListTile extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      trackArtistNames ?? context.localization.unknownArtist,
+                      songMetadata.getTrackArtistNames ??
+                          context.localization.unknownArtist,
                       style: TextStyle(
                         color: isSelected
                             ? CupertinoColors.white
@@ -84,9 +85,16 @@ class AlbumArtSongListTile extends StatelessWidget {
                 ),
               ),
               if (isSelected)
-                const Icon(
-                  CupertinoIcons.right_chevron,
+                Icon(
+                  isCurrentlyPlaying
+                      ? CupertinoIcons.volume_up
+                      : CupertinoIcons.right_chevron,
                   color: CupertinoColors.white,
+                ),
+              if (!isSelected && isCurrentlyPlaying)
+                const Icon(
+                  CupertinoIcons.volume_up,
+                  color: CupertinoColors.black,
                 ),
             ],
           ),

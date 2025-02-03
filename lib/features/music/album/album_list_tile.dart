@@ -1,19 +1,18 @@
+import 'dart:io';
+
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/constants/assets.dart';
+import 'package:classipod/features/music/album/album_details.dart';
 import 'package:flutter/cupertino.dart';
 
-class SongListTile extends StatelessWidget {
-  final String? songName;
-  final String? trackArtistNames;
+class AlbumListTile extends StatelessWidget {
+  final AlbumDetails albumDetails;
   final bool isSelected;
-  final bool isCurrentlyPlaying;
   final VoidCallback onTap;
-  const SongListTile({
+  const AlbumListTile({
     super.key,
-    required this.songName,
-    required this.trackArtistNames,
+    required this.albumDetails,
     required this.isSelected,
-    required this.isCurrentlyPlaying,
     required this.onTap,
   });
 
@@ -22,7 +21,7 @@ class SongListTile extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        height: 40,
+        height: 50,
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
@@ -37,16 +36,27 @@ class SongListTile extends StatelessWidget {
                   )
                 : null,
           ),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 4),
-            child: Row(
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+          child: Row(
+            children: [
+              Image(
+                image: (albumDetails.thumbnailPath != null)
+                    ? FileImage(File(albumDetails.thumbnailPath!))
+                    : const AssetImage(Assets.defaultAlbumCoverImage),
+                errorBuilder: (_, __, ___) => Image.asset(
+                  Assets.defaultAlbumCoverImage,
+                  fit: BoxFit.fitWidth,
+                ),
+                height: 50,
+                width: 50,
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      songName ?? context.localization.unknownSong,
+                      albumDetails.albumName,
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -56,8 +66,9 @@ class SongListTile extends StatelessWidget {
                       ),
                       maxLines: 1,
                     ),
+                    const SizedBox(height: 2),
                     Text(
-                      trackArtistNames ?? context.localization.unknownArtist,
+                      albumDetails.albumArtistName,
                       style: TextStyle(
                         color: isSelected
                             ? CupertinoColors.white
@@ -67,18 +78,13 @@ class SongListTile extends StatelessWidget {
                     ),
                   ],
                 ),
-                if (isCurrentlyPlaying) ...[
-                  const Spacer(),
-                  Icon(
-                    CupertinoIcons.volume_up,
-                    size: 18,
-                    color: isSelected
-                        ? CupertinoColors.white
-                        : CupertinoColors.black,
-                  ),
-                ],
-              ],
-            ),
+              ),
+              if (isSelected)
+                const Icon(
+                  CupertinoIcons.right_chevron,
+                  color: CupertinoColors.white,
+                ),
+            ],
           ),
         ),
       ),

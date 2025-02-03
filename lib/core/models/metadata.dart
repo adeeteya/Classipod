@@ -181,17 +181,51 @@ class Metadata {
     return trackArtistNames?[0] ?? "Unknown Artist";
   }
 
-  String get getTrackArtistNames {
+  String? get getTrackArtistNames {
     return trackArtistNames?.toString().substring(
-              1,
-              trackArtistNames.toString().length - 1,
-            ) ??
-        "Unknown Artist";
+          1,
+          trackArtistNames.toString().length - 1,
+        );
   }
 
   String get getMainGenre {
     return genres.isNotEmpty ? genres[0] : "Unknown Genre";
   }
+
+  @override
+  bool operator ==(Object other) {
+    return other is Metadata &&
+        trackName == other.trackName &&
+        trackArtistNames == other.trackArtistNames &&
+        albumName == other.albumName &&
+        albumArtistName == other.albumArtistName &&
+        trackNumber == other.trackNumber &&
+        albumLength == other.albumLength &&
+        year == other.year &&
+        genres == other.genres &&
+        discNumber == other.discNumber &&
+        mimeType == other.mimeType &&
+        trackDuration == other.trackDuration &&
+        bitrate == other.bitrate &&
+        filePath == other.filePath;
+  }
+
+  @override
+  int get hashCode => Object.hash(
+        trackName,
+        trackArtistNames,
+        albumName,
+        albumArtistName,
+        trackNumber,
+        albumLength,
+        year,
+        genres,
+        discNumber,
+        mimeType,
+        trackDuration,
+        bitrate,
+        filePath,
+      );
 }
 
 int? parseInteger(dynamic value) {

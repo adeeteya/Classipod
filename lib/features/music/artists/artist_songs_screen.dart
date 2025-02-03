@@ -1,8 +1,8 @@
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
-import 'package:classipod/features/music/album/album_art_song_list_tile.dart';
 import 'package:classipod/features/music/artists/artist_songs_provider.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -44,6 +44,8 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
 
   @override
   Widget build(BuildContext context) {
+    final int? currentlyPlayingOriginalIndex =
+        ref.watch(currentSongMetadataProvider)?.originalSongIndex;
     return CupertinoPageScaffold(
       child: Column(
         children: [
@@ -57,10 +59,10 @@ class _ArtistSongsScreenState extends ConsumerState<ArtistSongsScreen>
                 controller: scrollController,
                 itemCount: displayItems.length,
                 itemBuilder: (context, index) => AlbumArtSongListTile(
-                  thumbnailPath: displayItems[index].thumbnailPath,
-                  songName: displayItems[index].trackName,
-                  trackArtistNames: displayItems[index].getTrackArtistNames,
+                  songMetadata: displayItems[index],
                   isSelected: selectedDisplayItem == index,
+                  isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
+                      displayItems[index].originalSongIndex,
                   onTap: () async => _playSong(index),
                 ),
               ),

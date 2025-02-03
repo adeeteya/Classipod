@@ -7,12 +7,14 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
   final String songName;
   final Duration songDuration;
   final bool isSelected;
+  final bool isCurrentlyPlaying;
   final VoidCallback onTap;
   const CoverFlowAlbumSongListTile({
     super.key,
     required this.songName,
     required this.songDuration,
     required this.isSelected,
+    required this.isCurrentlyPlaying,
     required this.onTap,
   });
 
@@ -55,17 +57,25 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                   ),
                 ),
                 Flexible(
-                  child: Text(
-                    songDuration.getMinuteAndSecondString,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: isSelected
-                          ? CupertinoColors.white
-                          : CupertinoColors.black,
-                    ),
-                    maxLines: 1,
-                  ),
+                  child: isCurrentlyPlaying
+                      ? Icon(
+                          CupertinoIcons.volume_up,
+                          size: 16,
+                          color: isSelected
+                              ? CupertinoColors.white
+                              : CupertinoColors.black,
+                        )
+                      : Text(
+                          songDuration.getMinuteAndSecondString,
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: isSelected
+                                ? CupertinoColors.white
+                                : CupertinoColors.black,
+                          ),
+                          maxLines: 1,
+                        ),
                 ),
               ],
             ),

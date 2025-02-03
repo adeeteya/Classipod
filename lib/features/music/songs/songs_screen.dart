@@ -46,6 +46,8 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
 
   @override
   Widget build(BuildContext context) {
+    final int? currentlyPlayingOriginalIndex =
+        ref.watch(currentSongMetadataProvider)?.originalSongIndex;
     if (displayItems.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(
@@ -77,6 +79,8 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
                   songName: displayItems[index].trackName,
                   trackArtistNames: displayItems[index].getTrackArtistNames,
                   isSelected: selectedDisplayItem == index,
+                  isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
+                      displayItems[index].originalSongIndex,
                   onTap: () async => _playSong(index),
                 ),
               ),

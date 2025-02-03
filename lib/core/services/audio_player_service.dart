@@ -11,6 +11,16 @@ final audioPlayerProvider = Provider<AudioPlayer>((_) {
   return AudioPlayer();
 });
 
+final currentSongMetadataProvider = Provider<Metadata?>((ref) {
+  final currentIndex =
+      ref.watch(currentAudioPlayerIndexStreamProvider).value ?? 0;
+  final nowPlayingListMetadata = ref.watch(nowPlayingMetadataListProvider);
+  final Metadata? currentMetadata = nowPlayingListMetadata.isEmpty
+      ? null
+      : nowPlayingListMetadata[currentIndex];
+  return currentMetadata;
+});
+
 final currentAudioPlayerPlayingStreamProvider =
     StreamProvider.autoDispose<bool>((ref) {
   return ref.read(audioPlayerProvider).playingStream;
@@ -116,6 +126,13 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
           ref.read(audioFilesServiceProvider).requireValue.length) {
         await setAudioSource(ref.read(audioFilesServiceProvider).requireValue);
       }
+
+      //In case the same song is selected
+      if (originalIndex ==
+          ref.read(currentSongMetadataProvider)?.originalSongIndex) {
+        return;
+      }
+
       final int index = ref
           .read(nowPlayingMetadataListProvider)
           .indexWhere((element) => element.originalSongIndex == originalIndex);

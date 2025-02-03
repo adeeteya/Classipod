@@ -53,9 +53,8 @@ class NowPlayingPage extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               MarqueeText(
-                (songMetadata.getTrackArtistNames == "Unknown Artist")
-                    ? context.localization.unknownArtist
-                    : songMetadata.getTrackArtistNames,
+                songMetadata.getTrackArtistNames ??
+                    context.localization.unknownArtist,
                 style: const TextStyle(
                   color: AppPalette.hintTextColor,
                   fontSize: 16,

@@ -74,10 +74,10 @@ packages:
     dependency: transitive
     description:
       name: audio_service_web
-      sha256: "4cdc2127cd4562b957fb49227dc58e3303fafb09bde2573bc8241b938cf759d9"
+      sha256: b8ea9243201ee53383157fbccf13d5d2a866b5dda922ec19d866d1d5d70424df
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.3"
+    version: "0.1.4"
   audio_session:
     dependency: transitive
     description:
@@ -274,10 +274,10 @@ packages:
     dependency: "direct main"
     description:
       name: device_preview_plus
-      sha256: caee6de21c24f5b229c792e29b3caf409c6448c376a86899ec999bd2f2205fb9
+      sha256: "5a43d6a76b6d05f7b428f245414a196fd16d7e3aba054d22c473337b04a21e36"
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.5"
+    version: "2.2.6"
   disable_battery_optimization:
     dependency: "direct main"
     description:

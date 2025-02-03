@@ -3,11 +3,13 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
-import 'package:classipod/features/music/album/album_art_song_list_tile.dart';
 import 'package:classipod/features/music/album/album_details.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
+import 'package:classipod/features/music/album/album_list_tile.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -40,9 +42,16 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
     final albumMetadataList =
         ref.read(albumDetailsProvider.notifier).getAlbumMetadataList(albumName);
 
-    await ref
-        .read(audioPlayerServiceProvider.notifier)
-        .setAudioSource(albumMetadataList);
+    //If Current album is already playing, then do nothing
+    if (listEquals(
+      ref.read(nowPlayingMetadataListProvider),
+      albumMetadataList,
+    )) {
+    } else {
+      await ref
+          .read(audioPlayerServiceProvider.notifier)
+          .setAudioSource(albumMetadataList);
+    }
 
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
@@ -78,10 +87,8 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => AlbumArtSongListTile(
-                  thumbnailPath: displayItems[index].thumbnailPath,
-                  songName: displayItems[index].albumName,
-                  trackArtistNames: displayItems[index].albumArtistName,
+                itemBuilder: (context, index) => AlbumListTile(
+                  albumDetails: displayItems[index],
                   isSelected: selectedDisplayItem == index,
                   onTap: () async => _playAlbum(index),
                 ),

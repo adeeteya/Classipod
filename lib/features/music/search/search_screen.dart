@@ -73,18 +73,13 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
         }
       } else if (searchResult.searchResultType == SearchResultType.artist) {
         final selectedArtistName = searchResult.result as String;
-        context.goNamed(
+        await context.pushNamed(
           Routes.artistSongs.name,
           pathParameters: {"artistName": selectedArtistName},
         );
       } else if (searchResult.searchResultType == SearchResultType.album) {
-        final albumDetails = searchResult.result as AlbumDetail;
-        await ref
-            .read(audioPlayerServiceProvider.notifier)
-            .setAudioSource(albumDetails.albumSongs);
-        if (mounted) {
-          await context.pushNamed(Routes.nowPlaying.name);
-        }
+        final albumDetail = searchResult.result as AlbumDetail;
+        await context.pushNamed(Routes.albumSongs.name, extra: albumDetail);
       }
     }
   }

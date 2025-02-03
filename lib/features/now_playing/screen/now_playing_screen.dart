@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
-import 'package:classipod/features/custom_screen_widgets/custom_page_screen.dart';
+import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_bottom_bar.dart';
@@ -28,24 +28,14 @@ class NowPlayingScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _NowPlayingScreenState();
 }
 
-class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
-    with CustomPageScreen {
+class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   final PageController _bottomBarPageController = PageController();
   late Timer _longPressTimer;
   Timer _lastVolumeChangeTimer = Timer(Duration.zero, () {});
   bool _isVolumeChanging = false;
   _NowPlayingBottomBarPage _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
-
-  @override
   String get routeName => Routes.nowPlaying.name;
 
-  @override
-  int get initialPage => ref.read(audioPlayerProvider).currentIndex ?? 0;
-
-  @override
-  List<Metadata> get displayItems => ref.read(nowPlayingMetadataListProvider);
-
-  @override
   Future<void> onSelectPressed() async {
     if (_bottomBarPage == _NowPlayingBottomBarPage.seekBar) {
       await _bottomBarPageController.animateToPage(
@@ -68,7 +58,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     }
   }
 
-  @override
   void onSelectLongPress() {
     context.goNamed(Routes.nowPlayingMoreOptions.name);
   }
@@ -88,7 +77,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     });
   }
 
-  @override
   Future<void> rotateForward() async {
     if (_bottomBarPage == _NowPlayingBottomBarPage.scrubberBar) {
       await ref.read(audioPlayerServiceProvider.notifier).seekForward();
@@ -101,7 +89,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     startVolumeTimer();
   }
 
-  @override
   Future<void> rotateBackward() async {
     if (_bottomBarPage == _NowPlayingBottomBarPage.scrubberBar) {
       await ref.read(audioPlayerServiceProvider.notifier).seekBackward();
@@ -114,17 +101,14 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     startVolumeTimer();
   }
 
-  @override
   Future<void> seekForward() async {
     await ref.read(audioPlayerServiceProvider.notifier).nextSong();
   }
 
-  @override
   Future<void> seekBackward() async {
     await ref.read(audioPlayerServiceProvider.notifier).seekBackwards();
   }
 
-  @override
   void seekForwardLongPress() {
     _longPressTimer =
         Timer.periodic(const Duration(milliseconds: 50), (_) async {
@@ -132,7 +116,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     });
   }
 
-  @override
   void seekBackwardLongPress() {
     _longPressTimer =
         Timer.periodic(const Duration(milliseconds: 50), (_) async {
@@ -140,12 +123,19 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     });
   }
 
-  @override
   void onLongPressEnd() {
     if (_longPressTimer.isActive) {
       _longPressTimer.cancel();
       ref.read(deviceButtonsServiceProvider.notifier).resetDeviceAction();
     }
+  }
+
+  void onMenuButtonPressed() {
+    context.pop();
+  }
+
+  Future<void> onPlayPauseButtonPressed() async {
+    await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
   }
 
   @override
@@ -155,9 +145,52 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
     super.dispose();
   }
 
+  Future<void> deviceControlHandler(_, DeviceAction? newState) async {
+    if (newState == null || context.router.locationNamed != routeName) {
+      return;
+    }
+    switch (newState) {
+      case DeviceAction.menu:
+        onMenuButtonPressed();
+        break;
+      case DeviceAction.select:
+        await onSelectPressed();
+        break;
+      case DeviceAction.selectLongPress:
+        onSelectLongPress();
+        break;
+      case DeviceAction.rotateForward:
+        await rotateForward();
+        break;
+      case DeviceAction.rotateBackward:
+        await rotateBackward();
+        break;
+      case DeviceAction.seekForward:
+        await seekForward();
+        break;
+      case DeviceAction.seekBackward:
+        await seekBackward();
+        break;
+      case DeviceAction.seekForwardLongPress:
+        seekForwardLongPress();
+        break;
+      case DeviceAction.seekBackwardLongPress:
+        seekBackwardLongPress();
+        break;
+      case DeviceAction.playPause:
+        await onPlayPauseButtonPressed();
+        break;
+      case DeviceAction.longPressEnd:
+        onLongPressEnd();
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    if (displayItems.isEmpty) {
+    final currentSong = ref.watch(currentSongMetadataProvider);
+
+    if (currentSong == null) {
       return CupertinoPageScaffold(
         child: Column(
           children: [
@@ -172,22 +205,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
       );
     }
 
-    ref.listen(currentAudioPlayerIndexStreamProvider, (previous, next) async {
-      if (next is AsyncData) {
-        final nextPage = next.value ?? 0;
-        final previousPage = previous?.value ?? 0;
-        if ((nextPage - previousPage).abs() > 10) {
-          pageController.jumpToPage(nextPage);
-        } else if (nextPage - previousPage != 0) {
-          await pageController.animateToPage(
-            nextPage,
-            duration: const Duration(milliseconds: 1000),
-            curve: Curves.ease,
-          );
-        }
-      }
-    });
-
     final size = MediaQuery.sizeOf(context);
     late final double verticalPadding;
     if (size.height < 800) {
@@ -196,66 +213,63 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen>
       verticalPadding = 20;
     }
 
+    ref.listen(deviceButtonsServiceProvider, deviceControlHandler);
+
     return CupertinoPageScaffold(
       child: Column(
         children: [
           StatusBar(
             title: Routes.nowPlaying.title(context),
           ),
-          Flexible(
+          Expanded(
             child: Padding(
-              padding:
-                  EdgeInsets.fromLTRB(10, verticalPadding, 10, verticalPadding),
-              child: Column(
-                children: [
-                  Flexible(
-                    flex: 7,
-                    child: PageView.builder(
-                      controller: pageController,
-                      itemCount: displayItems.length,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemBuilder: (context, index) => NowPlayingPage(
-                        songMetadata: displayItems[index],
-                        currentTrackNumber: index + 1,
-                        totalTrackNumber: displayItems.length,
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    child: AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 300),
-                      transitionBuilder: (child, animation) {
-                        final begin =
-                            Offset(_isVolumeChanging ? 1.0 : -0.5, 0.0);
-                        final tween = Tween(begin: begin, end: Offset.zero);
-                        final offsetAnimation = animation.drive(tween);
-
-                        return FadeTransition(
-                          key: ValueKey<Key?>(child.key),
-                          opacity: animation,
-                          child: SlideTransition(
-                            key: ValueKey<Key?>(child.key),
-                            position: offsetAnimation,
-                            child: child,
-                          ),
-                        );
-                      },
-                      child: _isVolumeChanging
-                          ? const VolumeBar()
-                          : PageView(
-                              controller: _bottomBarPageController,
-                              physics: const NeverScrollableScrollPhysics(),
-                              children: const [
-                                NowPlayingBottomBar(),
-                                NowPlayingBottomBar(showScrubber: true),
-                              ],
-                            ),
-                    ),
-                  ),
-                ],
+              padding: EdgeInsets.fromLTRB(10, verticalPadding, 10, 0),
+              child: NowPlayingWidget(
+                songMetadata: currentSong,
+                currentTrackNumber:
+                    (ref.read(currentAudioPlayerIndexStreamProvider).value ??
+                            0) +
+                        1,
+                totalTrackNumber:
+                    ref.read(nowPlayingMetadataListProvider).length,
               ),
             ),
           ),
+          SizedBox(
+            height: 30,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: AnimatedSwitcher(
+                duration: const Duration(milliseconds: 300),
+                transitionBuilder: (child, animation) {
+                  final begin = Offset(_isVolumeChanging ? 1.0 : -0.5, 0.0);
+                  final tween = Tween(begin: begin, end: Offset.zero);
+                  final offsetAnimation = animation.drive(tween);
+
+                  return FadeTransition(
+                    key: ValueKey<Key?>(child.key),
+                    opacity: animation,
+                    child: SlideTransition(
+                      key: ValueKey<Key?>(child.key),
+                      position: offsetAnimation,
+                      child: child,
+                    ),
+                  );
+                },
+                child: _isVolumeChanging
+                    ? const VolumeBar()
+                    : PageView(
+                        controller: _bottomBarPageController,
+                        physics: const NeverScrollableScrollPhysics(),
+                        children: const [
+                          NowPlayingBottomBar(),
+                          NowPlayingBottomBar(showScrubber: true),
+                        ],
+                      ),
+              ),
+            ),
+          ),
+          SizedBox(height: verticalPadding),
         ],
       ),
     );

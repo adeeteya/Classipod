@@ -46,14 +46,16 @@ platform :android do
       symbolsFilePath = File.join(
         Dir.pwd,
         "..",
+        "..",
         "native-debug-symbols.zip"
       )
 
       symbolsFolderPath = File.join(
         Dir.pwd,
         "..",
-        "app",
+        "..",
         "build",
+        "app",
         "intermediates",
         "merged_native_libs",
         "productionRelease",

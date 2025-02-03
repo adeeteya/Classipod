@@ -3,6 +3,7 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/options_list_tile.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
+import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -49,7 +50,15 @@ class _NowPlayingMoreOptionsModalState
     final currentSongMetadata = ref.read(currentSongMetadataProvider);
     switch (optionItem) {
       case _NowPlayingMoreOptions.browseAlbum:
-        context.pushReplacementNamed(Routes.albums.name);
+        final albumDetailIndex = ref
+            .read(albumDetailsProvider)
+            .indexWhere((e) => e == currentSongMetadata?.getAlbumDetail);
+        if (albumDetailIndex != -1) {
+          context.pushReplacementNamed(
+            Routes.albumSongs.name,
+            extra: ref.read(albumDetailsProvider)[albumDetailIndex],
+          );
+        }
         break;
       case _NowPlayingMoreOptions.browseArtist:
         context.pushReplacementNamed(

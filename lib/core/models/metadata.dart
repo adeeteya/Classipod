@@ -1,5 +1,6 @@
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 
@@ -190,6 +191,15 @@ class Metadata {
 
   String get getMainGenre {
     return genres.isNotEmpty ? genres[0] : "Unknown Genre";
+  }
+
+  AlbumDetail get getAlbumDetail {
+    return AlbumDetail(
+      albumName: getAlbumName,
+      albumArtPath: thumbnailPath,
+      albumArtistName: getAlbumArtistName,
+      albumSongs: [this],
+    );
   }
 
   @override

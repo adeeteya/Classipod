@@ -15,7 +15,7 @@ class SplitScreenPlaceholder extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final splitScreenEnabled = ref.watch(
-      currentSettingsPreferencesProvider.select((e) => e.splitScreenEnabled),
+      settingsPreferencesControllerProvider.select((e) => e.splitScreenEnabled),
     );
     late final SplitScreenType splitScreenType;
     late final Widget splitScreenWidget;

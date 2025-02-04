@@ -57,7 +57,7 @@ class DevelopmentClassipodApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final languageLocaleCode = ref.watch(
-      currentSettingsPreferencesProvider
+      settingsPreferencesControllerProvider
           .select((value) => value.languageLocaleCode),
     );
     final router = ref.watch(routerProvider);

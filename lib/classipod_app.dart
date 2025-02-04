@@ -12,7 +12,7 @@ class ClassipodApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final languageLocaleCode = ref.watch(
-      currentSettingsPreferencesProvider.select(
+      settingsPreferencesControllerProvider.select(
         (value) => value.languageLocaleCode,
       ),
     );

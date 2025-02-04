@@ -14,8 +14,9 @@ class DeviceFrame extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final size = MediaQuery.sizeOf(context);
-    final deviceColor = ref
-        .watch(currentSettingsPreferencesProvider.select((e) => e.deviceColor));
+    final deviceColor = ref.watch(
+      settingsPreferencesControllerProvider.select((e) => e.deviceColor),
+    );
 
     return DecoratedBox(
       decoration: BoxDecoration(

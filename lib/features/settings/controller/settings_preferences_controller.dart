@@ -11,13 +11,17 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
-final settingsPreferencesControllerProvider = AutoDisposeAsyncNotifierProvider<
-    SettingsPreferencesControllerNotifier, void>(
+final settingsPreferencesControllerProvider = NotifierProvider<
+    SettingsPreferencesControllerNotifier, SettingsPreferences>(
   SettingsPreferencesControllerNotifier.new,
 );
 
-final currentSettingsPreferencesProvider = Provider<SettingsPreferences>(
-  (ref) {
+class SettingsPreferencesControllerNotifier
+    extends Notifier<SettingsPreferences> {
+  SettingsPreferencesControllerNotifier() : super();
+
+  @override
+  SettingsPreferences build() {
     final settingsPreferencesRepository =
         ref.read(settingsPreferencesRepositoryProvider);
     return SettingsPreferences(
@@ -33,200 +37,143 @@ final currentSettingsPreferencesProvider = Provider<SettingsPreferences>(
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
       musicFolderPath: settingsPreferencesRepository.getMusicFolderPath(),
     );
-  },
-);
-
-class SettingsPreferencesControllerNotifier
-    extends AutoDisposeAsyncNotifier<void> {
-  SettingsPreferencesControllerNotifier() : super();
-
-  @override
-  Future<void> build() async {}
+  }
 
   Future<void> setSystemUiMode() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final bool setImmersive =
-          ref.read(currentSettingsPreferencesProvider).immersiveMode;
-      if (setImmersive) {
-        await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-      } else {
-        await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-      }
-    });
+    if (state.immersiveMode) {
+      await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    } else {
+      await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    }
   }
 
   Future<void> setLanguage(Locale locale) async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setLanguageLocaleCode(languageLocaleCode: locale.languageCode);
-      ref.invalidate(currentSettingsPreferencesProvider);
-    });
+    state = state.copyWith(languageLocaleCode: locale.languageCode);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setLanguageLocaleCode(languageLocaleCode: locale.languageCode);
   }
 
   Future<void> toggleDeviceColor() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final DeviceColor deviceColor =
-          ref.read(currentSettingsPreferencesProvider).deviceColor;
-      switch (deviceColor) {
-        case DeviceColor.silver:
-          await ref
-              .read(settingsPreferencesRepositoryProvider)
-              .setDeviceColor(deviceColorName: DeviceColor.black.name);
-          break;
-        case DeviceColor.black:
-          await ref
-              .read(settingsPreferencesRepositoryProvider)
-              .setDeviceColor(deviceColorName: DeviceColor.silver.name);
-          break;
-      }
-      ref.invalidate(currentSettingsPreferencesProvider);
-    });
+    switch (state.deviceColor) {
+      case DeviceColor.silver:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setDeviceColor(deviceColorName: DeviceColor.black.name);
+        state = state.copyWith(deviceColor: DeviceColor.black);
+        break;
+      case DeviceColor.black:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setDeviceColor(deviceColorName: DeviceColor.silver.name);
+        state = state.copyWith(deviceColor: DeviceColor.silver);
+        break;
+    }
   }
 
   Future<void> toggleTouchScreen() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final bool isTouchScreenEnabled =
-          ref.read(currentSettingsPreferencesProvider).isTouchScreenEnabled;
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setTouchScreenEnabled(isTouchScreenEnabled: !isTouchScreenEnabled);
-      ref.invalidate(currentSettingsPreferencesProvider);
-    });
+    state = state.copyWith(isTouchScreenEnabled: !state.isTouchScreenEnabled);
+
+    await ref.read(settingsPreferencesRepositoryProvider).setTouchScreenEnabled(
+          isTouchScreenEnabled: state.isTouchScreenEnabled,
+        );
   }
 
   Future<void> toggleRepeat() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      bool isRepeat = ref.read(currentSettingsPreferencesProvider).repeat;
+    state = state.copyWith(repeat: !state.repeat);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setRepeat(isRepeat: state.repeat);
+    if (state.repeat) {
       await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setRepeat(isRepeat: !isRepeat);
-      isRepeat = ref.refresh(currentSettingsPreferencesProvider).repeat;
-      if (isRepeat) {
-        await ref
-            .read(audioPlayerServiceProvider.notifier)
-            .setLoopMode(LoopMode.all);
-      } else {
-        await ref
-            .read(audioPlayerServiceProvider.notifier)
-            .setLoopMode(LoopMode.off);
-      }
-    });
+          .read(audioPlayerServiceProvider.notifier)
+          .setLoopMode(LoopMode.all);
+    } else {
+      await ref
+          .read(audioPlayerServiceProvider.notifier)
+          .setLoopMode(LoopMode.off);
+    }
   }
 
   Future<void> toggleVibrate() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final bool isVibrateEnabled =
-          ref.read(currentSettingsPreferencesProvider).vibrate;
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setVibrate(isVibrateEnabled: !isVibrateEnabled);
-      ref.invalidate(currentSettingsPreferencesProvider);
-    });
+    state = state.copyWith(vibrate: !state.vibrate);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setVibrate(isVibrateEnabled: state.vibrate);
   }
 
   Future<void> toggleClickWheelSound(BuildContext context) async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      bool isClickWheelSoundEnabled =
-          ref.read(currentSettingsPreferencesProvider).clickWheelSound;
-      await ref.read(settingsPreferencesRepositoryProvider).setClickWheelSound(
-            isClickWheelSoundEnabled: !isClickWheelSoundEnabled,
-          );
+    state = state.copyWith(clickWheelSound: !state.clickWheelSound);
 
-      isClickWheelSoundEnabled =
-          ref.refresh(currentSettingsPreferencesProvider).clickWheelSound;
-
-      if (isClickWheelSoundEnabled && context.mounted) {
-        await Dialogs.showInfoDialog(
-          context: context,
-          title: context.localization.touchSoundsDialogTitle,
-          content: context.localization.touchSoundsDialogContent,
+    await ref.read(settingsPreferencesRepositoryProvider).setClickWheelSound(
+          isClickWheelSoundEnabled: state.clickWheelSound,
         );
-      }
-    });
+
+    if (state.clickWheelSound && context.mounted) {
+      await Dialogs.showInfoDialog(
+        context: context,
+        title: context.localization.touchSoundsDialogTitle,
+        content: context.localization.touchSoundsDialogContent,
+      );
+    }
   }
 
   Future<void> toggleSplitScreen() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final bool isSplitScreenEnabled =
-          ref.read(currentSettingsPreferencesProvider).splitScreenEnabled;
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setSplitScreenEnabled(isSplitScreenEnabled: !isSplitScreenEnabled);
-      ref.invalidate(currentSettingsPreferencesProvider);
-    });
+    state = state.copyWith(splitScreenEnabled: !state.splitScreenEnabled);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setSplitScreenEnabled(isSplitScreenEnabled: state.splitScreenEnabled);
   }
 
   Future<void> toggleImmersiveMode() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final bool isImmersiveModeEnabled =
-          ref.read(currentSettingsPreferencesProvider).immersiveMode;
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setImmersiveMode(isImmersiveModeEnabled: !isImmersiveModeEnabled);
-      ref.invalidate(currentSettingsPreferencesProvider);
-      await setSystemUiMode();
-    });
+    state = state.copyWith(immersiveMode: !state.immersiveMode);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setImmersiveMode(isImmersiveModeEnabled: state.immersiveMode);
+    await setSystemUiMode();
   }
 
   Future<void> setNewMusicFolderPath() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final oldMusicFolderPath =
-          ref.read(currentSettingsPreferencesProvider).musicFolderPath;
-      final String newMusicFolderPath =
-          await FilePicker.platform.getDirectoryPath() ?? '/';
+    final String newMusicFolderPath =
+        await FilePicker.platform.getDirectoryPath() ?? '/';
 
-      if (newMusicFolderPath != '/' &&
-          newMusicFolderPath != oldMusicFolderPath) {
-        await ref
-            .read(settingsPreferencesRepositoryProvider)
-            .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
-        ref.invalidate(currentSettingsPreferencesProvider);
-      }
-    });
+    if (newMusicFolderPath != '/' &&
+        newMusicFolderPath != state.musicFolderPath) {
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
+      state = state.copyWith(musicFolderPath: newMusicFolderPath);
+    }
   }
 
   Future<void> resetSettings() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setLanguageLocaleCode(languageLocaleCode: 'en');
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setDeviceColor(deviceColorName: DeviceColor.silver.name);
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setTouchScreenEnabled(isTouchScreenEnabled: true);
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setRepeat(isRepeat: false);
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setVibrate(isVibrateEnabled: true);
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setClickWheelSound(isClickWheelSoundEnabled: false);
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setSplitScreenEnabled(isSplitScreenEnabled: true);
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setImmersiveMode(isImmersiveModeEnabled: false);
-      await ref.read(settingsPreferencesRepositoryProvider).setMusicFolderPath(
-            musicFolderPath: Constants.defaultMusicFolderPath,
-          );
-      ref.invalidate(currentSettingsPreferencesProvider);
-    });
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setLanguageLocaleCode(languageLocaleCode: 'en');
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setDeviceColor(deviceColorName: DeviceColor.silver.name);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setTouchScreenEnabled(isTouchScreenEnabled: true);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setRepeat(isRepeat: false);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setVibrate(isVibrateEnabled: true);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setClickWheelSound(isClickWheelSoundEnabled: false);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setSplitScreenEnabled(isSplitScreenEnabled: true);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setImmersiveMode(isImmersiveModeEnabled: false);
+    await ref.read(settingsPreferencesRepositoryProvider).setMusicFolderPath(
+          musicFolderPath: Constants.defaultMusicFolderPath,
+        );
+    ref.invalidateSelf();
   }
 }

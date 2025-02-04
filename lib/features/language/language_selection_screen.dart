@@ -37,7 +37,7 @@ class _LanguageSelectionScreenState
   @override
   Widget build(BuildContext context) {
     final splitScreenEnabled = ref.watch(
-      currentSettingsPreferencesProvider.select(
+      settingsPreferencesControllerProvider.select(
         (value) => value.splitScreenEnabled,
       ),
     );

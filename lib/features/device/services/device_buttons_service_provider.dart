@@ -16,13 +16,13 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
   }
 
   Future<void> buttonPressVibrate() async {
-    if (ref.read(currentSettingsPreferencesProvider).vibrate) {
+    if (ref.read(settingsPreferencesControllerProvider).vibrate) {
       await Vibration.vibrate(duration: 3);
     }
   }
 
   Future<void> clickWheelSound() async {
-    if (ref.read(currentSettingsPreferencesProvider).clickWheelSound) {
+    if (ref.read(settingsPreferencesControllerProvider).clickWheelSound) {
       await SystemSound.play(SystemSoundType.click);
     }
   }

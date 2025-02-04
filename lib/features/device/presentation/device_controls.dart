@@ -104,8 +104,9 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.sizeOf(context);
-    final deviceColor = ref
-        .watch(currentSettingsPreferencesProvider.select((e) => e.deviceColor));
+    final deviceColor = ref.watch(
+      settingsPreferencesControllerProvider.select((e) => e.deviceColor),
+    );
 
     return GestureDetector(
       onPanUpdate: (dragUpdateDetails) async => onClickWheelScroll(

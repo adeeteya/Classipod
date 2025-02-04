@@ -169,7 +169,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     switch (settingsItem) {
       case _SettingsDisplayItems.deviceColor:
         return ref
-            .read(currentSettingsPreferencesProvider)
+            .read(settingsPreferencesControllerProvider)
             .deviceColor
             .title(context);
       default:
@@ -187,7 +187,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
 
   @override
   Widget build(BuildContext context) {
-    final settingsState = ref.watch(currentSettingsPreferencesProvider);
+    final settingsState = ref.watch(settingsPreferencesControllerProvider);
     return CupertinoPageScaffold(
       child: Column(
         children: [

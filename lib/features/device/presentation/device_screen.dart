@@ -12,12 +12,14 @@ class DeviceScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isTouchScreenEnabled = ref.watch(
-      currentSettingsPreferencesProvider.select((e) => e.isTouchScreenEnabled),
+      settingsPreferencesControllerProvider
+          .select((e) => e.isTouchScreenEnabled),
     );
 
     final size = MediaQuery.sizeOf(context);
-    final deviceColor = ref
-        .watch(currentSettingsPreferencesProvider.select((e) => e.deviceColor));
+    final deviceColor = ref.watch(
+      settingsPreferencesControllerProvider.select((e) => e.deviceColor),
+    );
 
     late final double screenHeight;
     if (size.height < 800) {

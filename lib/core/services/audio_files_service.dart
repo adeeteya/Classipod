@@ -24,7 +24,7 @@ class AudioFilesServiceNotifier
     try {
       final result = await compute(
         ref.read(localAudioFileRepositoryProvider).getAudioFilesMetadata,
-        ref.read(currentSettingsPreferencesProvider).musicFolderPath,
+        ref.read(settingsPreferencesControllerProvider).musicFolderPath,
       );
       state = AsyncData(result);
       return result;

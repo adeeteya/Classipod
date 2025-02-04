@@ -1,5 +1,5 @@
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/scrubber_bar.dart';
 import 'package:classipod/features/now_playing/widgets/seek_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,7 +16,8 @@ class NowPlayingBottomBar extends ConsumerWidget {
         stream: ref.read(audioPlayerProvider).positionStream,
         builder: (context, snapshot) {
           final double totalDuration = (ref
-                      .read(nowPlayingMetadataListProvider)[
+                      .read(nowPlayingDetailsProvider)
+                      .metadataList[
                           ref.read(audioPlayerProvider).currentIndex ?? 0]
                       .trackDuration ??
                   1000) /
@@ -31,8 +32,12 @@ class NowPlayingBottomBar extends ConsumerWidget {
 
           final int remainingTimeInMinutes =
               (totalDuration - currentDuration) ~/ 60;
-          final int remainingTimeInSeconds =
+          int remainingTimeInSeconds =
               (totalDuration - currentDuration).toInt() % 60;
+
+          if ((totalDuration - currentDuration) < 0) {
+            remainingTimeInSeconds = 0;
+          }
 
           return Row(
             children: [

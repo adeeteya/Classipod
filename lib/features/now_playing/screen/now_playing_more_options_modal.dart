@@ -1,9 +1,9 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/options_list_tile.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -47,7 +47,8 @@ class _NowPlayingMoreOptionsModalState
 
   Future<void> _navigateToScreen(_NowPlayingMoreOptions optionItem) async {
     setState(() => selectedDisplayItem = displayItems.indexOf(optionItem));
-    final currentSongMetadata = ref.read(currentSongMetadataProvider);
+    final currentSongMetadata =
+        ref.read(nowPlayingDetailsProvider).currentMetadata;
     switch (optionItem) {
       case _NowPlayingMoreOptions.browseAlbum:
         final albumDetailIndex = ref

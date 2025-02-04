@@ -5,6 +5,7 @@ import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/music/cover_flow/cover_flow_album_song_list_tile.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -39,7 +40,7 @@ class _CoverFlowAlbumSelectionScreenState
     final originalSongIndex = displayItems[index].originalSongIndex;
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .playSongAtOriginalIndex(originalSongIndex);
+        .playSongFromOriginalIndex(originalSongIndex);
 
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
@@ -48,8 +49,9 @@ class _CoverFlowAlbumSelectionScreenState
 
   @override
   Widget build(BuildContext context) {
-    final int? currentlyPlayingOriginalIndex =
-        ref.watch(currentSongMetadataProvider)?.originalSongIndex;
+    final int? currentlyPlayingOriginalIndex = ref
+        .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
+        ?.originalSongIndex;
     return Hero(
       tag:
           "${widget.albumDetail.albumName}-${widget.albumDetail.albumArtistName}",

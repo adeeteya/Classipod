@@ -2,33 +2,15 @@ import 'dart:async';
 
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
-import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
+import 'package:classipod/features/now_playing/model/now_playing_details.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
 final audioPlayerProvider = Provider<AudioPlayer>((_) {
   return AudioPlayer();
-});
-
-final currentSongMetadataProvider = Provider<Metadata?>((ref) {
-  final currentIndex =
-      ref.watch(currentAudioPlayerIndexStreamProvider).value ?? 0;
-  final nowPlayingListMetadata = ref.watch(nowPlayingMetadataListProvider);
-  final Metadata? currentMetadata = nowPlayingListMetadata.isEmpty
-      ? null
-      : nowPlayingListMetadata[currentIndex];
-  return currentMetadata;
-});
-
-final currentAudioPlayerPlayingStreamProvider =
-    StreamProvider.autoDispose<bool>((ref) {
-  return ref.read(audioPlayerProvider).playingStream;
-});
-
-final currentAudioPlayerIndexStreamProvider =
-    StreamProvider.autoDispose<int?>((ref) {
-  return ref.read(audioPlayerProvider).currentIndexStream;
 });
 
 final audioPlayerServiceProvider =
@@ -62,7 +44,10 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
       final metadataList =
           ref.read(audioFilesServiceProvider).requireValue.toList();
       metadataList.shuffle();
-      await setAudioSource(metadataList);
+      await setAudioSource(
+        nowPlayingType: NowPlayingType.shuffledSongs,
+        musicMetadataList: metadataList,
+      );
 
       final isLoopModeEnabled =
           ref.read(settingsPreferencesRepositoryProvider).getRepeat();
@@ -81,7 +66,10 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
     });
   }
 
-  Future<void> setAudioSource(List<Metadata> musicMetadataList) async {
+  Future<void> setAudioSource({
+    NowPlayingType nowPlayingType = NowPlayingType.songs,
+    required List<Metadata> musicMetadataList,
+  }) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       final List<AudioSource> songSourcePlaylist =
@@ -96,8 +84,10 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
             initialPosition: Duration.zero,
           );
 
-      ref.read(nowPlayingMetadataListProvider.notifier).setMetadataList =
-          musicMetadataList;
+      ref.read(nowPlayingDetailsProvider.notifier).setNewMetadataList(
+            nowPlayingType: nowPlayingType,
+            newMetadataList: musicMetadataList,
+          );
     });
   }
 
@@ -119,22 +109,31 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
     });
   }
 
-  Future<void> playSongAtOriginalIndex(int originalIndex) async {
+  Future<void> playSongFromOriginalIndex(int originalIndex) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      if (ref.read(nowPlayingMetadataListProvider).length !=
-          ref.read(audioFilesServiceProvider).requireValue.length) {
-        await setAudioSource(ref.read(audioFilesServiceProvider).requireValue);
+      //If Album is being played then Switch to original List of Songs
+      if (!listEquals(
+        ref.read(audioFilesServiceProvider).requireValue,
+        ref.read(nowPlayingDetailsProvider).metadataList,
+      )) {
+        await setAudioSource(
+          musicMetadataList: ref.read(audioFilesServiceProvider).requireValue,
+        );
       }
 
       //In case the same song is selected
       if (originalIndex ==
-          ref.read(currentSongMetadataProvider)?.originalSongIndex) {
+          ref
+              .read(nowPlayingDetailsProvider)
+              .currentMetadata
+              ?.originalSongIndex) {
         return;
       }
 
       final int index = ref
-          .read(nowPlayingMetadataListProvider)
+          .read(nowPlayingDetailsProvider)
+          .metadataList
           .indexWhere((element) => element.originalSongIndex == originalIndex);
       await ref.read(audioPlayerProvider).seek(Duration.zero, index: index);
     });

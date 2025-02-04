@@ -4,6 +4,7 @@ import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/genres/genre_songs_provider.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -34,7 +35,9 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
 
   Future<void> _playSong(int index) async {
     setState(() => selectedDisplayItem = index);
-    await ref.read(audioPlayerServiceProvider.notifier).playSongAtOriginalIndex(
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .playSongFromOriginalIndex(
           displayItems[index].originalSongIndex,
         );
     if (mounted) {
@@ -44,8 +47,9 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
 
   @override
   Widget build(BuildContext context) {
-    final int? currentlyPlayingOriginalIndex =
-        ref.watch(currentSongMetadataProvider)?.originalSongIndex;
+    final int? currentlyPlayingOriginalIndex = ref
+        .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
+        ?.originalSongIndex;
     return CupertinoPageScaffold(
       child: Column(
         children: [

@@ -45,7 +45,7 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
       // Set the audio source
       await ref
           .read(audioPlayerServiceProvider.notifier)
-          .setAudioSource(audioFilesMetadata);
+          .setAudioSource(musicMetadataList: audioFilesMetadata);
 
       // Invalidate the providers that depend on the audio files metadata
       ref.invalidate(albumDetailsProvider);

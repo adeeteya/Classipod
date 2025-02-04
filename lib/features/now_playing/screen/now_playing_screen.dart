@@ -7,7 +7,7 @@ import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
-import 'package:classipod/features/now_playing/provider/now_playing_provider.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_bottom_bar.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_page.dart';
 import 'package:classipod/features/now_playing/widgets/volume_bar.dart';
@@ -188,9 +188,9 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final currentSong = ref.watch(currentSongMetadataProvider);
+    final nowPlayingDetails = ref.watch(nowPlayingDetailsProvider);
 
-    if (currentSong == null) {
+    if (nowPlayingDetails.metadataList.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(
           children: [
@@ -225,13 +225,9 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
             child: Padding(
               padding: EdgeInsets.fromLTRB(10, verticalPadding, 10, 0),
               child: NowPlayingWidget(
-                songMetadata: currentSong,
-                currentTrackNumber:
-                    (ref.read(currentAudioPlayerIndexStreamProvider).value ??
-                            0) +
-                        1,
-                totalTrackNumber:
-                    ref.read(nowPlayingMetadataListProvider).length,
+                songMetadata: nowPlayingDetails.currentMetadata!,
+                currentTrackNumber: nowPlayingDetails.currentIndex + 1,
+                totalTrackNumber: nowPlayingDetails.metadataList.length,
               ),
             ),
           ),

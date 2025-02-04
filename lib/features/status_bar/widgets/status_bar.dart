@@ -1,5 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/status_bar/widgets/battery_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -45,14 +45,9 @@ class StatusBar extends StatelessWidget {
               ),
               Consumer(
                 builder: (context, ref, child) {
-                  final playingStreamProvider =
-                      ref.watch(currentAudioPlayerPlayingStreamProvider);
-                  late final bool isPlaying;
-                  if (playingStreamProvider is AsyncData) {
-                    isPlaying = playingStreamProvider.value ?? false;
-                  } else {
-                    isPlaying = false;
-                  }
+                  final isPlaying = ref.watch(
+                    nowPlayingDetailsProvider.select((e) => e.isPlaying),
+                  );
                   return Icon(
                     isPlaying
                         ? CupertinoIcons.play_fill

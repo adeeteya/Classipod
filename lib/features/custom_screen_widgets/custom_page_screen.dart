@@ -1,6 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
-import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:flutter/cupertino.dart';
@@ -40,10 +39,6 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   void onMenuButtonPressed() {
     context.pop();
-  }
-
-  Future<void> onPlayPauseButtonPressed() async {
-    await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
   }
 
   Future<void> seekForward() async {
@@ -101,7 +96,6 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         seekBackwardLongPress();
         break;
       case DeviceAction.playPause:
-        await onPlayPauseButtonPressed();
         break;
       case DeviceAction.longPressEnd:
         onLongPressEnd();

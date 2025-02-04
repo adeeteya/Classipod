@@ -62,10 +62,6 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     context.pop();
   }
 
-  Future<void> onPlayPauseButtonPressed() async {
-    await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
-  }
-
   Future<void> seekForward() async {
     await ref.read(audioPlayerServiceProvider.notifier).nextSong();
   }
@@ -105,7 +101,6 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
       case DeviceAction.seekBackwardLongPress:
         break;
       case DeviceAction.playPause:
-        await onPlayPauseButtonPressed();
         break;
       case DeviceAction.longPressEnd:
         break;

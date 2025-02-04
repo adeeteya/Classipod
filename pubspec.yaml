@@ -23,7 +23,7 @@ dependencies:
   flutter_riverpod: ^2.6.1
   go_router: ^14.7.2
   intl: any
-  just_audio: ^0.9.45
+  just_audio: ^0.9.46
   just_audio_background: ^0.0.1-beta.15
   path_provider: ^2.1.5
   permission_handler: ^11.3.1

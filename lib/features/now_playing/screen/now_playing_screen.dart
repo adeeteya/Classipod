@@ -134,10 +134,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     context.pop();
   }
 
-  Future<void> onPlayPauseButtonPressed() async {
-    await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
-  }
-
   @override
   void dispose() {
     _lastVolumeChangeTimer.cancel();
@@ -178,7 +174,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
         seekBackwardLongPress();
         break;
       case DeviceAction.playPause:
-        await onPlayPauseButtonPressed();
         break;
       case DeviceAction.longPressEnd:
         onLongPressEnd();

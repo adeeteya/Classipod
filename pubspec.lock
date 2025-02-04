@@ -58,10 +58,10 @@ packages:
     dependency: transitive
     description:
       name: audio_service
-      sha256: f6c8191bef6b843da34675dd0731ad11d06094c36b691ffcf3148a4feb2e585f
+      sha256: "887ddf15fce31fd12aa8044c3bffd14c58929fb20e31d96284fe3aaf48315ac6"
       url: "https://pub.dev"
     source: hosted
-    version: "0.18.16"
+    version: "0.18.17"
   audio_service_platform_interface:
     dependency: transitive
     description:
@@ -82,10 +82,10 @@ packages:
     dependency: transitive
     description:
       name: audio_session
-      sha256: a92eed06a93721bcc8a8b57d0a623e3fb9d2e4e11cef0a08ed448c73886700b7
+      sha256: "2b7fff16a552486d078bfc09a8cde19f426dc6d6329262b684182597bec5b1ac"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.24"
+    version: "0.1.25"
   battery_plus:
     dependency: "direct main"
     description:
@@ -454,10 +454,10 @@ packages:
     dependency: "direct main"
     description:
       name: just_audio
-      sha256: a516a7ebb97beb7f6959e69c4b31441ff993d48499abea53febe9f9f7a86a0a8
+      sha256: f978d5b4ccea08f267dae0232ec5405c1b05d3f3cd63f82097ea46c015d5c09e
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.45"
+    version: "0.9.46"
   just_audio_background:
     dependency: "direct main"
     description:

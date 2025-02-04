@@ -109,8 +109,10 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
     });
   }
 
-  Future<void> playAlbum(
-      {required AlbumDetail albumDetail, required int songIndex}) async {
+  Future<void> playAlbum({
+    required AlbumDetail albumDetail,
+    required int songIndex,
+  }) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       // If Album has no songs or the songIndex is out of bounds
@@ -127,8 +129,9 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
         return;
       } else {
         await setAudioSource(
-            nowPlayingType: NowPlayingType.album,
-            musicMetadataList: albumDetail.albumSongs);
+          nowPlayingType: NowPlayingType.album,
+          musicMetadataList: albumDetail.albumSongs,
+        );
         await playSongAtIndex(songIndex);
       }
     });

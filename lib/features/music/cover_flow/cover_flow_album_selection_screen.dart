@@ -33,14 +33,13 @@ class _CoverFlowAlbumSelectionScreenState
   List<Metadata> get displayItems => widget.albumDetail.albumSongs;
 
   @override
-  Future<void> onSelectPressed() => _playSong(selectedDisplayItem);
+  Future<void> onSelectPressed() => _playSongFromAlbum(selectedDisplayItem);
 
-  Future<void> _playSong(int index) async {
+  Future<void> _playSongFromAlbum(int index) async {
     setState(() => selectedDisplayItem = index);
-    final originalSongIndex = displayItems[index].originalSongIndex;
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .playSongFromOriginalIndex(originalSongIndex);
+        .playAlbum(albumDetail: widget.albumDetail, songIndex: index);
 
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
@@ -122,7 +121,7 @@ class _CoverFlowAlbumSelectionScreenState
                         isSelected: selectedDisplayItem == index,
                         isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
                             displayItems[index].originalSongIndex,
-                        onTap: () async => _playSong(index),
+                        onTap: () async => _playSongFromAlbum(index),
                       ),
                     ),
                   ),

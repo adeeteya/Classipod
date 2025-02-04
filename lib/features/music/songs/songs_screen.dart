@@ -38,7 +38,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
 
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .playSongFromOriginalIndex(originalSongIndex);
+        .playSongFromOriginalList(originalSongIndex);
 
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);

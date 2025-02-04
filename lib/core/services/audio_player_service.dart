@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/now_playing/model/now_playing_details.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -109,20 +109,55 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
     });
   }
 
-  Future<void> playSongFromOriginalIndex(int originalIndex) async {
+  Future<void> playAlbum(
+      {required AlbumDetail albumDetail, required int songIndex}) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      //If Album is being played then Switch to original List of Songs
-      if (!listEquals(
-        ref.read(audioFilesServiceProvider).requireValue,
-        ref.read(nowPlayingDetailsProvider).metadataList,
-      )) {
+      // If Album has no songs or the songIndex is out of bounds
+      if (albumDetail.albumSongs.isEmpty ||
+          songIndex >= albumDetail.albumSongs.length) {
+        return;
+      }
+      final nowPlayingDetails = ref.read(nowPlayingDetailsProvider);
+
+      // If the album is already playing
+      if (nowPlayingDetails.nowPlayingType == NowPlayingType.album &&
+          nowPlayingDetails.currentMetadata?.getAlbumDetail == albumDetail) {
+        await playSongAtIndex(songIndex);
+        return;
+      } else {
+        await setAudioSource(
+            nowPlayingType: NowPlayingType.album,
+            musicMetadataList: albumDetail.albumSongs);
+        await playSongAtIndex(songIndex);
+      }
+    });
+  }
+
+  Future<void> playSongAtIndex(int index) async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      //In case the same song is already playing
+      if (ref.read(nowPlayingDetailsProvider).currentIndex == index) {
+        return;
+      } else {
+        await ref.read(audioPlayerProvider).seek(Duration.zero, index: index);
+      }
+    });
+  }
+
+  Future<void> playSongFromOriginalList(int originalIndex) async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      //If Album or Playlist is being played then Switch to original List of Songs
+      if (ref.read(nowPlayingDetailsProvider).nowPlayingType !=
+          NowPlayingType.songs) {
         await setAudioSource(
           musicMetadataList: ref.read(audioFilesServiceProvider).requireValue,
         );
       }
 
-      //In case the same song is selected
+      //In case the same song is already playing
       if (originalIndex ==
           ref
               .read(nowPlayingDetailsProvider)

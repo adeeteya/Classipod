@@ -67,7 +67,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
         final metadata = searchResult.result as Metadata;
         await ref
             .read(audioPlayerServiceProvider.notifier)
-            .playSongFromOriginalIndex(metadata.originalSongIndex);
+            .playSongFromOriginalList(metadata.originalSongIndex);
         if (mounted) {
           await context.pushNamed(Routes.nowPlaying.name);
         }

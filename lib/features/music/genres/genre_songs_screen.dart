@@ -37,7 +37,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
     setState(() => selectedDisplayItem = index);
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .playSongFromOriginalIndex(
+        .playSongFromOriginalList(
           displayItems[index].originalSongIndex,
         );
     if (mounted) {

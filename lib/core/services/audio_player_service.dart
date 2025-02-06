@@ -5,7 +5,7 @@ import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/now_playing/model/now_playing_details.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
-import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -49,12 +49,19 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
         musicMetadataList: metadataList,
       );
 
-      final isLoopModeEnabled =
-          ref.read(settingsPreferencesRepositoryProvider).getRepeat();
-      if (isLoopModeEnabled) {
-        await setLoopMode(LoopMode.all);
-      } else {
-        await setLoopMode(LoopMode.off);
+      final currentLoopMode = ref
+          .read(settingsPreferencesControllerProvider)
+          .repeatMode
+          .toLoopMode();
+      switch (currentLoopMode) {
+        case LoopMode.all:
+          await setLoopMode(LoopMode.all);
+          break;
+        case LoopMode.one:
+          await setLoopMode(LoopMode.off);
+          break;
+        case LoopMode.off:
+          break;
       }
     });
   }

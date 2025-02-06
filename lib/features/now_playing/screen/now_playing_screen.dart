@@ -15,6 +15,7 @@ import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:just_audio/just_audio.dart';
 
 enum _NowPlayingBottomBarPage {
   seekBar,
@@ -216,14 +217,28 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
           StatusBar(
             title: Routes.nowPlaying.title(context),
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              if (nowPlayingDetails.loopMode != LoopMode.off)
+                Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Icon(
+                    (nowPlayingDetails.loopMode == LoopMode.all)
+                        ? CupertinoIcons.repeat
+                        : CupertinoIcons.repeat_1,
+                    size: verticalPadding,
+                    color: CupertinoColors.black,
+                  ),
+                ),
+              if (nowPlayingDetails.loopMode == LoopMode.off)
+                SizedBox(height: verticalPadding),
+            ],
+          ),
           Expanded(
             child: Padding(
-              padding: EdgeInsets.fromLTRB(10, verticalPadding, 10, 0),
-              child: NowPlayingWidget(
-                songMetadata: nowPlayingDetails.currentMetadata!,
-                currentTrackNumber: nowPlayingDetails.currentIndex + 1,
-                totalTrackNumber: nowPlayingDetails.metadataList.length,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: NowPlayingWidget(nowPlayingDetails: nowPlayingDetails),
             ),
           ),
           SizedBox(

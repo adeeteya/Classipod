@@ -3,6 +3,7 @@ import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/settings/model/device_color.dart';
+import 'package:classipod/features/settings/model/repeat_mode.dart';
 import 'package:classipod/features/settings/model/settings_preferences.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:file_picker/file_picker.dart';
@@ -30,7 +31,8 @@ class SettingsPreferencesControllerNotifier
           .byName(settingsPreferencesRepository.getDeviceColor()),
       isTouchScreenEnabled:
           settingsPreferencesRepository.getTouchScreenEnabled(),
-      repeat: settingsPreferencesRepository.getRepeat(),
+      repeatMode: RepeatMode.values
+          .byName(settingsPreferencesRepository.getRepeatMode()),
       vibrate: settingsPreferencesRepository.getVibrate(),
       clickWheelSound: settingsPreferencesRepository.getClickWheelSound(),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
@@ -44,6 +46,31 @@ class SettingsPreferencesControllerNotifier
       await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     } else {
       await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+    }
+  }
+
+  Future<void> setInitialRepeatMode() async {
+    switch (state.repeatMode) {
+      case RepeatMode.off:
+        await ref
+            .read(audioPlayerServiceProvider.notifier)
+            .setLoopMode(LoopMode.off);
+        break;
+      case RepeatMode.one:
+        // in case app starts with repeat mode one, set the loop mode to all
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setRepeatMode(repeatModeName: RepeatMode.all.name);
+        state = state.copyWith(repeatMode: RepeatMode.all);
+        await ref
+            .read(audioPlayerServiceProvider.notifier)
+            .setLoopMode(LoopMode.all);
+        break;
+      case RepeatMode.all:
+        await ref
+            .read(audioPlayerServiceProvider.notifier)
+            .setLoopMode(LoopMode.all);
+        break;
     }
   }
 
@@ -79,19 +106,35 @@ class SettingsPreferencesControllerNotifier
         );
   }
 
-  Future<void> toggleRepeat() async {
-    state = state.copyWith(repeat: !state.repeat);
-    await ref
-        .read(settingsPreferencesRepositoryProvider)
-        .setRepeat(isRepeat: state.repeat);
-    if (state.repeat) {
-      await ref
-          .read(audioPlayerServiceProvider.notifier)
-          .setLoopMode(LoopMode.all);
-    } else {
-      await ref
-          .read(audioPlayerServiceProvider.notifier)
-          .setLoopMode(LoopMode.off);
+  Future<void> toggleRepeatMode() async {
+    switch (state.repeatMode) {
+      case RepeatMode.off:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setRepeatMode(repeatModeName: RepeatMode.one.name);
+        await ref
+            .read(audioPlayerServiceProvider.notifier)
+            .setLoopMode(LoopMode.one);
+        state = state.copyWith(repeatMode: RepeatMode.one);
+        break;
+      case RepeatMode.one:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setRepeatMode(repeatModeName: RepeatMode.all.name);
+        await ref
+            .read(audioPlayerServiceProvider.notifier)
+            .setLoopMode(LoopMode.all);
+        state = state.copyWith(repeatMode: RepeatMode.all);
+        break;
+      case RepeatMode.all:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setRepeatMode(repeatModeName: RepeatMode.off.name);
+        await ref
+            .read(audioPlayerServiceProvider.notifier)
+            .setLoopMode(LoopMode.off);
+        state = state.copyWith(repeatMode: RepeatMode.off);
+        break;
     }
   }
 
@@ -158,7 +201,7 @@ class SettingsPreferencesControllerNotifier
         .setTouchScreenEnabled(isTouchScreenEnabled: true);
     await ref
         .read(settingsPreferencesRepositoryProvider)
-        .setRepeat(isRepeat: false);
+        .setRepeatMode(repeatModeName: RepeatMode.off.name);
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setVibrate(isVibrateEnabled: true);

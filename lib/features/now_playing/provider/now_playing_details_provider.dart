@@ -2,6 +2,7 @@ import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/now_playing/model/now_playing_details.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:just_audio/just_audio.dart';
 
 final nowPlayingDetailsProvider =
     NotifierProvider<NowPlayingDetailsNotifier, NowPlayingDetails>(
@@ -26,11 +27,16 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingDetails> {
       state = state.copyWith(isPlaying: isPlaying);
     });
 
+    ref.read(audioPlayerProvider).loopModeStream.listen((loopMode) {
+      state = state.copyWith(loopMode: loopMode);
+    });
+
     return NowPlayingDetails(
       currentIndex: 0,
       isPlaying: false,
       nowPlayingType: NowPlayingType.songs,
       metadataList: [],
+      loopMode: LoopMode.off,
     );
   }
 

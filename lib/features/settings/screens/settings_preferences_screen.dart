@@ -96,7 +96,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.repeat:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
-            .toggleRepeat();
+            .toggleRepeatMode();
         break;
       case _SettingsDisplayItems.vibrate:
         await ref
@@ -147,8 +147,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     switch (settingsItem) {
       case _SettingsDisplayItems.isTouchScreenEnabled:
         return settingsState.isTouchScreenEnabled;
-      case _SettingsDisplayItems.repeat:
-        return settingsState.repeat;
       case _SettingsDisplayItems.vibrate:
         return settingsState.vibrate;
       case _SettingsDisplayItems.clickWheelSound:
@@ -168,10 +166,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   ) {
     switch (settingsItem) {
       case _SettingsDisplayItems.deviceColor:
-        return ref
-            .read(settingsPreferencesControllerProvider)
-            .deviceColor
-            .title(context);
+        return settingsState.deviceColor.title(context);
+      case _SettingsDisplayItems.repeat:
+        return settingsState.repeatMode.title(context);
       default:
         final bool? isOn = _isOn(settingsState, settingsItem);
         if (isOn != null) {

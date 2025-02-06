@@ -1,10 +1,11 @@
 import 'package:classipod/features/settings/model/device_color.dart';
+import 'package:classipod/features/settings/model/repeat_mode.dart';
 
 class SettingsPreferences {
   final String languageLocaleCode;
   final DeviceColor deviceColor;
   final bool isTouchScreenEnabled;
-  final bool repeat;
+  final RepeatMode repeatMode;
   final bool vibrate;
   final bool clickWheelSound;
   final bool splitScreenEnabled;
@@ -15,7 +16,7 @@ class SettingsPreferences {
     required this.languageLocaleCode,
     required this.deviceColor,
     required this.isTouchScreenEnabled,
-    required this.repeat,
+    required this.repeatMode,
     required this.vibrate,
     required this.clickWheelSound,
     required this.splitScreenEnabled,
@@ -27,7 +28,7 @@ class SettingsPreferences {
     String? languageLocaleCode,
     DeviceColor? deviceColor,
     bool? isTouchScreenEnabled,
-    bool? repeat,
+    RepeatMode? repeatMode,
     bool? vibrate,
     bool? clickWheelSound,
     bool? splitScreenEnabled,
@@ -38,7 +39,7 @@ class SettingsPreferences {
       languageLocaleCode: languageLocaleCode ?? this.languageLocaleCode,
       deviceColor: deviceColor ?? this.deviceColor,
       isTouchScreenEnabled: isTouchScreenEnabled ?? this.isTouchScreenEnabled,
-      repeat: repeat ?? this.repeat,
+      repeatMode: repeatMode ?? this.repeatMode,
       vibrate: vibrate ?? this.vibrate,
       clickWheelSound: clickWheelSound ?? this.clickWheelSound,
       splitScreenEnabled: splitScreenEnabled ?? this.splitScreenEnabled,
@@ -46,4 +47,31 @@ class SettingsPreferences {
       musicFolderPath: musicFolderPath ?? this.musicFolderPath,
     );
   }
+
+  @override
+  bool operator ==(Object other) {
+    return other is SettingsPreferences &&
+        other.languageLocaleCode == languageLocaleCode &&
+        other.deviceColor == deviceColor &&
+        other.isTouchScreenEnabled == isTouchScreenEnabled &&
+        other.repeatMode == repeatMode &&
+        other.vibrate == vibrate &&
+        other.clickWheelSound == clickWheelSound &&
+        other.splitScreenEnabled == splitScreenEnabled &&
+        other.immersiveMode == immersiveMode &&
+        other.musicFolderPath == musicFolderPath;
+  }
+
+  @override
+  int get hashCode => Object.hash(
+        languageLocaleCode,
+        deviceColor,
+        isTouchScreenEnabled,
+        repeatMode,
+        vibrate,
+        clickWheelSound,
+        splitScreenEnabled,
+        immersiveMode,
+        musicFolderPath,
+      );
 }

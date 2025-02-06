@@ -1,19 +1,15 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
+import 'package:classipod/features/now_playing/model/now_playing_details.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:flutter/cupertino.dart';
 
 class NowPlayingWidget extends StatelessWidget {
-  final Metadata songMetadata;
-  final int currentTrackNumber;
-  final int totalTrackNumber;
+  final NowPlayingDetails nowPlayingDetails;
   const NowPlayingWidget({
     super.key,
-    required this.songMetadata,
-    required this.currentTrackNumber,
-    required this.totalTrackNumber,
+    required this.nowPlayingDetails,
   });
 
   @override
@@ -22,7 +18,7 @@ class NowPlayingWidget extends StatelessWidget {
       duration: const Duration(milliseconds: 300),
       child: Row(
         key: ValueKey(
-          "Now Playing-${songMetadata.originalSongIndex}",
+          "Now Playing-${nowPlayingDetails.currentMetadata}",
         ),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -33,10 +29,10 @@ class NowPlayingWidget extends StatelessWidget {
                 ..setEntry(3, 2, 0.003)
                 ..rotateY(-0.1),
               child: AlbumReflectiveArt(
-                thumbnailPath: songMetadata.thumbnailPath,
+                thumbnailPath: nowPlayingDetails.currentMetadata?.thumbnailPath,
                 reflectedImageHeight: 50,
                 heroTag:
-                    "${songMetadata.albumName}-${songMetadata.albumArtistName}",
+                    "${nowPlayingDetails.currentMetadata?.albumName}-${nowPlayingDetails.currentMetadata?.albumArtistName}",
               ),
             ),
           ),
@@ -47,7 +43,8 @@ class NowPlayingWidget extends StatelessWidget {
               children: [
                 const SizedBox(height: 10),
                 MarqueeText(
-                  songMetadata.trackName ?? context.localization.unknownSong,
+                  nowPlayingDetails.currentMetadata?.trackName ??
+                      context.localization.unknownSong,
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -58,7 +55,7 @@ class NowPlayingWidget extends StatelessWidget {
                 ),
                 const SizedBox(height: 5),
                 MarqueeText(
-                  songMetadata.getTrackArtistNames ??
+                  nowPlayingDetails.currentMetadata?.getTrackArtistNames ??
                       context.localization.unknownArtist,
                   style: const TextStyle(
                     color: AppPalette.hintTextColor,
@@ -70,7 +67,8 @@ class NowPlayingWidget extends StatelessWidget {
                 ),
                 const SizedBox(height: 5),
                 MarqueeText(
-                  songMetadata.albumName ?? context.localization.unknownAlbum,
+                  nowPlayingDetails.currentMetadata?.albumName ??
+                      context.localization.unknownAlbum,
                   style: const TextStyle(
                     color: AppPalette.hintTextColor,
                     fontSize: 16,
@@ -81,7 +79,7 @@ class NowPlayingWidget extends StatelessWidget {
                 ),
                 const Spacer(),
                 Text(
-                  "$currentTrackNumber ${context.localization.commonOfText} $totalTrackNumber",
+                  "${nowPlayingDetails.currentIndex + 1} ${context.localization.commonOfText} ${nowPlayingDetails.metadataList.length}",
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,

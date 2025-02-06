@@ -1,6 +1,7 @@
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
 import 'package:classipod/features/settings/model/device_color.dart';
+import 'package:classipod/features/settings/model/repeat_mode.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -8,7 +9,7 @@ enum SharedPreferencesKeys {
   languageLocaleCode,
   deviceColor,
   isTouchScreenEnabled,
-  repeat,
+  repeatMode,
   vibrate,
   clickWheelSound,
   splitScreenEnabled,
@@ -46,10 +47,10 @@ class SettingsPreferencesRepository {
         true;
   }
 
-  bool getRepeat() {
+  String getRepeatMode() {
     return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.repeat.name) ??
-        false;
+            .getString(SharedPreferencesKeys.repeatMode.name) ??
+        RepeatMode.off.name;
   }
 
   bool getVibrate() {
@@ -107,10 +108,10 @@ class SettingsPreferencesRepository {
     );
   }
 
-  Future<void> setRepeat({required bool isRepeat}) async {
-    return _sharedPreferencesWithCache.setBool(
-      SharedPreferencesKeys.repeat.name,
-      isRepeat,
+  Future<void> setRepeatMode({required String repeatModeName}) async {
+    return _sharedPreferencesWithCache.setString(
+      SharedPreferencesKeys.repeatMode.name,
+      repeatModeName,
     );
   }
 

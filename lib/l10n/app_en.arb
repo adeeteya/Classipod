@@ -103,6 +103,14 @@
   "@repeatModeSettingTitle": {
     "description": "The title of the repeat mode setting"
   },
+  "repeatModeOne": "ONE",
+  "@repeatModeOne": {
+    "description": "The text of the repeat mode for looping one song"
+  },
+  "repeatModeAll": "ALL",
+  "@repeatModeAll": {
+    "description": "The text of the repeat mode for looping all the songs"
+  },
   "vibrateSettingTitle": "Vibrate",
   "@vibrateSettingTitle": {
     "description": "The title of the vibrate setting"
@@ -252,7 +260,7 @@
     "description": "The text of the browse album option"
   },
   "cancelText": "Cancel",
-    "@cancelText": {
-        "description": "The text of the cancel list tile"
-    }
+  "@cancelText": {
+    "description": "The text of the cancel list tile"
+  }
 }

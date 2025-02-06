@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:flutter/cupertino.dart';
 
 class SettingsListTile extends StatelessWidget {
@@ -38,16 +39,24 @@ class SettingsListTile extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 4),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              spacing: 5,
               children: [
-                Text(
-                  text,
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: isSelected
-                        ? CupertinoColors.white
-                        : CupertinoColors.black,
-                    overflow: TextOverflow.ellipsis,
+                Flexible(
+                  child: MarqueeText(
+                    text,
+                    mode: TextScrollMode.bouncing,
+                    intervalSpaces: null,
+                    delayBefore: const Duration(seconds: 2),
+                    pauseBetween: const Duration(seconds: 2),
+                    pauseOnBounce: const Duration(seconds: 2),
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: isSelected
+                          ? CupertinoColors.white
+                          : CupertinoColors.black,
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                 ),
                 if (value != null)

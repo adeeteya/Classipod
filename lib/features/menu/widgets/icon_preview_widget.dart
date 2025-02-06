@@ -1,17 +1,20 @@
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
-import 'package:classipod/features/music/songs/songs_provider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class ShufflePreviewWidget extends ConsumerWidget {
-  const ShufflePreviewWidget({super.key});
+class IconPreviewWidget extends StatelessWidget {
+  final String titleText;
+  final IconData icon;
+  final String contentText;
+  const IconPreviewWidget({
+    super.key,
+    required this.titleText,
+    required this.icon,
+    required this.contentText,
+  });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final songs = ref.watch(songsProvider);
-
+  Widget build(BuildContext context) {
     return SizedBox(
       key: const ValueKey(SplitScreenType.shuffle),
       width: double.infinity,
@@ -31,21 +34,25 @@ class ShufflePreviewWidget extends ConsumerWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                context.localization.appTitle,
-                style: const TextStyle(
-                  fontSize: 20,
-                  color: CupertinoColors.white,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  titleText,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    color: CupertinoColors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-              const Icon(
-                CupertinoIcons.shuffle,
+              Icon(
+                icon,
                 size: 70,
                 color: CupertinoColors.white,
               ),
               Text(
-                "${songs.length} ${context.localization.songsScreenTitle}",
+                contentText,
                 style: const TextStyle(
                   fontSize: 20,
                   color: CupertinoColors.white,

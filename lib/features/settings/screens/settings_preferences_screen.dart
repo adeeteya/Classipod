@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
+import 'package:classipod/features/menu/controller/split_screen_controller.dart';
+import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/model/settings_preferences.dart';
 import 'package:classipod/features/settings/screens/widgets/settings_list_tile.dart';
@@ -182,9 +186,67 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     }
   }
 
+  Future<void> _changeSplitScreenType() async {
+    await Future.delayed(const Duration(milliseconds: 150));
+    switch (displayItems[selectedDisplayItem]) {
+      case _SettingsDisplayItems.language:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.language;
+        break;
+
+      case _SettingsDisplayItems.deviceColor:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.deviceColor;
+        break;
+      case _SettingsDisplayItems.isTouchScreenEnabled:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.touchScreen;
+        break;
+      case _SettingsDisplayItems.repeat:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.repeat;
+        break;
+      case _SettingsDisplayItems.vibrate:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.vibrate;
+        break;
+      case _SettingsDisplayItems.clickWheelSound:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.clickWheelSound;
+        break;
+      case _SettingsDisplayItems.splitScreenEnabled:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.splitScreenMode;
+        break;
+      case _SettingsDisplayItems.immersiveMode:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.immersiveMode;
+        break;
+      case _SettingsDisplayItems.changeDirectory:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.changeDirectory;
+        break;
+      case _SettingsDisplayItems.resetSettings:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.resetSettings;
+        break;
+      case _SettingsDisplayItems.donate:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.donate;
+        break;
+      default:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.settings;
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final settingsState = ref.watch(settingsPreferencesControllerProvider);
+
+    unawaited(_changeSplitScreenType());
+
     return CupertinoPageScaffold(
       child: Column(
         children: [

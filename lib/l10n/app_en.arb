@@ -99,15 +99,15 @@
   "@touchScreenSettingTitle": {
     "description": "The title of the touch screen setting"
   },
-  "repeatModeSettingTitle": "Repeat Mode",
+  "repeatModeSettingTitle": "Repeat",
   "@repeatModeSettingTitle": {
     "description": "The title of the repeat mode setting"
   },
-  "repeatModeOne": "ONE",
+  "repeatModeOne": "One",
   "@repeatModeOne": {
     "description": "The text of the repeat mode for looping one song"
   },
-  "repeatModeAll": "ALL",
+  "repeatModeAll": "All",
   "@repeatModeAll": {
     "description": "The text of the repeat mode for looping all the songs"
   },

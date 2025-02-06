@@ -152,7 +152,7 @@ final routerProvider = Provider(
                   GoRoute(
                     path: Routes.settings.name,
                     name: Routes.settings.name,
-                    parentNavigatorKey: _rootNavigatorKey,
+                    parentNavigatorKey: _menuNavigatorKey,
                     pageBuilder: (context, state) => CupertinoPage(
                       key: state.pageKey,
                       child: const SettingsScreen(),
@@ -170,7 +170,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.language.name,
                         name: Routes.language.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: _menuNavigatorKey,
                         pageBuilder: (context, state) => CupertinoPage(
                           key: state.pageKey,
                           child: const LanguageSelectionScreen(),

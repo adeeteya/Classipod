@@ -36,30 +36,38 @@ class SplitScreenPlaceholder extends ConsumerWidget {
       child: splitScreenEnabled
           ? Row(
               children: [
-                Expanded(child: child),
                 Expanded(
-                  child: AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 500),
-                    transitionBuilder: (widget, animation) {
-                      if (splitScreenType == SplitScreenType.albumArt) {
-                        final slideAnimation = Tween<Offset>(
-                          begin: const Offset(1, 0),
-                          end: Offset.zero,
-                        ).animate(animation);
+                  child: CupertinoUserInterfaceLevel(
+                    data: CupertinoUserInterfaceLevelData.elevated,
+                    child: child,
+                  ),
+                ),
+                Expanded(
+                  child: CupertinoUserInterfaceLevel(
+                    data: CupertinoUserInterfaceLevelData.base,
+                    child: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 500),
+                      transitionBuilder: (widget, animation) {
+                        if (splitScreenType == SplitScreenType.albumArt) {
+                          final slideAnimation = Tween<Offset>(
+                            begin: const Offset(1, 0),
+                            end: Offset.zero,
+                          ).animate(animation);
+                          return FadeTransition(
+                            opacity: animation,
+                            child: SlideTransition(
+                              position: slideAnimation,
+                              child: widget,
+                            ),
+                          );
+                        }
                         return FadeTransition(
                           opacity: animation,
-                          child: SlideTransition(
-                            position: slideAnimation,
-                            child: widget,
-                          ),
+                          child: widget,
                         );
-                      }
-                      return FadeTransition(
-                        opacity: animation,
-                        child: widget,
-                      );
-                    },
-                    child: splitScreenWidget,
+                      },
+                      child: splitScreenWidget,
+                    ),
                   ),
                 ),
               ],

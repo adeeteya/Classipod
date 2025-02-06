@@ -71,7 +71,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
       case _MainMenuDisplayItems.shuffleSongs:
         await ref
             .read(audioPlayerServiceProvider.notifier)
-            .shuffle()
+            .shuffleAllSongs()
             .then((value) {
           if (mounted) {
             context.goNamed(Routes.nowPlaying.name);

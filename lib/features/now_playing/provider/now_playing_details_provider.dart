@@ -31,12 +31,20 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingDetails> {
       state = state.copyWith(loopMode: loopMode);
     });
 
+    ref
+        .read(audioPlayerProvider)
+        .shuffleModeEnabledStream
+        .listen((isShuffleEnabled) {
+      state = state.copyWith(isShuffleEnabled: isShuffleEnabled);
+    });
+
     return NowPlayingDetails(
       currentIndex: 0,
       isPlaying: false,
       nowPlayingType: NowPlayingType.songs,
       metadataList: [],
       loopMode: LoopMode.off,
+      isShuffleEnabled: false,
     );
   }
 

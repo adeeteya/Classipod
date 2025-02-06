@@ -62,10 +62,6 @@ class SettingsPreferencesControllerNotifier
             .read(settingsPreferencesRepositoryProvider)
             .setRepeatMode(repeatModeName: RepeatMode.all.name);
         state = state.copyWith(repeatMode: RepeatMode.all);
-        await ref
-            .read(audioPlayerServiceProvider.notifier)
-            .setLoopMode(LoopMode.all);
-        break;
       case RepeatMode.all:
         await ref
             .read(audioPlayerServiceProvider.notifier)
@@ -109,33 +105,27 @@ class SettingsPreferencesControllerNotifier
   Future<void> toggleRepeatMode() async {
     switch (state.repeatMode) {
       case RepeatMode.off:
+        state = state.copyWith(repeatMode: RepeatMode.one);
         await ref
             .read(settingsPreferencesRepositoryProvider)
             .setRepeatMode(repeatModeName: RepeatMode.one.name);
-        await ref
-            .read(audioPlayerServiceProvider.notifier)
-            .setLoopMode(LoopMode.one);
-        state = state.copyWith(repeatMode: RepeatMode.one);
         break;
       case RepeatMode.one:
+        state = state.copyWith(repeatMode: RepeatMode.all);
         await ref
             .read(settingsPreferencesRepositoryProvider)
             .setRepeatMode(repeatModeName: RepeatMode.all.name);
-        await ref
-            .read(audioPlayerServiceProvider.notifier)
-            .setLoopMode(LoopMode.all);
-        state = state.copyWith(repeatMode: RepeatMode.all);
         break;
       case RepeatMode.all:
+        state = state.copyWith(repeatMode: RepeatMode.off);
         await ref
             .read(settingsPreferencesRepositoryProvider)
             .setRepeatMode(repeatModeName: RepeatMode.off.name);
-        await ref
-            .read(audioPlayerServiceProvider.notifier)
-            .setLoopMode(LoopMode.off);
-        state = state.copyWith(repeatMode: RepeatMode.off);
         break;
     }
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .setLoopMode(state.repeatMode.toLoopMode());
   }
 
   Future<void> toggleVibrate() async {

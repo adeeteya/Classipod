@@ -38,31 +38,32 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
     });
   }
 
-  Future<void> shuffle() async {
+  Future<void> setShuffleMode(bool isShuffleModeEnabled) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      final metadataList =
-          ref.read(audioFilesServiceProvider).requireValue.toList();
-      metadataList.shuffle();
-      await setAudioSource(
-        nowPlayingType: NowPlayingType.shuffledSongs,
-        musicMetadataList: metadataList,
-      );
+      await ref
+          .read(audioPlayerProvider)
+          .setShuffleModeEnabled(isShuffleModeEnabled);
+    });
+  }
 
-      final currentLoopMode = ref
-          .read(settingsPreferencesControllerProvider)
-          .repeatMode
-          .toLoopMode();
-      switch (currentLoopMode) {
-        case LoopMode.all:
-          await setLoopMode(LoopMode.all);
-          break;
-        case LoopMode.one:
-          await setLoopMode(LoopMode.off);
-          break;
-        case LoopMode.off:
-          break;
+  Future<void> shuffleAllSongs() async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      //If Album or Playlist is being played then Switch to original List of Songs
+      if (ref.read(nowPlayingDetailsProvider).nowPlayingType !=
+          NowPlayingType.songs) {
+        await setAudioSource(
+          musicMetadataList: ref.read(audioFilesServiceProvider).requireValue,
+        );
       }
+
+      await setShuffleMode(true);
+      await ref.read(audioPlayerProvider).shuffle();
+
+      await ref
+          .read(settingsPreferencesControllerProvider.notifier)
+          .setInitialRepeatMode();
     });
   }
 
@@ -140,6 +141,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
           musicMetadataList: albumDetail.albumSongs,
         );
         await playSongAtIndex(songIndex);
+        await setShuffleMode(false);
       }
     });
   }

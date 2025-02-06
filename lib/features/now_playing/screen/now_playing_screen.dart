@@ -10,6 +10,7 @@ import 'package:classipod/features/device/services/device_buttons_service_provid
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_bottom_bar.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_page.dart';
+import 'package:classipod/features/now_playing/widgets/shuffle_segmented_control.dart';
 import 'package:classipod/features/now_playing/widgets/volume_bar.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,6 +21,8 @@ import 'package:just_audio/just_audio.dart';
 enum _NowPlayingBottomBarPage {
   seekBar,
   scrubberBar,
+  volumeBar,
+  shuffleBar,
 }
 
 class NowPlayingScreen extends ConsumerStatefulWidget {
@@ -33,7 +36,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   final PageController _bottomBarPageController = PageController();
   late Timer _longPressTimer;
   Timer _lastVolumeChangeTimer = Timer(Duration.zero, () {});
-  bool _isVolumeChanging = false;
+  bool _isShuffleEnabled = false;
   _NowPlayingBottomBarPage _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
   String get routeName => Routes.nowPlaying.name;
 
@@ -47,7 +50,19 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       setState(() {
         _bottomBarPage = _NowPlayingBottomBarPage.scrubberBar;
       });
-    } else {
+    } else if (_bottomBarPage == _NowPlayingBottomBarPage.scrubberBar) {
+      await _bottomBarPageController.animateToPage(
+        2,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+      setState(() {
+        _bottomBarPage = _NowPlayingBottomBarPage.shuffleBar;
+      });
+    } else if (_bottomBarPage == _NowPlayingBottomBarPage.shuffleBar) {
+      await ref
+          .read(audioPlayerServiceProvider.notifier)
+          .setShuffleMode(_isShuffleEnabled);
       await _bottomBarPageController.animateToPage(
         0,
         duration: const Duration(milliseconds: 300),
@@ -71,7 +86,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
         Timer.periodic(const Duration(seconds: 1), (timer) {
       if (timer.tick >= 3) {
         setState(() {
-          _isVolumeChanging = false;
+          _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
         });
         timer.cancel();
       }
@@ -82,9 +97,14 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     if (_bottomBarPage == _NowPlayingBottomBarPage.scrubberBar) {
       await ref.read(audioPlayerServiceProvider.notifier).seekForward();
       return;
+    } else if (_bottomBarPage == _NowPlayingBottomBarPage.shuffleBar) {
+      setState(() {
+        _isShuffleEnabled = true;
+      });
+      return;
     }
     setState(() {
-      _isVolumeChanging = true;
+      _bottomBarPage = _NowPlayingBottomBarPage.volumeBar;
     });
     await ref.read(audioPlayerServiceProvider.notifier).increaseVolume();
     startVolumeTimer();
@@ -94,9 +114,14 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     if (_bottomBarPage == _NowPlayingBottomBarPage.scrubberBar) {
       await ref.read(audioPlayerServiceProvider.notifier).seekBackward();
       return;
+    } else if (_bottomBarPage == _NowPlayingBottomBarPage.shuffleBar) {
+      setState(() {
+        _isShuffleEnabled = false;
+      });
+      return;
     }
     setState(() {
-      _isVolumeChanging = true;
+      _bottomBarPage = _NowPlayingBottomBarPage.volumeBar;
     });
     await ref.read(audioPlayerServiceProvider.notifier).decreaseVolume();
     startVolumeTimer();
@@ -220,6 +245,15 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              if (nowPlayingDetails.isShuffleEnabled)
+                Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Icon(
+                    CupertinoIcons.shuffle,
+                    size: verticalPadding,
+                    color: CupertinoColors.black,
+                  ),
+                ),
               if (nowPlayingDetails.loopMode != LoopMode.off)
                 Padding(
                   padding: const EdgeInsets.only(right: 10),
@@ -231,7 +265,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                     color: CupertinoColors.black,
                   ),
                 ),
-              if (nowPlayingDetails.loopMode == LoopMode.off)
+              if (!nowPlayingDetails.isShuffleEnabled &&
+                  nowPlayingDetails.loopMode == LoopMode.off)
                 SizedBox(height: verticalPadding),
             ],
           ),
@@ -248,7 +283,12 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
               child: AnimatedSwitcher(
                 duration: const Duration(milliseconds: 300),
                 transitionBuilder: (child, animation) {
-                  final begin = Offset(_isVolumeChanging ? 1.0 : -0.5, 0.0);
+                  final begin = Offset(
+                    _bottomBarPage == _NowPlayingBottomBarPage.volumeBar
+                        ? 1.0
+                        : -0.5,
+                    0.0,
+                  );
                   final tween = Tween(begin: begin, end: Offset.zero);
                   final offsetAnimation = animation.drive(tween);
 
@@ -262,14 +302,22 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                     ),
                   );
                 },
-                child: _isVolumeChanging
+                child: _bottomBarPage == _NowPlayingBottomBarPage.volumeBar
                     ? const VolumeBar()
                     : PageView(
                         controller: _bottomBarPageController,
                         physics: const NeverScrollableScrollPhysics(),
-                        children: const [
-                          NowPlayingBottomBar(),
-                          NowPlayingBottomBar(showScrubber: true),
+                        children: [
+                          const NowPlayingBottomBar(),
+                          const NowPlayingBottomBar(showScrubber: true),
+                          ShuffleSegmentedControl(
+                            isShuffleEnabled: _isShuffleEnabled,
+                            onValueChanged: (value) {
+                              setState(() {
+                                _isShuffleEnabled = value ?? _isShuffleEnabled;
+                              });
+                            },
+                          ),
                         ],
                       ),
               ),

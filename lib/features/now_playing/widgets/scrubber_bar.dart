@@ -53,7 +53,8 @@ class ScrubberBar extends ConsumerWidget {
               ),
               Positioned(
                 top: 2,
-                left: (value / max) * constraints.maxWidth,
+                left: ((value / max) * (constraints.maxWidth - 30))
+                    .clamp(0, constraints.maxWidth - 30),
                 child: Transform.rotate(
                   angle: 3.14 / 4,
                   child: const SizedBox(

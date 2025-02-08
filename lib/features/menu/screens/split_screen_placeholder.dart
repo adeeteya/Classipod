@@ -13,11 +13,23 @@ import 'package:classipod/features/settings/controller/settings_preferences_cont
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+class SplitScreenViewController {
+  _SplitScreenPlaceholderState? _state;
+
+  Future<void>? openSplitView() => _state?._forwardAnimation();
+
+  Future<void>? closeSplitView() => _state?._backwardAnimation();
+
+  bool get isScreenVisible => _state?._isScreenVisible ?? true;
+}
+
 class SplitScreenPlaceholder extends ConsumerStatefulWidget {
   final Widget child;
+  final SplitScreenViewController splitScreenController;
   const SplitScreenPlaceholder({
     super.key,
     required this.child,
+    required this.splitScreenController,
   });
 
   @override
@@ -26,12 +38,14 @@ class SplitScreenPlaceholder extends ConsumerStatefulWidget {
 
 class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
     with SingleTickerProviderStateMixin {
+  bool _isScreenVisible = false;
   late final AnimationController _animationController;
   late final Animation<Offset> _leftSlideAnimation;
   late final Animation<Offset> _rightSlideAnimation;
 
   @override
   void initState() {
+    widget.splitScreenController._state = this;
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 300),
@@ -57,6 +71,16 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
 
   Future<void> _forwardAnimation() async {
     await _animationController.forward();
+    setState(() {
+      _isScreenVisible = true;
+    });
+  }
+
+  Future<void> _backwardAnimation() async {
+    await _animationController.reverse();
+    setState(() {
+      _isScreenVisible = false;
+    });
   }
 
   @override

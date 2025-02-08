@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
@@ -50,16 +52,22 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
       _MusicListDisplayItems.values;
 
   @override
-  void onSelectPressed() =>
+  Future<void> onSelectPressed() =>
       _navigateToScreen(_MusicListDisplayItems.values[selectedDisplayItem]);
 
-  void _navigateToScreen(_MusicListDisplayItems musicDisplayItem) {
+  Future<void> _navigateToScreen(
+      _MusicListDisplayItems musicDisplayItem) async {
     setState(
       () => selectedDisplayItem = displayItems.indexOf(musicDisplayItem),
     );
     switch (musicDisplayItem) {
       case _MusicListDisplayItems.coverFlow:
-        context.goNamed(Routes.coverFlow.name);
+        unawaited(ref.read(splitScreenViewControllerProvider).closeSplitView());
+        await context.pushNamed(
+          Routes.coverFlow.name,
+          extra: Routes.musicMenu.name,
+        );
+        unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
         break;
       case _MusicListDisplayItems.artists:
         context.goNamed(Routes.artists.name);
@@ -96,7 +104,7 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
                 itemBuilder: (context, index) => DisplayListTile(
                   text: displayItems[index].title(context),
                   isSelected: selectedDisplayItem == index,
-                  onTap: () => _navigateToScreen(displayItems[index]),
+                  onTap: () async => _navigateToScreen(displayItems[index]),
                 ),
               ),
             ),

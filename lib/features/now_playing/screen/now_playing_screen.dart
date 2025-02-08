@@ -75,7 +75,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   }
 
   void onSelectLongPress() {
-    context.goNamed(Routes.nowPlayingMoreOptions.name);
+    unawaited(context.pushNamed(Routes.nowPlayingMoreOptions.name));
   }
 
   void startVolumeTimer() {

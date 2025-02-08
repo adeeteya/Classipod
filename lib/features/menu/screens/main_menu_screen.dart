@@ -63,22 +63,25 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
         context.goNamed(Routes.musicMenu.name);
         break;
       case _MainMenuDisplayItems.nowPlaying:
-        context.goNamed(Routes.nowPlaying.name);
+        await _navigateToNowPlayingScreen();
         break;
       case _MainMenuDisplayItems.settings:
         context.goNamed(Routes.settings.name);
         break;
       case _MainMenuDisplayItems.shuffleSongs:
-        await ref
-            .read(audioPlayerServiceProvider.notifier)
-            .shuffleAllSongs()
-            .then((value) {
-          if (mounted) {
-            context.goNamed(Routes.nowPlaying.name);
-          }
-        });
+        await ref.read(audioPlayerServiceProvider.notifier).shuffleAllSongs();
+        await _navigateToNowPlayingScreen();
         break;
     }
+  }
+
+  Future<void> _navigateToNowPlayingScreen() async {
+    unawaited(ref.read(splitScreenViewControllerProvider).closeSplitView());
+    await context.pushNamed(
+      Routes.nowPlaying.name,
+      extra: Routes.menu.name,
+    );
+    unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
   }
 
   Future<void> _changeSplitScreenType() async {
@@ -106,6 +109,9 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
   @override
   Widget build(BuildContext context) {
     unawaited(_changeSplitScreenType());
+    if (!ref.read(splitScreenViewControllerProvider).isScreenVisible) {
+      unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
+    }
 
     return CupertinoPageScaffold(
       child: Column(

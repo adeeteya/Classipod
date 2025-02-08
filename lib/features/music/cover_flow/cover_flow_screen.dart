@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
@@ -33,9 +35,11 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
 
   void _chooseAlbum(int index) {
     final albumDetail = ref.read(albumDetailsProvider).elementAt(index);
-    context.goNamed(
-      Routes.coverFlowSelection.name,
-      extra: albumDetail,
+    unawaited(
+      context.pushNamed(
+        Routes.coverFlowSelection.name,
+        extra: albumDetail,
+      ),
     );
   }
 

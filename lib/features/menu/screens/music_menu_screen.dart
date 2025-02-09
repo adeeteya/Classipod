@@ -11,6 +11,7 @@ import 'package:go_router/go_router.dart';
 
 enum _MusicListDisplayItems {
   coverFlow,
+  playlists,
   artists,
   albums,
   songs,
@@ -21,6 +22,8 @@ enum _MusicListDisplayItems {
     switch (this) {
       case coverFlow:
         return context.localization.coverFlowScreenTitle;
+      case playlists:
+        return context.localization.playlistsScreenTitle;
       case artists:
         return context.localization.artistsScreenTitle;
       case albums:
@@ -56,7 +59,8 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
       _navigateToScreen(_MusicListDisplayItems.values[selectedDisplayItem]);
 
   Future<void> _navigateToScreen(
-      _MusicListDisplayItems musicDisplayItem) async {
+    _MusicListDisplayItems musicDisplayItem,
+  ) async {
     setState(
       () => selectedDisplayItem = displayItems.indexOf(musicDisplayItem),
     );
@@ -68,6 +72,9 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
           extra: Routes.musicMenu.name,
         );
         unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
+        break;
+      case _MusicListDisplayItems.playlists:
+        context.goNamed(Routes.playlists.name);
         break;
       case _MusicListDisplayItems.artists:
         context.goNamed(Routes.artists.name);

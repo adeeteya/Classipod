@@ -262,5 +262,17 @@
   "cancelText": "Cancel",
   "@cancelText": {
     "description": "The text of the cancel list tile"
+  },
+  "playlistsScreenTitle": "Playlists",
+  "@playlistsScreenTitle": {
+    "description": "The title of the playlists screen"
+  },
+  "addToOnTheGoPlaylist": "Add to On-The-Go",
+  "@addToOnTheGoPlaylist": {
+    "description": "The text of the add to on-the-go playlist option"
+  },
+  "removeSongFromThePlaylist": "Remove from the Playlist",
+  "@removeSongFromThePlaylist": {
+    "description": "The text of the remove song from the playlist option"
   }
 }

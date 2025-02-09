@@ -4,6 +4,7 @@ import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:classipod/features/music/artists/artist_names_provider.dart';
+import 'package:classipod/features/music/playlist/playlists_provider.dart';
 import 'package:classipod/features/music/songs/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -63,6 +64,8 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
       if (!isBatteryOptimizationDisabled) {
         throw const BatteryOptimizationEnabledException();
       }
+
+      await ref.read(playlistsProvider.notifier).init();
 
       // Navigate to the menu screen
       ref.read(routerProvider).goNamed(Routes.menu.name);

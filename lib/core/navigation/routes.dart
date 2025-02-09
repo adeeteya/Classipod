@@ -18,6 +18,9 @@ import 'package:classipod/features/music/cover_flow/cover_flow_album_selection_s
 import 'package:classipod/features/music/cover_flow/cover_flow_screen.dart';
 import 'package:classipod/features/music/genres/genre_songs_screen.dart';
 import 'package:classipod/features/music/genres/genres_screen.dart';
+import 'package:classipod/features/music/playlist/playlist_songs_more_options_modal.dart';
+import 'package:classipod/features/music/playlist/playlist_songs_screen.dart';
+import 'package:classipod/features/music/playlist/playlists_screen.dart';
 import 'package:classipod/features/music/search/search_screen.dart';
 import 'package:classipod/features/music/songs/songs_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_more_options_modal.dart';
@@ -43,6 +46,9 @@ enum Routes {
   artistAlbums,
   albums,
   albumSongs,
+  playlists,
+  playlistSongs,
+  playlistSongsMoreOptions,
   songs,
   genres,
   genreSongs,
@@ -83,6 +89,12 @@ enum Routes {
         return context.localization.albumsScreenTitle;
       case albumSongs:
         return context.localization.albumsScreenTitle;
+      case playlists:
+        return context.localization.playlistsScreenTitle;
+      case playlistSongs:
+        return context.localization.playlistsScreenTitle;
+      case playlistSongsMoreOptions:
+        return context.localization.playlistsScreenTitle;
       case songs:
         return context.localization.songsScreenTitle;
       case genres:
@@ -254,8 +266,12 @@ final routerProvider = Provider(
                             return CustomTransitionPage(
                               key: state.pageKey,
                               child: const CoverFlowScreen(),
-                              transitionsBuilder: (context, animation,
-                                  reversedAnimation, child) {
+                              transitionsBuilder: (
+                                context,
+                                animation,
+                                reversedAnimation,
+                                child,
+                              ) {
                                 return FadeTransition(
                                   opacity: CurvedAnimation(
                                     parent: animation,
@@ -336,6 +352,50 @@ final routerProvider = Provider(
                                 albumDetail: state.extra as AlbumDetail,
                               ),
                             ),
+                          ),
+                        ],
+                      ),
+                      GoRoute(
+                        path: Routes.playlists.name,
+                        name: Routes.playlists.name,
+                        parentNavigatorKey: _rootNavigatorKey,
+                        pageBuilder: (context, state) => CupertinoPage(
+                          key: state.pageKey,
+                          child: const PlaylistsScreen(),
+                        ),
+                        routes: [
+                          GoRoute(
+                            path: Routes.playlistSongs.name,
+                            name: Routes.playlistSongs.name,
+                            parentNavigatorKey: _rootNavigatorKey,
+                            pageBuilder: (context, state) => CupertinoPage(
+                              key: state.pageKey,
+                              child: PlaylistSongsScreen(
+                                playlistId: int.tryParse(
+                                      state.uri.queryParameters["playlistId"] ??
+                                          '',
+                                    ) ??
+                                    0,
+                              ),
+                            ),
+                            routes: [
+                              GoRoute(
+                                path: Routes.playlistSongsMoreOptions.name,
+                                name: Routes.playlistSongsMoreOptions.name,
+                                parentNavigatorKey: _rootNavigatorKey,
+                                pageBuilder: (context, state) =>
+                                    OptionsModalPage(
+                                  context: context,
+                                  title: Routes.playlistSongsMoreOptions
+                                      .title(context),
+                                  builder: (context) =>
+                                      PlaylistSongsMoreOptionsModal(
+                                    onRemoveSongFromPlaylist:
+                                        state.extra as VoidCallback,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

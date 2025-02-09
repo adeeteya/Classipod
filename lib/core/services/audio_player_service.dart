@@ -3,9 +3,11 @@ import 'dart:async';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
+import 'package:classipod/features/music/playlist/playlist_model.dart';
 import 'package:classipod/features/now_playing/model/now_playing_details.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -139,6 +141,35 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
         await setAudioSource(
           nowPlayingType: NowPlayingType.album,
           musicMetadataList: albumDetail.albumSongs,
+        );
+        await playSongAtIndex(songIndex);
+        await setShuffleMode(false);
+      }
+    });
+  }
+
+  Future<void> playPlaylist({
+    required PlaylistModel playlistDetail,
+    required int songIndex,
+  }) async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      // If Playlist has no songs or the songIndex is out of bounds
+      if (playlistDetail.songs.isEmpty ||
+          songIndex >= playlistDetail.songs.length) {
+        return;
+      }
+      final nowPlayingDetails = ref.read(nowPlayingDetailsProvider);
+
+      // If the playlist is already playing
+      if (nowPlayingDetails.nowPlayingType == NowPlayingType.playlist &&
+          listEquals(nowPlayingDetails.metadataList, playlistDetail.songs)) {
+        await playSongAtIndex(songIndex);
+        return;
+      } else {
+        await setAudioSource(
+          nowPlayingType: NowPlayingType.playlist,
+          musicMetadataList: playlistDetail.songs,
         );
         await playSongAtIndex(songIndex);
         await setShuffleMode(false);

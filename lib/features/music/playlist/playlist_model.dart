@@ -1,0 +1,48 @@
+import 'package:classipod/core/models/metadata.dart';
+
+class PlaylistModel {
+  int id;
+  String name;
+  List<Metadata> songs;
+
+  PlaylistModel({required this.id, required this.name, required this.songs});
+
+  PlaylistModel copyWith({String? name, List<Metadata>? songs}) {
+    return PlaylistModel(
+      id: id,
+      name: name ?? this.name,
+      songs: songs ?? this.songs,
+    );
+  }
+
+  PlaylistModel addSongToPlaylist(Metadata song) {
+    // If song is already in the playlist then return
+    if (songs.contains(song)) {
+      return this;
+    }
+    return copyWith(songs: [...songs, song]);
+  }
+
+  PlaylistModel removeSongFromPlaylist(Metadata song) {
+    return copyWith(
+      songs: songs
+          .where((e) => e.originalSongIndex != song.originalSongIndex)
+          .toList(),
+    );
+  }
+
+  PlaylistModel clearPlaylist() {
+    return copyWith(songs: []);
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is PlaylistModel &&
+        other.id == id &&
+        other.name == name &&
+        other.songs == songs;
+  }
+
+  @override
+  int get hashCode => Object.hash(id, name, songs);
+}

@@ -58,15 +58,15 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
       ref.invalidate(albumDetailsProvider);
       ref.invalidate(artistNamesProvider);
       ref.invalidate(songsProvider);
+      ref.invalidate(playlistsProvider);
+
+      await ref.read(playlistsProvider.notifier).init();
 
       final isBatteryOptimizationDisabled =
           await ref.read(batteryOptimizationProvider.future);
       if (!isBatteryOptimizationDisabled) {
         throw const BatteryOptimizationEnabledException();
       }
-
-      ref.invalidate(playlistsProvider);
-      await ref.read(playlistsProvider.notifier).init();
 
       // Navigate to the menu screen
       ref.read(routerProvider).goNamed(Routes.menu.name);

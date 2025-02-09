@@ -1,6 +1,7 @@
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/features/music/album/album_detail.dart';
 import 'package:classipod/features/music/playlist/playlist_model.dart';
 import 'package:classipod/features/music/playlist/playlists_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -22,6 +23,10 @@ class PlaylistSongsNotifier extends FamilyNotifier<PlaylistModel, int> {
     if (song != null) {
       state = state.addSongToPlaylist(song);
     }
+  }
+
+  void addAlbumToPlaylist(AlbumDetail albumDetail) {
+    albumDetail.albumSongs.forEach(addSongToPlaylist);
   }
 
   Future<void> removeSongFromPlaylist(Metadata? song) async {

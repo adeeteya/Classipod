@@ -13,9 +13,9 @@ dependencies:
   audio_metadata_reader: ^1.1.0
   battery_plus: ^6.2.1
   cupertino_icons: ^1.0.8
-  device_preview_plus: ^2.2.6
+  device_preview_plus: ^2.2.7
   disable_battery_optimization: ^1.1.1
-  file_picker: ^8.3.2
+  file_picker: ^8.3.3
   flutter:
     sdk: flutter
   flutter_localizations:

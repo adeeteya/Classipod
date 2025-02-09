@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
@@ -31,6 +33,14 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   @override
   Future<void> onSelectPressed() async =>
       _navigateToAlbumSelectionScreen(selectedDisplayItem);
+
+  @override
+  Future<void> onSelectLongPress() async {
+    await context.pushNamed(
+      Routes.albumMoreOptions.name,
+      extra: displayItems[selectedDisplayItem],
+    );
+  }
 
   void _navigateToAlbumSelectionScreen(int index) {
     setState(() => selectedDisplayItem = index);

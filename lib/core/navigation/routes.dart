@@ -11,6 +11,7 @@ import 'package:classipod/features/menu/screens/main_menu_screen.dart';
 import 'package:classipod/features/menu/screens/music_menu_screen.dart';
 import 'package:classipod/features/menu/screens/split_screen_placeholder.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
+import 'package:classipod/features/music/album/album_more_options_modal.dart';
 import 'package:classipod/features/music/album/album_selection_screen.dart';
 import 'package:classipod/features/music/album/album_songs_screen.dart';
 import 'package:classipod/features/music/artists/artist_albums_screen.dart';
@@ -46,7 +47,9 @@ enum Routes {
   coverFlowSelection,
   artists,
   artistAlbums,
+  artistAlbumsMoreOptions,
   albums,
+  albumMoreOptions,
   albumSongs,
   albumSongsMoreOptions,
   playlists,
@@ -90,7 +93,11 @@ enum Routes {
         return context.localization.artistsScreenTitle;
       case artistAlbums:
         return context.localization.artistsScreenTitle;
+      case artistAlbumsMoreOptions:
+        return context.localization.artistsScreenTitle;
       case albums:
+        return context.localization.albumsScreenTitle;
+      case albumMoreOptions:
         return context.localization.albumsScreenTitle;
       case albumSongs:
         return context.localization.albumsScreenTitle;
@@ -341,6 +348,25 @@ final routerProvider = Provider(
                                     state.pathParameters["artistName"] ?? "",
                               ),
                             ),
+                            routes: [
+                              GoRoute(
+                                path: Routes.artistAlbumsMoreOptions.name,
+                                name: Routes.artistAlbumsMoreOptions.name,
+                                parentNavigatorKey: _rootNavigatorKey,
+                                pageBuilder: (context, state) =>
+                                    OptionsModalPage(
+                                  context: context,
+                                  title: Routes.artistAlbumsMoreOptions
+                                      .title(context),
+                                  builder: (context) => AlbumMoreOptionsModal(
+                                    routeName:
+                                        Routes.artistAlbumsMoreOptions.name,
+                                    albumDetail: state.extra as AlbumDetail,
+                                    showBrowseArtist: false,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -383,6 +409,19 @@ final routerProvider = Provider(
                                 ),
                               ),
                             ],
+                          ),
+                          GoRoute(
+                            path: Routes.albumMoreOptions.name,
+                            name: Routes.albumMoreOptions.name,
+                            parentNavigatorKey: _rootNavigatorKey,
+                            pageBuilder: (context, state) => OptionsModalPage(
+                              context: context,
+                              title: Routes.albumMoreOptions.title(context),
+                              builder: (context) => AlbumMoreOptionsModal(
+                                routeName: Routes.albumMoreOptions.name,
+                                albumDetail: state.extra as AlbumDetail,
+                              ),
+                            ),
                           ),
                         ],
                       ),

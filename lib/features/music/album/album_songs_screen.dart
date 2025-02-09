@@ -46,12 +46,10 @@ class _AlbumSongsScreenState extends ConsumerState<AlbumSongsScreen>
   }
 
   @override
-  void onSelectLongPress() {
-    unawaited(
-      context.pushNamed(
-        Routes.albumSongsMoreOptions.name,
-        extra: displayItems[selectedDisplayItem],
-      ),
+  Future<void> onSelectLongPress() async {
+    await context.pushNamed(
+      Routes.albumSongsMoreOptions.name,
+      extra: displayItems[selectedDisplayItem],
     );
   }
 

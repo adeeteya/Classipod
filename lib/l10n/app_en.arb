@@ -271,6 +271,10 @@
   "@addToOnTheGoPlaylist": {
     "description": "The text of the add to on-the-go playlist option"
   },
+  "addAlbumToOnTheGoPlaylist": "Add Album to On-The-Go",
+  "@addAlbumToOnTheGoPlaylist": {
+    "description": "The text of the add album to on-the-go playlist option"
+  },
   "removeSongFromThePlaylist": "Remove from the Playlist",
   "@removeSongFromThePlaylist": {
     "description": "The text of the remove song from the playlist option"

@@ -30,8 +30,13 @@ enum _SongsMoreOptions {
 }
 
 class SongsMoreOptionsModal extends ConsumerStatefulWidget {
+  final String routeName;
   final Metadata currentSongMetadata;
-  const SongsMoreOptionsModal({super.key, required this.currentSongMetadata});
+  const SongsMoreOptionsModal({
+    super.key,
+    required this.routeName,
+    required this.currentSongMetadata,
+  });
 
   @override
   ConsumerState createState() => _SongsMoreOptionsModalState();
@@ -40,7 +45,7 @@ class SongsMoreOptionsModal extends ConsumerStatefulWidget {
 class _SongsMoreOptionsModalState extends ConsumerState<SongsMoreOptionsModal>
     with CustomScreen {
   @override
-  String get routeName => Routes.songsMoreOptions.name;
+  String get routeName => widget.routeName;
 
   @override
   List<_SongsMoreOptions> get displayItems => _SongsMoreOptions.values;

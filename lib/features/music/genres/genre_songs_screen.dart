@@ -33,6 +33,15 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
   @override
   Future<void> onSelectPressed() => _playSong(selectedDisplayItem);
 
+  @override
+  void onSelectLongPress() {
+    context.goNamed(
+      Routes.genresSongsMoreOptions.name,
+      pathParameters: {"genreName": widget.genreName},
+      extra: displayItems[selectedDisplayItem],
+    );
+  }
+
   Future<void> _playSong(int index) async {
     setState(() => selectedDisplayItem = index);
     await ref

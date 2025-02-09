@@ -55,6 +55,7 @@ enum Routes {
   songsMoreOptions,
   genres,
   genreSongs,
+  genresSongsMoreOptions,
   search;
 
   @override
@@ -105,6 +106,8 @@ enum Routes {
       case genres:
         return context.localization.genresScreenTitle;
       case genreSongs:
+        return context.localization.genreSongsScreenTitle;
+      case genresSongsMoreOptions:
         return context.localization.genreSongsScreenTitle;
       case search:
         return context.localization.searchScreenTitle;
@@ -421,6 +424,7 @@ final routerProvider = Provider(
                               context: context,
                               title: Routes.songsMoreOptions.title(context),
                               builder: (context) => SongsMoreOptionsModal(
+                                routeName: Routes.songsMoreOptions.name,
                                 currentSongMetadata: state.extra as Metadata,
                               ),
                             ),
@@ -447,6 +451,25 @@ final routerProvider = Provider(
                                     state.pathParameters["genreName"] ?? '',
                               ),
                             ),
+                            routes: [
+                              GoRoute(
+                                path: Routes.genresSongsMoreOptions.name,
+                                name: Routes.genresSongsMoreOptions.name,
+                                parentNavigatorKey: _rootNavigatorKey,
+                                pageBuilder: (context, state) =>
+                                    OptionsModalPage(
+                                  context: context,
+                                  title: Routes.genresSongsMoreOptions
+                                      .title(context),
+                                  builder: (context) => SongsMoreOptionsModal(
+                                    routeName:
+                                        Routes.genresSongsMoreOptions.name,
+                                    currentSongMetadata:
+                                        state.extra as Metadata,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

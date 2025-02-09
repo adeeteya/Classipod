@@ -25,8 +25,10 @@ class PlaylistSongsNotifier extends FamilyNotifier<PlaylistModel, int> {
     }
   }
 
-  void addAlbumToPlaylist(AlbumDetail albumDetail) {
-    albumDetail.albumSongs.forEach(addSongToPlaylist);
+  void addAlbumToPlaylist(AlbumDetail? albumDetail) {
+    if (albumDetail != null) {
+      albumDetail.albumSongs.forEach(addSongToPlaylist);
+    }
   }
 
   Future<void> removeSongFromPlaylist(Metadata? song) async {

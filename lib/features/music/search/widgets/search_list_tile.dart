@@ -12,11 +12,13 @@ class SearchListTile extends StatelessWidget {
   final SearchResultsModel searchResult;
   final bool isSelected;
   final VoidCallback onTap;
+  final VoidCallback onLongPress;
   const SearchListTile({
     super.key,
     required this.searchResult,
     required this.isSelected,
     required this.onTap,
+    required this.onLongPress,
   });
 
   @override
@@ -48,6 +50,7 @@ class SearchListTile extends StatelessWidget {
 
     return GestureDetector(
       onTap: onTap,
+      onLongPress: onLongPress,
       child: SizedBox(
         height: 50,
         width: double.infinity,

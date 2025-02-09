@@ -23,6 +23,7 @@ import 'package:classipod/features/music/genres/genres_screen.dart';
 import 'package:classipod/features/music/playlist/playlist_songs_more_options_modal.dart';
 import 'package:classipod/features/music/playlist/playlist_songs_screen.dart';
 import 'package:classipod/features/music/playlist/playlists_screen.dart';
+import 'package:classipod/features/music/search/search_more_options_modal.dart';
 import 'package:classipod/features/music/search/search_screen.dart';
 import 'package:classipod/features/music/songs/songs_more_options_modal.dart';
 import 'package:classipod/features/music/songs/songs_screen.dart';
@@ -60,7 +61,9 @@ enum Routes {
   genres,
   genreSongs,
   genresSongsMoreOptions,
-  search;
+  search,
+  searchMoreOptions,
+  ;
 
   @override
   String toString() {
@@ -120,6 +123,8 @@ enum Routes {
       case genresSongsMoreOptions:
         return context.localization.genreSongsScreenTitle;
       case search:
+        return context.localization.searchScreenTitle;
+      case searchMoreOptions:
         return context.localization.searchScreenTitle;
     }
   }
@@ -543,6 +548,25 @@ final routerProvider = Provider(
                           key: state.pageKey,
                           child: const SearchScreen(),
                         ),
+                        routes: [
+                          GoRoute(
+                            path: Routes.searchMoreOptions.name,
+                            name: Routes.searchMoreOptions.name,
+                            parentNavigatorKey: _rootNavigatorKey,
+                            pageBuilder: (context, state) => OptionsModalPage(
+                              context: context,
+                              title: Routes.searchMoreOptions.title(context),
+                              builder: (context) => SearchMoreOptionsModal(
+                                songMetadata: (state.extra is Metadata)
+                                    ? state.extra as Metadata
+                                    : null,
+                                albumDetail: (state.extra is AlbumDetail)
+                                    ? state.extra as AlbumDetail
+                                    : null,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

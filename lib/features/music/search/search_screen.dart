@@ -84,6 +84,30 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
     }
   }
 
+  @override
+  void onSelectLongPress() =>
+      _navigateToSearchMoreOptionsModal(selectedDisplayItem);
+
+  void _navigateToSearchMoreOptionsModal(int index) {
+    if (_isSearchBarActive || index == 0) {
+      return;
+    } else {
+      setState(() => selectedDisplayItem = index);
+      final searchResult = displayItems[selectedDisplayItem - 1];
+      if (searchResult.searchResultType == SearchResultType.track) {
+        context.goNamed(
+          Routes.searchMoreOptions.name,
+          extra: searchResult.result as Metadata,
+        );
+      } else if (searchResult.searchResultType == SearchResultType.album) {
+        context.goNamed(
+          Routes.searchMoreOptions.name,
+          extra: searchResult.result as AlbumDetail,
+        );
+      }
+    }
+  }
+
   void _onSearchDefaultTileAction() {
     setState(() {
       selectedDisplayItem = 0;
@@ -173,12 +197,15 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
                           ),
                           isSelected: selectedDisplayItem == 0,
                           onTap: _onSearchDefaultTileAction,
+                          onLongPress: () {},
                         );
                       }
                       return SearchListTile(
                         searchResult: displayItems[index - 1],
                         isSelected: selectedDisplayItem == index,
                         onTap: () async => _onSearchResultAction(index),
+                        onLongPress: () =>
+                            _navigateToSearchMoreOptionsModal(index),
                       );
                     },
                   ),

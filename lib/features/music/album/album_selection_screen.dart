@@ -35,10 +35,14 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
       _navigateToAlbumSelectionScreen(selectedDisplayItem);
 
   @override
-  Future<void> onSelectLongPress() async {
+  Future<void> onSelectLongPress() =>
+      _navigateToAlbumMoreOptionsScreen(selectedDisplayItem);
+
+  Future<void> _navigateToAlbumMoreOptionsScreen(int index) async {
+    setState(() => selectedDisplayItem = index);
     await context.pushNamed(
       Routes.albumMoreOptions.name,
-      extra: displayItems[selectedDisplayItem],
+      extra: displayItems[index],
     );
   }
 
@@ -83,6 +87,8 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
                   albumDetails: displayItems[index],
                   isSelected: selectedDisplayItem == index,
                   onTap: () async => _navigateToAlbumSelectionScreen(index),
+                  onLongPress: () async =>
+                      _navigateToAlbumMoreOptionsScreen(index),
                 ),
               ),
             ),

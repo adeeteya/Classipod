@@ -11,18 +11,21 @@ class AlbumArtSongListTile extends StatelessWidget {
   final bool isSelected;
   final bool isCurrentlyPlaying;
   final VoidCallback onTap;
+  final VoidCallback onLongPress;
   const AlbumArtSongListTile({
     super.key,
     required this.songMetadata,
     required this.isSelected,
     required this.isCurrentlyPlaying,
     required this.onTap,
+    required this.onLongPress,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
+      onLongPress: onLongPress,
       child: SizedBox(
         height: 50,
         width: double.infinity,

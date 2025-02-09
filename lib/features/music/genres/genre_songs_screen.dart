@@ -34,11 +34,17 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
   Future<void> onSelectPressed() => _playSong(selectedDisplayItem);
 
   @override
-  void onSelectLongPress() {
+  void onSelectLongPress() =>
+      _navigateToGenreMoreOptionsModal(selectedDisplayItem);
+
+  void _navigateToGenreMoreOptionsModal(int index) {
+    setState(() {
+      selectedDisplayItem = index;
+    });
     context.goNamed(
       Routes.genresSongsMoreOptions.name,
       pathParameters: {"genreName": widget.genreName},
-      extra: displayItems[selectedDisplayItem],
+      extra: displayItems[index],
     );
   }
 
@@ -77,6 +83,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
                   isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
                       displayItems[index].originalSongIndex,
                   onTap: () async => _playSong(index),
+                  onLongPress: () => _navigateToGenreMoreOptionsModal(index),
                 ),
               ),
             ),

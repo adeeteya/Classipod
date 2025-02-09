@@ -8,6 +8,7 @@ class SongListTile extends StatelessWidget {
   final bool isSelected;
   final bool isCurrentlyPlaying;
   final VoidCallback onTap;
+  final VoidCallback onLongPress;
   const SongListTile({
     super.key,
     required this.songName,
@@ -15,12 +16,14 @@ class SongListTile extends StatelessWidget {
     required this.isSelected,
     required this.isCurrentlyPlaying,
     required this.onTap,
+    required this.onLongPress,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
+      onLongPress: onLongPress,
       child: SizedBox(
         height: 40,
         width: double.infinity,

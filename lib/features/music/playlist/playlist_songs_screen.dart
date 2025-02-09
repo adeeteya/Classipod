@@ -38,14 +38,18 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
   Future<void> onSelectPressed() => _playPlaylist(selectedDisplayItem);
 
   @override
-  void onSelectLongPress() {
+  void onSelectLongPress() =>
+      _navigateToSongsMoreOptionsScreen(selectedDisplayItem);
+
+  void _navigateToSongsMoreOptionsScreen(int index) {
     if (displayItems.isEmpty) return;
+    setState(() => selectedDisplayItem = index);
     context.goNamed(
       Routes.playlistSongsMoreOptions.name,
       extra: () async {
         await ref
             .read(playlistSongsProvider(widget.playlistId).notifier)
-            .removeSongFromPlaylist(displayItems[selectedDisplayItem]);
+            .removeSongFromPlaylist(displayItems[index]);
       },
     );
   }
@@ -103,6 +107,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
                   isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
                       displayItems[index].originalSongIndex,
                   onTap: () async => _playPlaylist(index),
+                  onLongPress: () => _navigateToSongsMoreOptionsScreen(index),
                 ),
               ),
             ),

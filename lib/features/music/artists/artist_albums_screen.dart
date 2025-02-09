@@ -33,11 +33,15 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
       _navigateToAlbumSelectionScreen(selectedDisplayItem);
 
   @override
-  Future<void> onSelectLongPress() async {
+  Future<void> onSelectLongPress() =>
+      _navigateToAlbumMoreOptionsScreen(selectedDisplayItem);
+
+  Future<void> _navigateToAlbumMoreOptionsScreen(int index) async {
+    setState(() => selectedDisplayItem = index);
     await context.pushNamed(
       Routes.artistAlbumsMoreOptions.name,
       pathParameters: {"artistName": widget.artistName},
-      extra: displayItems[selectedDisplayItem],
+      extra: displayItems[index],
     );
   }
 
@@ -67,6 +71,8 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
                   albumDetails: displayItems[index],
                   isSelected: selectedDisplayItem == index,
                   onTap: () async => _navigateToAlbumSelectionScreen(index),
+                  onLongPress: () async =>
+                      _navigateToAlbumMoreOptionsScreen(index),
                 ),
               ),
             ),

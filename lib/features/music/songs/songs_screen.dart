@@ -33,10 +33,14 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
   Future<void> onSelectPressed() => _playSong(selectedDisplayItem);
 
   @override
-  void onSelectLongPress() {
+  void onSelectLongPress() =>
+      _navigateToSongMoreOptionsModal(selectedDisplayItem);
+
+  void _navigateToSongMoreOptionsModal(int index) {
+    setState(() => selectedDisplayItem = index);
     context.goNamed(
       Routes.songsMoreOptions.name,
-      extra: displayItems[selectedDisplayItem],
+      extra: displayItems[index],
     );
   }
 
@@ -92,6 +96,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
                   isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
                       displayItems[index].originalSongIndex,
                   onTap: () async => _playSong(index),
+                  onLongPress: () => _navigateToSongMoreOptionsModal(index),
                 ),
               ),
             ),

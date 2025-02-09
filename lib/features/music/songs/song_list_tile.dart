@@ -44,34 +44,35 @@ class SongListTile extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 4),
             child: Row(
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      songName ?? context.localization.unknownSong,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: isSelected
-                            ? CupertinoColors.white
-                            : CupertinoColors.black,
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        songName ?? context.localization.unknownSong,
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          color: isSelected
+                              ? CupertinoColors.white
+                              : CupertinoColors.black,
+                        ),
+                        maxLines: 1,
                       ),
-                      maxLines: 1,
-                    ),
-                    Text(
-                      trackArtistNames ?? context.localization.unknownArtist,
-                      style: TextStyle(
-                        color: isSelected
-                            ? CupertinoColors.white
-                            : AppPalette.hintTextColor,
+                      Text(
+                        trackArtistNames ?? context.localization.unknownArtist,
+                        style: TextStyle(
+                          color: isSelected
+                              ? CupertinoColors.white
+                              : AppPalette.hintTextColor,
+                        ),
+                        maxLines: 1,
                       ),
-                      maxLines: 1,
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-                if (isCurrentlyPlaying) ...[
-                  const Spacer(),
+                if (isCurrentlyPlaying)
                   Icon(
                     CupertinoIcons.volume_up,
                     size: 18,
@@ -79,7 +80,6 @@ class SongListTile extends StatelessWidget {
                         ? CupertinoColors.white
                         : CupertinoColors.black,
                   ),
-                ],
               ],
             ),
           ),

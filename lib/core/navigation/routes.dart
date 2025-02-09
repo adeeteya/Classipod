@@ -48,6 +48,7 @@ enum Routes {
   artistAlbums,
   albums,
   albumSongs,
+  albumSongsMoreOptions,
   playlists,
   playlistSongs,
   playlistSongsMoreOptions,
@@ -92,6 +93,8 @@ enum Routes {
       case albums:
         return context.localization.albumsScreenTitle;
       case albumSongs:
+        return context.localization.albumsScreenTitle;
+      case albumSongsMoreOptions:
         return context.localization.albumsScreenTitle;
       case playlists:
         return context.localization.playlistsScreenTitle;
@@ -360,6 +363,26 @@ final routerProvider = Provider(
                                 albumDetail: state.extra as AlbumDetail,
                               ),
                             ),
+                            routes: [
+                              GoRoute(
+                                path: Routes.albumSongsMoreOptions.name,
+                                name: Routes.albumSongsMoreOptions.name,
+                                parentNavigatorKey: _rootNavigatorKey,
+                                pageBuilder: (context, state) =>
+                                    OptionsModalPage(
+                                  context: context,
+                                  title: Routes.albumSongsMoreOptions
+                                      .title(context),
+                                  builder: (context) => SongsMoreOptionsModal(
+                                    routeName:
+                                        Routes.albumSongsMoreOptions.name,
+                                    currentSongMetadata:
+                                        state.extra as Metadata,
+                                    showAdditionalOptions: false,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

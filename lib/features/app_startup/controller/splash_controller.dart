@@ -65,6 +65,7 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
         throw const BatteryOptimizationEnabledException();
       }
 
+      ref.invalidate(playlistsProvider);
       await ref.read(playlistsProvider.notifier).init();
 
       // Navigate to the menu screen

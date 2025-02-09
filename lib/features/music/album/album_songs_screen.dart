@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -41,6 +43,16 @@ class _AlbumSongsScreenState extends ConsumerState<AlbumSongsScreen>
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
     }
+  }
+
+  @override
+  void onSelectLongPress() {
+    unawaited(
+      context.pushNamed(
+        Routes.albumSongsMoreOptions.name,
+        extra: displayItems[selectedDisplayItem],
+      ),
+    );
   }
 
   @override

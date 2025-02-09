@@ -32,10 +32,12 @@ enum _SongsMoreOptions {
 class SongsMoreOptionsModal extends ConsumerStatefulWidget {
   final String routeName;
   final Metadata currentSongMetadata;
+  final bool showAdditionalOptions;
   const SongsMoreOptionsModal({
     super.key,
     required this.routeName,
     required this.currentSongMetadata,
+    this.showAdditionalOptions = true,
   });
 
   @override
@@ -48,7 +50,12 @@ class _SongsMoreOptionsModalState extends ConsumerState<SongsMoreOptionsModal>
   String get routeName => widget.routeName;
 
   @override
-  List<_SongsMoreOptions> get displayItems => _SongsMoreOptions.values;
+  List<_SongsMoreOptions> get displayItems => [
+        _SongsMoreOptions.addToOnTheGo,
+        if (widget.showAdditionalOptions) _SongsMoreOptions.browseAlbum,
+        if (widget.showAdditionalOptions) _SongsMoreOptions.browseArtist,
+        _SongsMoreOptions.cancel,
+      ];
 
   @override
   Future<void> onSelectPressed() =>

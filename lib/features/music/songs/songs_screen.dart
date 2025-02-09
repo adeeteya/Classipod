@@ -32,6 +32,14 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
   @override
   Future<void> onSelectPressed() => _playSong(selectedDisplayItem);
 
+  @override
+  void onSelectLongPress() {
+    context.goNamed(
+      Routes.songsMoreOptions.name,
+      extra: displayItems[selectedDisplayItem],
+    );
+  }
+
   Future<void> _playSong(int displayIndex) async {
     setState(() => selectedDisplayItem = displayIndex);
     final int originalSongIndex = displayItems[displayIndex].originalSongIndex;

@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/page_not_found_screen.dart';
 import 'package:classipod/features/about/screen/about_screen.dart';
 import 'package:classipod/features/app_startup/screens/splash_screen.dart';
@@ -22,6 +23,7 @@ import 'package:classipod/features/music/playlist/playlist_songs_more_options_mo
 import 'package:classipod/features/music/playlist/playlist_songs_screen.dart';
 import 'package:classipod/features/music/playlist/playlists_screen.dart';
 import 'package:classipod/features/music/search/search_screen.dart';
+import 'package:classipod/features/music/songs/songs_more_options_modal.dart';
 import 'package:classipod/features/music/songs/songs_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_more_options_modal.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
@@ -50,6 +52,7 @@ enum Routes {
   playlistSongs,
   playlistSongsMoreOptions,
   songs,
+  songsMoreOptions,
   genres,
   genreSongs,
   search;
@@ -96,6 +99,8 @@ enum Routes {
       case playlistSongsMoreOptions:
         return context.localization.playlistsScreenTitle;
       case songs:
+        return context.localization.songsScreenTitle;
+      case songsMoreOptions:
         return context.localization.songsScreenTitle;
       case genres:
         return context.localization.genresScreenTitle;
@@ -407,6 +412,20 @@ final routerProvider = Provider(
                           key: state.pageKey,
                           child: const SongsScreen(),
                         ),
+                        routes: [
+                          GoRoute(
+                            path: Routes.songsMoreOptions.name,
+                            name: Routes.songsMoreOptions.name,
+                            parentNavigatorKey: _rootNavigatorKey,
+                            pageBuilder: (context, state) => OptionsModalPage(
+                              context: context,
+                              title: Routes.songsMoreOptions.title(context),
+                              builder: (context) => SongsMoreOptionsModal(
+                                currentSongMetadata: state.extra as Metadata,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                       GoRoute(
                         path: Routes.genres.toString(),

@@ -1,6 +1,6 @@
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:classipod/core/custom_painter/apple_logo_custom_painter.dart';
+import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/providers/battery_optimization_provider.dart';
@@ -67,10 +67,11 @@ class SplashScreen extends ConsumerWidget {
             ),
           ),
           child: Center(
-            child: CustomPaint(
-              size: const Size(64, 64),
-              foregroundPainter:
-                  AppleCustomPainter(color: CupertinoColors.white),
+            child: Image.asset(
+              Assets.appIcon,
+              height: 64,
+              width: 64,
+              color: CupertinoColors.white,
             ),
           ),
         ),

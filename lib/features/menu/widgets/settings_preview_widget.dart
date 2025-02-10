@@ -1,5 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:classipod/core/custom_painter/apple_logo_custom_painter.dart';
+import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:flutter/cupertino.dart';
@@ -40,11 +40,11 @@ class SettingsPreviewWidget extends StatelessWidget {
                 ),
               ),
               Center(
-                child: CustomPaint(
-                  size: const Size(65, 65),
-                  painter: AppleCustomPainter(
-                    color: CupertinoColors.white,
-                  ),
+                child: Image.asset(
+                  Assets.appIcon,
+                  height: 64,
+                  width: 64,
+                  color: CupertinoColors.white,
                 ),
               ),
             ],

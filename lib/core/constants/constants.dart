@@ -1,6 +1,9 @@
 class Constants {
   Constants._();
 
+  // Hive Box Constants
+  static const String metadataBoxName = "metadata_box";
+
   static const String defaultLanguageLocaleCode = "en";
   static const String defaultMusicFolderPath = "/storage/emulated/0/Music";
   static const String defaultNotificationAlbumArtImageUrl =

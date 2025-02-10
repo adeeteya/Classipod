@@ -3,20 +3,20 @@ import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/models/metadata.dart';
-import 'package:classipod/core/repositories/local_album_art_cache_repository.dart';
+import 'package:classipod/core/providers/temp_directory_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final localAudioFileRepositoryProvider =
-    Provider.autoDispose<LocalAudioFilesRepository>((ref) {
-  return LocalAudioFilesRepository(
-    ref.read(localAlbumArtCacheRepositoryProvider),
+final metadataReaderRepositoryProvider =
+    Provider.autoDispose<MetadataReaderRepository>((ref) {
+  return MetadataReaderRepository(
+    ref.read(tempDirectoryProvider).requireValue.path,
   );
 });
 
-class LocalAudioFilesRepository {
-  final LocalAlbumArtCacheRepository _localAlbumArtCacheRepository;
+class MetadataReaderRepository {
+  final String cacheParentDirectory;
 
-  LocalAudioFilesRepository(this._localAlbumArtCacheRepository);
+  MetadataReaderRepository(this.cacheParentDirectory);
 
   bool isSupportedAudioFormat(String path) {
     if (path.endsWith('.mp3') ||
@@ -31,10 +31,26 @@ class LocalAudioFilesRepository {
     }
   }
 
-  UnmodifiableListView<Metadata> getAudioFilesMetadata(
-    String audioFileFolderPath,
+  String getThumbnailPath({
+    required String? albumName,
+    required String? artistName,
+    required String filePath,
+  }) {
+    String albumArtFileName;
+    if (albumName == null || artistName == null) {
+      albumArtFileName = filePath;
+    } else {
+      albumArtFileName = '${albumName}by$artistName';
+    }
+    albumArtFileName =
+        albumArtFileName.replaceAll('/', '-').replaceAll(' ', '');
+    return '$cacheParentDirectory/$albumArtFileName.jpg';
+  }
+
+  UnmodifiableListView<Metadata> extractAudioFilesMetadata(
+    String musicFolderPath,
   ) {
-    final Directory storageDir = Directory(audioFileFolderPath);
+    final Directory storageDir = Directory(musicFolderPath);
     final List<FileSystemEntity> files = storageDir.listSync(
       recursive: true,
       followLinks: false,
@@ -47,26 +63,16 @@ class LocalAudioFilesRepository {
 
     for (final String path in filePaths) {
       if (isSupportedAudioFormat(path)) {
-        audioMetadata = readMetadata(File(path));
+        audioMetadata = readMetadata(File(path), getImage: true);
 
-        final String thumbnailPath =
-            _localAlbumArtCacheRepository.thumbnailPath(
+        final String thumbnailPath = getThumbnailPath(
           albumName: audioMetadata.album,
           artistName: audioMetadata.artist,
           filePath: path,
         );
 
-        //Cache album art if it doesn't exist
-        if (!_localAlbumArtCacheRepository.isThumbnailFileExists(
-          thumbnailPath: thumbnailPath,
-        )) {
-          audioMetadata = readMetadata(File(path), getImage: true);
-          if (audioMetadata.pictures.isNotEmpty) {
-            _localAlbumArtCacheRepository.cacheAlbumArt(
-              thumbnailPath: thumbnailPath,
-              bytes: audioMetadata.pictures[0].bytes,
-            );
-          }
+        if (audioMetadata.pictures.isNotEmpty) {
+          File(thumbnailPath).writeAsBytesSync(audioMetadata.pictures[0].bytes);
         }
 
         metadataList.add(

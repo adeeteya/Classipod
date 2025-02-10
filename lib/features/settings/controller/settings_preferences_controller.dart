@@ -1,6 +1,8 @@
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/settings/model/device_color.dart';
 import 'package:classipod/features/settings/model/repeat_mode.dart';
@@ -10,6 +12,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 
 final settingsPreferencesControllerProvider = NotifierProvider<
@@ -172,10 +175,12 @@ class SettingsPreferencesControllerNotifier
 
     if (newMusicFolderPath != '/' &&
         newMusicFolderPath != state.musicFolderPath) {
+      state = state.copyWith(musicFolderPath: newMusicFolderPath);
       await ref
           .read(settingsPreferencesRepositoryProvider)
           .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
-      state = state.copyWith(musicFolderPath: newMusicFolderPath);
+      await Hive.box<Metadata>(Constants.metadataBoxName).clear();
+      ref.read(routerProvider).goNamed(Routes.splash.name);
     }
   }
 

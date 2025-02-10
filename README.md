@@ -56,9 +56,9 @@ If you like what you see, please ⭐ the repo.
 - 👆 Touch Screen Support
 - 📺 Split Screen View (6th and 7th Gen iPod Classics)
 - 🔍 Ability to search songs
+- ⬇️ Caching Metadata of the songs for faster boot up times
 
 ### 🔜 Upcoming Features
-- ⬇️ Caching Metadata of the songs for faster boot up times
 - 📃 Ability to Create and Store Custom User Created Playlists
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device

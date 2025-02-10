@@ -85,12 +85,10 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
 
   @override
   Widget build(BuildContext context) {
-    final splitScreenEnabled = ref.watch(
-      settingsPreferencesControllerProvider.select((e) => e.splitScreenEnabled),
-    );
+    final currentSettings = ref.watch(settingsPreferencesControllerProvider);
     late final SplitScreenType splitScreenType;
     late final Widget splitScreenWidget;
-    if (splitScreenEnabled) {
+    if (currentSettings.splitScreenEnabled) {
       splitScreenType = ref.watch(splitScreenControllerProvider);
       if (splitScreenType == SplitScreenType.shuffle) {
         splitScreenWidget = IconPreviewWidget(
@@ -109,49 +107,59 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.deviceColorSettingTitle,
           icon: CupertinoIcons.device_phone_portrait,
-          contentText: "",
+          contentText: currentSettings.deviceColor.name,
         );
       } else if (splitScreenType == SplitScreenType.touchScreen) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.touchScreenSettingTitle,
           icon: CupertinoIcons.hand_draw,
-          contentText: "",
+          contentText: currentSettings.isTouchScreenEnabled
+              ? context.localization.tileValueOn
+              : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.repeat) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.repeatModeSettingTitle,
           icon: CupertinoIcons.repeat,
-          contentText: "",
+          contentText: currentSettings.repeatMode.name,
         );
       } else if (splitScreenType == SplitScreenType.vibrate) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.vibrateSettingTitle,
           icon: CupertinoIcons.rectangle_arrow_up_right_arrow_down_left,
-          contentText: "",
+          contentText: currentSettings.vibrate
+              ? context.localization.tileValueOn
+              : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.clickWheelSound) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.clickWheelSettingTitle,
           icon: CupertinoIcons.speaker_1,
-          contentText: "",
+          contentText: currentSettings.clickWheelSound
+              ? context.localization.tileValueOn
+              : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.splitScreenMode) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.splitScreenSettingTitle,
           icon: CupertinoIcons.uiwindow_split_2x1,
-          contentText: "",
+          contentText: currentSettings.splitScreenEnabled
+              ? context.localization.tileValueOn
+              : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.immersiveMode) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.immersiveModeSettingTitle,
           icon: CupertinoIcons.arrow_up_left_arrow_down_right,
-          contentText: "",
+          contentText: currentSettings.immersiveMode
+              ? context.localization.tileValueOn
+              : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.changeDirectory) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.changeDirectorySettingTitle,
           icon: CupertinoIcons.folder,
-          contentText: "",
+          contentText: currentSettings.musicFolderPath,
         );
       } else if (splitScreenType == SplitScreenType.resetSettings) {
         splitScreenWidget = IconPreviewWidget(
@@ -163,14 +171,14 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.donateSettingTitle,
           icon: CupertinoIcons.money_dollar_circle,
-          contentText: "",
+          contentText: context.localization.donateSettingDescription,
         );
       } else {
         splitScreenWidget = const AnimatedAlbumArtScroller();
       }
     }
     return CupertinoPageScaffold(
-      child: splitScreenEnabled
+      child: currentSettings.splitScreenEnabled
           ? Row(
               children: [
                 Expanded(

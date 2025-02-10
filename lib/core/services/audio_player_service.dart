@@ -40,6 +40,15 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
     });
   }
 
+  Future<void> toggleShuffleMode() async {
+    state = const AsyncLoading();
+    state = await AsyncValue.guard(() async {
+      await ref.read(audioPlayerProvider).setShuffleModeEnabled(
+            !ref.read(audioPlayerProvider).shuffleModeEnabled,
+          );
+    });
+  }
+
   Future<void> setShuffleMode(bool isShuffleModeEnabled) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {

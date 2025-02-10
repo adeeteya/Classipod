@@ -39,6 +39,10 @@
   "@shuffleSongsMenuTitle": {
     "description": "The title of shuffle songs feature"
   },
+  "shuffleSettingTitle": "Shuffle",
+  "@shuffleSettingTitle": {
+    "description": "The title of the shuffle setting"
+  },
   "settingsScreenTitle": "Settings",
   "@settingsScreenTitle": {
     "description": "The title of the settings screen"
@@ -143,6 +147,10 @@
   "@donateSettingTitle": {
     "description": "The title of the donate setting"
   },
+  "donateSettingDescription": "If you like this app, please consider donating.",
+    "@donateSettingDescription": {
+        "description": "The description of the donate setting"
+    },
   "versionAboutScreenTitle": "Version",
   "@versionAboutScreenTitle": {
     "description": "The title of the version tile in the about screen"

@@ -3,9 +3,11 @@ import 'dart:async';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/model/settings_preferences.dart';
 import 'package:classipod/features/settings/screens/widgets/settings_list_tile.dart';
@@ -20,6 +22,7 @@ enum _SettingsDisplayItems {
   language,
   deviceColor,
   isTouchScreenEnabled,
+  shuffle,
   repeat,
   vibrate,
   clickWheelSound,
@@ -39,6 +42,8 @@ enum _SettingsDisplayItems {
         return context.localization.touchScreenSettingTitle;
       case deviceColor:
         return context.localization.deviceColorSettingTitle;
+      case shuffle:
+        return context.localization.shuffleSettingTitle;
       case repeat:
         return context.localization.repeatModeSettingTitle;
       case vibrate:
@@ -97,6 +102,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleTouchScreen();
         break;
+      case _SettingsDisplayItems.shuffle:
+        await ref.read(audioPlayerServiceProvider.notifier).toggleShuffleMode();
+        break;
       case _SettingsDisplayItems.repeat:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
@@ -149,6 +157,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     _SettingsDisplayItems settingsItem,
   ) {
     switch (settingsItem) {
+      case _SettingsDisplayItems.shuffle:
+        return ref.watch(nowPlayingDetailsProvider).isShuffleEnabled;
       case _SettingsDisplayItems.isTouchScreenEnabled:
         return settingsState.isTouchScreenEnabled;
       case _SettingsDisplayItems.vibrate:
@@ -201,6 +211,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.isTouchScreenEnabled:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.touchScreen;
+        break;
+      case _SettingsDisplayItems.shuffle:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.shuffle;
         break;
       case _SettingsDisplayItems.repeat:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

@@ -51,12 +51,15 @@ class IconPreviewWidget extends StatelessWidget {
                 size: 70,
                 color: CupertinoColors.white,
               ),
-              Text(
-                contentText,
-                style: const TextStyle(
-                  fontSize: 20,
-                  color: CupertinoColors.white,
-                  fontWeight: FontWeight.bold,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Text(
+                  contentText,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: (contentText.length > 10) ? 14 : 20,
+                    color: CupertinoColors.white,
+                  ),
                 ),
               ),
             ],

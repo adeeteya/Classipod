@@ -3,7 +3,7 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/options_list_tile.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
-import 'package:classipod/features/music/playlist/playlist_songs_provider.dart';
+import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -61,7 +61,7 @@ class _AlbumMoreOptionsModalState extends ConsumerState<AlbumMoreOptionsModal>
     switch (optionItem) {
       case _AlbumMoreOptions.addAlbumToOnTheGo:
         ref
-            .read(playlistSongsProvider(0).notifier)
+            .read(playlistsProvider.notifier)
             .addAlbumToPlaylist(widget.albumDetail);
         context.pop();
         break;

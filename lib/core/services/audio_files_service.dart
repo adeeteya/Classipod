@@ -22,9 +22,11 @@ class AudioFilesServiceNotifier
   }
 
   Future<UnmodifiableListView<Metadata>> getAudioFilesMetadata() async {
+    state = const AsyncLoading();
     try {
       final Box<Metadata> metadataBox =
           Hive.box<Metadata>(Constants.metadataBoxName);
+
       if (metadataBox.isEmpty) {
         final result = await compute(
           ref.read(metadataReaderRepositoryProvider).extractAudioFilesMetadata,

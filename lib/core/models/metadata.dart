@@ -7,68 +7,50 @@ import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 
-part 'metadata.g.dart';
-
-@HiveType(typeId: 0)
 class Metadata extends HiveObject {
   /// Name of the track.
-  @HiveField(0)
   final String? trackName;
 
   /// Names of the artists performing in the track.
-  @HiveField(1)
   final List<String>? trackArtistNames;
 
   /// Name of the album.
-  @HiveField(2)
   final String? albumName;
 
   /// Name of the album artist.
-  @HiveField(3)
   final String? albumArtistName;
 
   /// Position of track in the album.
-  @HiveField(4)
   final int? trackNumber;
 
   /// Number of tracks in the album.
-  @HiveField(5)
   final int? albumLength;
 
   /// Year of the track.
-  @HiveField(6)
   final int? year;
 
   /// Genres of the track.
-  @HiveField(7)
   final List<String> genres;
 
   /// Number of the disc.
-  @HiveField(8)
   final int? discNumber;
 
   /// Mime type.
-  @HiveField(9)
   final String? mimeType;
 
   /// Duration of the track in milliseconds.
-  @HiveField(10)
   final int? trackDuration;
 
   /// Bitrate of the track.
-  @HiveField(11)
   final int? bitrate;
 
   /// File path of the media file.
-  @HiveField(12)
   final String? filePath;
 
   /// File path of the thumbnail album art file.
-  @HiveField(13)
   final String? thumbnailPath;
 
   /// Original Song Index
-  @HiveField(14)
   final int originalSongIndex;
 
   Metadata({

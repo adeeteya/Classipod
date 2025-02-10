@@ -4,7 +4,7 @@ import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
 import 'package:classipod/features/music/artists/artist_names_provider.dart';
-import 'package:classipod/features/music/playlist/playlists_provider.dart';
+import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/music/songs/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -40,9 +40,8 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       // Load the audio files metadata
-      ref.invalidate(audioFilesServiceProvider);
       final audioFilesMetadata =
-          await ref.read(audioFilesServiceProvider.future);
+          await ref.refresh(audioFilesServiceProvider.future);
 
       // Set the audio source
       await ref
@@ -60,6 +59,7 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
       ref.invalidate(songsProvider);
       ref.invalidate(playlistsProvider);
 
+      // Load the playlists
       await ref.read(playlistsProvider.notifier).init();
 
       final isBatteryOptimizationDisabled =

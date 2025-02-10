@@ -3,7 +3,7 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/options_list_tile.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/album/album_details_provider.dart';
-import 'package:classipod/features/music/playlist/playlist_songs_provider.dart';
+import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -56,7 +56,7 @@ class _NowPlayingMoreOptionsModalState
     switch (optionItem) {
       case _NowPlayingMoreOptions.addToOnTheGo:
         ref
-            .read(playlistSongsProvider(0).notifier)
+            .read(playlistsProvider.notifier)
             .addSongToPlaylist(currentSongMetadata);
         context.pop();
         break;

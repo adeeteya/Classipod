@@ -4,6 +4,7 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/model/device_color.dart';
 import 'package:classipod/features/settings/model/repeat_mode.dart';
 import 'package:classipod/features/settings/model/settings_preferences.dart';
@@ -180,6 +181,7 @@ class SettingsPreferencesControllerNotifier
           .read(settingsPreferencesRepositoryProvider)
           .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
       await Hive.box<Metadata>(Constants.metadataBoxName).clear();
+      await Hive.box<PlaylistModel>(Constants.playlistBoxName).clear();
       ref.read(routerProvider).goNamed(Routes.splash.name);
     }
   }

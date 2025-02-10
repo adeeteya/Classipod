@@ -294,5 +294,17 @@
   "scanningMusicFiles": "Scanning Music Files",
   "@scanningMusicFiles": {
     "description": "The text of the scanning music in splash screen"
-  }
+  },
+  "newPlaylist": "New Playlist",
+    "@newPlaylist": {
+        "description": "The text of the new playlist list tile"
+    },
+  "savePlaylist": "Save Playlist",
+    "@savePlaylist": {
+        "description": "The text of the save playlist list tile"
+    },
+  "clearPlaylist": "Clear Playlist",
+    "@clearPlaylist": {
+        "description": "The text of the clear playlist list tile"
+    }
 }

@@ -20,6 +20,7 @@ class SplashScreen extends ConsumerStatefulWidget {
 
 class _SplashScreenState extends ConsumerState<SplashScreen> {
   bool _showScanningMusicText = false;
+  late final Timer _timer;
 
   void _toggleScanningMusicText() {
     setState(() {
@@ -29,8 +30,14 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
 
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 5), _toggleScanningMusicText);
+    _timer = Timer(const Duration(seconds: 5), _toggleScanningMusicText);
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
   }
 
   @override

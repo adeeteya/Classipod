@@ -20,9 +20,9 @@ import 'package:classipod/features/music/cover_flow/cover_flow_album_selection_s
 import 'package:classipod/features/music/cover_flow/cover_flow_screen.dart';
 import 'package:classipod/features/music/genres/genre_songs_screen.dart';
 import 'package:classipod/features/music/genres/genres_screen.dart';
-import 'package:classipod/features/music/playlist/playlist_songs_more_options_modal.dart';
-import 'package:classipod/features/music/playlist/playlist_songs_screen.dart';
-import 'package:classipod/features/music/playlist/playlists_screen.dart';
+import 'package:classipod/features/music/playlist/screens/playlist_songs_more_options_modal.dart';
+import 'package:classipod/features/music/playlist/screens/playlist_songs_screen.dart';
+import 'package:classipod/features/music/playlist/screens/playlists_screen.dart';
 import 'package:classipod/features/music/search/search_more_options_modal.dart';
 import 'package:classipod/features/music/search/search_screen.dart';
 import 'package:classipod/features/music/songs/songs_more_options_modal.dart';
@@ -436,6 +436,7 @@ final routerProvider = Provider(
                         parentNavigatorKey: _rootNavigatorKey,
                         pageBuilder: (context, state) => CupertinoPage(
                           key: state.pageKey,
+                          maintainState: false,
                           child: const PlaylistsScreen(),
                         ),
                         routes: [

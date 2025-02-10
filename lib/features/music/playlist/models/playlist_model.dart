@@ -1,15 +1,18 @@
 import 'package:classipod/core/models/metadata.dart';
+import 'package:hive_ce_flutter/hive_flutter.dart';
 
-class PlaylistModel {
+class PlaylistModel extends HiveObject {
   int id;
+
   String name;
+
   List<Metadata> songs;
 
   PlaylistModel({required this.id, required this.name, required this.songs});
 
-  PlaylistModel copyWith({String? name, List<Metadata>? songs}) {
+  PlaylistModel copyWith({int? id, String? name, List<Metadata>? songs}) {
     return PlaylistModel(
-      id: id,
+      id: id ?? this.id,
       name: name ?? this.name,
       songs: songs ?? this.songs,
     );

@@ -12,6 +12,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   abstract final String routeName;
   abstract final List displayItems;
   int selectedDisplayItem = 0;
+  int extraDisplayItems = 0;
   int maxScrollDownDisplayItems = 2;
   final double displayTileHeight = 30.0;
   final ScrollController scrollController = ScrollController();
@@ -30,7 +31,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
       screenHeight = Constants.screenHeightRatio;
     }
 
-    if (selectedDisplayItem < displayItems.length - 1) {
+    if (selectedDisplayItem < displayItems.length + extraDisplayItems - 1) {
       setState(() {
         selectedDisplayItem++;
       });

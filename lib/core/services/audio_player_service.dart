@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
-import 'package:classipod/features/music/playlist/playlist_model.dart';
+import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/now_playing/model/now_playing_details.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';

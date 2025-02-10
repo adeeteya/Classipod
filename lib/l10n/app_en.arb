@@ -148,9 +148,9 @@
     "description": "The title of the donate setting"
   },
   "donateSettingDescription": "If you like this app, please consider donating.",
-    "@donateSettingDescription": {
-        "description": "The description of the donate setting"
-    },
+  "@donateSettingDescription": {
+    "description": "The description of the donate setting"
+  },
   "versionAboutScreenTitle": "Version",
   "@versionAboutScreenTitle": {
     "description": "The title of the version tile in the about screen"
@@ -288,7 +288,11 @@
     "description": "The text of the remove song from the playlist option"
   },
   "allAlbums": "All Albums",
-    "@allAlbums": {
-        "description": "The text of the all albums playlist"
-    }
+  "@allAlbums": {
+    "description": "The text of the all albums playlist"
+  },
+  "scanningMusicFiles": "Scanning Music Files",
+  "@scanningMusicFiles": {
+    "description": "The text of the scanning music in splash screen"
+  }
 }

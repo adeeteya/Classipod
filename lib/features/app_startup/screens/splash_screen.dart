@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
@@ -9,11 +11,30 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-class SplashScreen extends ConsumerWidget {
+class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends ConsumerState<SplashScreen> {
+  bool _showScanningMusicText = false;
+
+  void _toggleScanningMusicText() {
+    setState(() {
+      _showScanningMusicText = true;
+    });
+  }
+
+  @override
+  void initState() {
+    Future.delayed(const Duration(seconds: 5), _toggleScanningMusicText);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     ref.listen(splashControllerProvider, (_, state) async {
       if (state.hasError) {
         if (state.error is AudioPermissionDeniedException) {
@@ -50,7 +71,6 @@ class SplashScreen extends ConsumerWidget {
         }
       }
     });
-
     return CupertinoPageScaffold(
       backgroundColor: AppPalette.darkScreenBackgroundGradient2,
       child: SizedBox(
@@ -67,11 +87,37 @@ class SplashScreen extends ConsumerWidget {
             ),
           ),
           child: Center(
-            child: Image.asset(
-              Assets.appIcon,
-              height: 64,
-              width: 64,
-              color: CupertinoColors.white,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  Assets.appIcon,
+                  height: 64,
+                  width: 64,
+                  color: CupertinoColors.white,
+                ),
+                if (_showScanningMusicText)
+                  Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          context.localization.scanningMusicFiles,
+                          style: const TextStyle(
+                            color: CupertinoColors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        const CupertinoActivityIndicator(
+                          radius: 8,
+                          color: CupertinoColors.white,
+                        ),
+                      ],
+                    ),
+                  ),
+              ],
             ),
           ),
         ),

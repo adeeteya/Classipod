@@ -21,19 +21,6 @@ class AudioFilesServiceNotifier
     return getAudioFilesMetadata();
   }
 
-  bool isSupportedAudioFormat(String path) {
-    if (path.endsWith('.mp3') ||
-        path.endsWith('.ogg') ||
-        path.endsWith('.wav') ||
-        path.endsWith('.flac') ||
-        path.endsWith('.m4a') ||
-        path.endsWith('.aac')) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   Future<UnmodifiableListView<Metadata>> getAudioFilesMetadata() async {
     try {
       final Box<Metadata> metadataBox =

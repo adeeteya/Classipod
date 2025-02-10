@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/album/album_detail.dart';
@@ -40,18 +41,35 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
 
   Future<void> _navigateToAlbumMoreOptionsScreen(int index) async {
     setState(() => selectedDisplayItem = index);
-    await context.pushNamed(
-      Routes.albumMoreOptions.name,
-      extra: displayItems[index],
-    );
+    //If the index is 0, it means the user has selected the "All Albums" option
+    if (index == 0) {
+      return;
+    } else {
+      await context.pushNamed(
+        Routes.albumMoreOptions.name,
+        extra: displayItems[index - 1],
+      );
+    }
   }
 
   void _navigateToAlbumSelectionScreen(int index) {
     setState(() => selectedDisplayItem = index);
-    context.goNamed(
-      Routes.albumSongs.name,
-      extra: displayItems[index],
-    );
+    if (index == 0) {
+      context.goNamed(
+        Routes.albumSongs.name,
+        extra: AlbumDetail(
+          albumName: context.localization.allAlbums,
+          albumArtPath: null,
+          albumArtistName: "",
+          albumSongs: ref.read(audioFilesServiceProvider).requireValue,
+        ),
+      );
+    } else {
+      context.goNamed(
+        Routes.albumSongs.name,
+        extra: displayItems[index - 1],
+      );
+    }
   }
 
   @override
@@ -82,14 +100,33 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
-                itemCount: displayItems.length,
-                itemBuilder: (context, index) => AlbumListTile(
-                  albumDetails: displayItems[index],
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () async => _navigateToAlbumSelectionScreen(index),
-                  onLongPress: () async =>
-                      _navigateToAlbumMoreOptionsScreen(index),
-                ),
+                itemCount: displayItems.length + 1,
+                itemBuilder: (context, index) {
+                  if (index == 0) {
+                    final allSongs =
+                        ref.read(audioFilesServiceProvider).requireValue;
+                    return AlbumListTile(
+                      albumDetails: AlbumDetail(
+                        albumName: context.localization.allAlbums,
+                        albumArtPath: null,
+                        albumArtistName:
+                            context.localization.nSongs(allSongs.length),
+                        albumSongs: allSongs,
+                      ),
+                      isSelected: selectedDisplayItem == 0,
+                      onTap: () async => _navigateToAlbumSelectionScreen(0),
+                      onLongPress: () {},
+                    );
+                  }
+
+                  return AlbumListTile(
+                    albumDetails: displayItems[index - 1],
+                    isSelected: selectedDisplayItem == index,
+                    onTap: () async => _navigateToAlbumSelectionScreen(index),
+                    onLongPress: () async =>
+                        _navigateToAlbumMoreOptionsScreen(index),
+                  );
+                },
               ),
             ),
           ),

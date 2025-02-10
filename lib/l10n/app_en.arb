@@ -278,5 +278,9 @@
   "removeSongFromThePlaylist": "Remove from the Playlist",
   "@removeSongFromThePlaylist": {
     "description": "The text of the remove song from the playlist option"
-  }
+  },
+  "allAlbums": "All Albums",
+    "@allAlbums": {
+        "description": "The text of the all albums playlist"
+    }
 }

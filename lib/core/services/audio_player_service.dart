@@ -27,17 +27,11 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
   Future<void> build() async {}
 
   Future<void> play() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      await ref.read(audioPlayerProvider).play();
-    });
+    await ref.read(audioPlayerProvider).play();
   }
 
   Future<void> pause() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      await ref.read(audioPlayerProvider).pause();
-    });
+    await ref.read(audioPlayerProvider).pause();
   }
 
   Future<void> toggleShuffleMode() async {
@@ -71,6 +65,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
 
       await setShuffleMode(true);
       await ref.read(audioPlayerProvider).shuffle();
+      await nextSong();
 
       await ref
           .read(settingsPreferencesControllerProvider.notifier)
@@ -111,10 +106,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
   }
 
   Future<void> nextSong() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      await ref.read(audioPlayerProvider).seekToNext();
-    });
+    await ref.read(audioPlayerProvider).seekToNext();
   }
 
   Future<void> seekBackwards() async {

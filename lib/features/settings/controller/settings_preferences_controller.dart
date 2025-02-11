@@ -170,6 +170,12 @@ class SettingsPreferencesControllerNotifier
     await setSystemUiMode();
   }
 
+  Future<void> rescanMusicFiles() async {
+    await Hive.box<Metadata>(Constants.metadataBoxName).clear();
+    await Hive.box<PlaylistModel>(Constants.playlistBoxName).clear();
+    ref.read(routerProvider).goNamed(Routes.splash.name);
+  }
+
   Future<void> setNewMusicFolderPath() async {
     final String newMusicFolderPath =
         await FilePicker.platform.getDirectoryPath() ?? '/';
@@ -180,9 +186,7 @@ class SettingsPreferencesControllerNotifier
       await ref
           .read(settingsPreferencesRepositoryProvider)
           .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
-      await Hive.box<Metadata>(Constants.metadataBoxName).clear();
-      await Hive.box<PlaylistModel>(Constants.playlistBoxName).clear();
-      ref.read(routerProvider).goNamed(Routes.splash.name);
+      await rescanMusicFiles();
     }
   }
 

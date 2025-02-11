@@ -28,6 +28,7 @@ enum _SettingsDisplayItems {
   clickWheelSound,
   splitScreenEnabled,
   immersiveMode,
+  rescanMusicFiles,
   changeDirectory,
   resetSettings,
   donate;
@@ -54,6 +55,8 @@ enum _SettingsDisplayItems {
         return context.localization.splitScreenSettingTitle;
       case immersiveMode:
         return context.localization.immersiveModeSettingTitle;
+      case rescanMusicFiles:
+        return context.localization.rescanMusicFilesSettingTitle;
       case changeDirectory:
         return context.localization.changeDirectorySettingTitle;
       case resetSettings:
@@ -129,6 +132,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleImmersiveMode();
+        break;
+      case _SettingsDisplayItems.rescanMusicFiles:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .rescanMusicFiles();
         break;
       case _SettingsDisplayItems.changeDirectory:
         await ref
@@ -232,6 +240,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.immersiveMode:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.immersiveMode;
+        break;
+      case _SettingsDisplayItems.rescanMusicFiles:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.rescanMusicFiles;
         break;
       case _SettingsDisplayItems.changeDirectory:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

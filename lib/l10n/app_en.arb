@@ -296,15 +296,19 @@
     "description": "The text of the scanning music in splash screen"
   },
   "newPlaylist": "New Playlist",
-    "@newPlaylist": {
-        "description": "The text of the new playlist list tile"
-    },
+  "@newPlaylist": {
+    "description": "The text of the new playlist list tile"
+  },
   "savePlaylist": "Save Playlist",
-    "@savePlaylist": {
-        "description": "The text of the save playlist list tile"
-    },
+  "@savePlaylist": {
+    "description": "The text of the save playlist list tile"
+  },
   "clearPlaylist": "Clear Playlist",
-    "@clearPlaylist": {
-        "description": "The text of the clear playlist list tile"
-    }
+  "@clearPlaylist": {
+    "description": "The text of the clear playlist list tile"
+  },
+  "rescanMusicFilesSettingTitle": "Rescan Music Files",
+  "@rescanMusicFilesSettingTitle": {
+    "description": "The text of the rescan music files settings tile"
+  }
 }

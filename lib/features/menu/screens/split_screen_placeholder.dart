@@ -155,6 +155,12 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
               ? context.localization.tileValueOn
               : context.localization.tileValueOff,
         );
+      } else if (splitScreenType == SplitScreenType.rescanMusicFiles) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.rescanMusicFilesSettingTitle,
+          icon: CupertinoIcons.music_albums,
+          contentText: "",
+        );
       } else if (splitScreenType == SplitScreenType.changeDirectory) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.changeDirectorySettingTitle,
@@ -164,7 +170,7 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
       } else if (splitScreenType == SplitScreenType.resetSettings) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.resetSettingsTitle,
-          icon: CupertinoIcons.refresh,
+          icon: CupertinoIcons.refresh_circled,
           contentText: "",
         );
       } else if (splitScreenType == SplitScreenType.donate) {

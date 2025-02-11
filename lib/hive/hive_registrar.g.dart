@@ -2,6 +2,8 @@
 // Do not modify
 // Check in to version control
 
+// ignore_for_file: directives_ordering
+
 import 'package:hive_ce/hive.dart';
 import 'package:classipod/hive/hive_adapters.dart';
 

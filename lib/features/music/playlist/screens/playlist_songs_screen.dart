@@ -6,7 +6,7 @@ import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
-import 'package:classipod/features/music/songs/song_list_tile.dart';
+import 'package:classipod/features/music/playlist/widgets/playlist_song_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -116,7 +116,9 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
           child: Row(
             children: [
               Icon(
-                isSavePlaylist ? CupertinoIcons.plus_app : CupertinoIcons.clear,
+                isSavePlaylist
+                    ? CupertinoIcons.plus_app
+                    : CupertinoIcons.clear_circled,
                 size: 25,
                 color:
                     isSelected ? CupertinoColors.white : CupertinoColors.black,
@@ -199,10 +201,8 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
                     );
                   }
 
-                  return SongListTile(
-                    songName: displayItems[index - 2].trackName,
-                    trackArtistNames:
-                        displayItems[index - 2].getTrackArtistNames,
+                  return PlaylistSongListTile(
+                    songMetadata: displayItems[index - 2],
                     isSelected: selectedDisplayItem == index,
                     isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
                         displayItems[index - 2].originalSongIndex,

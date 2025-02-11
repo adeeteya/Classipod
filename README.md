@@ -90,30 +90,41 @@ If you like what you see, please ⭐ the repo.
 
 ## 🔌 Plugins
 
-| Name                                                                          | Usage                                                          |
-|-------------------------------------------------------------------------------|----------------------------------------------------------------|
-| [**cupertino_icons**](https://pub.dev/packages/cupertino_icons)               | For ios style icons                                            |
-| [**flutter_riverpod**](https://pub.dev/packages/flutter_riverpod)             | For State Management                                           |
-| [**shared_preferences**](https://pub.dev/packages/shared_preferences)         | To store system settings                                       |
-| [**audio_service**](https://pub.dev/packages/audio_service)                   | To play audio in the background of the app                     |
-| [**just_audio**](https://pub.dev/packages/just_audio)                         | To play audio files                                            |
-| [**just_audio_background**](https://pub.dev/packages/just_audio_background)   | To control audio through media notification                    |
-| [**flutter_svg**](https://pub.dev/packages/flutter_svg)                       | To display svg files                                           |
-| [**battery_plus**](https://pub.dev/packages/battery_plus)                     | Shows phone battery level and status                           |
-| [**permission_handler**](https://pub.dev/packages/permission_handler)         | To check and request for file access permissions               |
-| [**flutter_media_metadata**](https://pub.dev/packages/flutter_media_metadata) | To extract metadata from audio files                           |
-| [**go_router**](https://pub.dev/packages/go_router)                           | To handle routing within the app                               |
-| [**vibration**](https://pub.dev/packages/vibration)                           | Used for vibration while using device controls                 |
-| [**file_picker**](https://pub.dev/packages/file_picker)                       | To select the directory from which the music files are scanned |
-| [**url_launcher**](https://pub.dev/packages/url_launcher)                     | For Launching the Donation Page Link                           |
-| [**flutter_lints**](https://pub.dev/packages/flutter_lints)                   | For linting                                                    |
+| Name                                                                                      | Usage                                                                               |
+|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| [**audio_metadata_reader**](https://pub.dev/packages/audio_metadata_reader)               | To read the metadata of the local mp3 files                                         |
+| [**battery_plus**](https://pub.dev/packages/battery_plus)                                 | Shows phone battery level and status                                                |
+| [**cupertino_icons**](https://pub.dev/packages/cupertino_icons)                           | For ios style icons                                                                 |
+| [**device_preview_plus**](https://pub.dev/packages/device_preview_plus)                   | For visualizing how the app looks on different devices and screens                  |
+| [**disable_battery_optimization**](https://pub.dev/packages/disable_battery_optimization) | To Disable vendor or android specific battery optimizations fo rbackground playback |
+| [**file_picker**](https://pub.dev/packages/file_picker)                                   | To select the directory from which the music files are scanned                      |
+| [**flutter_localizations**](https://pub.dev/packages/flutter_localizations)               | For in-app localization map data                                                    |
+| [**flutter_riverpod**](https://pub.dev/packages/flutter_riverpod)                         | For State Management                                                                |
+| [**go_router**](https://pub.dev/packages/go_router)                                       | To handle routing within the app                                                    |
+| [**hive_ce**](https://pub.dev/packages/hive_ce)                                           | To Cache Auio Metadata and store playlists                                          |
+| [**hive_ce_flutter**](https://pub.dev/packages/hive_ce_flutter)                           | For flutter specific libs of hive                                                   |
+| [**intl**](https://pub.dev/packages/intl)                                                 | For internalization and localization of the app                                     |
+| [**just_audio**](https://pub.dev/packages/just_audio)                                     | To play audio files                                                                 |
+| [**just_audio_background**](https://pub.dev/packages/just_audio_background)               | To control audio through media notification                                         |
+| [**path_provider**](https://pub.dev/packages/path_provider)                               | To fetch app data directories                                                       |
+| [**permission_handler**](https://pub.dev/packages/permission_handler)                     | To check and request for file and audio access permissions                          |
+| [**shared_preferences**](https://pub.dev/packages/shared_preferences)                     | To store system settings                                                            |
+| [**tutorial_coach_mark**](https://pub.dev/packages/tutorial_coach_mark)                   | To provide app tutorial to the users                                                |
+| [**url_launcher**](https://pub.dev/packages/url_launcher)                                 | For Launching the Donation Page Link                                                |
+| [**vibration**](https://pub.dev/packages/vibration)                                       | Used for vibration while using device controls                                      |
+| [**build_runner**](https://pub.dev/packages/build_runner)                                 | For code generation                                                                 |
+| [**custom_lint**](https://pub.dev/packages/custom_lint)                                   | For using custom lint rules                                                         |
+| [**flutter_lints**](https://pub.dev/packages/flutter_lints)                               | For using recommended flutter lints                                                 |
+| [**flutter_test**](https://pub.dev/packages/flutter_test)                                 | For unit and widget testing the app                                                 |
+| [**hive_ce_generator**](https://pub.dev/packages/hive_ce_generator)                       | For automatically generating Hive TypeAdapters                                      |
+| [**riverpod_lint**](https://pub.dev/packages/riverpod_lint)                               | For using riverpod specific linting rules                                           |
 
 ## 🤓 Author
 
 **[Aditya R](https://github.com/adeeteya)**
 
 ## 🔖 LICENCE
-Copyright (c) 2024 Aditya R
+Copyright (c) 2025 Aditya R
 [BSD-4-Clause LICENCE](https://github.com/adeeteya/Classipod/blob/master/LICENSE)
 
 ## 🙏 Attributions

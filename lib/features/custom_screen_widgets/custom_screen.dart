@@ -1,4 +1,3 @@
-import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -22,15 +21,6 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   void onSelectLongPress() {}
 
   void scrollForward() {
-    final size = MediaQuery.sizeOf(context);
-
-    late final double screenHeight;
-    if (size.height < 800) {
-      screenHeight = Constants.smallScreenHeightRatio;
-    } else {
-      screenHeight = Constants.screenHeightRatio;
-    }
-
     if (selectedDisplayItem < displayItems.length + extraDisplayItems - 1) {
       setState(() {
         selectedDisplayItem++;
@@ -38,8 +28,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
       if (((selectedDisplayItem + maxScrollDownDisplayItems) *
               displayTileHeight) >
-          ((context.screenSize.height * screenHeight) +
-              scrollController.offset)) {
+          (context.screenSize.height + scrollController.offset)) {
         scrollController.jumpTo(scrollController.offset + displayTileHeight);
       }
     }

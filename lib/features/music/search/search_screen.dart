@@ -1,4 +1,3 @@
-import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
@@ -132,13 +131,6 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
       return;
     }
 
-    final size = MediaQuery.sizeOf(context);
-    late final double screenHeight;
-    if (size.height < 800) {
-      screenHeight = Constants.smallScreenHeightRatio;
-    } else {
-      screenHeight = Constants.screenHeightRatio;
-    }
     if (selectedDisplayItem < displayItems.length) {
       setState(() {
         selectedDisplayItem++;
@@ -146,8 +138,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
 
       if (((selectedDisplayItem + maxScrollDownDisplayItems) *
               displayTileHeight) >
-          ((context.screenSize.height * screenHeight) +
-              scrollController.offset)) {
+          (context.screenSize.height + scrollController.offset)) {
         scrollController.jumpTo(scrollController.offset + displayTileHeight);
       }
     }

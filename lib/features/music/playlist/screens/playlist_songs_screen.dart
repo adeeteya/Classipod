@@ -115,13 +115,19 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
           ),
           child: Row(
             children: [
-              Icon(
-                isSavePlaylist
-                    ? CupertinoIcons.plus_app
-                    : CupertinoIcons.clear_circled,
-                size: 25,
-                color:
-                    isSelected ? CupertinoColors.white : CupertinoColors.black,
+              SizedBox(
+                height: 54,
+                width: 54,
+                child: ColoredBox(
+                  color: AppPalette.defaultIconBackgroundColor,
+                  child: Icon(
+                    isSavePlaylist
+                        ? CupertinoIcons.plus_app
+                        : CupertinoIcons.clear_circled,
+                    size: 25,
+                    color: CupertinoColors.black,
+                  ),
+                ),
               ),
               const SizedBox(width: 10),
               Expanded(

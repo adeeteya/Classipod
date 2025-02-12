@@ -5,7 +5,6 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/providers/battery_optimization_provider.dart';
 import 'package:classipod/features/app_startup/controllers/splash_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -64,17 +63,9 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
           await ref
               .read(splashControllerProvider.notifier)
               .requestStoragePermissions();
-        } else if (state.error is BatteryOptimizationEnabledException) {
-          await Dialogs.showInfoDialog(
-            context: context,
-            title: context.localization.disableBatteryOptimizationTitle,
-            content: context.localization.disableBatteryOptimizationContent,
-          );
-          await ref.read(batteryOptimizationProvider.notifier).openSettings();
-
-          if (context.mounted) {
-            context.goNamed(Routes.menu.name);
-          }
+        }
+        if (context.mounted) {
+          context.goNamed(Routes.menu.name);
         }
       }
     });

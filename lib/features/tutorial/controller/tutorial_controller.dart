@@ -1,3 +1,9 @@
+import 'dart:async';
+
+import 'package:classipod/core/alerts/dialogs.dart';
+import 'package:classipod/core/constants/keys.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/providers/battery_optimization_provider.dart';
 import 'package:classipod/features/tutorial/repository/tutorial_repository.dart';
 import 'package:classipod/features/tutorial/widgets/tutorial_view_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -20,10 +26,26 @@ class TutorialControllerNotifier extends Notifier<bool> {
       TutorialViewWidget().showMainMenuTutorial(
         onFinish: () async {
           await ref.read(tutorialRepositoryProvider).setMenuTutorialCompleted();
+          await showBatteryOptimizationSettings();
         },
       );
     } else {
-      return;
+      unawaited(showBatteryOptimizationSettings());
+    }
+  }
+
+  Future<void> showBatteryOptimizationSettings() async {
+    final isBatteryOptimizationDisabled =
+        await ref.read(batteryOptimizationProvider.future);
+    if (!isBatteryOptimizationDisabled) {
+      await Dialogs.showInfoDialog(
+        context: deviceFrameGlobalKey.currentContext!,
+        title: deviceFrameGlobalKey
+            .currentContext!.localization.disableBatteryOptimizationTitle,
+        content: deviceFrameGlobalKey
+            .currentContext!.localization.disableBatteryOptimizationContent,
+      );
+      await ref.read(batteryOptimizationProvider.notifier).openSettings();
     }
   }
 

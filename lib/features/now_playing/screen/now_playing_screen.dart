@@ -211,6 +211,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   Widget build(BuildContext context) {
     final nowPlayingDetails = ref.watch(nowPlayingDetailsProvider);
 
+    ref.listen(deviceButtonsServiceProvider, deviceControlHandler);
+
     if (nowPlayingDetails.metadataList.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(
@@ -233,8 +235,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     } else {
       verticalPadding = 20;
     }
-
-    ref.listen(deviceButtonsServiceProvider, deviceControlHandler);
 
     return CupertinoPageScaffold(
       child: Column(

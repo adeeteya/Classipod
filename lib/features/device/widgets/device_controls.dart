@@ -1,6 +1,7 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/keys.dart';
 import 'package:classipod/core/custom_painter/next_button_custom_painter.dart';
 import 'package:classipod/core/custom_painter/play_pause_button_custom_painter.dart';
 import 'package:classipod/core/custom_painter/previous_button_custom_painter.dart';
@@ -155,6 +156,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     alignment: Alignment.topCenter,
                     child: Text(
                       context.localization.menuButtonText,
+                      key: menuButtonGlobalKey,
                       style: TextStyle(
                         color: deviceColor == DeviceColor.black
                             ? CupertinoColors.white
@@ -171,6 +173,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
             Row(
               children: [
                 Expanded(
+                  key: previousButtonGlobalKey,
                   child: GestureDetector(
                     onTap: () async => ref
                         .read(deviceButtonsServiceProvider.notifier)
@@ -203,6 +206,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                   ),
                 ),
                 GestureDetector(
+                  key: centerButtonGlobalKey,
                   onTap: () async => ref
                       .read(deviceButtonsServiceProvider.notifier)
                       .setDeviceAction(DeviceAction.select),
@@ -249,6 +253,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                   ),
                 ),
                 Expanded(
+                  key: nextButtonGlobalKey,
                   child: GestureDetector(
                     onTap: () async => ref
                         .read(deviceButtonsServiceProvider.notifier)
@@ -294,6 +299,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: CustomPaint(
+                      key: playPauseButtonGlobalKey,
                       size: const Size(26, 12),
                       painter: PlayPauseButtonCustomPainter(
                         color: deviceColor == DeviceColor.black

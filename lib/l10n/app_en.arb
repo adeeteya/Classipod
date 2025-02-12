@@ -310,5 +310,33 @@
   "rescanMusicFilesSettingTitle": "Rescan Music Files",
   "@rescanMusicFilesSettingTitle": {
     "description": "The text of the rescan music files settings tile"
+  },
+  "deviceControlMenuTutorialText": "Move your thumb lightly around the Click Wheel to highlight a menu item.",
+  "@deviceControlMenuTutorialText": {
+    "description": "The tutorial text for the device controls when user opens menu for the first time"
+  },
+  "centerButtonMenuTutorialText": "Press the center button to select the highlighted menu item.",
+  "@centerButtonMenuTutorialText": {
+    "description": "The tutorial text for the center button when user opens menu for the first time"
+  },
+  "playPauseMenuTutorialText": "Press this button to play or pause a song.",
+  "@playPauseTutorialText": {
+    "description": "The tutorial text for the play pause button when user opens menu for the first time"
+  },
+  "nextButtonMenuTutorialText": "Press this button to skip to the next song.",
+  "@nextButtonMenuTutorialText": {
+    "description": "The tutorial text for the next button when user opens menu for the first time"
+  },
+  "previousButtonMenuTutorialText": "Press this button to rewind or go back to the previous song.",
+  "@previousButtonMenuTutorialText": {
+    "description": "The tutorial text for the previous button when user opens menu for the first time"
+  },
+  "menuButtonTutorialText": "Press this button to go back to the previous menu. You could press and hold it from any other screen to directly go to the main menu.",
+  "@menuButtonTutorialText": {
+    "description": "The tutorial text for the menu button when user opens menu for the first time"
+  },
+  "deviceScreenMenuTutorialText": "This is the display screen. Touch Screen and Split Screen Mode are enabled by default and can be configured further in the settings.",
+  "@deviceScreenMenuTutorialText": {
+    "description": "The tutorial text for the device screen when user opens menu for the first time"
   }
 }

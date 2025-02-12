@@ -8,6 +8,7 @@ import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
+import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -104,6 +105,14 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
             SplitScreenType.nowPlaying;
         break;
     }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(tutorialControllerProvider.notifier).playMenuTutorial();
+    });
   }
 
   @override

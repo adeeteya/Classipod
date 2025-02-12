@@ -1,3 +1,4 @@
+import 'package:classipod/core/constants/keys.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/page_not_found_screen.dart';
@@ -152,7 +153,7 @@ final routerProvider = Provider(
               behavior: CustomScrollBehavior(),
               child: CupertinoPageScaffold(
                 resizeToAvoidBottomInset: false,
-                child: DeviceFrame(child: child),
+                child: DeviceFrame(key: deviceFrameGlobalKey, child: child),
               ),
             ),
           );

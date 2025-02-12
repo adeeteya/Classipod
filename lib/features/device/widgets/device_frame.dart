@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
+import 'package:classipod/core/constants/keys.dart';
 import 'package:classipod/features/device/widgets/device_controls.dart';
 import 'package:classipod/features/device/widgets/device_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -114,9 +115,11 @@ class DeviceFrame extends ConsumerWidget {
             minimum: const EdgeInsets.fromLTRB(20, 30, 20, 20),
             child: Column(
               children: [
-                DeviceScreen(child: child),
+                DeviceScreen(key: deviceScreenGlobalKey, child: child),
                 const Spacer(flex: 2),
-                const DeviceControls(),
+                DeviceControls(
+                  key: deviceControlsGlobalKey,
+                ),
                 const Spacer(),
               ],
             ),

@@ -39,7 +39,7 @@ class DeviceScreen extends ConsumerWidget {
         ),
         child: MediaQuery(
           data: MediaQuery.of(context).copyWith(
-            size: Size(size.width - 40, Constants.screenHeight),
+            size: Size(size.width - 40 - 10, Constants.screenHeight),
           ),
           child: child,
         ),

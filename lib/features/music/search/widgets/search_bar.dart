@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/constants/constants.dart';
 import 'package:flutter/cupertino.dart';
 
 class SearchBarController {
@@ -65,14 +66,15 @@ class _SearchBarState extends State<SearchBar> {
       if (_currentSelectedIndex < alphabets.length - 1) {
         _currentSelectedIndex++;
 
-        final size = MediaQuery.sizeOf(context);
-        final sizeOfAlphabetContainer =
-            size.width - 200; // 200 is the total amount of all padding
-        const sizeOfAlphabet = 15.25; //includes padding for each text
-        final currentSelectedIndexOffset =
-            _currentSelectedIndex * sizeOfAlphabet;
-        if (currentSelectedIndexOffset > sizeOfAlphabetContainer) {
-          _scrollController.jumpTo(_scrollController.offset + sizeOfAlphabet);
+        final double currentSelectedDisplayItemsWidth =
+            (_currentSelectedIndex + 1) * Constants.searchAlphabetSize;
+
+        final double currentScrollWidth =
+            Constants.searchAlphabetContainerWidth + _scrollController.offset;
+
+        if (currentSelectedDisplayItemsWidth > currentScrollWidth) {
+          _scrollController
+              .jumpTo(_scrollController.offset + Constants.searchAlphabetSize);
         }
       }
     });
@@ -82,12 +84,11 @@ class _SearchBarState extends State<SearchBar> {
     setState(() {
       if (_currentSelectedIndex > 0) {
         _currentSelectedIndex--;
-        const sizeOfAlphabet = 15.25; //includes padding for each text
-        final currentSelectedIndexOffset =
-            _currentSelectedIndex * sizeOfAlphabet;
-        if (currentSelectedIndexOffset - sizeOfAlphabet <
+
+        if (_currentSelectedIndex * Constants.searchAlphabetSize <
             _scrollController.offset) {
-          _scrollController.jumpTo(_scrollController.offset - sizeOfAlphabet);
+          _scrollController
+              .jumpTo(_currentSelectedIndex * Constants.searchAlphabetSize);
         }
       }
     });
@@ -111,7 +112,7 @@ class _SearchBarState extends State<SearchBar> {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: SizedBox(
-        height: 50,
+        height: 54,
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
@@ -129,8 +130,7 @@ class _SearchBarState extends State<SearchBar> {
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
             child: Row(
               children: [
-                SizedBox(
-                  width: 100,
+                Expanded(
                   child: CupertinoTextField(
                     padding: const EdgeInsets.all(4),
                     cursorColor: CupertinoColors.black,
@@ -143,8 +143,9 @@ class _SearchBarState extends State<SearchBar> {
                   ),
                 ),
                 const SizedBox(width: 10),
-                Expanded(
-                  flex: 2,
+                SizedBox(
+                  height: Constants.searchAlphabetSize,
+                  width: Constants.searchAlphabetContainerWidth,
                   child: DecoratedBox(
                     decoration: const BoxDecoration(
                       color: CupertinoColors.black,
@@ -152,24 +153,25 @@ class _SearchBarState extends State<SearchBar> {
                     ),
                     child: ListView.builder(
                       controller: _scrollController,
-                      padding: const EdgeInsets.all(2),
                       scrollDirection: Axis.horizontal,
                       itemCount: alphabets.length,
                       itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.only(right: 5),
-                          child: Text(
-                            alphabets[index],
-                            style: TextStyle(
-                              color: CupertinoColors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              fontFeatures: const [
-                                FontFeature.tabularFigures(),
-                              ],
-                              backgroundColor: (_currentSelectedIndex == index)
-                                  ? AppPalette.selectedTileGradientColor1
-                                  : null,
+                        return SizedBox(
+                          width: Constants.searchAlphabetSize,
+                          height: Constants.searchAlphabetSize,
+                          child: ColoredBox(
+                            color: (_currentSelectedIndex == index)
+                                ? AppPalette.selectedTileGradientColor1
+                                : CupertinoColors.black,
+                            child: Center(
+                              child: Text(
+                                alphabets[index],
+                                style: const TextStyle(
+                                  fontSize: Constants.searchAlphabetSize,
+                                  color: CupertinoColors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
                         );

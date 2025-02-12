@@ -17,4 +17,7 @@ class Constants {
   static const double screenHeight = 300;
   static const double deviceClickWheelRadiusRatio = 0.61;
   static const double deviceButtonSizeRatio = 0.2175;
+
+  static const double searchAlphabetContainerWidth = 180;
+  static const double searchAlphabetSize = 15;
 }

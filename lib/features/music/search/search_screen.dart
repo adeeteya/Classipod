@@ -26,6 +26,9 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
   final SearchBarController _searchBarController = SearchBarController();
 
   @override
+  int get extraDisplayItems => 1;
+
+  @override
   double get displayTileHeight => 54;
 
   @override
@@ -131,21 +134,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
       return;
     }
 
-    if (selectedDisplayItem < displayItems.length) {
-      setState(() {
-        selectedDisplayItem++;
-      });
-
-      final double currentSelectedDisplayItemsHeight =
-          (selectedDisplayItem + 1) * displayTileHeight + 30.0;
-
-      final double currentScrollHeight =
-          context.screenSize.height + scrollController.offset;
-
-      if (currentSelectedDisplayItemsHeight > currentScrollHeight) {
-        scrollController.jumpTo(scrollController.offset + displayTileHeight);
-      }
-    }
+    super.scrollForward();
   }
 
   @override

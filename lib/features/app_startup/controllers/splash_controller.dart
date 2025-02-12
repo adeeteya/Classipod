@@ -6,6 +6,7 @@ import 'package:classipod/features/music/artists/providers/artist_names_provider
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
 
@@ -57,6 +58,7 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
       ref.invalidate(artistNamesProvider);
       ref.invalidate(songsProvider);
       ref.invalidate(playlistsProvider);
+      ref.invalidate(tutorialControllerProvider);
 
       // Load the playlists
       await ref.read(playlistsProvider.notifier).init();

@@ -136,9 +136,13 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
         selectedDisplayItem++;
       });
 
-      if (((selectedDisplayItem + maxScrollDownDisplayItems) *
-              displayTileHeight) >
-          (context.screenSize.height + scrollController.offset)) {
+      final double currentSelectedDisplayItemsHeight =
+          (selectedDisplayItem + 1) * displayTileHeight + 30.0;
+
+      final double currentScrollHeight =
+          context.screenSize.height + scrollController.offset;
+
+      if (currentSelectedDisplayItemsHeight > currentScrollHeight) {
         scrollController.jumpTo(scrollController.offset + displayTileHeight);
       }
     }

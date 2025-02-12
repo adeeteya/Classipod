@@ -24,7 +24,7 @@ class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
 class _CoverFlowAlbumSelectionScreenState
     extends ConsumerState<CoverFlowAlbumSelectionScreen> with CustomScreen {
   @override
-  int get maxScrollDownDisplayItems => 4;
+  int get topStatusBarHeight => 60;
 
   @override
   String get routeName => Routes.coverFlowSelection.name;

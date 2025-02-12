@@ -12,7 +12,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   abstract final List displayItems;
   int selectedDisplayItem = 0;
   int extraDisplayItems = 0;
-  int maxScrollDownDisplayItems = 2;
+  int topStatusBarHeight = 30;
   final double displayTileHeight = 30;
   final ScrollController scrollController = ScrollController();
 
@@ -26,9 +26,13 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         selectedDisplayItem++;
       });
 
-      if (((selectedDisplayItem + maxScrollDownDisplayItems) *
-              displayTileHeight) >
-          (context.screenSize.height + scrollController.offset)) {
+      final double currentSelectedDisplayItemsHeight =
+          (selectedDisplayItem + 1) * displayTileHeight + topStatusBarHeight;
+
+      final double currentScrollHeight =
+          context.screenSize.height + scrollController.offset;
+
+      if (currentSelectedDisplayItemsHeight > currentScrollHeight) {
         scrollController.jumpTo(scrollController.offset + displayTileHeight);
       }
     }
@@ -40,6 +44,11 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
         selectedDisplayItem--;
       });
     }
+
+    // print(
+    //   "Backward; selectedDisplayItem: $selectedDisplayItem; scrollController.offset: ${scrollController.offset}; displayTileHeight: $displayTileHeight; screenSize.height: ${context.screenSize.height};",
+    // );
+
     if (selectedDisplayItem != 0 &&
         (selectedDisplayItem * displayTileHeight) - displayTileHeight <
             scrollController.offset) {

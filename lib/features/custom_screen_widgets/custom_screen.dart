@@ -45,15 +45,8 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
       });
     }
 
-    // print(
-    //   "Backward; selectedDisplayItem: $selectedDisplayItem; scrollController.offset: ${scrollController.offset}; displayTileHeight: $displayTileHeight; screenSize.height: ${context.screenSize.height};",
-    // );
-
-    if (selectedDisplayItem != 0 &&
-        (selectedDisplayItem * displayTileHeight) - displayTileHeight <
-            scrollController.offset) {
-      scrollController
-          .jumpTo(displayTileHeight * selectedDisplayItem - displayTileHeight);
+    if (selectedDisplayItem * displayTileHeight < scrollController.offset) {
+      scrollController.jumpTo(displayTileHeight * selectedDisplayItem);
     }
   }
 

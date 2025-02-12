@@ -11,7 +11,7 @@ class AlbumReflectiveArt extends StatelessWidget {
   const AlbumReflectiveArt({
     super.key,
     this.thumbnailPath,
-    required this.reflectedImageHeight,
+    this.reflectedImageHeight = 30,
     required this.heroTag,
   });
 

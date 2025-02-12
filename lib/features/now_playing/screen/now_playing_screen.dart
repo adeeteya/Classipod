@@ -228,14 +228,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       );
     }
 
-    final size = MediaQuery.sizeOf(context);
-    late final double verticalPadding;
-    if (size.height < 800) {
-      verticalPadding = 10;
-    } else {
-      verticalPadding = 20;
-    }
-
     return CupertinoPageScaffold(
       child: Column(
         children: [
@@ -246,11 +238,11 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               if (nowPlayingDetails.isShuffleEnabled)
-                Padding(
-                  padding: const EdgeInsets.only(right: 10),
+                const Padding(
+                  padding: EdgeInsets.only(right: 10),
                   child: Icon(
                     CupertinoIcons.shuffle,
-                    size: verticalPadding,
+                    size: 20,
                     color: CupertinoColors.black,
                   ),
                 ),
@@ -261,13 +253,13 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                     (nowPlayingDetails.loopMode == LoopMode.all)
                         ? CupertinoIcons.repeat
                         : CupertinoIcons.repeat_1,
-                    size: verticalPadding,
+                    size: 20,
                     color: CupertinoColors.black,
                   ),
                 ),
               if (!nowPlayingDetails.isShuffleEnabled &&
                   nowPlayingDetails.loopMode == LoopMode.off)
-                SizedBox(height: verticalPadding),
+                const SizedBox(height: 20),
             ],
           ),
           Expanded(
@@ -323,7 +315,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
               ),
             ),
           ),
-          SizedBox(height: verticalPadding),
+          const SizedBox(height: 10),
         ],
       ),
     );

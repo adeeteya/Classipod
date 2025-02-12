@@ -79,7 +79,7 @@ If you like what you see, please ⭐ the repo.
         <img width="220" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
       </a>
       <br>
-      <a href="https://github.com/adeeteya/Classipod/releases/latest/download/app-production-release.apk">
+      <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Android.apk">
         <img width="220" alt="APK download" src="https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png">
       </a>
     </td>

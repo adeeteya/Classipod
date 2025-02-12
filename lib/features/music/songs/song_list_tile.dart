@@ -25,7 +25,7 @@ class SongListTile extends StatelessWidget {
       onTap: onTap,
       onLongPress: onLongPress,
       child: SizedBox(
-        height: 40,
+        height: 54,
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
@@ -46,7 +46,7 @@ class SongListTile extends StatelessWidget {
               children: [
                 Expanded(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(

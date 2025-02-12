@@ -19,7 +19,7 @@ class ArtistAlbumsScreen extends ConsumerStatefulWidget {
 class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
     with CustomScreen {
   @override
-  double get displayTileHeight => 50;
+  double get displayTileHeight => 54;
 
   @override
   String get routeName => Uri.parse(widget.artistName).path;

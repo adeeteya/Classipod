@@ -111,7 +111,7 @@ class _SearchBarState extends State<SearchBar> {
     return Padding(
       padding: const EdgeInsets.all(20),
       child: SizedBox(
-        height: 40,
+        height: 50,
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(

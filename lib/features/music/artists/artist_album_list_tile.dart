@@ -25,7 +25,7 @@ class ArtistAlbumListTile extends StatelessWidget {
       onTap: onTap,
       onLongPress: onLongPress,
       child: SizedBox(
-        height: 50,
+        height: 54,
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
@@ -50,8 +50,8 @@ class ArtistAlbumListTile extends StatelessWidget {
                   Assets.defaultAlbumCoverImage,
                   fit: BoxFit.fitWidth,
                 ),
-                height: 50,
-                width: 50,
+                height: 54,
+                width: 54,
               ),
               const SizedBox(width: 10),
               Expanded(

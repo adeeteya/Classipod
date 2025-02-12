@@ -23,7 +23,7 @@ class AlbumsSelectionScreen extends ConsumerStatefulWidget {
 class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
     with CustomScreen {
   @override
-  double get displayTileHeight => 50;
+  double get displayTileHeight => 54;
 
   @override
   int get extraDisplayItems => 1;

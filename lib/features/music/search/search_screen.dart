@@ -26,7 +26,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
   final SearchBarController _searchBarController = SearchBarController();
 
   @override
-  double get displayTileHeight => 50;
+  double get displayTileHeight => 54;
 
   @override
   String get routeName => Routes.search.name;

@@ -52,7 +52,7 @@ class SearchListTile extends StatelessWidget {
       onTap: onTap,
       onLongPress: onLongPress,
       child: SizedBox(
-        height: 50,
+        height: 54,
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(

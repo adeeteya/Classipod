@@ -29,7 +29,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
           .path;
 
   @override
-  double get displayTileHeight => 40.0;
+  double get displayTileHeight => 54;
 
   @override
   int get extraDisplayItems => 2;
@@ -98,7 +98,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
-        height: 40,
+        height: 54,
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(

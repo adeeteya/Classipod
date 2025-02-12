@@ -27,7 +27,7 @@ class PlaylistSongListTile extends StatelessWidget {
       onTap: onTap,
       onLongPress: onLongPress,
       child: SizedBox(
-        height: 40,
+        height: 54,
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
@@ -52,8 +52,8 @@ class PlaylistSongListTile extends StatelessWidget {
                   Assets.defaultAlbumCoverImage,
                   fit: BoxFit.fitWidth,
                 ),
-                height: 40,
-                width: 40,
+                height: 54,
+                width: 54,
               ),
               const SizedBox(width: 10),
               Expanded(

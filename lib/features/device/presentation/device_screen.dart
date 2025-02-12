@@ -16,22 +16,16 @@ class DeviceScreen extends ConsumerWidget {
           .select((e) => e.isTouchScreenEnabled),
     );
 
-    final size = MediaQuery.sizeOf(context);
     final deviceColor = ref.watch(
       settingsPreferencesControllerProvider.select((e) => e.deviceColor),
     );
 
-    late final double screenHeightRatio;
-    if (size.height < 800) {
-      screenHeightRatio = Constants.smallScreenHeightRatio;
-    } else {
-      screenHeightRatio = Constants.screenHeightRatio;
-    }
+    final size = MediaQuery.sizeOf(context);
 
     return AbsorbPointer(
       absorbing: !isTouchScreenEnabled,
       child: Container(
-        height: size.height * screenHeightRatio,
+        height: Constants.screenHeight + 10,
         width: double.infinity,
         decoration: BoxDecoration(
           color: CupertinoColors.white,
@@ -45,7 +39,7 @@ class DeviceScreen extends ConsumerWidget {
         ),
         child: MediaQuery(
           data: MediaQuery.of(context).copyWith(
-            size: Size(size.width - 40, size.height * screenHeightRatio),
+            size: Size(size.width - 40, Constants.screenHeight),
           ),
           child: child,
         ),

@@ -111,7 +111,7 @@ class DeviceFrame extends ConsumerWidget {
             ),
           ),
           SafeArea(
-            minimum: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+            minimum: const EdgeInsets.fromLTRB(20, 30, 20, 20),
             child: Column(
               children: [
                 DeviceScreen(child: child),

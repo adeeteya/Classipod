@@ -14,8 +14,7 @@ class Constants {
   static const String donationLinkUrl = "https://www.paypal.me/adeeteya";
 
   static const int milliSecondsBeforeNextScroll = 75;
-  static const double smallScreenHeightRatio = 0.450;
-  static const double screenHeightRatio = 0.39;
+  static const double screenHeight = 300;
   static const double deviceClickWheelRadiusRatio = 0.61;
   static const double deviceButtonSizeRatio = 0.2175;
 }

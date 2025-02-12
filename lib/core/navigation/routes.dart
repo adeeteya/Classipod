@@ -190,10 +190,19 @@ final routerProvider = Provider(
                 path: Routes.menu.toString(),
                 name: Routes.menu.name,
                 parentNavigatorKey: _menuNavigatorKey,
-                pageBuilder: (context, state) => CupertinoPage(
-                  key: state.pageKey,
-                  child: const MainMenuScreen(),
-                ),
+                pageBuilder: (context, state) {
+                  if (state.extra is bool) {
+                    return CupertinoPage(
+                      key: state.pageKey,
+                      child: MainMenuScreen(showTutorial: state.extra as bool),
+                    );
+                  } else {
+                    return CupertinoPage(
+                      key: state.pageKey,
+                      child: const MainMenuScreen(),
+                    );
+                  }
+                },
                 routes: [
                   GoRoute(
                     path: Routes.settings.name,

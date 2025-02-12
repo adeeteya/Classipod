@@ -1,3 +1,4 @@
+import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/tutorial/repository/tutorial_repository.dart';
 import 'package:classipod/features/tutorial/widgets/tutorial_view_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,7 +29,10 @@ class TutorialControllerNotifier extends Notifier<bool> {
   }
 
   Future<void> resetTutorials() async {
-    final tutorialRepository = ref.read(tutorialRepositoryProvider);
-    await tutorialRepository.setMenuTutorialCompleted(isMenuFirstTime: true);
+    state = true;
+    await ref
+        .read(tutorialRepositoryProvider)
+        .setMenuTutorialCompleted(isMenuFirstTime: state);
+    ref.read(routerProvider).goNamed(Routes.menu.name, extra: true);
   }
 }

@@ -34,7 +34,8 @@ enum _MainMenuDisplayItems {
 }
 
 class MainMenuScreen extends ConsumerStatefulWidget {
-  const MainMenuScreen({super.key});
+  final bool showTutorial;
+  const MainMenuScreen({super.key, this.showTutorial = false});
 
   @override
   ConsumerState createState() => _MainMenuScreenState();
@@ -113,6 +114,14 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
     WidgetsBinding.instance.addPostFrameCallback((_) {
       ref.read(tutorialControllerProvider.notifier).playMenuTutorial();
     });
+  }
+
+  @override
+  void didUpdateWidget(covariant MainMenuScreen oldWidget) {
+    if (widget.showTutorial) {
+      ref.read(tutorialControllerProvider.notifier).playMenuTutorial();
+    }
+    super.didUpdateWidget(oldWidget);
   }
 
   @override

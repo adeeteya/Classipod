@@ -1,12 +1,12 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
-import 'package:classipod/features/now_playing/model/now_playing_details.dart';
+import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:flutter/cupertino.dart';
 
 class NowPlayingWidget extends StatelessWidget {
-  final NowPlayingDetails nowPlayingDetails;
+  final NowPlayingModel nowPlayingDetails;
   const NowPlayingWidget({
     super.key,
     required this.nowPlayingDetails,

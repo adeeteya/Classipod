@@ -4,8 +4,8 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/metadata.dart';
-import 'package:classipod/features/music/album/album_detail.dart';
-import 'package:classipod/features/music/search/search_model.dart';
+import 'package:classipod/features/music/album/models/album_model.dart';
+import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:flutter/cupertino.dart';
 
 class SearchListTile extends StatelessWidget {
@@ -34,7 +34,7 @@ class SearchListTile extends StatelessWidget {
       title = searchResult.result as String;
       description = context.localization.nAlbums(searchResult.count);
     } else if (searchResult.searchResultType == SearchResultType.album) {
-      final albumDetails = searchResult.result as AlbumDetail;
+      final albumDetails = searchResult.result as AlbumModel;
       title = albumDetails.albumName;
       description = context.localization.nSongs(searchResult.count);
       imageFilePath = albumDetails.albumArtPath;

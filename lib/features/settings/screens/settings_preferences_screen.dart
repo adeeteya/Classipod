@@ -4,12 +4,12 @@ import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
+import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
-import 'package:classipod/features/settings/model/settings_preferences.dart';
+import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/screens/widgets/settings_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -158,7 +158,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   }
 
   bool? _isOn(
-    SettingsPreferences settingsState,
+    SettingsPreferencesModel settingsState,
     _SettingsDisplayItems settingsItem,
   ) {
     switch (settingsItem) {
@@ -180,7 +180,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   }
 
   String? _getValue(
-    SettingsPreferences settingsState,
+    SettingsPreferencesModel settingsState,
     _SettingsDisplayItems settingsItem,
   ) {
     switch (settingsItem) {

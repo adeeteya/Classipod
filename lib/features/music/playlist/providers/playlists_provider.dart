@@ -2,7 +2,7 @@ import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/features/music/album/album_detail.dart';
+import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
@@ -64,7 +64,7 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
     }
   }
 
-  void addAlbumToPlaylist(AlbumDetail? albumDetail) {
+  void addAlbumToPlaylist(AlbumModel? albumDetail) {
     if (albumDetail != null) {
       albumDetail.albumSongs.forEach(addSongToPlaylist);
     }

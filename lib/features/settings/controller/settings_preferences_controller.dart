@@ -5,9 +5,9 @@ import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
-import 'package:classipod/features/settings/model/device_color.dart';
-import 'package:classipod/features/settings/model/repeat_mode.dart';
-import 'package:classipod/features/settings/model/settings_preferences.dart';
+import 'package:classipod/features/settings/models/device_color.dart';
+import 'package:classipod/features/settings/models/repeat_mode.dart';
+import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,19 +17,19 @@ import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 
 final settingsPreferencesControllerProvider = NotifierProvider<
-    SettingsPreferencesControllerNotifier, SettingsPreferences>(
+    SettingsPreferencesControllerNotifier, SettingsPreferencesModel>(
   SettingsPreferencesControllerNotifier.new,
 );
 
 class SettingsPreferencesControllerNotifier
-    extends Notifier<SettingsPreferences> {
+    extends Notifier<SettingsPreferencesModel> {
   SettingsPreferencesControllerNotifier() : super();
 
   @override
-  SettingsPreferences build() {
+  SettingsPreferencesModel build() {
     final settingsPreferencesRepository =
         ref.read(settingsPreferencesRepositoryProvider);
-    return SettingsPreferences(
+    return SettingsPreferencesModel(
       languageLocaleCode: settingsPreferencesRepository.getLanguageLocaleCode(),
       deviceColor: DeviceColor.values
           .byName(settingsPreferencesRepository.getDeviceColor()),

@@ -1,19 +1,19 @@
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/features/now_playing/model/now_playing_details.dart';
+import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
 final nowPlayingDetailsProvider =
-    NotifierProvider<NowPlayingDetailsNotifier, NowPlayingDetails>(
+    NotifierProvider<NowPlayingDetailsNotifier, NowPlayingModel>(
   NowPlayingDetailsNotifier.new,
 );
 
-class NowPlayingDetailsNotifier extends Notifier<NowPlayingDetails> {
+class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
   NowPlayingDetailsNotifier() : super();
 
   @override
-  NowPlayingDetails build() {
+  NowPlayingModel build() {
     ref.read(audioPlayerProvider).currentIndexStream.listen((newIndex) {
       if (newIndex != null && state.metadataList.isNotEmpty) {
         state = state.copyWith(
@@ -38,7 +38,7 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingDetails> {
       state = state.copyWith(isShuffleEnabled: isShuffleEnabled);
     });
 
-    return NowPlayingDetails(
+    return NowPlayingModel(
       currentIndex: 0,
       isPlaying: false,
       nowPlayingType: NowPlayingType.songs,

@@ -6,7 +6,7 @@ import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/providers/battery_optimization_provider.dart';
-import 'package:classipod/features/app_startup/controller/splash_controller.dart';
+import 'package:classipod/features/app_startup/controllers/splash_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';

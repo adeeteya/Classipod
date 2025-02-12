@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
-import 'package:classipod/features/music/album/album_detail.dart';
+import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
-import 'package:classipod/features/now_playing/model/now_playing_details.dart';
+import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter/foundation.dart';
@@ -121,7 +121,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
   }
 
   Future<void> playAlbum({
-    required AlbumDetail albumDetail,
+    required AlbumModel albumDetail,
     required int songIndex,
   }) async {
     state = const AsyncLoading();

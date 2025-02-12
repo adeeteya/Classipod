@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/constants/constants.dart';
-import 'package:classipod/features/music/album/album_detail.dart';
+import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
@@ -205,8 +205,8 @@ class Metadata extends HiveObject {
     return genres.isNotEmpty ? genres[0] : "Unknown Genre";
   }
 
-  AlbumDetail get getAlbumDetail {
-    return AlbumDetail(
+  AlbumModel get getAlbumDetail {
+    return AlbumModel(
       albumName: getAlbumName,
       albumArtPath: thumbnailPath,
       albumArtistName: getAlbumArtistName,

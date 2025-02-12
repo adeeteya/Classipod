@@ -8,7 +8,7 @@ import 'package:classipod/features/menu/widgets/icon_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/language_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/now_playing_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/settings_preview_widget.dart';
-import 'package:classipod/features/music/songs/songs_provider.dart';
+import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

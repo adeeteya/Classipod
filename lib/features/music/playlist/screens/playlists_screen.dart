@@ -1,5 +1,5 @@
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
+import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/music/playlist/widgets/playlist_list_tile.dart';

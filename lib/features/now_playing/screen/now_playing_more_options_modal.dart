@@ -1,8 +1,8 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/options_list_tile.dart';
-import 'package:classipod/features/custom_screen_widgets/custom_screen.dart';
-import 'package:classipod/features/music/album/album_details_provider.dart';
+import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
+import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:flutter/cupertino.dart';

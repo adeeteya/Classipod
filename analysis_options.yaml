@@ -10,6 +10,8 @@
 include: package:flutter_lints/flutter.yaml
 
 analyzer:
+  exclude:
+    - '**/*.g.dart'
   plugins:
     - custom_lint
 

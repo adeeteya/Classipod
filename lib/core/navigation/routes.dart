@@ -3,30 +3,30 @@ import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/navigation/page_not_found_screen.dart';
 import 'package:classipod/features/about/screen/about_screen.dart';
 import 'package:classipod/features/app_startup/screens/splash_screen.dart';
-import 'package:classipod/features/custom_screen_widgets/custom_scroll_behavior.dart';
-import 'package:classipod/features/custom_screen_widgets/options_modal_page.dart';
-import 'package:classipod/features/device/presentation/device_frame.dart';
+import 'package:classipod/features/custom_screen_elements/custom_scroll_behavior.dart';
+import 'package:classipod/features/custom_screen_elements/options_modal_page.dart';
+import 'package:classipod/features/device/widgets/device_frame.dart';
 import 'package:classipod/features/language/language_selection_screen.dart';
 import 'package:classipod/features/menu/screens/main_menu_screen.dart';
 import 'package:classipod/features/menu/screens/music_menu_screen.dart';
 import 'package:classipod/features/menu/screens/split_screen_placeholder.dart';
-import 'package:classipod/features/music/album/album_detail.dart';
-import 'package:classipod/features/music/album/album_more_options_modal.dart';
-import 'package:classipod/features/music/album/album_selection_screen.dart';
-import 'package:classipod/features/music/album/album_songs_screen.dart';
-import 'package:classipod/features/music/artists/artist_albums_screen.dart';
-import 'package:classipod/features/music/artists/artists_selection_screen.dart';
-import 'package:classipod/features/music/cover_flow/cover_flow_album_selection_screen.dart';
-import 'package:classipod/features/music/cover_flow/cover_flow_screen.dart';
-import 'package:classipod/features/music/genres/genre_songs_screen.dart';
-import 'package:classipod/features/music/genres/genres_screen.dart';
+import 'package:classipod/features/music/album/models/album_model.dart';
+import 'package:classipod/features/music/album/screens/album_more_options_modal.dart';
+import 'package:classipod/features/music/album/screens/album_selection_screen.dart';
+import 'package:classipod/features/music/album/screens/album_songs_screen.dart';
+import 'package:classipod/features/music/artists/screens/artist_albums_screen.dart';
+import 'package:classipod/features/music/artists/screens/artists_selection_screen.dart';
+import 'package:classipod/features/music/cover_flow/screens/cover_flow_album_selection_screen.dart';
+import 'package:classipod/features/music/cover_flow/screens/cover_flow_screen.dart';
+import 'package:classipod/features/music/genres/screens/genre_songs_screen.dart';
+import 'package:classipod/features/music/genres/screens/genres_screen.dart';
 import 'package:classipod/features/music/playlist/screens/playlist_songs_more_options_modal.dart';
 import 'package:classipod/features/music/playlist/screens/playlist_songs_screen.dart';
 import 'package:classipod/features/music/playlist/screens/playlists_screen.dart';
-import 'package:classipod/features/music/search/search_more_options_modal.dart';
-import 'package:classipod/features/music/search/search_screen.dart';
-import 'package:classipod/features/music/songs/songs_more_options_modal.dart';
-import 'package:classipod/features/music/songs/songs_screen.dart';
+import 'package:classipod/features/music/search/screens/search_more_options_modal.dart';
+import 'package:classipod/features/music/search/screens/search_screen.dart';
+import 'package:classipod/features/music/songs/screens/songs_more_options_modal.dart';
+import 'package:classipod/features/music/songs/screens/songs_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_more_options_modal.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -327,7 +327,7 @@ final routerProvider = Provider(
                               transitionsBuilder: (context, _, __, child) =>
                                   child,
                               child: CoverFlowAlbumSelectionScreen(
-                                albumDetail: state.extra as AlbumDetail,
+                                albumDetail: state.extra as AlbumModel,
                               ),
                             ),
                           ),
@@ -366,7 +366,7 @@ final routerProvider = Provider(
                                   builder: (context) => AlbumMoreOptionsModal(
                                     routeName:
                                         Routes.artistAlbumsMoreOptions.name,
-                                    albumDetail: state.extra as AlbumDetail,
+                                    albumDetail: state.extra as AlbumModel,
                                     showBrowseArtist: false,
                                   ),
                                 ),
@@ -391,7 +391,7 @@ final routerProvider = Provider(
                             pageBuilder: (context, state) => CupertinoPage(
                               key: state.pageKey,
                               child: AlbumSongsScreen(
-                                albumDetail: state.extra as AlbumDetail,
+                                albumDetail: state.extra as AlbumModel,
                               ),
                             ),
                             routes: [
@@ -424,7 +424,7 @@ final routerProvider = Provider(
                               title: Routes.albumMoreOptions.title(context),
                               builder: (context) => AlbumMoreOptionsModal(
                                 routeName: Routes.albumMoreOptions.name,
-                                albumDetail: state.extra as AlbumDetail,
+                                albumDetail: state.extra as AlbumModel,
                               ),
                             ),
                           ),
@@ -561,8 +561,8 @@ final routerProvider = Provider(
                                 songMetadata: (state.extra is Metadata)
                                     ? state.extra as Metadata
                                     : null,
-                                albumDetail: (state.extra is AlbumDetail)
-                                    ? state.extra as AlbumDetail
+                                albumDetail: (state.extra is AlbumModel)
+                                    ? state.extra as AlbumModel
                                     : null,
                               ),
                             ),

@@ -311,10 +311,6 @@
   "@rescanMusicFilesSettingTitle": {
     "description": "The text of the rescan music files settings tile"
   },
-  "showTutorialSettingTitle": "Show Tutorial",
-  "@showTutorialSettingTitle": {
-    "description": "The text of the show tutorial settings tile"
-  },
   "deviceControlMenuTutorialText": "Move your thumb lightly around the Click Wheel to highlight a menu item.",
   "@deviceControlMenuTutorialText": {
     "description": "The tutorial text for the device controls when user opens menu for the first time"

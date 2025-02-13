@@ -7,14 +7,17 @@ version: 1.7.0+11
 
 environment:
   sdk: ^3.6.1
-  flutter: 3.27.4
+  flutter: 3.29.0
 
 dependencies:
   audio_metadata_reader: ^1.1.0
   battery_plus: ^6.2.1
   cupertino_icons: ^1.0.8
   device_preview_plus: ^2.2.7
-  disable_battery_optimization: ^1.1.1
+  disable_battery_optimization:
+    git:
+      url: https://github.com/adeeteya/Disable-Battery-Optimizations.git
+      ref: master
   file_picker: ^8.3.5
   flutter:
     sdk: flutter
@@ -44,7 +47,6 @@ dev_dependencies:
   riverpod_lint: ^2.6.4
 
 flutter:
-  generate: true
   uses-material-design: true
 
   assets:

@@ -12,7 +12,6 @@ import 'package:classipod/features/settings/controller/settings_preferences_cont
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/screens/widgets/settings_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
-import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -29,7 +28,6 @@ enum _SettingsDisplayItems {
   clickWheelSound,
   splitScreenEnabled,
   immersiveMode,
-  showTutorial,
   rescanMusicFiles,
   changeDirectory,
   resetSettings,
@@ -59,8 +57,6 @@ enum _SettingsDisplayItems {
         return context.localization.immersiveModeSettingTitle;
       case rescanMusicFiles:
         return context.localization.rescanMusicFilesSettingTitle;
-      case showTutorial:
-        return context.localization.showTutorialSettingTitle;
       case changeDirectory:
         return context.localization.changeDirectorySettingTitle;
       case resetSettings:
@@ -142,8 +138,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .rescanMusicFiles();
         break;
-      case _SettingsDisplayItems.showTutorial:
-        await ref.read(tutorialControllerProvider.notifier).resetTutorials();
       case _SettingsDisplayItems.changeDirectory:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)

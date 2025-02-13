@@ -293,6 +293,12 @@ abstract class AppLocalizations {
   /// **'Immersive Mode'**
   String get immersiveModeSettingTitle;
 
+  /// The title of the show app tutorial setting
+  ///
+  /// In en, this message translates to:
+  /// **'Show Tutorial'**
+  String get showAppTutorialSettingTitle;
+
   /// The title of the change directory setting
   ///
   /// In en, this message translates to:

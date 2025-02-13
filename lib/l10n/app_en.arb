@@ -139,6 +139,10 @@
   "@immersiveModeSettingTitle": {
     "description": "The title of the immersive mode setting"
   },
+  "showAppTutorialSettingTitle": "Show Tutorial",
+    "@showAppTutorialSettingTitle": {
+        "description": "The title of the show app tutorial setting"
+    },
   "changeDirectorySettingTitle": "Change Directory",
   "@changeDirectorySettingTitle": {
     "description": "The title of the change directory setting"

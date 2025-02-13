@@ -75,6 +75,7 @@ class TutorialControllerNotifier extends Notifier<TutorialModel> {
   }
 
   Future<void> resetTutorials() async {
+    state=state.copyWith(isMenuFirstTime: true,isNowPlayingFirstTime: true,isSearchFirstTime: true);
     final tutorialRepository = ref.read(tutorialRepositoryProvider);
     await tutorialRepository.setMenuTutorialCompleted(isMenuFirstTime: true);
     await tutorialRepository.setNowPlayingTutorialCompleted(isNowPlayingFirstTime: true);

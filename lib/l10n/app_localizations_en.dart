@@ -135,6 +135,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get immersiveModeSettingTitle => 'Immersive Mode';
 
   @override
+  String get showAppTutorialSettingTitle => 'Show Tutorial';
+
+  @override
   String get changeDirectorySettingTitle => 'Change Directory';
 
   @override

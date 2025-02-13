@@ -9,6 +9,7 @@ import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
+import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -51,6 +52,14 @@ class SettingsPreferencesControllerNotifier
     } else {
       await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     }
+  }
+
+  Future<void> showAppTutorial() async{
+    await ref.read(tutorialControllerProvider.notifier).resetTutorials();
+    ref.read(routerProvider).goNamed(Routes.menu.name);
+    Future.delayed(const Duration(milliseconds: 500),(){
+      ref.read(tutorialControllerProvider.notifier).playMenuTutorial();
+    });
   }
 
   Future<void> setInitialRepeatMode() async {

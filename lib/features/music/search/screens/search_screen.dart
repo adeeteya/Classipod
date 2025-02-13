@@ -9,6 +9,7 @@ import 'package:classipod/features/music/search/provider/search_provider.dart';
 import 'package:classipod/features/music/search/widgets/search_bar.dart';
 import 'package:classipod/features/music/search/widgets/search_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
+import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -37,6 +38,14 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
   @override
   List<SearchResultsModel> get displayItems =>
       ref.watch(searchProvider(_searchText));
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(tutorialControllerProvider.notifier).playSearchTutorial();
+    });
+  }
 
   @override
   void onMenuButtonPressed() {

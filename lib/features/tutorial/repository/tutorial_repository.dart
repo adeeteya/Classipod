@@ -21,10 +21,36 @@ class TutorialRepository {
         true;
   }
 
+  bool getNowPlayingFirstTime() {
+    return _sharedPreferencesWithCache
+            .getBool(SharedPreferencesKeys.isNowPlayingFirstTime.name) ??
+        true;
+  }
+
+  bool getSearchFirstTime() {
+    return _sharedPreferencesWithCache
+            .getBool(SharedPreferencesKeys.isSearchFirstTime.name) ??
+        true;
+  }
+
   Future<void> setMenuTutorialCompleted({bool isMenuFirstTime = false}) async {
     return _sharedPreferencesWithCache.setBool(
       SharedPreferencesKeys.isMenuFirstTime.name,
       isMenuFirstTime,
+    );
+  }
+
+  Future<void> setNowPlayingTutorialCompleted({bool isNowPlayingFirstTime = false}) async {
+    return _sharedPreferencesWithCache.setBool(
+      SharedPreferencesKeys.isNowPlayingFirstTime.name,
+      isNowPlayingFirstTime,
+    );
+  }
+
+  Future<void> setSearchTutorialCompleted({bool isSearchFirstTime = false}) async {
+    return _sharedPreferencesWithCache.setBool(
+      SharedPreferencesKeys.isSearchFirstTime.name,
+      isSearchFirstTime,
     );
   }
 }

@@ -338,5 +338,41 @@
   "deviceScreenMenuTutorialText": "This is the display screen. Touch Screen and Split Screen Mode are enabled by default and can be configured further in the settings.",
   "@deviceScreenMenuTutorialText": {
     "description": "The tutorial text for the device screen when user opens menu for the first time"
+  },
+  "deviceControlNowPlayingTutorialText": "Move your thumb around the Click Wheel to adjust the volume.",
+  "@deviceControlNowPlayingTutorialText": {
+    "description": "The tutorial text for the device controls when user is in now playing screen for the first time"
+  },
+  "centerButtonNowPlayingTutorialText": "Press the Center button to cycle through seek bar, scrubber bar and shuffle slider. Press and hold the Center button to access additional options.",
+  "@centerButtonNowPlayingTutorialText": {
+    "description": "The tutorial text for the center button when user is in now playing screen for the first time"
+  },
+  "nextButtonNowPlayingTutorialText": "Press and hold this button to fast forward the song.",
+  "@nextButtonNowPlayingTutorialText": {
+    "description": "The tutorial text for the next button when user is in now playing screen for the first time"
+  },
+  "previousButtonNowPlayingTutorialText": "Press and hold this button to rewind the song.",
+  "@previousButtonNowPlayingTutorialText": {
+    "description": "The tutorial text for the previous button when user is in now playing screen for the first time"
+  },
+  "deviceControlSearchTutorialText": "Move your thumb lightly around the Click Wheel to highlight a alphabet.",
+  "@deviceControlSearchTutorialText": {
+    "description": "The tutorial text for the device controls when user is in search screen for the first time"
+  },
+  "centerButtonSearchTutorialText": "Press the center button to select the highlighted alphabet.",
+  "@centerButtonSearchTutorialText": {
+    "description": "The tutorial text for the center button when user is in search screen for the first time"
+  },
+  "nextButtonSearchTutorialText": "Press this button to add a space.",
+  "@nextButtonSearchTutorialText": {
+    "description": "The tutorial text for the next button when user is in search screen for the first time"
+  },
+  "previousButtonSearchTutorialText": "Press this button to delete the last character.",
+  "@previousButtonSearchTutorialText": {
+    "description": "The tutorial text for the previous button when user is in search screen for the first time"
+  },
+  "menuButtonSearchTutorialText": "Press this button to close the keyboard and interact with the search results.",
+  "@menuButtonSearchTutorialText": {
+    "description": "The tutorial text for the menu button when user is in search screen for the first time"
   }
 }

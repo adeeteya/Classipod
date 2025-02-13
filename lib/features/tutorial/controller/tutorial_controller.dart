@@ -4,33 +4,58 @@ import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/keys.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/providers/battery_optimization_provider.dart';
+import 'package:classipod/features/tutorial/models/tutorial_model.dart';
 import 'package:classipod/features/tutorial/repository/tutorial_repository.dart';
 import 'package:classipod/features/tutorial/widgets/tutorial_view_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final tutorialControllerProvider =
-    NotifierProvider<TutorialControllerNotifier, bool>(
+    NotifierProvider<TutorialControllerNotifier, TutorialModel>(
   TutorialControllerNotifier.new,
 );
 
-class TutorialControllerNotifier extends Notifier<bool> {
+class TutorialControllerNotifier extends Notifier<TutorialModel> {
   TutorialControllerNotifier() : super();
 
   @override
-  bool build() {
-    return ref.read(tutorialRepositoryProvider).getMenuOpenedFirstTime();
+  TutorialModel build() {
+    final tutorialRepository=ref.read(tutorialRepositoryProvider);
+    return TutorialModel(isMenuFirstTime: tutorialRepository.getMenuOpenedFirstTime(),isNowPlayingFirstTime: tutorialRepository.getNowPlayingFirstTime(),isSearchFirstTime: tutorialRepository.getSearchFirstTime(),);
   }
 
   void playMenuTutorial() {
-    if (state) {
+    if (state.isMenuFirstTime) {
       TutorialViewWidget().showMainMenuTutorial(
         onFinish: () async {
+          state=state.copyWith(isMenuFirstTime: false);
           await ref.read(tutorialRepositoryProvider).setMenuTutorialCompleted();
           await showBatteryOptimizationSettings();
         },
       );
     } else {
       unawaited(showBatteryOptimizationSettings());
+    }
+  }
+
+  void playNowPlayingTutorial() {
+    if (state.isNowPlayingFirstTime) {
+      TutorialViewWidget().showNowPlayingTutorial(
+        onFinish: () async {
+          state=state.copyWith(isNowPlayingFirstTime: false);
+          await ref.read(tutorialRepositoryProvider).setNowPlayingTutorialCompleted();
+        },
+      );
+    }
+  }
+
+  void playSearchTutorial() {
+    if (state.isSearchFirstTime) {
+      TutorialViewWidget().showSearchTutorial(
+        onFinish: () async {
+          state=state.copyWith(isSearchFirstTime: false);
+          await ref.read(tutorialRepositoryProvider).setSearchTutorialCompleted();
+        },
+      );
     }
   }
 
@@ -52,5 +77,7 @@ class TutorialControllerNotifier extends Notifier<bool> {
   Future<void> resetTutorials() async {
     final tutorialRepository = ref.read(tutorialRepositoryProvider);
     await tutorialRepository.setMenuTutorialCompleted(isMenuFirstTime: true);
+    await tutorialRepository.setNowPlayingTutorialCompleted(isNowPlayingFirstTime: true);
+    await tutorialRepository.setSearchTutorialCompleted(isSearchFirstTime: true);
   }
 }

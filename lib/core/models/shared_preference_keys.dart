@@ -9,4 +9,6 @@ enum SharedPreferencesKeys {
   immersiveMode,
   musicFolderPath,
   isMenuFirstTime,
+  isNowPlayingFirstTime,
+  isSearchFirstTime,
 }

@@ -13,6 +13,7 @@ import 'package:classipod/features/now_playing/widgets/now_playing_page.dart';
 import 'package:classipod/features/now_playing/widgets/shuffle_segmented_control.dart';
 import 'package:classipod/features/now_playing/widgets/volume_bar.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
+import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -158,6 +159,14 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
 
   void onMenuButtonPressed() {
     context.pop();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(tutorialControllerProvider.notifier).playNowPlayingTutorial();
+    });
   }
 
   @override

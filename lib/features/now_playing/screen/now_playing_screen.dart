@@ -39,6 +39,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   Timer _lastVolumeChangeTimer = Timer(Duration.zero, () {});
   bool _isShuffleEnabled = false;
   _NowPlayingBottomBarPage _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
+
   String get routeName => Routes.nowPlaying.name;
 
   Future<void> onSelectPressed() async {
@@ -272,9 +273,13 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
             ],
           ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: NowPlayingWidget(nowPlayingDetails: nowPlayingDetails),
+            child: GestureDetector(
+              onTap: onSelectPressed,
+              onLongPress: onSelectLongPress,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: NowPlayingWidget(nowPlayingDetails: nowPlayingDetails),
+              ),
             ),
           ),
           SizedBox(

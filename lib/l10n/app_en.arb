@@ -56,7 +56,7 @@
     "description": "The title of the cover flow screen"
   },
   "artistsScreenTitle": "Artists",
-  "@artistScreenTitle": {
+  "@artistsScreenTitle": {
     "description": "The title of the artists screen"
   },
   "albumsScreenTitle": "Albums",
@@ -324,7 +324,7 @@
     "description": "The tutorial text for the center button when user opens menu for the first time"
   },
   "playPauseMenuTutorialText": "Press this button to play or pause a song",
-  "@playPauseTutorialText": {
+  "@playPauseMenuTutorialText": {
     "description": "The tutorial text for the play pause button when user opens menu for the first time"
   },
   "nextButtonMenuTutorialText": "Press this button to skip to the next song",

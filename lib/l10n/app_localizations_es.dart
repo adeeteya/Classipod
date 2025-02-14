@@ -1,5 +1,5 @@
-// ignore: unused_import
 import 'package:intl/intl.dart' as intl;
+
 import 'app_localizations.dart';
 
 // ignore_for_file: type=lint
@@ -9,22 +9,22 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
-  String get appTitle => 'ClassiPod';
+  String get appTitle => 'Clase';
 
   @override
   String get menuButtonText => 'MENÚ';
 
   @override
-  String get audioAccessPermissionTitle => 'Se requiere permiso de acceso al audio';
+  String get audioAccessPermissionTitle => 'Se requiere permiso de acceso de audio';
 
   @override
-  String get audioAccessPermissionContent => 'Conceda acceso a los archivos de audio para permitirnos reproducir sus archivos de música.';
+  String get audioAccessPermissionContent => 'Otorgue a los archivos de audio acceso para permitirnos reproducir sus archivos de música.';
 
   @override
   String get audioAccessPermissionPermanentlyDeniedTitle => 'Permiso de acceso de audio denegado';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Conceda acceso a los archivos de audio para esta aplicación en la configuración del dispositivo para permitirnos reproducir sus archivos de música.';
+  String get audioAccessPermissionPermanentlyDeniedContent => 'Occione el acceso a los archivos de audio para esta aplicación en la configuración del dispositivo para permitirnos reproducir sus archivos de música.';
 
   @override
   String get menuScreenTitle => 'Menú';
@@ -36,10 +36,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get nowPlayingScreenTitle => 'Ahora jugando';
 
   @override
-  String get shuffleSongsMenuTitle => 'Mezclar canciones';
+  String get shuffleSongsMenuTitle => 'Canciones de baraja';
 
   @override
-  String get shuffleSettingTitle => 'Shuffle';
+  String get shuffleSettingTitle => 'Barajar';
 
   @override
   String get settingsScreenTitle => 'Ajustes';
@@ -48,7 +48,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get aboutScreenTitle => 'Acerca de';
 
   @override
-  String get coverFlowScreenTitle => 'Flujo de cobertura';
+  String get coverFlowScreenTitle => 'Flujo de tapa';
 
   @override
   String get artistsScreenTitle => 'Artistas';
@@ -70,9 +70,9 @@ class AppLocalizationsEs extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$countString Songs',
-      one: '1 Song',
-      zero: 'No Songs',
+      other: '$countString canciones',
+      one: '1 canción',
+      zero: 'sin canciones',
     );
     return '$_temp0';
   }
@@ -88,63 +88,63 @@ class AppLocalizationsEs extends AppLocalizations {
     String _temp0 = intl.Intl.pluralLogic(
       count,
       locale: localeName,
-      other: '$countString Albums',
-      one: '1 Album',
-      zero: 'No Albums',
+      other: '$countString Álbumes',
+      one: '1 álbum',
+      zero: 'sin álbumes',
     );
     return '$_temp0';
   }
 
   @override
-  String get genresScreenTitle => 'Genres';
+  String get genresScreenTitle => 'Géneros';
 
   @override
-  String get genreSongsScreenTitle => 'Genre Songs';
+  String get genreSongsScreenTitle => 'Canciones de género';
 
   @override
-  String get deviceColorSettingTitle => 'Device Color';
+  String get deviceColorSettingTitle => 'Color del dispositivo';
 
   @override
-  String get touchScreenSettingTitle => 'Touch Screen Enabled';
+  String get touchScreenSettingTitle => 'Pantalla táctil habilitada';
 
   @override
-  String get repeatModeSettingTitle => 'Modo de repetición';
+  String get repeatModeSettingTitle => 'Repetir';
 
   @override
-  String get repeatModeOne => 'One';
+  String get repeatModeOne => 'Uno';
 
   @override
-  String get repeatModeAll => 'All';
+  String get repeatModeAll => 'Todo';
 
   @override
   String get vibrateSettingTitle => 'Vibrar';
 
   @override
-  String get clickWheelSettingTitle => 'Sonidos de la rueda de clic';
+  String get clickWheelSettingTitle => 'Haga clic en los sonidos de la rueda';
 
   @override
-  String get splitScreenSettingTitle => 'Split Screen Mode';
+  String get splitScreenSettingTitle => 'Modo de pantalla dividida';
 
   @override
   String get touchSoundsDialogTitle => 'Sonidos táctiles';
 
   @override
-  String get touchSoundsDialogContent => 'Habilite los sonidos táctiles desde la configuración del sistema para escuchar los sonidos de la rueda de clic';
+  String get touchSoundsDialogContent => 'Habilite los sonidos táctiles desde la configuración del sistema para escuchar los sonidos de la rueda de clics';
 
   @override
   String get immersiveModeSettingTitle => 'Modo inmersivo';
 
   @override
-  String get showAppTutorialSettingTitle => 'Show Tutorial';
+  String get showAppTutorialSettingTitle => 'Tutorial de espectáculos';
 
   @override
-  String get changeDirectorySettingTitle => 'Cambiar directorio';
+  String get changeDirectorySettingTitle => 'Directorio de cambio';
 
   @override
   String get donateSettingTitle => 'Donar';
 
   @override
-  String get donateSettingDescription => 'If you like this app, please consider donating.';
+  String get donateSettingDescription => 'Si le gusta esta aplicación, considere donar.';
 
   @override
   String get versionAboutScreenTitle => 'Versión';
@@ -153,13 +153,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get madeWithLoveTitle => 'Hecho con ❤️ por';
 
   @override
-  String get noMusicFilesFound => 'Sin música';
+  String get noMusicFilesFound => 'No hay música';
 
   @override
-  String get noArtistsFound => 'No Artists';
+  String get noArtistsFound => 'No hay artistas';
 
   @override
-  String get noAlbumsFound => 'No Albums';
+  String get noAlbumsFound => 'Sin álbumes';
 
   @override
   String get unknownSong => 'Canción desconocida';
@@ -186,7 +186,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get commonOfText => 'de';
 
   @override
-  String get pageNotFoundText => 'The given page was not found';
+  String get pageNotFoundText => 'La página dada no fue encontrada';
 
   @override
   String get commonErrorText => 'Error';
@@ -195,122 +195,122 @@ class AppLocalizationsEs extends AppLocalizations {
   String get retryButtonText => 'Rever';
 
   @override
-  String get filePickerDialogTitle => 'Seleccione un directorio para buscar música';
+  String get filePickerDialogTitle => 'Seleccione un directorio para escanear música';
 
   @override
-  String get searchScreenTitle => 'Search';
+  String get searchScreenTitle => 'Buscar';
 
   @override
-  String get searchEmptyText => 'No Search Results';
+  String get searchEmptyText => 'Sin resultados de búsqueda';
 
   @override
-  String get searchResultsText => 'Search Results: ';
+  String get searchResultsText => 'Resultados de la búsqueda:';
 
   @override
-  String get resultsForText => 'Results for: ';
+  String get resultsForText => 'Resultados para:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Disable Battery Optimization';
+  String get disableBatteryOptimizationTitle => 'Deshabilitar la optimización de la batería';
 
   @override
-  String get disableBatteryOptimizationContent => 'Please disable battery optimization for this app in the device settings to allow background playback of music.';
+  String get disableBatteryOptimizationContent => 'Desactive la optimización de la batería para esta aplicación en la configuración del dispositivo para permitir la reproducción de música de fondo.';
 
   @override
-  String get languageScreenTitle => 'Language';
+  String get languageScreenTitle => 'Idioma';
 
   @override
-  String get silverDeviceColor => 'Silver';
+  String get silverDeviceColor => 'Plata';
 
   @override
-  String get blackDeviceColor => 'Black';
+  String get blackDeviceColor => 'Negro';
 
   @override
-  String get resetSettingsTitle => 'Reset Settings';
+  String get resetSettingsTitle => 'Configuración de reinicio';
 
   @override
-  String get browseArtist => 'Browse Artist';
+  String get browseArtist => 'Navegar por el artista';
 
   @override
-  String get browseAlbum => 'Browse Album';
+  String get browseAlbum => 'Álbum de navegación';
 
   @override
-  String get cancelText => 'Cancel';
+  String get cancelText => 'Cancelar';
 
   @override
-  String get playlistsScreenTitle => 'Playlists';
+  String get playlistsScreenTitle => 'Listas de reproducción';
 
   @override
-  String get addToOnTheGoPlaylist => 'Add to On-The-Go';
+  String get addToOnTheGoPlaylist => 'Agregar a la marcha';
 
   @override
-  String get addAlbumToOnTheGoPlaylist => 'Add Album to On-The-Go';
+  String get addAlbumToOnTheGoPlaylist => 'Agregar álbum a la marcha';
 
   @override
-  String get removeSongFromThePlaylist => 'Remove from the Playlist';
+  String get removeSongFromThePlaylist => 'Eliminar de la lista de reproducción';
 
   @override
-  String get allAlbums => 'All Albums';
+  String get allAlbums => 'Todos los álbumes';
 
   @override
-  String get scanningMusicFiles => 'Scanning Music Files';
+  String get scanningMusicFiles => 'Escaneo de archivos de música';
 
   @override
-  String get newPlaylist => 'New Playlist';
+  String get newPlaylist => 'Nueva lista de reproducción';
 
   @override
-  String get savePlaylist => 'Save Playlist';
+  String get savePlaylist => 'Guardar lista de reproducción';
 
   @override
-  String get clearPlaylist => 'Clear Playlist';
+  String get clearPlaylist => 'Lista de reproducción clara';
 
   @override
-  String get rescanMusicFilesSettingTitle => 'Rescan Music Files';
+  String get rescanMusicFilesSettingTitle => 'Archivos de reestructuración de música';
 
   @override
-  String get deviceControlMenuTutorialText => 'Move your thumb lightly around the Click Wheel to navigate the menu';
+  String get deviceControlMenuTutorialText => 'Mueva el pulgar ligeramente alrededor de la rueda de clic para navegar por el menú';
 
   @override
-  String get centerButtonMenuTutorialText => 'Press the center button to select the highlighted menu item';
+  String get centerButtonMenuTutorialText => 'Presione el botón central para seleccionar el elemento de menú resaltado';
 
   @override
-  String get playPauseMenuTutorialText => 'Press this button to play or pause a song';
+  String get playPauseMenuTutorialText => 'Presione este botón para reproducir o pausar una canción';
 
   @override
-  String get nextButtonMenuTutorialText => 'Press this button to skip to the next song';
+  String get nextButtonMenuTutorialText => 'Presione este botón para saltar a la siguiente canción';
 
   @override
-  String get previousButtonMenuTutorialText => 'Press this button to rewind or go back to the previous song';
+  String get previousButtonMenuTutorialText => 'Presione este botón para rebobinar o volver a la canción anterior';
 
   @override
-  String get menuButtonTutorialText => 'Press this button to go back to the previous menu. You could press and hold it from any other screen to directly go to the main menu.';
+  String get menuButtonTutorialText => 'Presione este botón para volver al menú anterior. Puede presionarlo y mantenerlo desde cualquier otra pantalla para ir directamente al menú principal.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'This is the display screen. Touch Screen and Split Screen Mode are enabled by default and can be configured further in the settings.';
+  String get deviceScreenMenuTutorialText => 'Esta es la pantalla. La pantalla táctil y el modo de pantalla dividida están habilitados de forma predeterminada y se pueden configurar más en la configuración.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Move your thumb around the Click Wheel to adjust the volume';
+  String get deviceControlNowPlayingTutorialText => 'Mueva el pulgar alrededor de la rueda de clic para ajustar el volumen';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Press the Center button to cycle through seek bar, scrubber bar and shuffle slider. Press and hold the Center button to access additional options.';
+  String get centerButtonNowPlayingTutorialText => 'Presione el botón central para recorrer la barra de búsqueda, la barra de depuración y el control deslizante de barajas. Mantenga presionado el botón central para acceder a opciones adicionales.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Press and hold this button to fast forward the song';
+  String get nextButtonNowPlayingTutorialText => 'Mantenga presionado este botón para avanzar rápidamente la canción';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Press and hold this button to rewind the song';
+  String get previousButtonNowPlayingTutorialText => 'Mantenga presionado este botón para rebobinar la canción';
 
   @override
-  String get deviceControlSearchTutorialText => 'Move your thumb lightly around the Click Wheel to highlight a alphabet';
+  String get deviceControlSearchTutorialText => 'Mueva el pulgar ligeramente alrededor de la rueda de clic para resaltar un alfabeto';
 
   @override
-  String get centerButtonSearchTutorialText => 'Press the center button to select the highlighted alphabet';
+  String get centerButtonSearchTutorialText => 'Presione el botón central para seleccionar el alfabeto resaltado';
 
   @override
-  String get nextButtonSearchTutorialText => 'Press this button to add a space';
+  String get nextButtonSearchTutorialText => 'Presione este botón para agregar un espacio';
 
   @override
-  String get previousButtonSearchTutorialText => 'Press this button to delete the last character';
+  String get previousButtonSearchTutorialText => 'Presione este botón para eliminar el último personaje';
 
   @override
-  String get menuButtonSearchTutorialText => 'Press this button to close the keyboard and interact with the search results';
+  String get menuButtonSearchTutorialText => 'Presione este botón para cerrar el teclado e interactuar con los resultados de la búsqueda';
 }

@@ -140,9 +140,9 @@
     "description": "The title of the immersive mode setting"
   },
   "showAppTutorialSettingTitle": "Show Tutorial",
-    "@showAppTutorialSettingTitle": {
-        "description": "The title of the show app tutorial setting"
-    },
+  "@showAppTutorialSettingTitle": {
+    "description": "The title of the show app tutorial setting"
+  },
   "changeDirectorySettingTitle": "Change Directory",
   "@changeDirectorySettingTitle": {
     "description": "The title of the change directory setting"
@@ -315,23 +315,23 @@
   "@rescanMusicFilesSettingTitle": {
     "description": "The text of the rescan music files settings tile"
   },
-  "deviceControlMenuTutorialText": "Move your thumb lightly around the Click Wheel to highlight a menu item.",
+  "deviceControlMenuTutorialText": "Move your thumb lightly around the Click Wheel to navigate the menu",
   "@deviceControlMenuTutorialText": {
     "description": "The tutorial text for the device controls when user opens menu for the first time"
   },
-  "centerButtonMenuTutorialText": "Press the center button to select the highlighted menu item.",
+  "centerButtonMenuTutorialText": "Press the center button to select the highlighted menu item",
   "@centerButtonMenuTutorialText": {
     "description": "The tutorial text for the center button when user opens menu for the first time"
   },
-  "playPauseMenuTutorialText": "Press this button to play or pause a song.",
+  "playPauseMenuTutorialText": "Press this button to play or pause a song",
   "@playPauseTutorialText": {
     "description": "The tutorial text for the play pause button when user opens menu for the first time"
   },
-  "nextButtonMenuTutorialText": "Press this button to skip to the next song.",
+  "nextButtonMenuTutorialText": "Press this button to skip to the next song",
   "@nextButtonMenuTutorialText": {
     "description": "The tutorial text for the next button when user opens menu for the first time"
   },
-  "previousButtonMenuTutorialText": "Press this button to rewind or go back to the previous song.",
+  "previousButtonMenuTutorialText": "Press this button to rewind or go back to the previous song",
   "@previousButtonMenuTutorialText": {
     "description": "The tutorial text for the previous button when user opens menu for the first time"
   },
@@ -343,7 +343,7 @@
   "@deviceScreenMenuTutorialText": {
     "description": "The tutorial text for the device screen when user opens menu for the first time"
   },
-  "deviceControlNowPlayingTutorialText": "Move your thumb around the Click Wheel to adjust the volume.",
+  "deviceControlNowPlayingTutorialText": "Move your thumb around the Click Wheel to adjust the volume",
   "@deviceControlNowPlayingTutorialText": {
     "description": "The tutorial text for the device controls when user is in now playing screen for the first time"
   },
@@ -351,31 +351,31 @@
   "@centerButtonNowPlayingTutorialText": {
     "description": "The tutorial text for the center button when user is in now playing screen for the first time"
   },
-  "nextButtonNowPlayingTutorialText": "Press and hold this button to fast forward the song.",
+  "nextButtonNowPlayingTutorialText": "Press and hold this button to fast forward the song",
   "@nextButtonNowPlayingTutorialText": {
     "description": "The tutorial text for the next button when user is in now playing screen for the first time"
   },
-  "previousButtonNowPlayingTutorialText": "Press and hold this button to rewind the song.",
+  "previousButtonNowPlayingTutorialText": "Press and hold this button to rewind the song",
   "@previousButtonNowPlayingTutorialText": {
     "description": "The tutorial text for the previous button when user is in now playing screen for the first time"
   },
-  "deviceControlSearchTutorialText": "Move your thumb lightly around the Click Wheel to highlight a alphabet.",
+  "deviceControlSearchTutorialText": "Move your thumb lightly around the Click Wheel to highlight a alphabet",
   "@deviceControlSearchTutorialText": {
     "description": "The tutorial text for the device controls when user is in search screen for the first time"
   },
-  "centerButtonSearchTutorialText": "Press the center button to select the highlighted alphabet.",
+  "centerButtonSearchTutorialText": "Press the center button to select the highlighted alphabet",
   "@centerButtonSearchTutorialText": {
     "description": "The tutorial text for the center button when user is in search screen for the first time"
   },
-  "nextButtonSearchTutorialText": "Press this button to add a space.",
+  "nextButtonSearchTutorialText": "Press this button to add a space",
   "@nextButtonSearchTutorialText": {
     "description": "The tutorial text for the next button when user is in search screen for the first time"
   },
-  "previousButtonSearchTutorialText": "Press this button to delete the last character.",
+  "previousButtonSearchTutorialText": "Press this button to delete the last character",
   "@previousButtonSearchTutorialText": {
     "description": "The tutorial text for the previous button when user is in search screen for the first time"
   },
-  "menuButtonSearchTutorialText": "Press this button to close the keyboard and interact with the search results.",
+  "menuButtonSearchTutorialText": "Press this button to close the keyboard and interact with the search results",
   "@menuButtonSearchTutorialText": {
     "description": "The tutorial text for the menu button when user is in search screen for the first time"
   }

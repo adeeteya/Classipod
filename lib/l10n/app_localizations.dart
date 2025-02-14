@@ -65,7 +65,8 @@ import 'app_localizations_hi.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale)
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -73,7 +74,8 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -85,7 +87,8 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -560,31 +563,31 @@ abstract class AppLocalizations {
   /// The tutorial text for the device controls when user opens menu for the first time
   ///
   /// In en, this message translates to:
-  /// **'Move your thumb lightly around the Click Wheel to highlight a menu item.'**
+  /// **'Move your thumb lightly around the Click Wheel to navigate the menu'**
   String get deviceControlMenuTutorialText;
 
   /// The tutorial text for the center button when user opens menu for the first time
   ///
   /// In en, this message translates to:
-  /// **'Press the center button to select the highlighted menu item.'**
+  /// **'Press the center button to select the highlighted menu item'**
   String get centerButtonMenuTutorialText;
 
   /// No description provided for @playPauseMenuTutorialText.
   ///
   /// In en, this message translates to:
-  /// **'Press this button to play or pause a song.'**
+  /// **'Press this button to play or pause a song'**
   String get playPauseMenuTutorialText;
 
   /// The tutorial text for the next button when user opens menu for the first time
   ///
   /// In en, this message translates to:
-  /// **'Press this button to skip to the next song.'**
+  /// **'Press this button to skip to the next song'**
   String get nextButtonMenuTutorialText;
 
   /// The tutorial text for the previous button when user opens menu for the first time
   ///
   /// In en, this message translates to:
-  /// **'Press this button to rewind or go back to the previous song.'**
+  /// **'Press this button to rewind or go back to the previous song'**
   String get previousButtonMenuTutorialText;
 
   /// The tutorial text for the menu button when user opens menu for the first time
@@ -602,7 +605,7 @@ abstract class AppLocalizations {
   /// The tutorial text for the device controls when user is in now playing screen for the first time
   ///
   /// In en, this message translates to:
-  /// **'Move your thumb around the Click Wheel to adjust the volume.'**
+  /// **'Move your thumb around the Click Wheel to adjust the volume'**
   String get deviceControlNowPlayingTutorialText;
 
   /// The tutorial text for the center button when user is in now playing screen for the first time
@@ -614,47 +617,48 @@ abstract class AppLocalizations {
   /// The tutorial text for the next button when user is in now playing screen for the first time
   ///
   /// In en, this message translates to:
-  /// **'Press and hold this button to fast forward the song.'**
+  /// **'Press and hold this button to fast forward the song'**
   String get nextButtonNowPlayingTutorialText;
 
   /// The tutorial text for the previous button when user is in now playing screen for the first time
   ///
   /// In en, this message translates to:
-  /// **'Press and hold this button to rewind the song.'**
+  /// **'Press and hold this button to rewind the song'**
   String get previousButtonNowPlayingTutorialText;
 
   /// The tutorial text for the device controls when user is in search screen for the first time
   ///
   /// In en, this message translates to:
-  /// **'Move your thumb lightly around the Click Wheel to highlight a alphabet.'**
+  /// **'Move your thumb lightly around the Click Wheel to highlight a alphabet'**
   String get deviceControlSearchTutorialText;
 
   /// The tutorial text for the center button when user is in search screen for the first time
   ///
   /// In en, this message translates to:
-  /// **'Press the center button to select the highlighted alphabet.'**
+  /// **'Press the center button to select the highlighted alphabet'**
   String get centerButtonSearchTutorialText;
 
   /// The tutorial text for the next button when user is in search screen for the first time
   ///
   /// In en, this message translates to:
-  /// **'Press this button to add a space.'**
+  /// **'Press this button to add a space'**
   String get nextButtonSearchTutorialText;
 
   /// The tutorial text for the previous button when user is in search screen for the first time
   ///
   /// In en, this message translates to:
-  /// **'Press this button to delete the last character.'**
+  /// **'Press this button to delete the last character'**
   String get previousButtonSearchTutorialText;
 
   /// The tutorial text for the menu button when user is in search screen for the first time
   ///
   /// In en, this message translates to:
-  /// **'Press this button to close the keyboard and interact with the search results.'**
+  /// **'Press this button to close the keyboard and interact with the search results'**
   String get menuButtonSearchTutorialText;
 }
 
-class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate
+    extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -663,28 +667,31 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['de', 'en', 'es', 'fr', 'hi'].contains(locale.languageCode);
+  bool isSupported(Locale locale) =>
+      <String>['de', 'en', 'es', 'fr', 'hi'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
-
-
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'de': return AppLocalizationsDe();
-    case 'en': return AppLocalizationsEn();
-    case 'es': return AppLocalizationsEs();
-    case 'fr': return AppLocalizationsFr();
-    case 'hi': return AppLocalizationsHi();
+    case 'de':
+      return AppLocalizationsDe();
+    case 'en':
+      return AppLocalizationsEn();
+    case 'es':
+      return AppLocalizationsEs();
+    case 'fr':
+      return AppLocalizationsFr();
+    case 'hi':
+      return AppLocalizationsHi();
   }
 
   throw FlutterError(
-    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
-  );
+      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }

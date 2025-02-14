@@ -19,15 +19,19 @@ class TutorialControllerNotifier extends Notifier<TutorialModel> {
 
   @override
   TutorialModel build() {
-    final tutorialRepository=ref.read(tutorialRepositoryProvider);
-    return TutorialModel(isMenuFirstTime: tutorialRepository.getMenuOpenedFirstTime(),isNowPlayingFirstTime: tutorialRepository.getNowPlayingFirstTime(),isSearchFirstTime: tutorialRepository.getSearchFirstTime(),);
+    final tutorialRepository = ref.read(tutorialRepositoryProvider);
+    return TutorialModel(
+      isMenuFirstTime: tutorialRepository.getMenuOpenedFirstTime(),
+      isNowPlayingFirstTime: tutorialRepository.getNowPlayingFirstTime(),
+      isSearchFirstTime: tutorialRepository.getSearchFirstTime(),
+    );
   }
 
   void playMenuTutorial() {
     if (state.isMenuFirstTime) {
       TutorialViewWidget().showMainMenuTutorial(
         onFinish: () async {
-          state=state.copyWith(isMenuFirstTime: false);
+          state = state.copyWith(isMenuFirstTime: false);
           await ref.read(tutorialRepositoryProvider).setMenuTutorialCompleted();
           await showBatteryOptimizationSettings();
         },
@@ -41,8 +45,10 @@ class TutorialControllerNotifier extends Notifier<TutorialModel> {
     if (state.isNowPlayingFirstTime) {
       TutorialViewWidget().showNowPlayingTutorial(
         onFinish: () async {
-          state=state.copyWith(isNowPlayingFirstTime: false);
-          await ref.read(tutorialRepositoryProvider).setNowPlayingTutorialCompleted();
+          state = state.copyWith(isNowPlayingFirstTime: false);
+          await ref
+              .read(tutorialRepositoryProvider)
+              .setNowPlayingTutorialCompleted();
         },
       );
     }
@@ -52,8 +58,10 @@ class TutorialControllerNotifier extends Notifier<TutorialModel> {
     if (state.isSearchFirstTime) {
       TutorialViewWidget().showSearchTutorial(
         onFinish: () async {
-          state=state.copyWith(isSearchFirstTime: false);
-          await ref.read(tutorialRepositoryProvider).setSearchTutorialCompleted();
+          state = state.copyWith(isSearchFirstTime: false);
+          await ref
+              .read(tutorialRepositoryProvider)
+              .setSearchTutorialCompleted();
         },
       );
     }
@@ -75,10 +83,18 @@ class TutorialControllerNotifier extends Notifier<TutorialModel> {
   }
 
   Future<void> resetTutorials() async {
-    state=state.copyWith(isMenuFirstTime: true,isNowPlayingFirstTime: true,isSearchFirstTime: true);
+    state = state.copyWith(
+      isMenuFirstTime: true,
+      isNowPlayingFirstTime: true,
+      isSearchFirstTime: true,
+    );
     final tutorialRepository = ref.read(tutorialRepositoryProvider);
     await tutorialRepository.setMenuTutorialCompleted(isMenuFirstTime: true);
-    await tutorialRepository.setNowPlayingTutorialCompleted(isNowPlayingFirstTime: true);
-    await tutorialRepository.setSearchTutorialCompleted(isSearchFirstTime: true);
+    await tutorialRepository.setNowPlayingTutorialCompleted(
+      isNowPlayingFirstTime: true,
+    );
+    await tutorialRepository.setSearchTutorialCompleted(
+      isSearchFirstTime: true,
+    );
   }
 }

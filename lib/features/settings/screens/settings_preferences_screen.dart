@@ -56,7 +56,7 @@ enum _SettingsDisplayItems {
         return context.localization.splitScreenSettingTitle;
       case immersiveMode:
         return context.localization.immersiveModeSettingTitle;
-        case showAppTutorial:
+      case showAppTutorial:
         return context.localization.showAppTutorialSettingTitle;
       case rescanMusicFiles:
         return context.localization.rescanMusicFilesSettingTitle;

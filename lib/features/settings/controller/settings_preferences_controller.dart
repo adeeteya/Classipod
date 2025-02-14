@@ -54,10 +54,10 @@ class SettingsPreferencesControllerNotifier
     }
   }
 
-  Future<void> showAppTutorial() async{
+  Future<void> showAppTutorial() async {
     await ref.read(tutorialControllerProvider.notifier).resetTutorials();
     ref.read(routerProvider).goNamed(Routes.menu.name);
-    Future.delayed(const Duration(milliseconds: 500),(){
+    Future.delayed(const Duration(milliseconds: 500), () {
       ref.read(tutorialControllerProvider.notifier).playMenuTutorial();
     });
   }

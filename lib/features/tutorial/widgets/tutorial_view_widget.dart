@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/keys.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/features/tutorial/widgets/animated_hand_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
@@ -8,33 +9,55 @@ class TutorialViewWidget {
     required String identify,
     required GlobalKey keyTarget,
     required String tutorialText,
-    bool enableOverlayTab = false,
     EdgeInsets contentPadding = const EdgeInsets.all(20),
     ShapeLightFocus shapeLightFocus = ShapeLightFocus.Circle,
     ContentAlign contentAlign = ContentAlign.top,
+    bool showAnimatedHand = false,
   }) {
+    final List<TargetContent> targetContents = [
+      TargetContent(
+        align: contentAlign,
+        padding: contentPadding,
+        child: Center(
+          child: Text(
+            tutorialText,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: CupertinoColors.white,
+            ),
+          ),
+        ),
+      ),
+    ];
+
+    if (showAnimatedHand) {
+      final RenderBox centerButtonRenderBox =
+          centerButtonGlobalKey.currentContext!.findRenderObject() as RenderBox;
+      final Offset centerButtonOffset =
+          centerButtonRenderBox.localToGlobal(Offset.zero);
+
+      targetContents.add(
+        TargetContent(
+          align: ContentAlign.custom,
+          padding: EdgeInsets.zero,
+          customPosition: CustomTargetContentPosition(
+            top: centerButtonOffset.dy + 25,
+            left: 1,
+            right: 1,
+          ),
+          child: const AnimatedHandIcon(),
+        ),
+      );
+    }
+
     return TargetFocus(
       identify: identify,
       keyTarget: keyTarget,
       shape: shapeLightFocus,
-      enableOverlayTab: enableOverlayTab,
-      contents: [
-        TargetContent(
-          align: contentAlign,
-          padding: contentPadding,
-          child: Center(
-            child: Text(
-              tutorialText,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: CupertinoColors.white,
-              ),
-            ),
-          ),
-        ),
-      ],
+      enableOverlayTab: true,
+      contents: targetContents,
     );
   }
 
@@ -48,6 +71,7 @@ class TutorialViewWidget {
           keyTarget: deviceControlsGlobalKey,
           tutorialText: deviceFrameGlobalKey
               .currentContext!.localization.deviceControlMenuTutorialText,
+          showAnimatedHand: true,
         ),
         _targetFocusWidget(
           identify: 'Center Button',
@@ -58,7 +82,6 @@ class TutorialViewWidget {
         _targetFocusWidget(
           identify: 'Play / Pause Button',
           keyTarget: playPauseButtonGlobalKey,
-          enableOverlayTab: true,
           contentPadding: const EdgeInsets.only(bottom: 40),
           tutorialText: deviceFrameGlobalKey
               .currentContext!.localization.playPauseMenuTutorialText,
@@ -77,7 +100,6 @@ class TutorialViewWidget {
         ),
         _targetFocusWidget(
           identify: 'Menu Button',
-          enableOverlayTab: true,
           contentPadding: const EdgeInsets.fromLTRB(20, 0, 20, 50),
           keyTarget: menuButtonGlobalKey,
           tutorialText: deviceFrameGlobalKey
@@ -85,7 +107,6 @@ class TutorialViewWidget {
         ),
         _targetFocusWidget(
           identify: 'Device Screen',
-          enableOverlayTab: true,
           keyTarget: deviceScreenGlobalKey,
           shapeLightFocus: ShapeLightFocus.RRect,
           contentAlign: ContentAlign.bottom,
@@ -108,6 +129,7 @@ class TutorialViewWidget {
           keyTarget: deviceControlsGlobalKey,
           tutorialText: deviceFrameGlobalKey
               .currentContext!.localization.deviceControlNowPlayingTutorialText,
+          showAnimatedHand: true,
         ),
         _targetFocusWidget(
           identify: 'Center Button',
@@ -124,8 +146,8 @@ class TutorialViewWidget {
         _targetFocusWidget(
           identify: 'Previous Button',
           keyTarget: previousButtonGlobalKey,
-          tutorialText: deviceFrameGlobalKey
-              .currentContext!.localization.previousButtonNowPlayingTutorialText,
+          tutorialText: deviceFrameGlobalKey.currentContext!.localization
+              .previousButtonNowPlayingTutorialText,
         ),
       ],
       onFinish: onFinish,
@@ -163,7 +185,6 @@ class TutorialViewWidget {
         ),
         _targetFocusWidget(
           identify: 'Menu Button',
-          enableOverlayTab: true,
           contentPadding: const EdgeInsets.fromLTRB(20, 0, 20, 50),
           keyTarget: menuButtonGlobalKey,
           tutorialText: deviceFrameGlobalKey
@@ -173,5 +194,4 @@ class TutorialViewWidget {
       onFinish: onFinish,
     ).show(context: deviceFrameGlobalKey.currentContext!);
   }
-
 }

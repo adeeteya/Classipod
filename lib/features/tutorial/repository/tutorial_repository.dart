@@ -40,14 +40,18 @@ class TutorialRepository {
     );
   }
 
-  Future<void> setNowPlayingTutorialCompleted({bool isNowPlayingFirstTime = false}) async {
+  Future<void> setNowPlayingTutorialCompleted({
+    bool isNowPlayingFirstTime = false,
+  }) async {
     return _sharedPreferencesWithCache.setBool(
       SharedPreferencesKeys.isNowPlayingFirstTime.name,
       isNowPlayingFirstTime,
     );
   }
 
-  Future<void> setSearchTutorialCompleted({bool isSearchFirstTime = false}) async {
+  Future<void> setSearchTutorialCompleted({
+    bool isSearchFirstTime = false,
+  }) async {
     return _sharedPreferencesWithCache.setBool(
       SharedPreferencesKeys.isSearchFirstTime.name,
       isSearchFirstTime,

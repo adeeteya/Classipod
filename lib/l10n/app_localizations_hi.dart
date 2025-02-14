@@ -267,19 +267,19 @@ class AppLocalizationsHi extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Files';
 
   @override
-  String get deviceControlMenuTutorialText => 'Move your thumb lightly around the Click Wheel to highlight a menu item.';
+  String get deviceControlMenuTutorialText => 'Move your thumb lightly around the Click Wheel to navigate the menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Press the center button to select the highlighted menu item.';
+  String get centerButtonMenuTutorialText => 'Press the center button to select the highlighted menu item';
 
   @override
-  String get playPauseMenuTutorialText => 'Press this button to play or pause a song.';
+  String get playPauseMenuTutorialText => 'Press this button to play or pause a song';
 
   @override
-  String get nextButtonMenuTutorialText => 'Press this button to skip to the next song.';
+  String get nextButtonMenuTutorialText => 'Press this button to skip to the next song';
 
   @override
-  String get previousButtonMenuTutorialText => 'Press this button to rewind or go back to the previous song.';
+  String get previousButtonMenuTutorialText => 'Press this button to rewind or go back to the previous song';
 
   @override
   String get menuButtonTutorialText => 'Press this button to go back to the previous menu. You could press and hold it from any other screen to directly go to the main menu.';
@@ -288,29 +288,29 @@ class AppLocalizationsHi extends AppLocalizations {
   String get deviceScreenMenuTutorialText => 'This is the display screen. Touch Screen and Split Screen Mode are enabled by default and can be configured further in the settings.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Move your thumb around the Click Wheel to adjust the volume.';
+  String get deviceControlNowPlayingTutorialText => 'Move your thumb around the Click Wheel to adjust the volume';
 
   @override
   String get centerButtonNowPlayingTutorialText => 'Press the Center button to cycle through seek bar, scrubber bar and shuffle slider. Press and hold the Center button to access additional options.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Press and hold this button to fast forward the song.';
+  String get nextButtonNowPlayingTutorialText => 'Press and hold this button to fast forward the song';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Press and hold this button to rewind the song.';
+  String get previousButtonNowPlayingTutorialText => 'Press and hold this button to rewind the song';
 
   @override
-  String get deviceControlSearchTutorialText => 'Move your thumb lightly around the Click Wheel to highlight a alphabet.';
+  String get deviceControlSearchTutorialText => 'Move your thumb lightly around the Click Wheel to highlight a alphabet';
 
   @override
-  String get centerButtonSearchTutorialText => 'Press the center button to select the highlighted alphabet.';
+  String get centerButtonSearchTutorialText => 'Press the center button to select the highlighted alphabet';
 
   @override
-  String get nextButtonSearchTutorialText => 'Press this button to add a space.';
+  String get nextButtonSearchTutorialText => 'Press this button to add a space';
 
   @override
-  String get previousButtonSearchTutorialText => 'Press this button to delete the last character.';
+  String get previousButtonSearchTutorialText => 'Press this button to delete the last character';
 
   @override
-  String get menuButtonSearchTutorialText => 'Press this button to close the keyboard and interact with the search results.';
+  String get menuButtonSearchTutorialText => 'Press this button to close the keyboard and interact with the search results';
 }

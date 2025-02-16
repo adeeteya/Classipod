@@ -1,4 +1,5 @@
 {
+  "@@locale": "es",
   "appTitle": "Clase",
   "menuButtonText": "MENÚ",
   "audioAccessPermissionTitle": "Se requiere permiso de acceso de audio",

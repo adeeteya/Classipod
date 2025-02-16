@@ -1,4 +1,5 @@
 {
+  "@@locale": "de",
   "appTitle": "Classipod",
   "menuButtonText": "SPEISEKARTE",
   "audioAccessPermissionTitle": "Erforderliche Genehmigung für Audiozugriff",

@@ -1,4 +1,5 @@
 {
+  "@@locale": "fr",
   "appTitle": "Classipode",
   "menuButtonText": "MENU",
   "audioAccessPermissionTitle": "Autorisation d'accès audio requise",

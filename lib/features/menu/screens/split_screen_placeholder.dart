@@ -26,6 +26,7 @@ class SplitScreenViewController {
 class SplitScreenPlaceholder extends ConsumerStatefulWidget {
   final Widget child;
   final SplitScreenViewController splitScreenController;
+
   const SplitScreenPlaceholder({
     super.key,
     required this.child,
@@ -154,6 +155,12 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
           contentText: currentSettings.immersiveMode
               ? context.localization.tileValueOn
               : context.localization.tileValueOff,
+        );
+      } else if (splitScreenType == SplitScreenType.showTutorialScreen) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.showAppTutorialSettingTitle,
+          icon: CupertinoIcons.play_rectangle_fill,
+          contentText: "",
         );
       } else if (splitScreenType == SplitScreenType.rescanMusicFiles) {
         splitScreenWidget = IconPreviewWidget(

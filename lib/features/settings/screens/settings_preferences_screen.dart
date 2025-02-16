@@ -249,6 +249,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.immersiveMode;
         break;
+      case _SettingsDisplayItems.showAppTutorial:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.showTutorialScreen;
+        break;
       case _SettingsDisplayItems.rescanMusicFiles:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.rescanMusicFiles;

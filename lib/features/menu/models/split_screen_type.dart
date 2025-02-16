@@ -11,6 +11,7 @@ enum SplitScreenType {
   clickWheelSound,
   splitScreenMode,
   immersiveMode,
+  showTutorialScreen,
   rescanMusicFiles,
   changeDirectory,
   resetSettings,

@@ -8,62 +8,81 @@
 
 Introducing "Classipod" – Your Timeless Audio Experience
 
-Step back in time with Classipod, a local music player app designed to capture the nostalgic essence of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the joy of navigating your music library with a touch of retro charm.
+Step back in time with Classipod, a local music player app designed to capture the nostalgic essence
+of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the
+joy of navigating your music library with a touch of retro charm.
 
 </div>
 
-🧭 Intuitive Navigation: Navigate through your music library effortlessly using the virtual click wheel. Scroll, click, and feel the tactile response as you rediscover the joy of selecting your favorite tracks with the same ease as the original iPod.
+🧭 Intuitive Navigation: Navigate through your music library effortlessly using the virtual click
+wheel. Scroll, click, and feel the tactile response as you rediscover the joy of selecting your
+favorite tracks with the same ease as the original iPod.
 
-🗃️ Local Music Library: Classipod is focused on your locally stored music files, ensuring that your personal music collection takes center stage. Organize your tracks, albums, and playlists just like you did on your trusty iPod Classic.
+🗃️ Local Music Library: Classipod is focused on your locally stored music files, ensuring that your
+personal music collection takes center stage. Organize your tracks, albums, and playlists just like
+you did on your trusty iPod Classic.
 
-🖌️ Customizable Themes: Personalize your Classipod experience with the option of silver or grey device frame. Choose from the two different color schemes to tailor the app's appearance to your unique style.
+🖌️ Customizable Themes: Personalize your Classipod experience with the option of silver or grey
+device frame. Choose from the two different color schemes to tailor the app's appearance to your
+unique style.
 
-🖼️ Cover Art Display: Immerse yourself in your music by appreciating album artwork on the vibrant display. Classipod pays homage to the visual appeal of classic iPods by showcasing your favorite album covers in a retro-inspired format.
+🖼️ Cover Art Display: Immerse yourself in your music by appreciating album artwork on the vibrant
+display. Classipod pays homage to the visual appeal of classic iPods by showcasing your favorite
+album covers in a retro-inspired format.
 
-🎼 No Frills, Just Music: Classipod stays true to the essence of a music player – no distractions, no unnecessary features. Focus solely on the joy of listening to your favorite tunes without the complexities of a modern streaming service.
+🎼 No Frills, Just Music: Classipod stays true to the essence of a music player – no distractions, no
+unnecessary features. Focus solely on the joy of listening to your favorite tunes without the
+complexities of a modern streaming service.
 
-🎧 Offline Listening: Enjoy your music without relying on an internet connection. Classipod is perfect for those moments when you want to disconnect and savor the tunes stored locally on your device.
+🎧 Offline Listening: Enjoy your music without relying on an internet connection. Classipod is
+perfect for those moments when you want to disconnect and savor the tunes stored locally on your
+device.
 
-Relive the magic of the iPod Classic with Classipod – where timeless design meets the convenience of today. Download now and embark on a journey down memory lane with your music in the palm of your hand.
+Relive the magic of the iPod Classic with Classipod – where timeless design meets the convenience of
+today. Download now and embark on a journey down memory lane with your music in the palm of your
+hand.
 
 If you like what you see, please ⭐ the repo.
 
 ## ✨ Features
 
 - 🗃️ Ability to play multiple audio formats:- .mp3, .wav, .ogg, .flac, .m4a and .aac
-- 🔎 Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root folder of the device)
+- 🔎 Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root folder
+  of the device)
 - 🎨 Multiple Ipod Classic Device Colors (Silver and Black)
 - 🖼️ Displays the Music Metadata (Album Art, Artist Names)
-- ⏩ Ability to seek forward and backwards on a audio file (By Long Pressing the seek forward/backwards buttons)
+- ⏩ Ability to seek forward and backwards on a audio file (By Long Pressing the seek
+  forward/backwards buttons)
 - ⏮️ Ability to go to previous and next track in the playlist
 - 📱 Ipod Classic User Interface
 - 🎞️ Cover Flow View
 - 🎡 Click Wheel with Scrollable Rotation Enabled
 - 💿 Now Playing Screen with current music progress displayed
-- 🎶 Songs Screen with all the possible songs in the system
+- 🎶 Songs Screen with all the possible songs from the selected directory
 - 🧑‍🎤 Ability to Filter and Select From a Particular Artist, Album or Genre
 - 📲 Responsive Design For all Different Types of Screen Sizes
 - 🔋 Displays the current device battery level and charging status on the status bar
 - 🎧 Background Playback with Notification Control
 - 🔀 Shuffle Songs Feature
-- ➰ Loop Songs Feature
+- ➰ Loop Songs Feature (Loop one song or an entire playlist)
 - 🔉 Click Wheel Sounds
 - 📳 Vibration when clicking buttons and scrolling through the scroll wheel
-- 🔇 Volume Control
+- 🔇 In App Volume Control
 - 🪞 Reflective Cover Art
 - ℹ️ About Screen
-- 🌍 Multi Language Support
+- 🌍 Multi Language Support (Over 197 Languages Supported)
 - 👆 Touch Screen Support
-- 📺 Split Screen View (6th and 7th Gen iPod Classics)
-- 🔍 Ability to search songs
+- 📺 Split Screen View (6th and 7th Gen iPod Classic)
+- 🔍 Ability to search songs, artists, playlists and albums
 - ⬇️ Caching Metadata of the songs for faster boot up times
 - 📃 Ability to Create and Store Custom User Created Playlists
+- 📖 App Usage Tutorial
 
 ### 🔜 Upcoming Features
+
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
 - 📝 Lyrics Support
-- 📖 App Usage Tutorial
 
 ## 💻 Installation links
 
@@ -86,7 +105,6 @@ If you like what you see, please ⭐ the repo.
   </tr>
 
 </table>
-
 
 ## 🔌 Plugins
 
@@ -124,8 +142,11 @@ If you like what you see, please ⭐ the repo.
 **[Aditya R](https://github.com/adeeteya)**
 
 ## 🔖 LICENCE
+
 Copyright (c) 2025 Aditya R
 [BSD-4-Clause LICENCE](https://github.com/adeeteya/Classipod/blob/master/LICENSE)
 
 ## 🙏 Attributions
-<a href="https://www.flaticon.com/free-icons/ipod" title="ipod icons">Ipod icons created by Freepik - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/ipod" title="ipod icons">Ipod icons created by
+Freepik - Flaticon</a>

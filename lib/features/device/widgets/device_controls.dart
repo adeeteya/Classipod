@@ -75,27 +75,26 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
       });
     }
 
-    if (rotationalChange > 4 &&
-        millisecondsSinceLastScroll > Constants.milliSecondsBeforeNextScroll) {
+    final bool isForwardDirection = rotationalChange > 0;
+    final double absRotationalChange = rotationalChange.abs();
+
+    if ((absRotationalChange > 150) ||
+        (absRotationalChange > 4 &&
+            millisecondsSinceLastScroll >
+                Constants.milliSecondsBeforeNextScroll)) {
       await ref
           .read(deviceButtonsServiceProvider.notifier)
           .buttonPressVibrate();
       await ref.read(deviceButtonsServiceProvider.notifier).clickWheelSound();
-      await ref
-          .read(deviceButtonsServiceProvider.notifier)
-          .setDeviceAction(DeviceAction.rotateForward);
-      setState(() {
-        durationSinceLastScroll = Duration.zero;
-      });
-    } else if (rotationalChange < -4 &&
-        millisecondsSinceLastScroll > Constants.milliSecondsBeforeNextScroll) {
-      await ref
-          .read(deviceButtonsServiceProvider.notifier)
-          .buttonPressVibrate();
-      await ref.read(deviceButtonsServiceProvider.notifier).clickWheelSound();
-      await ref
-          .read(deviceButtonsServiceProvider.notifier)
-          .setDeviceAction(DeviceAction.rotateBackward);
+      if (isForwardDirection) {
+        await ref
+            .read(deviceButtonsServiceProvider.notifier)
+            .setDeviceAction(DeviceAction.rotateForward);
+      } else {
+        await ref
+            .read(deviceButtonsServiceProvider.notifier)
+            .setDeviceAction(DeviceAction.rotateBackward);
+      }
       setState(() {
         durationSinceLastScroll = Duration.zero;
       });

@@ -29,25 +29,24 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
   Future<void> onClickWheelScroll(
     DragUpdateDetails dragUpdateDetails,
     double radius,
-    double height,
   ) async {
-    /// Pan location on the wheel
+    // Pan location on the wheel
     final bool onTop = dragUpdateDetails.localPosition.dy <= radius;
     final bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;
     final bool onRightSide = !onLeftSide;
     final bool onBottom = !onTop;
 
-    /// Pan movements
+    // Pan movements
     final bool panUp = dragUpdateDetails.delta.dy <= 0.0;
     final bool panLeft = dragUpdateDetails.delta.dx <= 0.0;
     final bool panRight = !panLeft;
     final bool panDown = !panUp;
 
-    /// Absolute change on axis
+    // Absolute change on axis
     final double yChange = dragUpdateDetails.delta.dy.abs();
     final double xChange = dragUpdateDetails.delta.dx.abs();
 
-    /// Directional change on wheel
+    // Directional change on wheel
     final double verticalRotation =
         (onRightSide && panDown) || (onLeftSide && panUp)
             ? yChange
@@ -57,7 +56,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         (onTop && panRight) || (onBottom && panLeft) ? xChange : xChange * -1;
 
     // Total computed change
-    final double rotationalChange = (verticalRotation + horizontalRotation) *
+    final double rotationalChange =
+        (verticalRotation + horizontalRotation) *
         (dragUpdateDetails.delta.distance * 0.8);
 
     int millisecondsSinceLastScroll = 0;
@@ -67,7 +67,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
             dragUpdateDetails.sourceTimeStamp?.inSeconds) {
       millisecondsSinceLastScroll =
           dragUpdateDetails.sourceTimeStamp!.inMilliseconds -
-              durationSinceLastScroll.inMilliseconds;
+          durationSinceLastScroll.inMilliseconds;
     } else {
       setState(() {
         durationSinceLastScroll =
@@ -103,181 +103,246 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.sizeOf(context);
     final deviceColor = ref.watch(
       settingsPreferencesControllerProvider.select((e) => e.deviceColor),
     );
 
-    return GestureDetector(
-      onPanUpdate: (dragUpdateDetails) async => onClickWheelScroll(
-        dragUpdateDetails,
-        (size.width * Constants.deviceClickWheelRadiusRatio) / 2,
-        size.height,
-      ),
-      child: Container(
-        height: size.width * Constants.deviceClickWheelRadiusRatio,
-        width: size.width * Constants.deviceClickWheelRadiusRatio,
-        padding: const EdgeInsets.all(12),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: deviceColor == DeviceColor.black
-              ? AppPalette.darkDeviceControlBackgroundColor
-              : CupertinoColors.white,
-        ),
-        clipBehavior: Clip.hardEdge,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: GestureDetector(
-                onTap: () async => ref
-                    .read(deviceButtonsServiceProvider.notifier)
-                    .setDeviceAction(DeviceAction.menu),
-                onLongPress: () async {
-                  await Future.wait([
-                    ref
-                        .read(deviceButtonsServiceProvider.notifier)
-                        .buttonPressVibrate(),
-                    ref
-                        .read(deviceButtonsServiceProvider.notifier)
-                        .clickWheelSound(),
-                  ]);
-                  if (context.mounted) {
-                    context.goNamed(Routes.menu.name);
-                  }
-                },
-                child: ColoredBox(
-                  color: deviceColor == DeviceColor.black
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return GestureDetector(
+          onPanUpdate:
+              (dragUpdateDetails) async => onClickWheelScroll(
+                dragUpdateDetails,
+                (constraints.maxWidth * Constants.deviceClickWheelRadiusRatio) /
+                    2,
+              ),
+          child: Container(
+            height:
+                constraints.maxWidth * Constants.deviceClickWheelRadiusRatio,
+            width: constraints.maxWidth * Constants.deviceClickWheelRadiusRatio,
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color:
+                  deviceColor == DeviceColor.black
                       ? AppPalette.darkDeviceControlBackgroundColor
                       : CupertinoColors.white,
-                  child: Align(
-                    alignment: Alignment.topCenter,
-                    child: Text(
-                      context.localization.menuButtonText,
-                      key: menuButtonGlobalKey,
-                      style: TextStyle(
-                        color: deviceColor == DeviceColor.black
-                            ? CupertinoColors.white
-                            : AppPalette.lightDeviceButtonColor,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: Assets.sfProTextFont,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
             ),
-            Row(
+            clipBehavior: Clip.hardEdge,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Expanded(
-                  key: previousButtonGlobalKey,
                   child: GestureDetector(
-                    onTap: () async => ref
-                        .read(deviceButtonsServiceProvider.notifier)
-                        .setDeviceAction(DeviceAction.seekBackward),
-                    onLongPress: () async => ref
-                        .read(deviceButtonsServiceProvider.notifier)
-                        .setDeviceAction(DeviceAction.seekBackwardLongPress),
-                    onLongPressEnd: (_) async => ref
-                        .read(deviceButtonsServiceProvider.notifier)
-                        .setDeviceAction(DeviceAction.longPressEnd),
-                    child: SizedBox(
-                      height: size.width * 0.2175,
-                      child: ColoredBox(
-                        color: deviceColor == DeviceColor.black
-                            ? AppPalette.darkDeviceControlBackgroundColor
-                            : CupertinoColors.white,
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: CustomPaint(
-                            size: const Size(20, 10),
-                            painter: PreviousButtonCustomPainter(
-                              color: deviceColor == DeviceColor.black
-                                  ? null
-                                  : AppPalette.lightDeviceButtonColor,
-                            ),
+                    onTap:
+                        () async => ref
+                            .read(deviceButtonsServiceProvider.notifier)
+                            .setDeviceAction(DeviceAction.menu),
+                    onLongPress: () async {
+                      await Future.wait([
+                        ref
+                            .read(deviceButtonsServiceProvider.notifier)
+                            .buttonPressVibrate(),
+                        ref
+                            .read(deviceButtonsServiceProvider.notifier)
+                            .clickWheelSound(),
+                      ]);
+                      if (context.mounted) {
+                        context.goNamed(Routes.menu.name);
+                      }
+                    },
+                    child: ColoredBox(
+                      color:
+                          deviceColor == DeviceColor.black
+                              ? AppPalette.darkDeviceControlBackgroundColor
+                              : CupertinoColors.white,
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Text(
+                          context.localization.menuButtonText,
+                          key: menuButtonGlobalKey,
+                          style: TextStyle(
+                            color:
+                                deviceColor == DeviceColor.black
+                                    ? CupertinoColors.white
+                                    : AppPalette.lightDeviceButtonColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: Assets.sfProTextFont,
                           ),
                         ),
                       ),
                     ),
                   ),
                 ),
-                GestureDetector(
-                  key: centerButtonGlobalKey,
-                  onTap: () async => ref
-                      .read(deviceButtonsServiceProvider.notifier)
-                      .setDeviceAction(DeviceAction.select),
-                  onLongPress: () async => ref
-                      .read(deviceButtonsServiceProvider.notifier)
-                      .setDeviceAction(DeviceAction.selectLongPress),
-                  onLongPressEnd: (_) async => ref
-                      .read(deviceButtonsServiceProvider.notifier)
-                      .setDeviceAction(DeviceAction.longPressEnd),
-                  child: SizedBox(
-                    height: size.width * Constants.deviceButtonSizeRatio,
-                    width: size.width * Constants.deviceButtonSizeRatio,
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: deviceColor == DeviceColor.black
-                              ? CupertinoColors.black
-                              : AppPalette.lightDeviceControlBorderColor,
-                        ),
-                        image: const DecorationImage(
-                          image: AssetImage(Assets.noiseImage),
-                          fit: BoxFit.cover,
-                        ),
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: deviceColor == DeviceColor.black
-                              ? [
-                                  AppPalette
-                                      .darkDeviceControlInnerButtonGradientColor1,
-                                  AppPalette
-                                      .darkDeviceControlInnerButtonGradientColor2,
-                                ]
-                              : [
-                                  AppPalette
-                                      .lightDeviceControlInnerButtonGradientColor1,
-                                  AppPalette
-                                      .lightDeviceControlInnerButtonGradientColor2,
-                                ],
+                Row(
+                  children: [
+                    Expanded(
+                      key: previousButtonGlobalKey,
+                      child: GestureDetector(
+                        onTap:
+                            () async => ref
+                                .read(deviceButtonsServiceProvider.notifier)
+                                .setDeviceAction(DeviceAction.seekBackward),
+                        onLongPress:
+                            () async => ref
+                                .read(deviceButtonsServiceProvider.notifier)
+                                .setDeviceAction(
+                                  DeviceAction.seekBackwardLongPress,
+                                ),
+                        onLongPressEnd:
+                            (_) async => ref
+                                .read(deviceButtonsServiceProvider.notifier)
+                                .setDeviceAction(DeviceAction.longPressEnd),
+                        child: SizedBox(
+                          height: constraints.maxWidth * 0.2175,
+                          child: ColoredBox(
+                            color:
+                                deviceColor == DeviceColor.black
+                                    ? AppPalette
+                                        .darkDeviceControlBackgroundColor
+                                    : CupertinoColors.white,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: CustomPaint(
+                                size: const Size(20, 10),
+                                painter: PreviousButtonCustomPainter(
+                                  color:
+                                      deviceColor == DeviceColor.black
+                                          ? null
+                                          : AppPalette.lightDeviceButtonColor,
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ),
-                  ),
+                    GestureDetector(
+                      key: centerButtonGlobalKey,
+                      onTap:
+                          () async => ref
+                              .read(deviceButtonsServiceProvider.notifier)
+                              .setDeviceAction(DeviceAction.select),
+                      onLongPress:
+                          () async => ref
+                              .read(deviceButtonsServiceProvider.notifier)
+                              .setDeviceAction(DeviceAction.selectLongPress),
+                      onLongPressEnd:
+                          (_) async => ref
+                              .read(deviceButtonsServiceProvider.notifier)
+                              .setDeviceAction(DeviceAction.longPressEnd),
+                      child: SizedBox(
+                        height:
+                            constraints.maxWidth *
+                            Constants.deviceButtonSizeRatio,
+                        width:
+                            constraints.maxWidth *
+                            Constants.deviceButtonSizeRatio,
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color:
+                                  deviceColor == DeviceColor.black
+                                      ? CupertinoColors.black
+                                      : AppPalette
+                                          .lightDeviceControlBorderColor,
+                            ),
+                            image: const DecorationImage(
+                              image: AssetImage(Assets.noiseImage),
+                              fit: BoxFit.cover,
+                            ),
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors:
+                                  deviceColor == DeviceColor.black
+                                      ? [
+                                        AppPalette
+                                            .darkDeviceControlInnerButtonGradientColor1,
+                                        AppPalette
+                                            .darkDeviceControlInnerButtonGradientColor2,
+                                      ]
+                                      : [
+                                        AppPalette
+                                            .lightDeviceControlInnerButtonGradientColor1,
+                                        AppPalette
+                                            .lightDeviceControlInnerButtonGradientColor2,
+                                      ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      key: nextButtonGlobalKey,
+                      child: GestureDetector(
+                        onTap:
+                            () async => ref
+                                .read(deviceButtonsServiceProvider.notifier)
+                                .setDeviceAction(DeviceAction.seekForward),
+                        onLongPress:
+                            () async => ref
+                                .read(deviceButtonsServiceProvider.notifier)
+                                .setDeviceAction(
+                                  DeviceAction.seekForwardLongPress,
+                                ),
+                        onLongPressEnd:
+                            (_) async => ref
+                                .read(deviceButtonsServiceProvider.notifier)
+                                .setDeviceAction(DeviceAction.longPressEnd),
+                        child: SizedBox(
+                          height:
+                              constraints.maxWidth *
+                              Constants.deviceButtonSizeRatio,
+                          child: ColoredBox(
+                            color:
+                                deviceColor == DeviceColor.black
+                                    ? AppPalette
+                                        .darkDeviceControlBackgroundColor
+                                    : CupertinoColors.white,
+                            child: Align(
+                              alignment: Alignment.centerRight,
+                              child: CustomPaint(
+                                size: const Size(20, 10),
+                                painter: NextButtonCustomPainter(
+                                  color:
+                                      deviceColor == DeviceColor.black
+                                          ? null
+                                          : AppPalette.lightDeviceButtonColor,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 Expanded(
-                  key: nextButtonGlobalKey,
                   child: GestureDetector(
-                    onTap: () async => ref
-                        .read(deviceButtonsServiceProvider.notifier)
-                        .setDeviceAction(DeviceAction.seekForward),
-                    onLongPress: () async => ref
-                        .read(deviceButtonsServiceProvider.notifier)
-                        .setDeviceAction(DeviceAction.seekForwardLongPress),
-                    onLongPressEnd: (_) async => ref
-                        .read(deviceButtonsServiceProvider.notifier)
-                        .setDeviceAction(DeviceAction.longPressEnd),
-                    child: SizedBox(
-                      height: size.width * Constants.deviceButtonSizeRatio,
-                      child: ColoredBox(
-                        color: deviceColor == DeviceColor.black
-                            ? AppPalette.darkDeviceControlBackgroundColor
-                            : CupertinoColors.white,
-                        child: Align(
-                          alignment: Alignment.centerRight,
-                          child: CustomPaint(
-                            size: const Size(20, 10),
-                            painter: NextButtonCustomPainter(
-                              color: deviceColor == DeviceColor.black
-                                  ? null
-                                  : AppPalette.lightDeviceButtonColor,
-                            ),
+                    onTap:
+                        () async =>
+                            ref
+                                .read(audioPlayerServiceProvider.notifier)
+                                .togglePlayback(),
+                    child: ColoredBox(
+                      color:
+                          deviceColor == DeviceColor.black
+                              ? AppPalette.darkDeviceControlBackgroundColor
+                              : CupertinoColors.white,
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: CustomPaint(
+                          key: playPauseButtonGlobalKey,
+                          size: const Size(26, 12),
+                          painter: PlayPauseButtonCustomPainter(
+                            color:
+                                deviceColor == DeviceColor.black
+                                    ? null
+                                    : AppPalette.lightDeviceButtonColor,
                           ),
                         ),
                       ),
@@ -286,33 +351,9 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                 ),
               ],
             ),
-            Expanded(
-              child: GestureDetector(
-                onTap: () async => ref
-                    .read(audioPlayerServiceProvider.notifier)
-                    .togglePlayback(),
-                child: ColoredBox(
-                  color: deviceColor == DeviceColor.black
-                      ? AppPalette.darkDeviceControlBackgroundColor
-                      : CupertinoColors.white,
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: CustomPaint(
-                      key: playPauseButtonGlobalKey,
-                      size: const Size(26, 12),
-                      painter: PlayPauseButtonCustomPainter(
-                        color: deviceColor == DeviceColor.black
-                            ? null
-                            : AppPalette.lightDeviceButtonColor,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

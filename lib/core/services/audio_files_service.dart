@@ -26,7 +26,7 @@ class AudioFilesServiceNotifier
     state = const AsyncLoading();
     try {
       if (ref.read(settingsPreferencesControllerProvider).fetchOnlineMusic) {
-        return UnmodifiableListView(onlineAudioFilesMetaData);
+        return UnmodifiableListView(onlineDemoAudioFilesMetaData);
       } else {
         final Box<Metadata> metadataBox =
             Hive.box<Metadata>(Constants.metadataBoxName);

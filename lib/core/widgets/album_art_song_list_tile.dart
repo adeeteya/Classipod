@@ -5,7 +5,6 @@ import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 
 class AlbumArtSongListTile extends StatelessWidget {
   final Metadata songMetadata;

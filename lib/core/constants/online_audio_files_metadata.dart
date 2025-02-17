@@ -1,6 +1,6 @@
 import 'package:classipod/core/models/metadata.dart';
 
-final List<Metadata> onlineAudioFilesMetaData = [
+final List<Metadata> onlineDemoAudioFilesMetaData = [
   // Linkin Park - One More Light
   Metadata(
     trackName: "Nobody Can Save Me",

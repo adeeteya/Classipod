@@ -7,7 +7,6 @@ import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 
 class SearchListTile extends StatelessWidget {
   final SearchResultsModel searchResult;

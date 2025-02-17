@@ -12,17 +12,16 @@ import 'package:go_router/go_router.dart';
 
 class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
   final AlbumModel albumDetail;
-  const CoverFlowAlbumSelectionScreen({
-    super.key,
-    required this.albumDetail,
-  });
+
+  const CoverFlowAlbumSelectionScreen({super.key, required this.albumDetail});
 
   @override
   ConsumerState createState() => _CoverFlowAlbumSelectionScreenState();
 }
 
 class _CoverFlowAlbumSelectionScreenState
-    extends ConsumerState<CoverFlowAlbumSelectionScreen> with CustomScreen {
+    extends ConsumerState<CoverFlowAlbumSelectionScreen>
+    with CustomScreen {
   @override
   int get topStatusBarHeight => 60;
 
@@ -48,9 +47,10 @@ class _CoverFlowAlbumSelectionScreenState
 
   @override
   Widget build(BuildContext context) {
-    final int? currentlyPlayingOriginalIndex = ref
-        .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
-        ?.originalSongIndex;
+    final int? currentlyPlayingOriginalIndex =
+        ref
+            .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
+            ?.originalSongIndex;
     return Hero(
       tag:
           "${widget.albumDetail.albumName}-${widget.albumDetail.albumArtistName}",
@@ -112,17 +112,19 @@ class _CoverFlowAlbumSelectionScreenState
                     child: ListView.builder(
                       controller: scrollController,
                       itemCount: displayItems.length,
-                      itemBuilder: (context, index) =>
-                          CoverFlowAlbumSongListTile(
-                        songName: displayItems[index].getTrackName,
-                        songDuration: Duration(
-                          milliseconds: displayItems[index].getTrackDuration,
-                        ),
-                        isSelected: selectedDisplayItem == index,
-                        isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
-                            displayItems[index].originalSongIndex,
-                        onTap: () async => _playSongFromAlbum(index),
-                      ),
+                      itemBuilder:
+                          (context, index) => CoverFlowAlbumSongListTile(
+                            songName: displayItems[index].getTrackName,
+                            songDuration: Duration(
+                              milliseconds:
+                                  displayItems[index].getTrackDuration,
+                            ),
+                            isSelected: selectedDisplayItem == index,
+                            isCurrentlyPlaying:
+                                currentlyPlayingOriginalIndex ==
+                                displayItems[index].originalSongIndex,
+                            onTap: () async => _playSongFromAlbum(index),
+                          ),
                     ),
                   ),
                 ),

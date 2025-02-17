@@ -6,11 +6,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class ScrubberBar extends ConsumerWidget {
   final double max;
   final double value;
-  const ScrubberBar({
-    super.key,
-    required this.max,
-    required this.value,
-  });
+
+  const ScrubberBar({super.key, required this.max, required this.value});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,12 +22,10 @@ class ScrubberBar extends ConsumerWidget {
                   onTapDown: (tapDownDetails) async {
                     final targetSeekValue =
                         (tapDownDetails.localPosition.dx * max) /
-                            constraints.maxWidth;
+                        constraints.maxWidth;
                     await ref
                         .read(audioPlayerServiceProvider.notifier)
-                        .seekToDuration(
-                          targetSeekValue.floor(),
-                        );
+                        .seekToDuration(targetSeekValue.floor());
                   },
                   child: SizedBox(
                     height: 20,
@@ -53,8 +48,10 @@ class ScrubberBar extends ConsumerWidget {
               ),
               Positioned(
                 top: 2,
-                left: ((value / max) * (constraints.maxWidth - 30))
-                    .clamp(0, constraints.maxWidth - 30),
+                left: ((value / max) * (constraints.maxWidth - 30)).clamp(
+                  0,
+                  constraints.maxWidth - 30,
+                ),
                 child: Transform.rotate(
                   angle: 3.14 / 4,
                   child: const SizedBox(

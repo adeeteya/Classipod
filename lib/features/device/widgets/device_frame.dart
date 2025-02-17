@@ -10,6 +10,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class DeviceFrame extends ConsumerWidget {
   final Widget child;
+
   const DeviceFrame({super.key, required this.child});
 
   @override
@@ -29,15 +30,16 @@ class DeviceFrame extends ConsumerWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: (deviceColor == DeviceColor.black)
-              ? [
-                  AppPalette.darkDeviceFrameGradientColor1,
-                  AppPalette.darkDeviceFrameGradientColor2,
-                ]
-              : [
-                  AppPalette.lightDeviceFrameGradientColor1,
-                  AppPalette.lightDeviceFrameGradientColor2,
-                ],
+          colors:
+              (deviceColor == DeviceColor.black)
+                  ? [
+                    AppPalette.darkDeviceFrameGradientColor1,
+                    AppPalette.darkDeviceFrameGradientColor2,
+                  ]
+                  : [
+                    AppPalette.lightDeviceFrameGradientColor1,
+                    AppPalette.lightDeviceFrameGradientColor2,
+                  ],
         ),
       ),
       child: Stack(
@@ -50,12 +52,7 @@ class DeviceFrame extends ConsumerWidget {
               width: size.width,
               child: const DecoratedBox(
                 decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 100,
-                      spreadRadius: 1,
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 100, spreadRadius: 1)],
                 ),
               ),
             ),
@@ -67,12 +64,7 @@ class DeviceFrame extends ConsumerWidget {
               width: size.width,
               child: const DecoratedBox(
                 decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 100,
-                      spreadRadius: 1,
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 100, spreadRadius: 1)],
                 ),
               ),
             ),
@@ -84,12 +76,7 @@ class DeviceFrame extends ConsumerWidget {
               width: 20,
               child: const DecoratedBox(
                 decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 100,
-                      spreadRadius: 1,
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 100, spreadRadius: 1)],
                 ),
               ),
             ),
@@ -101,12 +88,7 @@ class DeviceFrame extends ConsumerWidget {
               width: 20,
               child: const DecoratedBox(
                 decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 100,
-                      spreadRadius: 1,
-                    ),
-                  ],
+                  boxShadow: [BoxShadow(blurRadius: 100, spreadRadius: 1)],
                 ),
               ),
             ),
@@ -117,9 +99,7 @@ class DeviceFrame extends ConsumerWidget {
               children: [
                 DeviceScreen(key: deviceScreenGlobalKey, child: child),
                 const Spacer(flex: 2),
-                DeviceControls(
-                  key: deviceControlsGlobalKey,
-                ),
+                DeviceControls(key: deviceControlsGlobalKey),
                 const Spacer(),
               ],
             ),

@@ -8,10 +8,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final settingsPreferencesRepositoryProvider =
     Provider.autoDispose<SettingsPreferencesRepository>((ref) {
-  return SettingsPreferencesRepository(
-    ref.read(sharedPreferencesWithCacheProvider).requireValue,
-  );
-});
+      return SettingsPreferencesRepository(
+        ref.read(sharedPreferencesWithCacheProvider).requireValue,
+      );
+    });
 
 class SettingsPreferencesRepository {
   final SharedPreferencesWithCache _sharedPreferencesWithCache;
@@ -19,56 +19,65 @@ class SettingsPreferencesRepository {
   SettingsPreferencesRepository(this._sharedPreferencesWithCache);
 
   String getLanguageLocaleCode() {
-    return _sharedPreferencesWithCache
-            .getString(SharedPreferencesKeys.languageLocaleCode.name) ??
+    return _sharedPreferencesWithCache.getString(
+          SharedPreferencesKeys.languageLocaleCode.name,
+        ) ??
         Constants.defaultLanguageLocaleCode;
   }
 
   String getDeviceColor() {
-    return _sharedPreferencesWithCache
-            .getString(SharedPreferencesKeys.deviceColor.name) ??
+    return _sharedPreferencesWithCache.getString(
+          SharedPreferencesKeys.deviceColor.name,
+        ) ??
         DeviceColor.silver.name;
   }
 
   bool getTouchScreenEnabled() {
-    return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.isTouchScreenEnabled.name) ??
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.isTouchScreenEnabled.name,
+        ) ??
         true;
   }
 
   String getRepeatMode() {
-    return _sharedPreferencesWithCache
-            .getString(SharedPreferencesKeys.repeatMode.name) ??
+    return _sharedPreferencesWithCache.getString(
+          SharedPreferencesKeys.repeatMode.name,
+        ) ??
         RepeatMode.off.name;
   }
 
   bool getVibrate() {
-    return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.vibrate.name) ??
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.vibrate.name,
+        ) ??
         true;
   }
 
   bool getSplitScreenEnabled() {
-    return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.splitScreenEnabled.name) ??
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.splitScreenEnabled.name,
+        ) ??
         true;
   }
 
   bool getClickWheelSound() {
-    return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.clickWheelSound.name) ??
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.clickWheelSound.name,
+        ) ??
         false;
   }
 
   bool getImmersiveMode() {
-    return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.immersiveMode.name) ??
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.immersiveMode.name,
+        ) ??
         false;
   }
 
   String getMusicFolderPath() {
-    return _sharedPreferencesWithCache
-            .getString(SharedPreferencesKeys.musicFolderPath.name) ??
+    return _sharedPreferencesWithCache.getString(
+          SharedPreferencesKeys.musicFolderPath.name,
+        ) ??
         Constants.defaultMusicFolderPath;
   }
 

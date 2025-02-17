@@ -13,6 +13,7 @@ class SearchListTile extends StatelessWidget {
   final bool isSelected;
   final VoidCallback onTap;
   final VoidCallback onLongPress;
+
   const SearchListTile({
     super.key,
     required this.searchResult,
@@ -56,16 +57,17 @@ class SearchListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient:
+                isSelected
+                    ? const LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        AppPalette.selectedTileGradientColor1,
+                        AppPalette.selectedTileGradientColor2,
+                      ],
+                    )
+                    : null,
           ),
           child: Row(
             children: [
@@ -73,33 +75,37 @@ class SearchListTile extends StatelessWidget {
                       searchResult.searchResultType ==
                           SearchResultType.defaultSearch)
                   ? SizedBox(
-                      height: 50,
-                      width: 50,
-                      child: ColoredBox(
-                        color: AppPalette.defaultIconBackgroundColor,
-                        child: Center(
-                          child: Icon(
-                            (searchResult.searchResultType ==
-                                    SearchResultType.artist)
-                                ? CupertinoIcons.person_alt
-                                : CupertinoIcons.search,
-                          ),
+                    height: 50,
+                    width: 50,
+                    child: ColoredBox(
+                      color: AppPalette.defaultIconBackgroundColor,
+                      child: Center(
+                        child: Icon(
+                          (searchResult.searchResultType ==
+                                  SearchResultType.artist)
+                              ? CupertinoIcons.person_alt
+                              : CupertinoIcons.search,
                         ),
                       ),
-                    )
-                  : Image(
-                      image: (searchResult.searchResultType ==
-                                  SearchResultType.album &&
-                              imageFilePath != null)
-                          ? FileImage(File(imageFilePath))
-                          : const AssetImage(Assets.defaultAlbumCoverImage),
-                      errorBuilder: (_, __, ___) => Image.asset(
-                        Assets.defaultAlbumCoverImage,
-                        fit: BoxFit.fitWidth,
-                      ),
-                      height: 50,
-                      width: 50,
                     ),
+                  )
+                  : Image(
+                    image:
+                        (searchResult.searchResultType ==
+                                    SearchResultType.album &&
+                                imageFilePath != null)
+                            ? (searchResult.result as AlbumModel).isOnDevice()
+                                ? FileImage(File(imageFilePath))
+                                : NetworkImage(imageFilePath)
+                            : const AssetImage(Assets.defaultAlbumCoverImage),
+                    errorBuilder:
+                        (_, __, ___) => Image.asset(
+                          Assets.defaultAlbumCoverImage,
+                          fit: BoxFit.fitWidth,
+                        ),
+                    height: 50,
+                    width: 50,
+                  ),
               const SizedBox(width: 10),
               Expanded(
                 child: Column(
@@ -111,9 +117,10 @@ class SearchListTile extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: isSelected
-                            ? CupertinoColors.white
-                            : CupertinoColors.black,
+                        color:
+                            isSelected
+                                ? CupertinoColors.white
+                                : CupertinoColors.black,
                       ),
                       maxLines: 1,
                     ),
@@ -121,9 +128,10 @@ class SearchListTile extends StatelessWidget {
                     Text(
                       description,
                       style: TextStyle(
-                        color: isSelected
-                            ? CupertinoColors.white
-                            : AppPalette.hintTextColor,
+                        color:
+                            isSelected
+                                ? CupertinoColors.white
+                                : AppPalette.hintTextColor,
                       ),
                       maxLines: 1,
                     ),

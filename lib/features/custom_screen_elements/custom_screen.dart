@@ -102,10 +102,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   @override
   void initState() {
     super.initState();
-    ref.listenManual(
-      deviceButtonsServiceProvider,
-      deviceControlHandler,
-    );
+    ref.listenManual(deviceButtonsServiceProvider, deviceControlHandler);
   }
 
   @override

@@ -3,8 +3,9 @@ import 'package:classipod/core/providers/shared_preferences_with_cache_provider.
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final tutorialRepositoryProvider =
-    Provider.autoDispose<TutorialRepository>((ref) {
+final tutorialRepositoryProvider = Provider.autoDispose<TutorialRepository>((
+  ref,
+) {
   return TutorialRepository(
     ref.read(sharedPreferencesWithCacheProvider).requireValue,
   );
@@ -16,20 +17,23 @@ class TutorialRepository {
   TutorialRepository(this._sharedPreferencesWithCache);
 
   bool getMenuOpenedFirstTime() {
-    return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.isMenuFirstTime.name) ??
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.isMenuFirstTime.name,
+        ) ??
         true;
   }
 
   bool getNowPlayingFirstTime() {
-    return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.isNowPlayingFirstTime.name) ??
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.isNowPlayingFirstTime.name,
+        ) ??
         true;
   }
 
   bool getSearchFirstTime() {
-    return _sharedPreferencesWithCache
-            .getBool(SharedPreferencesKeys.isSearchFirstTime.name) ??
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.isSearchFirstTime.name,
+        ) ??
         true;
   }
 

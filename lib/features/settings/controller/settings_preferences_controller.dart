@@ -12,15 +12,16 @@ import 'package:classipod/features/settings/repository/settings_preferences_repo
 import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 
 final settingsPreferencesControllerProvider = NotifierProvider<
-    SettingsPreferencesControllerNotifier, SettingsPreferencesModel>(
-  SettingsPreferencesControllerNotifier.new,
-);
+  SettingsPreferencesControllerNotifier,
+  SettingsPreferencesModel
+>(SettingsPreferencesControllerNotifier.new);
 
 class SettingsPreferencesControllerNotifier
     extends Notifier<SettingsPreferencesModel> {
@@ -28,16 +29,19 @@ class SettingsPreferencesControllerNotifier
 
   @override
   SettingsPreferencesModel build() {
-    final settingsPreferencesRepository =
-        ref.read(settingsPreferencesRepositoryProvider);
+    final settingsPreferencesRepository = ref.read(
+      settingsPreferencesRepositoryProvider,
+    );
     return SettingsPreferencesModel(
       languageLocaleCode: settingsPreferencesRepository.getLanguageLocaleCode(),
-      deviceColor: DeviceColor.values
-          .byName(settingsPreferencesRepository.getDeviceColor()),
+      deviceColor: DeviceColor.values.byName(
+        settingsPreferencesRepository.getDeviceColor(),
+      ),
       isTouchScreenEnabled:
           settingsPreferencesRepository.getTouchScreenEnabled(),
-      repeatMode: RepeatMode.values
-          .byName(settingsPreferencesRepository.getRepeatMode()),
+      repeatMode: RepeatMode.values.byName(
+        settingsPreferencesRepository.getRepeatMode(),
+      ),
       vibrate: settingsPreferencesRepository.getVibrate(),
       clickWheelSound: settingsPreferencesRepository.getClickWheelSound(),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
@@ -47,10 +51,20 @@ class SettingsPreferencesControllerNotifier
   }
 
   Future<void> setSystemUiMode() async {
-    if (state.immersiveMode) {
-      await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    if (!kIsWeb) {
+      if (state.immersiveMode) {
+        await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+      } else {
+        await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+      }
+    }
+  }
+
+  void setAudioSource({required bool isOnlineAudioSource}) {
+    if (isOnlineAudioSource) {
+      state = state.copyWith(fetchOnlineMusic: true);
     } else {
-      await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+      state = state.copyWith(fetchOnlineMusic: false);
     }
   }
 
@@ -110,7 +124,9 @@ class SettingsPreferencesControllerNotifier
   Future<void> toggleTouchScreen() async {
     state = state.copyWith(isTouchScreenEnabled: !state.isTouchScreenEnabled);
 
-    await ref.read(settingsPreferencesRepositoryProvider).setTouchScreenEnabled(
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setTouchScreenEnabled(
           isTouchScreenEnabled: state.isTouchScreenEnabled,
         );
   }
@@ -151,9 +167,9 @@ class SettingsPreferencesControllerNotifier
   Future<void> toggleClickWheelSound(BuildContext context) async {
     state = state.copyWith(clickWheelSound: !state.clickWheelSound);
 
-    await ref.read(settingsPreferencesRepositoryProvider).setClickWheelSound(
-          isClickWheelSoundEnabled: state.clickWheelSound,
-        );
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setClickWheelSound(isClickWheelSoundEnabled: state.clickWheelSound);
 
     if (state.clickWheelSound && context.mounted) {
       await Dialogs.showInfoDialog(
@@ -226,9 +242,9 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setImmersiveMode(isImmersiveModeEnabled: false);
-    await ref.read(settingsPreferencesRepositoryProvider).setMusicFolderPath(
-          musicFolderPath: Constants.defaultMusicFolderPath,
-        );
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setMusicFolderPath(musicFolderPath: Constants.defaultMusicFolderPath);
     ref.invalidateSelf();
   }
 }

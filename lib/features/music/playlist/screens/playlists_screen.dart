@@ -34,9 +34,7 @@ class _PlaylistsScreenState extends ConsumerState<PlaylistsScreen>
     setState(() => selectedDisplayItem = displayIndex);
     context.goNamed(
       Routes.playlistSongs.name,
-      queryParameters: {
-        'playlistId': displayItems[displayIndex].id.toString(),
-      },
+      queryParameters: {'playlistId': displayItems[displayIndex].id.toString()},
     );
   }
 
@@ -45,20 +43,19 @@ class _PlaylistsScreenState extends ConsumerState<PlaylistsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.playlists.title(context),
-          ),
+          StatusBar(title: Routes.playlists.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => PlaylistListTile(
-                  playlistModel: displayItems[index],
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () async => _navigateToPlaylistSongsScreen(index),
-                ),
+                itemBuilder:
+                    (context, index) => PlaylistListTile(
+                      playlistModel: displayItems[index],
+                      isSelected: selectedDisplayItem == index,
+                      onTap: () async => _navigateToPlaylistSongsScreen(index),
+                    ),
               ),
             ),
           ),

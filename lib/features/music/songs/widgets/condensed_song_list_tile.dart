@@ -6,6 +6,7 @@ class CondensedSongListTile extends StatelessWidget {
   final bool isSelected;
   final bool isCurrentlyPlaying;
   final VoidCallback? onTap;
+
   const CondensedSongListTile({
     super.key,
     required this.songName,
@@ -23,26 +24,28 @@ class CondensedSongListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            border: isSelected
-                ? const Border(
-                    top: BorderSide(
-                      color: AppPalette.selectedTileTopBorderColor,
-                    ),
-                    bottom: BorderSide(
-                      color: AppPalette.selectedTileBottomBorderColor,
-                    ),
-                  )
-                : null,
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            border:
+                isSelected
+                    ? const Border(
+                      top: BorderSide(
+                        color: AppPalette.selectedTileTopBorderColor,
+                      ),
+                      bottom: BorderSide(
+                        color: AppPalette.selectedTileBottomBorderColor,
+                      ),
+                    )
+                    : null,
+            gradient:
+                isSelected
+                    ? const LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        AppPalette.selectedTileGradientColor1,
+                        AppPalette.selectedTileGradientColor2,
+                      ],
+                    )
+                    : null,
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),
@@ -55,9 +58,10 @@ class CondensedSongListTile extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
-                      color: isSelected
-                          ? CupertinoColors.white
-                          : CupertinoColors.black,
+                      color:
+                          isSelected
+                              ? CupertinoColors.white
+                              : CupertinoColors.black,
                     ),
                     maxLines: 1,
                   ),
@@ -65,9 +69,10 @@ class CondensedSongListTile extends StatelessWidget {
                 if (isCurrentlyPlaying)
                   Icon(
                     CupertinoIcons.volume_up,
-                    color: isSelected
-                        ? CupertinoColors.white
-                        : CupertinoColors.black,
+                    color:
+                        isSelected
+                            ? CupertinoColors.white
+                            : CupertinoColors.black,
                   ),
               ],
             ),

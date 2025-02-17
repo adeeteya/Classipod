@@ -29,6 +29,7 @@ class AlbumMoreOptionsModal extends ConsumerStatefulWidget {
   final String routeName;
   final AlbumModel albumDetail;
   final bool showBrowseArtist;
+
   const AlbumMoreOptionsModal({
     super.key,
     required this.routeName,
@@ -47,10 +48,10 @@ class _AlbumMoreOptionsModalState extends ConsumerState<AlbumMoreOptionsModal>
 
   @override
   List<_AlbumMoreOptions> get displayItems => [
-        _AlbumMoreOptions.addAlbumToOnTheGo,
-        if (widget.showBrowseArtist) _AlbumMoreOptions.browseArtist,
-        _AlbumMoreOptions.cancel,
-      ];
+    _AlbumMoreOptions.addAlbumToOnTheGo,
+    if (widget.showBrowseArtist) _AlbumMoreOptions.browseArtist,
+    _AlbumMoreOptions.cancel,
+  ];
 
   @override
   Future<void> onSelectPressed() =>
@@ -68,9 +69,7 @@ class _AlbumMoreOptionsModalState extends ConsumerState<AlbumMoreOptionsModal>
       case _AlbumMoreOptions.browseArtist:
         context.pushReplacementNamed(
           Routes.artistAlbums.name,
-          pathParameters: {
-            "artistName": widget.albumDetail.albumArtistName,
-          },
+          pathParameters: {"artistName": widget.albumDetail.albumArtistName},
         );
         break;
       case _AlbumMoreOptions.cancel:

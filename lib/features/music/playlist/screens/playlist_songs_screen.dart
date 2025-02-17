@@ -15,6 +15,7 @@ import 'package:go_router/go_router.dart';
 
 class PlaylistSongsScreen extends ConsumerStatefulWidget {
   final int playlistId;
+
   const PlaylistSongsScreen({super.key, required this.playlistId});
 
   @override
@@ -25,8 +26,9 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
     with CustomScreen {
   @override
   String get routeName =>
-      Uri.parse("${Routes.playlistSongs.name}?playlistId=${widget.playlistId}")
-          .path;
+      Uri.parse(
+        "${Routes.playlistSongs.name}?playlistId=${widget.playlistId}",
+      ).path;
 
   @override
   double get displayTileHeight => 54;
@@ -62,7 +64,9 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
         context.pop();
       }
     } else {
-      await ref.read(audioPlayerServiceProvider.notifier).playPlaylist(
+      await ref
+          .read(audioPlayerServiceProvider.notifier)
+          .playPlaylist(
             playlistDetail: ref.read(playlistsProvider)[widget.playlistId],
             songIndex: index - 2,
           );
@@ -81,7 +85,9 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
       context.goNamed(
         Routes.playlistSongsMoreOptions.name,
         extra: () async {
-          await ref.read(playlistsProvider.notifier).removeSongFromPlaylist(
+          await ref
+              .read(playlistsProvider.notifier)
+              .removeSongFromPlaylist(
                 playlistId: widget.playlistId,
                 song: displayItems[index - 2],
               );
@@ -102,16 +108,17 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient:
+                isSelected
+                    ? const LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        AppPalette.selectedTileGradientColor1,
+                        AppPalette.selectedTileGradientColor2,
+                      ],
+                    )
+                    : null,
           ),
           child: Row(
             children: [
@@ -138,9 +145,10 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: isSelected
-                        ? CupertinoColors.white
-                        : CupertinoColors.black,
+                    color:
+                        isSelected
+                            ? CupertinoColors.white
+                            : CupertinoColors.black,
                   ),
                   maxLines: 1,
                 ),
@@ -176,16 +184,15 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
       );
     }
 
-    final int? currentlyPlayingOriginalIndex = ref
-        .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
-        ?.originalSongIndex;
+    final int? currentlyPlayingOriginalIndex =
+        ref
+            .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
+            ?.originalSongIndex;
 
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: ref.read(playlistsProvider)[widget.playlistId].name,
-          ),
+          StatusBar(title: ref.read(playlistsProvider)[widget.playlistId].name),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
@@ -210,7 +217,8 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
                   return PlaylistSongListTile(
                     songMetadata: displayItems[index - 2],
                     isSelected: selectedDisplayItem == index,
-                    isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
+                    isCurrentlyPlaying:
+                        currentlyPlayingOriginalIndex ==
                         displayItems[index - 2].originalSongIndex,
                     onTap: () async => _performAction(index),
                     onLongPress: () => _performLongPressAction(index),

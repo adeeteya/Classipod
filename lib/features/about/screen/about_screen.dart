@@ -29,9 +29,7 @@ class AboutScreen extends ConsumerWidget {
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.about.title(context),
-          ),
+          StatusBar(title: Routes.about.title(context)),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
@@ -60,7 +58,7 @@ class AboutScreen extends ConsumerWidget {
                 ),
                 AboutListTile(
                   titleText: context.localization.versionAboutScreenTitle,
-                  valueText: "1.00",
+                  valueText: "1.7.5",
                 ),
                 AboutListTile(
                   titleText: context.localization.madeWithLoveTitle,

@@ -37,7 +37,8 @@ class NowPlayingMoreOptionsModal extends ConsumerStatefulWidget {
 }
 
 class _NowPlayingMoreOptionsModalState
-    extends ConsumerState<NowPlayingMoreOptionsModal> with CustomScreen {
+    extends ConsumerState<NowPlayingMoreOptionsModal>
+    with CustomScreen {
   @override
   String get routeName => Routes.nowPlayingMoreOptions.name;
 

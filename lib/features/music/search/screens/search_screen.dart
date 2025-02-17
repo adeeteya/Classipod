@@ -171,9 +171,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
         children: [
           Column(
             children: [
-              StatusBar(
-                title: statusBarTitle,
-              ),
+              StatusBar(title: statusBarTitle),
               Flexible(
                 child: CupertinoScrollbar(
                   controller: scrollController,
@@ -197,8 +195,8 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
                         searchResult: displayItems[index - 1],
                         isSelected: selectedDisplayItem == index,
                         onTap: () async => _onSearchResultAction(index),
-                        onLongPress: () =>
-                            _navigateToSearchMoreOptionsModal(index),
+                        onLongPress:
+                            () => _navigateToSearchMoreOptionsModal(index),
                       );
                     },
                   ),

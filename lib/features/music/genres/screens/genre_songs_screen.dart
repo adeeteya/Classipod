@@ -12,6 +12,7 @@ import 'package:go_router/go_router.dart';
 
 class GenreSongsScreen extends ConsumerStatefulWidget {
   final String genreName;
+
   const GenreSongsScreen({super.key, required this.genreName});
 
   @override
@@ -52,9 +53,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
     setState(() => selectedDisplayItem = index);
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .playSongFromOriginalList(
-          displayItems[index].originalSongIndex,
-        );
+        .playSongFromOriginalList(displayItems[index].originalSongIndex);
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
     }
@@ -62,29 +61,31 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
 
   @override
   Widget build(BuildContext context) {
-    final int? currentlyPlayingOriginalIndex = ref
-        .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
-        ?.originalSongIndex;
+    final int? currentlyPlayingOriginalIndex =
+        ref
+            .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
+            ?.originalSongIndex;
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: widget.genreName,
-          ),
+          StatusBar(title: widget.genreName),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => AlbumArtSongListTile(
-                  songMetadata: displayItems[index],
-                  isSelected: selectedDisplayItem == index,
-                  isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
-                      displayItems[index].originalSongIndex,
-                  onTap: () async => _playSong(index),
-                  onLongPress: () => _navigateToGenreMoreOptionsModal(index),
-                ),
+                itemBuilder:
+                    (context, index) => AlbumArtSongListTile(
+                      songMetadata: displayItems[index],
+                      isSelected: selectedDisplayItem == index,
+                      isCurrentlyPlaying:
+                          currentlyPlayingOriginalIndex ==
+                          displayItems[index].originalSongIndex,
+                      onTap: () async => _playSong(index),
+                      onLongPress:
+                          () => _navigateToGenreMoreOptionsModal(index),
+                    ),
               ),
             ),
           ),

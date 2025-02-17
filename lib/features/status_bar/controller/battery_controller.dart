@@ -21,5 +21,5 @@ final onBatteryStateChangeProvider = StreamProvider<BatteryState>((ref) {
 
 final batteryDetailsControllerProvider =
     AsyncNotifierProvider<BatteryDetailsControllerNotifier, BatteryModel>(() {
-  return BatteryDetailsControllerNotifier();
-});
+      return BatteryDetailsControllerNotifier();
+    });

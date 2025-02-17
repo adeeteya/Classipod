@@ -1,9 +1,4 @@
-enum SearchResultType {
-  artist,
-  album,
-  track,
-  defaultSearch,
-}
+enum SearchResultType { artist, album, track, defaultSearch }
 
 class SearchResultsModel<T> {
   final SearchResultType searchResultType;

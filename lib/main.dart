@@ -14,11 +14,5 @@ void main() {
     ),
   );
 
-  runApp(
-    const ProviderScope(
-      child: AppStartupScreen(
-        app: ClassipodApp(),
-      ),
-    ),
-  );
+  runApp(const ProviderScope(child: AppStartupScreen(app: ClassipodApp())));
 }

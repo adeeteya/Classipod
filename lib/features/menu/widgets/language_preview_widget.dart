@@ -31,8 +31,9 @@ class LanguagePreviewWidget extends StatelessWidget {
                   "Bienvenue",
                   style: TextStyle(
                     fontSize: 20,
-                    color: AppPalette.darkScreenLightIconColor
-                        .withValues(alpha: 0.5),
+                    color: AppPalette.darkScreenLightIconColor.withValues(
+                      alpha: 0.5,
+                    ),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -44,8 +45,9 @@ class LanguagePreviewWidget extends StatelessWidget {
                   "欢迎",
                   style: TextStyle(
                     fontSize: 30,
-                    color: AppPalette.darkScreenLightIconColor
-                        .withValues(alpha: 0.5),
+                    color: AppPalette.darkScreenLightIconColor.withValues(
+                      alpha: 0.5,
+                    ),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -57,8 +59,9 @@ class LanguagePreviewWidget extends StatelessWidget {
                   "Willkomen",
                   style: TextStyle(
                     fontSize: 20,
-                    color: AppPalette.darkScreenLightIconColor
-                        .withValues(alpha: 0.5),
+                    color: AppPalette.darkScreenLightIconColor.withValues(
+                      alpha: 0.5,
+                    ),
                     fontWeight: FontWeight.bold,
                   ),
                 ),

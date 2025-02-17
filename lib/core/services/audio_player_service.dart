@@ -17,8 +17,8 @@ final audioPlayerProvider = Provider<AudioPlayer>((_) {
 
 final audioPlayerServiceProvider =
     AutoDisposeAsyncNotifierProvider<AudioPlayerServiceNotifier, void>(
-  AudioPlayerServiceNotifier.new,
-);
+      AudioPlayerServiceNotifier.new,
+    );
 
 class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
   AudioPlayerServiceNotifier() : super();
@@ -37,7 +37,9 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
   Future<void> toggleShuffleMode() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      await ref.read(audioPlayerProvider).setShuffleModeEnabled(
+      await ref
+          .read(audioPlayerProvider)
+          .setShuffleModeEnabled(
             !ref.read(audioPlayerProvider).shuffleModeEnabled,
           );
     });
@@ -89,7 +91,9 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
       final List<AudioSource> songSourcePlaylist =
           musicMetadataList.map((e) => e.toAudioSource()).toList();
 
-      await ref.read(audioPlayerProvider).setAudioSource(
+      await ref
+          .read(audioPlayerProvider)
+          .setAudioSource(
             ConcatenatingAudioSource(
               shuffleOrder: DefaultShuffleOrder(),
               children: songSourcePlaylist,
@@ -98,7 +102,9 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
             initialPosition: Duration.zero,
           );
 
-      ref.read(nowPlayingDetailsProvider.notifier).setNewMetadataList(
+      ref
+          .read(nowPlayingDetailsProvider.notifier)
+          .setNewMetadataList(
             nowPlayingType: nowPlayingType,
             newMetadataList: musicMetadataList,
           );
@@ -237,7 +243,9 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
       final int maxDurationInSeconds =
           ref.read(audioPlayerProvider).duration?.inSeconds ?? 0;
       if (currentDurationInSeconds + 1 < maxDurationInSeconds) {
-        await ref.read(audioPlayerProvider).seek(
+        await ref
+            .read(audioPlayerProvider)
+            .seek(
               Duration(
                 seconds: ref.read(audioPlayerProvider).position.inSeconds + 1,
               ),
@@ -249,7 +257,9 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
   Future<void> seekBackward() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      await ref.read(audioPlayerProvider).seek(
+      await ref
+          .read(audioPlayerProvider)
+          .seek(
             Duration(
               seconds: ref.read(audioPlayerProvider).position.inSeconds - 1,
             ),
@@ -264,17 +274,13 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
           ref.read(audioPlayerProvider).duration?.inSeconds ?? 0;
       if (targetDurationInSeconds > 0 &&
           targetDurationInSeconds <= maxDurationInSeconds) {
-        await ref.read(audioPlayerProvider).seek(
-              Duration(
-                seconds: targetDurationInSeconds,
-              ),
-            );
+        await ref
+            .read(audioPlayerProvider)
+            .seek(Duration(seconds: targetDurationInSeconds));
       }
-      await ref.read(audioPlayerProvider).seek(
-            Duration(
-              seconds: targetDurationInSeconds,
-            ),
-          );
+      await ref
+          .read(audioPlayerProvider)
+          .seek(Duration(seconds: targetDurationInSeconds));
     });
   }
 

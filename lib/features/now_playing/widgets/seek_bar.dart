@@ -6,11 +6,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class SeekBar extends ConsumerWidget {
   final double max;
   final double value;
-  const SeekBar({
-    super.key,
-    required this.max,
-    required this.value,
-  });
+
+  const SeekBar({super.key, required this.max, required this.value});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,12 +22,10 @@ class SeekBar extends ConsumerWidget {
                   onTapDown: (tapDownDetails) async {
                     final targetSeekValue =
                         (tapDownDetails.localPosition.dx * max) /
-                            constraints.maxWidth;
+                        constraints.maxWidth;
                     await ref
                         .read(audioPlayerServiceProvider.notifier)
-                        .seekToDuration(
-                          targetSeekValue.floor(),
-                        );
+                        .seekToDuration(targetSeekValue.floor());
                   },
                   child: SizedBox(
                     height: 20,

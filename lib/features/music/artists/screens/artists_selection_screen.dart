@@ -56,20 +56,19 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.artists.title(context),
-          ),
+          StatusBar(title: Routes.artists.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => DisplayListTile(
-                  text: displayItems[index],
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () => _selectArtist(index),
-                ),
+                itemBuilder:
+                    (context, index) => DisplayListTile(
+                      text: displayItems[index],
+                      isSelected: selectedDisplayItem == index,
+                      onTap: () => _selectArtist(index),
+                    ),
               ),
             ),
           ),

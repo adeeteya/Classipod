@@ -44,7 +44,7 @@ class Metadata extends HiveObject {
   /// Bitrate of the track.
   final int? bitrate;
 
-  /// File path of the media file.
+  /// File path of the audio file.
   final String? filePath;
 
   /// File path of the thumbnail album art file.
@@ -52,6 +52,9 @@ class Metadata extends HiveObject {
 
   /// Original Song Index
   final int originalSongIndex;
+
+  /// Bool to Indicate that the File is Located On-Device
+  final bool isOnDevice;
 
   Metadata({
     this.trackName,
@@ -69,6 +72,7 @@ class Metadata extends HiveObject {
     this.filePath,
     this.thumbnailPath,
     this.originalSongIndex = 0,
+    this.isOnDevice = true,
   });
 
   factory Metadata.fromAudioMetadata(
@@ -98,9 +102,10 @@ class Metadata extends HiveObject {
       year: audioMetadata.year?.year,
       genres: audioMetadata.genres,
       discNumber: audioMetadata.discNumber,
-      mimeType: audioMetadata.pictures.isEmpty
-          ? null
-          : audioMetadata.pictures[0].mimetype,
+      mimeType:
+          audioMetadata.pictures.isEmpty
+              ? null
+              : audioMetadata.pictures[0].mimetype,
       trackDuration: audioMetadata.duration?.inMilliseconds,
       bitrate: audioMetadata.bitrate,
       filePath: audioMetadata.file.path,
@@ -110,40 +115,42 @@ class Metadata extends HiveObject {
   }
 
   factory Metadata.fromMap(Map<String, dynamic> map) => Metadata(
-        trackName: map['metadata']['trackName'],
-        trackArtistNames: map['metadata']['trackArtistNames']?.split('/'),
-        albumName: map['metadata']['albumName'],
-        albumArtistName: map['metadata']['albumArtistName'],
-        trackNumber: parseInteger(map['metadata']['trackNumber']),
-        albumLength: parseInteger(map['metadata']['albumLength']),
-        year: parseInteger(map['metadata']['year']),
-        genres: map['genres'],
-        discNumber: parseInteger(map['metadata']['discNumber']),
-        mimeType: map['metadata']['mimeType'],
-        trackDuration: parseInteger(map['metadata']['trackDuration']),
-        bitrate: parseInteger(map['metadata']['bitrate']),
-        filePath: map['filePath'],
-        thumbnailPath: map['thumbnailPath'],
-        originalSongIndex: map['originalSongIndex'],
-      );
+    trackName: map['metadata']['trackName'],
+    trackArtistNames: map['metadata']['trackArtistNames']?.split('/'),
+    albumName: map['metadata']['albumName'],
+    albumArtistName: map['metadata']['albumArtistName'],
+    trackNumber: parseInteger(map['metadata']['trackNumber']),
+    albumLength: parseInteger(map['metadata']['albumLength']),
+    year: parseInteger(map['metadata']['year']),
+    genres: map['genres'],
+    discNumber: parseInteger(map['metadata']['discNumber']),
+    mimeType: map['metadata']['mimeType'],
+    trackDuration: parseInteger(map['metadata']['trackDuration']),
+    bitrate: parseInteger(map['metadata']['bitrate']),
+    filePath: map['filePath'],
+    thumbnailPath: map['thumbnailPath'],
+    originalSongIndex: map['originalSongIndex'],
+    isOnDevice: map['isOnDevice'],
+  );
 
   Map<String, dynamic> toMap() => {
-        'trackName': trackName,
-        'trackArtistNames': trackArtistNames,
-        'albumName': albumName,
-        'albumArtistName': albumArtistName,
-        'trackNumber': trackNumber,
-        'albumLength': albumLength,
-        'year': year,
-        'genres': genres,
-        'discNumber': discNumber,
-        'mimeType': mimeType,
-        'trackDuration': trackDuration,
-        'bitrate': bitrate,
-        'filePath': filePath,
-        'thumbnailPath': thumbnailPath,
-        'originalSongIndex': originalSongIndex,
-      };
+    'trackName': trackName,
+    'trackArtistNames': trackArtistNames,
+    'albumName': albumName,
+    'albumArtistName': albumArtistName,
+    'trackNumber': trackNumber,
+    'albumLength': albumLength,
+    'year': year,
+    'genres': genres,
+    'discNumber': discNumber,
+    'mimeType': mimeType,
+    'trackDuration': trackDuration,
+    'bitrate': bitrate,
+    'filePath': filePath,
+    'thumbnailPath': thumbnailPath,
+    'originalSongIndex': originalSongIndex,
+    'isOnDevice': isOnDevice,
+  };
 
   factory Metadata.fromJson(String source) =>
       Metadata.fromMap(jsonDecode(source));
@@ -151,24 +158,45 @@ class Metadata extends HiveObject {
   String toJson() => jsonEncode(toMap());
 
   AudioSource toAudioSource() {
-    return AudioSource.file(
-      filePath ?? '',
-      tag: MediaItem(
-        id: filePath ?? '',
-        title: trackName ?? "Unknown Song",
-        album: albumName ?? "Unknown Album",
-        artist: getTrackArtistNames,
-        genre: genres.isEmpty ? null : genres[0],
-        duration: trackDuration != null
-            ? Duration(milliseconds: trackDuration!)
-            : null,
-        artUri: thumbnailPath == null
-            ? Uri.parse(
-                Constants.defaultNotificationAlbumArtImageUrl,
-              )
-            : Uri.file(thumbnailPath!),
-      ),
-    );
+    if (isOnDevice) {
+      return AudioSource.file(
+        filePath ?? '',
+        tag: MediaItem(
+          id: filePath ?? '',
+          title: trackName ?? "Unknown Song",
+          album: albumName ?? "Unknown Album",
+          artist: getTrackArtistNames,
+          genre: genres.isEmpty ? null : genres[0],
+          duration:
+              trackDuration != null
+                  ? Duration(milliseconds: trackDuration!)
+                  : null,
+          artUri:
+              thumbnailPath == null
+                  ? Uri.parse(Constants.defaultNotificationAlbumArtImageUrl)
+                  : Uri.file(thumbnailPath!),
+        ),
+      );
+    } else {
+      return AudioSource.uri(
+        Uri.parse(filePath ?? ''),
+        tag: MediaItem(
+          id: filePath ?? '',
+          title: trackName ?? "Unknown Song",
+          album: albumName ?? "Unknown Album",
+          artist: getTrackArtistNames,
+          genre: genres.isEmpty ? null : genres[0],
+          duration:
+              trackDuration != null
+                  ? Duration(milliseconds: trackDuration!)
+                  : null,
+          artUri:
+              thumbnailPath == null
+                  ? Uri.parse(Constants.defaultNotificationAlbumArtImageUrl)
+                  : Uri.file(thumbnailPath!),
+        ),
+      );
+    }
   }
 
   @override
@@ -196,9 +224,9 @@ class Metadata extends HiveObject {
 
   String? get getTrackArtistNames {
     return trackArtistNames?.toString().substring(
-          1,
-          trackArtistNames.toString().length - 1,
-        );
+      1,
+      trackArtistNames.toString().length - 1,
+    );
   }
 
   String get getMainGenre {
@@ -234,20 +262,20 @@ class Metadata extends HiveObject {
 
   @override
   int get hashCode => Object.hash(
-        trackName,
-        trackArtistNames,
-        albumName,
-        albumArtistName,
-        trackNumber,
-        albumLength,
-        year,
-        genres,
-        discNumber,
-        mimeType,
-        trackDuration,
-        bitrate,
-        filePath,
-      );
+    trackName,
+    trackArtistNames,
+    albumName,
+    albumArtistName,
+    trackNumber,
+    albumLength,
+    year,
+    genres,
+    discNumber,
+    mimeType,
+    trackDuration,
+    bitrate,
+    filePath,
+  );
 }
 
 int? parseInteger(dynamic value) {

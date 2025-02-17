@@ -114,9 +114,10 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.touchScreenSettingTitle,
           icon: CupertinoIcons.hand_draw,
-          contentText: currentSettings.isTouchScreenEnabled
-              ? context.localization.tileValueOn
-              : context.localization.tileValueOff,
+          contentText:
+              currentSettings.isTouchScreenEnabled
+                  ? context.localization.tileValueOn
+                  : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.repeat) {
         splitScreenWidget = IconPreviewWidget(
@@ -128,33 +129,37 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.vibrateSettingTitle,
           icon: CupertinoIcons.rectangle_arrow_up_right_arrow_down_left,
-          contentText: currentSettings.vibrate
-              ? context.localization.tileValueOn
-              : context.localization.tileValueOff,
+          contentText:
+              currentSettings.vibrate
+                  ? context.localization.tileValueOn
+                  : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.clickWheelSound) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.clickWheelSettingTitle,
           icon: CupertinoIcons.speaker_1,
-          contentText: currentSettings.clickWheelSound
-              ? context.localization.tileValueOn
-              : context.localization.tileValueOff,
+          contentText:
+              currentSettings.clickWheelSound
+                  ? context.localization.tileValueOn
+                  : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.splitScreenMode) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.splitScreenSettingTitle,
           icon: CupertinoIcons.uiwindow_split_2x1,
-          contentText: currentSettings.splitScreenEnabled
-              ? context.localization.tileValueOn
-              : context.localization.tileValueOff,
+          contentText:
+              currentSettings.splitScreenEnabled
+                  ? context.localization.tileValueOn
+                  : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.immersiveMode) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.immersiveModeSettingTitle,
           icon: CupertinoIcons.arrow_up_left_arrow_down_right,
-          contentText: currentSettings.immersiveMode
-              ? context.localization.tileValueOn
-              : context.localization.tileValueOff,
+          contentText:
+              currentSettings.immersiveMode
+                  ? context.localization.tileValueOn
+                  : context.localization.tileValueOff,
         );
       } else if (splitScreenType == SplitScreenType.showTutorialScreen) {
         splitScreenWidget = IconPreviewWidget(
@@ -191,46 +196,47 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
       }
     }
     return CupertinoPageScaffold(
-      child: currentSettings.splitScreenEnabled
-          ? Row(
-              children: [
-                Expanded(
-                  child: SlideTransition(
-                    position: _leftSlideAnimation,
-                    child: widget.child,
-                  ),
-                ),
-                Expanded(
-                  child: SlideTransition(
-                    position: _rightSlideAnimation,
-                    child: AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 500),
-                      transitionBuilder: (widget, animation) {
-                        if (splitScreenType == SplitScreenType.albumArt) {
-                          final slideAnimation = Tween<Offset>(
-                            begin: const Offset(1, 0),
-                            end: Offset.zero,
-                          ).animate(animation);
-                          return FadeTransition(
-                            opacity: animation,
-                            child: SlideTransition(
-                              position: slideAnimation,
-                              child: widget,
-                            ),
-                          );
-                        }
-                        return FadeTransition(
-                          opacity: animation,
-                          child: widget,
-                        );
-                      },
-                      child: splitScreenWidget,
+      child:
+          currentSettings.splitScreenEnabled
+              ? Row(
+                children: [
+                  Expanded(
+                    child: SlideTransition(
+                      position: _leftSlideAnimation,
+                      child: widget.child,
                     ),
                   ),
-                ),
-              ],
-            )
-          : widget.child,
+                  Expanded(
+                    child: SlideTransition(
+                      position: _rightSlideAnimation,
+                      child: AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 500),
+                        transitionBuilder: (widget, animation) {
+                          if (splitScreenType == SplitScreenType.albumArt) {
+                            final slideAnimation = Tween<Offset>(
+                              begin: const Offset(1, 0),
+                              end: Offset.zero,
+                            ).animate(animation);
+                            return FadeTransition(
+                              opacity: animation,
+                              child: SlideTransition(
+                                position: slideAnimation,
+                                child: widget,
+                              ),
+                            );
+                          }
+                          return FadeTransition(
+                            opacity: animation,
+                            child: widget,
+                          );
+                        },
+                        child: splitScreenWidget,
+                      ),
+                    ),
+                  ),
+                ],
+              )
+              : widget.child,
     );
   }
 }

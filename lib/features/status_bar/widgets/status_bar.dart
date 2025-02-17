@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class StatusBar extends StatelessWidget {
   final String title;
+
   const StatusBar({super.key, required this.title});
 
   @override
@@ -24,9 +25,7 @@ class StatusBar extends StatelessWidget {
             ],
           ),
           border: Border(
-            bottom: BorderSide(
-              color: AppPalette.statusBarBorderColor,
-            ),
+            bottom: BorderSide(color: AppPalette.statusBarBorderColor),
           ),
         ),
         child: Padding(

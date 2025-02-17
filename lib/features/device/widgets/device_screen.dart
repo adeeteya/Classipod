@@ -7,13 +7,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class DeviceScreen extends ConsumerWidget {
   final Widget child;
+
   const DeviceScreen({super.key, required this.child});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isTouchScreenEnabled = ref.watch(
-      settingsPreferencesControllerProvider
-          .select((e) => e.isTouchScreenEnabled),
+      settingsPreferencesControllerProvider.select(
+        (e) => e.isTouchScreenEnabled,
+      ),
     );
 
     final deviceColor = ref.watch(
@@ -31,16 +33,17 @@ class DeviceScreen extends ConsumerWidget {
           color: CupertinoColors.white,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
-            color: deviceColor == DeviceColor.black
-                ? AppPalette.darkDeviceScreenColor
-                : AppPalette.lightDeviceScreenBorderColor,
+            color:
+                deviceColor == DeviceColor.black
+                    ? AppPalette.darkDeviceScreenColor
+                    : AppPalette.lightDeviceScreenBorderColor,
             width: 5,
           ),
         ),
         child: MediaQuery(
-          data: MediaQuery.of(context).copyWith(
-            size: Size(size.width - 40 - 10, Constants.screenHeight),
-          ),
+          data: MediaQuery.of(
+            context,
+          ).copyWith(size: Size(size.width - 40 - 10, Constants.screenHeight)),
           child: child,
         ),
       ),

@@ -55,10 +55,14 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
         } else if (state.error is AudioPermissionPermanentlyDeniedException) {
           await Dialogs.showInfoDialog(
             context: context,
-            title: context
-                .localization.audioAccessPermissionPermanentlyDeniedTitle,
-            content: context
-                .localization.audioAccessPermissionPermanentlyDeniedContent,
+            title:
+                context
+                    .localization
+                    .audioAccessPermissionPermanentlyDeniedTitle,
+            content:
+                context
+                    .localization
+                    .audioAccessPermissionPermanentlyDeniedContent,
           );
           await ref
               .read(splashControllerProvider.notifier)

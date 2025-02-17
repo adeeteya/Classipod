@@ -14,10 +14,8 @@ import 'package:go_router/go_router.dart';
 
 class AlbumSongsScreen extends ConsumerStatefulWidget {
   final AlbumModel albumDetail;
-  const AlbumSongsScreen({
-    super.key,
-    required this.albumDetail,
-  });
+
+  const AlbumSongsScreen({super.key, required this.albumDetail});
 
   @override
   ConsumerState createState() => _AlbumSongsScreenState();
@@ -55,28 +53,29 @@ class _AlbumSongsScreenState extends ConsumerState<AlbumSongsScreen>
 
   @override
   Widget build(BuildContext context) {
-    final int? currentlyPlayingOriginalIndex = ref
-        .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
-        ?.originalSongIndex;
+    final int? currentlyPlayingOriginalIndex =
+        ref
+            .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
+            ?.originalSongIndex;
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: widget.albumDetail.albumName,
-          ),
+          StatusBar(title: widget.albumDetail.albumName),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => CondensedSongListTile(
-                  songName: displayItems[index].getTrackName,
-                  isSelected: selectedDisplayItem == index,
-                  isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
-                      displayItems[index].originalSongIndex,
-                  onTap: () async => _playSongFromAlbum(index),
-                ),
+                itemBuilder:
+                    (context, index) => CondensedSongListTile(
+                      songName: displayItems[index].getTrackName,
+                      isSelected: selectedDisplayItem == index,
+                      isCurrentlyPlaying:
+                          currentlyPlayingOriginalIndex ==
+                          displayItems[index].originalSongIndex,
+                      onTap: () async => _playSongFromAlbum(index),
+                    ),
               ),
             ),
           ),

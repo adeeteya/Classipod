@@ -11,8 +11,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final tutorialControllerProvider =
     NotifierProvider<TutorialControllerNotifier, TutorialModel>(
-  TutorialControllerNotifier.new,
-);
+      TutorialControllerNotifier.new,
+    );
 
 class TutorialControllerNotifier extends Notifier<TutorialModel> {
   TutorialControllerNotifier() : super();
@@ -68,15 +68,22 @@ class TutorialControllerNotifier extends Notifier<TutorialModel> {
   }
 
   Future<void> showBatteryOptimizationSettings() async {
-    final isBatteryOptimizationDisabled =
-        await ref.read(batteryOptimizationProvider.future);
+    final isBatteryOptimizationDisabled = await ref.read(
+      batteryOptimizationProvider.future,
+    );
     if (!isBatteryOptimizationDisabled) {
       await Dialogs.showInfoDialog(
         context: deviceFrameGlobalKey.currentContext!,
-        title: deviceFrameGlobalKey
-            .currentContext!.localization.disableBatteryOptimizationTitle,
-        content: deviceFrameGlobalKey
-            .currentContext!.localization.disableBatteryOptimizationContent,
+        title:
+            deviceFrameGlobalKey
+                .currentContext!
+                .localization
+                .disableBatteryOptimizationTitle,
+        content:
+            deviceFrameGlobalKey
+                .currentContext!
+                .localization
+                .disableBatteryOptimizationContent,
       );
       await ref.read(batteryOptimizationProvider.notifier).openSettings();
     }

@@ -119,10 +119,7 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     );
     pageController.addListener(_updatePage);
     super.initState();
-    ref.listenManual(
-      deviceButtonsServiceProvider,
-      deviceControlHandler,
-    );
+    ref.listenManual(deviceButtonsServiceProvider, deviceControlHandler);
   }
 
   @override

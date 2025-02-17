@@ -7,30 +7,29 @@ import 'package:flutter/cupertino.dart';
 
 class NowPlayingWidget extends StatelessWidget {
   final NowPlayingModel nowPlayingDetails;
-  const NowPlayingWidget({
-    super.key,
-    required this.nowPlayingDetails,
-  });
+
+  const NowPlayingWidget({super.key, required this.nowPlayingDetails});
 
   @override
   Widget build(BuildContext context) {
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 300),
       child: Row(
-        key: ValueKey(
-          "Now Playing-${nowPlayingDetails.currentMetadata}",
-        ),
+        key: ValueKey("Now Playing-${nowPlayingDetails.currentMetadata}"),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Flexible(
             flex: 7,
             child: Transform(
-              transform: Matrix4.identity()
-                ..setEntry(3, 2, 0.003)
-                ..rotateY(-0.1),
+              transform:
+                  Matrix4.identity()
+                    ..setEntry(3, 2, 0.003)
+                    ..rotateY(-0.1),
               child: AlbumReflectiveArt(
                 thumbnailPath: nowPlayingDetails.currentMetadata?.thumbnailPath,
                 reflectedImageHeight: 50,
+                isOnDevice:
+                    nowPlayingDetails.currentMetadata?.isOnDevice ?? true,
                 heroTag:
                     "${nowPlayingDetails.currentMetadata?.albumName}-${nowPlayingDetails.currentMetadata?.albumArtistName}",
               ),

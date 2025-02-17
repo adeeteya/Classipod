@@ -33,6 +33,7 @@ class SongsMoreOptionsModal extends ConsumerStatefulWidget {
   final String routeName;
   final Metadata currentSongMetadata;
   final bool showAdditionalOptions;
+
   const SongsMoreOptionsModal({
     super.key,
     required this.routeName,
@@ -51,11 +52,11 @@ class _SongsMoreOptionsModalState extends ConsumerState<SongsMoreOptionsModal>
 
   @override
   List<_SongsMoreOptions> get displayItems => [
-        _SongsMoreOptions.addToOnTheGo,
-        if (widget.showAdditionalOptions) _SongsMoreOptions.browseAlbum,
-        if (widget.showAdditionalOptions) _SongsMoreOptions.browseArtist,
-        _SongsMoreOptions.cancel,
-      ];
+    _SongsMoreOptions.addToOnTheGo,
+    if (widget.showAdditionalOptions) _SongsMoreOptions.browseAlbum,
+    if (widget.showAdditionalOptions) _SongsMoreOptions.browseArtist,
+    _SongsMoreOptions.cancel,
+  ];
 
   @override
   Future<void> onSelectPressed() =>

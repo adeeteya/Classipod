@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -7,13 +9,14 @@ import 'package:classipod/features/music/playlist/providers/playlists_provider.d
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 final splashControllerProvider =
     AsyncNotifierProvider.autoDispose<SplashControllerNotifier, void>(
-  SplashControllerNotifier.new,
-);
+      SplashControllerNotifier.new,
+    );
 
 class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
   @override
@@ -24,12 +27,15 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
   Future<void> requestStoragePermissions() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      final PermissionStatus audioPermission = await Permission.audio.request();
-      if (audioPermission.isDenied) {
-        throw const AudioPermissionDeniedException();
-      }
-      if (audioPermission.isPermanentlyDenied) {
-        throw const AudioPermissionPermanentlyDeniedException();
+      if (!kIsWeb && (Platform.isAndroid || Platform.isIOS)) {
+        final PermissionStatus audioPermission =
+            await Permission.audio.request();
+        if (audioPermission.isDenied) {
+          throw const AudioPermissionDeniedException();
+        }
+        if (audioPermission.isPermanentlyDenied) {
+          throw const AudioPermissionPermanentlyDeniedException();
+        }
       }
 
       await initializeApp();
@@ -40,8 +46,9 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       // Load the audio files metadata
-      final audioFilesMetadata =
-          await ref.refresh(audioFilesServiceProvider.future);
+      final audioFilesMetadata = await ref.refresh(
+        audioFilesServiceProvider.future,
+      );
 
       // Set the audio source
       await ref

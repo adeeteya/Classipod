@@ -12,19 +12,20 @@ class Dialogs {
     return showCupertinoDialog(
       context: context,
       barrierDismissible: true,
-      builder: (context) => CupertinoAlertDialog(
-        title: Text(title),
-        content: Text(content),
-        actions: [
-          CupertinoDialogAction(
-            isDefaultAction: true,
-            onPressed: () => context.pop(),
-            child: Text(
-              buttonConfirmText ?? context.localization.buttonConfirmText,
-            ),
+      builder:
+          (context) => CupertinoAlertDialog(
+            title: Text(title),
+            content: Text(content),
+            actions: [
+              CupertinoDialogAction(
+                isDefaultAction: true,
+                onPressed: () => context.pop(),
+                child: Text(
+                  buttonConfirmText ?? context.localization.buttonConfirmText,
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
     );
   }
 }

@@ -68,10 +68,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
         ),
       );
     } else {
-      context.goNamed(
-        Routes.albumSongs.name,
-        extra: displayItems[index - 1],
-      );
+      context.goNamed(Routes.albumSongs.name, extra: displayItems[index - 1]);
     }
   }
 
@@ -95,9 +92,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.albums.title(context),
-          ),
+          StatusBar(title: Routes.albums.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
@@ -112,8 +107,9 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
                       albumDetails: AlbumModel(
                         albumName: context.localization.allAlbums,
                         albumArtPath: null,
-                        albumArtistName:
-                            context.localization.nSongs(allSongs.length),
+                        albumArtistName: context.localization.nSongs(
+                          allSongs.length,
+                        ),
                         albumSongs: allSongs,
                       ),
                       isSelected: selectedDisplayItem == 0,
@@ -126,8 +122,8 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
                     albumDetails: displayItems[index - 1],
                     isSelected: selectedDisplayItem == index,
                     onTap: () async => _navigateToAlbumSelectionScreen(index),
-                    onLongPress: () async =>
-                        _navigateToAlbumMoreOptionsScreen(index),
+                    onLongPress:
+                        () async => _navigateToAlbumMoreOptionsScreen(index),
                   );
                 },
               ),

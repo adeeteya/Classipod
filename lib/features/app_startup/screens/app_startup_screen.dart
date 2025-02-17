@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AppStartupScreen extends ConsumerWidget {
   final Widget app;
+
   const AppStartupScreen({super.key, required this.app});
 
   @override
@@ -13,10 +14,11 @@ class AppStartupScreen extends ConsumerWidget {
     final appStartupState = ref.watch(appStartupControllerProvider);
     return appStartupState.when(
       loading: () => const AppStartupLoading(),
-      error: (e, _) => AppStartupError(
-        error: e,
-        onRetry: () => ref.invalidate(appStartupControllerProvider),
-      ),
+      error:
+          (e, _) => AppStartupError(
+            error: e,
+            onRetry: () => ref.invalidate(appStartupControllerProvider),
+          ),
       data: (_) => app,
     );
   }

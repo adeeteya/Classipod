@@ -94,15 +94,24 @@ If you like what you see, please ⭐ the repo.
   <tr>
     <td>Android</td>
     <td>
-    <a href="https://play.google.com/store/apps/details?id=com.adeeteya.classipod">
+      <a href="https://play.google.com/store/apps/details?id=com.adeeteya.classipod">
         <img width="220" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
       </a>
       <br>
       <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Android.apk">
-        <img width="220" alt="APK download" src="https://user-images.githubusercontent.com/114044633/223920025-83687de0-e463-4c5d-8122-e06e4bb7d40c.png">
+        <img width="220" alt="APK download" src="https://img.shields.io/static/v1?label=Download&message=Android+.apk&color=2ea44f&style=for-the-badge&logo=Android&logoSize=auto">
       </a>
     </td>
   </tr>
+
+  <tr>
+      <td>Web App</td>
+      <td>
+        <a href="https://adeeteya.github.io/Classipod/#/">
+          <img width="220" alt="APK download" src="https://img.shields.io/static/v1?label=Webapp&message=Visit+Demo&color=blue&style=for-the-badge&logo=PWA&logoSize=auto">
+        </a>
+      </td>
+    </tr>
 
 </table>
 

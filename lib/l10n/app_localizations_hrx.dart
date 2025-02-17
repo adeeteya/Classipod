@@ -18,13 +18,16 @@ class AppLocalizationsHrx extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Access Erlaupnis ferlangt';
 
   @override
-  String get audioAccessPermissionContent => 'Tuu khanst aach ti autio-file fine fer uns erlaupe tayn musik fiile se xpiile.';
+  String get audioAccessPermissionContent =>
+      'Tuu khanst aach ti autio-file fine fer uns erlaupe tayn musik fiile se xpiile.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Akses Erlaupnis Denied';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Akses Erlaupnis Denied';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Tuu khanst aach ti autio-file penutse fer tiise applicatsioon in te apteelung instellunge fer uns erlaupe tayn musik fiile se xpiile.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Tuu khanst aach ti autio-file penutse fer tiise applicatsioon in te apteelung instellunge fer uns erlaupe tayn musik fiile se xpiile.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsHrx extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsHrx extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsHrx extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Toch Klingt';
 
   @override
-  String get touchSoundsDialogContent => 'Bitte Enable Touch fon Sisteem Instellunge fer ti klik rail klangs heere .';
+  String get touchSoundsDialogContent =>
+      'Bitte Enable Touch fon Sisteem Instellunge fer ti klik rail klangs heere .';
 
   @override
   String get immersiveModeSettingTitle => 'Immersiif Mode';
@@ -144,7 +146,8 @@ class AppLocalizationsHrx extends AppLocalizations {
   String get donateSettingTitle => 'Aan wëne';
 
   @override
-  String get donateSettingDescription => 'Wëns tuu tiise app kërn host, tuu tich traan hale aan se këpe.';
+  String get donateSettingDescription =>
+      'Wëns tuu tiise app kërn host, tuu tich traan hale aan se këpe.';
 
   @override
   String get versionAboutScreenTitle => 'Wersyoon';
@@ -210,10 +213,12 @@ class AppLocalizationsHrx extends AppLocalizations {
   String get resultsForText => 'Resultados fer:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'In eenmaal optimatsioon fon te bateria .';
+  String get disableBatteryOptimizationTitle =>
+      'In eenmaal optimatsioon fon te bateria .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Tuu khanst aach ti optimatsioon fon te bateria fer tiise applicatsioon in te apteelungs instellunge aus mache, tas ti musik xpiile fon te musik erlaupt.';
+  String get disableBatteryOptimizationContent =>
+      'Tuu khanst aach ti optimatsioon fon te bateria fer tiise applicatsioon in te apteelungs instellunge aus mache, tas ti musik xpiile fon te musik erlaupt.';
 
   @override
   String get languageScreenTitle => 'Xprooch';
@@ -267,50 +272,66 @@ class AppLocalizationsHrx extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Files';
 
   @override
-  String get deviceControlMenuTutorialText => 'Tuu tayn thumle licht um te Klik uf mache fer tas menu se navikeere .';
+  String get deviceControlMenuTutorialText =>
+      'Tuu tayn thumle licht um te Klik uf mache fer tas menu se navikeere .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tuu te sentrum knoop xmayse fer tas menú menú .';
+  String get centerButtonMenuTutorialText =>
+      'Tuu te sentrum knoop xmayse fer tas menú menú .';
 
   @override
-  String get playPauseMenuTutorialText => 'Tuu tiise knoop xmayse fer een liit se xpiile orer se paue .';
+  String get playPauseMenuTutorialText =>
+      'Tuu tiise knoop xmayse fer een liit se xpiile orer se paue .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tuu tiise knoop xmayse fer tas neekste liit se xpiile .';
+  String get nextButtonMenuTutorialText =>
+      'Tuu tiise knoop xmayse fer tas neekste liit se xpiile .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tuu tiise knoop xmayse fer noch mool se winxe orer tsurik ins foerxtëlungs liit keen .';
+  String get previousButtonMenuTutorialText =>
+      'Tuu tiise knoop xmayse fer noch mool se winxe orer tsurik ins foerxtëlungs liit keen .';
 
   @override
-  String get menuButtonTutorialText => 'Tuu tiise knoop xmayse fer tsurik ins foerxtëlungs menu se keen. Tuu khanst tas fon yeete aner xpiichel xmayse un hale fer ti haupste menu direktsioone se mache.';
+  String get menuButtonTutorialText =>
+      'Tuu tiise knoop xmayse fer tsurik ins foerxtëlungs menu se keen. Tuu khanst tas fon yeete aner xpiichel xmayse un hale fer ti haupste menu direktsioone se mache.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Tas is te display-xpiichel. Toch Screen un Split Screen Modus sin fon te xprooch in kextelt kep un khëne wayter in te instëlunge konfituert wëre.';
+  String get deviceScreenMenuTutorialText =>
+      'Tas is te display-xpiichel. Toch Screen un Split Screen Modus sin fon te xprooch in kextelt kep un khëne wayter in te instëlunge konfituert wëre.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Tuu tayn thumb um te Klik uf mache fer tas volumen aanpase .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Tuu tayn thumb um te Klik uf mache fer tas volumen aanpase .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Press te Centro-knop fer torich suuche bar, skupber bar un shuffle xliise. Tuu te Centro-knop xmayse un hale fer noch anere optsioone se kriin.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Press te Centro-knop fer torich suuche bar, skupber bar un shuffle xliise. Tuu te Centro-knop xmayse un hale fer noch anere optsioone se kriin.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tuu tiise knoop xmayse un hale fer tas liit xnël foran keen .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tuu tiise knoop xmayse un hale fer tas liit xnël foran keen .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tuu tiise knoop xmayse un hale fer tas liit noch mool se winxe .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tuu tiise knoop xmayse un hale fer tas liit noch mool se winxe .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Tuu tayn thumle licht um te Klik uf mache fer een alfapët se markiire .';
+  String get deviceControlSearchTutorialText =>
+      'Tuu tayn thumle licht um te Klik uf mache fer een alfapët se markiire .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tuu te sentrum knoop xmayse fer tas markiirt alfapët raus suuche .';
+  String get centerButtonSearchTutorialText =>
+      'Tuu te sentrum knoop xmayse fer tas markiirt alfapët raus suuche .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tuu tiise knoop xmayse fer een plats se tuun .';
+  String get nextButtonSearchTutorialText =>
+      'Tuu tiise knoop xmayse fer een plats se tuun .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tuu tiise knoop xmayse fer te letste persoon aus lëye .';
+  String get previousButtonSearchTutorialText =>
+      'Tuu tiise knoop xmayse fer te letste persoon aus lëye .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tuu tiise knoop xmayse fer tas tastatur se mache un mit te suuchungs resultaate interakteere .';
+  String get menuButtonSearchTutorialText =>
+      'Tuu tiise knoop xmayse fer tas tastatur se mache un mit te suuchungs resultaate interakteere .';
 }

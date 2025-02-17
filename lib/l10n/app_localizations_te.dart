@@ -18,13 +18,16 @@ class AppLocalizationsTe extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ఆడియో యాక్సెస్ అనుమతి అవసరం';
 
   @override
-  String get audioAccessPermissionContent => 'దయచేసి మీ మ్యూజిక్ ఫైల్‌లను ప్లే చేయడానికి మాకు అనుమతించడానికి ఆడియో ఫైల్‌లను యాక్సెస్ చేయండి.';
+  String get audioAccessPermissionContent =>
+      'దయచేసి మీ మ్యూజిక్ ఫైల్‌లను ప్లే చేయడానికి మాకు అనుమతించడానికి ఆడియో ఫైల్‌లను యాక్సెస్ చేయండి.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ఆడియో యాక్సెస్ అనుమతి తిరస్కరించబడింది';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ఆడియో యాక్సెస్ అనుమతి తిరస్కరించబడింది';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'దయచేసి మీ మ్యూజిక్ ఫైళ్ళను ప్లే చేయడానికి మాకు అనుమతించడానికి పరికర సెట్టింగ్‌లలో ఈ అనువర్తనం కోసం ఆడియో ఫైల్‌లను యాక్సెస్ చేయండి.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'దయచేసి మీ మ్యూజిక్ ఫైళ్ళను ప్లే చేయడానికి మాకు అనుమతించడానికి పరికర సెట్టింగ్‌లలో ఈ అనువర్తనం కోసం ఆడియో ఫైల్‌లను యాక్సెస్ చేయండి.';
 
   @override
   String get menuScreenTitle => 'మెను';
@@ -63,7 +66,6 @@ class AppLocalizationsTe extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsTe extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsTe extends AppLocalizations {
   String get touchSoundsDialogTitle => 'టచ్ శబ్దాలు';
 
   @override
-  String get touchSoundsDialogContent => 'క్లిక్ వీల్ శబ్దాలను వినడానికి దయచేసి సిస్టమ్ సెట్టింగుల నుండి టచ్ శబ్దాలను ప్రారంభించండి';
+  String get touchSoundsDialogContent =>
+      'క్లిక్ వీల్ శబ్దాలను వినడానికి దయచేసి సిస్టమ్ సెట్టింగుల నుండి టచ్ శబ్దాలను ప్రారంభించండి';
 
   @override
   String get immersiveModeSettingTitle => 'లీనమయ్యే మోడ్';
@@ -144,7 +146,8 @@ class AppLocalizationsTe extends AppLocalizations {
   String get donateSettingTitle => 'దానం';
 
   @override
-  String get donateSettingDescription => 'మీకు ఈ అనువర్తనం నచ్చితే, దయచేసి విరాళం ఇవ్వండి.';
+  String get donateSettingDescription =>
+      'మీకు ఈ అనువర్తనం నచ్చితే, దయచేసి విరాళం ఇవ్వండి.';
 
   @override
   String get versionAboutScreenTitle => 'వెర్షన్';
@@ -195,7 +198,8 @@ class AppLocalizationsTe extends AppLocalizations {
   String get retryButtonText => 'మళ్లీ ప్రయత్నించండి';
 
   @override
-  String get filePickerDialogTitle => 'సంగీతం కోసం స్కాన్ చేయడానికి డైరెక్టరీని ఎంచుకోండి';
+  String get filePickerDialogTitle =>
+      'సంగీతం కోసం స్కాన్ చేయడానికి డైరెక్టరీని ఎంచుకోండి';
 
   @override
   String get searchScreenTitle => 'శోధన';
@@ -210,10 +214,12 @@ class AppLocalizationsTe extends AppLocalizations {
   String get resultsForText => 'దీని కోసం ఫలితాలు:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'బ్యాటరీ ఆప్టిమైజేషన్‌ను నిలిపివేయండి';
+  String get disableBatteryOptimizationTitle =>
+      'బ్యాటరీ ఆప్టిమైజేషన్‌ను నిలిపివేయండి';
 
   @override
-  String get disableBatteryOptimizationContent => 'సంగీతం యొక్క నేపథ్య ప్లేబ్యాక్‌ను అనుమతించడానికి పరికర సెట్టింగ్‌లలో ఈ అనువర్తనం కోసం బ్యాటరీ ఆప్టిమైజేషన్‌ను నిలిపివేయండి.';
+  String get disableBatteryOptimizationContent =>
+      'సంగీతం యొక్క నేపథ్య ప్లేబ్యాక్‌ను అనుమతించడానికి పరికర సెట్టింగ్‌లలో ఈ అనువర్తనం కోసం బ్యాటరీ ఆప్టిమైజేషన్‌ను నిలిపివేయండి.';
 
   @override
   String get languageScreenTitle => 'భాష';
@@ -267,50 +273,66 @@ class AppLocalizationsTe extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'మ్యూజిక్ ఫైళ్ళను రెస్కాన్ చేయండి';
 
   @override
-  String get deviceControlMenuTutorialText => 'మెనుని నావిగేట్ చేయడానికి క్లిక్ వీల్ చుట్టూ మీ బొటనవేలును తేలికగా తరలించండి';
+  String get deviceControlMenuTutorialText =>
+      'మెనుని నావిగేట్ చేయడానికి క్లిక్ వీల్ చుట్టూ మీ బొటనవేలును తేలికగా తరలించండి';
 
   @override
-  String get centerButtonMenuTutorialText => 'హైలైట్ చేసిన మెను ఐటెమ్‌ను ఎంచుకోవడానికి సెంటర్ బటన్ నొక్కండి';
+  String get centerButtonMenuTutorialText =>
+      'హైలైట్ చేసిన మెను ఐటెమ్‌ను ఎంచుకోవడానికి సెంటర్ బటన్ నొక్కండి';
 
   @override
-  String get playPauseMenuTutorialText => 'పాటను ప్లే చేయడానికి లేదా పాజ్ చేయడానికి ఈ బటన్‌ను నొక్కండి';
+  String get playPauseMenuTutorialText =>
+      'పాటను ప్లే చేయడానికి లేదా పాజ్ చేయడానికి ఈ బటన్‌ను నొక్కండి';
 
   @override
-  String get nextButtonMenuTutorialText => 'తదుపరి పాటను దాటవేయడానికి ఈ బటన్‌ను నొక్కండి';
+  String get nextButtonMenuTutorialText =>
+      'తదుపరి పాటను దాటవేయడానికి ఈ బటన్‌ను నొక్కండి';
 
   @override
-  String get previousButtonMenuTutorialText => 'రివైండ్ చేయడానికి ఈ బటన్‌ను నొక్కండి లేదా మునుపటి పాటకి తిరిగి వెళ్లండి';
+  String get previousButtonMenuTutorialText =>
+      'రివైండ్ చేయడానికి ఈ బటన్‌ను నొక్కండి లేదా మునుపటి పాటకి తిరిగి వెళ్లండి';
 
   @override
-  String get menuButtonTutorialText => 'మునుపటి మెనూకు తిరిగి వెళ్లడానికి ఈ బటన్‌ను నొక్కండి. మీరు నేరుగా ప్రధాన మెనూకు వెళ్ళడానికి ఏ ఇతర స్క్రీన్ నుండి నొక్కండి మరియు పట్టుకోవచ్చు.';
+  String get menuButtonTutorialText =>
+      'మునుపటి మెనూకు తిరిగి వెళ్లడానికి ఈ బటన్‌ను నొక్కండి. మీరు నేరుగా ప్రధాన మెనూకు వెళ్ళడానికి ఏ ఇతర స్క్రీన్ నుండి నొక్కండి మరియు పట్టుకోవచ్చు.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ఇది డిస్ప్లే స్క్రీన్. టచ్ స్క్రీన్ మరియు స్ప్లిట్ స్క్రీన్ మోడ్ అప్రమేయంగా ప్రారంభించబడతాయి మరియు సెట్టింగులలో మరింత కాన్ఫిగర్ చేయవచ్చు.';
+  String get deviceScreenMenuTutorialText =>
+      'ఇది డిస్ప్లే స్క్రీన్. టచ్ స్క్రీన్ మరియు స్ప్లిట్ స్క్రీన్ మోడ్ అప్రమేయంగా ప్రారంభించబడతాయి మరియు సెట్టింగులలో మరింత కాన్ఫిగర్ చేయవచ్చు.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'వాల్యూమ్‌ను సర్దుబాటు చేయడానికి క్లిక్ వీల్ చుట్టూ మీ బొటనవేలును తరలించండి';
+  String get deviceControlNowPlayingTutorialText =>
+      'వాల్యూమ్‌ను సర్దుబాటు చేయడానికి క్లిక్ వీల్ చుట్టూ మీ బొటనవేలును తరలించండి';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'సీక్ బార్, స్క్రబ్బర్ బార్ మరియు షఫుల్ స్లైడర్ ద్వారా సైకిల్ చేయడానికి సెంటర్ బటన్‌ను నొక్కండి. అదనపు ఎంపికలను యాక్సెస్ చేయడానికి సెంటర్ బటన్‌ను నొక్కి ఉంచండి.';
+  String get centerButtonNowPlayingTutorialText =>
+      'సీక్ బార్, స్క్రబ్బర్ బార్ మరియు షఫుల్ స్లైడర్ ద్వారా సైకిల్ చేయడానికి సెంటర్ బటన్‌ను నొక్కండి. అదనపు ఎంపికలను యాక్సెస్ చేయడానికి సెంటర్ బటన్‌ను నొక్కి ఉంచండి.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'పాటను వేగంగా ఫార్వార్డ్ చేయడానికి ఈ బటన్‌ను నొక్కి ఉంచండి';
+  String get nextButtonNowPlayingTutorialText =>
+      'పాటను వేగంగా ఫార్వార్డ్ చేయడానికి ఈ బటన్‌ను నొక్కి ఉంచండి';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'పాటను రివైండ్ చేయడానికి ఈ బటన్‌ను నొక్కి ఉంచండి';
+  String get previousButtonNowPlayingTutorialText =>
+      'పాటను రివైండ్ చేయడానికి ఈ బటన్‌ను నొక్కి ఉంచండి';
 
   @override
-  String get deviceControlSearchTutorialText => 'వర్ణమాలను హైలైట్ చేయడానికి క్లిక్ వీల్ చుట్టూ మీ బొటనవేలును తేలికగా తరలించండి';
+  String get deviceControlSearchTutorialText =>
+      'వర్ణమాలను హైలైట్ చేయడానికి క్లిక్ వీల్ చుట్టూ మీ బొటనవేలును తేలికగా తరలించండి';
 
   @override
-  String get centerButtonSearchTutorialText => 'హైలైట్ చేసిన వర్ణమాలను ఎంచుకోవడానికి సెంటర్ బటన్ నొక్కండి';
+  String get centerButtonSearchTutorialText =>
+      'హైలైట్ చేసిన వర్ణమాలను ఎంచుకోవడానికి సెంటర్ బటన్ నొక్కండి';
 
   @override
-  String get nextButtonSearchTutorialText => 'స్థలాన్ని జోడించడానికి ఈ బటన్‌ను నొక్కండి';
+  String get nextButtonSearchTutorialText =>
+      'స్థలాన్ని జోడించడానికి ఈ బటన్‌ను నొక్కండి';
 
   @override
-  String get previousButtonSearchTutorialText => 'చివరి అక్షరాన్ని తొలగించడానికి ఈ బటన్‌ను నొక్కండి';
+  String get previousButtonSearchTutorialText =>
+      'చివరి అక్షరాన్ని తొలగించడానికి ఈ బటన్‌ను నొక్కండి';
 
   @override
-  String get menuButtonSearchTutorialText => 'కీబోర్డ్‌ను మూసివేయడానికి ఈ బటన్‌ను నొక్కండి మరియు శోధన ఫలితాలతో ఇంటరాక్ట్ అవ్వండి';
+  String get menuButtonSearchTutorialText =>
+      'కీబోర్డ్‌ను మూసివేయడానికి ఈ బటన్‌ను నొక్కండి మరియు శోధన ఫలితాలతో ఇంటరాక్ట్ అవ్వండి';
 }

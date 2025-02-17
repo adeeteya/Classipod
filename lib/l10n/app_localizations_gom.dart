@@ -18,13 +18,16 @@ class AppLocalizationsGom extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ऑडिओ प्रवेशाची परवानगी जाय आशिल्ली';
 
   @override
-  String get audioAccessPermissionContent => 'उपकार करून तुमचीं संगीत फायली वाजोवंक मेळचीं म्हूण ऑडियो फायलींचो प्रवेश दिवचो.';
+  String get audioAccessPermissionContent =>
+      'उपकार करून तुमचीं संगीत फायली वाजोवंक मेळचीं म्हूण ऑडियो फायलींचो प्रवेश दिवचो.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ऑडियो प्रवेशाची परवानगी नाकारली';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ऑडियो प्रवेशाची परवानगी नाकारली';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'उपकार करून तुमचीं संगीत फायली वाजोवंक मेळचीं म्हूण डिव्हायस सेटिंग्जांत ह्या ऍप्लिकेशनाक ऑडियो फायलींचो प्रवेश दिवचो.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'उपकार करून तुमचीं संगीत फायली वाजोवंक मेळचीं म्हूण डिव्हायस सेटिंग्जांत ह्या ऍप्लिकेशनाक ऑडियो फायलींचो प्रवेश दिवचो.';
 
   @override
   String get menuScreenTitle => 'मेनू 1';
@@ -63,7 +66,6 @@ class AppLocalizationsGom extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsGom extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsGom extends AppLocalizations {
   String get touchSoundsDialogTitle => 'स्पर्श आवाज 1000';
 
   @override
-  String get touchSoundsDialogContent => 'उपकार करून क्लिक व्हील आवाज आयकुपाक प्रणाली मांडावळींतल्यान स्पर्श आवाज सक्षम करात';
+  String get touchSoundsDialogContent =>
+      'उपकार करून क्लिक व्हील आवाज आयकुपाक प्रणाली मांडावळींतल्यान स्पर्श आवाज सक्षम करात';
 
   @override
   String get immersiveModeSettingTitle => 'विसर्जन मोड 1';
@@ -144,7 +146,8 @@ class AppLocalizationsGom extends AppLocalizations {
   String get donateSettingTitle => 'देणगी दिवप';
 
   @override
-  String get donateSettingDescription => 'तुमकां हो अॅप आवडलो जाल्यार दान करपाचो विचार करात.';
+  String get donateSettingDescription =>
+      'तुमकां हो अॅप आवडलो जाल्यार दान करपाचो विचार करात.';
 
   @override
   String get versionAboutScreenTitle => 'आवृत्ती';
@@ -195,7 +198,8 @@ class AppLocalizationsGom extends AppLocalizations {
   String get retryButtonText => 'परतून यत्न 1000';
 
   @override
-  String get filePickerDialogTitle => 'संगीता खातीर स्कॅन करपाक निर्देशिका निवडात';
+  String get filePickerDialogTitle =>
+      'संगीता खातीर स्कॅन करपाक निर्देशिका निवडात';
 
   @override
   String get searchScreenTitle => 'सोद';
@@ -213,7 +217,8 @@ class AppLocalizationsGom extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'बॅटरी ऑप्टिमायझेशन अक्षम करप';
 
   @override
-  String get disableBatteryOptimizationContent => 'उपकार करून संगीताच्या पार्श्वभूंय प्लेबॅकाक परवानगी दिवपाक डिव्हायस सेटिंग्जांत ह्या ऍप्लिकेशनाक बॅटरी ऑप्टिमायझेशन अक्षम करात.';
+  String get disableBatteryOptimizationContent =>
+      'उपकार करून संगीताच्या पार्श्वभूंय प्लेबॅकाक परवानगी दिवपाक डिव्हायस सेटिंग्जांत ह्या ऍप्लिकेशनाक बॅटरी ऑप्टिमायझेशन अक्षम करात.';
 
   @override
   String get languageScreenTitle => 'भास';
@@ -267,50 +272,65 @@ class AppLocalizationsGom extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'rescan संगीत फायली';
 
   @override
-  String get deviceControlMenuTutorialText => 'मेनू नेव्हिगेट करपाक क्लिक चाका भोंवतणी तुमचो आंगठो हळदुवो हालोवचो';
+  String get deviceControlMenuTutorialText =>
+      'मेनू नेव्हिगेट करपाक क्लिक चाका भोंवतणी तुमचो आंगठो हळदुवो हालोवचो';
 
   @override
-  String get centerButtonMenuTutorialText => 'हायलाइट केल्ली मेनू आयटम निवडपाक केंद्र बटण दामचें';
+  String get centerButtonMenuTutorialText =>
+      'हायलाइट केल्ली मेनू आयटम निवडपाक केंद्र बटण दामचें';
 
   @override
-  String get playPauseMenuTutorialText => 'गीत वाजोवपाक वा थांबवपाक हें बटण दामचें';
+  String get playPauseMenuTutorialText =>
+      'गीत वाजोवपाक वा थांबवपाक हें बटण दामचें';
 
   @override
-  String get nextButtonMenuTutorialText => 'फुडल्या गीताचेर वगडावपाक हें बटण दामचें';
+  String get nextButtonMenuTutorialText =>
+      'फुडल्या गीताचेर वगडावपाक हें बटण दामचें';
 
   @override
-  String get previousButtonMenuTutorialText => 'रिवाइंड करपाक वा फाटल्या गीताचेर परत वचपाक हें बटण दामचें';
+  String get previousButtonMenuTutorialText =>
+      'रिवाइंड करपाक वा फाटल्या गीताचेर परत वचपाक हें बटण दामचें';
 
   @override
-  String get menuButtonTutorialText => 'फाटल्या मेनूचेर परत वचपाक हें बटण दामचें. तुमी थेट मुखेल मेनूंत वचपाक हेर खंयच्याय स्क्रीनांतल्यान दामूं येताले.';
+  String get menuButtonTutorialText =>
+      'फाटल्या मेनूचेर परत वचपाक हें बटण दामचें. तुमी थेट मुखेल मेनूंत वचपाक हेर खंयच्याय स्क्रीनांतल्यान दामूं येताले.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'हो डिस्प्ले स्क्रीन आसा. टच स्क्रीन आनी स्प्लिट स्क्रीन मोड पूर्वनिर्धारीतपणान सक्षम केला आनी मांडावळींनी फुडें संरचीत करूंक शकता.';
+  String get deviceScreenMenuTutorialText =>
+      'हो डिस्प्ले स्क्रीन आसा. टच स्क्रीन आनी स्प्लिट स्क्रीन मोड पूर्वनिर्धारीतपणान सक्षम केला आनी मांडावळींनी फुडें संरचीत करूंक शकता.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'आवाज समायोजीत करपाक क्लिक चाका भोंवतणी तुमचो आंगठो हालयात';
+  String get deviceControlNowPlayingTutorialText =>
+      'आवाज समायोजीत करपाक क्लिक चाका भोंवतणी तुमचो आंगठो हालयात';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'सीक बार, स्क्रबर बार आनी शफल स्लायडरांतल्यान सायकल करपाक सेंटर बटण दामचें. अतिरिक्त पर्याय ऍक्सॅस करपाक केंद्र बटण दामून दवरात.';
+  String get centerButtonNowPlayingTutorialText =>
+      'सीक बार, स्क्रबर बार आनी शफल स्लायडरांतल्यान सायकल करपाक सेंटर बटण दामचें. अतिरिक्त पर्याय ऍक्सॅस करपाक केंद्र बटण दामून दवरात.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'गीत फास्ट फॉरवर्ड करपाक हें बटण दामून दवरचें गीत';
+  String get nextButtonNowPlayingTutorialText =>
+      'गीत फास्ट फॉरवर्ड करपाक हें बटण दामून दवरचें गीत';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'गीत रिवाइंड करपाक हें बटण दामून दवरात';
+  String get previousButtonNowPlayingTutorialText =>
+      'गीत रिवाइंड करपाक हें बटण दामून दवरात';
 
   @override
-  String get deviceControlSearchTutorialText => 'वर्णमाळेचेर हायलाइट करपाक क्लिक चाका भोंवतणी हळूच आंगठो हालोवचो';
+  String get deviceControlSearchTutorialText =>
+      'वर्णमाळेचेर हायलाइट करपाक क्लिक चाका भोंवतणी हळूच आंगठो हालोवचो';
 
   @override
-  String get centerButtonSearchTutorialText => 'हायलाइट केल्लें वर्णमाला निवडपाक केंद्र बटण दामचें';
+  String get centerButtonSearchTutorialText =>
+      'हायलाइट केल्लें वर्णमाला निवडपाक केंद्र बटण दामचें';
 
   @override
   String get nextButtonSearchTutorialText => 'जागो जोडपाक हें बटण दामचें';
 
   @override
-  String get previousButtonSearchTutorialText => 'निमाणें वर्ण काडून उडोवपाक हें बटण दामचें';
+  String get previousButtonSearchTutorialText =>
+      'निमाणें वर्ण काडून उडोवपाक हें बटण दामचें';
 
   @override
-  String get menuButtonSearchTutorialText => 'कीबोर्ड बंद करपाक हें बटण दामचें आनी सोद परिणामांकडेन संवाद सादचो';
+  String get menuButtonSearchTutorialText =>
+      'कीबोर्ड बंद करपाक हें बटण दामचें आनी सोद परिणामांकडेन संवाद सादचो';
 }

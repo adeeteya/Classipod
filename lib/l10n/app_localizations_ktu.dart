@@ -18,13 +18,16 @@ class AppLocalizationsKtu extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Nswa ya Audio Kelombaka';
 
   @override
-  String get audioAccessPermissionContent => 'Beno pesa ba fichiers ya kuwidikila sambu na kupesa beto nzila ya kubula bafishe na beno ya miziki.';
+  String get audioAccessPermissionContent =>
+      'Beno pesa ba fichiers ya kuwidikila sambu na kupesa beto nzila ya kubula bafishe na beno ya miziki.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Nswa ya Audio Me Nswa';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Nswa ya Audio Me Nswa';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Beno pesa bafishe ya kuwidikila sambu na appli yai na baparametre ya apareyi sambu na kupesa beto nzila ya kubula bafishe na beno ya miziki.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Beno pesa bafishe ya kuwidikila sambu na appli yai na baparametre ya apareyi sambu na kupesa beto nzila ya kubula bafishe na beno ya miziki.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsKtu extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsKtu extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsKtu extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Kusimba Makelesa';
 
   @override
-  String get touchSoundsDialogContent => 'Pardo, Kupesa Bamasini ya Kusimba Mambu ya Me katuka na Parametre ya Système sambu na kuwa makelele ya roue ya clique .';
+  String get touchSoundsDialogContent =>
+      'Pardo, Kupesa Bamasini ya Kusimba Mambu ya Me katuka na Parametre ya Système sambu na kuwa makelele ya roue ya clique .';
 
   @override
   String get immersiveModeSettingTitle => 'Mode ya kukota na kati';
@@ -144,7 +146,8 @@ class AppLocalizationsKtu extends AppLocalizations {
   String get donateSettingTitle => 'Kupesa makabu';
 
   @override
-  String get donateSettingDescription => 'Kana nge ke zolaka appli yai, beno yindula kupesa makabu.';
+  String get donateSettingDescription =>
+      'Kana nge ke zolaka appli yai, beno yindula kupesa makabu.';
 
   @override
   String get versionAboutScreenTitle => 'Versio';
@@ -195,7 +198,8 @@ class AppLocalizationsKtu extends AppLocalizations {
   String get retryButtonText => 'Kuyidika';
 
   @override
-  String get filePickerDialogTitle => 'Pona Diskure mosi na Scan sambu na Miziki .';
+  String get filePickerDialogTitle =>
+      'Pona Diskure mosi na Scan sambu na Miziki .';
 
   @override
   String get searchScreenTitle => 'Kusosa';
@@ -213,7 +217,8 @@ class AppLocalizationsKtu extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Kukanga Bateri ya mbote';
 
   @override
-  String get disableBatteryOptimizationContent => 'Pardon, kanga batterie ya batterie sambu na appli yai na baparametre ya apareyi sambu na kupesa nzila na kubula na nima ya miziki.';
+  String get disableBatteryOptimizationContent =>
+      'Pardon, kanga batterie ya batterie sambu na appli yai na baparametre ya apareyi sambu na kupesa nzila na kubula na nima ya miziki.';
 
   @override
   String get languageScreenTitle => 'Ndinga';
@@ -246,7 +251,8 @@ class AppLocalizationsKtu extends AppLocalizations {
   String get addAlbumToOnTheGoPlaylist => 'Yika Album na-Go .';
 
   @override
-  String get removeSongFromThePlaylist => 'Katula na Muntu yina ke bulaka bansaka .';
+  String get removeSongFromThePlaylist =>
+      'Katula na Muntu yina ke bulaka bansaka .';
 
   @override
   String get allAlbums => 'Ba Album yonso';
@@ -267,50 +273,66 @@ class AppLocalizationsKtu extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Bafishe ya Miziki';
 
   @override
-  String get deviceControlMenuTutorialText => 'Tula musapi na nge na pete na nziunga ya Roue ya Climent sambu na kutambula na menu .';
+  String get deviceControlMenuTutorialText =>
+      'Tula musapi na nge na pete na nziunga ya Roue ya Climent sambu na kutambula na menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Fina bouton ya kati-kati sambu na kupona kima ya menu ya bo me tula dikebi .';
+  String get centerButtonMenuTutorialText =>
+      'Fina bouton ya kati-kati sambu na kupona kima ya menu ya bo me tula dikebi .';
 
   @override
-  String get playPauseMenuTutorialText => 'Fina bouton yai sambu na kubula to kupema nkunga .';
+  String get playPauseMenuTutorialText =>
+      'Fina bouton yai sambu na kubula to kupema nkunga .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Fina bouton yai sambu na kukwenda na nkunga yina ke landa .';
+  String get nextButtonMenuTutorialText =>
+      'Fina bouton yai sambu na kukwenda na nkunga yina ke landa .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Fina bouton yai sambu na kuvutukila to kuvutuka na nkunga ya ntete .';
+  String get previousButtonMenuTutorialText =>
+      'Fina bouton yai sambu na kuvutukila to kuvutuka na nkunga ya ntete .';
 
   @override
-  String get menuButtonTutorialText => 'Fina bouton yayi samu na kuvutuka na menu ya ntete. Nge lenda niema mpi kusimba yo na konso écran sambu na kukwenda mbala mosi na menu ya nene.';
+  String get menuButtonTutorialText =>
+      'Fina bouton yayi samu na kuvutuka na menu ya ntete. Nge lenda niema mpi kusimba yo na konso écran sambu na kukwenda mbala mosi na menu ya nene.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Yai kele ecran ya kumonisa. Mode ya kusimba mpi ya Kukabula ke pesa nzila na mutindu ya kukonda kukana mpi bo lenda tula yo na zulu ya baparametre.';
+  String get deviceScreenMenuTutorialText =>
+      'Yai kele ecran ya kumonisa. Mode ya kusimba mpi ya Kukabula ke pesa nzila na mutindu ya kukonda kukana mpi bo lenda tula yo na zulu ya baparametre.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Tula musapi na nge na nziunga ya Roue ya Climent sambu na kusoba volime .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Tula musapi na nge na nziunga ya Roue ya Climent sambu na kusoba volime .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Fina bouton ya Centre sambu na kutambula na nzila ya bar, bar ya kuyobisa mpi curseur ya kuvukisa. Fina mpi simba buto ya Centre sambu na kubaka mitindu ya nkaka.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Fina bouton ya Centre sambu na kutambula na nzila ya bar, bar ya kuyobisa mpi curseur ya kuvukisa. Fina mpi simba buto ya Centre sambu na kubaka mitindu ya nkaka.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Fina mpi simba bouton yai sambu na kunata nswalu nkunga .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Fina mpi simba bouton yai sambu na kunata nswalu nkunga .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Fina mpi simba bouton yai sambu na kuvutula nkunga .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Fina mpi simba bouton yai sambu na kuvutula nkunga .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Tula musapi na nge na pete na nziunga ya Roue ya Kufimpa sambu na kutula dikebi na alfabe .';
+  String get deviceControlSearchTutorialText =>
+      'Tula musapi na nge na pete na nziunga ya Roue ya Kufimpa sambu na kutula dikebi na alfabe .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Fina bouton ya kati-kati sambu na kupona alfabe yina bo me tula dikebi .';
+  String get centerButtonSearchTutorialText =>
+      'Fina bouton ya kati-kati sambu na kupona alfabe yina bo me tula dikebi .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Fina bouton yai sambu na kuyika kisika .';
+  String get nextButtonSearchTutorialText =>
+      'Fina bouton yai sambu na kuyika kisika .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Fina bouton yai sambu na kufwa muntu ya nsuka .';
+  String get previousButtonSearchTutorialText =>
+      'Fina bouton yai sambu na kufwa muntu ya nsuka .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Fina bouton yayi samu na kukanga clavier mpe kusala mambu na ba mvutu ya kusosa .';
+  String get menuButtonSearchTutorialText =>
+      'Fina bouton yayi samu na kukanga clavier mpe kusala mambu na ba mvutu ya kusosa .';
 }

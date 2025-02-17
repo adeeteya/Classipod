@@ -18,13 +18,16 @@ class AppLocalizationsPs extends AppLocalizations {
   String get audioAccessPermissionTitle => 'د آډیو لاسرسي اجازه لازمي';
 
   @override
-  String get audioAccessPermissionContent => 'مهرباني وکړئ موږ ته اجازه راکړئ چې موږ ته اجازه درکړو ترڅو ستاسو د میوزیک فایلونو غږول.';
+  String get audioAccessPermissionContent =>
+      'مهرباني وکړئ موږ ته اجازه راکړئ چې موږ ته اجازه درکړو ترڅو ستاسو د میوزیک فایلونو غږول.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'د آډیو لاسرسي اجازه';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'د آډیو لاسرسي اجازه';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'مهرباني وکړئ د وسیلې ترتیباتو کې د دې ایپ لپاره د آډیو فایلونو لاسرسی واستوئ ترڅو موږ ته اجازه راکړئ ستاسو د میوزیک فایلونو غږول.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'مهرباني وکړئ د وسیلې ترتیباتو کې د دې ایپ لپاره د آډیو فایلونو لاسرسی واستوئ ترڅو موږ ته اجازه راکړئ ستاسو د میوزیک فایلونو غږول.';
 
   @override
   String get menuScreenTitle => 'مینو';
@@ -63,7 +66,6 @@ class AppLocalizationsPs extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsPs extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsPs extends AppLocalizations {
   String get touchSoundsDialogTitle => 'ټچ غږونه';
 
   @override
-  String get touchSoundsDialogContent => 'مهرباني وکړئ د سیسټم تنظیماتو غږولو لپاره د سیسټم تنظیماتو څخه د ټیپ آر ایسونه تنظیم کړئ';
+  String get touchSoundsDialogContent =>
+      'مهرباني وکړئ د سیسټم تنظیماتو غږولو لپاره د سیسټم تنظیماتو څخه د ټیپ آر ایسونه تنظیم کړئ';
 
   @override
   String get immersiveModeSettingTitle => 'ډوب حالت';
@@ -144,7 +146,8 @@ class AppLocalizationsPs extends AppLocalizations {
   String get donateSettingTitle => 'مرسته وکړه';
 
   @override
-  String get donateSettingDescription => 'که تاسو دا ایپ خوښ یاست، مهرباني وکړئ مرسته کول په پام کې ونیسئ.';
+  String get donateSettingDescription =>
+      'که تاسو دا ایپ خوښ یاست، مهرباني وکړئ مرسته کول په پام کې ونیسئ.';
 
   @override
   String get versionAboutScreenTitle => 'نسخه';
@@ -195,7 +198,8 @@ class AppLocalizationsPs extends AppLocalizations {
   String get retryButtonText => 'بیا هڅه';
 
   @override
-  String get filePickerDialogTitle => 'د میوزیک لپاره سکین کولو لپاره لارښود غوره کړئ';
+  String get filePickerDialogTitle =>
+      'د میوزیک لپاره سکین کولو لپاره لارښود غوره کړئ';
 
   @override
   String get searchScreenTitle => 'لټون';
@@ -213,7 +217,8 @@ class AppLocalizationsPs extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'د بیټرۍ مطلوب غیر فعال کړئ';
 
   @override
-  String get disableBatteryOptimizationContent => 'مهرباني وکړئ د دې ایپ لپاره د بیټرۍ اصلاح کولو لپاره د بیټرۍ اصلاح کړئ ترڅو د میوزیک شالید غږولو ته اجازه ورکړئ.';
+  String get disableBatteryOptimizationContent =>
+      'مهرباني وکړئ د دې ایپ لپاره د بیټرۍ اصلاح کولو لپاره د بیټرۍ اصلاح کړئ ترڅو د میوزیک شالید غږولو ته اجازه ورکړئ.';
 
   @override
   String get languageScreenTitle => 'ژبه';
@@ -267,50 +272,65 @@ class AppLocalizationsPs extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'د ژغورنې میوزیک فایلونه';
 
   @override
-  String get deviceControlMenuTutorialText => 'خپل ګوتو د مینو د چلولو لپاره د کلیک ویل په شاوخوا کلیک وکړئ';
+  String get deviceControlMenuTutorialText =>
+      'خپل ګوتو د مینو د چلولو لپاره د کلیک ویل په شاوخوا کلیک وکړئ';
 
   @override
-  String get centerButtonMenuTutorialText => 'د روښانه شوي مینو توکي غوره کولو لپاره د مرکز ت button ۍ فشار ورکړئ';
+  String get centerButtonMenuTutorialText =>
+      'د روښانه شوي مینو توکي غوره کولو لپاره د مرکز ت button ۍ فشار ورکړئ';
 
   @override
-  String get playPauseMenuTutorialText => 'دا ت button ۍ فشار ورکړئ ترڅو د سندرې غږول یا ځنډ کړئ';
+  String get playPauseMenuTutorialText =>
+      'دا ت button ۍ فشار ورکړئ ترڅو د سندرې غږول یا ځنډ کړئ';
 
   @override
-  String get nextButtonMenuTutorialText => 'دې ت button ۍ په راتلونکي سندره کې د تاوولو لپاره فشار ورکړئ';
+  String get nextButtonMenuTutorialText =>
+      'دې ت button ۍ په راتلونکي سندره کې د تاوولو لپاره فشار ورکړئ';
 
   @override
-  String get previousButtonMenuTutorialText => 'دې ت button ۍ فشار ورکړئ ترڅو بیرته ستنیدل یا پخوانۍ سندرې ته لاړشئ';
+  String get previousButtonMenuTutorialText =>
+      'دې ت button ۍ فشار ورکړئ ترڅو بیرته ستنیدل یا پخوانۍ سندرې ته لاړشئ';
 
   @override
-  String get menuButtonTutorialText => 'پخوانۍ مینو ته د تللو لپاره دا ت button ۍ فشار ورکړئ. تاسو کولی شئ دا د نورو سکرین څخه په مستقیم ډول اصلي مینو ته لاړشئ.';
+  String get menuButtonTutorialText =>
+      'پخوانۍ مینو ته د تللو لپاره دا ت button ۍ فشار ورکړئ. تاسو کولی شئ دا د نورو سکرین څخه په مستقیم ډول اصلي مینو ته لاړشئ.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'دا د ښودنې سکرین دی. لماک سکرین او د ویشل سکرین حالت د ډیفالټ لخوا فعال شوی او په ترتیباتو کې یې نور تنظیم کیدی شي.';
+  String get deviceScreenMenuTutorialText =>
+      'دا د ښودنې سکرین دی. لماک سکرین او د ویشل سکرین حالت د ډیفالټ لخوا فعال شوی او په ترتیباتو کې یې نور تنظیم کیدی شي.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'خپل تومب د کښت د سمولو لپاره د کلیک ویل په شاوخوا کلیک وکړئ';
+  String get deviceControlNowPlayingTutorialText =>
+      'خپل تومب د کښت د سمولو لپاره د کلیک ویل په شاوخوا کلیک وکړئ';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'د بار وړلو لپاره د مرکز ت button ۍ فشار ورکړئ، د پرببار بار او شفل سلایډونو څخه. اضافي اختیارونو ته د لاسرسي لپاره د مرکز ت button ۍ فشار او ونیسئ.';
+  String get centerButtonNowPlayingTutorialText =>
+      'د بار وړلو لپاره د مرکز ت button ۍ فشار ورکړئ، د پرببار بار او شفل سلایډونو څخه. اضافي اختیارونو ته د لاسرسي لپاره د مرکز ت button ۍ فشار او ونیسئ.';
 
   @override
   String get nextButtonNowPlayingTutorialText => 'د دې ت button ۍ فشار ورکړئ';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'د سندرو بیا کلیک کولو لپاره دا ت button ۍ فشار ورکړئ او ونیسئ';
+  String get previousButtonNowPlayingTutorialText =>
+      'د سندرو بیا کلیک کولو لپاره دا ت button ۍ فشار ورکړئ او ونیسئ';
 
   @override
-  String get deviceControlSearchTutorialText => 'خپل ګوتو ته د الفبا په اوږدو کې د کلیک ویل په شاوخوا کلیک وکړئ';
+  String get deviceControlSearchTutorialText =>
+      'خپل ګوتو ته د الفبا په اوږدو کې د کلیک ویل په شاوخوا کلیک وکړئ';
 
   @override
-  String get centerButtonSearchTutorialText => 'د روښانه شوي الفبا د ټاکلو لپاره د مرکز ت button ۍ فشار ورکړئ';
+  String get centerButtonSearchTutorialText =>
+      'د روښانه شوي الفبا د ټاکلو لپاره د مرکز ت button ۍ فشار ورکړئ';
 
   @override
-  String get nextButtonSearchTutorialText => 'د ځای اضافه کولو لپاره دا ت button ۍ کېکاږئ';
+  String get nextButtonSearchTutorialText =>
+      'د ځای اضافه کولو لپاره دا ت button ۍ کېکاږئ';
 
   @override
-  String get previousButtonSearchTutorialText => 'د وروستي کرکټر حذف کولو لپاره دا ت button ۍ فشار ورکړئ';
+  String get previousButtonSearchTutorialText =>
+      'د وروستي کرکټر حذف کولو لپاره دا ت button ۍ فشار ورکړئ';
 
   @override
-  String get menuButtonSearchTutorialText => 'د کیبورډ بندولو لپاره دا ت button ۍ فشار ورکړئ او د لټون پایلو سره متقابل عمل وکړئ';
+  String get menuButtonSearchTutorialText =>
+      'د کیبورډ بندولو لپاره دا ت button ۍ فشار ورکړئ او د لټون پایلو سره متقابل عمل وکړئ';
 }

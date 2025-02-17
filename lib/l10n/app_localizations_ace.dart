@@ -15,16 +15,20 @@ class AppLocalizationsAce extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'Izin Akses Audio Nyang dipeureulee .';
+  String get audioAccessPermissionTitle =>
+      'Izin Akses Audio Nyang dipeureulee .';
 
   @override
-  String get audioAccessPermissionContent => 'Silakan neubri akses file audio keu neubi kamoe meu\'en file musik droeneuh.';
+  String get audioAccessPermissionContent =>
+      'Silakan neubri akses file audio keu neubi kamoe meu\'en file musik droeneuh.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Izin Akses Audio nyang ka Ditulak .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Izin Akses Audio nyang ka Ditulak .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Silakan neubri akses file audio keu app nyoe lam pengaturan alat untuk memungkenkan kamoe untuk meuen file musik droeneuh.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Silakan neubri akses file audio keu app nyoe lam pengaturan alat untuk memungkenkan kamoe untuk meuen file musik droeneuh.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsAce extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsAce extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsAce extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sumber Touch';
 
   @override
-  String get touchSoundsDialogContent => 'Silakan Aktifkan Bunyi dari Pengaturan Sistem untuk deungoe su roda klik .';
+  String get touchSoundsDialogContent =>
+      'Silakan Aktifkan Bunyi dari Pengaturan Sistem untuk deungoe su roda klik .';
 
   @override
   String get immersiveModeSettingTitle => 'Mode Imsersif';
@@ -144,7 +147,8 @@ class AppLocalizationsAce extends AppLocalizations {
   String get donateSettingTitle => 'Donasi';
 
   @override
-  String get donateSettingDescription => 'Meunyo galak keu app nyoe, neupertimbangkan untuk neubri sumbangan.';
+  String get donateSettingDescription =>
+      'Meunyo galak keu app nyoe, neupertimbangkan untuk neubri sumbangan.';
 
   @override
   String get versionAboutScreenTitle => 'Versi';
@@ -186,7 +190,8 @@ class AppLocalizationsAce extends AppLocalizations {
   String get commonOfText => 'dari';
 
   @override
-  String get pageNotFoundText => 'Laman nyang ka geubri nyan hana geuteumeung .';
+  String get pageNotFoundText =>
+      'Laman nyang ka geubri nyan hana geuteumeung .';
 
   @override
   String get commonErrorText => 'Eror';
@@ -213,7 +218,8 @@ class AppLocalizationsAce extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Optimasi Baterai Cacat';
 
   @override
-  String get disableBatteryOptimizationContent => 'Silakan neu nonaktifkan optimasi baterai keu aplikasi nyoe lam pengaturan alat untuk memungkenkan pemenang musik musik.';
+  String get disableBatteryOptimizationContent =>
+      'Silakan neu nonaktifkan optimasi baterai keu aplikasi nyoe lam pengaturan alat untuk memungkenkan pemenang musik musik.';
 
   @override
   String get languageScreenTitle => 'Basa';
@@ -267,50 +273,66 @@ class AppLocalizationsAce extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Baju Musik .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Pindah jeumot droeneuh ringan-ringan di sekitar Click Wheel untuk neu navigasi menu .';
+  String get deviceControlMenuTutorialText =>
+      'Pindah jeumot droeneuh ringan-ringan di sekitar Click Wheel untuk neu navigasi menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Teukan tombol pusat keu pilih item menu nyang ka geusorot .';
+  String get centerButtonMenuTutorialText =>
+      'Teukan tombol pusat keu pilih item menu nyang ka geusorot .';
 
   @override
-  String get playPauseMenuTutorialText => 'Teukan tombol nyoe keu meu\'en atawa neu jeuda lagu .';
+  String get playPauseMenuTutorialText =>
+      'Teukan tombol nyoe keu meu\'en atawa neu jeuda lagu .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Teukan tombol nyoe keu neu skip bak lagu selanjut jih .';
+  String get nextButtonMenuTutorialText =>
+      'Teukan tombol nyoe keu neu skip bak lagu selanjut jih .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Teukan tombol nyoe keu neuwoe atawa neuwoe lom bak lagu awai .';
+  String get previousButtonMenuTutorialText =>
+      'Teukan tombol nyoe keu neuwoe atawa neuwoe lom bak lagu awai .';
 
   @override
-  String get menuButtonTutorialText => 'Teukan tombol nyoe keu tajak woe u menu awai. Droeneuh jeuet neutekan dan neumat dari layar laen keu langsong neujak u menu utama.';
+  String get menuButtonTutorialText =>
+      'Teukan tombol nyoe keu tajak woe u menu awai. Droeneuh jeuet neutekan dan neumat dari layar laen keu langsong neujak u menu utama.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Nyoe keuh layar tampilan. Mode Screen Touch dan Penyalahgunaan Penyalahgunaan diaktifkan secara default dan jeut dikonfigurasi leubeh lanjot lam pengaturan.';
+  String get deviceScreenMenuTutorialText =>
+      'Nyoe keuh layar tampilan. Mode Screen Touch dan Penyalahgunaan Penyalahgunaan diaktifkan secara default dan jeut dikonfigurasi leubeh lanjot lam pengaturan.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Pindah jaroe droeneuh di sekitar Click Wheel untuk neusesuaikan volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Pindah jaroe droeneuh di sekitar Click Wheel untuk neusesuaikan volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Teukan tombol Pusat keu meu-sepeda rot mita bar, bar scrubber ngon slider sliffle. Teukan dan peugot tombol Pusat keu neuakses opsi tambahan.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Teukan tombol Pusat keu meu-sepeda rot mita bar, bar scrubber ngon slider sliffle. Teukan dan peugot tombol Pusat keu neuakses opsi tambahan.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Teukan dan mat tombol nyoe untuk bagah maju lagu .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Teukan dan mat tombol nyoe untuk bagah maju lagu .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Teukan dan peugot tombol nyoe untuk neu rewire lagu .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Teukan dan peugot tombol nyoe untuk neu rewire lagu .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Pindah jeumot droeneuh deungon ringan-ringan di sekitar Wheel Click untuk neusorot saboh abjad .';
+  String get deviceControlSearchTutorialText =>
+      'Pindah jeumot droeneuh deungon ringan-ringan di sekitar Wheel Click untuk neusorot saboh abjad .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Teukan tombol pusat keu pilih abjad nyang ka geusorot .';
+  String get centerButtonSearchTutorialText =>
+      'Teukan tombol pusat keu pilih abjad nyang ka geusorot .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Teukan tombol nyoe keu neu tamah saboh ruang .';
+  String get nextButtonSearchTutorialText =>
+      'Teukan tombol nyoe keu neu tamah saboh ruang .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Teukan tombol nyoe keu neusampôh karakter nyang akhé .';
+  String get previousButtonSearchTutorialText =>
+      'Teukan tombol nyoe keu neusampôh karakter nyang akhé .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Teukan tombol nyoe untuk tapeutop keyboard dan ta interaksi ngon hasee pencarian .';
+  String get menuButtonSearchTutorialText =>
+      'Teukan tombol nyoe untuk tapeutop keyboard dan ta interaksi ngon hasee pencarian .';
 }

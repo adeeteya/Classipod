@@ -18,13 +18,16 @@ class AppLocalizationsMni extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ꯑꯣꯗꯤꯑꯣ ꯑꯦꯛꯁꯦꯁꯀꯤ ꯑꯌꯥꯕꯥ ꯂꯧꯕꯥ ꯃꯊꯧ ꯇꯥꯏ';
 
   @override
-  String get audioAccessPermissionContent => 'ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯑꯗꯣꯃꯒꯤ ꯃ꯭ꯌꯨꯖꯤꯛ ꯐꯥꯏꯂꯁꯤꯡ ꯄ꯭ꯂꯦ ꯇꯧꯕꯥ ꯌꯥꯅꯕꯥ ꯑꯣꯗꯤꯑꯣ ꯐꯥꯏꯂꯁꯤꯡ ꯑꯦꯛꯁꯦꯁ ꯇꯧꯕꯤꯌꯨ꯫';
+  String get audioAccessPermissionContent =>
+      'ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯑꯗꯣꯃꯒꯤ ꯃ꯭ꯌꯨꯖꯤꯛ ꯐꯥꯏꯂꯁꯤꯡ ꯄ꯭ꯂꯦ ꯇꯧꯕꯥ ꯌꯥꯅꯕꯥ ꯑꯣꯗꯤꯑꯣ ꯐꯥꯏꯂꯁꯤꯡ ꯑꯦꯛꯁꯦꯁ ꯇꯧꯕꯤꯌꯨ꯫';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ꯑꯣꯗꯤꯑꯣ ꯑꯦꯛꯁꯦꯁꯀꯤ ꯑꯌꯥꯕꯥ ꯄꯤꯕꯥ';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ꯑꯣꯗꯤꯑꯣ ꯑꯦꯛꯁꯦꯁꯀꯤ ꯑꯌꯥꯕꯥ ꯄꯤꯕꯥ';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯑꯗꯣꯃꯒꯤ ꯃ꯭ꯌꯨꯖꯤꯛ ꯐꯥꯏꯂꯁꯤꯡ ꯄ꯭ꯂꯦ ꯇꯧꯕꯥ ꯌꯥꯅꯕꯥ ꯗꯤꯚꯥꯏꯁ ꯁꯦꯇꯤꯡꯁꯤꯡꯗꯥ ꯑꯦꯞ ꯑꯁꯤꯒꯤꯗꯃꯛꯇꯥ ꯑꯣꯗꯤꯑꯣ ꯐꯥꯏꯂꯁꯤꯡ ꯑꯦꯛꯁꯦꯁ ꯇꯧꯕꯤꯌꯨ꯫';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯑꯗꯣꯃꯒꯤ ꯃ꯭ꯌꯨꯖꯤꯛ ꯐꯥꯏꯂꯁꯤꯡ ꯄ꯭ꯂꯦ ꯇꯧꯕꯥ ꯌꯥꯅꯕꯥ ꯗꯤꯚꯥꯏꯁ ꯁꯦꯇꯤꯡꯁꯤꯡꯗꯥ ꯑꯦꯞ ꯑꯁꯤꯒꯤꯗꯃꯛꯇꯥ ꯑꯣꯗꯤꯑꯣ ꯐꯥꯏꯂꯁꯤꯡ ꯑꯦꯛꯁꯦꯁ ꯇꯧꯕꯤꯌꯨ꯫';
 
   @override
   String get menuScreenTitle => 'ꯃꯦꯅꯨ';
@@ -63,7 +66,6 @@ class AppLocalizationsMni extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsMni extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsMni extends AppLocalizations {
   String get touchSoundsDialogTitle => 'ꯇꯆ ꯁꯥꯎꯟꯗꯁꯤꯡ';
 
   @override
-  String get touchSoundsDialogContent => 'ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯁꯥꯎꯟꯗꯁꯤꯡ ꯇꯥꯅꯕꯒꯤꯗꯃꯛ ꯁꯤꯁ꯭ꯇꯦꯝ ꯁꯦꯇꯤꯡꯁꯤꯡꯗꯒꯤ ꯇꯆ ꯁꯥꯎꯟꯗꯁꯤꯡ ꯏꯅꯦꯕꯜ ꯇꯧꯕꯤꯌꯨ';
+  String get touchSoundsDialogContent =>
+      'ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯁꯥꯎꯟꯗꯁꯤꯡ ꯇꯥꯅꯕꯒꯤꯗꯃꯛ ꯁꯤꯁ꯭ꯇꯦꯝ ꯁꯦꯇꯤꯡꯁꯤꯡꯗꯒꯤ ꯇꯆ ꯁꯥꯎꯟꯗꯁꯤꯡ ꯏꯅꯦꯕꯜ ꯇꯧꯕꯤꯌꯨ';
 
   @override
   String get immersiveModeSettingTitle => 'ꯏꯃꯔꯁꯤꯕ ꯃꯣꯗ ꯴.';
@@ -144,7 +146,8 @@ class AppLocalizationsMni extends AppLocalizations {
   String get donateSettingTitle => 'ꯗꯥꯟ ꯇꯧꯕ';
 
   @override
-  String get donateSettingDescription => 'ꯀꯔꯤꯒꯨꯝꯕꯥ ꯅꯍꯥꯛꯅꯥ ꯑꯦꯞ ꯑꯁꯤ ꯄꯥꯝꯂꯕꯗꯤ, ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯗꯥꯟ ꯇꯧꯅꯕꯥ ꯈꯟꯅꯕꯤꯌꯨ꯫';
+  String get donateSettingDescription =>
+      'ꯀꯔꯤꯒꯨꯝꯕꯥ ꯅꯍꯥꯛꯅꯥ ꯑꯦꯞ ꯑꯁꯤ ꯄꯥꯝꯂꯕꯗꯤ, ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯗꯥꯟ ꯇꯧꯅꯕꯥ ꯈꯟꯅꯕꯤꯌꯨ꯫';
 
   @override
   String get versionAboutScreenTitle => 'ꯃꯈꯜ';
@@ -195,7 +198,8 @@ class AppLocalizationsMni extends AppLocalizations {
   String get retryButtonText => 'ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯍꯣꯠꯅꯕꯥ';
 
   @override
-  String get filePickerDialogTitle => 'ꯃ꯭ꯌꯨꯖꯤꯛ ꯁ꯭ꯀꯦꯟ ꯇꯧꯅꯕꯥ ꯗꯥꯏꯔꯦꯛꯇꯣꯔꯤ ꯑꯃꯥ ꯈꯅꯕꯤꯌꯨ .';
+  String get filePickerDialogTitle =>
+      'ꯃ꯭ꯌꯨꯖꯤꯛ ꯁ꯭ꯀꯦꯟ ꯇꯧꯅꯕꯥ ꯗꯥꯏꯔꯦꯛꯇꯣꯔꯤ ꯑꯃꯥ ꯈꯅꯕꯤꯌꯨ .';
 
   @override
   String get searchScreenTitle => 'ꯊꯤꯕ';
@@ -210,10 +214,12 @@ class AppLocalizationsMni extends AppLocalizations {
   String get resultsForText => 'ꯔꯤꯖꯜꯇꯁꯤꯡ ꯑꯁꯤ:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'ꯕꯦꯠꯇꯔꯤ ꯑꯣꯞꯇꯤꯃꯥꯏꯖꯦꯁꯟ ꯗꯤꯁꯦꯕꯜ ꯇꯧꯕꯥ';
+  String get disableBatteryOptimizationTitle =>
+      'ꯕꯦꯠꯇꯔꯤ ꯑꯣꯞꯇꯤꯃꯥꯏꯖꯦꯁꯟ ꯗꯤꯁꯦꯕꯜ ꯇꯧꯕꯥ';
 
   @override
-  String get disableBatteryOptimizationContent => 'ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯃ꯭ꯌꯨꯖꯤꯀꯀꯤ ꯕꯦꯀꯒ꯭ꯔꯥꯎꯟꯗ ꯄ꯭ꯂꯦꯕꯦꯛ ꯑꯌꯥꯕꯥ ꯄꯤꯅꯕꯥ ꯗꯤꯚꯥꯏꯁ ꯁꯦꯇꯤꯡꯁꯤꯡꯗꯥ ꯑꯦꯞ ꯑꯁꯤꯒꯤꯗꯃꯛꯇꯥ ꯕꯦꯠꯇꯔꯤ ꯑꯣꯞꯇꯤꯃꯥꯏꯖꯦꯁꯟ ꯗꯤꯁꯦꯕꯜ ꯇꯧꯕꯤꯌꯨ꯫';
+  String get disableBatteryOptimizationContent =>
+      'ꯆꯥꯅꯕꯤꯗꯨꯅꯥ ꯃ꯭ꯌꯨꯖꯤꯀꯀꯤ ꯕꯦꯀꯒ꯭ꯔꯥꯎꯟꯗ ꯄ꯭ꯂꯦꯕꯦꯛ ꯑꯌꯥꯕꯥ ꯄꯤꯅꯕꯥ ꯗꯤꯚꯥꯏꯁ ꯁꯦꯇꯤꯡꯁꯤꯡꯗꯥ ꯑꯦꯞ ꯑꯁꯤꯒꯤꯗꯃꯛꯇꯥ ꯕꯦꯠꯇꯔꯤ ꯑꯣꯞꯇꯤꯃꯥꯏꯖꯦꯁꯟ ꯗꯤꯁꯦꯕꯜ ꯇꯧꯕꯤꯌꯨ꯫';
 
   @override
   String get languageScreenTitle => 'ꯂꯣꯜ';
@@ -267,50 +273,65 @@ class AppLocalizationsMni extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'ꯔꯤꯁ꯭ꯀꯦꯟ ꯃꯤꯎꯖꯤꯛ ꯐꯥꯏꯂꯁꯤꯡ';
 
   @override
-  String get deviceControlMenuTutorialText => 'ꯃꯦꯅꯨꯗꯥ ꯆꯠꯅꯕꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯑꯗꯨꯒꯤ ꯃꯅꯨꯡꯗꯥ ꯅꯍꯥꯛꯀꯤ ꯊꯣꯡꯅꯥꯎ ꯑꯗꯨ ꯂꯥꯏꯅꯥ ꯂꯧꯊꯣꯀꯎ';
+  String get deviceControlMenuTutorialText =>
+      'ꯃꯦꯅꯨꯗꯥ ꯆꯠꯅꯕꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯑꯗꯨꯒꯤ ꯃꯅꯨꯡꯗꯥ ꯅꯍꯥꯛꯀꯤ ꯊꯣꯡꯅꯥꯎ ꯑꯗꯨ ꯂꯥꯏꯅꯥ ꯂꯧꯊꯣꯀꯎ';
 
   @override
-  String get centerButtonMenuTutorialText => 'ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯔꯕꯥ ꯃꯦꯅꯨ ꯑꯥꯏꯇꯦꯝ ꯑꯗꯨ ꯈꯅꯕꯗꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫';
+  String get centerButtonMenuTutorialText =>
+      'ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯔꯕꯥ ꯃꯦꯅꯨ ꯑꯥꯏꯇꯦꯝ ꯑꯗꯨ ꯈꯅꯕꯗꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫';
 
   @override
-  String get playPauseMenuTutorialText => 'ꯏꯁꯩ ꯑꯃꯥ ꯇꯥꯕꯥ ꯅꯠꯔꯒꯥ ꯄꯣꯖ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .';
+  String get playPauseMenuTutorialText =>
+      'ꯏꯁꯩ ꯑꯃꯥ ꯇꯥꯕꯥ ꯅꯠꯔꯒꯥ ꯄꯣꯖ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .';
 
   @override
   String get nextButtonMenuTutorialText => 'ꯃꯊꯪꯒꯤ ꯏꯁꯩꯗꯥ ꯆꯠꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .';
 
   @override
-  String get previousButtonMenuTutorialText => 'ꯔꯤꯋꯥꯏꯟꯗ ꯇꯧꯅꯕꯥ ꯅꯠꯠꯔꯒꯥ ꯃꯃꯥꯡꯒꯤ ꯏꯁꯩꯗꯥ ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯆꯪꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .';
+  String get previousButtonMenuTutorialText =>
+      'ꯔꯤꯋꯥꯏꯟꯗ ꯇꯧꯅꯕꯥ ꯅꯠꯠꯔꯒꯥ ꯃꯃꯥꯡꯒꯤ ꯏꯁꯩꯗꯥ ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯆꯪꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .';
 
   @override
-  String get menuButtonTutorialText => 'ꯃꯃꯥꯡꯒꯤ ꯃꯦꯅꯨꯗꯥ ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯆꯪꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ꯫ ꯅꯍꯥꯛꯅꯥ ꯃꯗꯨ ꯃꯦꯟ ꯃꯦꯅꯨꯗꯥ ꯍꯀꯊꯦꯡꯅꯅꯥ ꯆꯠꯅꯕꯥ ꯑꯇꯣꯞꯄꯥ ꯁ꯭ꯛꯔꯤꯟ ꯑꯃꯍꯦꯛꯇꯗꯒꯤ ꯄ꯭ꯔꯦꯁ ꯇꯧꯕꯥ ꯑꯃꯁꯨꯡ ꯊꯝꯕꯥ ꯌꯥꯏ꯫';
+  String get menuButtonTutorialText =>
+      'ꯃꯃꯥꯡꯒꯤ ꯃꯦꯅꯨꯗꯥ ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯆꯪꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ꯫ ꯅꯍꯥꯛꯅꯥ ꯃꯗꯨ ꯃꯦꯟ ꯃꯦꯅꯨꯗꯥ ꯍꯀꯊꯦꯡꯅꯅꯥ ꯆꯠꯅꯕꯥ ꯑꯇꯣꯞꯄꯥ ꯁ꯭ꯛꯔꯤꯟ ꯑꯃꯍꯦꯛꯇꯗꯒꯤ ꯄ꯭ꯔꯦꯁ ꯇꯧꯕꯥ ꯑꯃꯁꯨꯡ ꯊꯝꯕꯥ ꯌꯥꯏ꯫';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ꯃꯁꯤ ꯗꯤꯁꯞꯂꯦ ꯁ꯭ꯛꯔꯤꯅꯅꯤ꯫ ꯇꯆ ꯁ꯭ꯛꯔꯤꯟ ꯑꯃꯁꯨꯡ ꯁ꯭ꯞꯂꯤꯠ ꯁ꯭ꯛꯔꯤꯟ ꯃꯣꯗ ꯑꯁꯤ ꯗꯤꯐꯣꯜꯇ ꯑꯣꯏꯅꯥ ꯏꯅꯦꯕꯜ ꯑꯣꯏ ꯑꯃꯁꯨꯡ ꯁꯦꯇꯤꯡꯁꯤꯡꯗꯥ ꯃꯈꯥ ꯇꯥꯅꯥ ꯀꯅꯐꯤꯒꯔ ꯇꯧꯕꯥ ꯌꯥꯏ꯫';
+  String get deviceScreenMenuTutorialText =>
+      'ꯃꯁꯤ ꯗꯤꯁꯞꯂꯦ ꯁ꯭ꯛꯔꯤꯅꯅꯤ꯫ ꯇꯆ ꯁ꯭ꯛꯔꯤꯟ ꯑꯃꯁꯨꯡ ꯁ꯭ꯞꯂꯤꯠ ꯁ꯭ꯛꯔꯤꯟ ꯃꯣꯗ ꯑꯁꯤ ꯗꯤꯐꯣꯜꯇ ꯑꯣꯏꯅꯥ ꯏꯅꯦꯕꯜ ꯑꯣꯏ ꯑꯃꯁꯨꯡ ꯁꯦꯇꯤꯡꯁꯤꯡꯗꯥ ꯃꯈꯥ ꯇꯥꯅꯥ ꯀꯅꯐꯤꯒꯔ ꯇꯧꯕꯥ ꯌꯥꯏ꯫';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'ꯚꯣꯜꯌꯨꯝ ꯑꯗꯨ ꯑꯦꯗꯖꯁ꯭ꯠ ꯇꯧꯅꯕꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯑꯗꯨꯒꯤ ꯑꯀꯣꯌꯕꯗꯥ ꯅꯍꯥꯛꯀꯤ ꯊꯣꯡꯅꯥꯎ ꯑꯗꯨ ꯂꯧꯊꯣꯀꯎ';
+  String get deviceControlNowPlayingTutorialText =>
+      'ꯚꯣꯜꯌꯨꯝ ꯑꯗꯨ ꯑꯦꯗꯖꯁ꯭ꯠ ꯇꯧꯅꯕꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯑꯗꯨꯒꯤ ꯑꯀꯣꯌꯕꯗꯥ ꯅꯍꯥꯛꯀꯤ ꯊꯣꯡꯅꯥꯎ ꯑꯗꯨ ꯂꯧꯊꯣꯀꯎ';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'ꯁꯤꯛ ꯕꯥꯔ, ꯁ꯭ꯛꯔꯕꯔ ꯕꯥꯔ ꯑꯃꯁꯨꯡ ꯁ꯭ꯂꯥꯏꯗꯔꯒꯤ ꯃꯔꯛꯇꯥ ꯁꯥꯏꯀꯜ ꯊꯧꯅꯕꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫ ꯑꯍꯦꯅꯕꯥ ꯑꯣꯄꯁꯅꯁꯤꯡ ꯑꯦꯛꯁꯦꯁ ꯇꯧꯅꯕꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ ꯑꯃꯁꯨꯡ ꯊꯝꯃꯨ꯫';
+  String get centerButtonNowPlayingTutorialText =>
+      'ꯁꯤꯛ ꯕꯥꯔ, ꯁ꯭ꯛꯔꯕꯔ ꯕꯥꯔ ꯑꯃꯁꯨꯡ ꯁ꯭ꯂꯥꯏꯗꯔꯒꯤ ꯃꯔꯛꯇꯥ ꯁꯥꯏꯀꯜ ꯊꯧꯅꯕꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫ ꯑꯍꯦꯅꯕꯥ ꯑꯣꯄꯁꯅꯁꯤꯡ ꯑꯦꯛꯁꯦꯁ ꯇꯧꯅꯕꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ ꯑꯃꯁꯨꯡ ꯊꯝꯃꯨ꯫';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'ꯏꯁꯩ ꯑꯁꯤ ꯌꯥꯝꯅꯥ ꯊꯨꯅꯥ ꯃꯥꯡꯂꯣꯃꯗꯥ ꯆꯪꯁꯤꯟꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ ꯑꯃꯁꯨꯡ ꯊꯝꯃꯨ .';
+  String get nextButtonNowPlayingTutorialText =>
+      'ꯏꯁꯩ ꯑꯁꯤ ꯌꯥꯝꯅꯥ ꯊꯨꯅꯥ ꯃꯥꯡꯂꯣꯃꯗꯥ ꯆꯪꯁꯤꯟꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ ꯑꯃꯁꯨꯡ ꯊꯝꯃꯨ .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'ꯏꯁꯩ ꯑꯁꯤ ꯔꯤꯋꯥꯏꯟꯗ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ ꯑꯃꯁꯨꯡ ꯊꯝꯃꯨ .';
+  String get previousButtonNowPlayingTutorialText =>
+      'ꯏꯁꯩ ꯑꯁꯤ ꯔꯤꯋꯥꯏꯟꯗ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ ꯑꯃꯁꯨꯡ ꯊꯝꯃꯨ .';
 
   @override
-  String get deviceControlSearchTutorialText => 'ꯑꯂꯐꯥꯕꯦꯠ ꯑꯃꯥ ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯅꯕꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯑꯗꯨꯒꯤ ꯑꯀꯣꯌꯕꯗꯥ ꯅꯍꯥꯛꯀꯤ ꯊꯣꯡꯅꯥꯎ ꯑꯗꯨ ꯂꯥꯏꯅꯥ ꯂꯧꯊꯣꯀꯎ';
+  String get deviceControlSearchTutorialText =>
+      'ꯑꯂꯐꯥꯕꯦꯠ ꯑꯃꯥ ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯅꯕꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯑꯗꯨꯒꯤ ꯑꯀꯣꯌꯕꯗꯥ ꯅꯍꯥꯛꯀꯤ ꯊꯣꯡꯅꯥꯎ ꯑꯗꯨ ꯂꯥꯏꯅꯥ ꯂꯧꯊꯣꯀꯎ';
 
   @override
-  String get centerButtonSearchTutorialText => 'ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯔꯕꯥ ꯑꯥꯂꯐꯥꯕꯦꯠ ꯑꯗꯨ ꯈꯅꯕꯗꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫';
+  String get centerButtonSearchTutorialText =>
+      'ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯔꯕꯥ ꯑꯥꯂꯐꯥꯕꯦꯠ ꯑꯗꯨ ꯈꯅꯕꯗꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫';
 
   @override
-  String get nextButtonSearchTutorialText => 'ꯁ꯭ꯄꯦꯁ ꯑꯃꯥ ꯍꯥꯄꯆꯤꯟꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .';
+  String get nextButtonSearchTutorialText =>
+      'ꯁ꯭ꯄꯦꯁ ꯑꯃꯥ ꯍꯥꯄꯆꯤꯟꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .';
 
   @override
-  String get previousButtonSearchTutorialText => 'ꯑꯔꯣꯏꯕꯥ ꯆꯦꯛꯔꯦꯇꯔ ꯑꯗꯨ ꯃꯨꯠꯊꯠꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .';
+  String get previousButtonSearchTutorialText =>
+      'ꯑꯔꯣꯏꯕꯥ ꯆꯦꯛꯔꯦꯇꯔ ꯑꯗꯨ ꯃꯨꯠꯊꯠꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .';
 
   @override
-  String get menuButtonSearchTutorialText => 'ꯀꯤꯕꯣꯔꯗ ꯂꯣꯗ ꯇꯧꯅꯕꯥ ꯑꯃꯁꯨꯡ ꯁꯥꯔꯆ ꯔꯤꯖꯜꯇꯁꯤꯡꯒꯥ ꯏꯟꯇꯔꯦꯛꯇ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ';
+  String get menuButtonSearchTutorialText =>
+      'ꯀꯤꯕꯣꯔꯗ ꯂꯣꯗ ꯇꯧꯅꯕꯥ ꯑꯃꯁꯨꯡ ꯁꯥꯔꯆ ꯔꯤꯖꯜꯇꯁꯤꯡꯒꯥ ꯏꯟꯇꯔꯦꯛꯇ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ';
 }

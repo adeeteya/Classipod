@@ -15,16 +15,20 @@ class AppLocalizationsIt extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'Autorizzazione dell\'accesso audio richiesto';
+  String get audioAccessPermissionTitle =>
+      'Autorizzazione dell\'accesso audio richiesto';
 
   @override
-  String get audioAccessPermissionContent => 'Si prega di concedere l\'accesso ai file audio per consentirci di riprodurre i tuoi file musicali.';
+  String get audioAccessPermissionContent =>
+      'Si prega di concedere l\'accesso ai file audio per consentirci di riprodurre i tuoi file musicali.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Autorizzazione dell\'accesso audio negato';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Autorizzazione dell\'accesso audio negato';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Si prega di concedere l\'accesso ai file audio per questa app nelle impostazioni del dispositivo per consentirci di riprodurre i tuoi file musicali.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Si prega di concedere l\'accesso ai file audio per questa app nelle impostazioni del dispositivo per consentirci di riprodurre i tuoi file musicali.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsIt extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsIt extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Toccare i suoni';
 
   @override
-  String get touchSoundsDialogContent => 'Abilita i suoni touch dalle impostazioni del sistema per ascoltare i suoni della ruota clicca';
+  String get touchSoundsDialogContent =>
+      'Abilita i suoni touch dalle impostazioni del sistema per ascoltare i suoni della ruota clicca';
 
   @override
   String get immersiveModeSettingTitle => 'Modalità immersiva';
@@ -144,7 +147,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get donateSettingTitle => 'Donare';
 
   @override
-  String get donateSettingDescription => 'Se ti piace questa app, ti preghiamo di prendere in considerazione la donazione.';
+  String get donateSettingDescription =>
+      'Se ti piace questa app, ti preghiamo di prendere in considerazione la donazione.';
 
   @override
   String get versionAboutScreenTitle => 'Versione';
@@ -195,7 +199,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get retryButtonText => 'Riprovare';
 
   @override
-  String get filePickerDialogTitle => 'Seleziona una directory per scansionare la musica';
+  String get filePickerDialogTitle =>
+      'Seleziona una directory per scansionare la musica';
 
   @override
   String get searchScreenTitle => 'Ricerca';
@@ -210,10 +215,12 @@ class AppLocalizationsIt extends AppLocalizations {
   String get resultsForText => 'Risultati per:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Disabilita l\'ottimizzazione della batteria';
+  String get disableBatteryOptimizationTitle =>
+      'Disabilita l\'ottimizzazione della batteria';
 
   @override
-  String get disableBatteryOptimizationContent => 'Si prega di disabilitare l\'ottimizzazione della batteria per questa app nelle impostazioni del dispositivo per consentire la riproduzione in background della musica.';
+  String get disableBatteryOptimizationContent =>
+      'Si prega di disabilitare l\'ottimizzazione della batteria per questa app nelle impostazioni del dispositivo per consentire la riproduzione in background della musica.';
 
   @override
   String get languageScreenTitle => 'Lingua';
@@ -267,50 +274,66 @@ class AppLocalizationsIt extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music File';
 
   @override
-  String get deviceControlMenuTutorialText => 'Sposta leggermente il pollice attorno alla ruota del clic per navigare nel menu';
+  String get deviceControlMenuTutorialText =>
+      'Sposta leggermente il pollice attorno alla ruota del clic per navigare nel menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Premere il pulsante Centro per selezionare la voce di menu evidenziata';
+  String get centerButtonMenuTutorialText =>
+      'Premere il pulsante Centro per selezionare la voce di menu evidenziata';
 
   @override
-  String get playPauseMenuTutorialText => 'Premere questo pulsante per riprodurre o mettere in pausa una canzone';
+  String get playPauseMenuTutorialText =>
+      'Premere questo pulsante per riprodurre o mettere in pausa una canzone';
 
   @override
-  String get nextButtonMenuTutorialText => 'Premere questo pulsante per saltare alla canzone successiva';
+  String get nextButtonMenuTutorialText =>
+      'Premere questo pulsante per saltare alla canzone successiva';
 
   @override
-  String get previousButtonMenuTutorialText => 'Premere questo pulsante per riavvolgere o tornare alla canzone precedente';
+  String get previousButtonMenuTutorialText =>
+      'Premere questo pulsante per riavvolgere o tornare alla canzone precedente';
 
   @override
-  String get menuButtonTutorialText => 'Premere questo pulsante per tornare al menu precedente. È possibile premere e trattenerlo da qualsiasi altra schermata per andare direttamente al menu principale.';
+  String get menuButtonTutorialText =>
+      'Premere questo pulsante per tornare al menu precedente. È possibile premere e trattenerlo da qualsiasi altra schermata per andare direttamente al menu principale.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Questo è lo schermo del display. Il touchscreen e la modalità schermata divisa sono abilitati per impostazione predefinita e possono essere configurati ulteriormente nelle impostazioni.';
+  String get deviceScreenMenuTutorialText =>
+      'Questo è lo schermo del display. Il touchscreen e la modalità schermata divisa sono abilitati per impostazione predefinita e possono essere configurati ulteriormente nelle impostazioni.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Sposta il pollice attorno alla ruota del clic per regolare il volume';
+  String get deviceControlNowPlayingTutorialText =>
+      'Sposta il pollice attorno alla ruota del clic per regolare il volume';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Premere il pulsante Centro per scorrere attraverso la barra di ricerca, la barra di scrubber e il cursore di mescola. Premere e tenere premuto il pulsante Centro per accedere alle opzioni aggiuntive.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Premere il pulsante Centro per scorrere attraverso la barra di ricerca, la barra di scrubber e il cursore di mescola. Premere e tenere premuto il pulsante Centro per accedere alle opzioni aggiuntive.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Premere e tieni presente questo pulsante per inoltrare velocemente la canzone';
+  String get nextButtonNowPlayingTutorialText =>
+      'Premere e tieni presente questo pulsante per inoltrare velocemente la canzone';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Premere e tenere premuto questo pulsante per riavvolgere la canzone';
+  String get previousButtonNowPlayingTutorialText =>
+      'Premere e tenere premuto questo pulsante per riavvolgere la canzone';
 
   @override
-  String get deviceControlSearchTutorialText => 'Sposta leggermente il pollice attorno alla ruota del clic per evidenziare un alfabeto';
+  String get deviceControlSearchTutorialText =>
+      'Sposta leggermente il pollice attorno alla ruota del clic per evidenziare un alfabeto';
 
   @override
-  String get centerButtonSearchTutorialText => 'Premere il pulsante Centro per selezionare l\'alfabeto evidenziato';
+  String get centerButtonSearchTutorialText =>
+      'Premere il pulsante Centro per selezionare l\'alfabeto evidenziato';
 
   @override
-  String get nextButtonSearchTutorialText => 'Premere questo pulsante per aggiungere uno spazio';
+  String get nextButtonSearchTutorialText =>
+      'Premere questo pulsante per aggiungere uno spazio';
 
   @override
-  String get previousButtonSearchTutorialText => 'Premere questo pulsante per eliminare l\'ultimo carattere';
+  String get previousButtonSearchTutorialText =>
+      'Premere questo pulsante per eliminare l\'ultimo carattere';
 
   @override
-  String get menuButtonSearchTutorialText => 'Premere questo pulsante per chiudere la tastiera e interagire con i risultati di ricerca';
+  String get menuButtonSearchTutorialText =>
+      'Premere questo pulsante per chiudere la tastiera e interagire con i risultati di ricerca';
 }

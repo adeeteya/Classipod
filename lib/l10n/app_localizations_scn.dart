@@ -18,13 +18,16 @@ class AppLocalizationsScn extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Pirmessu di l\'accessu audio.';
 
   @override
-  String get audioAccessPermissionContent => 'Si prega di cuncediri li file àudiu pi pirmèttiricci di sunari li file musicali.';
+  String get audioAccessPermissionContent =>
+      'Si prega di cuncediri li file àudiu pi pirmèttiricci di sunari li file musicali.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Pirmessu d\'accessu audio nigatu';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Pirmessu d\'accessu audio nigatu';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Si prega di cuncediri l\'accessu ê file àudiu pi sta app nnî paràmitri dû dispusitivu pi pirmèttiricci di sunari li file musicali.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Si prega di cuncediri l\'accessu ê file àudiu pi sta app nnî paràmitri dû dispusitivu pi pirmèttiricci di sunari li file musicali.';
 
   @override
   String get menuScreenTitle => 'Menù';
@@ -63,7 +66,6 @@ class AppLocalizationsScn extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsScn extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsScn extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Toccari';
 
   @override
-  String get touchSoundsDialogContent => 'Si prega di Attivari li soni di l\'impostazzioni dû sistema pi sèntiri li soni dû rota.';
+  String get touchSoundsDialogContent =>
+      'Si prega di Attivari li soni di l\'impostazzioni dû sistema pi sèntiri li soni dû rota.';
 
   @override
   String get immersiveModeSettingTitle => 'Modu immersivu';
@@ -144,7 +146,8 @@ class AppLocalizationsScn extends AppLocalizations {
   String get donateSettingTitle => 'Dunari';
 
   @override
-  String get donateSettingDescription => 'Si ti piaci sta app, ti pregu di cunzidirari la dunazzioni.';
+  String get donateSettingDescription =>
+      'Si ti piaci sta app, ti pregu di cunzidirari la dunazzioni.';
 
   @override
   String get versionAboutScreenTitle => 'Virsiuni';
@@ -210,10 +213,12 @@ class AppLocalizationsScn extends AppLocalizations {
   String get resultsForText => 'Risultati pi:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Disattiva l\'uttimizzazzioni dâ battirìa';
+  String get disableBatteryOptimizationTitle =>
+      'Disattiva l\'uttimizzazzioni dâ battirìa';
 
   @override
-  String get disableBatteryOptimizationContent => 'Si prega di disattivari l\'ottimizzazzioni dâ battirìa pi sta app nnî paràmitri dû dispusitivu pi cunsentiri la riproduzzioni di sfunnu dâ musica.';
+  String get disableBatteryOptimizationContent =>
+      'Si prega di disattivari l\'ottimizzazzioni dâ battirìa pi sta app nnî paràmitri dû dispusitivu pi cunsentiri la riproduzzioni di sfunnu dâ musica.';
 
   @override
   String get languageScreenTitle => 'Lingua';
@@ -267,50 +272,66 @@ class AppLocalizationsScn extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Fascini di musica rescacana';
 
   @override
-  String get deviceControlMenuTutorialText => 'Spustati lu pollici ntunnu â Clicca Wheel pi navigari ô menù';
+  String get deviceControlMenuTutorialText =>
+      'Spustati lu pollici ntunnu â Clicca Wheel pi navigari ô menù';
 
   @override
-  String get centerButtonMenuTutorialText => 'Primi lu buttuni cintrali pi scègghiri l\'articulu dû menù suttaliniatu';
+  String get centerButtonMenuTutorialText =>
+      'Primi lu buttuni cintrali pi scègghiri l\'articulu dû menù suttaliniatu';
 
   @override
-  String get playPauseMenuTutorialText => 'Prima stu buttuni pi sunari o fari na pausa';
+  String get playPauseMenuTutorialText =>
+      'Prima stu buttuni pi sunari o fari na pausa';
 
   @override
-  String get nextButtonMenuTutorialText => 'Prima stu buttuni pi saltari â canzuna appressu';
+  String get nextButtonMenuTutorialText =>
+      'Prima stu buttuni pi saltari â canzuna appressu';
 
   @override
-  String get previousButtonMenuTutorialText => 'Prima stu buttuni ppi ricurdiri o turnari â canzuni pricidenti';
+  String get previousButtonMenuTutorialText =>
+      'Prima stu buttuni ppi ricurdiri o turnari â canzuni pricidenti';
 
   @override
-  String get menuButtonTutorialText => 'Prima stu buttuni pi turnari ô menù pricidenti. Putissi apprìmiri e tènirilu di qualegghiè autru schermu pi jiri direttamenti ô menù principali.';
+  String get menuButtonTutorialText =>
+      'Prima stu buttuni pi turnari ô menù pricidenti. Putissi apprìmiri e tènirilu di qualegghiè autru schermu pi jiri direttamenti ô menù principali.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Chistu è lu schermu dû schermu. Lu Modu di Schermu di Touch e Screen su\' attivati ​​pi difautu e ponnu èssiri cunfigurati cchiù assai nnî paràmitri.';
+  String get deviceScreenMenuTutorialText =>
+      'Chistu è lu schermu dû schermu. Lu Modu di Schermu di Touch e Screen su\' attivati ​​pi difautu e ponnu èssiri cunfigurati cchiù assai nnî paràmitri.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Spustati lu pollici ntunnu â Clicca Wheel pi aggiustari lu vulumi';
+  String get deviceControlNowPlayingTutorialText =>
+      'Spustati lu pollici ntunnu â Clicca Wheel pi aggiustari lu vulumi';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Primi lu buttuni Center pi ciclari attraversu la barra, la barra di lavaggiu e lu cursuri di smuppu. Prima e tèniri lu buttuni Center pi accèdiri a autri opzzioni.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Primi lu buttuni Center pi ciclari attraversu la barra, la barra di lavaggiu e lu cursuri di smuppu. Prima e tèniri lu buttuni Center pi accèdiri a autri opzzioni.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Premi e teniri stu buttuni ppiloti avanti la canzuni';
+  String get nextButtonNowPlayingTutorialText =>
+      'Premi e teniri stu buttuni ppiloti avanti la canzuni';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Premi e teniri stu buttune pi ritruvari la canzuni';
+  String get previousButtonNowPlayingTutorialText =>
+      'Premi e teniri stu buttune pi ritruvari la canzuni';
 
   @override
-  String get deviceControlSearchTutorialText => 'Spustati liggermenti lu pollici ntunnu â Clicca Wheel pi suttaliniari n\'alfabbetu';
+  String get deviceControlSearchTutorialText =>
+      'Spustati liggermenti lu pollici ntunnu â Clicca Wheel pi suttaliniari n\'alfabbetu';
 
   @override
-  String get centerButtonSearchTutorialText => 'Primi lu buttuni cintrali pi scègghiri l\'alfabbetu suttaliniatu';
+  String get centerButtonSearchTutorialText =>
+      'Primi lu buttuni cintrali pi scègghiri l\'alfabbetu suttaliniatu';
 
   @override
-  String get nextButtonSearchTutorialText => 'Primi stu buttuni pi agghiùnciri nu spazziu';
+  String get nextButtonSearchTutorialText =>
+      'Primi stu buttuni pi agghiùnciri nu spazziu';
 
   @override
-  String get previousButtonSearchTutorialText => 'Prima stu buttuni pi cancillari l\'ùrtimu caràttiri';
+  String get previousButtonSearchTutorialText =>
+      'Prima stu buttuni pi cancillari l\'ùrtimu caràttiri';
 
   @override
-  String get menuButtonSearchTutorialText => 'Prima stu buttuni pi chiudiri la tastiera e ntiraggìsciri chî risurtati di circata';
+  String get menuButtonSearchTutorialText =>
+      'Prima stu buttuni pi chiudiri la tastiera e ntiraggìsciri chî risurtati di circata';
 }

@@ -15,16 +15,20 @@ class AppLocalizationsYi extends AppLocalizations {
   String get menuButtonText => 'מעניו';
 
   @override
-  String get audioAccessPermissionTitle => 'אַודיאָ אַקסעס דערלויבעניש פארלאנגט';
+  String get audioAccessPermissionTitle =>
+      'אַודיאָ אַקסעס דערלויבעניש פארלאנגט';
 
   @override
-  String get audioAccessPermissionContent => 'ביטע געבן אַודיאָ טעקעס אַקסעס צו לאָזן אונדז צו שפּילן דיין מוזיק טעקעס.';
+  String get audioAccessPermissionContent =>
+      'ביטע געבן אַודיאָ טעקעס אַקסעס צו לאָזן אונדז צו שפּילן דיין מוזיק טעקעס.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'אַודיאָ אַקסעס דערלויבעניש אפגעזאגט';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'אַודיאָ אַקסעס דערלויבעניש אפגעזאגט';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'ביטע געבן אַודיאָ טעקעס אַקסעס פֿאַר דעם אַפּ אין די מיטל סעטטינגס צו לאָזן אונדז צו שפּילן דיין מוזיק טעקעס.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'ביטע געבן אַודיאָ טעקעס אַקסעס פֿאַר דעם אַפּ אין די מיטל סעטטינגס צו לאָזן אונדז צו שפּילן דיין מוזיק טעקעס.';
 
   @override
   String get menuScreenTitle => 'מעניו';
@@ -63,7 +67,6 @@ class AppLocalizationsYi extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsYi extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsYi extends AppLocalizations {
   String get touchSoundsDialogTitle => 'פאַרבינדן סאָונדס';
 
   @override
-  String get touchSoundsDialogContent => 'ביטע געבן פאַרבינדן סאָונדס פון סיסטעם סעטטינגס צו הערן די קליק ראָד סאָונדס';
+  String get touchSoundsDialogContent =>
+      'ביטע געבן פאַרבינדן סאָונדס פון סיסטעם סעטטינגס צו הערן די קליק ראָד סאָונדס';
 
   @override
   String get immersiveModeSettingTitle => 'יממערסיווע מאָדע';
@@ -144,7 +147,8 @@ class AppLocalizationsYi extends AppLocalizations {
   String get donateSettingTitle => 'מאַקרעוו זייַן';
 
   @override
-  String get donateSettingDescription => 'אויב איר ווי די אַפּ, ביטע באַטראַכטן דאָונייטינג.';
+  String get donateSettingDescription =>
+      'אויב איר ווי די אַפּ, ביטע באַטראַכטן דאָונייטינג.';
 
   @override
   String get versionAboutScreenTitle => 'נוסעך';
@@ -195,7 +199,8 @@ class AppLocalizationsYi extends AppLocalizations {
   String get retryButtonText => 'פריין';
 
   @override
-  String get filePickerDialogTitle => 'סעלעקטירן אַ וועגווייַזער צו יבערקוקן פֿאַר מוזיק';
+  String get filePickerDialogTitle =>
+      'סעלעקטירן אַ וועגווייַזער צו יבערקוקן פֿאַר מוזיק';
 
   @override
   String get searchScreenTitle => 'זוכן';
@@ -210,10 +215,12 @@ class AppLocalizationsYi extends AppLocalizations {
   String get resultsForText => 'רעזולטאַטן פֿאַר:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'דיסאַבלע באַטאַרייע אַפּטאַמאַזיישאַן';
+  String get disableBatteryOptimizationTitle =>
+      'דיסאַבלע באַטאַרייע אַפּטאַמאַזיישאַן';
 
   @override
-  String get disableBatteryOptimizationContent => 'ביטע דיסייבאַל באַטאַרייע אַפּטאַמאַזיישאַן פֿאַר דעם אַפּ אין די מיטל סעטטינגס צו לאָזן הינטערגרונט פּלייַבאַקק פון מוזיק.';
+  String get disableBatteryOptimizationContent =>
+      'ביטע דיסייבאַל באַטאַרייע אַפּטאַמאַזיישאַן פֿאַר דעם אַפּ אין די מיטל סעטטינגס צו לאָזן הינטערגרונט פּלייַבאַקק פון מוזיק.';
 
   @override
   String get languageScreenTitle => 'שפּראַך';
@@ -267,50 +274,66 @@ class AppLocalizationsYi extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'רעסקאַן מוזיק טעקעס';
 
   @override
-  String get deviceControlMenuTutorialText => 'מאַך דיין גראָבער פינגער לייטלי אַרום די קליק ראָד צו נאַוויגירן די מעניו';
+  String get deviceControlMenuTutorialText =>
+      'מאַך דיין גראָבער פינגער לייטלי אַרום די קליק ראָד צו נאַוויגירן די מעניו';
 
   @override
-  String get centerButtonMenuTutorialText => 'דרוק דעם צענטער קנעפּל צו סעלעקטירן דעם כיילייטיד מעניו נומער';
+  String get centerButtonMenuTutorialText =>
+      'דרוק דעם צענטער קנעפּל צו סעלעקטירן דעם כיילייטיד מעניו נומער';
 
   @override
-  String get playPauseMenuTutorialText => 'דרוק דעם קנעפּל צו שפּילן אָדער פּויזע אַ ליד';
+  String get playPauseMenuTutorialText =>
+      'דרוק דעם קנעפּל צו שפּילן אָדער פּויזע אַ ליד';
 
   @override
-  String get nextButtonMenuTutorialText => 'דרוק דעם קנעפּל צו האָפּקען צו דער ווייַטער ליד';
+  String get nextButtonMenuTutorialText =>
+      'דרוק דעם קנעפּל צו האָפּקען צו דער ווייַטער ליד';
 
   @override
-  String get previousButtonMenuTutorialText => 'דרוק דעם קנעפּל צו ריוויינד אָדער גיין צוריק צו די פריערדיקע ליד';
+  String get previousButtonMenuTutorialText =>
+      'דרוק דעם קנעפּל צו ריוויינד אָדער גיין צוריק צו די פריערדיקע ליד';
 
   @override
-  String get menuButtonTutorialText => 'דרוק דעם קנעפּל צו צוריקקומען צו די פריערדיקע מעניו. איר קען דריקן און האַלטן עס פון קיין אנדערע פאַרשטעלן צו דערגרייכן די הויפּט מעניו.';
+  String get menuButtonTutorialText =>
+      'דרוק דעם קנעפּל צו צוריקקומען צו די פריערדיקע מעניו. איר קען דריקן און האַלטן עס פון קיין אנדערע פאַרשטעלן צו דערגרייכן די הויפּט מעניו.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'דאָס איז די אַרויסווייַזן פאַרשטעלן. פאַרבינדן פאַרשטעלן און שפּאַלטן פאַרשטעלן מאָדע זענען ענייבאַלד דורך פעליקייַט און קענען זיין קאַנפיגיערד ווייַטער אין די סעטטינגס.';
+  String get deviceScreenMenuTutorialText =>
+      'דאָס איז די אַרויסווייַזן פאַרשטעלן. פאַרבינדן פאַרשטעלן און שפּאַלטן פאַרשטעלן מאָדע זענען ענייבאַלד דורך פעליקייַט און קענען זיין קאַנפיגיערד ווייַטער אין די סעטטינגס.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'מאַך דיין גראָבער פינגער אַרום די גיט ראָד צו סטרויערן די באַנד';
+  String get deviceControlNowPlayingTutorialText =>
+      'מאַך דיין גראָבער פינגער אַרום די גיט ראָד צו סטרויערן די באַנד';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'דרוק דעם צענטער קנעפּל צו ציקל דורך זוכן באַר, סקרובבער באַר און שאַרן סליידער. דריקן און האַלטן די צענטער קנעפּל צו אַקסעס נאָך אָפּציעס.';
+  String get centerButtonNowPlayingTutorialText =>
+      'דרוק דעם צענטער קנעפּל צו ציקל דורך זוכן באַר, סקרובבער באַר און שאַרן סליידער. דריקן און האַלטן די צענטער קנעפּל צו אַקסעס נאָך אָפּציעס.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'דריקן און האַלטן דעם קנעפּל צו געשווינד פאָרלייגן די ליד';
+  String get nextButtonNowPlayingTutorialText =>
+      'דריקן און האַלטן דעם קנעפּל צו געשווינד פאָרלייגן די ליד';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'דריקן און האַלטן דעם קנעפּל צו ריוויינד די ליד';
+  String get previousButtonNowPlayingTutorialText =>
+      'דריקן און האַלטן דעם קנעפּל צו ריוויינד די ליד';
 
   @override
-  String get deviceControlSearchTutorialText => 'מאַך דיין גראָבער פינגער לייטלי אַרום די קליק ראָד צו הויכפּונקט אַ אלפאבעט';
+  String get deviceControlSearchTutorialText =>
+      'מאַך דיין גראָבער פינגער לייטלי אַרום די קליק ראָד צו הויכפּונקט אַ אלפאבעט';
 
   @override
-  String get centerButtonSearchTutorialText => 'דרוק דעם צענטער קנעפּל צו סעלעקטירן דעם כיילייטיד אלפאבעט';
+  String get centerButtonSearchTutorialText =>
+      'דרוק דעם צענטער קנעפּל צו סעלעקטירן דעם כיילייטיד אלפאבעט';
 
   @override
-  String get nextButtonSearchTutorialText => 'דרוק דעם קנעפּל צו לייגן אַ פּלאַץ';
+  String get nextButtonSearchTutorialText =>
+      'דרוק דעם קנעפּל צו לייגן אַ פּלאַץ';
 
   @override
-  String get previousButtonSearchTutorialText => 'דרוק דעם קנעפּל צו ויסמעקן די לעצטע כאַראַקטער';
+  String get previousButtonSearchTutorialText =>
+      'דרוק דעם קנעפּל צו ויסמעקן די לעצטע כאַראַקטער';
 
   @override
-  String get menuButtonSearchTutorialText => 'דרוק דעם קנעפּל צו פאַרמאַכן די קלאַוויאַטור און ינטעראַקט מיט די זוך רעזולטאַטן';
+  String get menuButtonSearchTutorialText =>
+      'דרוק דעם קנעפּל צו פאַרמאַכן די קלאַוויאַטור און ינטעראַקט מיט די זוך רעזולטאַטן';
 }

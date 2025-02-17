@@ -18,13 +18,16 @@ class AppLocalizationsQu extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Yaykuna Permisota mañasqa .';
 
   @override
-  String get audioAccessPermissionContent => 'Ama hina kaspa, uyarinapaq archivokuna yaykuyta quy, takiy archivoykikunata tocanaykupaq.';
+  String get audioAccessPermissionContent =>
+      'Ama hina kaspa, uyarinapaq archivokuna yaykuyta quy, takiy archivoykikunata tocanaykupaq.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Yaykuna Permiso negasqa .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Yaykuna Permiso negasqa .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Ama hina kaspa, kay apppaq uyarina archivokuna yaykuyta quy dispositivo churanakunapi takiy archivokunayki tocayta atisqaykumanta.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Ama hina kaspa, kay apppaq uyarina archivokuna yaykuyta quy dispositivo churanakunapi takiy archivokunayki tocayta atisqaykumanta.';
 
   @override
   String get menuScreenTitle => 'Menú .';
@@ -63,7 +66,6 @@ class AppLocalizationsQu extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsQu extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsQu extends AppLocalizations {
   String get touchSoundsDialogTitle => 'T\'uqyaykuna llamiy .';
 
   @override
-  String get touchSoundsDialogContent => 'Ama hina kaspa, sistemapa churayninkunamanta llachpay uyarinakunata atichiy, ñit\'iy rueda t\'uqyaykunata uyarinaykipaq .';
+  String get touchSoundsDialogContent =>
+      'Ama hina kaspa, sistemapa churayninkunamanta llachpay uyarinakunata atichiy, ñit\'iy rueda t\'uqyaykunata uyarinaykipaq .';
 
   @override
   String get immersiveModeSettingTitle => 'Modo inmerso .';
@@ -144,7 +146,8 @@ class AppLocalizationsQu extends AppLocalizations {
   String get donateSettingTitle => 'Quy';
 
   @override
-  String get donateSettingDescription => 'Sichus kay app gustanki chayqa, ama hina kaspa qhawariy qoyta.';
+  String get donateSettingDescription =>
+      'Sichus kay app gustanki chayqa, ama hina kaspa qhawariy qoyta.';
 
   @override
   String get versionAboutScreenTitle => 'Ima niraq';
@@ -186,7 +189,8 @@ class AppLocalizationsQu extends AppLocalizations {
   String get commonOfText => 'de .';
 
   @override
-  String get pageNotFoundText => 'Chay qusqa p\'anqaqa manam tarisqachu karqan .';
+  String get pageNotFoundText =>
+      'Chay qusqa p\'anqaqa manam tarisqachu karqan .';
 
   @override
   String get commonErrorText => 'Pantay';
@@ -195,7 +199,8 @@ class AppLocalizationsQu extends AppLocalizations {
   String get retryButtonText => 'Retry .';
 
   @override
-  String get filePickerDialogTitle => 'Musikuta escaneanapaq huk directoriota akllay .';
+  String get filePickerDialogTitle =>
+      'Musikuta escaneanapaq huk directoriota akllay .';
 
   @override
   String get searchScreenTitle => 'Maskay';
@@ -210,10 +215,12 @@ class AppLocalizationsQu extends AppLocalizations {
   String get resultsForText => 'Resultados para:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Pilakuna allinchayta mana llamk\'achiy .';
+  String get disableBatteryOptimizationTitle =>
+      'Pilakuna allinchayta mana llamk\'achiy .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Ama hina kaspa, kay apppaq pila allinchayta dispositivo churaykunapi mana llamk\'achiy, takiypa qhipa takiyninta saqinanpaq.';
+  String get disableBatteryOptimizationContent =>
+      'Ama hina kaspa, kay apppaq pila allinchayta dispositivo churaykunapi mana llamk\'achiy, takiypa qhipa takiyninta saqinanpaq.';
 
   @override
   String get languageScreenTitle => 'Simi';
@@ -267,50 +274,66 @@ class AppLocalizationsQu extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Musiku Archivokuna .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Rueda de clic nisqapi hatun makiykita llampullata kuyuchiy menú nisqapi purinaykipaq .';
+  String get deviceControlMenuTutorialText =>
+      'Rueda de clic nisqapi hatun makiykita llampullata kuyuchiy menú nisqapi purinaykipaq .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Chawpi kaq botonta ñit\'iy Resaltado nisqa menú nisqapi akllanaykipaq .';
+  String get centerButtonMenuTutorialText =>
+      'Chawpi kaq botonta ñit\'iy Resaltado nisqa menú nisqapi akllanaykipaq .';
 
   @override
-  String get playPauseMenuTutorialText => 'Kay botonta ñit’iy huk takiyta tocanaykipaq otaq samarinaykipaq .';
+  String get playPauseMenuTutorialText =>
+      'Kay botonta ñit’iy huk takiyta tocanaykipaq otaq samarinaykipaq .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Kay ñit\'inata ñit\'iy qatiq takiman saltanaykipaq .';
+  String get nextButtonMenuTutorialText =>
+      'Kay ñit\'inata ñit\'iy qatiq takiman saltanaykipaq .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Kay ñit\'inata ñit\'iy kutiy kutinaykipaq icha ñawpaq takiman kutinaykipaq .';
+  String get previousButtonMenuTutorialText =>
+      'Kay ñit\'inata ñit\'iy kutiy kutinaykipaq icha ñawpaq takiman kutinaykipaq .';
 
   @override
-  String get menuButtonTutorialText => 'Kay ñit’inata ñit’iy ñawpaq menú nisqaman kutinaykipaq. Huk pantallamanta ñit\'iy chaymanta hap\'iy atikunki chiqamanta menú principal kaqman riyta.';
+  String get menuButtonTutorialText =>
+      'Kay ñit’inata ñit’iy ñawpaq menú nisqaman kutinaykipaq. Huk pantallamanta ñit\'iy chaymanta hap\'iy atikunki chiqamanta menú principal kaqman riyta.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Kayqa pantalla qhawaymi. Pantalla ñit\'iy chaymanta pantalla rakisqa modo kaqmanta atichisqa kanku ñawpaqmanta chaymanta aswan ruwanakuna ruwaypi ruwasqa kanku.';
+  String get deviceScreenMenuTutorialText =>
+      'Kayqa pantalla qhawaymi. Pantalla ñit\'iy chaymanta pantalla rakisqa modo kaqmanta atichisqa kanku ñawpaqmanta chaymanta aswan ruwanakuna ruwaypi ruwasqa kanku.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Rueda de clic nisqapi hatun makiykita kuyuchiy volumen nisqa allinchanaykipaq .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Rueda de clic nisqapi hatun makiykita kuyuchiy volumen nisqa allinchanaykipaq .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Chawpi boton ñit’iy bicicletapi purinaykipaq Seek Bar, Scrubber Bar chaymanta Shuffle Slider kaqnintakama. Chawpi kaq botonta ñit’iy hinaspa hap’iy huk akllanakunaman haykunapaq.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Chawpi boton ñit’iy bicicletapi purinaykipaq Seek Bar, Scrubber Bar chaymanta Shuffle Slider kaqnintakama. Chawpi kaq botonta ñit’iy hinaspa hap’iy huk akllanakunaman haykunapaq.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Kay botonta ñit\'ispa hap\'iy takita usqhaylla ñawpaqman purichinaykipaq .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Kay botonta ñit\'ispa hap\'iy takita usqhaylla ñawpaqman purichinaykipaq .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Kay ñit\'inata ñit\'ispa hap\'iy takiyta kutinanpaq .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Kay ñit\'inata ñit\'ispa hap\'iy takiyta kutinanpaq .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Rueda de clic nisqapi hatun makiykita llampullata kuyuchiy huk alfabetota resaltanaykipaq .';
+  String get deviceControlSearchTutorialText =>
+      'Rueda de clic nisqapi hatun makiykita llampullata kuyuchiy huk alfabetota resaltanaykipaq .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Chawpi kaq botonta ñit’iy resaltasqa alfabetota akllanaykipaq .';
+  String get centerButtonSearchTutorialText =>
+      'Chawpi kaq botonta ñit’iy resaltasqa alfabetota akllanaykipaq .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Kay ñit\'inata ñit\'iy huk espaciota yapanaykipaq .';
+  String get nextButtonSearchTutorialText =>
+      'Kay ñit\'inata ñit\'iy huk espaciota yapanaykipaq .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Kay ñit\'inata ñit\'iy qhipa kaq qillqata qulluchinaykipaq .';
+  String get previousButtonSearchTutorialText =>
+      'Kay ñit\'inata ñit\'iy qhipa kaq qillqata qulluchinaykipaq .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Kay ñit\'inata ñit\'iy teclado wichq\'anapaq chaymanta maskana ruwaykunawan tinkiy .';
+  String get menuButtonSearchTutorialText =>
+      'Kay ñit\'inata ñit\'iy teclado wichq\'anapaq chaymanta maskana ruwaykunawan tinkiy .';
 }

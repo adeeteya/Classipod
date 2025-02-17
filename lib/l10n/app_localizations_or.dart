@@ -18,13 +18,16 @@ class AppLocalizationsOr extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ଅଡିଓ ଆକ୍ସେସ୍ ଅନୁମତି ଆବଶ୍ୟକ |';
 
   @override
-  String get audioAccessPermissionContent => 'ଆମକୁ ମ୍ୟୁଜିକ୍ ଫାଇଲ୍ ଖେଳିବାକୁ ଅନୁମତି ଦେବା ପାଇଁ ଦୟାକରି ଅଡିଓ ଫାଇଲ୍ ଆକ୍ସେସ୍ ପ୍ରଦାନ କରନ୍ତୁ |';
+  String get audioAccessPermissionContent =>
+      'ଆମକୁ ମ୍ୟୁଜିକ୍ ଫାଇଲ୍ ଖେଳିବାକୁ ଅନୁମତି ଦେବା ପାଇଁ ଦୟାକରି ଅଡିଓ ଫାଇଲ୍ ଆକ୍ସେସ୍ ପ୍ରଦାନ କରନ୍ତୁ |';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ଅଡିଓ ଆକ୍ସେସ୍ ଅନୁମତି ପ୍ରତ୍ୟାଖ୍ୟାନ |';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ଅଡିଓ ଆକ୍ସେସ୍ ଅନୁମତି ପ୍ରତ୍ୟାଖ୍ୟାନ |';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'ଦୟାକରି ଆମକୁ ଆପଣଙ୍କର ମ୍ୟୁଜିକ୍ ଫାଇଲଗୁଡ଼ିକ ବଜାଇବାକୁ ଅନୁମତି ଦେବା ପାଇଁ ଦୟାକରି ଏହି ଆପ୍ ପାଇଁ ଅଡିଓ ଫାଇଲ୍ ଆକ୍ସେସ୍ ପାଇଁ ଗ୍ରାଟ୍ କରନ୍ତୁ |';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'ଦୟାକରି ଆମକୁ ଆପଣଙ୍କର ମ୍ୟୁଜିକ୍ ଫାଇଲଗୁଡ଼ିକ ବଜାଇବାକୁ ଅନୁମତି ଦେବା ପାଇଁ ଦୟାକରି ଏହି ଆପ୍ ପାଇଁ ଅଡିଓ ଫାଇଲ୍ ଆକ୍ସେସ୍ ପାଇଁ ଗ୍ରାଟ୍ କରନ୍ତୁ |';
 
   @override
   String get menuScreenTitle => 'ମେନୁ';
@@ -63,7 +66,6 @@ class AppLocalizationsOr extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsOr extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsOr extends AppLocalizations {
   String get touchSoundsDialogTitle => 'ସ୍ପର୍ଶ ଶବ୍ଦ |';
 
   @override
-  String get touchSoundsDialogContent => 'କ୍ଲିକ୍ ଚକ ଶବ୍ଦ ଶୁଣିବା ପାଇଁ ଦୟାକରି ସିଷ୍ଟମ୍ ସେଟିଂସମୂହରୁ ସିଷ୍ଟମ୍ ସେଟିଂସମୂହରୁ ସକ୍ଷମ ହୁଅନ୍ତୁ |';
+  String get touchSoundsDialogContent =>
+      'କ୍ଲିକ୍ ଚକ ଶବ୍ଦ ଶୁଣିବା ପାଇଁ ଦୟାକରି ସିଷ୍ଟମ୍ ସେଟିଂସମୂହରୁ ସିଷ୍ଟମ୍ ସେଟିଂସମୂହରୁ ସକ୍ଷମ ହୁଅନ୍ତୁ |';
 
   @override
   String get immersiveModeSettingTitle => 'ଅମଗର୍ସ ମୋଡ୍ |';
@@ -144,7 +146,8 @@ class AppLocalizationsOr extends AppLocalizations {
   String get donateSettingTitle => 'ଦାନ କରନ୍ତୁ |';
 
   @override
-  String get donateSettingDescription => 'ଯଦି ଆପଣ ଏହି ଆପ୍ ପସନ୍ଦ କରନ୍ତି, ଦୟାକରି ଦାନ କରିବାକୁ ବିଚାର କରନ୍ତୁ |';
+  String get donateSettingDescription =>
+      'ଯଦି ଆପଣ ଏହି ଆପ୍ ପସନ୍ଦ କରନ୍ତି, ଦୟାକରି ଦାନ କରିବାକୁ ବିଚାର କରନ୍ତୁ |';
 
   @override
   String get versionAboutScreenTitle => 'ସଂସ୍କରଣ';
@@ -195,7 +198,8 @@ class AppLocalizationsOr extends AppLocalizations {
   String get retryButtonText => 'ପୁନ ry ଚେଷ୍ଟା କର';
 
   @override
-  String get filePickerDialogTitle => 'ସଙ୍ଗୀତ ପାଇଁ ସ୍କାନ୍ କରିବାକୁ ଏକ ଡିରେକ୍ଟୋରୀ ଚୟନ କରନ୍ତୁ |';
+  String get filePickerDialogTitle =>
+      'ସଙ୍ଗୀତ ପାଇଁ ସ୍କାନ୍ କରିବାକୁ ଏକ ଡିରେକ୍ଟୋରୀ ଚୟନ କରନ୍ତୁ |';
 
   @override
   String get searchScreenTitle => 'ସନ୍ଧାନ କର |';
@@ -210,10 +214,12 @@ class AppLocalizationsOr extends AppLocalizations {
   String get resultsForText => 'ଫଳାଫଳ:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'ବ୍ୟାଟେରୀ ଅପ୍ଟିମାଇଜେସନ୍ ଅକ୍ଷମ କରନ୍ତୁ |';
+  String get disableBatteryOptimizationTitle =>
+      'ବ୍ୟାଟେରୀ ଅପ୍ଟିମାଇଜେସନ୍ ଅକ୍ଷମ କରନ୍ତୁ |';
 
   @override
-  String get disableBatteryOptimizationContent => 'ସଂଗୀତ ପୃଷ୍ଠଭୂମି ପ୍ଲେବ୍ୟାକ୍ କୁ ଅନୁମତି ଦେବା ପାଇଁ ଦୟାକରି ଏହି ଆପ୍ ପାଇଁ ବ୍ୟାଟେରୀ ଅପ୍ଟିମାଇଜେସନ୍ ଅକ୍ଷମ କରନ୍ତୁ |';
+  String get disableBatteryOptimizationContent =>
+      'ସଂଗୀତ ପୃଷ୍ଠଭୂମି ପ୍ଲେବ୍ୟାକ୍ କୁ ଅନୁମତି ଦେବା ପାଇଁ ଦୟାକରି ଏହି ଆପ୍ ପାଇଁ ବ୍ୟାଟେରୀ ଅପ୍ଟିମାଇଜେସନ୍ ଅକ୍ଷମ କରନ୍ତୁ |';
 
   @override
   String get languageScreenTitle => 'ଭାଷା';
@@ -267,50 +273,66 @@ class AppLocalizationsOr extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'ସଂଗୀତ ସଂଗୀତ ଫାଇଲଗୁଡିକ |';
 
   @override
-  String get deviceControlMenuTutorialText => 'ମେନୁକୁ ନେଭିଗେଟ୍ କରିବା ପାଇଁ ଆପଣଙ୍କ ଆଙ୍ଗୁଠିକୁ ହାଲୁକା ଘୁଞ୍ଚାନ୍ତୁ |';
+  String get deviceControlMenuTutorialText =>
+      'ମେନୁକୁ ନେଭିଗେଟ୍ କରିବା ପାଇଁ ଆପଣଙ୍କ ଆଙ୍ଗୁଠିକୁ ହାଲୁକା ଘୁଞ୍ଚାନ୍ତୁ |';
 
   @override
-  String get centerButtonMenuTutorialText => 'ହାଇଲାଇଟ୍ ହୋଇଥିବା ମେନୁ ଆଇଟମ୍ ବାଛିବା ପାଇଁ କେନ୍ଦ୍ର ବଟନ୍ ଦବାନ୍ତୁ |';
+  String get centerButtonMenuTutorialText =>
+      'ହାଇଲାଇଟ୍ ହୋଇଥିବା ମେନୁ ଆଇଟମ୍ ବାଛିବା ପାଇଁ କେନ୍ଦ୍ର ବଟନ୍ ଦବାନ୍ତୁ |';
 
   @override
-  String get playPauseMenuTutorialText => 'ଏକ ଗୀତ ବଜାଇବା କିମ୍ବା ବିରାମ ଦେବା ପାଇଁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
+  String get playPauseMenuTutorialText =>
+      'ଏକ ଗୀତ ବଜାଇବା କିମ୍ବା ବିରାମ ଦେବା ପାଇଁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
 
   @override
-  String get nextButtonMenuTutorialText => 'ପରବର୍ତ୍ତୀ ଗୀତକୁ ଯିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
+  String get nextButtonMenuTutorialText =>
+      'ପରବର୍ତ୍ତୀ ଗୀତକୁ ଯିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
 
   @override
-  String get previousButtonMenuTutorialText => 'ପୂର୍ବ ଗୀତକୁ ରିଭାଇଣ୍ଡ୍ କରିବା କିମ୍ବା ପଛକୁ ଯିବା ପାଇଁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
+  String get previousButtonMenuTutorialText =>
+      'ପୂର୍ବ ଗୀତକୁ ରିଭାଇଣ୍ଡ୍ କରିବା କିମ୍ବା ପଛକୁ ଯିବା ପାଇଁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
 
   @override
-  String get menuButtonTutorialText => 'ପୂର୍ବ ମେନୁକୁ ଫେରିବା ପାଇଁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ | ଆପଣ ମୁଖ୍ୟ ମେନୁକୁ ଯାଆନ୍ତୁକୁ ସିଧାସଳଖ ଯିବାକୁ ଅନ୍ୟ କ the ଣସି ପରଦାରୁ ଏହାକୁ ଦବାଇ ଧରି ପାରିବେ |';
+  String get menuButtonTutorialText =>
+      'ପୂର୍ବ ମେନୁକୁ ଫେରିବା ପାଇଁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ | ଆପଣ ମୁଖ୍ୟ ମେନୁକୁ ଯାଆନ୍ତୁକୁ ସିଧାସଳଖ ଯିବାକୁ ଅନ୍ୟ କ the ଣସି ପରଦାରୁ ଏହାକୁ ଦବାଇ ଧରି ପାରିବେ |';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ଏହା ହେଉଛି ଡିସପ୍ଲେ ସ୍କ୍ରିନ | ଡିଫଲ୍ଟ ଭାବରେ ସ୍ପର୍ଶ ସ୍କ୍ରିନ ଏବଂ ସ୍ପ୍ ସ୍ପଟ୍ ସ୍କ୍ରିନ୍ ମୋଡ୍ ସକ୍ଷମ ହୋଇଛି ଏବଂ ସେଟିଂସମୂହରେ ଅଧିକ ବିନ୍ୟାସ କରାଯାଇପାରିବ |';
+  String get deviceScreenMenuTutorialText =>
+      'ଏହା ହେଉଛି ଡିସପ୍ଲେ ସ୍କ୍ରିନ | ଡିଫଲ୍ଟ ଭାବରେ ସ୍ପର୍ଶ ସ୍କ୍ରିନ ଏବଂ ସ୍ପ୍ ସ୍ପଟ୍ ସ୍କ୍ରିନ୍ ମୋଡ୍ ସକ୍ଷମ ହୋଇଛି ଏବଂ ସେଟିଂସମୂହରେ ଅଧିକ ବିନ୍ୟାସ କରାଯାଇପାରିବ |';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'ଭଲ୍ୟୁମ୍ ସଜାଡିବା ପାଇଁ କ୍ଲିକ୍ କରନ୍ତୁ କ୍ଲିକ୍ କରନ୍ତୁ |';
+  String get deviceControlNowPlayingTutorialText =>
+      'ଭଲ୍ୟୁମ୍ ସଜାଡିବା ପାଇଁ କ୍ଲିକ୍ କରନ୍ତୁ କ୍ଲିକ୍ କରନ୍ତୁ |';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'ଅନୁସନ୍ଧାନ ଦଣ୍ଡିକା, ସ୍କ୍ରବର୍ ବାର୍ ଏବଂ ଶଫର୍ ସ୍ଲାଇଡର୍ ମାଧ୍ୟମରେ ଚକ୍ରକୁ ଚକ୍ରକୁ ବ char ାନ୍ତୁ | ଅତିରିକ୍ତ ବିକଳ୍ପଗୁଡିକ ପ୍ରବେଶ କରିବାକୁ କେନ୍ଦ୍ର ବଟନ୍ ଦବାନ୍ତୁ ଏବଂ ଧରି ରଖନ୍ତୁ |';
+  String get centerButtonNowPlayingTutorialText =>
+      'ଅନୁସନ୍ଧାନ ଦଣ୍ଡିକା, ସ୍କ୍ରବର୍ ବାର୍ ଏବଂ ଶଫର୍ ସ୍ଲାଇଡର୍ ମାଧ୍ୟମରେ ଚକ୍ରକୁ ଚକ୍ରକୁ ବ char ାନ୍ତୁ | ଅତିରିକ୍ତ ବିକଳ୍ପଗୁଡିକ ପ୍ରବେଶ କରିବାକୁ କେନ୍ଦ୍ର ବଟନ୍ ଦବାନ୍ତୁ ଏବଂ ଧରି ରଖନ୍ତୁ |';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'ଗୀତକୁ ଶୀଘ୍ର ଆଗକୁ ବ to ିବାକୁ ଏବଂ ଧରି ରଖନ୍ତୁ |';
+  String get nextButtonNowPlayingTutorialText =>
+      'ଗୀତକୁ ଶୀଘ୍ର ଆଗକୁ ବ to ିବାକୁ ଏବଂ ଧରି ରଖନ୍ତୁ |';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'ଗୀତକୁ ପୁନ brand କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ ଏବଂ ଧରି ରଖନ୍ତୁ |';
+  String get previousButtonNowPlayingTutorialText =>
+      'ଗୀତକୁ ପୁନ brand କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ ଏବଂ ଧରି ରଖନ୍ତୁ |';
 
   @override
-  String get deviceControlSearchTutorialText => 'ଏକ ବର୍ଣ୍ଣମାଳା ହାଇଲାଇଟ୍ କରିବା ପାଇଁ ଆପଣଙ୍କର ଆଙ୍ଗୁଠିକୁ ହାଲୁକା ଘୁଞ୍ଚାନ୍ତୁ |';
+  String get deviceControlSearchTutorialText =>
+      'ଏକ ବର୍ଣ୍ଣମାଳା ହାଇଲାଇଟ୍ କରିବା ପାଇଁ ଆପଣଙ୍କର ଆଙ୍ଗୁଠିକୁ ହାଲୁକା ଘୁଞ୍ଚାନ୍ତୁ |';
 
   @override
-  String get centerButtonSearchTutorialText => 'ହାଇଲାଇଟ୍ ହୋଇଥିବା ବର୍ଣ୍ଣମାଳା ବାଛିବା ପାଇଁ କେନ୍ଦ୍ର ବଟନ୍ ଦବାନ୍ତୁ |';
+  String get centerButtonSearchTutorialText =>
+      'ହାଇଲାଇଟ୍ ହୋଇଥିବା ବର୍ଣ୍ଣମାଳା ବାଛିବା ପାଇଁ କେନ୍ଦ୍ର ବଟନ୍ ଦବାନ୍ତୁ |';
 
   @override
-  String get nextButtonSearchTutorialText => 'ଏକ ସ୍ଥାନ ଯୋଡିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
+  String get nextButtonSearchTutorialText =>
+      'ଏକ ସ୍ଥାନ ଯୋଡିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
 
   @override
-  String get previousButtonSearchTutorialText => 'ଶେଷ ବର୍ଣ୍ଣ ବିଲୋପ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
+  String get previousButtonSearchTutorialText =>
+      'ଶେଷ ବର୍ଣ୍ଣ ବିଲୋପ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
 
   @override
-  String get menuButtonSearchTutorialText => 'କୀବୋର୍ଡ୍ ବନ୍ଦ କରିବାକୁ ଏବଂ ସନ୍ଧାନ ଫଳାଫଳ ସହିତ ଯୋଗାଯୋଗ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
+  String get menuButtonSearchTutorialText =>
+      'କୀବୋର୍ଡ୍ ବନ୍ଦ କରିବାକୁ ଏବଂ ସନ୍ଧାନ ଫଳାଫଳ ସହିତ ଯୋଗାଯୋଗ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
 }

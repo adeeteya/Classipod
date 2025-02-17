@@ -18,13 +18,16 @@ class AppLocalizationsKac extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio lu la na ahkang ra ai';
 
   @override
-  String get audioAccessPermissionContent => 'Na a mahkawn file ni hpe anhte hpe madat na matu audio file ni hpe access jaw mai ai.';
+  String get audioAccessPermissionContent =>
+      'Na a mahkawn file ni hpe anhte hpe madat na matu audio file ni hpe access jaw mai ai.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio lu la na ahkang hpe ningdang kau ai';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio lu la na ahkang hpe ningdang kau ai';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Ndai app a matu audio file ni hpe device setting ni hta bang da nna, na a music file ni hpe dum mai ai.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Ndai app a matu audio file ni hpe device setting ni hta bang da nna, na a music file ni hpe dum mai ai.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsKac extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsKac extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsKac extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch sounds';
 
   @override
-  String get touchSoundsDialogContent => 'System Settings kaw na click leng nsen ni hpe na lu na matu Touch Sounds hpe hkam la lu na re';
+  String get touchSoundsDialogContent =>
+      'System Settings kaw na click leng nsen ni hpe na lu na matu Touch Sounds hpe hkam la lu na re';
 
   @override
   String get immersiveModeSettingTitle => 'Immersive Mode';
@@ -144,7 +146,8 @@ class AppLocalizationsKac extends AppLocalizations {
   String get donateSettingTitle => 'Gam jaw ai';
 
   @override
-  String get donateSettingDescription => 'Ndai app hpe ra sharawng ai rai yang, alu gumhpraw hpe myit yu u.';
+  String get donateSettingDescription =>
+      'Ndai app hpe ra sharawng ai rai yang, alu gumhpraw hpe myit yu u.';
 
   @override
   String get versionAboutScreenTitle => 'Ga gale tawn ai lam';
@@ -195,7 +198,8 @@ class AppLocalizationsKac extends AppLocalizations {
   String get retryButtonText => 'Bai nhtang wa ai; bai htang ai';
 
   @override
-  String get filePickerDialogTitle => 'Music a matu Scan hpe Directory lata la u';
+  String get filePickerDialogTitle =>
+      'Music a matu Scan hpe Directory lata la u';
 
   @override
   String get searchScreenTitle => 'Gasawk';
@@ -210,10 +214,12 @@ class AppLocalizationsKac extends AppLocalizations {
   String get resultsForText => 'Mahtai:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Disable Battery hpe grau kaja hkra galaw ai';
+  String get disableBatteryOptimizationTitle =>
+      'Disable Battery hpe grau kaja hkra galaw ai';
 
   @override
-  String get disableBatteryOptimizationContent => 'Ndai app a matu battery hpe n mai lang hkra galaw ya rit, device settings ni hta mahkawn ni hpe background galaw ya lu na matu.';
+  String get disableBatteryOptimizationContent =>
+      'Ndai app a matu battery hpe n mai lang hkra galaw ya rit, device settings ni hta mahkawn ni hpe background galaw ya lu na matu.';
 
   @override
   String get languageScreenTitle => 'Ga';
@@ -267,50 +273,66 @@ class AppLocalizationsKac extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Music Files ni';
 
   @override
-  String get deviceControlMenuTutorialText => 'Na a layung hpe Click Wheel grup yin hta loi loi hte htawt nna, menu hpe hkawm sa u';
+  String get deviceControlMenuTutorialText =>
+      'Na a layung hpe Click Wheel grup yin hta loi loi hte htawt nna, menu hpe hkawm sa u';
 
   @override
-  String get centerButtonMenuTutorialText => 'Dai majaw, n-gun ja ai menu hpe lata na matu, center button hpe dip u';
+  String get centerButtonMenuTutorialText =>
+      'Dai majaw, n-gun ja ai menu hpe lata na matu, center button hpe dip u';
 
   @override
-  String get playPauseMenuTutorialText => 'Ndai button hpe dip nna mahkawn langai hpe dum u (sh) hkring sa la mai ai .';
+  String get playPauseMenuTutorialText =>
+      'Ndai button hpe dip nna mahkawn langai hpe dum u (sh) hkring sa la mai ai .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Ndai button hpe dip nna hpang na mahkawn de skip galaw u';
+  String get nextButtonMenuTutorialText =>
+      'Ndai button hpe dip nna hpang na mahkawn de skip galaw u';
 
   @override
-  String get previousButtonMenuTutorialText => 'Ndai button hpe dip nna, rewind (sh) shawng na mahkawn de bai nhtang wa u .';
+  String get previousButtonMenuTutorialText =>
+      'Ndai button hpe dip nna, rewind (sh) shawng na mahkawn de bai nhtang wa u .';
 
   @override
-  String get menuButtonTutorialText => 'Ndai button hpe dip nna, shawng na menu de bai nhtang wa u. Kaga screen langai ngai kaw na dip nna hkam la nna, main menu de direct sa mai ai.';
+  String get menuButtonTutorialText =>
+      'Ndai button hpe dip nna, shawng na menu de bai nhtang wa u. Kaga screen langai ngai kaw na dip nna hkam la nna, main menu de direct sa mai ai.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ndai gaw display screen re. Touch Screen hte Split Screen Mode hpe default hku nna hpaw da ai rai nna, setting ni hta grau nna configure galaw mai ai.';
+  String get deviceScreenMenuTutorialText =>
+      'Ndai gaw display screen re. Touch Screen hte Split Screen Mode hpe default hku nna hpaw da ai rai nna, setting ni hta grau nna configure galaw mai ai.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Na a lata hpe Click Wheel grup yin de htawt nna, nsen hpe gram lajang u';
+  String get deviceControlNowPlayingTutorialText =>
+      'Na a lata hpe Click Wheel grup yin de htawt nna, nsen hpe gram lajang u';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Centre ngu ai hpe dip dat jang, bar, scrubber bar hte shuffle slider hpe tam na matu cycle hte hkawm sa wa na re. Kaga lata la mai ai lam ni hpe lu la na matu Centre ngu ai hpe dip nna jum da u.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Centre ngu ai hpe dip dat jang, bar, scrubber bar hte shuffle slider hpe tam na matu cycle hte hkawm sa wa na re. Kaga lata la mai ai lam ni hpe lu la na matu Centre ngu ai hpe dip nna jum da u.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Mahkawn hpe lawan ai hku shawng de sit sa na matu ndai button hpe dip nna jum da u';
+  String get nextButtonNowPlayingTutorialText =>
+      'Mahkawn hpe lawan ai hku shawng de sit sa na matu ndai button hpe dip nna jum da u';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Ndai button hpe dip nna jum da nna mahkawn hpe bai nhtang wa na .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Ndai button hpe dip nna jum da nna mahkawn hpe bai nhtang wa na .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Na a layung hpe Click Wheel grup yin hta loi loi hte htawt nna, alphabet langai hpe madi madun u';
+  String get deviceControlSearchTutorialText =>
+      'Na a layung hpe Click Wheel grup yin hta loi loi hte htawt nna, alphabet langai hpe madi madun u';
 
   @override
-  String get centerButtonSearchTutorialText => 'Dai hpe madi madun da ai laika buk hpe lata na matu center button hpe dip u .';
+  String get centerButtonSearchTutorialText =>
+      'Dai hpe madi madun da ai laika buk hpe lata na matu center button hpe dip u .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Ndai button hpe dip nna shara langai mi bang u';
+  String get nextButtonSearchTutorialText =>
+      'Ndai button hpe dip nna shara langai mi bang u';
 
   @override
-  String get previousButtonSearchTutorialText => 'Hpang jahtum na hkrang hpe delete galaw na matu ndai button hpe dip u';
+  String get previousButtonSearchTutorialText =>
+      'Hpang jahtum na hkrang hpe delete galaw na matu ndai button hpe dip u';
 
   @override
-  String get menuButtonSearchTutorialText => 'Ndai button hpe dip nna keyboard hpe pat nna tam ai mahtai ni hte matut mahkai mai ai';
+  String get menuButtonSearchTutorialText =>
+      'Ndai button hpe dip nna keyboard hpe pat nna tam ai mahtai ni hte matut mahkai mai ai';
 }

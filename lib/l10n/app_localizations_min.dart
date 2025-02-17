@@ -18,13 +18,16 @@ class AppLocalizationsMin extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Izin Akses Audio Diparalukan';
 
   @override
-  String get audioAccessPermissionContent => 'Silakan agiah file audio akses untuak mamungkinkan kami untuak mamainkan file musik Sanak.';
+  String get audioAccessPermissionContent =>
+      'Silakan agiah file audio akses untuak mamungkinkan kami untuak mamainkan file musik Sanak.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Izin Akses Audio Disarahkan';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Izin Akses Audio Disarahkan';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Silakan agiah file audio akses untuak aplikasi ko di pangaturan perangkat untuak mamungkinkan kami untuak mamainkan file musik Sanak.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Silakan agiah file audio akses untuak aplikasi ko di pangaturan perangkat untuak mamungkinkan kami untuak mamainkan file musik Sanak.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsMin extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsMin extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsMin extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Tadanga sentuhan';
 
   @override
-  String get touchSoundsDialogContent => 'Silakan Aktifkan Suaro dari Pangaturan Sistem untuak mandanga bunyi roda klik .';
+  String get touchSoundsDialogContent =>
+      'Silakan Aktifkan Suaro dari Pangaturan Sistem untuak mandanga bunyi roda klik .';
 
   @override
   String get immersiveModeSettingTitle => 'Mode Pahala';
@@ -144,7 +146,8 @@ class AppLocalizationsMin extends AppLocalizations {
   String get donateSettingTitle => 'Sumbang';
 
   @override
-  String get donateSettingDescription => 'Kalau sanak suko jo app ko, silakan pertimbangkan untuak manyumbang.';
+  String get donateSettingDescription =>
+      'Kalau sanak suko jo app ko, silakan pertimbangkan untuak manyumbang.';
 
   @override
   String get versionAboutScreenTitle => 'Persi';
@@ -195,7 +198,8 @@ class AppLocalizationsMin extends AppLocalizations {
   String get retryButtonText => 'Uriman';
 
   @override
-  String get filePickerDialogTitle => 'Piliah Direktori untuak Scan untuak Musik';
+  String get filePickerDialogTitle =>
+      'Piliah Direktori untuak Scan untuak Musik';
 
   @override
   String get searchScreenTitle => 'Manari';
@@ -213,7 +217,8 @@ class AppLocalizationsMin extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Nonaktifkan Optimasi Baterai';
 
   @override
-  String get disableBatteryOptimizationContent => 'Silakan nonaktifkan optimasi baterai untuak aplikasi ko dalam pangaturan perangkat untuak mamungkinkan pamutaran latar balakang musik.';
+  String get disableBatteryOptimizationContent =>
+      'Silakan nonaktifkan optimasi baterai untuak aplikasi ko dalam pangaturan perangkat untuak mamungkinkan pamutaran latar balakang musik.';
 
   @override
   String get languageScreenTitle => 'Bahaso';
@@ -267,50 +272,66 @@ class AppLocalizationsMin extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'File Musik Reskan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Pindahkan jari tunjuak ringan di sakitar Klik Roda untuak manavigasi menu .';
+  String get deviceControlMenuTutorialText =>
+      'Pindahkan jari tunjuak ringan di sakitar Klik Roda untuak manavigasi menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Takan tombol tangah untuak mamiliah item menu nan disorot .';
+  String get centerButtonMenuTutorialText =>
+      'Takan tombol tangah untuak mamiliah item menu nan disorot .';
 
   @override
-  String get playPauseMenuTutorialText => 'Takan tombol ko untuak mamuta atau pause lagu .';
+  String get playPauseMenuTutorialText =>
+      'Takan tombol ko untuak mamuta atau pause lagu .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Takan tombol ko untuak skip ka lagu barikuiknyo';
+  String get nextButtonMenuTutorialText =>
+      'Takan tombol ko untuak skip ka lagu barikuiknyo';
 
   @override
-  String get previousButtonMenuTutorialText => 'Takan tombol ko untuak mundur atau babaliak ka lagu sabalunnyo .';
+  String get previousButtonMenuTutorialText =>
+      'Takan tombol ko untuak mundur atau babaliak ka lagu sabalunnyo .';
 
   @override
-  String get menuButtonTutorialText => 'Takan tombol ko untuak babaliak ka menu sabalunnyo. Sanak bisa manekan dan mamaciknyo dari layar lain untuak langsuang pai ka menu utamo.';
+  String get menuButtonTutorialText =>
+      'Takan tombol ko untuak babaliak ka menu sabalunnyo. Sanak bisa manekan dan mamaciknyo dari layar lain untuak langsuang pai ka menu utamo.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Iko adolah layar tampilan. Mode Layar jo Layar Pacahan diaktifkan dek default dan dapek dikonfigurasi labiah lanjuik dalam pangaturan.';
+  String get deviceScreenMenuTutorialText =>
+      'Iko adolah layar tampilan. Mode Layar jo Layar Pacahan diaktifkan dek default dan dapek dikonfigurasi labiah lanjuik dalam pangaturan.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Pindahkan jari tunjuak di sakitar Klik Roda untuak manyasuaian volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Pindahkan jari tunjuak di sakitar Klik Roda untuak manyasuaian volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Takan tombol Pusat untuak basepeda malalui mancari batang, batang scrubber jo slider asok. Takan jo tahan tombol Pusat untuak maakses pilihan tambahan.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Takan tombol Pusat untuak basepeda malalui mancari batang, batang scrubber jo slider asok. Takan jo tahan tombol Pusat untuak maakses pilihan tambahan.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Takan jo tahan tombol ko untuak kancang maju lagu .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Takan jo tahan tombol ko untuak kancang maju lagu .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Takan jo tahan tombol ko untuak malapehan lagu .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Takan jo tahan tombol ko untuak malapehan lagu .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Pindahkan jari tunjuak ringan di sakitar Klik Roda untuak manyoroti abjad .';
+  String get deviceControlSearchTutorialText =>
+      'Pindahkan jari tunjuak ringan di sakitar Klik Roda untuak manyoroti abjad .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Takan tombol tangah untuak mamiliah abjad nan disorot .';
+  String get centerButtonSearchTutorialText =>
+      'Takan tombol tangah untuak mamiliah abjad nan disorot .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Takan tombol ko untuak manambah ruang';
+  String get nextButtonSearchTutorialText =>
+      'Takan tombol ko untuak manambah ruang';
 
   @override
-  String get previousButtonSearchTutorialText => 'Takan tombol ko untuak maapuih karakter tarakhia .';
+  String get previousButtonSearchTutorialText =>
+      'Takan tombol ko untuak maapuih karakter tarakhia .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Takan tombol ko untuak manutup keyboard jo bainteraksi jo hasil pancarian .';
+  String get menuButtonSearchTutorialText =>
+      'Takan tombol ko untuak manutup keyboard jo bainteraksi jo hasil pancarian .';
 }

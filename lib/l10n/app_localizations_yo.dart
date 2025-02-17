@@ -18,13 +18,16 @@ class AppLocalizationsYo extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Igbanilaaye wiwọle Audio nilo';
 
   @override
-  String get audioAccessPermissionContent => 'Jọwọ fun awọn faili ohun wọle wọle lati gba wa laaye lati mu awọn faili orin rẹ dun.';
+  String get audioAccessPermissionContent =>
+      'Jọwọ fun awọn faili ohun wọle wọle lati gba wa laaye lati mu awọn faili orin rẹ dun.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Iwe igbanilaaye Audio Audio kọ';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Iwe igbanilaaye Audio Audio kọ';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Jọwọ fun awọn faili ohun Wiwọle iraye fun app yii ninu awọn eto eto lati gba wa laaye lati mu awọn faili orin rẹ ṣiṣẹ.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Jọwọ fun awọn faili ohun Wiwọle iraye fun app yii ninu awọn eto eto lati gba wa laaye lati mu awọn faili orin rẹ ṣiṣẹ.';
 
   @override
   String get menuScreenTitle => 'Mẹnu';
@@ -63,7 +66,6 @@ class AppLocalizationsYo extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsYo extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsYo extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Ifọwọkan awọn ohun';
 
   @override
-  String get touchSoundsDialogContent => 'Jọwọ ṣiṣẹ mọ awọn ohun ifọwọkan lati awọn eto eto lati gbọ awọn ariwo kẹkẹ';
+  String get touchSoundsDialogContent =>
+      'Jọwọ ṣiṣẹ mọ awọn ohun ifọwọkan lati awọn eto eto lati gbọ awọn ariwo kẹkẹ';
 
   @override
   String get immersiveModeSettingTitle => 'Ipo Immersive';
@@ -144,7 +146,8 @@ class AppLocalizationsYo extends AppLocalizations {
   String get donateSettingTitle => 'Ṣetọrẹ';
 
   @override
-  String get donateSettingDescription => 'Ti o ba fẹran app yii, jọwọ ronu lilo.';
+  String get donateSettingDescription =>
+      'Ti o ba fẹran app yii, jọwọ ronu lilo.';
 
   @override
   String get versionAboutScreenTitle => 'Ẹya';
@@ -213,7 +216,8 @@ class AppLocalizationsYo extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Mu Ifasi batiri';
 
   @override
-  String get disableBatteryOptimizationContent => 'Jọwọ mu imudara batiri fun app yii ninu awọn eto ẹrọ lati jẹ ki ere atilẹba ti orin.';
+  String get disableBatteryOptimizationContent =>
+      'Jọwọ mu imudara batiri fun app yii ninu awọn eto ẹrọ lati jẹ ki ere atilẹba ti orin.';
 
   @override
   String get languageScreenTitle => 'Ede';
@@ -267,50 +271,66 @@ class AppLocalizationsYo extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Awọn faili Orin Igbala';
 
   @override
-  String get deviceControlMenuTutorialText => 'Gbe atanpako rẹ ni ayika kẹkẹ ti o tẹ bọtini lati lilö kiri';
+  String get deviceControlMenuTutorialText =>
+      'Gbe atanpako rẹ ni ayika kẹkẹ ti o tẹ bọtini lati lilö kiri';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tẹ bọtini aarin lati yan nkan akojọ aṣayan ti o tẹnumọ';
+  String get centerButtonMenuTutorialText =>
+      'Tẹ bọtini aarin lati yan nkan akojọ aṣayan ti o tẹnumọ';
 
   @override
-  String get playPauseMenuTutorialText => 'Tẹ bọtini yii lati mu ṣiṣẹ tabi da duro orin kan';
+  String get playPauseMenuTutorialText =>
+      'Tẹ bọtini yii lati mu ṣiṣẹ tabi da duro orin kan';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tẹ bọtini yii lati fo si orin atẹle';
+  String get nextButtonMenuTutorialText =>
+      'Tẹ bọtini yii lati fo si orin atẹle';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tẹ bọtini yii lati sẹhin tabi pada sẹhin si orin iṣaaju';
+  String get previousButtonMenuTutorialText =>
+      'Tẹ bọtini yii lati sẹhin tabi pada sẹhin si orin iṣaaju';
 
   @override
-  String get menuButtonTutorialText => 'Tẹ bọtini yii lati pada si mẹnu ti tẹlẹ. O le tẹ ati mu ki o di ohun iboju eyikeyi miiran lati lọ si akojọ aṣayan akọkọ.';
+  String get menuButtonTutorialText =>
+      'Tẹ bọtini yii lati pada si mẹnu ti tẹlẹ. O le tẹ ati mu ki o di ohun iboju eyikeyi miiran lati lọ si akojọ aṣayan akọkọ.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Eyi ni iboju Ifihan. Iboju ifọwọkan ati Ipo iboju pipin ti ṣiṣẹ nipasẹ aiyipada ati pe o le wa ni tunto siwaju ninu awọn eto.';
+  String get deviceScreenMenuTutorialText =>
+      'Eyi ni iboju Ifihan. Iboju ifọwọkan ati Ipo iboju pipin ti ṣiṣẹ nipasẹ aiyipada ati pe o le wa ni tunto siwaju ninu awọn eto.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Gbe atanpako rẹ ni ayika kẹkẹ ti o tẹ lati ṣatunṣe iwọn didun';
+  String get deviceControlNowPlayingTutorialText =>
+      'Gbe atanpako rẹ ni ayika kẹkẹ ti o tẹ lati ṣatunṣe iwọn didun';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tẹ bọtini oju-ajo si ọmọ nipasẹ awọn abe, igi idẹjẹ ati didaworan sloffle. Tẹ mọlẹ bọtini ile-iṣẹ lati wọle si awọn aṣayan afikun.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tẹ bọtini oju-ajo si ọmọ nipasẹ awọn abe, igi idẹjẹ ati didaworan sloffle. Tẹ mọlẹ bọtini ile-iṣẹ lati wọle si awọn aṣayan afikun.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tẹ mọlẹ bọtini yii lati yara mu orin siwaju';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tẹ mọlẹ bọtini yii lati yara mu orin siwaju';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tẹ ki o mu bọtini yi lati tun orin naa';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tẹ ki o mu bọtini yi lati tun orin naa';
 
   @override
-  String get deviceControlSearchTutorialText => 'Gbe atanpako rẹ ni irọrun yika kẹkẹ tẹ lati ṣe afihan abidi kan';
+  String get deviceControlSearchTutorialText =>
+      'Gbe atanpako rẹ ni irọrun yika kẹkẹ tẹ lati ṣe afihan abidi kan';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tẹ bọtini aarin lati yan abidi ti a ṣe afihan';
+  String get centerButtonSearchTutorialText =>
+      'Tẹ bọtini aarin lati yan abidi ti a ṣe afihan';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tẹ bọtini yii lati ṣafikun aaye kan';
+  String get nextButtonSearchTutorialText =>
+      'Tẹ bọtini yii lati ṣafikun aaye kan';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tẹ bọtini yii lati pa ohun kikọ ikẹhin';
+  String get previousButtonSearchTutorialText =>
+      'Tẹ bọtini yii lati pa ohun kikọ ikẹhin';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tẹ bọtini yii lati pa bọtini itẹwe ati ibaraenisọrọ pẹlu awọn abajade wiwa';
+  String get menuButtonSearchTutorialText =>
+      'Tẹ bọtini yii lati pa bọtini itẹwe ati ibaraenisọrọ pẹlu awọn abajade wiwa';
 }

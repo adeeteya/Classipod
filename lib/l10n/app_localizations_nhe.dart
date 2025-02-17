@@ -18,13 +18,16 @@ class AppLocalizationsNhe extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Acceso Permiso tlen monequi';
 
   @override
-  String get audioAccessPermissionContent => 'Xijmaka archivos tlen audio ma techkaua ma tijtsontekontlalikaj nopa archivos tlen música.';
+  String get audioAccessPermissionContent =>
+      'Xijmaka archivos tlen audio ma techkaua ma tijtsontekontlalikaj nopa archivos tlen música.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Acceso Permiso Denicio';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Acceso Permiso Denicio';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Xijmaka archivos tlen audio ipan ni aplicación ipan nopa teposme tlen eltok ipan nopa dispositivo para ma tijtsontekontlalikaj nopa archivos tlen música.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Xijmaka archivos tlen audio ipan ni aplicación ipan nopa teposme tlen eltok ipan nopa dispositivo para ma tijtsontekontlalikaj nopa archivos tlen música.';
 
   @override
   String get menuScreenTitle => 'Mensa';
@@ -63,7 +66,6 @@ class AppLocalizationsNhe extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsNhe extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -144,7 +145,8 @@ class AppLocalizationsNhe extends AppLocalizations {
   String get donateSettingTitle => 'Temaktia';
 
   @override
-  String get donateSettingDescription => 'Tlaj tijneki ni aplicación, ximoiljui tijmakas tomij.';
+  String get donateSettingDescription =>
+      'Tlaj tijneki ni aplicación, ximoiljui tijmakas tomij.';
 
   @override
   String get versionAboutScreenTitle => 'Mokamanalis';
@@ -195,7 +197,8 @@ class AppLocalizationsNhe extends AppLocalizations {
   String get retryButtonText => 'ixtlalis';
 
   @override
-  String get filePickerDialogTitle => 'Xijtlapejpeni se Dirección para Escán para Music .';
+  String get filePickerDialogTitle =>
+      'Xijtlapejpeni se Dirección para Escán para Music .';
 
   @override
   String get searchScreenTitle => 'Temoli';
@@ -210,10 +213,12 @@ class AppLocalizationsNhe extends AppLocalizations {
   String get resultsForText => 'Resultados para:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Nopa tlamantli tlen ax hueli tijtzacuas nopa batería';
+  String get disableBatteryOptimizationTitle =>
+      'Nopa tlamantli tlen ax hueli tijtzacuas nopa batería';
 
   @override
-  String get disableBatteryOptimizationContent => 'Xijtlajtlanica para ma mocualtlali nopa batería para ni app ipan nopa tlayejyecoli tlen nopa dispositivo para ma onca se tlanextili tlen nopa tlatzotzonali.';
+  String get disableBatteryOptimizationContent =>
+      'Xijtlajtlanica para ma mocualtlali nopa batería para ni app ipan nopa tlayejyecoli tlen nopa dispositivo para ma onca se tlanextili tlen nopa tlatzotzonali.';
 
   @override
   String get languageScreenTitle => 'Tlajtoli';
@@ -264,53 +269,70 @@ class AppLocalizationsNhe extends AppLocalizations {
   String get clearPlaylist => 'Tlapajtli';
 
   @override
-  String get rescanMusicFilesSettingTitle => 'Nopa archivos tlen Música de rescate';
+  String get rescanMusicFilesSettingTitle =>
+      'Nopa archivos tlen Música de rescate';
 
   @override
-  String get deviceControlMenuTutorialText => 'Xijpatla mometz san pilquentzi ipan nopa rueda tlen itoca Clic para tijnejnemiltis nopa menú .';
+  String get deviceControlMenuTutorialText =>
+      'Xijpatla mometz san pilquentzi ipan nopa rueda tlen itoca Clic para tijnejnemiltis nopa menú .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Xijtlatzquiltili nopa botón tlen tlatlajco para tijtlapejpenis nopa tlamantli tlen nopa menú tlen eltoc .';
+  String get centerButtonMenuTutorialText =>
+      'Xijtlatzquiltili nopa botón tlen tlatlajco para tijtlapejpenis nopa tlamantli tlen nopa menú tlen eltoc .';
 
   @override
-  String get playPauseMenuTutorialText => 'Xijtlatzquiltili ni botón para tijtzotzonas o tijquetzas se huicatl .';
+  String get playPauseMenuTutorialText =>
+      'Xijtlatzquiltili ni botón para tijtzotzonas o tijquetzas se huicatl .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Xijtlatzquiltili ni botón para tijpanoltis nopa seyoc huicatl .';
+  String get nextButtonMenuTutorialText =>
+      'Xijtlatzquiltili ni botón para tijpanoltis nopa seyoc huicatl .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Xijtlatzquiltili ni botón para timocuepas o ximocuepa ipan nopa huicatl tlen achtohui .';
+  String get previousButtonMenuTutorialText =>
+      'Xijtlatzquiltili ni botón para timocuepas o ximocuepa ipan nopa huicatl tlen achtohui .';
 
   @override
-  String get menuButtonTutorialText => 'Xijtlatzquiltili ni botón para sampa tiyas ipan nopa menú tlen achtohui. Uelis tijtsonpechilis uan tijtsakuas tlen seyok pantalla uan xiya ipan nopa menú tlen tlauel ipati.';
+  String get menuButtonTutorialText =>
+      'Xijtlatzquiltili ni botón para sampa tiyas ipan nopa menú tlen achtohui. Uelis tijtsonpechilis uan tijtsakuas tlen seyok pantalla uan xiya ipan nopa menú tlen tlauel ipati.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ni eli nopa pantalla tlen kinextia. Nopa Modelo tlen nopa pantalla tlen itoka Touch uan nopa Modo Splecre Spcreen, kipaleuia nopa tlamantli tlen amo kuali uan uelis mosentlalis más ipan nopa tlamantli tlen kitlaliaj.';
+  String get deviceScreenMenuTutorialText =>
+      'Ni eli nopa pantalla tlen kinextia. Nopa Modelo tlen nopa pantalla tlen itoka Touch uan nopa Modo Splecre Spcreen, kipaleuia nopa tlamantli tlen amo kuali uan uelis mosentlalis más ipan nopa tlamantli tlen kitlaliaj.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Xijpatla mometz ipan nopa Bruja Clic para ma eli nopa volumen .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Xijpatla mometz ipan nopa Bruja Clic para ma eli nopa volumen .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Xijtlatzquiltili nopa botón tlen nopa Centro ipan ciclo ica barra tlen tijtemos, barra tlen escrubador huan nopa slider tlen motlalana. Xijtlapejpeni uan xijpixto nopa botón Centro para tijpantis sekinok tlamantli.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Xijtlatzquiltili nopa botón tlen nopa Centro ipan ciclo ica barra tlen tijtemos, barra tlen escrubador huan nopa slider tlen motlalana. Xijtlapejpeni uan xijpixto nopa botón Centro para tijpantis sekinok tlamantli.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Xijtlatzquiltili huan xijpixto ni botón para tijtoquilis nopa huicatl .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Xijtlatzquiltili huan xijpixto ni botón para tijtoquilis nopa huicatl .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Xijtsonpechili uan xijpixto ni botón para tijkuepilis nopa uikatl .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Xijtsonpechili uan xijpixto ni botón para tijkuepilis nopa uikatl .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Xijpatla mometz san pilquentzi campa hueli ipan nopa rueda Click para tijnextis se alfabeto .';
+  String get deviceControlSearchTutorialText =>
+      'Xijpatla mometz san pilquentzi campa hueli ipan nopa rueda Click para tijnextis se alfabeto .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Xijtlatzquiltili nopa botón tlen tlatlajco para tijtlapejpenis nopa alfabeto tlen más nesi .';
+  String get centerButtonSearchTutorialText =>
+      'Xijtlatzquiltili nopa botón tlen tlatlajco para tijtlapejpenis nopa alfabeto tlen más nesi .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Xijtlatzquiltili ni botón para tijtlalis se lugar .';
+  String get nextButtonSearchTutorialText =>
+      'Xijtlatzquiltili ni botón para tijtlalis se lugar .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Xijtlachili ni botón para tijtlamiltis nopa último personaje';
+  String get previousButtonSearchTutorialText =>
+      'Xijtlachili ni botón para tijtlamiltis nopa último personaje';
 
   @override
-  String get menuButtonSearchTutorialText => 'Xijtlatzquiltili ni botón para tijtzacuas nopa teclado huan ximocamahui ica nopa tlayejyecoli tlen tijtemos .';
+  String get menuButtonSearchTutorialText =>
+      'Xijtlatzquiltili ni botón para tijtzacuas nopa teclado huan ximocamahui ica nopa tlayejyecoli tlen tijtemos .';
 }

@@ -15,16 +15,20 @@ class AppLocalizationsGd extends AppLocalizations {
   String get menuButtonText => 'Clàr-taice';
 
   @override
-  String get audioAccessPermissionTitle => 'Feumar cead ruigsinneachd claisneachd a tha a dhìth';
+  String get audioAccessPermissionTitle =>
+      'Feumar cead ruigsinneachd claisneachd a tha a dhìth';
 
   @override
-  String get audioAccessPermissionContent => 'Feuch an toir thu cothrom air faidhlichean claisneachd gus leigeil leinn na faidhlichean ciùil agad a chluich.';
+  String get audioAccessPermissionContent =>
+      'Feuch an toir thu cothrom air faidhlichean claisneachd gus leigeil leinn na faidhlichean ciùil agad a chluich.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ruigsinneachd ruigsinneachd claisneachd air a dhiùltadh';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ruigsinneachd ruigsinneachd claisneachd air a dhiùltadh';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Feuch an toir thu cothrom air faidhlichean claisneachd airson an aplacaid seo ann an suidheachadh an inneal gus leigeil leinn faidhlichean ciùil agad a chluich.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Feuch an toir thu cothrom air faidhlichean claisneachd airson an aplacaid seo ann an suidheachadh an inneal gus leigeil leinn faidhlichean ciùil agad a chluich.';
 
   @override
   String get menuScreenTitle => 'Clàr-taice';
@@ -63,7 +67,6 @@ class AppLocalizationsGd extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsGd extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsGd extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Fuaimean suathadh';
 
   @override
-  String get touchSoundsDialogContent => 'Feuch an cuir thu le bhith a \'suathadh ri fuaimean an t-siostaim gus na fuaimean cuibhle cliog cliog claidheamh a chluinntinn';
+  String get touchSoundsDialogContent =>
+      'Feuch an cuir thu le bhith a \'suathadh ri fuaimean an t-siostaim gus na fuaimean cuibhle cliog cliog claidheamh a chluinntinn';
 
   @override
   String get immersiveModeSettingTitle => 'Modh bogaidh';
@@ -144,7 +147,8 @@ class AppLocalizationsGd extends AppLocalizations {
   String get donateSettingTitle => 'Thoir seachad';
 
   @override
-  String get donateSettingDescription => 'Mas toil leat an aplacaid seo, smaoinich air a bhith a \'toirt seachad.';
+  String get donateSettingDescription =>
+      'Mas toil leat an aplacaid seo, smaoinich air a bhith a \'toirt seachad.';
 
   @override
   String get versionAboutScreenTitle => 'Tionndadh';
@@ -186,7 +190,8 @@ class AppLocalizationsGd extends AppLocalizations {
   String get commonOfText => 'de';
 
   @override
-  String get pageNotFoundText => 'Cha deach an duilleag a chaidh a thoirt seachad a lorg';
+  String get pageNotFoundText =>
+      'Cha deach an duilleag a chaidh a thoirt seachad a lorg';
 
   @override
   String get commonErrorText => 'Mearachd';
@@ -210,10 +215,12 @@ class AppLocalizationsGd extends AppLocalizations {
   String get resultsForText => 'Toraidhean airson:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Cuir à comas Optimization bataraidh';
+  String get disableBatteryOptimizationTitle =>
+      'Cuir à comas Optimization bataraidh';
 
   @override
-  String get disableBatteryOptimizationContent => 'Cuir a-mach an optas bataraidh airson an aplacaid seo ann an suidheachadh an inneal gus leigeil le cùl-taic ceòl.';
+  String get disableBatteryOptimizationContent =>
+      'Cuir a-mach an optas bataraidh airson an aplacaid seo ann an suidheachadh an inneal gus leigeil le cùl-taic ceòl.';
 
   @override
   String get languageScreenTitle => 'Cànan';
@@ -243,7 +250,8 @@ class AppLocalizationsGd extends AppLocalizations {
   String get addToOnTheGoPlaylist => 'Cuir ris an taobh a-muigh';
 
   @override
-  String get addAlbumToOnTheGoPlaylist => 'Cuir a-steach Album gu air-the-dol-falbh';
+  String get addAlbumToOnTheGoPlaylist =>
+      'Cuir a-steach Album gu air-the-dol-falbh';
 
   @override
   String get removeSongFromThePlaylist => 'Thoir air falbh bhon liosta-cluiche';
@@ -267,50 +275,66 @@ class AppLocalizationsGd extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Faidhlichean ciùil Freecan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Gluais do òrdag timcheall air a \'chuibhle cliog gus an clàr-bìdh a sheòladh';
+  String get deviceControlMenuTutorialText =>
+      'Gluais do òrdag timcheall air a \'chuibhle cliog gus an clàr-bìdh a sheòladh';
 
   @override
-  String get centerButtonMenuTutorialText => 'Brùth putan an ionaid gus an rud a \'phrìomh stiùireadh a thaghadh';
+  String get centerButtonMenuTutorialText =>
+      'Brùth putan an ionaid gus an rud a \'phrìomh stiùireadh a thaghadh';
 
   @override
-  String get playPauseMenuTutorialText => 'Brùth am putan seo gus òran a chluich no stad a chuir air òran';
+  String get playPauseMenuTutorialText =>
+      'Brùth am putan seo gus òran a chluich no stad a chuir air òran';
 
   @override
-  String get nextButtonMenuTutorialText => 'Brùth am putan seo gus leum chun ath òran';
+  String get nextButtonMenuTutorialText =>
+      'Brùth am putan seo gus leum chun ath òran';
 
   @override
-  String get previousButtonMenuTutorialText => 'Brùth am putan seo gus ath-fhilleadh no a dhol air ais chun òran roimhe';
+  String get previousButtonMenuTutorialText =>
+      'Brùth am putan seo gus ath-fhilleadh no a dhol air ais chun òran roimhe';
 
   @override
-  String get menuButtonTutorialText => 'Brùth am putan seo gus a dhol air ais chun chlàr roimhe. B \'urrainn dhut a bhrùth agus a chumail bho scrion sam bith eile gus a dhol chun phrìomh chlàr.';
+  String get menuButtonTutorialText =>
+      'Brùth am putan seo gus a dhol air ais chun chlàr roimhe. B \'urrainn dhut a bhrùth agus a chumail bho scrion sam bith eile gus a dhol chun phrìomh chlàr.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Is e seo an scrion taisbeanaidh. Tha Modh Foot Food agus Modh Sgrion Roinnte air an comasachadh gu bunaiteach agus faodar an cur air dòigh nas fhaide anns na suidheachaidhean.';
+  String get deviceScreenMenuTutorialText =>
+      'Is e seo an scrion taisbeanaidh. Tha Modh Foot Food agus Modh Sgrion Roinnte air an comasachadh gu bunaiteach agus faodar an cur air dòigh nas fhaide anns na suidheachaidhean.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Gluais do òrdag timcheall air a \'chuibhle cliog gus an tomhas-lìonaidh atharrachadh';
+  String get deviceControlNowPlayingTutorialText =>
+      'Gluais do òrdag timcheall air a \'chuibhle cliog gus an tomhas-lìonaidh atharrachadh';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Brùth putan an ionaid gus rothaireachd tro shireadh bàr, bàr scuubber bàr agus sleamhnaiche shuffle. Brùth agus cùm putan an ionaid gus faighinn gu roghainnean a bharrachd.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Brùth putan an ionaid gus rothaireachd tro shireadh bàr, bàr scuubber bàr agus sleamhnaiche shuffle. Brùth agus cùm putan an ionaid gus faighinn gu roghainnean a bharrachd.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Brùth agus cùm am putan seo gus an t-òran a chuir air adhart gu luath air adhart';
+  String get nextButtonNowPlayingTutorialText =>
+      'Brùth agus cùm am putan seo gus an t-òran a chuir air adhart gu luath air adhart';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Brùth agus cùm am putan seo gus an t-òran ath-shuidheachadh';
+  String get previousButtonNowPlayingTutorialText =>
+      'Brùth agus cùm am putan seo gus an t-òran ath-shuidheachadh';
 
   @override
-  String get deviceControlSearchTutorialText => 'Gluais do òrdag timcheall air a \'chuibhle cliog gus a bhith a\' soilleireachadh aibideil';
+  String get deviceControlSearchTutorialText =>
+      'Gluais do òrdag timcheall air a \'chuibhle cliog gus a bhith a\' soilleireachadh aibideil';
 
   @override
-  String get centerButtonSearchTutorialText => 'Brùth putan an Ionaid gus an aibideil a tha air an comharrachadh';
+  String get centerButtonSearchTutorialText =>
+      'Brùth putan an Ionaid gus an aibideil a tha air an comharrachadh';
 
   @override
-  String get nextButtonSearchTutorialText => 'Brùth am putan seo gus àite a chuir ris';
+  String get nextButtonSearchTutorialText =>
+      'Brùth am putan seo gus àite a chuir ris';
 
   @override
-  String get previousButtonSearchTutorialText => 'Brùth am putan seo gus cuir às don charactar mu dheireadh';
+  String get previousButtonSearchTutorialText =>
+      'Brùth am putan seo gus cuir às don charactar mu dheireadh';
 
   @override
-  String get menuButtonSearchTutorialText => 'Brùth am putan seo gus am meur-chlàr a dhùnadh agus eadar-obrachadh leis na toraidhean rannsachaidh';
+  String get menuButtonSearchTutorialText =>
+      'Brùth am putan seo gus am meur-chlàr a dhùnadh agus eadar-obrachadh leis na toraidhean rannsachaidh';
 }

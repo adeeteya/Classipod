@@ -18,13 +18,16 @@ class AppLocalizationsRom extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Akseso Permisia Mangen';
 
   @override
-  String get audioAccessPermissionContent => 'Te mangena te den audio-files akceso te shaj te khelen tumare muzikake fileura.';
+  String get audioAccessPermissionContent =>
+      'Te mangena te den audio-files akceso te shaj te khelen tumare muzikake fileura.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Acceso Permisia Deni.';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Acceso Permisia Deni.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Te mangena te den audio-files akceso vash akava app ano aparatya vash o aparatya vash te shay te khelen tumare muzikake fileya.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Te mangena te den audio-files akceso vash akava app ano aparatya vash o aparatya vash te shay te khelen tumare muzikake fileya.';
 
   @override
   String get menuScreenTitle => 'menùni';
@@ -63,7 +66,6 @@ class AppLocalizationsRom extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsRom extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsRom extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Teśunen';
 
   @override
-  String get touchSoundsDialogContent => 'Te rughiv tut Aktiv Touch Òunes katar o Sistemoske Parametri te aśunes o kliko e klikosqo aśunel pes';
+  String get touchSoundsDialogContent =>
+      'Te rughiv tut Aktiv Touch Òunes katar o Sistemoske Parametri te aśunes o kliko e klikosqo aśunel pes';
 
   @override
   String get immersiveModeSettingTitle => 'O Modo immerìvo';
@@ -138,13 +140,15 @@ class AppLocalizationsRom extends AppLocalizations {
   String get showAppTutorialSettingTitle => 'Sikavel Tutoriàlo';
 
   @override
-  String get changeDirectorySettingTitle => 'Direktori e paruvipnaski e paruvipnaski';
+  String get changeDirectorySettingTitle =>
+      'Direktori e paruvipnaski e paruvipnaski';
 
   @override
   String get donateSettingTitle => 'Del';
 
   @override
-  String get donateSettingDescription => 'Te kames kadi app, mangav tut te gindis te des.';
+  String get donateSettingDescription =>
+      'Te kames kadi app, mangav tut te gindis te des.';
 
   @override
   String get versionAboutScreenTitle => 'Vèrsia';
@@ -210,10 +214,12 @@ class AppLocalizationsRom extends AppLocalizations {
   String get resultsForText => 'Rezultatura pala:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Optimizacia e baterienqi dezactivacia';
+  String get disableBatteryOptimizationTitle =>
+      'Optimizacia e baterienqi dezactivacia';
 
   @override
-  String get disableBatteryOptimizationContent => 'Te manges te des avri optimizacia pe bateria pe kadi app ande apparatoske settingura te shaj avel tut bakgrundsback pe muzika.';
+  String get disableBatteryOptimizationContent =>
+      'Te manges te des avri optimizacia pe bateria pe kadi app ande apparatoske settingura te shaj avel tut bakgrundsback pe muzika.';
 
   @override
   String get languageScreenTitle => 'Ćhib';
@@ -267,50 +273,66 @@ class AppLocalizationsRom extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Reskakoske Muzikake lila';
 
   @override
-  String get deviceControlMenuTutorialText => 'Te ćhives o vast śukar krujal o Klik Śav';
+  String get deviceControlMenuTutorialText =>
+      'Te ćhives o vast śukar krujal o Klik Śav';
 
   @override
-  String get centerButtonMenuTutorialText => 'Presinen o butikoni e centrosko vash te alosaren o artiklo e menuesko kova si vasno .';
+  String get centerButtonMenuTutorialText =>
+      'Presinen o butikoni e centrosko vash te alosaren o artiklo e menuesko kova si vasno .';
 
   @override
-  String get playPauseMenuTutorialText => 'Press kado butyi te kheles vaj te pauzas jekh gilyi .';
+  String get playPauseMenuTutorialText =>
+      'Press kado butyi te kheles vaj te pauzas jekh gilyi .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Press kado buti te skipis pe kaver gilji .';
+  String get nextButtonMenuTutorialText =>
+      'Press kado buti te skipis pe kaver gilji .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Press kado buti te shaj rewind vaj te zhas palpale ande angluni gili .';
+  String get previousButtonMenuTutorialText =>
+      'Press kado buti te shaj rewind vaj te zhas palpale ande angluni gili .';
 
   @override
-  String get menuButtonTutorialText => 'Press kado buti te zhas palpale ando angluno menu. Tu śaj te ćhives thaj te astares les katar savi aver ekran te džas direktno k-o maj baro menu.';
+  String get menuButtonTutorialText =>
+      'Press kado buti te zhas palpale ando angluno menu. Tu śaj te ćhives thaj te astares les katar savi aver ekran te džas direktno k-o maj baro menu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Kado si o ekran. Touch Screen thaj Split Screen Mode si aktivirime po default thaj shaj te aven konfigurime maj dur ande settingura.';
+  String get deviceScreenMenuTutorialText =>
+      'Kado si o ekran. Touch Screen thaj Split Screen Mode si aktivirime po default thaj shaj te aven konfigurime maj dur ande settingura.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Te ćhives o vast krujal o Klik .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Te ćhives o vast krujal o Klik .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Presinen o butikoni e Centrosko vash te phiren kotar o rode bar, scrubber bar thaj shuflo glider. Presa thaj te inkren o Center buti te shaj resen maj but opciji.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Presinen o butikoni e Centrosko vash te phiren kotar o rode bar, scrubber bar thaj shuflo glider. Presa thaj te inkren o Center buti te shaj resen maj but opciji.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Press thaj inkren kado button te maj sigo angle si e gili .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Press thaj inkren kado button te maj sigo angle si e gili .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Press thaj ingrel kado button te shaj rewind-in e gili .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Press thaj ingrel kado button te shaj rewind-in e gili .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Move o vast light-l-o krujal o Click Wheel te sikavel jekh alfabeto .';
+  String get deviceControlSearchTutorialText =>
+      'Move o vast light-l-o krujal o Click Wheel te sikavel jekh alfabeto .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Presinen o butikoni centresko vash te alosaren o alfabeti e vastune .';
+  String get centerButtonSearchTutorialText =>
+      'Presinen o butikoni centresko vash te alosaren o alfabeti e vastune .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Presinen akava buti vash te qhiven yek than .';
+  String get nextButtonSearchTutorialText =>
+      'Presinen akava buti vash te qhiven yek than .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Presinen akava buti te čhiven o paluno personažo .';
+  String get previousButtonSearchTutorialText =>
+      'Presinen akava buti te čhiven o paluno personažo .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Presinen akava buti te phanen o klaviatura thay te keren interakcia e rodipaskere rezultatencar .';
+  String get menuButtonSearchTutorialText =>
+      'Presinen akava buti te phanen o klaviatura thay te keren interakcia e rodipaskere rezultatencar .';
 }

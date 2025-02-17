@@ -18,13 +18,15 @@ class AppLocalizationsBal extends AppLocalizations {
   String get audioAccessPermissionTitle => 'آڈیو ءِ رسائی ءَ لوٹ اِت';
 
   @override
-  String get audioAccessPermissionContent => 'آڈیو فائلانی رسائی ءَ بہ دئے اِت کہ مارا وتی موسیقی ءِ فائلانی گوازینگ ءِ اجازت بہ دنت۔';
+  String get audioAccessPermissionContent =>
+      'آڈیو فائلانی رسائی ءَ بہ دئے اِت کہ مارا وتی موسیقی ءِ فائلانی گوازینگ ءِ اجازت بہ دنت۔';
 
   @override
   String get audioAccessPermissionPermanentlyDeniedTitle => 'رسائی ءِ رسائی';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'اے ایپ ءِ ھاتر ءَ آڈیو فائلانی رسائی ءِ ھاتر ءَ ڈیوائس ءِ ترتیبات ءِ تہ ءَ رسائی ءِ اجازت بہ دئے اِت کہ مارا شمئے میوزک فائلانی گوازینگ ءِ اجازت بہ دنت۔';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'اے ایپ ءِ ھاتر ءَ آڈیو فائلانی رسائی ءِ ھاتر ءَ ڈیوائس ءِ ترتیبات ءِ تہ ءَ رسائی ءِ اجازت بہ دئے اِت کہ مارا شمئے میوزک فائلانی گوازینگ ءِ اجازت بہ دنت۔';
 
   @override
   String get menuScreenTitle => 'مینو';
@@ -63,7 +65,6 @@ class AppLocalizationsBal extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +82,6 @@ class AppLocalizationsBal extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +129,8 @@ class AppLocalizationsBal extends AppLocalizations {
   String get touchSoundsDialogTitle => 'ٹچ شپ';
 
   @override
-  String get touchSoundsDialogContent => 'کلک کن اِت کہ کلک وہ ءِ توار ءِ اشکنگ ءِ ھاترا سسٹم سیٹنگز ءَ چہ ٹچ سائنڈز ءَ فعال بہ کن اِت';
+  String get touchSoundsDialogContent =>
+      'کلک کن اِت کہ کلک وہ ءِ توار ءِ اشکنگ ءِ ھاترا سسٹم سیٹنگز ءَ چہ ٹچ سائنڈز ءَ فعال بہ کن اِت';
 
   @override
   String get immersiveModeSettingTitle => 'دلگوش دیگ';
@@ -144,7 +145,8 @@ class AppLocalizationsBal extends AppLocalizations {
   String get donateSettingTitle => 'دیگ';
 
   @override
-  String get donateSettingDescription => 'اگاں شما اے ایپ ءَ دوست دار اِت گڑا عطیہ کنگ ءِ سرا ھیال ءُ لیکہ بہ کن اِت۔';
+  String get donateSettingDescription =>
+      'اگاں شما اے ایپ ءَ دوست دار اِت گڑا عطیہ کنگ ءِ سرا ھیال ءُ لیکہ بہ کن اِت۔';
 
   @override
   String get versionAboutScreenTitle => 'تہر';
@@ -195,7 +197,8 @@ class AppLocalizationsBal extends AppLocalizations {
   String get retryButtonText => 'پُشت';
 
   @override
-  String get filePickerDialogTitle => 'پہ موسیقی ءِ واستہ ڈائریکٹری ءَ گچین کن اِت';
+  String get filePickerDialogTitle =>
+      'پہ موسیقی ءِ واستہ ڈائریکٹری ءَ گچین کن اِت';
 
   @override
   String get searchScreenTitle => 'شوہاز کن';
@@ -213,7 +216,8 @@ class AppLocalizationsBal extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'بیٹری ءِ سرا کار کنگ';
 
   @override
-  String get disableBatteryOptimizationContent => 'موسیقی ءِ پس منظر ءِ پلے بیک ءِ اجازت دیگ ءِ ھاتر ءَ ڈیوائس ءِ ترتیبات ءَ اے ایپ ءِ واستہ بیٹری ءِ اصلاح ءَ را نافذ بہ کن اِت۔';
+  String get disableBatteryOptimizationContent =>
+      'موسیقی ءِ پس منظر ءِ پلے بیک ءِ اجازت دیگ ءِ ھاتر ءَ ڈیوائس ءِ ترتیبات ءَ اے ایپ ءِ واستہ بیٹری ءِ اصلاح ءَ را نافذ بہ کن اِت۔';
 
   @override
   String get languageScreenTitle => 'زبان';
@@ -267,43 +271,56 @@ class AppLocalizationsBal extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'مکران';
 
   @override
-  String get deviceControlMenuTutorialText => 'مینو ءِ نیویگیشن کنگ ءِ ھاترا وتی انگوٹھے ءَ ہلکی ہلکی ءَ دیم ءَ بیار اِت';
+  String get deviceControlMenuTutorialText =>
+      'مینو ءِ نیویگیشن کنگ ءِ ھاترا وتی انگوٹھے ءَ ہلکی ہلکی ءَ دیم ءَ بیار اِت';
 
   @override
-  String get centerButtonMenuTutorialText => 'مریضہ مینی آئٹم ءِ گچین کنگ ءِ ھاترا مرکز ءِ بٹن ءَ دپ ءَ بہ کن اِت';
+  String get centerButtonMenuTutorialText =>
+      'مریضہ مینی آئٹم ءِ گچین کنگ ءِ ھاترا مرکز ءِ بٹن ءَ دپ ءَ بہ کن اِت';
 
   @override
-  String get playPauseMenuTutorialText => 'اے بٹن ءَ دپ ءَ بہ جن اِت کہ یک گانا یے بہ جن اِت';
+  String get playPauseMenuTutorialText =>
+      'اے بٹن ءَ دپ ءَ بہ جن اِت کہ یک گانا یے بہ جن اِت';
 
   @override
-  String get nextButtonMenuTutorialText => 'دیمتر ءِ گانا ءِ سرا اسکی کنگ ءِ ھاترا اے بٹن ءَ دپ ءَ بہ کن اِت';
+  String get nextButtonMenuTutorialText =>
+      'دیمتر ءِ گانا ءِ سرا اسکی کنگ ءِ ھاترا اے بٹن ءَ دپ ءَ بہ کن اِت';
 
   @override
-  String get previousButtonMenuTutorialText => 'اے بٹن ءَ دپ ءَ بہ جن یا پدا پیسر ءَ پدا رواں';
+  String get previousButtonMenuTutorialText =>
+      'اے بٹن ءَ دپ ءَ بہ جن یا پدا پیسر ءَ پدا رواں';
 
   @override
-  String get menuButtonTutorialText => 'اے بٹن ءَ دپ ءَ بہ جن اِت کہ پیسر ءَ چہ پیسریگیں مینو ءَ بہ رو اِت۔ تو چہ دگہ اسکرین ءَ دیم پہ دیم بوت کن ئے کہ دیم پہ دیم مین مینو ءَ بہ رو ئے۔';
+  String get menuButtonTutorialText =>
+      'اے بٹن ءَ دپ ءَ بہ جن اِت کہ پیسر ءَ چہ پیسریگیں مینو ءَ بہ رو اِت۔ تو چہ دگہ اسکرین ءَ دیم پہ دیم بوت کن ئے کہ دیم پہ دیم مین مینو ءَ بہ رو ئے۔';
 
   @override
-  String get deviceScreenMenuTutorialText => 'اے ڈسپلے اسکرین انت۔ ٹچ اسکرین ءُ اسپلٹ اسکرین موڈ ءَ ڈیفالٹ ءِ وسیلہ ءَ فعال کنگ بیت ءُ ترتیبات ءِ تہا گیشتر ترتیب دیگ بوت کنت۔';
+  String get deviceScreenMenuTutorialText =>
+      'اے ڈسپلے اسکرین انت۔ ٹچ اسکرین ءُ اسپلٹ اسکرین موڈ ءَ ڈیفالٹ ءِ وسیلہ ءَ فعال کنگ بیت ءُ ترتیبات ءِ تہا گیشتر ترتیب دیگ بوت کنت۔';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'وتی انگوٹھے ءَ کلک کن اِت کہ حجم ءَ ایڈجسٹ بہ کن اِت';
+  String get deviceControlNowPlayingTutorialText =>
+      'وتی انگوٹھے ءَ کلک کن اِت کہ حجم ءَ ایڈجسٹ بہ کن اِت';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'مرکز ءِ بٹن ءَ چہ شوھاز ءَ بہ کن اِت کہ چہ آئی ءِ شوھاز ءَ بہ کن اِت، سکڑیں بار ءُ شفل سلائیڈر۔ مرکز ءِ بٹن ءَ دپ ءَ بہ دار اِت ءُ گیشیں آپشنانی رسائی ءَ بہ دار اِت۔';
+  String get centerButtonNowPlayingTutorialText =>
+      'مرکز ءِ بٹن ءَ چہ شوھاز ءَ بہ کن اِت کہ چہ آئی ءِ شوھاز ءَ بہ کن اِت، سکڑیں بار ءُ شفل سلائیڈر۔ مرکز ءِ بٹن ءَ دپ ءَ بہ دار اِت ءُ گیشیں آپشنانی رسائی ءَ بہ دار اِت۔';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'اے بٹن ءَ دپ ءَ بہ دار اِت ءُ گانا ءِ دیم ءَ بہ دار اِت';
+  String get nextButtonNowPlayingTutorialText =>
+      'اے بٹن ءَ دپ ءَ بہ دار اِت ءُ گانا ءِ دیم ءَ بہ دار اِت';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'گانا ءِ پدا گرگ ءِ ھاترا اے بٹن ءَ بہ دار اِت';
+  String get previousButtonNowPlayingTutorialText =>
+      'گانا ءِ پدا گرگ ءِ ھاترا اے بٹن ءَ بہ دار اِت';
 
   @override
-  String get deviceControlSearchTutorialText => 'وتی انگوٹھے ءَ چہ کلک ءِ کش ءُ گور ءَ دیم ءَ بیار';
+  String get deviceControlSearchTutorialText =>
+      'وتی انگوٹھے ءَ چہ کلک ءِ کش ءُ گور ءَ دیم ءَ بیار';
 
   @override
-  String get centerButtonSearchTutorialText => 'مرخص الففی ءِ گچین کنگ ءِ ھاترا مرکز ءِ بٹن ءَ دپ ءَ بہ کن اِت';
+  String get centerButtonSearchTutorialText =>
+      'مرخص الففی ءِ گچین کنگ ءِ ھاترا مرکز ءِ بٹن ءَ دپ ءَ بہ کن اِت';
 
   @override
   String get nextButtonSearchTutorialText => 'اے بٹن ءَ دپ ءَ بہ جن اِت';
@@ -312,5 +329,6 @@ class AppLocalizationsBal extends AppLocalizations {
   String get previousButtonSearchTutorialText => 'اے بٹن ئا دپ جن';
 
   @override
-  String get menuButtonSearchTutorialText => 'کی بورڈ بند کنگ ءِ ھاترا اے بٹن ءَ دپ ءَ بہ کن ءُ پٹ ءُ پول ءِ آسر ءَ گوں رابطہ بہ کن';
+  String get menuButtonSearchTutorialText =>
+      'کی بورڈ بند کنگ ءِ ھاترا اے بٹن ءَ دپ ءَ بہ کن ءُ پٹ ءُ پول ءِ آسر ءَ گوں رابطہ بہ کن';
 }

@@ -18,13 +18,16 @@ class AppLocalizationsTg extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Иҷозатномаи аудио лозим аст';
 
   @override
-  String get audioAccessPermissionContent => 'Лутфан ба файлҳои аудиоӣ ворид шавед, то ба мо иҷозат диҳем, ки файлҳои мусиқии худро бозӣ кунем.';
+  String get audioAccessPermissionContent =>
+      'Лутфан ба файлҳои аудиоӣ ворид шавед, то ба мо иҷозат диҳем, ки файлҳои мусиқии худро бозӣ кунем.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Иҷозати дастрасии аудио рад карда шуд';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Иҷозати дастрасии аудио рад карда шуд';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Лутфан ба мо дастрасии аудио барои ин барномаро дар танзимоти дастгоҳ иҷозат диҳед, то ба мо имкон диҳад, ки файлҳои мусиқии шуморо бозӣ кунем.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Лутфан ба мо дастрасии аудио барои ин барномаро дар танзимоти дастгоҳ иҷозат диҳед, то ба мо имкон диҳад, ки файлҳои мусиқии шуморо бозӣ кунем.';
 
   @override
   String get menuScreenTitle => 'Меню';
@@ -63,7 +66,6 @@ class AppLocalizationsTg extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsTg extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsTg extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Садо';
 
   @override
-  String get touchSoundsDialogContent => 'Лутфан, бо танзимоти система ба садоҳои система кӯмак кунед';
+  String get touchSoundsDialogContent =>
+      'Лутфан, бо танзимоти система ба садоҳои система кӯмак кунед';
 
   @override
   String get immersiveModeSettingTitle => 'Усули воқеӣ';
@@ -144,7 +146,8 @@ class AppLocalizationsTg extends AppLocalizations {
   String get donateSettingTitle => 'Хайрия';
 
   @override
-  String get donateSettingDescription => 'Агар шумо ин барномаро дӯст медоред, лутфан ба хайрия фикр кунед.';
+  String get donateSettingDescription =>
+      'Агар шумо ин барномаро дӯст медоред, лутфан ба хайрия фикр кунед.';
 
   @override
   String get versionAboutScreenTitle => 'Версия';
@@ -210,10 +213,12 @@ class AppLocalizationsTg extends AppLocalizations {
   String get resultsForText => 'Натиҷаҳо барои:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Оптимизатсияи батареяро ғайрифаъол кунед';
+  String get disableBatteryOptimizationTitle =>
+      'Оптимизатсияи батареяро ғайрифаъол кунед';
 
   @override
-  String get disableBatteryOptimizationContent => 'Лутфан оптимизатсияи батареяро барои ин барнома дар танзимоти дастгоҳ хомӯш кунед, то ба бозии пасзамаи мусиқӣ иҷозат диҳед.';
+  String get disableBatteryOptimizationContent =>
+      'Лутфан оптимизатсияи батареяро барои ин барнома дар танзимоти дастгоҳ хомӯш кунед, то ба бозии пасзамаи мусиқӣ иҷозат диҳед.';
 
   @override
   String get languageScreenTitle => 'Забон';
@@ -267,50 +272,66 @@ class AppLocalizationsTg extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Наҷотдиҳандагонро наҷот додан';
 
   @override
-  String get deviceControlMenuTutorialText => 'Ангушт занед ба чархи клик барои пайгирии меню';
+  String get deviceControlMenuTutorialText =>
+      'Ангушт занед ба чархи клик барои пайгирии меню';
 
   @override
-  String get centerButtonMenuTutorialText => 'Тугмаи марказиро пахш кунед, то ҷузъи менюи рӯшноиро интихоб кунед';
+  String get centerButtonMenuTutorialText =>
+      'Тугмаи марказиро пахш кунед, то ҷузъи менюи рӯшноиро интихоб кунед';
 
   @override
-  String get playPauseMenuTutorialText => 'Барои бозӣ кардан ё таваққуф кардани суруд ин кнопкаро пахш кунед';
+  String get playPauseMenuTutorialText =>
+      'Барои бозӣ кардан ё таваққуф кардани суруд ин кнопкаро пахш кунед';
 
   @override
-  String get nextButtonMenuTutorialText => 'Барои гузаштан ба суруди навбатӣ, ин тугмаро пахш кунед';
+  String get nextButtonMenuTutorialText =>
+      'Барои гузаштан ба суруди навбатӣ, ин тугмаро пахш кунед';
 
   @override
-  String get previousButtonMenuTutorialText => 'Барои дубора ба даст овардани суруди қаблӣ ин тугмаро пахш кунед';
+  String get previousButtonMenuTutorialText =>
+      'Барои дубора ба даст овардани суруди қаблӣ ин тугмаро пахш кунед';
 
   @override
-  String get menuButtonTutorialText => 'Барои баргаштан ба менюи қаблӣ ин тугмаро пахш кунед. Шумо метавонед онро аз ҳама экрани дигар пахш кунед, то бевосита ба менюи асосӣ равед.';
+  String get menuButtonTutorialText =>
+      'Барои баргаштан ба менюи қаблӣ ин тугмаро пахш кунед. Шумо метавонед онро аз ҳама экрани дигар пахш кунед, то бевосита ба менюи асосӣ равед.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ин экрани намоиш аст. Бо нобаёнӣ Strection ва экрани экран фаъол карда шудааст ва метавонад дар танзимот минбаъда танзим карда шавад.';
+  String get deviceScreenMenuTutorialText =>
+      'Ин экрани намоиш аст. Бо нобаёнӣ Strection ва экрани экран фаъол карда шудааст ва метавонад дар танзимот минбаъда танзим карда шавад.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Ангушти худро дар атрофи чархи клик барои танзими ҳаҷм';
+  String get deviceControlNowPlayingTutorialText =>
+      'Ангушти худро дар атрофи чархи клик барои танзими ҳаҷм';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Барои давидан тавассути сикл кардани сатр, пардаи скраббонро пахш кунед. Барои дастрасӣ ба имконоти иловагӣ тугмаи марказиро пахш карда нигоҳ доред.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Барои давидан тавассути сикл кардани сатр, пардаи скраббонро пахш кунед. Барои дастрасӣ ба имконоти иловагӣ тугмаи марказиро пахш карда нигоҳ доред.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Ин кнопкаро пахш карда нигоҳ доред, то ки сурудро зуд пеш гирад';
+  String get nextButtonNowPlayingTutorialText =>
+      'Ин кнопкаро пахш карда нигоҳ доред, то ки сурудро зуд пеш гирад';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Барои гирифтани суруд ин тугмаро пахш карда нигоҳ доред';
+  String get previousButtonNowPlayingTutorialText =>
+      'Барои гирифтани суруд ин тугмаро пахш карда нигоҳ доред';
 
   @override
-  String get deviceControlSearchTutorialText => 'Ангушти худро каме каме дар атрофи чархи клик барои таъкид кардани алифбо';
+  String get deviceControlSearchTutorialText =>
+      'Ангушти худро каме каме дар атрофи чархи клик барои таъкид кардани алифбо';
 
   @override
-  String get centerButtonSearchTutorialText => 'Тугмаи марказиро пахш кунед, то алифбои равшанро интихоб кунед';
+  String get centerButtonSearchTutorialText =>
+      'Тугмаи марказиро пахш кунед, то алифбои равшанро интихоб кунед';
 
   @override
-  String get nextButtonSearchTutorialText => 'Барои илова кардани фазо ин тугмаро пахш кунед';
+  String get nextButtonSearchTutorialText =>
+      'Барои илова кардани фазо ин тугмаро пахш кунед';
 
   @override
-  String get previousButtonSearchTutorialText => 'Барои тоза кардани аломати охирин ин тугмаро пахш кунед';
+  String get previousButtonSearchTutorialText =>
+      'Барои тоза кардани аломати охирин ин тугмаро пахш кунед';
 
   @override
-  String get menuButtonSearchTutorialText => 'Барои пӯшидани клавиатура ва ҳамкорӣ бо натиҷаҳои ҷустуҷӯ ин тугмаро пахш кунед';
+  String get menuButtonSearchTutorialText =>
+      'Барои пӯшидани клавиатура ва ҳамкорӣ бо натиҷаҳои ҷустуҷӯ ин тугмаро пахш кунед';
 }

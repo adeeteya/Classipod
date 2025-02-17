@@ -15,16 +15,20 @@ class AppLocalizationsShn extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'ၶေႃႈပၼ်ၶႂၢင်ႉ တႃႇၶဝ်ႈထိုင် ႁူင်းပွႆႇသဵင် လူဝ်ႇ';
+  String get audioAccessPermissionTitle =>
+      'ၶေႃႈပၼ်ၶႂၢင်ႉ တႃႇၶဝ်ႈထိုင် ႁူင်းပွႆႇသဵင် လူဝ်ႇ';
 
   @override
-  String get audioAccessPermissionContent => 'ၶႅၼ်းတေႃႈ ပၼ်ၶႂၢင်ႉ တႃႇၶဝ်ႈတူၺ်း ၾၢႆႇသဵင် ႁႂ်ႈႁဝ်းလဵၼ်ႈ ၾၢႆႇၽဵင်းၵႂၢမ်း ၸဝ်ႈၵဝ်ႇ။';
+  String get audioAccessPermissionContent =>
+      'ၶႅၼ်းတေႃႈ ပၼ်ၶႂၢင်ႉ တႃႇၶဝ်ႈတူၺ်း ၾၢႆႇသဵင် ႁႂ်ႈႁဝ်းလဵၼ်ႈ ၾၢႆႇၽဵင်းၵႂၢမ်း ၸဝ်ႈၵဝ်ႇ။';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ၶႂၢင်ႉတႃႇၶဝ်ႈဢွၵ်ႇသဵင်';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ၶႂၢင်ႉတႃႇၶဝ်ႈဢွၵ်ႇသဵင်';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'ၶႅၼ်းတေႃႈ ပၼ်ၶႂၢင်ႉ တႃႇၶဝ်ႈတူၺ်း ၾၢႆႇသဵင် တွၼ်ႈတႃႇ ဢႅပ်ႉၼႆႉ တီႈၼႂ်း ၶိူင်ႈတင်ႈၶိူင်ႈ ႁႂ်ႈႁဝ်းၶႃႈ လဵၼ်ႈလႆႈ ၾၢႆႇၽဵင်းၵႂၢမ်း ၸဝ်ႈၵဝ်ႇ။';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'ၶႅၼ်းတေႃႈ ပၼ်ၶႂၢင်ႉ တႃႇၶဝ်ႈတူၺ်း ၾၢႆႇသဵင် တွၼ်ႈတႃႇ ဢႅပ်ႉၼႆႉ တီႈၼႂ်း ၶိူင်ႈတင်ႈၶိူင်ႈ ႁႂ်ႈႁဝ်းၶႃႈ လဵၼ်ႈလႆႈ ၾၢႆႇၽဵင်းၵႂၢမ်း ၸဝ်ႈၵဝ်ႇ။';
 
   @override
   String get menuScreenTitle => 'မေႇၼူႇ';
@@ -63,7 +67,6 @@ class AppLocalizationsShn extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsShn extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsShn extends AppLocalizations {
   String get touchSoundsDialogTitle => 'တိူဝ်ႉၺႃး';
 
   @override
-  String get touchSoundsDialogContent => 'ၶႅၼ်းတေႃႈ Enable Touch Sounds ဢၼ်လုၵ်ႉတီႈ System Settings သေ ထွမ်ႇလႆႈ သဵင်မၢၵ်ႇလေႃႉ ဢၼ်ၼဵၵ်းဝႆႉ';
+  String get touchSoundsDialogContent =>
+      'ၶႅၼ်းတေႃႈ Enable Touch Sounds ဢၼ်လုၵ်ႉတီႈ System Settings သေ ထွမ်ႇလႆႈ သဵင်မၢၵ်ႇလေႃႉ ဢၼ်ၼဵၵ်းဝႆႉ';
 
   @override
   String get immersiveModeSettingTitle => 'Mowersive Mode';
@@ -144,7 +147,8 @@ class AppLocalizationsShn extends AppLocalizations {
   String get donateSettingTitle => 'လူႇတၢၼ်း';
 
   @override
-  String get donateSettingDescription => 'သင်သူင်ၸႂ် ဢႅပ်ႉၼႆႉၸိုင် ၶႅၼ်းတေႃႈ ဝူၼ်ႉတႃႇလူႇႁွမ်းတၢၼ်းလႆႈၶႃႈ';
+  String get donateSettingDescription =>
+      'သင်သူင်ၸႂ် ဢႅပ်ႉၼႆႉၸိုင် ၶႅၼ်းတေႃႈ ဝူၼ်ႉတႃႇလူႇႁွမ်းတၢၼ်းလႆႈၶႃႈ';
 
   @override
   String get versionAboutScreenTitle => 'လၢႆးႁွင်ႉ';
@@ -210,10 +214,12 @@ class AppLocalizationsShn extends AppLocalizations {
   String get resultsForText => 'ၶေႃႈတွပ်ႇ တႃႇ:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'လွင်ႈႁဵတ်းႁႂ်ႈ ပႅတ်ႉထရီႇ ဢမ်ႇတဵမ်ထူၼ်ႈ';
+  String get disableBatteryOptimizationTitle =>
+      'လွင်ႈႁဵတ်းႁႂ်ႈ ပႅတ်ႉထရီႇ ဢမ်ႇတဵမ်ထူၼ်ႈ';
 
   @override
-  String get disableBatteryOptimizationContent => 'ၶႅၼ်းတေႃႈ ယႃႉပႅတ်ႈ လွင်ႈႁဵတ်းႁႂ်ႈ ပႅတ်ႉထီးရီးယႃး လီလိူဝ်မႃး တွၼ်ႈတႃႇ ဢႅပ်ႉၼႆႉ ၼႂ်းၶိူင်ႈ တႃႇပၼ် ပိုၼ်ႉလင် ၽဵင်းၵႂၢမ်း။';
+  String get disableBatteryOptimizationContent =>
+      'ၶႅၼ်းတေႃႈ ယႃႉပႅတ်ႈ လွင်ႈႁဵတ်းႁႂ်ႈ ပႅတ်ႉထီးရီးယႃး လီလိူဝ်မႃး တွၼ်ႈတႃႇ ဢႅပ်ႉၼႆႉ ၼႂ်းၶိူင်ႈ တႃႇပၼ် ပိုၼ်ႉလင် ၽဵင်းၵႂၢမ်း။';
 
   @override
   String get languageScreenTitle => 'လိၵ်ႈလၢႆးၵႂၢမ်းလၢတ်ႈ';
@@ -264,53 +270,70 @@ class AppLocalizationsShn extends AppLocalizations {
   String get clearPlaylist => 'လၢင်ႉၶလႄးတဵတ်ႇ';
 
   @override
-  String get rescanMusicFilesSettingTitle => 'ၽိုၼ်လိၵ်ႈၽဵင်းၵႂၢမ်း ရႅတ်ႉသၵႅၼ်ႇ';
+  String get rescanMusicFilesSettingTitle =>
+      'ၽိုၼ်လိၵ်ႈၽဵင်းၵႂၢမ်း ရႅတ်ႉသၵႅၼ်ႇ';
 
   @override
-  String get deviceControlMenuTutorialText => 'ၶၢႆႉၼိဝ်ႉမိုဝ်းၸဝ်ႈၵဝ်ႇ ဢိတ်းဢွတ်း ႁိမ်းႁွမ်း Click Wheel သေ ၼႄတၢင်း ၼႂ်းမႅၼ်ႇၼူဝ်ႇ';
+  String get deviceControlMenuTutorialText =>
+      'ၶၢႆႉၼိဝ်ႉမိုဝ်းၸဝ်ႈၵဝ်ႇ ဢိတ်းဢွတ်း ႁိမ်းႁွမ်း Click Wheel သေ ၼႄတၢင်း ၼႂ်းမႅၼ်ႇၼူဝ်ႇ';
 
   @override
-  String get centerButtonMenuTutorialText => 'ၼဵၵ်းတီႈ ၼဵၼ်ၵၢင် တႃႇလိူၵ်ႈ ၶူဝ်းၶွင် ဢၼ်ႁိူဝ်ႈလႅင်း';
+  String get centerButtonMenuTutorialText =>
+      'ၼဵၵ်းတီႈ ၼဵၼ်ၵၢင် တႃႇလိူၵ်ႈ ၶူဝ်းၶွင် ဢၼ်ႁိူဝ်ႈလႅင်း';
 
   @override
-  String get playPauseMenuTutorialText => 'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉ တႃႇလဵၼ်ႈ ဢမ်ႇၼၼ် ၵိုတ်းၽဵင်းၵႂၢမ်း';
+  String get playPauseMenuTutorialText =>
+      'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉ တႃႇလဵၼ်ႈ ဢမ်ႇၼၼ် ၵိုတ်းၽဵင်းၵႂၢမ်း';
 
   @override
-  String get nextButtonMenuTutorialText => 'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ ၶၢမ်ႈၵႂႃႇတီႈၽဵင်းၵႂၢမ်းထႅင်ႈ';
+  String get nextButtonMenuTutorialText =>
+      'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ ၶၢမ်ႈၵႂႃႇတီႈၽဵင်းၵႂၢမ်းထႅင်ႈ';
 
   @override
-  String get previousButtonMenuTutorialText => 'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉ တႃႇၶိုၼ်းပိုတ်ႇၶိုၼ်း ဢမ်ႇၼၼ် ၶိုၼ်းၵႂႃႇတီႈၽဵင်းၵဝ်ႇ';
+  String get previousButtonMenuTutorialText =>
+      'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉ တႃႇၶိုၼ်းပိုတ်ႇၶိုၼ်း ဢမ်ႇၼၼ် ၶိုၼ်းၵႂႃႇတီႈၽဵင်းၵဝ်ႇ';
 
   @override
-  String get menuButtonTutorialText => 'ၼဵၵ်းတီႈဢၼ်ၼႆႉသေ ၶိုၼ်းၵႂႃႇတီႈ Menu ဢၼ်ပူၼ်ႉမႃးၼၼ်ႉ။ ၼဵၵ်းသေ ယိပ်းဢဝ်တီႈ ၽႅၼ်ႇတူၺ်းတၢင်ႇဢၼ်သေ ၶဝ်ႈၵႂႃႇတီႈ menu ၼၼ်ႉၵမ်းသိုဝ်ႈ။';
+  String get menuButtonTutorialText =>
+      'ၼဵၵ်းတီႈဢၼ်ၼႆႉသေ ၶိုၼ်းၵႂႃႇတီႈ Menu ဢၼ်ပူၼ်ႉမႃးၼၼ်ႉ။ ၼဵၵ်းသေ ယိပ်းဢဝ်တီႈ ၽႅၼ်ႇတူၺ်းတၢင်ႇဢၼ်သေ ၶဝ်ႈၵႂႃႇတီႈ menu ၼၼ်ႉၵမ်းသိုဝ်ႈ။';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ၼႆႉပဵၼ်ၽႅၼ်ႇၼႄ။ Touch Screen လႄႈ Screen Screen Screen Mode ၼႆႉ လႆႈပိုတ်ႇပၼ် ၸွမ်းၼင်ႇ ပိူင်မၼ်းသေ ၸၢင်ႈၵေႃႇသၢင်ႈလႆႈထႅင်ႈ တီႈၼႂ်း Settings ၼၼ်ႉယဝ်ႉ။';
+  String get deviceScreenMenuTutorialText =>
+      'ၼႆႉပဵၼ်ၽႅၼ်ႇၼႄ။ Touch Screen လႄႈ Screen Screen Screen Mode ၼႆႉ လႆႈပိုတ်ႇပၼ် ၸွမ်းၼင်ႇ ပိူင်မၼ်းသေ ၸၢင်ႈၵေႃႇသၢင်ႈလႆႈထႅင်ႈ တီႈၼႂ်း Settings ၼၼ်ႉယဝ်ႉ။';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'ၶၢႆႉၼိဝ်ႉမိုဝ်းၸဝ်ႈၵဝ်ႇ ႁိမ်းႁွမ်း Click Wheel သေ မႄးပၼ် သဵင်';
+  String get deviceControlNowPlayingTutorialText =>
+      'ၶၢႆႉၼိဝ်ႉမိုဝ်းၸဝ်ႈၵဝ်ႇ ႁိမ်းႁွမ်း Click Wheel သေ မႄးပၼ် သဵင်';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'ၼဵၵ်းတီႈ Center သေ လႄႇလဵပ်ႈ ႁႃ bar ၊ ၼဵၵ်းလႄႈ ယိပ်းဝႆႉ ၼဵၼ် Center သေ ၶဝ်ႈတူၺ်းလႆႈ တၢင်းလိူၵ်ႈထႅင်ႈ။';
+  String get centerButtonNowPlayingTutorialText =>
+      'ၼဵၵ်းတီႈ Center သေ လႄႇလဵပ်ႈ ႁႃ bar ၊ ၼဵၵ်းလႄႈ ယိပ်းဝႆႉ ၼဵၼ် Center သေ ၶဝ်ႈတူၺ်းလႆႈ တၢင်းလိူၵ်ႈထႅင်ႈ။';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'ၼဵၵ်းလႄႈယိပ်းဝႆႉ ၼဵၼ်ၼႆႉ ႁႂ်ႈဝႆးၽဵင်းၵႂၢမ်း';
+  String get nextButtonNowPlayingTutorialText =>
+      'ၼဵၵ်းလႄႈယိပ်းဝႆႉ ၼဵၼ်ၼႆႉ ႁႂ်ႈဝႆးၽဵင်းၵႂၢမ်း';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'ၼဵၵ်းတိတ်းတၢမ်းပၼ် ၼဵၼ်ဢၼ်ၼႆႉ တႃႇၶိုၼ်းပိုတ်ႇၽဵင်းၵႂၢမ်း';
+  String get previousButtonNowPlayingTutorialText =>
+      'ၼဵၵ်းတိတ်းတၢမ်းပၼ် ၼဵၼ်ဢၼ်ၼႆႉ တႃႇၶိုၼ်းပိုတ်ႇၽဵင်းၵႂၢမ်း';
 
   @override
-  String get deviceControlSearchTutorialText => 'ၶၢႆႉၼိဝ်ႉမိုဝ်းၸဝ်ႈၵဝ်ႇ ဢိတ်းဢွတ်း ႁိမ်းႁွမ်း Click Wheel သေ ၼႄပၼ် တူဝ်မႄႈလိၵ်ႈ';
+  String get deviceControlSearchTutorialText =>
+      'ၶၢႆႉၼိဝ်ႉမိုဝ်းၸဝ်ႈၵဝ်ႇ ဢိတ်းဢွတ်း ႁိမ်းႁွမ်း Click Wheel သေ ၼႄပၼ် တူဝ်မႄႈလိၵ်ႈ';
 
   @override
-  String get centerButtonSearchTutorialText => 'ၼဵၵ်းတီႈ ၼဵၼ်ၵၢင်သေ လိူၵ်ႈဢဝ် တူဝ်မႄႈလိၵ်ႈဢၼ်ၼႄဝႆႉၼၼ်ႉ';
+  String get centerButtonSearchTutorialText =>
+      'ၼဵၵ်းတီႈ ၼဵၼ်ၵၢင်သေ လိူၵ်ႈဢဝ် တူဝ်မႄႈလိၵ်ႈဢၼ်ၼႄဝႆႉၼၼ်ႉ';
 
   @override
-  String get nextButtonSearchTutorialText => 'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ သႂ်ႇပၼ်တီႈ space';
+  String get nextButtonSearchTutorialText =>
+      'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ သႂ်ႇပၼ်တီႈ space';
 
   @override
-  String get previousButtonSearchTutorialText => 'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ မွတ်ႇပႅတ်ႈ တူဝ်လိၵ်ႈၵမ်းလိုၼ်းသုတ်း';
+  String get previousButtonSearchTutorialText =>
+      'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ မွတ်ႇပႅတ်ႈ တူဝ်လိၵ်ႈၵမ်းလိုၼ်းသုတ်း';
 
   @override
-  String get menuButtonSearchTutorialText => 'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ ဢိုတ်းၶီးပူတ်ႉသေ တိတ်းတေႃႇၸွမ်း ၶေႃႈတွပ်ႇဢၼ်သွၵ်ႈႁႃၼၼ်ႉ';
+  String get menuButtonSearchTutorialText =>
+      'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ ဢိုတ်းၶီးပူတ်ႉသေ တိတ်းတေႃႇၸွမ်း ၶေႃႈတွပ်ႇဢၼ်သွၵ်ႈႁႃၼၼ်ႉ';
 }

@@ -18,13 +18,16 @@ class AppLocalizationsTa extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ஆடியோ அணுகல் அனுமதி தேவை';
 
   @override
-  String get audioAccessPermissionContent => 'உங்கள் இசைக் கோப்புகளை இயக்க எங்களை அனுமதிக்க ஆடியோ கோப்புகளின் அணுகலை வழங்கவும்.';
+  String get audioAccessPermissionContent =>
+      'உங்கள் இசைக் கோப்புகளை இயக்க எங்களை அனுமதிக்க ஆடியோ கோப்புகளின் அணுகலை வழங்கவும்.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ஆடியோ அணுகல் அனுமதி மறுக்கப்பட்டது';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ஆடியோ அணுகல் அனுமதி மறுக்கப்பட்டது';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'உங்கள் இசைக் கோப்புகளை இயக்க அனுமதிக்க சாதன அமைப்புகளில் இந்த பயன்பாட்டிற்கான ஆடியோ கோப்புகள் அணுகலை வழங்கவும்.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'உங்கள் இசைக் கோப்புகளை இயக்க அனுமதிக்க சாதன அமைப்புகளில் இந்த பயன்பாட்டிற்கான ஆடியோ கோப்புகள் அணுகலை வழங்கவும்.';
 
   @override
   String get menuScreenTitle => 'பட்டி';
@@ -63,7 +66,6 @@ class AppLocalizationsTa extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsTa extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get touchSoundsDialogTitle => 'தொடு ஒலிகள்';
 
   @override
-  String get touchSoundsDialogContent => 'கிளிக் சக்கரம் ஒலிகளைக் கேட்க கணினி அமைப்புகளிலிருந்து தொடு ஒலிகளை இயக்கவும்';
+  String get touchSoundsDialogContent =>
+      'கிளிக் சக்கரம் ஒலிகளைக் கேட்க கணினி அமைப்புகளிலிருந்து தொடு ஒலிகளை இயக்கவும்';
 
   @override
   String get immersiveModeSettingTitle => 'அதிவேக முறை';
@@ -144,7 +146,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get donateSettingTitle => 'நன்கொடை';
 
   @override
-  String get donateSettingDescription => 'இந்த பயன்பாட்டை நீங்கள் விரும்பினால், நன்கொடை அளிப்பதைக் கவனியுங்கள்.';
+  String get donateSettingDescription =>
+      'இந்த பயன்பாட்டை நீங்கள் விரும்பினால், நன்கொடை அளிப்பதைக் கவனியுங்கள்.';
 
   @override
   String get versionAboutScreenTitle => 'பதிப்பு';
@@ -195,7 +198,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get retryButtonText => 'மீண்டும் முயற்சிக்கவும்';
 
   @override
-  String get filePickerDialogTitle => 'இசைக்கு ஸ்கேன் செய்ய ஒரு கோப்பகத்தைத் தேர்ந்தெடுக்கவும்';
+  String get filePickerDialogTitle =>
+      'இசைக்கு ஸ்கேன் செய்ய ஒரு கோப்பகத்தைத் தேர்ந்தெடுக்கவும்';
 
   @override
   String get searchScreenTitle => 'தேடல்';
@@ -213,7 +217,8 @@ class AppLocalizationsTa extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'பேட்டரி தேர்வுமுறை முடக்கு';
 
   @override
-  String get disableBatteryOptimizationContent => 'இசையின் பின்னணி பின்னணியை அனுமதிக்க சாதன அமைப்புகளில் இந்த பயன்பாட்டிற்கான பேட்டரி தேர்வுமுறை முடக்கு.';
+  String get disableBatteryOptimizationContent =>
+      'இசையின் பின்னணி பின்னணியை அனுமதிக்க சாதன அமைப்புகளில் இந்த பயன்பாட்டிற்கான பேட்டரி தேர்வுமுறை முடக்கு.';
 
   @override
   String get languageScreenTitle => 'மொழி';
@@ -267,50 +272,66 @@ class AppLocalizationsTa extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'இசை கோப்புகளை மீட்டமைக்கவும்';
 
   @override
-  String get deviceControlMenuTutorialText => 'மெனுவுக்கு செல்ல கிளிக் சக்கரத்தைச் சுற்றி உங்கள் கட்டைவிரலை லேசாக நகர்த்தவும்';
+  String get deviceControlMenuTutorialText =>
+      'மெனுவுக்கு செல்ல கிளிக் சக்கரத்தைச் சுற்றி உங்கள் கட்டைவிரலை லேசாக நகர்த்தவும்';
 
   @override
-  String get centerButtonMenuTutorialText => 'சிறப்பம்சமாக மெனு உருப்படியைத் தேர்ந்தெடுக்க மைய பொத்தானை அழுத்தவும்';
+  String get centerButtonMenuTutorialText =>
+      'சிறப்பம்சமாக மெனு உருப்படியைத் தேர்ந்தெடுக்க மைய பொத்தானை அழுத்தவும்';
 
   @override
-  String get playPauseMenuTutorialText => 'ஒரு பாடலை இயக்க அல்லது இடைநிறுத்த இந்த பொத்தானை அழுத்தவும்';
+  String get playPauseMenuTutorialText =>
+      'ஒரு பாடலை இயக்க அல்லது இடைநிறுத்த இந்த பொத்தானை அழுத்தவும்';
 
   @override
-  String get nextButtonMenuTutorialText => 'அடுத்த பாடலுக்கு தவிர்க்க இந்த பொத்தானை அழுத்தவும்';
+  String get nextButtonMenuTutorialText =>
+      'அடுத்த பாடலுக்கு தவிர்க்க இந்த பொத்தானை அழுத்தவும்';
 
   @override
-  String get previousButtonMenuTutorialText => 'முன்னாடி வைக்க இந்த பொத்தானை அழுத்தவும் அல்லது முந்தைய பாடலுக்குச் செல்லவும்';
+  String get previousButtonMenuTutorialText =>
+      'முன்னாடி வைக்க இந்த பொத்தானை அழுத்தவும் அல்லது முந்தைய பாடலுக்குச் செல்லவும்';
 
   @override
-  String get menuButtonTutorialText => 'முந்தைய மெனுவுக்குச் செல்ல இந்த பொத்தானை அழுத்தவும். பிரதான மெனுவுக்கு நேரடியாகச் செல்ல நீங்கள் வேறு எந்தத் திரையிலிருந்தும் அதை அழுத்திப் பிடித்துக் கொள்ளலாம்.';
+  String get menuButtonTutorialText =>
+      'முந்தைய மெனுவுக்குச் செல்ல இந்த பொத்தானை அழுத்தவும். பிரதான மெனுவுக்கு நேரடியாகச் செல்ல நீங்கள் வேறு எந்தத் திரையிலிருந்தும் அதை அழுத்திப் பிடித்துக் கொள்ளலாம்.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'இது காட்சித் திரை. தொடுதிரை மற்றும் பிளவு திரை பயன்முறை இயல்புநிலையாக இயக்கப்பட்டிருக்கும் மற்றும் அமைப்புகளில் மேலும் கட்டமைக்கப்படலாம்.';
+  String get deviceScreenMenuTutorialText =>
+      'இது காட்சித் திரை. தொடுதிரை மற்றும் பிளவு திரை பயன்முறை இயல்புநிலையாக இயக்கப்பட்டிருக்கும் மற்றும் அமைப்புகளில் மேலும் கட்டமைக்கப்படலாம்.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'அளவை சரிசெய்ய உங்கள் கட்டைவிரலை கிளிக் சக்கரத்தைச் சுற்றி நகர்த்தவும்';
+  String get deviceControlNowPlayingTutorialText =>
+      'அளவை சரிசெய்ய உங்கள் கட்டைவிரலை கிளிக் சக்கரத்தைச் சுற்றி நகர்த்தவும்';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'சீக்கர் பொத்தானை சுழற்சி செய்ய சீர் பொத்தானை அழுத்தவும், ஸ்க்ரப்பர் பார் மற்றும் ஷஃபிள் ஸ்லைடர் மூலம் சுழற்சி செய்யவும். கூடுதல் விருப்பங்களை அணுக மைய பொத்தானை அழுத்திப் பிடிக்கவும்.';
+  String get centerButtonNowPlayingTutorialText =>
+      'சீக்கர் பொத்தானை சுழற்சி செய்ய சீர் பொத்தானை அழுத்தவும், ஸ்க்ரப்பர் பார் மற்றும் ஷஃபிள் ஸ்லைடர் மூலம் சுழற்சி செய்யவும். கூடுதல் விருப்பங்களை அணுக மைய பொத்தானை அழுத்திப் பிடிக்கவும்.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'பாடலை வேகமாக அனுப்ப இந்த பொத்தானை அழுத்திப் பிடிக்கவும்';
+  String get nextButtonNowPlayingTutorialText =>
+      'பாடலை வேகமாக அனுப்ப இந்த பொத்தானை அழுத்திப் பிடிக்கவும்';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'பாடலை முன்னாடி இந்த பொத்தானை அழுத்திப் பிடிக்கவும்';
+  String get previousButtonNowPlayingTutorialText =>
+      'பாடலை முன்னாடி இந்த பொத்தானை அழுத்திப் பிடிக்கவும்';
 
   @override
-  String get deviceControlSearchTutorialText => 'ஒரு எழுத்துக்களை முன்னிலைப்படுத்த கிளிக் சக்கரத்தைச் சுற்றி உங்கள் கட்டைவிரலை லேசாக நகர்த்தவும்';
+  String get deviceControlSearchTutorialText =>
+      'ஒரு எழுத்துக்களை முன்னிலைப்படுத்த கிளிக் சக்கரத்தைச் சுற்றி உங்கள் கட்டைவிரலை லேசாக நகர்த்தவும்';
 
   @override
-  String get centerButtonSearchTutorialText => 'சிறப்பிக்கப்பட்ட எழுத்துக்களைத் தேர்ந்தெடுக்க மைய பொத்தானை அழுத்தவும்';
+  String get centerButtonSearchTutorialText =>
+      'சிறப்பிக்கப்பட்ட எழுத்துக்களைத் தேர்ந்தெடுக்க மைய பொத்தானை அழுத்தவும்';
 
   @override
-  String get nextButtonSearchTutorialText => 'ஒரு இடத்தைச் சேர்க்க இந்த பொத்தானை அழுத்தவும்';
+  String get nextButtonSearchTutorialText =>
+      'ஒரு இடத்தைச் சேர்க்க இந்த பொத்தானை அழுத்தவும்';
 
   @override
-  String get previousButtonSearchTutorialText => 'கடைசி எழுத்தை நீக்க இந்த பொத்தானை அழுத்தவும்';
+  String get previousButtonSearchTutorialText =>
+      'கடைசி எழுத்தை நீக்க இந்த பொத்தானை அழுத்தவும்';
 
   @override
-  String get menuButtonSearchTutorialText => 'விசைப்பலகை மூடவும், தேடல் முடிவுகளுடன் தொடர்பு கொள்ளவும் இந்த பொத்தானை அழுத்தவும்';
+  String get menuButtonSearchTutorialText =>
+      'விசைப்பலகை மூடவும், தேடல் முடிவுகளுடன் தொடர்பு கொள்ளவும் இந்த பொத்தானை அழுத்தவும்';
 }

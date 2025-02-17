@@ -11,6 +11,7 @@ class SettingsPreferencesModel {
   final bool splitScreenEnabled;
   final bool immersiveMode;
   final String musicFolderPath;
+  final bool fetchOnlineMusic;
 
   SettingsPreferencesModel({
     required this.languageLocaleCode,
@@ -22,6 +23,7 @@ class SettingsPreferencesModel {
     required this.splitScreenEnabled,
     required this.immersiveMode,
     required this.musicFolderPath,
+    this.fetchOnlineMusic = false,
   });
 
   SettingsPreferencesModel copyWith({
@@ -34,6 +36,7 @@ class SettingsPreferencesModel {
     bool? splitScreenEnabled,
     bool? immersiveMode,
     String? musicFolderPath,
+    bool? fetchOnlineMusic,
   }) {
     return SettingsPreferencesModel(
       languageLocaleCode: languageLocaleCode ?? this.languageLocaleCode,
@@ -45,6 +48,7 @@ class SettingsPreferencesModel {
       splitScreenEnabled: splitScreenEnabled ?? this.splitScreenEnabled,
       immersiveMode: immersiveMode ?? this.immersiveMode,
       musicFolderPath: musicFolderPath ?? this.musicFolderPath,
+      fetchOnlineMusic: fetchOnlineMusic ?? this.fetchOnlineMusic,
     );
   }
 
@@ -59,7 +63,8 @@ class SettingsPreferencesModel {
         other.clickWheelSound == clickWheelSound &&
         other.splitScreenEnabled == splitScreenEnabled &&
         other.immersiveMode == immersiveMode &&
-        other.musicFolderPath == musicFolderPath;
+        other.musicFolderPath == musicFolderPath &&
+        other.fetchOnlineMusic == fetchOnlineMusic;
   }
 
   @override
@@ -73,5 +78,6 @@ class SettingsPreferencesModel {
         splitScreenEnabled,
         immersiveMode,
         musicFolderPath,
+        fetchOnlineMusic,
       );
 }

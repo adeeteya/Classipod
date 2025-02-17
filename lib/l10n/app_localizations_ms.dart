@@ -18,13 +18,16 @@ class AppLocalizationsMs extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Kebenaran akses audio diperlukan';
 
   @override
-  String get audioAccessPermissionContent => 'Sila berikan akses fail audio untuk membolehkan kami memainkan fail muzik anda.';
+  String get audioAccessPermissionContent =>
+      'Sila berikan akses fail audio untuk membolehkan kami memainkan fail muzik anda.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Kebenaran akses audio ditolak';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Kebenaran akses audio ditolak';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Sila berikan akses fail audio untuk aplikasi ini dalam tetapan peranti untuk membolehkan kami memainkan fail muzik anda.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Sila berikan akses fail audio untuk aplikasi ini dalam tetapan peranti untuk membolehkan kami memainkan fail muzik anda.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsMs extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsMs extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsMs extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sentuh bunyi';
 
   @override
-  String get touchSoundsDialogContent => 'Sila aktifkan bunyi sentuhan dari tetapan sistem untuk mendengar bunyi roda klik';
+  String get touchSoundsDialogContent =>
+      'Sila aktifkan bunyi sentuhan dari tetapan sistem untuk mendengar bunyi roda klik';
 
   @override
   String get immersiveModeSettingTitle => 'Mod immersive';
@@ -144,7 +146,8 @@ class AppLocalizationsMs extends AppLocalizations {
   String get donateSettingTitle => 'Menderma';
 
   @override
-  String get donateSettingDescription => 'Jika anda suka aplikasi ini, sila pertimbangkan untuk menderma.';
+  String get donateSettingDescription =>
+      'Jika anda suka aplikasi ini, sila pertimbangkan untuk menderma.';
 
   @override
   String get versionAboutScreenTitle => 'Versi';
@@ -210,10 +213,12 @@ class AppLocalizationsMs extends AppLocalizations {
   String get resultsForText => 'Keputusan untuk:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Lumpuhkan pengoptimuman bateri';
+  String get disableBatteryOptimizationTitle =>
+      'Lumpuhkan pengoptimuman bateri';
 
   @override
-  String get disableBatteryOptimizationContent => 'Sila lumpuhkan pengoptimuman bateri untuk aplikasi ini dalam tetapan peranti untuk membolehkan main balik latar belakang muzik.';
+  String get disableBatteryOptimizationContent =>
+      'Sila lumpuhkan pengoptimuman bateri untuk aplikasi ini dalam tetapan peranti untuk membolehkan main balik latar belakang muzik.';
 
   @override
   String get languageScreenTitle => 'Bahasa';
@@ -267,50 +272,66 @@ class AppLocalizationsMs extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Fail muzik rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Gerakkan ibu jari anda dengan ringan di sekitar roda klik untuk menavigasi menu';
+  String get deviceControlMenuTutorialText =>
+      'Gerakkan ibu jari anda dengan ringan di sekitar roda klik untuk menavigasi menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tekan butang Pusat untuk memilih item menu yang diserlahkan';
+  String get centerButtonMenuTutorialText =>
+      'Tekan butang Pusat untuk memilih item menu yang diserlahkan';
 
   @override
-  String get playPauseMenuTutorialText => 'Tekan butang ini untuk bermain atau menjeda lagu';
+  String get playPauseMenuTutorialText =>
+      'Tekan butang ini untuk bermain atau menjeda lagu';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tekan butang ini untuk melangkau ke lagu seterusnya';
+  String get nextButtonMenuTutorialText =>
+      'Tekan butang ini untuk melangkau ke lagu seterusnya';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tekan butang ini untuk mundur atau kembali ke lagu sebelumnya';
+  String get previousButtonMenuTutorialText =>
+      'Tekan butang ini untuk mundur atau kembali ke lagu sebelumnya';
 
   @override
-  String get menuButtonTutorialText => 'Tekan butang ini untuk kembali ke menu sebelumnya. Anda boleh menekan dan menahannya dari mana -mana skrin lain untuk terus pergi ke menu utama.';
+  String get menuButtonTutorialText =>
+      'Tekan butang ini untuk kembali ke menu sebelumnya. Anda boleh menekan dan menahannya dari mana -mana skrin lain untuk terus pergi ke menu utama.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ini adalah skrin paparan. Skrin sentuh dan mod skrin berpecah diaktifkan secara lalai dan boleh dikonfigurasikan selanjutnya dalam tetapan.';
+  String get deviceScreenMenuTutorialText =>
+      'Ini adalah skrin paparan. Skrin sentuh dan mod skrin berpecah diaktifkan secara lalai dan boleh dikonfigurasikan selanjutnya dalam tetapan.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Gerakkan ibu jari anda di sekitar roda klik untuk menyesuaikan kelantangan';
+  String get deviceControlNowPlayingTutorialText =>
+      'Gerakkan ibu jari anda di sekitar roda klik untuk menyesuaikan kelantangan';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tekan butang tengah untuk menembusi Bar, Bar Scrubber dan Slider Shuffle. Tekan dan tahan butang Pusat untuk mengakses pilihan tambahan.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tekan butang tengah untuk menembusi Bar, Bar Scrubber dan Slider Shuffle. Tekan dan tahan butang Pusat untuk mengakses pilihan tambahan.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tekan dan tahan butang ini untuk meneruskan lagu';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tekan dan tahan butang ini untuk meneruskan lagu';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tekan dan tahan butang ini untuk memutar balik lagu';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tekan dan tahan butang ini untuk memutar balik lagu';
 
   @override
-  String get deviceControlSearchTutorialText => 'Gerakkan ibu jari anda dengan ringan di sekitar roda klik untuk menyerlahkan abjad';
+  String get deviceControlSearchTutorialText =>
+      'Gerakkan ibu jari anda dengan ringan di sekitar roda klik untuk menyerlahkan abjad';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tekan butang Pusat untuk memilih abjad yang diserlahkan';
+  String get centerButtonSearchTutorialText =>
+      'Tekan butang Pusat untuk memilih abjad yang diserlahkan';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tekan butang ini untuk menambah ruang';
+  String get nextButtonSearchTutorialText =>
+      'Tekan butang ini untuk menambah ruang';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tekan butang ini untuk memadam watak terakhir';
+  String get previousButtonSearchTutorialText =>
+      'Tekan butang ini untuk memadam watak terakhir';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tekan butang ini untuk menutup papan kekunci dan berinteraksi dengan hasil carian';
+  String get menuButtonSearchTutorialText =>
+      'Tekan butang ini untuk menutup papan kekunci dan berinteraksi dengan hasil carian';
 }

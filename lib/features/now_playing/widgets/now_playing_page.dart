@@ -31,6 +31,8 @@ class NowPlayingWidget extends StatelessWidget {
               child: AlbumReflectiveArt(
                 thumbnailPath: nowPlayingDetails.currentMetadata?.thumbnailPath,
                 reflectedImageHeight: 50,
+                isOnDevice:
+                    nowPlayingDetails.currentMetadata?.isOnDevice ?? true,
                 heroTag:
                     "${nowPlayingDetails.currentMetadata?.albumName}-${nowPlayingDetails.currentMetadata?.albumArtistName}",
               ),

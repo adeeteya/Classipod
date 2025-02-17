@@ -15,16 +15,20 @@ class AppLocalizationsKek extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'Xk’ulub’ankil li Audio Li na’ajmank .';
+  String get audioAccessPermissionTitle =>
+      'Xk’ulub’ankil li Audio Li na’ajmank .';
 
   @override
-  String get audioAccessPermissionContent => 'B’aanu usilal, k’e reheb’ li archivo re li son re naq tooruuq chixb’ichankileb’ laa archivo re li son.';
+  String get audioAccessPermissionContent =>
+      'B’aanu usilal, k’e reheb’ li archivo re li son re naq tooruuq chixb’ichankileb’ laa archivo re li son.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Xk’ulub’il li ok sa’ li Audio Denied .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Xk’ulub’il li ok sa’ li Audio Denied .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'B’aanu usilal, k’e reheb’ li archivo re li son choq’ re li aplicación a’in sa’ li k’uub’anb’il na’leb’ re li k’anjeleb’aal re naq tooruuq chixb’ichankileb’ laa archivo re li son.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'B’aanu usilal, k’e reheb’ li archivo re li son choq’ re li aplicación a’in sa’ li k’uub’anb’il na’leb’ re li k’anjeleb’aal re naq tooruuq chixb’ichankileb’ laa archivo re li son.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsKek extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsKek extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -144,7 +146,8 @@ class AppLocalizationsKek extends AppLocalizations {
   String get donateSettingTitle => 'Siib\'al';
 
   @override
-  String get donateSettingDescription => 'Wi nawulak chawu li aplicación a’in, b’aanu usilal, k’oxla li tenq’ank.';
+  String get donateSettingDescription =>
+      'Wi nawulak chawu li aplicación a’in, b’aanu usilal, k’oxla li tenq’ank.';
 
   @override
   String get versionAboutScreenTitle => 'Yeeman';
@@ -195,7 +198,8 @@ class AppLocalizationsKek extends AppLocalizations {
   String get retryButtonText => 'Xrankil';
 
   @override
-  String get filePickerDialogTitle => 'Sik’ ru jun li Directory sa’ li Escena choq’ re li Musiq’ej .';
+  String get filePickerDialogTitle =>
+      'Sik’ ru jun li Directory sa’ li Escena choq’ re li Musiq’ej .';
 
   @override
   String get searchScreenTitle => 'Sikok';
@@ -210,10 +214,12 @@ class AppLocalizationsKek extends AppLocalizations {
   String get resultsForText => 'Lix k’ulub’il li:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Xsik’b’al li batería li ink’a’ naru xjalb’al .';
+  String get disableBatteryOptimizationTitle =>
+      'Xsik’b’al li batería li ink’a’ naru xjalb’al .';
 
   @override
-  String get disableBatteryOptimizationContent => 'B’aanu usilal, isi li optimización re li batería choq’ re li aplicación a’in sa’ li k’uub’anb’il na’leb’ re li k’anjeleb’aal re naq taawanq li b’atz’unk sa’ li b’ich.';
+  String get disableBatteryOptimizationContent =>
+      'B’aanu usilal, isi li optimización re li batería choq’ re li aplicación a’in sa’ li k’uub’anb’il na’leb’ re li k’anjeleb’aal re naq taawanq li b’atz’unk sa’ li b’ich.';
 
   @override
   String get languageScreenTitle => 'Atinobal';
@@ -267,50 +273,66 @@ class AppLocalizationsKek extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Archivos de Música rescan .';
 
   @override
-  String get deviceControlMenuTutorialText => 'K’am laa nim uq’ chi kok’ aj xsa’ sa’ xsutam li Wheel re xb’eresinkil li menú .';
+  String get deviceControlMenuTutorialText =>
+      'K’am laa nim uq’ chi kok’ aj xsa’ sa’ xsutam li Wheel re xb’eresinkil li menú .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tat-ok sa’ li boton sa’ xyi re xsik’b’al ru li k’a’aq re ru re li menú li k’eeb’il xwankil .';
+  String get centerButtonMenuTutorialText =>
+      'Tat-ok sa’ li boton sa’ xyi re xsik’b’al ru li k’a’aq re ru re li menú li k’eeb’il xwankil .';
 
   @override
-  String get playPauseMenuTutorialText => 'Taak’e li boton a’in re xb’ichankil malaj xk’eeb’al jun li b’ich .';
+  String get playPauseMenuTutorialText =>
+      'Taak’e li boton a’in re xb’ichankil malaj xk’eeb’al jun li b’ich .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Taak’e li boton a’in re xnumsinkil li jun chik b’ich .';
+  String get nextButtonMenuTutorialText =>
+      'Taak’e li boton a’in re xnumsinkil li jun chik b’ich .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Taak’e li boton a’in re naq tatsutq’iiq malaj tatsutq’iiq sa’ li b’ich li ak xnume’ .';
+  String get previousButtonMenuTutorialText =>
+      'Taak’e li boton a’in re naq tatsutq’iiq malaj tatsutq’iiq sa’ li b’ich li ak xnume’ .';
 
   @override
-  String get menuButtonTutorialText => 'Tat-ok sa’ li boton a’in re sutq’iik sa’ li menú li ak wan chaq. Naru taapitz’ ut taachap sa’ yalaq chik li pantalla re naq tatxik chi tiik sa’ li menú principal.';
+  String get menuButtonTutorialText =>
+      'Tat-ok sa’ li boton a’in re sutq’iik sa’ li menú li ak wan chaq. Naru taapitz’ ut taachap sa’ yalaq chik li pantalla re naq tatxik chi tiik sa’ li menú principal.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'A’an a’in li pantalla re li k’utb’esink. Li Modo de Screen Screen ut Split re li toch’olal neke’k’eeman chi k’anjelak chi k’uub’anb’il ut naru neke’k’uub’aman chi us sa’ li k’uub’anb’il na’leb’.';
+  String get deviceScreenMenuTutorialText =>
+      'A’an a’in li pantalla re li k’utb’esink. Li Modo de Screen Screen ut Split re li toch’olal neke’k’eeman chi k’anjelak chi k’uub’anb’il ut naru neke’k’uub’aman chi us sa’ li k’uub’anb’il na’leb’.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'K’am laa nim uq’ sa’ xsutam li Rueda de Click re xjalb’al li xyaab’ kuxej .';
+  String get deviceControlNowPlayingTutorialText =>
+      'K’am laa nim uq’ sa’ xsutam li Rueda de Click re xjalb’al li xyaab’ kuxej .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tat-ok sa’ li boton re li Centro re naq taa’ok sa’ li b’eleb’aal ch’iich’ sa’ li bar sik’b’il, li barra de scrubber ut li deslizador re li b’atz’unk. Tat-ok sa’ li boton re li Centro re naq taa’ok sa’ jalan chik li na’leb’.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tat-ok sa’ li boton re li Centro re naq taa’ok sa’ li b’eleb’aal ch’iich’ sa’ li bar sik’b’il, li barra de scrubber ut li deslizador re li b’atz’unk. Tat-ok sa’ li boton re li Centro re naq taa’ok sa’ jalan chik li na’leb’.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Taqab’ ut chap li boton a’in re naq taa’ayuun chi us li b’ich .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Taqab’ ut chap li boton a’in re naq taa’ayuun chi us li b’ich .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Taqab’i ut chap li boton a’in re xk’eeb’al wi’chik li b’ich .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Taqab’i ut chap li boton a’in re xk’eeb’al wi’chik li b’ich .';
 
   @override
-  String get deviceControlSearchTutorialText => 'K’am laa nim uq’ chi kok’ aj xsa’ sa’ xsutam li Wheel Click re xk’eeb’al chi nawe’k jun li tz’iib’leb’ .';
+  String get deviceControlSearchTutorialText =>
+      'K’am laa nim uq’ chi kok’ aj xsa’ sa’ xsutam li Wheel Click re xk’eeb’al chi nawe’k jun li tz’iib’leb’ .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tat-ok sa’ li boton sa’ xyi re xsik’b’al ru li tz’iib’anb’il esil li k’eeb’il chi ilmank .';
+  String get centerButtonSearchTutorialText =>
+      'Tat-ok sa’ li boton sa’ xyi re xsik’b’al ru li tz’iib’anb’il esil li k’eeb’il chi ilmank .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Taak’e li boton a’in re xk’eeb’al jun li na’ajej .';
+  String get nextButtonSearchTutorialText =>
+      'Taak’e li boton a’in re xk’eeb’al jun li na’ajej .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tat-ok sa’ li boton a’in re xsachb’al li roso’jik tz’iib’ .';
+  String get previousButtonSearchTutorialText =>
+      'Tat-ok sa’ li boton a’in re xsachb’al li roso’jik tz’iib’ .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tat-ok sa’ li boton a’in re xtz’apb’al li teclado ut chi wank sa’ komonil rik’in li sik’ok .';
+  String get menuButtonSearchTutorialText =>
+      'Tat-ok sa’ li boton a’in re xtz’apb’al li teclado ut chi wank sa’ komonil rik’in li sik’ok .';
 }

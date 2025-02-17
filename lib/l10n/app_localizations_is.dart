@@ -18,13 +18,16 @@ class AppLocalizationsIs extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Hljóðaðgangsleyfi krafist';
 
   @override
-  String get audioAccessPermissionContent => 'Vinsamlegast gefðu hljóðskrár aðgang til að leyfa okkur að spila tónlistarskrárnar þínar.';
+  String get audioAccessPermissionContent =>
+      'Vinsamlegast gefðu hljóðskrár aðgang til að leyfa okkur að spila tónlistarskrárnar þínar.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Hljóðaðgangsleyfi hafnað';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Hljóðaðgangsleyfi hafnað';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Vinsamlegast gefðu hljóðskrár aðgang fyrir þetta forrit í tækjastillingunum til að leyfa okkur að spila tónlistarskrárnar þínar.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Vinsamlegast gefðu hljóðskrár aðgang fyrir þetta forrit í tækjastillingunum til að leyfa okkur að spila tónlistarskrárnar þínar.';
 
   @override
   String get menuScreenTitle => 'Matseðill';
@@ -63,7 +66,6 @@ class AppLocalizationsIs extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsIs extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsIs extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Snertu hljóð';
 
   @override
-  String get touchSoundsDialogContent => 'Vinsamlegast virkjaðu Touch Sounds frá kerfisstillingum til að heyra Click Wheel Sounds';
+  String get touchSoundsDialogContent =>
+      'Vinsamlegast virkjaðu Touch Sounds frá kerfisstillingum til að heyra Click Wheel Sounds';
 
   @override
   String get immersiveModeSettingTitle => 'Yfirgripsmikil stilling';
@@ -144,7 +146,8 @@ class AppLocalizationsIs extends AppLocalizations {
   String get donateSettingTitle => 'Gefðu';
 
   @override
-  String get donateSettingDescription => 'Ef þér líkar vel við þetta forrit skaltu íhuga að gefa.';
+  String get donateSettingDescription =>
+      'Ef þér líkar vel við þetta forrit skaltu íhuga að gefa.';
 
   @override
   String get versionAboutScreenTitle => 'Útgáfa';
@@ -210,10 +213,12 @@ class AppLocalizationsIs extends AppLocalizations {
   String get resultsForText => 'Niðurstöður fyrir:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Slökkva á hagræðingu rafhlöðunnar';
+  String get disableBatteryOptimizationTitle =>
+      'Slökkva á hagræðingu rafhlöðunnar';
 
   @override
-  String get disableBatteryOptimizationContent => 'Vinsamlegast slökktu á hagræðingu rafhlöðunnar fyrir þetta forrit í tækjastillingunum til að leyfa bakgrunnsspilun tónlistar.';
+  String get disableBatteryOptimizationContent =>
+      'Vinsamlegast slökktu á hagræðingu rafhlöðunnar fyrir þetta forrit í tækjastillingunum til að leyfa bakgrunnsspilun tónlistar.';
 
   @override
   String get languageScreenTitle => 'Tungumál';
@@ -267,50 +272,66 @@ class AppLocalizationsIs extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Files';
 
   @override
-  String get deviceControlMenuTutorialText => 'Færðu þumalfingurinn létt um smellihjólið til að fletta í valmyndinni';
+  String get deviceControlMenuTutorialText =>
+      'Færðu þumalfingurinn létt um smellihjólið til að fletta í valmyndinni';
 
   @override
-  String get centerButtonMenuTutorialText => 'Ýttu á miðjuhnappinn til að velja auðkennda valmyndaratriðið';
+  String get centerButtonMenuTutorialText =>
+      'Ýttu á miðjuhnappinn til að velja auðkennda valmyndaratriðið';
 
   @override
-  String get playPauseMenuTutorialText => 'Ýttu á þennan hnapp til að spila eða gera hlé á lag';
+  String get playPauseMenuTutorialText =>
+      'Ýttu á þennan hnapp til að spila eða gera hlé á lag';
 
   @override
-  String get nextButtonMenuTutorialText => 'Ýttu á þennan hnapp til að sleppa í næsta lag';
+  String get nextButtonMenuTutorialText =>
+      'Ýttu á þennan hnapp til að sleppa í næsta lag';
 
   @override
-  String get previousButtonMenuTutorialText => 'Ýttu á þennan hnapp til að spóla til baka eða fara aftur í fyrra lagið';
+  String get previousButtonMenuTutorialText =>
+      'Ýttu á þennan hnapp til að spóla til baka eða fara aftur í fyrra lagið';
 
   @override
-  String get menuButtonTutorialText => 'Ýttu á þennan hnapp til að fara aftur í fyrri valmyndina. Þú gætir ýtt á og haldið honum frá öðrum skjá til að fara beint í aðalvalmyndina.';
+  String get menuButtonTutorialText =>
+      'Ýttu á þennan hnapp til að fara aftur í fyrri valmyndina. Þú gætir ýtt á og haldið honum frá öðrum skjá til að fara beint í aðalvalmyndina.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Þetta er skjárinn. Snertiskjár og skiptaskjárstilling eru sjálfgefin virk og hægt er að stilla þær frekar í stillingunum.';
+  String get deviceScreenMenuTutorialText =>
+      'Þetta er skjárinn. Snertiskjár og skiptaskjárstilling eru sjálfgefin virk og hægt er að stilla þær frekar í stillingunum.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Færðu þumalfingurinn um smellihjólið til að stilla hljóðstyrkinn';
+  String get deviceControlNowPlayingTutorialText =>
+      'Færðu þumalfingurinn um smellihjólið til að stilla hljóðstyrkinn';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Ýttu á miðjuhnappinn til að hjóla í gegnum LEEK Bar, Scrubber Bar og stokka rennibraut. Haltu inni miðjuhnappnum til að fá aðgang að viðbótarvalkostum.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Ýttu á miðjuhnappinn til að hjóla í gegnum LEEK Bar, Scrubber Bar og stokka rennibraut. Haltu inni miðjuhnappnum til að fá aðgang að viðbótarvalkostum.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Haltu þessum hnapp til að halda laginu áfram';
+  String get nextButtonNowPlayingTutorialText =>
+      'Haltu þessum hnapp til að halda laginu áfram';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Haltu þessum hnapp til að spóla til baka lagið';
+  String get previousButtonNowPlayingTutorialText =>
+      'Haltu þessum hnapp til að spóla til baka lagið';
 
   @override
-  String get deviceControlSearchTutorialText => 'Færðu þumalfingurinn létt um smellihjólið til að auðkenna stafrófið';
+  String get deviceControlSearchTutorialText =>
+      'Færðu þumalfingurinn létt um smellihjólið til að auðkenna stafrófið';
 
   @override
-  String get centerButtonSearchTutorialText => 'Ýttu á miðjuhnappinn til að velja auðkennda stafrófið';
+  String get centerButtonSearchTutorialText =>
+      'Ýttu á miðjuhnappinn til að velja auðkennda stafrófið';
 
   @override
-  String get nextButtonSearchTutorialText => 'Ýttu á þennan hnapp til að bæta við rými';
+  String get nextButtonSearchTutorialText =>
+      'Ýttu á þennan hnapp til að bæta við rými';
 
   @override
-  String get previousButtonSearchTutorialText => 'Ýttu á þennan hnapp til að eyða síðasta staf';
+  String get previousButtonSearchTutorialText =>
+      'Ýttu á þennan hnapp til að eyða síðasta staf';
 
   @override
-  String get menuButtonSearchTutorialText => 'Ýttu á þennan hnapp til að loka lyklaborðinu og hafa samskipti við leitarniðurstöðurnar';
+  String get menuButtonSearchTutorialText =>
+      'Ýttu á þennan hnapp til að loka lyklaborðinu og hafa samskipti við leitarniðurstöðurnar';
 }

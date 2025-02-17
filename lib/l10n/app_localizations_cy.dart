@@ -18,13 +18,16 @@ class AppLocalizationsCy extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Mae angen caniatâd mynediad sain';
 
   @override
-  String get audioAccessPermissionContent => 'Rhowch fynediad i ffeiliau sain i ganiatáu inni chwarae\'ch ffeiliau cerddoriaeth.';
+  String get audioAccessPermissionContent =>
+      'Rhowch fynediad i ffeiliau sain i ganiatáu inni chwarae\'ch ffeiliau cerddoriaeth.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Gwrthodwyd caniatâd mynediad sain';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Gwrthodwyd caniatâd mynediad sain';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Rhowch fynediad i ffeiliau sain ar gyfer yr app hon yn y gosodiadau dyfais er mwyn caniatáu inni chwarae\'ch ffeiliau cerddoriaeth.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Rhowch fynediad i ffeiliau sain ar gyfer yr app hon yn y gosodiadau dyfais er mwyn caniatáu inni chwarae\'ch ffeiliau cerddoriaeth.';
 
   @override
   String get menuScreenTitle => 'Bwydlen';
@@ -63,7 +66,6 @@ class AppLocalizationsCy extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsCy extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsCy extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Cyffwrdd synau';
 
   @override
-  String get touchSoundsDialogContent => 'Os gwelwch yn dda galluogi synau cyffwrdd o osodiadau system i glywed y synau olwyn clicio';
+  String get touchSoundsDialogContent =>
+      'Os gwelwch yn dda galluogi synau cyffwrdd o osodiadau system i glywed y synau olwyn clicio';
 
   @override
   String get immersiveModeSettingTitle => 'Modd trochi';
@@ -144,7 +146,8 @@ class AppLocalizationsCy extends AppLocalizations {
   String get donateSettingTitle => 'Rhoion';
 
   @override
-  String get donateSettingDescription => 'Os ydych chi\'n hoffi\'r app hon, ystyriwch roi.';
+  String get donateSettingDescription =>
+      'Os ydych chi\'n hoffi\'r app hon, ystyriwch roi.';
 
   @override
   String get versionAboutScreenTitle => 'Fersiwn';
@@ -195,7 +198,8 @@ class AppLocalizationsCy extends AppLocalizations {
   String get retryButtonText => 'Chyrchwch';
 
   @override
-  String get filePickerDialogTitle => 'Dewiswch gyfeiriadur i sganio ar gyfer cerddoriaeth';
+  String get filePickerDialogTitle =>
+      'Dewiswch gyfeiriadur i sganio ar gyfer cerddoriaeth';
 
   @override
   String get searchScreenTitle => 'Chwiloon';
@@ -213,7 +217,8 @@ class AppLocalizationsCy extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Analluogi Optimeiddio Batri';
 
   @override
-  String get disableBatteryOptimizationContent => 'Analluoga optimeiddio batri ar gyfer yr ap hwn yn y gosodiadau dyfais i ganiatáu chwarae cefndir o gerddoriaeth.';
+  String get disableBatteryOptimizationContent =>
+      'Analluoga optimeiddio batri ar gyfer yr ap hwn yn y gosodiadau dyfais i ganiatáu chwarae cefndir o gerddoriaeth.';
 
   @override
   String get languageScreenTitle => 'Hiaith';
@@ -267,50 +272,66 @@ class AppLocalizationsCy extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Ffeiliau Cerdd Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Symudwch eich bawd yn ysgafn o amgylch yr olwyn clicio i lywio\'r ddewislen';
+  String get deviceControlMenuTutorialText =>
+      'Symudwch eich bawd yn ysgafn o amgylch yr olwyn clicio i lywio\'r ddewislen';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pwyswch y botwm canol i ddewis yr eitem ddewislen a amlygwyd';
+  String get centerButtonMenuTutorialText =>
+      'Pwyswch y botwm canol i ddewis yr eitem ddewislen a amlygwyd';
 
   @override
-  String get playPauseMenuTutorialText => 'Pwyswch y botwm hwn i chwarae neu oedi cân';
+  String get playPauseMenuTutorialText =>
+      'Pwyswch y botwm hwn i chwarae neu oedi cân';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pwyswch y botwm hwn i hepgor i\'r gân nesaf';
+  String get nextButtonMenuTutorialText =>
+      'Pwyswch y botwm hwn i hepgor i\'r gân nesaf';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pwyswch y botwm hwn i ailddirwyn neu fynd yn ôl i\'r gân flaenorol';
+  String get previousButtonMenuTutorialText =>
+      'Pwyswch y botwm hwn i ailddirwyn neu fynd yn ôl i\'r gân flaenorol';
 
   @override
-  String get menuButtonTutorialText => 'Pwyswch y botwm hwn i fynd yn ôl i\'r ddewislen flaenorol. Fe allech chi ei wasgu a\'i ddal o unrhyw sgrin arall i fynd i\'r brif ddewislen yn uniongyrchol.';
+  String get menuButtonTutorialText =>
+      'Pwyswch y botwm hwn i fynd yn ôl i\'r ddewislen flaenorol. Fe allech chi ei wasgu a\'i ddal o unrhyw sgrin arall i fynd i\'r brif ddewislen yn uniongyrchol.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Dyma\'r sgrin arddangos. Mae Modd Sgrin Cyffwrdd a Sgrin Hollt yn cael eu galluogi yn ddiofyn a gellir ei ffurfweddu ymhellach yn y gosodiadau.';
+  String get deviceScreenMenuTutorialText =>
+      'Dyma\'r sgrin arddangos. Mae Modd Sgrin Cyffwrdd a Sgrin Hollt yn cael eu galluogi yn ddiofyn a gellir ei ffurfweddu ymhellach yn y gosodiadau.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Symudwch eich bawd o amgylch yr olwyn clicio i addasu\'r gyfrol';
+  String get deviceControlNowPlayingTutorialText =>
+      'Symudwch eich bawd o amgylch yr olwyn clicio i addasu\'r gyfrol';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pwyswch y botwm canol i feicio trwy\'r bar ceisio, bar sgwrio a llithrydd siffrwd. Pwyswch a dal y botwm canol i gael mynediad at opsiynau ychwanegol.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pwyswch y botwm canol i feicio trwy\'r bar ceisio, bar sgwrio a llithrydd siffrwd. Pwyswch a dal y botwm canol i gael mynediad at opsiynau ychwanegol.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Pwyswch a dal y botwm hwn i gyflymu\'r gân';
+  String get nextButtonNowPlayingTutorialText =>
+      'Pwyswch a dal y botwm hwn i gyflymu\'r gân';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pwyswch a dal y botwm hwn i ailddirwyn y gân';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pwyswch a dal y botwm hwn i ailddirwyn y gân';
 
   @override
-  String get deviceControlSearchTutorialText => 'Symudwch eich bawd yn ysgafn o amgylch yr olwyn clicio i dynnu sylw at wyddor';
+  String get deviceControlSearchTutorialText =>
+      'Symudwch eich bawd yn ysgafn o amgylch yr olwyn clicio i dynnu sylw at wyddor';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pwyswch y botwm canol i ddewis yr wyddor a amlygwyd';
+  String get centerButtonSearchTutorialText =>
+      'Pwyswch y botwm canol i ddewis yr wyddor a amlygwyd';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pwyswch y botwm hwn i ychwanegu lle';
+  String get nextButtonSearchTutorialText =>
+      'Pwyswch y botwm hwn i ychwanegu lle';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pwyswch y botwm hwn i ddileu\'r cymeriad olaf';
+  String get previousButtonSearchTutorialText =>
+      'Pwyswch y botwm hwn i ddileu\'r cymeriad olaf';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pwyswch y botwm hwn i gau\'r bysellfwrdd a rhyngweithio â\'r canlyniadau chwilio';
+  String get menuButtonSearchTutorialText =>
+      'Pwyswch y botwm hwn i gau\'r bysellfwrdd a rhyngweithio â\'r canlyniadau chwilio';
 }

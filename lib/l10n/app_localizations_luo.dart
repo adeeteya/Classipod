@@ -18,13 +18,16 @@ class AppLocalizationsLuo extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Dwaro mar Audio Dwaro';
 
   @override
-  String get audioAccessPermissionContent => 'Omiyo, ng’e ni fainde mag dwol nyalo miyo wabed gi thuolo mar goyo fainde mag thum.';
+  String get audioAccessPermissionContent =>
+      'Omiyo, ng’e ni fainde mag dwol nyalo miyo wabed gi thuolo mar goyo fainde mag thum.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Arimo mar Chiwo Gik Mowinjore';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Arimo mar Chiwo Gik Mowinjore';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Yie mondo chiw fainde mag apps mag program ma ni e chenro mag masin mondo oyienewa mondo watim fainde mag thum.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Yie mondo chiw fainde mag apps mag program ma ni e chenro mag masin mondo oyienewa mondo watim fainde mag thum.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsLuo extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsLuo extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsLuo extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Telo mag tiendi';
 
   @override
-  String get touchSoundsDialogContent => '<2Zepa> 2:10, 11. 10 Bende, ng’ato nyalo ng’eyo ni ng’ato nigi nyalo mar timo gik ma ng’ato dwaro timo';
+  String get touchSoundsDialogContent =>
+      '<2Zepa> 2:10, 11. 10 Bende, ng’ato nyalo ng’eyo ni ng’ato nigi nyalo mar timo gik ma ng’ato dwaro timo';
 
   @override
   String get immersiveModeSettingTitle => 'Mode ma ok tiyo';
@@ -144,7 +146,8 @@ class AppLocalizationsLuo extends AppLocalizations {
   String get donateSettingTitle => 'Chiwo ne jomoko';
 
   @override
-  String get donateSettingDescription => 'Kapo ni ihero program ni, yie mondo ipar mar chiwo pesa.';
+  String get donateSettingDescription =>
+      'Kapo ni ihero program ni, yie mondo ipar mar chiwo pesa.';
 
   @override
   String get versionAboutScreenTitle => 'Kido';
@@ -195,7 +198,8 @@ class AppLocalizationsLuo extends AppLocalizations {
   String get retryButtonText => 'kendo';
 
   @override
-  String get filePickerDialogTitle => 'Yier Opira ma ibiro tiyogo Skan mar Muziki';
+  String get filePickerDialogTitle =>
+      'Yier Opira ma ibiro tiyogo Skan mar Muziki';
 
   @override
   String get searchScreenTitle => 'Manyo';
@@ -213,7 +217,8 @@ class AppLocalizationsLuo extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Mathindo ma Ok Nyalre';
 
   @override
-  String get disableBatteryOptimizationContent => 'Yie mondo iweri gi betri ma ni e program ni e chenro mag masin mondo owek thum ma ng’ato winjo.';
+  String get disableBatteryOptimizationContent =>
+      'Yie mondo iweri gi betri ma ni e program ni e chenro mag masin mondo owek thum ma ng’ato winjo.';
 
   @override
   String get languageScreenTitle => 'Dhok';
@@ -267,50 +272,65 @@ class AppLocalizationsLuo extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Fail mag Muziki';
 
   @override
-  String get deviceControlMenuTutorialText => 'Ting’ lith lweti matin mana machiegni gi ng’at ma itiyogo mondo idhi e menu mar menyu';
+  String get deviceControlMenuTutorialText =>
+      'Ting’ lith lweti matin mana machiegni gi ng’at ma itiyogo mondo idhi e menu mar menyu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Dier baton mar diere mondo iyier gik ma nigi ler';
+  String get centerButtonMenuTutorialText =>
+      'Dier baton mar diere mondo iyier gik ma nigi ler';
 
   @override
-  String get playPauseMenuTutorialText => 'Dier baton ni mondo iweye kata iweri gi wende';
+  String get playPauseMenuTutorialText =>
+      'Dier baton ni mondo iweye kata iweri gi wende';
 
   @override
-  String get nextButtonMenuTutorialText => 'Dhi e baton ni mondo idhi e wer maluwo';
+  String get nextButtonMenuTutorialText =>
+      'Dhi e baton ni mondo idhi e wer maluwo';
 
   @override
-  String get previousButtonMenuTutorialText => 'Dhi e baton ni mondo iduok piny kata idok e wer mokalo';
+  String get previousButtonMenuTutorialText =>
+      'Dhi e baton ni mondo iduok piny kata idok e wer mokalo';
 
   @override
-  String get menuButtonTutorialText => 'Dier baton ni mondo idog e menyu mokalo. Inyalo ng’ado kendo imake kowuok e skrin moro amora mamoko mondo idhi e menu maduong’.';
+  String get menuButtonTutorialText =>
+      'Dier baton ni mondo idog e menyu mokalo. Inyalo ng’ado kendo imake kowuok e skrin moro amora mamoko mondo idhi e menu maduong’.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Mano e skrin ma nyiso gik moko. Mode mar Skrin ma mulo ng’ato kod ng’iyo gik moko nyalo bedo gi teko mar ng’iyo gik moko kendo inyalo keto e yo matut e alwora.';
+  String get deviceScreenMenuTutorialText =>
+      'Mano e skrin ma nyiso gik moko. Mode mar Skrin ma mulo ng’ato kod ng’iyo gik moko nyalo bedo gi teko mar ng’iyo gik moko kendo inyalo keto e yo matut e alwora.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Inyalo dhi e bath Wil ma itiyogo mondo ilok dwol';
+  String get deviceControlNowPlayingTutorialText =>
+      'Inyalo dhi e bath Wil ma itiyogo mondo ilok dwol';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Dier baton mar Center ma inyalo luwo e wi bar, ng’ado mtoka ma ng’ato nyalo ng’adoe. Dier kendo imak baton mar Senta mondo iyud yore mamoko ma inyalo yiero.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Dier baton mar Center ma inyalo luwo e wi bar, ng’ado mtoka ma ng’ato nyalo ng’adoe. Dier kendo imak baton mar Senta mondo iyud yore mamoko ma inyalo yiero.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Di kendo mako baton ni mondo idhi nyime gi wero wende mapiyo';
+  String get nextButtonNowPlayingTutorialText =>
+      'Di kendo mako baton ni mondo idhi nyime gi wero wende mapiyo';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Dhi kendo imak baton mar baton ni mondo iduok wende';
+  String get previousButtonNowPlayingTutorialText =>
+      'Dhi kendo imak baton mar baton ni mondo iduok wende';
 
   @override
-  String get deviceControlSearchTutorialText => 'Inyalo ng’ado lith lweti matin mana ka idhi e Wiel mondo oket ler kuom alfabet';
+  String get deviceControlSearchTutorialText =>
+      'Inyalo ng’ado lith lweti matin mana ka idhi e Wiel mondo oket ler kuom alfabet';
 
   @override
-  String get centerButtonSearchTutorialText => 'Dier baton mar diere mondo iyier alfabet ma nigi ler';
+  String get centerButtonSearchTutorialText =>
+      'Dier baton mar diere mondo iyier alfabet ma nigi ler';
 
   @override
   String get nextButtonSearchTutorialText => 'Dier baton ni mondo imed thuolo';
 
   @override
-  String get previousButtonSearchTutorialText => 'Dier baton ni mondo iduok kido mogik';
+  String get previousButtonSearchTutorialText =>
+      'Dier baton ni mondo iduok kido mogik';
 
   @override
-  String get menuButtonSearchTutorialText => 'Dhi e batonni mondo ilor kibod kendo iti gi duoko mag manyo';
+  String get menuButtonSearchTutorialText =>
+      'Dhi e batonni mondo ilor kibod kendo iti gi duoko mag manyo';
 }

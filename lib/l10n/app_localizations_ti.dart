@@ -18,13 +18,16 @@ class AppLocalizationsTi extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ናይ ድምጺ ምብጻሕ ፍቓድ የድሊ';
 
   @override
-  String get audioAccessPermissionContent => 'ናይ ሙዚቃ ፋይላትኩም ንኽንጻወተሎም ንኽፈቕዱ ናይ ድምጺ ፋይላት መእተዊኹም ይሃብኩም።';
+  String get audioAccessPermissionContent =>
+      'ናይ ሙዚቃ ፋይላትኩም ንኽንጻወተሎም ንኽፈቕዱ ናይ ድምጺ ፋይላት መእተዊኹም ይሃብኩም።';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ናይ ድምጺ ምብጻሕ ፍቓድ ተኸልኪሉ';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ናይ ድምጺ ምብጻሕ ፍቓድ ተኸልኪሉ';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'በጃኹም ናይ ድምጺ ፋይላት ነዚ ኣፕ እዚ ኣብቲ ናይ መሳርሒ ቅጥዒታት ናይ ሙዚቃ ፋይላትኩም ክንጻወት ንኽፍቀደሎም ክትፍቀደሎም ትኽእል።';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'በጃኹም ናይ ድምጺ ፋይላት ነዚ ኣፕ እዚ ኣብቲ ናይ መሳርሒ ቅጥዒታት ናይ ሙዚቃ ፋይላትኩም ክንጻወት ንኽፍቀደሎም ክትፍቀደሎም ትኽእል።';
 
   @override
   String get menuScreenTitle => 'ዝርዝር መግቢ';
@@ -63,7 +66,6 @@ class AppLocalizationsTi extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsTi extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsTi extends AppLocalizations {
   String get touchSoundsDialogTitle => 'ድምጽታት ምትንካፍ .';
 
   @override
-  String get touchSoundsDialogContent => 'በጃኻ ካብ System Settings ዝተወስደ ድምጺ ምትንኻፍ ኣንቂሕካ ድምጽታት click wheel ክትሰምዕ';
+  String get touchSoundsDialogContent =>
+      'በጃኻ ካብ System Settings ዝተወስደ ድምጺ ምትንኻፍ ኣንቂሕካ ድምጽታት click wheel ክትሰምዕ';
 
   @override
   String get immersiveModeSettingTitle => 'ምጥሓል ሞድ';
@@ -144,7 +146,8 @@ class AppLocalizationsTi extends AppLocalizations {
   String get donateSettingTitle => 'ምልጋስ';
 
   @override
-  String get donateSettingDescription => 'ነዛ ኣፕ እንተፈቲኹምዋ፡ በጃኻ ምልጋስ ኣብ ግምት ኣእትዋ።';
+  String get donateSettingDescription =>
+      'ነዛ ኣፕ እንተፈቲኹምዋ፡ በጃኻ ምልጋስ ኣብ ግምት ኣእትዋ።';
 
   @override
   String get versionAboutScreenTitle => 'ሕታም';
@@ -213,7 +216,8 @@ class AppLocalizationsTi extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'ናይ ባትሪ ምምሕያሽ ምግባር';
 
   @override
-  String get disableBatteryOptimizationContent => 'በጃኻ ነዚ ኣፕ ኣብ መሳርሒ ቅጥዕታት ናይ ባትሪ ምምሕያሽ ኣቋርጾ፡ ድሕረ ባይታ ምጽዋት ሙዚቃ ንኽፍቀድ።';
+  String get disableBatteryOptimizationContent =>
+      'በጃኻ ነዚ ኣፕ ኣብ መሳርሒ ቅጥዕታት ናይ ባትሪ ምምሕያሽ ኣቋርጾ፡ ድሕረ ባይታ ምጽዋት ሙዚቃ ንኽፍቀድ።';
 
   @override
   String get languageScreenTitle => 'ቋንቋ';
@@ -267,50 +271,64 @@ class AppLocalizationsTi extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'ሪስካን ሙዚቃ ፋይላት';
 
   @override
-  String get deviceControlMenuTutorialText => 'ኣብቲ ዝርዝር ንምንቅስቓስ ኣጻብዕቲ ኢድካ ኣብ ዙርያ እቲ ናይ ጠውቂ መንኰርኰር ብቐሊሉ ኣንቀሳቕሶ።';
+  String get deviceControlMenuTutorialText =>
+      'ኣብቲ ዝርዝር ንምንቅስቓስ ኣጻብዕቲ ኢድካ ኣብ ዙርያ እቲ ናይ ጠውቂ መንኰርኰር ብቐሊሉ ኣንቀሳቕሶ።';
 
   @override
-  String get centerButtonMenuTutorialText => 'ነቲ ዝጐደለ ናይ ምልክት ዝርዝር ነገራት ንምምራጽ ነቲ ማእከል መጠወቒ ንጽቀጥ .';
+  String get centerButtonMenuTutorialText =>
+      'ነቲ ዝጐደለ ናይ ምልክት ዝርዝር ነገራት ንምምራጽ ነቲ ማእከል መጠወቒ ንጽቀጥ .';
 
   @override
   String get playPauseMenuTutorialText => 'ነዚ መጠወቒ እዚ ምጽቃጥ ወይ ደርፊ ደው ንምባል';
 
   @override
-  String get nextButtonMenuTutorialText => 'ነዚ መጠወቒ እዚ ብምጽቃጥ ናብ ዝቕጽል ደርፊ ንምዝላል .';
+  String get nextButtonMenuTutorialText =>
+      'ነዚ መጠወቒ እዚ ብምጽቃጥ ናብ ዝቕጽል ደርፊ ንምዝላል .';
 
   @override
-  String get previousButtonMenuTutorialText => 'ነዚ መጠወቒ እዚ ብምጽቃጥ ናብታ ዝሓለፈት ደርፊ ክትምለስ ።';
+  String get previousButtonMenuTutorialText =>
+      'ነዚ መጠወቒ እዚ ብምጽቃጥ ናብታ ዝሓለፈት ደርፊ ክትምለስ ።';
 
   @override
-  String get menuButtonTutorialText => 'ናብቲ ዝሓለፈ ዝርዝር ንምምላስ ነዚ ቁልፊ ንጽቀጥ። ብቐጥታ ናብቲ ቀንዲ ዝርዝር ንምኻድ ካብ ዝኾነ ካልእ ስክሪን ጸቒጥካ ክትሕዞ ትኽእል ኢኻ።';
+  String get menuButtonTutorialText =>
+      'ናብቲ ዝሓለፈ ዝርዝር ንምምላስ ነዚ ቁልፊ ንጽቀጥ። ብቐጥታ ናብቲ ቀንዲ ዝርዝር ንምኻድ ካብ ዝኾነ ካልእ ስክሪን ጸቒጥካ ክትሕዞ ትኽእል ኢኻ።';
 
   @override
-  String get deviceScreenMenuTutorialText => 'እዚ ናይ ዲስፕለይ ስክሪን እዩ። Touch Screen and Split Screen mode ብነባሪ ዝኽሰት ኮይኑ ኣብቲ ቅጥዕታት ብዝያዳ ክውነን ይኽእል።';
+  String get deviceScreenMenuTutorialText =>
+      'እዚ ናይ ዲስፕለይ ስክሪን እዩ። Touch Screen and Split Screen mode ብነባሪ ዝኽሰት ኮይኑ ኣብቲ ቅጥዕታት ብዝያዳ ክውነን ይኽእል።';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'ድምጺ ንምትዕርራይ ኣጻብዕትኻ ኣብ ዙርያ እቲ ናይ ጠውቂ መንኰርኰር ኣንቀሳቕሶ .';
+  String get deviceControlNowPlayingTutorialText =>
+      'ድምጺ ንምትዕርራይ ኣጻብዕትኻ ኣብ ዙርያ እቲ ናይ ጠውቂ መንኰርኰር ኣንቀሳቕሶ .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'ነቲ ናይ ማእከል መጠወቒ ብምጽቃጥ ብመንገዲ Seek Bar, Scrubber Bar and Shuffle Slider ብሽክለታ ዑደት ግበር። ተወሳኺ ኣማራጺታት ንምርካብ ነቲ ናይ ማእከል መጠወቒ ጸቒጥካ ምሓዝ።';
+  String get centerButtonNowPlayingTutorialText =>
+      'ነቲ ናይ ማእከል መጠወቒ ብምጽቃጥ ብመንገዲ Seek Bar, Scrubber Bar and Shuffle Slider ብሽክለታ ዑደት ግበር። ተወሳኺ ኣማራጺታት ንምርካብ ነቲ ናይ ማእከል መጠወቒ ጸቒጥካ ምሓዝ።';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'ነዚ መጠወቒ ጸቒጥካ ሒዝካ ሒዝካ ንቕጽላት እታ ደርፊ';
+  String get nextButtonNowPlayingTutorialText =>
+      'ነዚ መጠወቒ ጸቒጥካ ሒዝካ ሒዝካ ንቕጽላት እታ ደርፊ';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'ነዚ መጠወቒ እዚ ጸቒጥካ ሒዝካ ሒዝካ 2019።';
+  String get previousButtonNowPlayingTutorialText =>
+      'ነዚ መጠወቒ እዚ ጸቒጥካ ሒዝካ ሒዝካ 2019።';
 
   @override
-  String get deviceControlSearchTutorialText => 'ንኣጻብዕቲ ኢድካ ኣብ ዙርያ እቲ ናይ ጠውቂ መንኰርኰር ብቐሊሉ ኣንቀሳቕሶ እሞ ንሓደ ፊደላት ንምጉላሕ .';
+  String get deviceControlSearchTutorialText =>
+      'ንኣጻብዕቲ ኢድካ ኣብ ዙርያ እቲ ናይ ጠውቂ መንኰርኰር ብቐሊሉ ኣንቀሳቕሶ እሞ ንሓደ ፊደላት ንምጉላሕ .';
 
   @override
-  String get centerButtonSearchTutorialText => 'ነቲ ዝጐልሐ ፊደላት ንምምራጽ ነቲ ናይ ማእከል መጠወቒ ምጽቃጥ .';
+  String get centerButtonSearchTutorialText =>
+      'ነቲ ዝጐልሐ ፊደላት ንምምራጽ ነቲ ናይ ማእከል መጠወቒ ምጽቃጥ .';
 
   @override
   String get nextButtonSearchTutorialText => 'ነዚ መጠወቒ እዚ ብምጽቃጥ ቦታ ንምውሳኽ .';
 
   @override
-  String get previousButtonSearchTutorialText => 'ነዚ ቁልፊ ብምጽቃጥ ናይ መወዳእታ ፊደል ንምድምሳስ .';
+  String get previousButtonSearchTutorialText =>
+      'ነዚ ቁልፊ ብምጽቃጥ ናይ መወዳእታ ፊደል ንምድምሳስ .';
 
   @override
-  String get menuButtonSearchTutorialText => 'ነዚ መጠወቒ እዚ ብምጽቃጥ ነቲ ቁልፊ ሰሌዳ ምዕጻውን ምስ ውጽኢት ምድላይ ንምትእስሳርን .';
+  String get menuButtonSearchTutorialText =>
+      'ነዚ መጠወቒ እዚ ብምጽቃጥ ነቲ ቁልፊ ሰሌዳ ምዕጻውን ምስ ውጽኢት ምድላይ ንምትእስሳርን .';
 }

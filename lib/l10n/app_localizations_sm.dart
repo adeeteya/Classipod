@@ -18,13 +18,16 @@ class AppLocalizationsSm extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Avanoa Audio Avanoa Manaomia';
 
   @override
-  String get audioAccessPermissionContent => 'Faʻamolemole faʻafesoʻotaʻi Audio faila avanoa e faʻatagaina ai matou e taʻalo au musika faila.';
+  String get audioAccessPermissionContent =>
+      'Faʻamolemole faʻafesoʻotaʻi Audio faila avanoa e faʻatagaina ai matou e taʻalo au musika faila.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ua le toe mauaina le faʻatagaina o le faʻaaogaina';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ua le toe mauaina le faʻatagaina o le faʻaaogaina';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Faʻamolemole faʻafesoʻotaʻi Audio faila avanoa mo lenei polokalama i le masini faʻatulaga e faʻatagaina ai matou e taʻalo au musika faila.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Faʻamolemole faʻafesoʻotaʻi Audio faila avanoa mo lenei polokalama i le masini faʻatulaga e faʻatagaina ai matou e taʻalo au musika faila.';
 
   @override
   String get menuScreenTitle => 'Lisi';
@@ -63,7 +66,6 @@ class AppLocalizationsSm extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsSm extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsSm extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Tago leo';
 
   @override
-  String get touchSoundsDialogContent => 'Faʻamolemole mafai ona paʻi leo mai le system tulaga e faʻalogo ai i le kiliki uili leo';
+  String get touchSoundsDialogContent =>
+      'Faʻamolemole mafai ona paʻi leo mai le system tulaga e faʻalogo ai i le kiliki uili leo';
 
   @override
   String get immersiveModeSettingTitle => 'Faatomeina faiga';
@@ -144,7 +146,8 @@ class AppLocalizationsSm extends AppLocalizations {
   String get donateSettingTitle => 'Lafo mai';
 
   @override
-  String get donateSettingDescription => 'A e fiafia i lenei app, faʻamolemole mafaufau foaʻi.';
+  String get donateSettingDescription =>
+      'A e fiafia i lenei app, faʻamolemole mafaufau foaʻi.';
 
   @override
   String get versionAboutScreenTitle => 'Lolomi';
@@ -213,7 +216,8 @@ class AppLocalizationsSm extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Faʻamuta le faʻamau';
 
   @override
-  String get disableBatteryOptimizationContent => 'Faʻamolemole tape le paʻu o loʻo i ai mo lenei app i le masini faʻatulaga e faʻatagaina ai le faʻamatalaga o le musika.';
+  String get disableBatteryOptimizationContent =>
+      'Faʻamolemole tape le paʻu o loʻo i ai mo lenei app i le masini faʻatulaga e faʻatagaina ai le faʻamatalaga o le musika.';
 
   @override
   String get languageScreenTitle => 'Gagana';
@@ -267,50 +271,66 @@ class AppLocalizationsSm extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Faleoloa o le tagata resitara';
 
   @override
-  String get deviceControlMenuTutorialText => 'Agai i luga o lou limamatua e latalata i le kiliki uili e folau ai le menu';
+  String get deviceControlMenuTutorialText =>
+      'Agai i luga o lou limamatua e latalata i le kiliki uili e folau ai le menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Fetaomi le ogatotonu faamau e filifili ai le maualuga auala menu';
+  String get centerButtonMenuTutorialText =>
+      'Fetaomi le ogatotonu faamau e filifili ai le maualuga auala menu';
 
   @override
-  String get playPauseMenuTutorialText => 'Fetaomi lenei ki e taalo pe taofi se pese';
+  String get playPauseMenuTutorialText =>
+      'Fetaomi lenei ki e taalo pe taofi se pese';
 
   @override
-  String get nextButtonMenuTutorialText => 'Fetaomi lenei ki e oso ai i le isi pese';
+  String get nextButtonMenuTutorialText =>
+      'Fetaomi lenei ki e oso ai i le isi pese';
 
   @override
-  String get previousButtonMenuTutorialText => 'Fetaomi lenei ki e toe foi pe toe foi i le pese muamua';
+  String get previousButtonMenuTutorialText =>
+      'Fetaomi lenei ki e toe foi pe toe foi i le pese muamua';
 
   @override
-  String get menuButtonTutorialText => 'Fetaomi lenei ki e toe foi ai i le lisi muamua. Oe mafai ona fetaomi ma taofi mai i se isi mata e alu tonu i le lisi autu.';
+  String get menuButtonTutorialText =>
+      'Fetaomi lenei ki e toe foi ai i le lisi muamua. Oe mafai ona fetaomi ma taofi mai i se isi mata e alu tonu i le lisi autu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'O le faʻaaliga lea o le mata. O le paʻi atu i le Screen ma Split Screen Mode e mafai ai e le masani ai ma mafai ona faʻatulagaina atili i le tulaga.';
+  String get deviceScreenMenuTutorialText =>
+      'O le faʻaaliga lea o le mata. O le paʻi atu i le Screen ma Split Screen Mode e mafai ai e le masani ai ma mafai ona faʻatulagaina atili i le tulaga.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Faʻasolo lou limamatua i le kiliki o le uili e faʻapipiʻi ai le voluma';
+  String get deviceControlNowPlayingTutorialText =>
+      'Faʻasolo lou limamatua i le kiliki o le uili e faʻapipiʻi ai le voluma';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Fetaomi le Center button e taamilosaga e ala i le saili pa, scrubber bar ma shuffle slider. Fetaomi ma taofi le ogatotonu faamau e ulufale ai i isi filifiliga.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Fetaomi le Center button e taamilosaga e ala i le saili pa, scrubber bar ma shuffle slider. Fetaomi ma taofi le ogatotonu faamau e ulufale ai i isi filifiliga.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Fetaomi ma taofi lenei ki e vave agai i luma le pese';
+  String get nextButtonNowPlayingTutorialText =>
+      'Fetaomi ma taofi lenei ki e vave agai i luma le pese';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Fetaomi ma taofi lenei ki e toe tusi ai le pese';
+  String get previousButtonNowPlayingTutorialText =>
+      'Fetaomi ma taofi lenei ki e toe tusi ai le pese';
 
   @override
-  String get deviceControlSearchTutorialText => 'Agai i luga o lou limamatua i luga o le kiliki uili e faamamafa ai se mataitusi';
+  String get deviceControlSearchTutorialText =>
+      'Agai i luga o lou limamatua i luga o le kiliki uili e faamamafa ai se mataitusi';
 
   @override
-  String get centerButtonSearchTutorialText => 'Fetaomi le ogatotonu faamau e filifili ai le maualuga o le alafapeta';
+  String get centerButtonSearchTutorialText =>
+      'Fetaomi le ogatotonu faamau e filifili ai le maualuga o le alafapeta';
 
   @override
-  String get nextButtonSearchTutorialText => 'Fetaomi lenei ki e faaopoopo ai se avanoa';
+  String get nextButtonSearchTutorialText =>
+      'Fetaomi lenei ki e faaopoopo ai se avanoa';
 
   @override
-  String get previousButtonSearchTutorialText => 'Fetaomi lenei ki e tape le uiga mulimuli';
+  String get previousButtonSearchTutorialText =>
+      'Fetaomi lenei ki e tape le uiga mulimuli';
 
   @override
-  String get menuButtonSearchTutorialText => 'Fetaomi lenei ki e tapunia le keyboard ma fegalegaleai ma le sailiga iuga';
+  String get menuButtonSearchTutorialText =>
+      'Fetaomi lenei ki e tapunia le keyboard ma fegalegaleai ma le sailiga iuga';
 }

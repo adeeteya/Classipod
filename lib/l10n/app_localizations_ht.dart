@@ -18,13 +18,16 @@ class AppLocalizationsHt extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Pèmisyon aksè odyo obligatwa';
 
   @override
-  String get audioAccessPermissionContent => 'Tanpri bay dosye odyo aksè pou pèmèt nou jwe dosye mizik ou yo.';
+  String get audioAccessPermissionContent =>
+      'Tanpri bay dosye odyo aksè pou pèmèt nou jwe dosye mizik ou yo.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Pèmisyon aksè odyo refize';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Pèmisyon aksè odyo refize';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Tanpri bay dosye odyo aksè pou app sa a nan anviwònman aparèy yo pou pèmèt nou jwe dosye mizik ou yo.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Tanpri bay dosye odyo aksè pou app sa a nan anviwònman aparèy yo pou pèmèt nou jwe dosye mizik ou yo.';
 
   @override
   String get menuScreenTitle => 'Meni';
@@ -63,7 +66,6 @@ class AppLocalizationsHt extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsHt extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsHt extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Manyen son';
 
   @override
-  String get touchSoundsDialogContent => 'Tanpri pèmèt son manyen soti nan anviwònman sistèm tande son yo klike sou wou yo';
+  String get touchSoundsDialogContent =>
+      'Tanpri pèmèt son manyen soti nan anviwònman sistèm tande son yo klike sou wou yo';
 
   @override
   String get immersiveModeSettingTitle => 'Immersion mòd';
@@ -144,7 +146,8 @@ class AppLocalizationsHt extends AppLocalizations {
   String get donateSettingTitle => 'Bay';
 
   @override
-  String get donateSettingDescription => 'Si ou renmen app sa a, tanpri konsidere bay.';
+  String get donateSettingDescription =>
+      'Si ou renmen app sa a, tanpri konsidere bay.';
 
   @override
   String get versionAboutScreenTitle => 'Vèsyon';
@@ -213,7 +216,8 @@ class AppLocalizationsHt extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Enfim optimize batri';
 
   @override
-  String get disableBatteryOptimizationContent => 'Tanpri enfim optimize batri pou app sa a nan anviwònman aparèy yo pou pèmèt lèktur background nan mizik.';
+  String get disableBatteryOptimizationContent =>
+      'Tanpri enfim optimize batri pou app sa a nan anviwònman aparèy yo pou pèmèt lèktur background nan mizik.';
 
   @override
   String get languageScreenTitle => 'Lang';
@@ -267,50 +271,66 @@ class AppLocalizationsHt extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Dosye mizik rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Deplase gwo pous ou alalejè alantou wou a klike sou navige meni an';
+  String get deviceControlMenuTutorialText =>
+      'Deplase gwo pous ou alalejè alantou wou a klike sou navige meni an';
 
   @override
-  String get centerButtonMenuTutorialText => 'Peze bouton an Sant yo chwazi atik la meni make';
+  String get centerButtonMenuTutorialText =>
+      'Peze bouton an Sant yo chwazi atik la meni make';
 
   @override
-  String get playPauseMenuTutorialText => 'Peze bouton sa a pou jwe oswa pran yon poz yon chan';
+  String get playPauseMenuTutorialText =>
+      'Peze bouton sa a pou jwe oswa pran yon poz yon chan';
 
   @override
-  String get nextButtonMenuTutorialText => 'Peze bouton sa a pou sote nan pwochen chan an';
+  String get nextButtonMenuTutorialText =>
+      'Peze bouton sa a pou sote nan pwochen chan an';
 
   @override
-  String get previousButtonMenuTutorialText => 'Peze bouton sa a pou remonte oswa tounen nan chante anvan an';
+  String get previousButtonMenuTutorialText =>
+      'Peze bouton sa a pou remonte oswa tounen nan chante anvan an';
 
   @override
-  String get menuButtonTutorialText => 'Peze bouton sa a pou tounen nan meni anvan an. Ou te kapab peze epi kenbe li nan nenpòt ki lòt ekran dirèkteman ale nan meni prensipal la.';
+  String get menuButtonTutorialText =>
+      'Peze bouton sa a pou tounen nan meni anvan an. Ou te kapab peze epi kenbe li nan nenpòt ki lòt ekran dirèkteman ale nan meni prensipal la.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Sa a se ekran an ekspozisyon. Touch ekran ak mòd ekran fann yo pèmèt pa default epi yo ka configuré plis nan anviwònman yo.';
+  String get deviceScreenMenuTutorialText =>
+      'Sa a se ekran an ekspozisyon. Touch ekran ak mòd ekran fann yo pèmèt pa default epi yo ka configuré plis nan anviwònman yo.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Deplase gwo pous ou alantou wou a klike sou ajiste volim nan';
+  String get deviceControlNowPlayingTutorialText =>
+      'Deplase gwo pous ou alantou wou a klike sou ajiste volim nan';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Peze bouton an sant sik nan chèche ba, baraj bar ak kurseur chefeul. Peze epi kenbe bouton an sant jwenn aksè nan opsyon adisyonèl.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Peze bouton an sant sik nan chèche ba, baraj bar ak kurseur chefeul. Peze epi kenbe bouton an sant jwenn aksè nan opsyon adisyonèl.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Peze epi kenbe bouton sa a vit pou pi devan chan an';
+  String get nextButtonNowPlayingTutorialText =>
+      'Peze epi kenbe bouton sa a vit pou pi devan chan an';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Peze epi kenbe bouton sa a pou remonte chan an';
+  String get previousButtonNowPlayingTutorialText =>
+      'Peze epi kenbe bouton sa a pou remonte chan an';
 
   @override
-  String get deviceControlSearchTutorialText => 'Deplase gwo pous ou alalejè alantou wou a klike sou mete aksan sou yon alfabè';
+  String get deviceControlSearchTutorialText =>
+      'Deplase gwo pous ou alalejè alantou wou a klike sou mete aksan sou yon alfabè';
 
   @override
-  String get centerButtonSearchTutorialText => 'Peze bouton sant lan pou chwazi alfabè a make';
+  String get centerButtonSearchTutorialText =>
+      'Peze bouton sant lan pou chwazi alfabè a make';
 
   @override
-  String get nextButtonSearchTutorialText => 'Peze bouton sa a pou ajoute yon espas';
+  String get nextButtonSearchTutorialText =>
+      'Peze bouton sa a pou ajoute yon espas';
 
   @override
-  String get previousButtonSearchTutorialText => 'Peze bouton sa a pou efase dènye karaktè a';
+  String get previousButtonSearchTutorialText =>
+      'Peze bouton sa a pou efase dènye karaktè a';
 
   @override
-  String get menuButtonSearchTutorialText => 'Peze bouton sa a pou fèmen klavye a epi kominike avèk rezilta rechèch la';
+  String get menuButtonSearchTutorialText =>
+      'Peze bouton sa a pou fèmen klavye a epi kominike avèk rezilta rechèch la';
 }

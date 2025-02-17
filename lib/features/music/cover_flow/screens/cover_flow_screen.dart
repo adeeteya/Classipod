@@ -88,6 +88,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                         : Alignment.centerRight,
                     child: AlbumReflectiveArt(
                       thumbnailPath: displayItems[index].albumArtPath,
+                      isOnDevice: displayItems[index].isOnDevice(),
                       heroTag:
                           "${displayItems[index].albumName}-${displayItems[index].albumArtistName}",
                     ),

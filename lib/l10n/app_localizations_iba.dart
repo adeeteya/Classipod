@@ -18,13 +18,16 @@ class AppLocalizationsIba extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Pemendar Akses Audio Diguna';
 
   @override
-  String get audioAccessPermissionContent => 'Minta nuan meri akses fail audio ngambika kami ulih bemain fail muzik nuan.';
+  String get audioAccessPermissionContent =>
+      'Minta nuan meri akses fail audio ngambika kami ulih bemain fail muzik nuan.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Pemendar Akses Audio Ditangguh';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Pemendar Akses Audio Ditangguh';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Minta nuan meri akses fail audio ungkup app tu dalam setting perengka ngambika kami ulih bemain fail muzik nuan.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Minta nuan meri akses fail audio ungkup app tu dalam setting perengka ngambika kami ulih bemain fail muzik nuan.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsIba extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsIba extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsIba extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sentuh Munyi';
 
   @override
-  String get touchSoundsDialogContent => 'Minta ampun Ngasuh Sentuh Munyi ari Settings Sistem kena ninga bunyi roda klik .';
+  String get touchSoundsDialogContent =>
+      'Minta ampun Ngasuh Sentuh Munyi ari Settings Sistem kena ninga bunyi roda klik .';
 
   @override
   String get immersiveModeSettingTitle => 'Mod Immersive';
@@ -144,7 +146,8 @@ class AppLocalizationsIba extends AppLocalizations {
   String get donateSettingTitle => 'Menderma';
 
   @override
-  String get donateSettingDescription => 'Enti kita rindu ke app tu, sila berunding meri pemeri.';
+  String get donateSettingDescription =>
+      'Enti kita rindu ke app tu, sila berunding meri pemeri.';
 
   @override
   String get versionAboutScreenTitle => 'Versi';
@@ -195,7 +198,8 @@ class AppLocalizationsIba extends AppLocalizations {
   String get retryButtonText => 'Angkat baru';
 
   @override
-  String get filePickerDialogTitle => 'Pilih Direktori ngagai Scan ungkup Muzik .';
+  String get filePickerDialogTitle =>
+      'Pilih Direktori ngagai Scan ungkup Muzik .';
 
   @override
   String get searchScreenTitle => 'Ngiga';
@@ -213,7 +217,8 @@ class AppLocalizationsIba extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Padamka Optimasyen Bateri';
 
   @override
-  String get disableBatteryOptimizationContent => 'Minta ampun optimasyen bateri ungkup app tu dalam atur perengka ngambika ulih ngasuh latar belakang muzik nyadi latar belakang.';
+  String get disableBatteryOptimizationContent =>
+      'Minta ampun optimasyen bateri ungkup app tu dalam atur perengka ngambika ulih ngasuh latar belakang muzik nyadi latar belakang.';
 
   @override
   String get languageScreenTitle => 'Bansa jaku';
@@ -267,50 +272,66 @@ class AppLocalizationsIba extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Fail Muzik Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Mindahka jemari nuan enggau ringan ngelingi Roda Klik ngambika ulih ngelayang menu .';
+  String get deviceControlMenuTutorialText =>
+      'Mindahka jemari nuan enggau ringan ngelingi Roda Klik ngambika ulih ngelayang menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tekan butang tengah kena milih item menu ti dikemeratka .';
+  String get centerButtonMenuTutorialText =>
+      'Tekan butang tengah kena milih item menu ti dikemeratka .';
 
   @override
-  String get playPauseMenuTutorialText => 'Tekan butang tu kena bemain tauka ngetu lagu .';
+  String get playPauseMenuTutorialText =>
+      'Tekan butang tu kena bemain tauka ngetu lagu .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tekan butang tu kena skip ngagai lagu ti nangkanka nya .';
+  String get nextButtonMenuTutorialText =>
+      'Tekan butang tu kena skip ngagai lagu ti nangkanka nya .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tekan butang tu kena rewind tauka pulai ngagai lagu ke udah .';
+  String get previousButtonMenuTutorialText =>
+      'Tekan butang tu kena rewind tauka pulai ngagai lagu ke udah .';
 
   @override
-  String get menuButtonTutorialText => 'Tekan butang tu ngambika pulai ngagai menu ke dulu ari tu. Nuan ulih nekan lalu megai iya ari sebarang skrin bukai ngambika terus mansang ngagai menu utama.';
+  String get menuButtonTutorialText =>
+      'Tekan butang tu ngambika pulai ngagai menu ke dulu ari tu. Nuan ulih nekan lalu megai iya ari sebarang skrin bukai ngambika terus mansang ngagai menu utama.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Tu meh skrin pemandang. Skrin Sentuh enggau Mod Skrin Skrin dikena enggau chara default lalu ulih dikonfigurasyenka agi dalam atur.';
+  String get deviceScreenMenuTutorialText =>
+      'Tu meh skrin pemandang. Skrin Sentuh enggau Mod Skrin Skrin dikena enggau chara default lalu ulih dikonfigurasyenka agi dalam atur.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Mindahka jemari nuan ngelingi Roda Klik ngambika ulih ngatur volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Mindahka jemari nuan ngelingi Roda Klik ngambika ulih ngatur volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tekan butang Pusat kena ngena basikal nengah bar ngiga, bar scrubber enggau slider shuffle. Tekan lalu pegai butang Pusat ngambika ulih ngulihka pilih tambah.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tekan butang Pusat kena ngena basikal nengah bar ngiga, bar scrubber enggau slider shuffle. Tekan lalu pegai butang Pusat ngambika ulih ngulihka pilih tambah.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tekan lalu pegai butang tu ngambika jampat ke mua lagu .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tekan lalu pegai butang tu ngambika jampat ke mua lagu .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tekan lalu pegai butang tu kena rewind lagu .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tekan lalu pegai butang tu kena rewind lagu .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Mindahka jemari nuan enggau ringan ngelingi Wheel Klik ngambika ulih ngayanka urup .';
+  String get deviceControlSearchTutorialText =>
+      'Mindahka jemari nuan enggau ringan ngelingi Wheel Klik ngambika ulih ngayanka urup .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tekan butang tengah kena milih urup ti dikemeratka .';
+  String get centerButtonSearchTutorialText =>
+      'Tekan butang tengah kena milih urup ti dikemeratka .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tekan butang tu kena nambahka ruang .';
+  String get nextButtonSearchTutorialText =>
+      'Tekan butang tu kena nambahka ruang .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tekan butang tu kena madamka watak kepenudi .';
+  String get previousButtonSearchTutorialText =>
+      'Tekan butang tu kena madamka watak kepenudi .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tekan butang tu kena nutup keyboard lalu beinteraksyen enggau asil ngiga .';
+  String get menuButtonSearchTutorialText =>
+      'Tekan butang tu kena nutup keyboard lalu beinteraksyen enggau asil ngiga .';
 }

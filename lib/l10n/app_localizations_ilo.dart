@@ -15,16 +15,20 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get menuButtonText => 'Menu .';
 
   @override
-  String get audioAccessPermissionTitle => 'Masapul ti pammalubos ti Audio Access .';
+  String get audioAccessPermissionTitle =>
+      'Masapul ti pammalubos ti Audio Access .';
 
   @override
-  String get audioAccessPermissionContent => 'Pangngaasiyo ta ipaayyo ti Audio Files iti access tapno mapalubosankami a mangtokar kadagiti music files-yo.';
+  String get audioAccessPermissionContent =>
+      'Pangngaasiyo ta ipaayyo ti Audio Files iti access tapno mapalubosankami a mangtokar kadagiti music files-yo.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Napagkedkedan ti pammalubos ti Audio Access .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Napagkedkedan ti pammalubos ti Audio Access .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Pangngaasiyo ta ipaayyo ti Audio Files Access para iti daytoy nga app kadagiti setting ti device tapno mapalubosankami a mangtokar kadagiti music files-yo.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Pangngaasiyo ta ipaayyo ti Audio Files Access para iti daytoy nga app kadagiti setting ti device tapno mapalubosankami a mangtokar kadagiti music files-yo.';
 
   @override
   String get menuScreenTitle => 'Menu .';
@@ -63,7 +67,6 @@ class AppLocalizationsIlo extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsIlo extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Dagiti uni a mangsagid iti uni .';
 
   @override
-  String get touchSoundsDialogContent => 'Pangngaasi nga ipalubos dagiti uni ti panangsagid manipud kadagiti setting ti sistema tapno mangngeg dagiti uni ti click wheel .';
+  String get touchSoundsDialogContent =>
+      'Pangngaasi nga ipalubos dagiti uni ti panangsagid manipud kadagiti setting ti sistema tapno mangngeg dagiti uni ti click wheel .';
 
   @override
   String get immersiveModeSettingTitle => 'Immersive nga Modo .';
@@ -144,7 +147,8 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get donateSettingTitle => 'Agidonar';
 
   @override
-  String get donateSettingDescription => 'No magustuam daytoy nga app, pangngaasim ta ibilangmo ti agdonar.';
+  String get donateSettingDescription =>
+      'No magustuam daytoy nga app, pangngaasim ta ibilangmo ti agdonar.';
 
   @override
   String get versionAboutScreenTitle => 'Bersion';
@@ -195,7 +199,8 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get retryButtonText => 'Padasen manen .';
 
   @override
-  String get filePickerDialogTitle => 'Pilien ti direktorio a pang-scan iti musika .';
+  String get filePickerDialogTitle =>
+      'Pilien ti direktorio a pang-scan iti musika .';
 
   @override
   String get searchScreenTitle => 'Agbirok';
@@ -210,10 +215,12 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get resultsForText => 'Resulta para iti:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Isardeng ti panag-optimisar ti bateria .';
+  String get disableBatteryOptimizationTitle =>
+      'Isardeng ti panag-optimisar ti bateria .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Pangngaasiyo ta i-disable ti battery optimization para iti daytoy nga app kadagiti setting ti device tapno maipalubos ti background playback ti musika.';
+  String get disableBatteryOptimizationContent =>
+      'Pangngaasiyo ta i-disable ti battery optimization para iti daytoy nga app kadagiti setting ti device tapno maipalubos ti background playback ti musika.';
 
   @override
   String get languageScreenTitle => 'Lengguahe';
@@ -264,53 +271,70 @@ class AppLocalizationsIlo extends AppLocalizations {
   String get clearPlaylist => 'Nalawag a playlist .';
 
   @override
-  String get rescanMusicFilesSettingTitle => 'Dagiti file ti musika ti rescan .';
+  String get rescanMusicFilesSettingTitle =>
+      'Dagiti file ti musika ti rescan .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Iyakarmo a nalag-an ti abaga ti imam iti aglawlaw ti click wheel tapno ag-navigate iti menu .';
+  String get deviceControlMenuTutorialText =>
+      'Iyakarmo a nalag-an ti abaga ti imam iti aglawlaw ti click wheel tapno ag-navigate iti menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pinduten ti center button tapno pilien ti nai-highlight a menu item .';
+  String get centerButtonMenuTutorialText =>
+      'Pinduten ti center button tapno pilien ti nai-highlight a menu item .';
 
   @override
-  String get playPauseMenuTutorialText => 'Pinduten daytoy a buton tapno agtokar wenno agsardeng iti kanta .';
+  String get playPauseMenuTutorialText =>
+      'Pinduten daytoy a buton tapno agtokar wenno agsardeng iti kanta .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pinduten daytoy a buton tapno laksiden ti sumaruno a kanta .';
+  String get nextButtonMenuTutorialText =>
+      'Pinduten daytoy a buton tapno laksiden ti sumaruno a kanta .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pinduten daytoy a buton tapno ag-rewind wenno agsubli iti napalabas a kanta .';
+  String get previousButtonMenuTutorialText =>
+      'Pinduten daytoy a buton tapno ag-rewind wenno agsubli iti napalabas a kanta .';
 
   @override
-  String get menuButtonTutorialText => 'Pinduten daytoy a buton tapno agsubli iti napalabas a menu. Mabalinmo nga i-press ken i-hold dayta manipud iti aniaman a sabali nga iskrin tapno direkta a mapan iti main menu.';
+  String get menuButtonTutorialText =>
+      'Pinduten daytoy a buton tapno agsubli iti napalabas a menu. Mabalinmo nga i-press ken i-hold dayta manipud iti aniaman a sabali nga iskrin tapno direkta a mapan iti main menu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Daytoy ti display screen. Ti touch screen ken split screen mode ket na-enable babaen ti default ken mabalin nga ad-adda a maikonfigura kadagiti settings.';
+  String get deviceScreenMenuTutorialText =>
+      'Daytoy ti display screen. Ti touch screen ken split screen mode ket na-enable babaen ti default ken mabalin nga ad-adda a maikonfigura kadagiti settings.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Iyakarmo ti abaga ti imam iti aglawlaw ti pilid ti panagpidut tapno maitunos ti volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Iyakarmo ti abaga ti imam iti aglawlaw ti pilid ti panagpidut tapno maitunos ti volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pinduten ti center button tapno agbisikleta babaen ti Seek bar, scrubber bar ken shuffle slider. Pinduten ken i-hold ti center button tapno makastrek kadagiti kanayonan a pagpilian.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pinduten ti center button tapno agbisikleta babaen ti Seek bar, scrubber bar ken shuffle slider. Pinduten ken i-hold ti center button tapno makastrek kadagiti kanayonan a pagpilian.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Pinduten ken i-hold daytoy a buton tapno mapapartak ti kanta .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Pinduten ken i-hold daytoy a buton tapno mapapartak ti kanta .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pinduten ken i-hold daytoy a buton tapno mai-rewind ti kanta .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pinduten ken i-hold daytoy a buton tapno mai-rewind ti kanta .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Iyakarmo a nalag-an ti abaga ti imam iti aglawlaw ti click wheel tapno maitampok ti alpabeto .';
+  String get deviceControlSearchTutorialText =>
+      'Iyakarmo a nalag-an ti abaga ti imam iti aglawlaw ti click wheel tapno maitampok ti alpabeto .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pinduten ti center button tapno pilien ti nai-highlight nga alpabeto .';
+  String get centerButtonSearchTutorialText =>
+      'Pinduten ti center button tapno pilien ti nai-highlight nga alpabeto .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pinduten daytoy a buton tapno mangnayon iti espasio .';
+  String get nextButtonSearchTutorialText =>
+      'Pinduten daytoy a buton tapno mangnayon iti espasio .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pinduten daytoy a buton tapno mapunas ti maudi a karakter .';
+  String get previousButtonSearchTutorialText =>
+      'Pinduten daytoy a buton tapno mapunas ti maudi a karakter .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pinduten daytoy a buton tapno maiserra ti teklado ken makilangen kadagiti resulta ti panagsapul .';
+  String get menuButtonSearchTutorialText =>
+      'Pinduten daytoy a buton tapno maiserra ti teklado ken makilangen kadagiti resulta ti panagsapul .';
 }

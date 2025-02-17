@@ -18,13 +18,16 @@ class AppLocalizationsGa extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Cead rochtana fuaime ag teastáil';
 
   @override
-  String get audioAccessPermissionContent => 'Deonaigh rochtain ar chomhaid fuaime le do thoil chun ligean dúinn do chuid comhad ceoil a imirt.';
+  String get audioAccessPermissionContent =>
+      'Deonaigh rochtain ar chomhaid fuaime le do thoil chun ligean dúinn do chuid comhad ceoil a imirt.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Diúltaíodh cead rochtana fuaime';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Diúltaíodh cead rochtana fuaime';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Deonaigh rochtain ar chomhaid fuaime don aip seo i socruithe na bhfeistí chun ligean dúinn do chuid comhad ceoil a imirt.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Deonaigh rochtain ar chomhaid fuaime don aip seo i socruithe na bhfeistí chun ligean dúinn do chuid comhad ceoil a imirt.';
 
   @override
   String get menuScreenTitle => 'Biachlár';
@@ -63,7 +66,6 @@ class AppLocalizationsGa extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsGa extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsGa extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Fuaimeanna tadhaill';
 
   @override
-  String get touchSoundsDialogContent => 'Cumasaigh fuaimeanna tadhaill ó shuíomhanna córais le do thoil chun na fuaimeanna roth cliceáil a chloisteáil';
+  String get touchSoundsDialogContent =>
+      'Cumasaigh fuaimeanna tadhaill ó shuíomhanna córais le do thoil chun na fuaimeanna roth cliceáil a chloisteáil';
 
   @override
   String get immersiveModeSettingTitle => 'Mód tumtha';
@@ -144,7 +146,8 @@ class AppLocalizationsGa extends AppLocalizations {
   String get donateSettingTitle => 'Síntigh';
 
   @override
-  String get donateSettingDescription => 'Más maith leat an feidhmchlár seo, smaoinigh ar bhronnadh.';
+  String get donateSettingDescription =>
+      'Más maith leat an feidhmchlár seo, smaoinigh ar bhronnadh.';
 
   @override
   String get versionAboutScreenTitle => 'Leagan';
@@ -210,10 +213,12 @@ class AppLocalizationsGa extends AppLocalizations {
   String get resultsForText => 'Torthaí do:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Optimization ceallraí a dhíchumasú';
+  String get disableBatteryOptimizationTitle =>
+      'Optimization ceallraí a dhíchumasú';
 
   @override
-  String get disableBatteryOptimizationContent => 'Díchumasaigh barrfheabhsú ceallraí don aip seo i suíomhanna na bhfeistí chun athsheinm cúlra an cheoil a cheadú.';
+  String get disableBatteryOptimizationContent =>
+      'Díchumasaigh barrfheabhsú ceallraí don aip seo i suíomhanna na bhfeistí chun athsheinm cúlra an cheoil a cheadú.';
 
   @override
   String get languageScreenTitle => 'Teanga';
@@ -267,50 +272,66 @@ class AppLocalizationsGa extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Comhaid cheoil a athscríobh';
 
   @override
-  String get deviceControlMenuTutorialText => 'Bog do ordóg go héadrom timpeall an roth cliceáil chun nascleanúint a dhéanamh ar an roghchlár';
+  String get deviceControlMenuTutorialText =>
+      'Bog do ordóg go héadrom timpeall an roth cliceáil chun nascleanúint a dhéanamh ar an roghchlár';
 
   @override
-  String get centerButtonMenuTutorialText => 'Brúigh an cnaipe Ionad chun an mhír roghchlár aibhsithe a roghnú';
+  String get centerButtonMenuTutorialText =>
+      'Brúigh an cnaipe Ionad chun an mhír roghchlár aibhsithe a roghnú';
 
   @override
-  String get playPauseMenuTutorialText => 'Brúigh an cnaipe seo chun amhrán a imirt nó sos';
+  String get playPauseMenuTutorialText =>
+      'Brúigh an cnaipe seo chun amhrán a imirt nó sos';
 
   @override
-  String get nextButtonMenuTutorialText => 'Brúigh an cnaipe seo chun scipeáil chuig an gcéad amhrán eile';
+  String get nextButtonMenuTutorialText =>
+      'Brúigh an cnaipe seo chun scipeáil chuig an gcéad amhrán eile';
 
   @override
-  String get previousButtonMenuTutorialText => 'Brúigh an cnaipe seo chun athghairm a dhéanamh nó dul ar ais chuig an amhrán roimhe seo';
+  String get previousButtonMenuTutorialText =>
+      'Brúigh an cnaipe seo chun athghairm a dhéanamh nó dul ar ais chuig an amhrán roimhe seo';
 
   @override
-  String get menuButtonTutorialText => 'Brúigh an cnaipe seo chun dul ar ais go dtí an roghchlár roimhe seo. D\'fhéadfá é a bhrú agus a choinneáil ó aon scáileán eile chun dul go díreach chuig an bpríomh -roghchlár.';
+  String get menuButtonTutorialText =>
+      'Brúigh an cnaipe seo chun dul ar ais go dtí an roghchlár roimhe seo. D\'fhéadfá é a bhrú agus a choinneáil ó aon scáileán eile chun dul go díreach chuig an bpríomh -roghchlár.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Is é seo an scáileán taispeána. Cumasaítear an scáileán tadhaill agus an modh scáileáin scoilte de réir réamhshocraithe agus is féidir iad a chumrú tuilleadh sna suíomhanna.';
+  String get deviceScreenMenuTutorialText =>
+      'Is é seo an scáileán taispeána. Cumasaítear an scáileán tadhaill agus an modh scáileáin scoilte de réir réamhshocraithe agus is féidir iad a chumrú tuilleadh sna suíomhanna.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Bog do ordóg timpeall an roth cliceáil chun an toirt a choigeartú';
+  String get deviceControlNowPlayingTutorialText =>
+      'Bog do ordóg timpeall an roth cliceáil chun an toirt a choigeartú';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Brúigh an cnaipe Ionad chun rothaíocht a dhéanamh trí bharra, barra sciúrtha agus sleamhnán a shuaitheadh. Brúigh agus coinnigh an cnaipe Ionad chun rochtain a fháil ar roghanna breise.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Brúigh an cnaipe Ionad chun rothaíocht a dhéanamh trí bharra, barra sciúrtha agus sleamhnán a shuaitheadh. Brúigh agus coinnigh an cnaipe Ionad chun rochtain a fháil ar roghanna breise.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Brúigh agus coinnigh an cnaipe seo chun an t -amhrán a chur ar aghaidh go tapa';
+  String get nextButtonNowPlayingTutorialText =>
+      'Brúigh agus coinnigh an cnaipe seo chun an t -amhrán a chur ar aghaidh go tapa';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Brúigh agus coinnigh an cnaipe seo chun an t -amhrán a athsheoladh';
+  String get previousButtonNowPlayingTutorialText =>
+      'Brúigh agus coinnigh an cnaipe seo chun an t -amhrán a athsheoladh';
 
   @override
-  String get deviceControlSearchTutorialText => 'Bog do ordóg go héadrom timpeall an roth cliceáil chun aibítir a aibhsiú';
+  String get deviceControlSearchTutorialText =>
+      'Bog do ordóg go héadrom timpeall an roth cliceáil chun aibítir a aibhsiú';
 
   @override
-  String get centerButtonSearchTutorialText => 'Brúigh an cnaipe Ionad chun an aibítir aibhsithe a roghnú';
+  String get centerButtonSearchTutorialText =>
+      'Brúigh an cnaipe Ionad chun an aibítir aibhsithe a roghnú';
 
   @override
-  String get nextButtonSearchTutorialText => 'Brúigh an cnaipe seo chun spás a chur leis';
+  String get nextButtonSearchTutorialText =>
+      'Brúigh an cnaipe seo chun spás a chur leis';
 
   @override
-  String get previousButtonSearchTutorialText => 'Brúigh an cnaipe seo chun an carachtar deireanach a scriosadh';
+  String get previousButtonSearchTutorialText =>
+      'Brúigh an cnaipe seo chun an carachtar deireanach a scriosadh';
 
   @override
-  String get menuButtonSearchTutorialText => 'Brúigh an cnaipe seo chun an méarchlár a dhúnadh agus idirghníomhú leis na torthaí cuardaigh';
+  String get menuButtonSearchTutorialText =>
+      'Brúigh an cnaipe seo chun an méarchlár a dhúnadh agus idirghníomhú leis na torthaí cuardaigh';
 }

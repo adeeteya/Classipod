@@ -18,13 +18,16 @@ class AppLocalizationsSd extends AppLocalizations {
   String get audioAccessPermissionTitle => 'آڊيو رسائي جي اجازت گهربل آهي';
 
   @override
-  String get audioAccessPermissionContent => 'مهرباني ڪري آڊيو فائلن کي رسائي ڏيو اسان کي توهان جي ميوزڪ فائلن کي کيڏڻ جي اجازت ڏيو.';
+  String get audioAccessPermissionContent =>
+      'مهرباني ڪري آڊيو فائلن کي رسائي ڏيو اسان کي توهان جي ميوزڪ فائلن کي کيڏڻ جي اجازت ڏيو.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'آڊيو رسائي جي اجازت رد ڪئي وئي';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'آڊيو رسائي جي اجازت رد ڪئي وئي';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'مهرباني ڪري توهان جي ميوزڪ فائلن کي کيڏڻ جي اجازت ڏيو ته آڊيو فائلن جي لاء آڊيو فائلون رسائي ڏيو.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'مهرباني ڪري توهان جي ميوزڪ فائلن کي کيڏڻ جي اجازت ڏيو ته آڊيو فائلن جي لاء آڊيو فائلون رسائي ڏيو.';
 
   @override
   String get menuScreenTitle => 'مينيو';
@@ -63,7 +66,6 @@ class AppLocalizationsSd extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsSd extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsSd extends AppLocalizations {
   String get touchSoundsDialogTitle => 'آوازن جو آواز';
 
   @override
-  String get touchSoundsDialogContent => 'مهرباني ڪري ٽچ جي سيٽنگن مان ٽچ جي سيٽنگن مان ڪلڪ ڪريو';
+  String get touchSoundsDialogContent =>
+      'مهرباني ڪري ٽچ جي سيٽنگن مان ٽچ جي سيٽنگن مان ڪلڪ ڪريو';
 
   @override
   String get immersiveModeSettingTitle => 'امرائيندڙ موڊ';
@@ -144,7 +146,8 @@ class AppLocalizationsSd extends AppLocalizations {
   String get donateSettingTitle => 'عطيو ڏيو';
 
   @override
-  String get donateSettingDescription => 'جيڪڏهن توهان هن ايپ کي پسند ڪيو، مهرباني ڪري عطيو ڏيڻ تي غور ڪريو.';
+  String get donateSettingDescription =>
+      'جيڪڏهن توهان هن ايپ کي پسند ڪيو، مهرباني ڪري عطيو ڏيڻ تي غور ڪريو.';
 
   @override
   String get versionAboutScreenTitle => 'جو وارو';
@@ -195,7 +198,8 @@ class AppLocalizationsSd extends AppLocalizations {
   String get retryButtonText => 'ٻيهر ڪوشش ڪريو';
 
   @override
-  String get filePickerDialogTitle => 'موسيقي لاء اسڪين ڪرڻ لاء ڊاريڪٽري چونڊيو';
+  String get filePickerDialogTitle =>
+      'موسيقي لاء اسڪين ڪرڻ لاء ڊاريڪٽري چونڊيو';
 
   @override
   String get searchScreenTitle => 'ڳولا';
@@ -213,7 +217,8 @@ class AppLocalizationsSd extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'بيٽري اصلاح کي غير فعال ڪريو';
 
   @override
-  String get disableBatteryOptimizationContent => 'مهرباني ڪري موسيقي جي پلے بیک جي پسمنظر جي اجازت ڏيڻ جي اجازت ڏيڻ لاء هن ايپ لاء مهرباني ڪري بيٽري جي اصلاح کي غير فعال ڪريو.';
+  String get disableBatteryOptimizationContent =>
+      'مهرباني ڪري موسيقي جي پلے بیک جي پسمنظر جي اجازت ڏيڻ جي اجازت ڏيڻ لاء هن ايپ لاء مهرباني ڪري بيٽري جي اصلاح کي غير فعال ڪريو.';
 
   @override
   String get languageScreenTitle => 'ٻولي';
@@ -267,50 +272,66 @@ class AppLocalizationsSd extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'ميوزڪ فائلن کي ريزنيٽ فائلون';
 
   @override
-  String get deviceControlMenuTutorialText => 'مينيو کي نيويگيٽ ڪرڻ لاء پنهنجي انگوزي کي هلڪو هلايو';
+  String get deviceControlMenuTutorialText =>
+      'مينيو کي نيويگيٽ ڪرڻ لاء پنهنجي انگوزي کي هلڪو هلايو';
 
   @override
-  String get centerButtonMenuTutorialText => 'نمايان ٿيل مينيو آئٽم کي چونڊڻ لاء سينٽر جو بٽڻ دٻايو';
+  String get centerButtonMenuTutorialText =>
+      'نمايان ٿيل مينيو آئٽم کي چونڊڻ لاء سينٽر جو بٽڻ دٻايو';
 
   @override
-  String get playPauseMenuTutorialText => 'هڪ گيت کيڏڻ يا ڇڪڻ لاء هن بٽڻ کي دٻايو';
+  String get playPauseMenuTutorialText =>
+      'هڪ گيت کيڏڻ يا ڇڪڻ لاء هن بٽڻ کي دٻايو';
 
   @override
-  String get nextButtonMenuTutorialText => 'پريس ڪريو ھي بٽڻ دٻايو ايندڙ گيت ڏانھن وڃو';
+  String get nextButtonMenuTutorialText =>
+      'پريس ڪريو ھي بٽڻ دٻايو ايندڙ گيت ڏانھن وڃو';
 
   @override
-  String get previousButtonMenuTutorialText => 'هن بٽڻ کي ٻيهر کولڻ يا واپس وڃڻ لاء دٻايو';
+  String get previousButtonMenuTutorialText =>
+      'هن بٽڻ کي ٻيهر کولڻ يا واپس وڃڻ لاء دٻايو';
 
   @override
-  String get menuButtonTutorialText => 'پوئين مينيو ڏانهن واپس وڃڻ لاء هن بٽڻ کي دٻايو. توهان سڌي رستي تي سڌو سنئون ڪنهن ٻئي اسڪرين تي ڪلڪ ڪري سگهو ٿا.';
+  String get menuButtonTutorialText =>
+      'پوئين مينيو ڏانهن واپس وڃڻ لاء هن بٽڻ کي دٻايو. توهان سڌي رستي تي سڌو سنئون ڪنهن ٻئي اسڪرين تي ڪلڪ ڪري سگهو ٿا.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'هي ڊسپلي اسڪرين آهي. ٽچ اسڪرين ۽ اسپلٽ اسڪرين موڊ ڊفالٽ ذريعي فعال ڪيو ويو آهي ۽ سيٽنگن ۾ وڌيڪ ترتيب ڏئي سگهجي ٿو.';
+  String get deviceScreenMenuTutorialText =>
+      'هي ڊسپلي اسڪرين آهي. ٽچ اسڪرين ۽ اسپلٽ اسڪرين موڊ ڊفالٽ ذريعي فعال ڪيو ويو آهي ۽ سيٽنگن ۾ وڌيڪ ترتيب ڏئي سگهجي ٿو.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'حجم کي ترتيب ڏيڻ لاء ڪلڪ ڪريو تي ڪلڪ ڪريو ڪلڪ ڪريو';
+  String get deviceControlNowPlayingTutorialText =>
+      'حجم کي ترتيب ڏيڻ لاء ڪلڪ ڪريو تي ڪلڪ ڪريو ڪلڪ ڪريو';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'بار بار بار، اسڪربر بار ۽ شفل سلائيڊر ذريعي سائيڪل جو بٽڻ دٻايو. پريس ڪريو ۽ وچ واري بٽڻ کي اضافي اختيارن تائين رسائي لاء دٻايو.';
+  String get centerButtonNowPlayingTutorialText =>
+      'بار بار بار، اسڪربر بار ۽ شفل سلائيڊر ذريعي سائيڪل جو بٽڻ دٻايو. پريس ڪريو ۽ وچ واري بٽڻ کي اضافي اختيارن تائين رسائي لاء دٻايو.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'پريس کي دٻايو ۽ هن بٽڻ کي تيز ڪرڻ لاء';
+  String get nextButtonNowPlayingTutorialText =>
+      'پريس کي دٻايو ۽ هن بٽڻ کي تيز ڪرڻ لاء';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'پريس ڪريو ۽ هن بٽڻ کي گانو کي ٻيهر کولڻ لاء دٻايو';
+  String get previousButtonNowPlayingTutorialText =>
+      'پريس ڪريو ۽ هن بٽڻ کي گانو کي ٻيهر کولڻ لاء دٻايو';
 
   @override
-  String get deviceControlSearchTutorialText => 'ڪلڪ ڪريو پنھنجي آ thumb يء ريت ڪلڪ ڪريو ڪلڪ ڪريو ھڪڙي الفابيٽ کي اجاگر ڪرڻ لاء';
+  String get deviceControlSearchTutorialText =>
+      'ڪلڪ ڪريو پنھنجي آ thumb يء ريت ڪلڪ ڪريو ڪلڪ ڪريو ھڪڙي الفابيٽ کي اجاگر ڪرڻ لاء';
 
   @override
-  String get centerButtonSearchTutorialText => 'نمايان ٿيل الفابيٽ کي چونڊڻ لاء سينٽر جو بٽڻ دٻايو';
+  String get centerButtonSearchTutorialText =>
+      'نمايان ٿيل الفابيٽ کي چونڊڻ لاء سينٽر جو بٽڻ دٻايو';
 
   @override
-  String get nextButtonSearchTutorialText => 'اسپيس شامل ڪرڻ لاء هن بٽڻ کي دٻايو';
+  String get nextButtonSearchTutorialText =>
+      'اسپيس شامل ڪرڻ لاء هن بٽڻ کي دٻايو';
 
   @override
-  String get previousButtonSearchTutorialText => 'آخري ڪردار کي ختم ڪرڻ لاء هن بٽڻ کي دٻايو';
+  String get previousButtonSearchTutorialText =>
+      'آخري ڪردار کي ختم ڪرڻ لاء هن بٽڻ کي دٻايو';
 
   @override
-  String get menuButtonSearchTutorialText => 'ڪيبورڊ بند ڪرڻ لاء هن بٽڻ کي دٻايو ۽ ڳولا جي نتيجن سان رابطو ڪريو';
+  String get menuButtonSearchTutorialText =>
+      'ڪيبورڊ بند ڪرڻ لاء هن بٽڻ کي دٻايو ۽ ڳولا جي نتيجن سان رابطو ڪريو';
 }

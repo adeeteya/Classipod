@@ -18,13 +18,16 @@ class AppLocalizationsHa extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Izinin shiga mai shiga sauti';
 
   @override
-  String get audioAccessPermissionContent => 'Da fatan za a ba da fayilolin sauti mai aiki don ba mu damar kunna fayilolin kiɗa.';
+  String get audioAccessPermissionContent =>
+      'Da fatan za a ba da fayilolin sauti mai aiki don ba mu damar kunna fayilolin kiɗa.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'An hana izinin shiga Audio';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'An hana izinin shiga Audio';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Da fatan za a ba da fayilolin bidiyo a cikin wannan app a cikin saitunan na\'urar don ba mu damar kunna fayilolin kiɗa.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Da fatan za a ba da fayilolin bidiyo a cikin wannan app a cikin saitunan na\'urar don ba mu damar kunna fayilolin kiɗa.';
 
   @override
   String get menuScreenTitle => 'Takardar tsarin abinci';
@@ -63,7 +66,6 @@ class AppLocalizationsHa extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsHa extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsHa extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sauya sauti';
 
   @override
-  String get touchSoundsDialogContent => 'Da fatan za a kunna sauti na taba wurin saitunan tsarin don jin danna Saurar da Sauti';
+  String get touchSoundsDialogContent =>
+      'Da fatan za a kunna sauti na taba wurin saitunan tsarin don jin danna Saurar da Sauti';
 
   @override
   String get immersiveModeSettingTitle => 'Yanayin nutsewa';
@@ -144,7 +146,8 @@ class AppLocalizationsHa extends AppLocalizations {
   String get donateSettingTitle => 'Ba da kyauta';
 
   @override
-  String get donateSettingDescription => 'Idan kuna son wannan app, da fatan za a yi amfani da gudummawa.';
+  String get donateSettingDescription =>
+      'Idan kuna son wannan app, da fatan za a yi amfani da gudummawa.';
 
   @override
   String get versionAboutScreenTitle => 'Irin ra\'ayi';
@@ -213,7 +216,8 @@ class AppLocalizationsHa extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Kashe ingantawa baturi';
 
   @override
-  String get disableBatteryOptimizationContent => 'Da fatan za a kashe ingantawa ta baturi don wannan app a cikin saitunan na\'urar don ba da damar sake kunnawa na kiɗa.';
+  String get disableBatteryOptimizationContent =>
+      'Da fatan za a kashe ingantawa ta baturi don wannan app a cikin saitunan na\'urar don ba da damar sake kunnawa na kiɗa.';
 
   @override
   String get languageScreenTitle => 'Harshe';
@@ -267,50 +271,66 @@ class AppLocalizationsHa extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Fayilolin Music';
 
   @override
-  String get deviceControlMenuTutorialText => 'Matsar da yatsa da sauƙi a kusa da dannawa don kewaya menu';
+  String get deviceControlMenuTutorialText =>
+      'Matsar da yatsa da sauƙi a kusa da dannawa don kewaya menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Latsa maɓallin tsakiyar don zaɓar abun da aka yi';
+  String get centerButtonMenuTutorialText =>
+      'Latsa maɓallin tsakiyar don zaɓar abun da aka yi';
 
   @override
-  String get playPauseMenuTutorialText => 'Latsa wannan maɓallin don wasa ko dakatar da waƙa';
+  String get playPauseMenuTutorialText =>
+      'Latsa wannan maɓallin don wasa ko dakatar da waƙa';
 
   @override
-  String get nextButtonMenuTutorialText => 'Latsa wannan maballin don tsallake zuwa waƙar ta gaba';
+  String get nextButtonMenuTutorialText =>
+      'Latsa wannan maballin don tsallake zuwa waƙar ta gaba';
 
   @override
-  String get previousButtonMenuTutorialText => 'Latsa wannan maɓallin don komawa ko komawa zuwa waƙar da ta gabata';
+  String get previousButtonMenuTutorialText =>
+      'Latsa wannan maɓallin don komawa ko komawa zuwa waƙar da ta gabata';
 
   @override
-  String get menuButtonTutorialText => 'Latsa wannan maɓallin don komawa menu na baya. Kuna iya latsa ku riƙe shi daga kowane allon don kai tsaye zuwa menu na ainihi.';
+  String get menuButtonTutorialText =>
+      'Latsa wannan maɓallin don komawa menu na baya. Kuna iya latsa ku riƙe shi daga kowane allon don kai tsaye zuwa menu na ainihi.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Wannan shine allon nuni. Yanayin allo aka kunna yanayin raba allo ta tsohuwa kuma za\'a iya saita shi a saitunan.';
+  String get deviceScreenMenuTutorialText =>
+      'Wannan shine allon nuni. Yanayin allo aka kunna yanayin raba allo ta tsohuwa kuma za\'a iya saita shi a saitunan.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Matsa babban yatsa a kusa da dannawa don daidaita ƙarar';
+  String get deviceControlNowPlayingTutorialText =>
+      'Matsa babban yatsa a kusa da dannawa don daidaita ƙarar';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Latsa maɓallin tsakiyar zuwa sake zagayowar ta hanyar neman mashaya, goge goge kuma supfle Slider. Latsa ka riƙe maɓallin cibiyar don samun damar ƙarin zaɓuɓɓuka.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Latsa maɓallin tsakiyar zuwa sake zagayowar ta hanyar neman mashaya, goge goge kuma supfle Slider. Latsa ka riƙe maɓallin cibiyar don samun damar ƙarin zaɓuɓɓuka.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Latsa ka riƙe wannan maɓallin don saurin tura waƙar';
+  String get nextButtonNowPlayingTutorialText =>
+      'Latsa ka riƙe wannan maɓallin don saurin tura waƙar';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Latsa ka riƙe wannan maɓallin don sake kunna wakar';
+  String get previousButtonNowPlayingTutorialText =>
+      'Latsa ka riƙe wannan maɓallin don sake kunna wakar';
 
   @override
-  String get deviceControlSearchTutorialText => 'Matsar da yatsa a kusa da dannawa don ƙarin haruffa';
+  String get deviceControlSearchTutorialText =>
+      'Matsar da yatsa a kusa da dannawa don ƙarin haruffa';
 
   @override
-  String get centerButtonSearchTutorialText => 'Latsa maɓallin tsakiyar don zaɓar wasika mai alama';
+  String get centerButtonSearchTutorialText =>
+      'Latsa maɓallin tsakiyar don zaɓar wasika mai alama';
 
   @override
-  String get nextButtonSearchTutorialText => 'Latsa wannan maɓallin don ƙara sarari';
+  String get nextButtonSearchTutorialText =>
+      'Latsa wannan maɓallin don ƙara sarari';
 
   @override
-  String get previousButtonSearchTutorialText => 'Latsa wannan maɓallin don share halayyar ƙarshe';
+  String get previousButtonSearchTutorialText =>
+      'Latsa wannan maɓallin don share halayyar ƙarshe';
 
   @override
-  String get menuButtonSearchTutorialText => 'Latsa wannan maɓallin don rufe maballin kuma yana hulɗa da sakamakon binciken';
+  String get menuButtonSearchTutorialText =>
+      'Latsa wannan maɓallin don rufe maballin kuma yana hulɗa da sakamakon binciken';
 }

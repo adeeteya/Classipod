@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -9,12 +10,15 @@ import 'package:flutter/foundation.dart';
 class AlbumListTile extends StatelessWidget {
   final AlbumModel albumDetails;
   final bool isSelected;
+  final bool showArtistName;
   final VoidCallback onTap;
   final VoidCallback onLongPress;
+
   const AlbumListTile({
     super.key,
     required this.albumDetails,
     required this.isSelected,
+    this.showArtistName = true,
     required this.onTap,
     required this.onLongPress,
   });
@@ -44,9 +48,9 @@ class AlbumListTile extends StatelessWidget {
             children: [
               Image(
                 image: (albumDetails.albumArtPath != null)
-                    ? kIsWeb
-                        ? NetworkImage(albumDetails.albumArtPath!)
-                        : FileImage(File(albumDetails.albumArtPath!))
+                    ? albumDetails.isOnDevice()
+                        ? FileImage(File(albumDetails.albumArtPath!))
+                        : NetworkImage(albumDetails.albumArtPath!)
                     : const AssetImage(Assets.defaultAlbumCoverImage),
                 errorBuilder: (_, __, ___) => Image.asset(
                   Assets.defaultAlbumCoverImage,
@@ -74,7 +78,10 @@ class AlbumListTile extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      albumDetails.albumArtistName,
+                      showArtistName
+                          ? albumDetails.albumArtistName
+                          : context.localization
+                              .nSongs(albumDetails.albumSongs.length),
                       style: TextStyle(
                         color: isSelected
                             ? CupertinoColors.white

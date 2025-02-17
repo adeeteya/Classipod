@@ -18,13 +18,16 @@ class AppLocalizationsUdm extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Аудио доступ разрешение кулэ';
 
   @override
-  String get audioAccessPermissionContent => 'Пожалуйста, грант аудиофайлъёсты сётыны лэзьыны, асьмелы тон крезьгур файлъёсты шудыны.';
+  String get audioAccessPermissionContent =>
+      'Пожалуйста, грант аудиофайлъёсты сётыны лэзьыны, асьмелы тон крезьгур файлъёсты шудыны.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Аудио доступ разрешение отказать';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Аудио доступ разрешение отказать';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Пожалуйста, грант аудиофайлъёс понна та приложение устройство настройкаос лэзьыны, асьмелы шудыны тон крезьгур файлъёсты.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Пожалуйста, грант аудиофайлъёс понна та приложение устройство настройкаос лэзьыны, асьмелы шудыны тон крезьгур файлъёсты.';
 
   @override
   String get menuScreenTitle => 'Меню';
@@ -63,7 +66,6 @@ class AppLocalizationsUdm extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsUdm extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsUdm extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Сдвигаться Куараос';
 
   @override
-  String get touchSoundsDialogContent => 'Пожалуйста, включать сенсорный куараос система настройкаос, мед кылзозы, клик колёса куараос .';
+  String get touchSoundsDialogContent =>
+      'Пожалуйста, включать сенсорный куараос система настройкаос, мед кылзозы, клик колёса куараос .';
 
   @override
   String get immersiveModeSettingTitle => 'Иммерсивной Режим';
@@ -144,7 +146,8 @@ class AppLocalizationsUdm extends AppLocalizations {
   String get donateSettingTitle => 'Коньдонэн юрттӥськыны';
 
   @override
-  String get donateSettingDescription => 'Та приложение тӥледлы кельше ке, пожалуйста, сётэ сётыны.';
+  String get donateSettingDescription =>
+      'Та приложение тӥледлы кельше ке, пожалуйста, сётэ сётыны.';
 
   @override
   String get versionAboutScreenTitle => 'Пӧртэмлык';
@@ -195,7 +198,8 @@ class AppLocalizationsUdm extends AppLocalizations {
   String get retryButtonText => 'пенсие потыны';
 
   @override
-  String get filePickerDialogTitle => 'Быръе Каталоге сканировать понна музыка .';
+  String get filePickerDialogTitle =>
+      'Быръе Каталоге сканировать понна музыка .';
 
   @override
   String get searchScreenTitle => 'Утчан';
@@ -213,7 +217,8 @@ class AppLocalizationsUdm extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Отключать батарея оптимизация';
 
   @override
-  String get disableBatteryOptimizationContent => 'Пожалуйста, отключать батарея оптимизация понна та приложение устройство настройкаос лэзьыны фон воспроизведение крезьгур.';
+  String get disableBatteryOptimizationContent =>
+      'Пожалуйста, отключать батарея оптимизация понна та приложение устройство настройкаос лэзьыны фон воспроизведение крезьгур.';
 
   @override
   String get languageScreenTitle => 'Кыл';
@@ -267,50 +272,66 @@ class AppLocalizationsUdm extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Резкан крезьгур файлъёс';
 
   @override
-  String get deviceControlMenuTutorialText => 'Перемещать тон ымнырзэ лёгет котырын Клик колёса ориентировать меню .';
+  String get deviceControlMenuTutorialText =>
+      'Перемещать тон ымнырзэ лёгет котырын Клик колёса ориентировать меню .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Центр кнопкаез зӥбыса, бырйыны пусъемын меню пункт .';
+  String get centerButtonMenuTutorialText =>
+      'Центр кнопкаез зӥбыса, бырйыны пусъемын меню пункт .';
 
   @override
-  String get playPauseMenuTutorialText => 'Та кнопкаез зӥбыса, шудыны яке пауза кырӟан .';
+  String get playPauseMenuTutorialText =>
+      'Та кнопкаез зӥбыса, шудыны яке пауза кырӟан .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Та кнопкаез зӥбыса, вуоно кырӟанэ лэзьыны .';
+  String get nextButtonMenuTutorialText =>
+      'Та кнопкаез зӥбыса, вуоно кырӟанэ лэзьыны .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Та кнопкаез зӥбыса, перемотка яке берытскыны азьвыл кырӟан .';
+  String get previousButtonMenuTutorialText =>
+      'Та кнопкаез зӥбыса, перемотка яке берытскыны азьвыл кырӟан .';
 
   @override
-  String get menuButtonTutorialText => 'Та кнопкаез зӥбыса, азьвыл менюе берытскыны. Тон быгатӥськод-а, сое мукет экранысь напрямую мыныны валтӥсь меню.';
+  String get menuButtonTutorialText =>
+      'Та кнопкаез зӥбыса, азьвыл менюе берытскыны. Тон быгатӥськод-а, сое мукет экранысь напрямую мыныны валтӥсь меню.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Та дисплей экран. Сцена вылын но Split экран Режим умолчание лэземын но азьланяз настройкаос лэсьтыны луэ настройкаос.';
+  String get deviceScreenMenuTutorialText =>
+      'Та дисплей экран. Сцена вылын но Split экран Режим умолчание лэземын но азьланяз настройкаос лэсьтыны луэ настройкаос.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Выжтэ тон котырын Клик колёса, мед тупатозы объем .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Выжтэ тон котырын Клик колёса, мед тупатозы объем .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Центр кнопкаез зӥбыса, цикл пыр утчан бар, скраббер бар но перетасовывать ползунок. Центр кнопкаез зӥбыса, ватсаса вариантъёс доры кариськыны.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Центр кнопкаез зӥбыса, цикл пыр утчан бар, скраббер бар но перетасовывать ползунок. Центр кнопкаез зӥбыса, ватсаса вариантъёс доры кариськыны.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Та кнопкаез зӥбыса, кырӟанэз ӝог азьланьтыны .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Та кнопкаез зӥбыса, кырӟанэз ӝог азьланьтыны .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Та кнопкаез зӥбыса, кырӟанэз выльысь ӝутыны .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Та кнопкаез зӥбыса, кырӟанэз выльысь ӝутыны .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Перемещать тон пальто котыр Клик колёса пусъён понна алфавит .';
+  String get deviceControlSearchTutorialText =>
+      'Перемещать тон пальто котыр Клик колёса пусъён понна алфавит .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Центр кнопкаез зӥбыса, бырйыны пусъемын алфавит .';
+  String get centerButtonSearchTutorialText =>
+      'Центр кнопкаез зӥбыса, бырйыны пусъемын алфавит .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Та кнопкаез зӥбыса, ватсаса инты .';
+  String get nextButtonSearchTutorialText =>
+      'Та кнопкаез зӥбыса, ватсаса инты .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Та кнопкаез зӥбыса, берпуметӥ символэз утялтыны .';
+  String get previousButtonSearchTutorialText =>
+      'Та кнопкаез зӥбыса, берпуметӥ символэз утялтыны .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Та кнопкаез зӥбыса, клавиатураез пытсаны но взаимодействовать утчан результатъёс .';
+  String get menuButtonSearchTutorialText =>
+      'Та кнопкаез зӥбыса, клавиатураез пытсаны но взаимодействовать утчан результатъёс .';
 }

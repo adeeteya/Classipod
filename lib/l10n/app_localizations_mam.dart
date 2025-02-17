@@ -15,16 +15,19 @@ class AppLocalizationsMam extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'Aju Permiso Audio il tiʼj tuʼn tten';
+  String get audioAccessPermissionTitle =>
+      'Aju Permiso Audio il tiʼj tuʼn tten';
 
   @override
-  String get audioAccessPermissionContent => 'Bʼaʼn tuʼn ttzaj tqʼoʼna ambʼil qeye tuʼn tokx qqʼoʼne qe archivo te audio tuʼntzun tkubʼ qbʼinchaʼne qe archivo te bʼitz.';
+  String get audioAccessPermissionContent =>
+      'Bʼaʼn tuʼn ttzaj tqʼoʼna ambʼil qeye tuʼn tokx qqʼoʼne qe archivo te audio tuʼntzun tkubʼ qbʼinchaʼne qe archivo te bʼitz.';
 
   @override
   String get audioAccessPermissionPermanentlyDeniedTitle => 'Aju Permiso Audio';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Bʼaʼn tuʼn t-xi qqʼoʼn ambʼil kye archivo te audio tuʼn tokx toj aplicación lu toj ambʼil jaʼlo tuʼntzun t-xi qqʼoʼn ambʼil qeye tuʼn tkubʼ qbʼinchaʼne qe archivo te bʼitz.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Bʼaʼn tuʼn t-xi qqʼoʼn ambʼil kye archivo te audio tuʼn tokx toj aplicación lu toj ambʼil jaʼlo tuʼntzun t-xi qqʼoʼn ambʼil qeye tuʼn tkubʼ qbʼinchaʼne qe archivo te bʼitz.';
 
   @override
   String get menuScreenTitle => 'men';
@@ -63,7 +66,6 @@ class AppLocalizationsMam extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsMam extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsMam extends AppLocalizations {
   String get touchSoundsDialogTitle => 'B´a´n';
 
   @override
-  String get touchSoundsDialogContent => 'Bʼaʼn tuʼn t-xi qbʼiʼn aju Configuración del sistema tuʼntzun tok qbʼiʼn qe tqʼajqʼajel wibʼaj te rueda te clic .';
+  String get touchSoundsDialogContent =>
+      'Bʼaʼn tuʼn t-xi qbʼiʼn aju Configuración del sistema tuʼntzun tok qbʼiʼn qe tqʼajqʼajel wibʼaj te rueda te clic .';
 
   @override
   String get immersiveModeSettingTitle => 'Aju tnam Mo .';
@@ -144,7 +146,8 @@ class AppLocalizationsMam extends AppLocalizations {
   String get donateSettingTitle => 'Oyil';
 
   @override
-  String get donateSettingDescription => 'Qa bʼaʼn in nela toj twitza aju aplicación lu, bʼaʼn tuʼn tkubʼ t-ximana tuʼn t-xi tqʼoʼna oyaj.';
+  String get donateSettingDescription =>
+      'Qa bʼaʼn in nela toj twitza aju aplicación lu, bʼaʼn tuʼn tkubʼ t-ximana tuʼn t-xi tqʼoʼna oyaj.';
 
   @override
   String get versionAboutScreenTitle => 'Nim';
@@ -195,7 +198,8 @@ class AppLocalizationsMam extends AppLocalizations {
   String get retryButtonText => 'Aju qʼol chojbʼil';
 
   @override
-  String get filePickerDialogTitle => 'Jaku jaw tjyoʼna jun Directorio tuʼn tkubʼ bʼinchet bʼitz';
+  String get filePickerDialogTitle =>
+      'Jaku jaw tjyoʼna jun Directorio tuʼn tkubʼ bʼinchet bʼitz';
 
   @override
   String get searchScreenTitle => 'Joyb´aj';
@@ -213,7 +217,8 @@ class AppLocalizationsMam extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Aju bʼant tuʼn Batería';
 
   @override
-  String get disableBatteryOptimizationContent => 'Bʼaʼn tuʼn tkubʼ qbʼinchaʼn aju bʼaʼn tuʼn tbʼant quʼn tuʼn qbʼet toj aplicación lu toj ambʼil jaʼlo tuʼntzun t-xi qqʼoʼn ambʼil tuʼn qbʼitzin tiʼj bʼitz.';
+  String get disableBatteryOptimizationContent =>
+      'Bʼaʼn tuʼn tkubʼ qbʼinchaʼn aju bʼaʼn tuʼn tbʼant quʼn tuʼn qbʼet toj aplicación lu toj ambʼil jaʼlo tuʼntzun t-xi qqʼoʼn ambʼil tuʼn qbʼitzin tiʼj bʼitz.';
 
   @override
   String get languageScreenTitle => 'Yol';
@@ -243,7 +248,8 @@ class AppLocalizationsMam extends AppLocalizations {
   String get addToOnTheGoPlaylist => 'Aju qʼuqbʼil qkʼuʼj toj On-Go .';
 
   @override
-  String get addAlbumToOnTheGoPlaylist => 'Jaku tzʼokx qqʼoʼn Álbum toj On-De-Go .';
+  String get addAlbumToOnTheGoPlaylist =>
+      'Jaku tzʼokx qqʼoʼn Álbum toj On-De-Go .';
 
   @override
   String get removeSongFromThePlaylist => 'Jatz tiʼna aju .';
@@ -267,50 +273,66 @@ class AppLocalizationsMam extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Aju bʼant tuʼn';
 
   @override
-  String get deviceControlMenuTutorialText => 'Qʼonxa chʼin t-xbʼaluna tiʼjele Rueda de clic tuʼntzun t-xiʼya toj menú .';
+  String get deviceControlMenuTutorialText =>
+      'Qʼonxa chʼin t-xbʼaluna tiʼjele Rueda de clic tuʼntzun t-xiʼya toj menú .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Jaku tzʼok ttzyuʼna aju botón te tmij tuʼn tjaw tjyoʼna aju tiʼ in tzaj tqʼamaʼn aju menú resaltado .';
+  String get centerButtonMenuTutorialText =>
+      'Jaku tzʼok ttzyuʼna aju botón te tmij tuʼn tjaw tjyoʼna aju tiʼ in tzaj tqʼamaʼn aju menú resaltado .';
 
   @override
-  String get playPauseMenuTutorialText => 'Jaku tzʼok ttzyuʼna aju botón lu tuʼn t-xi t-xoʼna moqa qʼonxa jun bʼitz .';
+  String get playPauseMenuTutorialText =>
+      'Jaku tzʼok ttzyuʼna aju botón lu tuʼn t-xi t-xoʼna moqa qʼonxa jun bʼitz .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Qʼonka twitza tiʼj botón lu tuʼn tkubʼ t-ximana tuʼn tkubʼ t-ximana juntl bʼitz .';
+  String get nextButtonMenuTutorialText =>
+      'Qʼonka twitza tiʼj botón lu tuʼn tkubʼ t-ximana tuʼn tkubʼ t-ximana juntl bʼitz .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ t-ximana juntl maj moqa jaku meltzʼaja juntl maj tiʼj bʼitz otoq bʼant .';
+  String get previousButtonMenuTutorialText =>
+      'Jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ t-ximana juntl maj moqa jaku meltzʼaja juntl maj tiʼj bʼitz otoq bʼant .';
 
   @override
-  String get menuButtonTutorialText => 'Jaku tzʼok ttzyuʼna aju botón lu tuʼn tmeltzʼaja toj menú otoq bʼaj. Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna toj alkyexku juntl pantalla tuʼntzun t-xiʼ directamente toj menú principal.';
+  String get menuButtonTutorialText =>
+      'Jaku tzʼok ttzyuʼna aju botón lu tuʼn tmeltzʼaja toj menú otoq bʼaj. Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna toj alkyexku juntl pantalla tuʼntzun t-xiʼ directamente toj menú principal.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Atzun t-xilen jlu. Aju t-xilen yol lu, aju tuʼn tkubʼ qbʼinchaʼn aju in tzaj tqʼamaʼn Tyol Dios.';
+  String get deviceScreenMenuTutorialText =>
+      'Atzun t-xilen jlu. Aju t-xilen yol lu, aju tuʼn tkubʼ qbʼinchaʼn aju in tzaj tqʼamaʼn Tyol Dios.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Qʼonxa t-xbʼaluna tiʼjele Beel de Click tuʼntzun tkubʼ t-ximana aju volumen .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Qʼonxa t-xbʼaluna tiʼjele Beel de Click tuʼntzun tkubʼ t-ximana aju volumen .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Jaku tzʼok ttzyuʼna aju botón Center tuʼn t-xiʼya toj bicicleta toj barra, toj barra te scribber ex toj deslizador te shuffle. Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna aju botón Center tuʼntzun tokxa toj junjuntl tten.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Jaku tzʼok ttzyuʼna aju botón Center tuʼn t-xiʼya toj bicicleta toj barra, toj barra te scribber ex toj deslizador te shuffle. Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna aju botón Center tuʼntzun tokxa toj junjuntl tten.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna aju botón lu tuʼn t-xi t-xnaqʼtzaʼna aju bʼitz .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna aju botón lu tuʼn t-xi t-xnaqʼtzaʼna aju bʼitz .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ t-ximana juntl maj aju bʼitz .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ t-ximana juntl maj aju bʼitz .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Qʼonxa chʼin t-xbʼaluna tiʼjele Beel Click tuʼntzun tkubʼ tyekʼina jun alfabeto .';
+  String get deviceControlSearchTutorialText =>
+      'Qʼonxa chʼin t-xbʼaluna tiʼjele Beel Click tuʼntzun tkubʼ tyekʼina jun alfabeto .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Jaku tzʼok ttzyuʼna aju botón centro tuʼn tjaw tjyoʼna aju alfabeto resaltado .';
+  String get centerButtonSearchTutorialText =>
+      'Jaku tzʼok ttzyuʼna aju botón centro tuʼn tjaw tjyoʼna aju alfabeto resaltado .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ tqʼoʼna jun .';
+  String get nextButtonSearchTutorialText =>
+      'Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ tqʼoʼna jun .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ tnajsaʼna aju bʼajsbʼil xjal .';
+  String get previousButtonSearchTutorialText =>
+      'Jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ tnajsaʼna aju bʼajsbʼil xjal .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ ttzʼibʼina teclado ex jaku tzʼok tmojbʼan tibʼa tukʼilju in tzaj tqʼamaʼn xjelbʼitz .';
+  String get menuButtonSearchTutorialText =>
+      'Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ ttzʼibʼina teclado ex jaku tzʼok tmojbʼan tibʼa tukʼilju in tzaj tqʼamaʼn xjelbʼitz .';
 }

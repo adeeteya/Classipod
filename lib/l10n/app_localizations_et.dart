@@ -18,13 +18,16 @@ class AppLocalizationsEt extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Vajalik heli juurdepääsu luba';
 
   @override
-  String get audioAccessPermissionContent => 'Andke helifailidele juurdepääs, et saaksime teie muusikafaile mängida.';
+  String get audioAccessPermissionContent =>
+      'Andke helifailidele juurdepääs, et saaksime teie muusikafaile mängida.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Heli juurdepääsu luba on keelatud';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Heli juurdepääsu luba on keelatud';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Andke selle rakenduse jaoks seadme sätetes juurdepääs helifailidele, et saaksime teie muusikafaile mängida.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Andke selle rakenduse jaoks seadme sätetes juurdepääs helifailidele, et saaksime teie muusikafaile mängida.';
 
   @override
   String get menuScreenTitle => 'Menüü';
@@ -63,7 +66,6 @@ class AppLocalizationsEt extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsEt extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsEt extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Puudutushelid';
 
   @override
-  String get touchSoundsDialogContent => 'Klõpsukera helide kuulmiseks lubage süsteemi sätetelt puudutushelid';
+  String get touchSoundsDialogContent =>
+      'Klõpsukera helide kuulmiseks lubage süsteemi sätetelt puudutushelid';
 
   @override
   String get immersiveModeSettingTitle => 'Ümbritsev režiim';
@@ -144,7 +146,8 @@ class AppLocalizationsEt extends AppLocalizations {
   String get donateSettingTitle => 'Annetama';
 
   @override
-  String get donateSettingDescription => 'Kui teile see rakendus meeldib, kaaluge annetamist.';
+  String get donateSettingDescription =>
+      'Kui teile see rakendus meeldib, kaaluge annetamist.';
 
   @override
   String get versionAboutScreenTitle => 'Versioon';
@@ -213,7 +216,8 @@ class AppLocalizationsEt extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Keelake aku optimeerimine';
 
   @override
-  String get disableBatteryOptimizationContent => 'Keelake selle rakenduse aku optimeerimine seadme seadetes, et võimaldada muusika tausta taasesitust.';
+  String get disableBatteryOptimizationContent =>
+      'Keelake selle rakenduse aku optimeerimine seadme seadetes, et võimaldada muusika tausta taasesitust.';
 
   @override
   String get languageScreenTitle => 'Keel';
@@ -267,50 +271,66 @@ class AppLocalizationsEt extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Musici failid';
 
   @override
-  String get deviceControlMenuTutorialText => 'Menüü navigeerimiseks liigutage pöial kergekäeliselt ümber klõpsuratta';
+  String get deviceControlMenuTutorialText =>
+      'Menüü navigeerimiseks liigutage pöial kergekäeliselt ümber klõpsuratta';
 
   @override
-  String get centerButtonMenuTutorialText => 'Hõlmatud menüüelemendi valimiseks vajutage keskpunkti nuppu';
+  String get centerButtonMenuTutorialText =>
+      'Hõlmatud menüüelemendi valimiseks vajutage keskpunkti nuppu';
 
   @override
-  String get playPauseMenuTutorialText => 'Laulu mängimiseks või peatamiseks vajutage seda nuppu';
+  String get playPauseMenuTutorialText =>
+      'Laulu mängimiseks või peatamiseks vajutage seda nuppu';
 
   @override
-  String get nextButtonMenuTutorialText => 'Järgmise laulu vahelejätmiseks vajutage seda nuppu';
+  String get nextButtonMenuTutorialText =>
+      'Järgmise laulu vahelejätmiseks vajutage seda nuppu';
 
   @override
-  String get previousButtonMenuTutorialText => 'Vajutage seda nuppu, et kerida või minna tagasi eelmise laulu juurde';
+  String get previousButtonMenuTutorialText =>
+      'Vajutage seda nuppu, et kerida või minna tagasi eelmise laulu juurde';
 
   @override
-  String get menuButtonTutorialText => 'Vajutage seda nuppu, et minna tagasi eelmise menüü juurde. Peamenüüsse otse suvalise ekraanilt vajutada ja hoida seda mis tahes muult ekraanilt.';
+  String get menuButtonTutorialText =>
+      'Vajutage seda nuppu, et minna tagasi eelmise menüü juurde. Peamenüüsse otse suvalise ekraanilt vajutada ja hoida seda mis tahes muult ekraanilt.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'See on ekraan. Puutetundlik ekraan ja jagatud ekraanirežiim on vaikimisi lubatud ja seda saab seadetes veelgi konfigureerida.';
+  String get deviceScreenMenuTutorialText =>
+      'See on ekraan. Puutetundlik ekraan ja jagatud ekraanirežiim on vaikimisi lubatud ja seda saab seadetes veelgi konfigureerida.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Liigutage oma pöialt ümber klikkratta, et helitugevust reguleerida';
+  String get deviceControlNowPlayingTutorialText =>
+      'Liigutage oma pöialt ümber klikkratta, et helitugevust reguleerida';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Vajutage keskmist nuppu, et tsüklida läbi lüüa, puhastubaba ja liuguri segamiseks. Täiendavate suvandite juurdepääsu saamiseks hoidke keskpunkti nuppu ja hoidke all.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Vajutage keskmist nuppu, et tsüklida läbi lüüa, puhastubaba ja liuguri segamiseks. Täiendavate suvandite juurdepääsu saamiseks hoidke keskpunkti nuppu ja hoidke all.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Vajutage ja hoidke seda nuppu, et laulu kiireks edastada';
+  String get nextButtonNowPlayingTutorialText =>
+      'Vajutage ja hoidke seda nuppu, et laulu kiireks edastada';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Vajutage ja hoidke seda nuppu, et laulu tagasi kerida';
+  String get previousButtonNowPlayingTutorialText =>
+      'Vajutage ja hoidke seda nuppu, et laulu tagasi kerida';
 
   @override
-  String get deviceControlSearchTutorialText => 'Liigutage pöial kergelt klikkiratta ümber, et esile tõsta tähestikku';
+  String get deviceControlSearchTutorialText =>
+      'Liigutage pöial kergelt klikkiratta ümber, et esile tõsta tähestikku';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tõstetud tähestiku valimiseks vajutage keskmist nuppu';
+  String get centerButtonSearchTutorialText =>
+      'Tõstetud tähestiku valimiseks vajutage keskmist nuppu';
 
   @override
-  String get nextButtonSearchTutorialText => 'Ruumi lisamiseks vajutage seda nuppu';
+  String get nextButtonSearchTutorialText =>
+      'Ruumi lisamiseks vajutage seda nuppu';
 
   @override
-  String get previousButtonSearchTutorialText => 'Viimase tähemärgi kustutamiseks vajutage seda nuppu';
+  String get previousButtonSearchTutorialText =>
+      'Viimase tähemärgi kustutamiseks vajutage seda nuppu';
 
   @override
-  String get menuButtonSearchTutorialText => 'Klaviatuuri sulgemiseks ja otsingutulemustega suhtlemiseks vajutage seda nuppu';
+  String get menuButtonSearchTutorialText =>
+      'Klaviatuuri sulgemiseks ja otsingutulemustega suhtlemiseks vajutage seda nuppu';
 }

@@ -15,16 +15,20 @@ class AppLocalizationsAf extends AppLocalizations {
   String get menuButtonText => 'Spyskaart';
 
   @override
-  String get audioAccessPermissionTitle => 'Toestemming vir klanktoegang benodig';
+  String get audioAccessPermissionTitle =>
+      'Toestemming vir klanktoegang benodig';
 
   @override
-  String get audioAccessPermissionContent => 'Toegegee Audio -lêers toegang om ons musieklêers te laat speel.';
+  String get audioAccessPermissionContent =>
+      'Toegegee Audio -lêers toegang om ons musieklêers te laat speel.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Toestemming vir klanktoegang word geweier';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Toestemming vir klanktoegang word geweier';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Toekenning vir klanklêers vir hierdie app in die toestelinstellings sodat ons u musieklêers kan speel.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Toekenning vir klanklêers vir hierdie app in die toestelinstellings sodat ons u musieklêers kan speel.';
 
   @override
   String get menuScreenTitle => 'Spyskaart';
@@ -63,7 +67,6 @@ class AppLocalizationsAf extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsAf extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsAf extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Raak klanke';
 
   @override
-  String get touchSoundsDialogContent => 'Aktiveer aanraking van klanke van die stelselinstellings om die klikwielgeluide te hoor';
+  String get touchSoundsDialogContent =>
+      'Aktiveer aanraking van klanke van die stelselinstellings om die klikwielgeluide te hoor';
 
   @override
   String get immersiveModeSettingTitle => 'Oorsigende modus';
@@ -144,7 +147,8 @@ class AppLocalizationsAf extends AppLocalizations {
   String get donateSettingTitle => 'Skenk';
 
   @override
-  String get donateSettingDescription => 'Oorweeg dit om te skenk as u van hierdie app hou.';
+  String get donateSettingDescription =>
+      'Oorweeg dit om te skenk as u van hierdie app hou.';
 
   @override
   String get versionAboutScreenTitle => 'Weergawe';
@@ -210,10 +214,12 @@ class AppLocalizationsAf extends AppLocalizations {
   String get resultsForText => 'Resultate vir:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Skakel batteryoptimalisering uit';
+  String get disableBatteryOptimizationTitle =>
+      'Skakel batteryoptimalisering uit';
 
   @override
-  String get disableBatteryOptimizationContent => 'Deaktiveer asseblief die optimalisering van die battery vir hierdie app in die toestelinstellings om die agtergrond van musiek moontlik te maak.';
+  String get disableBatteryOptimizationContent =>
+      'Deaktiveer asseblief die optimalisering van die battery vir hierdie app in die toestelinstellings om die agtergrond van musiek moontlik te maak.';
 
   @override
   String get languageScreenTitle => 'Taal';
@@ -267,50 +273,66 @@ class AppLocalizationsAf extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Herstel musieklêers';
 
   @override
-  String get deviceControlMenuTutorialText => 'Beweeg jou duim liggies om die klikwiel om die menu te navigeer';
+  String get deviceControlMenuTutorialText =>
+      'Beweeg jou duim liggies om die klikwiel om die menu te navigeer';
 
   @override
-  String get centerButtonMenuTutorialText => 'Druk op die middelste knoppie om die gemerkte menu -item te kies';
+  String get centerButtonMenuTutorialText =>
+      'Druk op die middelste knoppie om die gemerkte menu -item te kies';
 
   @override
-  String get playPauseMenuTutorialText => 'Druk op hierdie knoppie om \'n liedjie te speel of te onderbreek';
+  String get playPauseMenuTutorialText =>
+      'Druk op hierdie knoppie om \'n liedjie te speel of te onderbreek';
 
   @override
-  String get nextButtonMenuTutorialText => 'Druk op hierdie knoppie om na die volgende liedjie oor te slaan';
+  String get nextButtonMenuTutorialText =>
+      'Druk op hierdie knoppie om na die volgende liedjie oor te slaan';
 
   @override
-  String get previousButtonMenuTutorialText => 'Druk op hierdie knoppie om terug te spoel of terug te gaan na die vorige liedjie';
+  String get previousButtonMenuTutorialText =>
+      'Druk op hierdie knoppie om terug te spoel of terug te gaan na die vorige liedjie';
 
   @override
-  String get menuButtonTutorialText => 'Druk op hierdie knoppie om terug te gaan na die vorige menu. U kan dit van enige ander skerm hou en hou om direk na die hoofmenu te gaan.';
+  String get menuButtonTutorialText =>
+      'Druk op hierdie knoppie om terug te gaan na die vorige menu. U kan dit van enige ander skerm hou en hou om direk na die hoofmenu te gaan.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Dit is die vertoonskerm. Aanraakskerm en split -skermmodus is standaard ingeskakel en kan verder in die instellings gekonfigureer word.';
+  String get deviceScreenMenuTutorialText =>
+      'Dit is die vertoonskerm. Aanraakskerm en split -skermmodus is standaard ingeskakel en kan verder in die instellings gekonfigureer word.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Beweeg jou duim om die klikwiel om die volume aan te pas';
+  String get deviceControlNowPlayingTutorialText =>
+      'Beweeg jou duim om die klikwiel om die volume aan te pas';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Druk op die middelste knoppie om deur Seek Bar, Scrubber Bar en Shuffle Slider te fiets. Druk en hou die middelknoppie in om toegang tot addisionele opsies te kry.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Druk op die middelste knoppie om deur Seek Bar, Scrubber Bar en Shuffle Slider te fiets. Druk en hou die middelknoppie in om toegang tot addisionele opsies te kry.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Druk en hou hierdie knoppie in om die liedjie vinnig te stuur';
+  String get nextButtonNowPlayingTutorialText =>
+      'Druk en hou hierdie knoppie in om die liedjie vinnig te stuur';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Druk en hou hierdie knoppie in om die liedjie weer te laat herwin';
+  String get previousButtonNowPlayingTutorialText =>
+      'Druk en hou hierdie knoppie in om die liedjie weer te laat herwin';
 
   @override
-  String get deviceControlSearchTutorialText => 'Beweeg jou duim liggies om die klikwiel om \'n alfabet uit te lig';
+  String get deviceControlSearchTutorialText =>
+      'Beweeg jou duim liggies om die klikwiel om \'n alfabet uit te lig';
 
   @override
-  String get centerButtonSearchTutorialText => 'Druk op die middelste knoppie om die gemerkte alfabet te kies';
+  String get centerButtonSearchTutorialText =>
+      'Druk op die middelste knoppie om die gemerkte alfabet te kies';
 
   @override
-  String get nextButtonSearchTutorialText => 'Druk op hierdie knoppie om \'n ruimte by te voeg';
+  String get nextButtonSearchTutorialText =>
+      'Druk op hierdie knoppie om \'n ruimte by te voeg';
 
   @override
-  String get previousButtonSearchTutorialText => 'Druk op hierdie knoppie om die laaste karakter te verwyder';
+  String get previousButtonSearchTutorialText =>
+      'Druk op hierdie knoppie om die laaste karakter te verwyder';
 
   @override
-  String get menuButtonSearchTutorialText => 'Druk op hierdie knoppie om die sleutelbord te sluit en met die soekresultate te kommunikeer';
+  String get menuButtonSearchTutorialText =>
+      'Druk op hierdie knoppie om die sleutelbord te sluit en met die soekresultate te kommunikeer';
 }

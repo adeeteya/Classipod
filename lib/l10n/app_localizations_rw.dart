@@ -18,13 +18,16 @@ class AppLocalizationsRw extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Uruhushya rwo kwinjira rusabwa';
 
   @override
-  String get audioAccessPermissionContent => 'Nyamuneka tanga amajwi yamajwi yo kubona kugirango dukine dosiye yawe yumuziki.';
+  String get audioAccessPermissionContent =>
+      'Nyamuneka tanga amajwi yamajwi yo kubona kugirango dukine dosiye yawe yumuziki.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Uruhushya rwamajwi ruhambiriye';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Uruhushya rwamajwi ruhambiriye';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Nyamuneka tanga dosiye ya Audio kwinjira kuriyi porogaramu mubikoresho kugirango utwemere gucuranga dosiye yawe yumuziki.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Nyamuneka tanga dosiye ya Audio kwinjira kuriyi porogaramu mubikoresho kugirango utwemere gucuranga dosiye yawe yumuziki.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsRw extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsRw extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsRw extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch';
 
   @override
-  String get touchSoundsDialogContent => 'Nyamuneka Gushoboza gukoraho amajwi muri sisitemu kugirango wumve kanda yimodoka';
+  String get touchSoundsDialogContent =>
+      'Nyamuneka Gushoboza gukoraho amajwi muri sisitemu kugirango wumve kanda yimodoka';
 
   @override
   String get immersiveModeSettingTitle => 'Uburyo bwo kwinjiza';
@@ -144,7 +146,8 @@ class AppLocalizationsRw extends AppLocalizations {
   String get donateSettingTitle => 'Gutanga';
 
   @override
-  String get donateSettingDescription => 'Niba ukunda iyi porogaramu, nyamuneka tekereza gutanga impano.';
+  String get donateSettingDescription =>
+      'Niba ukunda iyi porogaramu, nyamuneka tekereza gutanga impano.';
 
   @override
   String get versionAboutScreenTitle => 'Verisiyo';
@@ -213,7 +216,8 @@ class AppLocalizationsRw extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Hagarika uburyo bwo guhitamo';
 
   @override
-  String get disableBatteryOptimizationContent => 'Nyamuneka uhagarike uburyo bwo gutegura bateri kuriyi porogaramu mubikoresho kugirango ukemere gukina umuziki.';
+  String get disableBatteryOptimizationContent =>
+      'Nyamuneka uhagarike uburyo bwo gutegura bateri kuriyi porogaramu mubikoresho kugirango ukemere gukina umuziki.';
 
   @override
   String get languageScreenTitle => 'Ururimi';
@@ -267,50 +271,66 @@ class AppLocalizationsRw extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Idosiye Yumuziki Yumuziki';
 
   @override
-  String get deviceControlMenuTutorialText => 'Kwimura igikumwe cyawe cyoroshye kuzenguruka uruziga kugirango uyobore menu';
+  String get deviceControlMenuTutorialText =>
+      'Kwimura igikumwe cyawe cyoroshye kuzenguruka uruziga kugirango uyobore menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Kanda buto ya Centre kugirango uhitemo ibintu byerekanwe na menu';
+  String get centerButtonMenuTutorialText =>
+      'Kanda buto ya Centre kugirango uhitemo ibintu byerekanwe na menu';
 
   @override
-  String get playPauseMenuTutorialText => 'Kanda iyi buto kugirango ukine cyangwa uhagarike indirimbo';
+  String get playPauseMenuTutorialText =>
+      'Kanda iyi buto kugirango ukine cyangwa uhagarike indirimbo';
 
   @override
-  String get nextButtonMenuTutorialText => 'Kanda iyi buto kugirango usimbuke indirimbo ikurikira';
+  String get nextButtonMenuTutorialText =>
+      'Kanda iyi buto kugirango usimbuke indirimbo ikurikira';
 
   @override
-  String get previousButtonMenuTutorialText => 'Kanda iyi buto kugirango usubize cyangwa usubire mu ndirimbo ibanza';
+  String get previousButtonMenuTutorialText =>
+      'Kanda iyi buto kugirango usubize cyangwa usubire mu ndirimbo ibanza';
 
   @override
-  String get menuButtonTutorialText => 'Kanda iyi buto kugirango usubire kuri menu yabanjirije. Urashobora gukanda no kubifata mubindi bya ecran kugirango ujye kuri menu nkuru.';
+  String get menuButtonTutorialText =>
+      'Kanda iyi buto kugirango usubire kuri menu yabanjirije. Urashobora gukanda no kubifata mubindi bya ecran kugirango ujye kuri menu nkuru.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Iyi ni ecran ya ecran. Gukoraho ecran no kugabanyirizwa ecran byashoboka kubisanzwe kandi birashobora gushyirwaho byinshi murwego.';
+  String get deviceScreenMenuTutorialText =>
+      'Iyi ni ecran ya ecran. Gukoraho ecran no kugabanyirizwa ecran byashoboka kubisanzwe kandi birashobora gushyirwaho byinshi murwego.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Kwimura igikumwe cyawe hafi ya kanda uruziga kugirango uhindure amajwi';
+  String get deviceControlNowPlayingTutorialText =>
+      'Kwimura igikumwe cyawe hafi ya kanda uruziga kugirango uhindure amajwi';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Kanda buto ya Centre kugirango ukoreshe bar, Scrubber Bar na Shuffle Slider. Kanda hanyuma ufate buto yo hagati kugirango ugere kumahitamo yinyongera.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Kanda buto ya Centre kugirango ukoreshe bar, Scrubber Bar na Shuffle Slider. Kanda hanyuma ufate buto yo hagati kugirango ugere kumahitamo yinyongera.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Kanda kandi ufate iyi buto kugirango wihute imbere indirimbo';
+  String get nextButtonNowPlayingTutorialText =>
+      'Kanda kandi ufate iyi buto kugirango wihute imbere indirimbo';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Kanda kandi ufate iyi buto kugirango usubize indirimbo';
+  String get previousButtonNowPlayingTutorialText =>
+      'Kanda kandi ufate iyi buto kugirango usubize indirimbo';
 
   @override
-  String get deviceControlSearchTutorialText => 'Kwimura igikumwe cyawe kumurika kuzenguruka uruziga kugirango ugaragaze inyuguti';
+  String get deviceControlSearchTutorialText =>
+      'Kwimura igikumwe cyawe kumurika kuzenguruka uruziga kugirango ugaragaze inyuguti';
 
   @override
-  String get centerButtonSearchTutorialText => 'Kanda buto ya Centre kugirango uhitemo inyuguti zerekanwe';
+  String get centerButtonSearchTutorialText =>
+      'Kanda buto ya Centre kugirango uhitemo inyuguti zerekanwe';
 
   @override
-  String get nextButtonSearchTutorialText => 'Kanda iyi buto kugirango wongere umwanya';
+  String get nextButtonSearchTutorialText =>
+      'Kanda iyi buto kugirango wongere umwanya';
 
   @override
-  String get previousButtonSearchTutorialText => 'Kanda iyi buto kugirango usibe inyuguti yanyuma';
+  String get previousButtonSearchTutorialText =>
+      'Kanda iyi buto kugirango usibe inyuguti yanyuma';
 
   @override
-  String get menuButtonSearchTutorialText => 'Kanda iyi buto kugirango ufunge clavier hanyuma usangire nibisubizo byubushakashatsi';
+  String get menuButtonSearchTutorialText =>
+      'Kanda iyi buto kugirango ufunge clavier hanyuma usangire nibisubizo byubushakashatsi';
 }

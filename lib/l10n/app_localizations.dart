@@ -257,7 +257,8 @@ import 'app_localizations_zu.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale)
+      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -265,7 +266,8 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -277,7 +279,8 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -1038,7 +1041,8 @@ abstract class AppLocalizations {
   String get menuButtonSearchTutorialText;
 }
 
-class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate
+    extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -1047,220 +1051,612 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ace', 'ach', 'af', 'ak', 'alz', 'am', 'ar', 'as', 'awa', 'ay', 'az', 'bal', 'ban', 'bbc', 'bci', 'be', 'bem', 'ber', 'bew', 'bg', 'bho', 'bik', 'bm', 'bn', 'bs', 'bts', 'btx', 'bua', 'ca', 'ceb', 'cgg', 'chk', 'ckb', 'cnh', 'co', 'crh', 'crs', 'cs', 'cy', 'da', 'de', 'din', 'doi', 'dv', 'dyu', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fil', 'fon', 'fr', 'fur', 'fy', 'ga', 'gaa', 'gd', 'gl', 'gn', 'gom', 'gu', 'ha', 'haw', 'he', 'hi', 'hil', 'hmn', 'hr', 'hrx', 'ht', 'hu', 'hy', 'iba', 'id', 'ig', 'ilo', 'is', 'it', 'ja', 'jam', 'jv', 'ka', 'kac', 'kek', 'kha', 'kk', 'km', 'kn', 'ko', 'kri', 'ktu', 'ku', 'ky', 'la', 'lb', 'lg', 'lij', 'lmo', 'ln', 'lo', 'lt', 'ltg', 'luo', 'lv', 'mai', 'mak', 'mam', 'mfe', 'mg', 'mhr', 'mi', 'min', 'mk', 'ml', 'mn', 'mni', 'mr', 'ms', 'mt', 'mwr', 'my', 'ne', 'new', 'nhe', 'nl', 'no', 'nso', 'nus', 'ny', 'om', 'or', 'pa', 'pag', 'pam', 'pap', 'pl', 'ps', 'pt', 'qu', 'ro', 'rom', 'ru', 'rw', 'sa', 'sah', 'sat', 'scn', 'sd', 'shn', 'si', 'sk', 'sl', 'sm', 'sn', 'so', 'sq', 'sr', 'st', 'su', 'sus', 'sv', 'sw', 'szl', 'ta', 'te', 'tet', 'tg', 'th', 'ti', 'tiv', 'tk', 'tl', 'tpi', 'tr', 'ts', 'tt', 'tum', 'udm', 'ug', 'uk', 'ur', 'uz', 'vec', 'vi', 'war', 'xh', 'yi', 'yo', 'yua', 'yue', 'zap', 'zh', 'zu'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+        'ace',
+        'ach',
+        'af',
+        'ak',
+        'alz',
+        'am',
+        'ar',
+        'as',
+        'awa',
+        'ay',
+        'az',
+        'bal',
+        'ban',
+        'bbc',
+        'bci',
+        'be',
+        'bem',
+        'ber',
+        'bew',
+        'bg',
+        'bho',
+        'bik',
+        'bm',
+        'bn',
+        'bs',
+        'bts',
+        'btx',
+        'bua',
+        'ca',
+        'ceb',
+        'cgg',
+        'chk',
+        'ckb',
+        'cnh',
+        'co',
+        'crh',
+        'crs',
+        'cs',
+        'cy',
+        'da',
+        'de',
+        'din',
+        'doi',
+        'dv',
+        'dyu',
+        'el',
+        'en',
+        'eo',
+        'es',
+        'et',
+        'eu',
+        'fa',
+        'fi',
+        'fil',
+        'fon',
+        'fr',
+        'fur',
+        'fy',
+        'ga',
+        'gaa',
+        'gd',
+        'gl',
+        'gn',
+        'gom',
+        'gu',
+        'ha',
+        'haw',
+        'he',
+        'hi',
+        'hil',
+        'hmn',
+        'hr',
+        'hrx',
+        'ht',
+        'hu',
+        'hy',
+        'iba',
+        'id',
+        'ig',
+        'ilo',
+        'is',
+        'it',
+        'ja',
+        'jam',
+        'jv',
+        'ka',
+        'kac',
+        'kek',
+        'kha',
+        'kk',
+        'km',
+        'kn',
+        'ko',
+        'kri',
+        'ktu',
+        'ku',
+        'ky',
+        'la',
+        'lb',
+        'lg',
+        'lij',
+        'lmo',
+        'ln',
+        'lo',
+        'lt',
+        'ltg',
+        'luo',
+        'lv',
+        'mai',
+        'mak',
+        'mam',
+        'mfe',
+        'mg',
+        'mhr',
+        'mi',
+        'min',
+        'mk',
+        'ml',
+        'mn',
+        'mni',
+        'mr',
+        'ms',
+        'mt',
+        'mwr',
+        'my',
+        'ne',
+        'new',
+        'nhe',
+        'nl',
+        'no',
+        'nso',
+        'nus',
+        'ny',
+        'om',
+        'or',
+        'pa',
+        'pag',
+        'pam',
+        'pap',
+        'pl',
+        'ps',
+        'pt',
+        'qu',
+        'ro',
+        'rom',
+        'ru',
+        'rw',
+        'sa',
+        'sah',
+        'sat',
+        'scn',
+        'sd',
+        'shn',
+        'si',
+        'sk',
+        'sl',
+        'sm',
+        'sn',
+        'so',
+        'sq',
+        'sr',
+        'st',
+        'su',
+        'sus',
+        'sv',
+        'sw',
+        'szl',
+        'ta',
+        'te',
+        'tet',
+        'tg',
+        'th',
+        'ti',
+        'tiv',
+        'tk',
+        'tl',
+        'tpi',
+        'tr',
+        'ts',
+        'tt',
+        'tum',
+        'udm',
+        'ug',
+        'uk',
+        'ur',
+        'uz',
+        'vec',
+        'vi',
+        'war',
+        'xh',
+        'yi',
+        'yo',
+        'yua',
+        'yue',
+        'zap',
+        'zh',
+        'zu'
+      ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
-
-
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'ace': return AppLocalizationsAce();
-    case 'ach': return AppLocalizationsAch();
-    case 'af': return AppLocalizationsAf();
-    case 'ak': return AppLocalizationsAk();
-    case 'alz': return AppLocalizationsAlz();
-    case 'am': return AppLocalizationsAm();
-    case 'ar': return AppLocalizationsAr();
-    case 'as': return AppLocalizationsAs();
-    case 'awa': return AppLocalizationsAwa();
-    case 'ay': return AppLocalizationsAy();
-    case 'az': return AppLocalizationsAz();
-    case 'bal': return AppLocalizationsBal();
-    case 'ban': return AppLocalizationsBan();
-    case 'bbc': return AppLocalizationsBbc();
-    case 'bci': return AppLocalizationsBci();
-    case 'be': return AppLocalizationsBe();
-    case 'bem': return AppLocalizationsBem();
-    case 'ber': return AppLocalizationsBer();
-    case 'bew': return AppLocalizationsBew();
-    case 'bg': return AppLocalizationsBg();
-    case 'bho': return AppLocalizationsBho();
-    case 'bik': return AppLocalizationsBik();
-    case 'bm': return AppLocalizationsBm();
-    case 'bn': return AppLocalizationsBn();
-    case 'bs': return AppLocalizationsBs();
-    case 'bts': return AppLocalizationsBts();
-    case 'btx': return AppLocalizationsBtx();
-    case 'bua': return AppLocalizationsBua();
-    case 'ca': return AppLocalizationsCa();
-    case 'ceb': return AppLocalizationsCeb();
-    case 'cgg': return AppLocalizationsCgg();
-    case 'chk': return AppLocalizationsChk();
-    case 'ckb': return AppLocalizationsCkb();
-    case 'cnh': return AppLocalizationsCnh();
-    case 'co': return AppLocalizationsCo();
-    case 'crh': return AppLocalizationsCrh();
-    case 'crs': return AppLocalizationsCrs();
-    case 'cs': return AppLocalizationsCs();
-    case 'cy': return AppLocalizationsCy();
-    case 'da': return AppLocalizationsDa();
-    case 'de': return AppLocalizationsDe();
-    case 'din': return AppLocalizationsDin();
-    case 'doi': return AppLocalizationsDoi();
-    case 'dv': return AppLocalizationsDv();
-    case 'dyu': return AppLocalizationsDyu();
-    case 'el': return AppLocalizationsEl();
-    case 'en': return AppLocalizationsEn();
-    case 'eo': return AppLocalizationsEo();
-    case 'es': return AppLocalizationsEs();
-    case 'et': return AppLocalizationsEt();
-    case 'eu': return AppLocalizationsEu();
-    case 'fa': return AppLocalizationsFa();
-    case 'fi': return AppLocalizationsFi();
-    case 'fil': return AppLocalizationsFil();
-    case 'fon': return AppLocalizationsFon();
-    case 'fr': return AppLocalizationsFr();
-    case 'fur': return AppLocalizationsFur();
-    case 'fy': return AppLocalizationsFy();
-    case 'ga': return AppLocalizationsGa();
-    case 'gaa': return AppLocalizationsGaa();
-    case 'gd': return AppLocalizationsGd();
-    case 'gl': return AppLocalizationsGl();
-    case 'gn': return AppLocalizationsGn();
-    case 'gom': return AppLocalizationsGom();
-    case 'gu': return AppLocalizationsGu();
-    case 'ha': return AppLocalizationsHa();
-    case 'haw': return AppLocalizationsHaw();
-    case 'he': return AppLocalizationsHe();
-    case 'hi': return AppLocalizationsHi();
-    case 'hil': return AppLocalizationsHil();
-    case 'hmn': return AppLocalizationsHmn();
-    case 'hr': return AppLocalizationsHr();
-    case 'hrx': return AppLocalizationsHrx();
-    case 'ht': return AppLocalizationsHt();
-    case 'hu': return AppLocalizationsHu();
-    case 'hy': return AppLocalizationsHy();
-    case 'iba': return AppLocalizationsIba();
-    case 'id': return AppLocalizationsId();
-    case 'ig': return AppLocalizationsIg();
-    case 'ilo': return AppLocalizationsIlo();
-    case 'is': return AppLocalizationsIs();
-    case 'it': return AppLocalizationsIt();
-    case 'ja': return AppLocalizationsJa();
-    case 'jam': return AppLocalizationsJam();
-    case 'jv': return AppLocalizationsJv();
-    case 'ka': return AppLocalizationsKa();
-    case 'kac': return AppLocalizationsKac();
-    case 'kek': return AppLocalizationsKek();
-    case 'kha': return AppLocalizationsKha();
-    case 'kk': return AppLocalizationsKk();
-    case 'km': return AppLocalizationsKm();
-    case 'kn': return AppLocalizationsKn();
-    case 'ko': return AppLocalizationsKo();
-    case 'kri': return AppLocalizationsKri();
-    case 'ktu': return AppLocalizationsKtu();
-    case 'ku': return AppLocalizationsKu();
-    case 'ky': return AppLocalizationsKy();
-    case 'la': return AppLocalizationsLa();
-    case 'lb': return AppLocalizationsLb();
-    case 'lg': return AppLocalizationsLg();
-    case 'lij': return AppLocalizationsLij();
-    case 'lmo': return AppLocalizationsLmo();
-    case 'ln': return AppLocalizationsLn();
-    case 'lo': return AppLocalizationsLo();
-    case 'lt': return AppLocalizationsLt();
-    case 'ltg': return AppLocalizationsLtg();
-    case 'luo': return AppLocalizationsLuo();
-    case 'lv': return AppLocalizationsLv();
-    case 'mai': return AppLocalizationsMai();
-    case 'mak': return AppLocalizationsMak();
-    case 'mam': return AppLocalizationsMam();
-    case 'mfe': return AppLocalizationsMfe();
-    case 'mg': return AppLocalizationsMg();
-    case 'mhr': return AppLocalizationsMhr();
-    case 'mi': return AppLocalizationsMi();
-    case 'min': return AppLocalizationsMin();
-    case 'mk': return AppLocalizationsMk();
-    case 'ml': return AppLocalizationsMl();
-    case 'mn': return AppLocalizationsMn();
-    case 'mni': return AppLocalizationsMni();
-    case 'mr': return AppLocalizationsMr();
-    case 'ms': return AppLocalizationsMs();
-    case 'mt': return AppLocalizationsMt();
-    case 'mwr': return AppLocalizationsMwr();
-    case 'my': return AppLocalizationsMy();
-    case 'ne': return AppLocalizationsNe();
-    case 'new': return AppLocalizationsNew();
-    case 'nhe': return AppLocalizationsNhe();
-    case 'nl': return AppLocalizationsNl();
-    case 'no': return AppLocalizationsNo();
-    case 'nso': return AppLocalizationsNso();
-    case 'nus': return AppLocalizationsNus();
-    case 'ny': return AppLocalizationsNy();
-    case 'om': return AppLocalizationsOm();
-    case 'or': return AppLocalizationsOr();
-    case 'pa': return AppLocalizationsPa();
-    case 'pag': return AppLocalizationsPag();
-    case 'pam': return AppLocalizationsPam();
-    case 'pap': return AppLocalizationsPap();
-    case 'pl': return AppLocalizationsPl();
-    case 'ps': return AppLocalizationsPs();
-    case 'pt': return AppLocalizationsPt();
-    case 'qu': return AppLocalizationsQu();
-    case 'ro': return AppLocalizationsRo();
-    case 'rom': return AppLocalizationsRom();
-    case 'ru': return AppLocalizationsRu();
-    case 'rw': return AppLocalizationsRw();
-    case 'sa': return AppLocalizationsSa();
-    case 'sah': return AppLocalizationsSah();
-    case 'sat': return AppLocalizationsSat();
-    case 'scn': return AppLocalizationsScn();
-    case 'sd': return AppLocalizationsSd();
-    case 'shn': return AppLocalizationsShn();
-    case 'si': return AppLocalizationsSi();
-    case 'sk': return AppLocalizationsSk();
-    case 'sl': return AppLocalizationsSl();
-    case 'sm': return AppLocalizationsSm();
-    case 'sn': return AppLocalizationsSn();
-    case 'so': return AppLocalizationsSo();
-    case 'sq': return AppLocalizationsSq();
-    case 'sr': return AppLocalizationsSr();
-    case 'st': return AppLocalizationsSt();
-    case 'su': return AppLocalizationsSu();
-    case 'sus': return AppLocalizationsSus();
-    case 'sv': return AppLocalizationsSv();
-    case 'sw': return AppLocalizationsSw();
-    case 'szl': return AppLocalizationsSzl();
-    case 'ta': return AppLocalizationsTa();
-    case 'te': return AppLocalizationsTe();
-    case 'tet': return AppLocalizationsTet();
-    case 'tg': return AppLocalizationsTg();
-    case 'th': return AppLocalizationsTh();
-    case 'ti': return AppLocalizationsTi();
-    case 'tiv': return AppLocalizationsTiv();
-    case 'tk': return AppLocalizationsTk();
-    case 'tl': return AppLocalizationsTl();
-    case 'tpi': return AppLocalizationsTpi();
-    case 'tr': return AppLocalizationsTr();
-    case 'ts': return AppLocalizationsTs();
-    case 'tt': return AppLocalizationsTt();
-    case 'tum': return AppLocalizationsTum();
-    case 'udm': return AppLocalizationsUdm();
-    case 'ug': return AppLocalizationsUg();
-    case 'uk': return AppLocalizationsUk();
-    case 'ur': return AppLocalizationsUr();
-    case 'uz': return AppLocalizationsUz();
-    case 'vec': return AppLocalizationsVec();
-    case 'vi': return AppLocalizationsVi();
-    case 'war': return AppLocalizationsWar();
-    case 'xh': return AppLocalizationsXh();
-    case 'yi': return AppLocalizationsYi();
-    case 'yo': return AppLocalizationsYo();
-    case 'yua': return AppLocalizationsYua();
-    case 'yue': return AppLocalizationsYue();
-    case 'zap': return AppLocalizationsZap();
-    case 'zh': return AppLocalizationsZh();
-    case 'zu': return AppLocalizationsZu();
+    case 'ace':
+      return AppLocalizationsAce();
+    case 'ach':
+      return AppLocalizationsAch();
+    case 'af':
+      return AppLocalizationsAf();
+    case 'ak':
+      return AppLocalizationsAk();
+    case 'alz':
+      return AppLocalizationsAlz();
+    case 'am':
+      return AppLocalizationsAm();
+    case 'ar':
+      return AppLocalizationsAr();
+    case 'as':
+      return AppLocalizationsAs();
+    case 'awa':
+      return AppLocalizationsAwa();
+    case 'ay':
+      return AppLocalizationsAy();
+    case 'az':
+      return AppLocalizationsAz();
+    case 'bal':
+      return AppLocalizationsBal();
+    case 'ban':
+      return AppLocalizationsBan();
+    case 'bbc':
+      return AppLocalizationsBbc();
+    case 'bci':
+      return AppLocalizationsBci();
+    case 'be':
+      return AppLocalizationsBe();
+    case 'bem':
+      return AppLocalizationsBem();
+    case 'ber':
+      return AppLocalizationsBer();
+    case 'bew':
+      return AppLocalizationsBew();
+    case 'bg':
+      return AppLocalizationsBg();
+    case 'bho':
+      return AppLocalizationsBho();
+    case 'bik':
+      return AppLocalizationsBik();
+    case 'bm':
+      return AppLocalizationsBm();
+    case 'bn':
+      return AppLocalizationsBn();
+    case 'bs':
+      return AppLocalizationsBs();
+    case 'bts':
+      return AppLocalizationsBts();
+    case 'btx':
+      return AppLocalizationsBtx();
+    case 'bua':
+      return AppLocalizationsBua();
+    case 'ca':
+      return AppLocalizationsCa();
+    case 'ceb':
+      return AppLocalizationsCeb();
+    case 'cgg':
+      return AppLocalizationsCgg();
+    case 'chk':
+      return AppLocalizationsChk();
+    case 'ckb':
+      return AppLocalizationsCkb();
+    case 'cnh':
+      return AppLocalizationsCnh();
+    case 'co':
+      return AppLocalizationsCo();
+    case 'crh':
+      return AppLocalizationsCrh();
+    case 'crs':
+      return AppLocalizationsCrs();
+    case 'cs':
+      return AppLocalizationsCs();
+    case 'cy':
+      return AppLocalizationsCy();
+    case 'da':
+      return AppLocalizationsDa();
+    case 'de':
+      return AppLocalizationsDe();
+    case 'din':
+      return AppLocalizationsDin();
+    case 'doi':
+      return AppLocalizationsDoi();
+    case 'dv':
+      return AppLocalizationsDv();
+    case 'dyu':
+      return AppLocalizationsDyu();
+    case 'el':
+      return AppLocalizationsEl();
+    case 'en':
+      return AppLocalizationsEn();
+    case 'eo':
+      return AppLocalizationsEo();
+    case 'es':
+      return AppLocalizationsEs();
+    case 'et':
+      return AppLocalizationsEt();
+    case 'eu':
+      return AppLocalizationsEu();
+    case 'fa':
+      return AppLocalizationsFa();
+    case 'fi':
+      return AppLocalizationsFi();
+    case 'fil':
+      return AppLocalizationsFil();
+    case 'fon':
+      return AppLocalizationsFon();
+    case 'fr':
+      return AppLocalizationsFr();
+    case 'fur':
+      return AppLocalizationsFur();
+    case 'fy':
+      return AppLocalizationsFy();
+    case 'ga':
+      return AppLocalizationsGa();
+    case 'gaa':
+      return AppLocalizationsGaa();
+    case 'gd':
+      return AppLocalizationsGd();
+    case 'gl':
+      return AppLocalizationsGl();
+    case 'gn':
+      return AppLocalizationsGn();
+    case 'gom':
+      return AppLocalizationsGom();
+    case 'gu':
+      return AppLocalizationsGu();
+    case 'ha':
+      return AppLocalizationsHa();
+    case 'haw':
+      return AppLocalizationsHaw();
+    case 'he':
+      return AppLocalizationsHe();
+    case 'hi':
+      return AppLocalizationsHi();
+    case 'hil':
+      return AppLocalizationsHil();
+    case 'hmn':
+      return AppLocalizationsHmn();
+    case 'hr':
+      return AppLocalizationsHr();
+    case 'hrx':
+      return AppLocalizationsHrx();
+    case 'ht':
+      return AppLocalizationsHt();
+    case 'hu':
+      return AppLocalizationsHu();
+    case 'hy':
+      return AppLocalizationsHy();
+    case 'iba':
+      return AppLocalizationsIba();
+    case 'id':
+      return AppLocalizationsId();
+    case 'ig':
+      return AppLocalizationsIg();
+    case 'ilo':
+      return AppLocalizationsIlo();
+    case 'is':
+      return AppLocalizationsIs();
+    case 'it':
+      return AppLocalizationsIt();
+    case 'ja':
+      return AppLocalizationsJa();
+    case 'jam':
+      return AppLocalizationsJam();
+    case 'jv':
+      return AppLocalizationsJv();
+    case 'ka':
+      return AppLocalizationsKa();
+    case 'kac':
+      return AppLocalizationsKac();
+    case 'kek':
+      return AppLocalizationsKek();
+    case 'kha':
+      return AppLocalizationsKha();
+    case 'kk':
+      return AppLocalizationsKk();
+    case 'km':
+      return AppLocalizationsKm();
+    case 'kn':
+      return AppLocalizationsKn();
+    case 'ko':
+      return AppLocalizationsKo();
+    case 'kri':
+      return AppLocalizationsKri();
+    case 'ktu':
+      return AppLocalizationsKtu();
+    case 'ku':
+      return AppLocalizationsKu();
+    case 'ky':
+      return AppLocalizationsKy();
+    case 'la':
+      return AppLocalizationsLa();
+    case 'lb':
+      return AppLocalizationsLb();
+    case 'lg':
+      return AppLocalizationsLg();
+    case 'lij':
+      return AppLocalizationsLij();
+    case 'lmo':
+      return AppLocalizationsLmo();
+    case 'ln':
+      return AppLocalizationsLn();
+    case 'lo':
+      return AppLocalizationsLo();
+    case 'lt':
+      return AppLocalizationsLt();
+    case 'ltg':
+      return AppLocalizationsLtg();
+    case 'luo':
+      return AppLocalizationsLuo();
+    case 'lv':
+      return AppLocalizationsLv();
+    case 'mai':
+      return AppLocalizationsMai();
+    case 'mak':
+      return AppLocalizationsMak();
+    case 'mam':
+      return AppLocalizationsMam();
+    case 'mfe':
+      return AppLocalizationsMfe();
+    case 'mg':
+      return AppLocalizationsMg();
+    case 'mhr':
+      return AppLocalizationsMhr();
+    case 'mi':
+      return AppLocalizationsMi();
+    case 'min':
+      return AppLocalizationsMin();
+    case 'mk':
+      return AppLocalizationsMk();
+    case 'ml':
+      return AppLocalizationsMl();
+    case 'mn':
+      return AppLocalizationsMn();
+    case 'mni':
+      return AppLocalizationsMni();
+    case 'mr':
+      return AppLocalizationsMr();
+    case 'ms':
+      return AppLocalizationsMs();
+    case 'mt':
+      return AppLocalizationsMt();
+    case 'mwr':
+      return AppLocalizationsMwr();
+    case 'my':
+      return AppLocalizationsMy();
+    case 'ne':
+      return AppLocalizationsNe();
+    case 'new':
+      return AppLocalizationsNew();
+    case 'nhe':
+      return AppLocalizationsNhe();
+    case 'nl':
+      return AppLocalizationsNl();
+    case 'no':
+      return AppLocalizationsNo();
+    case 'nso':
+      return AppLocalizationsNso();
+    case 'nus':
+      return AppLocalizationsNus();
+    case 'ny':
+      return AppLocalizationsNy();
+    case 'om':
+      return AppLocalizationsOm();
+    case 'or':
+      return AppLocalizationsOr();
+    case 'pa':
+      return AppLocalizationsPa();
+    case 'pag':
+      return AppLocalizationsPag();
+    case 'pam':
+      return AppLocalizationsPam();
+    case 'pap':
+      return AppLocalizationsPap();
+    case 'pl':
+      return AppLocalizationsPl();
+    case 'ps':
+      return AppLocalizationsPs();
+    case 'pt':
+      return AppLocalizationsPt();
+    case 'qu':
+      return AppLocalizationsQu();
+    case 'ro':
+      return AppLocalizationsRo();
+    case 'rom':
+      return AppLocalizationsRom();
+    case 'ru':
+      return AppLocalizationsRu();
+    case 'rw':
+      return AppLocalizationsRw();
+    case 'sa':
+      return AppLocalizationsSa();
+    case 'sah':
+      return AppLocalizationsSah();
+    case 'sat':
+      return AppLocalizationsSat();
+    case 'scn':
+      return AppLocalizationsScn();
+    case 'sd':
+      return AppLocalizationsSd();
+    case 'shn':
+      return AppLocalizationsShn();
+    case 'si':
+      return AppLocalizationsSi();
+    case 'sk':
+      return AppLocalizationsSk();
+    case 'sl':
+      return AppLocalizationsSl();
+    case 'sm':
+      return AppLocalizationsSm();
+    case 'sn':
+      return AppLocalizationsSn();
+    case 'so':
+      return AppLocalizationsSo();
+    case 'sq':
+      return AppLocalizationsSq();
+    case 'sr':
+      return AppLocalizationsSr();
+    case 'st':
+      return AppLocalizationsSt();
+    case 'su':
+      return AppLocalizationsSu();
+    case 'sus':
+      return AppLocalizationsSus();
+    case 'sv':
+      return AppLocalizationsSv();
+    case 'sw':
+      return AppLocalizationsSw();
+    case 'szl':
+      return AppLocalizationsSzl();
+    case 'ta':
+      return AppLocalizationsTa();
+    case 'te':
+      return AppLocalizationsTe();
+    case 'tet':
+      return AppLocalizationsTet();
+    case 'tg':
+      return AppLocalizationsTg();
+    case 'th':
+      return AppLocalizationsTh();
+    case 'ti':
+      return AppLocalizationsTi();
+    case 'tiv':
+      return AppLocalizationsTiv();
+    case 'tk':
+      return AppLocalizationsTk();
+    case 'tl':
+      return AppLocalizationsTl();
+    case 'tpi':
+      return AppLocalizationsTpi();
+    case 'tr':
+      return AppLocalizationsTr();
+    case 'ts':
+      return AppLocalizationsTs();
+    case 'tt':
+      return AppLocalizationsTt();
+    case 'tum':
+      return AppLocalizationsTum();
+    case 'udm':
+      return AppLocalizationsUdm();
+    case 'ug':
+      return AppLocalizationsUg();
+    case 'uk':
+      return AppLocalizationsUk();
+    case 'ur':
+      return AppLocalizationsUr();
+    case 'uz':
+      return AppLocalizationsUz();
+    case 'vec':
+      return AppLocalizationsVec();
+    case 'vi':
+      return AppLocalizationsVi();
+    case 'war':
+      return AppLocalizationsWar();
+    case 'xh':
+      return AppLocalizationsXh();
+    case 'yi':
+      return AppLocalizationsYi();
+    case 'yo':
+      return AppLocalizationsYo();
+    case 'yua':
+      return AppLocalizationsYua();
+    case 'yue':
+      return AppLocalizationsYue();
+    case 'zap':
+      return AppLocalizationsZap();
+    case 'zh':
+      return AppLocalizationsZh();
+    case 'zu':
+      return AppLocalizationsZu();
   }
 
   throw FlutterError(
-    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-    'an issue with the localizations generation tool. Please file an issue '
-    'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.'
-  );
+      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+      'an issue with the localizations generation tool. Please file an issue '
+      'on GitHub with a reproducible sample app and the gen-l10n configuration '
+      'that was used.');
 }

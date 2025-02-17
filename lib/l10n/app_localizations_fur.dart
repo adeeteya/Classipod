@@ -18,13 +18,16 @@ class AppLocalizationsFur extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ricuistâ l’acès audio Recuisît';
 
   @override
-  String get audioAccessPermissionContent => 'Par plasê dâ l’acès ai file audio par permeti di sunâ i file di musiche.';
+  String get audioAccessPermissionContent =>
+      'Par plasê dâ l’acès ai file audio par permeti di sunâ i file di musiche.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio di acès Denins di acè';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio di acès Denins di acè';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Par plasê concedi l’acès ai file audio par cheste aplicazion intes impostazions dal dispositîf par permeti di sunâ i file di musiche.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Par plasê concedi l’acès ai file audio par cheste aplicazion intes impostazions dal dispositîf par permeti di sunâ i file di musiche.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsFur extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsFur extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsFur extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Tocs suns';
 
   @override
-  String get touchSoundsDialogContent => 'Par plasê Abilite i suns di Toc di Impostazions dal sisteme par sintî i suns de ruede di clic';
+  String get touchSoundsDialogContent =>
+      'Par plasê Abilite i suns di Toc di Impostazions dal sisteme par sintî i suns de ruede di clic';
 
   @override
   String get immersiveModeSettingTitle => 'Mod imersîf';
@@ -144,7 +146,8 @@ class AppLocalizationsFur extends AppLocalizations {
   String get donateSettingTitle => 'Donâ';
 
   @override
-  String get donateSettingDescription => 'Se tu âs gust di cheste aplicazion, par plasê pense di donâ.';
+  String get donateSettingDescription =>
+      'Se tu âs gust di cheste aplicazion, par plasê pense di donâ.';
 
   @override
   String get versionAboutScreenTitle => 'Version';
@@ -195,7 +198,8 @@ class AppLocalizationsFur extends AppLocalizations {
   String get retryButtonText => 'Cori';
 
   @override
-  String get filePickerDialogTitle => 'Seleziona un Repertori par Scansionâ par musiche';
+  String get filePickerDialogTitle =>
+      'Seleziona un Repertori par Scansionâ par musiche';
 
   @override
   String get searchScreenTitle => 'Ricercje';
@@ -210,10 +214,12 @@ class AppLocalizationsFur extends AppLocalizations {
   String get resultsForText => 'Risultâts par:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Disabilitâ la otimizazion de baterie';
+  String get disableBatteryOptimizationTitle =>
+      'Disabilitâ la otimizazion de baterie';
 
   @override
-  String get disableBatteryOptimizationContent => 'Par plasê disabilitâ la otimizazion de baterie par cheste aplicazion intes impostazions dal dispositîf par permeti il ​​riproduzion di fonts de musiche.';
+  String get disableBatteryOptimizationContent =>
+      'Par plasê disabilitâ la otimizazion de baterie par cheste aplicazion intes impostazions dal dispositîf par permeti il ​​riproduzion di fonts de musiche.';
 
   @override
   String get languageScreenTitle => 'Lenghe';
@@ -243,7 +249,8 @@ class AppLocalizationsFur extends AppLocalizations {
   String get addToOnTheGoPlaylist => 'Azontâ al On-Go';
 
   @override
-  String get addAlbumToOnTheGoPlaylist => 'A puedin jessi zontâts l’album al On-Gjestôr';
+  String get addAlbumToOnTheGoPlaylist =>
+      'A puedin jessi zontâts l’album al On-Gjestôr';
 
   @override
   String get removeSongFromThePlaylist => 'Cjapâ vie de liste dai zuiadôrs';
@@ -267,50 +274,66 @@ class AppLocalizationsFur extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Filis di musiche di riscaldazion';
 
   @override
-  String get deviceControlMenuTutorialText => 'Spostâ il polsar a pôc ator ator de Ruede Clicâ par navigâ il menût';
+  String get deviceControlMenuTutorialText =>
+      'Spostâ il polsar a pôc ator ator de Ruede Clicâ par navigâ il menût';
 
   @override
-  String get centerButtonMenuTutorialText => 'Preme il botôn centrâl par selezionâ l’ogjet di menu evidenziât';
+  String get centerButtonMenuTutorialText =>
+      'Preme il botôn centrâl par selezionâ l’ogjet di menu evidenziât';
 
   @override
-  String get playPauseMenuTutorialText => 'Preme chest botôn par sunâ o fermâ une cjançon';
+  String get playPauseMenuTutorialText =>
+      'Preme chest botôn par sunâ o fermâ une cjançon';
 
   @override
-  String get nextButtonMenuTutorialText => 'Preme chest botôn par saltâ al prossim';
+  String get nextButtonMenuTutorialText =>
+      'Preme chest botôn par saltâ al prossim';
 
   @override
-  String get previousButtonMenuTutorialText => 'Preme chest botôn par tornâ o tornâ ae cjançon precedent';
+  String get previousButtonMenuTutorialText =>
+      'Preme chest botôn par tornâ o tornâ ae cjançon precedent';
 
   @override
-  String get menuButtonTutorialText => 'Preme chest botôn par tornâ al menût precedent. Si podarès premi e tignîlu di ogni altri schermi par lâ in maniere direte al menût principâl.';
+  String get menuButtonTutorialText =>
+      'Preme chest botôn par tornâ al menût precedent. Si podarès premi e tignîlu di ogni altri schermi par lâ in maniere direte al menût principâl.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Chest al è il schermi di visualizazion. Touch Screen e Mode Screen Screen a son abilitâts par automatic e a puedin jessi configurâts plui in là intes impostazions.';
+  String get deviceScreenMenuTutorialText =>
+      'Chest al è il schermi di visualizazion. Touch Screen e Mode Screen Screen a son abilitâts par automatic e a puedin jessi configurâts plui in là intes impostazions.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Spostâ il polsar ator ator de Ruede Clic par regolâ il volum';
+  String get deviceControlNowPlayingTutorialText =>
+      'Spostâ il polsar ator ator de Ruede Clic par regolâ il volum';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Preme il botôn dal Centri par lâ in biciclete traviers de barre di ricercje, dal bar di scrupul e dal cursôr di tremul. Preme e tignî il botôn dal Centri par vê acès a opzions adizionâls.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Preme il botôn dal Centri par lâ in biciclete traviers de barre di ricercje, dal bar di scrupul e dal cursôr di tremul. Preme e tignî il botôn dal Centri par vê acès a opzions adizionâls.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Preme e tignî chest botôn par sveltî indenant la cjançon';
+  String get nextButtonNowPlayingTutorialText =>
+      'Preme e tignî chest botôn par sveltî indenant la cjançon';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Preme e tignî chest botôn par tornâ a meti sù la cjançon';
+  String get previousButtonNowPlayingTutorialText =>
+      'Preme e tignî chest botôn par tornâ a meti sù la cjançon';
 
   @override
-  String get deviceControlSearchTutorialText => 'Spostâ il polsar a pôc ator ator de Ruede Clic par evidenziâ un alfabet';
+  String get deviceControlSearchTutorialText =>
+      'Spostâ il polsar a pôc ator ator de Ruede Clic par evidenziâ un alfabet';
 
   @override
-  String get centerButtonSearchTutorialText => 'Preme il tast centrâl par selezionâ il alfabet evidenziât';
+  String get centerButtonSearchTutorialText =>
+      'Preme il tast centrâl par selezionâ il alfabet evidenziât';
 
   @override
-  String get nextButtonSearchTutorialText => 'Preme chest botôn par zontâ un spazi';
+  String get nextButtonSearchTutorialText =>
+      'Preme chest botôn par zontâ un spazi';
 
   @override
-  String get previousButtonSearchTutorialText => 'Preme chest botôn par cancelâ l’ultin caratar';
+  String get previousButtonSearchTutorialText =>
+      'Preme chest botôn par cancelâ l’ultin caratar';
 
   @override
-  String get menuButtonSearchTutorialText => 'Preme chest botôn par sierâ il tastier e interagjî cui risultâts de ricercje';
+  String get menuButtonSearchTutorialText =>
+      'Preme chest botôn par sierâ il tastier e interagjî cui risultâts de ricercje';
 }

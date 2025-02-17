@@ -15,16 +15,20 @@ class AppLocalizationsMhr extends AppLocalizations {
   String get menuButtonText => 'МЕНУ';
 
   @override
-  String get audioAccessPermissionTitle => 'Аудио доступен разрешенийым йодеш .';
+  String get audioAccessPermissionTitle =>
+      'Аудио доступен разрешенийым йодеш .';
 
   @override
-  String get audioAccessPermissionContent => 'Пожалуйста, аудио файлым пуымо йӧн дене мемнан музык файлым шокташ йӧным пуа.';
+  String get audioAccessPermissionContent =>
+      'Пожалуйста, аудио файлым пуымо йӧн дене мемнан музык файлым шокташ йӧным пуа.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Аудио деке пураш лиймашым налын разрешенийым пуымо';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Аудио деке пураш лиймашым налын разрешенийым пуымо';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Пожалуйста, аудио файлым пуымо тиде приложенийыште ӱзгар настройкыште йӧным ыштен, мемнан музык файлым шокташ йӧным пуа.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Пожалуйста, аудио файлым пуымо тиде приложенийыште ӱзгар настройкыште йӧным ыштен, мемнан музык файлым шокташ йӧным пуа.';
 
   @override
   String get menuScreenTitle => 'Меню';
@@ -63,7 +67,6 @@ class AppLocalizationsMhr extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsMhr extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsMhr extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Йӱк-влак йӱк';
 
   @override
-  String get touchSoundsDialogContent => 'Пожалуйста, сенсорный йӱк-йӱан йӱк-йӱан йӱк-йӱан йӱк-йӱан йӱк-йӱан йӱк-енкот клика йӱк-йӱан йӱк-йӱан .';
+  String get touchSoundsDialogContent =>
+      'Пожалуйста, сенсорный йӱк-йӱан йӱк-йӱан йӱк-йӱан йӱк-йӱан йӱк-йӱан йӱк-енкот клика йӱк-йӱан йӱк-йӱан .';
 
   @override
   String get immersiveModeSettingTitle => 'Иммерсивный режим';
@@ -144,7 +147,8 @@ class AppLocalizationsMhr extends AppLocalizations {
   String get donateSettingTitle => 'Пӧлекленат';
 
   @override
-  String get donateSettingDescription => 'Тиде приложений тыланда келша гын, пожалуйста, пӧлекым ыштен.';
+  String get donateSettingDescription =>
+      'Тиде приложений тыланда келша гын, пожалуйста, пӧлекым ыштен.';
 
   @override
   String get versionAboutScreenTitle => 'Версия';
@@ -195,7 +199,8 @@ class AppLocalizationsMhr extends AppLocalizations {
   String get retryButtonText => 'Сосвожда';
 
   @override
-  String get filePickerDialogTitle => 'Музыклан сканироватлаш каталогым ойырен налза';
+  String get filePickerDialogTitle =>
+      'Музыклан сканироватлаш каталогым ойырен налза';
 
   @override
   String get searchScreenTitle => 'Кычалаш';
@@ -210,10 +215,12 @@ class AppLocalizationsMhr extends AppLocalizations {
   String get resultsForText => 'Лектыш:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Аккумулятор оптимизацийым ыштен';
+  String get disableBatteryOptimizationTitle =>
+      'Аккумулятор оптимизацийым ыштен';
 
   @override
-  String get disableBatteryOptimizationContent => 'Пожалуйста, батарейышке оптимизацийым ыштен, тиде приложенийыште ӱзгар настройкыште фон воспроизведение музык йӧным пуаш манын.';
+  String get disableBatteryOptimizationContent =>
+      'Пожалуйста, батарейышке оптимизацийым ыштен, тиде приложенийыште ӱзгар настройкыште фон воспроизведение музык йӧным пуаш манын.';
 
   @override
   String get languageScreenTitle => 'Йылме';
@@ -267,50 +274,66 @@ class AppLocalizationsMhr extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Резканальный музык файлым';
 
   @override
-  String get deviceControlMenuTutorialText => 'Тендан ӱпым йӱштӧ йыр куснаш Click Wheel навигация меню .';
+  String get deviceControlMenuTutorialText =>
+      'Тендан ӱпым йӱштӧ йыр куснаш Click Wheel навигация меню .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Рӱдӧ кнопкым темдал, ойырен налме меню пункт ойырен налаш манын .';
+  String get centerButtonMenuTutorialText =>
+      'Рӱдӧ кнопкым темдал, ойырен налме меню пункт ойырен налаш манын .';
 
   @override
-  String get playPauseMenuTutorialText => 'Тиде кнопкым темдал, модаш але мурым паузым ышташ .';
+  String get playPauseMenuTutorialText =>
+      'Тиде кнопкым темдал, модаш але мурым паузым ышташ .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Тиде кнопкым темдал, вес муро деке луктын колташ манын .';
+  String get nextButtonMenuTutorialText =>
+      'Тиде кнопкым темдал, вес муро деке луктын колташ манын .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Тиде кнопкым темдал, перемотка але ончычсо муро деке пӧртылаш .';
+  String get previousButtonMenuTutorialText =>
+      'Тиде кнопкым темдал, перемотка але ончычсо муро деке пӧртылаш .';
 
   @override
-  String get menuButtonTutorialText => 'Тиде кнопкым темдал, ончычсо меню деке пӧртылаш манын. Те тудым кеч-могай вес экран гыч пресс да кучен кертеш ыле, тура тӱҥ меню каяш.';
+  String get menuButtonTutorialText =>
+      'Тиде кнопкым темдал, ончычсо меню деке пӧртылаш манын. Те тудым кеч-могай вес экран гыч пресс да кучен кертеш ыле, тура тӱҥ меню каяш.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Тиде дисплей экран. Экраныште сенсорный да шеледыме экран режим умолчание дене йӧным ыштен да умбакыже настройкым ыштен кертеш.';
+  String get deviceScreenMenuTutorialText =>
+      'Тиде дисплей экран. Экраныште сенсорный да шеледыме экран режим умолчание дене йӧным ыштен да умбакыже настройкым ыштен кертеш.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Тендан йыр куснаш клика колесо том дене келыштараш .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Тендан йыр куснаш клика колесо том дене келыштараш .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Центр кнопкым темдал, цикл гоч цикл кычалаш барыште, скраббер барыште да шуффл ползунок. Рӱдер кнопкым темдал да ешартыш вариант-влак деке пураш лиймашым налын.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Центр кнопкым темдал, цикл гоч цикл кычалаш барыште, скраббер барыште да шуффл ползунок. Рӱдер кнопкым темдал да ешартыш вариант-влак деке пураш лиймашым налын.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Муром писын ончыко каяш манын, тиде кнопкым темдал да кучен .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Муром писын ончыко каяш манын, тиде кнопкым темдал да кучен .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Муром угыч вӱдаш да тиде кнопкым темдал .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Муром угыч вӱдаш да тиде кнопкым темдал .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Тендан оҥдам йӱштӧ йыр куснаш Кликовный алфавитым ойырен налаш манын';
+  String get deviceControlSearchTutorialText =>
+      'Тендан оҥдам йӱштӧ йыр куснаш Кликовный алфавитым ойырен налаш манын';
 
   @override
-  String get centerButtonSearchTutorialText => 'Рӱдӧ кнопкым темдал, ойырен налме алфавит ойырен налме .';
+  String get centerButtonSearchTutorialText =>
+      'Рӱдӧ кнопкым темдал, ойырен налме алфавит ойырен налме .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Тиде кнопкым темдал, верым ешарен .';
+  String get nextButtonSearchTutorialText =>
+      'Тиде кнопкым темдал, верым ешарен .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Тиде кнопкым темдал, пытартыш персонажым кораҥдаш манын .';
+  String get previousButtonSearchTutorialText =>
+      'Тиде кнопкым темдал, пытартыш персонажым кораҥдаш манын .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Тиде кнопкым темдал, клавиатурым петыраш да кычалмаш лектыш дене кылым кучаш .';
+  String get menuButtonSearchTutorialText =>
+      'Тиде кнопкым темдал, клавиатурым петыраш да кычалмаш лектыш дене кылым кучаш .';
 }

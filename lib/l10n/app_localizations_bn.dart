@@ -18,13 +18,16 @@ class AppLocalizationsBn extends AppLocalizations {
   String get audioAccessPermissionTitle => 'অডিও অ্যাক্সেস অনুমতি প্রয়োজন';
 
   @override
-  String get audioAccessPermissionContent => 'আমাদের আপনার সঙ্গীত ফাইলগুলি খেলতে অনুমতি দেওয়ার জন্য দয়া করে অডিও ফাইলগুলি অ্যাক্সেস মঞ্জুর করুন।';
+  String get audioAccessPermissionContent =>
+      'আমাদের আপনার সঙ্গীত ফাইলগুলি খেলতে অনুমতি দেওয়ার জন্য দয়া করে অডিও ফাইলগুলি অ্যাক্সেস মঞ্জুর করুন।';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'অডিও অ্যাক্সেস অনুমতি অস্বীকার';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'অডিও অ্যাক্সেস অনুমতি অস্বীকার';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'আমাদের আপনার সঙ্গীত ফাইলগুলি খেলতে দেওয়ার জন্য দয়া করে ডিভাইস সেটিংসে এই অ্যাপ্লিকেশনটির জন্য অডিও ফাইলগুলি অ্যাক্সেস মঞ্জুর করুন।';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'আমাদের আপনার সঙ্গীত ফাইলগুলি খেলতে দেওয়ার জন্য দয়া করে ডিভাইস সেটিংসে এই অ্যাপ্লিকেশনটির জন্য অডিও ফাইলগুলি অ্যাক্সেস মঞ্জুর করুন।';
 
   @override
   String get menuScreenTitle => 'মেনু';
@@ -63,7 +66,6 @@ class AppLocalizationsBn extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsBn extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsBn extends AppLocalizations {
   String get touchSoundsDialogTitle => 'স্পর্শ শব্দ';
 
   @override
-  String get touchSoundsDialogContent => 'ক্লিক হুইল সাউন্ড শুনতে দয়া করে সিস্টেম সেটিংস থেকে স্পর্শ শব্দগুলি সক্ষম করুন';
+  String get touchSoundsDialogContent =>
+      'ক্লিক হুইল সাউন্ড শুনতে দয়া করে সিস্টেম সেটিংস থেকে স্পর্শ শব্দগুলি সক্ষম করুন';
 
   @override
   String get immersiveModeSettingTitle => 'নিমজ্জন মোড';
@@ -144,7 +146,8 @@ class AppLocalizationsBn extends AppLocalizations {
   String get donateSettingTitle => 'দান করুন';
 
   @override
-  String get donateSettingDescription => 'আপনি যদি এই অ্যাপ্লিকেশনটি পছন্দ করেন তবে অনুদান দেওয়ার বিষয়টি বিবেচনা করুন।';
+  String get donateSettingDescription =>
+      'আপনি যদি এই অ্যাপ্লিকেশনটি পছন্দ করেন তবে অনুদান দেওয়ার বিষয়টি বিবেচনা করুন।';
 
   @override
   String get versionAboutScreenTitle => 'সংস্করণ';
@@ -195,7 +198,8 @@ class AppLocalizationsBn extends AppLocalizations {
   String get retryButtonText => 'পুনরায় চেষ্টা করুন';
 
   @override
-  String get filePickerDialogTitle => 'সংগীতের জন্য স্ক্যান করতে একটি ডিরেক্টরি নির্বাচন করুন';
+  String get filePickerDialogTitle =>
+      'সংগীতের জন্য স্ক্যান করতে একটি ডিরেক্টরি নির্বাচন করুন';
 
   @override
   String get searchScreenTitle => 'অনুসন্ধান';
@@ -210,10 +214,12 @@ class AppLocalizationsBn extends AppLocalizations {
   String get resultsForText => 'ফলাফল:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'ব্যাটারি অপ্টিমাইজেশন অক্ষম করুন';
+  String get disableBatteryOptimizationTitle =>
+      'ব্যাটারি অপ্টিমাইজেশন অক্ষম করুন';
 
   @override
-  String get disableBatteryOptimizationContent => 'সঙ্গীতটির ব্যাকগ্রাউন্ড প্লেব্যাকের অনুমতি দেওয়ার জন্য দয়া করে ডিভাইস সেটিংসে এই অ্যাপ্লিকেশনটির জন্য ব্যাটারি অপ্টিমাইজেশন অক্ষম করুন।';
+  String get disableBatteryOptimizationContent =>
+      'সঙ্গীতটির ব্যাকগ্রাউন্ড প্লেব্যাকের অনুমতি দেওয়ার জন্য দয়া করে ডিভাইস সেটিংসে এই অ্যাপ্লিকেশনটির জন্য ব্যাটারি অপ্টিমাইজেশন অক্ষম করুন।';
 
   @override
   String get languageScreenTitle => 'ভাষা';
@@ -267,50 +273,66 @@ class AppLocalizationsBn extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'মিউজিক ফাইলগুলি পুনরুদ্ধার করুন';
 
   @override
-  String get deviceControlMenuTutorialText => 'মেনুটি নেভিগেট করতে আপনার থাম্বটি ক্লিক হুইলের চারপাশে হালকাভাবে সরান';
+  String get deviceControlMenuTutorialText =>
+      'মেনুটি নেভিগেট করতে আপনার থাম্বটি ক্লিক হুইলের চারপাশে হালকাভাবে সরান';
 
   @override
-  String get centerButtonMenuTutorialText => 'হাইলাইটেড মেনু আইটেমটি নির্বাচন করতে সেন্টার বোতাম টিপুন';
+  String get centerButtonMenuTutorialText =>
+      'হাইলাইটেড মেনু আইটেমটি নির্বাচন করতে সেন্টার বোতাম টিপুন';
 
   @override
-  String get playPauseMenuTutorialText => 'একটি গান খেলতে বা বিরতি দিতে এই বোতামটি টিপুন';
+  String get playPauseMenuTutorialText =>
+      'একটি গান খেলতে বা বিরতি দিতে এই বোতামটি টিপুন';
 
   @override
-  String get nextButtonMenuTutorialText => 'পরবর্তী গানে এড়াতে এই বোতামটি টিপুন';
+  String get nextButtonMenuTutorialText =>
+      'পরবর্তী গানে এড়াতে এই বোতামটি টিপুন';
 
   @override
-  String get previousButtonMenuTutorialText => 'রিওয়াইন্ড করতে বা আগের গানে ফিরে যেতে এই বোতামটি টিপুন';
+  String get previousButtonMenuTutorialText =>
+      'রিওয়াইন্ড করতে বা আগের গানে ফিরে যেতে এই বোতামটি টিপুন';
 
   @override
-  String get menuButtonTutorialText => 'পূর্ববর্তী মেনুতে ফিরে যেতে এই বোতামটি টিপুন। আপনি সরাসরি মেনুতে যেতে অন্য কোনও স্ক্রিন থেকে এটি টিপতে এবং ধরে রাখতে পারেন।';
+  String get menuButtonTutorialText =>
+      'পূর্ববর্তী মেনুতে ফিরে যেতে এই বোতামটি টিপুন। আপনি সরাসরি মেনুতে যেতে অন্য কোনও স্ক্রিন থেকে এটি টিপতে এবং ধরে রাখতে পারেন।';
 
   @override
-  String get deviceScreenMenuTutorialText => 'এটি ডিসপ্লে স্ক্রিন। টাচ স্ক্রিন এবং স্প্লিট স্ক্রিন মোড ডিফল্টরূপে সক্ষম করা হয় এবং সেটিংসে আরও কনফিগার করা যায়।';
+  String get deviceScreenMenuTutorialText =>
+      'এটি ডিসপ্লে স্ক্রিন। টাচ স্ক্রিন এবং স্প্লিট স্ক্রিন মোড ডিফল্টরূপে সক্ষম করা হয় এবং সেটিংসে আরও কনফিগার করা যায়।';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'ভলিউম সামঞ্জস্য করতে আপনার থাম্বটি ক্লিক হুইলের চারপাশে সরান';
+  String get deviceControlNowPlayingTutorialText =>
+      'ভলিউম সামঞ্জস্য করতে আপনার থাম্বটি ক্লিক হুইলের চারপাশে সরান';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'সিক বার, স্ক্রাবার বার এবং শ্যাফল স্লাইডারের মাধ্যমে চক্রের জন্য সেন্টার বোতামটি টিপুন। অতিরিক্ত বিকল্পগুলি অ্যাক্সেস করতে সেন্টার বোতাম টিপুন এবং ধরে রাখুন।';
+  String get centerButtonNowPlayingTutorialText =>
+      'সিক বার, স্ক্রাবার বার এবং শ্যাফল স্লাইডারের মাধ্যমে চক্রের জন্য সেন্টার বোতামটি টিপুন। অতিরিক্ত বিকল্পগুলি অ্যাক্সেস করতে সেন্টার বোতাম টিপুন এবং ধরে রাখুন।';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'গানটি দ্রুত ফরোয়ার্ড করতে এই বোতামটি টিপুন এবং ধরে রাখুন';
+  String get nextButtonNowPlayingTutorialText =>
+      'গানটি দ্রুত ফরোয়ার্ড করতে এই বোতামটি টিপুন এবং ধরে রাখুন';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'গানটি রিওয়াইন্ড করতে এই বোতামটি টিপুন এবং ধরে রাখুন';
+  String get previousButtonNowPlayingTutorialText =>
+      'গানটি রিওয়াইন্ড করতে এই বোতামটি টিপুন এবং ধরে রাখুন';
 
   @override
-  String get deviceControlSearchTutorialText => 'একটি বর্ণমালা হাইলাইট করতে আপনার থাম্বটি ক্লিক হুইলের চারপাশে হালকাভাবে সরান';
+  String get deviceControlSearchTutorialText =>
+      'একটি বর্ণমালা হাইলাইট করতে আপনার থাম্বটি ক্লিক হুইলের চারপাশে হালকাভাবে সরান';
 
   @override
-  String get centerButtonSearchTutorialText => 'হাইলাইট বর্ণমালা নির্বাচন করতে সেন্টার বোতাম টিপুন';
+  String get centerButtonSearchTutorialText =>
+      'হাইলাইট বর্ণমালা নির্বাচন করতে সেন্টার বোতাম টিপুন';
 
   @override
-  String get nextButtonSearchTutorialText => 'একটি স্থান যুক্ত করতে এই বোতামটি টিপুন';
+  String get nextButtonSearchTutorialText =>
+      'একটি স্থান যুক্ত করতে এই বোতামটি টিপুন';
 
   @override
-  String get previousButtonSearchTutorialText => 'শেষ চরিত্রটি মুছতে এই বোতামটি টিপুন';
+  String get previousButtonSearchTutorialText =>
+      'শেষ চরিত্রটি মুছতে এই বোতামটি টিপুন';
 
   @override
-  String get menuButtonSearchTutorialText => 'কীবোর্ডটি বন্ধ করতে এই বোতামটি টিপুন এবং অনুসন্ধান ফলাফলের সাথে ইন্টারঅ্যাক্ট করুন';
+  String get menuButtonSearchTutorialText =>
+      'কীবোর্ডটি বন্ধ করতে এই বোতামটি টিপুন এবং অনুসন্ধান ফলাফলের সাথে ইন্টারঅ্যাক্ট করুন';
 }

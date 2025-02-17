@@ -15,16 +15,20 @@ class AppLocalizationsLij extends AppLocalizations {
   String get menuButtonText => 'MEU';
 
   @override
-  String get audioAccessPermissionTitle => 'Permiscion de l\'accesso audio Requixito';
+  String get audioAccessPermissionTitle =>
+      'Permiscion de l\'accesso audio Requixito';
 
   @override
-  String get audioAccessPermissionContent => 'Pe favô, concede l\'accesso a-i file audio pe permette de sunâ i vòstri file de muxica.';
+  String get audioAccessPermissionContent =>
+      'Pe favô, concede l\'accesso a-i file audio pe permette de sunâ i vòstri file de muxica.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Permiscion de l\'accesso audio Denegou';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Permiscion de l\'accesso audio Denegou';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Pe favô, concede l\'accesso a-i file audio pe st\'app inte impostaçioin do dispoxitivo pe permette de sunâ i vòstri file de muxica.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Pe favô, concede l\'accesso a-i file audio pe st\'app inte impostaçioin do dispoxitivo pe permette de sunâ i vòstri file de muxica.';
 
   @override
   String get menuScreenTitle => 'menû';
@@ -63,7 +67,6 @@ class AppLocalizationsLij extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsLij extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsLij extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Toccole tocco';
 
   @override
-  String get touchSoundsDialogContent => 'Pe favô, Attiva i soin de tocco da-e Impostaçioin do scistema pe ascoltâ i soin de reua de clic';
+  String get touchSoundsDialogContent =>
+      'Pe favô, Attiva i soin de tocco da-e Impostaçioin do scistema pe ascoltâ i soin de reua de clic';
 
   @override
   String get immersiveModeSettingTitle => 'Modo immerscivo';
@@ -144,7 +147,8 @@ class AppLocalizationsLij extends AppLocalizations {
   String get donateSettingTitle => 'Donâ';
 
   @override
-  String get donateSettingDescription => 'Se ti piaxe st\'app, pe favô, pensâ à donâ.';
+  String get donateSettingDescription =>
+      'Se ti piaxe st\'app, pe favô, pensâ à donâ.';
 
   @override
   String get versionAboutScreenTitle => 'Verscion';
@@ -195,7 +199,8 @@ class AppLocalizationsLij extends AppLocalizations {
   String get retryButtonText => 'Repiggiâ';
 
   @override
-  String get filePickerDialogTitle => 'Seleçionâ un Directory a-a Scangia pe-a muxica';
+  String get filePickerDialogTitle =>
+      'Seleçionâ un Directory a-a Scangia pe-a muxica';
 
   @override
   String get searchScreenTitle => 'Çercâ';
@@ -210,10 +215,12 @@ class AppLocalizationsLij extends AppLocalizations {
   String get resultsForText => 'I exiti pe:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Ottimizzaçion disabilitâ de disabili';
+  String get disableBatteryOptimizationTitle =>
+      'Ottimizzaçion disabilitâ de disabili';
 
   @override
-  String get disableBatteryOptimizationContent => 'Pe favô, disattivâ l\'ottimizzaçion de battëie pe st\'app inte impostaçioin do dispoxitivo pe permette a reproduçion do sfondo da muxica.';
+  String get disableBatteryOptimizationContent =>
+      'Pe favô, disattivâ l\'ottimizzaçion de battëie pe st\'app inte impostaçioin do dispoxitivo pe permette a reproduçion do sfondo da muxica.';
 
   @override
   String get languageScreenTitle => 'Lengua';
@@ -267,50 +274,66 @@ class AppLocalizationsLij extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'File de Muxica de Rescal';
 
   @override
-  String get deviceControlMenuTutorialText => 'Mesciâ o polegâ de lengê in gio a-a reua Clicca pe navigâ into menù';
+  String get deviceControlMenuTutorialText =>
+      'Mesciâ o polegâ de lengê in gio a-a reua Clicca pe navigâ into menù';
 
   @override
-  String get centerButtonMenuTutorialText => 'Premme o botton çentrâ pe seleçionâ l\'elemento de menù evidençiou';
+  String get centerButtonMenuTutorialText =>
+      'Premme o botton çentrâ pe seleçionâ l\'elemento de menù evidençiou';
 
   @override
-  String get playPauseMenuTutorialText => 'Premme sto botton pe sonâ ò fâ unna pausa unna canson';
+  String get playPauseMenuTutorialText =>
+      'Premme sto botton pe sonâ ò fâ unna pausa unna canson';
 
   @override
-  String get nextButtonMenuTutorialText => 'Premme sto botton pe saltâ a-a canson apreuvo';
+  String get nextButtonMenuTutorialText =>
+      'Premme sto botton pe saltâ a-a canson apreuvo';
 
   @override
-  String get previousButtonMenuTutorialText => 'Premme sto botton pe fâ renovâ ò tornâ a-a canson passâ';
+  String get previousButtonMenuTutorialText =>
+      'Premme sto botton pe fâ renovâ ò tornâ a-a canson passâ';
 
   @override
-  String get menuButtonTutorialText => 'Premme sto botton pe tornâ a-o menù preçedente. O porrieiva appressâlo e tegnîlo da quæ se segge atro schermo pe anâ direttamente a-o menù prinçipâ.';
+  String get menuButtonTutorialText =>
+      'Premme sto botton pe tornâ a-o menù preçedente. O porrieiva appressâlo e tegnîlo da quæ se segge atro schermo pe anâ direttamente a-o menù prinçipâ.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Sto chì o l\'é o schermo de visualizzaçion. O schermo de tocco e a modalitæ scritta split son attivæ pe automatico e peuan ëse configuræ ancon de ciù inte impostaçioin.';
+  String get deviceScreenMenuTutorialText =>
+      'Sto chì o l\'é o schermo de visualizzaçion. O schermo de tocco e a modalitæ scritta split son attivæ pe automatico e peuan ëse configuræ ancon de ciù inte impostaçioin.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Sposta o polegâ in gio a-a reua Clicca pe regolâ o volumme';
+  String get deviceControlNowPlayingTutorialText =>
+      'Sposta o polegâ in gio a-a reua Clicca pe regolâ o volumme';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Premme o botton do Çentro pe çiclâ pe mezo da barra, unna barra de scrubber e de cursô de sfummatua. Premme e tegnî o botton do Çentro pe açede à de opçioin in ciù.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Premme o botton do Çentro pe çiclâ pe mezo da barra, unna barra de scrubber e de cursô de sfummatua. Premme e tegnî o botton do Çentro pe açede à de opçioin in ciù.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Premme e tegnî sto botton pe inversâ a canson';
+  String get nextButtonNowPlayingTutorialText =>
+      'Premme e tegnî sto botton pe inversâ a canson';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Premme e tegnî sto botton pe reverze a canson';
+  String get previousButtonNowPlayingTutorialText =>
+      'Premme e tegnî sto botton pe reverze a canson';
 
   @override
-  String get deviceControlSearchTutorialText => 'Mesciâ o polegâ de lengê in gio a-a reua de clic pe mette in luxe un alfabeto';
+  String get deviceControlSearchTutorialText =>
+      'Mesciâ o polegâ de lengê in gio a-a reua de clic pe mette in luxe un alfabeto';
 
   @override
-  String get centerButtonSearchTutorialText => 'Premme o botton çentrale pe seleçionâ l’alfabeto evidençiou';
+  String get centerButtonSearchTutorialText =>
+      'Premme o botton çentrale pe seleçionâ l’alfabeto evidençiou';
 
   @override
-  String get nextButtonSearchTutorialText => 'Premme sto botton pe azzonze un spaçio';
+  String get nextButtonSearchTutorialText =>
+      'Premme sto botton pe azzonze un spaçio';
 
   @override
-  String get previousButtonSearchTutorialText => 'Premme sto botton pe cancellâ l\'urtimo carattere';
+  String get previousButtonSearchTutorialText =>
+      'Premme sto botton pe cancellâ l\'urtimo carattere';
 
   @override
-  String get menuButtonSearchTutorialText => 'Premme sto botton pe serrâ o tastierino e interagî co-i resultati de reçerca';
+  String get menuButtonSearchTutorialText =>
+      'Premme sto botton pe serrâ o tastierino e interagî co-i resultati de reçerca';
 }

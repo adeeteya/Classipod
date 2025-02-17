@@ -18,13 +18,16 @@ class AppLocalizationsFy extends AppLocalizations {
   String get audioAccessPermissionTitle => 'AUDIO Tagong tastimming fereaske';
 
   @override
-  String get audioAccessPermissionContent => 'GRAGJE AUDIO BESLAAPT TAYS TO FERGESE OM FILL OM JOU MUSIEBILDS SPELLEN.';
+  String get audioAccessPermissionContent =>
+      'GRAGJE AUDIO BESLAAPT TAYS TO FERGESE OM FILL OM JOU MUSIEBILDS SPELLEN.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio tagongsrjochten wegere';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio tagongsrjochten wegere';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'GRAG FERGESE AUDIO BESLAADY TAGTEN FAN DIT APP IN DE FERGESJOCHTSJOCHTEN OM FS TO LJOCHT OM JOU MUSIE BILDS SPELLEN.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'GRAG FERGESE AUDIO BESLAADY TAGTEN FAN DIT APP IN DE FERGESJOCHTSJOCHTEN OM FS TO LJOCHT OM JOU MUSIE BILDS SPELLEN.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsFy extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsFy extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsFy extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch lûden';
 
   @override
-  String get touchSoundsDialogContent => 'Aktivearje asjebleaft touch lûden út systeemynstellingen om it klik te hearren';
+  String get touchSoundsDialogContent =>
+      'Aktivearje asjebleaft touch lûden út systeemynstellingen om it klik te hearren';
 
   @override
   String get immersiveModeSettingTitle => 'Unmoleaze modus';
@@ -144,7 +146,8 @@ class AppLocalizationsFy extends AppLocalizations {
   String get donateSettingTitle => 'Donearje';
 
   @override
-  String get donateSettingDescription => 'As jo ​​dizze app leuk fine, beskôgje dan dat doneart.';
+  String get donateSettingDescription =>
+      'As jo ​​dizze app leuk fine, beskôgje dan dat doneart.';
 
   @override
   String get versionAboutScreenTitle => 'Ferzje';
@@ -195,7 +198,8 @@ class AppLocalizationsFy extends AppLocalizations {
   String get retryButtonText => 'Twurkje';
 
   @override
-  String get filePickerDialogTitle => 'Selektearje in map om te scannen foar muzyk';
+  String get filePickerDialogTitle =>
+      'Selektearje in map om te scannen foar muzyk';
 
   @override
   String get searchScreenTitle => 'Sykje';
@@ -210,10 +214,12 @@ class AppLocalizationsFy extends AppLocalizations {
   String get resultsForText => 'Resultaten foar:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Batterij-optimalisaasje útskeakelje';
+  String get disableBatteryOptimizationTitle =>
+      'Batterij-optimalisaasje útskeakelje';
 
   @override
-  String get disableBatteryOptimizationContent => 'Skeakelje asjebleaft Batterijoptimalisaasje foar dizze app yn \'e apparaatynstellingen om eftergrûnôfbylding fan muzyk tastean.';
+  String get disableBatteryOptimizationContent =>
+      'Skeakelje asjebleaft Batterijoptimalisaasje foar dizze app yn \'e apparaatynstellingen om eftergrûnôfbylding fan muzyk tastean.';
 
   @override
   String get languageScreenTitle => 'Taal';
@@ -267,50 +273,66 @@ class AppLocalizationsFy extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Bestannen';
 
   @override
-  String get deviceControlMenuTutorialText => 'Ferpleatse jo tomme ljocht om it klikwiel om it menu te navigearjen';
+  String get deviceControlMenuTutorialText =>
+      'Ferpleatse jo tomme ljocht om it klikwiel om it menu te navigearjen';
 
   @override
-  String get centerButtonMenuTutorialText => 'Druk op \'e CENTRE knop om it markearre menu-item te selektearjen';
+  String get centerButtonMenuTutorialText =>
+      'Druk op \'e CENTRE knop om it markearre menu-item te selektearjen';
 
   @override
-  String get playPauseMenuTutorialText => 'Druk op dizze knop om in ferske te spyljen of te pausjen';
+  String get playPauseMenuTutorialText =>
+      'Druk op dizze knop om in ferske te spyljen of te pausjen';
 
   @override
-  String get nextButtonMenuTutorialText => 'Druk op dizze knop om te oerslaan nei it folgjende ferske';
+  String get nextButtonMenuTutorialText =>
+      'Druk op dizze knop om te oerslaan nei it folgjende ferske';
 
   @override
-  String get previousButtonMenuTutorialText => 'Druk op dizze knop om werom te reitsjen of werom te gean nei it foarige ferske';
+  String get previousButtonMenuTutorialText =>
+      'Druk op dizze knop om werom te reitsjen of werom te gean nei it foarige ferske';
 
   @override
-  String get menuButtonTutorialText => 'Druk op dizze knop om werom te gean nei it foarige menu. Jo koene it op elk oar skerm drukke en hâlde om direkt nei it haadmenu te gean.';
+  String get menuButtonTutorialText =>
+      'Druk op dizze knop om werom te gean nei it foarige menu. Jo koene it op elk oar skerm drukke en hâlde om direkt nei it haadmenu te gean.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Dit is it skerm skerm. Touch Screen en SPLIT-skermmodus binne standert ynskeakele en kinne fierder ynskeakele wurde yn \'e ynstellingen.';
+  String get deviceScreenMenuTutorialText =>
+      'Dit is it skerm skerm. Touch Screen en SPLIT-skermmodus binne standert ynskeakele en kinne fierder ynskeakele wurde yn \'e ynstellingen.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Ferpleatse jo tomme om it klik tsjil om it folume oan te passen';
+  String get deviceControlNowPlayingTutorialText =>
+      'Ferpleatse jo tomme om it klik tsjil om it folume oan te passen';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Druk op \'e sintrumknop om te fytsen troch te syklus, sykje, scrubberbar en shuffle Slider. Druk op en hâld de sintrumknop yn om tagong te krijen ta ekstra opsjes.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Druk op \'e sintrumknop om te fytsen troch te syklus, sykje, scrubberbar en shuffle Slider. Druk op en hâld de sintrumknop yn om tagong te krijen ta ekstra opsjes.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Druk op dizze knop en hâld op om it ferske te rapjen';
+  String get nextButtonNowPlayingTutorialText =>
+      'Druk op dizze knop en hâld op om it ferske te rapjen';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Druk op dizze knop en hâld op om it ferske werom te reitsjen';
+  String get previousButtonNowPlayingTutorialText =>
+      'Druk op dizze knop en hâld op om it ferske werom te reitsjen';
 
   @override
-  String get deviceControlSearchTutorialText => 'Ferpleatse jo tomme ljocht om it klik tsjil om in alfabet te markearjen';
+  String get deviceControlSearchTutorialText =>
+      'Ferpleatse jo tomme ljocht om it klik tsjil om in alfabet te markearjen';
 
   @override
-  String get centerButtonSearchTutorialText => 'Druk op \'e sintrumknop om it markearre alfabet te selektearjen';
+  String get centerButtonSearchTutorialText =>
+      'Druk op \'e sintrumknop om it markearre alfabet te selektearjen';
 
   @override
-  String get nextButtonSearchTutorialText => 'Druk op dizze knop om in romte ta te foegjen';
+  String get nextButtonSearchTutorialText =>
+      'Druk op dizze knop om in romte ta te foegjen';
 
   @override
-  String get previousButtonSearchTutorialText => 'Druk op dizze knop om it lêste karakter te wiskjen';
+  String get previousButtonSearchTutorialText =>
+      'Druk op dizze knop om it lêste karakter te wiskjen';
 
   @override
-  String get menuButtonSearchTutorialText => 'Druk op dizze knop om it toetseboerd te sluten en ynteraksje mei de sykresultaten te sluten';
+  String get menuButtonSearchTutorialText =>
+      'Druk op dizze knop om it toetseboerd te sluten en ynteraksje mei de sykresultaten te sluten';
 }

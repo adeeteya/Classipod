@@ -15,16 +15,20 @@ class AppLocalizationsVi extends AppLocalizations {
   String get menuButtonText => 'Menu';
 
   @override
-  String get audioAccessPermissionTitle => 'Yêu cầu quyền truy cập âm thanh cần thiết';
+  String get audioAccessPermissionTitle =>
+      'Yêu cầu quyền truy cập âm thanh cần thiết';
 
   @override
-  String get audioAccessPermissionContent => 'Vui lòng cấp các tệp âm thanh truy cập để cho phép chúng tôi phát các tệp nhạc của bạn.';
+  String get audioAccessPermissionContent =>
+      'Vui lòng cấp các tệp âm thanh truy cập để cho phép chúng tôi phát các tệp nhạc của bạn.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Quyền truy cập âm thanh bị từ chối';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Quyền truy cập âm thanh bị từ chối';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Vui lòng cấp quyền truy cập tệp âm thanh cho ứng dụng này trong cài đặt thiết bị để cho phép chúng tôi phát các tệp nhạc của bạn.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Vui lòng cấp quyền truy cập tệp âm thanh cho ứng dụng này trong cài đặt thiết bị để cho phép chúng tôi phát các tệp nhạc của bạn.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsVi extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Chạm vào âm thanh';
 
   @override
-  String get touchSoundsDialogContent => 'Vui lòng bật âm thanh cảm ứng từ cài đặt hệ thống để nghe âm thanh của bánh xe nhấp chuột';
+  String get touchSoundsDialogContent =>
+      'Vui lòng bật âm thanh cảm ứng từ cài đặt hệ thống để nghe âm thanh của bánh xe nhấp chuột';
 
   @override
   String get immersiveModeSettingTitle => 'Chế độ nhập vai';
@@ -144,7 +147,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get donateSettingTitle => 'Quyên tặng';
 
   @override
-  String get donateSettingDescription => 'Nếu bạn thích ứng dụng này, xin vui lòng xem xét quyên góp.';
+  String get donateSettingDescription =>
+      'Nếu bạn thích ứng dụng này, xin vui lòng xem xét quyên góp.';
 
   @override
   String get versionAboutScreenTitle => 'Phiên bản';
@@ -213,7 +217,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Tắt tối ưu hóa pin';
 
   @override
-  String get disableBatteryOptimizationContent => 'Vui lòng vô hiệu hóa tối ưu hóa pin cho ứng dụng này trong cài đặt thiết bị để cho phép phát lại nền của nhạc.';
+  String get disableBatteryOptimizationContent =>
+      'Vui lòng vô hiệu hóa tối ưu hóa pin cho ứng dụng này trong cài đặt thiết bị để cho phép phát lại nền của nhạc.';
 
   @override
   String get languageScreenTitle => 'Ngôn ngữ';
@@ -267,50 +272,66 @@ class AppLocalizationsVi extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan tập tin nhạc';
 
   @override
-  String get deviceControlMenuTutorialText => 'Di chuyển nhẹ ngón tay cái của bạn xung quanh bánh xe nhấp để điều hướng menu';
+  String get deviceControlMenuTutorialText =>
+      'Di chuyển nhẹ ngón tay cái của bạn xung quanh bánh xe nhấp để điều hướng menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Nhấn nút trung tâm để chọn mục menu được tô sáng';
+  String get centerButtonMenuTutorialText =>
+      'Nhấn nút trung tâm để chọn mục menu được tô sáng';
 
   @override
-  String get playPauseMenuTutorialText => 'Nhấn nút này để phát hoặc tạm dừng bài hát';
+  String get playPauseMenuTutorialText =>
+      'Nhấn nút này để phát hoặc tạm dừng bài hát';
 
   @override
-  String get nextButtonMenuTutorialText => 'Nhấn nút này để bỏ qua bài hát tiếp theo';
+  String get nextButtonMenuTutorialText =>
+      'Nhấn nút này để bỏ qua bài hát tiếp theo';
 
   @override
-  String get previousButtonMenuTutorialText => 'Nhấn nút này để tua lại hoặc quay lại bài hát trước';
+  String get previousButtonMenuTutorialText =>
+      'Nhấn nút này để tua lại hoặc quay lại bài hát trước';
 
   @override
-  String get menuButtonTutorialText => 'Nhấn nút này để quay lại menu trước. Bạn có thể nhấn và giữ nó từ bất kỳ màn hình nào khác để trực tiếp đi đến menu chính.';
+  String get menuButtonTutorialText =>
+      'Nhấn nút này để quay lại menu trước. Bạn có thể nhấn và giữ nó từ bất kỳ màn hình nào khác để trực tiếp đi đến menu chính.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Đây là màn hình hiển thị. Màn hình cảm ứng và chế độ màn hình chia được bật theo mặc định và có thể được cấu hình thêm trong các cài đặt.';
+  String get deviceScreenMenuTutorialText =>
+      'Đây là màn hình hiển thị. Màn hình cảm ứng và chế độ màn hình chia được bật theo mặc định và có thể được cấu hình thêm trong các cài đặt.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Di chuyển ngón tay cái của bạn xung quanh bánh xe nhấp để điều chỉnh âm lượng';
+  String get deviceControlNowPlayingTutorialText =>
+      'Di chuyển ngón tay cái của bạn xung quanh bánh xe nhấp để điều chỉnh âm lượng';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Nhấn nút trung tâm để đạp qua thanh tìm kiếm, thanh chà sàn và thanh trượt xáo trộn. Nhấn và giữ nút trung tâm để truy cập các tùy chọn bổ sung.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Nhấn nút trung tâm để đạp qua thanh tìm kiếm, thanh chà sàn và thanh trượt xáo trộn. Nhấn và giữ nút trung tâm để truy cập các tùy chọn bổ sung.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Nhấn và giữ nút này để nhanh chóng chuyển tiếp bài hát';
+  String get nextButtonNowPlayingTutorialText =>
+      'Nhấn và giữ nút này để nhanh chóng chuyển tiếp bài hát';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Nhấn và giữ nút này để tua lại bài hát';
+  String get previousButtonNowPlayingTutorialText =>
+      'Nhấn và giữ nút này để tua lại bài hát';
 
   @override
-  String get deviceControlSearchTutorialText => 'Di chuyển nhẹ ngón tay cái của bạn xung quanh bánh xe nhấp chuột để tô sáng bảng chữ cái';
+  String get deviceControlSearchTutorialText =>
+      'Di chuyển nhẹ ngón tay cái của bạn xung quanh bánh xe nhấp chuột để tô sáng bảng chữ cái';
 
   @override
-  String get centerButtonSearchTutorialText => 'Nhấn nút trung tâm để chọn bảng chữ cái được tô sáng';
+  String get centerButtonSearchTutorialText =>
+      'Nhấn nút trung tâm để chọn bảng chữ cái được tô sáng';
 
   @override
-  String get nextButtonSearchTutorialText => 'Nhấn nút này để thêm một khoảng trống';
+  String get nextButtonSearchTutorialText =>
+      'Nhấn nút này để thêm một khoảng trống';
 
   @override
-  String get previousButtonSearchTutorialText => 'Nhấn nút này để xóa ký tự cuối cùng';
+  String get previousButtonSearchTutorialText =>
+      'Nhấn nút này để xóa ký tự cuối cùng';
 
   @override
-  String get menuButtonSearchTutorialText => 'Nhấn nút này để đóng bàn phím và tương tác với kết quả tìm kiếm';
+  String get menuButtonSearchTutorialText =>
+      'Nhấn nút này để đóng bàn phím và tương tác với kết quả tìm kiếm';
 }

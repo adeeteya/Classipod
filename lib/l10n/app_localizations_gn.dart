@@ -15,16 +15,20 @@ class AppLocalizationsGn extends AppLocalizations {
   String get menuButtonText => 'Menú rehegua';
 
   @override
-  String get audioAccessPermissionTitle => 'Oñeikotevẽ permiso ojeike hag̃ua audio rehegua';
+  String get audioAccessPermissionTitle =>
+      'Oñeikotevẽ permiso ojeike hag̃ua audio rehegua';
 
   @override
-  String get audioAccessPermissionContent => 'Eme’ẽmi umi archivo audio rehegua ikatu hag̃uáicha rembopu ore rembiapokue purahéi rehegua.';
+  String get audioAccessPermissionContent =>
+      'Eme’ẽmi umi archivo audio rehegua ikatu hag̃uáicha rembopu ore rembiapokue purahéi rehegua.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'audio jeike permiso oñenegava’ekue';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'audio jeike permiso oñenegava’ekue';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Eme’ẽ eme’ẽ hag̃ua umi archivo audio rehegua ko app-pe g̃uarã umi tembipuru’i ñembohekorãme ikatu hag̃uáicha roñembosarái ne mba’epu’apu’a.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Eme’ẽ eme’ẽ hag̃ua umi archivo audio rehegua ko app-pe g̃uarã umi tembipuru’i ñembohekorãme ikatu hag̃uáicha roñembosarái ne mba’epu’apu’a.';
 
   @override
   String get menuScreenTitle => 'Menú rehegua';
@@ -63,7 +67,6 @@ class AppLocalizationsGn extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsGn extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsGn extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Umi tyapu toque rehegua';
 
   @override
-  String get touchSoundsDialogContent => 'Emboguata umi tyapu táctil sistema ñemboheko guive ehendu hag̃ua umi tyapu Click Wheel rehegua';
+  String get touchSoundsDialogContent =>
+      'Emboguata umi tyapu táctil sistema ñemboheko guive ehendu hag̃ua umi tyapu Click Wheel rehegua';
 
   @override
   String get immersiveModeSettingTitle => 'Modo inmerso rehegua';
@@ -144,7 +147,8 @@ class AppLocalizationsGn extends AppLocalizations {
   String get donateSettingTitle => 'Me\'ẽrei';
 
   @override
-  String get donateSettingDescription => 'Oiméramo ndegusta ko app, por favor, econsidera donación.';
+  String get donateSettingDescription =>
+      'Oiméramo ndegusta ko app, por favor, econsidera donación.';
 
   @override
   String get versionAboutScreenTitle => 'Je\'eháicha';
@@ -195,7 +199,8 @@ class AppLocalizationsGn extends AppLocalizations {
   String get retryButtonText => 'oñeha’ã jey';
 
   @override
-  String get filePickerDialogTitle => 'Eiporavo peteĩ kundaha reescanea hag̃ua mba’epu rehegua';
+  String get filePickerDialogTitle =>
+      'Eiporavo peteĩ kundaha reescanea hag̃ua mba’epu rehegua';
 
   @override
   String get searchScreenTitle => 'Jeheka';
@@ -210,10 +215,12 @@ class AppLocalizationsGn extends AppLocalizations {
   String get resultsForText => 'Resultados para:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Ojedesactiva hagua batería optimización';
+  String get disableBatteryOptimizationTitle =>
+      'Ojedesactiva hagua batería optimización';
 
   @override
-  String get disableBatteryOptimizationContent => 'Por favor, embogue optimización batería rehegua ko app-pe g̃uarã umi tembipuru ñembohekorãme ikatu hag̃uáicha rembopu tapykuehoha purahéi rehegua.';
+  String get disableBatteryOptimizationContent =>
+      'Por favor, embogue optimización batería rehegua ko app-pe g̃uarã umi tembipuru ñembohekorãme ikatu hag̃uáicha rembopu tapykuehoha purahéi rehegua.';
 
   @override
   String get languageScreenTitle => 'Ñe\'ẽ';
@@ -246,7 +253,8 @@ class AppLocalizationsGn extends AppLocalizations {
   String get addAlbumToOnTheGoPlaylist => 'Oñemoĩve álbum-pe';
 
   @override
-  String get removeSongFromThePlaylist => 'Ojepe’a pe lista de reproducción-gui';
+  String get removeSongFromThePlaylist =>
+      'Ojepe’a pe lista de reproducción-gui';
 
   @override
   String get allAlbums => 'Opaite álbum';
@@ -264,53 +272,70 @@ class AppLocalizationsGn extends AppLocalizations {
   String get clearPlaylist => 'Lista de reproducción hesakãva';
 
   @override
-  String get rescanMusicFilesSettingTitle => 'Archivos de música rescan rehegua';
+  String get rescanMusicFilesSettingTitle =>
+      'Archivos de música rescan rehegua';
 
   @override
-  String get deviceControlMenuTutorialText => 'Emoinge michĩmi nde poguasu pe rueda clic jerére reguata hag̃ua pe menúpe';
+  String get deviceControlMenuTutorialText =>
+      'Emoinge michĩmi nde poguasu pe rueda clic jerére reguata hag̃ua pe menúpe';
 
   @override
-  String get centerButtonMenuTutorialText => 'Emboguapy pe botón mbytegua eiporavo hag̃ua pe elemento menúpegua ojehechaukáva';
+  String get centerButtonMenuTutorialText =>
+      'Emboguapy pe botón mbytegua eiporavo hag̃ua pe elemento menúpegua ojehechaukáva';
 
   @override
-  String get playPauseMenuTutorialText => 'Emboguapy ko botón rembopu térã repytuʼu hag̃ua peteĩ purahéi';
+  String get playPauseMenuTutorialText =>
+      'Emboguapy ko botón rembopu térã repytuʼu hag̃ua peteĩ purahéi';
 
   @override
-  String get nextButtonMenuTutorialText => 'Emboguejy ko botón resalta hag̃ua pe purahéi oúvape';
+  String get nextButtonMenuTutorialText =>
+      'Emboguejy ko botón resalta hag̃ua pe purahéi oúvape';
 
   @override
-  String get previousButtonMenuTutorialText => 'Emboguapy ko botón rembojere hag̃ua térã reho jey hag̃ua purahéi mboyveguápe';
+  String get previousButtonMenuTutorialText =>
+      'Emboguapy ko botón rembojere hag̃ua térã reho jey hag̃ua purahéi mboyveguápe';
 
   @override
-  String get menuButtonTutorialText => 'Emboguejy ko botón reho jey hag̃ua pe menú yma guarépe. Ikatu remboguejy ha reñongatu oimeraẽ ambue pantalla-gui reho hag̃ua directamente menú principal-pe.';
+  String get menuButtonTutorialText =>
+      'Emboguejy ko botón reho jey hag̃ua pe menú yma guarépe. Ikatu remboguejy ha reñongatu oimeraẽ ambue pantalla-gui reho hag̃ua directamente menú principal-pe.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Kóva ha’e pe pantalla jehechaukarã. Pantalla táctil ha pantalla dividida modo oñembohapéva por defecto ha ikatu oñembohekove umi configuración-pe.';
+  String get deviceScreenMenuTutorialText =>
+      'Kóva ha’e pe pantalla jehechaukarã. Pantalla táctil ha pantalla dividida modo oñembohapéva por defecto ha ikatu oñembohekove umi configuración-pe.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Emoinge nde pulgar pe rueda clic jerére remohenda hagua pe volumen';
+  String get deviceControlNowPlayingTutorialText =>
+      'Emoinge nde pulgar pe rueda clic jerére remohenda hagua pe volumen';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Ojepyso pe botón centro ojejapo hagua ciclo barra de búsqueda rupive, barra de fregadora ha deslizador de baraja. Ojepyso ha ojejoko pe botón centro ojeike hag̃ua opciones adicionales-pe.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Ojepyso pe botón centro ojejapo hagua ciclo barra de búsqueda rupive, barra de fregadora ha deslizador de baraja. Ojepyso ha ojejoko pe botón centro ojeike hag̃ua opciones adicionales-pe.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Emboguapy ha eñongatu ko botón rembohasa pya\'e hag̃ua purahéi';
+  String get nextButtonNowPlayingTutorialText =>
+      'Emboguapy ha eñongatu ko botón rembohasa pya\'e hag̃ua purahéi';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Emboguejy ha eñongatu ko botón rembojere hag̃ua pe purahéi';
+  String get previousButtonNowPlayingTutorialText =>
+      'Emboguejy ha eñongatu ko botón rembojere hag̃ua pe purahéi';
 
   @override
-  String get deviceControlSearchTutorialText => 'Emoinge michĩmi nde poguasu pe rueda clic jerére rerresalta hag̃ua peteĩ alfabeto';
+  String get deviceControlSearchTutorialText =>
+      'Emoinge michĩmi nde poguasu pe rueda clic jerére rerresalta hag̃ua peteĩ alfabeto';
 
   @override
-  String get centerButtonSearchTutorialText => 'Ojepyso pe botón mbytegua ojeporavo hag̃ua pe alfabeto ojerresaltáva';
+  String get centerButtonSearchTutorialText =>
+      'Ojepyso pe botón mbytegua ojeporavo hag̃ua pe alfabeto ojerresaltáva';
 
   @override
-  String get nextButtonSearchTutorialText => 'Emboguejy ko botón remoĩ hag̃ua peteĩ espacio';
+  String get nextButtonSearchTutorialText =>
+      'Emboguejy ko botón remoĩ hag̃ua peteĩ espacio';
 
   @override
-  String get previousButtonSearchTutorialText => 'Emboguejy ko botón embogue hag̃ua pe karameg̃ua paha';
+  String get previousButtonSearchTutorialText =>
+      'Emboguejy ko botón embogue hag̃ua pe karameg̃ua paha';
 
   @override
-  String get menuButtonSearchTutorialText => 'Emboguejy ko botón emboty hag̃ua teclado ha eñembojoaju hag̃ua umi jeheka renda ndive';
+  String get menuButtonSearchTutorialText =>
+      'Emboguejy ko botón emboty hag̃ua teclado ha eñembojoaju hag̃ua umi jeheka renda ndive';
 }

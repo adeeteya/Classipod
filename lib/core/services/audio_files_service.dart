@@ -25,21 +25,23 @@ class AudioFilesServiceNotifier
   Future<UnmodifiableListView<Metadata>> getAudioFilesMetadata() async {
     state = const AsyncLoading();
     try {
-      final Box<Metadata> metadataBox =
-          Hive.box<Metadata>(Constants.metadataBoxName);
-
-      if (kIsWeb) {
-        // Return a Pre Defined List of Metadata for Web
+      if (ref.read(settingsPreferencesControllerProvider).fetchOnlineMusic) {
         return UnmodifiableListView(onlineAudioFilesMetaData);
-      } else if (metadataBox.isEmpty) {
-        final result = await compute(
-          ref.read(metadataReaderRepositoryProvider).extractAudioFilesMetadata,
-          ref.read(settingsPreferencesControllerProvider).musicFolderPath,
-        );
-        await metadataBox.addAll(result);
-        return UnmodifiableListView(result);
       } else {
-        return UnmodifiableListView(metadataBox.values);
+        final Box<Metadata> metadataBox =
+            Hive.box<Metadata>(Constants.metadataBoxName);
+        if (metadataBox.isEmpty) {
+          final result = await compute(
+            ref
+                .read(metadataReaderRepositoryProvider)
+                .extractAudioFilesMetadata,
+            ref.read(settingsPreferencesControllerProvider).musicFolderPath,
+          );
+          await metadataBox.addAll(result);
+          return UnmodifiableListView(result);
+        } else {
+          return UnmodifiableListView(metadataBox.values);
+        }
       }
     } catch (e) {
       return UnmodifiableListView([]);

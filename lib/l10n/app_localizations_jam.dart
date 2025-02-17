@@ -18,13 +18,16 @@ class AppLocalizationsJam extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Aadio Akses Permishan Riquired .';
 
   @override
-  String get audioAccessPermissionContent => 'Pliiz gi aadibl fail akses fi lou wi fi plie yu myuuzik fail.';
+  String get audioAccessPermissionContent =>
+      'Pliiz gi aadibl fail akses fi lou wi fi plie yu myuuzik fail.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Aadio Akses Permishan Deniid .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Aadio Akses Permishan Deniid .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Pliiz gi aadibl fail akses fi dis ap ina di divais setn fi lou wi fi plie yu myuuzik fail.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Pliiz gi aadibl fail akses fi dis ap ina di divais setn fi lou wi fi plie yu myuuzik fail.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsJam extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsJam extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsJam extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Toch Sauns';
 
   @override
-  String get touchSoundsDialogContent => 'Pliiz Enabl Toch Sauns fram Sistim Setinz fi hier di klik wiel soun .';
+  String get touchSoundsDialogContent =>
+      'Pliiz Enabl Toch Sauns fram Sistim Setinz fi hier di klik wiel soun .';
 
   @override
   String get immersiveModeSettingTitle => 'Imerzaiv Mod';
@@ -144,7 +146,8 @@ class AppLocalizationsJam extends AppLocalizations {
   String get donateSettingTitle => 'Gi';
 
   @override
-  String get donateSettingDescription => 'Ef yu laik dis ya ap, pliiz kansida fi gi.';
+  String get donateSettingDescription =>
+      'Ef yu laik dis ya ap, pliiz kansida fi gi.';
 
   @override
   String get versionAboutScreenTitle => 'Vershan';
@@ -195,7 +198,8 @@ class AppLocalizationsJam extends AppLocalizations {
   String get retryButtonText => 'Retry';
 
   @override
-  String get filePickerDialogTitle => 'Silek wan Dairekchri tu Skan fi Myuuzik .';
+  String get filePickerDialogTitle =>
+      'Silek wan Dairekchri tu Skan fi Myuuzik .';
 
   @override
   String get searchScreenTitle => 'Luk fah';
@@ -213,7 +217,8 @@ class AppLocalizationsJam extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Disabl Batari Optimizashan .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Pliiz disabl bachri optimizashan fi dis ap ina di divais setn fi lou bakgrong pliebak a myuuzik.';
+  String get disableBatteryOptimizationContent =>
+      'Pliiz disabl bachri optimizashan fi dis ap ina di divais setn fi lou bakgrong pliebak a myuuzik.';
 
   @override
   String get languageScreenTitle => 'Langwij';
@@ -267,50 +272,66 @@ class AppLocalizationsJam extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Reskan Myuuzik Failz .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Muuv yu tumbu lait roun di Klik Wiel fi navigieshan di menyu .';
+  String get deviceControlMenuTutorialText =>
+      'Muuv yu tumbu lait roun di Klik Wiel fi navigieshan di menyu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pres di senta boton fi silek di hailait menyu item .';
+  String get centerButtonMenuTutorialText =>
+      'Pres di senta boton fi silek di hailait menyu item .';
 
   @override
-  String get playPauseMenuTutorialText => 'Pres dis button fi plie ar paas wan sang .';
+  String get playPauseMenuTutorialText =>
+      'Pres dis button fi plie ar paas wan sang .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pres dis button fi skip tu di neks sang .';
+  String get nextButtonMenuTutorialText =>
+      'Pres dis button fi skip tu di neks sang .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pres dis button fi riwind ar go bak tu di prii- sang .';
+  String get previousButtonMenuTutorialText =>
+      'Pres dis button fi riwind ar go bak tu di prii- sang .';
 
   @override
-  String get menuButtonTutorialText => 'Press dis button fi go bak tu di prii-y menyu. Yu kuda pres an uol it fram eni ada skriin fi dairekli go a di mien menyu.';
+  String get menuButtonTutorialText =>
+      'Press dis button fi go bak tu di prii-y menyu. Yu kuda pres an uol it fram eni ada skriin fi dairekli go a di mien menyu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Dis a di displie skriin. Toch Skriin ah Split Skriin Mod ena-mek bai difault ah kiah kanfiguor muo ina di setn.';
+  String get deviceScreenMenuTutorialText =>
+      'Dis a di displie skriin. Toch Skriin ah Split Skriin Mod ena-mek bai difault ah kiah kanfiguor muo ina di setn.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Muuv yu tumbu roun di Klik Wiel fi adjuus di volyum .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Muuv yu tumbu roun di Klik Wiel fi adjuus di volyum .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pres di Senta button fi saikl chuu luk baal, skruuba baal ahn shub-saaf sliida. Pres ahn huol di Senta button fi akses ada opshan.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pres di Senta button fi saikl chuu luk baal, skruuba baal ahn shub-saaf sliida. Pres ahn huol di Senta button fi akses ada opshan.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Pres ahn huol dis button fi faas forda di sang .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Pres ahn huol dis button fi faas forda di sang .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pres ahn huol dis button fi riwind di sang .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pres ahn huol dis button fi riwind di sang .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Muuv yu tumbu lait roun di Klik Wiel fi hailai wan alfabet .';
+  String get deviceControlSearchTutorialText =>
+      'Muuv yu tumbu lait roun di Klik Wiel fi hailai wan alfabet .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pres di senta boton fi silek di hailait alfabet .';
+  String get centerButtonSearchTutorialText =>
+      'Pres di senta boton fi silek di hailait alfabet .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pres dis button fi ad wan spies .';
+  String get nextButtonSearchTutorialText =>
+      'Pres dis button fi ad wan spies .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pres dis button fi diliit di laas kiarakta .';
+  String get previousButtonSearchTutorialText =>
+      'Pres dis button fi diliit di laas kiarakta .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pres dis button fi kluoz di kiibuod ah intarak wid di saach rizolt .';
+  String get menuButtonSearchTutorialText =>
+      'Pres dis button fi kluoz di kiibuod ah intarak wid di saach rizolt .';
 }

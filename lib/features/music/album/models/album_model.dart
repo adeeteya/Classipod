@@ -39,4 +39,8 @@ class AlbumModel {
         albumName,
         albumArtistName,
       );
+
+  bool isOnDevice() {
+    return albumSongs.first.isOnDevice;
+  }
 }

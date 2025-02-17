@@ -15,16 +15,20 @@ class AppLocalizationsHu extends AppLocalizations {
   String get menuButtonText => 'MENÜ';
 
   @override
-  String get audioAccessPermissionTitle => 'Audio hozzáférési engedély szükséges';
+  String get audioAccessPermissionTitle =>
+      'Audio hozzáférési engedély szükséges';
 
   @override
-  String get audioAccessPermissionContent => 'Kérjük, biztosítsa az audio fájlok hozzáférését, hogy lehetővé tegyük a zenei fájlok lejátszását.';
+  String get audioAccessPermissionContent =>
+      'Kérjük, biztosítsa az audio fájlok hozzáférését, hogy lehetővé tegyük a zenei fájlok lejátszását.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Az audio hozzáférési engedély megtagadva';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Az audio hozzáférési engedély megtagadva';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Kérjük, adja meg az audio fájlok hozzáférését az alkalmazáshoz az eszköz beállításaiban, hogy lejátsszuk a zenei fájlokat.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Kérjük, adja meg az audio fájlok hozzáférését az alkalmazáshoz az eszköz beállításaiban, hogy lejátsszuk a zenei fájlokat.';
 
   @override
   String get menuScreenTitle => 'Menü';
@@ -63,7 +67,6 @@ class AppLocalizationsHu extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsHu extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsHu extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Érintse meg a hangokat';
 
   @override
-  String get touchSoundsDialogContent => 'Kérjük, engedélyezze az érintési hangokat a rendszerbeállításoktól a kattintáskerék hangjainak meghallgatásához';
+  String get touchSoundsDialogContent =>
+      'Kérjük, engedélyezze az érintési hangokat a rendszerbeállításoktól a kattintáskerék hangjainak meghallgatásához';
 
   @override
   String get immersiveModeSettingTitle => 'Magával ragadó mód';
@@ -144,7 +147,8 @@ class AppLocalizationsHu extends AppLocalizations {
   String get donateSettingTitle => 'Adományoz';
 
   @override
-  String get donateSettingDescription => 'Ha tetszik ez az alkalmazás, kérjük, fontolja meg az adományozást.';
+  String get donateSettingDescription =>
+      'Ha tetszik ez az alkalmazás, kérjük, fontolja meg az adományozást.';
 
   @override
   String get versionAboutScreenTitle => 'Változat';
@@ -195,7 +199,8 @@ class AppLocalizationsHu extends AppLocalizations {
   String get retryButtonText => 'Újjáépít';
 
   @override
-  String get filePickerDialogTitle => 'Válasszon egy könyvtárat a zene szkenneléséhez';
+  String get filePickerDialogTitle =>
+      'Válasszon egy könyvtárat a zene szkenneléséhez';
 
   @override
   String get searchScreenTitle => 'Keresés';
@@ -210,10 +215,12 @@ class AppLocalizationsHu extends AppLocalizations {
   String get resultsForText => 'Eredmények:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Tiltsa le az akkumulátor optimalizálását';
+  String get disableBatteryOptimizationTitle =>
+      'Tiltsa le az akkumulátor optimalizálását';
 
   @override
-  String get disableBatteryOptimizationContent => 'Kérjük, tiltsa le az alkalmazás akkumulátor optimalizálását az eszköz beállításaiban, hogy lehetővé tegye a zene háttér lejátszását.';
+  String get disableBatteryOptimizationContent =>
+      'Kérjük, tiltsa le az alkalmazás akkumulátor optimalizálását az eszköz beállításaiban, hogy lehetővé tegye a zene háttér lejátszását.';
 
   @override
   String get languageScreenTitle => 'Nyelv';
@@ -243,7 +250,8 @@ class AppLocalizationsHu extends AppLocalizations {
   String get addToOnTheGoPlaylist => 'Adja hozzá az on-the-go-t';
 
   @override
-  String get addAlbumToOnTheGoPlaylist => 'Adjon hozzá albumot az on-the-go-hoz';
+  String get addAlbumToOnTheGoPlaylist =>
+      'Adjon hozzá albumot az on-the-go-hoz';
 
   @override
   String get removeSongFromThePlaylist => 'Távolítsa el a lejátszási listáról';
@@ -267,50 +275,66 @@ class AppLocalizationsHu extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan zenei fájlok';
 
   @override
-  String get deviceControlMenuTutorialText => 'A menüben a navigáláshoz mozgassa enyhén a hüvelykujját a kattintáskerék körül';
+  String get deviceControlMenuTutorialText =>
+      'A menüben a navigáláshoz mozgassa enyhén a hüvelykujját a kattintáskerék körül';
 
   @override
-  String get centerButtonMenuTutorialText => 'Nyomja meg a Center gombot a kiemelt menüpont kiválasztásához';
+  String get centerButtonMenuTutorialText =>
+      'Nyomja meg a Center gombot a kiemelt menüpont kiválasztásához';
 
   @override
-  String get playPauseMenuTutorialText => 'Nyomja meg ezt a gombot a dal lejátszásához vagy szüneteltetéséhez';
+  String get playPauseMenuTutorialText =>
+      'Nyomja meg ezt a gombot a dal lejátszásához vagy szüneteltetéséhez';
 
   @override
-  String get nextButtonMenuTutorialText => 'Nyomja meg ezt a gombot a következő dal kihagyásához';
+  String get nextButtonMenuTutorialText =>
+      'Nyomja meg ezt a gombot a következő dal kihagyásához';
 
   @override
-  String get previousButtonMenuTutorialText => 'Nyomja meg ezt a gombot a visszatekeréshez vagy az előző dalhoz való visszatéréshez';
+  String get previousButtonMenuTutorialText =>
+      'Nyomja meg ezt a gombot a visszatekeréshez vagy az előző dalhoz való visszatéréshez';
 
   @override
-  String get menuButtonTutorialText => 'Nyomja meg ezt a gombot, hogy visszatérjen az előző menübe. Bármely más képernyőn megnyomhatja és megtarthatja, hogy közvetlenül a főmenübe léphessen.';
+  String get menuButtonTutorialText =>
+      'Nyomja meg ezt a gombot, hogy visszatérjen az előző menübe. Bármely más képernyőn megnyomhatja és megtarthatja, hogy közvetlenül a főmenübe léphessen.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ez a kijelző képernyő. Az érintőképernyő és a megosztott képernyő mód alapértelmezés szerint engedélyezve van, és a beállításokban tovább konfigurálható.';
+  String get deviceScreenMenuTutorialText =>
+      'Ez a kijelző képernyő. Az érintőképernyő és a megosztott képernyő mód alapértelmezés szerint engedélyezve van, és a beállításokban tovább konfigurálható.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Mozgassa a hüvelykujját a kattintó kerék körül a hangerő beállításához';
+  String get deviceControlNowPlayingTutorialText =>
+      'Mozgassa a hüvelykujját a kattintó kerék körül a hangerő beállításához';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Nyomja meg a középső gombot a kerekes sávon, a súrolóval és a csúszdán való kerékpározáshoz. Nyomja meg és tartsa be a Center gombot a további beállítások eléréséhez.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Nyomja meg a középső gombot a kerekes sávon, a súrolóval és a csúszdán való kerékpározáshoz. Nyomja meg és tartsa be a Center gombot a további beállítások eléréséhez.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Nyomja meg és tartsa be ezt a gombot a dal gyors előmozdításához';
+  String get nextButtonNowPlayingTutorialText =>
+      'Nyomja meg és tartsa be ezt a gombot a dal gyors előmozdításához';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Nyomja meg és tartsa be ezt a gombot a dal visszatekeréséhez';
+  String get previousButtonNowPlayingTutorialText =>
+      'Nyomja meg és tartsa be ezt a gombot a dal visszatekeréséhez';
 
   @override
-  String get deviceControlSearchTutorialText => 'Mozgassa a hüvelykujját enyhén a kattintó kerék körül, hogy kiemelje az ábécét';
+  String get deviceControlSearchTutorialText =>
+      'Mozgassa a hüvelykujját enyhén a kattintó kerék körül, hogy kiemelje az ábécét';
 
   @override
-  String get centerButtonSearchTutorialText => 'Nyomja meg a Center gombot a kiemelt ábécé kiválasztásához';
+  String get centerButtonSearchTutorialText =>
+      'Nyomja meg a Center gombot a kiemelt ábécé kiválasztásához';
 
   @override
-  String get nextButtonSearchTutorialText => 'Nyomja meg ezt a gombot a hely hozzáadásához';
+  String get nextButtonSearchTutorialText =>
+      'Nyomja meg ezt a gombot a hely hozzáadásához';
 
   @override
-  String get previousButtonSearchTutorialText => 'Nyomja meg ezt a gombot az utolsó karakter törléséhez';
+  String get previousButtonSearchTutorialText =>
+      'Nyomja meg ezt a gombot az utolsó karakter törléséhez';
 
   @override
-  String get menuButtonSearchTutorialText => 'Nyomja meg ezt a gombot a billentyűzet bezárásához és a keresési eredményekkel való interakcióhoz';
+  String get menuButtonSearchTutorialText =>
+      'Nyomja meg ezt a gombot a billentyűzet bezárásához és a keresési eredményekkel való interakcióhoz';
 }

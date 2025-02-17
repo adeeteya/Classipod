@@ -18,13 +18,16 @@ class AppLocalizationsSah extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Аудио доступа Требуется';
 
   @override
-  String get audioAccessPermissionContent => 'Баһаалыста, аудио-файллары биэриҥ, музыкальнай файлларыҥ оонньуурга көҥүл биэрэргэ.';
+  String get audioAccessPermissionContent =>
+      'Баһаалыста, аудио-файллары биэриҥ, музыкальнай файлларыҥ оонньуурга көҥүл биэрэргэ.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Access Permission Denied';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Access Permission Denied';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Бу приложениеҕа аудифайллар доступтарын биэриҥ, эн музыкальнай файлларыҥ оонньуурга көҥүл биэрэргэ.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Бу приложениеҕа аудифайллар доступтарын биэриҥ, эн музыкальнай файлларыҥ оонньуурга көҥүл биэрэргэ.';
 
   @override
   String get menuScreenTitle => 'Меню';
@@ -63,7 +66,6 @@ class AppLocalizationsSah extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsSah extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsSah extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Тач дорҕооннор';
 
   @override
-  String get touchSoundsDialogContent => 'Пожалуйста, включить нажмите звуки из системных Настройках, чтобы слышать звуки клик колесо';
+  String get touchSoundsDialogContent =>
+      'Пожалуйста, включить нажмите звуки из системных Настройках, чтобы слышать звуки клик колесо';
 
   @override
   String get immersiveModeSettingTitle => 'Кэмсинэр режимэ';
@@ -144,7 +146,8 @@ class AppLocalizationsSah extends AppLocalizations {
   String get donateSettingTitle => 'Сиэртибэлээ';
 
   @override
-  String get donateSettingDescription => 'Бу приложениены сөбүлүүр буоллаххына, бэлэхтээһини толкуйдаан көрүҥ.';
+  String get donateSettingDescription =>
+      'Бу приложениены сөбүлүүр буоллаххына, бэлэхтээһини толкуйдаан көрүҥ.';
 
   @override
   String get versionAboutScreenTitle => 'Версия';
@@ -210,10 +213,12 @@ class AppLocalizationsSah extends AppLocalizations {
   String get resultsForText => 'Результаты для:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Отключение Оптимизация аккумулятора';
+  String get disableBatteryOptimizationTitle =>
+      'Отключение Оптимизация аккумулятора';
 
   @override
-  String get disableBatteryOptimizationContent => 'Пожалуйста, отключите оптимизацию аккумулятора для этого приложения в настройках устройства, чтобы позволить воспроизведение фона музыка.';
+  String get disableBatteryOptimizationContent =>
+      'Пожалуйста, отключите оптимизацию аккумулятора для этого приложения в настройках устройства, чтобы позволить воспроизведение фона музыка.';
 
   @override
   String get languageScreenTitle => 'Тыл';
@@ -267,50 +272,66 @@ class AppLocalizationsSah extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Рескан музыкальнай файллара';
 
   @override
-  String get deviceControlMenuTutorialText => 'Пулевой эн улахан тарбаххын чэпчэкитик баттаан, менюну навигациялыыр туһугар.';
+  String get deviceControlMenuTutorialText =>
+      'Пулевой эн улахан тарбаххын чэпчэкитик баттаан, менюну навигациялыыр туһугар.';
 
   @override
-  String get centerButtonMenuTutorialText => 'Нажмите на кнопку центра, чтобы выбрать элемент выделенного меню';
+  String get centerButtonMenuTutorialText =>
+      'Нажмите на кнопку центра, чтобы выбрать элемент выделенного меню';
 
   @override
-  String get playPauseMenuTutorialText => 'Бу кнопканы баттаан, ырыаны оонньотуу эбэтэр тохтоторго';
+  String get playPauseMenuTutorialText =>
+      'Бу кнопканы баттаан, ырыаны оонньотуу эбэтэр тохтоторго';
 
   @override
-  String get nextButtonMenuTutorialText => 'Бу кнопканы баттаан, салгыы ырыаҕа тиий';
+  String get nextButtonMenuTutorialText =>
+      'Бу кнопканы баттаан, салгыы ырыаҕа тиий';
 
   @override
-  String get previousButtonMenuTutorialText => 'Бу кнопканы баттаан, аныгыскыга эбэтэр урукку ырыаҕа төннөргө';
+  String get previousButtonMenuTutorialText =>
+      'Бу кнопканы баттаан, аныгыскыга эбэтэр урукку ырыаҕа төннөргө';
 
   @override
-  String get menuButtonTutorialText => 'Бу кнопканы баттаан, урукку менюҕа төннүн. Атын ханнык баҕарар экрантан баттаан, тутан олоруоххун сөп, сүрүн менюҕа быһаччы киириэххин сөп.';
+  String get menuButtonTutorialText =>
+      'Бу кнопканы баттаан, урукку менюҕа төннүн. Атын ханнык баҕарар экрантан баттаан, тутан олоруоххун сөп, сүрүн менюҕа быһаччы киириэххин сөп.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Это экран дисплей. Сенсорный Экран и разрывные Режим включены по умолчанию и может быть настроен дальше в настройках.';
+  String get deviceScreenMenuTutorialText =>
+      'Это экран дисплей. Сенсорный Экран и разрывные Режим включены по умолчанию и может быть настроен дальше в настройках.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Пользовите свой пальцу вокруг Нажмите Колесо, чтобы настроить объем';
+  String get deviceControlNowPlayingTutorialText =>
+      'Пользовите свой пальцу вокруг Нажмите Колесо, чтобы настроить объем';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Нажмите кнопку Центр, чтобы велосипедить через поиск бар, скраббер-бар и слайдер перемешивания. Эбии варианнарга киирэргэ Киин кнопканы баттаан, тут.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Нажмите кнопку Центр, чтобы велосипедить через поиск бар, скраббер-бар и слайдер перемешивания. Эбии варианнарга киирэргэ Киин кнопканы баттаан, тут.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Бу кнопканы баттаан баран, ырыаны түргэнник инники диэки тардан кэбиһиҥ';
+  String get nextButtonNowPlayingTutorialText =>
+      'Бу кнопканы баттаан баран, ырыаны түргэнник инники диэки тардан кэбиһиҥ';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Бу кнопканы баттаан баран, ырыаны хат көтөҕүллүүгэ тутуһуҥ';
+  String get previousButtonNowPlayingTutorialText =>
+      'Бу кнопканы баттаан баран, ырыаны хат көтөҕүллүүгэ тутуһуҥ';
 
   @override
-  String get deviceControlSearchTutorialText => 'Улахан тарбаххын баттаан, алфавиты бэлиэтээн, баттааҥ.';
+  String get deviceControlSearchTutorialText =>
+      'Улахан тарбаххын баттаан, алфавиты бэлиэтээн, баттааҥ.';
 
   @override
-  String get centerButtonSearchTutorialText => 'Нажмите на кнопку центра, чтобы выбрать выделенную алфавит';
+  String get centerButtonSearchTutorialText =>
+      'Нажмите на кнопку центра, чтобы выбрать выделенную алфавит';
 
   @override
-  String get nextButtonSearchTutorialText => 'Бу кнопканы баттаан, миэстэни эбэбит';
+  String get nextButtonSearchTutorialText =>
+      'Бу кнопканы баттаан, миэстэни эбэбит';
 
   @override
-  String get previousButtonSearchTutorialText => 'Бу кнопканы баттаан, бүтэһик персонажы суох оҥоруҥ';
+  String get previousButtonSearchTutorialText =>
+      'Бу кнопканы баттаан, бүтэһик персонажы суох оҥоруҥ';
 
   @override
-  String get menuButtonSearchTutorialText => 'Бу кнопканы баттаан, клавиатураны сабан баран, көрдөөһүн түмүгүн кытта дьүөрэлэһиннэр';
+  String get menuButtonSearchTutorialText =>
+      'Бу кнопканы баттаан, клавиатураны сабан баран, көрдөөһүн түмүгүн кытта дьүөрэлэһиннэр';
 }

@@ -18,13 +18,16 @@ class AppLocalizationsTr extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ses erişim izni gerekli';
 
   @override
-  String get audioAccessPermissionContent => 'Müzik dosyalarınızı oynatmamıza izin vermek için lütfen ses dosyaları erişimi verin.';
+  String get audioAccessPermissionContent =>
+      'Müzik dosyalarınızı oynatmamıza izin vermek için lütfen ses dosyaları erişimi verin.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ses erişim izni reddedildi';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ses erişim izni reddedildi';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Müzik dosyalarınızı oynatmamıza izin vermek için lütfen cihaz ayarlarında bu uygulama için ses dosyaları erişimi verin.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Müzik dosyalarınızı oynatmamıza izin vermek için lütfen cihaz ayarlarında bu uygulama için ses dosyaları erişimi verin.';
 
   @override
   String get menuScreenTitle => 'Menü';
@@ -63,7 +66,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsTr extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Dokunma Sesleri';
 
   @override
-  String get touchSoundsDialogContent => 'Tıklama tekerleği seslerini duymak için lütfen sistem ayarlarından dokunma seslerini etkinleştirin';
+  String get touchSoundsDialogContent =>
+      'Tıklama tekerleği seslerini duymak için lütfen sistem ayarlarından dokunma seslerini etkinleştirin';
 
   @override
   String get immersiveModeSettingTitle => 'Sürükleyici mod';
@@ -144,7 +146,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get donateSettingTitle => 'Bağış yapmak';
 
   @override
-  String get donateSettingDescription => 'Bu uygulamayı beğendiyseniz, lütfen bağış yapmayı düşünün.';
+  String get donateSettingDescription =>
+      'Bu uygulamayı beğendiyseniz, lütfen bağış yapmayı düşünün.';
 
   @override
   String get versionAboutScreenTitle => 'Versiyon';
@@ -210,10 +213,12 @@ class AppLocalizationsTr extends AppLocalizations {
   String get resultsForText => 'Sonuçlar:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Pil optimizasyonunu devre dışı bırakın';
+  String get disableBatteryOptimizationTitle =>
+      'Pil optimizasyonunu devre dışı bırakın';
 
   @override
-  String get disableBatteryOptimizationContent => 'Müziğin arka plan çalmasına izin vermek için lütfen cihaz ayarlarında bu uygulama için pil optimizasyonunu devre dışı bırakın.';
+  String get disableBatteryOptimizationContent =>
+      'Müziğin arka plan çalmasına izin vermek için lütfen cihaz ayarlarında bu uygulama için pil optimizasyonunu devre dışı bırakın.';
 
   @override
   String get languageScreenTitle => 'Dil';
@@ -267,50 +272,66 @@ class AppLocalizationsTr extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Yeniden düzenli müzik dosyaları';
 
   @override
-  String get deviceControlMenuTutorialText => 'Menüde gezinmek için başparmağınızı tıklama tekerleğinin etrafında hafifçe hareket ettirin';
+  String get deviceControlMenuTutorialText =>
+      'Menüde gezinmek için başparmağınızı tıklama tekerleğinin etrafında hafifçe hareket ettirin';
 
   @override
-  String get centerButtonMenuTutorialText => 'Vurgulanan menü öğesini seçmek için Merkez düğmesine basın';
+  String get centerButtonMenuTutorialText =>
+      'Vurgulanan menü öğesini seçmek için Merkez düğmesine basın';
 
   @override
-  String get playPauseMenuTutorialText => 'Bir şarkıyı çalmak veya duraklatmak için bu düğmeye basın';
+  String get playPauseMenuTutorialText =>
+      'Bir şarkıyı çalmak veya duraklatmak için bu düğmeye basın';
 
   @override
-  String get nextButtonMenuTutorialText => 'Bir sonraki şarkıya atlamak için bu düğmeye basın';
+  String get nextButtonMenuTutorialText =>
+      'Bir sonraki şarkıya atlamak için bu düğmeye basın';
 
   @override
-  String get previousButtonMenuTutorialText => 'Yeniden sarmak veya önceki şarkıya geri dönmek için bu düğmeye basın';
+  String get previousButtonMenuTutorialText =>
+      'Yeniden sarmak veya önceki şarkıya geri dönmek için bu düğmeye basın';
 
   @override
-  String get menuButtonTutorialText => 'Önceki menüye geri dönmek için bu düğmeye basın. Doğrudan ana menüye gitmek için diğer ekranlardan basılı tutabilirsiniz.';
+  String get menuButtonTutorialText =>
+      'Önceki menüye geri dönmek için bu düğmeye basın. Doğrudan ana menüye gitmek için diğer ekranlardan basılı tutabilirsiniz.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Bu ekran ekranı. Dokunmatik ekran ve bölünmüş ekran modu varsayılan olarak etkinleştirilir ve ayarlarda daha fazla yapılandırılabilir.';
+  String get deviceScreenMenuTutorialText =>
+      'Bu ekran ekranı. Dokunmatik ekran ve bölünmüş ekran modu varsayılan olarak etkinleştirilir ve ayarlarda daha fazla yapılandırılabilir.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Sesi ayarlamak için başparmağınızı tıklama tekerleğinin etrafında hareket ettirin';
+  String get deviceControlNowPlayingTutorialText =>
+      'Sesi ayarlamak için başparmağınızı tıklama tekerleğinin etrafında hareket ettirin';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Arama çubuğu, yıkama çubuğu ve shuffle kaydırıcısından geçerek merkez düğmesine basın. Ek seçeneklere erişmek için Orta düğmesini basılı tutun.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Arama çubuğu, yıkama çubuğu ve shuffle kaydırıcısından geçerek merkez düğmesine basın. Ek seçeneklere erişmek için Orta düğmesini basılı tutun.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Şarkıyı hızlı bir şekilde ileriye götürmek için bu düğmeye basın ve basılı tutun';
+  String get nextButtonNowPlayingTutorialText =>
+      'Şarkıyı hızlı bir şekilde ileriye götürmek için bu düğmeye basın ve basılı tutun';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Şarkıyı geri sarmak için bu düğmeyi basılı tutun';
+  String get previousButtonNowPlayingTutorialText =>
+      'Şarkıyı geri sarmak için bu düğmeyi basılı tutun';
 
   @override
-  String get deviceControlSearchTutorialText => 'Bir alfabeyi vurgulamak için başparmağınızı tıklama tekerleğinin etrafında hafifçe hareket ettirin';
+  String get deviceControlSearchTutorialText =>
+      'Bir alfabeyi vurgulamak için başparmağınızı tıklama tekerleğinin etrafında hafifçe hareket ettirin';
 
   @override
-  String get centerButtonSearchTutorialText => 'Vurgulanan alfabeyi seçmek için Merkez düğmesine basın';
+  String get centerButtonSearchTutorialText =>
+      'Vurgulanan alfabeyi seçmek için Merkez düğmesine basın';
 
   @override
-  String get nextButtonSearchTutorialText => 'Bir alan eklemek için bu düğmeye basın';
+  String get nextButtonSearchTutorialText =>
+      'Bir alan eklemek için bu düğmeye basın';
 
   @override
-  String get previousButtonSearchTutorialText => 'Son karakteri silmek için bu düğmeye basın';
+  String get previousButtonSearchTutorialText =>
+      'Son karakteri silmek için bu düğmeye basın';
 
   @override
-  String get menuButtonSearchTutorialText => 'Klavyeyi kapatmak için bu düğmeye basın ve arama sonuçlarıyla etkileşime geçin';
+  String get menuButtonSearchTutorialText =>
+      'Klavyeyi kapatmak için bu düğmeye basın ve arama sonuçlarıyla etkileşime geçin';
 }

@@ -15,16 +15,20 @@ class AppLocalizationsMt extends AppLocalizations {
   String get menuButtonText => 'Menu';
 
   @override
-  String get audioAccessPermissionTitle => 'Permess ta \'Aċċess għall-Awdjo Meħtieġ';
+  String get audioAccessPermissionTitle =>
+      'Permess ta \'Aċċess għall-Awdjo Meħtieġ';
 
   @override
-  String get audioAccessPermissionContent => 'Jekk jogħġbok agħti aċċess għall-fajls awdjo biex tippermettilna ndoqq il-fajls tal-mużika tiegħek.';
+  String get audioAccessPermissionContent =>
+      'Jekk jogħġbok agħti aċċess għall-fajls awdjo biex tippermettilna ndoqq il-fajls tal-mużika tiegħek.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Permess ta \'aċċess awdjo miċħud';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Permess ta \'aċċess awdjo miċħud';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Jekk jogħġbok agħti aċċess għall-fajls awdjo għal din l-app fl-issettjar tal-apparat biex tippermettilna ndoqq il-fajls tal-mużika tiegħek.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Jekk jogħġbok agħti aċċess għall-fajls awdjo għal din l-app fl-issettjar tal-apparat biex tippermettilna ndoqq il-fajls tal-mużika tiegħek.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsMt extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsMt extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsMt extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Tmiss il-ħsejjes';
 
   @override
-  String get touchSoundsDialogContent => 'Jekk jogħġbok ħalli l-ħsejjes tal-mess mill-issettjar tas-sistema biex tisma \'l-ħsejjes tar-rota tal-ikklikkja';
+  String get touchSoundsDialogContent =>
+      'Jekk jogħġbok ħalli l-ħsejjes tal-mess mill-issettjar tas-sistema biex tisma \'l-ħsejjes tar-rota tal-ikklikkja';
 
   @override
   String get immersiveModeSettingTitle => 'Modalità immersiva';
@@ -144,7 +147,8 @@ class AppLocalizationsMt extends AppLocalizations {
   String get donateSettingTitle => 'Donazzjoni';
 
   @override
-  String get donateSettingDescription => 'Jekk tixtieq din l-app, jekk jogħġbok ikkunsidra li tagħti d-donazzjoni.';
+  String get donateSettingDescription =>
+      'Jekk tixtieq din l-app, jekk jogħġbok ikkunsidra li tagħti d-donazzjoni.';
 
   @override
   String get versionAboutScreenTitle => 'Verżjoni';
@@ -195,7 +199,8 @@ class AppLocalizationsMt extends AppLocalizations {
   String get retryButtonText => 'Erġa \'erġa\'';
 
   @override
-  String get filePickerDialogTitle => 'Agħżel direttorju biex tiskannja għall-mużika';
+  String get filePickerDialogTitle =>
+      'Agħżel direttorju biex tiskannja għall-mużika';
 
   @override
   String get searchScreenTitle => 'Tfittxija';
@@ -210,10 +215,12 @@ class AppLocalizationsMt extends AppLocalizations {
   String get resultsForText => 'Riżultati għal:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Itfi l-ottimizzazzjoni tal-batterija';
+  String get disableBatteryOptimizationTitle =>
+      'Itfi l-ottimizzazzjoni tal-batterija';
 
   @override
-  String get disableBatteryOptimizationContent => 'Jekk jogħġbok itfi l-ottimizzazzjoni tal-batterija għal din l-app fl-issettjar tal-apparat biex tippermetti d-daqq tal-isfond tal-mużika.';
+  String get disableBatteryOptimizationContent =>
+      'Jekk jogħġbok itfi l-ottimizzazzjoni tal-batterija għal din l-app fl-issettjar tal-apparat biex tippermetti d-daqq tal-isfond tal-mużika.';
 
   @override
   String get languageScreenTitle => 'Lingwa';
@@ -267,50 +274,66 @@ class AppLocalizationsMt extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Fajls tal-mużika mill-ġdid';
 
   @override
-  String get deviceControlMenuTutorialText => 'Mexxi l-kbir tiegħek ħafif madwar ir-rota tal-ikklikkja biex tinnaviga l-menu';
+  String get deviceControlMenuTutorialText =>
+      'Mexxi l-kbir tiegħek ħafif madwar ir-rota tal-ikklikkja biex tinnaviga l-menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Agħfas il-buttuna Ċentru biex tagħżel l-oġġett tal-menu enfasizzat';
+  String get centerButtonMenuTutorialText =>
+      'Agħfas il-buttuna Ċentru biex tagħżel l-oġġett tal-menu enfasizzat';
 
   @override
-  String get playPauseMenuTutorialText => 'Agħfas din il-buttuna biex tilgħab jew nieqaf kanzunetta';
+  String get playPauseMenuTutorialText =>
+      'Agħfas din il-buttuna biex tilgħab jew nieqaf kanzunetta';
 
   @override
-  String get nextButtonMenuTutorialText => 'Agħfas din il-buttuna biex taqbeż il-kanzunetta li jmiss';
+  String get nextButtonMenuTutorialText =>
+      'Agħfas din il-buttuna biex taqbeż il-kanzunetta li jmiss';
 
   @override
-  String get previousButtonMenuTutorialText => 'Agħfas din il-buttuna biex terġa \'tidwir jew mur lura għall-kanzunetta ta\' qabel';
+  String get previousButtonMenuTutorialText =>
+      'Agħfas din il-buttuna biex terġa \'tidwir jew mur lura għall-kanzunetta ta\' qabel';
 
   @override
-  String get menuButtonTutorialText => 'Agħfas din il-buttuna biex tmur lura għall-menu preċedenti. Tista \'tagħfas u żżommha minn kwalunkwe skrin ieħor biex tmur direttament fil-menu prinċipali.';
+  String get menuButtonTutorialText =>
+      'Agħfas din il-buttuna biex tmur lura għall-menu preċedenti. Tista \'tagħfas u żżommha minn kwalunkwe skrin ieħor biex tmur direttament fil-menu prinċipali.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Dan huwa l-iskrin tal-wiri. Touch Screen u Split Screen Mode huma attivati ​​awtomatikament u jistgħu jiġu kkonfigurati aktar fis-settings.';
+  String get deviceScreenMenuTutorialText =>
+      'Dan huwa l-iskrin tal-wiri. Touch Screen u Split Screen Mode huma attivati ​​awtomatikament u jistgħu jiġu kkonfigurati aktar fis-settings.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Mexxi l-kbir tiegħek madwar ir-rota tal-ikklikkja biex taġġusta l-volum';
+  String get deviceControlNowPlayingTutorialText =>
+      'Mexxi l-kbir tiegħek madwar ir-rota tal-ikklikkja biex taġġusta l-volum';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Agħfas il-buttuna Ċentru biex tiċċikla permezz ta \'SEEF BAR, SCRUBBER BAR u SHUFFLE SLIDER. Agħfas u żomm il-buttuna Ċentru biex taċċessa għażliet addizzjonali.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Agħfas il-buttuna Ċentru biex tiċċikla permezz ta \'SEEF BAR, SCRUBBER BAR u SHUFFLE SLIDER. Agħfas u żomm il-buttuna Ċentru biex taċċessa għażliet addizzjonali.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Agħfas u żomm din il-buttuna biex tgħaddi l-kanzunetta';
+  String get nextButtonNowPlayingTutorialText =>
+      'Agħfas u żomm din il-buttuna biex tgħaddi l-kanzunetta';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Agħfas u żomm din il-buttuna biex terġa \'tidwir il-kanzunetta';
+  String get previousButtonNowPlayingTutorialText =>
+      'Agħfas u żomm din il-buttuna biex terġa \'tidwir il-kanzunetta';
 
   @override
-  String get deviceControlSearchTutorialText => 'Mexxi l-kbir tiegħek ħafif madwar ir-rota tal-ikklikkja biex tenfasizza alfabett';
+  String get deviceControlSearchTutorialText =>
+      'Mexxi l-kbir tiegħek ħafif madwar ir-rota tal-ikklikkja biex tenfasizza alfabett';
 
   @override
-  String get centerButtonSearchTutorialText => 'Agħfas il-buttuna Ċentru biex tagħżel l-alfabett enfasizzat';
+  String get centerButtonSearchTutorialText =>
+      'Agħfas il-buttuna Ċentru biex tagħżel l-alfabett enfasizzat';
 
   @override
-  String get nextButtonSearchTutorialText => 'Agħfas din il-buttuna biex iżżid spazju';
+  String get nextButtonSearchTutorialText =>
+      'Agħfas din il-buttuna biex iżżid spazju';
 
   @override
-  String get previousButtonSearchTutorialText => 'Agħfas din il-buttuna biex tħassar l-aħħar karattru';
+  String get previousButtonSearchTutorialText =>
+      'Agħfas din il-buttuna biex tħassar l-aħħar karattru';
 
   @override
-  String get menuButtonSearchTutorialText => 'Agħfas din il-buttuna biex tagħlaq it-tastiera u tinteraġixxi mar-riżultati tat-tfittxija';
+  String get menuButtonSearchTutorialText =>
+      'Agħfas din il-buttuna biex tagħlaq it-tastiera u tinteraġixxi mar-riżultati tat-tfittxija';
 }

@@ -18,13 +18,16 @@ class AppLocalizationsNl extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Access -toestemming vereist';
 
   @override
-  String get audioAccessPermissionContent => 'Geef audiobestanden toegang om ons in staat te stellen uw muziekbestanden te spelen.';
+  String get audioAccessPermissionContent =>
+      'Geef audiobestanden toegang om ons in staat te stellen uw muziekbestanden te spelen.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Access -toestemming geweigerd';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Access -toestemming geweigerd';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Geef audiobestanden toegang tot deze app in de apparaatinstellingen zodat we uw muziekbestanden kunnen afspelen.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Geef audiobestanden toegang tot deze app in de apparaatinstellingen zodat we uw muziekbestanden kunnen afspelen.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsNl extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsNl extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsNl extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Raak geluiden aan';
 
   @override
-  String get touchSoundsDialogContent => 'Schakel Touch Sounds uit systeeminstellingen in om het klikwielgeluiden te horen';
+  String get touchSoundsDialogContent =>
+      'Schakel Touch Sounds uit systeeminstellingen in om het klikwielgeluiden te horen';
 
   @override
   String get immersiveModeSettingTitle => 'Immersieve modus';
@@ -144,7 +146,8 @@ class AppLocalizationsNl extends AppLocalizations {
   String get donateSettingTitle => 'Doneren';
 
   @override
-  String get donateSettingDescription => 'Als je deze app leuk vindt, overweeg dan om te doneren.';
+  String get donateSettingDescription =>
+      'Als je deze app leuk vindt, overweeg dan om te doneren.';
 
   @override
   String get versionAboutScreenTitle => 'Versie';
@@ -195,7 +198,8 @@ class AppLocalizationsNl extends AppLocalizations {
   String get retryButtonText => 'Opnieuw proberen';
 
   @override
-  String get filePickerDialogTitle => 'Selecteer een map om op muziek te scannen';
+  String get filePickerDialogTitle =>
+      'Selecteer een map om op muziek te scannen';
 
   @override
   String get searchScreenTitle => 'Zoekopdracht';
@@ -210,10 +214,12 @@ class AppLocalizationsNl extends AppLocalizations {
   String get resultsForText => 'Resultaten voor:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Schakel de batterijoptimalisatie uit';
+  String get disableBatteryOptimizationTitle =>
+      'Schakel de batterijoptimalisatie uit';
 
   @override
-  String get disableBatteryOptimizationContent => 'Schakel de batterijoptimalisatie voor deze app uit in de apparaatinstellingen om het afspelen van muziek achtergrond mogelijk te maken.';
+  String get disableBatteryOptimizationContent =>
+      'Schakel de batterijoptimalisatie voor deze app uit in de apparaatinstellingen om het afspelen van muziek achtergrond mogelijk te maken.';
 
   @override
   String get languageScreenTitle => 'Taal';
@@ -267,50 +273,66 @@ class AppLocalizationsNl extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan -muziekbestanden';
 
   @override
-  String get deviceControlMenuTutorialText => 'Verplaats uw duim lichtjes rond het klikwiel om door het menu te navigeren';
+  String get deviceControlMenuTutorialText =>
+      'Verplaats uw duim lichtjes rond het klikwiel om door het menu te navigeren';
 
   @override
-  String get centerButtonMenuTutorialText => 'Druk op de middelste knop om het gemarkeerde menu -item te selecteren';
+  String get centerButtonMenuTutorialText =>
+      'Druk op de middelste knop om het gemarkeerde menu -item te selecteren';
 
   @override
-  String get playPauseMenuTutorialText => 'Druk op deze knop om een ​​nummer te spelen of te pauzeren';
+  String get playPauseMenuTutorialText =>
+      'Druk op deze knop om een ​​nummer te spelen of te pauzeren';
 
   @override
-  String get nextButtonMenuTutorialText => 'Druk op deze knop om over te slaan naar het volgende nummer';
+  String get nextButtonMenuTutorialText =>
+      'Druk op deze knop om over te slaan naar het volgende nummer';
 
   @override
-  String get previousButtonMenuTutorialText => 'Druk op deze knop om terug te spoelen of terug te gaan naar het vorige nummer';
+  String get previousButtonMenuTutorialText =>
+      'Druk op deze knop om terug te spoelen of terug te gaan naar het vorige nummer';
 
   @override
-  String get menuButtonTutorialText => 'Druk op deze knop om terug te gaan naar het vorige menu. U kunt het op elk ander scherm ingedrukt houden om rechtstreeks naar het hoofdmenu te gaan.';
+  String get menuButtonTutorialText =>
+      'Druk op deze knop om terug te gaan naar het vorige menu. U kunt het op elk ander scherm ingedrukt houden om rechtstreeks naar het hoofdmenu te gaan.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Dit is het schermscherm. Touchscreen en split -schermmodus zijn standaard ingeschakeld en kunnen verder worden geconfigureerd in de instellingen.';
+  String get deviceScreenMenuTutorialText =>
+      'Dit is het schermscherm. Touchscreen en split -schermmodus zijn standaard ingeschakeld en kunnen verder worden geconfigureerd in de instellingen.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Verplaats uw duim rond het klikwiel om het volume aan te passen';
+  String get deviceControlNowPlayingTutorialText =>
+      'Verplaats uw duim rond het klikwiel om het volume aan te passen';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Druk op de middelste knop om door zoekbalk, scrubberbar en shuffle schuifregelaar te fietsen. Druk op de middelste knop ingedrukt om toegang te krijgen tot extra opties.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Druk op de middelste knop om door zoekbalk, scrubberbar en shuffle schuifregelaar te fietsen. Druk op de middelste knop ingedrukt om toegang te krijgen tot extra opties.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Houd deze knop ingedrukt om het nummer snel vooruit te maken';
+  String get nextButtonNowPlayingTutorialText =>
+      'Houd deze knop ingedrukt om het nummer snel vooruit te maken';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Houd deze knop ingedrukt om het nummer terug te spoelen';
+  String get previousButtonNowPlayingTutorialText =>
+      'Houd deze knop ingedrukt om het nummer terug te spoelen';
 
   @override
-  String get deviceControlSearchTutorialText => 'Verplaats uw duim lichtjes rond het klikwiel om een ​​alfabet te markeren';
+  String get deviceControlSearchTutorialText =>
+      'Verplaats uw duim lichtjes rond het klikwiel om een ​​alfabet te markeren';
 
   @override
-  String get centerButtonSearchTutorialText => 'Druk op de middelste knop om het gemarkeerde alfabet te selecteren';
+  String get centerButtonSearchTutorialText =>
+      'Druk op de middelste knop om het gemarkeerde alfabet te selecteren';
 
   @override
-  String get nextButtonSearchTutorialText => 'Druk op deze knop om een ​​ruimte toe te voegen';
+  String get nextButtonSearchTutorialText =>
+      'Druk op deze knop om een ​​ruimte toe te voegen';
 
   @override
-  String get previousButtonSearchTutorialText => 'Druk op deze knop om het laatste teken te verwijderen';
+  String get previousButtonSearchTutorialText =>
+      'Druk op deze knop om het laatste teken te verwijderen';
 
   @override
-  String get menuButtonSearchTutorialText => 'Druk op deze knop om het toetsenbord te sluiten en te communiceren met de zoekresultaten';
+  String get menuButtonSearchTutorialText =>
+      'Druk op deze knop om het toetsenbord te sluiten en te communiceren met de zoekresultaten';
 }

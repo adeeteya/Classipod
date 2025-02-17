@@ -15,16 +15,20 @@ class AppLocalizationsLg extends AppLocalizations {
   String get menuButtonText => 'Menu .';
 
   @override
-  String get audioAccessPermissionTitle => 'Olukusa lw’okuyingira mu maloboozi lwetaagisa .';
+  String get audioAccessPermissionTitle =>
+      'Olukusa lw’okuyingira mu maloboozi lwetaagisa .';
 
   @override
-  String get audioAccessPermissionContent => 'Nsaba okuwa Audio Files Access okutusobozesa okukuba fayiro zo ez\'ennyimba.';
+  String get audioAccessPermissionContent =>
+      'Nsaba okuwa Audio Files Access okutusobozesa okukuba fayiro zo ez\'ennyimba.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Olukusa lw\'okuyingira mu ddoboozi olugaaniddwa .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Olukusa lw\'okuyingira mu ddoboozi olugaaniddwa .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Nsaba owe fayiro z’amaloboozi okuyingira ku pulogulaamu eno mu nteekateeka z’ekyuma okutusobozesa okukuba fayiro zo ez’ennyimba.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Nsaba owe fayiro z’amaloboozi okuyingira ku pulogulaamu eno mu nteekateeka z’ekyuma okutusobozesa okukuba fayiro zo ez’ennyimba.';
 
   @override
   String get menuScreenTitle => 'Menu .';
@@ -63,7 +67,6 @@ class AppLocalizationsLg extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsLg extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsLg extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Amaloboozi g\'okukwatako .';
 
   @override
-  String get touchSoundsDialogContent => 'Nkusaba okusobozesa amaloboozi g\'okukwata okuva mu nteekateeka z\'enkola okuwulira amaloboozi ga Click Wheel .';
+  String get touchSoundsDialogContent =>
+      'Nkusaba okusobozesa amaloboozi g\'okukwata okuva mu nteekateeka z\'enkola okuwulira amaloboozi ga Click Wheel .';
 
   @override
   String get immersiveModeSettingTitle => 'Omutindo gw\'okunnyika .';
@@ -144,7 +147,8 @@ class AppLocalizationsLg extends AppLocalizations {
   String get donateSettingTitle => 'Okugaba';
 
   @override
-  String get donateSettingDescription => 'Bwoba oyagala app eno, nsaba olowooze ku kuwaayo.';
+  String get donateSettingDescription =>
+      'Bwoba oyagala app eno, nsaba olowooze ku kuwaayo.';
 
   @override
   String get versionAboutScreenTitle => 'Ekika';
@@ -195,7 +199,8 @@ class AppLocalizationsLg extends AppLocalizations {
   String get retryButtonText => 'Ddamu okugezaako .';
 
   @override
-  String get filePickerDialogTitle => 'Londa ekitabo ky\'ogenda okukebera ennyimba .';
+  String get filePickerDialogTitle =>
+      'Londa ekitabo ky\'ogenda okukebera ennyimba .';
 
   @override
   String get searchScreenTitle => 'Okunoonya';
@@ -213,7 +218,8 @@ class AppLocalizationsLg extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Lemesa okulongoosa bbaatule .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Nsaba okulemesa okulongoosa bbaatule ku pulogulaamu eno mu nteekateeka z\'ekyuma okusobozesa okukuba omuziki emabega.';
+  String get disableBatteryOptimizationContent =>
+      'Nsaba okulemesa okulongoosa bbaatule ku pulogulaamu eno mu nteekateeka z\'ekyuma okusobozesa okukuba omuziki emabega.';
 
   @override
   String get languageScreenTitle => 'Olulimi';
@@ -267,50 +273,66 @@ class AppLocalizationsLg extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Fayiro z\'ennyimba za Rescan .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Tambuza engalo yo ensajja mu ngeri etali ya maanyi ku nnamuziga y’okunyiga okutambula mu menu .';
+  String get deviceControlMenuTutorialText =>
+      'Tambuza engalo yo ensajja mu ngeri etali ya maanyi ku nnamuziga y’okunyiga okutambula mu menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Nywa ku bbaatuuni ya Centre okulonda ekintu kya menu .';
+  String get centerButtonMenuTutorialText =>
+      'Nywa ku bbaatuuni ya Centre okulonda ekintu kya menu .';
 
   @override
-  String get playPauseMenuTutorialText => 'Nywa ku bbaatuuni eno okukuba oba okuyimiriza oluyimba .';
+  String get playPauseMenuTutorialText =>
+      'Nywa ku bbaatuuni eno okukuba oba okuyimiriza oluyimba .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Nywa ku bbaatuuni eno okubuuka ku luyimba oluddako .';
+  String get nextButtonMenuTutorialText =>
+      'Nywa ku bbaatuuni eno okubuuka ku luyimba oluddako .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Nywa ku bbaatuuni eno okudda emabega oba okuddayo ku luyimba oluyise .';
+  String get previousButtonMenuTutorialText =>
+      'Nywa ku bbaatuuni eno okudda emabega oba okuddayo ku luyimba oluyise .';
 
   @override
-  String get menuButtonTutorialText => 'Nywa ku bbaatuuni eno okudda ku menu eyasooka. Oyinza okuginyiga n’ogikwata okuva ku screen endala yonna okugenda butereevu ku menu enkulu.';
+  String get menuButtonTutorialText =>
+      'Nywa ku bbaatuuni eno okudda ku menu eyasooka. Oyinza okuginyiga n’ogikwata okuva ku screen endala yonna okugenda butereevu ku menu enkulu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Eno ye screen y’okulaga. Touch Screen ne Split Screen Mode zikolebwa nga bwe zibeera era zisobola okusengekebwa okwongera mu nteekateeka.';
+  String get deviceScreenMenuTutorialText =>
+      'Eno ye screen y’okulaga. Touch Screen ne Split Screen Mode zikolebwa nga bwe zibeera era zisobola okusengekebwa okwongera mu nteekateeka.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Tambuza engalo yo ennene ku nnamuziga y’okunyiga okutereeza eddoboozi .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Tambuza engalo yo ennene ku nnamuziga y’okunyiga okutereeza eddoboozi .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Nywa ku bbaatuuni ya wakati okuvuga okuyita mu bbaala ya Seek, Scrubber Bar ne Shuffle Slider. Nywa era onyige bbaatuuni ya wakati okusobola okufuna eby’okulonda ebirala.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Nywa ku bbaatuuni ya wakati okuvuga okuyita mu bbaala ya Seek, Scrubber Bar ne Shuffle Slider. Nywa era onyige bbaatuuni ya wakati okusobola okufuna eby’okulonda ebirala.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Nywa era onyige button eno okusiiba mu maaso oluyimba .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Nywa era onyige button eno okusiiba mu maaso oluyimba .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Nywa era onyige button eno okuddamu okuvuga oluyimba .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Nywa era onyige button eno okuddamu okuvuga oluyimba .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Tambuza engalo yo ensajja mu ngeri etali ya maanyi ku nnamuziga y’okunyiga okulaga ennukuta .';
+  String get deviceControlSearchTutorialText =>
+      'Tambuza engalo yo ensajja mu ngeri etali ya maanyi ku nnamuziga y’okunyiga okulaga ennukuta .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Nywa ku bbaatuuni ya wakati okulonda ennukuta ezisiddwaako akabonero .';
+  String get centerButtonSearchTutorialText =>
+      'Nywa ku bbaatuuni ya wakati okulonda ennukuta ezisiddwaako akabonero .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Nywa ku bbaatuuni eno okwongerako ekifo .';
+  String get nextButtonSearchTutorialText =>
+      'Nywa ku bbaatuuni eno okwongerako ekifo .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Nywa ku bbaatuuni eno okusazaamu ennukuta esembayo .';
+  String get previousButtonSearchTutorialText =>
+      'Nywa ku bbaatuuni eno okusazaamu ennukuta esembayo .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Nywa ku bbaatuuni eno okuggalawo keyboard era okwatagane n’ebivudde mu kunoonyereza .';
+  String get menuButtonSearchTutorialText =>
+      'Nywa ku bbaatuuni eno okuggalawo keyboard era okwatagane n’ebivudde mu kunoonyereza .';
 }

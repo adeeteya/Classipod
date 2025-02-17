@@ -15,16 +15,20 @@ class AppLocalizationsZap extends AppLocalizations {
   String get menuButtonText => 'MENÚ .';
 
   @override
-  String get audioAccessPermissionTitle => 'Permisu de acceso audio ni caquiiñeʼ .';
+  String get audioAccessPermissionTitle =>
+      'Permisu de acceso audio ni caquiiñeʼ .';
 
   @override
-  String get audioAccessPermissionContent => 'Bidii lugar chuʼ archivu de audio para ganda gucaadiágadu ca archivu stiʼ música stiluʼ.';
+  String get audioAccessPermissionContent =>
+      'Bidii lugar chuʼ archivu de audio para ganda gucaadiágadu ca archivu stiʼ música stiluʼ.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Acceso permisu negada';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Acceso permisu negada';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Bidii lugar chuʼ archivu de audio para aplicación riʼ lu configuración stiʼ dispositivo ca para ganda gucaadiágadu ca archivu de música stiluʼ.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Bidii lugar chuʼ archivu de audio para aplicación riʼ lu configuración stiʼ dispositivo ca para ganda gucaadiágadu ca archivu de música stiluʼ.';
 
   @override
   String get menuScreenTitle => 'Menú .';
@@ -63,7 +67,6 @@ class AppLocalizationsZap extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsZap extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsZap extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sonido toque .';
 
   @override
-  String get touchSoundsDialogContent => 'Biʼniʼ activar sonidu Toque de ca configuración stiʼ sistema para gucaadiágaluʼ ca sonidu stiʼ rueda de clic .';
+  String get touchSoundsDialogContent =>
+      'Biʼniʼ activar sonidu Toque de ca configuración stiʼ sistema para gucaadiágaluʼ ca sonidu stiʼ rueda de clic .';
 
   @override
   String get immersiveModeSettingTitle => 'Modo inmersivo';
@@ -144,7 +147,8 @@ class AppLocalizationsZap extends AppLocalizations {
   String get donateSettingTitle => 'Rusiga\'de';
 
   @override
-  String get donateSettingDescription => 'Pa riuuláʼdxiluʼ aplicación riʼ, biiyaʼ pa zanda gudiiluʼ donación.';
+  String get donateSettingDescription =>
+      'Pa riuuláʼdxiluʼ aplicación riʼ, biiyaʼ pa zanda gudiiluʼ donación.';
 
   @override
   String get versionAboutScreenTitle => 'Versión';
@@ -195,7 +199,8 @@ class AppLocalizationsZap extends AppLocalizations {
   String get retryButtonText => 'Retry';
 
   @override
-  String get filePickerDialogTitle => 'Bicaa ti directoriu para gucaaluʼ música .';
+  String get filePickerDialogTitle =>
+      'Bicaa ti directoriu para gucaaluʼ música .';
 
   @override
   String get searchScreenTitle => 'Ruyubi';
@@ -210,10 +215,12 @@ class AppLocalizationsZap extends AppLocalizations {
   String get resultsForText => 'Resultadu para:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Optimización de batería desactivar';
+  String get disableBatteryOptimizationTitle =>
+      'Optimización de batería desactivar';
 
   @override
-  String get disableBatteryOptimizationContent => 'Biʼniʼ desactivar optimización de batería para aplicación riʼ lu ca configuración stiʼ dispositivo ca para ganda guiree música lu fondo stiʼ música.';
+  String get disableBatteryOptimizationContent =>
+      'Biʼniʼ desactivar optimización de batería para aplicación riʼ lu ca configuración stiʼ dispositivo ca para ganda guiree música lu fondo stiʼ música.';
 
   @override
   String get languageScreenTitle => 'Diidxa';
@@ -267,50 +274,66 @@ class AppLocalizationsZap extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Archivo de música rescana';
 
   @override
-  String get deviceControlMenuTutorialText => 'Bicaa pulgar stiluʼ ti ratuhuiiniʼ guidubi vuelta de Rueda de Click para gúʼyaluʼ menú .';
+  String get deviceControlMenuTutorialText =>
+      'Bicaa pulgar stiluʼ ti ratuhuiiniʼ guidubi vuelta de Rueda de Click para gúʼyaluʼ menú .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Biʼniʼ clic lu botón central para cuiluʼ ni cá lu menú ni maʼ guca resaltar .';
+  String get centerButtonMenuTutorialText =>
+      'Biʼniʼ clic lu botón central para cuiluʼ ni cá lu menú ni maʼ guca resaltar .';
 
   @override
-  String get playPauseMenuTutorialText => 'Biʼniʼ clic lu botón riʼ para gucaaluʼ o gucueezaluʼ ti canción .';
+  String get playPauseMenuTutorialText =>
+      'Biʼniʼ clic lu botón riʼ para gucaaluʼ o gucueezaluʼ ti canción .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Biʼniʼ clic lu botón riʼ para guireeluʼ lu sti canción .';
+  String get nextButtonMenuTutorialText =>
+      'Biʼniʼ clic lu botón riʼ para guireeluʼ lu sti canción .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Biʼniʼ clic lu botón riʼ para guni rebobinarluʼ o guibiguétaluʼ lu canción ni guyuu ante .';
+  String get previousButtonMenuTutorialText =>
+      'Biʼniʼ clic lu botón riʼ para guni rebobinarluʼ o guibiguétaluʼ lu canción ni guyuu ante .';
 
   @override
-  String get menuButtonTutorialText => 'Biʼniʼ clic lu botón riʼ para guibiguétaluʼ lu menú ni guyuu ante. Zanda gucaaluʼ ni ne gucaaluʼ ni de sti pantalla para cheluʼ directu lu menú principal.';
+  String get menuButtonTutorialText =>
+      'Biʼniʼ clic lu botón riʼ para guibiguétaluʼ lu menú ni guyuu ante. Zanda gucaaluʼ ni ne gucaaluʼ ni de sti pantalla para cheluʼ directu lu menú principal.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ndiʼ nga pantalla stiʼ pantalla. Pantalla toque ne Modo de Pantalla de Disparo ca raca activar cani pur defectu ne zanda gaca configurar cani jma lu ca configuración.';
+  String get deviceScreenMenuTutorialText =>
+      'Ndiʼ nga pantalla stiʼ pantalla. Pantalla toque ne Modo de Pantalla de Disparo ca raca activar cani pur defectu ne zanda gaca configurar cani jma lu ca configuración.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Bicaa pulgar stiluʼ guidubi vuelta de Rueda Click para ganda guchaaluʼ volumen stini .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Bicaa pulgar stiluʼ guidubi vuelta de Rueda Click para ganda guchaaluʼ volumen stini .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Biʼniʼ clic lu botón Centru para gúniluʼ ciclo lu barra de búsqueda, barra de fregadero ne deslizador de rechazo. Biʼniʼ clic lu botón Centru para ganda guidxélaluʼ xcaadxi opción.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Biʼniʼ clic lu botón Centru para gúniluʼ ciclo lu barra de búsqueda, barra de fregadero ne deslizador de rechazo. Biʼniʼ clic lu botón Centru para ganda guidxélaluʼ xcaadxi opción.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Biʼniʼ presionar botón riʼ para ganda guiree canción ca nagueendaca .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Biʼniʼ presionar botón riʼ para ganda guiree canción ca nagueendaca .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Biʼniʼ presionar ne biʼniʼ recabar botón riʼ para guni rebobinar canción ca .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Biʼniʼ presionar ne biʼniʼ recabar botón riʼ para guni rebobinar canción ca .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Bicaa pulgar stiluʼ ti ratuhuiiniʼ guidubi vuelta de Rueda Click para gusihuínniluʼ ti abecedariu .';
+  String get deviceControlSearchTutorialText =>
+      'Bicaa pulgar stiluʼ ti ratuhuiiniʼ guidubi vuelta de Rueda Click para gusihuínniluʼ ti abecedariu .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Biʼniʼ clic lu botón central para cuiluʼ abecedariu ni maʼ bihuinni .';
+  String get centerButtonSearchTutorialText =>
+      'Biʼniʼ clic lu botón central para cuiluʼ abecedariu ni maʼ bihuinni .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Biʼniʼ clic lu botón riʼ para ganda gucaaluʼ ti lugar .';
+  String get nextButtonSearchTutorialText =>
+      'Biʼniʼ clic lu botón riʼ para ganda gucaaluʼ ti lugar .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Biʼniʼ clic lu botón riʼ para gucaaluʼ últimu carácter .';
+  String get previousButtonSearchTutorialText =>
+      'Biʼniʼ clic lu botón riʼ para gucaaluʼ últimu carácter .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Biʼniʼ presionar botón riʼ para guseeguʼ tecladu ne guni interactuar né ca resultadu stiʼ búsqueda .';
+  String get menuButtonSearchTutorialText =>
+      'Biʼniʼ presionar botón riʼ para guseeguʼ tecladu ne guni interactuar né ca resultadu stiʼ búsqueda .';
 }

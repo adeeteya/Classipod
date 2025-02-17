@@ -24,7 +24,8 @@ class AppLocalizationsYue extends AppLocalizations {
   String get audioAccessPermissionPermanentlyDeniedTitle => '音頻存取權限拒絕';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => '請喺裝置設定入面提供呢個應用程式嘅音頻檔案存取權，等我哋可以播放你嘅音樂檔案。';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      '請喺裝置設定入面提供呢個應用程式嘅音頻檔案存取權，等我哋可以播放你嘅音樂檔案。';
 
   @override
   String get menuScreenTitle => '菜單';
@@ -63,7 +64,6 @@ class AppLocalizationsYue extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +81,6 @@ class AppLocalizationsYue extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -213,7 +212,8 @@ class AppLocalizationsYue extends AppLocalizations {
   String get disableBatteryOptimizationTitle => '停用電池優化';
 
   @override
-  String get disableBatteryOptimizationContent => '請喺裝置設定入面停用呢個應用程式嘅電池優化，以便背景播放音樂。';
+  String get disableBatteryOptimizationContent =>
+      '請喺裝置設定入面停用呢個應用程式嘅電池優化，以便背景播放音樂。';
 
   @override
   String get languageScreenTitle => '語言';
@@ -282,16 +282,19 @@ class AppLocalizationsYue extends AppLocalizations {
   String get previousButtonMenuTutorialText => '撳呢個掣就可以倒轉，或者返去上一首歌';
 
   @override
-  String get menuButtonTutorialText => '撳呢個掣就可以返去上一個選單。你可以喺任何其他畫面上面按住同埋按住佢，直接去主選單。';
+  String get menuButtonTutorialText =>
+      '撳呢個掣就可以返去上一個選單。你可以喺任何其他畫面上面按住同埋按住佢，直接去主選單。';
 
   @override
-  String get deviceScreenMenuTutorialText => '呢個係顯示屏幕。預設啟用「觸控螢幕」同「分屏模式」 , 亦可以喺設定入面進一步配置。';
+  String get deviceScreenMenuTutorialText =>
+      '呢個係顯示屏幕。預設啟用「觸控螢幕」同「分屏模式」 , 亦可以喺設定入面進一步配置。';
 
   @override
   String get deviceControlNowPlayingTutorialText => '將拇指移動到點擊輪上面，就可以調整音量';
 
   @override
-  String get centerButtonNowPlayingTutorialText => '按中心按鈕循環穿過尋求棒、洗衣機棒和混搭滑桿。按住中心掣，就可以存取額外嘅選項。';
+  String get centerButtonNowPlayingTutorialText =>
+      '按中心按鈕循環穿過尋求棒、洗衣機棒和混搭滑桿。按住中心掣，就可以存取額外嘅選項。';
 
   @override
   String get nextButtonNowPlayingTutorialText => '按住呢個掣，就可以快速向前行呢首歌';

@@ -15,16 +15,20 @@ class AppLocalizationsCo extends AppLocalizations {
   String get menuButtonText => 'Menu';
 
   @override
-  String get audioAccessPermissionTitle => 'Permissione d\'Accessu Audio necessariu';
+  String get audioAccessPermissionTitle =>
+      'Permissione d\'Accessu Audio necessariu';
 
   @override
-  String get audioAccessPermissionContent => 'Per piacè cuncessione l\'accessu di i schedari audio per permette di ghjucà i vostri fugliali di musica.';
+  String get audioAccessPermissionContent =>
+      'Per piacè cuncessione l\'accessu di i schedari audio per permette di ghjucà i vostri fugliali di musica.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'U permessu d\'accessu audio hà nigatu';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'U permessu d\'accessu audio hà nigatu';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Per piacè, cuncessione di l\'accessu di i schedari audio per questa app in i paràmetri di u dispositivu per permette di ghjucà i vostri fugliali di musica.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Per piacè, cuncessione di l\'accessu di i schedari audio per questa app in i paràmetri di u dispositivu per permette di ghjucà i vostri fugliali di musica.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsCo extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsCo extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsCo extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Toccu sonu';
 
   @override
-  String get touchSoundsDialogContent => 'Per piacè attivà u toccu sona da i paràmetri di u sistema per sente u clic di rota di cliccà';
+  String get touchSoundsDialogContent =>
+      'Per piacè attivà u toccu sona da i paràmetri di u sistema per sente u clic di rota di cliccà';
 
   @override
   String get immersiveModeSettingTitle => 'Modu Immerifichi';
@@ -144,7 +147,8 @@ class AppLocalizationsCo extends AppLocalizations {
   String get donateSettingTitle => 'Donate';
 
   @override
-  String get donateSettingDescription => 'Se ti piace sta app, per piacè cunsiderà a donazione.';
+  String get donateSettingDescription =>
+      'Se ti piace sta app, per piacè cunsiderà a donazione.';
 
   @override
   String get versionAboutScreenTitle => 'Versione';
@@ -195,7 +199,8 @@ class AppLocalizationsCo extends AppLocalizations {
   String get retryButtonText => 'Ritruvà';
 
   @override
-  String get filePickerDialogTitle => 'Selezziunate un repertoriu per scopre per a musica';
+  String get filePickerDialogTitle =>
+      'Selezziunate un repertoriu per scopre per a musica';
 
   @override
   String get searchScreenTitle => 'CERCAZZA';
@@ -210,10 +215,12 @@ class AppLocalizationsCo extends AppLocalizations {
   String get resultsForText => 'Risultati per:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Disattivate l\'ottimisazione di a bateria';
+  String get disableBatteryOptimizationTitle =>
+      'Disattivate l\'ottimisazione di a bateria';
 
   @override
-  String get disableBatteryOptimizationContent => 'Per piacè Disattivate l\'ottimisazione di a bateria per questa app in i paràmetri di u dispositivu per permette u riproduzione di u fondo di musica.';
+  String get disableBatteryOptimizationContent =>
+      'Per piacè Disattivate l\'ottimisazione di a bateria per questa app in i paràmetri di u dispositivu per permette u riproduzione di u fondo di musica.';
 
   @override
   String get languageScreenTitle => 'Lingua';
@@ -267,50 +274,66 @@ class AppLocalizationsCo extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'File di Music Restcan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Move u to pollice ligeramente intornu à a rota cliccate per navigà u menu';
+  String get deviceControlMenuTutorialText =>
+      'Move u to pollice ligeramente intornu à a rota cliccate per navigà u menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pulse u buttone centru per selezziunate l\'elementu di menu evidenziatu';
+  String get centerButtonMenuTutorialText =>
+      'Pulse u buttone centru per selezziunate l\'elementu di menu evidenziatu';
 
   @override
-  String get playPauseMenuTutorialText => 'Pulse stu buttone per ghjucà o pause una canzone';
+  String get playPauseMenuTutorialText =>
+      'Pulse stu buttone per ghjucà o pause una canzone';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pulse stu buttone per saltà à a prossima canzone';
+  String get nextButtonMenuTutorialText =>
+      'Pulse stu buttone per saltà à a prossima canzone';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pulse stu buttone per rimpruverà o vultate à a canzone precedente';
+  String get previousButtonMenuTutorialText =>
+      'Pulse stu buttone per rimpruverà o vultate à a canzone precedente';
 
   @override
-  String get menuButtonTutorialText => 'Pulse stu buttone per vultà à u menù precedente. Puderebbe pressu è tene da qualsiasi altra schermu per andà direttamente à u menu principale.';
+  String get menuButtonTutorialText =>
+      'Pulse stu buttone per vultà à u menù precedente. Puderebbe pressu è tene da qualsiasi altra schermu per andà direttamente à u menu principale.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Questa hè a schermu di visualizazione. U modalità di schermu di toccu è u modalità di schermu di Split sò attivati ​​per automaticamente è pò esse cunfiguratu in più in i paràmetri.';
+  String get deviceScreenMenuTutorialText =>
+      'Questa hè a schermu di visualizazione. U modalità di schermu di toccu è u modalità di schermu di Split sò attivati ​​per automaticamente è pò esse cunfiguratu in più in i paràmetri.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Move u to pollice intornu à a rota cliccate per aghjustà u voluminu';
+  String get deviceControlNowPlayingTutorialText =>
+      'Move u to pollice intornu à a rota cliccate per aghjustà u voluminu';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pulsà u buttone centru per ciclu per mezu di veh, barra di scrubbu è slider shutle. Pulse è manteneu u buttone centru per accede à l\'opzioni supplementari.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pulsà u buttone centru per ciclu per mezu di veh, barra di scrubbu è slider shutle. Pulse è manteneu u buttone centru per accede à l\'opzioni supplementari.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Pulse è mantene stu buttone per rinvià a canzone';
+  String get nextButtonNowPlayingTutorialText =>
+      'Pulse è mantene stu buttone per rinvià a canzone';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pulse è tenite stu buttone per rimpruverà a canzone';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pulse è tenite stu buttone per rimpruverà a canzone';
 
   @override
-  String get deviceControlSearchTutorialText => 'Move u to pollice ligeramente intornu à a rota di cliccà per evidenziare un alfabetu';
+  String get deviceControlSearchTutorialText =>
+      'Move u to pollice ligeramente intornu à a rota di cliccà per evidenziare un alfabetu';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pulse u buttone centru per selezziunate l\'alfabetu evidenziatu';
+  String get centerButtonSearchTutorialText =>
+      'Pulse u buttone centru per selezziunate l\'alfabetu evidenziatu';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pulse stu buttone per aghjunghje un spaziu';
+  String get nextButtonSearchTutorialText =>
+      'Pulse stu buttone per aghjunghje un spaziu';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pulse stu buttone per sguassà l\'ultimu caratteru';
+  String get previousButtonSearchTutorialText =>
+      'Pulse stu buttone per sguassà l\'ultimu caratteru';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pulse stu buttone per chjude u teclatu è interagisce cù i risultati di ricerca';
+  String get menuButtonSearchTutorialText =>
+      'Pulse stu buttone per chjude u teclatu è interagisce cù i risultati di ricerca';
 }

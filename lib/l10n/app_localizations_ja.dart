@@ -18,13 +18,16 @@ class AppLocalizationsJa extends AppLocalizations {
   String get audioAccessPermissionTitle => 'オーディオアクセス許可が必要です';
 
   @override
-  String get audioAccessPermissionContent => '音楽ファイルを再生できるように、オーディオファイルアクセスを許可してください。';
+  String get audioAccessPermissionContent =>
+      '音楽ファイルを再生できるように、オーディオファイルアクセスを許可してください。';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'オーディオアクセス許可は拒否されました';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'オーディオアクセス許可は拒否されました';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'デバイス設定のこのアプリのオーディオファイルアクセスを許可して、音楽ファイルを再生できるようにしてください。';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'デバイス設定のこのアプリのオーディオファイルアクセスを許可して、音楽ファイルを再生できるようにしてください。';
 
   @override
   String get menuScreenTitle => 'メニュー';
@@ -63,7 +66,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsJa extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -213,7 +214,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'バッテリーの最適化を無効にします';
 
   @override
-  String get disableBatteryOptimizationContent => 'デバイス設定のこのアプリのバッテリーの最適化を無効にして、音楽の背景再生を可能にしてください。';
+  String get disableBatteryOptimizationContent =>
+      'デバイス設定のこのアプリのバッテリーの最適化を無効にして、音楽の背景再生を可能にしてください。';
 
   @override
   String get languageScreenTitle => '言語';
@@ -267,7 +269,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Musicファイル';
 
   @override
-  String get deviceControlMenuTutorialText => 'クリックホイールの周りに親指を軽く動かしてメニューをナビゲートします';
+  String get deviceControlMenuTutorialText =>
+      'クリックホイールの周りに親指を軽く動かしてメニューをナビゲートします';
 
   @override
   String get centerButtonMenuTutorialText => '中央ボタンを押して、強調表示されたメニュー項目を選択します';
@@ -282,16 +285,20 @@ class AppLocalizationsJa extends AppLocalizations {
   String get previousButtonMenuTutorialText => 'このボタンを押して巻き戻すか、前の曲に戻ります';
 
   @override
-  String get menuButtonTutorialText => 'このボタンを押して、前のメニューに戻ります。他の画面からそれを押し続けて、メインメニューに直接移動できます。';
+  String get menuButtonTutorialText =>
+      'このボタンを押して、前のメニューに戻ります。他の画面からそれを押し続けて、メインメニューに直接移動できます。';
 
   @override
-  String get deviceScreenMenuTutorialText => 'これが表示画面です。タッチスクリーンモードとスプリット画面モードはデフォルトで有効になり、設定でさらに構成できます。';
+  String get deviceScreenMenuTutorialText =>
+      'これが表示画面です。タッチスクリーンモードとスプリット画面モードはデフォルトで有効になり、設定でさらに構成できます。';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'クリックホイールの周りに親指を動かしてボリュームを調整します';
+  String get deviceControlNowPlayingTutorialText =>
+      'クリックホイールの周りに親指を動かしてボリュームを調整します';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'センターボタンを押して、シークバー、スクラバーバー、シャッフルスライダーをサイクリングします。センターボタンを押し続けて、追加のオプションにアクセスします。';
+  String get centerButtonNowPlayingTutorialText =>
+      'センターボタンを押して、シークバー、スクラバーバー、シャッフルスライダーをサイクリングします。センターボタンを押し続けて、追加のオプションにアクセスします。';
 
   @override
   String get nextButtonNowPlayingTutorialText => 'このボタンを押して、曲を早送りする';
@@ -300,7 +307,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get previousButtonNowPlayingTutorialText => 'このボタンを押し続けて、曲を巻き戻します';
 
   @override
-  String get deviceControlSearchTutorialText => 'クリックホイールの周りに親指を軽く動かして、アルファベットを強調表示します';
+  String get deviceControlSearchTutorialText =>
+      'クリックホイールの周りに親指を軽く動かして、アルファベットを強調表示します';
 
   @override
   String get centerButtonSearchTutorialText => '中央ボタンを押して、強調表示されたアルファベットを選択します';

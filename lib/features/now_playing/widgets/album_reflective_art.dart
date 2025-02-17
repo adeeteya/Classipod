@@ -7,11 +7,13 @@ import 'package:flutter/foundation.dart';
 
 class AlbumReflectiveArt extends StatelessWidget {
   final String? thumbnailPath;
+  final bool isOnDevice;
   final double reflectedImageHeight;
   final String heroTag;
   const AlbumReflectiveArt({
     super.key,
     this.thumbnailPath,
+    this.isOnDevice = true,
     this.reflectedImageHeight = 30,
     required this.heroTag,
   });
@@ -62,9 +64,9 @@ class AlbumReflectiveArt extends StatelessWidget {
               width: double.infinity,
               child: Image(
                 image: (thumbnailPath != null)
-                    ? kIsWeb
-                        ? NetworkImage(thumbnailPath!)
-                        : FileImage(File(thumbnailPath!))
+                    ? isOnDevice
+                        ? FileImage(File(thumbnailPath!))
+                        : NetworkImage(thumbnailPath!)
                     : const AssetImage(Assets.defaultAlbumCoverImage),
                 errorBuilder: (_, __, ___) => Image.asset(
                   Assets.defaultAlbumCoverImage,

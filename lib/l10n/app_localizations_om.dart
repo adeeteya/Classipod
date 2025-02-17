@@ -15,16 +15,20 @@ class AppLocalizationsOm extends AppLocalizations {
   String get menuButtonText => 'Menu .';
 
   @override
-  String get audioAccessPermissionTitle => 'Hayyama qaqqabummaa sagalee barbaachisa .';
+  String get audioAccessPermissionTitle =>
+      'Hayyama qaqqabummaa sagalee barbaachisa .';
 
   @override
-  String get audioAccessPermissionContent => 'Maaloo faayiloota muuziqaa keessan akka taphannu nuuf hayyamaa faayiloota sagalee argachuu dandeessu.';
+  String get audioAccessPermissionContent =>
+      'Maaloo faayiloota muuziqaa keessan akka taphannu nuuf hayyamaa faayiloota sagalee argachuu dandeessu.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Hayyamni qaqqabummaa sagalee dhorkame .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Hayyamni qaqqabummaa sagalee dhorkame .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Mee faayiloota muuziqaa keessan akka taphannuuf appii kanaaf appii kanaaf qaqqabummaa kennuu.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Mee faayiloota muuziqaa keessan akka taphannuuf appii kanaaf appii kanaaf qaqqabummaa kennuu.';
 
   @override
   String get menuScreenTitle => 'Menu .';
@@ -63,7 +67,6 @@ class AppLocalizationsOm extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsOm extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsOm extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sagaleewwan tuquu .';
 
   @override
-  String get touchSoundsDialogContent => 'Maaloo sagalee tuquu qindaa\'inoota sirnaa irraa sagalee wiil cuqaasuu dhaga\'uu dandeessisi .';
+  String get touchSoundsDialogContent =>
+      'Maaloo sagalee tuquu qindaa\'inoota sirnaa irraa sagalee wiil cuqaasuu dhaga\'uu dandeessisi .';
 
   @override
   String get immersiveModeSettingTitle => 'Haala keessa nama liqimsu .';
@@ -144,7 +147,8 @@ class AppLocalizationsOm extends AppLocalizations {
   String get donateSettingTitle => 'Gumaachuu';
 
   @override
-  String get donateSettingDescription => 'Yoo appii kana jaallattan arjoomuuf yaadaa.';
+  String get donateSettingDescription =>
+      'Yoo appii kana jaallattan arjoomuuf yaadaa.';
 
   @override
   String get versionAboutScreenTitle => 'Gosa';
@@ -210,10 +214,12 @@ class AppLocalizationsOm extends AppLocalizations {
   String get resultsForText => 'Bu\'aa:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Battery Optimization Disable .';
+  String get disableBatteryOptimizationTitle =>
+      'Battery Optimization Disable .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Maaloo appii kanaaf optimization meeshaa keessatti hojii duubaa muuziqaa akka taphachiisu gochuu.';
+  String get disableBatteryOptimizationContent =>
+      'Maaloo appii kanaaf optimization meeshaa keessatti hojii duubaa muuziqaa akka taphachiisu gochuu.';
 
   @override
   String get languageScreenTitle => 'Afaan';
@@ -267,50 +273,66 @@ class AppLocalizationsOm extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Faayilota Muuziqaa Rescan .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Quba kee salphaatti naannoo wiil cuqaasi menu keessa naanna\'i .';
+  String get deviceControlMenuTutorialText =>
+      'Quba kee salphaatti naannoo wiil cuqaasi menu keessa naanna\'i .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Wanti menu calaqqise filachuuf qaree Giddugaleessaa dhiibi .';
+  String get centerButtonMenuTutorialText =>
+      'Wanti menu calaqqise filachuuf qaree Giddugaleessaa dhiibi .';
 
   @override
-  String get playPauseMenuTutorialText => 'Sirba tokko taphachuuf ykn dhaabuuf button kana dhiibi .';
+  String get playPauseMenuTutorialText =>
+      'Sirba tokko taphachuuf ykn dhaabuuf button kana dhiibi .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Gara sirba itti aanutti darbuuf button kana dhiibaa .';
+  String get nextButtonMenuTutorialText =>
+      'Gara sirba itti aanutti darbuuf button kana dhiibaa .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Duubatti deebi\'uuf button kana dhiibi ykn gara sirba duraatti deebi\'i .';
+  String get previousButtonMenuTutorialText =>
+      'Duubatti deebi\'uuf button kana dhiibi ykn gara sirba duraatti deebi\'i .';
 
   @override
-  String get menuButtonTutorialText => 'Gara menu duraatti deebi\'uuf button kana dhiibi. Kallattiin gara menu guddaatti akka deemtu iskiriinii biraa kamirraayyuu dhiibuu fi qabachuu dandeessa.';
+  String get menuButtonTutorialText =>
+      'Gara menu duraatti deebi\'uuf button kana dhiibi. Kallattiin gara menu guddaatti akka deemtu iskiriinii biraa kamirraayyuu dhiibuu fi qabachuu dandeessa.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Kun iskiriinii agarsiisaati. Haalata iskiriinii tuquu fi qoqqoodamuun durtiidhan dandeessifamu fi qindaa\'inoota keessatti caalaatti qindaa\'uu danda\'a.';
+  String get deviceScreenMenuTutorialText =>
+      'Kun iskiriinii agarsiisaati. Haalata iskiriinii tuquu fi qoqqoodamuun durtiidhan dandeessifamu fi qindaa\'inoota keessatti caalaatti qindaa\'uu danda\'a.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Quba kee sagalee sirreessuuf naannoo wheel cuqaasi .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Quba kee sagalee sirreessuuf naannoo wheel cuqaasi .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Bar barbaa, barruu scrubber fi shuffle slider keessa marsaa gochuuf button giddu galeessaa dhiibi. Filannoo dabalataa argachuuf qaree Giddugaleessaa dhiibaa qabadhaa.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Bar barbaa, barruu scrubber fi shuffle slider keessa marsaa gochuuf button giddu galeessaa dhiibi. Filannoo dabalataa argachuuf qaree Giddugaleessaa dhiibaa qabadhaa.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Faarfannaa saffisaan fuulduratti tarkaanfachiisuuf button kana dhiibaa qabadhaa .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Faarfannaa saffisaan fuulduratti tarkaanfachiisuuf button kana dhiibaa qabadhaa .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Sirba sana duubatti deebisuuf button kana dhiibaa qabadhaa .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Sirba sana duubatti deebisuuf button kana dhiibaa qabadhaa .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Quba kee salphaatti naannoo wiil cuqaasuutti sochoosi .';
+  String get deviceControlSearchTutorialText =>
+      'Quba kee salphaatti naannoo wiil cuqaasuutti sochoosi .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Qubee calaqqise filachuuf button giddu galeessaa dhiibi .';
+  String get centerButtonSearchTutorialText =>
+      'Qubee calaqqise filachuuf button giddu galeessaa dhiibi .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Bakka itti dabaluuf button kana dhiibaa .';
+  String get nextButtonSearchTutorialText =>
+      'Bakka itti dabaluuf button kana dhiibaa .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Arfii dhumaa haquuf qaree kana dhiibi .';
+  String get previousButtonSearchTutorialText =>
+      'Arfii dhumaa haquuf qaree kana dhiibi .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Kiiboodii cufuuf button kana dhiibiitii bu\'aa barbaacha waliin wal qunnami .';
+  String get menuButtonSearchTutorialText =>
+      'Kiiboodii cufuuf button kana dhiibiitii bu\'aa barbaacha waliin wal qunnami .';
 }

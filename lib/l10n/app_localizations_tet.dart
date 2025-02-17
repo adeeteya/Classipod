@@ -15,16 +15,20 @@ class AppLocalizationsTet extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'Permisaun Asesu ba Audio ne’ebé presiza .';
+  String get audioAccessPermissionTitle =>
+      'Permisaun Asesu ba Audio ne’ebé presiza .';
 
   @override
-  String get audioAccessPermissionContent => 'Favor ida fo asesu file audio atu permite ami atu toka ita nia file muzika.';
+  String get audioAccessPermissionContent =>
+      'Favor ida fo asesu file audio atu permite ami atu toka ita nia file muzika.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Lisensa Asesu ba Audio nega';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Lisensa Asesu ba Audio nega';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Favor ida fo asesu file audio ba app ida ne’e iha setting device hodi permite ami atu toka ita nia file muzika.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Favor ida fo asesu file audio ba app ida ne’e iha setting device hodi permite ami atu toka ita nia file muzika.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsTet extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsTet extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsTet extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sona Toque';
 
   @override
-  String get touchSoundsDialogContent => 'Favor Ativa Touch Sounds husi Settings atu rona lian klik roda .';
+  String get touchSoundsDialogContent =>
+      'Favor Ativa Touch Sounds husi Settings atu rona lian klik roda .';
 
   @override
   String get immersiveModeSettingTitle => 'Modu Immerzivu';
@@ -144,7 +147,8 @@ class AppLocalizationsTet extends AppLocalizations {
   String get donateSettingTitle => 'Doasaun';
 
   @override
-  String get donateSettingDescription => 'Se ita gosta app ida ne’e, favor konsidera doasaun.';
+  String get donateSettingDescription =>
+      'Se ita gosta app ida ne’e, favor konsidera doasaun.';
 
   @override
   String get versionAboutScreenTitle => 'Versaun';
@@ -210,10 +214,12 @@ class AppLocalizationsTet extends AppLocalizations {
   String get resultsForText => 'Rezultadu ba:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Optimizasaun Bateria Defisiente';
+  String get disableBatteryOptimizationTitle =>
+      'Optimizasaun Bateria Defisiente';
 
   @override
-  String get disableBatteryOptimizationContent => 'Favor ida dezativa optimizasaun bateria ba app ne’e iha konfigurasaun dispozitivu hodi permite playback background husi múzika.';
+  String get disableBatteryOptimizationContent =>
+      'Favor ida dezativa optimizasaun bateria ba app ne’e iha konfigurasaun dispozitivu hodi permite playback background husi múzika.';
 
   @override
   String get languageScreenTitle => 'Lingua';
@@ -267,50 +273,66 @@ class AppLocalizationsTet extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Arkivu Múzika Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Muda ita-nia liman-fuan boot ho kmaan iha Wheel Click nia sorin-sorin hodi navega menu .';
+  String get deviceControlMenuTutorialText =>
+      'Muda ita-nia liman-fuan boot ho kmaan iha Wheel Click nia sorin-sorin hodi navega menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tekan butaun sentru hodi hili item menu ne’ebé destakadu .';
+  String get centerButtonMenuTutorialText =>
+      'Tekan butaun sentru hodi hili item menu ne’ebé destakadu .';
 
   @override
-  String get playPauseMenuTutorialText => 'Prense butaun ne’e hodi toka ka pauza knananuk ida .';
+  String get playPauseMenuTutorialText =>
+      'Prense butaun ne’e hodi toka ka pauza knananuk ida .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Prense butaun ne\'e hodi skip ba knananuk tuir mai';
+  String get nextButtonMenuTutorialText =>
+      'Prense butaun ne\'e hodi skip ba knananuk tuir mai';
 
   @override
-  String get previousButtonMenuTutorialText => 'Prense butaun ne\'e hodi rewind ka fila fali ba knananuk anterior .';
+  String get previousButtonMenuTutorialText =>
+      'Prense butaun ne\'e hodi rewind ka fila fali ba knananuk anterior .';
 
   @override
-  String get menuButtonTutorialText => 'Prense butaun ne’e atu ba fali menu uluk. Ita bele hanehan no kaer husi kualker ekran seluk atu direitamente ba iha menu prinsipal.';
+  String get menuButtonTutorialText =>
+      'Prense butaun ne’e atu ba fali menu uluk. Ita bele hanehan no kaer husi kualker ekran seluk atu direitamente ba iha menu prinsipal.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ida ne’e mak ekran display. Toque Screen no Modu Screen Screen ativadu ho default no bele konfigura liu tan iha settings.';
+  String get deviceScreenMenuTutorialText =>
+      'Ida ne’e mak ekran display. Toque Screen no Modu Screen Screen ativadu ho default no bele konfigura liu tan iha settings.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Muda ita-nia liman-fuan boot haleu Klik Roda hodi ajusta volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Muda ita-nia liman-fuan boot haleu Klik Roda hodi ajusta volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Prense butaun Center hodi halo siklu liu husi barra buka, scrubber bar no shuffle slider. Prense no kaer metin butaun Center hodi asesu ba opsaun adisional.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Prense butaun Center hodi halo siklu liu husi barra buka, scrubber bar no shuffle slider. Prense no kaer metin butaun Center hodi asesu ba opsaun adisional.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Prense no kaer butaun ne\'e hodi fast forward ba knananuk .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Prense no kaer butaun ne\'e hodi fast forward ba knananuk .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Prense no kaer butaun ne’e hodi rewind knananuk .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Prense no kaer butaun ne’e hodi rewind knananuk .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Muda ita-nia liman-fuan boot ho kmaan iha Wheel nia sorin-sorin hodi destaka alfabetu ida .';
+  String get deviceControlSearchTutorialText =>
+      'Muda ita-nia liman-fuan boot ho kmaan iha Wheel nia sorin-sorin hodi destaka alfabetu ida .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tekan butaun sentru hodi hili alfabetu ne’ebé destakadu .';
+  String get centerButtonSearchTutorialText =>
+      'Tekan butaun sentru hodi hili alfabetu ne’ebé destakadu .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tekan butaun ne’e hodi aumenta espasu ida .';
+  String get nextButtonSearchTutorialText =>
+      'Tekan butaun ne’e hodi aumenta espasu ida .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tekan butaun ne’e hodi apaga karakter ikus .';
+  String get previousButtonSearchTutorialText =>
+      'Tekan butaun ne’e hodi apaga karakter ikus .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tekan butaun ne’e hodi taka keyboard no interasaun ho rezultadu peskiza .';
+  String get menuButtonSearchTutorialText =>
+      'Tekan butaun ne’e hodi taka keyboard no interasaun ho rezultadu peskiza .';
 }

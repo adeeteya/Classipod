@@ -15,16 +15,20 @@ class AppLocalizationsSr extends AppLocalizations {
   String get menuButtonText => 'Мени';
 
   @override
-  String get audioAccessPermissionTitle => 'Потребна је дозвола за аудио приступа';
+  String get audioAccessPermissionTitle =>
+      'Потребна је дозвола за аудио приступа';
 
   @override
-  String get audioAccessPermissionContent => 'Молимо да дате приступ аудио датотекама како бисте нам дозволили да репродукујемо ваше музичке датотеке.';
+  String get audioAccessPermissionContent =>
+      'Молимо да дате приступ аудио датотекама како бисте нам дозволили да репродукујемо ваше музичке датотеке.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Дозвола за аудио приступа је одбијена';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Дозвола за аудио приступа је одбијена';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Молимо да додате приступ аудио датотеци за ову апликацију у подешавањима уређаја како бисте нам омогућили да репродукујемо ваше музичке датотеке.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Молимо да додате приступ аудио датотеци за ову апликацију у подешавањима уређаја како бисте нам омогућили да репродукујемо ваше музичке датотеке.';
 
   @override
   String get menuScreenTitle => 'Мени';
@@ -63,7 +67,6 @@ class AppLocalizationsSr extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsSr extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsSr extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Додирните звукове';
 
   @override
-  String get touchSoundsDialogContent => 'Молимо омогућите звукове додира из системских поставки да бисте чули звук точка на клику';
+  String get touchSoundsDialogContent =>
+      'Молимо омогућите звукове додира из системских поставки да бисте чули звук точка на клику';
 
   @override
   String get immersiveModeSettingTitle => 'Умерни мод';
@@ -144,7 +147,8 @@ class AppLocalizationsSr extends AppLocalizations {
   String get donateSettingTitle => 'Донирати';
 
   @override
-  String get donateSettingDescription => 'Ако вам се свиђа ова апликација, молимо вас да размислите о донацији.';
+  String get donateSettingDescription =>
+      'Ако вам се свиђа ова апликација, молимо вас да размислите о донацији.';
 
   @override
   String get versionAboutScreenTitle => 'Верзија';
@@ -195,7 +199,8 @@ class AppLocalizationsSr extends AppLocalizations {
   String get retryButtonText => 'Поново покушати';
 
   @override
-  String get filePickerDialogTitle => 'Изаберите директориј да бисте скенирали музику';
+  String get filePickerDialogTitle =>
+      'Изаберите директориј да бисте скенирали музику';
 
   @override
   String get searchScreenTitle => 'Тражити';
@@ -210,10 +215,12 @@ class AppLocalizationsSr extends AppLocalizations {
   String get resultsForText => 'Резултати за:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Онемогућити оптимизацију батерије';
+  String get disableBatteryOptimizationTitle =>
+      'Онемогућити оптимизацију батерије';
 
   @override
-  String get disableBatteryOptimizationContent => 'Онемогућите оптимизацију батерије за ову апликацију у подешавањима уређаја да бисте омогућили позадинску репродукцију музике.';
+  String get disableBatteryOptimizationContent =>
+      'Онемогућите оптимизацију батерије за ову апликацију у подешавањима уређаја да бисте омогућили позадинску репродукцију музике.';
 
   @override
   String get languageScreenTitle => 'Језик';
@@ -267,50 +274,66 @@ class AppLocalizationsSr extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Ресцан Мусиц Филес';
 
   @override
-  String get deviceControlMenuTutorialText => 'Лагано померите палац око точка на клику да бисте се кретали у менију';
+  String get deviceControlMenuTutorialText =>
+      'Лагано померите палац око точка на клику да бисте се кретали у менију';
 
   @override
-  String get centerButtonMenuTutorialText => 'Притисните средишњи тастер да бисте изабрали означену ставку менија';
+  String get centerButtonMenuTutorialText =>
+      'Притисните средишњи тастер да бисте изабрали означену ставку менија';
 
   @override
-  String get playPauseMenuTutorialText => 'Притисните ово дугме да бисте репродуковали или паузирали песму';
+  String get playPauseMenuTutorialText =>
+      'Притисните ово дугме да бисте репродуковали или паузирали песму';
 
   @override
-  String get nextButtonMenuTutorialText => 'Притисните ово дугме да бисте прешли на следећу песму';
+  String get nextButtonMenuTutorialText =>
+      'Притисните ово дугме да бисте прешли на следећу песму';
 
   @override
-  String get previousButtonMenuTutorialText => 'Притисните ово дугме да бисте премотали уназад или се вратили на претходну песму';
+  String get previousButtonMenuTutorialText =>
+      'Притисните ово дугме да бисте премотали уназад или се вратили на претходну песму';
 
   @override
-  String get menuButtonTutorialText => 'Притисните ово дугме да бисте се вратили на претходни мени. Можете да притиснете и држите га са било којег другог екрана да бисте директно прешли у главни мени.';
+  String get menuButtonTutorialText =>
+      'Притисните ово дугме да бисте се вратили на претходни мени. Можете да притиснете и држите га са било којег другог екрана да бисте директно прешли у главни мени.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ово је екран екран. Режим додирног екрана и подељеног режим екрана омогућени су подразумевано и могу се даље конфигурирати у подешавањима.';
+  String get deviceScreenMenuTutorialText =>
+      'Ово је екран екран. Режим додирног екрана и подељеног режим екрана омогућени су подразумевано и могу се даље конфигурирати у подешавањима.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Померите палац око точка клик да бисте подесили јачину звука';
+  String get deviceControlNowPlayingTutorialText =>
+      'Померите палац око точка клик да бисте подесили јачину звука';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Притисните средишњи тастер да бисте се возили кроз тражење траке, траке за прочишћавање и клизач за померање. Притисните и држите дугме Центра за приступ додатним опцијама.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Притисните средишњи тастер да бисте се возили кроз тражење траке, траке за прочишћавање и клизач за померање. Притисните и држите дугме Центра за приступ додатним опцијама.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Притисните и држите ово дугме да бисте брзо проследили песму';
+  String get nextButtonNowPlayingTutorialText =>
+      'Притисните и држите ово дугме да бисте брзо проследили песму';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Притисните и држите ово дугме да бисте премотали песму';
+  String get previousButtonNowPlayingTutorialText =>
+      'Притисните и држите ово дугме да бисте премотали песму';
 
   @override
-  String get deviceControlSearchTutorialText => 'Лагано померите палцу око точка на клику да бисте истакли абецеду';
+  String get deviceControlSearchTutorialText =>
+      'Лагано померите палцу око точка на клику да бисте истакли абецеду';
 
   @override
-  String get centerButtonSearchTutorialText => 'Притисните дугме Центра за одабир означене абецеде';
+  String get centerButtonSearchTutorialText =>
+      'Притисните дугме Центра за одабир означене абецеде';
 
   @override
-  String get nextButtonSearchTutorialText => 'Притисните ово дугме да бисте додали простор';
+  String get nextButtonSearchTutorialText =>
+      'Притисните ово дугме да бисте додали простор';
 
   @override
-  String get previousButtonSearchTutorialText => 'Притисните ово дугме да бисте избрисали последњи знак';
+  String get previousButtonSearchTutorialText =>
+      'Притисните ово дугме да бисте избрисали последњи знак';
 
   @override
-  String get menuButtonSearchTutorialText => 'Притисните ово дугме да бисте затворили тастатуру и комуницирали са резултатима претраге';
+  String get menuButtonSearchTutorialText =>
+      'Притисните ово дугме да бисте затворили тастатуру и комуницирали са резултатима претраге';
 }

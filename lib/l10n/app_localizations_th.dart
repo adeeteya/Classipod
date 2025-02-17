@@ -18,13 +18,16 @@ class AppLocalizationsTh extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ต้องได้รับอนุญาตการเข้าถึงเสียง';
 
   @override
-  String get audioAccessPermissionContent => 'โปรดให้การเข้าถึงไฟล์เสียงเพื่อให้เราเล่นไฟล์เพลงของคุณ';
+  String get audioAccessPermissionContent =>
+      'โปรดให้การเข้าถึงไฟล์เสียงเพื่อให้เราเล่นไฟล์เพลงของคุณ';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'การอนุญาตการเข้าถึงเสียงถูกปฏิเสธ';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'การอนุญาตการเข้าถึงเสียงถูกปฏิเสธ';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'โปรดให้การเข้าถึงไฟล์เสียงสำหรับแอพนี้ในการตั้งค่าอุปกรณ์เพื่อให้เราเล่นไฟล์เพลงของคุณ';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'โปรดให้การเข้าถึงไฟล์เสียงสำหรับแอพนี้ในการตั้งค่าอุปกรณ์เพื่อให้เราเล่นไฟล์เพลงของคุณ';
 
   @override
   String get menuScreenTitle => 'เมนู';
@@ -63,7 +66,6 @@ class AppLocalizationsTh extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsTh extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsTh extends AppLocalizations {
   String get touchSoundsDialogTitle => 'สัมผัสเสียง';
 
   @override
-  String get touchSoundsDialogContent => 'โปรดเปิดใช้งานเสียงสัมผัสจากการตั้งค่าระบบเพื่อฟังเสียงล้อคลิก';
+  String get touchSoundsDialogContent =>
+      'โปรดเปิดใช้งานเสียงสัมผัสจากการตั้งค่าระบบเพื่อฟังเสียงล้อคลิก';
 
   @override
   String get immersiveModeSettingTitle => 'โหมดดื่มด่ำ';
@@ -210,10 +212,12 @@ class AppLocalizationsTh extends AppLocalizations {
   String get resultsForText => 'ผลลัพธ์สำหรับ:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'ปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่';
+  String get disableBatteryOptimizationTitle =>
+      'ปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่';
 
   @override
-  String get disableBatteryOptimizationContent => 'โปรดปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่สำหรับแอพนี้ในการตั้งค่าอุปกรณ์เพื่อให้สามารถเล่นเพลงพื้นหลังได้';
+  String get disableBatteryOptimizationContent =>
+      'โปรดปิดใช้งานการเพิ่มประสิทธิภาพแบตเตอรี่สำหรับแอพนี้ในการตั้งค่าอุปกรณ์เพื่อให้สามารถเล่นเพลงพื้นหลังได้';
 
   @override
   String get languageScreenTitle => 'ภาษา';
@@ -267,50 +271,64 @@ class AppLocalizationsTh extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'ไฟล์เพลง Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'เลื่อนนิ้วโป้งของคุณเบา ๆ รอบล้อคลิกเพื่อนำทางเมนู';
+  String get deviceControlMenuTutorialText =>
+      'เลื่อนนิ้วโป้งของคุณเบา ๆ รอบล้อคลิกเพื่อนำทางเมนู';
 
   @override
-  String get centerButtonMenuTutorialText => 'กดปุ่มกึ่งกลางเพื่อเลือกรายการเมนูที่ไฮไลต์';
+  String get centerButtonMenuTutorialText =>
+      'กดปุ่มกึ่งกลางเพื่อเลือกรายการเมนูที่ไฮไลต์';
 
   @override
-  String get playPauseMenuTutorialText => 'กดปุ่มนี้เพื่อเล่นหรือหยุดเพลงชั่วคราว';
+  String get playPauseMenuTutorialText =>
+      'กดปุ่มนี้เพื่อเล่นหรือหยุดเพลงชั่วคราว';
 
   @override
   String get nextButtonMenuTutorialText => 'กดปุ่มนี้เพื่อข้ามไปยังเพลงถัดไป';
 
   @override
-  String get previousButtonMenuTutorialText => 'กดปุ่มนี้เพื่อย้อนกลับหรือกลับไปที่เพลงก่อนหน้า';
+  String get previousButtonMenuTutorialText =>
+      'กดปุ่มนี้เพื่อย้อนกลับหรือกลับไปที่เพลงก่อนหน้า';
 
   @override
-  String get menuButtonTutorialText => 'กดปุ่มนี้เพื่อกลับไปที่เมนูก่อนหน้า คุณสามารถกดค้างไว้จากหน้าจออื่น ๆ เพื่อไปที่เมนูหลักโดยตรง';
+  String get menuButtonTutorialText =>
+      'กดปุ่มนี้เพื่อกลับไปที่เมนูก่อนหน้า คุณสามารถกดค้างไว้จากหน้าจออื่น ๆ เพื่อไปที่เมนูหลักโดยตรง';
 
   @override
-  String get deviceScreenMenuTutorialText => 'นี่คือหน้าจอแสดงผล หน้าจอสัมผัสและโหมดหน้าจอแยกถูกเปิดใช้งานโดยค่าเริ่มต้นและสามารถกำหนดค่าเพิ่มเติมในการตั้งค่า';
+  String get deviceScreenMenuTutorialText =>
+      'นี่คือหน้าจอแสดงผล หน้าจอสัมผัสและโหมดหน้าจอแยกถูกเปิดใช้งานโดยค่าเริ่มต้นและสามารถกำหนดค่าเพิ่มเติมในการตั้งค่า';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'เลื่อนนิ้วโป้งของคุณไปรอบ ๆ ล้อคลิกเพื่อปรับระดับเสียง';
+  String get deviceControlNowPlayingTutorialText =>
+      'เลื่อนนิ้วโป้งของคุณไปรอบ ๆ ล้อคลิกเพื่อปรับระดับเสียง';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'กดปุ่มกึ่งกลางเพื่อปั่นจักรยานผ่านแถบแสวงหาบาร์สครับและตัวเลื่อนสลับ กดปุ่มกึ่งกลางค้างไว้เพื่อเข้าถึงตัวเลือกเพิ่มเติม';
+  String get centerButtonNowPlayingTutorialText =>
+      'กดปุ่มกึ่งกลางเพื่อปั่นจักรยานผ่านแถบแสวงหาบาร์สครับและตัวเลื่อนสลับ กดปุ่มกึ่งกลางค้างไว้เพื่อเข้าถึงตัวเลือกเพิ่มเติม';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'กดปุ่มนี้ค้างไว้เพื่อส่งต่อเพลงอย่างรวดเร็ว';
+  String get nextButtonNowPlayingTutorialText =>
+      'กดปุ่มนี้ค้างไว้เพื่อส่งต่อเพลงอย่างรวดเร็ว';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'กดปุ่มนี้ค้างไว้เพื่อย้อนกลับเพลง';
+  String get previousButtonNowPlayingTutorialText =>
+      'กดปุ่มนี้ค้างไว้เพื่อย้อนกลับเพลง';
 
   @override
-  String get deviceControlSearchTutorialText => 'เลื่อนนิ้วโป้งของคุณเบา ๆ รอบล้อคลิกเพื่อเน้นตัวอักษร';
+  String get deviceControlSearchTutorialText =>
+      'เลื่อนนิ้วโป้งของคุณเบา ๆ รอบล้อคลิกเพื่อเน้นตัวอักษร';
 
   @override
-  String get centerButtonSearchTutorialText => 'กดปุ่มกึ่งกลางเพื่อเลือกตัวอักษรที่ไฮไลต์';
+  String get centerButtonSearchTutorialText =>
+      'กดปุ่มกึ่งกลางเพื่อเลือกตัวอักษรที่ไฮไลต์';
 
   @override
   String get nextButtonSearchTutorialText => 'กดปุ่มนี้เพื่อเพิ่มพื้นที่';
 
   @override
-  String get previousButtonSearchTutorialText => 'กดปุ่มนี้เพื่อลบอักขระสุดท้าย';
+  String get previousButtonSearchTutorialText =>
+      'กดปุ่มนี้เพื่อลบอักขระสุดท้าย';
 
   @override
-  String get menuButtonSearchTutorialText => 'กดปุ่มนี้เพื่อปิดแป้นพิมพ์และโต้ตอบกับผลการค้นหา';
+  String get menuButtonSearchTutorialText =>
+      'กดปุ่มนี้เพื่อปิดแป้นพิมพ์และโต้ตอบกับผลการค้นหา';
 }

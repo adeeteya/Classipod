@@ -18,13 +18,16 @@ class AppLocalizationsPap extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Permiso di Acceso di Audio Rekeri';
 
   @override
-  String get audioAccessPermissionContent => 'Por fabor duna audio archivonan di akseso pa permití nos toka bo archivonan di músika.';
+  String get audioAccessPermissionContent =>
+      'Por fabor duna audio archivonan di akseso pa permití nos toka bo archivonan di músika.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Permiso di Acceso di Audio Nenga';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Permiso di Acceso di Audio Nenga';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Por fabor duna audio archivonan akseso pa e app aki den e settings di aparato pa permití nos toka bo archivonan di músika.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Por fabor duna audio archivonan akseso pa e app aki den e settings di aparato pa permití nos toka bo archivonan di músika.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsPap extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsPap extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsPap extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Toca Zonido';
 
   @override
-  String get touchSoundsDialogContent => 'Por fabor Habilitá Sonidonan di Toke for di Settings di Sistema pa tende e wiel di klik ta zona .';
+  String get touchSoundsDialogContent =>
+      'Por fabor Habilitá Sonidonan di Toke for di Settings di Sistema pa tende e wiel di klik ta zona .';
 
   @override
   String get immersiveModeSettingTitle => 'Modo inmersivo';
@@ -144,7 +146,8 @@ class AppLocalizationsPap extends AppLocalizations {
   String get donateSettingTitle => 'Hasi donashon';
 
   @override
-  String get donateSettingDescription => 'Si bo ta gusta e app aki, por fabor konsiderá hasi donashon.';
+  String get donateSettingDescription =>
+      'Si bo ta gusta e app aki, por fabor konsiderá hasi donashon.';
 
   @override
   String get versionAboutScreenTitle => 'Vershon';
@@ -210,10 +213,12 @@ class AppLocalizationsPap extends AppLocalizations {
   String get resultsForText => 'Resultadonan pa:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Deshabilitá Optimalisashon di Bateria';
+  String get disableBatteryOptimizationTitle =>
+      'Deshabilitá Optimalisashon di Bateria';
 
   @override
-  String get disableBatteryOptimizationContent => 'Por fabor deshabilitá optimalisashon di bateria pa e app aki den e settingnan di aparato pa permití reprodukshon di fondo di músika.';
+  String get disableBatteryOptimizationContent =>
+      'Por fabor deshabilitá optimalisashon di bateria pa e app aki den e settingnan di aparato pa permití reprodukshon di fondo di músika.';
 
   @override
   String get languageScreenTitle => 'Idioma';
@@ -267,50 +272,66 @@ class AppLocalizationsPap extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Archivonan di Músika di Reskan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Move bo duim lihé rònt di e Wiel di Klik pa nabegá e menú .';
+  String get deviceControlMenuTutorialText =>
+      'Move bo duim lihé rònt di e Wiel di Klik pa nabegá e menú .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Druk riba e boton di sentro pa selektá e artíkulo di menú resaltá';
+  String get centerButtonMenuTutorialText =>
+      'Druk riba e boton di sentro pa selektá e artíkulo di menú resaltá';
 
   @override
-  String get playPauseMenuTutorialText => 'Dòbel e boton aki pa toka òf pausa un kantika';
+  String get playPauseMenuTutorialText =>
+      'Dòbel e boton aki pa toka òf pausa un kantika';
 
   @override
-  String get nextButtonMenuTutorialText => 'Druk e boton aki pa salta pa e siguiente kantika';
+  String get nextButtonMenuTutorialText =>
+      'Druk e boton aki pa salta pa e siguiente kantika';
 
   @override
-  String get previousButtonMenuTutorialText => 'Druk e boton aki pa rewind of bay bek na e cantica anterior .';
+  String get previousButtonMenuTutorialText =>
+      'Druk e boton aki pa rewind of bay bek na e cantica anterior .';
 
   @override
-  String get menuButtonTutorialText => 'Dòbel e boton aki pa bai bèk na e menú anterior. Bo por primi i tene esaki for di kualke otro pantaya pa direktamente bai na e menú prinsipal.';
+  String get menuButtonTutorialText =>
+      'Dòbel e boton aki pa bai bèk na e menú anterior. Bo por primi i tene esaki for di kualke otro pantaya pa direktamente bai na e menú prinsipal.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Esaki ta e pantaya di display. Pantalla di Toke y Modo di Pantalla Split ta wordo habilita pa default y por wordo configura mas den e configuracionnan.';
+  String get deviceScreenMenuTutorialText =>
+      'Esaki ta e pantaya di display. Pantalla di Toke y Modo di Pantalla Split ta wordo habilita pa default y por wordo configura mas den e configuracionnan.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Move bo duim rònt di e Wiel Klik pa ahusta e volúmen .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Move bo duim rònt di e Wiel Klik pa ahusta e volúmen .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Druk riba e boton di Centro pa ciclo door di busca bar, scrubber bar y slider di shuffle. Prensa y tene e boton Centro pa haya acceso na opcionnan adicional.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Druk riba e boton di Centro pa ciclo door di busca bar, scrubber bar y slider di shuffle. Prensa y tene e boton Centro pa haya acceso na opcionnan adicional.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Prensa y tene e boton aki pa bo yuna e cancion .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Prensa y tene e boton aki pa bo yuna e cancion .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Prensa y tene e boton aki pa rewind e cantica .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Prensa y tene e boton aki pa rewind e cantica .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Move bo duim lihé rònt di e Wiel di Klik pa resaltá un alfabèt .';
+  String get deviceControlSearchTutorialText =>
+      'Move bo duim lihé rònt di e Wiel di Klik pa resaltá un alfabèt .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Druk riba e boton di sentro pa selektá e alfabet resaltá';
+  String get centerButtonSearchTutorialText =>
+      'Druk riba e boton di sentro pa selektá e alfabet resaltá';
 
   @override
-  String get nextButtonSearchTutorialText => 'Dòbel e boton aki pa añadí un espasio .';
+  String get nextButtonSearchTutorialText =>
+      'Dòbel e boton aki pa añadí un espasio .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Dòbel e boton aki pa eliminá e último personahe .';
+  String get previousButtonSearchTutorialText =>
+      'Dòbel e boton aki pa eliminá e último personahe .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Druk e boton aki pa sera e teclado i interakshoná ku e resultadonan di búskeda .';
+  String get menuButtonSearchTutorialText =>
+      'Druk e boton aki pa sera e teclado i interakshoná ku e resultadonan di búskeda .';
 }

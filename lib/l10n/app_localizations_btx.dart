@@ -18,13 +18,16 @@ class AppLocalizationsBtx extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Akses Audio Iperluken .';
 
   @override
-  String get audioAccessPermissionContent => 'Tolong berekenndu akses file audio gelah banci kami mutarken file musikndu.';
+  String get audioAccessPermissionContent =>
+      'Tolong berekenndu akses file audio gelah banci kami mutarken file musikndu.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Akses Audio si I Denied .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Akses Audio si I Denied .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Tolong berekenndu akses file audio guna aplikasi enda i bas pengaturen perangkat gelah banci kami mutarken file musikndu.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Tolong berekenndu akses file audio guna aplikasi enda i bas pengaturen perangkat gelah banci kami mutarken file musikndu.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsBtx extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsBtx extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsBtx extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sentuh Sora';
 
   @override
-  String get touchSoundsDialogContent => 'Tolong Aktifken Sound Sounds ibas Pengaturan Sistem nari guna megiken sora roda klik .';
+  String get touchSoundsDialogContent =>
+      'Tolong Aktifken Sound Sounds ibas Pengaturan Sistem nari guna megiken sora roda klik .';
 
   @override
   String get immersiveModeSettingTitle => 'Mode Immersif';
@@ -144,7 +146,8 @@ class AppLocalizationsBtx extends AppLocalizations {
   String get donateSettingTitle => 'Cukong';
 
   @override
-  String get donateSettingDescription => 'Adi ngena atendu aplikasi enda, perdiatekenlah sumbangan.';
+  String get donateSettingDescription =>
+      'Adi ngena atendu aplikasi enda, perdiatekenlah sumbangan.';
 
   @override
   String get versionAboutScreenTitle => 'Versi';
@@ -210,10 +213,12 @@ class AppLocalizationsBtx extends AppLocalizations {
   String get resultsForText => 'Hasilna guna:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Optimalisasi Baterai Nonaktif .';
+  String get disableBatteryOptimizationTitle =>
+      'Optimalisasi Baterai Nonaktif .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Silahkan menonaktifken optimasi baterai guna aplikasi enda ibas pengaturen perangkat guna banci latar belakang pemutaren musik.';
+  String get disableBatteryOptimizationContent =>
+      'Silahkan menonaktifken optimasi baterai guna aplikasi enda ibas pengaturen perangkat guna banci latar belakang pemutaren musik.';
 
   @override
   String get languageScreenTitle => 'Bahasa';
@@ -267,50 +272,66 @@ class AppLocalizationsBtx extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Berkas Musik Rescan .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Pindahken jempolndu ringan-ringan i sekelewet Roda Klik guna navigasi menu .';
+  String get deviceControlMenuTutorialText =>
+      'Pindahken jempolndu ringan-ringan i sekelewet Roda Klik guna navigasi menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tekan tombol pusat guna milih item menu si isoroti .';
+  String get centerButtonMenuTutorialText =>
+      'Tekan tombol pusat guna milih item menu si isoroti .';
 
   @override
-  String get playPauseMenuTutorialText => 'Tekan tombol enda guna mainken ntah pe ngadiken sada lagu .';
+  String get playPauseMenuTutorialText =>
+      'Tekan tombol enda guna mainken ntah pe ngadiken sada lagu .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tekan tombol enda guna skip ku lagu selanjutna .';
+  String get nextButtonMenuTutorialText =>
+      'Tekan tombol enda guna skip ku lagu selanjutna .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tekan tombol enda guna mulih ntah pe mulihken ku lagu si enggo lewat .';
+  String get previousButtonMenuTutorialText =>
+      'Tekan tombol enda guna mulih ntah pe mulihken ku lagu si enggo lewat .';
 
   @override
-  String get menuButtonTutorialText => 'Tekan tombol enda guna mulihken ku menu si enggo lewat. Banci itekanndu janah itahanndu arah layar si deban guna langsung ku menu utama.';
+  String get menuButtonTutorialText =>
+      'Tekan tombol enda guna mulihken ku menu si enggo lewat. Banci itekanndu janah itahanndu arah layar si deban guna langsung ku menu utama.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Enda me layar tampilen. Sentuhan Layar ras Split Mode Layar iaktifken secara default ras banci ikonfigurasi lebih lanjut ibas pengaturen.';
+  String get deviceScreenMenuTutorialText =>
+      'Enda me layar tampilen. Sentuhan Layar ras Split Mode Layar iaktifken secara default ras banci ikonfigurasi lebih lanjut ibas pengaturen.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Pindahken jempolndu i sekelewet Roda Klik guna menyesuaiken volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Pindahken jempolndu i sekelewet Roda Klik guna menyesuaiken volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tekan tombol Pusat guna ersepeda arah bar, bar scrubber ras slider shuffle. Tekan ras tahan tombol Pusat guna ndatken pilihen tambahen.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tekan tombol Pusat guna ersepeda arah bar, bar scrubber ras slider shuffle. Tekan ras tahan tombol Pusat guna ndatken pilihen tambahen.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tekan ras tahan tombol enda guna cepat maju lagu .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tekan ras tahan tombol enda guna cepat maju lagu .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tekan ras tahan tombol enda guna mulihi lagu .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tekan ras tahan tombol enda guna mulihi lagu .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Pindahken jempolndu ringan i sekelewet Roda Klik guna menyoroti alfabet .';
+  String get deviceControlSearchTutorialText =>
+      'Pindahken jempolndu ringan i sekelewet Roda Klik guna menyoroti alfabet .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tekan tombol pusat guna milih alfabet si isoroti .';
+  String get centerButtonSearchTutorialText =>
+      'Tekan tombol pusat guna milih alfabet si isoroti .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tekan tombol enda guna nambahi ruang .';
+  String get nextButtonSearchTutorialText =>
+      'Tekan tombol enda guna nambahi ruang .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tekan tombol enda guna menghapus karakter si terakhir .';
+  String get previousButtonSearchTutorialText =>
+      'Tekan tombol enda guna menghapus karakter si terakhir .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tekan tombol enda guna nutup keyboard ras berinteraksi ras hasil pencarian .';
+  String get menuButtonSearchTutorialText =>
+      'Tekan tombol enda guna nutup keyboard ras berinteraksi ras hasil pencarian .';
 }

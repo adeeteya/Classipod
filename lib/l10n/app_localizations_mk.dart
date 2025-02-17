@@ -15,16 +15,20 @@ class AppLocalizationsMk extends AppLocalizations {
   String get menuButtonText => 'Мени';
 
   @override
-  String get audioAccessPermissionTitle => 'Потребна е дозвола за аудио пристап';
+  String get audioAccessPermissionTitle =>
+      'Потребна е дозвола за аудио пристап';
 
   @override
-  String get audioAccessPermissionContent => 'Ве молиме, дајте пристап до аудио -датотеките за да ни овозможите да ги репродуцираме вашите музички датотеки.';
+  String get audioAccessPermissionContent =>
+      'Ве молиме, дајте пристап до аудио -датотеките за да ни овозможите да ги репродуцираме вашите музички датотеки.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Одредена дозвола за аудио пристап';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Одредена дозвола за аудио пристап';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Ве молиме, дајте пристап за аудио датотеки за оваа апликација во поставките на уредот за да ни овозможи да ги репродуцираме вашите музички датотеки.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Ве молиме, дајте пристап за аудио датотеки за оваа апликација во поставките на уредот за да ни овозможи да ги репродуцираме вашите музички датотеки.';
 
   @override
   String get menuScreenTitle => 'Мени';
@@ -63,7 +67,6 @@ class AppLocalizationsMk extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsMk extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsMk extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Звуци на допир';
 
   @override
-  String get touchSoundsDialogContent => 'Ве молиме, овозможете звуци на допир од поставките на системот за да ги слушнете звуците на тркалото за кликнување';
+  String get touchSoundsDialogContent =>
+      'Ве молиме, овозможете звуци на допир од поставките на системот за да ги слушнете звуците на тркалото за кликнување';
 
   @override
   String get immersiveModeSettingTitle => 'Потопен режим';
@@ -144,7 +147,8 @@ class AppLocalizationsMk extends AppLocalizations {
   String get donateSettingTitle => 'Донирај';
 
   @override
-  String get donateSettingDescription => 'Ако ви се допаѓа оваа апликација, размислете да донирате.';
+  String get donateSettingDescription =>
+      'Ако ви се допаѓа оваа апликација, размислете да донирате.';
 
   @override
   String get versionAboutScreenTitle => 'Верзија';
@@ -195,7 +199,8 @@ class AppLocalizationsMk extends AppLocalizations {
   String get retryButtonText => 'Повторно обидете се';
 
   @override
-  String get filePickerDialogTitle => 'Изберете директориум за скенирање за музика';
+  String get filePickerDialogTitle =>
+      'Изберете директориум за скенирање за музика';
 
   @override
   String get searchScreenTitle => 'Пребарување';
@@ -210,10 +215,12 @@ class AppLocalizationsMk extends AppLocalizations {
   String get resultsForText => 'Резултати за:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Оневозможете ја оптимизацијата на батеријата';
+  String get disableBatteryOptimizationTitle =>
+      'Оневозможете ја оптимизацијата на батеријата';
 
   @override
-  String get disableBatteryOptimizationContent => 'Ве молиме, оневозможете ја оптимизацијата на батеријата за оваа апликација во поставките на уредот за да овозможите репродукција на музика во позадина.';
+  String get disableBatteryOptimizationContent =>
+      'Ве молиме, оневозможете ја оптимизацијата на батеријата за оваа апликација во поставките на уредот за да овозможите репродукција на музика во позадина.';
 
   @override
   String get languageScreenTitle => 'Јазик';
@@ -267,50 +274,66 @@ class AppLocalizationsMk extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Music датотеки со Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Поместете го палецот лесно околу тркалото за кликнување за да се движите во менито';
+  String get deviceControlMenuTutorialText =>
+      'Поместете го палецот лесно околу тркалото за кликнување за да се движите во менито';
 
   @override
-  String get centerButtonMenuTutorialText => 'Притиснете го копчето Центар за да ја изберете означената ставка од менито';
+  String get centerButtonMenuTutorialText =>
+      'Притиснете го копчето Центар за да ја изберете означената ставка од менито';
 
   @override
-  String get playPauseMenuTutorialText => 'Притиснете го ова копче за да свирите или паузирате песна';
+  String get playPauseMenuTutorialText =>
+      'Притиснете го ова копче за да свирите или паузирате песна';
 
   @override
-  String get nextButtonMenuTutorialText => 'Притиснете го ова копче за да го прескокнете на следната песна';
+  String get nextButtonMenuTutorialText =>
+      'Притиснете го ова копче за да го прескокнете на следната песна';
 
   @override
-  String get previousButtonMenuTutorialText => 'Притиснете го ова копче за да се премотате или да се вратите на претходната песна';
+  String get previousButtonMenuTutorialText =>
+      'Притиснете го ова копче за да се премотате или да се вратите на претходната песна';
 
   @override
-  String get menuButtonTutorialText => 'Притиснете го ова копче за да се вратите на претходното мени. Можете да го притиснете и да го држите од кој било друг екран за директно да одите во главното мени.';
+  String get menuButtonTutorialText =>
+      'Притиснете го ова копче за да се вратите на претходното мени. Можете да го притиснете и да го држите од кој било друг екран за директно да одите во главното мени.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ова е екранот на екранот. Екранот на допир и режимот на сплит екранот се овозможуваат стандардно и може да се конфигурираат понатаму во поставките.';
+  String get deviceScreenMenuTutorialText =>
+      'Ова е екранот на екранот. Екранот на допир и режимот на сплит екранот се овозможуваат стандардно и може да се конфигурираат понатаму во поставките.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Поместете го палецот околу тркалото за кликнување за да ја прилагодите јачината на звукот';
+  String get deviceControlNowPlayingTutorialText =>
+      'Поместете го палецот околу тркалото за кликнување за да ја прилагодите јачината на звукот';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Притиснете го копчето Централно за да циклус преку Seek Bar, Scrubber Bar и Shuffle Slider. Притиснете и задржете го копчето Центар за да пристапите до дополнителни опции.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Притиснете го копчето Централно за да циклус преку Seek Bar, Scrubber Bar и Shuffle Slider. Притиснете и задржете го копчето Центар за да пристапите до дополнителни опции.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Притиснете и држете го ова копче за побрзо да ја препраќате песната';
+  String get nextButtonNowPlayingTutorialText =>
+      'Притиснете и држете го ова копче за побрзо да ја препраќате песната';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Притиснете и држете го ова копче за да ја премотате песната';
+  String get previousButtonNowPlayingTutorialText =>
+      'Притиснете и држете го ова копче за да ја премотате песната';
 
   @override
-  String get deviceControlSearchTutorialText => 'Поместете го палецот лесно околу тркалото за кликнување за да истакнете азбука';
+  String get deviceControlSearchTutorialText =>
+      'Поместете го палецот лесно околу тркалото за кликнување за да истакнете азбука';
 
   @override
-  String get centerButtonSearchTutorialText => 'Притиснете го копчето Центар за да ја изберете истакната азбука';
+  String get centerButtonSearchTutorialText =>
+      'Притиснете го копчето Центар за да ја изберете истакната азбука';
 
   @override
-  String get nextButtonSearchTutorialText => 'Притиснете го ова копче за да додадете простор';
+  String get nextButtonSearchTutorialText =>
+      'Притиснете го ова копче за да додадете простор';
 
   @override
-  String get previousButtonSearchTutorialText => 'Притиснете го ова копче за да го избришете последниот знак';
+  String get previousButtonSearchTutorialText =>
+      'Притиснете го ова копче за да го избришете последниот знак';
 
   @override
-  String get menuButtonSearchTutorialText => 'Притиснете го ова копче за да ја затворите тастатурата и да комуницирате со резултатите од пребарувањето';
+  String get menuButtonSearchTutorialText =>
+      'Притиснете го ова копче за да ја затворите тастатурата и да комуницирате со резултатите од пребарувањето';
 }

@@ -18,13 +18,16 @@ class AppLocalizationsDyu extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Saali ka kan ka kɛ .';
 
   @override
-  String get audioAccessPermissionContent => 'Aw k’a to an ka se ka ordinatɛri ka sɛbɛw sɔrɔ walisa k’a to an ka se k’aw ka dɔnkiliw fɔ.';
+  String get audioAccessPermissionContent =>
+      'Aw k’a to an ka se ka ordinatɛri ka sɛbɛw sɔrɔ walisa k’a to an ka se k’aw ka dɔnkiliw fɔ.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio sɔrɔli ka kan ka kɛ .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio sɔrɔli ka kan ka kɛ .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Aw k’a to aw ka se ka o porogramu ka porogramuw sɔrɔ o porogramu kɔnɔ walisa k’a to an ka se k’aw ka miziki sɛbɛw fɔ.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Aw k’a to aw ka se ka o porogramu ka porogramuw sɔrɔ o porogramu kɔnɔ walisa k’a to an ka se k’aw ka miziki sɛbɛw fɔ.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsDyu extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsDyu extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsDyu extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Aw ye maga Sounds';
 
   @override
-  String get touchSoundsDialogContent => 'Aw ka Enable Touch Sounds ka bɔ System Paramɛtiriw la walisa ka digi click hot mankanw mɛn .';
+  String get touchSoundsDialogContent =>
+      'Aw ka Enable Touch Sounds ka bɔ System Paramɛtiriw la walisa ka digi click hot mankanw mɛn .';
 
   @override
   String get immersiveModeSettingTitle => 'Mode min be mɔgɔ kabakoya';
@@ -144,7 +146,8 @@ class AppLocalizationsDyu extends AppLocalizations {
   String get donateSettingTitle => 'Di';
 
   @override
-  String get donateSettingDescription => 'N’o porogramu ka di i ye, i ka miiri k’a filɛ.';
+  String get donateSettingDescription =>
+      'N’o porogramu ka di i ye, i ka miiri k’a filɛ.';
 
   @override
   String get versionAboutScreenTitle => 'Wɛrisiyɔn';
@@ -195,7 +198,8 @@ class AppLocalizationsDyu extends AppLocalizations {
   String get retryButtonText => 'segi';
 
   @override
-  String get filePickerDialogTitle => 'Aw ye Direktɛri dɔ sugandi min be se ka kɛ miziki ye .';
+  String get filePickerDialogTitle =>
+      'Aw ye Direktɛri dɔ sugandi min be se ka kɛ miziki ye .';
 
   @override
   String get searchScreenTitle => 'Ɲini';
@@ -213,7 +217,8 @@ class AppLocalizationsDyu extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Batiri min be se ka bana.';
 
   @override
-  String get disableBatteryOptimizationContent => 'Aw k’aw ka batiriw labɛn ka ɲɛ o porogramu kama minw be sɔrɔ o minanw kɔnɔ walisa ka se ka dɔnkiliw lamɛn.';
+  String get disableBatteryOptimizationContent =>
+      'Aw k’aw ka batiriw labɛn ka ɲɛ o porogramu kama minw be sɔrɔ o minanw kɔnɔ walisa ka se ka dɔnkiliw lamɛn.';
 
   @override
   String get languageScreenTitle => 'Kan';
@@ -267,50 +272,66 @@ class AppLocalizationsDyu extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan miziki filɛri';
 
   @override
-  String get deviceControlMenuTutorialText => 'I bolokunnaden ta dɔɔni dɔɔni i ka Click Wheel lamini walisa ka se ka taga yɔrɔ nin na .';
+  String get deviceControlMenuTutorialText =>
+      'I bolokunnaden ta dɔɔni dɔɔni i ka Click Wheel lamini walisa ka se ka taga yɔrɔ nin na .';
 
   @override
-  String get centerButtonMenuTutorialText => 'I ka yɔrɔ cɛmancɛ butɔn digi walisa ka yɔrɔ min yira, o sugandi .';
+  String get centerButtonMenuTutorialText =>
+      'I ka yɔrɔ cɛmancɛ butɔn digi walisa ka yɔrɔ min yira, o sugandi .';
 
   @override
-  String get playPauseMenuTutorialText => 'Aw ye nin butɔn digi ka dɔnkili dɔ fɔ wala k’a lalɔ .';
+  String get playPauseMenuTutorialText =>
+      'Aw ye nin butɔn digi ka dɔnkili dɔ fɔ wala k’a lalɔ .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Aw ye nin butɔn digi ka tɛmɛ dɔnkili nata kan .';
+  String get nextButtonMenuTutorialText =>
+      'Aw ye nin butɔn digi ka tɛmɛ dɔnkili nata kan .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Aw ye nin butɔn digi walisa ka segi ka bɔ wala ka kɔsegi dɔnkili tɛmɛnin na .';
+  String get previousButtonMenuTutorialText =>
+      'Aw ye nin butɔn digi walisa ka segi ka bɔ wala ka kɔsegi dɔnkili tɛmɛnin na .';
 
   @override
-  String get menuButtonTutorialText => 'I ka butɔn nin digi walisa ka kɔsegi yɔrɔ tɛmɛninw na. I tun be se k’a digi ani k’a minɛ ekran wɛrɛ kan walisa ka taga yɔrɔ min na, o ye ka taga yɔrɔ min na, o ye yɔrɔ jɔnjɔn ye.';
+  String get menuButtonTutorialText =>
+      'I ka butɔn nin digi walisa ka kɔsegi yɔrɔ tɛmɛninw na. I tun be se k’a digi ani k’a minɛ ekran wɛrɛ kan walisa ka taga yɔrɔ min na, o ye ka taga yɔrɔ min na, o ye yɔrɔ jɔnjɔn ye.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Nin ye yiracogo yɔrɔ ye. Ɲɔgɔn Screen ani Split Screen Mode be se ka baara kɛ ka ɲɛ ani u be se ka labɛn ka ɲɛ paramɛtiriw kɔnɔ.';
+  String get deviceScreenMenuTutorialText =>
+      'Nin ye yiracogo yɔrɔ ye. Ɲɔgɔn Screen ani Split Screen Mode be se ka baara kɛ ka ɲɛ ani u be se ka labɛn ka ɲɛ paramɛtiriw kɔnɔ.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'I k’i bolokunnanden yɛlɛma ka taga yɔrɔ min na i be se ka yɔrɔ nin yɛlɛma .';
+  String get deviceControlNowPlayingTutorialText =>
+      'I k’i bolokunnanden yɛlɛma ka taga yɔrɔ min na i be se ka yɔrɔ nin yɛlɛma .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'I ka Centre butɔn digi walisa ka se ka nɛgɛso ɲini, ka scrubber bar ani shuffle slider ɲini. I ka Centre butɔn digi ani k’a minɛ walisa ka se ka fɛɛn wɛrɛw sɔrɔ.';
+  String get centerButtonNowPlayingTutorialText =>
+      'I ka Centre butɔn digi walisa ka se ka nɛgɛso ɲini, ka scrubber bar ani shuffle slider ɲini. I ka Centre butɔn digi ani k’a minɛ walisa ka se ka fɛɛn wɛrɛw sɔrɔ.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Aw ye nin butɔn digi ani k’a minɛ walisa ka dɔnkili nin ɲɛfɛ .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Aw ye nin butɔn digi ani k’a minɛ walisa ka dɔnkili nin ɲɛfɛ .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Aw ye nin butɔn digi ani k’a minɛ walisa ka dɔnkili nin bɔ tugun .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Aw ye nin butɔn digi ani k’a minɛ walisa ka dɔnkili nin bɔ tugun .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Aw k’aw bolokunnaden yɛlɛma dɔɔni dɔɔni ka se ka yɔrɔ dɔ lamini walisa ka alfabɛti dɔ yira .';
+  String get deviceControlSearchTutorialText =>
+      'Aw k’aw bolokunnaden yɛlɛma dɔɔni dɔɔni ka se ka yɔrɔ dɔ lamini walisa ka alfabɛti dɔ yira .';
 
   @override
-  String get centerButtonSearchTutorialText => 'I ka yɔrɔ cɛmancɛ butɔn digi walisa ka alfabɛti yiranin sugandi .';
+  String get centerButtonSearchTutorialText =>
+      'I ka yɔrɔ cɛmancɛ butɔn digi walisa ka alfabɛti yiranin sugandi .';
 
   @override
-  String get nextButtonSearchTutorialText => 'I ka butɔn nin digi walisa ka yɔrɔ dɔ fara a kan .';
+  String get nextButtonSearchTutorialText =>
+      'I ka butɔn nin digi walisa ka yɔrɔ dɔ fara a kan .';
 
   @override
-  String get previousButtonSearchTutorialText => 'I ka nin butɔn digi walisa ka mɔgɔ laban jɔsi .';
+  String get previousButtonSearchTutorialText =>
+      'I ka nin butɔn digi walisa ka mɔgɔ laban jɔsi .';
 
   @override
-  String get menuButtonSearchTutorialText => 'I ka o butɔn digi walisa ka klaviye datugu ani ka jɛnɲɔgɔnya kɛ ni ɲinini jaabiw ye .';
+  String get menuButtonSearchTutorialText =>
+      'I ka o butɔn digi walisa ka klaviye datugu ani ka jɛnɲɔgɔnya kɛ ni ɲinini jaabiw ye .';
 }

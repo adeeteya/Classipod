@@ -18,13 +18,16 @@ class AppLocalizationsUr extends AppLocalizations {
   String get audioAccessPermissionTitle => 'آڈیو رسائی کی اجازت درکار ہے';
 
   @override
-  String get audioAccessPermissionContent => 'براہ کرم آڈیو فائلوں تک رسائی حاصل کریں تاکہ ہمیں آپ کی میوزک فائلیں چلانے کی اجازت دی جاسکے۔';
+  String get audioAccessPermissionContent =>
+      'براہ کرم آڈیو فائلوں تک رسائی حاصل کریں تاکہ ہمیں آپ کی میوزک فائلیں چلانے کی اجازت دی جاسکے۔';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'آڈیو رسائی کی اجازت سے انکار کیا گیا';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'آڈیو رسائی کی اجازت سے انکار کیا گیا';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'براہ کرم آڈیو فائلوں کو اس ایپ کے لئے آلہ کی ترتیبات میں رسائی دیں تاکہ ہمیں آپ کی میوزک فائلیں چلانے کی اجازت دی جاسکے۔';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'براہ کرم آڈیو فائلوں کو اس ایپ کے لئے آلہ کی ترتیبات میں رسائی دیں تاکہ ہمیں آپ کی میوزک فائلیں چلانے کی اجازت دی جاسکے۔';
 
   @override
   String get menuScreenTitle => 'مینو';
@@ -63,7 +66,6 @@ class AppLocalizationsUr extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsUr extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsUr extends AppLocalizations {
   String get touchSoundsDialogTitle => 'ٹچ آوازیں';
 
   @override
-  String get touchSoundsDialogContent => 'براہ کرم پہیے کی آوازوں کو سننے کے لئے سسٹم کی ترتیبات سے ٹچ آوازوں کو فعال کریں';
+  String get touchSoundsDialogContent =>
+      'براہ کرم پہیے کی آوازوں کو سننے کے لئے سسٹم کی ترتیبات سے ٹچ آوازوں کو فعال کریں';
 
   @override
   String get immersiveModeSettingTitle => 'عمیق موڈ';
@@ -144,7 +146,8 @@ class AppLocalizationsUr extends AppLocalizations {
   String get donateSettingTitle => 'عطیہ کریں';
 
   @override
-  String get donateSettingDescription => 'اگر آپ کو یہ ایپ پسند ہے تو ، براہ کرم عطیہ کرنے پر غور کریں۔';
+  String get donateSettingDescription =>
+      'اگر آپ کو یہ ایپ پسند ہے تو ، براہ کرم عطیہ کرنے پر غور کریں۔';
 
   @override
   String get versionAboutScreenTitle => 'ورژن';
@@ -195,7 +198,8 @@ class AppLocalizationsUr extends AppLocalizations {
   String get retryButtonText => 'دوبارہ کوشش کریں';
 
   @override
-  String get filePickerDialogTitle => 'موسیقی کے لئے اسکین کرنے کے لئے ایک ڈائریکٹری منتخب کریں';
+  String get filePickerDialogTitle =>
+      'موسیقی کے لئے اسکین کرنے کے لئے ایک ڈائریکٹری منتخب کریں';
 
   @override
   String get searchScreenTitle => 'تلاش';
@@ -210,10 +214,12 @@ class AppLocalizationsUr extends AppLocalizations {
   String get resultsForText => 'نتائج کے نتائج:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'بیٹری کی اصلاح کو غیر فعال کریں';
+  String get disableBatteryOptimizationTitle =>
+      'بیٹری کی اصلاح کو غیر فعال کریں';
 
   @override
-  String get disableBatteryOptimizationContent => 'براہ کرم موسیقی کے پس منظر پلے بیک کی اجازت دینے کے لئے ڈیوائس کی ترتیبات میں اس ایپ کے لئے بیٹری کی اصلاح کو غیر فعال کریں۔';
+  String get disableBatteryOptimizationContent =>
+      'براہ کرم موسیقی کے پس منظر پلے بیک کی اجازت دینے کے لئے ڈیوائس کی ترتیبات میں اس ایپ کے لئے بیٹری کی اصلاح کو غیر فعال کریں۔';
 
   @override
   String get languageScreenTitle => 'زبان';
@@ -267,50 +273,66 @@ class AppLocalizationsUr extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'میوزک فائلوں کو بازیافت کریں';
 
   @override
-  String get deviceControlMenuTutorialText => 'مینو کو نیویگیٹ کرنے کے لئے اپنے انگوٹھے کو ہلکے سے کلک وہیل کے گرد منتقل کریں';
+  String get deviceControlMenuTutorialText =>
+      'مینو کو نیویگیٹ کرنے کے لئے اپنے انگوٹھے کو ہلکے سے کلک وہیل کے گرد منتقل کریں';
 
   @override
-  String get centerButtonMenuTutorialText => 'نمایاں کردہ مینو آئٹم کو منتخب کرنے کے لئے سنٹر بٹن دبائیں';
+  String get centerButtonMenuTutorialText =>
+      'نمایاں کردہ مینو آئٹم کو منتخب کرنے کے لئے سنٹر بٹن دبائیں';
 
   @override
-  String get playPauseMenuTutorialText => 'کسی گانے کو کھیلنے یا روکنے کے لئے اس بٹن کو دبائیں';
+  String get playPauseMenuTutorialText =>
+      'کسی گانے کو کھیلنے یا روکنے کے لئے اس بٹن کو دبائیں';
 
   @override
-  String get nextButtonMenuTutorialText => 'اگلے گانے پر جانے کے لئے اس بٹن کو دبائیں';
+  String get nextButtonMenuTutorialText =>
+      'اگلے گانے پر جانے کے لئے اس بٹن کو دبائیں';
 
   @override
-  String get previousButtonMenuTutorialText => 'اس بٹن کو ریوائنڈ کرنے یا پچھلے گانے پر واپس جانے کے لئے دبائیں';
+  String get previousButtonMenuTutorialText =>
+      'اس بٹن کو ریوائنڈ کرنے یا پچھلے گانے پر واپس جانے کے لئے دبائیں';
 
   @override
-  String get menuButtonTutorialText => 'پچھلے مینو میں واپس جانے کے لئے اس بٹن کو دبائیں۔ براہ راست مین مینو میں جانے کے لئے آپ اسے کسی بھی دوسری اسکرین سے دبائیں اور تھام سکتے ہیں۔';
+  String get menuButtonTutorialText =>
+      'پچھلے مینو میں واپس جانے کے لئے اس بٹن کو دبائیں۔ براہ راست مین مینو میں جانے کے لئے آپ اسے کسی بھی دوسری اسکرین سے دبائیں اور تھام سکتے ہیں۔';
 
   @override
-  String get deviceScreenMenuTutorialText => 'یہ ڈسپلے اسکرین ہے۔ ٹچ اسکرین اور اسپلٹ اسکرین وضع کو بطور ڈیفالٹ فعال کیا جاتا ہے اور ترتیبات میں مزید ترتیب دی جاسکتی ہے۔';
+  String get deviceScreenMenuTutorialText =>
+      'یہ ڈسپلے اسکرین ہے۔ ٹچ اسکرین اور اسپلٹ اسکرین وضع کو بطور ڈیفالٹ فعال کیا جاتا ہے اور ترتیبات میں مزید ترتیب دی جاسکتی ہے۔';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'حجم کو ایڈجسٹ کرنے کے لئے اپنے انگوٹھے کو کلک وہیل کے ارد گرد منتقل کریں';
+  String get deviceControlNowPlayingTutorialText =>
+      'حجم کو ایڈجسٹ کرنے کے لئے اپنے انگوٹھے کو کلک وہیل کے ارد گرد منتقل کریں';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'سیچ بار ، اسکربر بار اور شفل سلائیڈر کے ذریعے سائیکل کے لئے سینٹر کے بٹن کو دبائیں۔ اضافی اختیارات تک رسائی کے ل the سینٹر کے بٹن کو دبائیں اور تھامیں۔';
+  String get centerButtonNowPlayingTutorialText =>
+      'سیچ بار ، اسکربر بار اور شفل سلائیڈر کے ذریعے سائیکل کے لئے سینٹر کے بٹن کو دبائیں۔ اضافی اختیارات تک رسائی کے ل the سینٹر کے بٹن کو دبائیں اور تھامیں۔';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'گانے کو تیزی سے آگے بڑھانے کے لئے اس بٹن کو دبائیں اور تھامیں';
+  String get nextButtonNowPlayingTutorialText =>
+      'گانے کو تیزی سے آگے بڑھانے کے لئے اس بٹن کو دبائیں اور تھامیں';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'گانے کو دوبارہ بنانے کے لئے اس بٹن کو دبائیں اور تھامیں';
+  String get previousButtonNowPlayingTutorialText =>
+      'گانے کو دوبارہ بنانے کے لئے اس بٹن کو دبائیں اور تھامیں';
 
   @override
-  String get deviceControlSearchTutorialText => 'حرف تہجی کو اجاگر کرنے کے لئے اپنے انگوٹھے کو ہلکے سے کلک پہیے کے گرد منتقل کریں';
+  String get deviceControlSearchTutorialText =>
+      'حرف تہجی کو اجاگر کرنے کے لئے اپنے انگوٹھے کو ہلکے سے کلک پہیے کے گرد منتقل کریں';
 
   @override
-  String get centerButtonSearchTutorialText => 'نمایاں حروف تہجی کو منتخب کرنے کے لئے سینٹر کے بٹن کو دبائیں';
+  String get centerButtonSearchTutorialText =>
+      'نمایاں حروف تہجی کو منتخب کرنے کے لئے سینٹر کے بٹن کو دبائیں';
 
   @override
-  String get nextButtonSearchTutorialText => 'جگہ شامل کرنے کے لئے اس بٹن کو دبائیں';
+  String get nextButtonSearchTutorialText =>
+      'جگہ شامل کرنے کے لئے اس بٹن کو دبائیں';
 
   @override
-  String get previousButtonSearchTutorialText => 'آخری کردار کو حذف کرنے کے لئے اس بٹن کو دبائیں';
+  String get previousButtonSearchTutorialText =>
+      'آخری کردار کو حذف کرنے کے لئے اس بٹن کو دبائیں';
 
   @override
-  String get menuButtonSearchTutorialText => 'کی بورڈ کو بند کرنے اور تلاش کے نتائج کے ساتھ بات چیت کرنے کے لئے اس بٹن کو دبائیں';
+  String get menuButtonSearchTutorialText =>
+      'کی بورڈ کو بند کرنے اور تلاش کے نتائج کے ساتھ بات چیت کرنے کے لئے اس بٹن کو دبائیں';
 }

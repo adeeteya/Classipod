@@ -18,13 +18,16 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ponoʻiaʻo Audio i kahiʻaeʻia';
 
   @override
-  String get audioAccessPermissionContent => 'Eʻoluʻolu e hāʻawi i nā faila audio eʻae iā mākou eʻae iā mākou e pāʻani i kāu mau faila mele.';
+  String get audioAccessPermissionContent =>
+      'Eʻoluʻolu e hāʻawi i nā faila audio eʻae iā mākou eʻae iā mākou e pāʻani i kāu mau faila mele.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ua hōʻoleʻiaʻo Audio iʻaeʻia';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ua hōʻoleʻiaʻo Audio iʻaeʻia';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Eʻoluʻolu e hāʻawi i nā faila leo audio e komo no kēia app ma nā hoʻonohonoho pūnaewele eʻae iā mākou e pāʻani i kāu mau faila mele.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Eʻoluʻolu e hāʻawi i nā faila leo audio e komo no kēia app ma nā hoʻonohonoho pūnaewele eʻae iā mākou e pāʻani i kāu mau faila mele.';
 
   @override
   String get menuScreenTitle => 'Papa kuhikuhi';
@@ -63,7 +66,6 @@ class AppLocalizationsHaw extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsHaw extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Pākuʻi Pūila';
 
   @override
-  String get touchSoundsDialogContent => 'Eʻoluʻolu e hoʻopili i nā leo mai nā hoʻonohonoho hoʻonohonoho e hoʻolohe ai i nā leo kelepona';
+  String get touchSoundsDialogContent =>
+      'Eʻoluʻolu e hoʻopili i nā leo mai nā hoʻonohonoho hoʻonohonoho e hoʻolohe ai i nā leo kelepona';
 
   @override
   String get immersiveModeSettingTitle => 'Mode mode';
@@ -144,7 +146,8 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get donateSettingTitle => 'Hāʻawi';
 
   @override
-  String get donateSettingDescription => 'Inā makemakeʻoe i kēia app, e noʻonoʻo e hāʻawi i ka hāʻawiʻana.';
+  String get donateSettingDescription =>
+      'Inā makemakeʻoe i kēia app, e noʻonoʻo e hāʻawi i ka hāʻawiʻana.';
 
   @override
   String get versionAboutScreenTitle => 'Kūlana';
@@ -195,7 +198,8 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get retryButtonText => 'Retry';
 
   @override
-  String get filePickerDialogTitle => 'E koho i kahi papa kuhikuhi e scan no ke mele';
+  String get filePickerDialogTitle =>
+      'E koho i kahi papa kuhikuhi e scan no ke mele';
 
   @override
   String get searchScreenTitle => 'Huli';
@@ -210,10 +214,12 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get resultsForText => 'Nā hopena no:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Hoʻopaʻa i ka Optimization Battery';
+  String get disableBatteryOptimizationTitle =>
+      'Hoʻopaʻa i ka Optimization Battery';
 
   @override
-  String get disableBatteryOptimizationContent => 'Eʻoluʻolu e hōʻole i nā koho balota no kēia app ma kaʻaoʻao o kaʻaoʻao eʻae i keʻano o ke mele mele.';
+  String get disableBatteryOptimizationContent =>
+      'Eʻoluʻolu e hōʻole i nā koho balota no kēia app ma kaʻaoʻao o kaʻaoʻao eʻae i keʻano o ke mele mele.';
 
   @override
   String get languageScreenTitle => 'Kanakai';
@@ -267,50 +273,66 @@ class AppLocalizationsHaw extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'ʻO nā faila mele rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'E hoʻoneʻe i kou manamana lima e pili ana i ka huila e hoʻokele ai i ka papa kuhikuhi';
+  String get deviceControlMenuTutorialText =>
+      'E hoʻoneʻe i kou manamana lima e pili ana i ka huila e hoʻokele ai i ka papa kuhikuhi';
 
   @override
-  String get centerButtonMenuTutorialText => 'E kaomi i ke pihi Center e koho i ka waihona papa kuhikuhi';
+  String get centerButtonMenuTutorialText =>
+      'E kaomi i ke pihi Center e koho i ka waihona papa kuhikuhi';
 
   @override
-  String get playPauseMenuTutorialText => 'E kaomi i kēia pihi e pāʻani a nānā aku i kahi mele';
+  String get playPauseMenuTutorialText =>
+      'E kaomi i kēia pihi e pāʻani a nānā aku i kahi mele';
 
   @override
-  String get nextButtonMenuTutorialText => 'E kaomi i kēia pihi e holo i ke mele hou aʻe';
+  String get nextButtonMenuTutorialText =>
+      'E kaomi i kēia pihi e holo i ke mele hou aʻe';
 
   @override
-  String get previousButtonMenuTutorialText => 'E kaomi i kēia pihi e hoʻihoʻi hou a hoʻi hou i ka mele ma mua';
+  String get previousButtonMenuTutorialText =>
+      'E kaomi i kēia pihi e hoʻihoʻi hou a hoʻi hou i ka mele ma mua';
 
   @override
-  String get menuButtonTutorialText => 'E kaomi i kēia pihi e hoʻi i ka papa kuhikuhi ma mua. Hiki iāʻoe ke kaomi a hoʻopaʻa iā ia mai kekahiʻaoʻao\'ē aʻe e hele pololei i ka papa kuhikuhi nui.';
+  String get menuButtonTutorialText =>
+      'E kaomi i kēia pihi e hoʻi i ka papa kuhikuhi ma mua. Hiki iāʻoe ke kaomi a hoʻopaʻa iā ia mai kekahiʻaoʻao\'ē aʻe e hele pololei i ka papa kuhikuhi nui.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ʻO kēia ka pale hōʻike. Hoʻokomoʻia ka SCA SCACE a me SPLIT SPECH SPECE e hiki ke hoʻopaʻaʻia e ka maʻamau a hiki ke hoʻonohonohoʻia ma nā hoʻonohonoho.';
+  String get deviceScreenMenuTutorialText =>
+      'ʻO kēia ka pale hōʻike. Hoʻokomoʻia ka SCA SCACE a me SPLIT SPECH SPECE e hiki ke hoʻopaʻaʻia e ka maʻamau a hiki ke hoʻonohonohoʻia ma nā hoʻonohonoho.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'E hoʻoneʻe i kou manamana lima a puni ka huila e hoʻoponopono i ka leo';
+  String get deviceControlNowPlayingTutorialText =>
+      'E hoʻoneʻe i kou manamana lima a puni ka huila e hoʻoponopono i ka leo';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'E kaomi i ke pihi Center e hiki ai i ke kiʻi ma o kaʻimiʻana, scrubber bar a shuffle slider. E kaomi a hoʻopaʻa i ka pihi Center e komo ai i nā koho hou aʻe.';
+  String get centerButtonNowPlayingTutorialText =>
+      'E kaomi i ke pihi Center e hiki ai i ke kiʻi ma o kaʻimiʻana, scrubber bar a shuffle slider. E kaomi a hoʻopaʻa i ka pihi Center e komo ai i nā koho hou aʻe.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'E kaomi a hoʻopaʻa i kēia pihi e wikiwiki i ka mele';
+  String get nextButtonNowPlayingTutorialText =>
+      'E kaomi a hoʻopaʻa i kēia pihi e wikiwiki i ka mele';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'E kaomi a hoʻopaʻa i kēia pihi e hana hou i ke mele';
+  String get previousButtonNowPlayingTutorialText =>
+      'E kaomi a hoʻopaʻa i kēia pihi e hana hou i ke mele';
 
   @override
-  String get deviceControlSearchTutorialText => 'E neʻe i kāu manamana aniani e pili ana i ka paena kaomi e hōʻike i kahi kiʻi';
+  String get deviceControlSearchTutorialText =>
+      'E neʻe i kāu manamana aniani e pili ana i ka paena kaomi e hōʻike i kahi kiʻi';
 
   @override
-  String get centerButtonSearchTutorialText => 'E kaomi i ke pihi Center e koho i ka leka i hōʻikeʻia';
+  String get centerButtonSearchTutorialText =>
+      'E kaomi i ke pihi Center e koho i ka leka i hōʻikeʻia';
 
   @override
-  String get nextButtonSearchTutorialText => 'E kaomi i kēia pihi e hoʻohui i kahi wahi';
+  String get nextButtonSearchTutorialText =>
+      'E kaomi i kēia pihi e hoʻohui i kahi wahi';
 
   @override
-  String get previousButtonSearchTutorialText => 'E kaomi i kēia pihi e hoʻopau i keʻano hope';
+  String get previousButtonSearchTutorialText =>
+      'E kaomi i kēia pihi e hoʻopau i keʻano hope';
 
   @override
-  String get menuButtonSearchTutorialText => 'E kaomi i kēia pihi e pani i ke kīwī a kamaʻilio pū me nā hopena huli';
+  String get menuButtonSearchTutorialText =>
+      'E kaomi i kēia pihi e pani i ke kīwī a kamaʻilio pū me nā hopena huli';
 }

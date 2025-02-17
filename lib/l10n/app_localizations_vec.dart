@@ -15,16 +15,20 @@ class AppLocalizationsVec extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'Permesso de Audio Accesso Accesso Recusa.';
+  String get audioAccessPermissionTitle =>
+      'Permesso de Audio Accesso Accesso Recusa.';
 
   @override
-  String get audioAccessPermissionContent => 'Te prego, concesion audio el permeter de far el so file de ła muxica.';
+  String get audioAccessPermissionContent =>
+      'Te prego, concesion audio el permeter de far el so file de ła muxica.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Accesso Acesso Accesso Accesso Denito';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Accesso Acesso Accesso Accesso Denito';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Par piaser, concede a l’aceso de audio pa sta aplicasion de aplicasion pa permetarne de far i vostri file de muxica.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Par piaser, concede a l’aceso de audio pa sta aplicasion de aplicasion pa permetarne de far i vostri file de muxica.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsVec extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsVec extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsVec extends AppLocalizations {
   String get touchSoundsDialogTitle => 'El toc El sone';
 
   @override
-  String get touchSoundsDialogContent => 'Par piasér Toc el sona da Sistema Inpostasion pa sentir ła roda de roda del clic';
+  String get touchSoundsDialogContent =>
+      'Par piasér Toc el sona da Sistema Inpostasion pa sentir ła roda de roda del clic';
 
   @override
   String get immersiveModeSettingTitle => 'Modalità imersiva';
@@ -144,7 +147,8 @@ class AppLocalizationsVec extends AppLocalizations {
   String get donateSettingTitle => 'Donar';
 
   @override
-  String get donateSettingDescription => 'Se te piase sta aplicasion, te par piaxer de donar.';
+  String get donateSettingDescription =>
+      'Se te piase sta aplicasion, te par piaxer de donar.';
 
   @override
   String get versionAboutScreenTitle => 'Version';
@@ -195,7 +199,8 @@ class AppLocalizationsVec extends AppLocalizations {
   String get retryButtonText => 'Ripression';
 
   @override
-  String get filePickerDialogTitle => 'Sełesiona na Diretoria a Scan par ła Musica';
+  String get filePickerDialogTitle =>
+      'Sełesiona na Diretoria a Scan par ła Musica';
 
   @override
   String get searchScreenTitle => 'Sercar';
@@ -210,10 +215,12 @@ class AppLocalizationsVec extends AppLocalizations {
   String get resultsForText => 'Risulta par:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Ła stabiłixasion de ła bataria';
+  String get disableBatteryOptimizationTitle =>
+      'Ła stabiłixasion de ła bataria';
 
   @override
-  String get disableBatteryOptimizationContent => 'Par piasér otimixasion de bataria pa sta aplicasion pa ła muxica de ła muxica.';
+  String get disableBatteryOptimizationContent =>
+      'Par piasér otimixasion de bataria pa sta aplicasion pa ła muxica de ła muxica.';
 
   @override
   String get languageScreenTitle => 'Léngua';
@@ -267,50 +274,66 @@ class AppLocalizationsVec extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescal Files .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Sposta el pollice leggermente intorno al Click Rota da navigar el menù';
+  String get deviceControlMenuTutorialText =>
+      'Sposta el pollice leggermente intorno al Click Rota da navigar el menù';
 
   @override
-  String get centerButtonMenuTutorialText => 'Premi el pulsante sentro pa sełesionar el menù minu evidensià';
+  String get centerButtonMenuTutorialText =>
+      'Premi el pulsante sentro pa sełesionar el menù minu evidensià';
 
   @override
-  String get playPauseMenuTutorialText => 'Preme sto boton par zugar o pausa na canson';
+  String get playPauseMenuTutorialText =>
+      'Preme sto boton par zugar o pausa na canson';
 
   @override
-  String get nextButtonMenuTutorialText => 'Preme sto boton da saltare a ła canson dopo';
+  String get nextButtonMenuTutorialText =>
+      'Preme sto boton da saltare a ła canson dopo';
 
   @override
-  String get previousButtonMenuTutorialText => 'Preme sto boton par rimensar o tornar al canto precedente .';
+  String get previousButtonMenuTutorialText =>
+      'Preme sto boton par rimensar o tornar al canto precedente .';
 
   @override
-  String get menuButtonTutorialText => 'Premi sto boton par tornar indrio al menù precedente. Podevi premere e tegnerlo da qualsiasi altro schermo per andar diretamente al menù principale.';
+  String get menuButtonTutorialText =>
+      'Premi sto boton par tornar indrio al menù precedente. Podevi premere e tegnerlo da qualsiasi altro schermo per andar diretamente al menù principale.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Questo xe el schermo. El toc Scrin e Scrin Scrin e ativa dała predefinìa e el pol esar configurà pì in pì nełe inpostasion.';
+  String get deviceScreenMenuTutorialText =>
+      'Questo xe el schermo. El toc Scrin e Scrin Scrin e ativa dała predefinìa e el pol esar configurà pì in pì nełe inpostasion.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Sposta el pollice intorno al Click Rota per regolar el volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Sposta el pollice intorno al Click Rota per regolar el volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Premi el pulsante Centro per ciclè traverso cercar bar, bar de scrubri e scivoloso. Premi e tegner el pulsante del Centro par acedar opsion in pì.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Premi el pulsante Centro per ciclè traverso cercar bar, bar de scrubri e scivoloso. Premi e tegner el pulsante del Centro par acedar opsion in pì.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Premi e tien sto boton par digiunare in vanti ła canson';
+  String get nextButtonNowPlayingTutorialText =>
+      'Premi e tien sto boton par digiunare in vanti ła canson';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Premi e tien sto boton par rimensare la canson';
+  String get previousButtonNowPlayingTutorialText =>
+      'Premi e tien sto boton par rimensare la canson';
 
   @override
-  String get deviceControlSearchTutorialText => 'Spostate el pollice leggermente intorno al Click Rota per evidenziar un alfabeto';
+  String get deviceControlSearchTutorialText =>
+      'Spostate el pollice leggermente intorno al Click Rota per evidenziar un alfabeto';
 
   @override
-  String get centerButtonSearchTutorialText => 'Premi el pulsante sentro pa sełesionar l’alfabeto evidensià';
+  String get centerButtonSearchTutorialText =>
+      'Premi el pulsante sentro pa sełesionar l’alfabeto evidensià';
 
   @override
-  String get nextButtonSearchTutorialText => 'Preme sto boton par zontar un spasio';
+  String get nextButtonSearchTutorialText =>
+      'Preme sto boton par zontar un spasio';
 
   @override
-  String get previousButtonSearchTutorialText => 'Preme sto boton par cancełar l\'ultimo caratere';
+  String get previousButtonSearchTutorialText =>
+      'Preme sto boton par cancełar l\'ultimo caratere';
 
   @override
-  String get menuButtonSearchTutorialText => 'Premi sto boton par chiudere la tastiera e interagi co i risultati de ricerca';
+  String get menuButtonSearchTutorialText =>
+      'Premi sto boton par chiudere la tastiera e interagi co i risultati de ricerca';
 }

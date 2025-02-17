@@ -15,16 +15,20 @@ class AppLocalizationsCs extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'Vyžaduje se povolení k přístupu zvuku';
+  String get audioAccessPermissionTitle =>
+      'Vyžaduje se povolení k přístupu zvuku';
 
   @override
-  String get audioAccessPermissionContent => 'Udělejte zvukové soubory přístup, abyste nám mohli přehrávat vaše hudební soubory.';
+  String get audioAccessPermissionContent =>
+      'Udělejte zvukové soubory přístup, abyste nám mohli přehrávat vaše hudební soubory.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Oprávnění přístupu zvuku odepřeno';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Oprávnění přístupu zvuku odepřeno';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Udělejte prosím přístup zvukových souborů pro tuto aplikaci v nastavení zařízení a umožňují nám přehrávat vaše hudební soubory.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Udělejte prosím přístup zvukových souborů pro tuto aplikaci v nastavení zařízení a umožňují nám přehrávat vaše hudební soubory.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsCs extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsCs extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsCs extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Dotykové zvuky';
 
   @override
-  String get touchSoundsDialogContent => 'Povolte prosím dotykové zvuky z nastavení systému a uslyšíte zvuky kliknutí';
+  String get touchSoundsDialogContent =>
+      'Povolte prosím dotykové zvuky z nastavení systému a uslyšíte zvuky kliknutí';
 
   @override
   String get immersiveModeSettingTitle => 'Pohlcující režim';
@@ -144,7 +147,8 @@ class AppLocalizationsCs extends AppLocalizations {
   String get donateSettingTitle => 'Darovat';
 
   @override
-  String get donateSettingDescription => 'Pokud se vám tato aplikace líbí, zvažte prosím darování.';
+  String get donateSettingDescription =>
+      'Pokud se vám tato aplikace líbí, zvažte prosím darování.';
 
   @override
   String get versionAboutScreenTitle => 'Verze';
@@ -213,7 +217,8 @@ class AppLocalizationsCs extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Zakázat optimalizaci baterie';
 
   @override
-  String get disableBatteryOptimizationContent => 'Zakázat optimalizaci baterie pro tuto aplikaci v nastavení zařízení, abyste umožnili přehrávání hudby na pozadí.';
+  String get disableBatteryOptimizationContent =>
+      'Zakázat optimalizaci baterie pro tuto aplikaci v nastavení zařízení, abyste umožnili přehrávání hudby na pozadí.';
 
   @override
   String get languageScreenTitle => 'Jazyk';
@@ -267,50 +272,66 @@ class AppLocalizationsCs extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Files';
 
   @override
-  String get deviceControlMenuTutorialText => 'Posuňte palec lehce kolem kliknutí na promování po nabídce';
+  String get deviceControlMenuTutorialText =>
+      'Posuňte palec lehce kolem kliknutí na promování po nabídce';
 
   @override
-  String get centerButtonMenuTutorialText => 'Stisknutím tlačítka středu vyberte zvýrazněnou položku nabídky';
+  String get centerButtonMenuTutorialText =>
+      'Stisknutím tlačítka středu vyberte zvýrazněnou položku nabídky';
 
   @override
-  String get playPauseMenuTutorialText => 'Stisknutím tohoto tlačítka přehráváte nebo pozastavíte píseň';
+  String get playPauseMenuTutorialText =>
+      'Stisknutím tohoto tlačítka přehráváte nebo pozastavíte píseň';
 
   @override
-  String get nextButtonMenuTutorialText => 'Stisknutím tohoto tlačítka přeskočte další skladbu';
+  String get nextButtonMenuTutorialText =>
+      'Stisknutím tohoto tlačítka přeskočte další skladbu';
 
   @override
-  String get previousButtonMenuTutorialText => 'Stisknutím tohoto tlačítka přejděte nebo se vrátíte k předchozí písni';
+  String get previousButtonMenuTutorialText =>
+      'Stisknutím tohoto tlačítka přejděte nebo se vrátíte k předchozí písni';
 
   @override
-  String get menuButtonTutorialText => 'Stisknutím tohoto tlačítka se vrátíte do předchozí nabídky. Dalo by se stisknout a držet ji z jakékoli jiné obrazovky a přímo přejít do hlavní nabídky.';
+  String get menuButtonTutorialText =>
+      'Stisknutím tohoto tlačítka se vrátíte do předchozí nabídky. Dalo by se stisknout a držet ji z jakékoli jiné obrazovky a přímo přejít do hlavní nabídky.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Toto je obrazovka displeje. Ve výchozím nastavení jsou povoleny dotykové obrazovky a režim rozdělení obrazovky a v nastavení je lze dále nakonfigurovat.';
+  String get deviceScreenMenuTutorialText =>
+      'Toto je obrazovka displeje. Ve výchozím nastavení jsou povoleny dotykové obrazovky a režim rozdělení obrazovky a v nastavení je lze dále nakonfigurovat.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Posuňte palce kolem kliknutí a upravte hlasitost';
+  String get deviceControlNowPlayingTutorialText =>
+      'Posuňte palce kolem kliknutí a upravte hlasitost';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Stisknutím tlačítka středu procházejte vyhledáváním tyče, pračky a posuvníku shuffle. Stisknutím a podržením tlačítka Centra přistupujte k dalším možnostem.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Stisknutím tlačítka středu procházejte vyhledáváním tyče, pračky a posuvníku shuffle. Stisknutím a podržením tlačítka Centra přistupujte k dalším možnostem.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Stisknutím a podržením tohoto tlačítka rychle přesunujte skladbu';
+  String get nextButtonNowPlayingTutorialText =>
+      'Stisknutím a podržením tohoto tlačítka rychle přesunujte skladbu';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Stisknutím a podržením tohoto tlačítka převinete píseň';
+  String get previousButtonNowPlayingTutorialText =>
+      'Stisknutím a podržením tohoto tlačítka převinete píseň';
 
   @override
-  String get deviceControlSearchTutorialText => 'Přesuňte palec lehce kolem kliknutí a zvýrazněte abecedu';
+  String get deviceControlSearchTutorialText =>
+      'Přesuňte palec lehce kolem kliknutí a zvýrazněte abecedu';
 
   @override
-  String get centerButtonSearchTutorialText => 'Stisknutím tlačítka středu vyberte zvýrazněnou abecedu';
+  String get centerButtonSearchTutorialText =>
+      'Stisknutím tlačítka středu vyberte zvýrazněnou abecedu';
 
   @override
-  String get nextButtonSearchTutorialText => 'Stisknutím tohoto tlačítka přidejte prostor';
+  String get nextButtonSearchTutorialText =>
+      'Stisknutím tohoto tlačítka přidejte prostor';
 
   @override
-  String get previousButtonSearchTutorialText => 'Stisknutím tohoto tlačítka odstraníte poslední znak';
+  String get previousButtonSearchTutorialText =>
+      'Stisknutím tohoto tlačítka odstraníte poslední znak';
 
   @override
-  String get menuButtonSearchTutorialText => 'Stisknutím tohoto tlačítka zavřete klávesnici a komunikujte s výsledky vyhledávání';
+  String get menuButtonSearchTutorialText =>
+      'Stisknutím tohoto tlačítka zavřete klávesnici a komunikujte s výsledky vyhledávání';
 }

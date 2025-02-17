@@ -15,16 +15,20 @@ class AppLocalizationsSo extends AppLocalizations {
   String get menuButtonText => 'Warqad qiimo';
 
   @override
-  String get audioAccessPermissionTitle => 'Ogolaanshaha Helitaanka Audio ayaa loo baahan yahay';
+  String get audioAccessPermissionTitle =>
+      'Ogolaanshaha Helitaanka Audio ayaa loo baahan yahay';
 
   @override
-  String get audioAccessPermissionContent => 'Fadlan sii ogolow Audio feylasha si ay u oggolaadaan inay noo oggolaadaan inaan ciyaarno faylashaada muusikada.';
+  String get audioAccessPermissionContent =>
+      'Fadlan sii ogolow Audio feylasha si ay u oggolaadaan inay noo oggolaadaan inaan ciyaarno faylashaada muusikada.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ogolaanshaha Helitaanka Audio ayaa la diiday';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ogolaanshaha Helitaanka Audio ayaa la diiday';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Fadlan sii ogolow Audio faylasha gelitaanka barnaamijkan ku jira goobaha aaladda si loogu oggolaado inaan ciyaarno faylasha muusikadaada.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Fadlan sii ogolow Audio faylasha gelitaanka barnaamijkan ku jira goobaha aaladda si loogu oggolaado inaan ciyaarno faylasha muusikadaada.';
 
   @override
   String get menuScreenTitle => 'Warqad qiimo';
@@ -63,7 +67,6 @@ class AppLocalizationsSo extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsSo extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsSo extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Taabashada codka';
 
   @override
-  String get touchSoundsDialogContent => 'Fadlan u oggolow codadka taabashada ee nidaamka nidaamka si aad u maqashid dhawaqa dhagta';
+  String get touchSoundsDialogContent =>
+      'Fadlan u oggolow codadka taabashada ee nidaamka nidaamka si aad u maqashid dhawaqa dhagta';
 
   @override
   String get immersiveModeSettingTitle => 'Habka is-dhexgalka';
@@ -144,7 +147,8 @@ class AppLocalizationsSo extends AppLocalizations {
   String get donateSettingTitle => 'Ku tabarrucid';
 
   @override
-  String get donateSettingDescription => 'Haddii aad jeceshahay barnaamijkan, fadlan ka fiirso tabaruca.';
+  String get donateSettingDescription =>
+      'Haddii aad jeceshahay barnaamijkan, fadlan ka fiirso tabaruca.';
 
   @override
   String get versionAboutScreenTitle => 'Werin';
@@ -210,10 +214,12 @@ class AppLocalizationsSo extends AppLocalizations {
   String get resultsForText => 'Natiijooyinka:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Disable Kor-u-qaadidda batteriga';
+  String get disableBatteryOptimizationTitle =>
+      'Disable Kor-u-qaadidda batteriga';
 
   @override
-  String get disableBatteryOptimizationContent => 'Fadlan ka dhig kor u qaadista batteriga loogu talagalay barnaamijkan aaladda si aad u oggolaato dib-u-dhaca asalka ee muusikada.';
+  String get disableBatteryOptimizationContent =>
+      'Fadlan ka dhig kor u qaadista batteriga loogu talagalay barnaamijkan aaladda si aad u oggolaato dib-u-dhaca asalka ee muusikada.';
 
   @override
   String get languageScreenTitle => 'Af';
@@ -264,53 +270,70 @@ class AppLocalizationsSo extends AppLocalizations {
   String get clearPlaylist => 'Liiska Ciyaarta Cad';
 
   @override
-  String get rescanMusicFilesSettingTitle => 'Faylasha muusikada ee samatabbixinta';
+  String get rescanMusicFilesSettingTitle =>
+      'Faylasha muusikada ee samatabbixinta';
 
   @override
-  String get deviceControlMenuTutorialText => 'U dhaqaaq suulkaaga si khafiif ah hareeraha dhagsii dhagsiga si aad ugu socoto menu';
+  String get deviceControlMenuTutorialText =>
+      'U dhaqaaq suulkaaga si khafiif ah hareeraha dhagsii dhagsiga si aad ugu socoto menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Riix badhanka xarunta si aad u doorato shayga liiska iftiimiyey';
+  String get centerButtonMenuTutorialText =>
+      'Riix badhanka xarunta si aad u doorato shayga liiska iftiimiyey';
 
   @override
-  String get playPauseMenuTutorialText => 'Taabo batoonkan si aad u ciyaarto ama ha joojiso hees';
+  String get playPauseMenuTutorialText =>
+      'Taabo batoonkan si aad u ciyaarto ama ha joojiso hees';
 
   @override
-  String get nextButtonMenuTutorialText => 'Taabo batoonkan si aad ugu booddo heesta soo socota';
+  String get nextButtonMenuTutorialText =>
+      'Taabo batoonkan si aad ugu booddo heesta soo socota';
 
   @override
-  String get previousButtonMenuTutorialText => 'Riix batoonkan si aad dib ugu noqoto ama dib ugu noqo heesta hore';
+  String get previousButtonMenuTutorialText =>
+      'Riix batoonkan si aad dib ugu noqoto ama dib ugu noqo heesta hore';
 
   @override
-  String get menuButtonTutorialText => 'Riix badhankan si aad ugu laabato menu hore. Waad riixi kartaa oo waxaad kaheli kartaa shaashad kasta oo kale si aad si toos ah u tagto menu-ka ugu weyn.';
+  String get menuButtonTutorialText =>
+      'Riix badhankan si aad ugu laabato menu hore. Waad riixi kartaa oo waxaad kaheli kartaa shaashad kasta oo kale si aad si toos ah u tagto menu-ka ugu weyn.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Kani waa shaashadda shaashadda. Xaaladda shaashadda taabashada iyo nooca shaashadda ee loo kala qaybiyey ayaa si caadi ah loo kartiyeeyaa waxaana lagu dejin karaa meelaynta.';
+  String get deviceScreenMenuTutorialText =>
+      'Kani waa shaashadda shaashadda. Xaaladda shaashadda taabashada iyo nooca shaashadda ee loo kala qaybiyey ayaa si caadi ah loo kartiyeeyaa waxaana lagu dejin karaa meelaynta.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Ku wareeji suulkaaga guji riix riix si aad u hagaajiso mugga';
+  String get deviceControlNowPlayingTutorialText =>
+      'Ku wareeji suulkaaga guji riix riix si aad u hagaajiso mugga';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Riix batoonka bartamaha si aad ugu wareejiso raadinta bar, xargaha xoqidda iyo scider ssubel. Riix oo hay badhanka xarunta si aad u hesho xulasho dheeraad ah.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Riix batoonka bartamaha si aad ugu wareejiso raadinta bar, xargaha xoqidda iyo scider ssubel. Riix oo hay badhanka xarunta si aad u hesho xulasho dheeraad ah.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Riix oo ku hay badhankan si aad ugu soo xidho heesta';
+  String get nextButtonNowPlayingTutorialText =>
+      'Riix oo ku hay badhankan si aad ugu soo xidho heesta';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Riix oo hay badhankan si aad dib ugu celiso heesta';
+  String get previousButtonNowPlayingTutorialText =>
+      'Riix oo hay badhankan si aad dib ugu celiso heesta';
 
   @override
-  String get deviceControlSearchTutorialText => 'U dhaqaaq suulkaaga si fudud hareeraha dhagsii dhagsii si aad u muujiso alifbeetada';
+  String get deviceControlSearchTutorialText =>
+      'U dhaqaaq suulkaaga si fudud hareeraha dhagsii dhagsii si aad u muujiso alifbeetada';
 
   @override
-  String get centerButtonSearchTutorialText => 'Riix badhanka xarunta si aad u doorato xarfaha iftiimiya';
+  String get centerButtonSearchTutorialText =>
+      'Riix badhanka xarunta si aad u doorato xarfaha iftiimiya';
 
   @override
-  String get nextButtonSearchTutorialText => 'Riix badhankan si aad ugu darto meel bannaan';
+  String get nextButtonSearchTutorialText =>
+      'Riix badhankan si aad ugu darto meel bannaan';
 
   @override
-  String get previousButtonSearchTutorialText => 'Riix badhankan si aad u tirtirto dabeecada ugu dambeysay';
+  String get previousButtonSearchTutorialText =>
+      'Riix badhankan si aad u tirtirto dabeecada ugu dambeysay';
 
   @override
-  String get menuButtonSearchTutorialText => 'Riix badhankan si aad u xidho furaha oo aad la macaamilayso natiijooyinka raadinta';
+  String get menuButtonSearchTutorialText =>
+      'Riix badhankan si aad u xidho furaha oo aad la macaamilayso natiijooyinka raadinta';
 }

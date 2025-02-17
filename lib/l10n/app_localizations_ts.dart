@@ -15,16 +15,20 @@ class AppLocalizationsTs extends AppLocalizations {
   String get menuButtonText => 'Menyu';
 
   @override
-  String get audioAccessPermissionTitle => 'Mpfumelelo wo nghena hi mpfumawulo wa laveka';
+  String get audioAccessPermissionTitle =>
+      'Mpfumelelo wo nghena hi mpfumawulo wa laveka';
 
   @override
-  String get audioAccessPermissionContent => 'Hi kombela u nyika tifayela ta mpfumawulo ku nghena ku hi pfumelela ku tlanga tifayela ta wena ta vuyimbeleri.';
+  String get audioAccessPermissionContent =>
+      'Hi kombela u nyika tifayela ta mpfumawulo ku nghena ku hi pfumelela ku tlanga tifayela ta wena ta vuyimbeleri.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Mpfumelelo wo nghena eka mpfumawulo wu ariwile';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Mpfumelelo wo nghena eka mpfumawulo wu ariwile';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Hi kombela u nyika tifayele ta mpfumawulo mfikelelo wa app leyi eka swiletelo swa xitirhisiwa ku hi pfumelela ku tlanga tifayela ta wena ta vuyimbeleri.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Hi kombela u nyika tifayele ta mpfumawulo mfikelelo wa app leyi eka swiletelo swa xitirhisiwa ku hi pfumelela ku tlanga tifayela ta wena ta vuyimbeleri.';
 
   @override
   String get menuScreenTitle => 'Menyu';
@@ -63,7 +67,6 @@ class AppLocalizationsTs extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsTs extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsTs extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Mimpfumawulo yo khumba';
 
   @override
-  String get touchSoundsDialogContent => 'Hi kombela u pfumelela ku khumba mimpfumawulo ku suka eka swiyimiso swa sisiteme ku twa mimpfumawulo ya click wheel';
+  String get touchSoundsDialogContent =>
+      'Hi kombela u pfumelela ku khumba mimpfumawulo ku suka eka swiyimiso swa sisiteme ku twa mimpfumawulo ya click wheel';
 
   @override
   String get immersiveModeSettingTitle => 'Mode yo nyuperisa';
@@ -144,7 +147,8 @@ class AppLocalizationsTs extends AppLocalizations {
   String get donateSettingTitle => 'Nyikela';
 
   @override
-  String get donateSettingDescription => 'Loko u tsakela app leyi, hi kombela u ehleketa ku nyikela.';
+  String get donateSettingDescription =>
+      'Loko u tsakela app leyi, hi kombela u ehleketa ku nyikela.';
 
   @override
   String get versionAboutScreenTitle => 'Nkandziyiso';
@@ -210,10 +214,12 @@ class AppLocalizationsTs extends AppLocalizations {
   String get resultsForText => 'Vuyelo bya:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Ku tshikisa ku antswisiwa ka betri';
+  String get disableBatteryOptimizationTitle =>
+      'Ku tshikisa ku antswisiwa ka betri';
 
   @override
-  String get disableBatteryOptimizationContent => 'Hi kombela u tshikisa ku antswisiwa ka betri eka app leyi eka swiyimiso swa xitirhisiwa ku pfumelela ku tlanga ka le ndzhaku ka vuyimbeleri.';
+  String get disableBatteryOptimizationContent =>
+      'Hi kombela u tshikisa ku antswisiwa ka betri eka app leyi eka swiyimiso swa xitirhisiwa ku pfumelela ku tlanga ka le ndzhaku ka vuyimbeleri.';
 
   @override
   String get languageScreenTitle => 'Ririmi';
@@ -246,7 +252,8 @@ class AppLocalizationsTs extends AppLocalizations {
   String get addAlbumToOnTheGoPlaylist => 'Engetela album eka on-the-go';
 
   @override
-  String get removeSongFromThePlaylist => 'Susa eka nxaxamelo wa swichayachayana';
+  String get removeSongFromThePlaylist =>
+      'Susa eka nxaxamelo wa swichayachayana';
 
   @override
   String get allAlbums => 'Tialbamu hinkwato';
@@ -261,56 +268,74 @@ class AppLocalizationsTs extends AppLocalizations {
   String get savePlaylist => 'Hlayisa nxaxamelo wa swichayachayana';
 
   @override
-  String get clearPlaylist => 'Nxaxamelo wa swichayachayana leswi nga erivaleni';
+  String get clearPlaylist =>
+      'Nxaxamelo wa swichayachayana leswi nga erivaleni';
 
   @override
-  String get rescanMusicFilesSettingTitle => 'Tifayili ta vuyimbeleri bya Rescan';
+  String get rescanMusicFilesSettingTitle =>
+      'Tifayili ta vuyimbeleri bya Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Susa xikunwana xa wena hi ku olova ku rhendzela vhilwa ro tsindziyela leswaku u famba-famba eka menyu';
+  String get deviceControlMenuTutorialText =>
+      'Susa xikunwana xa wena hi ku olova ku rhendzela vhilwa ro tsindziyela leswaku u famba-famba eka menyu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Cinekela buti ya le xikarhi ku hlawula nchumu wa menyu lowu kombisiweke';
+  String get centerButtonMenuTutorialText =>
+      'Cinekela buti ya le xikarhi ku hlawula nchumu wa menyu lowu kombisiweke';
 
   @override
-  String get playPauseMenuTutorialText => 'Cinekela button leyi ku tlanga kumbe ku yimisa risimu';
+  String get playPauseMenuTutorialText =>
+      'Cinekela button leyi ku tlanga kumbe ku yimisa risimu';
 
   @override
-  String get nextButtonMenuTutorialText => 'Cinekela button leyi ku skipa eka risimu leri landzelaka';
+  String get nextButtonMenuTutorialText =>
+      'Cinekela button leyi ku skipa eka risimu leri landzelaka';
 
   @override
-  String get previousButtonMenuTutorialText => 'Cinekela button leyi ku rewind kutani u tlhelela eka risimu leri hundzeke';
+  String get previousButtonMenuTutorialText =>
+      'Cinekela button leyi ku rewind kutani u tlhelela eka risimu leri hundzeke';
 
   @override
-  String get menuButtonTutorialText => 'Cinekela button leyi ku tlhelela eka menu leyi hundzeke. U nga ha yi tshikilela u yi khoma ku suka eka xikirini xin’wana ni xin’wana leswaku u ya eka menyu leyikulu hi ku kongoma.';
+  String get menuButtonTutorialText =>
+      'Cinekela button leyi ku tlhelela eka menu leyi hundzeke. U nga ha yi tshikilela u yi khoma ku suka eka xikirini xin’wana ni xin’wana leswaku u ya eka menyu leyikulu hi ku kongoma.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Lexi i xikirini xa nkombiso. Touch Screen na Split Screen mode swi tirhisiwa hi ku tiyimisela naswona swi nga lulamisiwa ku ya emahlweni eka swiyimiso.';
+  String get deviceScreenMenuTutorialText =>
+      'Lexi i xikirini xa nkombiso. Touch Screen na Split Screen mode swi tirhisiwa hi ku tiyimisela naswona swi nga lulamisiwa ku ya emahlweni eka swiyimiso.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Susa xikunwana xa wena ku rhendzela vhilwa ra Click ku lulamisa vholumo';
+  String get deviceControlNowPlayingTutorialText =>
+      'Susa xikunwana xa wena ku rhendzela vhilwa ra Click ku lulamisa vholumo';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Cinekela button ya le xikarhi ku rhendzeleka hi seek bar, scrubber bar na shuffle slider. Cinekela u khoma buti ya le xikarhi ku fikelela swihlawulekisi swo engetela.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Cinekela button ya le xikarhi ku rhendzeleka hi seek bar, scrubber bar na shuffle slider. Cinekela u khoma buti ya le xikarhi ku fikelela swihlawulekisi swo engetela.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Cinekela u khoma button leyi ku fast forward risimu';
+  String get nextButtonNowPlayingTutorialText =>
+      'Cinekela u khoma button leyi ku fast forward risimu';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Cinekela u khoma button leyi ku rewind risimu';
+  String get previousButtonNowPlayingTutorialText =>
+      'Cinekela u khoma button leyi ku rewind risimu';
 
   @override
-  String get deviceControlSearchTutorialText => 'Susa xikunwana xa wena hi ku olova ku rhendzela vhilwa ra ku tsindziyela leswaku u kombisa maletere';
+  String get deviceControlSearchTutorialText =>
+      'Susa xikunwana xa wena hi ku olova ku rhendzela vhilwa ra ku tsindziyela leswaku u kombisa maletere';
 
   @override
-  String get centerButtonSearchTutorialText => 'Cinekela eka buti ya le xikarhi ku hlawula alifabete leyi kombisiweke';
+  String get centerButtonSearchTutorialText =>
+      'Cinekela eka buti ya le xikarhi ku hlawula alifabete leyi kombisiweke';
 
   @override
-  String get nextButtonSearchTutorialText => 'Cinekela button leyi ku engetela ndhawu';
+  String get nextButtonSearchTutorialText =>
+      'Cinekela button leyi ku engetela ndhawu';
 
   @override
-  String get previousButtonSearchTutorialText => 'Cinekela button leyi ku susa xihlawulekisi xo hetelela';
+  String get previousButtonSearchTutorialText =>
+      'Cinekela button leyi ku susa xihlawulekisi xo hetelela';
 
   @override
-  String get menuButtonSearchTutorialText => 'Cinekela button leyi ku pfala khibhodi na ku tirhisana na mbuyelo wa ku lavisisa';
+  String get menuButtonSearchTutorialText =>
+      'Cinekela button leyi ku pfala khibhodi na ku tirhisana na mbuyelo wa ku lavisisa';
 }

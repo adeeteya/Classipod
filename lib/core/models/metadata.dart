@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
-import 'package:flutter/foundation.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
@@ -45,7 +44,7 @@ class Metadata extends HiveObject {
   /// Bitrate of the track.
   final int? bitrate;
 
-  /// File path of the media file.
+  /// File path of the audio file.
   final String? filePath;
 
   /// File path of the thumbnail album art file.
@@ -53,6 +52,9 @@ class Metadata extends HiveObject {
 
   /// Original Song Index
   final int originalSongIndex;
+
+  /// Bool to Indicate that the File is Located On-Device
+  final bool isOnDevice;
 
   Metadata({
     this.trackName,
@@ -70,6 +72,7 @@ class Metadata extends HiveObject {
     this.filePath,
     this.thumbnailPath,
     this.originalSongIndex = 0,
+    this.isOnDevice = true,
   });
 
   factory Metadata.fromAudioMetadata(
@@ -126,6 +129,7 @@ class Metadata extends HiveObject {
         filePath: map['filePath'],
         thumbnailPath: map['thumbnailPath'],
         originalSongIndex: map['originalSongIndex'],
+        isOnDevice: map['isOnDevice'],
       );
 
   Map<String, dynamic> toMap() => {
@@ -144,6 +148,7 @@ class Metadata extends HiveObject {
         'filePath': filePath,
         'thumbnailPath': thumbnailPath,
         'originalSongIndex': originalSongIndex,
+        'isOnDevice': isOnDevice,
       };
 
   factory Metadata.fromJson(String source) =>
@@ -152,13 +157,28 @@ class Metadata extends HiveObject {
   String toJson() => jsonEncode(toMap());
 
   AudioSource toAudioSource() {
-    if (kIsWeb) {
-      return AudioSource.uri(
-        Uri.parse(filePath ?? ''),
-      );
-    } else {
+    if (isOnDevice) {
       return AudioSource.file(
         filePath ?? '',
+        tag: MediaItem(
+          id: filePath ?? '',
+          title: trackName ?? "Unknown Song",
+          album: albumName ?? "Unknown Album",
+          artist: getTrackArtistNames,
+          genre: genres.isEmpty ? null : genres[0],
+          duration: trackDuration != null
+              ? Duration(milliseconds: trackDuration!)
+              : null,
+          artUri: thumbnailPath == null
+              ? Uri.parse(
+                  Constants.defaultNotificationAlbumArtImageUrl,
+                )
+              : Uri.file(thumbnailPath!),
+        ),
+      );
+    } else {
+      return AudioSource.uri(
+        Uri.parse(filePath ?? ''),
         tag: MediaItem(
           id: filePath ?? '',
           title: trackName ?? "Unknown Song",

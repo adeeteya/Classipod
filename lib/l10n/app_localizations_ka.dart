@@ -18,13 +18,16 @@ class AppLocalizationsKa extends AppLocalizations {
   String get audioAccessPermissionTitle => 'საჭიროა აუდიო წვდომის ნებართვა';
 
   @override
-  String get audioAccessPermissionContent => 'გთხოვთ, მიანიჭოთ აუდიო ფაილების წვდომას, რომ მოგვმართოთ თქვენი მუსიკალური ფაილების დაკვრა.';
+  String get audioAccessPermissionContent =>
+      'გთხოვთ, მიანიჭოთ აუდიო ფაილების წვდომას, რომ მოგვმართოთ თქვენი მუსიკალური ფაილების დაკვრა.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'აუდიო წვდომის ნებართვა უარყო';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'აუდიო წვდომის ნებართვა უარყო';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'გთხოვთ, მიანიჭოთ აუდიო ფაილებს ამ აპლიკაციისთვის მოწყობილობის პარამეტრებში, რათა მოგვცეს თქვენი მუსიკალური ფაილების დაკვრა.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'გთხოვთ, მიანიჭოთ აუდიო ფაილებს ამ აპლიკაციისთვის მოწყობილობის პარამეტრებში, რათა მოგვცეს თქვენი მუსიკალური ფაილების დაკვრა.';
 
   @override
   String get menuScreenTitle => 'მენიუ';
@@ -63,7 +66,6 @@ class AppLocalizationsKa extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsKa extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsKa extends AppLocalizations {
   String get touchSoundsDialogTitle => 'შეხების ხმები';
 
   @override
-  String get touchSoundsDialogContent => 'გთხოვთ, ჩართოთ შეხების ხმები სისტემის პარამეტრებიდან, რომ მოისმინოთ დაჭერით ბორბლის ხმები';
+  String get touchSoundsDialogContent =>
+      'გთხოვთ, ჩართოთ შეხების ხმები სისტემის პარამეტრებიდან, რომ მოისმინოთ დაჭერით ბორბლის ხმები';
 
   @override
   String get immersiveModeSettingTitle => 'იმერული რეჟიმი';
@@ -144,7 +146,8 @@ class AppLocalizationsKa extends AppLocalizations {
   String get donateSettingTitle => 'ჩუქება';
 
   @override
-  String get donateSettingDescription => 'თუ მოგწონთ ეს აპლიკაცია, გთხოვთ, გაითვალისწინოთ შემოწირულობა.';
+  String get donateSettingDescription =>
+      'თუ მოგწონთ ეს აპლიკაცია, გთხოვთ, გაითვალისწინოთ შემოწირულობა.';
 
   @override
   String get versionAboutScreenTitle => 'ვერსია';
@@ -195,7 +198,8 @@ class AppLocalizationsKa extends AppLocalizations {
   String get retryButtonText => 'გამოცხადება';
 
   @override
-  String get filePickerDialogTitle => 'შეარჩიეთ დირექტორია, რომ სკანირდეს მუსიკისთვის';
+  String get filePickerDialogTitle =>
+      'შეარჩიეთ დირექტორია, რომ სკანირდეს მუსიკისთვის';
 
   @override
   String get searchScreenTitle => 'ძებნა';
@@ -213,7 +217,8 @@ class AppLocalizationsKa extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'გამორთეთ ბატარეის ოპტიმიზაცია';
 
   @override
-  String get disableBatteryOptimizationContent => 'გთხოვთ, გამორთოთ ბატარეის ოპტიმიზაცია ამ აპლიკაციისთვის მოწყობილობის პარამეტრებში, რათა მუსიკის ფონის დაკვრა მოხდეს.';
+  String get disableBatteryOptimizationContent =>
+      'გთხოვთ, გამორთოთ ბატარეის ოპტიმიზაცია ამ აპლიკაციისთვის მოწყობილობის პარამეტრებში, რათა მუსიკის ფონის დაკვრა მოხდეს.';
 
   @override
   String get languageScreenTitle => 'ენა';
@@ -267,50 +272,66 @@ class AppLocalizationsKa extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Files';
 
   @override
-  String get deviceControlMenuTutorialText => 'თქვენი ცერა თითი მსუბუქად გადაიტანეთ დაჭერით ბორბლის გარშემო, მენიუს ნავიგაციისთვის';
+  String get deviceControlMenuTutorialText =>
+      'თქვენი ცერა თითი მსუბუქად გადაიტანეთ დაჭერით ბორბლის გარშემო, მენიუს ნავიგაციისთვის';
 
   @override
-  String get centerButtonMenuTutorialText => 'დააჭირეთ ღილაკს ცენტრის ღილაკს მენიუ მენიუს ელემენტის შესარჩევად';
+  String get centerButtonMenuTutorialText =>
+      'დააჭირეთ ღილაკს ცენტრის ღილაკს მენიუ მენიუს ელემენტის შესარჩევად';
 
   @override
-  String get playPauseMenuTutorialText => 'დააჭირეთ ამ ღილაკს, რომ შეასრულოთ ან შეაჩეროთ სიმღერა';
+  String get playPauseMenuTutorialText =>
+      'დააჭირეთ ამ ღილაკს, რომ შეასრულოთ ან შეაჩეროთ სიმღერა';
 
   @override
-  String get nextButtonMenuTutorialText => 'დააჭირეთ ამ ღილაკს, რომ გამოტოვოთ შემდეგი სიმღერა';
+  String get nextButtonMenuTutorialText =>
+      'დააჭირეთ ამ ღილაკს, რომ გამოტოვოთ შემდეგი სიმღერა';
 
   @override
-  String get previousButtonMenuTutorialText => 'დააჭირეთ ამ ღილაკს, რომ გადახედოთ ან დაუბრუნდეთ წინა სიმღერას';
+  String get previousButtonMenuTutorialText =>
+      'დააჭირეთ ამ ღილაკს, რომ გადახედოთ ან დაუბრუნდეთ წინა სიმღერას';
 
   @override
-  String get menuButtonTutorialText => 'დააჭირეთ ამ ღილაკს წინა მენიუში დასაბრუნებლად. თქვენ შეგიძლიათ დააჭიროთ და გამართოთ იგი ნებისმიერი სხვა ეკრანიდან, რომ პირდაპირ მენიუში გადასასვლელად.';
+  String get menuButtonTutorialText =>
+      'დააჭირეთ ამ ღილაკს წინა მენიუში დასაბრუნებლად. თქვენ შეგიძლიათ დააჭიროთ და გამართოთ იგი ნებისმიერი სხვა ეკრანიდან, რომ პირდაპირ მენიუში გადასასვლელად.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ეს არის ეკრანის ეკრანი. სენსორული ეკრანი და Split ეკრანის რეჟიმი ჩართულია ნაგულისხმევი და შესაძლებელია კონფიგურაცია შემდგომ პარამეტრებში.';
+  String get deviceScreenMenuTutorialText =>
+      'ეს არის ეკრანის ეკრანი. სენსორული ეკრანი და Split ეკრანის რეჟიმი ჩართულია ნაგულისხმევი და შესაძლებელია კონფიგურაცია შემდგომ პარამეტრებში.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'გადაიტანეთ თქვენი თითი დაჭერით ბორბლის გარშემო, მოცულობის შესწორების მიზნით';
+  String get deviceControlNowPlayingTutorialText =>
+      'გადაიტანეთ თქვენი თითი დაჭერით ბორბლის გარშემო, მოცულობის შესწორების მიზნით';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'დააჭირეთ ღილაკს ცენტრის ღილაკს, რომლითაც Seeg Bar, Scrubber Bar და Shuffle Slider. დააჭირეთ და დააჭირეთ ღილაკს ცენტრის ღილაკს დამატებითი ვარიანტების მისაღებად.';
+  String get centerButtonNowPlayingTutorialText =>
+      'დააჭირეთ ღილაკს ცენტრის ღილაკს, რომლითაც Seeg Bar, Scrubber Bar და Shuffle Slider. დააჭირეთ და დააჭირეთ ღილაკს ცენტრის ღილაკს დამატებითი ვარიანტების მისაღებად.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'დააჭირეთ და დააჭირეთ ამ ღილაკს, რომ სწრაფად გადადოთ სიმღერა';
+  String get nextButtonNowPlayingTutorialText =>
+      'დააჭირეთ და დააჭირეთ ამ ღილაკს, რომ სწრაფად გადადოთ სიმღერა';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'დააჭირეთ და დააჭირეთ ამ ღილაკს სიმღერის გადასინჯვისთვის';
+  String get previousButtonNowPlayingTutorialText =>
+      'დააჭირეთ და დააჭირეთ ამ ღილაკს სიმღერის გადასინჯვისთვის';
 
   @override
-  String get deviceControlSearchTutorialText => 'ანბანის ხაზგასასმელად მიიტანეთ თქვენი ცერა თითი მსუბუქად';
+  String get deviceControlSearchTutorialText =>
+      'ანბანის ხაზგასასმელად მიიტანეთ თქვენი ცერა თითი მსუბუქად';
 
   @override
-  String get centerButtonSearchTutorialText => 'დააჭირეთ ცენტრის ღილაკს, რომ შეარჩიოთ მონიშნული ანბანი';
+  String get centerButtonSearchTutorialText =>
+      'დააჭირეთ ცენტრის ღილაკს, რომ შეარჩიოთ მონიშნული ანბანი';
 
   @override
-  String get nextButtonSearchTutorialText => 'დააჭირეთ ამ ღილაკს, რომ დაამატოთ სივრცე';
+  String get nextButtonSearchTutorialText =>
+      'დააჭირეთ ამ ღილაკს, რომ დაამატოთ სივრცე';
 
   @override
-  String get previousButtonSearchTutorialText => 'დააჭირეთ ამ ღილაკს ბოლო პერსონაჟის წაშლისთვის';
+  String get previousButtonSearchTutorialText =>
+      'დააჭირეთ ამ ღილაკს ბოლო პერსონაჟის წაშლისთვის';
 
   @override
-  String get menuButtonSearchTutorialText => 'დააჭირეთ ამ ღილაკს კლავიშის დახურვისთვის და ძიების შედეგებთან ურთიერთობისთვის';
+  String get menuButtonSearchTutorialText =>
+      'დააჭირეთ ამ ღილაკს კლავიშის დახურვისთვის და ძიების შედეგებთან ურთიერთობისთვის';
 }

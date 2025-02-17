@@ -18,13 +18,16 @@ class AppLocalizationsKu extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Destûra gihîştina bihîst';
 
   @override
-  String get audioAccessPermissionContent => 'Ji kerema xwe pelên bihîstinê bistînin da ku em destûr bidin ku hûn pelên muzîka xwe bilîzin.';
+  String get audioAccessPermissionContent =>
+      'Ji kerema xwe pelên bihîstinê bistînin da ku em destûr bidin ku hûn pelên muzîka xwe bilîzin.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Destûra gihîştina bihîstbar red dike';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Destûra gihîştina bihîstbar red dike';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Ji kerema xwe pelên bihîstinê yên ji bo vê sepanê di mîhengên cîhazê de bistînin da ku em destûr bidin ku pelên muzîka xwe bilîzin.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Ji kerema xwe pelên bihîstinê yên ji bo vê sepanê di mîhengên cîhazê de bistînin da ku em destûr bidin ku pelên muzîka xwe bilîzin.';
 
   @override
   String get menuScreenTitle => 'Qerta xûrekê';
@@ -63,7 +66,6 @@ class AppLocalizationsKu extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsKu extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsKu extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Dengên Touch';
 
   @override
-  String get touchSoundsDialogContent => 'Ji kerema xwe dengên Touch ji Mîhengên Pergalê Vebijêrin ku dengên Wheel Wheel bibihîzin';
+  String get touchSoundsDialogContent =>
+      'Ji kerema xwe dengên Touch ji Mîhengên Pergalê Vebijêrin ku dengên Wheel Wheel bibihîzin';
 
   @override
   String get immersiveModeSettingTitle => 'Mode Nemaze';
@@ -144,7 +146,8 @@ class AppLocalizationsKu extends AppLocalizations {
   String get donateSettingTitle => 'Bêşdan';
 
   @override
-  String get donateSettingDescription => 'Heke hûn vê sepanê hez dikin, ji kerema xwe donating bifikirin.';
+  String get donateSettingDescription =>
+      'Heke hûn vê sepanê hez dikin, ji kerema xwe donating bifikirin.';
 
   @override
   String get versionAboutScreenTitle => 'Awa';
@@ -195,7 +198,8 @@ class AppLocalizationsKu extends AppLocalizations {
   String get retryButtonText => 'Xweberbawer';
 
   @override
-  String get filePickerDialogTitle => 'Peldanka hilbijêrin ku ji bo muzîkê dakêşin';
+  String get filePickerDialogTitle =>
+      'Peldanka hilbijêrin ku ji bo muzîkê dakêşin';
 
   @override
   String get searchScreenTitle => 'Gerr';
@@ -210,10 +214,12 @@ class AppLocalizationsKu extends AppLocalizations {
   String get resultsForText => 'Encam ji bo:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Optimîzasyona batterê asteng bikin';
+  String get disableBatteryOptimizationTitle =>
+      'Optimîzasyona batterê asteng bikin';
 
   @override
-  String get disableBatteryOptimizationContent => 'Ji kerema xwe ji bo vê sepanê di mîhengên cîhazê de optimîzasyona batterê nekişînin da ku destûrê bide lîstika paşîn a muzîkê.';
+  String get disableBatteryOptimizationContent =>
+      'Ji kerema xwe ji bo vê sepanê di mîhengên cîhazê de optimîzasyona batterê nekişînin da ku destûrê bide lîstika paşîn a muzîkê.';
 
   @override
   String get languageScreenTitle => 'Ziman';
@@ -267,50 +273,66 @@ class AppLocalizationsKu extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Pelên muzîkê yên razdar';
 
   @override
-  String get deviceControlMenuTutorialText => 'Thumbê xwe bi rengek sivik li dora pêlika klîk hilînin da ku menu veguherînin';
+  String get deviceControlMenuTutorialText =>
+      'Thumbê xwe bi rengek sivik li dora pêlika klîk hilînin da ku menu veguherînin';
 
   @override
-  String get centerButtonMenuTutorialText => 'Bişkojka navendê bitikîne da ku tiştê menuya balkêş hilbijêrin';
+  String get centerButtonMenuTutorialText =>
+      'Bişkojka navendê bitikîne da ku tiştê menuya balkêş hilbijêrin';
 
   @override
-  String get playPauseMenuTutorialText => 'Vê bişkojka çap bikin da ku stranek bilîzin an bisekinin';
+  String get playPauseMenuTutorialText =>
+      'Vê bişkojka çap bikin da ku stranek bilîzin an bisekinin';
 
   @override
-  String get nextButtonMenuTutorialText => 'Vê bişkojka bitikînin da ku ji strana duyemîn re bişopînin';
+  String get nextButtonMenuTutorialText =>
+      'Vê bişkojka bitikînin da ku ji strana duyemîn re bişopînin';
 
   @override
-  String get previousButtonMenuTutorialText => 'Vê bişkojka çap bikin da ku ji nû ve bişopînin an vegerin strana berê';
+  String get previousButtonMenuTutorialText =>
+      'Vê bişkojka çap bikin da ku ji nû ve bişopînin an vegerin strana berê';
 
   @override
-  String get menuButtonTutorialText => 'Vê bişkojka çap bikin da ku vegerin menuya berê. Hûn dikarin ji her ekranek din ve bikin û bigirin ku rasterast biçin menuya sereke.';
+  String get menuButtonTutorialText =>
+      'Vê bişkojka çap bikin da ku vegerin menuya berê. Hûn dikarin ji her ekranek din ve bikin û bigirin ku rasterast biçin menuya sereke.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ev ekrana ekranê ye. Dîmendera ekranê û moda dîmendera parçebûyî ji hêla xwerû ve têne çalak kirin û dikarin di mîhengan de bêtir werin mîheng kirin.';
+  String get deviceScreenMenuTutorialText =>
+      'Ev ekrana ekranê ye. Dîmendera ekranê û moda dîmendera parçebûyî ji hêla xwerû ve têne çalak kirin û dikarin di mîhengan de bêtir werin mîheng kirin.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Tiliya xwe li dora wheel bikirtînin da ku qumarê veke';
+  String get deviceControlNowPlayingTutorialText =>
+      'Tiliya xwe li dora wheel bikirtînin da ku qumarê veke';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Bişkojka navendê bitikîne ku bi riya baranê vegerin, barika scrubber û şilika shuffle. Bişkojka navendê bigire û bigire da ku vebijarkên zêde bigihîje.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Bişkojka navendê bitikîne ku bi riya baranê vegerin, barika scrubber û şilika shuffle. Bişkojka navendê bigire û bigire da ku vebijarkên zêde bigihîje.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Vê bişkojka bikişînin û bisekinin ku stranê zûtir bikin';
+  String get nextButtonNowPlayingTutorialText =>
+      'Vê bişkojka bikişînin û bisekinin ku stranê zûtir bikin';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Vebijêrin û vê bişkojka bigire da ku stranê bişîne';
+  String get previousButtonNowPlayingTutorialText =>
+      'Vebijêrin û vê bişkojka bigire da ku stranê bişîne';
 
   @override
-  String get deviceControlSearchTutorialText => 'Tiliya xwe bi rengek sivik li dora pêlika klîk hilînin da ku alfabeyek ronî bikin';
+  String get deviceControlSearchTutorialText =>
+      'Tiliya xwe bi rengek sivik li dora pêlika klîk hilînin da ku alfabeyek ronî bikin';
 
   @override
-  String get centerButtonSearchTutorialText => 'Bişkojka navendê bitikîne da ku alfabeya balkêş hilbijêrin';
+  String get centerButtonSearchTutorialText =>
+      'Bişkojka navendê bitikîne da ku alfabeya balkêş hilbijêrin';
 
   @override
-  String get nextButtonSearchTutorialText => 'Vê bişkojka çap bikin da ku cîhek zêde bikin';
+  String get nextButtonSearchTutorialText =>
+      'Vê bişkojka çap bikin da ku cîhek zêde bikin';
 
   @override
-  String get previousButtonSearchTutorialText => 'Vê bişkojka çap bikin da ku karaktera paşîn jêbirin';
+  String get previousButtonSearchTutorialText =>
+      'Vê bişkojka çap bikin da ku karaktera paşîn jêbirin';
 
   @override
-  String get menuButtonSearchTutorialText => 'Vê bişkojka bitikînin da ku klavyeyê bigire û bi encamên lêgerînê re têkilî daynin';
+  String get menuButtonSearchTutorialText =>
+      'Vê bişkojka bitikînin da ku klavyeyê bigire û bi encamên lêgerînê re têkilî daynin';
 }

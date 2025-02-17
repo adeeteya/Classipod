@@ -18,13 +18,16 @@ class AppLocalizationsLmo extends AppLocalizations {
   String get audioAccessPermissionTitle => 'L’aprovaziun de la Cort Suprema.';
 
   @override
-  String get audioAccessPermissionContent => 'Per piasér, g’he vœur de duperà i tò informaziun sü la tò pagina di impostaziun de la pagina.';
+  String get audioAccessPermissionContent =>
+      'Per piasér, g’he vœur de duperà i tò informaziun sü la tò pagina di impostaziun de la pagina.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'L’aprovaziun de l’inflaziun de la legg.';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'L’aprovaziun de l’inflaziun de la legg.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Per piasér, g’he vœur de duperà i tò dati de la pagina di schermi de la pagina di schermi di utent che g’he vœut de duperà.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Per piasér, g’he vœur de duperà i tò dati de la pagina di schermi de la pagina di schermi di utent che g’he vœut de duperà.';
 
   @override
   String get menuScreenTitle => 'haver-g';
@@ -33,7 +36,8 @@ class AppLocalizationsLmo extends AppLocalizations {
   String get musicMenuScreenTitle => 'Musega';
 
   @override
-  String get nowPlayingScreenTitle => 'Dal principi de la jentaa de la Crotaa 3 ada, l’è la plu banda.';
+  String get nowPlayingScreenTitle =>
+      'Dal principi de la jentaa de la Crotaa 3 ada, l’è la plu banda.';
 
   @override
   String get shuffleSongsMenuTitle => 'Sent';
@@ -63,7 +67,6 @@ class AppLocalizationsLmo extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsLmo extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsLmo extends AppLocalizations {
   String get touchSoundsDialogTitle => 'l\'è';
 
   @override
-  String get touchSoundsDialogContent => 'Per piasér a la part de la pagina di schermi de la pagina di schermi de la pagina di schermi de la pagina.';
+  String get touchSoundsDialogContent =>
+      'Per piasér a la part de la pagina di schermi de la pagina di schermi de la pagina di schermi de la pagina.';
 
   @override
   String get immersiveModeSettingTitle => 'Sam.';
@@ -138,13 +141,15 @@ class AppLocalizationsLmo extends AppLocalizations {
   String get showAppTutorialSettingTitle => 'La jenezion';
 
   @override
-  String get changeDirectorySettingTitle => 'Godeta el noster sistèm de gestiun del noster sistèm.';
+  String get changeDirectorySettingTitle =>
+      'Godeta el noster sistèm de gestiun del noster sistèm.';
 
   @override
   String get donateSettingTitle => 'Donar';
 
   @override
-  String get donateSettingDescription => 'Se g’he minga bisogn de savè, l’è minga impurtant.';
+  String get donateSettingDescription =>
+      'Se g’he minga bisogn de savè, l’è minga impurtant.';
 
   @override
   String get versionAboutScreenTitle => 'Version';
@@ -195,7 +200,8 @@ class AppLocalizationsLmo extends AppLocalizations {
   String get retryButtonText => 'l\'è';
 
   @override
-  String get filePickerDialogTitle => 'Seleziuna un sit web per la vòstra azienda.';
+  String get filePickerDialogTitle =>
+      'Seleziuna un sit web per la vòstra azienda.';
 
   @override
   String get searchScreenTitle => 'Cercar';
@@ -210,10 +216,12 @@ class AppLocalizationsLmo extends AppLocalizations {
   String get resultsForText => 'Risposta:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Reportament de l’installaziun de la CBS.';
+  String get disableBatteryOptimizationTitle =>
+      'Reportament de l’installaziun de la CBS.';
 
   @override
-  String get disableBatteryOptimizationContent => 'Per piasér, g’hem de vèss duperà per i utent de la fotocamera de la fotocamera de la lista di schermi de la pagina di schermi.';
+  String get disableBatteryOptimizationContent =>
+      'Per piasér, g’hem de vèss duperà per i utent de la fotocamera de la fotocamera de la lista di schermi de la pagina di schermi.';
 
   @override
   String get languageScreenTitle => 'Lengua';
@@ -267,50 +275,66 @@ class AppLocalizationsLmo extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Sviluppa un’ativitàa.';
 
   @override
-  String get deviceControlMenuTutorialText => 'Clicca sü la tò pagina de la fotocamera de la buttiglia de la buttiglia de la pagina.';
+  String get deviceControlMenuTutorialText =>
+      'Clicca sü la tò pagina de la fotocamera de la buttiglia de la buttiglia de la pagina.';
 
   @override
-  String get centerButtonMenuTutorialText => 'Clicca sul sit web de la fotocamera de la fotocamera.';
+  String get centerButtonMenuTutorialText =>
+      'Clicca sul sit web de la fotocamera de la fotocamera.';
 
   @override
-  String get playPauseMenuTutorialText => 'Certo un tatuagg de un taxi de un tatuagg de un’oltra.';
+  String get playPauseMenuTutorialText =>
+      'Certo un tatuagg de un taxi de un tatuagg de un’oltra.';
 
   @override
-  String get nextButtonMenuTutorialText => 'Cerca el prim post in de la fotocamera de la fotocamera.';
+  String get nextButtonMenuTutorialText =>
+      'Cerca el prim post in de la fotocamera de la fotocamera.';
 
   @override
-  String get previousButtonMenuTutorialText => 'Certo che l’è minga una foto de la fotocamera che l’è drèe a fà el schermu.';
+  String get previousButtonMenuTutorialText =>
+      'Certo che l’è minga una foto de la fotocamera che l’è drèe a fà el schermu.';
 
   @override
-  String get menuButtonTutorialText => 'Cerca el temp de la fotocamera per la prima volta. Pudevet esattament el nomm de la fotocamera e g’he stà de vèss sicür che g’he stà de fär.';
+  String get menuButtonTutorialText =>
+      'Cerca el temp de la fotocamera per la prima volta. Pudevet esattament el nomm de la fotocamera e g’he stà de vèss sicür che g’he stà de fär.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Chesta l’è la versiun püsee precisa de la foto. In de la seziun 2 e i schermi de cuntrol de la seziun de la seziun de la red e i erur de la posiziun de la red.';
+  String get deviceScreenMenuTutorialText =>
+      'Chesta l’è la versiun püsee precisa de la foto. In de la seziun 2 e i schermi de cuntrol de la seziun de la seziun de la red e i erur de la posiziun de la red.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Clicca sul pulsant de la buttega de la buttega de la scheda.';
+  String get deviceControlNowPlayingTutorialText =>
+      'Clicca sul pulsant de la buttega de la buttega de la scheda.';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Clicca sü la spiaggia de la buttiglia de la buttiglia de la buttiglia, e dopu s’cioppo de la buttiglia de la buttiglia. Clicca sul sit web e illegal de la scheda de la scheda.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Clicca sü la spiaggia de la buttiglia de la buttiglia de la buttiglia, e dopu s’cioppo de la buttiglia de la buttiglia. Clicca sul sit web e illegal de la scheda de la scheda.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Clicca sü la fotocamera e la g’ha de vèss sicür che l’è stà el prim post.';
+  String get nextButtonNowPlayingTutorialText =>
+      'Clicca sü la fotocamera e la g’ha de vèss sicür che l’è stà el prim post.';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Clicca sü la foto e l’è la prima volta in de la lista.';
+  String get previousButtonNowPlayingTutorialText =>
+      'Clicca sü la foto e l’è la prima volta in de la lista.';
 
   @override
-  String get deviceControlSearchTutorialText => 'Clicca sü la part superiur de la schermata de la schermata de la vostra eletricità.';
+  String get deviceControlSearchTutorialText =>
+      'Clicca sü la part superiur de la schermata de la schermata de la vostra eletricità.';
 
   @override
-  String get centerButtonSearchTutorialText => 'Clicca sul sit web de la logo per la prima volta in de la gamba.';
+  String get centerButtonSearchTutorialText =>
+      'Clicca sul sit web de la logo per la prima volta in de la gamba.';
 
   @override
-  String get nextButtonSearchTutorialText => 'Clicca sü un spazi per illustraziun de la foto.';
+  String get nextButtonSearchTutorialText =>
+      'Clicca sü un spazi per illustraziun de la foto.';
 
   @override
-  String get previousButtonSearchTutorialText => 'Cerca el numer de la fotocamera per la prima volta.';
+  String get previousButtonSearchTutorialText =>
+      'Cerca el numer de la fotocamera per la prima volta.';
 
   @override
-  String get menuButtonSearchTutorialText => 'Clicca sul sit web de la memoria e i dat che g’he sun di dat che g’he sun.';
+  String get menuButtonSearchTutorialText =>
+      'Clicca sul sit web de la memoria e i dat che g’he sun di dat che g’he sun.';
 }

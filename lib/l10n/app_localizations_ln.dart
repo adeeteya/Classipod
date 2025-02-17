@@ -15,16 +15,20 @@ class AppLocalizationsLn extends AppLocalizations {
   String get menuButtonText => 'Menu .';
 
   @override
-  String get audioAccessPermissionTitle => 'Ndingisa ya kokɔta na audio esengeli .';
+  String get audioAccessPermissionTitle =>
+      'Ndingisa ya kokɔta na audio esengeli .';
 
   @override
-  String get audioAccessPermissionContent => 'Svp pesa accès na ba fichiers audio pona ko permettre biso to beta ba fichiers na yo ya musique.';
+  String get audioAccessPermissionContent =>
+      'Svp pesa accès na ba fichiers audio pona ko permettre biso to beta ba fichiers na yo ya musique.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ndingisa ya kokɔta na audio eboyami .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ndingisa ya kokɔta na audio eboyami .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Svp pesa accès ya ba fichiers audio pona app oyo na paramètres ya appareil pona ko permettre biso to beta ba fichiers na yo ya musique.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Svp pesa accès ya ba fichiers audio pona app oyo na paramètres ya appareil pona ko permettre biso to beta ba fichiers na yo ya musique.';
 
   @override
   String get menuScreenTitle => 'Menu .';
@@ -63,7 +67,6 @@ class AppLocalizationsLn extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsLn extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsLn extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Ba sons ya kosimba .';
 
   @override
-  String get touchSoundsDialogContent => 'Svp activer ba sons ya touch oyo ewutaka na ba paramètres ya système pona koyoka ba sons ya roue ya cliquage .';
+  String get touchSoundsDialogContent =>
+      'Svp activer ba sons ya touch oyo ewutaka na ba paramètres ya système pona koyoka ba sons ya roue ya cliquage .';
 
   @override
   String get immersiveModeSettingTitle => 'Mode Immersif .';
@@ -144,7 +147,8 @@ class AppLocalizationsLn extends AppLocalizations {
   String get donateSettingTitle => 'Kopesa libonza';
 
   @override
-  String get donateSettingDescription => 'Soki osepeli na app oyo, kanisá kopesa makabo.';
+  String get donateSettingDescription =>
+      'Soki osepeli na app oyo, kanisá kopesa makabo.';
 
   @override
   String get versionAboutScreenTitle => 'Ya';
@@ -195,7 +199,8 @@ class AppLocalizationsLn extends AppLocalizations {
   String get retryButtonText => 'Komeka lisusu .';
 
   @override
-  String get filePickerDialogTitle => 'Pona répertoire moko pona ko scanner pona musique .';
+  String get filePickerDialogTitle =>
+      'Pona répertoire moko pona ko scanner pona musique .';
 
   @override
   String get searchScreenTitle => 'Koluka';
@@ -210,10 +215,12 @@ class AppLocalizationsLn extends AppLocalizations {
   String get resultsForText => 'Ba résultats ya:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Désactiver optimisation ya pile .';
+  String get disableBatteryOptimizationTitle =>
+      'Désactiver optimisation ya pile .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Svp désactiver optimisation ya pile pona app oyo na ba paramètres ya appareil pona ko permettre lecture ya fond ya musique.';
+  String get disableBatteryOptimizationContent =>
+      'Svp désactiver optimisation ya pile pona app oyo na ba paramètres ya appareil pona ko permettre lecture ya fond ya musique.';
 
   @override
   String get languageScreenTitle => 'Lokota';
@@ -225,7 +232,8 @@ class AppLocalizationsLn extends AppLocalizations {
   String get blackDeviceColor => 'Moindo';
 
   @override
-  String get resetSettingsTitle => 'Bozongisa ba paramètres na esika na yango .';
+  String get resetSettingsTitle =>
+      'Bozongisa ba paramètres na esika na yango .';
 
   @override
   String get browseArtist => 'Parcourir artiste .';
@@ -264,53 +272,70 @@ class AppLocalizationsLn extends AppLocalizations {
   String get clearPlaylist => 'Liste ya ba plays ya polele .';
 
   @override
-  String get rescanMusicFilesSettingTitle => 'Ba fichiers ya musique ya Rescan .';
+  String get rescanMusicFilesSettingTitle =>
+      'Ba fichiers ya musique ya Rescan .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Bokende na mosapi na bino ya monene na pete zingazinga ya roue ya kofina mpo na kokende na menu .';
+  String get deviceControlMenuTutorialText =>
+      'Bokende na mosapi na bino ya monene na pete zingazinga ya roue ya kofina mpo na kokende na menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Finá na butɔ ya katikati mpo na kopona eloko ya menu oyo ezali na elembo .';
+  String get centerButtonMenuTutorialText =>
+      'Finá na butɔ ya katikati mpo na kopona eloko ya menu oyo ezali na elembo .';
 
   @override
-  String get playPauseMenuTutorialText => 'Finá butɔ oyo mpo na kobɛta to kosala pause na nzembo moko .';
+  String get playPauseMenuTutorialText =>
+      'Finá butɔ oyo mpo na kobɛta to kosala pause na nzembo moko .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Finá bouton oyo mpo na kopumbwa na nzembo oyo elandi .';
+  String get nextButtonMenuTutorialText =>
+      'Finá bouton oyo mpo na kopumbwa na nzembo oyo elandi .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Finá bouton oyo mpo na kozongisa nsima to kozonga na nzembo oyo eleki .';
+  String get previousButtonMenuTutorialText =>
+      'Finá bouton oyo mpo na kozongisa nsima to kozonga na nzembo oyo eleki .';
 
   @override
-  String get menuButtonTutorialText => 'Finá na butɔ oyo mpo na kozonga na menu oyo eleki. Okoki kofina mpe kokanga yango uta na écran mosusu nyonso mpo na kokende mbala moko na menu monene.';
+  String get menuButtonTutorialText =>
+      'Finá na butɔ oyo mpo na kozonga na menu oyo eleki. Okoki kofina mpe kokanga yango uta na écran mosusu nyonso mpo na kokende mbala moko na menu monene.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Oyo ezali écran ya kolakisa. Ecran tactile mpe mode ya écran split ezali activé par défaut mpe ekoki kozala configuré lisusu na ba paramètres.';
+  String get deviceScreenMenuTutorialText =>
+      'Oyo ezali écran ya kolakisa. Ecran tactile mpe mode ya écran split ezali activé par défaut mpe ekoki kozala configuré lisusu na ba paramètres.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Tia mosapi monene na yo zingazinga ya roue ya kofina mpo na kobongisa volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Tia mosapi monene na yo zingazinga ya roue ya kofina mpo na kobongisa volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Finá bouton ya katikati mpo na kosala cycle na nzela ya bar ya Seek, barre ya scrubber mpe shuffle slider. Finá mpe simbá bouton ya katikati mpo na kokɔta na ba options mosusu.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Finá bouton ya katikati mpo na kosala cycle na nzela ya bar ya Seek, barre ya scrubber mpe shuffle slider. Finá mpe simbá bouton ya katikati mpo na kokɔta na ba options mosusu.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Finá mpe simbá bouton oyo mpo na kotinda nzembo yango nokinoki .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Finá mpe simbá bouton oyo mpo na kotinda nzembo yango nokinoki .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Finá mpe simbá bouton oyo mpo na kozongisa nzembo yango .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Finá mpe simbá bouton oyo mpo na kozongisa nzembo yango .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Bokende na mosapi na bino ya monene na pete zingazinga ya roue ya cliquage mpo na kosala ete alfabɛ́ moko ezala na ntina mingi .';
+  String get deviceControlSearchTutorialText =>
+      'Bokende na mosapi na bino ya monene na pete zingazinga ya roue ya cliquage mpo na kosala ete alfabɛ́ moko ezala na ntina mingi .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Finá na butɔ ya katikati mpo na kopona alfabɛ oyo ezali na elembo ya malamu .';
+  String get centerButtonSearchTutorialText =>
+      'Finá na butɔ ya katikati mpo na kopona alfabɛ oyo ezali na elembo ya malamu .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Finá butɔ oyo mpo na kobakisa esika moko .';
+  String get nextButtonSearchTutorialText =>
+      'Finá butɔ oyo mpo na kobakisa esika moko .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Finá na butɔ oyo mpo na kosilisa elembo ya nsuka .';
+  String get previousButtonSearchTutorialText =>
+      'Finá na butɔ oyo mpo na kosilisa elembo ya nsuka .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Finá na butɔ oyo mpo na kokanga klaviatware mpe kosala boyokani na ba résultats ya bolukiluki .';
+  String get menuButtonSearchTutorialText =>
+      'Finá na butɔ oyo mpo na kokanga klaviatware mpe kosala boyokani na ba résultats ya bolukiluki .';
 }

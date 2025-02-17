@@ -15,16 +15,20 @@ class AppLocalizationsKm extends AppLocalizations {
   String get menuButtonText => 'បហ្ជីមុខម្ហូប';
 
   @override
-  String get audioAccessPermissionTitle => 'តម្រូវឱ្យមានការអនុញ្ញាតឱ្យចូលប្រើអូឌីយ៉ូ';
+  String get audioAccessPermissionTitle =>
+      'តម្រូវឱ្យមានការអនុញ្ញាតឱ្យចូលប្រើអូឌីយ៉ូ';
 
   @override
-  String get audioAccessPermissionContent => 'សូមផ្តល់ឯកសារអូឌីយ៉ូចូលប្រើដើម្បីអនុញ្ញាតឱ្យយើងលេងឯកសារតន្ត្រីរបស់អ្នក។';
+  String get audioAccessPermissionContent =>
+      'សូមផ្តល់ឯកសារអូឌីយ៉ូចូលប្រើដើម្បីអនុញ្ញាតឱ្យយើងលេងឯកសារតន្ត្រីរបស់អ្នក។';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'សិទ្ធិចូលដំណើរការអូឌីយ៉ូត្រូវបានបដិសេធ';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'សិទ្ធិចូលដំណើរការអូឌីយ៉ូត្រូវបានបដិសេធ';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'សូមផ្តល់ឯកសារអូឌីយ៉ូចូលប្រើសម្រាប់កម្មវិធីនេះនៅក្នុងការកំណត់ឧបករណ៍ដើម្បីអនុញ្ញាតឱ្យយើងលេងឯកសារតន្ត្រីរបស់អ្នក។';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'សូមផ្តល់ឯកសារអូឌីយ៉ូចូលប្រើសម្រាប់កម្មវិធីនេះនៅក្នុងការកំណត់ឧបករណ៍ដើម្បីអនុញ្ញាតឱ្យយើងលេងឯកសារតន្ត្រីរបស់អ្នក។';
 
   @override
   String get menuScreenTitle => 'បហ្ជីមុខម្ហូប';
@@ -63,7 +67,6 @@ class AppLocalizationsKm extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsKm extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsKm extends AppLocalizations {
   String get touchSoundsDialogTitle => 'ប៉ះសំឡេង';
 
   @override
-  String get touchSoundsDialogContent => 'សូមអនុញ្ញាតឱ្យប៉ះសំឡេងពីការកំណត់ប្រព័ន្ធដើម្បីស្តាប់សំឡេងចុចកង់';
+  String get touchSoundsDialogContent =>
+      'សូមអនុញ្ញាតឱ្យប៉ះសំឡេងពីការកំណត់ប្រព័ន្ធដើម្បីស្តាប់សំឡេងចុចកង់';
 
   @override
   String get immersiveModeSettingTitle => 'របៀបវង្វេងស្មារតី';
@@ -144,7 +147,8 @@ class AppLocalizationsKm extends AppLocalizations {
   String get donateSettingTitle => 'បរិច្ចាក';
 
   @override
-  String get donateSettingDescription => 'ប្រសិនបើអ្នកចូលចិត្តកម្មវិធីនេះសូមពិចារណាបរិច្ចាគ។';
+  String get donateSettingDescription =>
+      'ប្រសិនបើអ្នកចូលចិត្តកម្មវិធីនេះសូមពិចារណាបរិច្ចាគ។';
 
   @override
   String get versionAboutScreenTitle => 'កមបុរក្នា';
@@ -210,10 +214,12 @@ class AppLocalizationsKm extends AppLocalizations {
   String get resultsForText => 'លទ្ធផលសម្រាប់:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'បិទដំណើរការថ្មបង្កើនប្រសិទ្ធភាព';
+  String get disableBatteryOptimizationTitle =>
+      'បិទដំណើរការថ្មបង្កើនប្រសិទ្ធភាព';
 
   @override
-  String get disableBatteryOptimizationContent => 'សូមបិទការបង្កើនប្រសិទ្ធិភាពអាគុយសម្រាប់កម្មវិធីនេះក្នុងការកំណត់ឧបករណ៍ដើម្បីអនុញ្ញាតឱ្យមានប្រវត្តិរូបសង្ខេបនៃតន្ត្រី។';
+  String get disableBatteryOptimizationContent =>
+      'សូមបិទការបង្កើនប្រសិទ្ធិភាពអាគុយសម្រាប់កម្មវិធីនេះក្នុងការកំណត់ឧបករណ៍ដើម្បីអនុញ្ញាតឱ្យមានប្រវត្តិរូបសង្ខេបនៃតន្ត្រី។';
 
   @override
   String get languageScreenTitle => 'ផាសា';
@@ -267,50 +273,65 @@ class AppLocalizationsKm extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'រេនកូរ៉េឡើងវិញ';
 
   @override
-  String get deviceControlMenuTutorialText => 'ផ្លាស់ទីមេដៃរបស់អ្នកស្រាល ៗ ជុំវិញកង់ចុចដើម្បីរុករកម៉ឺនុយ';
+  String get deviceControlMenuTutorialText =>
+      'ផ្លាស់ទីមេដៃរបស់អ្នកស្រាល ៗ ជុំវិញកង់ចុចដើម្បីរុករកម៉ឺនុយ';
 
   @override
-  String get centerButtonMenuTutorialText => 'ចុចប៊ូតុងកណ្តាលដើម្បីជ្រើសរើសធាតុម៉ឺនុយដែលបានបន្លិច';
+  String get centerButtonMenuTutorialText =>
+      'ចុចប៊ូតុងកណ្តាលដើម្បីជ្រើសរើសធាតុម៉ឺនុយដែលបានបន្លិច';
 
   @override
   String get playPauseMenuTutorialText => 'ចុចប៊ូតុងនេះដើម្បីលេងឬផ្អាកបទចម្រៀង';
 
   @override
-  String get nextButtonMenuTutorialText => 'ចុចប៊ូតុងនេះដើម្បីរំលងទៅបទចម្រៀងបន្ទាប់';
+  String get nextButtonMenuTutorialText =>
+      'ចុចប៊ូតុងនេះដើម្បីរំលងទៅបទចម្រៀងបន្ទាប់';
 
   @override
-  String get previousButtonMenuTutorialText => 'ចុចប៊ូតុងនេះដើម្បីរំកិលឬត្រលប់ទៅបទចម្រៀងមុនវិញ';
+  String get previousButtonMenuTutorialText =>
+      'ចុចប៊ូតុងនេះដើម្បីរំកិលឬត្រលប់ទៅបទចម្រៀងមុនវិញ';
 
   @override
-  String get menuButtonTutorialText => 'ចុចប៊ូតុងនេះដើម្បីត្រលប់ទៅម៉ឺនុយមុន។ អ្នកអាចចុចហើយសង្កត់វាពីអេក្រង់ផ្សេងទៀតដើម្បីចូលទៅកាន់ម៉ឺនុយមេដោយផ្ទាល់។';
+  String get menuButtonTutorialText =>
+      'ចុចប៊ូតុងនេះដើម្បីត្រលប់ទៅម៉ឺនុយមុន។ អ្នកអាចចុចហើយសង្កត់វាពីអេក្រង់ផ្សេងទៀតដើម្បីចូលទៅកាន់ម៉ឺនុយមេដោយផ្ទាល់។';
 
   @override
-  String get deviceScreenMenuTutorialText => 'នេះគឺជាអេក្រង់បង្ហាញ។ ប៉ះអេក្រង់និងបំបែករបៀបអេក្រង់ត្រូវបានបើកតាមលំនាំដើមហើយអាចត្រូវបានតំឡើងបន្ថែមទៀតនៅក្នុងការកំណត់។';
+  String get deviceScreenMenuTutorialText =>
+      'នេះគឺជាអេក្រង់បង្ហាញ។ ប៉ះអេក្រង់និងបំបែករបៀបអេក្រង់ត្រូវបានបើកតាមលំនាំដើមហើយអាចត្រូវបានតំឡើងបន្ថែមទៀតនៅក្នុងការកំណត់។';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'ផ្លាស់ទីមេដៃរបស់អ្នកជុំវិញកង់ចុចដើម្បីកែសម្រួលបរិមាណ';
+  String get deviceControlNowPlayingTutorialText =>
+      'ផ្លាស់ទីមេដៃរបស់អ្នកជុំវិញកង់ចុចដើម្បីកែសម្រួលបរិមាណ';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'ចុចប៊ូតុងកណ្តាលដើម្បីវដ្តដែលឆ្លងកាត់ការស្វែងរករបារដាស់ត្នោតរបារព្រងើយកន្តើយនិងសាប់គ្រាប់រំកិល។ ចុចនិងសង្កត់ប៊ូតុងកណ្តាលដើម្បីចូលប្រើជម្រើសបន្ថែម។';
+  String get centerButtonNowPlayingTutorialText =>
+      'ចុចប៊ូតុងកណ្តាលដើម្បីវដ្តដែលឆ្លងកាត់ការស្វែងរករបារដាស់ត្នោតរបារព្រងើយកន្តើយនិងសាប់គ្រាប់រំកិល។ ចុចនិងសង្កត់ប៊ូតុងកណ្តាលដើម្បីចូលប្រើជម្រើសបន្ថែម។';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'ចុចហើយសង្កត់ប៊ូតុងនេះដើម្បីបញ្ជូនបន្តទៅមុខ';
+  String get nextButtonNowPlayingTutorialText =>
+      'ចុចហើយសង្កត់ប៊ូតុងនេះដើម្បីបញ្ជូនបន្តទៅមុខ';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'ចុចហើយសង្កត់ប៊ូតុងនេះដើម្បីបង្វែរបទចម្រៀងឡើងវិញ';
+  String get previousButtonNowPlayingTutorialText =>
+      'ចុចហើយសង្កត់ប៊ូតុងនេះដើម្បីបង្វែរបទចម្រៀងឡើងវិញ';
 
   @override
-  String get deviceControlSearchTutorialText => 'ផ្លាស់ទីមេដៃរបស់អ្នកស្រាល ៗ ជុំវិញកង់ចុចដើម្បីរំលេចអក្ខរក្រម';
+  String get deviceControlSearchTutorialText =>
+      'ផ្លាស់ទីមេដៃរបស់អ្នកស្រាល ៗ ជុំវិញកង់ចុចដើម្បីរំលេចអក្ខរក្រម';
 
   @override
-  String get centerButtonSearchTutorialText => 'ចុចប៊ូតុងកណ្តាលដើម្បីជ្រើសរើសអក្ខរក្រមដែលបានបន្លិច';
+  String get centerButtonSearchTutorialText =>
+      'ចុចប៊ូតុងកណ្តាលដើម្បីជ្រើសរើសអក្ខរក្រមដែលបានបន្លិច';
 
   @override
-  String get nextButtonSearchTutorialText => 'ចុចប៊ូតុងនេះដើម្បីបន្ថែមចន្លោះមួយ';
+  String get nextButtonSearchTutorialText =>
+      'ចុចប៊ូតុងនេះដើម្បីបន្ថែមចន្លោះមួយ';
 
   @override
-  String get previousButtonSearchTutorialText => 'ចុចប៊ូតុងនេះដើម្បីលុបតួអក្សរចុងក្រោយ';
+  String get previousButtonSearchTutorialText =>
+      'ចុចប៊ូតុងនេះដើម្បីលុបតួអក្សរចុងក្រោយ';
 
   @override
-  String get menuButtonSearchTutorialText => 'ចុចប៊ូតុងនេះដើម្បីបិទក្តារចុចនិងធ្វើអន្តរកម្មជាមួយលទ្ធផលស្វែងរក';
+  String get menuButtonSearchTutorialText =>
+      'ចុចប៊ូតុងនេះដើម្បីបិទក្តារចុចនិងធ្វើអន្តរកម្មជាមួយលទ្ធផលស្វែងរក';
 }

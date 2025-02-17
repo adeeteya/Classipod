@@ -18,13 +18,16 @@ class AppLocalizationsMi extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Whakaaetanga whakauru oro';
 
   @override
-  String get audioAccessPermissionContent => 'Tena koa tohaina te uru o te oro ki te tuku i a maatau ki te takaro i o konae puoro.';
+  String get audioAccessPermissionContent =>
+      'Tena koa tohaina te uru o te oro ki te tuku i a maatau ki te takaro i o konae puoro.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Whakaaetanga Whakauru Audio i whakakahoretia';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Whakaaetanga Whakauru Audio i whakakahoretia';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Tena koa tukuna nga konae ororongo mo tenei taupānga i roto i nga tautuhinga taputapu kia taea ai e matou te takaro i o konae puoro.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Tena koa tukuna nga konae ororongo mo tenei taupānga i roto i nga tautuhinga taputapu kia taea ai e matou te takaro i o konae puoro.';
 
   @override
   String get menuScreenTitle => 'Rārangi kai';
@@ -63,7 +66,6 @@ class AppLocalizationsMi extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsMi extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsMi extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Paoa pa';
 
   @override
-  String get touchSoundsDialogContent => 'Tena koa whakahoutia nga oro pa mai i nga tautuhinga punaha kia rongo i nga oro o nga wira click';
+  String get touchSoundsDialogContent =>
+      'Tena koa whakahoutia nga oro pa mai i nga tautuhinga punaha kia rongo i nga oro o nga wira click';
 
   @override
   String get immersiveModeSettingTitle => 'Aratau rumaki';
@@ -144,7 +146,8 @@ class AppLocalizationsMi extends AppLocalizations {
   String get donateSettingTitle => 'Hoatu koha';
 
   @override
-  String get donateSettingDescription => 'Mena kei te pai koe ki tenei taupānga, whakaarohia mai he takoha.';
+  String get donateSettingDescription =>
+      'Mena kei te pai koe ki tenei taupānga, whakaarohia mai he takoha.';
 
   @override
   String get versionAboutScreenTitle => 'Whakaaturanga';
@@ -195,7 +198,8 @@ class AppLocalizationsMi extends AppLocalizations {
   String get retryButtonText => 'Rehiry hoki';
 
   @override
-  String get filePickerDialogTitle => 'Whiriwhiria te whaiaronga ki te matawai mo te puoro';
+  String get filePickerDialogTitle =>
+      'Whiriwhiria te whaiaronga ki te matawai mo te puoro';
 
   @override
   String get searchScreenTitle => 'Rapu';
@@ -210,10 +214,12 @@ class AppLocalizationsMi extends AppLocalizations {
   String get resultsForText => 'Nga Hua mo:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Monokia te arotautanga o te pākahiko';
+  String get disableBatteryOptimizationTitle =>
+      'Monokia te arotautanga o te pākahiko';
 
   @override
-  String get disableBatteryOptimizationContent => 'Tena koa whakakorea te arotautanga o te pākahiko mo tenei taupānga i roto i nga tautuhinga taputapu kia taea ai te purei papamuri i te puoro puoro.';
+  String get disableBatteryOptimizationContent =>
+      'Tena koa whakakorea te arotautanga o te pākahiko mo tenei taupānga i roto i nga tautuhinga taputapu kia taea ai te purei papamuri i te puoro puoro.';
 
   @override
   String get languageScreenTitle => 'Reo';
@@ -243,7 +249,8 @@ class AppLocalizationsMi extends AppLocalizations {
   String get addToOnTheGoPlaylist => 'Tāpirihia ki runga-te-haere';
 
   @override
-  String get addAlbumToOnTheGoPlaylist => 'Tāpirihia te pukaemi ki runga-a-haere';
+  String get addAlbumToOnTheGoPlaylist =>
+      'Tāpirihia te pukaemi ki runga-a-haere';
 
   @override
   String get removeSongFromThePlaylist => 'Tangohia mai i te kaitakaro';
@@ -267,50 +274,66 @@ class AppLocalizationsMi extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Kōnae puoro Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Nukuhia to koromatua huri noa i te wira click hei whakatere i te tahua';
+  String get deviceControlMenuTutorialText =>
+      'Nukuhia to koromatua huri noa i te wira click hei whakatere i te tahua';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pawhiria te paatene pokapū ki te whiriwhiri i te taonga tahua tohu';
+  String get centerButtonMenuTutorialText =>
+      'Pawhiria te paatene pokapū ki te whiriwhiri i te taonga tahua tohu';
 
   @override
-  String get playPauseMenuTutorialText => 'Pawhiria te paatene nei ki te takaro, ki te whakangahau ranei i tetahi waiata';
+  String get playPauseMenuTutorialText =>
+      'Pawhiria te paatene nei ki te takaro, ki te whakangahau ranei i tetahi waiata';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pawhiria te paatene nei kia peke ki te waiata o muri';
+  String get nextButtonMenuTutorialText =>
+      'Pawhiria te paatene nei kia peke ki te waiata o muri';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pawhiria te paatene nei ki te whakahoki ano ka hoki atu ranei ki te waiata o mua';
+  String get previousButtonMenuTutorialText =>
+      'Pawhiria te paatene nei ki te whakahoki ano ka hoki atu ranei ki te waiata o mua';
 
   @override
-  String get menuButtonTutorialText => 'Pawhiria te paatene nei kia hoki ki te tahua o mua. Ka taea e koe te pēhi me te pupuri i tetahi atu mata kia haere tika atu ki te tahua matua.';
+  String get menuButtonTutorialText =>
+      'Pawhiria te paatene nei kia hoki ki te tahua o mua. Ka taea e koe te pēhi me te pupuri i tetahi atu mata kia haere tika atu ki te tahua matua.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Koinei te mata whakaatu. Ko te mata pa me te aratau Matapihi ka whakahohea ma te taunoa ka taea te whirihora ano i roto i nga tautuhinga.';
+  String get deviceScreenMenuTutorialText =>
+      'Koinei te mata whakaatu. Ko te mata pa me te aratau Matapihi ka whakahohea ma te taunoa ka taea te whirihora ano i roto i nga tautuhinga.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Nukuhia to koromatua huri noa i te wira click hei whakatika i te rōrahi';
+  String get deviceControlNowPlayingTutorialText =>
+      'Nukuhia to koromatua huri noa i te wira click hei whakatika i te rōrahi';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pawhiria te paatene pokapū ki te huringa ma te rapu pae, paataki scruffle me te raima shuffle. Press me te pupuri i te paatene pokapū kia uru atu ai etahi atu taapiri.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pawhiria te paatene pokapū ki te huringa ma te rapu pae, paataki scruffle me te raima shuffle. Press me te pupuri i te paatene pokapū kia uru atu ai etahi atu taapiri.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Press me te pupuri i tenei paatene kia tere ai te waiata';
+  String get nextButtonNowPlayingTutorialText =>
+      'Press me te pupuri i tenei paatene kia tere ai te waiata';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Press me te pupuri i tenei paatene ki te whakahoki ano i te waiata';
+  String get previousButtonNowPlayingTutorialText =>
+      'Press me te pupuri i tenei paatene ki te whakahoki ano i te waiata';
 
   @override
-  String get deviceControlSearchTutorialText => 'Nukuhia to koromatua huri noa i te wira click hei whakanui i te taatai';
+  String get deviceControlSearchTutorialText =>
+      'Nukuhia to koromatua huri noa i te wira click hei whakanui i te taatai';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pawhiria te paatene pokapū ki te whiriwhiri i te reta nui';
+  String get centerButtonSearchTutorialText =>
+      'Pawhiria te paatene pokapū ki te whiriwhiri i te reta nui';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pawhiria te paatene ki te taapiri i tetahi waahi';
+  String get nextButtonSearchTutorialText =>
+      'Pawhiria te paatene ki te taapiri i tetahi waahi';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pawhiria te paatene nei ki te muku i te ahuatanga whakamutunga';
+  String get previousButtonSearchTutorialText =>
+      'Pawhiria te paatene nei ki te muku i te ahuatanga whakamutunga';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pawhiria te paatene nei kia kati te papapātuhi me te taunekeneke ki nga hua o te rapu';
+  String get menuButtonSearchTutorialText =>
+      'Pawhiria te paatene nei kia kati te papapātuhi me te taunekeneke ki nga hua o te rapu';
 }

@@ -57,6 +57,14 @@ class SettingsPreferencesControllerNotifier
     }
   }
 
+  void setAudioSource({required bool isOnlineAudioSource}) {
+    if (isOnlineAudioSource) {
+      state = state.copyWith(fetchOnlineMusic: true);
+    } else {
+      state = state.copyWith(fetchOnlineMusic: false);
+    }
+  }
+
   Future<void> showAppTutorial() async {
     await ref.read(tutorialControllerProvider.notifier).resetTutorials();
     ref.read(routerProvider).goNamed(Routes.menu.name);

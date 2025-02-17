@@ -18,13 +18,16 @@ class AppLocalizationsIg extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ikike inweta ikike';
 
   @override
-  String get audioAccessPermissionContent => 'Biko Grata faịlụ ohere iji mee ka anyị kpọọ faịlụ egwu gị.';
+  String get audioAccessPermissionContent =>
+      'Biko Grata faịlụ ohere iji mee ka anyị kpọọ faịlụ egwu gị.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ekwela ka ohere nweta ikike';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ekwela ka ohere nweta ikike';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Biko Grata Audio Nweta maka ngwa a na ntọala ngwaọrụ iji mee ka anyị kpọọ faịlụ egwu gị.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Biko Grata Audio Nweta maka ngwa a na ntọala ngwaọrụ iji mee ka anyị kpọọ faịlụ egwu gị.';
 
   @override
   String get menuScreenTitle => 'Nri enwere';
@@ -63,7 +66,6 @@ class AppLocalizationsIg extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsIg extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsIg extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Mmetụ mmetụ';
 
   @override
-  String get touchSoundsDialogContent => 'Biko mee ka ụda mmetụ si na ntọala sistemụ iji nụ ụda pịa';
+  String get touchSoundsDialogContent =>
+      'Biko mee ka ụda mmetụ si na ntọala sistemụ iji nụ ụda pịa';
 
   @override
   String get immersiveModeSettingTitle => 'Modem mode';
@@ -144,7 +146,8 @@ class AppLocalizationsIg extends AppLocalizations {
   String get donateSettingTitle => 'Inye';
 
   @override
-  String get donateSettingDescription => 'Ọ bụrụ na ịchọrọ ngwa a, biko tụlee inye onyinye.';
+  String get donateSettingDescription =>
+      'Ọ bụrụ na ịchọrọ ngwa a, biko tụlee inye onyinye.';
 
   @override
   String get versionAboutScreenTitle => 'Veshion';
@@ -213,7 +216,8 @@ class AppLocalizationsIg extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Gbanyụọ batrị batrị';
 
   @override
-  String get disableBatteryOptimizationContent => 'Biko gbanyụọ batrị batrị maka ngwa a na ntọala ngwaọrụ iji mee ka egwu dị na egwu.';
+  String get disableBatteryOptimizationContent =>
+      'Biko gbanyụọ batrị batrị maka ngwa a na ntọala ngwaọrụ iji mee ka egwu dị na egwu.';
 
   @override
   String get languageScreenTitle => 'Asusu';
@@ -267,50 +271,66 @@ class AppLocalizationsIg extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Faịlị egwu na-egwu';
 
   @override
-  String get deviceControlMenuTutorialText => 'Bugharịa mkpịsị aka ukwu gị gburugburu na wheel ga-agagharị na menu';
+  String get deviceControlMenuTutorialText =>
+      'Bugharịa mkpịsị aka ukwu gị gburugburu na wheel ga-agagharị na menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pịa bọtịnụ etiti ka ịhọrọ ihe menu pụtara ìhè';
+  String get centerButtonMenuTutorialText =>
+      'Pịa bọtịnụ etiti ka ịhọrọ ihe menu pụtara ìhè';
 
   @override
-  String get playPauseMenuTutorialText => 'Pịa bọtịnụ a iji kpọọ ma ọ bụ kwụsịtụ abụ';
+  String get playPauseMenuTutorialText =>
+      'Pịa bọtịnụ a iji kpọọ ma ọ bụ kwụsịtụ abụ';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pịa bọtịnụ a ka ọ gaa na egwu na-esote';
+  String get nextButtonMenuTutorialText =>
+      'Pịa bọtịnụ a ka ọ gaa na egwu na-esote';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pịa bọtịnụ a ka ịlaghachi ma ọ bụ laghachi na egwu gara aga';
+  String get previousButtonMenuTutorialText =>
+      'Pịa bọtịnụ a ka ịlaghachi ma ọ bụ laghachi na egwu gara aga';
 
   @override
-  String get menuButtonTutorialText => 'Pịa bọtịnụ a ka ịlaghachi na menu gara aga. Nwere ike pịa ma jide ya na ihuenyo ọ bụla ọzọ iji gaa na nchịkọta nhọrọ.';
+  String get menuButtonTutorialText =>
+      'Pịa bọtịnụ a ka ịlaghachi na menu gara aga. Nwere ike pịa ma jide ya na ihuenyo ọ bụla ọzọ iji gaa na nchịkọta nhọrọ.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Nke a bụ enyo ngosi. A na-akwado ihuenyo mmetụ ma gbasaa na ọnọdụ ihuenyo ma enwere ike ịhazi ya na ntọala ahụ.';
+  String get deviceScreenMenuTutorialText =>
+      'Nke a bụ enyo ngosi. A na-akwado ihuenyo mmetụ ma gbasaa na ọnọdụ ihuenyo ma enwere ike ịhazi ya na ntọala ahụ.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Bugharịa mkpịsị aka ukwu gị gburugburu na wiil pịa iji dozie olu';
+  String get deviceControlNowPlayingTutorialText =>
+      'Bugharịa mkpịsị aka ukwu gị gburugburu na wiil pịa iji dozie olu';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pịa bọtịnụ etiti iji chọọ mmanya, sctufber mmanya na mmịfe mmịfe. Pịa ma jide bọtịnụ etiti iji nweta nhọrọ ndị ọzọ.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pịa bọtịnụ etiti iji chọọ mmanya, sctufber mmanya na mmịfe mmịfe. Pịa ma jide bọtịnụ etiti iji nweta nhọrọ ndị ọzọ.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Pịa ma jide bọtịnụ a iji bulie egwu ahụ ọsọ';
+  String get nextButtonNowPlayingTutorialText =>
+      'Pịa ma jide bọtịnụ a iji bulie egwu ahụ ọsọ';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pịa ma jide bọtịnụ a iji weghachi abụ ahụ';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pịa ma jide bọtịnụ a iji weghachi abụ ahụ';
 
   @override
-  String get deviceControlSearchTutorialText => 'Bugharịa mkpịsị aka ukwu gị gburugburu n\'akụkụ wiilịpụta iji gosipụta mkpụrụedemede';
+  String get deviceControlSearchTutorialText =>
+      'Bugharịa mkpịsị aka ukwu gị gburugburu n\'akụkụ wiilịpụta iji gosipụta mkpụrụedemede';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pịa bọtịnụ etiti iji họrọ mkpụrụ akwụkwọ akọwapụtara';
+  String get centerButtonSearchTutorialText =>
+      'Pịa bọtịnụ etiti iji họrọ mkpụrụ akwụkwọ akọwapụtara';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pịa bọtịnụ a ka ịgbakwunye oghere';
+  String get nextButtonSearchTutorialText =>
+      'Pịa bọtịnụ a ka ịgbakwunye oghere';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pịa bọtịnụ a ka ihichapụ agwa ikpeazụ';
+  String get previousButtonSearchTutorialText =>
+      'Pịa bọtịnụ a ka ihichapụ agwa ikpeazụ';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pịa bọtịnụ a iji mechie usoro ma soro nsonaazụ ọchụchọ ahụ';
+  String get menuButtonSearchTutorialText =>
+      'Pịa bọtịnụ a iji mechie usoro ma soro nsonaazụ ọchụchọ ahụ';
 }

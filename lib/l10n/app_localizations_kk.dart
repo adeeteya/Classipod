@@ -18,13 +18,16 @@ class AppLocalizationsKk extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Аудио қатынау рұқсаты қажет';
 
   @override
-  String get audioAccessPermissionContent => 'Музыкалық файлдарды ойнауға мүмкіндік беретін аудио файлдарға кіруді сұраймыз.';
+  String get audioAccessPermissionContent =>
+      'Музыкалық файлдарды ойнауға мүмкіндік беретін аудио файлдарға кіруді сұраймыз.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Дыбыстық қатынау рұқсаты қабылданбады';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Дыбыстық қатынау рұқсаты қабылданбады';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Музыкалық файлдарды ойнатуға мүмкіндік беру үшін осы қолданба үшін Audio файлдарына кіруді беріңіз.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Музыкалық файлдарды ойнатуға мүмкіндік беру үшін осы қолданба үшін Audio файлдарына кіруді беріңіз.';
 
   @override
   String get menuScreenTitle => 'Дастархан мәзірі';
@@ -63,7 +66,6 @@ class AppLocalizationsKk extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsKk extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsKk extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Дыбыстарды түртіңіз';
 
   @override
-  String get touchSoundsDialogContent => 'Доңғалақты дыбыстарды есту үшін жүйелік параметрлерден сенсорлық дыбыстарды қосыңыз';
+  String get touchSoundsDialogContent =>
+      'Доңғалақты дыбыстарды есту үшін жүйелік параметрлерден сенсорлық дыбыстарды қосыңыз';
 
   @override
   String get immersiveModeSettingTitle => 'Имерсивті режим';
@@ -144,7 +146,8 @@ class AppLocalizationsKk extends AppLocalizations {
   String get donateSettingTitle => 'Қию';
 
   @override
-  String get donateSettingDescription => 'Егер сізге осы бағдарлама ұнаса, сыйға тарту туралы ойланыңыз.';
+  String get donateSettingDescription =>
+      'Егер сізге осы бағдарлама ұнаса, сыйға тарту туралы ойланыңыз.';
 
   @override
   String get versionAboutScreenTitle => 'Нұсқа';
@@ -195,7 +198,8 @@ class AppLocalizationsKk extends AppLocalizations {
   String get retryButtonText => 'Қайталау';
 
   @override
-  String get filePickerDialogTitle => 'Музыканы сканерлеу үшін каталогты таңдаңыз';
+  String get filePickerDialogTitle =>
+      'Музыканы сканерлеу үшін каталогты таңдаңыз';
 
   @override
   String get searchScreenTitle => 'Іздеу';
@@ -210,10 +214,12 @@ class AppLocalizationsKk extends AppLocalizations {
   String get resultsForText => 'Нәтижелері:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Батареяны оңтайландыруды өшіріңіз';
+  String get disableBatteryOptimizationTitle =>
+      'Батареяны оңтайландыруды өшіріңіз';
 
   @override
-  String get disableBatteryOptimizationContent => 'Музыканы фондық ойнатуға мүмкіндік беру үшін осы бағдарлама үшін батареяның оңтайландыруын өшіріңіз.';
+  String get disableBatteryOptimizationContent =>
+      'Музыканы фондық ойнатуға мүмкіндік беру үшін осы бағдарлама үшін батареяның оңтайландыруын өшіріңіз.';
 
   @override
   String get languageScreenTitle => 'Тіл';
@@ -267,50 +273,66 @@ class AppLocalizationsKk extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Resian музыкалық файлдары';
 
   @override
-  String get deviceControlMenuTutorialText => 'Мәзірді шарлау үшін бас бармағыңызды шертуді шертуді шерту';
+  String get deviceControlMenuTutorialText =>
+      'Мәзірді шарлау үшін бас бармағыңызды шертуді шертуді шерту';
 
   @override
-  String get centerButtonMenuTutorialText => 'Бөлектелген мәзір элементін таңдау үшін Орталық түймесін басыңыз';
+  String get centerButtonMenuTutorialText =>
+      'Бөлектелген мәзір элементін таңдау үшін Орталық түймесін басыңыз';
 
   @override
-  String get playPauseMenuTutorialText => 'Әнді ойнату немесе кідірту үшін осы түймені басыңыз';
+  String get playPauseMenuTutorialText =>
+      'Әнді ойнату немесе кідірту үшін осы түймені басыңыз';
 
   @override
-  String get nextButtonMenuTutorialText => 'Келесі әнге өту үшін осы батырманы басыңыз';
+  String get nextButtonMenuTutorialText =>
+      'Келесі әнге өту үшін осы батырманы басыңыз';
 
   @override
-  String get previousButtonMenuTutorialText => 'Алдыңғы әнге қайта оралу үшін осы батырманы басыңыз';
+  String get previousButtonMenuTutorialText =>
+      'Алдыңғы әнге қайта оралу үшін осы батырманы басыңыз';
 
   @override
-  String get menuButtonTutorialText => 'Алдыңғы мәзірге оралу үшін осы батырманы басыңыз. Негізгі мәзірге тікелей өту үшін оны басқа экраннан басып ұстап тұруға болады.';
+  String get menuButtonTutorialText =>
+      'Алдыңғы мәзірге оралу үшін осы батырманы басыңыз. Негізгі мәзірге тікелей өту үшін оны басқа экраннан басып ұстап тұруға болады.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Бұл дисплей экраны. Сенсорлы экран және бөлінген экран режимі әдепкі бойынша қосылады және оны басқа параметрлерде теңшеуге болады.';
+  String get deviceScreenMenuTutorialText =>
+      'Бұл дисплей экраны. Сенсорлы экран және бөлінген экран режимі әдепкі бойынша қосылады және оны басқа параметрлерде теңшеуге болады.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Дыбыс деңгейін реттеу үшін бас бармағыңызды дөңгелекті шерту';
+  String get deviceControlNowPlayingTutorialText =>
+      'Дыбыс деңгейін реттеу үшін бас бармағыңызды дөңгелекті шерту';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Жолақты, скраббер жолағының және араластырғыш жүгірткіні цикл алу үшін Орталық түймесін басыңыз. Қосымша опцияларға қол жеткізу үшін Орталық түймесін басып тұрыңыз.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Жолақты, скраббер жолағының және араластырғыш жүгірткіні цикл алу үшін Орталық түймесін басыңыз. Қосымша опцияларға қол жеткізу үшін Орталық түймесін басып тұрыңыз.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Әнді алға қарай жылдам басып тұрыңыз';
+  String get nextButtonNowPlayingTutorialText =>
+      'Әнді алға қарай жылдам басып тұрыңыз';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Әнді кері айналдыру үшін осы түймені басып тұрыңыз';
+  String get previousButtonNowPlayingTutorialText =>
+      'Әнді кері айналдыру үшін осы түймені басып тұрыңыз';
 
   @override
-  String get deviceControlSearchTutorialText => 'Алфавитті бөлектеу үшін бас бармағыңызды шертуді шертіңіз';
+  String get deviceControlSearchTutorialText =>
+      'Алфавитті бөлектеу үшін бас бармағыңызды шертуді шертіңіз';
 
   @override
-  String get centerButtonSearchTutorialText => 'Бөлектелген әліпбиді таңдау үшін Орталық түймесін басыңыз';
+  String get centerButtonSearchTutorialText =>
+      'Бөлектелген әліпбиді таңдау үшін Орталық түймесін басыңыз';
 
   @override
-  String get nextButtonSearchTutorialText => 'Бос орын қосу үшін осы түймені басыңыз';
+  String get nextButtonSearchTutorialText =>
+      'Бос орын қосу үшін осы түймені басыңыз';
 
   @override
-  String get previousButtonSearchTutorialText => 'Соңғы таңбаны жою үшін осы түймені басыңыз';
+  String get previousButtonSearchTutorialText =>
+      'Соңғы таңбаны жою үшін осы түймені басыңыз';
 
   @override
-  String get menuButtonSearchTutorialText => 'Пернетақтаны жабу және іздеу нәтижелерімен өзара әрекеттесу үшін осы түймені басыңыз';
+  String get menuButtonSearchTutorialText =>
+      'Пернетақтаны жабу және іздеу нәтижелерімен өзара әрекеттесу үшін осы түймені басыңыз';
 }

@@ -18,13 +18,16 @@ class AppLocalizationsKha extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ka Jing lah ban wan rung .';
 
   @override
-  String get audioAccessPermissionContent => 'Sngewbha ai ia ki file audio ban ailad ia ngi ban tem ia ki file jingrwai jong phi.';
+  String get audioAccessPermissionContent =>
+      'Sngewbha ai ia ki file audio ban ailad ia ngi ban tem ia ki file jingrwai jong phi.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ka Jing lah ban wan.';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ka Jing lah ban wan.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Sngewbha ai ia ki file audio ban ioh ia kane ka app ha ki jaka shna tiar ban ailad ia ngi ban tem ia ki file jingrwai jong phi.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Sngewbha ai ia ki file audio ban ioh ia kane ka app ha ki jaka shna tiar ban ailad ia ngi ban tem ia ki file jingrwai jong phi.';
 
   @override
   String get menuScreenTitle => 'Meu';
@@ -63,7 +66,6 @@ class AppLocalizationsKha extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsKha extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsKha extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Ka ktah ia ki sur';
 
   @override
-  String get touchSoundsDialogContent => 'Sngewbha ban ktah ia ki sur ba sngewtynnad na System ban iohsngew ia ki sur ba jem .';
+  String get touchSoundsDialogContent =>
+      'Sngewbha ban ktah ia ki sur ba sngewtynnad na System ban iohsngew ia ki sur ba jem .';
 
   @override
   String get immersiveModeSettingTitle => 'Ka Mode';
@@ -144,7 +146,8 @@ class AppLocalizationsKha extends AppLocalizations {
   String get donateSettingTitle => 'Aisbun';
 
   @override
-  String get donateSettingDescription => 'Lada phi sngewtynnad ia kane ka app, sngewbha pyrkhat ban ai sngewbha.';
+  String get donateSettingDescription =>
+      'Lada phi sngewtynnad ia kane ka app, sngewbha pyrkhat ban ai sngewbha.';
 
   @override
   String get versionAboutScreenTitle => 'Jingiathuh';
@@ -195,7 +198,8 @@ class AppLocalizationsKha extends AppLocalizations {
   String get retryButtonText => 'Pynkylla';
 
   @override
-  String get filePickerDialogTitle => 'Jied ia u Directory ban Scan na ka bynta ka Music .';
+  String get filePickerDialogTitle =>
+      'Jied ia u Directory ban Scan na ka bynta ka Music .';
 
   @override
   String get searchScreenTitle => 'Wad';
@@ -213,7 +217,8 @@ class AppLocalizationsKha extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Ka jingpynkhlain ia ka met';
 
   @override
-  String get disableBatteryOptimizationContent => 'Sngewbha pynbha ia ki battery kiba duna dkhot met na ka bynta kane ka app ha ki jaka shna tiar ban ailad ia ka jingkylla ha ka met.';
+  String get disableBatteryOptimizationContent =>
+      'Sngewbha pynbha ia ki battery kiba duna dkhot met na ka bynta kane ka app ha ki jaka shna tiar ban ailad ia ka jingkylla ha ka met.';
 
   @override
   String get languageScreenTitle => 'Jait ktien';
@@ -240,10 +245,12 @@ class AppLocalizationsKha extends AppLocalizations {
   String get playlistsScreenTitle => 'Ki nongialehkai';
 
   @override
-  String get addToOnTheGoPlaylist => 'Pyndap ia ka ha ka jingmut jingpyrkhat jong u.';
+  String get addToOnTheGoPlaylist =>
+      'Pyndap ia ka ha ka jingmut jingpyrkhat jong u.';
 
   @override
-  String get addAlbumToOnTheGoPlaylist => 'Pyndap ia ka Album sha ka Hang-U-Go .';
+  String get addAlbumToOnTheGoPlaylist =>
+      'Pyndap ia ka Album sha ka Hang-U-Go .';
 
   @override
   String get removeSongFromThePlaylist => 'Pynduh noh na ka Playlist .';
@@ -267,50 +274,66 @@ class AppLocalizationsKha extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Pynduna ia ki Prime Files .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Pynkhih ia u thylliej jong phi da kaba jem bha sawdong u Ksiar Click ban iaid lyngba ia ka menu .';
+  String get deviceControlMenuTutorialText =>
+      'Pynkhih ia u thylliej jong phi da kaba jem bha sawdong u Ksiar Click ban iaid lyngba ia ka menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pynkhih ia u button pdeng ban jied ia ka mar ba la pynpaw .';
+  String get centerButtonMenuTutorialText =>
+      'Pynkhih ia u button pdeng ban jied ia ka mar ba la pynpaw .';
 
   @override
-  String get playPauseMenuTutorialText => 'Pynkhih ia une u button ban tem ne sangeh ia ka jingrwai .';
+  String get playPauseMenuTutorialText =>
+      'Pynkhih ia une u button ban tem ne sangeh ia ka jingrwai .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pynkhih ia kane ka button ban skip sha ka jingrwai kaba bud .';
+  String get nextButtonMenuTutorialText =>
+      'Pynkhih ia kane ka button ban skip sha ka jingrwai kaba bud .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pynkhih ia une u button ban pynliem biang ne leit phai biang sha ka jingrwai ba mynshuwa .';
+  String get previousButtonMenuTutorialText =>
+      'Pynkhih ia une u button ban pynliem biang ne leit phai biang sha ka jingrwai ba mynshuwa .';
 
   @override
-  String get menuButtonTutorialText => 'Pynkhih ia une u button ban leit phai biang sha ka menu kaba mynshuwa. Phi lah ban pynkhih bad bat ia ka na kano kano kawei pat ka screen ban leit beit sha ka menu ba kongsan.';
+  String get menuButtonTutorialText =>
+      'Pynkhih ia une u button ban leit phai biang sha ka menu kaba mynshuwa. Phi lah ban pynkhih bad bat ia ka na kano kano kawei pat ka screen ban leit beit sha ka menu ba kongsan.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Kane ka dei ka screen pyni. Ka jingktah jong ka Screen bad ka Mode Screen Mode la pynlah da kaba duna bad lah ban pynbeit kham bniah ha ki jaka.';
+  String get deviceScreenMenuTutorialText =>
+      'Kane ka dei ka screen pyni. Ka jingktah jong ka Screen bad ka Mode Screen Mode la pynlah da kaba duna bad lah ban pynbeit kham bniah ha ki jaka.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Pynkhih ia ka kti jong phi sawdong u Wheel jong u Click ban pynbeit ia ka volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Pynkhih ia ka kti jong phi sawdong u Wheel jong u Click ban pynbeit ia ka volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pynkhih ia u button Centre lyngba wad ia u bar, u scrubber bar bad u slur. Press bad pynlong ia u button Centre ban ioh ia ki lad ki lynti kiba kham bun.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pynkhih ia u button Centre lyngba wad ia u bar, u scrubber bar bad u slur. Press bad pynlong ia u button Centre ban ioh ia ki lad ki lynti kiba kham bun.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Press bad pynlong ia une u button ban iaid stet sha khmat ia ka jingrwai .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Press bad pynlong ia une u button ban iaid stet sha khmat ia ka jingrwai .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Press bad bat ia une u button ban pynliem biang ia ka jingrwai .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Press bad bat ia une u button ban pynliem biang ia ka jingrwai .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Pynkhih ia u thylliej jong phi da kaba jem bha sawdong u Wheel u Wheel ban pynpaw ia ka alphabet .';
+  String get deviceControlSearchTutorialText =>
+      'Pynkhih ia u thylliej jong phi da kaba jem bha sawdong u Wheel u Wheel ban pynpaw ia ka alphabet .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pynkhih ia u button pdeng ban jied ia u alphabet ba la pynpaw .';
+  String get centerButtonSearchTutorialText =>
+      'Pynkhih ia u button pdeng ban jied ia u alphabet ba la pynpaw .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pynkhih ia kane ka button ban pyndap ia ka jaka .';
+  String get nextButtonSearchTutorialText =>
+      'Pynkhih ia kane ka button ban pyndap ia ka jaka .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pynkhih ia une u button ban pynduh ia u briew uba khatduh .';
+  String get previousButtonSearchTutorialText =>
+      'Pynkhih ia une u button ban pynduh ia u briew uba khatduh .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pynkhih ia une u button ban khang ia u shabi bad ban iakynduh bad ki jingmih na ka jingwad .';
+  String get menuButtonSearchTutorialText =>
+      'Pynkhih ia une u button ban khang ia u shabi bad ban iakynduh bad ki jingmih na ka jingwad .';
 }

@@ -18,13 +18,16 @@ class AppLocalizationsCrh extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Аудио кириш рухсети керек';
 
   @override
-  String get audioAccessPermissionContent => 'Музыка файлларынъызны ойнамагъа имкян бермек ичюн, аудио файлларгъа киришни беринъиз.';
+  String get audioAccessPermissionContent =>
+      'Музыка файлларынъызны ойнамагъа имкян бермек ичюн, аудио файлларгъа киришни беринъиз.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Аудио кириш рухсети ред этильди';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Аудио кириш рухсети ред этильди';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Лютфен, бу къулланма ичюн аудиофайллар ичюн киришни, бизге музыка файлларынъызны ойнатмагъа имкян бермек ичюн, иляве этинъиз.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Лютфен, бу къулланма ичюн аудиофайллар ичюн киришни, бизге музыка файлларынъызны ойнатмагъа имкян бермек ичюн, иляве этинъиз.';
 
   @override
   String get menuScreenTitle => 'Меню';
@@ -63,7 +66,6 @@ class AppLocalizationsCrh extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsCrh extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsCrh extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Сеслер .';
 
   @override
-  String get touchSoundsDialogContent => 'Лютфен, «Система параметрлери»ден «Точ» сеслерини чалыштырмакъ ичюн тыртырлав копчеги сеслерини эшитмек .';
+  String get touchSoundsDialogContent =>
+      'Лютфен, «Система параметрлери»ден «Точ» сеслерини чалыштырмакъ ичюн тыртырлав копчеги сеслерини эшитмек .';
 
   @override
   String get immersiveModeSettingTitle => 'Иммерсив режим .';
@@ -144,7 +146,8 @@ class AppLocalizationsCrh extends AppLocalizations {
   String get donateSettingTitle => 'Багъышламакъ';
 
   @override
-  String get donateSettingDescription => 'Эгер сиз бу къулланманы бегенсенъиз, лутфен, багъышламакъны тюшюнип бакъынъыз.';
+  String get donateSettingDescription =>
+      'Эгер сиз бу къулланманы бегенсенъиз, лутфен, багъышламакъны тюшюнип бакъынъыз.';
 
   @override
   String get versionAboutScreenTitle => 'Версия';
@@ -195,7 +198,8 @@ class AppLocalizationsCrh extends AppLocalizations {
   String get retryButtonText => 'Ресимни чекмек';
 
   @override
-  String get filePickerDialogTitle => 'Музыка ичюн сканерлемек ичюн каталогны сечип алынъыз .';
+  String get filePickerDialogTitle =>
+      'Музыка ичюн сканерлемек ичюн каталогны сечип алынъыз .';
 
   @override
   String get searchScreenTitle => 'Къыдырмакъ';
@@ -210,10 +214,12 @@ class AppLocalizationsCrh extends AppLocalizations {
   String get resultsForText => 'Нетиджелер:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Аккумуляторны оптимизация этмек .';
+  String get disableBatteryOptimizationTitle =>
+      'Аккумуляторны оптимизация этмек .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Музыканы фон ойнатмагъа имкян бермек ичюн, бу къулланма ичюн бу къулланма ичюн батарея оптимизациясыны сёндюринъиз.';
+  String get disableBatteryOptimizationContent =>
+      'Музыканы фон ойнатмагъа имкян бермек ичюн, бу къулланма ичюн бу къулланма ичюн батарея оптимизациясыны сёндюринъиз.';
 
   @override
   String get languageScreenTitle => 'Лисан';
@@ -267,50 +273,66 @@ class AppLocalizationsCrh extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Рескан музыка файллары';
 
   @override
-  String get deviceControlMenuTutorialText => 'Менюде юрмек ичюн баш пармагъынъны енгильден «Сыгъырчыкъ» копчеги этрафында авуштырынъыз .';
+  String get deviceControlMenuTutorialText =>
+      'Менюде юрмек ичюн баш пармагъынъны енгильден «Сыгъырчыкъ» копчеги этрафында авуштырынъыз .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Менюнинъ айдынлатылгъан пунктыны сечип алмакъ ичюн орта дёгмесини басынъыз .';
+  String get centerButtonMenuTutorialText =>
+      'Менюнинъ айдынлатылгъан пунктыны сечип алмакъ ичюн орта дёгмесини басынъыз .';
 
   @override
-  String get playPauseMenuTutorialText => 'Йырны чалмакъ я да токътатмакъ ичюн бу дёгмени басынъыз .';
+  String get playPauseMenuTutorialText =>
+      'Йырны чалмакъ я да токътатмакъ ичюн бу дёгмени басынъыз .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Невбеттеки йыргъа кечмек ичюн бу дёгмени басынъыз .';
+  String get nextButtonMenuTutorialText =>
+      'Невбеттеки йыргъа кечмек ичюн бу дёгмени басынъыз .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Бу дёгмени къайтарып, эвельки йыргъа къайтмакъ ичюн .';
+  String get previousButtonMenuTutorialText =>
+      'Бу дёгмени къайтарып, эвельки йыргъа къайтмакъ ичюн .';
 
   @override
-  String get menuButtonTutorialText => 'Эвельки менюге къайтмакъ ичюн бу дёгмени басынъыз. Оны догърудан-догъру эсас менюге бармакъ ичюн эр бир экрандан басып, тутып олурсынъ.';
+  String get menuButtonTutorialText =>
+      'Эвельки менюге къайтмакъ ичюн бу дёгмени басынъыз. Оны догърудан-догъру эсас менюге бармакъ ичюн эр бир экрандан басып, тутып олурсынъ.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Бу дисплей экраныдыр. Экран ве джыллылыкъ экран режими стандарт оларакъ чалыштырыла ве параметрлерде даа да зияде конфигурацияланмакъ мумкюн.';
+  String get deviceScreenMenuTutorialText =>
+      'Бу дисплей экраныдыр. Экран ве джыллылыкъ экран режими стандарт оларакъ чалыштырыла ве параметрлерде даа да зияде конфигурацияланмакъ мумкюн.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Объектни ерлештирмек ичюн баш пармагъынъны «Клик» копчегининъ этрафында авуштырынъыз .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Объектни ерлештирмек ичюн баш пармагъынъны «Клик» копчегининъ этрафында авуштырынъыз .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => '«Меркез» дёгмесини басынъыз, къыдырмакъ ичюн пансионат, скруббер бар ве къарыштырув слайдер ярдымынен чалышмакъ керек. Къошма вариантларгъа кирмек ичюн «Меркез» дёгмесини басып тутынъыз.';
+  String get centerButtonNowPlayingTutorialText =>
+      '«Меркез» дёгмесини басынъыз, къыдырмакъ ичюн пансионат, скруббер бар ве къарыштырув слайдер ярдымынен чалышмакъ керек. Къошма вариантларгъа кирмек ичюн «Меркез» дёгмесини басып тутынъыз.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Бу дёгмени басып тутынъыз, йырны тез илерилемек .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Бу дёгмени басып тутынъыз, йырны тез илерилемек .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Йырны къайтармакъ ичюн бу дёгмени басып тутынъыз .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Йырны къайтармакъ ичюн бу дёгмени басып тутынъыз .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Элифбени айдынлатмакъ ичюн баш пармагъынъны енгильден «Клик копчеги» этрафында авуштырынъыз .';
+  String get deviceControlSearchTutorialText =>
+      'Элифбени айдынлатмакъ ичюн баш пармагъынъны енгильден «Клик копчеги» этрафында авуштырынъыз .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Тасвирленген элифбени сечип алмакъ ичюн орта дёгмесини басынъыз .';
+  String get centerButtonSearchTutorialText =>
+      'Тасвирленген элифбени сечип алмакъ ичюн орта дёгмесини басынъыз .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Бу дёгмени басынъыз, бошлукъ къошмакъ ичюн .';
+  String get nextButtonSearchTutorialText =>
+      'Бу дёгмени басынъыз, бошлукъ къошмакъ ичюн .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Сонъки ишаретни ёкъ этмек ичюн бу дёгмени басынъыз .';
+  String get previousButtonSearchTutorialText =>
+      'Сонъки ишаретни ёкъ этмек ичюн бу дёгмени басынъыз .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Клавиатураны къапатмакъ ве къыдырув нетиджелеринен тесирлешмек ичюн бу дёгмени басынъыз .';
+  String get menuButtonSearchTutorialText =>
+      'Клавиатураны къапатмакъ ве къыдырув нетиджелеринен тесирлешмек ичюн бу дёгмени басынъыз .';
 }

@@ -18,13 +18,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get audioAccessPermissionTitle => 'إذن الوصول إلى الصوت مطلوب';
 
   @override
-  String get audioAccessPermissionContent => 'يرجى منح ملفات الصوت للوصول للسماح لنا بتشغيل ملفات الموسيقى الخاصة بك.';
+  String get audioAccessPermissionContent =>
+      'يرجى منح ملفات الصوت للوصول للسماح لنا بتشغيل ملفات الموسيقى الخاصة بك.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'تم رفض إذن الوصول إلى الصوت';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'تم رفض إذن الوصول إلى الصوت';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'يرجى منح وصول ملفات الصوت لهذا التطبيق في إعدادات الجهاز للسماح لنا بتشغيل ملفات الموسيقى الخاصة بك.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'يرجى منح وصول ملفات الصوت لهذا التطبيق في إعدادات الجهاز للسماح لنا بتشغيل ملفات الموسيقى الخاصة بك.';
 
   @override
   String get menuScreenTitle => 'قائمة طعام';
@@ -63,7 +66,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsAr extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get touchSoundsDialogTitle => 'اللمس الأصوات';
 
   @override
-  String get touchSoundsDialogContent => 'يرجى تمكين اللمس الأصوات من إعدادات النظام لسماع أصوات عجلة النقر';
+  String get touchSoundsDialogContent =>
+      'يرجى تمكين اللمس الأصوات من إعدادات النظام لسماع أصوات عجلة النقر';
 
   @override
   String get immersiveModeSettingTitle => 'الوضع الغامرة';
@@ -144,7 +146,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get donateSettingTitle => 'يتبرع';
 
   @override
-  String get donateSettingDescription => 'إذا كنت تحب هذا التطبيق ، فيرجى التفكير في التبرع.';
+  String get donateSettingDescription =>
+      'إذا كنت تحب هذا التطبيق ، فيرجى التفكير في التبرع.';
 
   @override
   String get versionAboutScreenTitle => 'إصدار';
@@ -213,7 +216,8 @@ class AppLocalizationsAr extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'تعطيل تحسين البطارية';
 
   @override
-  String get disableBatteryOptimizationContent => 'يرجى تعطيل تحسين البطارية لهذا التطبيق في إعدادات الجهاز للسماح بتشغيل الخلفية للموسيقى.';
+  String get disableBatteryOptimizationContent =>
+      'يرجى تعطيل تحسين البطارية لهذا التطبيق في إعدادات الجهاز للسماح بتشغيل الخلفية للموسيقى.';
 
   @override
   String get languageScreenTitle => 'لغة';
@@ -267,50 +271,65 @@ class AppLocalizationsAr extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'ملفات موسيقى ROSCAN';
 
   @override
-  String get deviceControlMenuTutorialText => 'حرك إبهامك برفق حول عجلة النقر للتنقل في القائمة';
+  String get deviceControlMenuTutorialText =>
+      'حرك إبهامك برفق حول عجلة النقر للتنقل في القائمة';
 
   @override
-  String get centerButtonMenuTutorialText => 'اضغط على زر الوسط لتحديد عنصر القائمة المميزة';
+  String get centerButtonMenuTutorialText =>
+      'اضغط على زر الوسط لتحديد عنصر القائمة المميزة';
 
   @override
-  String get playPauseMenuTutorialText => 'اضغط على هذا الزر للتشغيل أو إيقاف تشغيل أغنية';
+  String get playPauseMenuTutorialText =>
+      'اضغط على هذا الزر للتشغيل أو إيقاف تشغيل أغنية';
 
   @override
-  String get nextButtonMenuTutorialText => 'اضغط على هذا الزر لتخطي الأغنية التالية';
+  String get nextButtonMenuTutorialText =>
+      'اضغط على هذا الزر لتخطي الأغنية التالية';
 
   @override
-  String get previousButtonMenuTutorialText => 'اضغط على هذا الزر للعودة أو العودة إلى الأغنية السابقة';
+  String get previousButtonMenuTutorialText =>
+      'اضغط على هذا الزر للعودة أو العودة إلى الأغنية السابقة';
 
   @override
-  String get menuButtonTutorialText => 'اضغط على هذا الزر للعودة إلى القائمة السابقة. يمكنك الضغط عليها والاحتفاظ بها من أي شاشة أخرى للذهاب مباشرة إلى القائمة الرئيسية.';
+  String get menuButtonTutorialText =>
+      'اضغط على هذا الزر للعودة إلى القائمة السابقة. يمكنك الضغط عليها والاحتفاظ بها من أي شاشة أخرى للذهاب مباشرة إلى القائمة الرئيسية.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'هذه هي شاشة العرض. يتم تمكين شاشة اللمس ووضع الشاشة المقسمة بشكل افتراضي ويمكن تكوينه بشكل أكبر في الإعدادات.';
+  String get deviceScreenMenuTutorialText =>
+      'هذه هي شاشة العرض. يتم تمكين شاشة اللمس ووضع الشاشة المقسمة بشكل افتراضي ويمكن تكوينه بشكل أكبر في الإعدادات.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'حرك إبهامك حول عجلة النقر لضبط مستوى الصوت';
+  String get deviceControlNowPlayingTutorialText =>
+      'حرك إبهامك حول عجلة النقر لضبط مستوى الصوت';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'اضغط على زر المركز للتنقل من خلال شريط Seek و Scrubber Bar و Shuffle Randider. اضغط مع الاستمرار على زر الوسط للوصول إلى خيارات إضافية.';
+  String get centerButtonNowPlayingTutorialText =>
+      'اضغط على زر المركز للتنقل من خلال شريط Seek و Scrubber Bar و Shuffle Randider. اضغط مع الاستمرار على زر الوسط للوصول إلى خيارات إضافية.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'اضغط مع الاستمرار على هذا الزر لإعادة توجيه الأغنية بسرعة';
+  String get nextButtonNowPlayingTutorialText =>
+      'اضغط مع الاستمرار على هذا الزر لإعادة توجيه الأغنية بسرعة';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'اضغط مع الاستمرار على هذا الزر لإرجاع الأغنية';
+  String get previousButtonNowPlayingTutorialText =>
+      'اضغط مع الاستمرار على هذا الزر لإرجاع الأغنية';
 
   @override
-  String get deviceControlSearchTutorialText => 'حرك إبهامك بخفة حول عجلة النقر لتسليط الضوء على الأبجدية';
+  String get deviceControlSearchTutorialText =>
+      'حرك إبهامك بخفة حول عجلة النقر لتسليط الضوء على الأبجدية';
 
   @override
-  String get centerButtonSearchTutorialText => 'اضغط على زر الوسط لتحديد الأبجدية المميزة';
+  String get centerButtonSearchTutorialText =>
+      'اضغط على زر الوسط لتحديد الأبجدية المميزة';
 
   @override
   String get nextButtonSearchTutorialText => 'اضغط على هذا الزر لإضافة مساحة';
 
   @override
-  String get previousButtonSearchTutorialText => 'اضغط على هذا الزر لحذف الحرف الأخير';
+  String get previousButtonSearchTutorialText =>
+      'اضغط على هذا الزر لحذف الحرف الأخير';
 
   @override
-  String get menuButtonSearchTutorialText => 'اضغط على هذا الزر لإغلاق لوحة المفاتيح والتفاعل مع نتائج البحث';
+  String get menuButtonSearchTutorialText =>
+      'اضغط على هذا الزر لإغلاق لوحة المفاتيح والتفاعل مع نتائج البحث';
 }

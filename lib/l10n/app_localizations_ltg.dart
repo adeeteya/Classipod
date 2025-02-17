@@ -18,13 +18,16 @@ class AppLocalizationsLtg extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio pīkļuvis atļuovis praseja .';
 
   @override
-  String get audioAccessPermissionContent => 'Lyudzu, dolit pīkļuot audio failim, kab ļautu atskaņuot jūs muzykys failus.';
+  String get audioAccessPermissionContent =>
+      'Lyudzu, dolit pīkļuot audio failim, kab ļautu atskaņuot jūs muzykys failus.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio pīkļuvis atļuovis nūraideja .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio pīkļuvis atļuovis nūraideja .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Lyudzu, dolit audio failus pīkļuvei itai lītai īreiču īstatejumūs, lai ļautu mums atskaņuot jūs muzykys failus.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Lyudzu, dolit audio failus pīkļuvei itai lītai īreiču īstatejumūs, lai ļautu mums atskaņuot jūs muzykys failus.';
 
   @override
   String get menuScreenTitle => 'Izvēlne';
@@ -63,7 +66,6 @@ class AppLocalizationsLtg extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsLtg extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsLtg extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Pīsaskart skanis .';
 
   @override
-  String get touchSoundsDialogContent => '100 doc#1159 Lyudzu , Īspējoj pīskuorīņa skaņu nu Sistemys īstatejumim , lai dzierdātu klikšķu riteņu skanis .';
+  String get touchSoundsDialogContent =>
+      '100 doc#1159 Lyudzu , Īspējoj pīskuorīņa skaņu nu Sistemys īstatejumim , lai dzierdātu klikšķu riteņu skanis .';
 
   @override
   String get immersiveModeSettingTitle => 'Immersivais režims';
@@ -144,7 +146,8 @@ class AppLocalizationsLtg extends AppLocalizations {
   String get donateSettingTitle => 'Zīduot';
 
   @override
-  String get donateSettingDescription => 'Ka pateik itei līta, lyudzu, apsverit zīduošonu.';
+  String get donateSettingDescription =>
+      'Ka pateik itei līta, lyudzu, apsverit zīduošonu.';
 
   @override
   String get versionAboutScreenTitle => 'Verseja';
@@ -195,7 +198,8 @@ class AppLocalizationsLtg extends AppLocalizations {
   String get retryButtonText => 'atlaseit';
 
   @override
-  String get filePickerDialogTitle => '100 doc#1159 Izvēlētīs direktoreju , kū skenēt muzykai .';
+  String get filePickerDialogTitle =>
+      '100 doc#1159 Izvēlētīs direktoreju , kū skenēt muzykai .';
 
   @override
   String get searchScreenTitle => 'Meklēt';
@@ -210,10 +214,12 @@ class AppLocalizationsLtg extends AppLocalizations {
   String get resultsForText => 'Rezultati par:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Atspējot akumulatora optimizaceju .';
+  String get disableBatteryOptimizationTitle =>
+      'Atspējot akumulatora optimizaceju .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Lyudzu, atspējojit akumulatora optimizaceju itai lītai īreiču īstatejumūs, lai ļautu muzykys fona atskaņuošonai.';
+  String get disableBatteryOptimizationContent =>
+      'Lyudzu, atspējojit akumulatora optimizaceju itai lītai īreiču īstatejumūs, lai ļautu muzykys fona atskaņuošonai.';
 
   @override
   String get languageScreenTitle => 'Volūda';
@@ -246,7 +252,8 @@ class AppLocalizationsLtg extends AppLocalizations {
   String get addAlbumToOnTheGoPlaylist => 'Pīvīnojit Albumu, lai īslāgtu-Go .';
 
   @override
-  String get removeSongFromThePlaylist => '100 doc#1159 Izjimt nu Atskaņuošonys saroksta .';
+  String get removeSongFromThePlaylist =>
+      '100 doc#1159 Izjimt nu Atskaņuošonys saroksta .';
 
   @override
   String get allAlbums => 'Vysi Albumi .';
@@ -267,50 +274,66 @@ class AppLocalizationsLtg extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Reskānu muzykys faili .';
 
   @override
-  String get deviceControlMenuTutorialText => '100 doc#1159 Pōrvītoj sovu īkšķi vīgli ap Click Wheel , lai navigāceitu izvēlni .';
+  String get deviceControlMenuTutorialText =>
+      '100 doc#1159 Pōrvītoj sovu īkšķi vīgli ap Click Wheel , lai navigāceitu izvēlni .';
 
   @override
-  String get centerButtonMenuTutorialText => '100 doc#1159 Nūspīž centra pogu , lai izvālātu izcaltū izvēļnis punktu .';
+  String get centerButtonMenuTutorialText =>
+      '100 doc#1159 Nūspīž centra pogu , lai izvālātu izcaltū izvēļnis punktu .';
 
   @override
-  String get playPauseMenuTutorialText => '100 doc#1159 Nūspīž itū pogu , lai atskaņuotu voi pauzeitu dzīsmi .';
+  String get playPauseMenuTutorialText =>
+      '100 doc#1159 Nūspīž itū pogu , lai atskaņuotu voi pauzeitu dzīsmi .';
 
   @override
-  String get nextButtonMenuTutorialText => '100 doc#1159 Nūspīž itū pogu , lai izlaistu iz nuokamū dzīsmi .';
+  String get nextButtonMenuTutorialText =>
+      '100 doc#1159 Nūspīž itū pogu , lai izlaistu iz nuokamū dzīsmi .';
 
   @override
-  String get previousButtonMenuTutorialText => '100 doc#1159 Nūspīž itū pogu , lai attīktu voi dūtūs atpakaļ iz īprīkšejū dzīsmi .';
+  String get previousButtonMenuTutorialText =>
+      '100 doc#1159 Nūspīž itū pogu , lai attīktu voi dūtūs atpakaļ iz īprīkšejū dzīsmi .';
 
   @override
-  String get menuButtonTutorialText => 'Nūspīž itū pogu, lai atsagrīztu īprīkšejā izvēlnē. Varātu nūspīst i turēt nu sevkura cyta ekrana, kab tīši ītu iz golvonū izvēlni.';
+  String get menuButtonTutorialText =>
+      'Nūspīž itū pogu, lai atsagrīztu īprīkšejā izvēlnē. Varātu nūspīst i turēt nu sevkura cyta ekrana, kab tīši ītu iz golvonū izvēlni.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Tys ir displeja ekrans. Pīsaskar ekrans i Split Ekrana režims ir īspiejams piec nūklusājuma i tū var konfigurēt tuoļuok īstatejumūs.';
+  String get deviceScreenMenuTutorialText =>
+      'Tys ir displeja ekrans. Pīsaskar ekrans i Split Ekrana režims ir īspiejams piec nūklusājuma i tū var konfigurēt tuoļuok īstatejumūs.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => '100 doc#1159 Pōrvītoj īkšķi ap ​​Click Wheel , lai pīlāguotu skaļumu .';
+  String get deviceControlNowPlayingTutorialText =>
+      '100 doc#1159 Pōrvītoj īkšķi ap ​​Click Wheel , lai pīlāguotu skaļumu .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Nūspīž Centra pogu, lai brauktu ar velosipedu caur mekliešonu stygu, skruberi stygu i slīkšņa slīdi. Nūspīd i turēt Centra pogu, lai pīkļyutu papyldu opcejis.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Nūspīž Centra pogu, lai brauktu ar velosipedu caur mekliešonu stygu, skruberi stygu i slīkšņa slīdi. Nūspīd i turēt Centra pogu, lai pīkļyutu papyldu opcejis.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => '100 doc#1159 Nūspīž i turi itū pogu, lai gavētu iz prīšku dzīsmi .';
+  String get nextButtonNowPlayingTutorialText =>
+      '100 doc#1159 Nūspīž i turi itū pogu, lai gavētu iz prīšku dzīsmi .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => '100 doc#1159 Nūspīž i turi itū pogu, lai attīcynuotu dzīsmi .';
+  String get previousButtonNowPlayingTutorialText =>
+      '100 doc#1159 Nūspīž i turi itū pogu, lai attīcynuotu dzīsmi .';
 
   @override
-  String get deviceControlSearchTutorialText => '100 doc#1159 Pōrvītoj sovu īkšķi vīgli ap Click Wheel , lai izceļ ābeci .';
+  String get deviceControlSearchTutorialText =>
+      '100 doc#1159 Pōrvītoj sovu īkšķi vīgli ap Click Wheel , lai izceļ ābeci .';
 
   @override
-  String get centerButtonSearchTutorialText => '100 doc#1159 Nūspīž centra pogu , lai atlaseitu izcaltū ābeci .';
+  String get centerButtonSearchTutorialText =>
+      '100 doc#1159 Nūspīž centra pogu , lai atlaseitu izcaltū ābeci .';
 
   @override
-  String get nextButtonSearchTutorialText => '100 doc#1159 Nūspīž itū pogu , lai pīvīnuotu telpu .';
+  String get nextButtonSearchTutorialText =>
+      '100 doc#1159 Nūspīž itū pogu , lai pīvīnuotu telpu .';
 
   @override
-  String get previousButtonSearchTutorialText => '100 doc#1159 Nūspīž itū pogu , lai izdzēstu pādejū raksturu .';
+  String get previousButtonSearchTutorialText =>
+      '100 doc#1159 Nūspīž itū pogu , lai izdzēstu pādejū raksturu .';
 
   @override
-  String get menuButtonSearchTutorialText => '100 doc#1159 Nūspīž itū pogu , lai aiztaiseitu klaviaturu i sasadorbuotu ar mekliešonys rezultatim .';
+  String get menuButtonSearchTutorialText =>
+      '100 doc#1159 Nūspīž itū pogu , lai aiztaiseitu klaviaturu i sasadorbuotu ar mekliešonys rezultatim .';
 }

@@ -18,13 +18,16 @@ class AppLocalizationsFon extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Access É byɔ';
 
   @override
-  String get audioAccessPermissionContent => 'Kɛnklɛn na gbè wema e è nɔ sè lɛ é bo na dó sixu xò hanwema towe lɛ.';
+  String get audioAccessPermissionContent =>
+      'Kɛnklɛn na gbè wema e è nɔ sè lɛ é bo na dó sixu xò hanwema towe lɛ.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Auglecée È Nɔ Na Mɛ';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Auglecée È Nɔ Na Mɛ';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Mi kɛnklɛn bo na gbè wema e mɛ è nɔ sè nǔ ɖè lɛ é nú appli enɛ ɖò nǔ e è nɔ zán lɛ é mɛ, bo na dó sixu xò hanwema mitɔn lɛ.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Mi kɛnklɛn bo na gbè wema e mɛ è nɔ sè nǔ ɖè lɛ é nú appli enɛ ɖò nǔ e è nɔ zán lɛ é mɛ, bo na dó sixu xò hanwema mitɔn lɛ.';
 
   @override
   String get menuScreenTitle => 'Mlù';
@@ -63,7 +66,6 @@ class AppLocalizationsFon extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsFon extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsFon extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Mi hɛn alɔ';
 
   @override
-  String get touchSoundsDialogContent => 'Mi kɛnklɛn bo wlan nǔ dó System Sounds jí bo sè gbè e è nɔ sè lɛ é sín gbè .';
+  String get touchSoundsDialogContent =>
+      'Mi kɛnklɛn bo wlan nǔ dó System Sounds jí bo sè gbè e è nɔ sè lɛ é sín gbè .';
 
   @override
   String get immersiveModeSettingTitle => 'Mode e nɔ hɛn mɛ lidǒ é';
@@ -144,7 +146,8 @@ class AppLocalizationsFon extends AppLocalizations {
   String get donateSettingTitle => 'Dŏ nù';
 
   @override
-  String get donateSettingDescription => 'Enyi a yí wǎn nú appli elɔ hǔn, kɛnklɛn bo lin tamɛ dó nǔnina jí.';
+  String get donateSettingDescription =>
+      'Enyi a yí wǎn nú appli elɔ hǔn, kɛnklɛn bo lin tamɛ dó nǔnina jí.';
 
   @override
   String get versionAboutScreenTitle => 'Nùwlanwlan';
@@ -213,7 +216,8 @@ class AppLocalizationsFon extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Batterie optimé .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Mi kɛnklɛn bo bló bɔ batterie ɔ na nyɔ́ hugǎn nú appli enɛ ɖò nǔ e è nɔ zán lɛ é mɛ, bo na dó sixu xò han lɛ ɖò gudo.';
+  String get disableBatteryOptimizationContent =>
+      'Mi kɛnklɛn bo bló bɔ batterie ɔ na nyɔ́ hugǎn nú appli enɛ ɖò nǔ e è nɔ zán lɛ é mɛ, bo na dó sixu xò han lɛ ɖò gudo.';
 
   @override
   String get languageScreenTitle => 'Gbè';
@@ -267,50 +271,66 @@ class AppLocalizationsFon extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Hanjiji Rescan tɔn lɛ';
 
   @override
-  String get deviceControlMenuTutorialText => 'Sɔ́ alɔví towe dó jǐ kpɛɖé bo lɛlɛ̌ dó Click Wheel ɔ bo kpɔ́n nǔ e ɖò wema ɔ mɛ lɛ é .';
+  String get deviceControlMenuTutorialText =>
+      'Sɔ́ alɔví towe dó jǐ kpɛɖé bo lɛlɛ̌ dó Click Wheel ɔ bo kpɔ́n nǔ e ɖò wema ɔ mɛ lɛ é .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tɛ́n butɔn tɛntin tɔn ɔ bo sɔ́ nǔ e è ɖè xlɛ́ é';
+  String get centerButtonMenuTutorialText =>
+      'Tɛ́n butɔn tɛntin tɔn ɔ bo sɔ́ nǔ e è ɖè xlɛ́ é';
 
   @override
-  String get playPauseMenuTutorialText => 'Tɛ́n butɔn elɔ bo xò alǒ ɖó han ɖé te';
+  String get playPauseMenuTutorialText =>
+      'Tɛ́n butɔn elɔ bo xò alǒ ɖó han ɖé te';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tɛ́n butɔn elɔ bo xò han e bɔ d’ewu é .';
+  String get nextButtonMenuTutorialText =>
+      'Tɛ́n butɔn elɔ bo xò han e bɔ d’ewu é .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tɛ́n butɔn elɔ bo na dó gbɔ azɔn alǒ lɛkɔ yì han e wá yì é jí .';
+  String get previousButtonMenuTutorialText =>
+      'Tɛ́n butɔn elɔ bo na dó gbɔ azɔn alǒ lɛkɔ yì han e wá yì é jí .';
 
   @override
-  String get menuButtonTutorialText => 'Tɛ butɔn elɔ bo lɛkɔ yi menu e wa yi ɔ mɛ. A sixu zín bo hɛn sín écran ɖevo jí bo na yì nǔ taji ɔ jí tlɔlɔ.';
+  String get menuButtonTutorialText =>
+      'Tɛ butɔn elɔ bo lɛkɔ yi menu e wa yi ɔ mɛ. A sixu zín bo hɛn sín écran ɖevo jí bo na yì nǔ taji ɔ jí tlɔlɔ.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Nǔ e è nɔ xlɛ́ mɛ é wɛ nyí enɛ. Touch Screen kpo Split Screen Mode kpo nɔ w’azɔ̌ ɖò jlɛ̌ jí, bɔ è sixu bló tuto nú ye d’eji ɖò ninɔmɛ lɛ mɛ.';
+  String get deviceScreenMenuTutorialText =>
+      'Nǔ e è nɔ xlɛ́ mɛ é wɛ nyí enɛ. Touch Screen kpo Split Screen Mode kpo nɔ w’azɔ̌ ɖò jlɛ̌ jí, bɔ è sixu bló tuto nú ye d’eji ɖò ninɔmɛ lɛ mɛ.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Sɔ́ alɔví towe dó Click Wheel ɔ jí bo jla hlɔnhlɔn ɔ ɖó .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Sɔ́ alɔví towe dó Click Wheel ɔ jí bo jla hlɔnhlɔn ɔ ɖó .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tɛ butɔn Center tɔn ɔ jí bo na dó ɖi zɔnlin gbɔn bar, scrubber bar kpo slider shuffle kpo gblamɛ. Tɛ́n bo hɛn butɔn Centre ɔ bo na mɔ nǔ ɖevo lɛ.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tɛ butɔn Center tɔn ɔ jí bo na dó ɖi zɔnlin gbɔn bar, scrubber bar kpo slider shuffle kpo gblamɛ. Tɛ́n bo hɛn butɔn Centre ɔ bo na mɔ nǔ ɖevo lɛ.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tɛ bo hɛn butɔn elɔ bo na do yi nukɔn nu han ɔ .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tɛ bo hɛn butɔn elɔ bo na do yi nukɔn nu han ɔ .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tɛ́n bo hɛn butɔn elɔ bo na dó vɔ́ han ɔ kpɔ́n .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tɛ́n bo hɛn butɔn elɔ bo na dó vɔ́ han ɔ kpɔ́n .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Sɔ́ alɔví towe dó jǐ kpɛɖé bo lɛlɛ̌ dó Click Wheel bo ɖè alfabɛti ɖé xlɛ́';
+  String get deviceControlSearchTutorialText =>
+      'Sɔ́ alɔví towe dó jǐ kpɛɖé bo lɛlɛ̌ dó Click Wheel bo ɖè alfabɛti ɖé xlɛ́';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tɛ́n butɔn tɛntin tɔn ɔ bo na dó sɔ́ alfabɛti e è ɖè xlɛ́ é';
+  String get centerButtonSearchTutorialText =>
+      'Tɛ́n butɔn tɛntin tɔn ɔ bo na dó sɔ́ alfabɛti e è ɖè xlɛ́ é';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tɛ́n butɔn elɔ bo na dó gɔ́ tɛnmɛ ɖé .';
+  String get nextButtonSearchTutorialText =>
+      'Tɛ́n butɔn elɔ bo na dó gɔ́ tɛnmɛ ɖé .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tɛ́n butɔn elɔ bo súnsún wuntun gudo tɔn ɔ .';
+  String get previousButtonSearchTutorialText =>
+      'Tɛ́n butɔn elɔ bo súnsún wuntun gudo tɔn ɔ .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tɛ́n butɔn elɔ bo sú klavié ɔ bo nɔ wà nǔ xá nǔ e è ba lɛ é .';
+  String get menuButtonSearchTutorialText =>
+      'Tɛ́n butɔn elɔ bo sú klavié ɔ bo nɔ wà nǔ xá nǔ e è ba lɛ é .';
 }

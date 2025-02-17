@@ -15,16 +15,20 @@ class AppLocalizationsAy extends AppLocalizations {
   String get menuButtonText => 'Menú ukax 1.1.';
 
   @override
-  String get audioAccessPermissionTitle => 'Audio ukar mantañ permiso ukax wakisiwa .';
+  String get audioAccessPermissionTitle =>
+      'Audio ukar mantañ permiso ukax wakisiwa .';
 
   @override
-  String get audioAccessPermissionContent => 'Ukhamaraki, audio archivonakax mantañapatakiw yanapt’añama, ukhamat musica archivonakam phust’añapataki.';
+  String get audioAccessPermissionContent =>
+      'Ukhamaraki, audio archivonakax mantañapatakiw yanapt’añama, ukhamat musica archivonakam phust’añapataki.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Acceso Permiso ukax jan iyawsatawa .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Acceso Permiso ukax jan iyawsatawa .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Aka app ukatakix audio archivonakax dispositivo ukan utt’ayat ukar mantañapatakiw churañama, ukhamat musica archivonakam phust’añataki.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Aka app ukatakix audio archivonakax dispositivo ukan utt’ayat ukar mantañapatakiw churañama, ukhamat musica archivonakam phust’añataki.';
 
   @override
   String get menuScreenTitle => 'Menú ukax 1.1.';
@@ -63,7 +67,6 @@ class AppLocalizationsAy extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsAy extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsAy extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Ukax sañ muniwa.';
 
   @override
-  String get touchSoundsDialogContent => 'Ukhamaraki, sistema ukan utt’ayatanakapat llamkt’añ sonidonak ch’amanchañamawa, ukhamat clic rueda sonidos ist’añataki .';
+  String get touchSoundsDialogContent =>
+      'Ukhamaraki, sistema ukan utt’ayatanakapat llamkt’añ sonidonak ch’amanchañamawa, ukhamat clic rueda sonidos ist’añataki .';
 
   @override
   String get immersiveModeSettingTitle => 'Modo inmerso ukaxa 1.1.';
@@ -144,7 +147,8 @@ class AppLocalizationsAy extends AppLocalizations {
   String get donateSettingTitle => 'Khuyapayaña';
 
   @override
-  String get donateSettingDescription => 'Jumatix aka app ukar munassta ukhax, churañ amtañamawa.';
+  String get donateSettingDescription =>
+      'Jumatix aka app ukar munassta ukhax, churañ amtañamawa.';
 
   @override
   String get versionAboutScreenTitle => 'Wirsyuna';
@@ -195,7 +199,8 @@ class AppLocalizationsAy extends AppLocalizations {
   String get retryButtonText => 'Ukax wasitat yant’atawa.';
 
   @override
-  String get filePickerDialogTitle => 'Mä directorio ajlliñamawa, ukhamat musicanak escanear .';
+  String get filePickerDialogTitle =>
+      'Mä directorio ajlliñamawa, ukhamat musicanak escanear .';
 
   @override
   String get searchScreenTitle => 'Thaqhata';
@@ -210,10 +215,12 @@ class AppLocalizationsAy extends AppLocalizations {
   String get resultsForText => 'Ukax akham sañ muni:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Batería ukan optimización ukar jan ch’amanchaña .';
+  String get disableBatteryOptimizationTitle =>
+      'Batería ukan optimización ukar jan ch’amanchaña .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Ukhamaraki, aka app ukatakix pilas optimización ukax dispositivo ukan configuración ukanx janiw utjkiti, ukhamat musica ukan qhipa uñtawipar jaysañataki.';
+  String get disableBatteryOptimizationContent =>
+      'Ukhamaraki, aka app ukatakix pilas optimización ukax dispositivo ukan configuración ukanx janiw utjkiti, ukhamat musica ukan qhipa uñtawipar jaysañataki.';
 
   @override
   String get languageScreenTitle => 'Aru';
@@ -246,7 +253,8 @@ class AppLocalizationsAy extends AppLocalizations {
   String get addAlbumToOnTheGoPlaylist => 'Ukax on-the-go ukar yapxatatawa .';
 
   @override
-  String get removeSongFromThePlaylist => 'Ukax mä lista de reproducción ukankiwa .';
+  String get removeSongFromThePlaylist =>
+      'Ukax mä lista de reproducción ukankiwa .';
 
   @override
   String get allAlbums => 'Taqi álbumanak .';
@@ -267,50 +275,66 @@ class AppLocalizationsAy extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Archivonaka .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Uka ampar lukʼanamxa mä jukʼa muytʼañamawa, ukhamatwa menú ukar sarañama .';
+  String get deviceControlMenuTutorialText =>
+      'Uka ampar lukʼanamxa mä jukʼa muytʼañamawa, ukhamatwa menú ukar sarañama .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Uka chiqaru ch’iqt’aña, ukhamata Menú resaltado uka chimpu ajlliña .';
+  String get centerButtonMenuTutorialText =>
+      'Uka chiqaru ch’iqt’aña, ukhamata Menú resaltado uka chimpu ajlliña .';
 
   @override
-  String get playPauseMenuTutorialText => 'Aka botón ukar ch’iqt’am mä q’uchu phust’añataki jan ukax samart’ayañataki .';
+  String get playPauseMenuTutorialText =>
+      'Aka botón ukar ch’iqt’am mä q’uchu phust’añataki jan ukax samart’ayañataki .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Aka botón ukar ch’iqt’am jutir q’uchur jaytañataki .';
+  String get nextButtonMenuTutorialText =>
+      'Aka botón ukar ch’iqt’am jutir q’uchur jaytañataki .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Aka botón ukar ch’iqt’am rebobinar jan ukax nayrïr q’uchur kutt’añataki .';
+  String get previousButtonMenuTutorialText =>
+      'Aka botón ukar ch’iqt’am rebobinar jan ukax nayrïr q’uchur kutt’añataki .';
 
   @override
-  String get menuButtonTutorialText => 'Aka botón ukar ch’iqt’aña, nayrïr menú ukar kutt’añataki. Ukhamaraki, yaqha pantallanakatxa ch’allt’asmawa ukatxa chiqapa menú principal ukar sarasma.';
+  String get menuButtonTutorialText =>
+      'Aka botón ukar ch’iqt’aña, nayrïr menú ukar kutt’añataki. Ukhamaraki, yaqha pantallanakatxa ch’allt’asmawa ukatxa chiqapa menú principal ukar sarasma.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Akax pantalla uñacht’ayañawa. Pantalla táctil ukatxa pantalla split ukaxa ch’amanchatawa default ukampi ukatxa juk’ampi configurar ukhamawa configuración ukanxa.';
+  String get deviceScreenMenuTutorialText =>
+      'Akax pantalla uñacht’ayañawa. Pantalla táctil ukatxa pantalla split ukaxa ch’amanchatawa default ukampi ukatxa juk’ampi configurar ukhamawa configuración ukanxa.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Uka ampar lukʼanamxa, volúmenes ukar chiqañchañatakix ampar lukʼanamwa muytayañama .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Uka ampar lukʼanamxa, volúmenes ukar chiqañchañatakix ampar lukʼanamwa muytayañama .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Uka chika taypinkir botón ukar ch’iqt’aña, Barra de Seek, barra de fregado ukat deslizador de barate ukanakampiw ciclo ukar ch’iqt’añama. Yaqha amtanakar mantañatakix chika taypinkir botón ukar ch’iqt’añamawa.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Uka chika taypinkir botón ukar ch’iqt’aña, Barra de Seek, barra de fregado ukat deslizador de barate ukanakampiw ciclo ukar ch’iqt’añama. Yaqha amtanakar mantañatakix chika taypinkir botón ukar ch’iqt’añamawa.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Aka botón ukar ch’iqt’aña ukat katxaruña rápida del canción .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Aka botón ukar ch’iqt’aña ukat katxaruña rápida del canción .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Aka botón ukar ch’iqt’aña ukat katxaruña .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Aka botón ukar ch’iqt’aña ukat katxaruña .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Mä alfabeto uñacht’ayañatakix clic rueda ukar mä juk’a muytayañamawa .';
+  String get deviceControlSearchTutorialText =>
+      'Mä alfabeto uñacht’ayañatakix clic rueda ukar mä juk’a muytayañamawa .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Chika taypinkir botón ukar ch’iqt’asaw alfabeto resaltado ukar ch’iqt’añama .';
+  String get centerButtonSearchTutorialText =>
+      'Chika taypinkir botón ukar ch’iqt’asaw alfabeto resaltado ukar ch’iqt’añama .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Aka botón ukar ch’iqt’aña mä chiqaru yapxatañataki .';
+  String get nextButtonSearchTutorialText =>
+      'Aka botón ukar ch’iqt’aña mä chiqaru yapxatañataki .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Aka botón ukar ch’iqt’aña qhipa chimpu chhaqtayañataki .';
+  String get previousButtonSearchTutorialText =>
+      'Aka botón ukar ch’iqt’aña qhipa chimpu chhaqtayañataki .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Aka botón ukar ch’iqt’aña teclado jist’antañataki ukat thakhinchawimp chikt’ata .';
+  String get menuButtonSearchTutorialText =>
+      'Aka botón ukar ch’iqt’aña teclado jist’antañataki ukat thakhinchawimp chikt’ata .';
 }

@@ -15,16 +15,20 @@ class AppLocalizationsUk extends AppLocalizations {
   String get menuButtonText => 'Меню';
 
   @override
-  String get audioAccessPermissionTitle => 'Необхідний дозвіл на доступ до аудіо';
+  String get audioAccessPermissionTitle =>
+      'Необхідний дозвіл на доступ до аудіо';
 
   @override
-  String get audioAccessPermissionContent => 'Будь ласка, надайте доступ до аудіофайлів, щоб ми могли відтворювати ваші музичні файли.';
+  String get audioAccessPermissionContent =>
+      'Будь ласка, надайте доступ до аудіофайлів, щоб ми могли відтворювати ваші музичні файли.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Дозвіл на аудіо доступу';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Дозвіл на аудіо доступу';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Будь ласка, надайте доступ до аудіофайлів для цього додатка в налаштуваннях пристрою, щоб ми могли відтворювати ваші музичні файли.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Будь ласка, надайте доступ до аудіофайлів для цього додатка в налаштуваннях пристрою, щоб ми могли відтворювати ваші музичні файли.';
 
   @override
   String get menuScreenTitle => 'Меню';
@@ -63,7 +67,6 @@ class AppLocalizationsUk extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsUk extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Дотик звучить';
 
   @override
-  String get touchSoundsDialogContent => 'Будь ласка, увімкніть сенсорні звуки з налаштувань системи, щоб почути звуки колеса клацання';
+  String get touchSoundsDialogContent =>
+      'Будь ласка, увімкніть сенсорні звуки з налаштувань системи, щоб почути звуки колеса клацання';
 
   @override
   String get immersiveModeSettingTitle => 'Імперсивний режим';
@@ -144,7 +147,8 @@ class AppLocalizationsUk extends AppLocalizations {
   String get donateSettingTitle => 'Пожертвувати';
 
   @override
-  String get donateSettingDescription => 'Якщо вам подобається ця програма, будь ласка, подумайте про пожертвування.';
+  String get donateSettingDescription =>
+      'Якщо вам подобається ця програма, будь ласка, подумайте про пожертвування.';
 
   @override
   String get versionAboutScreenTitle => 'Версія';
@@ -210,10 +214,12 @@ class AppLocalizationsUk extends AppLocalizations {
   String get resultsForText => 'Результати для:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Вимкнути оптимізацію акумулятора';
+  String get disableBatteryOptimizationTitle =>
+      'Вимкнути оптимізацію акумулятора';
 
   @override
-  String get disableBatteryOptimizationContent => 'Вимкніть оптимізацію акумулятора для цього додатка в налаштуваннях пристрою, щоб дозволити відтворення музики.';
+  String get disableBatteryOptimizationContent =>
+      'Вимкніть оптимізацію акумулятора для цього додатка в налаштуваннях пристрою, щоб дозволити відтворення музики.';
 
   @override
   String get languageScreenTitle => 'Мова';
@@ -267,50 +273,66 @@ class AppLocalizationsUk extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Музичні файли Crecon Music';
 
   @override
-  String get deviceControlMenuTutorialText => 'Злегка перемістіть великий палець навколо колеса клацання, щоб орієнтуватися в меню';
+  String get deviceControlMenuTutorialText =>
+      'Злегка перемістіть великий палець навколо колеса клацання, щоб орієнтуватися в меню';
 
   @override
-  String get centerButtonMenuTutorialText => 'Натисніть кнопку Центру, щоб вибрати виділений пункт меню';
+  String get centerButtonMenuTutorialText =>
+      'Натисніть кнопку Центру, щоб вибрати виділений пункт меню';
 
   @override
-  String get playPauseMenuTutorialText => 'Натисніть цю кнопку, щоб відтворити або призупинити пісню';
+  String get playPauseMenuTutorialText =>
+      'Натисніть цю кнопку, щоб відтворити або призупинити пісню';
 
   @override
-  String get nextButtonMenuTutorialText => 'Натисніть цю кнопку, щоб перейти до наступної пісні';
+  String get nextButtonMenuTutorialText =>
+      'Натисніть цю кнопку, щоб перейти до наступної пісні';
 
   @override
-  String get previousButtonMenuTutorialText => 'Натисніть цю кнопку, щоб перемотати або повернутися до попередньої пісні';
+  String get previousButtonMenuTutorialText =>
+      'Натисніть цю кнопку, щоб перемотати або повернутися до попередньої пісні';
 
   @override
-  String get menuButtonTutorialText => 'Натисніть цю кнопку, щоб повернутися до попереднього меню. Ви можете натиснути і утримувати його з будь -якого іншого екрану, щоб безпосередньо перейти до головного меню.';
+  String get menuButtonTutorialText =>
+      'Натисніть цю кнопку, щоб повернутися до попереднього меню. Ви можете натиснути і утримувати його з будь -якого іншого екрану, щоб безпосередньо перейти до головного меню.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Це екран дисплея. Сенсорний екран і режим розділеного екрана увімкнено за замовчуванням і може бути налаштований далі в налаштуваннях.';
+  String get deviceScreenMenuTutorialText =>
+      'Це екран дисплея. Сенсорний екран і режим розділеного екрана увімкнено за замовчуванням і може бути налаштований далі в налаштуваннях.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Перемістіть великий палець навколо колеса клацання, щоб регулювати гучність';
+  String get deviceControlNowPlayingTutorialText =>
+      'Перемістіть великий палець навколо колеса клацання, щоб регулювати гучність';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Натисніть центральну кнопку, щоб провести кругообігу через смугу пошуку, скрубер -смужку та повзунок для перетасування. Натисніть і утримуйте центральну кнопку, щоб отримати доступ до додаткових параметрів.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Натисніть центральну кнопку, щоб провести кругообігу через смугу пошуку, скрубер -смужку та повзунок для перетасування. Натисніть і утримуйте центральну кнопку, щоб отримати доступ до додаткових параметрів.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Натисніть і утримуйте цю кнопку, щоб поститися вперед пісню';
+  String get nextButtonNowPlayingTutorialText =>
+      'Натисніть і утримуйте цю кнопку, щоб поститися вперед пісню';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Натисніть і утримуйте цю кнопку, щоб перемотати пісню';
+  String get previousButtonNowPlayingTutorialText =>
+      'Натисніть і утримуйте цю кнопку, щоб перемотати пісню';
 
   @override
-  String get deviceControlSearchTutorialText => 'Злегка перемістіть великий палець навколо колеса, щоб виділити алфавіт';
+  String get deviceControlSearchTutorialText =>
+      'Злегка перемістіть великий палець навколо колеса, щоб виділити алфавіт';
 
   @override
-  String get centerButtonSearchTutorialText => 'Натисніть кнопку Центру, щоб вибрати виділений алфавіт';
+  String get centerButtonSearchTutorialText =>
+      'Натисніть кнопку Центру, щоб вибрати виділений алфавіт';
 
   @override
-  String get nextButtonSearchTutorialText => 'Натисніть цю кнопку, щоб додати простір';
+  String get nextButtonSearchTutorialText =>
+      'Натисніть цю кнопку, щоб додати простір';
 
   @override
-  String get previousButtonSearchTutorialText => 'Натисніть цю кнопку, щоб видалити останній символ';
+  String get previousButtonSearchTutorialText =>
+      'Натисніть цю кнопку, щоб видалити останній символ';
 
   @override
-  String get menuButtonSearchTutorialText => 'Натисніть цю кнопку, щоб закрити клавіатуру та взаємодіяти з результатами пошуку';
+  String get menuButtonSearchTutorialText =>
+      'Натисніть цю кнопку, щоб закрити клавіатуру та взаємодіяти з результатами пошуку';
 }

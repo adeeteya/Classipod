@@ -15,16 +15,20 @@ class AppLocalizationsMn extends AppLocalizations {
   String get menuButtonText => 'Хоолны нэрс';
 
   @override
-  String get audioAccessPermissionTitle => 'Аудио нэвтрэх зөвшөөрөл шаардлагатай байна';
+  String get audioAccessPermissionTitle =>
+      'Аудио нэвтрэх зөвшөөрөл шаардлагатай байна';
 
   @override
-  String get audioAccessPermissionContent => 'Хөгжмийн файлуудаа тоглох боломжийг олгохын тулд аудио файлууд нэвтрэх боломжтой.';
+  String get audioAccessPermissionContent =>
+      'Хөгжмийн файлуудаа тоглох боломжийг олгохын тулд аудио файлууд нэвтрэх боломжтой.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Аудио нэвтрэх зөвшөөрөл татгалзсан';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Аудио нэвтрэх зөвшөөрөл татгалзсан';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Төхөөрөмжийн тохиргоонд нэвтрэхэд аудио файлд хандах боломжтой.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Төхөөрөмжийн тохиргоонд нэвтрэхэд аудио файлд хандах боломжтой.';
 
   @override
   String get menuScreenTitle => 'Хоолны нэрс';
@@ -63,7 +67,6 @@ class AppLocalizationsMn extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsMn extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsMn extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Хүрэхийнх';
 
   @override
-  String get touchSoundsDialogContent => 'Системийн тохиргооноос SEAL SELESTS-ээс SEARD SELDINGS-ийг идэвхжүүлнэ үү';
+  String get touchSoundsDialogContent =>
+      'Системийн тохиргооноос SEAL SELESTS-ээс SEARD SELDINGS-ийг идэвхжүүлнэ үү';
 
   @override
   String get immersiveModeSettingTitle => 'Дүрсний горим';
@@ -144,7 +147,8 @@ class AppLocalizationsMn extends AppLocalizations {
   String get donateSettingTitle => 'Бэлэглэх';
 
   @override
-  String get donateSettingDescription => 'Хэрэв танд энэ апп таалагдаж байвал хандив өгөхийг анхаарна уу.';
+  String get donateSettingDescription =>
+      'Хэрэв танд энэ апп таалагдаж байвал хандив өгөхийг анхаарна уу.';
 
   @override
   String get versionAboutScreenTitle => 'Таамаглал';
@@ -195,7 +199,8 @@ class AppLocalizationsMn extends AppLocalizations {
   String get retryButtonText => 'Уилах';
 
   @override
-  String get filePickerDialogTitle => 'Хөгжимд сканнердах директорыг сонгоно уу';
+  String get filePickerDialogTitle =>
+      'Хөгжимд сканнердах директорыг сонгоно уу';
 
   @override
   String get searchScreenTitle => 'Эрэл хайгуул хийх';
@@ -210,10 +215,12 @@ class AppLocalizationsMn extends AppLocalizations {
   String get resultsForText => 'Үр дүн:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Батерейны оновчлолыг идэвхгүй болгох';
+  String get disableBatteryOptimizationTitle =>
+      'Батерейны оновчлолыг идэвхгүй болгох';
 
   @override
-  String get disableBatteryOptimizationContent => 'Энэ програмын тохиргоог ашиглан энэ апп-ыг ашиглан хөгжмийн тоглолтыг ашиглахыг зөвшөөрнө үү.';
+  String get disableBatteryOptimizationContent =>
+      'Энэ програмын тохиргоог ашиглан энэ апп-ыг ашиглан хөгжмийн тоглолтыг ашиглахыг зөвшөөрнө үү.';
 
   @override
   String get languageScreenTitle => 'Хэл';
@@ -267,50 +274,64 @@ class AppLocalizationsMn extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Хөгжмийн файлуудыг сэргээх';
 
   @override
-  String get deviceControlMenuTutorialText => 'Цэсийг чиглүүлэхийн тулд товшиж эрхий хуруугаа нүүж ав';
+  String get deviceControlMenuTutorialText =>
+      'Цэсийг чиглүүлэхийн тулд товшиж эрхий хуруугаа нүүж ав';
 
   @override
   String get centerButtonMenuTutorialText => 'Тодруулсан цэсийг сонгоно уу';
 
   @override
-  String get playPauseMenuTutorialText => 'Дууг тоглох эсвэл түр зогсоохын тулд энэ товчийг дарна уу';
+  String get playPauseMenuTutorialText =>
+      'Дууг тоглох эсвэл түр зогсоохын тулд энэ товчийг дарна уу';
 
   @override
-  String get nextButtonMenuTutorialText => 'Дараагийн дуу руу шилжихийн тулд энэ товчийг дарна уу';
+  String get nextButtonMenuTutorialText =>
+      'Дараагийн дуу руу шилжихийн тулд энэ товчийг дарна уу';
 
   @override
-  String get previousButtonMenuTutorialText => 'Энэ товчийг дарж, өмнөх дуу руу буцах эсвэл буцах';
+  String get previousButtonMenuTutorialText =>
+      'Энэ товчийг дарж, өмнөх дуу руу буцах эсвэл буцах';
 
   @override
-  String get menuButtonTutorialText => 'Өмнөх цэс рүү буцахын тулд энэ товчийг дарна уу. Та үүнийг үндсэн цэс рүү шууд очихын тулд бусад дэлгэцээс үүнийг дарж, барьж болно.';
+  String get menuButtonTutorialText =>
+      'Өмнөх цэс рүү буцахын тулд энэ товчийг дарна уу. Та үүнийг үндсэн цэс рүү шууд очихын тулд бусад дэлгэцээс үүнийг дарж, барьж болно.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Энэ бол дэлгэцийн дэлгэц юм. Дэлгэц, хуваах дэлгэцийн горимыг анхдагчаар тохируулж, тохиргоонд тохируулж болно.';
+  String get deviceScreenMenuTutorialText =>
+      'Энэ бол дэлгэцийн дэлгэц юм. Дэлгэц, хуваах дэлгэцийн горимыг анхдагчаар тохируулж, тохиргоонд тохируулж болно.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Дууг тохируулахын тулд товшиж эрхий хуруугаа хөдөлгө';
+  String get deviceControlNowPlayingTutorialText =>
+      'Дууг тохируулахын тулд товшиж эрхий хуруугаа хөдөлгө';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Төвийн товчийг дарж, Scrubber Bar болон Sluffle Slider-ээр дамжуулан дугуйг дарна уу. Төвийг дараад Нэмэлт сонголтууд руу нэвтрэхийн тулд дарна уу.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Төвийн товчийг дарж, Scrubber Bar болон Sluffle Slider-ээр дамжуулан дугуйг дарна уу. Төвийг дараад Нэмэлт сонголтууд руу нэвтрэхийн тулд дарна уу.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Дууг хурдан дамжуулахын тулд энэ товчийг дараад барина уу';
+  String get nextButtonNowPlayingTutorialText =>
+      'Дууг хурдан дамжуулахын тулд энэ товчийг дараад барина уу';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Дууг буцаахын тулд энэ товчийг дараад барина уу';
+  String get previousButtonNowPlayingTutorialText =>
+      'Дууг буцаахын тулд энэ товчийг дараад барина уу';
 
   @override
-  String get deviceControlSearchTutorialText => 'Цагаан толгойн тодрохын тулд эрхий хуруугаа нүүж ав';
+  String get deviceControlSearchTutorialText =>
+      'Цагаан толгойн тодрохын тулд эрхий хуруугаа нүүж ав';
 
   @override
-  String get centerButtonSearchTutorialText => 'Тодруулсан цагаан толгойг сонгохын тулд төв товчийг дарна уу';
+  String get centerButtonSearchTutorialText =>
+      'Тодруулсан цагаан толгойг сонгохын тулд төв товчийг дарна уу';
 
   @override
   String get nextButtonSearchTutorialText => 'Энэ товчийг дарна уу';
 
   @override
-  String get previousButtonSearchTutorialText => 'Сүүлийн дүрийг устгахын тулд энэ товчийг дарна уу';
+  String get previousButtonSearchTutorialText =>
+      'Сүүлийн дүрийг устгахын тулд энэ товчийг дарна уу';
 
   @override
-  String get menuButtonSearchTutorialText => 'Гарыг хаахын тулд энэ товчийг дараад хайлтын үр дүнтэй харилцах';
+  String get menuButtonSearchTutorialText =>
+      'Гарыг хаахын тулд энэ товчийг дараад хайлтын үр дүнтэй харилцах';
 }

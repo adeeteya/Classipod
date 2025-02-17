@@ -18,13 +18,16 @@ class AppLocalizationsEo extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio -alira permeso bezonata';
 
   @override
-  String get audioAccessPermissionContent => 'Bonvolu koncedi sondosierojn aliron por permesi al ni ludi viajn muzikdosierojn.';
+  String get audioAccessPermissionContent =>
+      'Bonvolu koncedi sondosierojn aliron por permesi al ni ludi viajn muzikdosierojn.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio -alira permeso neita';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio -alira permeso neita';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Bonvolu koncedi sondosierojn aliron por ĉi tiu app en la aparataj agordoj por permesi al ni ludi viajn muzikdosierojn.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Bonvolu koncedi sondosierojn aliron por ĉi tiu app en la aparataj agordoj por permesi al ni ludi viajn muzikdosierojn.';
 
   @override
   String get menuScreenTitle => 'Menuo';
@@ -63,7 +66,6 @@ class AppLocalizationsEo extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsEo extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsEo extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Tuŝaj sonoj';
 
   @override
-  String get touchSoundsDialogContent => 'Bonvolu ebligi tuŝajn sonojn de sistemaj agordoj por aŭdi la klakajn radojn';
+  String get touchSoundsDialogContent =>
+      'Bonvolu ebligi tuŝajn sonojn de sistemaj agordoj por aŭdi la klakajn radojn';
 
   @override
   String get immersiveModeSettingTitle => 'Imersiva reĝimo';
@@ -144,7 +146,8 @@ class AppLocalizationsEo extends AppLocalizations {
   String get donateSettingTitle => 'Donaci';
 
   @override
-  String get donateSettingDescription => 'Se vi ŝatas ĉi tiun programon, bonvolu konsideri donaci.';
+  String get donateSettingDescription =>
+      'Se vi ŝatas ĉi tiun programon, bonvolu konsideri donaci.';
 
   @override
   String get versionAboutScreenTitle => 'Versio';
@@ -213,7 +216,8 @@ class AppLocalizationsEo extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Malŝalti baterian optimumigon';
 
   @override
-  String get disableBatteryOptimizationContent => 'Bonvolu malebligi baterian optimumigon por ĉi tiu app en la aparataj agordoj por permesi fonan reproduktadon de muziko.';
+  String get disableBatteryOptimizationContent =>
+      'Bonvolu malebligi baterian optimumigon por ĉi tiu app en la aparataj agordoj por permesi fonan reproduktadon de muziko.';
 
   @override
   String get languageScreenTitle => 'Lingvo';
@@ -267,50 +271,66 @@ class AppLocalizationsEo extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Reskanaj muzikdosieroj';
 
   @override
-  String get deviceControlMenuTutorialText => 'Movu vian dikfingron malpeze ĉirkaŭ la klaka rado por navigi la menuon';
+  String get deviceControlMenuTutorialText =>
+      'Movu vian dikfingron malpeze ĉirkaŭ la klaka rado por navigi la menuon';
 
   @override
-  String get centerButtonMenuTutorialText => 'Premu la centran butonon por elekti la reliefigitan menuon';
+  String get centerButtonMenuTutorialText =>
+      'Premu la centran butonon por elekti la reliefigitan menuon';
 
   @override
-  String get playPauseMenuTutorialText => 'Premu ĉi tiun butonon por ludi aŭ paŭzi kanton';
+  String get playPauseMenuTutorialText =>
+      'Premu ĉi tiun butonon por ludi aŭ paŭzi kanton';
 
   @override
-  String get nextButtonMenuTutorialText => 'Premu ĉi tiun butonon por salti al la sekva kanto';
+  String get nextButtonMenuTutorialText =>
+      'Premu ĉi tiun butonon por salti al la sekva kanto';
 
   @override
-  String get previousButtonMenuTutorialText => 'Premu ĉi tiun butonon por rebobini aŭ reiri al la antaŭa kanto';
+  String get previousButtonMenuTutorialText =>
+      'Premu ĉi tiun butonon por rebobini aŭ reiri al la antaŭa kanto';
 
   @override
-  String get menuButtonTutorialText => 'Premu ĉi tiun butonon por reiri al la antaŭa menuo. Vi povus premi kaj teni ĝin de iu ajn alia ekrano por rekte iri al la ĉefa menuo.';
+  String get menuButtonTutorialText =>
+      'Premu ĉi tiun butonon por reiri al la antaŭa menuo. Vi povus premi kaj teni ĝin de iu ajn alia ekrano por rekte iri al la ĉefa menuo.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Jen la ekrano. Tuŝekrano kaj Split -ekrana reĝimo estas ebligitaj defaŭlte kaj povas esti agorditaj plu en la agordoj.';
+  String get deviceScreenMenuTutorialText =>
+      'Jen la ekrano. Tuŝekrano kaj Split -ekrana reĝimo estas ebligitaj defaŭlte kaj povas esti agorditaj plu en la agordoj.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Movu vian dikfingron ĉirkaŭ la klaka rado por ĝustigi la volumon';
+  String get deviceControlNowPlayingTutorialText =>
+      'Movu vian dikfingron ĉirkaŭ la klaka rado por ĝustigi la volumon';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Premu la centran butonon por bicikli tra Seek Bar, Scrubber Bar kaj Shuffle Slider. Premu kaj tenu la centran butonon por aliri pliajn eblojn.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Premu la centran butonon por bicikli tra Seek Bar, Scrubber Bar kaj Shuffle Slider. Premu kaj tenu la centran butonon por aliri pliajn eblojn.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Premu kaj tenu ĉi tiun butonon por antaŭenigi la kanton';
+  String get nextButtonNowPlayingTutorialText =>
+      'Premu kaj tenu ĉi tiun butonon por antaŭenigi la kanton';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Premu kaj tenu ĉi tiun butonon por rebobini la kanton';
+  String get previousButtonNowPlayingTutorialText =>
+      'Premu kaj tenu ĉi tiun butonon por rebobini la kanton';
 
   @override
-  String get deviceControlSearchTutorialText => 'Movu vian dikfingron malpeze ĉirkaŭ la klakan radon por reliefigi alfabeton';
+  String get deviceControlSearchTutorialText =>
+      'Movu vian dikfingron malpeze ĉirkaŭ la klakan radon por reliefigi alfabeton';
 
   @override
-  String get centerButtonSearchTutorialText => 'Premu la centran butonon por elekti la reliefigitan alfabeton';
+  String get centerButtonSearchTutorialText =>
+      'Premu la centran butonon por elekti la reliefigitan alfabeton';
 
   @override
-  String get nextButtonSearchTutorialText => 'Premu ĉi tiun butonon por aldoni spacon';
+  String get nextButtonSearchTutorialText =>
+      'Premu ĉi tiun butonon por aldoni spacon';
 
   @override
-  String get previousButtonSearchTutorialText => 'Premu ĉi tiun butonon por forigi la lastan karakteron';
+  String get previousButtonSearchTutorialText =>
+      'Premu ĉi tiun butonon por forigi la lastan karakteron';
 
   @override
-  String get menuButtonSearchTutorialText => 'Premu ĉi tiun butonon por fermi la klavaron kaj interagi kun la serĉrezultoj';
+  String get menuButtonSearchTutorialText =>
+      'Premu ĉi tiun butonon por fermi la klavaron kaj interagi kun la serĉrezultoj';
 }

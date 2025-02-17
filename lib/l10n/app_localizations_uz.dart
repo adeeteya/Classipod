@@ -15,16 +15,20 @@ class AppLocalizationsUz extends AppLocalizations {
   String get menuButtonText => 'Menyu';
 
   @override
-  String get audioAccessPermissionTitle => 'Ovozga kirish uchun ruxsatnoma talab qilinadi';
+  String get audioAccessPermissionTitle =>
+      'Ovozga kirish uchun ruxsatnoma talab qilinadi';
 
   @override
-  String get audioAccessPermissionContent => 'Iltimos, musiqiy fayllaringizni o\'ynashga ruxsat berish uchun audio fayllar kiradi.';
+  String get audioAccessPermissionContent =>
+      'Iltimos, musiqiy fayllaringizni o\'ynashga ruxsat berish uchun audio fayllar kiradi.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio kirish uchun ruxsat rad etildi';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio kirish uchun ruxsat rad etildi';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Iltimos, audio fayllarni ushbu ilova uchun musiqa fayllaringizni o\'ynashga imkon berish uchun ushbu ilova uchun AUDIO fayllari uchun ruxsat bering.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Iltimos, audio fayllarni ushbu ilova uchun musiqa fayllaringizni o\'ynashga imkon berish uchun ushbu ilova uchun AUDIO fayllari uchun ruxsat bering.';
 
   @override
   String get menuScreenTitle => 'Menyu';
@@ -63,7 +67,6 @@ class AppLocalizationsUz extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsUz extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsUz extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Tovush tovushlar';
 
   @override
-  String get touchSoundsDialogContent => 'Iltimos, CLICK RUPRIGE tovushlarini eshitish uchun tizim sozlamalaridan teginish-ni yoqing';
+  String get touchSoundsDialogContent =>
+      'Iltimos, CLICK RUPRIGE tovushlarini eshitish uchun tizim sozlamalaridan teginish-ni yoqing';
 
   @override
   String get immersiveModeSettingTitle => 'Immer rejimi';
@@ -144,7 +147,8 @@ class AppLocalizationsUz extends AppLocalizations {
   String get donateSettingTitle => 'Xayr-ehson qilmoq';
 
   @override
-  String get donateSettingDescription => 'Agar sizga ushbu ilova yoqsa, iltimos, xayr-ehson qiling.';
+  String get donateSettingDescription =>
+      'Agar sizga ushbu ilova yoqsa, iltimos, xayr-ehson qiling.';
 
   @override
   String get versionAboutScreenTitle => 'Versiya';
@@ -195,7 +199,8 @@ class AppLocalizationsUz extends AppLocalizations {
   String get retryButtonText => 'Qaytadan urinib ko\'rmoq';
 
   @override
-  String get filePickerDialogTitle => 'Musiqani tekshirish uchun katalogni tanlang';
+  String get filePickerDialogTitle =>
+      'Musiqani tekshirish uchun katalogni tanlang';
 
   @override
   String get searchScreenTitle => 'Qidirish';
@@ -210,10 +215,12 @@ class AppLocalizationsUz extends AppLocalizations {
   String get resultsForText => 'Natija:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Batareyani optimallashtirishni o\'chiring';
+  String get disableBatteryOptimizationTitle =>
+      'Batareyani optimallashtirishni o\'chiring';
 
   @override
-  String get disableBatteryOptimizationContent => 'Iltimos, musiqa tinglashga ruxsat berish uchun ushbu ilova uchun batareyani optimallashtirishni o\'chiring.';
+  String get disableBatteryOptimizationContent =>
+      'Iltimos, musiqa tinglashga ruxsat berish uchun ushbu ilova uchun batareyani optimallashtirishni o\'chiring.';
 
   @override
   String get languageScreenTitle => 'Til';
@@ -267,50 +274,66 @@ class AppLocalizationsUz extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Refon musiqiy fayllari';
 
   @override
-  String get deviceControlMenuTutorialText => 'Menyuni boshqarish uchun CLICK g\'ildiragida bosh barmog\'ingizni engil siljiting';
+  String get deviceControlMenuTutorialText =>
+      'Menyuni boshqarish uchun CLICK g\'ildiragida bosh barmog\'ingizni engil siljiting';
 
   @override
-  String get centerButtonMenuTutorialText => 'Belgilangan menyu elementini tanlash uchun Markaz tugmasini bosing';
+  String get centerButtonMenuTutorialText =>
+      'Belgilangan menyu elementini tanlash uchun Markaz tugmasini bosing';
 
   @override
-  String get playPauseMenuTutorialText => 'Qo\'shiqni o\'ynash yoki pauza qilish uchun ushbu tugmani bosing';
+  String get playPauseMenuTutorialText =>
+      'Qo\'shiqni o\'ynash yoki pauza qilish uchun ushbu tugmani bosing';
 
   @override
-  String get nextButtonMenuTutorialText => 'Keyingi qo\'shiqqa o\'tish uchun ushbu tugmani bosing';
+  String get nextButtonMenuTutorialText =>
+      'Keyingi qo\'shiqqa o\'tish uchun ushbu tugmani bosing';
 
   @override
-  String get previousButtonMenuTutorialText => 'Oldingi qo\'shiqqa qaytish yoki orqaga qaytish uchun ushbu tugmani bosing';
+  String get previousButtonMenuTutorialText =>
+      'Oldingi qo\'shiqqa qaytish yoki orqaga qaytish uchun ushbu tugmani bosing';
 
   @override
-  String get menuButtonTutorialText => 'Oldingi menyuga qaytish uchun ushbu tugmani bosing. Siz boshqa biron bir ekrandan faqat asosiy menyuga o\'tish uchun ushlab turishingiz mumkin.';
+  String get menuButtonTutorialText =>
+      'Oldingi menyuga qaytish uchun ushbu tugmani bosing. Siz boshqa biron bir ekrandan faqat asosiy menyuga o\'tish uchun ushlab turishingiz mumkin.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Bu displey ekranidir. Sensorli ekran va satr ekran holati sukut bo\'yicha yoqilgan va keyingi sozlamalarda konfiguratsiya qilinishi mumkin.';
+  String get deviceScreenMenuTutorialText =>
+      'Bu displey ekranidir. Sensorli ekran va satr ekran holati sukut bo\'yicha yoqilgan va keyingi sozlamalarda konfiguratsiya qilinishi mumkin.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Ovoz balandligini sozlash uchun bosh barmog\'ingizni bosing';
+  String get deviceControlNowPlayingTutorialText =>
+      'Ovoz balandligini sozlash uchun bosh barmog\'ingizni bosing';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Barmoq panjarasi, skruber barda va aralash slayderni aylanib o\'tish uchun CARC tugmasini bosing. Qo\'shimcha variantlarga kirish uchun Markaz tugmasini bosing va ushlab turing.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Barmoq panjarasi, skruber barda va aralash slayderni aylanib o\'tish uchun CARC tugmasini bosing. Qo\'shimcha variantlarga kirish uchun Markaz tugmasini bosing va ushlab turing.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Qo\'shiqni oldinga o\'tkazish uchun ushbu tugmani bosing va ushlab turing';
+  String get nextButtonNowPlayingTutorialText =>
+      'Qo\'shiqni oldinga o\'tkazish uchun ushbu tugmani bosing va ushlab turing';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Qo\'shiqni orqaga qaytarish uchun ushbu tugmani bosing va ushlab turing';
+  String get previousButtonNowPlayingTutorialText =>
+      'Qo\'shiqni orqaga qaytarish uchun ushbu tugmani bosing va ushlab turing';
 
   @override
-  String get deviceControlSearchTutorialText => 'Alifboni ajratib ko\'rsatish uchun bosh barmog\'ingizni engil siljiting';
+  String get deviceControlSearchTutorialText =>
+      'Alifboni ajratib ko\'rsatish uchun bosh barmog\'ingizni engil siljiting';
 
   @override
-  String get centerButtonSearchTutorialText => 'Belgilangan alifboni tanlash uchun Markaz tugmasini bosing';
+  String get centerButtonSearchTutorialText =>
+      'Belgilangan alifboni tanlash uchun Markaz tugmasini bosing';
 
   @override
-  String get nextButtonSearchTutorialText => 'Kamerani qo\'shish uchun ushbu tugmani bosing';
+  String get nextButtonSearchTutorialText =>
+      'Kamerani qo\'shish uchun ushbu tugmani bosing';
 
   @override
-  String get previousButtonSearchTutorialText => 'So\'nggi belgini o\'chirish uchun ushbu tugmani bosing';
+  String get previousButtonSearchTutorialText =>
+      'So\'nggi belgini o\'chirish uchun ushbu tugmani bosing';
 
   @override
-  String get menuButtonSearchTutorialText => 'Klaviaturani yopish va qidirish natijalari bilan o\'zaro aloqada bo\'lish uchun ushbu tugmani bosing';
+  String get menuButtonSearchTutorialText =>
+      'Klaviaturani yopish va qidirish natijalari bilan o\'zaro aloqada bo\'lish uchun ushbu tugmani bosing';
 }

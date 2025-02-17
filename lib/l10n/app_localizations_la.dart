@@ -18,13 +18,16 @@ class AppLocalizationsLa extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio obvius permission required';
 
   @override
-  String get audioAccessPermissionContent => 'Quaeso concessione audio files aditus ut sino nobis ludere vestri musica files.';
+  String get audioAccessPermissionContent =>
+      'Quaeso concessione audio files aditus ut sino nobis ludere vestri musica files.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio obvius permission negavit';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio obvius permission negavit';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Quaeso concessione audio files aditum hoc app in fabrica occasus ut liceat nobis ludere vestri musica files.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Quaeso concessione audio files aditum hoc app in fabrica occasus ut liceat nobis ludere vestri musica files.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsLa extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsLa extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsLa extends AppLocalizations {
   String get touchSoundsDialogTitle => 'SINGULTO';
 
   @override
-  String get touchSoundsDialogContent => 'Placere enable tactus sonos a ratio occasus ut audire click rota sonos';
+  String get touchSoundsDialogContent =>
+      'Placere enable tactus sonos a ratio occasus ut audire click rota sonos';
 
   @override
   String get immersiveModeSettingTitle => 'Immersive modus';
@@ -144,7 +146,8 @@ class AppLocalizationsLa extends AppLocalizations {
   String get donateSettingTitle => 'DONO';
 
   @override
-  String get donateSettingDescription => 'Si vis hoc app, placere consideramus donando.';
+  String get donateSettingDescription =>
+      'Si vis hoc app, placere consideramus donando.';
 
   @override
   String get versionAboutScreenTitle => 'Verso';
@@ -213,7 +216,8 @@ class AppLocalizationsLa extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Disable altilium Optimization';
 
   @override
-  String get disableBatteryOptimizationContent => 'Placere disable altilium Optimization hoc app in fabrica occasus ut background playback ex musica.';
+  String get disableBatteryOptimizationContent =>
+      'Placere disable altilium Optimization hoc app in fabrica occasus ut background playback ex musica.';
 
   @override
   String get languageScreenTitle => 'LENTITUDO';
@@ -267,50 +271,66 @@ class AppLocalizationsLa extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Musica files';
 
   @override
-  String get deviceControlMenuTutorialText => 'Movere pollice leviter circa click rota ad navigare menu';
+  String get deviceControlMenuTutorialText =>
+      'Movere pollice leviter circa click rota ad navigare menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Torcular ad Centrum Puga pyga eligere in luce menu item';
+  String get centerButtonMenuTutorialText =>
+      'Torcular ad Centrum Puga pyga eligere in luce menu item';
 
   @override
-  String get playPauseMenuTutorialText => 'Torcular quod conjunctionem ad ludere vel mora canticum';
+  String get playPauseMenuTutorialText =>
+      'Torcular quod conjunctionem ad ludere vel mora canticum';
 
   @override
-  String get nextButtonMenuTutorialText => 'Torcular quod conjunctionem ad skip to altera carmen';
+  String get nextButtonMenuTutorialText =>
+      'Torcular quod conjunctionem ad skip to altera carmen';
 
   @override
-  String get previousButtonMenuTutorialText => 'Torcular quod conjunctionem ad rewind aut ire ad priorem carmen';
+  String get previousButtonMenuTutorialText =>
+      'Torcular quod conjunctionem ad rewind aut ire ad priorem carmen';
 
   @override
-  String get menuButtonTutorialText => 'Torcular quod conjunctionem ut ad priorem menu. Potuit premere et tenere ab aliquo screen ad directe ad pelagus menu.';
+  String get menuButtonTutorialText =>
+      'Torcular quod conjunctionem ut ad priorem menu. Potuit premere et tenere ab aliquo screen ad directe ad pelagus menu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Hoc est ostentationem screen. Tactus screen et split screen modus sunt enabled per default et potest configurari longius in occasus.';
+  String get deviceScreenMenuTutorialText =>
+      'Hoc est ostentationem screen. Tactus screen et split screen modus sunt enabled per default et potest configurari longius in occasus.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Movere pollicem circa click rota ad adjust in volumine';
+  String get deviceControlNowPlayingTutorialText =>
+      'Movere pollicem circa click rota ad adjust in volumine';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Torcular ad centrum puga pyga ad cycle per quaerite bar, scrubber talea et shuffle labor lapsus. Torcular et tenere centrum puga accedere additional optiones.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Torcular ad centrum puga pyga ad cycle per quaerite bar, scrubber talea et shuffle labor lapsus. Torcular et tenere centrum puga accedere additional optiones.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Torcular et hunc felis ieiunium deinceps carmen';
+  String get nextButtonNowPlayingTutorialText =>
+      'Torcular et hunc felis ieiunium deinceps carmen';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Torcular et teneat conjunctionem rewind carmen';
+  String get previousButtonNowPlayingTutorialText =>
+      'Torcular et teneat conjunctionem rewind carmen';
 
   @override
-  String get deviceControlSearchTutorialText => 'Movere pollice leviter circa click rota ad highlight a alphabeto';
+  String get deviceControlSearchTutorialText =>
+      'Movere pollice leviter circa click rota ad highlight a alphabeto';
 
   @override
-  String get centerButtonSearchTutorialText => 'Torcular ad Centrum Puga pyga eligere in luce alphabet';
+  String get centerButtonSearchTutorialText =>
+      'Torcular ad Centrum Puga pyga eligere in luce alphabet';
 
   @override
-  String get nextButtonSearchTutorialText => 'Torcular quod conjunctionem addere spatium';
+  String get nextButtonSearchTutorialText =>
+      'Torcular quod conjunctionem addere spatium';
 
   @override
-  String get previousButtonSearchTutorialText => 'Torcular quod conjunctionem delere ultimum mores';
+  String get previousButtonSearchTutorialText =>
+      'Torcular quod conjunctionem delere ultimum mores';
 
   @override
-  String get menuButtonSearchTutorialText => 'Torcular quod conjunctionem claudere keyboard et penitus per search results';
+  String get menuButtonSearchTutorialText =>
+      'Torcular quod conjunctionem claudere keyboard et penitus per search results';
 }

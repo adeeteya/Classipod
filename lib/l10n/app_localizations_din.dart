@@ -18,13 +18,16 @@ class AppLocalizationsDin extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Luɔɔi de Apɛi de Apɛi';
 
   @override
-  String get audioAccessPermissionContent => 'Yïn adhil ba athör ë pïŋ ë röl gäm ɣook bïk ɣok puɔ̈l buk käk ë pïŋdu looi.';
+  String get audioAccessPermissionContent =>
+      'Yïn adhil ba athör ë pïŋ ë röl gäm ɣook bïk ɣok puɔ̈l buk käk ë pïŋdu looi.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Kë ye piŋ në wëu ke 100 acï bɛ̈n lueel';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Kë ye piŋ në wëu ke 100 acï bɛ̈n lueel';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Yïn adhil ba athör ë pïŋ ë thok ë app kënë gäm ë thäät ë thäät yiic ago ɣok ya puɔ̈l buk athör ë thäät ë thäät ë thäät ë thäät.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Yïn adhil ba athör ë pïŋ ë thok ë app kënë gäm ë thäät ë thäät yiic ago ɣok ya puɔ̈l buk athör ë thäät ë thäät ë thäät ë thäät.';
 
   @override
   String get menuScreenTitle => 'kuïn';
@@ -63,7 +66,6 @@ class AppLocalizationsDin extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsDin extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsDin extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Tɛ̈n ë thɛɛr';
 
   @override
-  String get touchSoundsDialogContent => 'Tïŋ Kä lëu bïk röt looi tënë ɣän ke tɔ̈ɔ̈u bïk piŋ në röl de cök .';
+  String get touchSoundsDialogContent =>
+      'Tïŋ Kä lëu bïk röt looi tënë ɣän ke tɔ̈ɔ̈u bïk piŋ në röl de cök .';
 
   @override
   String get immersiveModeSettingTitle => 'Mööl rac';
@@ -144,7 +146,8 @@ class AppLocalizationsDin extends AppLocalizations {
   String get donateSettingTitle => 'Kuɔ̈l';
 
   @override
-  String get donateSettingDescription => 'Na nhiar app kënë, ke yïn lëu ba wëu gaam.';
+  String get donateSettingDescription =>
+      'Na nhiar app kënë, ke yïn lëu ba wëu gaam.';
 
   @override
   String get versionAboutScreenTitle => 'Wɛ̈t ye lueel';
@@ -195,7 +198,8 @@ class AppLocalizationsDin extends AppLocalizations {
   String get retryButtonText => 'Riɔɔk';
 
   @override
-  String get filePickerDialogTitle => 'Kuany kë bï kɔc jääm nhïïm tënë Scan në kë de Kä juëc .';
+  String get filePickerDialogTitle =>
+      'Kuany kë bï kɔc jääm nhïïm tënë Scan në kë de Kä juëc .';
 
   @override
   String get searchScreenTitle => 'Wïc';
@@ -213,7 +217,8 @@ class AppLocalizationsDin extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Tɛ̈ŋ de yic de kä ye röt waar';
 
   @override
-  String get disableBatteryOptimizationContent => 'Tääu ë lööŋ ke battery ë thäät ë app kënë në thäät ë thäät yiic ago thäät ë thäät ë thäät ë thäät ë thäät ë thäät.';
+  String get disableBatteryOptimizationContent =>
+      'Tääu ë lööŋ ke battery ë thäät ë app kënë në thäät ë thäät yiic ago thäät ë thäät ë thäät ë thäät ë thäät ë thäät.';
 
   @override
   String get languageScreenTitle => 'Thoŋ';
@@ -246,7 +251,8 @@ class AppLocalizationsDin extends AppLocalizations {
   String get addAlbumToOnTheGoPlaylist => 'Tääu Almu kë cï tääu në-Kë-Go';
 
   @override
-  String get removeSongFromThePlaylist => 'Tääu ë wël ë lëk tënë raan ë gɛ̈t athöör .';
+  String get removeSongFromThePlaylist =>
+      'Tääu ë wël ë lëk tënë raan ë gɛ̈t athöör .';
 
   @override
   String get allAlbums => 'Akut kedhiɛ';
@@ -267,50 +273,66 @@ class AppLocalizationsDin extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Kë yenë käŋ tɔ̈ɔ̈u thïn';
 
   @override
-  String get deviceControlMenuTutorialText => 'Tääu ë nhomdu piny në Cick Wheel yic ba lɔ në menu yic';
+  String get deviceControlMenuTutorialText =>
+      'Tääu ë nhomdu piny në Cick Wheel yic ba lɔ në menu yic';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tääu ë thëm de ciɛɛl ba kë cï nyuɔɔth de menu cï nyuɔɔth kuany';
+  String get centerButtonMenuTutorialText =>
+      'Tääu ë thëm de ciɛɛl ba kë cï nyuɔɔth de menu cï nyuɔɔth kuany';
 
   @override
-  String get playPauseMenuTutorialText => 'Tääu ë ye button kënë ba pol wala ba diɛt cɔk kääc';
+  String get playPauseMenuTutorialText =>
+      'Tääu ë ye button kënë ba pol wala ba diɛt cɔk kääc';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tääu ë ye button kënë ba lɔ nhial në diɛt kɔ̈k yiic .';
+  String get nextButtonMenuTutorialText =>
+      'Tääu ë ye button kënë ba lɔ nhial në diɛt kɔ̈k yiic .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tääu ë ye button kënë ba dhuɔ̈kciëën wala dhuk ciëën në diɛt thɛɛr .';
+  String get previousButtonMenuTutorialText =>
+      'Tääu ë ye button kënë ba dhuɔ̈kciëën wala dhuk ciëën në diɛt thɛɛr .';
 
   @override
-  String get menuButtonTutorialText => 'Tääu ë thäät käk yiic ba dhuk ciëën në thäät thɛɛr yiic. Yïn alëu ba thëm ku muk keek tënë gɛɛr de thëm dɛ̈t bï lɔ ë thëm dït.';
+  String get menuButtonTutorialText =>
+      'Tääu ë thäät käk yiic ba dhuk ciëën në thäät thɛɛr yiic. Yïn alëu ba thëm ku muk keek tënë gɛɛr de thëm dɛ̈t bï lɔ ë thëm dït.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Yen ee kë ye nyuɔɔth. Kë tɔ̈u nhial ku Sliden cï gɔ̈t nhial aye keek puɔ̈l në kä cï keek tääu thïn ku kaa lëu bï keek tääu në ɣän cï keek tääu thïn.';
+  String get deviceScreenMenuTutorialText =>
+      'Yen ee kë ye nyuɔɔth. Kë tɔ̈u nhial ku Sliden cï gɔ̈t nhial aye keek puɔ̈l në kä cï keek tääu thïn ku kaa lëu bï keek tääu në ɣän cï keek tääu thïn.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Tääu ë yï cin në Click Wheel yic ba kë dït ë nhom tääu thïn';
+  String get deviceControlNowPlayingTutorialText =>
+      'Tääu ë yï cin në Click Wheel yic ba kë dït ë nhom tääu thïn';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tääu ë thëm de Center ba thëm në thëm de bar, bar ë thëm ku thëm de thëm. Tääu ku dɔm ë thäät ë Center yiic ku yök kä juëc ë lööŋ.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tääu ë thëm de Center ba thëm në thëm de bar, bar ë thëm ku thëm de thëm. Tääu ku dɔm ë thäät ë Center yiic ku yök kä juëc ë lööŋ.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tääu ku muk ye button kënë ba diɛt lac tääu tueŋ .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tääu ku muk ye button kënë ba diɛt lac tääu tueŋ .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tääu ku dɔm ye button kënë ba diɛt bɛɛr kueen .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tääu ku dɔm ye button kënë ba diɛt bɛɛr kueen .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Tääu ë cindu yic në Cɔ̈k Wheel yic ba kë cï gɔ̈t në alfabet nyuɔɔth';
+  String get deviceControlSearchTutorialText =>
+      'Tääu ë cindu yic në Cɔ̈k Wheel yic ba kë cï gɔ̈t në alfabet nyuɔɔth';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tääu ë thëm de ciɛɛl ba kë cï juiir de alphabet kuany';
+  String get centerButtonSearchTutorialText =>
+      'Tääu ë thëm de ciɛɛl ba kë cï juiir de alphabet kuany';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tääu ë button kënë yic ba të lääu juak thïn .';
+  String get nextButtonSearchTutorialText =>
+      'Tääu ë button kënë yic ba të lääu juak thïn .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tääu ë button kënë yic ba kë tɔ̈u ciëën nyaai .';
+  String get previousButtonSearchTutorialText =>
+      'Tääu ë button kënë yic ba kë tɔ̈u ciëën nyaai .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tääu ë ye button kënë ba keyboard thiɔ̈ɔ̈k ku yök kë cï yök .';
+  String get menuButtonSearchTutorialText =>
+      'Tääu ë ye button kënë ba keyboard thiɔ̈ɔ̈k ku yök kë cï yök .';
 }

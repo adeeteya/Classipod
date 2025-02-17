@@ -18,13 +18,16 @@ class AppLocalizationsAs extends AppLocalizations {
   String get audioAccessPermissionTitle => 'অডিঅ\' অভিগম অনুমতিৰ প্ৰয়োজন';
 
   @override
-  String get audioAccessPermissionContent => 'অনুগ্ৰহ কৰি আপোনাৰ সংগীত ফাইলসমূহ বজাবলৈ অনুমতি দিবলৈ অডিঅ\' ফাইলসমূহ অভিগম প্ৰদান কৰক।';
+  String get audioAccessPermissionContent =>
+      'অনুগ্ৰহ কৰি আপোনাৰ সংগীত ফাইলসমূহ বজাবলৈ অনুমতি দিবলৈ অডিঅ\' ফাইলসমূহ অভিগম প্ৰদান কৰক।';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'অডিঅ\' অভিগম অনুমতি অস্বীকাৰ কৰা হৈছে';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'অডিঅ\' অভিগম অনুমতি অস্বীকাৰ কৰা হৈছে';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'আপোনাৰ সংগীত ফাইলসমূহ বজাবলৈ অনুমতি দিবলৈ অনুগ্ৰহ কৰি ডিভাইচ ছেটিংছত এই এপটোৰ বাবে অডিঅ\' ফাইলসমূহ প্ৰৱেশ প্ৰদান কৰক।';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'আপোনাৰ সংগীত ফাইলসমূহ বজাবলৈ অনুমতি দিবলৈ অনুগ্ৰহ কৰি ডিভাইচ ছেটিংছত এই এপটোৰ বাবে অডিঅ\' ফাইলসমূহ প্ৰৱেশ প্ৰদান কৰক।';
 
   @override
   String get menuScreenTitle => 'মেনু';
@@ -63,7 +66,6 @@ class AppLocalizationsAs extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsAs extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsAs extends AppLocalizations {
   String get touchSoundsDialogTitle => 'টাচ শব্দসমূহ';
 
   @override
-  String get touchSoundsDialogContent => 'ক্লিক চকা শব্দ শুনিবলৈ চিস্টেম ছেটিংছৰ পৰা স্পৰ্শ শব্দসমূহ সামৰ্থবান কৰক';
+  String get touchSoundsDialogContent =>
+      'ক্লিক চকা শব্দ শুনিবলৈ চিস্টেম ছেটিংছৰ পৰা স্পৰ্শ শব্দসমূহ সামৰ্থবান কৰক';
 
   @override
   String get immersiveModeSettingTitle => 'ইমাৰ্চিভ মোড';
@@ -144,7 +146,8 @@ class AppLocalizationsAs extends AppLocalizations {
   String get donateSettingTitle => 'দান কৰা';
 
   @override
-  String get donateSettingDescription => 'যদি আপুনি এই এপটো ভাল পায়, অনুগ্ৰহ কৰি দান কৰাৰ কথা চিন্তা কৰক।';
+  String get donateSettingDescription =>
+      'যদি আপুনি এই এপটো ভাল পায়, অনুগ্ৰহ কৰি দান কৰাৰ কথা চিন্তা কৰক।';
 
   @override
   String get versionAboutScreenTitle => 'সংস্কৰণ';
@@ -195,7 +198,8 @@ class AppLocalizationsAs extends AppLocalizations {
   String get retryButtonText => 'পুনৰ চেষ্টা কৰক';
 
   @override
-  String get filePickerDialogTitle => 'সংগীতৰ বাবে স্কেন কৰিবলৈ এটা ডাইৰেকটৰি নিৰ্ব্বাচন কৰক';
+  String get filePickerDialogTitle =>
+      'সংগীতৰ বাবে স্কেন কৰিবলৈ এটা ডাইৰেকটৰি নিৰ্ব্বাচন কৰক';
 
   @override
   String get searchScreenTitle => 'সন্ধান';
@@ -213,7 +217,8 @@ class AppLocalizationsAs extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'বেটাৰি অনুকূলন নিষ্ক্ৰিয় কৰক';
 
   @override
-  String get disableBatteryOptimizationContent => 'অনুগ্ৰহ কৰি ডিভাইচ ছেটিংছত এই এপৰ বাবে বেটাৰী অনুকূলন নিষ্ক্ৰিয় কৰক সংগীতৰ পটভূমি প্লেবেকৰ অনুমতি দিবলৈ।';
+  String get disableBatteryOptimizationContent =>
+      'অনুগ্ৰহ কৰি ডিভাইচ ছেটিংছত এই এপৰ বাবে বেটাৰী অনুকূলন নিষ্ক্ৰিয় কৰক সংগীতৰ পটভূমি প্লেবেকৰ অনুমতি দিবলৈ।';
 
   @override
   String get languageScreenTitle => 'ভাষা';
@@ -267,50 +272,66 @@ class AppLocalizationsAs extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Files';
 
   @override
-  String get deviceControlMenuTutorialText => 'মেনু নেভিগেট কৰিবলৈ ক্লিক চকাটোৰ চাৰিওফালে আপোনাৰ বুঢ়া আঙুলিটো লাহেকৈ লৰচৰ কৰক';
+  String get deviceControlMenuTutorialText =>
+      'মেনু নেভিগেট কৰিবলৈ ক্লিক চকাটোৰ চাৰিওফালে আপোনাৰ বুঢ়া আঙুলিটো লাহেকৈ লৰচৰ কৰক';
 
   @override
-  String get centerButtonMenuTutorialText => 'হাইলাইট কৰা মেনু বস্তু নিৰ্ব্বাচন কৰিবলে কেন্দ্ৰ বুটাম টিপক';
+  String get centerButtonMenuTutorialText =>
+      'হাইলাইট কৰা মেনু বস্তু নিৰ্ব্বাচন কৰিবলে কেন্দ্ৰ বুটাম টিপক';
 
   @override
-  String get playPauseMenuTutorialText => 'এটা গীত বজাবলৈ বা বিৰাম দিবলৈ এই বুটাম টিপক';
+  String get playPauseMenuTutorialText =>
+      'এটা গীত বজাবলৈ বা বিৰাম দিবলৈ এই বুটাম টিপক';
 
   @override
-  String get nextButtonMenuTutorialText => 'পৰৱৰ্তী গীতলৈ এৰি যাবলৈ এই বুটাম টিপক';
+  String get nextButtonMenuTutorialText =>
+      'পৰৱৰ্তী গীতলৈ এৰি যাবলৈ এই বুটাম টিপক';
 
   @override
-  String get previousButtonMenuTutorialText => 'এই বুটামটো টিপক বা পূৰ্বৱৰ্তী গীতলৈ উভতি যাওক';
+  String get previousButtonMenuTutorialText =>
+      'এই বুটামটো টিপক বা পূৰ্বৱৰ্তী গীতলৈ উভতি যাওক';
 
   @override
-  String get menuButtonTutorialText => 'পূৰ্বৰ মেনুলৈ উভতি যাবলৈ এই বুটাম টিপক। আপুনি ইয়াক অন্য যিকোনো পৰ্দাৰ পৰা টিপি ধৰি ৰাখিব পাৰিব যাতে প্ৰত্যক্ষভাৱে মূল মেনুলৈ যাব পাৰে।';
+  String get menuButtonTutorialText =>
+      'পূৰ্বৰ মেনুলৈ উভতি যাবলৈ এই বুটাম টিপক। আপুনি ইয়াক অন্য যিকোনো পৰ্দাৰ পৰা টিপি ধৰি ৰাখিব পাৰিব যাতে প্ৰত্যক্ষভাৱে মূল মেনুলৈ যাব পাৰে।';
 
   @override
-  String get deviceScreenMenuTutorialText => 'এইটো হৈছে ডিছপ্লে স্ক্ৰীণ। টাচ স্ক্ৰীণ আৰু বিভক্ত পৰ্দা ধৰণ অবিকল্পিতভাৱে সামৰ্থবান কৰা হয় আৰু সংহতিসমূহত অধিক বিন্যাস কৰিব পাৰি।';
+  String get deviceScreenMenuTutorialText =>
+      'এইটো হৈছে ডিছপ্লে স্ক্ৰীণ। টাচ স্ক্ৰীণ আৰু বিভক্ত পৰ্দা ধৰণ অবিকল্পিতভাৱে সামৰ্থবান কৰা হয় আৰু সংহতিসমূহত অধিক বিন্যাস কৰিব পাৰি।';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'আয়তন সামঞ্জস্য কৰিবলৈ ক্লিক চকাৰ চাৰিওফালে আপোনাৰ বুঢ়া আঙুলি লৰচৰ কৰক';
+  String get deviceControlNowPlayingTutorialText =>
+      'আয়তন সামঞ্জস্য কৰিবলৈ ক্লিক চকাৰ চাৰিওফালে আপোনাৰ বুঢ়া আঙুলি লৰচৰ কৰক';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'ছিক বাৰ, স্ক্ৰাবাৰ বাৰ আৰু শ্বাফেল স্লাইডাৰৰ মাজেৰে চাইকেল চলাবলৈ কেন্দ্ৰ বুটাম টিপক। অতিৰিক্ত বিকল্পসমূহ অভিগম কৰিবলে কেন্দ্ৰ বুটাম টিপক আৰু ধৰি ৰাখক।';
+  String get centerButtonNowPlayingTutorialText =>
+      'ছিক বাৰ, স্ক্ৰাবাৰ বাৰ আৰু শ্বাফেল স্লাইডাৰৰ মাজেৰে চাইকেল চলাবলৈ কেন্দ্ৰ বুটাম টিপক। অতিৰিক্ত বিকল্পসমূহ অভিগম কৰিবলে কেন্দ্ৰ বুটাম টিপক আৰু ধৰি ৰাখক।';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'গীতটো দ্ৰুতভাৱে আগুৱাই নিবলৈ এই বুটামটো টিপি ধৰি ৰাখক';
+  String get nextButtonNowPlayingTutorialText =>
+      'গীতটো দ্ৰুতভাৱে আগুৱাই নিবলৈ এই বুটামটো টিপি ধৰি ৰাখক';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'গীতটো পুনৰ ঘূৰাই দিবলৈ এই বুটামটো টিপি ধৰি ৰাখক';
+  String get previousButtonNowPlayingTutorialText =>
+      'গীতটো পুনৰ ঘূৰাই দিবলৈ এই বুটামটো টিপি ধৰি ৰাখক';
 
   @override
-  String get deviceControlSearchTutorialText => 'এটা বৰ্ণমালা হাইলাইট কৰিবলৈ ক্লিক চকাটোৰ চাৰিওফালে আপোনাৰ বুঢ়া আঙুলিটো লাহেকৈ লৰচৰ কৰক';
+  String get deviceControlSearchTutorialText =>
+      'এটা বৰ্ণমালা হাইলাইট কৰিবলৈ ক্লিক চকাটোৰ চাৰিওফালে আপোনাৰ বুঢ়া আঙুলিটো লাহেকৈ লৰচৰ কৰক';
 
   @override
-  String get centerButtonSearchTutorialText => 'হাইলাইট কৰা বৰ্ণমালা নিৰ্ব্বাচন কৰিবলে কেন্দ্ৰ বুটাম টিপক';
+  String get centerButtonSearchTutorialText =>
+      'হাইলাইট কৰা বৰ্ণমালা নিৰ্ব্বাচন কৰিবলে কেন্দ্ৰ বুটাম টিপক';
 
   @override
-  String get nextButtonSearchTutorialText => 'এটা স্থান যোগ কৰিবলৈ এই বুটাম টিপক';
+  String get nextButtonSearchTutorialText =>
+      'এটা স্থান যোগ কৰিবলৈ এই বুটাম টিপক';
 
   @override
-  String get previousButtonSearchTutorialText => 'শেষ আখৰ মচি পেলাবলৈ এই বুটাম টিপক';
+  String get previousButtonSearchTutorialText =>
+      'শেষ আখৰ মচি পেলাবলৈ এই বুটাম টিপক';
 
   @override
-  String get menuButtonSearchTutorialText => 'এই বুটামটো টিপক কিবৰ্ড বন্ধ কৰিবলৈ আৰু সন্ধান ফলাফলৰ সৈতে যোগাযোগ কৰক';
+  String get menuButtonSearchTutorialText =>
+      'এই বুটামটো টিপক কিবৰ্ড বন্ধ কৰিবলৈ আৰু সন্ধান ফলাফলৰ সৈতে যোগাযোগ কৰক';
 }

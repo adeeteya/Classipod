@@ -15,16 +15,20 @@ class AppLocalizationsUg extends AppLocalizations {
   String get menuButtonText => 'تىزىملىك';
 
   @override
-  String get audioAccessPermissionTitle => 'ئاۋازلىق زىيارەت ئىجازەتنامىسى تەلەپ قىلىنىدۇ';
+  String get audioAccessPermissionTitle =>
+      'ئاۋازلىق زىيارەت ئىجازەتنامىسى تەلەپ قىلىنىدۇ';
 
   @override
-  String get audioAccessPermissionContent => 'ئاۋازلىق ھۆججەتلىرىڭىزنى زىيارەت قىلىشىمىزغا ياردەم قىلىڭ.';
+  String get audioAccessPermissionContent =>
+      'ئاۋازلىق ھۆججەتلىرىڭىزنى زىيارەت قىلىشىمىزغا ياردەم قىلىڭ.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ئۈندىدار قايتۇرۇش ئىجازەتنامىسى رەت قىلىندى';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ئۈندىدار قايتۇرۇش ئىجازەتنامىسى رەت قىلىندى';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'ئۈسكۈنىنىڭ تەڭشەكلىرىدىكى بۇ دېتالنىڭ ھۆججەتلىرىنى زىيارەت قىلىشىمىزغا يول قويۇڭ.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'ئۈسكۈنىنىڭ تەڭشەكلىرىدىكى بۇ دېتالنىڭ ھۆججەتلىرىنى زىيارەت قىلىشىمىزغا يول قويۇڭ.';
 
   @override
   String get menuScreenTitle => 'تىزىملىك';
@@ -63,7 +67,6 @@ class AppLocalizationsUg extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsUg extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsUg extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch Sounds';
 
   @override
-  String get touchSoundsDialogContent => 'سىستېما تەڭشىكىدىن چەكمە ئاۋازلارنى قوزغىتىڭ';
+  String get touchSoundsDialogContent =>
+      'سىستېما تەڭشىكىدىن چەكمە ئاۋازلارنى قوزغىتىڭ';
 
   @override
   String get immersiveModeSettingTitle => 'چاقىرىش ھالىتى';
@@ -144,7 +147,8 @@ class AppLocalizationsUg extends AppLocalizations {
   String get donateSettingTitle => 'ئىئانە قىلىڭ';
 
   @override
-  String get donateSettingDescription => 'ئەگەر بۇ ئەپنى ياقتۇرسىڭىز, ئىئانە قىلىشنى ئويلىشىڭ.';
+  String get donateSettingDescription =>
+      'ئەگەر بۇ ئەپنى ياقتۇرسىڭىز, ئىئانە قىلىشنى ئويلىشىڭ.';
 
   @override
   String get versionAboutScreenTitle => 'نەشرى';
@@ -195,7 +199,8 @@ class AppLocalizationsUg extends AppLocalizations {
   String get retryButtonText => 'قايتا سىناڭ';
 
   @override
-  String get filePickerDialogTitle => 'مۇزىكىنى سايىلەش ئۈچۈن مۇندەرىجىنى تاللاڭ';
+  String get filePickerDialogTitle =>
+      'مۇزىكىنى سايىلەش ئۈچۈن مۇندەرىجىنى تاللاڭ';
 
   @override
   String get searchScreenTitle => 'ئىزدەش';
@@ -210,10 +215,12 @@ class AppLocalizationsUg extends AppLocalizations {
   String get resultsForText => 'نەتىجە:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'باتارېيە ئەلالاشتۇرۇشنى چەكلەش';
+  String get disableBatteryOptimizationTitle =>
+      'باتارېيە ئەلالاشتۇرۇشنى چەكلەش';
 
   @override
-  String get disableBatteryOptimizationContent => 'ئۈسكۈنىنىڭ تەڭشەكلىرىگە باتارېيە نەشرىدىكى باتارېيە ئەلالاشتۇرۇشىنى چەكلەش.';
+  String get disableBatteryOptimizationContent =>
+      'ئۈسكۈنىنىڭ تەڭشەكلىرىگە باتارېيە نەشرىدىكى باتارېيە ئەلالاشتۇرۇشىنى چەكلەش.';
 
   @override
   String get languageScreenTitle => 'تىل';
@@ -267,50 +274,65 @@ class AppLocalizationsUg extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'قۇتقۇزۇش مۇزىكا ھۆججىتى';
 
   @override
-  String get deviceControlMenuTutorialText => 'باش بارمىقىڭىزنى چېكىپ تىزىملىكنى چېكىپ تىزىملىككە يۆتكىڭ';
+  String get deviceControlMenuTutorialText =>
+      'باش بارمىقىڭىزنى چېكىپ تىزىملىكنى چېكىپ تىزىملىككە يۆتكىڭ';
 
   @override
   String get centerButtonMenuTutorialText => 'چوڭ تىزىملىك ​​تۈرىنى تاللاڭ';
 
   @override
-  String get playPauseMenuTutorialText => 'بۇ كۇنۇپكىنى بېسىپ ناخشىنى قويۇش ياكى توختىتىش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ';
+  String get playPauseMenuTutorialText =>
+      'بۇ كۇنۇپكىنى بېسىپ ناخشىنى قويۇش ياكى توختىتىش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ';
 
   @override
-  String get nextButtonMenuTutorialText => 'كېيىنكى ناخشىغا ئاتلىنىش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ';
+  String get nextButtonMenuTutorialText =>
+      'كېيىنكى ناخشىغا ئاتلىنىش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ';
 
   @override
-  String get previousButtonMenuTutorialText => 'بۇ كۇنۇپكىنى بېسىپ ئىلگىرىكى ناخشىغا قايتىڭ ياكى قاينىتىڭ';
+  String get previousButtonMenuTutorialText =>
+      'بۇ كۇنۇپكىنى بېسىپ ئىلگىرىكى ناخشىغا قايتىڭ ياكى قاينىتىڭ';
 
   @override
-  String get menuButtonTutorialText => 'بۇ كۇنۇپكىنى بېسىپ ئالدىنقى تىزىملىككە قايتىڭ. ئۇنى باشقا ئېكراندىن بىۋاسىتە تىزىملىككە بارالايسىز ۋە تۇتالايسىز.';
+  String get menuButtonTutorialText =>
+      'بۇ كۇنۇپكىنى بېسىپ ئالدىنقى تىزىملىككە قايتىڭ. ئۇنى باشقا ئېكراندىن بىۋاسىتە تىزىملىككە بارالايسىز ۋە تۇتالايسىز.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'بۇ كۆرسىتىش ئېكرانى. سۈكۈتتىكى ھالەتتە سېزىمچان ئېكران ۋە بۆلۈش ھالىتى قوزغىتىلغان بولۇپ, تەڭشەكلەردە تېخىمۇ چوڭ چەكلىگىلى بولىدۇ.';
+  String get deviceScreenMenuTutorialText =>
+      'بۇ كۆرسىتىش ئېكرانى. سۈكۈتتىكى ھالەتتە سېزىمچان ئېكران ۋە بۆلۈش ھالىتى قوزغىتىلغان بولۇپ, تەڭشەكلەردە تېخىمۇ چوڭ چەكلىگىلى بولىدۇ.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'باش بارمىقىڭىزنى چېكىپ ئاۋازنى تەڭشەش ئۈچۈن چېكىڭ';
+  String get deviceControlNowPlayingTutorialText =>
+      'باش بارمىقىڭىزنى چېكىپ ئاۋازنى تەڭشەش ئۈچۈن چېكىڭ';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'مەركەزنى بېسىپ ئۆتۈش بالدىكنى بېسىپ ئۆگزىسى, سۈرتكۈچ بالداق ۋە Shuffle Sliffer ئارقىلىق دەۋرىيلەڭ. قوشۇمچە تاللاشلارنى زىيارەت قىلىش ئۈچۈن مەركىزى كۇنۇپكىنى بېسىڭ.';
+  String get centerButtonNowPlayingTutorialText =>
+      'مەركەزنى بېسىپ ئۆتۈش بالدىكنى بېسىپ ئۆگزىسى, سۈرتكۈچ بالداق ۋە Shuffle Sliffer ئارقىلىق دەۋرىيلەڭ. قوشۇمچە تاللاشلارنى زىيارەت قىلىش ئۈچۈن مەركىزى كۇنۇپكىنى بېسىڭ.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'بۇ كۇنۇپكىنى بېسىپ بۇ كۇنۇپكىنى بېسىڭ';
+  String get nextButtonNowPlayingTutorialText =>
+      'بۇ كۇنۇپكىنى بېسىپ بۇ كۇنۇپكىنى بېسىڭ';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'بۇ كۇنۇپكىنى بېسىپ بۇ كۇنۇپكىنى بېسىپ ناخشىنى ئەسلىگە كەلتۈرۈڭ';
+  String get previousButtonNowPlayingTutorialText =>
+      'بۇ كۇنۇپكىنى بېسىپ بۇ كۇنۇپكىنى بېسىپ ناخشىنى ئەسلىگە كەلتۈرۈڭ';
 
   @override
-  String get deviceControlSearchTutorialText => 'باش بارمىقىڭىزنى لامپۇچكىڭىزنى چېكىپ ئېلىپبەنى گەۋدىلەندۈرۈش ئۈچۈن چېكىڭ';
+  String get deviceControlSearchTutorialText =>
+      'باش بارمىقىڭىزنى لامپۇچكىڭىزنى چېكىپ ئېلىپبەنى گەۋدىلەندۈرۈش ئۈچۈن چېكىڭ';
 
   @override
-  String get centerButtonSearchTutorialText => 'مەركىزى كۇنۇپكىنى بېسىپ گەۋدىلەنگەن ئېلىپبەنى تاللاڭ';
+  String get centerButtonSearchTutorialText =>
+      'مەركىزى كۇنۇپكىنى بېسىپ گەۋدىلەنگەن ئېلىپبەنى تاللاڭ';
 
   @override
-  String get nextButtonSearchTutorialText => 'بوشلۇق قوشۇش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ';
+  String get nextButtonSearchTutorialText =>
+      'بوشلۇق قوشۇش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ';
 
   @override
-  String get previousButtonSearchTutorialText => 'بۇ كۇنۇپكىنى بېسىپ ئاخىرقى ھەرپنى ئۆچۈرۈڭ';
+  String get previousButtonSearchTutorialText =>
+      'بۇ كۇنۇپكىنى بېسىپ ئاخىرقى ھەرپنى ئۆچۈرۈڭ';
 
   @override
-  String get menuButtonSearchTutorialText => 'كۇنۇپكا تاختىسىنى ۋە ئىزدەش نەتىجىسىنى تاقاش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ';
+  String get menuButtonSearchTutorialText =>
+      'كۇنۇپكا تاختىسىنى ۋە ئىزدەش نەتىجىسىنى تاقاش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ';
 }

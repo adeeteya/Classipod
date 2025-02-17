@@ -18,13 +18,16 @@ class AppLocalizationsMl extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ഓഡിയോ ആക്സസ് അനുമതി ആവശ്യമാണ്';
 
   @override
-  String get audioAccessPermissionContent => 'നിങ്ങളുടെ സംഗീത ഫയലുകൾ പ്ലേ ചെയ്യാൻ ഞങ്ങളെ അനുവദിക്കുന്നതിന് ദയവായി ഓഡിയോ ഫയലുകൾ അനുവദിക്കുക.';
+  String get audioAccessPermissionContent =>
+      'നിങ്ങളുടെ സംഗീത ഫയലുകൾ പ്ലേ ചെയ്യാൻ ഞങ്ങളെ അനുവദിക്കുന്നതിന് ദയവായി ഓഡിയോ ഫയലുകൾ അനുവദിക്കുക.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ഓഡിയോ ആക്സസ് അനുമതി നിരസിച്ചു';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ഓഡിയോ ആക്സസ് അനുമതി നിരസിച്ചു';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'നിങ്ങളുടെ സംഗീത ഫയലുകൾ പ്ലേ ചെയ്യാൻ ഞങ്ങളെ അനുവദിക്കുന്നതിന് ഉപകരണ ക്രമീകരണങ്ങളിൽ ദയവായി ഓഡിയോ ഫയലുകൾ അനുവദിക്കുക.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'നിങ്ങളുടെ സംഗീത ഫയലുകൾ പ്ലേ ചെയ്യാൻ ഞങ്ങളെ അനുവദിക്കുന്നതിന് ഉപകരണ ക്രമീകരണങ്ങളിൽ ദയവായി ഓഡിയോ ഫയലുകൾ അനുവദിക്കുക.';
 
   @override
   String get menuScreenTitle => 'മെനു';
@@ -63,7 +66,6 @@ class AppLocalizationsMl extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsMl extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsMl extends AppLocalizations {
   String get touchSoundsDialogTitle => 'സ്പർശിക്കുക';
 
   @override
-  String get touchSoundsDialogContent => 'ക്ലിക്ക് വീൽ ശബ്ദങ്ങൾ കേൾക്കാൻ സിസ്റ്റം ക്രമീകരണങ്ങളിൽ നിന്ന് സ്പർശനങ്ങൾ പ്രാപ്തമാക്കുക';
+  String get touchSoundsDialogContent =>
+      'ക്ലിക്ക് വീൽ ശബ്ദങ്ങൾ കേൾക്കാൻ സിസ്റ്റം ക്രമീകരണങ്ങളിൽ നിന്ന് സ്പർശനങ്ങൾ പ്രാപ്തമാക്കുക';
 
   @override
   String get immersiveModeSettingTitle => 'അമൂർജ്ജ മോഡ്';
@@ -144,7 +146,8 @@ class AppLocalizationsMl extends AppLocalizations {
   String get donateSettingTitle => 'സംഭാവനചെയ്യുക';
 
   @override
-  String get donateSettingDescription => 'നിങ്ങൾക്ക് ഈ അപ്ലിക്കേഷൻ ഇഷ്ടമാണെങ്കിൽ, ദയവായി സംഭാവന ചെയ്യുക.';
+  String get donateSettingDescription =>
+      'നിങ്ങൾക്ക് ഈ അപ്ലിക്കേഷൻ ഇഷ്ടമാണെങ്കിൽ, ദയവായി സംഭാവന ചെയ്യുക.';
 
   @override
   String get versionAboutScreenTitle => 'ഭാഷം';
@@ -195,7 +198,8 @@ class AppLocalizationsMl extends AppLocalizations {
   String get retryButtonText => 'വീണ്ടുംരി ചെയ്യുക';
 
   @override
-  String get filePickerDialogTitle => 'സംഗീതത്തിനായി സ്കാൻ ചെയ്യുന്നതിന് ഒരു ഡയറക്ടറി തിരഞ്ഞെടുക്കുക';
+  String get filePickerDialogTitle =>
+      'സംഗീതത്തിനായി സ്കാൻ ചെയ്യുന്നതിന് ഒരു ഡയറക്ടറി തിരഞ്ഞെടുക്കുക';
 
   @override
   String get searchScreenTitle => 'അനേഷണം';
@@ -210,10 +214,12 @@ class AppLocalizationsMl extends AppLocalizations {
   String get resultsForText => 'ഇതിനുള്ള ഫലങ്ങൾ:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'ബാറ്ററി ഒപ്റ്റിമൈസേഷൻ അപ്രാപ്തമാക്കുക';
+  String get disableBatteryOptimizationTitle =>
+      'ബാറ്ററി ഒപ്റ്റിമൈസേഷൻ അപ്രാപ്തമാക്കുക';
 
   @override
-  String get disableBatteryOptimizationContent => 'സംഗീതത്തിന്റെ പശ്ചാത്തല പ്ലേബാക്ക് അനുവദിക്കുന്നതിന് ഉപകരണ ക്രമീകരണങ്ങളിൽ ദയവായി ഈ അപ്ലിക്കേഷനായി ബാറ്ററി ഒപ്റ്റിമൈസേഷൻ അപ്രാപ്തമാക്കുക.';
+  String get disableBatteryOptimizationContent =>
+      'സംഗീതത്തിന്റെ പശ്ചാത്തല പ്ലേബാക്ക് അനുവദിക്കുന്നതിന് ഉപകരണ ക്രമീകരണങ്ങളിൽ ദയവായി ഈ അപ്ലിക്കേഷനായി ബാറ്ററി ഒപ്റ്റിമൈസേഷൻ അപ്രാപ്തമാക്കുക.';
 
   @override
   String get languageScreenTitle => 'ഭാഷ';
@@ -267,50 +273,66 @@ class AppLocalizationsMl extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'റിസർച്ച് മ്യൂസിക് ഫയലുകൾ';
 
   @override
-  String get deviceControlMenuTutorialText => 'മെനു നാവിഗേറ്റുചെയ്യുന്നതിന് ക്ലിക്ക് ചക്രത്തിന് ചുറ്റും നിങ്ങളുടെ തള്ളവിരൽ ലഘുവായി നീക്കുക';
+  String get deviceControlMenuTutorialText =>
+      'മെനു നാവിഗേറ്റുചെയ്യുന്നതിന് ക്ലിക്ക് ചക്രത്തിന് ചുറ്റും നിങ്ങളുടെ തള്ളവിരൽ ലഘുവായി നീക്കുക';
 
   @override
-  String get centerButtonMenuTutorialText => 'ഹൈലൈറ്റ് ചെയ്ത മെനു ഇനം തിരഞ്ഞെടുക്കാൻ സെന്റർ ബട്ടൺ അമർത്തുക';
+  String get centerButtonMenuTutorialText =>
+      'ഹൈലൈറ്റ് ചെയ്ത മെനു ഇനം തിരഞ്ഞെടുക്കാൻ സെന്റർ ബട്ടൺ അമർത്തുക';
 
   @override
-  String get playPauseMenuTutorialText => 'ഒരു ഗാനം പ്ലേ ചെയ്യാനോ താൽക്കാലികമായി നിർത്താനോ ഈ ബട്ടൺ അമർത്തുക';
+  String get playPauseMenuTutorialText =>
+      'ഒരു ഗാനം പ്ലേ ചെയ്യാനോ താൽക്കാലികമായി നിർത്താനോ ഈ ബട്ടൺ അമർത്തുക';
 
   @override
-  String get nextButtonMenuTutorialText => 'അടുത്ത ഗാനത്തിലേക്ക് ഒഴിവാക്കാൻ ഈ ബട്ടൺ അമർത്തുക';
+  String get nextButtonMenuTutorialText =>
+      'അടുത്ത ഗാനത്തിലേക്ക് ഒഴിവാക്കാൻ ഈ ബട്ടൺ അമർത്തുക';
 
   @override
-  String get previousButtonMenuTutorialText => 'റിവൈൻഡ് ചെയ്യുന്നതിന് ഈ ബട്ടൺ അമർത്തുക അല്ലെങ്കിൽ മുമ്പത്തെ ഗാനത്തിലേക്ക് മടങ്ങുക';
+  String get previousButtonMenuTutorialText =>
+      'റിവൈൻഡ് ചെയ്യുന്നതിന് ഈ ബട്ടൺ അമർത്തുക അല്ലെങ്കിൽ മുമ്പത്തെ ഗാനത്തിലേക്ക് മടങ്ങുക';
 
   @override
-  String get menuButtonTutorialText => 'മുമ്പത്തെ മെനുവിലേക്ക് മടങ്ങുന്നതിന് ഈ ബട്ടൺ അമർത്തുക. പ്രധാന മെനുവിലേക്ക് നേരിട്ട് പോകാൻ നിങ്ങൾക്ക് മറ്റേതെങ്കിലും സ്ക്രീനിൽ നിന്നും അത് അമർത്തിപ്പിടിക്കാം.';
+  String get menuButtonTutorialText =>
+      'മുമ്പത്തെ മെനുവിലേക്ക് മടങ്ങുന്നതിന് ഈ ബട്ടൺ അമർത്തുക. പ്രധാന മെനുവിലേക്ക് നേരിട്ട് പോകാൻ നിങ്ങൾക്ക് മറ്റേതെങ്കിലും സ്ക്രീനിൽ നിന്നും അത് അമർത്തിപ്പിടിക്കാം.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ഇതാണ് ഡിസ്പ്ലേ സ്ക്രീൻ. ടച്ച് സ്ക്രീനും സ്പ്ലിറ്റ് സ്ക്രീൻ മോഡും സ്ഥിരസ്ഥിതിയായി പ്രാപ്തമാക്കി, അവ ക്രമീകരണങ്ങളിൽ ക്രമീകരിക്കാൻ കഴിയും.';
+  String get deviceScreenMenuTutorialText =>
+      'ഇതാണ് ഡിസ്പ്ലേ സ്ക്രീൻ. ടച്ച് സ്ക്രീനും സ്പ്ലിറ്റ് സ്ക്രീൻ മോഡും സ്ഥിരസ്ഥിതിയായി പ്രാപ്തമാക്കി, അവ ക്രമീകരണങ്ങളിൽ ക്രമീകരിക്കാൻ കഴിയും.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'വോളിയം ക്രമീകരിക്കുന്നതിന് ക്ലിക്ക് ചക്രത്തിന് ചുറ്റും നിങ്ങളുടെ തള്ളവിരൽ നീക്കുക';
+  String get deviceControlNowPlayingTutorialText =>
+      'വോളിയം ക്രമീകരിക്കുന്നതിന് ക്ലിക്ക് ചക്രത്തിന് ചുറ്റും നിങ്ങളുടെ തള്ളവിരൽ നീക്കുക';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'ടിച്ച് ബാർ, സ്ക്രബ്ബർ ബാർ, ഷഫിൾ സ്ലൈഡർ എന്നിവയിലൂടെ സൈക്കിളിലേക്ക് സെന്റർ ബട്ടൺ അമർത്തുക. അധിക ഓപ്ഷനുകൾ ആക്സസ് ചെയ്യുന്നതിന് സെന്റർ ബട്ടൺ അമർത്തിപ്പിടിക്കുക.';
+  String get centerButtonNowPlayingTutorialText =>
+      'ടിച്ച് ബാർ, സ്ക്രബ്ബർ ബാർ, ഷഫിൾ സ്ലൈഡർ എന്നിവയിലൂടെ സൈക്കിളിലേക്ക് സെന്റർ ബട്ടൺ അമർത്തുക. അധിക ഓപ്ഷനുകൾ ആക്സസ് ചെയ്യുന്നതിന് സെന്റർ ബട്ടൺ അമർത്തിപ്പിടിക്കുക.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'പാട്ട് വേഗത്തിൽ കൈമാറാൻ ഈ ബട്ടൺ അമർത്തിപ്പിടിക്കുക';
+  String get nextButtonNowPlayingTutorialText =>
+      'പാട്ട് വേഗത്തിൽ കൈമാറാൻ ഈ ബട്ടൺ അമർത്തിപ്പിടിക്കുക';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'പാട്ട് റിവൈൻഡ് ചെയ്യുന്നതിന് ഈ ബട്ടൺ അമർത്തിപ്പിടിക്കുക';
+  String get previousButtonNowPlayingTutorialText =>
+      'പാട്ട് റിവൈൻഡ് ചെയ്യുന്നതിന് ഈ ബട്ടൺ അമർത്തിപ്പിടിക്കുക';
 
   @override
-  String get deviceControlSearchTutorialText => 'ഒരു അക്ഷരമാല ഹൈലൈറ്റ് ചെയ്യുന്നതിന് നിങ്ങളുടെ തള്ളവിരൽ ലഘുവായി നീക്കുക';
+  String get deviceControlSearchTutorialText =>
+      'ഒരു അക്ഷരമാല ഹൈലൈറ്റ് ചെയ്യുന്നതിന് നിങ്ങളുടെ തള്ളവിരൽ ലഘുവായി നീക്കുക';
 
   @override
-  String get centerButtonSearchTutorialText => 'ഹൈലൈറ്റ് ചെയ്ത അക്ഷരമാല തിരഞ്ഞെടുക്കാൻ സെന്റർ ബട്ടൺ അമർത്തുക';
+  String get centerButtonSearchTutorialText =>
+      'ഹൈലൈറ്റ് ചെയ്ത അക്ഷരമാല തിരഞ്ഞെടുക്കാൻ സെന്റർ ബട്ടൺ അമർത്തുക';
 
   @override
-  String get nextButtonSearchTutorialText => 'ഒരു സ്ഥലം ചേർക്കാൻ ഈ ബട്ടൺ അമർത്തുക';
+  String get nextButtonSearchTutorialText =>
+      'ഒരു സ്ഥലം ചേർക്കാൻ ഈ ബട്ടൺ അമർത്തുക';
 
   @override
-  String get previousButtonSearchTutorialText => 'അവസാന പ്രതീകം ഇല്ലാതാക്കാൻ ഈ ബട്ടൺ അമർത്തുക';
+  String get previousButtonSearchTutorialText =>
+      'അവസാന പ്രതീകം ഇല്ലാതാക്കാൻ ഈ ബട്ടൺ അമർത്തുക';
 
   @override
-  String get menuButtonSearchTutorialText => 'കീബോർഡ് അടച്ച് തിരയൽ ഫലങ്ങളുമായി സംവദിക്കാൻ ഈ ബട്ടൺ അമർത്തുക';
+  String get menuButtonSearchTutorialText =>
+      'കീബോർഡ് അടച്ച് തിരയൽ ഫലങ്ങളുമായി സംവദിക്കാൻ ഈ ബട്ടൺ അമർത്തുക';
 }

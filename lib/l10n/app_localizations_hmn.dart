@@ -18,13 +18,16 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Access Tso Cai Xav Tau';
 
   @override
-  String get audioAccessPermissionContent => 'Thov txais cov ntaub ntawv audio kom tso cai rau peb ua si koj cov ntaub ntawv nkauj.';
+  String get audioAccessPermissionContent =>
+      'Thov txais cov ntaub ntawv audio kom tso cai rau peb ua si koj cov ntaub ntawv nkauj.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio kev nkag tau kev tso cai audio';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio kev nkag tau kev tso cai audio';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Thov txais cov ntaub ntawv audio nkag rau cov app no ​​hauv cov cuab yeej cuab tam tso cai rau peb ua si koj cov ntaub ntawv nkauj.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Thov txais cov ntaub ntawv audio nkag rau cov app no ​​hauv cov cuab yeej cuab tam tso cai rau peb ua si koj cov ntaub ntawv nkauj.';
 
   @override
   String get menuScreenTitle => 'Daim qhia muaj zaub mov li cas';
@@ -63,7 +66,6 @@ class AppLocalizationsHmn extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsHmn extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Kov Suab';
 
   @override
-  String get touchSoundsDialogContent => 'Thov Pab kov Suab los ntawm cov chaw teeb tsa kom hnov ​​cov nias lub suab nrov';
+  String get touchSoundsDialogContent =>
+      'Thov Pab kov Suab los ntawm cov chaw teeb tsa kom hnov ​​cov nias lub suab nrov';
 
   @override
   String get immersiveModeSettingTitle => 'Cov hom';
@@ -144,7 +146,8 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get donateSettingTitle => 'Pub dawb';
 
   @override
-  String get donateSettingDescription => 'Yog tias koj nyiam cov app no, thov txiav txim siab pub nyiaj.';
+  String get donateSettingDescription =>
+      'Yog tias koj nyiam cov app no, thov txiav txim siab pub nyiaj.';
 
   @override
   String get versionAboutScreenTitle => 'Zaj';
@@ -195,7 +198,8 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get retryButtonText => 'Rov ua';
 
   @override
-  String get filePickerDialogTitle => 'Xaiv cov ntawv qhia kom luam theej duab rau nkauj';
+  String get filePickerDialogTitle =>
+      'Xaiv cov ntawv qhia kom luam theej duab rau nkauj';
 
   @override
   String get searchScreenTitle => 'Kev tshawb nrhiav';
@@ -210,10 +214,12 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get resultsForText => 'Cov txiaj ntsig rau:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Kaw cov roj teeb kev txhim kho';
+  String get disableBatteryOptimizationTitle =>
+      'Kaw cov roj teeb kev txhim kho';
 
   @override
-  String get disableBatteryOptimizationContent => 'Thov tua cov roj teeb ua kom zoo rau cov app no ​​hauv cov khoom siv ntaus ntawv kom tso cai tom qab cov nkauj playback.';
+  String get disableBatteryOptimizationContent =>
+      'Thov tua cov roj teeb ua kom zoo rau cov app no ​​hauv cov khoom siv ntaus ntawv kom tso cai tom qab cov nkauj playback.';
 
   @override
   String get languageScreenTitle => 'Yam lus';
@@ -252,7 +258,8 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get allAlbums => 'Txhua albums';
 
   @override
-  String get scanningMusicFiles => 'Scanning cov ntaub ntawv suab paj nruag cov ntaub ntawv';
+  String get scanningMusicFiles =>
+      'Scanning cov ntaub ntawv suab paj nruag cov ntaub ntawv';
 
   @override
   String get newPlaylist => 'PlayList Tshiab';
@@ -267,50 +274,65 @@ class AppLocalizationsHmn extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Cov Ntaub Ntawv Sedran Music';
 
   @override
-  String get deviceControlMenuTutorialText => 'Txav koj tus ntiv tes xoo me ntsis nyob ib ncig ntawm nias lub log los tshawb cov zaub mov';
+  String get deviceControlMenuTutorialText =>
+      'Txav koj tus ntiv tes xoo me ntsis nyob ib ncig ntawm nias lub log los tshawb cov zaub mov';
 
   @override
-  String get centerButtonMenuTutorialText => 'Nias khawm nruab nrab kom xaiv cov ntawv qhia zaub mov tseem ceeb';
+  String get centerButtonMenuTutorialText =>
+      'Nias khawm nruab nrab kom xaiv cov ntawv qhia zaub mov tseem ceeb';
 
   @override
-  String get playPauseMenuTutorialText => 'Nias lub pob no los ua si lossis ncua ib zaj nkauj';
+  String get playPauseMenuTutorialText =>
+      'Nias lub pob no los ua si lossis ncua ib zaj nkauj';
 
   @override
-  String get nextButtonMenuTutorialText => 'Nias lub pob no mus rau tom ntej zaj nkauj';
+  String get nextButtonMenuTutorialText =>
+      'Nias lub pob no mus rau tom ntej zaj nkauj';
 
   @override
-  String get previousButtonMenuTutorialText => 'Nias lub pob no rau rewind lossis rov qab mus rau zaj nkauj dhau los';
+  String get previousButtonMenuTutorialText =>
+      'Nias lub pob no rau rewind lossis rov qab mus rau zaj nkauj dhau los';
 
   @override
-  String get menuButtonTutorialText => 'Nias lub pob no rov qab mus rau cov ntawv qhia zaub mov dhau los. Koj tuaj yeem nias thiab tuav nws los ntawm lwm lub vijtsam kom ncaj qha mus rau cov ntawv qhia zaub mov tseem ceeb.';
+  String get menuButtonTutorialText =>
+      'Nias lub pob no rov qab mus rau cov ntawv qhia zaub mov dhau los. Koj tuaj yeem nias thiab tuav nws los ntawm lwm lub vijtsam kom ncaj qha mus rau cov ntawv qhia zaub mov tseem ceeb.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Nov yog cov zaub. Kov npo thiab split screen hom yog qhib los ntawm lub neej ntawd thiab tuaj yeem teeb tsa txuas ntxiv hauv cov chaw.';
+  String get deviceScreenMenuTutorialText =>
+      'Nov yog cov zaub. Kov npo thiab split screen hom yog qhib los ntawm lub neej ntawd thiab tuaj yeem teeb tsa txuas ntxiv hauv cov chaw.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Txav koj tus ntiv tes xoo ib ncig ntawm lub log nyem kom hloov cov ntim';
+  String get deviceControlNowPlayingTutorialText =>
+      'Txav koj tus ntiv tes xoo ib ncig ntawm lub log nyem kom hloov cov ntim';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Nias lub chaw nruab nrab mus rau voj voog los ntawm nrhiav bar, cov kab ntawv kom nruj thiab ua rau slider. Nias thiab tuav lub pob nruab nrab kom nkag mus rau cov kev xaiv ntxiv.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Nias lub chaw nruab nrab mus rau voj voog los ntawm nrhiav bar, cov kab ntawv kom nruj thiab ua rau slider. Nias thiab tuav lub pob nruab nrab kom nkag mus rau cov kev xaiv ntxiv.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Nias thiab tuav lub pob no kom khiav tawm rau yav tsaus ntuj';
+  String get nextButtonNowPlayingTutorialText =>
+      'Nias thiab tuav lub pob no kom khiav tawm rau yav tsaus ntuj';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Nias thiab tuav lub pob no kom rewind zaj nkauj';
+  String get previousButtonNowPlayingTutorialText =>
+      'Nias thiab tuav lub pob no kom rewind zaj nkauj';
 
   @override
-  String get deviceControlSearchTutorialText => 'Txav koj tus ntiv tes xoo me ntsis nyob ib ncig ntawm nias log kom nrov rau cov tsiaj ntawv';
+  String get deviceControlSearchTutorialText =>
+      'Txav koj tus ntiv tes xoo me ntsis nyob ib ncig ntawm nias log kom nrov rau cov tsiaj ntawv';
 
   @override
-  String get centerButtonSearchTutorialText => 'Nias khawm nruab nrab kom xaiv cov tsiaj ntawv tseem ceeb';
+  String get centerButtonSearchTutorialText =>
+      'Nias khawm nruab nrab kom xaiv cov tsiaj ntawv tseem ceeb';
 
   @override
   String get nextButtonSearchTutorialText => 'Nias lub pob no kom ntxiv chaw';
 
   @override
-  String get previousButtonSearchTutorialText => 'Nias lub pob no kom rho tawm tus cwj pwm kawg';
+  String get previousButtonSearchTutorialText =>
+      'Nias lub pob no kom rho tawm tus cwj pwm kawg';
 
   @override
-  String get menuButtonSearchTutorialText => 'Nias lub pob no kaw cov keyboard thiab cuam tshuam nrog cov kev tshawb fawb';
+  String get menuButtonSearchTutorialText =>
+      'Nias lub pob no kaw cov keyboard thiab cuam tshuam nrog cov kev tshawb fawb';
 }

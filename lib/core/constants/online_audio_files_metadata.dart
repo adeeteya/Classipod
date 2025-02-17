@@ -11,6 +11,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     trackDuration: 226000,
     genres: ["Pop", "Rock"],
     year: 2017,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/01.%20Nobody%20Can%20Save%20Me.mp3",
     thumbnailPath:
@@ -26,6 +27,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Pop", "Rock"],
     year: 2017,
     originalSongIndex: 1,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/03.%20Talking%20to%20Myself.mp3",
     thumbnailPath:
@@ -41,6 +43,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Pop", "Rock"],
     year: 2017,
     originalSongIndex: 2,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/02.%20Good%20Goodbye%20%28feat.%20Pusha%20T%20%20Stormzy%29.mp3",
     thumbnailPath:
@@ -56,6 +59,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Pop", "Rock"],
     year: 2017,
     originalSongIndex: 3,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/04.%20Battle%20Symphony.mp3",
     thumbnailPath:
@@ -71,6 +75,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Pop", "Rock"],
     year: 2017,
     originalSongIndex: 4,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/05.%20Invisible.mp3",
     thumbnailPath:
@@ -86,6 +91,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Pop", "Rock"],
     year: 2017,
     originalSongIndex: 5,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/06.%20Heavy%20%28feat.%20Kiiara%29.mp3",
     thumbnailPath:
@@ -101,6 +107,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Pop", "Rock"],
     year: 2017,
     originalSongIndex: 6,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/07.%20Sorry%20for%20Now.mp3",
     thumbnailPath:
@@ -116,6 +123,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Pop", "Rock"],
     year: 2017,
     originalSongIndex: 7,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/08.%20Halfway%20Right.mp3",
     thumbnailPath:
@@ -131,6 +139,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Pop", "Rock"],
     year: 2017,
     originalSongIndex: 8,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/09.%20One%20More%20Light.mp3",
     thumbnailPath:
@@ -146,6 +155,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Pop", "Rock"],
     year: 2017,
     originalSongIndex: 9,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/linkin-park-one-more-light-2017/10.%20Sharp%20Edges.mp3",
     thumbnailPath:
@@ -163,6 +173,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 10,
+    isOnDevice: false,
     filePath: "https://archive.org/download/blonde-frank-ocean/Nikes.mp3",
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
@@ -177,6 +188,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 11,
+    isOnDevice: false,
     filePath: "https://archive.org/download/blonde-frank-ocean/Ivy.mp3",
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
@@ -191,6 +203,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 12,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/Pink%20%2B%20White.mp3",
     thumbnailPath:
@@ -206,6 +219,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 13,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/Be%20Yourself.mp3",
     thumbnailPath:
@@ -221,6 +235,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 14,
+    isOnDevice: false,
     filePath: "https://archive.org/download/blonde-frank-ocean/Solo.mp3",
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
@@ -235,6 +250,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 15,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/Skyline%20To.mp3",
     thumbnailPath:
@@ -250,6 +266,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 16,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/Self%20Control.mp3",
     thumbnailPath:
@@ -265,6 +282,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 17,
+    isOnDevice: false,
     filePath: "https://archive.org/download/blonde-frank-ocean/Good%20Guy.mp3",
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
@@ -279,6 +297,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 18,
+    isOnDevice: false,
     filePath: "https://archive.org/download/blonde-frank-ocean/Nights.mp3",
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
@@ -293,6 +312,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 19,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/Solo%20%28Reprise%29.mp3",
     thumbnailPath:
@@ -308,6 +328,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 20,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/Pretty%20Sweet.mp3",
     thumbnailPath:
@@ -323,6 +344,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 21,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/Facebook%20Story.mp3",
     thumbnailPath:
@@ -338,6 +360,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 22,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/Close%20To%20You.mp3",
     thumbnailPath:
@@ -353,6 +376,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 23,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/White%20Ferrari.mp3",
     thumbnailPath:
@@ -368,6 +392,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 24,
+    isOnDevice: false,
     filePath: "https://archive.org/download/blonde-frank-ocean/Seigfried.mp3",
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
@@ -382,6 +407,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 25,
+    isOnDevice: false,
     filePath: "https://archive.org/download/blonde-frank-ocean/Godspeed.mp3",
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
@@ -396,6 +422,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["R&B", "Soul"],
     year: 2016,
     originalSongIndex: 26,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/blonde-frank-ocean/Futura%20Free.mp3",
     thumbnailPath:
@@ -413,6 +440,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 27,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/01.%20Smells%20Like%20Teen%20Spirit.mp3",
     thumbnailPath:
@@ -428,6 +456,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 28,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/02.%20In%20Bloom.mp3",
     thumbnailPath:
@@ -443,6 +472,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 29,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/03.%20Come%20As%20You%20Are.mp3",
     thumbnailPath:
@@ -458,6 +488,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 30,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/04.%20Breed.mp3",
     thumbnailPath:
@@ -473,6 +504,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 31,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/05.%20Lithium.mp3",
     thumbnailPath:
@@ -488,6 +520,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 32,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/06.%20Polly.mp3",
     thumbnailPath:
@@ -503,6 +536,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 33,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/07.%20Territorial%20Pissings.mp3",
     thumbnailPath:
@@ -518,6 +552,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 34,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/08.%20Drain%20You.mp3",
     thumbnailPath:
@@ -533,6 +568,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 35,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/09.%20Lounge%20Act.mp3",
     thumbnailPath:
@@ -548,6 +584,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 36,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/10.%20Stay%20Away.mp3",
     thumbnailPath:
@@ -563,6 +600,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 37,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/11.%20On%20A%20Plain.mp3",
     thumbnailPath:
@@ -578,6 +616,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Grunge", "Rock"],
     year: 1991,
     originalSongIndex: 38,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/12.%20Something%20In%20The%20Way%20-%20Endless%2C%20Nameless.mp3",
     thumbnailPath:
@@ -595,6 +634,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Progressive Rock"],
     year: 1973,
     originalSongIndex: 39,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/the-dark-side-of-the-moon-cd-rip-full-tracks/%2801%29%20Speak%20To%20Me%20%2B%20Breathe.mp3",
     thumbnailPath:
@@ -610,6 +650,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Progressive Rock"],
     year: 1973,
     originalSongIndex: 40,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/the-dark-side-of-the-moon-cd-rip-full-tracks/%2802%29%20On%20The%20Run.mp3",
     thumbnailPath:
@@ -625,6 +666,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Progressive Rock"],
     year: 1973,
     originalSongIndex: 41,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/the-dark-side-of-the-moon-cd-rip-full-tracks/%2803%29%20Time.mp3",
     thumbnailPath:
@@ -640,6 +682,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Progressive Rock"],
     year: 1973,
     originalSongIndex: 42,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/the-dark-side-of-the-moon-cd-rip-full-tracks/%2804%29%20The%20Great%20Gig%20In%20The%20Sky.mp3",
     thumbnailPath:
@@ -655,6 +698,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Progressive Rock"],
     year: 1973,
     originalSongIndex: 43,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/the-dark-side-of-the-moon-cd-rip-full-tracks/%2805%29%20Money.mp3",
     thumbnailPath:
@@ -670,6 +714,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Progressive Rock"],
     year: 1973,
     originalSongIndex: 44,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/the-dark-side-of-the-moon-cd-rip-full-tracks/%2806%29%20Us%20And%20Them.mp3",
     thumbnailPath:
@@ -685,6 +730,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Progressive Rock"],
     year: 1973,
     originalSongIndex: 45,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/the-dark-side-of-the-moon-cd-rip-full-tracks/%2807%29%20Any%20Colour%20You%20Like.mp3",
     thumbnailPath:
@@ -700,6 +746,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Progressive Rock"],
     year: 1973,
     originalSongIndex: 46,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/the-dark-side-of-the-moon-cd-rip-full-tracks/%2808%29%20Brain%20Damage.mp3",
     thumbnailPath:
@@ -715,6 +762,7 @@ final List<Metadata> onlineAudioFilesMetaData = [
     genres: ["Progressive Rock"],
     year: 1973,
     originalSongIndex: 47,
+    isOnDevice: false,
     filePath:
         "https://archive.org/download/the-dark-side-of-the-moon-cd-rip-full-tracks/%2809%29%20Eclipse.mp3",
     thumbnailPath:

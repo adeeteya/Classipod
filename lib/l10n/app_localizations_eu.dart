@@ -15,16 +15,20 @@ class AppLocalizationsEu extends AppLocalizations {
   String get menuButtonText => 'Menu';
 
   @override
-  String get audioAccessPermissionTitle => 'Audiorako sarbide baimena beharrezkoa da';
+  String get audioAccessPermissionTitle =>
+      'Audiorako sarbide baimena beharrezkoa da';
 
   @override
-  String get audioAccessPermissionContent => 'Mesedez, eman audio fitxategiak sarbidea zure musika fitxategiak erreproduzitzeko.';
+  String get audioAccessPermissionContent =>
+      'Mesedez, eman audio fitxategiak sarbidea zure musika fitxategiak erreproduzitzeko.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio sarbide baimena ukatu da';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio sarbide baimena ukatu da';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Mesedez, eman audio fitxategiak aplikazio honetarako sarbidea gailuaren ezarpenetan zure musika fitxategiak erreproduzitzeko.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Mesedez, eman audio fitxategiak aplikazio honetarako sarbidea gailuaren ezarpenetan zure musika fitxategiak erreproduzitzeko.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsEu extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsEu extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsEu extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Ukitu Soinuak';
 
   @override
-  String get touchSoundsDialogContent => 'Mesedez, gaitu ukitu soinuak sistemaren ezarpenetatik klik egiteko gurpilaren soinuak entzuteko';
+  String get touchSoundsDialogContent =>
+      'Mesedez, gaitu ukitu soinuak sistemaren ezarpenetatik klik egiteko gurpilaren soinuak entzuteko';
 
   @override
   String get immersiveModeSettingTitle => 'Murgileko modua';
@@ -144,7 +147,8 @@ class AppLocalizationsEu extends AppLocalizations {
   String get donateSettingTitle => 'Eman';
 
   @override
-  String get donateSettingDescription => 'Aplikazio hau nahi baduzu, kontuan hartu dohaintza.';
+  String get donateSettingDescription =>
+      'Aplikazio hau nahi baduzu, kontuan hartu dohaintza.';
 
   @override
   String get versionAboutScreenTitle => 'Bertsio';
@@ -195,7 +199,8 @@ class AppLocalizationsEu extends AppLocalizations {
   String get retryButtonText => 'Berrirohartu';
 
   @override
-  String get filePickerDialogTitle => 'Hautatu direktorio bat musika eskaneatzeko';
+  String get filePickerDialogTitle =>
+      'Hautatu direktorio bat musika eskaneatzeko';
 
   @override
   String get searchScreenTitle => 'Araketa';
@@ -210,10 +215,12 @@ class AppLocalizationsEu extends AppLocalizations {
   String get resultsForText => 'Emaitzak:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Desgaitu bateriaren optimizazioa';
+  String get disableBatteryOptimizationTitle =>
+      'Desgaitu bateriaren optimizazioa';
 
   @override
-  String get disableBatteryOptimizationContent => 'Mesedez, desgaitu aplikazio honetarako bateriaren optimizazioa gailuaren ezarpenetan, musika atzeko planoa erreproduzitzeko baimena emateko.';
+  String get disableBatteryOptimizationContent =>
+      'Mesedez, desgaitu aplikazio honetarako bateriaren optimizazioa gailuaren ezarpenetan, musika atzeko planoa erreproduzitzeko baimena emateko.';
 
   @override
   String get languageScreenTitle => 'Mintzaira';
@@ -267,50 +274,66 @@ class AppLocalizationsEu extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Berreskuratu musika fitxategiak';
 
   @override
-  String get deviceControlMenuTutorialText => 'Eraman hatza arinki klik gurpilaren inguruan menuan nabigatzeko';
+  String get deviceControlMenuTutorialText =>
+      'Eraman hatza arinki klik gurpilaren inguruan menuan nabigatzeko';
 
   @override
-  String get centerButtonMenuTutorialText => 'Sakatu erdiko botoia nabarmendutako menuko elementua hautatzeko';
+  String get centerButtonMenuTutorialText =>
+      'Sakatu erdiko botoia nabarmendutako menuko elementua hautatzeko';
 
   @override
-  String get playPauseMenuTutorialText => 'Sakatu botoi hau abesti bat erreproduzitzeko edo pausatzeko';
+  String get playPauseMenuTutorialText =>
+      'Sakatu botoi hau abesti bat erreproduzitzeko edo pausatzeko';
 
   @override
-  String get nextButtonMenuTutorialText => 'Sakatu botoi hau hurrengo abestira joateko';
+  String get nextButtonMenuTutorialText =>
+      'Sakatu botoi hau hurrengo abestira joateko';
 
   @override
-  String get previousButtonMenuTutorialText => 'Sakatu botoi hau berriro itzultzeko edo aurreko abestira itzultzeko';
+  String get previousButtonMenuTutorialText =>
+      'Sakatu botoi hau berriro itzultzeko edo aurreko abestira itzultzeko';
 
   @override
-  String get menuButtonTutorialText => 'Sakatu botoi hau aurreko menura itzultzeko. Beste edozein pantailatik luze sakatu dezakezu menu nagusira zuzenean joateko.';
+  String get menuButtonTutorialText =>
+      'Sakatu botoi hau aurreko menura itzultzeko. Beste edozein pantailatik luze sakatu dezakezu menu nagusira zuzenean joateko.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Hau da pantaila pantaila. Ukipen-pantaila eta Split Screen Modua lehenespenez gaituta daude eta ezarpenetan konfigura daitezke.';
+  String get deviceScreenMenuTutorialText =>
+      'Hau da pantaila pantaila. Ukipen-pantaila eta Split Screen Modua lehenespenez gaituta daude eta ezarpenetan konfigura daitezke.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Eraman zure behatza klik gurpilaren inguruan bolumena doitzeko';
+  String get deviceControlNowPlayingTutorialText =>
+      'Eraman zure behatza klik gurpilaren inguruan bolumena doitzeko';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Sakatu erdiko botoia bilatzeko barra, saski barra eta nahastu graduatzailea. Luze sakatu erdiko botoia aukera gehigarrietara sartzeko.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Sakatu erdiko botoia bilatzeko barra, saski barra eta nahastu graduatzailea. Luze sakatu erdiko botoia aukera gehigarrietara sartzeko.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Luze sakatu botoi hau abestia aurrera ateratzeko';
+  String get nextButtonNowPlayingTutorialText =>
+      'Luze sakatu botoi hau abestia aurrera ateratzeko';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Luze sakatu botoi hau abestia itzultzeko';
+  String get previousButtonNowPlayingTutorialText =>
+      'Luze sakatu botoi hau abestia itzultzeko';
 
   @override
-  String get deviceControlSearchTutorialText => 'Eraman zure hatza arinki gurpilaren inguruan alfabeto bat nabarmentzeko';
+  String get deviceControlSearchTutorialText =>
+      'Eraman zure hatza arinki gurpilaren inguruan alfabeto bat nabarmentzeko';
 
   @override
-  String get centerButtonSearchTutorialText => 'Sakatu erdiko botoia nabarmendutako alfabetoa hautatzeko';
+  String get centerButtonSearchTutorialText =>
+      'Sakatu erdiko botoia nabarmendutako alfabetoa hautatzeko';
 
   @override
-  String get nextButtonSearchTutorialText => 'Sakatu botoi hau espazio bat gehitzeko';
+  String get nextButtonSearchTutorialText =>
+      'Sakatu botoi hau espazio bat gehitzeko';
 
   @override
-  String get previousButtonSearchTutorialText => 'Sakatu botoi hau azken karakterea ezabatzeko';
+  String get previousButtonSearchTutorialText =>
+      'Sakatu botoi hau azken karakterea ezabatzeko';
 
   @override
-  String get menuButtonSearchTutorialText => 'Sakatu botoi hau teklatua ixteko eta bilaketaren emaitzekin elkarreragiteko';
+  String get menuButtonSearchTutorialText =>
+      'Sakatu botoi hau teklatua ixteko eta bilaketaren emaitzekin elkarreragiteko';
 }

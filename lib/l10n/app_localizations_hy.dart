@@ -15,16 +15,20 @@ class AppLocalizationsHy extends AppLocalizations {
   String get menuButtonText => 'Մենյու';
 
   @override
-  String get audioAccessPermissionTitle => 'Պահանջվում է աուդիո մուտքի թույլտվություն';
+  String get audioAccessPermissionTitle =>
+      'Պահանջվում է աուդիո մուտքի թույլտվություն';
 
   @override
-  String get audioAccessPermissionContent => 'Խնդրում ենք տրամադրել աուդիո ֆայլերի հասանելիությունը `թույլ տալով, որ մենք նվագենք ձեր երաժշտական ​​ֆայլերը:';
+  String get audioAccessPermissionContent =>
+      'Խնդրում ենք տրամադրել աուդիո ֆայլերի հասանելիությունը `թույլ տալով, որ մենք նվագենք ձեր երաժշտական ​​ֆայլերը:';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Աուդիո մուտքի թույլտվությունը մերժվեց';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Աուդիո մուտքի թույլտվությունը մերժվեց';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Խնդրում ենք տրամադրել աուդիո ֆայլերի մուտքը սարքի պարամետրերում այս ծրագրի համար `թույլ տալու համար, որ մենք նվագենք ձեր երաժշտական ​​ֆայլերը:';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Խնդրում ենք տրամադրել աուդիո ֆայլերի մուտքը սարքի պարամետրերում այս ծրագրի համար `թույլ տալու համար, որ մենք նվագենք ձեր երաժշտական ​​ֆայլերը:';
 
   @override
   String get menuScreenTitle => 'Մենյու';
@@ -63,7 +67,6 @@ class AppLocalizationsHy extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsHy extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsHy extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Հպեք հնչյուններ';
 
   @override
-  String get touchSoundsDialogContent => 'Խնդրում ենք միացնել հպումային հնչյունները համակարգի պարամետրերից `կտտոցների անիվի հնչյունները լսելու համար';
+  String get touchSoundsDialogContent =>
+      'Խնդրում ենք միացնել հպումային հնչյունները համակարգի պարամետրերից `կտտոցների անիվի հնչյունները լսելու համար';
 
   @override
   String get immersiveModeSettingTitle => 'Ընկղմող ռեժիմ';
@@ -144,7 +147,8 @@ class AppLocalizationsHy extends AppLocalizations {
   String get donateSettingTitle => 'Նվիրել';
 
   @override
-  String get donateSettingDescription => 'Եթե ​​Ձեզ դուր է գալիս այս ծրագիրը, խնդրում ենք հաշվի առնել նվիրատվությունը:';
+  String get donateSettingDescription =>
+      'Եթե ​​Ձեզ դուր է գալիս այս ծրագիրը, խնդրում ենք հաշվի առնել նվիրատվությունը:';
 
   @override
   String get versionAboutScreenTitle => 'Տարբերակ';
@@ -195,7 +199,8 @@ class AppLocalizationsHy extends AppLocalizations {
   String get retryButtonText => 'Փորձել';
 
   @override
-  String get filePickerDialogTitle => 'Երաժշտության համար սկանավորելու համար ընտրեք գրացուցակ';
+  String get filePickerDialogTitle =>
+      'Երաժշտության համար սկանավորելու համար ընտրեք գրացուցակ';
 
   @override
   String get searchScreenTitle => 'Որոնել';
@@ -210,10 +215,12 @@ class AppLocalizationsHy extends AppLocalizations {
   String get resultsForText => 'Արդյունքներ.';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Անջատեք մարտկոցի օպտիմիզացումը';
+  String get disableBatteryOptimizationTitle =>
+      'Անջատեք մարտկոցի օպտիմիզացումը';
 
   @override
-  String get disableBatteryOptimizationContent => 'Խնդրում ենք անջատել մարտկոցի օպտիմիզացումը սարքի պարամետրերում այս ծրագրի համար `երաժշտության ֆոնային նվագարկումը թույլ տալու համար:';
+  String get disableBatteryOptimizationContent =>
+      'Խնդրում ենք անջատել մարտկոցի օպտիմիզացումը սարքի պարամետրերում այս ծրագրի համար `երաժշտության ֆոնային նվագարկումը թույլ տալու համար:';
 
   @override
   String get languageScreenTitle => 'Լեզու';
@@ -267,50 +274,66 @@ class AppLocalizationsHy extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan երաժշտական ​​ֆայլեր';
 
   @override
-  String get deviceControlMenuTutorialText => 'Menu անկը նավարկելու համար ձեր մատը թեթեւ տեղափոխեք կտտոցով';
+  String get deviceControlMenuTutorialText =>
+      'Menu անկը նավարկելու համար ձեր մատը թեթեւ տեղափոխեք կտտոցով';
 
   @override
-  String get centerButtonMenuTutorialText => 'Սեղմեք կենտրոնի կոճակը `ընդգծված ընտրացանկի տարրը ընտրելու համար';
+  String get centerButtonMenuTutorialText =>
+      'Սեղմեք կենտրոնի կոճակը `ընդգծված ընտրացանկի տարրը ընտրելու համար';
 
   @override
-  String get playPauseMenuTutorialText => 'Սեղմեք այս կոճակը `երգը նվագելու կամ դադար տալու համար';
+  String get playPauseMenuTutorialText =>
+      'Սեղմեք այս կոճակը `երգը նվագելու կամ դադար տալու համար';
 
   @override
-  String get nextButtonMenuTutorialText => 'Հաջորդ երգը բաց թողնելու համար սեղմեք այս կոճակը';
+  String get nextButtonMenuTutorialText =>
+      'Հաջորդ երգը բաց թողնելու համար սեղմեք այս կոճակը';
 
   @override
-  String get previousButtonMenuTutorialText => 'Սեղմեք այս կոճակը `նախորդ երգին վերադառնանք կամ վերադառնալու համար';
+  String get previousButtonMenuTutorialText =>
+      'Սեղմեք այս կոճակը `նախորդ երգին վերադառնանք կամ վերադառնալու համար';
 
   @override
-  String get menuButtonTutorialText => 'Սեղմեք այս կոճակը նախորդ ընտրացանկին վերադառնալու համար: Դուք կարող եք սեղմել եւ պահել այն ցանկացած այլ էկրանից `ուղղակիորեն անցնելու հիմնական ընտրացանկին:';
+  String get menuButtonTutorialText =>
+      'Սեղմեք այս կոճակը նախորդ ընտրացանկին վերադառնալու համար: Դուք կարող եք սեղմել եւ պահել այն ցանկացած այլ էկրանից `ուղղակիորեն անցնելու հիմնական ընտրացանկին:';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Սա ցուցադրման էկրանն է: Touch էկրանը եւ Split էկրանի ռեժիմը միացված են լռելյայն եւ կարող եք կազմաձեւվել պարամետրերում:';
+  String get deviceScreenMenuTutorialText =>
+      'Սա ցուցադրման էկրանն է: Touch էկրանը եւ Split էկրանի ռեժիմը միացված են լռելյայն եւ կարող եք կազմաձեւվել պարամետրերում:';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Ձեռքը կարգավորելու համար ձեր բութ մատը տեղափոխեք կտտացման անիվը';
+  String get deviceControlNowPlayingTutorialText =>
+      'Ձեռքը կարգավորելու համար ձեր բութ մատը տեղափոխեք կտտացման անիվը';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Սեղմեք կենտրոնի կոճակը `փխրուն բար, մացառի բար եւ խորամանկ սահող: Լրացուցիչ ընտրանքներ մուտք գործելու համար սեղմեք եւ պահեք կենտրոնի կոճակը:';
+  String get centerButtonNowPlayingTutorialText =>
+      'Սեղմեք կենտրոնի կոճակը `փխրուն բար, մացառի բար եւ խորամանկ սահող: Լրացուցիչ ընտրանքներ մուտք գործելու համար սեղմեք եւ պահեք կենտրոնի կոճակը:';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Սեղմեք եւ պահեք այս կոճակը `երգը արագ առաջ տանելու համար';
+  String get nextButtonNowPlayingTutorialText =>
+      'Սեղմեք եւ պահեք այս կոճակը `երգը արագ առաջ տանելու համար';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Սեղմեք եւ պահեք այս կոճակը `երգը վերափոխելու համար';
+  String get previousButtonNowPlayingTutorialText =>
+      'Սեղմեք եւ պահեք այս կոճակը `երգը վերափոխելու համար';
 
   @override
-  String get deviceControlSearchTutorialText => 'Այբուբենն ընդգծելու համար ձեր մատը թեթեւ տեղափոխեք կտտոցով';
+  String get deviceControlSearchTutorialText =>
+      'Այբուբենն ընդգծելու համար ձեր մատը թեթեւ տեղափոխեք կտտոցով';
 
   @override
-  String get centerButtonSearchTutorialText => 'Սեղմեք կենտրոնի կոճակը `ընդգծված այբուբենը ընտրելու համար';
+  String get centerButtonSearchTutorialText =>
+      'Սեղմեք կենտրոնի կոճակը `ընդգծված այբուբենը ընտրելու համար';
 
   @override
-  String get nextButtonSearchTutorialText => 'Սեղմեք այս կոճակը `տարածք ավելացնելու համար';
+  String get nextButtonSearchTutorialText =>
+      'Սեղմեք այս կոճակը `տարածք ավելացնելու համար';
 
   @override
-  String get previousButtonSearchTutorialText => 'Վերջին կերպարը ջնջելու համար սեղմեք այս կոճակը';
+  String get previousButtonSearchTutorialText =>
+      'Վերջին կերպարը ջնջելու համար սեղմեք այս կոճակը';
 
   @override
-  String get menuButtonSearchTutorialText => 'Սեղմեք այս կոճակը `ստեղնաշարը փակելու եւ որոնման արդյունքների հետ շփվելու համար';
+  String get menuButtonSearchTutorialText =>
+      'Սեղմեք այս կոճակը `ստեղնաշարը փակելու եւ որոնման արդյունքների հետ շփվելու համար';
 }

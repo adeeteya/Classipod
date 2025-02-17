@@ -15,16 +15,20 @@ class AppLocalizationsSw extends AppLocalizations {
   String get menuButtonText => 'Mechi';
 
   @override
-  String get audioAccessPermissionTitle => 'Ruhusa ya ufikiaji wa sauti inahitajika';
+  String get audioAccessPermissionTitle =>
+      'Ruhusa ya ufikiaji wa sauti inahitajika';
 
   @override
-  String get audioAccessPermissionContent => 'Tafadhali toa ufikiaji wa faili za sauti kuturuhusu kucheza faili zako za muziki.';
+  String get audioAccessPermissionContent =>
+      'Tafadhali toa ufikiaji wa faili za sauti kuturuhusu kucheza faili zako za muziki.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ruhusa ya ufikiaji wa sauti imekataliwa';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ruhusa ya ufikiaji wa sauti imekataliwa';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Tafadhali toa ufikiaji wa faili za sauti za programu hii kwenye mipangilio ya kifaa kuturuhusu kucheza faili zako za muziki.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Tafadhali toa ufikiaji wa faili za sauti za programu hii kwenye mipangilio ya kifaa kuturuhusu kucheza faili zako za muziki.';
 
   @override
   String get menuScreenTitle => 'Mechi';
@@ -63,7 +67,6 @@ class AppLocalizationsSw extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsSw extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sauti za kugusa';
 
   @override
-  String get touchSoundsDialogContent => 'Tafadhali Wezesha Sauti za Kugusa kutoka kwa Mipangilio ya Mfumo kusikia sauti za gurudumu';
+  String get touchSoundsDialogContent =>
+      'Tafadhali Wezesha Sauti za Kugusa kutoka kwa Mipangilio ya Mfumo kusikia sauti za gurudumu';
 
   @override
   String get immersiveModeSettingTitle => 'Njia ya kuzama';
@@ -144,7 +147,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get donateSettingTitle => 'Toa';
 
   @override
-  String get donateSettingDescription => 'Ikiwa unapenda programu hii, tafadhali fikiria kutoa.';
+  String get donateSettingDescription =>
+      'Ikiwa unapenda programu hii, tafadhali fikiria kutoa.';
 
   @override
   String get versionAboutScreenTitle => 'Toleo';
@@ -213,7 +217,8 @@ class AppLocalizationsSw extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Lemaza utaftaji wa betri';
 
   @override
-  String get disableBatteryOptimizationContent => 'Tafadhali lemaza utaftaji wa betri kwa programu hii kwenye mipangilio ya kifaa ili kuruhusu uchezaji wa nyuma wa muziki.';
+  String get disableBatteryOptimizationContent =>
+      'Tafadhali lemaza utaftaji wa betri kwa programu hii kwenye mipangilio ya kifaa ili kuruhusu uchezaji wa nyuma wa muziki.';
 
   @override
   String get languageScreenTitle => 'Lugha';
@@ -267,50 +272,66 @@ class AppLocalizationsSw extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Faili za Muziki za Kuokoa';
 
   @override
-  String get deviceControlMenuTutorialText => 'Sogeza kidole chako kidogo kuzunguka gurudumu la kubonyeza ili kuzunguka menyu';
+  String get deviceControlMenuTutorialText =>
+      'Sogeza kidole chako kidogo kuzunguka gurudumu la kubonyeza ili kuzunguka menyu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Bonyeza kitufe cha Kituo ili uchague kipengee cha menyu kilichoangaziwa';
+  String get centerButtonMenuTutorialText =>
+      'Bonyeza kitufe cha Kituo ili uchague kipengee cha menyu kilichoangaziwa';
 
   @override
-  String get playPauseMenuTutorialText => 'Bonyeza kitufe hiki kucheza au kusitisha wimbo';
+  String get playPauseMenuTutorialText =>
+      'Bonyeza kitufe hiki kucheza au kusitisha wimbo';
 
   @override
-  String get nextButtonMenuTutorialText => 'Bonyeza kitufe hiki kuruka kwa wimbo unaofuata';
+  String get nextButtonMenuTutorialText =>
+      'Bonyeza kitufe hiki kuruka kwa wimbo unaofuata';
 
   @override
-  String get previousButtonMenuTutorialText => 'Bonyeza kitufe hiki kurudi nyuma au kurudi kwenye wimbo uliopita';
+  String get previousButtonMenuTutorialText =>
+      'Bonyeza kitufe hiki kurudi nyuma au kurudi kwenye wimbo uliopita';
 
   @override
-  String get menuButtonTutorialText => 'Bonyeza kitufe hiki kurudi kwenye menyu iliyopita. Unaweza kubonyeza na kuishikilia kutoka kwa skrini nyingine yoyote kwenda moja kwa moja kwenye menyu kuu.';
+  String get menuButtonTutorialText =>
+      'Bonyeza kitufe hiki kurudi kwenye menyu iliyopita. Unaweza kubonyeza na kuishikilia kutoka kwa skrini nyingine yoyote kwenda moja kwa moja kwenye menyu kuu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Hii ndio skrini ya kuonyesha. Screen ya kugusa na modi ya skrini ya mgawanyiko imewezeshwa na chaguo -msingi na inaweza kusanidiwa zaidi katika mipangilio.';
+  String get deviceScreenMenuTutorialText =>
+      'Hii ndio skrini ya kuonyesha. Screen ya kugusa na modi ya skrini ya mgawanyiko imewezeshwa na chaguo -msingi na inaweza kusanidiwa zaidi katika mipangilio.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Sogeza kidole chako kuzunguka gurudumu la kubonyeza ili kurekebisha kiasi';
+  String get deviceControlNowPlayingTutorialText =>
+      'Sogeza kidole chako kuzunguka gurudumu la kubonyeza ili kurekebisha kiasi';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Bonyeza kitufe cha katikati ili kuzunguka kupitia bar ya kutafuta, bar ya scrubber na slider. Bonyeza na ushikilie kitufe cha kituo ili kufikia chaguzi za ziada.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Bonyeza kitufe cha katikati ili kuzunguka kupitia bar ya kutafuta, bar ya scrubber na slider. Bonyeza na ushikilie kitufe cha kituo ili kufikia chaguzi za ziada.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Bonyeza na ushikilie kitufe hiki ili kusonga mbele wimbo';
+  String get nextButtonNowPlayingTutorialText =>
+      'Bonyeza na ushikilie kitufe hiki ili kusonga mbele wimbo';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Bonyeza na ushikilie kitufe hiki kurudisha wimbo';
+  String get previousButtonNowPlayingTutorialText =>
+      'Bonyeza na ushikilie kitufe hiki kurudisha wimbo';
 
   @override
-  String get deviceControlSearchTutorialText => 'Sogeza kidole chako kidogo kuzunguka gurudumu la kubonyeza ili kuonyesha alfabeti';
+  String get deviceControlSearchTutorialText =>
+      'Sogeza kidole chako kidogo kuzunguka gurudumu la kubonyeza ili kuonyesha alfabeti';
 
   @override
-  String get centerButtonSearchTutorialText => 'Bonyeza kitufe cha katikati kuchagua alfabeti iliyoangaziwa';
+  String get centerButtonSearchTutorialText =>
+      'Bonyeza kitufe cha katikati kuchagua alfabeti iliyoangaziwa';
 
   @override
-  String get nextButtonSearchTutorialText => 'Bonyeza kitufe hiki ili kuongeza nafasi';
+  String get nextButtonSearchTutorialText =>
+      'Bonyeza kitufe hiki ili kuongeza nafasi';
 
   @override
-  String get previousButtonSearchTutorialText => 'Bonyeza kitufe hiki kufuta tabia ya mwisho';
+  String get previousButtonSearchTutorialText =>
+      'Bonyeza kitufe hiki kufuta tabia ya mwisho';
 
   @override
-  String get menuButtonSearchTutorialText => 'Bonyeza kitufe hiki ili kufunga kibodi na kuingiliana na matokeo ya utaftaji';
+  String get menuButtonSearchTutorialText =>
+      'Bonyeza kitufe hiki ili kufunga kibodi na kuingiliana na matokeo ya utaftaji';
 }

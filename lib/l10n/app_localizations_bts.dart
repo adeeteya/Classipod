@@ -18,13 +18,16 @@ class AppLocalizationsBts extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Akses Ijin na ihaporluhon .';
 
   @override
-  String get audioAccessPermissionContent => 'Patugah ma file audio ase boi masuk hu file musikmu.';
+  String get audioAccessPermissionContent =>
+      'Patugah ma file audio ase boi masuk hu file musikmu.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Akses Ijin na Ihaporsayai .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Akses Ijin na Ihaporsayai .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Patugah ma bani file audio akses bani aplikasi on bani pengaturan perangkat ase boi hanami marmeam file musik nasiam.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Patugah ma bani file audio akses bani aplikasi on bani pengaturan perangkat ase boi hanami marmeam file musik nasiam.';
 
   @override
   String get menuScreenTitle => 'Menian';
@@ -63,7 +66,6 @@ class AppLocalizationsBts extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsBts extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsBts extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sentuhan';
 
   @override
-  String get touchSoundsDialogContent => 'Boi do Aktifkon ma Touch Soara humbani Pengaturan Sistem laho manangar sora ni roda klik .';
+  String get touchSoundsDialogContent =>
+      'Boi do Aktifkon ma Touch Soara humbani Pengaturan Sistem laho manangar sora ni roda klik .';
 
   @override
   String get immersiveModeSettingTitle => 'Mode na Ipermula';
@@ -144,7 +146,8 @@ class AppLocalizationsBts extends AppLocalizations {
   String get donateSettingTitle => 'Sumbangan';
 
   @override
-  String get donateSettingDescription => 'Anggo marosuh nasiam bani aplikasi on, pingkirhon ma laho mambere sumbangan.';
+  String get donateSettingDescription =>
+      'Anggo marosuh nasiam bani aplikasi on, pingkirhon ma laho mambere sumbangan.';
 
   @override
   String get versionAboutScreenTitle => 'Versi';
@@ -195,7 +198,8 @@ class AppLocalizationsBts extends AppLocalizations {
   String get retryButtonText => 'suratkon';
 
   @override
-  String get filePickerDialogTitle => 'Pilih ma Direktori laho Scan bani Musik .';
+  String get filePickerDialogTitle =>
+      'Pilih ma Direktori laho Scan bani Musik .';
 
   @override
   String get searchScreenTitle => 'Manorihi';
@@ -210,10 +214,12 @@ class AppLocalizationsBts extends AppLocalizations {
   String get resultsForText => 'Hasilni bani:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Anggo lang dong na boi mambahen hita lang be marpangunsandeian.';
+  String get disableBatteryOptimizationTitle =>
+      'Anggo lang dong na boi mambahen hita lang be marpangunsandeian.';
 
   @override
-  String get disableBatteryOptimizationContent => 'Tolong ma cacat optimasi baterai bani aplikasi on bani pengaturan perangkat ase boi marlatarbelakang musik.';
+  String get disableBatteryOptimizationContent =>
+      'Tolong ma cacat optimasi baterai bani aplikasi on bani pengaturan perangkat ase boi marlatarbelakang musik.';
 
   @override
   String get languageScreenTitle => 'Bahasa';
@@ -267,50 +273,66 @@ class AppLocalizationsBts extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Barang Musik Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Pindahkon ma jari-jari ni tanganmu ringan-ringan i sekitar Klik Klik laho manavigasi menu .';
+  String get deviceControlMenuTutorialText =>
+      'Pindahkon ma jari-jari ni tanganmu ringan-ringan i sekitar Klik Klik laho manavigasi menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tekan ma tombol pusat laho mamilih menu na isorotkon .';
+  String get centerButtonMenuTutorialText =>
+      'Tekan ma tombol pusat laho mamilih menu na isorotkon .';
 
   @override
-  String get playPauseMenuTutorialText => 'Tekan ma tombol on laho marmeam atap pe pause ma sada doding .';
+  String get playPauseMenuTutorialText =>
+      'Tekan ma tombol on laho marmeam atap pe pause ma sada doding .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tekan ma tombol on laho manlewati doding na mangihut .';
+  String get nextButtonMenuTutorialText =>
+      'Tekan ma tombol on laho manlewati doding na mangihut .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tekan ma tombol on ase boi ibalikkon atap mulak hu doding na salpu .';
+  String get previousButtonMenuTutorialText =>
+      'Tekan ma tombol on ase boi ibalikkon atap mulak hu doding na salpu .';
 
   @override
-  String get menuButtonTutorialText => 'Tekan ma tombol on laho mulak hubani menu na salpu. Boi do itekan janah ijolom ham ai humbani layar na legan ase langsung hu menu utama.';
+  String get menuButtonTutorialText =>
+      'Tekan ma tombol on laho mulak hubani menu na salpu. Boi do itekan janah ijolom ham ai humbani layar na legan ase langsung hu menu utama.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'On ma layar tampilan. Screen Screen pakon Mode Layar Split iaktifkon secara default janah boi ikonfigurasihon lobih bagas bani pengaturan.';
+  String get deviceScreenMenuTutorialText =>
+      'On ma layar tampilan. Screen Screen pakon Mode Layar Split iaktifkon secara default janah boi ikonfigurasihon lobih bagas bani pengaturan.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Pindahkon ma jari-jari ni tanganmu i sekitarni roda Klik laho menyesuaihon volume .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Pindahkon ma jari-jari ni tanganmu i sekitarni roda Klik laho menyesuaihon volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tekan ma tombol Pusat laho marsepeda marhitei bar mangindahi bar, scrubber bar pakon sliffer sliffer. Tekan janah jolom ma tombol Pusat laho mangakses pilihan tambahan.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tekan ma tombol Pusat laho marsepeda marhitei bar mangindahi bar, scrubber bar pakon sliffer sliffer. Tekan janah jolom ma tombol Pusat laho mangakses pilihan tambahan.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tekan janah tahan ma tombol on ase podas hu lobei doding ai .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tekan janah tahan ma tombol on ase podas hu lobei doding ai .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tekan janah jolom ma tombol on laho mambahen ulang doding ai .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tekan janah jolom ma tombol on laho mambahen ulang doding ai .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Pindahkon ma jari-jari ni tanganmu ringan-ringan i sekitar Wheel Klik laho pataridahkon albeet .';
+  String get deviceControlSearchTutorialText =>
+      'Pindahkon ma jari-jari ni tanganmu ringan-ringan i sekitar Wheel Klik laho pataridahkon albeet .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tekan ma tombol pusat laho mamilih alfabet na isorot .';
+  String get centerButtonSearchTutorialText =>
+      'Tekan ma tombol pusat laho mamilih alfabet na isorot .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tekan ma tombol on laho manambah ruang .';
+  String get nextButtonSearchTutorialText =>
+      'Tekan ma tombol on laho manambah ruang .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tekan ma tombol on laho manghapus karakter na parpudi .';
+  String get previousButtonSearchTutorialText =>
+      'Tekan ma tombol on laho manghapus karakter na parpudi .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tekan ma tombol on laho manutup keyboard janah marinteraksi pakon hasil pencarian .';
+  String get menuButtonSearchTutorialText =>
+      'Tekan ma tombol on laho manutup keyboard janah marinteraksi pakon hasil pencarian .';
 }

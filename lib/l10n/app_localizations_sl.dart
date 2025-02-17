@@ -18,13 +18,16 @@ class AppLocalizationsSl extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Potrebno je dovoljenje za dostop';
 
   @override
-  String get audioAccessPermissionContent => 'Prosimo, da dodelite dostop do zvočnih datotek, da nam omogočite predvajanje vaših glasbenih datotek.';
+  String get audioAccessPermissionContent =>
+      'Prosimo, da dodelite dostop do zvočnih datotek, da nam omogočite predvajanje vaših glasbenih datotek.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Dovoljenje za dostop do zvoka zavrnjeno';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Dovoljenje za dostop do zvoka zavrnjeno';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'V nastavitvah naprave dodelite dostop do zvočnih datotek za to aplikacijo, da nam omogoča predvajanje vaših glasbenih datotek.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'V nastavitvah naprave dodelite dostop do zvočnih datotek za to aplikacijo, da nam omogoča predvajanje vaših glasbenih datotek.';
 
   @override
   String get menuScreenTitle => 'Meni';
@@ -63,7 +66,6 @@ class AppLocalizationsSl extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsSl extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsSl extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Zvoki dotika';
 
   @override
-  String get touchSoundsDialogContent => 'Prosimo, omogočite zvoke na dotik iz nastavitev sistema, da slišite zvoke za klik';
+  String get touchSoundsDialogContent =>
+      'Prosimo, omogočite zvoke na dotik iz nastavitev sistema, da slišite zvoke za klik';
 
   @override
   String get immersiveModeSettingTitle => 'Potopni način';
@@ -144,7 +146,8 @@ class AppLocalizationsSl extends AppLocalizations {
   String get donateSettingTitle => 'Donirajte';
 
   @override
-  String get donateSettingDescription => 'Če vam je všeč ta aplikacija, razmislite o donaciji.';
+  String get donateSettingDescription =>
+      'Če vam je všeč ta aplikacija, razmislite o donaciji.';
 
   @override
   String get versionAboutScreenTitle => 'Različica';
@@ -210,10 +213,12 @@ class AppLocalizationsSl extends AppLocalizations {
   String get resultsForText => 'Rezultati za:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Onemogoči optimizacijo baterije';
+  String get disableBatteryOptimizationTitle =>
+      'Onemogoči optimizacijo baterije';
 
   @override
-  String get disableBatteryOptimizationContent => 'Onemogočite optimizacijo baterije za to aplikacijo v nastavitvah naprave, da omogočite predvajanje glasbe v ozadju.';
+  String get disableBatteryOptimizationContent =>
+      'Onemogočite optimizacijo baterije za to aplikacijo v nastavitvah naprave, da omogočite predvajanje glasbe v ozadju.';
 
   @override
   String get languageScreenTitle => 'Jezik';
@@ -267,50 +272,66 @@ class AppLocalizationsSl extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rečilne glasbene datoteke';
 
   @override
-  String get deviceControlMenuTutorialText => 'Palec rahlo premaknite okoli kolesa za klik, da krmarite po meniju';
+  String get deviceControlMenuTutorialText =>
+      'Palec rahlo premaknite okoli kolesa za klik, da krmarite po meniju';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pritisnite gumb Center, da izberete poudarjeno postavko menija';
+  String get centerButtonMenuTutorialText =>
+      'Pritisnite gumb Center, da izberete poudarjeno postavko menija';
 
   @override
-  String get playPauseMenuTutorialText => 'Pritisnite ta gumb, da predvajate ali ustavite pesem';
+  String get playPauseMenuTutorialText =>
+      'Pritisnite ta gumb, da predvajate ali ustavite pesem';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pritisnite ta gumb, da preskočite na naslednjo skladbo';
+  String get nextButtonMenuTutorialText =>
+      'Pritisnite ta gumb, da preskočite na naslednjo skladbo';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pritisnite ta gumb, da se previjate ali se vrnete na prejšnjo skladbo';
+  String get previousButtonMenuTutorialText =>
+      'Pritisnite ta gumb, da se previjate ali se vrnete na prejšnjo skladbo';
 
   @override
-  String get menuButtonTutorialText => 'Pritisnite ta gumb, da se vrnete v prejšnji meni. Lahko ga pritisnete in držite z katerega koli drugega zaslona, ​​da se neposredno odpravite v glavni meni.';
+  String get menuButtonTutorialText =>
+      'Pritisnite ta gumb, da se vrnete v prejšnji meni. Lahko ga pritisnete in držite z katerega koli drugega zaslona, ​​da se neposredno odpravite v glavni meni.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'To je zaslon za prikaz. Zaslon na dotik in način razdelitve zaslona sta privzeto omogočena in ga je mogoče nadalje konfigurirati v nastavitvah.';
+  String get deviceScreenMenuTutorialText =>
+      'To je zaslon za prikaz. Zaslon na dotik in način razdelitve zaslona sta privzeto omogočena in ga je mogoče nadalje konfigurirati v nastavitvah.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Premaknite palec okoli kolesa klika, da prilagodite glasnost';
+  String get deviceControlNowPlayingTutorialText =>
+      'Premaknite palec okoli kolesa klika, da prilagodite glasnost';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pritisnite Center Gumb, da kolesarite skozi Bar Seek, Scrubber Bar in Shiffle Slider. Pritisnite in pridržite gumb Center, da dostopate do dodatnih možnosti.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pritisnite Center Gumb, da kolesarite skozi Bar Seek, Scrubber Bar in Shiffle Slider. Pritisnite in pridržite gumb Center, da dostopate do dodatnih možnosti.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Pritisnite in držite ta gumb, da hitro posredujete pesem';
+  String get nextButtonNowPlayingTutorialText =>
+      'Pritisnite in držite ta gumb, da hitro posredujete pesem';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pritisnite in pridržite ta gumb, da previjate pesem';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pritisnite in pridržite ta gumb, da previjate pesem';
 
   @override
-  String get deviceControlSearchTutorialText => 'Palec rahlo premaknite okoli kolesa za klik, da označite abecedo';
+  String get deviceControlSearchTutorialText =>
+      'Palec rahlo premaknite okoli kolesa za klik, da označite abecedo';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pritisnite gumb Center, da izberete označeno abecedo';
+  String get centerButtonSearchTutorialText =>
+      'Pritisnite gumb Center, da izberete označeno abecedo';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pritisnite ta gumb, da dodate prostor';
+  String get nextButtonSearchTutorialText =>
+      'Pritisnite ta gumb, da dodate prostor';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pritisnite ta gumb, da izbrišete zadnji znak';
+  String get previousButtonSearchTutorialText =>
+      'Pritisnite ta gumb, da izbrišete zadnji znak';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pritisnite ta gumb, da zaprete tipkovnico in interakcijo z rezultati iskanja';
+  String get menuButtonSearchTutorialText =>
+      'Pritisnite ta gumb, da zaprete tipkovnico in interakcijo z rezultati iskanja';
 }

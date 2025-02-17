@@ -18,13 +18,16 @@ class AppLocalizationsChk extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ekkewe Chon Angei Ra Angei';
 
   @override
-  String get audioAccessPermissionContent => 'Kopwe ngeni ekkewe chon fiti ewe mwich pwe repwe tongeni mut ngeni kich ach sipwe fiti om kewe mwich.';
+  String get audioAccessPermissionContent =>
+      'Kopwe ngeni ekkewe chon fiti ewe mwich pwe repwe tongeni mut ngeni kich ach sipwe fiti om kewe mwich.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ewe Chon Apungupung A Angei';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ewe Chon Apungupung A Angei';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Kopwe mut ngeni ekkewe chon fiti repwe fiti ei app non ewe nenien pisek pwe repwe mut ngeni kich ach sipwe fiti omw kewe file.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Kopwe mut ngeni ekkewe chon fiti repwe fiti ei app non ewe nenien pisek pwe repwe mut ngeni kich ach sipwe fiti omw kewe file.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsChk extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsChk extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsChk extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Tounun Aramas .';
 
   @override
-  String get touchSoundsDialogContent => 'Kopwe Angei Seni Aramas Seni System pwe kopwe rongorong ewe ngingin klack .';
+  String get touchSoundsDialogContent =>
+      'Kopwe Angei Seni Aramas Seni System pwe kopwe rongorong ewe ngingin klack .';
 
   @override
   String get immersiveModeSettingTitle => 'Mokutukut mi weires';
@@ -144,7 +146,8 @@ class AppLocalizationsChk extends AppLocalizations {
   String get donateSettingTitle => 'Niffang ngeni';
 
   @override
-  String get donateSettingDescription => 'Ika ka sani ei app, kose mochen kopwe awora.';
+  String get donateSettingDescription =>
+      'Ika ka sani ei app, kose mochen kopwe awora.';
 
   @override
   String get versionAboutScreenTitle => 'Eoch sokkun';
@@ -195,7 +198,8 @@ class AppLocalizationsChk extends AppLocalizations {
   String get retryButtonText => 'Repwe';
 
   @override
-  String get filePickerDialogTitle => 'Fili eu Kinikinin Scrac fan iten Sikaik .';
+  String get filePickerDialogTitle =>
+      'Fili eu Kinikinin Scrac fan iten Sikaik .';
 
   @override
   String get searchScreenTitle => 'Kutta';
@@ -213,7 +217,8 @@ class AppLocalizationsChk extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Achocho';
 
   @override
-  String get disableBatteryOptimizationContent => 'Kopwe fokkun pwapwa ren ei app non ewe nenien pisek pwe epwe mut ngeni ewe angangen fiti urumot.';
+  String get disableBatteryOptimizationContent =>
+      'Kopwe fokkun pwapwa ren ei app non ewe nenien pisek pwe epwe mut ngeni ewe angangen fiti urumot.';
 
   @override
   String get languageScreenTitle => 'Fosun ekis';
@@ -264,53 +269,70 @@ class AppLocalizationsChk extends AppLocalizations {
   String get clearPlaylist => 'Ewe chon ffat';
 
   @override
-  String get rescanMusicFilesSettingTitle => 'Ekkewe pisekin maun mi tongeni fis';
+  String get rescanMusicFilesSettingTitle =>
+      'Ekkewe pisekin maun mi tongeni fis';
 
   @override
-  String get deviceControlMenuTutorialText => 'Kopwe suki om we asam ngeni ewe Klik won Wick pwe kopwe fetan won ewe menu .';
+  String get deviceControlMenuTutorialText =>
+      'Kopwe suki om we asam ngeni ewe Klik won Wick pwe kopwe fetan won ewe menu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Kopwe fiti ewe biton seni ewe nefinen pwe kopwe finata ewe pisekin menu mi auchea .';
+  String get centerButtonMenuTutorialText =>
+      'Kopwe fiti ewe biton seni ewe nefinen pwe kopwe finata ewe pisekin menu mi auchea .';
 
   @override
-  String get playPauseMenuTutorialText => 'Kopwe suki ei button pwe kopwe fiti are asoso eu kol .';
+  String get playPauseMenuTutorialText =>
+      'Kopwe suki ei button pwe kopwe fiti are asoso eu kol .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Kopwe suki ei bloton pwe kopwe fiti ewe köl mwirin .';
+  String get nextButtonMenuTutorialText =>
+      'Kopwe suki ei bloton pwe kopwe fiti ewe köl mwirin .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Kopwe suki ei bloton pwe kopwe niwinsefan ika niwin ngeni ewe kon me mwan .';
+  String get previousButtonMenuTutorialText =>
+      'Kopwe suki ei bloton pwe kopwe niwinsefan ika niwin ngeni ewe kon me mwan .';
 
   @override
-  String get menuButtonTutorialText => 'Kopwe suki ei button pwe kopwe niwin ngeni ewe menu me mwan. Ka tongeni suki me amwochu seni meinisin ekkewe ekkoch scare pwe kopwe pwisin feilo ngeni ewe menukon.';
+  String get menuButtonTutorialText =>
+      'Kopwe suki ei button pwe kopwe niwin ngeni ewe menu me mwan. Ka tongeni suki me amwochu seni meinisin ekkewe ekkoch scare pwe kopwe pwisin feilo ngeni ewe menukon.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Iei ewe kapasen pwarata. Toropween Screen me ekkewe pisekin angang mi fis fan iten ekkewe pisek ra tongeni fis me ra tongeni kon fitikoko non ekkewe neni.';
+  String get deviceScreenMenuTutorialText =>
+      'Iei ewe kapasen pwarata. Toropween Screen me ekkewe pisekin angang mi fis fan iten ekkewe pisek ra tongeni fis me ra tongeni kon fitikoko non ekkewe neni.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Kopwe äeä pöük le äeä ewe föün äsefich pwe epwe siwili ewe puk .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Kopwe äeä pöük le äeä ewe föün äsefich pwe epwe siwili ewe puk .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Kopwe pwarata ewe puun Center pwe kopwe fiti ewe angangen kutta bar, brabber me ekkewe sling mi fitikoko. Kopwe suki me amwochu ewe puun Cent pwe kopwe tongeni angei pwan ekkoch tufich.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Kopwe pwarata ewe puun Center pwe kopwe fiti ewe angangen kutta bar, brabber me ekkewe sling mi fitikoko. Kopwe suki me amwochu ewe puun Cent pwe kopwe tongeni angei pwan ekkoch tufich.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Kopwe fiti me amwochu ei but pwe kopwe mwitir ngeni ewe kon .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Kopwe fiti me amwochu ei but pwe kopwe mwitir ngeni ewe kon .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Kopwe fiti me amwochu ei button pwe kopwe niwinsefaniti ewe kon .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Kopwe fiti me amwochu ei button pwe kopwe niwinsefaniti ewe kon .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Kopwe suki om we asam ngeni ewe Wiik Wick pwe epwe menlapei eu alfabet .';
+  String get deviceControlSearchTutorialText =>
+      'Kopwe suki om we asam ngeni ewe Wiik Wick pwe epwe menlapei eu alfabet .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Kopwe fiti ewe biton seni ewe puun pwe kopwe filatá ewe alfabet mi menlapei .';
+  String get centerButtonSearchTutorialText =>
+      'Kopwe fiti ewe biton seni ewe puun pwe kopwe filatá ewe alfabet mi menlapei .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Kopwe äeä ei föün äsefich pwe kopwe apacha ngeni eü leeni .';
+  String get nextButtonSearchTutorialText =>
+      'Kopwe äeä ei föün äsefich pwe kopwe apacha ngeni eü leeni .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Kopwe suki ei ngonuk pwe kopwe amoielo ewe amuchunon mak .';
+  String get previousButtonSearchTutorialText =>
+      'Kopwe suki ei ngonuk pwe kopwe amoielo ewe amuchunon mak .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Kopwe pwarata ei button pwe kopwe suki ewe asam me chiechi ngeni ekkewe pisekin kutta .';
+  String get menuButtonSearchTutorialText =>
+      'Kopwe pwarata ei button pwe kopwe suki ewe asam me chiechi ngeni ekkewe pisekin kutta .';
 }

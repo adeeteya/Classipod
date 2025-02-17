@@ -18,13 +18,16 @@ class AppLocalizationsCkb extends AppLocalizations {
   String get audioAccessPermissionTitle => 'مۆڵەتی دەستگەیشتن بە دەنگ پێویستە';
 
   @override
-  String get audioAccessPermissionContent => 'تکایە دەستڕاگەیشتن بە فایلە دەنگییەکان بە بۆ ئەوەی ڕێگەمان پێبدات فایلە مۆسیقەکانت لێبدەین.';
+  String get audioAccessPermissionContent =>
+      'تکایە دەستڕاگەیشتن بە فایلە دەنگییەکان بە بۆ ئەوەی ڕێگەمان پێبدات فایلە مۆسیقەکانت لێبدەین.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'مۆڵەتی دەستگەیشتن بە دەنگ ڕەتکرایەوە';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'مۆڵەتی دەستگەیشتن بە دەنگ ڕەتکرایەوە';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'تکایە لە ڕێکخستنەکانی ئامێرەکەدا دەستگەیشتن بە فایلە دەنگییەکان بۆ ئەم ئەپە بدە بۆ ئەوەی ڕێگەمان پێبدات فایلە مۆسیقییەکانت لێبدەین.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'تکایە لە ڕێکخستنەکانی ئامێرەکەدا دەستگەیشتن بە فایلە دەنگییەکان بۆ ئەم ئەپە بدە بۆ ئەوەی ڕێگەمان پێبدات فایلە مۆسیقییەکانت لێبدەین.';
 
   @override
   String get menuScreenTitle => 'مینیو';
@@ -63,7 +66,6 @@ class AppLocalizationsCkb extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsCkb extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsCkb extends AppLocalizations {
   String get touchSoundsDialogTitle => 'دەنگەکانی تاچ';
 
   @override
-  String get touchSoundsDialogContent => 'تکایە لە ڕێکخستنەکانی سیستەمەوە دەنگەکانی تاچ چالاک بکە بۆ بیستنی دەنگەکانی ویل کلیک.';
+  String get touchSoundsDialogContent =>
+      'تکایە لە ڕێکخستنەکانی سیستەمەوە دەنگەکانی تاچ چالاک بکە بۆ بیستنی دەنگەکانی ویل کلیک.';
 
   @override
   String get immersiveModeSettingTitle => 'دۆخی نوقمبوون';
@@ -144,7 +146,8 @@ class AppLocalizationsCkb extends AppLocalizations {
   String get donateSettingTitle => 'بەخشین';
 
   @override
-  String get donateSettingDescription => 'ئەگەر ئەم ئەپەتان بەدڵە، تکایە بیر لە بەخشین بکەنەوە.';
+  String get donateSettingDescription =>
+      'ئەگەر ئەم ئەپەتان بەدڵە، تکایە بیر لە بەخشین بکەنەوە.';
 
   @override
   String get versionAboutScreenTitle => 'وەشان';
@@ -195,7 +198,8 @@ class AppLocalizationsCkb extends AppLocalizations {
   String get retryButtonText => 'دووبارە هەوڵبدەرەوە';
 
   @override
-  String get filePickerDialogTitle => 'بەڕێوەبەرایەتییەک هەڵبژێرە بۆ سکانکردنی مۆسیقا';
+  String get filePickerDialogTitle =>
+      'بەڕێوەبەرایەتییەک هەڵبژێرە بۆ سکانکردنی مۆسیقا';
 
   @override
   String get searchScreenTitle => 'گەڕان';
@@ -213,7 +217,8 @@ class AppLocalizationsCkb extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'لەکارخستنی باشکردنی پاتری';
 
   @override
-  String get disableBatteryOptimizationContent => 'تکایە باشکردنی پاتری بۆ ئەم ئەپە لە ڕێکخستنەکانی ئامێرەکەدا لەکاربخە بۆ ئەوەی ڕێگە بە پەخشکردنی پاشبنەما بدات لە مۆسیقا.';
+  String get disableBatteryOptimizationContent =>
+      'تکایە باشکردنی پاتری بۆ ئەم ئەپە لە ڕێکخستنەکانی ئامێرەکەدا لەکاربخە بۆ ئەوەی ڕێگە بە پەخشکردنی پاشبنەما بدات لە مۆسیقا.';
 
   @override
   String get languageScreenTitle => 'زمان';
@@ -267,50 +272,66 @@ class AppLocalizationsCkb extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'فایلەکانی مۆسیقای Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'پەنجەی گەورەت بە سووکیی بجوڵێنە بە دەوری ویلەکەی کلیکەکەدا بۆ گەشتکردن بە مینیوەکەدا';
+  String get deviceControlMenuTutorialText =>
+      'پەنجەی گەورەت بە سووکیی بجوڵێنە بە دەوری ویلەکەی کلیکەکەدا بۆ گەشتکردن بە مینیوەکەدا';
 
   @override
-  String get centerButtonMenuTutorialText => 'بۆ هەڵبژاردنی بڕگەی Menu ی Highlighted دوگمەی Center داگرە';
+  String get centerButtonMenuTutorialText =>
+      'بۆ هەڵبژاردنی بڕگەی Menu ی Highlighted دوگمەی Center داگرە';
 
   @override
-  String get playPauseMenuTutorialText => 'ئەم دوگمەیە داگرە بۆ لێدان یان وەستاندنی گۆرانییەک';
+  String get playPauseMenuTutorialText =>
+      'ئەم دوگمەیە داگرە بۆ لێدان یان وەستاندنی گۆرانییەک';
 
   @override
-  String get nextButtonMenuTutorialText => 'ئەم دوگمەیە بکە بۆ ئەوەی بپەڕیتەوە بۆ گۆرانی داهاتوو';
+  String get nextButtonMenuTutorialText =>
+      'ئەم دوگمەیە بکە بۆ ئەوەی بپەڕیتەوە بۆ گۆرانی داهاتوو';
 
   @override
-  String get previousButtonMenuTutorialText => 'ئەم دوگمەیە داگرە بۆ گەڕانەوە یان گەڕانەوە بۆ گۆرانی پێشوو';
+  String get previousButtonMenuTutorialText =>
+      'ئەم دوگمەیە داگرە بۆ گەڕانەوە یان گەڕانەوە بۆ گۆرانی پێشوو';
 
   @override
-  String get menuButtonTutorialText => 'ئەم دوگمەیە بکە بۆ گەڕانەوە بۆ مینیوی پێشوو. دەتوانیت لە هەر شاشەیەکی ترەوە دایبگریت و ڕایبگریت بۆ ئەوەی ڕاستەوخۆ بچیتە ناو مینیوی سەرەکی.';
+  String get menuButtonTutorialText =>
+      'ئەم دوگمەیە بکە بۆ گەڕانەوە بۆ مینیوی پێشوو. دەتوانیت لە هەر شاشەیەکی ترەوە دایبگریت و ڕایبگریت بۆ ئەوەی ڕاستەوخۆ بچیتە ناو مینیوی سەرەکی.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ئەمە شاشەی نمایشە. دۆخی شاشەی تاچ و شاشەی دابەشکراو بە شێوازی پێشوەختە چالاک کراوە و دەتوانرێت زیاتر لە ڕێکخستنەکاندا ڕێکبخرێت.';
+  String get deviceScreenMenuTutorialText =>
+      'ئەمە شاشەی نمایشە. دۆخی شاشەی تاچ و شاشەی دابەشکراو بە شێوازی پێشوەختە چالاک کراوە و دەتوانرێت زیاتر لە ڕێکخستنەکاندا ڕێکبخرێت.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'پەنجەی گەورەت بە دەوری ویلەکەی کلیکەکەدا بجوڵێنە بۆ ڕێکخستنی دەنگەکە';
+  String get deviceControlNowPlayingTutorialText =>
+      'پەنجەی گەورەت بە دەوری ویلەکەی کلیکەکەدا بجوڵێنە بۆ ڕێکخستنی دەنگەکە';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'دوگمەی ناوەڕاست داگرە بۆ ئەوەی لە ڕێگەی Seek Bar و Scrubber Bar و Shuffle Slider ەوە بڕۆن. دوگمەی ناوەڕاست داگرە و ڕایبگرە بۆ دەستگەیشتن بە بژاردەی زیادە.';
+  String get centerButtonNowPlayingTutorialText =>
+      'دوگمەی ناوەڕاست داگرە بۆ ئەوەی لە ڕێگەی Seek Bar و Scrubber Bar و Shuffle Slider ەوە بڕۆن. دوگمەی ناوەڕاست داگرە و ڕایبگرە بۆ دەستگەیشتن بە بژاردەی زیادە.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'ئەم دوگمەیە داگرە و ڕایبگرە بۆ ئەوەی گۆرانییەکە بەخێرایی بکەیتە پێشەوە';
+  String get nextButtonNowPlayingTutorialText =>
+      'ئەم دوگمەیە داگرە و ڕایبگرە بۆ ئەوەی گۆرانییەکە بەخێرایی بکەیتە پێشەوە';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'ئەم دوگمەیە داگرە و ڕایبگرە بۆ ئەوەی گۆرانییەکە بگەڕێنێتەوە';
+  String get previousButtonNowPlayingTutorialText =>
+      'ئەم دوگمەیە داگرە و ڕایبگرە بۆ ئەوەی گۆرانییەکە بگەڕێنێتەوە';
 
   @override
-  String get deviceControlSearchTutorialText => 'پەنجەی گەورەت بە سووکیی بە دەوری ویلەکەی کلیکەکەدا بجوڵێنە بۆ ئەوەی ئەلفوبێیەک تیشک بخەیتە سەر';
+  String get deviceControlSearchTutorialText =>
+      'پەنجەی گەورەت بە سووکیی بە دەوری ویلەکەی کلیکەکەدا بجوڵێنە بۆ ئەوەی ئەلفوبێیەک تیشک بخەیتە سەر';
 
   @override
-  String get centerButtonSearchTutorialText => 'دوگمەی ناوەڕاست داگرە بۆ هەڵبژاردنی ئەلفوبێی دیاریکراو';
+  String get centerButtonSearchTutorialText =>
+      'دوگمەی ناوەڕاست داگرە بۆ هەڵبژاردنی ئەلفوبێی دیاریکراو';
 
   @override
-  String get nextButtonSearchTutorialText => 'بۆ زیادکردنی بۆشایی ئەم دوگمەیە داگرە';
+  String get nextButtonSearchTutorialText =>
+      'بۆ زیادکردنی بۆشایی ئەم دوگمەیە داگرە';
 
   @override
-  String get previousButtonSearchTutorialText => 'بۆ سڕینەوەی دوا پیت ئەم دوگمەیە بکە';
+  String get previousButtonSearchTutorialText =>
+      'بۆ سڕینەوەی دوا پیت ئەم دوگمەیە بکە';
 
   @override
-  String get menuButtonSearchTutorialText => 'ئەم دوگمەیە بکە بۆ داخستنی کیبۆردەکە و کارلێککردن لەگەڵ ئەنجامەکانی گەڕان';
+  String get menuButtonSearchTutorialText =>
+      'ئەم دوگمەیە بکە بۆ داخستنی کیبۆردەکە و کارلێککردن لەگەڵ ئەنجامەکانی گەڕان';
 }

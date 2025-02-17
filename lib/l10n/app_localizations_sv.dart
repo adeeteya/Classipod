@@ -18,13 +18,16 @@ class AppLocalizationsSv extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ljudåtkomsttillstånd krävs';
 
   @override
-  String get audioAccessPermissionContent => 'Vänligen ge ljudfiler åtkomst så att vi kan spela dina musikfiler.';
+  String get audioAccessPermissionContent =>
+      'Vänligen ge ljudfiler åtkomst så att vi kan spela dina musikfiler.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ljudåtkomsttillstånd nekas';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ljudåtkomsttillstånd nekas';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Vänligen ge ljudfiler åtkomst för den här appen i enhetsinställningarna så att vi kan spela dina musikfiler.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Vänligen ge ljudfiler åtkomst för den här appen i enhetsinställningarna så att vi kan spela dina musikfiler.';
 
   @override
   String get menuScreenTitle => 'Meny';
@@ -63,7 +66,6 @@ class AppLocalizationsSv extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsSv extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Pekljud';
 
   @override
-  String get touchSoundsDialogContent => 'Vänligen aktivera Touch -ljud från systeminställningar för att höra klickhjulets ljud';
+  String get touchSoundsDialogContent =>
+      'Vänligen aktivera Touch -ljud från systeminställningar för att höra klickhjulets ljud';
 
   @override
   String get immersiveModeSettingTitle => 'Uppslukande läge';
@@ -144,7 +146,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get donateSettingTitle => 'Donera';
 
   @override
-  String get donateSettingDescription => 'Om du gillar den här appen, överväg att donera.';
+  String get donateSettingDescription =>
+      'Om du gillar den här appen, överväg att donera.';
 
   @override
   String get versionAboutScreenTitle => 'Version';
@@ -195,7 +198,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get retryButtonText => 'Försöka igen';
 
   @override
-  String get filePickerDialogTitle => 'Välj en katalog för att söka efter musik';
+  String get filePickerDialogTitle =>
+      'Välj en katalog för att söka efter musik';
 
   @override
   String get searchScreenTitle => 'Söka';
@@ -213,7 +217,8 @@ class AppLocalizationsSv extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Inaktivera batterioptimering';
 
   @override
-  String get disableBatteryOptimizationContent => 'Vänligen inaktivera batterioptimering för den här appen i enhetsinställningarna för att möjliggöra bakgrundsuppspelning av musik.';
+  String get disableBatteryOptimizationContent =>
+      'Vänligen inaktivera batterioptimering för den här appen i enhetsinställningarna för att möjliggöra bakgrundsuppspelning av musik.';
 
   @override
   String get languageScreenTitle => 'Språk';
@@ -267,50 +272,66 @@ class AppLocalizationsSv extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Files';
 
   @override
-  String get deviceControlMenuTutorialText => 'Flytta tummen lätt runt klickhjulet för att navigera på menyn';
+  String get deviceControlMenuTutorialText =>
+      'Flytta tummen lätt runt klickhjulet för att navigera på menyn';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tryck på centerknappen för att välja markering av menyalternativ';
+  String get centerButtonMenuTutorialText =>
+      'Tryck på centerknappen för att välja markering av menyalternativ';
 
   @override
-  String get playPauseMenuTutorialText => 'Tryck på den här knappen för att spela eller pausa en låt';
+  String get playPauseMenuTutorialText =>
+      'Tryck på den här knappen för att spela eller pausa en låt';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tryck på den här knappen för att hoppa till nästa låt';
+  String get nextButtonMenuTutorialText =>
+      'Tryck på den här knappen för att hoppa till nästa låt';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tryck på den här knappen för att spola tillbaka eller gå tillbaka till föregående låt';
+  String get previousButtonMenuTutorialText =>
+      'Tryck på den här knappen för att spola tillbaka eller gå tillbaka till föregående låt';
 
   @override
-  String get menuButtonTutorialText => 'Tryck på den här knappen för att gå tillbaka till föregående meny. Du kan trycka på och hålla den från någon annan skärm för att direkt gå till huvudmenyn.';
+  String get menuButtonTutorialText =>
+      'Tryck på den här knappen för att gå tillbaka till föregående meny. Du kan trycka på och hålla den från någon annan skärm för att direkt gå till huvudmenyn.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Det här är skärmen. Pekskärm och delad skärmläge är aktiverat som standard och kan konfigureras ytterligare i inställningarna.';
+  String get deviceScreenMenuTutorialText =>
+      'Det här är skärmen. Pekskärm och delad skärmläge är aktiverat som standard och kan konfigureras ytterligare i inställningarna.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Flytta tummen runt klickhjulet för att justera volymen';
+  String get deviceControlNowPlayingTutorialText =>
+      'Flytta tummen runt klickhjulet för att justera volymen';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tryck på mittknappen för att cykla genom sökstång, skrubberfält och skjutreglage. Tryck och håll i mittknappen för att komma åt ytterligare alternativ.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tryck på mittknappen för att cykla genom sökstång, skrubberfält och skjutreglage. Tryck och håll i mittknappen för att komma åt ytterligare alternativ.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tryck och håll den här knappen för att snabbt framåt låten';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tryck och håll den här knappen för att snabbt framåt låten';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tryck och håll den här knappen för att spola tillbaka låten';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tryck och håll den här knappen för att spola tillbaka låten';
 
   @override
-  String get deviceControlSearchTutorialText => 'Flytta tummen lätt runt klickhjulet för att markera ett alfabet';
+  String get deviceControlSearchTutorialText =>
+      'Flytta tummen lätt runt klickhjulet för att markera ett alfabet';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tryck på mittknappen för att välja det markerade alfabetet';
+  String get centerButtonSearchTutorialText =>
+      'Tryck på mittknappen för att välja det markerade alfabetet';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tryck på den här knappen för att lägga till ett utrymme';
+  String get nextButtonSearchTutorialText =>
+      'Tryck på den här knappen för att lägga till ett utrymme';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tryck på den här knappen för att ta bort det sista tecknet';
+  String get previousButtonSearchTutorialText =>
+      'Tryck på den här knappen för att ta bort det sista tecknet';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tryck på den här knappen för att stänga tangentbordet och interagera med sökresultaten';
+  String get menuButtonSearchTutorialText =>
+      'Tryck på den här knappen för att stänga tangentbordet och interagera med sökresultaten';
 }

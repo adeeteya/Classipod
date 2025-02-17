@@ -15,16 +15,20 @@ class AppLocalizationsSus extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'Audio xa walie nan lanma a xa raba .';
+  String get audioAccessPermissionTitle =>
+      'Audio xa walie nan lanma a xa raba .';
 
   @override
-  String get audioAccessPermissionContent => 'Wo xa yi bukie rawali alako wo xa nɔ wo xa kɔrae rawalide.';
+  String get audioAccessPermissionContent =>
+      'Wo xa yi bukie rawali alako wo xa nɔ wo xa kɔrae rawalide.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio xa wali xunmasafe .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio xa wali xunmasafe .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Wo xa yi appli xa fe fala yi luti ma alako wo xa nɔ wo xa sigie rawalide.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Wo xa yi appli xa fe fala yi luti ma alako wo xa nɔ wo xa sigie rawalide.';
 
   @override
   String get menuScreenTitle => 'mou';
@@ -63,7 +67,6 @@ class AppLocalizationsSus extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsSus extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsSus extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch sounds';
 
   @override
-  String get touchSoundsDialogContent => 'Wo xa yi luti yusi kelife System Paramètres ma alako wo xa na xui ramɛ .';
+  String get touchSoundsDialogContent =>
+      'Wo xa yi luti yusi kelife System Paramètres ma alako wo xa na xui ramɛ .';
 
   @override
   String get immersiveModeSettingTitle => 'Yi Mode dan a sago';
@@ -144,10 +147,12 @@ class AppLocalizationsSus extends AppLocalizations {
   String get donateSettingTitle => 'Fi';
 
   @override
-  String get donateSettingDescription => 'Xa wo wama yi appli xɔn, wo xa wo ɲɔxɔ sa a ma.';
+  String get donateSettingDescription =>
+      'Xa wo wama yi appli xɔn, wo xa wo ɲɔxɔ sa a ma.';
 
   @override
-  String get versionAboutScreenTitle => 'Fé falaki Évolution fé ma siguè ya ré ma';
+  String get versionAboutScreenTitle =>
+      'Fé falaki Évolution fé ma siguè ya ré ma';
 
   @override
   String get madeWithLoveTitle => 'A rafalaxi ❤️ nan na .';
@@ -195,7 +200,8 @@ class AppLocalizationsSus extends AppLocalizations {
   String get retryButtonText => 'na ba fé';
 
   @override
-  String get filePickerDialogTitle => 'Wo xa Directory sugandi Scan for Music .';
+  String get filePickerDialogTitle =>
+      'Wo xa Directory sugandi Scan for Music .';
 
   @override
   String get searchScreenTitle => 'Fenfé';
@@ -213,7 +219,8 @@ class AppLocalizationsSus extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Bateri naxan mu kanama .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Wo xa yi appli xa fe rawali ki fanyi ra alako wo xa nɔ wo xa kɔrae rawalide.';
+  String get disableBatteryOptimizationContent =>
+      'Wo xa yi appli xa fe rawali ki fanyi ra alako wo xa nɔ wo xa kɔrae rawalide.';
 
   @override
   String get languageScreenTitle => 'Nènyi';
@@ -267,50 +274,66 @@ class AppLocalizationsSus extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan xa sigie';
 
   @override
-  String get deviceControlMenuTutorialText => 'Wo xa wo bɛlɛxɛsole ragoro Click Wheel rabilinyi alako wo xa na donse rawali .';
+  String get deviceControlMenuTutorialText =>
+      'Wo xa wo bɛlɛxɛsole ragoro Click Wheel rabilinyi alako wo xa na donse rawali .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Wo xa na button makɔrɛ alako wo xa na buki sugandi .';
+  String get centerButtonMenuTutorialText =>
+      'Wo xa na button makɔrɛ alako wo xa na buki sugandi .';
 
   @override
-  String get playPauseMenuTutorialText => 'Wo yi button makɔrɛ alako wo xa sigi sa xa na mu wo xa sigi sa .';
+  String get playPauseMenuTutorialText =>
+      'Wo yi button makɔrɛ alako wo xa sigi sa xa na mu wo xa sigi sa .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Wo yi button makɔrɛ alako wo xa siga na sigi naxan fama .';
+  String get nextButtonMenuTutorialText =>
+      'Wo yi button makɔrɛ alako wo xa siga na sigi naxan fama .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Wo yi button makɔrɛ alako wo xa gbilen na sigi fori ma .';
+  String get previousButtonMenuTutorialText =>
+      'Wo yi button makɔrɛ alako wo xa gbilen na sigi fori ma .';
 
   @override
-  String get menuButtonTutorialText => 'Wo yi button makɔrɛ alako wo xa gbilen na menu fori ma. Wo nɔma a dinde wo xa a suxu, wo xa a suxu alako wo xa siga a rawalide a fanyi ra.';
+  String get menuButtonTutorialText =>
+      'Wo yi button makɔrɛ alako wo xa gbilen na menu fori ma. Wo nɔma a dinde wo xa a suxu, wo xa a suxu alako wo xa siga a rawalide a fanyi ra.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Na nan a ra, yi buki xaranfe. Touch Screen nun Split Screen Mode naxa a rawali a fanyi ra, a man nɔma rawalide a gbengbenyi a xa walie kui.';
+  String get deviceScreenMenuTutorialText =>
+      'Na nan a ra, yi buki xaranfe. Touch Screen nun Split Screen Mode naxa a rawali a fanyi ra, a man nɔma rawalide a gbengbenyi a xa walie kui.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Wo xa wo furi ragoro Click Wheel ma alako wo xa na buki rawali .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Wo xa wo furi ragoro Click Wheel ma alako wo xa na buki rawali .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Wo xa Centre xa button makɔrɛ alako wo xa nɔ wo xa bar, wo xa scrubber bar nun wo xa shuffle slider rawali. Wo yi buki rawali alako wo xa nɔ yi buki rawalide.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Wo xa Centre xa button makɔrɛ alako wo xa nɔ wo xa bar, wo xa scrubber bar nun wo xa shuffle slider rawali. Wo yi buki rawali alako wo xa nɔ yi buki rawalide.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Wo yi button makɔrɛ alako wo xa na sigi rawali mafuren .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Wo yi button makɔrɛ alako wo xa na sigi rawali mafuren .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Wo yi buki ragoro wo ma alako wo xa na sigi rawali .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Wo yi buki ragoro wo ma alako wo xa na sigi rawali .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Wo xa wo bɛlɛxɛsole ragoro Click Wheel ma alako wo xa alfabe masen .';
+  String get deviceControlSearchTutorialText =>
+      'Wo xa wo bɛlɛxɛsole ragoro Click Wheel ma alako wo xa alfabe masen .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Wo xa na button makɔrɛ alako wo xa na sɛbɛli sugandi naxan xili alphabet .';
+  String get centerButtonSearchTutorialText =>
+      'Wo xa na button makɔrɛ alako wo xa na sɛbɛli sugandi naxan xili alphabet .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Wo yi button makɔrɛ alako wo xa yire nde sa a ma .';
+  String get nextButtonSearchTutorialText =>
+      'Wo yi button makɔrɛ alako wo xa yire nde sa a ma .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Wo yi button makɔrɛ alako wo xa na sɛbɛli dɔnxɔɛ raxara .';
+  String get previousButtonSearchTutorialText =>
+      'Wo yi button makɔrɛ alako wo xa na sɛbɛli dɔnxɔɛ raxara .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Wo yi button makɔrɛ alako wo xa na buki balan anun wo xa wo maso na fe fenfe ra .';
+  String get menuButtonSearchTutorialText =>
+      'Wo yi button makɔrɛ alako wo xa na buki balan anun wo xa wo maso na fe fenfe ra .';
 }

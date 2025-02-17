@@ -18,13 +18,16 @@ class AppLocalizationsLo extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ຕ້ອງການອະນຸຍາດເຂົ້າໃຊ້ສຽງ';
 
   @override
-  String get audioAccessPermissionContent => 'ກະລຸນາໃຫ້ການເຂົ້າເຖິງໄຟລ໌ສຽງເພື່ອໃຫ້ພວກເຮົາຫຼີ້ນໄຟລ໌ດົນຕີຂອງທ່ານ.';
+  String get audioAccessPermissionContent =>
+      'ກະລຸນາໃຫ້ການເຂົ້າເຖິງໄຟລ໌ສຽງເພື່ອໃຫ້ພວກເຮົາຫຼີ້ນໄຟລ໌ດົນຕີຂອງທ່ານ.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ການອະນຸຍາດເຂົ້າໃຊ້ສຽງທີ່ຖືກປະຕິເສດ';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ການອະນຸຍາດເຂົ້າໃຊ້ສຽງທີ່ຖືກປະຕິເສດ';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'ກະລຸນາໃຫ້ການເຂົ້າເຖິງໄຟລ໌ສຽງສໍາລັບແອັບນີ້ໃນການຕັ້ງຄ່າອຸປະກອນເພື່ອໃຫ້ພວກເຮົາຫຼີ້ນໄຟລ໌ດົນຕີຂອງທ່ານ.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'ກະລຸນາໃຫ້ການເຂົ້າເຖິງໄຟລ໌ສຽງສໍາລັບແອັບນີ້ໃນການຕັ້ງຄ່າອຸປະກອນເພື່ອໃຫ້ພວກເຮົາຫຼີ້ນໄຟລ໌ດົນຕີຂອງທ່ານ.';
 
   @override
   String get menuScreenTitle => 'ເມນູ';
@@ -63,7 +66,6 @@ class AppLocalizationsLo extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsLo extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsLo extends AppLocalizations {
   String get touchSoundsDialogTitle => 'ສຽງສໍາພັດ';
 
   @override
-  String get touchSoundsDialogContent => 'ກະລຸນາເປີດໃຊ້ສຽງສໍາຜັດຈາກການຕັ້ງຄ່າລະບົບເພື່ອຟັງສຽງກົດປຸ່ມກົດປຸ່ມ';
+  String get touchSoundsDialogContent =>
+      'ກະລຸນາເປີດໃຊ້ສຽງສໍາຜັດຈາກການຕັ້ງຄ່າລະບົບເພື່ອຟັງສຽງກົດປຸ່ມກົດປຸ່ມ';
 
   @override
   String get immersiveModeSettingTitle => 'ຮູບແບບທີ່ບໍ່ມີຕົວຕົນ';
@@ -144,7 +146,8 @@ class AppLocalizationsLo extends AppLocalizations {
   String get donateSettingTitle => 'ບໍລິຈາກ';
 
   @override
-  String get donateSettingDescription => 'ຖ້າທ່ານມັກແອັບ this ນີ້, ກະລຸນາພິຈາລະນາການບໍລິຈາກ.';
+  String get donateSettingDescription =>
+      'ຖ້າທ່ານມັກແອັບ this ນີ້, ກະລຸນາພິຈາລະນາການບໍລິຈາກ.';
 
   @override
   String get versionAboutScreenTitle => 'ສະບັບ';
@@ -213,7 +216,8 @@ class AppLocalizationsLo extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'ປິດການແຂ່ງຂັນແບັດເຕີຣີ';
 
   @override
-  String get disableBatteryOptimizationContent => 'ກະລຸນາປິດການໃຊ້ງານສໍາລັບການເພີ່ມປະສິດທິພາບຂອງແບດເຕີຣີສໍາລັບແອັບ this ນີ້ໃນການຕັ້ງຄ່າອຸປະກອນເພື່ອອະນຸຍາດການຫຼີ້ນໃຫມ່ຂອງດົນຕີ.';
+  String get disableBatteryOptimizationContent =>
+      'ກະລຸນາປິດການໃຊ້ງານສໍາລັບການເພີ່ມປະສິດທິພາບຂອງແບດເຕີຣີສໍາລັບແອັບ this ນີ້ໃນການຕັ້ງຄ່າອຸປະກອນເພື່ອອະນຸຍາດການຫຼີ້ນໃຫມ່ຂອງດົນຕີ.';
 
   @override
   String get languageScreenTitle => 'ພາສາ';
@@ -267,10 +271,12 @@ class AppLocalizationsLo extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'rescan ໄຟລ໌ດົນຕີ';
 
   @override
-  String get deviceControlMenuTutorialText => 'ຍ້າຍນິ້ວໂປ້ຂອງທ່ານເບົາລົງຮອບລໍ້ກົດເພື່ອນໍາໃຊ້ເມນູ';
+  String get deviceControlMenuTutorialText =>
+      'ຍ້າຍນິ້ວໂປ້ຂອງທ່ານເບົາລົງຮອບລໍ້ກົດເພື່ອນໍາໃຊ້ເມນູ';
 
   @override
-  String get centerButtonMenuTutorialText => 'ກົດປຸ່ມ STENTS ເພື່ອເລືອກລາຍການເມນູທີ່ຖືກເນັ້ນໃຫ້';
+  String get centerButtonMenuTutorialText =>
+      'ກົດປຸ່ມ STENTS ເພື່ອເລືອກລາຍການເມນູທີ່ຖືກເນັ້ນໃຫ້';
 
   @override
   String get playPauseMenuTutorialText => 'ກົດປຸ່ມນີ້ເພື່ອຫຼີ້ນຫລືຢຸດເພງ';
@@ -279,38 +285,49 @@ class AppLocalizationsLo extends AppLocalizations {
   String get nextButtonMenuTutorialText => 'ກົດປຸ່ມນີ້ເພື່ອຂ້າມໄປທີ່ເພງຕໍ່ໄປ';
 
   @override
-  String get previousButtonMenuTutorialText => 'ກົດປຸ່ມນີ້ເພື່ອອ່ານຄືນຫຼືກັບໄປທີ່ເພງທີ່ຜ່ານມາ';
+  String get previousButtonMenuTutorialText =>
+      'ກົດປຸ່ມນີ້ເພື່ອອ່ານຄືນຫຼືກັບໄປທີ່ເພງທີ່ຜ່ານມາ';
 
   @override
-  String get menuButtonTutorialText => 'ກົດປຸ່ມນີ້ເພື່ອກັບໄປທີ່ເມນູກ່ອນຫນ້ານີ້. ທ່ານສາມາດກົດແລະກົດມັນຈາກຫນ້າຈໍອື່ນເພື່ອໄປທີ່ເມນູຫລັກໂດຍກົງ.';
+  String get menuButtonTutorialText =>
+      'ກົດປຸ່ມນີ້ເພື່ອກັບໄປທີ່ເມນູກ່ອນຫນ້ານີ້. ທ່ານສາມາດກົດແລະກົດມັນຈາກຫນ້າຈໍອື່ນເພື່ອໄປທີ່ເມນູຫລັກໂດຍກົງ.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ນີ້ແມ່ນຫນ້າຈໍສະແດງ. ຮູບແບບຫນ້າຈໍສໍາຜັດແລະແບ່ງປັນຫນ້າຈໍແມ່ນເປີດໃຊ້ໂດຍຄ່າເລີ່ມຕົ້ນແລະສາມາດຕັ້ງຄ່າຕື່ມອີກໃນການຕັ້ງຄ່າ.';
+  String get deviceScreenMenuTutorialText =>
+      'ນີ້ແມ່ນຫນ້າຈໍສະແດງ. ຮູບແບບຫນ້າຈໍສໍາຜັດແລະແບ່ງປັນຫນ້າຈໍແມ່ນເປີດໃຊ້ໂດຍຄ່າເລີ່ມຕົ້ນແລະສາມາດຕັ້ງຄ່າຕື່ມອີກໃນການຕັ້ງຄ່າ.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'ຍ້າຍໂປ້ໂປ້ຂອງທ່ານຮອບລໍ້ກົດເພື່ອປັບປະລິມານ';
+  String get deviceControlNowPlayingTutorialText =>
+      'ຍ້າຍໂປ້ໂປ້ຂອງທ່ານຮອບລໍ້ກົດເພື່ອປັບປະລິມານ';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'ກົດປຸ່ມສູນກາງຫາວົງຈອນໂດຍຜ່ານການສະແຫວງຫາແຖບ, ແຖບ Scrubber ແລະເລື່ອນເລື່ອນ. ກົດແລະກົດປຸ່ມສູນກາງເພື່ອເຂົ້າຫາຕົວເລືອກເພີ່ມເຕີມ.';
+  String get centerButtonNowPlayingTutorialText =>
+      'ກົດປຸ່ມສູນກາງຫາວົງຈອນໂດຍຜ່ານການສະແຫວງຫາແຖບ, ແຖບ Scrubber ແລະເລື່ອນເລື່ອນ. ກົດແລະກົດປຸ່ມສູນກາງເພື່ອເຂົ້າຫາຕົວເລືອກເພີ່ມເຕີມ.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'ກົດປຸ່ມແລະກົດປຸ່ມນີ້ເພື່ອກ້າວໄປຂ້າງຫນ້າເພງ';
+  String get nextButtonNowPlayingTutorialText =>
+      'ກົດປຸ່ມແລະກົດປຸ່ມນີ້ເພື່ອກ້າວໄປຂ້າງຫນ້າເພງ';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'ກົດປຸ່ມແລະກົດປຸ່ມນີ້ເພື່ອຫວນຄືນເພງ';
+  String get previousButtonNowPlayingTutorialText =>
+      'ກົດປຸ່ມແລະກົດປຸ່ມນີ້ເພື່ອຫວນຄືນເພງ';
 
   @override
-  String get deviceControlSearchTutorialText => 'ຍ້າຍນິ້ວໂປ້ຂອງທ່ານເບົາລົງຮອບລໍ້ກົດເພື່ອຊີ້ໃຫ້ເຫັນຕົວຫນັງສື';
+  String get deviceControlSearchTutorialText =>
+      'ຍ້າຍນິ້ວໂປ້ຂອງທ່ານເບົາລົງຮອບລໍ້ກົດເພື່ອຊີ້ໃຫ້ເຫັນຕົວຫນັງສື';
 
   @override
-  String get centerButtonSearchTutorialText => 'ກົດປຸ່ມ STENTS ເພື່ອເລືອກຕົວຫນັງສືທີ່ໂດດເດັ່ນ';
+  String get centerButtonSearchTutorialText =>
+      'ກົດປຸ່ມ STENTS ເພື່ອເລືອກຕົວຫນັງສືທີ່ໂດດເດັ່ນ';
 
   @override
   String get nextButtonSearchTutorialText => 'ກົດປຸ່ມນີ້ເພື່ອເພີ່ມພື້ນທີ່';
 
   @override
-  String get previousButtonSearchTutorialText => 'ກົດປຸ່ມນີ້ເພື່ອລຶບຕົວລະຄອນສຸດທ້າຍ';
+  String get previousButtonSearchTutorialText =>
+      'ກົດປຸ່ມນີ້ເພື່ອລຶບຕົວລະຄອນສຸດທ້າຍ';
 
   @override
-  String get menuButtonSearchTutorialText => 'ກົດປຸ່ມນີ້ເພື່ອປິດແປ້ນພິມແລະພົວພັນກັບຜົນການຄົ້ນຫາ';
+  String get menuButtonSearchTutorialText =>
+      'ກົດປຸ່ມນີ້ເພື່ອປິດແປ້ນພິມແລະພົວພັນກັບຜົນການຄົ້ນຫາ';
 }

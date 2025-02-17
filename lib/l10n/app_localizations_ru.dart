@@ -15,16 +15,20 @@ class AppLocalizationsRu extends AppLocalizations {
   String get menuButtonText => 'МЕНЮ';
 
   @override
-  String get audioAccessPermissionTitle => 'Требуется разрешение на доступ к аудио';
+  String get audioAccessPermissionTitle =>
+      'Требуется разрешение на доступ к аудио';
 
   @override
-  String get audioAccessPermissionContent => 'Пожалуйста, предоставьте аудиофайлы, чтобы позволить нам воспроизводить ваши музыкальные файлы.';
+  String get audioAccessPermissionContent =>
+      'Пожалуйста, предоставьте аудиофайлы, чтобы позволить нам воспроизводить ваши музыкальные файлы.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Разрешение на доступ к аудио';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Разрешение на доступ к аудио';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Пожалуйста, предоставьте доступ аудиофайлов для этого приложения в настройках устройства, чтобы мы могли воспроизводить ваши музыкальные файлы.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Пожалуйста, предоставьте доступ аудиофайлов для этого приложения в настройках устройства, чтобы мы могли воспроизводить ваши музыкальные файлы.';
 
   @override
   String get menuScreenTitle => 'Меню';
@@ -63,7 +67,6 @@ class AppLocalizationsRu extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsRu extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Касаясь звуков';
 
   @override
-  String get touchSoundsDialogContent => 'Пожалуйста, включите сенсорные звуки из настройки системы, чтобы услышать звуки колеса щелчка';
+  String get touchSoundsDialogContent =>
+      'Пожалуйста, включите сенсорные звуки из настройки системы, чтобы услышать звуки колеса щелчка';
 
   @override
   String get immersiveModeSettingTitle => 'Иммерсивный режим';
@@ -144,7 +147,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get donateSettingTitle => 'Пожертвовать';
 
   @override
-  String get donateSettingDescription => 'Если вам нравится это приложение, пожалуйста, рассмотрите возможность пожертвования.';
+  String get donateSettingDescription =>
+      'Если вам нравится это приложение, пожалуйста, рассмотрите возможность пожертвования.';
 
   @override
   String get versionAboutScreenTitle => 'Версия';
@@ -195,7 +199,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get retryButtonText => 'Повторно';
 
   @override
-  String get filePickerDialogTitle => 'Выберите каталог для сканирования музыки';
+  String get filePickerDialogTitle =>
+      'Выберите каталог для сканирования музыки';
 
   @override
   String get searchScreenTitle => 'Поиск';
@@ -213,7 +218,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Отключить оптимизацию батареи';
 
   @override
-  String get disableBatteryOptimizationContent => 'Пожалуйста, отключите оптимизацию батареи для этого приложения в настройках устройства, чтобы обеспечить воспроизведение фонового воспроизведения музыки.';
+  String get disableBatteryOptimizationContent =>
+      'Пожалуйста, отключите оптимизацию батареи для этого приложения в настройках устройства, чтобы обеспечить воспроизведение фонового воспроизведения музыки.';
 
   @override
   String get languageScreenTitle => 'Язык';
@@ -267,50 +273,66 @@ class AppLocalizationsRu extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music файлы';
 
   @override
-  String get deviceControlMenuTutorialText => 'Слегка переместите большой палец вокруг щелчка, чтобы ориентироваться в меню';
+  String get deviceControlMenuTutorialText =>
+      'Слегка переместите большой палец вокруг щелчка, чтобы ориентироваться в меню';
 
   @override
-  String get centerButtonMenuTutorialText => 'Нажмите кнопку центра, чтобы выбрать выделенный пункт меню';
+  String get centerButtonMenuTutorialText =>
+      'Нажмите кнопку центра, чтобы выбрать выделенный пункт меню';
 
   @override
-  String get playPauseMenuTutorialText => 'Нажмите эту кнопку, чтобы воспроизвести или приостановить песню';
+  String get playPauseMenuTutorialText =>
+      'Нажмите эту кнопку, чтобы воспроизвести или приостановить песню';
 
   @override
-  String get nextButtonMenuTutorialText => 'Нажмите эту кнопку, чтобы перейти к следующей песне';
+  String get nextButtonMenuTutorialText =>
+      'Нажмите эту кнопку, чтобы перейти к следующей песне';
 
   @override
-  String get previousButtonMenuTutorialText => 'Нажмите эту кнопку, чтобы перемотать или вернуться к предыдущей песне';
+  String get previousButtonMenuTutorialText =>
+      'Нажмите эту кнопку, чтобы перемотать или вернуться к предыдущей песне';
 
   @override
-  String get menuButtonTutorialText => 'Нажмите эту кнопку, чтобы вернуться в предыдущее меню. Вы можете нажать и удержать его на любом другом экране, чтобы напрямую перейти в главное меню.';
+  String get menuButtonTutorialText =>
+      'Нажмите эту кнопку, чтобы вернуться в предыдущее меню. Вы можете нажать и удержать его на любом другом экране, чтобы напрямую перейти в главное меню.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Это экран дисплея. Сенсорный экран и режим экрана разделения включены по умолчанию и могут быть настроены далее в настройках.';
+  String get deviceScreenMenuTutorialText =>
+      'Это экран дисплея. Сенсорный экран и режим экрана разделения включены по умолчанию и могут быть настроены далее в настройках.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Переместите большой палец вокруг колеса щелчка, чтобы отрегулировать громкость';
+  String get deviceControlNowPlayingTutorialText =>
+      'Переместите большой палец вокруг колеса щелчка, чтобы отрегулировать громкость';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Нажмите кнопку центра, чтобы пройти велосипед через бар, скруббер и ползунок. Нажмите и удерживайте центральную кнопку, чтобы получить доступ к дополнительным параметрам.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Нажмите кнопку центра, чтобы пройти велосипед через бар, скруббер и ползунок. Нажмите и удерживайте центральную кнопку, чтобы получить доступ к дополнительным параметрам.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Нажмите и удерживайте эту кнопку, чтобы перенести песню';
+  String get nextButtonNowPlayingTutorialText =>
+      'Нажмите и удерживайте эту кнопку, чтобы перенести песню';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Нажмите и удерживайте эту кнопку, чтобы перемотать песню';
+  String get previousButtonNowPlayingTutorialText =>
+      'Нажмите и удерживайте эту кнопку, чтобы перемотать песню';
 
   @override
-  String get deviceControlSearchTutorialText => 'Слегка переместите большой палец вокруг щелчка, чтобы выделить алфавит';
+  String get deviceControlSearchTutorialText =>
+      'Слегка переместите большой палец вокруг щелчка, чтобы выделить алфавит';
 
   @override
-  String get centerButtonSearchTutorialText => 'Нажмите кнопку центра, чтобы выбрать выделенный алфавит';
+  String get centerButtonSearchTutorialText =>
+      'Нажмите кнопку центра, чтобы выбрать выделенный алфавит';
 
   @override
-  String get nextButtonSearchTutorialText => 'Нажмите эту кнопку, чтобы добавить пространство';
+  String get nextButtonSearchTutorialText =>
+      'Нажмите эту кнопку, чтобы добавить пространство';
 
   @override
-  String get previousButtonSearchTutorialText => 'Нажмите эту кнопку, чтобы удалить последний персонаж';
+  String get previousButtonSearchTutorialText =>
+      'Нажмите эту кнопку, чтобы удалить последний персонаж';
 
   @override
-  String get menuButtonSearchTutorialText => 'Нажмите эту кнопку, чтобы закрыть клавиатуру и взаимодействовать с результатами поиска';
+  String get menuButtonSearchTutorialText =>
+      'Нажмите эту кнопку, чтобы закрыть клавиатуру и взаимодействовать с результатами поиска';
 }

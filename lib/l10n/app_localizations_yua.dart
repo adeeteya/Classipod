@@ -18,13 +18,16 @@ class AppLocalizationsYua extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio muuk\' Permiso K\'a\'abéet';
 
   @override
-  String get audioAccessPermissionContent => 'Béet conceder audio archivos muuk\' utia\'al permitir k reproducir u archivos paax.';
+  String get audioAccessPermissionContent =>
+      'Béet conceder audio archivos muuk\' utia\'al permitir k reproducir u archivos paax.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio muuk\' Permiso Deneed';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio muuk\' Permiso Deneed';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Béet conceder archivos muuk\' archivos utia\'al le ka\'anatako\'ob ti\' le configuración le dispositivo utia\'al u permitir k reproducir u archivos paax.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Béet conceder archivos muuk\' archivos utia\'al le ka\'anatako\'ob ti\' le configuración le dispositivo utia\'al u permitir k reproducir u archivos paax.';
 
   @override
   String get menuScreenTitle => 'Menú';
@@ -63,7 +66,6 @@ class AppLocalizationsYua extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsYua extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsYua extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch juum';
 
   @override
-  String get touchSoundsDialogContent => 'Béet Habilitar sonidos toque u Configuración t.u.m utia\'al u yu\'ubik le sonidos t\'íinche\'balak\' clic';
+  String get touchSoundsDialogContent =>
+      'Béet Habilitar sonidos toque u Configuración t.u.m utia\'al u yu\'ubik le sonidos t\'íinche\'balak\' clic';
 
   @override
   String get immersiveModeSettingTitle => 'Modo inmersivo';
@@ -144,7 +146,8 @@ class AppLocalizationsYua extends AppLocalizations {
   String get donateSettingTitle => 'Ts\'áaj áantaj';
 
   @override
-  String get donateSettingDescription => 'Wa uts a wilik le ka\'anatako\'ob, Béet considere donar.';
+  String get donateSettingDescription =>
+      'Wa uts a wilik le ka\'anatako\'ob, Béet considere donar.';
 
   @override
   String get versionAboutScreenTitle => 'Bersion';
@@ -186,7 +189,8 @@ class AppLocalizationsYua extends AppLocalizations {
   String get commonOfText => 'ti\'';
 
   @override
-  String get pageNotFoundText => 'Le linki abas kaambal dada ma\' bin encontrada';
+  String get pageNotFoundText =>
+      'Le linki abas kaambal dada ma\' bin encontrada';
 
   @override
   String get commonErrorText => 'K\'aas';
@@ -195,13 +199,15 @@ class AppLocalizationsYua extends AppLocalizations {
   String get retryButtonText => 'K\'a\' intentar';
 
   @override
-  String get filePickerDialogTitle => 'Seleccione jump\'éel Directorio utia\'al u escanear utia\'al u paax';
+  String get filePickerDialogTitle =>
+      'Seleccione jump\'éel Directorio utia\'al u escanear utia\'al u paax';
 
   @override
   String get searchScreenTitle => 'Kaxan';
 
   @override
-  String get searchEmptyText => 'Ma\' Ya\'ala\'al máaxo\'ob máano\'ob xookilo\'';
+  String get searchEmptyText =>
+      'Ma\' Ya\'ala\'al máaxo\'ob máano\'ob xookilo\'';
 
   @override
   String get searchResultsText => 'Ya\'ala\'al máaxo\'ob máano\'ob xookilo\':';
@@ -210,10 +216,12 @@ class AppLocalizationsYua extends AppLocalizations {
   String get resultsForText => 'Ya\'ala\'al máaxo\'ob máano\'ob utia\'al u:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Desactivar u optimización le batería';
+  String get disableBatteryOptimizationTitle =>
+      'Desactivar u optimización le batería';
 
   @override
-  String get disableBatteryOptimizationContent => 'Much desactivar optimización le batería utia\'al le ka\'anatako\'ob ti\' le configuración le dispositivo utia\'al u permitir u ju\'unil tu\'ux yaan u kuxtal kajnáalo\'ob le paaxo\'.';
+  String get disableBatteryOptimizationContent =>
+      'Much desactivar optimización le batería utia\'al le ka\'anatako\'ob ti\' le configuración le dispositivo utia\'al u permitir u ju\'unil tu\'ux yaan u kuxtal kajnáalo\'ob le paaxo\'.';
 
   @override
   String get languageScreenTitle => 'T\'aan';
@@ -267,50 +275,66 @@ class AppLocalizationsYua extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Archivos u paax rescano';
 
   @override
-  String get deviceControlMenuTutorialText => 'Péeksik u pulgar ligeramente mentik kex le Brededor Balk\'es utia\'al u navegar le menú';
+  String get deviceControlMenuTutorialText =>
+      'Péeksik u pulgar ligeramente mentik kex le Brededor Balk\'es utia\'al u navegar le menú';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pulse le botón chúumukil utia\'al u seleccionar le elemento menú resaltado';
+  String get centerButtonMenuTutorialText =>
+      'Pulse le botón chúumukil utia\'al u seleccionar le elemento menú resaltado';
 
   @override
-  String get playPauseMenuTutorialText => 'Presione le botón utia\'al báaxal wa pausar jump\'éel k\'aay';
+  String get playPauseMenuTutorialText =>
+      'Presione le botón utia\'al báaxal wa pausar jump\'éel k\'aay';
 
   @override
-  String get nextButtonMenuTutorialText => 'Presione le botón utia\'al u saltar ti\' le uláak\' k\'aayo\'';
+  String get nextButtonMenuTutorialText =>
+      'Presione le botón utia\'al u saltar ti\' le uláak\' k\'aayo\'';
 
   @override
-  String get previousButtonMenuTutorialText => 'Presione le botón utia\'al u rebobinar wa k\'a\' le k\'aayo\' anterior';
+  String get previousButtonMenuTutorialText =>
+      'Presione le botón utia\'al u rebobinar wa k\'a\' le k\'aayo\' anterior';
 
   @override
-  String get menuButtonTutorialText => 'Presione le botón utia\'al u suut ti\' le menú anterior. Podrías pulsar yéetel sostenga tak je\'el ba\'ax uláak\' pantalla utia\'al u Jun bin le menú noj bejo\'.';
+  String get menuButtonTutorialText =>
+      'Presione le botón utia\'al u suut ti\' le menú anterior. Podrías pulsar yéetel sostenga tak je\'el ba\'ax uláak\' pantalla utia\'al u Jun bin le menú noj bejo\'.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Lela\' le pantalla ye\'esik. Pantalla táctil yéetel Modo pantalla splien táan habilitados tumen defecto yéetel je\'el u páajtal u configurado asab ti\' le ajustes.';
+  String get deviceScreenMenuTutorialText =>
+      'Lela\' le pantalla ye\'esik. Pantalla táctil yéetel Modo pantalla splien táan habilitados tumen defecto yéetel je\'el u páajtal u configurado asab ti\' le ajustes.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Péeksik u pulgar mentik kex le Brecho Balk\'es utia\'al u ajustar le volumen';
+  String get deviceControlNowPlayingTutorialText =>
+      'Péeksik u pulgar mentik kex le Brecho Balk\'es utia\'al u ajustar le volumen';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Presione le botón Centro u ciclo yo\'osal kaxtik barra, barra matorcha yéetel deslizante baraja. Presione yéetel mantenga pulsado le botón Centro utia\'al tsáabaltio\'ob áantaj opciones adicionales.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Presione le botón Centro u ciclo yo\'osal kaxtik barra, barra matorcha yéetel deslizante baraja. Presione yéetel mantenga pulsado le botón Centro utia\'al tsáabaltio\'ob áantaj opciones adicionales.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Presione yéetel mantenga pulsado le botón utia\'al u ayunar táanil le k\'aayo\'';
+  String get nextButtonNowPlayingTutorialText =>
+      'Presione yéetel mantenga pulsado le botón utia\'al u ayunar táanil le k\'aayo\'';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Presione yéetel mantenga pulsado le botón utia\'al u rebobinar le k\'aayo\'';
+  String get previousButtonNowPlayingTutorialText =>
+      'Presione yéetel mantenga pulsado le botón utia\'al u rebobinar le k\'aayo\'';
 
   @override
-  String get deviceControlSearchTutorialText => 'Péeksik u pulgar ligeramente mentik kex le Brija Click utia\'al u resaltar jump\'éel alfabeto';
+  String get deviceControlSearchTutorialText =>
+      'Péeksik u pulgar ligeramente mentik kex le Brija Click utia\'al u resaltar jump\'éel alfabeto';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pulse le botón chúumukil utia\'al u seleccionar le alfabeto resaltado';
+  String get centerButtonSearchTutorialText =>
+      'Pulse le botón chúumukil utia\'al u seleccionar le alfabeto resaltado';
 
   @override
-  String get nextButtonSearchTutorialText => 'Presione le botón utia\'al u ts\'áabal jump\'éel kúuchil';
+  String get nextButtonSearchTutorialText =>
+      'Presione le botón utia\'al u ts\'áabal jump\'éel kúuchil';
 
   @override
-  String get previousButtonSearchTutorialText => 'Presione le botón utia\'al u borrar le ts\'ook personaje';
+  String get previousButtonSearchTutorialText =>
+      'Presione le botón utia\'al u borrar le ts\'ook personaje';
 
   @override
-  String get menuButtonSearchTutorialText => 'Presione le botón utia\'al u k\'áalal le teclado yéetel interactuar yéetel ya\'ala\'al máaxo\'ob máano\'ob le xookilo\'';
+  String get menuButtonSearchTutorialText =>
+      'Presione le botón utia\'al u k\'áalal le teclado yéetel interactuar yéetel ya\'ala\'al máaxo\'ob máano\'ob le xookilo\'';
 }

@@ -15,16 +15,20 @@ class AppLocalizationsDe extends AppLocalizations {
   String get menuButtonText => 'SPEISEKARTE';
 
   @override
-  String get audioAccessPermissionTitle => 'Erforderliche Genehmigung für Audiozugriff';
+  String get audioAccessPermissionTitle =>
+      'Erforderliche Genehmigung für Audiozugriff';
 
   @override
-  String get audioAccessPermissionContent => 'Bitte gewähren Sie Audio -Dateien Zugriff, damit wir Ihre Musikdateien abspielen können.';
+  String get audioAccessPermissionContent =>
+      'Bitte gewähren Sie Audio -Dateien Zugriff, damit wir Ihre Musikdateien abspielen können.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audiozugangserlaubnis abgelehnt';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audiozugangserlaubnis abgelehnt';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Bitte gewähren Sie Audio -Dateien Zugriff für diese App in den Geräteeinstellungen, damit wir Ihre Musikdateien abspielen können.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Bitte gewähren Sie Audio -Dateien Zugriff für diese App in den Geräteeinstellungen, damit wir Ihre Musikdateien abspielen können.';
 
   @override
   String get menuScreenTitle => 'Speisekarte';
@@ -63,7 +67,6 @@ class AppLocalizationsDe extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsDe extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsDe extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Berühren Sie Geräusche';
 
   @override
-  String get touchSoundsDialogContent => 'Bitte aktivieren Sie Touch -Sounds aus den Systemeinstellungen, um die Klickrad -Sounds zu hören';
+  String get touchSoundsDialogContent =>
+      'Bitte aktivieren Sie Touch -Sounds aus den Systemeinstellungen, um die Klickrad -Sounds zu hören';
 
   @override
   String get immersiveModeSettingTitle => 'Immersiven Modus';
@@ -144,7 +147,8 @@ class AppLocalizationsDe extends AppLocalizations {
   String get donateSettingTitle => 'Spenden';
 
   @override
-  String get donateSettingDescription => 'Wenn Ihnen diese App gefällt, sollten Sie bitte spenden.';
+  String get donateSettingDescription =>
+      'Wenn Ihnen diese App gefällt, sollten Sie bitte spenden.';
 
   @override
   String get versionAboutScreenTitle => 'Version';
@@ -195,7 +199,8 @@ class AppLocalizationsDe extends AppLocalizations {
   String get retryButtonText => 'Wiederholen';
 
   @override
-  String get filePickerDialogTitle => 'Wählen Sie ein Verzeichnis, das Sie nach Musik scannen können';
+  String get filePickerDialogTitle =>
+      'Wählen Sie ein Verzeichnis, das Sie nach Musik scannen können';
 
   @override
   String get searchScreenTitle => 'Suchen';
@@ -210,10 +215,12 @@ class AppLocalizationsDe extends AppLocalizations {
   String get resultsForText => 'Ergebnisse für:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Batterieoptimierung deaktivieren';
+  String get disableBatteryOptimizationTitle =>
+      'Batterieoptimierung deaktivieren';
 
   @override
-  String get disableBatteryOptimizationContent => 'Bitte deaktivieren Sie die Akkuoptimierung für diese App in den Geräteeinstellungen, um die Musik -Musik -Wiedergabe von Musik zu ermöglichen.';
+  String get disableBatteryOptimizationContent =>
+      'Bitte deaktivieren Sie die Akkuoptimierung für diese App in den Geräteeinstellungen, um die Musik -Musik -Wiedergabe von Musik zu ermöglichen.';
 
   @override
   String get languageScreenTitle => 'Sprache';
@@ -243,7 +250,8 @@ class AppLocalizationsDe extends AppLocalizations {
   String get addToOnTheGoPlaylist => 'Zu unübertroffenes Go fügen';
 
   @override
-  String get addAlbumToOnTheGoPlaylist => 'Fügen Sie das Album in der O-Go hinzu';
+  String get addAlbumToOnTheGoPlaylist =>
+      'Fügen Sie das Album in der O-Go hinzu';
 
   @override
   String get removeSongFromThePlaylist => 'Aus der Wiedergabeliste entfernen';
@@ -267,50 +275,66 @@ class AppLocalizationsDe extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan musikdateien';
 
   @override
-  String get deviceControlMenuTutorialText => 'Bewegen Sie Ihren Daumen leicht um das Klickrad, um das Menü zu navigieren';
+  String get deviceControlMenuTutorialText =>
+      'Bewegen Sie Ihren Daumen leicht um das Klickrad, um das Menü zu navigieren';
 
   @override
-  String get centerButtonMenuTutorialText => 'Drücken Sie die Mitte -Taste, um den hervorgehobenen Menüelement auszuwählen';
+  String get centerButtonMenuTutorialText =>
+      'Drücken Sie die Mitte -Taste, um den hervorgehobenen Menüelement auszuwählen';
 
   @override
-  String get playPauseMenuTutorialText => 'Drücken Sie diese Taste, um einen Song abzuspielen oder zu pausieren';
+  String get playPauseMenuTutorialText =>
+      'Drücken Sie diese Taste, um einen Song abzuspielen oder zu pausieren';
 
   @override
-  String get nextButtonMenuTutorialText => 'Drücken Sie diese Taste, um zum nächsten Song zu springen';
+  String get nextButtonMenuTutorialText =>
+      'Drücken Sie diese Taste, um zum nächsten Song zu springen';
 
   @override
-  String get previousButtonMenuTutorialText => 'Drücken Sie diese Taste, um zurückzuspulen oder zum vorherigen Song zurückzukehren';
+  String get previousButtonMenuTutorialText =>
+      'Drücken Sie diese Taste, um zurückzuspulen oder zum vorherigen Song zurückzukehren';
 
   @override
-  String get menuButtonTutorialText => 'Drücken Sie diese Taste, um zum vorherigen Menü zurückzukehren. Sie können es von jedem anderen Bildschirm von der direkten Bildschirm gedrückt halten, um direkt zum Hauptmenü zu gehen.';
+  String get menuButtonTutorialText =>
+      'Drücken Sie diese Taste, um zum vorherigen Menü zurückzukehren. Sie können es von jedem anderen Bildschirm von der direkten Bildschirm gedrückt halten, um direkt zum Hauptmenü zu gehen.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Dies ist der Anzeigebildschirm. Der Touchscreen- und der Split -Bildschirmmodus sind standardmäßig aktiviert und können in den Einstellungen weiter konfiguriert werden.';
+  String get deviceScreenMenuTutorialText =>
+      'Dies ist der Anzeigebildschirm. Der Touchscreen- und der Split -Bildschirmmodus sind standardmäßig aktiviert und können in den Einstellungen weiter konfiguriert werden.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Bewegen Sie Ihren Daumen um das Klickrad, um die Lautstärke anzupassen';
+  String get deviceControlNowPlayingTutorialText =>
+      'Bewegen Sie Ihren Daumen um das Klickrad, um die Lautstärke anzupassen';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Drücken Sie die Mitte -Taste, um durch die Suchleiste, den Schrubbenbalken und den Shuffle Slider zu fahren. Halten Sie die Mitte -Taste gedrückt, um auf zusätzliche Optionen zuzugreifen.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Drücken Sie die Mitte -Taste, um durch die Suchleiste, den Schrubbenbalken und den Shuffle Slider zu fahren. Halten Sie die Mitte -Taste gedrückt, um auf zusätzliche Optionen zuzugreifen.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Halten Sie diese Taste gedrückt, um das Lied zu schnell voranzutreiben';
+  String get nextButtonNowPlayingTutorialText =>
+      'Halten Sie diese Taste gedrückt, um das Lied zu schnell voranzutreiben';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Halten Sie diese Taste gedrückt, um das Lied zurückzuspulen';
+  String get previousButtonNowPlayingTutorialText =>
+      'Halten Sie diese Taste gedrückt, um das Lied zurückzuspulen';
 
   @override
-  String get deviceControlSearchTutorialText => 'Bewegen Sie Ihren Daumen leicht um das Klickrad, um ein Alphabet hervorzuheben';
+  String get deviceControlSearchTutorialText =>
+      'Bewegen Sie Ihren Daumen leicht um das Klickrad, um ein Alphabet hervorzuheben';
 
   @override
-  String get centerButtonSearchTutorialText => 'Drücken Sie die Mitte -Taste, um das hervorgehobene Alphabet auszuwählen';
+  String get centerButtonSearchTutorialText =>
+      'Drücken Sie die Mitte -Taste, um das hervorgehobene Alphabet auszuwählen';
 
   @override
-  String get nextButtonSearchTutorialText => 'Drücken Sie diese Taste, um einen Speicherplatz hinzuzufügen';
+  String get nextButtonSearchTutorialText =>
+      'Drücken Sie diese Taste, um einen Speicherplatz hinzuzufügen';
 
   @override
-  String get previousButtonSearchTutorialText => 'Drücken Sie diese Taste, um das letzte Zeichen zu löschen';
+  String get previousButtonSearchTutorialText =>
+      'Drücken Sie diese Taste, um das letzte Zeichen zu löschen';
 
   @override
-  String get menuButtonSearchTutorialText => 'Drücken Sie diese Taste, um die Tastatur zu schließen und mit den Suchergebnissen zu interagieren';
+  String get menuButtonSearchTutorialText =>
+      'Drücken Sie diese Taste, um die Tastatur zu schließen und mit den Suchergebnissen zu interagieren';
 }

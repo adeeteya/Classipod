@@ -15,16 +15,20 @@ class AppLocalizationsZu extends AppLocalizations {
   String get menuButtonText => 'Umbhalo wokutholakalayo';
 
   @override
-  String get audioAccessPermissionTitle => 'Kudingeka imvume yokufinyelela komsindo';
+  String get audioAccessPermissionTitle =>
+      'Kudingeka imvume yokufinyelela komsindo';
 
   @override
-  String get audioAccessPermissionContent => 'Sicela unikeze amafayela womsindo ukufinyelela ukuze usivumele ukudlala amafayela wakho omculo.';
+  String get audioAccessPermissionContent =>
+      'Sicela unikeze amafayela womsindo ukufinyelela ukuze usivumele ukudlala amafayela wakho omculo.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Imvume yokufinyelela komsindo yenqatshiwe';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Imvume yokufinyelela komsindo yenqatshiwe';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Sicela unikeze amafayela womsindo Ukufinyelela kwalolu hlelo lokusebenza kuzilungiselelo zedivayisi ukuvumela ukuthi sidlale amafayela wakho omculo.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Sicela unikeze amafayela womsindo Ukufinyelela kwalolu hlelo lokusebenza kuzilungiselelo zedivayisi ukuvumela ukuthi sidlale amafayela wakho omculo.';
 
   @override
   String get menuScreenTitle => 'Umbhalo wokutholakalayo';
@@ -63,7 +67,6 @@ class AppLocalizationsZu extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsZu extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsZu extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Thinta imisindo';
 
   @override
-  String get touchSoundsDialogContent => 'Sicela unike amandla ukuthinta imisindo kusuka kuzilungiselelo zesistimu ukuzwa imisindo yesondo yokuchofoza';
+  String get touchSoundsDialogContent =>
+      'Sicela unike amandla ukuthinta imisindo kusuka kuzilungiselelo zesistimu ukuzwa imisindo yesondo yokuchofoza';
 
   @override
   String get immersiveModeSettingTitle => 'Imodi yokuntylika';
@@ -144,7 +147,8 @@ class AppLocalizationsZu extends AppLocalizations {
   String get donateSettingTitle => 'Nikela';
 
   @override
-  String get donateSettingDescription => 'Uma uthanda lolu hlelo lokusebenza, sicela ucabangele ukunikela.';
+  String get donateSettingDescription =>
+      'Uma uthanda lolu hlelo lokusebenza, sicela ucabangele ukunikela.';
 
   @override
   String get versionAboutScreenTitle => 'Ukuhumushela';
@@ -213,7 +217,8 @@ class AppLocalizationsZu extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Khubaza ukusebenza kwebhethri';
 
   @override
-  String get disableBatteryOptimizationContent => 'Sicela ukhubaze ukusebenza kwebhethri kwalolu hlelo lokusebenza kuzilungiselelo zedivayisi ukuvumela ukudlalwa kwangemuva komculo.';
+  String get disableBatteryOptimizationContent =>
+      'Sicela ukhubaze ukusebenza kwebhethri kwalolu hlelo lokusebenza kuzilungiselelo zedivayisi ukuvumela ukudlalwa kwangemuva komculo.';
 
   @override
   String get languageScreenTitle => 'Ulimi';
@@ -267,50 +272,66 @@ class AppLocalizationsZu extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Amafayela omculo aseSulan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Hambisa isithupha sakho kancane uzungeze isondo lokuchofoza ukuze uzulazule imenyu';
+  String get deviceControlMenuTutorialText =>
+      'Hambisa isithupha sakho kancane uzungeze isondo lokuchofoza ukuze uzulazule imenyu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Cindezela inkinobho yesikhungo ukukhetha into yemenyu egqanyisiwe';
+  String get centerButtonMenuTutorialText =>
+      'Cindezela inkinobho yesikhungo ukukhetha into yemenyu egqanyisiwe';
 
   @override
-  String get playPauseMenuTutorialText => 'Cindezela le nkinobho ukuze udlale noma ikhefu ingoma';
+  String get playPauseMenuTutorialText =>
+      'Cindezela le nkinobho ukuze udlale noma ikhefu ingoma';
 
   @override
-  String get nextButtonMenuTutorialText => 'Cindezela le nkinobho ukweqa engomeni elandelayo';
+  String get nextButtonMenuTutorialText =>
+      'Cindezela le nkinobho ukweqa engomeni elandelayo';
 
   @override
-  String get previousButtonMenuTutorialText => 'Cindezela le nkinobho ukuze ubuyise emuva noma ubuyele engomeni edlule';
+  String get previousButtonMenuTutorialText =>
+      'Cindezela le nkinobho ukuze ubuyise emuva noma ubuyele engomeni edlule';
 
   @override
-  String get menuButtonTutorialText => 'Cindezela le nkinobho ukuze ubuyele kumenyu edlule. Ungacindezela futhi uyibambe kunoma yisiphi esinye isikrini ukuze uye ngqo kumenyu enkulu.';
+  String get menuButtonTutorialText =>
+      'Cindezela le nkinobho ukuze ubuyele kumenyu edlule. Ungacindezela futhi uyibambe kunoma yisiphi esinye isikrini ukuze uye ngqo kumenyu enkulu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Lesi yisikrini sokubonisa. Isikrini sokuthinta kanye nemodi yesikrini sokuhlukanisa inikwe amandla ngokuzenzakalela futhi ingalungiswa ngokuqhubekayo kuzilungiselelo.';
+  String get deviceScreenMenuTutorialText =>
+      'Lesi yisikrini sokubonisa. Isikrini sokuthinta kanye nemodi yesikrini sokuhlukanisa inikwe amandla ngokuzenzakalela futhi ingalungiswa ngokuqhubekayo kuzilungiselelo.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Hambisa isithupha sakho ngokuzungeza isondo lokuchofoza ukuze uguqule ivolumu';
+  String get deviceControlNowPlayingTutorialText =>
+      'Hambisa isithupha sakho ngokuzungeza isondo lokuchofoza ukuze uguqule ivolumu';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Cindezela inkinobho yesikhungo ukuze ujikeleze ibha yokufuna, ibha ye-scrubber nesilayidi esishisayo. Cindezela ubambe inkinobho yesikhungo ukufinyelela izinketho ezengeziwe.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Cindezela inkinobho yesikhungo ukuze ujikeleze ibha yokufuna, ibha ye-scrubber nesilayidi esishisayo. Cindezela ubambe inkinobho yesikhungo ukufinyelela izinketho ezengeziwe.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Cindezela ubambe le nkinobho ukuze uqhubeke ngokushesha iculo';
+  String get nextButtonNowPlayingTutorialText =>
+      'Cindezela ubambe le nkinobho ukuze uqhubeke ngokushesha iculo';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Cindezela bese ubamba le nkinobho ukuze ubuyise kabusha iculo';
+  String get previousButtonNowPlayingTutorialText =>
+      'Cindezela bese ubamba le nkinobho ukuze ubuyise kabusha iculo';
 
   @override
-  String get deviceControlSearchTutorialText => 'Hambisa isithupha sakho kancane uzungeze isondo lokuchofoza ukugqamisa izinhlamvu';
+  String get deviceControlSearchTutorialText =>
+      'Hambisa isithupha sakho kancane uzungeze isondo lokuchofoza ukugqamisa izinhlamvu';
 
   @override
-  String get centerButtonSearchTutorialText => 'Cindezela inkinobho yesikhungo ukukhetha i-Alfabhethi egqanyisiwe';
+  String get centerButtonSearchTutorialText =>
+      'Cindezela inkinobho yesikhungo ukukhetha i-Alfabhethi egqanyisiwe';
 
   @override
-  String get nextButtonSearchTutorialText => 'Cindezela le nkinobho ukwengeza isikhala';
+  String get nextButtonSearchTutorialText =>
+      'Cindezela le nkinobho ukwengeza isikhala';
 
   @override
-  String get previousButtonSearchTutorialText => 'Cindezela le nkinobho ukuze ususe umlingiswa wokugcina';
+  String get previousButtonSearchTutorialText =>
+      'Cindezela le nkinobho ukuze ususe umlingiswa wokugcina';
 
   @override
-  String get menuButtonSearchTutorialText => 'Cindezela le nkinobho ukuvala ikhibhodi futhi uhlanganyele nemiphumela yokucinga';
+  String get menuButtonSearchTutorialText =>
+      'Cindezela le nkinobho ukuvala ikhibhodi futhi uhlanganyele nemiphumela yokucinga';
 }

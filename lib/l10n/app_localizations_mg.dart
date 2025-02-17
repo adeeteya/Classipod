@@ -18,13 +18,16 @@ class AppLocalizationsMg extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ilaina ny fahazoan-dàlana Audio';
 
   @override
-  String get audioAccessPermissionContent => 'Azafady mba omeo ny fidirana am-peo Audio dia mamela anay hilalao ny rakitra mozika.';
+  String get audioAccessPermissionContent =>
+      'Azafady mba omeo ny fidirana am-peo Audio dia mamela anay hilalao ny rakitra mozika.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ny fahazoan-dàlana Audio dia nolavina';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ny fahazoan-dàlana Audio dia nolavina';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Azafady mba omeo ny rakitra Audio Fandraisana an-tsoratra amin\'ity fampiharana ity ao amin\'ny Fikirana Fitaovana mba hahafahantsika milalao ny rakitra mozika.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Azafady mba omeo ny rakitra Audio Fandraisana an-tsoratra amin\'ity fampiharana ity ao amin\'ny Fikirana Fitaovana mba hahafahantsika milalao ny rakitra mozika.';
 
   @override
   String get menuScreenTitle => 'sakafo';
@@ -63,7 +66,6 @@ class AppLocalizationsMg extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsMg extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsMg extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Hikasika feo';
 
   @override
-  String get touchSoundsDialogContent => 'Azafady azafady alefaso ny feo avy amin\'ny Settings Settings handrenesana ny feon\'ny kitay click';
+  String get touchSoundsDialogContent =>
+      'Azafady azafady alefaso ny feo avy amin\'ny Settings Settings handrenesana ny feon\'ny kitay click';
 
   @override
   String get immersiveModeSettingTitle => 'Modely milentika';
@@ -144,7 +146,8 @@ class AppLocalizationsMg extends AppLocalizations {
   String get donateSettingTitle => 'Manomeza';
 
   @override
-  String get donateSettingDescription => 'Raha tianao ity fampiharana ity, azafady mba hevero ny fanomezana.';
+  String get donateSettingDescription =>
+      'Raha tianao ity fampiharana ity, azafady mba hevero ny fanomezana.';
 
   @override
   String get versionAboutScreenTitle => 'Malagasy Bible';
@@ -195,7 +198,8 @@ class AppLocalizationsMg extends AppLocalizations {
   String get retryButtonText => 'Hanandrana indray';
 
   @override
-  String get filePickerDialogTitle => 'Safidio ny lahatahiry iray hikoropaka mozika';
+  String get filePickerDialogTitle =>
+      'Safidio ny lahatahiry iray hikoropaka mozika';
 
   @override
   String get searchScreenTitle => 'karohy';
@@ -210,10 +214,12 @@ class AppLocalizationsMg extends AppLocalizations {
   String get resultsForText => 'Vokatry ny:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Ampidiro ny fanalan-karena bateria';
+  String get disableBatteryOptimizationTitle =>
+      'Ampidiro ny fanalan-karena bateria';
 
   @override
-  String get disableBatteryOptimizationContent => 'Azafady azafady azafady azafady ny bateria momba ny bateria ho an\'ity fampiharana ity ao amin\'ny sehatry ny fitaovana mba ahafahana mamoaka ny mozika mozika.';
+  String get disableBatteryOptimizationContent =>
+      'Azafady azafady azafady azafady ny bateria momba ny bateria ho an\'ity fampiharana ity ao amin\'ny sehatry ny fitaovana mba ahafahana mamoaka ny mozika mozika.';
 
   @override
   String get languageScreenTitle => 'Fiteny';
@@ -267,50 +273,66 @@ class AppLocalizationsMg extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rakitra Rescan Music';
 
   @override
-  String get deviceControlMenuTutorialText => 'Arosoy moramora ny kitrokelinao manodidina ny kitiho tsindrio mba hivezivezena ny menu';
+  String get deviceControlMenuTutorialText =>
+      'Arosoy moramora ny kitrokelinao manodidina ny kitiho tsindrio mba hivezivezena ny menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tsindrio ny bokotra Center mba hisafidy ny lisitry ny menu nalehany';
+  String get centerButtonMenuTutorialText =>
+      'Tsindrio ny bokotra Center mba hisafidy ny lisitry ny menu nalehany';
 
   @override
-  String get playPauseMenuTutorialText => 'Tsindrio ity bokotra ity hilalao na hiato ny hira iray';
+  String get playPauseMenuTutorialText =>
+      'Tsindrio ity bokotra ity hilalao na hiato ny hira iray';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tsindrio ity bokotra ity mba hialana amin\'ny hira manaraka';
+  String get nextButtonMenuTutorialText =>
+      'Tsindrio ity bokotra ity mba hialana amin\'ny hira manaraka';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tsindrio ity bokotra ity mba hamerenany na hiverina amin\'ny hira teo aloha';
+  String get previousButtonMenuTutorialText =>
+      'Tsindrio ity bokotra ity mba hamerenany na hiverina amin\'ny hira teo aloha';
 
   @override
-  String get menuButtonTutorialText => 'Tsindrio ity bokotra ity mba hiverina any amin\'ny menu teo aloha. Azonao atao ny manery sy mitazona azy amin\'ny efijery hafa mba handehanana mivantana amin\'ny menu lehibe.';
+  String get menuButtonTutorialText =>
+      'Tsindrio ity bokotra ity mba hiverina any amin\'ny menu teo aloha. Azonao atao ny manery sy mitazona azy amin\'ny efijery hafa mba handehanana mivantana amin\'ny menu lehibe.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ity no efijery fampisehoana. Ny efijery hikasika sy ny zoro efijery split dia alefa amin\'ny alàlan\'ny default ary azo amboarina bebe kokoa amin\'ny toe-javatra.';
+  String get deviceScreenMenuTutorialText =>
+      'Ity no efijery fampisehoana. Ny efijery hikasika sy ny zoro efijery split dia alefa amin\'ny alàlan\'ny default ary azo amboarina bebe kokoa amin\'ny toe-javatra.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Afindra ny ankihibenanao manodidina ny kitay tsindrio hanitsy ny tahiry';
+  String get deviceControlNowPlayingTutorialText =>
+      'Afindra ny ankihibenanao manodidina ny kitay tsindrio hanitsy ny tahiry';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tsindrio ny bokotra Centre amin\'ny tsingerin-taona amin\'ny alàlan\'ny fikatsahana bara, barazy scrubber ary slider shuffle. Tsindrio ary mitazona ny bokotra Center mba hidirana safidy fanampiny.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tsindrio ny bokotra Centre amin\'ny tsingerin-taona amin\'ny alàlan\'ny fikatsahana bara, barazy scrubber ary slider shuffle. Tsindrio ary mitazona ny bokotra Center mba hidirana safidy fanampiny.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tsindrio ary hazaho ity bokotra ity mba hanamafisana ny hira';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tsindrio ary hazaho ity bokotra ity mba hanamafisana ny hira';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tsindrio ary hazaho ity bokotra ity mba hamerenanao ny hira';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tsindrio ary hazaho ity bokotra ity mba hamerenanao ny hira';
 
   @override
-  String get deviceControlSearchTutorialText => 'Arosoy moramora ny kitrokelinao manodidina ny kitiho tsindrio mba hanasongadinana ny abidia';
+  String get deviceControlSearchTutorialText =>
+      'Arosoy moramora ny kitrokelinao manodidina ny kitiho tsindrio mba hanasongadinana ny abidia';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tsindrio ny bokotra Center hisafidy ny abidia nasongadina';
+  String get centerButtonSearchTutorialText =>
+      'Tsindrio ny bokotra Center hisafidy ny abidia nasongadina';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tsindrio ity bokotra ity mba hanampiana toerana';
+  String get nextButtonSearchTutorialText =>
+      'Tsindrio ity bokotra ity mba hanampiana toerana';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tsindrio ity bokotra ity mba hamafa ny toetra farany';
+  String get previousButtonSearchTutorialText =>
+      'Tsindrio ity bokotra ity mba hamafa ny toetra farany';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tsindrio ity bokotra ity hanakatonana ny fitendry ary hifanerasera amin\'ny valin\'ny fikarohana';
+  String get menuButtonSearchTutorialText =>
+      'Tsindrio ity bokotra ity hanakatonana ny fitendry ary hifanerasera amin\'ny valin\'ny fikarohana';
 }

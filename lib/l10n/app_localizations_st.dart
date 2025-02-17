@@ -15,16 +15,20 @@ class AppLocalizationsSt extends AppLocalizations {
   String get menuButtonText => 'Menu';
 
   @override
-  String get audioAccessPermissionTitle => 'Ho hlokahala tumello ea ho fihlella';
+  String get audioAccessPermissionTitle =>
+      'Ho hlokahala tumello ea ho fihlella';
 
   @override
-  String get audioAccessPermissionContent => 'Ka kopo sheba lifaele tsa audio phihlello ea ho re lumella ho bapala lifaele tsa hau tsa mmino.';
+  String get audioAccessPermissionContent =>
+      'Ka kopo sheba lifaele tsa audio phihlello ea ho re lumella ho bapala lifaele tsa hau tsa mmino.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'AUD Audio Adive Tumello e hanne';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'AUD Audio Adive Tumello e hanne';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Ka kopo sheba lifaele tsa audio ho fihlella sesebelisoa sena ho sesebelisoa sa sesebelisoa ho re lumella ho bapala lifaele tsa hau tsa mmino.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Ka kopo sheba lifaele tsa audio ho fihlella sesebelisoa sena ho sesebelisoa sa sesebelisoa ho re lumella ho bapala lifaele tsa hau tsa mmino.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +67,6 @@ class AppLocalizationsSt extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsSt extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsSt extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Ama melumo';
 
   @override
-  String get touchSoundsDialogContent => 'Ka kopo, nolofalletsa melumo ea ho boloka litlhophiso tsa sisteme ho utloa melumo ea wheelli';
+  String get touchSoundsDialogContent =>
+      'Ka kopo, nolofalletsa melumo ea ho boloka litlhophiso tsa sisteme ho utloa melumo ea wheelli';
 
   @override
   String get immersiveModeSettingTitle => 'Mode ea ho qoelisoa';
@@ -144,7 +147,8 @@ class AppLocalizationsSt extends AppLocalizations {
   String get donateSettingTitle => 'Donate';
 
   @override
-  String get donateSettingDescription => 'Haeba u rata sesebelisoa sena, ka kopo nahana ka ho u fafa.';
+  String get donateSettingDescription =>
+      'Haeba u rata sesebelisoa sena, ka kopo nahana ka ho u fafa.';
 
   @override
   String get versionAboutScreenTitle => 'Mofuta';
@@ -213,7 +217,8 @@ class AppLocalizationsSt extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Qoba Battery Outter';
 
   @override
-  String get disableBatteryOptimizationContent => 'Ka kopo hlakola sesebelisoa sa betri ho sesebelisoa sena ho sesebelisoa sa sesebelisoa ho lumella ho bapala ha semelo sa \'mino.';
+  String get disableBatteryOptimizationContent =>
+      'Ka kopo hlakola sesebelisoa sa betri ho sesebelisoa sena ho sesebelisoa sa sesebelisoa ho lumella ho bapala ha semelo sa \'mino.';
 
   @override
   String get languageScreenTitle => 'Puo';
@@ -267,50 +272,66 @@ class AppLocalizationsSt extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Lifaele tsa mmino';
 
   @override
-  String get deviceControlMenuTutorialText => 'Tsamaisetsa monoana oa hau o motle ho potoloha lebili ho navigate menu';
+  String get deviceControlMenuTutorialText =>
+      'Tsamaisetsa monoana oa hau o motle ho potoloha lebili ho navigate menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tobetsa konopo ea Center ho khetha ntho e totobetseng ea menu';
+  String get centerButtonMenuTutorialText =>
+      'Tobetsa konopo ea Center ho khetha ntho e totobetseng ea menu';
 
   @override
-  String get playPauseMenuTutorialText => 'Tobetsa konopo ena ho bapala kapa ho khefutsa pina';
+  String get playPauseMenuTutorialText =>
+      'Tobetsa konopo ena ho bapala kapa ho khefutsa pina';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tobetsa konopo ena ho tlola pina e latelang';
+  String get nextButtonMenuTutorialText =>
+      'Tobetsa konopo ena ho tlola pina e latelang';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tobetsa konopo ena ho nchafatsa kapa ho khutlela pina e fetileng';
+  String get previousButtonMenuTutorialText =>
+      'Tobetsa konopo ena ho nchafatsa kapa ho khutlela pina e fetileng';
 
   @override
-  String get menuButtonTutorialText => 'Tobetsa konopo ena ho khutlela ho menyu e fetileng. U ka tobetsa ebe u e ts\'oara ka skrineng e ngoe ho ea ho ea ho ea ka kotloloho ho ea menu e ka sehloohong.';
+  String get menuButtonTutorialText =>
+      'Tobetsa konopo ena ho khutlela ho menyu e fetileng. U ka tobetsa ebe u e ts\'oara ka skrineng e ngoe ho ea ho ea ho ea ka kotloloho ho ea menu e ka sehloohong.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Ena ke skrini ea lipontšo. Sesebelisoa sa ho ama le ho arola skril skrili se entsoe ka nako le nako ebile se ka hlophisoa haholoanyane maemong.';
+  String get deviceScreenMenuTutorialText =>
+      'Ena ke skrini ea lipontšo. Sesebelisoa sa ho ama le ho arola skril skrili se entsoe ka nako le nako ebile se ka hlophisoa haholoanyane maemong.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Tsamaisa monoana oa hau ho potoloha lebili ho lokisa molumo';
+  String get deviceControlNowPlayingTutorialText =>
+      'Tsamaisa monoana oa hau ho potoloha lebili ho lokisa molumo';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tobetsa konopo ea Center ho potoloha ka ho batla Bar, Bar, Bar le Shuffle Slider. Tobetsa le ho tšoara konopo ea Center ho fumana likhetho tse ling.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tobetsa konopo ea Center ho potoloha ka ho batla Bar, Bar, Bar le Shuffle Slider. Tobetsa le ho tšoara konopo ea Center ho fumana likhetho tse ling.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Tobetsa \'me u tšoare konopo ena ho potlakisa pina';
+  String get nextButtonNowPlayingTutorialText =>
+      'Tobetsa \'me u tšoare konopo ena ho potlakisa pina';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tobetsa le ho tšoara konopo ena ho nchafatsa pina';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tobetsa le ho tšoara konopo ena ho nchafatsa pina';
 
   @override
-  String get deviceControlSearchTutorialText => 'Tsamaisa monoana oa hau o bobebe ho potoloha lebili le totobatsang alfabeta';
+  String get deviceControlSearchTutorialText =>
+      'Tsamaisa monoana oa hau o bobebe ho potoloha lebili le totobatsang alfabeta';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tobetsa konopo ea Center ho khetha alfabeta e totobalitsoeng';
+  String get centerButtonSearchTutorialText =>
+      'Tobetsa konopo ea Center ho khetha alfabeta e totobalitsoeng';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tobetsa konopo ena ho eketsa sebaka';
+  String get nextButtonSearchTutorialText =>
+      'Tobetsa konopo ena ho eketsa sebaka';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tobetsa konopo ena ho hlakola sebopeho sa ho qetela';
+  String get previousButtonSearchTutorialText =>
+      'Tobetsa konopo ena ho hlakola sebopeho sa ho qetela';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tobetsa konopo ena ho koala keyboard ebe o buisana le sephetho sa lipatlisiso';
+  String get menuButtonSearchTutorialText =>
+      'Tobetsa konopo ena ho koala keyboard ebe o buisana le sephetho sa lipatlisiso';
 }

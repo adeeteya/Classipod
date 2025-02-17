@@ -15,16 +15,20 @@ class AppLocalizationsRo extends AppLocalizations {
   String get menuButtonText => 'MENIU';
 
   @override
-  String get audioAccessPermissionTitle => 'Permisiunea de acces audio necesară';
+  String get audioAccessPermissionTitle =>
+      'Permisiunea de acces audio necesară';
 
   @override
-  String get audioAccessPermissionContent => 'Vă rugăm să acordați accesul fișierelor audio pentru a ne permite să redăm fișierele dvs. de muzică.';
+  String get audioAccessPermissionContent =>
+      'Vă rugăm să acordați accesul fișierelor audio pentru a ne permite să redăm fișierele dvs. de muzică.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Permisiunea de acces audio refuzată';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Permisiunea de acces audio refuzată';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Vă rugăm să acordați accesul fișierelor audio pentru această aplicație în setările dispozitivului pentru a ne permite să redăm fișierele dvs. de muzică.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Vă rugăm să acordați accesul fișierelor audio pentru această aplicație în setările dispozitivului pentru a ne permite să redăm fișierele dvs. de muzică.';
 
   @override
   String get menuScreenTitle => 'Meniu';
@@ -63,7 +67,6 @@ class AppLocalizationsRo extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsRo extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsRo extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch sunete';
 
   @override
-  String get touchSoundsDialogContent => 'Vă rugăm să activați sunetele tactile din setările sistemului pentru a auzi sunetele roților de clic';
+  String get touchSoundsDialogContent =>
+      'Vă rugăm să activați sunetele tactile din setările sistemului pentru a auzi sunetele roților de clic';
 
   @override
   String get immersiveModeSettingTitle => 'Mod imersiv';
@@ -144,7 +147,8 @@ class AppLocalizationsRo extends AppLocalizations {
   String get donateSettingTitle => 'Dona';
 
   @override
-  String get donateSettingDescription => 'Dacă vă place această aplicație, vă rugăm să luați în considerare donarea.';
+  String get donateSettingDescription =>
+      'Dacă vă place această aplicație, vă rugăm să luați în considerare donarea.';
 
   @override
   String get versionAboutScreenTitle => 'Versiune';
@@ -195,7 +199,8 @@ class AppLocalizationsRo extends AppLocalizations {
   String get retryButtonText => 'Din nou';
 
   @override
-  String get filePickerDialogTitle => 'Selectați un director pentru a scana pentru muzică';
+  String get filePickerDialogTitle =>
+      'Selectați un director pentru a scana pentru muzică';
 
   @override
   String get searchScreenTitle => 'Căutare';
@@ -210,10 +215,12 @@ class AppLocalizationsRo extends AppLocalizations {
   String get resultsForText => 'Rezultate pentru:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Dezactivați optimizarea bateriei';
+  String get disableBatteryOptimizationTitle =>
+      'Dezactivați optimizarea bateriei';
 
   @override
-  String get disableBatteryOptimizationContent => 'Vă rugăm să dezactivați optimizarea bateriei pentru această aplicație în setările dispozitivului pentru a permite redarea de fundal a muzicii.';
+  String get disableBatteryOptimizationContent =>
+      'Vă rugăm să dezactivați optimizarea bateriei pentru această aplicație în setările dispozitivului pentru a permite redarea de fundal a muzicii.';
 
   @override
   String get languageScreenTitle => 'Limbă';
@@ -267,50 +274,66 @@ class AppLocalizationsRo extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescris fișiere de muzică';
 
   @override
-  String get deviceControlMenuTutorialText => 'Mutați ușor degetul mare în jurul roții de clic pentru a naviga în meniu';
+  String get deviceControlMenuTutorialText =>
+      'Mutați ușor degetul mare în jurul roții de clic pentru a naviga în meniu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Apăsați butonul Centrul pentru a selecta elementul de meniu evidențiat';
+  String get centerButtonMenuTutorialText =>
+      'Apăsați butonul Centrul pentru a selecta elementul de meniu evidențiat';
 
   @override
-  String get playPauseMenuTutorialText => 'Apăsați acest buton pentru a reda sau a întrerupe o melodie';
+  String get playPauseMenuTutorialText =>
+      'Apăsați acest buton pentru a reda sau a întrerupe o melodie';
 
   @override
-  String get nextButtonMenuTutorialText => 'Apăsați acest buton pentru a sări la următoarea melodie';
+  String get nextButtonMenuTutorialText =>
+      'Apăsați acest buton pentru a sări la următoarea melodie';
 
   @override
-  String get previousButtonMenuTutorialText => 'Apăsați acest buton pentru a derula sau reveni la melodia anterioară';
+  String get previousButtonMenuTutorialText =>
+      'Apăsați acest buton pentru a derula sau reveni la melodia anterioară';
 
   @override
-  String get menuButtonTutorialText => 'Apăsați acest buton pentru a reveni la meniul anterior. Puteți apăsa și țineți apăsat de pe orice alt ecran pentru a merge direct la meniul principal.';
+  String get menuButtonTutorialText =>
+      'Apăsați acest buton pentru a reveni la meniul anterior. Puteți apăsa și țineți apăsat de pe orice alt ecran pentru a merge direct la meniul principal.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Acesta este ecranul de afișare. Ecranul tactil și modul de ecran împărțit sunt activate în mod implicit și pot fi configurate în continuare în setări.';
+  String get deviceScreenMenuTutorialText =>
+      'Acesta este ecranul de afișare. Ecranul tactil și modul de ecran împărțit sunt activate în mod implicit și pot fi configurate în continuare în setări.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Mutați degetul mare în jurul roții de clic pentru a regla volumul';
+  String get deviceControlNowPlayingTutorialText =>
+      'Mutați degetul mare în jurul roții de clic pentru a regla volumul';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Apăsați butonul central pentru a circula printr -o bară de căutare, bara de scrubber și shuffle shuffle. Apăsați și mențineți apăsat butonul Center pentru a accesa opțiuni suplimentare.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Apăsați butonul central pentru a circula printr -o bară de căutare, bara de scrubber și shuffle shuffle. Apăsați și mențineți apăsat butonul Center pentru a accesa opțiuni suplimentare.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Apăsați și mențineți apăsat acest buton pentru a transmite rapid melodia';
+  String get nextButtonNowPlayingTutorialText =>
+      'Apăsați și mențineți apăsat acest buton pentru a transmite rapid melodia';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Apăsați și mențineți apăsat acest buton pentru a derula melodia';
+  String get previousButtonNowPlayingTutorialText =>
+      'Apăsați și mențineți apăsat acest buton pentru a derula melodia';
 
   @override
-  String get deviceControlSearchTutorialText => 'Mutați -vă ușor degetul în jurul roții de clic pentru a evidenția un alfabet';
+  String get deviceControlSearchTutorialText =>
+      'Mutați -vă ușor degetul în jurul roții de clic pentru a evidenția un alfabet';
 
   @override
-  String get centerButtonSearchTutorialText => 'Apăsați butonul central pentru a selecta alfabetul evidențiat';
+  String get centerButtonSearchTutorialText =>
+      'Apăsați butonul central pentru a selecta alfabetul evidențiat';
 
   @override
-  String get nextButtonSearchTutorialText => 'Apăsați acest buton pentru a adăuga un spațiu';
+  String get nextButtonSearchTutorialText =>
+      'Apăsați acest buton pentru a adăuga un spațiu';
 
   @override
-  String get previousButtonSearchTutorialText => 'Apăsați acest buton pentru a șterge ultimul personaj';
+  String get previousButtonSearchTutorialText =>
+      'Apăsați acest buton pentru a șterge ultimul personaj';
 
   @override
-  String get menuButtonSearchTutorialText => 'Apăsați acest buton pentru a închide tastatura și a interacționa cu rezultatele căutării';
+  String get menuButtonSearchTutorialText =>
+      'Apăsați acest buton pentru a închide tastatura și a interacționa cu rezultatele căutării';
 }

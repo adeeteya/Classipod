@@ -18,13 +18,16 @@ class AppLocalizationsTk extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ses giriş rugsady talap edilýär';
 
   @override
-  String get audioAccessPermissionContent => 'Aýdym-saz faýllaryňyzy oýnamaga rugsat bermek üçin ses faýllaryny ibermegiňizi haýyş edýäris.';
+  String get audioAccessPermissionContent =>
+      'Aýdym-saz faýllaryňyzy oýnamaga rugsat bermek üçin ses faýllaryny ibermegiňizi haýyş edýäris.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ses giriş rugsady ret edildi';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ses giriş rugsady ret edildi';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Suratda aýdym-saz faýllaryny oýnamak üçin enjam sazlamalarynda ses faýllaryna girmegiňizi haýyş edýäris.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Suratda aýdym-saz faýllaryny oýnamak üçin enjam sazlamalarynda ses faýllaryna girmegiňizi haýyş edýäris.';
 
   @override
   String get menuScreenTitle => 'Menýu';
@@ -63,7 +66,6 @@ class AppLocalizationsTk extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsTk extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsTk extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Görlenişe degirmenleri';
 
   @override
-  String get touchSoundsDialogContent => 'Tigir seslerini görmek üçin ulgam sazlamalaryny sistema sazlamalaryna degmäň';
+  String get touchSoundsDialogContent =>
+      'Tigir seslerini görmek üçin ulgam sazlamalaryny sistema sazlamalaryna degmäň';
 
   @override
   String get immersiveModeSettingTitle => 'Çümdüriji tertibi';
@@ -144,7 +146,8 @@ class AppLocalizationsTk extends AppLocalizations {
   String get donateSettingTitle => 'Bagyş et';
 
   @override
-  String get donateSettingDescription => 'Bu programmany halaýan bolsaňyz, bagyşlaň.';
+  String get donateSettingDescription =>
+      'Bu programmany halaýan bolsaňyz, bagyşlaň.';
 
   @override
   String get versionAboutScreenTitle => 'Wersiýasy';
@@ -195,7 +198,8 @@ class AppLocalizationsTk extends AppLocalizations {
   String get retryButtonText => 'Gaýtadan synanyşyň';
 
   @override
-  String get filePickerDialogTitle => 'Saz üçin skanirlemek üçin katalog saýlaň';
+  String get filePickerDialogTitle =>
+      'Saz üçin skanirlemek üçin katalog saýlaň';
 
   @override
   String get searchScreenTitle => 'Gözlemek';
@@ -210,10 +214,12 @@ class AppLocalizationsTk extends AppLocalizations {
   String get resultsForText => 'Netijeler:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Batareýany optimizasiýa öçüriň';
+  String get disableBatteryOptimizationTitle =>
+      'Batareýany optimizasiýa öçüriň';
 
   @override
-  String get disableBatteryOptimizationContent => 'Sazyň fon sanawyna girmek üçin enjam sazlamalarynda batareýa optimizasiýasyny öçüriň.';
+  String get disableBatteryOptimizationContent =>
+      'Sazyň fon sanawyna girmek üçin enjam sazlamalarynda batareýa optimizasiýasyny öçüriň.';
 
   @override
   String get languageScreenTitle => 'Dili';
@@ -267,50 +273,66 @@ class AppLocalizationsTk extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan aýdym-saz faýllary';
 
   @override
-  String get deviceControlMenuTutorialText => 'MENU-ny menýudan geçmek üçin basmak tigirine ýeňil süýşüriň';
+  String get deviceControlMenuTutorialText =>
+      'MENU-ny menýudan geçmek üçin basmak tigirine ýeňil süýşüriň';
 
   @override
-  String get centerButtonMenuTutorialText => 'Aýratynlandyrylan menýu elementini saýlamak üçin merkez düwmesine basyň';
+  String get centerButtonMenuTutorialText =>
+      'Aýratynlandyrylan menýu elementini saýlamak üçin merkez düwmesine basyň';
 
   @override
-  String get playPauseMenuTutorialText => 'Aýdym oýnamak ýa-da durmak üçin bu düwmä basyň';
+  String get playPauseMenuTutorialText =>
+      'Aýdym oýnamak ýa-da durmak üçin bu düwmä basyň';
 
   @override
-  String get nextButtonMenuTutorialText => 'Indiki aýdymyna geçmek üçin şu düwmä basyň';
+  String get nextButtonMenuTutorialText =>
+      'Indiki aýdymyna geçmek üçin şu düwmä basyň';
 
   @override
-  String get previousButtonMenuTutorialText => 'Yza çekmek ýa-da öňki aýdymy yza çekmek üçin bu düwmä basyň';
+  String get previousButtonMenuTutorialText =>
+      'Yza çekmek ýa-da öňki aýdymy yza çekmek üçin bu düwmä basyň';
 
   @override
-  String get menuButtonTutorialText => 'Öňki menýuda dolanmak üçin şu düwmä basyň. Başga ekrana gönüden-göni internete giren beýleki ekrana basyp saklap bilersiňiz.';
+  String get menuButtonTutorialText =>
+      'Öňki menýuda dolanmak üçin şu düwmä basyň. Başga ekrana gönüden-göni internete giren beýleki ekrana basyp saklap bilersiňiz.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Bu ekran ekrany. Duýgur ekran we bölüň ekranyň re modeimesi, Sazlamalara goşmaça düzüp bilersiňiz.';
+  String get deviceScreenMenuTutorialText =>
+      'Bu ekran ekrany. Duýgur ekran we bölüň ekranyň re modeimesi, Sazlamalara goşmaça düzüp bilersiňiz.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Göwrümi sazlamak üçin başam barmagyňyzy basyň';
+  String get deviceControlNowPlayingTutorialText =>
+      'Göwrümi sazlamak üçin başam barmagyňyzy basyň';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Gysga, swöter bar we çalçly slaýderi gözlemek arkaly sikl üçin merkezi düwmesini basyň. Goşmaça wariantlara girmek üçin merkez düwmesine basyň we saklaň.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Gysga, swöter bar we çalçly slaýderi gözlemek arkaly sikl üçin merkezi düwmesini basyň. Goşmaça wariantlara girmek üçin merkez düwmesine basyň we saklaň.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Aýdymy çalt öňe sürmek üçin bu düwmä basyň we saklaň';
+  String get nextButtonNowPlayingTutorialText =>
+      'Aýdymy çalt öňe sürmek üçin bu düwmä basyň we saklaň';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Aýdymy yza öwürmek üçin bu düwmäni basyň we saklaň';
+  String get previousButtonNowPlayingTutorialText =>
+      'Aýdymy yza öwürmek üçin bu düwmäni basyň we saklaň';
 
   @override
-  String get deviceControlSearchTutorialText => 'Elipbiýi bellemek üçin başam barmagyňyzy ýeňilleşdiriň';
+  String get deviceControlSearchTutorialText =>
+      'Elipbiýi bellemek üçin başam barmagyňyzy ýeňilleşdiriň';
 
   @override
-  String get centerButtonSearchTutorialText => 'Aýratynlandyrylan elipbiýi saýlamak üçin merkez düwmesine basyň';
+  String get centerButtonSearchTutorialText =>
+      'Aýratynlandyrylan elipbiýi saýlamak üçin merkez düwmesine basyň';
 
   @override
-  String get nextButtonSearchTutorialText => 'Boş ýer goşmak üçin şu düwmä basyň';
+  String get nextButtonSearchTutorialText =>
+      'Boş ýer goşmak üçin şu düwmä basyň';
 
   @override
-  String get previousButtonSearchTutorialText => 'Iň soňky häsiýeti pozmak üçin şu düwmä basyň';
+  String get previousButtonSearchTutorialText =>
+      'Iň soňky häsiýeti pozmak üçin şu düwmä basyň';
 
   @override
-  String get menuButtonSearchTutorialText => 'Klawiaturany ýapmak we gözleg netijeleri bilen täsir etmek üçin şu düwmä basyň';
+  String get menuButtonSearchTutorialText =>
+      'Klawiaturany ýapmak we gözleg netijeleri bilen täsir etmek üçin şu düwmä basyň';
 }

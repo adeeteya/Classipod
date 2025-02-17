@@ -18,13 +18,16 @@ class AppLocalizationsFa extends AppLocalizations {
   String get audioAccessPermissionTitle => 'اجازه دسترسی صوتی لازم است';
 
   @override
-  String get audioAccessPermissionContent => 'لطفاً به پرونده های صوتی دسترسی پیدا کنید تا به ما اجازه دهید فایلهای موسیقی خود را پخش کنیم.';
+  String get audioAccessPermissionContent =>
+      'لطفاً به پرونده های صوتی دسترسی پیدا کنید تا به ما اجازه دهید فایلهای موسیقی خود را پخش کنیم.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'مجوز دسترسی صوتی رد شد';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'مجوز دسترسی صوتی رد شد';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'لطفاً به فایلهای صوتی دسترسی به این برنامه در تنظیمات دستگاه اعطا کنید تا به ما اجازه دهد فایلهای موسیقی خود را پخش کنیم.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'لطفاً به فایلهای صوتی دسترسی به این برنامه در تنظیمات دستگاه اعطا کنید تا به ما اجازه دهد فایلهای موسیقی خود را پخش کنیم.';
 
   @override
   String get menuScreenTitle => 'منو';
@@ -63,7 +66,6 @@ class AppLocalizationsFa extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsFa extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsFa extends AppLocalizations {
   String get touchSoundsDialogTitle => 'صداها را لمس کنید';
 
   @override
-  String get touchSoundsDialogContent => 'لطفاً صداهای لمس را از تنظیمات سیستم فعال کنید تا صداهای چرخ کلیک را بشنوید';
+  String get touchSoundsDialogContent =>
+      'لطفاً صداهای لمس را از تنظیمات سیستم فعال کنید تا صداهای چرخ کلیک را بشنوید';
 
   @override
   String get immersiveModeSettingTitle => 'حالت همهجانبه';
@@ -144,7 +146,8 @@ class AppLocalizationsFa extends AppLocalizations {
   String get donateSettingTitle => 'اهداء کردن';
 
   @override
-  String get donateSettingDescription => 'اگر این برنامه را دوست دارید ، لطفاً اهداء را در نظر بگیرید.';
+  String get donateSettingDescription =>
+      'اگر این برنامه را دوست دارید ، لطفاً اهداء را در نظر بگیرید.';
 
   @override
   String get versionAboutScreenTitle => 'نسخه';
@@ -195,7 +198,8 @@ class AppLocalizationsFa extends AppLocalizations {
   String get retryButtonText => 'مجدداً';
 
   @override
-  String get filePickerDialogTitle => 'دایرکتوری را برای اسکن موسیقی انتخاب کنید';
+  String get filePickerDialogTitle =>
+      'دایرکتوری را برای اسکن موسیقی انتخاب کنید';
 
   @override
   String get searchScreenTitle => 'جستجو';
@@ -210,10 +214,12 @@ class AppLocalizationsFa extends AppLocalizations {
   String get resultsForText => 'نتایج برای:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'بهینه سازی باتری را غیرفعال کنید';
+  String get disableBatteryOptimizationTitle =>
+      'بهینه سازی باتری را غیرفعال کنید';
 
   @override
-  String get disableBatteryOptimizationContent => 'لطفاً بهینه سازی باتری را برای این برنامه در تنظیمات دستگاه غیرفعال کنید تا پخش پس زمینه موسیقی امکان پذیر باشد.';
+  String get disableBatteryOptimizationContent =>
+      'لطفاً بهینه سازی باتری را برای این برنامه در تنظیمات دستگاه غیرفعال کنید تا پخش پس زمینه موسیقی امکان پذیر باشد.';
 
   @override
   String get languageScreenTitle => 'زبان';
@@ -267,50 +273,66 @@ class AppLocalizationsFa extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'پرونده های موسیقی Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'انگشت شست خود را به آرامی دور چرخ کلیک برای حرکت در منو حرکت دهید';
+  String get deviceControlMenuTutorialText =>
+      'انگشت شست خود را به آرامی دور چرخ کلیک برای حرکت در منو حرکت دهید';
 
   @override
-  String get centerButtonMenuTutorialText => 'برای انتخاب مورد منوی برجسته ، دکمه Center را فشار دهید';
+  String get centerButtonMenuTutorialText =>
+      'برای انتخاب مورد منوی برجسته ، دکمه Center را فشار دهید';
 
   @override
-  String get playPauseMenuTutorialText => 'برای پخش یا مکث یک آهنگ ، این دکمه را فشار دهید';
+  String get playPauseMenuTutorialText =>
+      'برای پخش یا مکث یک آهنگ ، این دکمه را فشار دهید';
 
   @override
-  String get nextButtonMenuTutorialText => 'این دکمه را فشار دهید تا به آهنگ بعدی پرش کنید';
+  String get nextButtonMenuTutorialText =>
+      'این دکمه را فشار دهید تا به آهنگ بعدی پرش کنید';
 
   @override
-  String get previousButtonMenuTutorialText => 'این دکمه را فشار دهید تا دوباره به آهنگ قبلی برگردید';
+  String get previousButtonMenuTutorialText =>
+      'این دکمه را فشار دهید تا دوباره به آهنگ قبلی برگردید';
 
   @override
-  String get menuButtonTutorialText => 'برای بازگشت به منوی قبلی ، این دکمه را فشار دهید. می توانید آن را از هر صفحه دیگر فشار داده و نگه دارید تا مستقیماً به منوی اصلی بروید.';
+  String get menuButtonTutorialText =>
+      'برای بازگشت به منوی قبلی ، این دکمه را فشار دهید. می توانید آن را از هر صفحه دیگر فشار داده و نگه دارید تا مستقیماً به منوی اصلی بروید.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'این صفحه نمایش است. صفحه لمسی و حالت صفحه تقسیم به طور پیش فرض فعال می شوند و می توانند در تنظیمات بیشتر پیکربندی شوند.';
+  String get deviceScreenMenuTutorialText =>
+      'این صفحه نمایش است. صفحه لمسی و حالت صفحه تقسیم به طور پیش فرض فعال می شوند و می توانند در تنظیمات بیشتر پیکربندی شوند.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'انگشت شست خود را در اطراف چرخ کلیک حرکت دهید تا حجم تنظیم شود';
+  String get deviceControlNowPlayingTutorialText =>
+      'انگشت شست خود را در اطراف چرخ کلیک حرکت دهید تا حجم تنظیم شود';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'دکمه مرکز را فشار دهید تا از طریق نوار جستجو ، نوار اسکراب و کشویی Shuffle چرخه بزنید. دکمه مرکز را فشار داده و نگه دارید تا به گزینه های اضافی دسترسی پیدا کنید.';
+  String get centerButtonNowPlayingTutorialText =>
+      'دکمه مرکز را فشار دهید تا از طریق نوار جستجو ، نوار اسکراب و کشویی Shuffle چرخه بزنید. دکمه مرکز را فشار داده و نگه دارید تا به گزینه های اضافی دسترسی پیدا کنید.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'این دکمه را فشار داده و نگه دارید تا سریع آهنگ را به جلو بکشید';
+  String get nextButtonNowPlayingTutorialText =>
+      'این دکمه را فشار داده و نگه دارید تا سریع آهنگ را به جلو بکشید';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'این دکمه را فشار داده و نگه دارید تا دوباره آهنگ شود';
+  String get previousButtonNowPlayingTutorialText =>
+      'این دکمه را فشار داده و نگه دارید تا دوباره آهنگ شود';
 
   @override
-  String get deviceControlSearchTutorialText => 'انگشت شست خود را به آرامی در اطراف چرخ کلیک حرکت دهید تا یک الفبای برجسته شود';
+  String get deviceControlSearchTutorialText =>
+      'انگشت شست خود را به آرامی در اطراف چرخ کلیک حرکت دهید تا یک الفبای برجسته شود';
 
   @override
-  String get centerButtonSearchTutorialText => 'برای انتخاب الفبای برجسته ، دکمه Center را فشار دهید';
+  String get centerButtonSearchTutorialText =>
+      'برای انتخاب الفبای برجسته ، دکمه Center را فشار دهید';
 
   @override
-  String get nextButtonSearchTutorialText => 'این دکمه را فشار دهید تا یک فضا اضافه شود';
+  String get nextButtonSearchTutorialText =>
+      'این دکمه را فشار دهید تا یک فضا اضافه شود';
 
   @override
-  String get previousButtonSearchTutorialText => 'این دکمه را فشار دهید تا آخرین شخصیت حذف شود';
+  String get previousButtonSearchTutorialText =>
+      'این دکمه را فشار دهید تا آخرین شخصیت حذف شود';
 
   @override
-  String get menuButtonSearchTutorialText => 'برای بستن صفحه کلید و تعامل با نتایج جستجو ، این دکمه را فشار دهید';
+  String get menuButtonSearchTutorialText =>
+      'برای بستن صفحه کلید و تعامل با نتایج جستجو ، این دکمه را فشار دهید';
 }

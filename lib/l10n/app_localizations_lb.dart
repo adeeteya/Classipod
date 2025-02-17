@@ -15,16 +15,20 @@ class AppLocalizationsLb extends AppLocalizations {
   String get menuButtonText => 'CENUER ASB';
 
   @override
-  String get audioAccessPermissionTitle => 'Audio Access Erlaabnes erfuerderlech';
+  String get audioAccessPermissionTitle =>
+      'Audio Access Erlaabnes erfuerderlech';
 
   @override
-  String get audioAccessPermissionContent => 'Gitt w.e.g. Audio Dateien Zougang fir datt mir Är Musekdateien ze spillen.';
+  String get audioAccessPermissionContent =>
+      'Gitt w.e.g. Audio Dateien Zougang fir datt mir Är Musekdateien ze spillen.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Access Erlaabnes refuséiert';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Access Erlaabnes refuséiert';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Gitt w.e.g. Audio Dateien Zougang fir dës App am Apparat Astellunge fir datt mir Är Musekdateien spillen.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Gitt w.e.g. Audio Dateien Zougang fir dës App am Apparat Astellunge fir datt mir Är Musekdateien spillen.';
 
   @override
   String get menuScreenTitle => 'CENUER ASB';
@@ -63,7 +67,6 @@ class AppLocalizationsLb extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsLb extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsLb extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch kléngt';
 
   @override
-  String get touchSoundsDialogContent => 'Aktivéiert w.e.g. Touch Kläng aus System Astellunge fir de Click-Ricken ze héieren';
+  String get touchSoundsDialogContent =>
+      'Aktivéiert w.e.g. Touch Kläng aus System Astellunge fir de Click-Ricken ze héieren';
 
   @override
   String get immersiveModeSettingTitle => 'Imlemor Modus';
@@ -144,7 +147,8 @@ class AppLocalizationsLb extends AppLocalizations {
   String get donateSettingTitle => 'Spenden';
 
   @override
-  String get donateSettingDescription => 'Wann Dir dës App gär hutt, betruecht w.e.g.';
+  String get donateSettingDescription =>
+      'Wann Dir dës App gär hutt, betruecht w.e.g.';
 
   @override
   String get versionAboutScreenTitle => 'Erëm';
@@ -195,7 +199,8 @@ class AppLocalizationsLb extends AppLocalizations {
   String get retryButtonText => 'Erëmkréien';
 
   @override
-  String get filePickerDialogTitle => 'Wielt e Verzeechnes fir Musek ze scannen';
+  String get filePickerDialogTitle =>
+      'Wielt e Verzeechnes fir Musek ze scannen';
 
   @override
   String get searchScreenTitle => 'Sichen';
@@ -210,10 +215,12 @@ class AppLocalizationsLb extends AppLocalizations {
   String get resultsForText => 'Resultater fir:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Desaktivéiere Batterie Optimiséierung';
+  String get disableBatteryOptimizationTitle =>
+      'Desaktivéiere Batterie Optimiséierung';
 
   @override
-  String get disableBatteryOptimizationContent => 'Desaktivéiere Batterie Optimiséierung fir dës App am Apparat Astellunge fir den Hannergrond Playback vun der Musek z\'erméiglechen.';
+  String get disableBatteryOptimizationContent =>
+      'Desaktivéiere Batterie Optimiséierung fir dës App am Apparat Astellunge fir den Hannergrond Playback vun der Musek z\'erméiglechen.';
 
   @override
   String get languageScreenTitle => 'Sprooche';
@@ -267,50 +274,66 @@ class AppLocalizationsLb extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Musekdateien';
 
   @override
-  String get deviceControlMenuTutorialText => 'Réckelt Ären Daum liicht ronderëm de Klickhimmel fir de Menü navigéieren';
+  String get deviceControlMenuTutorialText =>
+      'Réckelt Ären Daum liicht ronderëm de Klickhimmel fir de Menü navigéieren';
 
   @override
-  String get centerButtonMenuTutorialText => 'Dréckt op den Zentrum Knäppchen fir den Highlight Menü Artikel ze wielen';
+  String get centerButtonMenuTutorialText =>
+      'Dréckt op den Zentrum Knäppchen fir den Highlight Menü Artikel ze wielen';
 
   @override
-  String get playPauseMenuTutorialText => 'Press dëse Knäppchen fir e Song ze spillen oder ze pausen';
+  String get playPauseMenuTutorialText =>
+      'Press dëse Knäppchen fir e Song ze spillen oder ze pausen';
 
   @override
-  String get nextButtonMenuTutorialText => 'Dréckt dëse Knäppchen fir an dat nächst Lidd ze iwwersprangen';
+  String get nextButtonMenuTutorialText =>
+      'Dréckt dëse Knäppchen fir an dat nächst Lidd ze iwwersprangen';
 
   @override
-  String get previousButtonMenuTutorialText => 'Dréckt dëse Knäppchen fir zréckzekommen oder zréck an de viregte Lidd ze goen';
+  String get previousButtonMenuTutorialText =>
+      'Dréckt dëse Knäppchen fir zréckzekommen oder zréck an de viregte Lidd ze goen';
 
   @override
-  String get menuButtonTutorialText => 'Press dëse Knäppchen fir zréck op de viregte Menu. Dir kënnt drécken an halen et vun engem aneren Écran fir direkt an den Haaptmenu ze goen.';
+  String get menuButtonTutorialText =>
+      'Press dëse Knäppchen fir zréck op de viregte Menu. Dir kënnt drécken an halen et vun engem aneren Écran fir direkt an den Haaptmenu ze goen.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Dëst ass den Displaybildschierm. Touch Écran a Splitbildschiermbezuel sinn am Standard aktivéiert a ka weider an den Astellunge konfiguréiert ginn.';
+  String get deviceScreenMenuTutorialText =>
+      'Dëst ass den Displaybildschierm. Touch Écran a Splitbildschiermbezuel sinn am Standard aktivéiert a ka weider an den Astellunge konfiguréiert ginn.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Réckelt Ären Daumen ronderëm de Klickhimmel fir de Volumen unzepassen';
+  String get deviceControlNowPlayingTutorialText =>
+      'Réckelt Ären Daumen ronderëm de Klickhimmel fir de Volumen unzepassen';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Dréckt op den Zentrum Knäppchen fir duerch Seiger Bar ze verzöltegen, Scrubber Bar an Shuffle Schieber. Dréckt an hält den Zentrum Knäppchen fir op zousätzlech Optiounen ze kréien.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Dréckt op den Zentrum Knäppchen fir duerch Seiger Bar ze verzöltegen, Scrubber Bar an Shuffle Schieber. Dréckt an hält den Zentrum Knäppchen fir op zousätzlech Optiounen ze kréien.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Dréckt op an hält dëse Knäppchen fir de Song weiderzeféieren';
+  String get nextButtonNowPlayingTutorialText =>
+      'Dréckt op an hält dëse Knäppchen fir de Song weiderzeféieren';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Dréckt an hält dëse Knäppchen fir d\'Lidd ze widderhuelen';
+  String get previousButtonNowPlayingTutorialText =>
+      'Dréckt an hält dëse Knäppchen fir d\'Lidd ze widderhuelen';
 
   @override
-  String get deviceControlSearchTutorialText => 'Réckelt Ären Daum liicht ronderëm de Klickrad fir en Alfabet ze markéieren';
+  String get deviceControlSearchTutorialText =>
+      'Réckelt Ären Daum liicht ronderëm de Klickrad fir en Alfabet ze markéieren';
 
   @override
-  String get centerButtonSearchTutorialText => 'Dréckt op den Zentrum Knäppchen fir den Highlighted Alphabet ze wielen';
+  String get centerButtonSearchTutorialText =>
+      'Dréckt op den Zentrum Knäppchen fir den Highlighted Alphabet ze wielen';
 
   @override
-  String get nextButtonSearchTutorialText => 'Dréckt dëse Knäppchen fir e Raum ze addéieren';
+  String get nextButtonSearchTutorialText =>
+      'Dréckt dëse Knäppchen fir e Raum ze addéieren';
 
   @override
-  String get previousButtonSearchTutorialText => 'Dréckt dëse Knäppchen fir de leschte Charakter ze läschen';
+  String get previousButtonSearchTutorialText =>
+      'Dréckt dëse Knäppchen fir de leschte Charakter ze läschen';
 
   @override
-  String get menuButtonSearchTutorialText => 'Press dëse Knäppchen fir d\'Tastatur zoumaachen an interagéieren mat de Sichresultater';
+  String get menuButtonSearchTutorialText =>
+      'Press dëse Knäppchen fir d\'Tastatur zoumaachen an interagéieren mat de Sichresultater';
 }

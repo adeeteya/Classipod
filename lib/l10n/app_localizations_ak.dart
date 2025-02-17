@@ -15,16 +15,20 @@ class AppLocalizationsAk extends AppLocalizations {
   String get menuButtonText => 'Menu .';
 
   @override
-  String get audioAccessPermissionTitle => 'Odio a wɔde kɔ hɔ ho kwan a wɔhwehwɛ .';
+  String get audioAccessPermissionTitle =>
+      'Odio a wɔde kɔ hɔ ho kwan a wɔhwehwɛ .';
 
   @override
-  String get audioAccessPermissionContent => 'Yɛsrɛ sɛ ma yɛn kwan ma yɛmfa audio fael mma na ama yɛatumi abɔ wo nnwom fael no.';
+  String get audioAccessPermissionContent =>
+      'Yɛsrɛ sɛ ma yɛn kwan ma yɛmfa audio fael mma na ama yɛatumi abɔ wo nnwom fael no.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ɔdio kwan ho kwan a wɔapow .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ɔdio kwan ho kwan a wɔapow .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Yɛsrɛ sɛ ma ɔdio fael kwan mma saa app yi wɔ device settings no mu na ama yɛatumi abɔ wo nnwom fael no.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Yɛsrɛ sɛ ma ɔdio fael kwan mma saa app yi wɔ device settings no mu na ama yɛatumi abɔ wo nnwom fael no.';
 
   @override
   String get menuScreenTitle => 'Menu .';
@@ -63,7 +67,6 @@ class AppLocalizationsAk extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsAk extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsAk extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Ka nnyigyei ahorow ho asɛm .';
 
   @override
-  String get touchSoundsDialogContent => 'Yɛsrɛ sɛ ma wo nsa nka nnyigyei a efi System Settings mu no na woate sɛ woabɔ wo ho so .';
+  String get touchSoundsDialogContent =>
+      'Yɛsrɛ sɛ ma wo nsa nka nnyigyei a efi System Settings mu no na woate sɛ woabɔ wo ho so .';
 
   @override
   String get immersiveModeSettingTitle => 'Immersive mode .';
@@ -144,7 +147,8 @@ class AppLocalizationsAk extends AppLocalizations {
   String get donateSettingTitle => 'Yi boa';
 
   @override
-  String get donateSettingDescription => 'Sɛ w’ani gye saa app yi ho a, yɛsrɛ wo susuw ntoboa ho.';
+  String get donateSettingDescription =>
+      'Sɛ w’ani gye saa app yi ho a, yɛsrɛ wo susuw ntoboa ho.';
 
   @override
   String get versionAboutScreenTitle => 'Ɔfa';
@@ -210,10 +214,12 @@ class AppLocalizationsAk extends AppLocalizations {
   String get resultsForText => 'Nea efi mu ba ne sɛ:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Ma battery a ɛyɛ papa no nyɛ adwuma yiye .';
+  String get disableBatteryOptimizationTitle =>
+      'Ma battery a ɛyɛ papa no nyɛ adwuma yiye .';
 
   @override
-  String get disableBatteryOptimizationContent => 'Yɛsrɛ sɛ gyae battery optimization ma saa app yi wɔ device settings no mu na ama woatumi abɔ nnwom akyi nnwom.';
+  String get disableBatteryOptimizationContent =>
+      'Yɛsrɛ sɛ gyae battery optimization ma saa app yi wɔ device settings no mu na ama woatumi abɔ nnwom akyi nnwom.';
 
   @override
   String get languageScreenTitle => 'Kasa';
@@ -267,50 +273,66 @@ class AppLocalizationsAk extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan nnwom fael ahorow .';
 
   @override
-  String get deviceControlMenuTutorialText => 'Fa wo nsateaa no twa klike no ho kakra na fa kɔ menu no mu .';
+  String get deviceControlMenuTutorialText =>
+      'Fa wo nsateaa no twa klike no ho kakra na fa kɔ menu no mu .';
 
   @override
-  String get centerButtonMenuTutorialText => 'Mia Centre button no so na paw menu asɛm a wɔasi so dua no .';
+  String get centerButtonMenuTutorialText =>
+      'Mia Centre button no so na paw menu asɛm a wɔasi so dua no .';
 
   @override
-  String get playPauseMenuTutorialText => 'Mia saa bɔtn yi so na bɔ dwom bi anaasɛ gyina kakra .';
+  String get playPauseMenuTutorialText =>
+      'Mia saa bɔtn yi so na bɔ dwom bi anaasɛ gyina kakra .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Mia saa bɔtn yi so na skip kɔ dwom a edi hɔ no so .';
+  String get nextButtonMenuTutorialText =>
+      'Mia saa bɔtn yi so na skip kɔ dwom a edi hɔ no so .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Mia saa bɔtn yi so na san kɔ anaasɛ san kɔ dwom a atwam no so .';
+  String get previousButtonMenuTutorialText =>
+      'Mia saa bɔtn yi so na san kɔ anaasɛ san kɔ dwom a atwam no so .';
 
   @override
-  String get menuButtonTutorialText => 'Mia saa bɔtn yi so na san kɔ menu a atwam no so. Wubetumi amia na woakura mu afi screen foforo biara so na woakɔ menu titiriw no so tẽẽ.';
+  String get menuButtonTutorialText =>
+      'Mia saa bɔtn yi so na san kɔ menu a atwam no so. Wubetumi amia na woakura mu afi screen foforo biara so na woakɔ menu titiriw no so tẽẽ.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Eyi ne display screen no. Touch Screen ne Split Screen mode no yɛ default na wobetumi asiesie no akɔ akyiri wɔ nhyehyɛe no mu.';
+  String get deviceScreenMenuTutorialText =>
+      'Eyi ne display screen no. Touch Screen ne Split Screen mode no yɛ default na wobetumi asiesie no akɔ akyiri wɔ nhyehyɛe no mu.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Fa wo nsateaa no twa click wheel no ho hyia na sesa volume no .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Fa wo nsateaa no twa click wheel no ho hyia na sesa volume no .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Mia mfinimfini bɔtn no so na fa cycle fa hwehwɛ bar, scrubber bar ne shuffle slider so. Mia na kura mfinimfini bɔtn no so na woanya akwan foforo a wobɛfa so.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Mia mfinimfini bɔtn no so na fa cycle fa hwehwɛ bar, scrubber bar ne shuffle slider so. Mia na kura mfinimfini bɔtn no so na woanya akwan foforo a wobɛfa so.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Mia na kura saa bɔtn yi mu na ama dwom no akɔ w’anim ntɛmntɛm .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Mia na kura saa bɔtn yi mu na ama dwom no akɔ w’anim ntɛmntɛm .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Mia na kura saa bɔtn yi mu na ama dwom no asan akɔ akyi .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Mia na kura saa bɔtn yi mu na ama dwom no asan akɔ akyi .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Fa wo nsateaa no twa click wheel no ho kakra na ama woatumi asi nkyerɛwde bi so dua .';
+  String get deviceControlSearchTutorialText =>
+      'Fa wo nsateaa no twa click wheel no ho kakra na ama woatumi asi nkyerɛwde bi so dua .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Mia mfinimfini bɔtn no so na paw nkyerɛwde a wɔasi so dua no .';
+  String get centerButtonSearchTutorialText =>
+      'Mia mfinimfini bɔtn no so na paw nkyerɛwde a wɔasi so dua no .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Mia saa bɔtn yi so na fa baabi bi ka ho .';
+  String get nextButtonSearchTutorialText =>
+      'Mia saa bɔtn yi so na fa baabi bi ka ho .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Mia saa bɔtn yi so na popa nkyerɛwde a etwa to no .';
+  String get previousButtonSearchTutorialText =>
+      'Mia saa bɔtn yi so na popa nkyerɛwde a etwa to no .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Mia saa bɔtn yi so na to keyboard no mu na wo ne search results no nni nkitaho .';
+  String get menuButtonSearchTutorialText =>
+      'Mia saa bɔtn yi so na to keyboard no mu na wo ne search results no nni nkitaho .';
 }

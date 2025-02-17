@@ -18,13 +18,16 @@ class AppLocalizationsNew extends AppLocalizations {
   String get audioAccessPermissionTitle => 'अडियो पहुँचया अनुमति माःगु';
 
   @override
-  String get audioAccessPermissionContent => 'छिगु म्यूजिक फाइल म्हितेत अडियो फाइलया पहुँच बियादिसँ ।';
+  String get audioAccessPermissionContent =>
+      'छिगु म्यूजिक फाइल म्हितेत अडियो फाइलया पहुँच बियादिसँ ।';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'अडियो सुलभिङ्ग पर्सिमिशन डिनाइड';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'अडियो सुलभिङ्ग पर्सिमिशन डिनाइड';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'जिमित छिगु संगीत फाइल म्हितेत डिभाइस सेटिङ्गय् थुगु एपया निंतिं अडियो फाइलया पहुँच बियादिसँ ।';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'जिमित छिगु संगीत फाइल म्हितेत डिभाइस सेटिङ्गय् थुगु एपया निंतिं अडियो फाइलया पहुँच बियादिसँ ।';
 
   @override
   String get menuScreenTitle => 'मेनु';
@@ -63,7 +66,6 @@ class AppLocalizationsNew extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsNew extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsNew extends AppLocalizations {
   String get touchSoundsDialogTitle => 'जाँच यायेगु';
 
   @override
-  String get touchSoundsDialogContent => 'क्लिक व्हील सः न्यनेत सिस्टम सेटिङ्गपाखें सहगु सःतुइकादिसँ ।';
+  String get touchSoundsDialogContent =>
+      'क्लिक व्हील सः न्यनेत सिस्टम सेटिङ्गपाखें सहगु सःतुइकादिसँ ।';
 
   @override
   String get immersiveModeSettingTitle => 'इमर्सिभ मोड';
@@ -144,7 +146,8 @@ class AppLocalizationsNew extends AppLocalizations {
   String get donateSettingTitle => 'दान य';
 
   @override
-  String get donateSettingDescription => 'छन्त थ्व एप यःसा, दान यायेगु बिचाः या ।';
+  String get donateSettingDescription =>
+      'छन्त थ्व एप यःसा, दान यायेगु बिचाः या ।';
 
   @override
   String get versionAboutScreenTitle => 'संस्करण';
@@ -195,7 +198,8 @@ class AppLocalizationsNew extends AppLocalizations {
   String get retryButtonText => 'पनाखं';
 
   @override
-  String get filePickerDialogTitle => 'संगीतया निंतिं स्क्यानय् निर्देशिका ल्ययादिसँ ।';
+  String get filePickerDialogTitle =>
+      'संगीतया निंतिं स्क्यानय् निर्देशिका ल्ययादिसँ ।';
 
   @override
   String get searchScreenTitle => 'मालेउ';
@@ -213,7 +217,8 @@ class AppLocalizationsNew extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'असक्षम ब्याट्री अनुकूलन';
 
   @override
-  String get disableBatteryOptimizationContent => 'संगीतया पृष्ठभूमि प्लेब्याक यायेत अनुमति बीत डिभाइस सेटिङय् थुगु एपया निंतिं ब्याट्री अपटिमाइजेशनयात असक्षम यानादिसँ ।';
+  String get disableBatteryOptimizationContent =>
+      'संगीतया पृष्ठभूमि प्लेब्याक यायेत अनुमति बीत डिभाइस सेटिङय् थुगु एपया निंतिं ब्याट्री अपटिमाइजेशनयात असक्षम यानादिसँ ।';
 
   @override
   String get languageScreenTitle => 'भ्या';
@@ -267,50 +272,65 @@ class AppLocalizationsNew extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'रेस्कन संगीत फाइल';
 
   @override
-  String get deviceControlMenuTutorialText => 'मेनु नेभिगेट यायेत क्लिक व्हीलया चाकःलिं थःगु थम्बयात हल्का यानादिसँ ।';
+  String get deviceControlMenuTutorialText =>
+      'मेनु नेभिगेट यायेत क्लिक व्हीलया चाकःलिं थःगु थम्बयात हल्का यानादिसँ ।';
 
   @override
-  String get centerButtonMenuTutorialText => 'हाइलाइट यानातःगु मेनु आइटम ल्ययेत सेन्टर बटन त्यु ।';
+  String get centerButtonMenuTutorialText =>
+      'हाइलाइट यानातःगु मेनु आइटम ल्ययेत सेन्टर बटन त्यु ।';
 
   @override
-  String get playPauseMenuTutorialText => 'म्ये हालेत बाय् दिकेत थुगु बटन त्यु ।';
+  String get playPauseMenuTutorialText =>
+      'म्ये हालेत बाय् दिकेत थुगु बटन त्यु ।';
 
   @override
-  String get nextButtonMenuTutorialText => 'मेगु म्येयात त्वःतेत थुगु बटन त्यु ।';
+  String get nextButtonMenuTutorialText =>
+      'मेगु म्येयात त्वःतेत थुगु बटन त्यु ।';
 
   @override
-  String get previousButtonMenuTutorialText => 'न्हापाया म्येय् लिहां वनेत थुगु बटन त्यु ।';
+  String get previousButtonMenuTutorialText =>
+      'न्हापाया म्येय् लिहां वनेत थुगु बटन त्यु ।';
 
   @override
-  String get menuButtonTutorialText => 'न्हापाया मेनुइ लिहां वनेत थुगु बटन त्यु । छिं थुकियात मेगु छुं नं स्क्रिनं तप्यंक मू मेनुइ वनेत तियादिसँ ।';
+  String get menuButtonTutorialText =>
+      'न्हापाया मेनुइ लिहां वनेत थुगु बटन त्यु । छिं थुकियात मेगु छुं नं स्क्रिनं तप्यंक मू मेनुइ वनेत तियादिसँ ।';
 
   @override
-  String get deviceScreenMenuTutorialText => 'थ्व डिस्प्ले स्क्रिन खः । टच स्क्रीन व स्प्लिट स्क्रीन मोडयात डिफल्ट कथं सक्षम याइ व सेटिङय् अझ अप्वः कन्फिगर यायेफइ ।';
+  String get deviceScreenMenuTutorialText =>
+      'थ्व डिस्प्ले स्क्रिन खः । टच स्क्रीन व स्प्लिट स्क्रीन मोडयात डिफल्ट कथं सक्षम याइ व सेटिङय् अझ अप्वः कन्फिगर यायेफइ ।';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'आयतन समायोजन यायेत क्लिक व्हीलयात थःगु थुम्बः यंकि ।';
+  String get deviceControlNowPlayingTutorialText =>
+      'आयतन समायोजन यायेत क्लिक व्हीलयात थःगु थुम्बः यंकि ।';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'बार, स्क्रबर बार व शफल स्लाइडर मालेगु माध्यमं साइकल चले यायेत सेन्टर बटन त्यु । तँसा विकल्प कायेत सेन्टर बटन त्यु अले तयादिसँ ।';
+  String get centerButtonNowPlayingTutorialText =>
+      'बार, स्क्रबर बार व शफल स्लाइडर मालेगु माध्यमं साइकल चले यायेत सेन्टर बटन त्यु । तँसा विकल्प कायेत सेन्टर बटन त्यु अले तयादिसँ ।';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'म्येयात फास्ट फर्वार्ड यायेत थुगु बटन त्यु अले ज्वनादिसँ ।';
+  String get nextButtonNowPlayingTutorialText =>
+      'म्येयात फास्ट फर्वार्ड यायेत थुगु बटन त्यु अले ज्वनादिसँ ।';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'म्येयात हाकनं चलन यायेत थुगु बटन त्यु अले ज्वनादिसँ ।';
+  String get previousButtonNowPlayingTutorialText =>
+      'म्येयात हाकनं चलन यायेत थुगु बटन त्यु अले ज्वनादिसँ ।';
 
   @override
-  String get deviceControlSearchTutorialText => 'अल्फाबेटयात हाइलाइट यायेत क्लिक व्हीलया चाकःलिं छंगु थुम्बः हल्का चाःहिकि ।';
+  String get deviceControlSearchTutorialText =>
+      'अल्फाबेटयात हाइलाइट यायेत क्लिक व्हीलया चाकःलिं छंगु थुम्बः हल्का चाःहिकि ।';
 
   @override
-  String get centerButtonSearchTutorialText => 'हाइलाइट यानातःगु अल्फाबेट ल्ययेत सेन्टर बटन त्यु ।';
+  String get centerButtonSearchTutorialText =>
+      'हाइलाइट यानातःगु अल्फाबेट ल्ययेत सेन्टर बटन त्यु ।';
 
   @override
   String get nextButtonSearchTutorialText => 'थाय् तनेत थुगु बटन त्यु ।';
 
   @override
-  String get previousButtonSearchTutorialText => 'लिपांगु पात्र हुइकेत थुगु बटन त्यु ।';
+  String get previousButtonSearchTutorialText =>
+      'लिपांगु पात्र हुइकेत थुगु बटन त्यु ।';
 
   @override
-  String get menuButtonSearchTutorialText => 'कीबोर्ड बन्द यायेत व मालेगु लिच्वःलिसे अन्तरक्रिया यायेत थुगु बटन त्यु ।';
+  String get menuButtonSearchTutorialText =>
+      'कीबोर्ड बन्द यायेत व मालेगु लिच्वःलिसे अन्तरक्रिया यायेत थुगु बटन त्यु ।';
 }

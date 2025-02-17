@@ -18,13 +18,16 @@ class AppLocalizationsAz extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Səs giriş icazəsi tələb olunur';
 
   @override
-  String get audioAccessPermissionContent => 'Zəhmət olmasa musiqi sənədlərinizi oynamağa imkan verən audio faylları əldə edin.';
+  String get audioAccessPermissionContent =>
+      'Zəhmət olmasa musiqi sənədlərinizi oynamağa imkan verən audio faylları əldə edin.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Səs giriş icazəsi rədd edildi';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Səs giriş icazəsi rədd edildi';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Zəhmət olmasa, musiqi sənədlərinizi oynamağa imkan verən cihaz parametrlərində bu tətbiqetmədə audio fayllarına giriş imkanı verin.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Zəhmət olmasa, musiqi sənədlərinizi oynamağa imkan verən cihaz parametrlərində bu tətbiqetmədə audio fayllarına giriş imkanı verin.';
 
   @override
   String get menuScreenTitle => 'Menyu';
@@ -63,7 +66,6 @@ class AppLocalizationsAz extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsAz extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsAz extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Toxunmaq';
 
   @override
-  String get touchSoundsDialogContent => 'Zəhmət olmasa, tıklaması səslərini eşitmək üçün sistem parametrlərindən toxunma səslərini aktivləşdirin';
+  String get touchSoundsDialogContent =>
+      'Zəhmət olmasa, tıklaması səslərini eşitmək üçün sistem parametrlərindən toxunma səslərini aktivləşdirin';
 
   @override
   String get immersiveModeSettingTitle => 'İmmersive rejimi';
@@ -144,7 +146,8 @@ class AppLocalizationsAz extends AppLocalizations {
   String get donateSettingTitle => 'Hədiyyə etmək';
 
   @override
-  String get donateSettingDescription => 'Bu proqramı sevirsinizsə, xahiş edirəm bağışlanmağı düşünün.';
+  String get donateSettingDescription =>
+      'Bu proqramı sevirsinizsə, xahiş edirəm bağışlanmağı düşünün.';
 
   @override
   String get versionAboutScreenTitle => 'Versiya';
@@ -195,7 +198,8 @@ class AppLocalizationsAz extends AppLocalizations {
   String get retryButtonText => 'Yenidən cəhd etmək';
 
   @override
-  String get filePickerDialogTitle => 'Musiqi üçün skan etmək üçün bir qovluq seçin';
+  String get filePickerDialogTitle =>
+      'Musiqi üçün skan etmək üçün bir qovluq seçin';
 
   @override
   String get searchScreenTitle => 'Axtarış';
@@ -210,10 +214,12 @@ class AppLocalizationsAz extends AppLocalizations {
   String get resultsForText => 'Nəticələr:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Batareyanın optimallaşdırılmasını deaktiv edin';
+  String get disableBatteryOptimizationTitle =>
+      'Batareyanın optimallaşdırılmasını deaktiv edin';
 
   @override
-  String get disableBatteryOptimizationContent => 'Zəhmət olmasa, musiqinin arxa səslənməsinə icazə vermək üçün cihaz parametrlərində bu tətbiq üçün batareyanın optimallaşdırılmasını deaktiv edin.';
+  String get disableBatteryOptimizationContent =>
+      'Zəhmət olmasa, musiqinin arxa səslənməsinə icazə vermək üçün cihaz parametrlərində bu tətbiq üçün batareyanın optimallaşdırılmasını deaktiv edin.';
 
   @override
   String get languageScreenTitle => 'Dil';
@@ -267,50 +273,66 @@ class AppLocalizationsAz extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan musiqi faylları';
 
   @override
-  String get deviceControlMenuTutorialText => 'Menyunu gəzmək üçün baş barmağınızı klik təkəri ətrafında gəzin';
+  String get deviceControlMenuTutorialText =>
+      'Menyunu gəzmək üçün baş barmağınızı klik təkəri ətrafında gəzin';
 
   @override
-  String get centerButtonMenuTutorialText => 'Yüklənmiş menyu elementini seçmək üçün Mərkəz düyməsini basın';
+  String get centerButtonMenuTutorialText =>
+      'Yüklənmiş menyu elementini seçmək üçün Mərkəz düyməsini basın';
 
   @override
-  String get playPauseMenuTutorialText => 'Bir mahnı oynamaq və ya fasilə etmək üçün bu düyməni basın';
+  String get playPauseMenuTutorialText =>
+      'Bir mahnı oynamaq və ya fasilə etmək üçün bu düyməni basın';
 
   @override
-  String get nextButtonMenuTutorialText => 'Növbəti mahnıya keçmək üçün bu düyməni basın';
+  String get nextButtonMenuTutorialText =>
+      'Növbəti mahnıya keçmək üçün bu düyməni basın';
 
   @override
-  String get previousButtonMenuTutorialText => 'Əvvəlki mahnıya qayıtmaq və ya geri dönmək üçün bu düyməni basın';
+  String get previousButtonMenuTutorialText =>
+      'Əvvəlki mahnıya qayıtmaq və ya geri dönmək üçün bu düyməni basın';
 
   @override
-  String get menuButtonTutorialText => 'Əvvəlki menyuya qayıtmaq üçün bu düyməni basın. Əsas menyuya birbaşa getmək üçün hər hansı digər ekrandan basıb saxlaya bilərsiniz.';
+  String get menuButtonTutorialText =>
+      'Əvvəlki menyuya qayıtmaq üçün bu düyməni basın. Əsas menyuya birbaşa getmək üçün hər hansı digər ekrandan basıb saxlaya bilərsiniz.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Bu ekran ekranıdır. Sensor ekran və split ekran rejimi standart olaraq aktivdir və parametrlərdə daha da konfiqurasiya edilə bilər.';
+  String get deviceScreenMenuTutorialText =>
+      'Bu ekran ekranıdır. Sensor ekran və split ekran rejimi standart olaraq aktivdir və parametrlərdə daha da konfiqurasiya edilə bilər.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Səs səviyyəsini tənzimləmək üçün baş barmağınızı klik təkərinə köçürün';
+  String get deviceControlNowPlayingTutorialText =>
+      'Səs səviyyəsini tənzimləmək üçün baş barmağınızı klik təkərinə köçürün';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Çubuğu, ovucu çubuğu və qarışıq kaydırıcıyı keçmək üçün mərkəz düyməsini basın. Əlavə seçimlərə daxil olmaq üçün mərkəz düyməsini basıb saxlayın.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Çubuğu, ovucu çubuğu və qarışıq kaydırıcıyı keçmək üçün mərkəz düyməsini basın. Əlavə seçimlərə daxil olmaq üçün mərkəz düyməsini basıb saxlayın.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Mahnını sürətlə irəli sürmək üçün bu düyməni basıb saxlayın';
+  String get nextButtonNowPlayingTutorialText =>
+      'Mahnını sürətlə irəli sürmək üçün bu düyməni basıb saxlayın';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Mahnını geri qaytarmaq üçün bu düyməni basıb saxlayın';
+  String get previousButtonNowPlayingTutorialText =>
+      'Mahnını geri qaytarmaq üçün bu düyməni basıb saxlayın';
 
   @override
-  String get deviceControlSearchTutorialText => 'Bir əlifbanı vurğulamaq üçün baş barmağınızı klik təkəri ətrafında gəzin';
+  String get deviceControlSearchTutorialText =>
+      'Bir əlifbanı vurğulamaq üçün baş barmağınızı klik təkəri ətrafında gəzin';
 
   @override
-  String get centerButtonSearchTutorialText => 'Yüklənmiş əlifbanı seçmək üçün mərkəz düyməsini basın';
+  String get centerButtonSearchTutorialText =>
+      'Yüklənmiş əlifbanı seçmək üçün mərkəz düyməsini basın';
 
   @override
-  String get nextButtonSearchTutorialText => 'Bir boşluq əlavə etmək üçün bu düyməni basın';
+  String get nextButtonSearchTutorialText =>
+      'Bir boşluq əlavə etmək üçün bu düyməni basın';
 
   @override
-  String get previousButtonSearchTutorialText => 'Son simvolu silmək üçün bu düyməni basın';
+  String get previousButtonSearchTutorialText =>
+      'Son simvolu silmək üçün bu düyməni basın';
 
   @override
-  String get menuButtonSearchTutorialText => 'Klaviaturanı bağlamaq və axtarış nəticələri ilə qarşılıqlı əlaqə yaratmaq üçün bu düyməni basın';
+  String get menuButtonSearchTutorialText =>
+      'Klaviaturanı bağlamaq və axtarış nəticələri ilə qarşılıqlı əlaqə yaratmaq üçün bu düyməni basın';
 }

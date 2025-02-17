@@ -18,13 +18,16 @@ class AppLocalizationsMai extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ऑडियो एक्सेस अनुमति आवश्यक अछि';
 
   @override
-  String get audioAccessPermissionContent => 'कृपया ऑडियो फाइल के एक्सेस प्रदान करू जाहि स हमरा सब के अपन म्यूजिक फाइल के बजाबय के अनुमति भेटत।';
+  String get audioAccessPermissionContent =>
+      'कृपया ऑडियो फाइल के एक्सेस प्रदान करू जाहि स हमरा सब के अपन म्यूजिक फाइल के बजाबय के अनुमति भेटत।';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'ऑडियो एक्सेस अनुमति खंडित';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'ऑडियो एक्सेस अनुमति खंडित';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'कृपया डिवाइस सेटिंग्स में एहि ऐप के लेल ऑडियो फाइल एक्सेस प्रदान करू जाहि सं हमरा सब के अहां के म्यूजिक फाइल के बजाबय के मौका मिलत.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'कृपया डिवाइस सेटिंग्स में एहि ऐप के लेल ऑडियो फाइल एक्सेस प्रदान करू जाहि सं हमरा सब के अहां के म्यूजिक फाइल के बजाबय के मौका मिलत.';
 
   @override
   String get menuScreenTitle => 'मेनू';
@@ -63,7 +66,6 @@ class AppLocalizationsMai extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsMai extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsMai extends AppLocalizations {
   String get touchSoundsDialogTitle => 'स्पर्श ध्वनि';
 
   @override
-  String get touchSoundsDialogContent => 'कृपया सिस्टम सेटिंग्स स टच साउंड सक्षम करू क्लिक व्हील साउंड सुनबा लेल';
+  String get touchSoundsDialogContent =>
+      'कृपया सिस्टम सेटिंग्स स टच साउंड सक्षम करू क्लिक व्हील साउंड सुनबा लेल';
 
   @override
   String get immersiveModeSettingTitle => 'विसर्जन मोड 1।';
@@ -144,7 +146,8 @@ class AppLocalizationsMai extends AppLocalizations {
   String get donateSettingTitle => 'दान करनाइ';
 
   @override
-  String get donateSettingDescription => 'अगर अहां के ई ऐप नीक लगैत अछि त दान करय पर विचार करू.';
+  String get donateSettingDescription =>
+      'अगर अहां के ई ऐप नीक लगैत अछि त दान करय पर विचार करू.';
 
   @override
   String get versionAboutScreenTitle => 'संस्करण';
@@ -195,7 +198,8 @@ class AppLocalizationsMai extends AppLocalizations {
   String get retryButtonText => 'पुनः प्रयास ८.';
 
   @override
-  String get filePickerDialogTitle => 'संगीत के लेल स्कैन करय लेल एकटा डायरेक्टरी चुनू';
+  String get filePickerDialogTitle =>
+      'संगीत के लेल स्कैन करय लेल एकटा डायरेक्टरी चुनू';
 
   @override
   String get searchScreenTitle => 'खोजनाइ';
@@ -213,7 +217,8 @@ class AppLocalizationsMai extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'बैटरी अनुकूलन अक्षम करू';
 
   @override
-  String get disableBatteryOptimizationContent => 'कृपया संगीत के बैकग्राउंड प्लेबैक के अनुमति देबय लेल डिवाइस सेटिंग्स में एहि ऐप के लेल बैटरी ऑप्टिमाइजेशन के अक्षम करू.';
+  String get disableBatteryOptimizationContent =>
+      'कृपया संगीत के बैकग्राउंड प्लेबैक के अनुमति देबय लेल डिवाइस सेटिंग्स में एहि ऐप के लेल बैटरी ऑप्टिमाइजेशन के अक्षम करू.';
 
   @override
   String get languageScreenTitle => 'भाषा';
@@ -267,50 +272,64 @@ class AppLocalizationsMai extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'रिस्कन संगीत फाइल';
 
   @override
-  String get deviceControlMenuTutorialText => 'मेनू में नेविगेट करय लेल क्लिक के पहिया के चारू कात अपन अंगूठा हल्का घुमाउ';
+  String get deviceControlMenuTutorialText =>
+      'मेनू में नेविगेट करय लेल क्लिक के पहिया के चारू कात अपन अंगूठा हल्का घुमाउ';
 
   @override
-  String get centerButtonMenuTutorialText => 'हाइलाइट कएल गेल मेनू आइटम क चयन करबाक लेल केंद्र बटन दबाउ';
+  String get centerButtonMenuTutorialText =>
+      'हाइलाइट कएल गेल मेनू आइटम क चयन करबाक लेल केंद्र बटन दबाउ';
 
   @override
-  String get playPauseMenuTutorialText => 'कोनो गीत बजाबय वा विराम देबय लेल एहि बटन दबाउ';
+  String get playPauseMenuTutorialText =>
+      'कोनो गीत बजाबय वा विराम देबय लेल एहि बटन दबाउ';
 
   @override
   String get nextButtonMenuTutorialText => 'अगिला गीत पर छोड़य लेल ई बटन दबाउ';
 
   @override
-  String get previousButtonMenuTutorialText => 'रिवाइंड करबाक लेल ई बटन दबाउ वा पिछला गीत पर वापस जाउ';
+  String get previousButtonMenuTutorialText =>
+      'रिवाइंड करबाक लेल ई बटन दबाउ वा पिछला गीत पर वापस जाउ';
 
   @override
-  String get menuButtonTutorialText => 'पिछला मेनू पर वापस जेबाक लेल एहि बटन दबाउ। अहां एकरा कोनो आन स्क्रीन सं दबा कए सीधा मुख्य मेनू मे जा सकैत छलहुं.';
+  String get menuButtonTutorialText =>
+      'पिछला मेनू पर वापस जेबाक लेल एहि बटन दबाउ। अहां एकरा कोनो आन स्क्रीन सं दबा कए सीधा मुख्य मेनू मे जा सकैत छलहुं.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ई डिस्प्ले स्क्रीन अछि। टच स्क्रीन आ स्प्लिट स्क्रीन मोड डिफ़ॉल्ट रूप सं सक्षम छै आ सेटिंग्स मे आगू कॉन्फ़िगर कैल जा सकय छै.';
+  String get deviceScreenMenuTutorialText =>
+      'ई डिस्प्ले स्क्रीन अछि। टच स्क्रीन आ स्प्लिट स्क्रीन मोड डिफ़ॉल्ट रूप सं सक्षम छै आ सेटिंग्स मे आगू कॉन्फ़िगर कैल जा सकय छै.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'वॉल्यूम एडजस्ट करबाक लेल क्लिक व्हील के चारू कात अपन अंगूठा घुमाउ';
+  String get deviceControlNowPlayingTutorialText =>
+      'वॉल्यूम एडजस्ट करबाक लेल क्लिक व्हील के चारू कात अपन अंगूठा घुमाउ';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'सीक बार, स्क्रबर बार आ शफल स्लाइडर के माध्यम सं साइकिल चलाबय लेल केंद्र बटन दबाउ. अतिरिक्त विकल्पक कें एक्सेस करय कें लेल केंद्र बटन दबाउ आ राखू.';
+  String get centerButtonNowPlayingTutorialText =>
+      'सीक बार, स्क्रबर बार आ शफल स्लाइडर के माध्यम सं साइकिल चलाबय लेल केंद्र बटन दबाउ. अतिरिक्त विकल्पक कें एक्सेस करय कें लेल केंद्र बटन दबाउ आ राखू.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'गीत के फास्ट फॉरवर्ड करय लेल एहि बटन के दबाउ आ पकड़ू';
+  String get nextButtonNowPlayingTutorialText =>
+      'गीत के फास्ट फॉरवर्ड करय लेल एहि बटन के दबाउ आ पकड़ू';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'गीत के रिवाइंड करय लेल एहि बटन के दबाउ आ पकड़ू';
+  String get previousButtonNowPlayingTutorialText =>
+      'गीत के रिवाइंड करय लेल एहि बटन के दबाउ आ पकड़ू';
 
   @override
-  String get deviceControlSearchTutorialText => 'एकटा वर्णमाला के हाइलाइट करय लेल क्लिक के पहिया के चारू कात अपन अंगूठा के हल्का स घुमाउ';
+  String get deviceControlSearchTutorialText =>
+      'एकटा वर्णमाला के हाइलाइट करय लेल क्लिक के पहिया के चारू कात अपन अंगूठा के हल्का स घुमाउ';
 
   @override
-  String get centerButtonSearchTutorialText => 'हाइलाइट कएल गेल वर्णमाला चुनबाक लेल केंद्र बटन दबाउ';
+  String get centerButtonSearchTutorialText =>
+      'हाइलाइट कएल गेल वर्णमाला चुनबाक लेल केंद्र बटन दबाउ';
 
   @override
   String get nextButtonSearchTutorialText => 'कोनो जगह जोड़बाक लेल ई बटन दबाउ';
 
   @override
-  String get previousButtonSearchTutorialText => 'अंतिम वर्ण के हटाबै के लेल ई बटन दबाउ';
+  String get previousButtonSearchTutorialText =>
+      'अंतिम वर्ण के हटाबै के लेल ई बटन दबाउ';
 
   @override
-  String get menuButtonSearchTutorialText => 'कीबोर्ड बंद करय लेल ई बटन दबाउ आ खोज परिणाम के संग बातचीत करू';
+  String get menuButtonSearchTutorialText =>
+      'कीबोर्ड बंद करय लेल ई बटन दबाउ आ खोज परिणाम के संग बातचीत करू';
 }

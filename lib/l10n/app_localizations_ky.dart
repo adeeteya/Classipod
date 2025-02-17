@@ -18,13 +18,16 @@ class AppLocalizationsKy extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Аудио кирүү уруксаты талап кылынат';
 
   @override
-  String get audioAccessPermissionContent => 'Музыка файлдарыңызды ойноого мүмкүнчүлүк берүү үчүн аудио файлдарын алууга мүмкүнчүлүк бериңиз.';
+  String get audioAccessPermissionContent =>
+      'Музыка файлдарыңызды ойноого мүмкүнчүлүк берүү үчүн аудио файлдарын алууга мүмкүнчүлүк бериңиз.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Аудио кирүү уруксаты четке кагылды';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Аудио кирүү уруксаты четке кагылды';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Музыка файлдарыңызды ойноого мүмкүнчүлүк берүү үчүн, бул колдонмо үчүн бул колдонмо үчүн аудио файлдарын түзмөк.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Музыка файлдарыңызды ойноого мүмкүнчүлүк берүү үчүн, бул колдонмо үчүн бул колдонмо үчүн аудио файлдарын түзмөк.';
 
   @override
   String get menuScreenTitle => 'Меню';
@@ -63,7 +66,6 @@ class AppLocalizationsKy extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsKy extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsKy extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Туура үндөр';
 
   @override
-  String get touchSoundsDialogContent => 'Сураныч, Велоддогу үндөрдү угуу үчүн тутумдун орнотуулары тутумунун орнотуулары';
+  String get touchSoundsDialogContent =>
+      'Сураныч, Велоддогу үндөрдү угуу үчүн тутумдун орнотуулары тутумунун орнотуулары';
 
   @override
   String get immersiveModeSettingTitle => 'Чуркоо режими';
@@ -144,7 +146,8 @@ class AppLocalizationsKy extends AppLocalizations {
   String get donateSettingTitle => 'Кайрымдуулук';
 
   @override
-  String get donateSettingDescription => 'Эгер сизге бул колдонмо жакса, сураныч, белекке кайрылыңыз.';
+  String get donateSettingDescription =>
+      'Эгер сизге бул колдонмо жакса, сураныч, белекке кайрылыңыз.';
 
   @override
   String get versionAboutScreenTitle => 'Версия';
@@ -195,7 +198,8 @@ class AppLocalizationsKy extends AppLocalizations {
   String get retryButtonText => 'Кайра аракет кылуу';
 
   @override
-  String get filePickerDialogTitle => 'Музыканы сканерлөө үчүн каталогду тандаңыз';
+  String get filePickerDialogTitle =>
+      'Музыканы сканерлөө үчүн каталогду тандаңыз';
 
   @override
   String get searchScreenTitle => 'Издөө';
@@ -213,7 +217,8 @@ class AppLocalizationsKy extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Батареяны оптималдаштыруу';
 
   @override
-  String get disableBatteryOptimizationContent => 'Түзмөктүн жөндөөлөрүндө бул колдонмо үчүн батареяны оптимизациясын өчүрүп коюңуз.';
+  String get disableBatteryOptimizationContent =>
+      'Түзмөктүн жөндөөлөрүндө бул колдонмо үчүн батареяны оптимизациясын өчүрүп коюңуз.';
 
   @override
   String get languageScreenTitle => 'Тил';
@@ -267,50 +272,66 @@ class AppLocalizationsKy extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan Music Files';
 
   @override
-  String get deviceControlMenuTutorialText => 'Бармагыңызды бир аз басуу дөңгөлөгүн чыкылдатып, менюга чабыттоо';
+  String get deviceControlMenuTutorialText =>
+      'Бармагыңызды бир аз басуу дөңгөлөгүн чыкылдатып, менюга чабыттоо';
 
   @override
-  String get centerButtonMenuTutorialText => 'Белгиленген меню пунктун тандоо үчүн Борбор баскычын басыңыз';
+  String get centerButtonMenuTutorialText =>
+      'Белгиленген меню пунктун тандоо үчүн Борбор баскычын басыңыз';
 
   @override
-  String get playPauseMenuTutorialText => 'Ырды ойнотуу же тыным жасоо үчүн бул баскычты басыңыз';
+  String get playPauseMenuTutorialText =>
+      'Ырды ойнотуу же тыным жасоо үчүн бул баскычты басыңыз';
 
   @override
-  String get nextButtonMenuTutorialText => 'Кийинки ырга өтүү үчүн бул баскычты басыңыз';
+  String get nextButtonMenuTutorialText =>
+      'Кийинки ырга өтүү үчүн бул баскычты басыңыз';
 
   @override
-  String get previousButtonMenuTutorialText => 'Мурунку ырга кайтуу үчүн бул баскычты басыңыз';
+  String get previousButtonMenuTutorialText =>
+      'Мурунку ырга кайтуу үчүн бул баскычты басыңыз';
 
   @override
-  String get menuButtonTutorialText => 'Мурунку менюга кайтып баруу үчүн бул баскычты басыңыз. Сиз башкы менюга түздөн-түз баруу үчүн сиз аны башка экранда басып, кармап турсаңыз болот.';
+  String get menuButtonTutorialText =>
+      'Мурунку менюга кайтып баруу үчүн бул баскычты басыңыз. Сиз башкы менюга түздөн-түз баруу үчүн сиз аны башка экранда басып, кармап турсаңыз болот.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Бул дисплей экраны. Сенсордук экран жана бөлүнүү экран режими демейки режимде иштетилет жана жөндөөлөрдө андан ары конфигурацияланат.';
+  String get deviceScreenMenuTutorialText =>
+      'Бул дисплей экраны. Сенсордук экран жана бөлүнүү экран режими демейки режимде иштетилет жана жөндөөлөрдө андан ары конфигурацияланат.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Үн көлөмүн жөндөө үчүн, бармагыңызды басуу дөңгөлөгүңүздү жылдырыңыз';
+  String get deviceControlNowPlayingTutorialText =>
+      'Үн көлөмүн жөндөө үчүн, бармагыңызды басуу дөңгөлөгүңүздү жылдырыңыз';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Бар, скраббер-бар, сыдырма сыдырманы издеңиз, скраббер-бар жана сыдырма издеңиз. Кошумча тандоолорго жетүү үчүн Борбор баскычын басып, кармап туруңуз.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Бар, скраббер-бар, сыдырма сыдырманы издеңиз, скраббер-бар жана сыдырма издеңиз. Кошумча тандоолорго жетүү үчүн Борбор баскычын басып, кармап туруңуз.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Ырды алдыга жылуу үчүн бул баскычты басып, кармап туруңуз';
+  String get nextButtonNowPlayingTutorialText =>
+      'Ырды алдыга жылуу үчүн бул баскычты басып, кармап туруңуз';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Ырды артка тартуу үчүн бул баскычты басып, кармап туруңуз';
+  String get previousButtonNowPlayingTutorialText =>
+      'Ырды артка тартуу үчүн бул баскычты басып, кармап туруңуз';
 
   @override
-  String get deviceControlSearchTutorialText => 'Алфавитти баса белгилөө үчүн, бармагыңызды бир аз баскан дөңгөлөктүн айланасында жылдырыңыз';
+  String get deviceControlSearchTutorialText =>
+      'Алфавитти баса белгилөө үчүн, бармагыңызды бир аз баскан дөңгөлөктүн айланасында жылдырыңыз';
 
   @override
-  String get centerButtonSearchTutorialText => 'Белгиленген алфавитти тандоо үчүн Борбор баскычын басыңыз';
+  String get centerButtonSearchTutorialText =>
+      'Белгиленген алфавитти тандоо үчүн Борбор баскычын басыңыз';
 
   @override
-  String get nextButtonSearchTutorialText => 'Мейкиндик кошуу үчүн бул баскычты басыңыз';
+  String get nextButtonSearchTutorialText =>
+      'Мейкиндик кошуу үчүн бул баскычты басыңыз';
 
   @override
-  String get previousButtonSearchTutorialText => 'Акыркы белгинин жок кылуу үчүн бул баскычты басыңыз';
+  String get previousButtonSearchTutorialText =>
+      'Акыркы белгинин жок кылуу үчүн бул баскычты басыңыз';
 
   @override
-  String get menuButtonSearchTutorialText => 'Баскычтопту жабуу үчүн бул баскычты басыңыз жана издөө натыйжалары менен өз ара аракеттенүү';
+  String get menuButtonSearchTutorialText =>
+      'Баскычтопту жабуу үчүн бул баскычты басыңыз жана издөө натыйжалары менен өз ара аракеттенүү';
 }

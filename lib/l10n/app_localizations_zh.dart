@@ -24,7 +24,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get audioAccessPermissionPermanentlyDeniedTitle => '拒绝音频访问权限';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => '请在设备设置中授予此应用程序的音频文件访问，以允许我们播放您的音乐文件。';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      '请在设备设置中授予此应用程序的音频文件访问，以允许我们播放您的音乐文件。';
 
   @override
   String get menuScreenTitle => '菜单';
@@ -63,7 +64,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +81,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -213,7 +212,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get disableBatteryOptimizationTitle => '禁用电池优化';
 
   @override
-  String get disableBatteryOptimizationContent => '请在设备设置中禁用此应用程序的电池优化，以允许对音乐进行背景播放。';
+  String get disableBatteryOptimizationContent =>
+      '请在设备设置中禁用此应用程序的电池优化，以允许对音乐进行背景播放。';
 
   @override
   String get languageScreenTitle => '语言';
@@ -285,13 +285,15 @@ class AppLocalizationsZh extends AppLocalizations {
   String get menuButtonTutorialText => '按下此按钮返回到上一个菜单。您可以按任何其他屏幕按下直接转到主菜单。';
 
   @override
-  String get deviceScreenMenuTutorialText => '这是显示屏幕。默认情况下启用了触摸屏和拆分屏幕模式，并且可以在设置中进一步配置。';
+  String get deviceScreenMenuTutorialText =>
+      '这是显示屏幕。默认情况下启用了触摸屏和拆分屏幕模式，并且可以在设置中进一步配置。';
 
   @override
   String get deviceControlNowPlayingTutorialText => '将拇指移动到单击方向盘以调整音量';
 
   @override
-  String get centerButtonNowPlayingTutorialText => '按下中心按钮以循环循环，通过Seek Bar，Scrubber Bar和Shuffle Slider循环。按住中心按钮以访问其他选项。';
+  String get centerButtonNowPlayingTutorialText =>
+      '按下中心按钮以循环循环，通过Seek Bar，Scrubber Bar和Shuffle Slider循环。按住中心按钮以访问其他选项。';
 
   @override
   String get nextButtonNowPlayingTutorialText => '按并按住此按钮快速前进这首歌';

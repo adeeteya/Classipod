@@ -18,13 +18,16 @@ class AppLocalizationsFi extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Vaadittava äänen käyttöoikeus';
 
   @override
-  String get audioAccessPermissionContent => 'Anna äänitiedostojen käyttöoikeus, jotta voimme toistaa musiikkitiedostoja.';
+  String get audioAccessPermissionContent =>
+      'Anna äänitiedostojen käyttöoikeus, jotta voimme toistaa musiikkitiedostoja.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Äänen käyttöoikeus hylättiin';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Äänen käyttöoikeus hylättiin';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Antakaa tämän sovelluksen äänitiedostot laiteasetuksissa, jotta voimme toistaa musiikkitiedostoja.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Antakaa tämän sovelluksen äänitiedostot laiteasetuksissa, jotta voimme toistaa musiikkitiedostoja.';
 
   @override
   String get menuScreenTitle => 'Valikko';
@@ -63,7 +66,6 @@ class AppLocalizationsFi extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsFi extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsFi extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Kosketusäänet';
 
   @override
-  String get touchSoundsDialogContent => 'Ota yhteyttä kosketusäänet järjestelmän asetuksista kuullaksesi Click Wheel -äänet';
+  String get touchSoundsDialogContent =>
+      'Ota yhteyttä kosketusäänet järjestelmän asetuksista kuullaksesi Click Wheel -äänet';
 
   @override
   String get immersiveModeSettingTitle => 'Syventävä tila';
@@ -144,7 +146,8 @@ class AppLocalizationsFi extends AppLocalizations {
   String get donateSettingTitle => 'Lahjoittaa';
 
   @override
-  String get donateSettingDescription => 'Jos pidät tästä sovelluksesta, harkitse lahjoittamista.';
+  String get donateSettingDescription =>
+      'Jos pidät tästä sovelluksesta, harkitse lahjoittamista.';
 
   @override
   String get versionAboutScreenTitle => 'Versio';
@@ -195,7 +198,8 @@ class AppLocalizationsFi extends AppLocalizations {
   String get retryButtonText => 'Tehdä uudelleen';
 
   @override
-  String get filePickerDialogTitle => 'Valitse hakemisto skannataksesi musiikkia';
+  String get filePickerDialogTitle =>
+      'Valitse hakemisto skannataksesi musiikkia';
 
   @override
   String get searchScreenTitle => 'Haku';
@@ -210,10 +214,12 @@ class AppLocalizationsFi extends AppLocalizations {
   String get resultsForText => 'Tulokset:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Poista akun optimointi käytöstä';
+  String get disableBatteryOptimizationTitle =>
+      'Poista akun optimointi käytöstä';
 
   @override
-  String get disableBatteryOptimizationContent => 'Poista tämän sovelluksen akun optimointi käytöstä laiteasetuksissa, jotta musiikin tausta on toisto.';
+  String get disableBatteryOptimizationContent =>
+      'Poista tämän sovelluksen akun optimointi käytöstä laiteasetuksissa, jotta musiikin tausta on toisto.';
 
   @override
   String get languageScreenTitle => 'Kieli';
@@ -267,50 +273,66 @@ class AppLocalizationsFi extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan -musiikkitiedostot';
 
   @override
-  String get deviceControlMenuTutorialText => 'Siirrä peukaloa kevyesti napsauta pyörän ympäri navigoidaksesi valikossa';
+  String get deviceControlMenuTutorialText =>
+      'Siirrä peukaloa kevyesti napsauta pyörän ympäri navigoidaksesi valikossa';
 
   @override
-  String get centerButtonMenuTutorialText => 'Valitse korostettu valikkokohta painamalla keski -painiketta';
+  String get centerButtonMenuTutorialText =>
+      'Valitse korostettu valikkokohta painamalla keski -painiketta';
 
   @override
-  String get playPauseMenuTutorialText => 'Paina tätä painiketta soittaaksesi tai keskeyttääksesi kappaleen';
+  String get playPauseMenuTutorialText =>
+      'Paina tätä painiketta soittaaksesi tai keskeyttääksesi kappaleen';
 
   @override
-  String get nextButtonMenuTutorialText => 'Paina tätä painiketta siirtyäksesi seuraavaan kappaleeseen';
+  String get nextButtonMenuTutorialText =>
+      'Paina tätä painiketta siirtyäksesi seuraavaan kappaleeseen';
 
   @override
-  String get previousButtonMenuTutorialText => 'Paina tätä painiketta kelata uudelleen tai palata takaisin edelliseen kappaleeseen';
+  String get previousButtonMenuTutorialText =>
+      'Paina tätä painiketta kelata uudelleen tai palata takaisin edelliseen kappaleeseen';
 
   @override
-  String get menuButtonTutorialText => 'Paina tätä painiketta palataksesi edelliseen valikkoon. Voit painaa sitä muusta näytöstä siirtyäksesi suoraan päävalikkoon.';
+  String get menuButtonTutorialText =>
+      'Paina tätä painiketta palataksesi edelliseen valikkoon. Voit painaa sitä muusta näytöstä siirtyäksesi suoraan päävalikkoon.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Tämä on näyttönäyttö. Kosketusnäyttö ja jaettu näyttötila ovat oletuksena käytössä ja ne voidaan määrittää edelleen asetuksissa.';
+  String get deviceScreenMenuTutorialText =>
+      'Tämä on näyttönäyttö. Kosketusnäyttö ja jaettu näyttötila ovat oletuksena käytössä ja ne voidaan määrittää edelleen asetuksissa.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Siirrä peukaloa napsauta pyörän ympärillä säätääksesi äänenvoimakkuutta';
+  String get deviceControlNowPlayingTutorialText =>
+      'Siirrä peukaloa napsauta pyörän ympärillä säätääksesi äänenvoimakkuutta';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Paina keskipainiketta kiertääksesi Seek -palkin, pesulapalkin ja sekoituksen liukusäätimen läpi. Pidä keski -painiketta painamalla lisävaihtoehtoja.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Paina keskipainiketta kiertääksesi Seek -palkin, pesulapalkin ja sekoituksen liukusäätimen läpi. Pidä keski -painiketta painamalla lisävaihtoehtoja.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Pidä tätä painiketta painettuna eteenpäin kappaleen eteenpäin';
+  String get nextButtonNowPlayingTutorialText =>
+      'Pidä tätä painiketta painettuna eteenpäin kappaleen eteenpäin';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pidä tätä painiketta painettuna takaisin kappaleeseen';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pidä tätä painiketta painettuna takaisin kappaleeseen';
 
   @override
-  String get deviceControlSearchTutorialText => 'Siirrä peukaloa kevyesti napsautuskohdan ympäri korostaaksesi aakkoset';
+  String get deviceControlSearchTutorialText =>
+      'Siirrä peukaloa kevyesti napsautuskohdan ympäri korostaaksesi aakkoset';
 
   @override
-  String get centerButtonSearchTutorialText => 'Valitse korostettu aakkoset painamalla keskuspainiketta';
+  String get centerButtonSearchTutorialText =>
+      'Valitse korostettu aakkoset painamalla keskuspainiketta';
 
   @override
-  String get nextButtonSearchTutorialText => 'Lisää tilaa painamalla tätä painiketta';
+  String get nextButtonSearchTutorialText =>
+      'Lisää tilaa painamalla tätä painiketta';
 
   @override
-  String get previousButtonSearchTutorialText => 'Poista viimeinen merkki painamalla tätä painiketta';
+  String get previousButtonSearchTutorialText =>
+      'Poista viimeinen merkki painamalla tätä painiketta';
 
   @override
-  String get menuButtonSearchTutorialText => 'Paina tätä painiketta sulkeaksesi näppäimistön ja vuorovaikutuksessa hakutulosten kanssa';
+  String get menuButtonSearchTutorialText =>
+      'Paina tätä painiketta sulkeaksesi näppäimistön ja vuorovaikutuksessa hakutulosten kanssa';
 }

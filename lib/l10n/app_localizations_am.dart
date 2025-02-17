@@ -18,13 +18,16 @@ class AppLocalizationsAm extends AppLocalizations {
   String get audioAccessPermissionTitle => 'የድምፅ መዳረሻ ፈቃድ ያስፈልጋል';
 
   @override
-  String get audioAccessPermissionContent => 'እባክዎን የሙዚቃ ፋይሎችዎን ለመጫወት የሚያስችለን የድምፅ ፋይሎች ይስጡ.';
+  String get audioAccessPermissionContent =>
+      'እባክዎን የሙዚቃ ፋይሎችዎን ለመጫወት የሚያስችለን የድምፅ ፋይሎች ይስጡ.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'የድምፅ መዳረሻ ፈቃድ ተከልክሏል';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'የድምፅ መዳረሻ ፈቃድ ተከልክሏል';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'የሙዚቃ ፋይሎችዎን እንድንጫወት የሚያስችለንን ለዚህ መተግበሪያ ኦዲዮ ፋይሎችን ለኦዲዮ ፋይሎች ይድረሱ.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'የሙዚቃ ፋይሎችዎን እንድንጫወት የሚያስችለንን ለዚህ መተግበሪያ ኦዲዮ ፋይሎችን ለኦዲዮ ፋይሎች ይድረሱ.';
 
   @override
   String get menuScreenTitle => 'ምናሌ';
@@ -63,7 +66,6 @@ class AppLocalizationsAm extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsAm extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsAm extends AppLocalizations {
   String get touchSoundsDialogTitle => 'የሚነካ ድም sounds ች';
 
   @override
-  String get touchSoundsDialogContent => 'ጠቅታ ተሽከርካሪ ድምጾችን ለመስማት ከስርዓት ቅንብሮች ከስርዓት ቅንብሮች ያንቁ';
+  String get touchSoundsDialogContent =>
+      'ጠቅታ ተሽከርካሪ ድምጾችን ለመስማት ከስርዓት ቅንብሮች ከስርዓት ቅንብሮች ያንቁ';
 
   @override
   String get immersiveModeSettingTitle => 'ጠማማ ሁኔታ';
@@ -213,7 +215,8 @@ class AppLocalizationsAm extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'የባትሪ ማመቻቸትን ያሰናክሉ';
 
   @override
-  String get disableBatteryOptimizationContent => 'የጀርባ ደንብ መልሶ ማጫወትን ለመፍቀድ እባክዎ በመሣሪያ ቅንብሮች ውስጥ የባትሪ ማመቻቸትን ያሰናክሉ.';
+  String get disableBatteryOptimizationContent =>
+      'የጀርባ ደንብ መልሶ ማጫወትን ለመፍቀድ እባክዎ በመሣሪያ ቅንብሮች ውስጥ የባትሪ ማመቻቸትን ያሰናክሉ.';
 
   @override
   String get languageScreenTitle => 'ቋንቋ';
@@ -267,40 +270,51 @@ class AppLocalizationsAm extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'የ REACAN የሙዚቃ ፋይሎች';
 
   @override
-  String get deviceControlMenuTutorialText => 'ምናሌውን ለማሰስ ጠቅ በማድረግ ጠቅታ ጎድጓዳው ዙሪያ አሽሮዎን ያንቀሳቅሱ';
+  String get deviceControlMenuTutorialText =>
+      'ምናሌውን ለማሰስ ጠቅ በማድረግ ጠቅታ ጎድጓዳው ዙሪያ አሽሮዎን ያንቀሳቅሱ';
 
   @override
-  String get centerButtonMenuTutorialText => 'የደመቀ ምናሌውን ንጥል ለመምረጥ የመሃል ቁልፍን ይጫኑ';
+  String get centerButtonMenuTutorialText =>
+      'የደመቀ ምናሌውን ንጥል ለመምረጥ የመሃል ቁልፍን ይጫኑ';
 
   @override
-  String get playPauseMenuTutorialText => 'አንድ ዘፈን ለማጫወት ወይም ለአፍታ ለማቆም ይህንን ቁልፍ ይጫኑ';
+  String get playPauseMenuTutorialText =>
+      'አንድ ዘፈን ለማጫወት ወይም ለአፍታ ለማቆም ይህንን ቁልፍ ይጫኑ';
 
   @override
   String get nextButtonMenuTutorialText => 'ወደ ቀጣዩ ዘፈን ለመዝለል ይህንን ቁልፍ ይጫኑ';
 
   @override
-  String get previousButtonMenuTutorialText => 'ወደ ቀደመው ዘፈን ለመመለስ ወይም ለመመለስ ይህንን ቁልፍ ይጫኑ';
+  String get previousButtonMenuTutorialText =>
+      'ወደ ቀደመው ዘፈን ለመመለስ ወይም ለመመለስ ይህንን ቁልፍ ይጫኑ';
 
   @override
-  String get menuButtonTutorialText => 'ወደ ቀዳሚው ምናሌ ለመመለስ ይህን ቁልፍ ተጫን. ወደ ዋናው ምናሌ በቀጥታ ለመሄድ ከማንኛውም ሌላ ገጽ ውስጥ መጫን እና መያዝ ይችላሉ.';
+  String get menuButtonTutorialText =>
+      'ወደ ቀዳሚው ምናሌ ለመመለስ ይህን ቁልፍ ተጫን. ወደ ዋናው ምናሌ በቀጥታ ለመሄድ ከማንኛውም ሌላ ገጽ ውስጥ መጫን እና መያዝ ይችላሉ.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ይህ የማሳያ ማያ ገጽ ነው. የመነሻ ማያ ገጽ እና የተደራጁ ማያ ገጽ ሞድ በነባሪነት ነቅቷል እናም በቅንብሮች ውስጥ የበለጠ ሊዋቀር ይችላል.';
+  String get deviceScreenMenuTutorialText =>
+      'ይህ የማሳያ ማያ ገጽ ነው. የመነሻ ማያ ገጽ እና የተደራጁ ማያ ገጽ ሞድ በነባሪነት ነቅቷል እናም በቅንብሮች ውስጥ የበለጠ ሊዋቀር ይችላል.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'ድምጹን ለማስተካከል ጠቅ በማድረግ ጠቅታ ጎድጓዳይ ላይ ይውሰዱት';
+  String get deviceControlNowPlayingTutorialText =>
+      'ድምጹን ለማስተካከል ጠቅ በማድረግ ጠቅታ ጎድጓዳይ ላይ ይውሰዱት';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'አሞሌ, Scrubber አሞሌ እና ተንሸራታች ወደ ጩኸት ወደ ፈልግ ማእከል ቁልፍን ይጫኑ. ተጨማሪ አማራጮችን ለመድረስ የመሃል ቁልፍን ተጭነው ይቆዩ.';
+  String get centerButtonNowPlayingTutorialText =>
+      'አሞሌ, Scrubber አሞሌ እና ተንሸራታች ወደ ጩኸት ወደ ፈልግ ማእከል ቁልፍን ይጫኑ. ተጨማሪ አማራጮችን ለመድረስ የመሃል ቁልፍን ተጭነው ይቆዩ.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'ዘፈኑን በፍጥነት ለማስተካከል ይህንን ቁልፍ ተጭነው ይቆዩ';
+  String get nextButtonNowPlayingTutorialText =>
+      'ዘፈኑን በፍጥነት ለማስተካከል ይህንን ቁልፍ ተጭነው ይቆዩ';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'ዘፈኑን ለመመልከት ይህንን ቁልፍ ተጭነው ይቆዩ እና ይያዙ';
+  String get previousButtonNowPlayingTutorialText =>
+      'ዘፈኑን ለመመልከት ይህንን ቁልፍ ተጭነው ይቆዩ እና ይያዙ';
 
   @override
-  String get deviceControlSearchTutorialText => 'ጣትዎን አንድ ፊደል ለማጉላት በመዝህሩ ዙሪያ አሽጉን ያዛውሩ';
+  String get deviceControlSearchTutorialText =>
+      'ጣትዎን አንድ ፊደል ለማጉላት በመዝህሩ ዙሪያ አሽጉን ያዛውሩ';
 
   @override
   String get centerButtonSearchTutorialText => 'የደመቀውን ፊደል ለመምረጥ የመሃል ቁልፍን ተጫን';
@@ -309,8 +323,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get nextButtonSearchTutorialText => 'ቦታ ለማከል ይህንን ቁልፍ ተጫን';
 
   @override
-  String get previousButtonSearchTutorialText => 'የመጨረሻውን ገጸ-ባህሪ ለመሰረዝ ይህንን ቁልፍ ተጫን';
+  String get previousButtonSearchTutorialText =>
+      'የመጨረሻውን ገጸ-ባህሪ ለመሰረዝ ይህንን ቁልፍ ተጫን';
 
   @override
-  String get menuButtonSearchTutorialText => 'የቁልፍ ሰሌዳውን ለመዝጋት እና ከድቶች ውጤቶች ጋር ለመግባባት ይህንን ቁልፍ ተጫን';
+  String get menuButtonSearchTutorialText =>
+      'የቁልፍ ሰሌዳውን ለመዝጋት እና ከድቶች ውጤቶች ጋር ለመግባባት ይህንን ቁልፍ ተጫን';
 }

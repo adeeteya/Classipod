@@ -18,13 +18,16 @@ class AppLocalizationsBua extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Аудио нэбтэрхэ эрхэ хэрэгтэй';
 
   @override
-  String get audioAccessPermissionContent => 'Хүгжэмэй файлнуудаа наадаха эрхэ олгохо аудио файлнуудта нэбтэрхэ эрхэ олгогты.';
+  String get audioAccessPermissionContent =>
+      'Хүгжэмэй файлнуудаа наадаха эрхэ олгохо аудио файлнуудта нэбтэрхэ эрхэ олгогты.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Аудио нэбтэрэлгын зүбшөөрэл үгы болгобо';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Аудио нэбтэрэлгын зүбшөөрэл үгы болгобо';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Хүгжэмэй файлнуудаа наадаха боломжо олгохын тулада энэ апп-да энэ апп-да аудио файлнуудые нэбтэрүүлхэ хэрэгтэй.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Хүгжэмэй файлнуудаа наадаха боломжо олгохын тулада энэ апп-да энэ апп-да аудио файлнуудые нэбтэрүүлхэ хэрэгтэй.';
 
   @override
   String get menuScreenTitle => 'Меню';
@@ -63,7 +66,6 @@ class AppLocalizationsBua extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsBua extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -105,7 +106,8 @@ class AppLocalizationsBua extends AppLocalizations {
   String get deviceColorSettingTitle => 'Түхеэрэлгэ үнгэ';
 
   @override
-  String get touchScreenSettingTitle => 'Дэлгэстэ хүртэхэ арга боломжотой болгохо';
+  String get touchScreenSettingTitle =>
+      'Дэлгэстэ хүртэхэ арга боломжотой болгохо';
 
   @override
   String get repeatModeSettingTitle => 'Дабтаха';
@@ -120,7 +122,8 @@ class AppLocalizationsBua extends AppLocalizations {
   String get vibrateSettingTitle => 'һэдэлгэ';
 
   @override
-  String get clickWheelSettingTitle => 'Түхэреэн абяанууд дээрэ дараха хэрэгтэй.';
+  String get clickWheelSettingTitle =>
+      'Түхэреэн абяанууд дээрэ дараха хэрэгтэй.';
 
   @override
   String get splitScreenSettingTitle => 'Хубилгаха дэлгэсэй горим';
@@ -129,7 +132,8 @@ class AppLocalizationsBua extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Абяан .';
 
   @override
-  String get touchSoundsDialogContent => 'Системнэ тохиргоонуудһаа Touch Sounds Enable Sounds Enable Sounds -ые шагнажа, кликэй хүрдэтэй абяануудые шагнаха';
+  String get touchSoundsDialogContent =>
+      'Системнэ тохиргоонуудһаа Touch Sounds Enable Sounds Enable Sounds -ые шагнажа, кликэй хүрдэтэй абяануудые шагнаха';
 
   @override
   String get immersiveModeSettingTitle => 'Иммеривнэ горим';
@@ -144,7 +148,8 @@ class AppLocalizationsBua extends AppLocalizations {
   String get donateSettingTitle => 'Мүнгэ үгэхэ';
 
   @override
-  String get donateSettingDescription => 'Энэ апп-да һайшаагдаа һаань, хандиб үргэхэ тухай бодожо үзыт.';
+  String get donateSettingDescription =>
+      'Энэ апп-да һайшаагдаа һаань, хандиб үргэхэ тухай бодожо үзыт.';
 
   @override
   String get versionAboutScreenTitle => 'Нэгэ илгаань';
@@ -213,7 +218,8 @@ class AppLocalizationsBua extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Батарейка оновчтой болгохогүй';
 
   @override
-  String get disableBatteryOptimizationContent => 'Хүгжэмэй арын тоглолто хэхэ боломжо олгохын тулада энэ апп-да батарейн оновчтой болгохо арга унтараагты.';
+  String get disableBatteryOptimizationContent =>
+      'Хүгжэмэй арын тоглолто хэхэ боломжо олгохын тулада энэ апп-да батарейн оновчтой болгохо арга унтараагты.';
 
   @override
   String get languageScreenTitle => 'Хэлэн';
@@ -267,50 +273,65 @@ class AppLocalizationsBua extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Ресканай хүгжэмэй файлууд';
 
   @override
-  String get deviceControlMenuTutorialText => 'Меню руу орохогүйн тула эрхиеэ дарахадаа, өөрынгөө эрхиеэ хүнгэнөөр хүдэлгэхэ';
+  String get deviceControlMenuTutorialText =>
+      'Меню руу орохогүйн тула эрхиеэ дарахадаа, өөрынгөө эрхиеэ хүнгэнөөр хүдэлгэхэ';
 
   @override
-  String get centerButtonMenuTutorialText => 'Түбэй тобшо даража, онсолһон менюин зүйл шэлэхэ .';
+  String get centerButtonMenuTutorialText =>
+      'Түбэй тобшо даража, онсолһон менюин зүйл шэлэхэ .';
 
   @override
-  String get playPauseMenuTutorialText => 'Энэ тобшо даража наадаха гү, али дуу зогсогты .';
+  String get playPauseMenuTutorialText =>
+      'Энэ тобшо даража наадаха гү, али дуу зогсогты .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Энэ тобшо даража, удаадахи дуунда алгасаха .';
+  String get nextButtonMenuTutorialText =>
+      'Энэ тобшо даража, удаадахи дуунда алгасаха .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Энэ тобшо даража, һөөргөө бусаха гү, али урданай дуунда бусаха';
+  String get previousButtonMenuTutorialText =>
+      'Энэ тобшо даража, һөөргөө бусаха гү, али урданай дуунда бусаха';
 
   @override
-  String get menuButtonTutorialText => 'Энэ тобшо даража, урданай меню руу бусаха. Гол меню руу шууд орохын тулада бусад ямаршье дэлгэсһээ даража, барижа болохо.';
+  String get menuButtonTutorialText =>
+      'Энэ тобшо даража, урданай меню руу бусаха. Гол меню руу шууд орохын тулада бусад ямаршье дэлгэсһээ даража, барижа болохо.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Энэ хадаа дэлгэсэй дэлгэс болоно. Touch Screen болон Split Screen Mode стандартаар нээгдэжэ, тохиргоонуудта саашаа тохируулжа болоно.';
+  String get deviceScreenMenuTutorialText =>
+      'Энэ хадаа дэлгэсэй дэлгэс болоно. Touch Screen болон Split Screen Mode стандартаар нээгдэжэ, тохиргоонуудта саашаа тохируулжа болоно.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Дуунай хэмжээе тааруулхадаа, өөрынгөө эрхие дараха Түхэреэн тойруулан хүдэлгэхэ';
+  String get deviceControlNowPlayingTutorialText =>
+      'Дуунай хэмжээе тааруулхадаа, өөрынгөө эрхие дараха Түхэреэн тойруулан хүдэлгэхэ';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Түбэй тобшо даража, бэдэрэлгын зурлаа, скруббер бар болон шуффель гулдирмагаар велосипедээр ябаха. Нэмэлтэ опцинуудта орохын тула Түбэй тобшо даража, барижа байгты.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Түбэй тобшо даража, бэдэрэлгын зурлаа, скруббер бар болон шуффель гулдирмагаар велосипедээр ябаха. Нэмэлтэ опцинуудта орохын тула Түбэй тобшо даража, барижа байгты.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Энэ тобшо даража, дуугаа түргэн урагшань ябуулжа байгты';
+  String get nextButtonNowPlayingTutorialText =>
+      'Энэ тобшо даража, дуугаа түргэн урагшань ябуулжа байгты';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Энэ тобшо даража, дуугаа бусааха .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Энэ тобшо даража, дуугаа бусааха .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Өөрынгөө эрхиеэ хүнгэнөөр даража, алфавид онсолхын тула алфавит онсолон тэмдэглэхэ .';
+  String get deviceControlSearchTutorialText =>
+      'Өөрынгөө эрхиеэ хүнгэнөөр даража, алфавид онсолхын тула алфавит онсолон тэмдэглэхэ .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Түбэй тобшо даража, онсолһон үзэг шэлэхэ .';
+  String get centerButtonSearchTutorialText =>
+      'Түбэй тобшо даража, онсолһон үзэг шэлэхэ .';
 
   @override
   String get nextButtonSearchTutorialText => 'Энэ тобшо даража, зай нэмэхэ .';
 
   @override
-  String get previousButtonSearchTutorialText => 'Энэ тобшо даража, һүүлшын дүрэ усадхаха .';
+  String get previousButtonSearchTutorialText =>
+      'Энэ тобшо даража, һүүлшын дүрэ усадхаха .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Энэ тобшо даража, гар бэшэгые хаажа, хайлтын дүнгүүдтэй харилсаха';
+  String get menuButtonSearchTutorialText =>
+      'Энэ тобшо даража, гар бэшэгые хаажа, хайлтын дүнгүүдтэй харилсаха';
 }

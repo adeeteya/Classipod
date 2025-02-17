@@ -15,16 +15,20 @@ class AppLocalizationsLt extends AppLocalizations {
   String get menuButtonText => 'Meniu';
 
   @override
-  String get audioAccessPermissionTitle => 'Reikalingas garso prieigos leidimas';
+  String get audioAccessPermissionTitle =>
+      'Reikalingas garso prieigos leidimas';
 
   @override
-  String get audioAccessPermissionContent => 'Suteikite garso failų prieigą, kad galėtume leisti mums jūsų muzikos failus.';
+  String get audioAccessPermissionContent =>
+      'Suteikite garso failų prieigą, kad galėtume leisti mums jūsų muzikos failus.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Garso prieigos leidimas paneigtas';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Garso prieigos leidimas paneigtas';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Prašome suteikti šios programos garso failų prieigą įrenginio nustatymuose, kad galėtume atkurti jūsų muzikos failus.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Prašome suteikti šios programos garso failų prieigą įrenginio nustatymuose, kad galėtume atkurti jūsų muzikos failus.';
 
   @override
   String get menuScreenTitle => 'Meniu';
@@ -63,7 +67,6 @@ class AppLocalizationsLt extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsLt extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsLt extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Palieskite garsus';
 
   @override
-  String get touchSoundsDialogContent => 'Įgalinkite „System Settings“ liesti garsus, kad išgirstumėte paspaudimo rato garsus';
+  String get touchSoundsDialogContent =>
+      'Įgalinkite „System Settings“ liesti garsus, kad išgirstumėte paspaudimo rato garsus';
 
   @override
   String get immersiveModeSettingTitle => 'Smegimo režimas';
@@ -144,7 +147,8 @@ class AppLocalizationsLt extends AppLocalizations {
   String get donateSettingTitle => 'Paaukoti';
 
   @override
-  String get donateSettingDescription => 'Jei jums patinka ši programa, apsvarstykite galimybę aukoti.';
+  String get donateSettingDescription =>
+      'Jei jums patinka ši programa, apsvarstykite galimybę aukoti.';
 
   @override
   String get versionAboutScreenTitle => 'Versija';
@@ -195,7 +199,8 @@ class AppLocalizationsLt extends AppLocalizations {
   String get retryButtonText => 'Bandyti';
 
   @override
-  String get filePickerDialogTitle => 'Pasirinkite katalogą, kurį norite nuskaityti muzikai';
+  String get filePickerDialogTitle =>
+      'Pasirinkite katalogą, kurį norite nuskaityti muzikai';
 
   @override
   String get searchScreenTitle => 'Ieškoti';
@@ -210,10 +215,12 @@ class AppLocalizationsLt extends AppLocalizations {
   String get resultsForText => 'Rezultatai:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Išjunkite akumuliatoriaus optimizavimą';
+  String get disableBatteryOptimizationTitle =>
+      'Išjunkite akumuliatoriaus optimizavimą';
 
   @override
-  String get disableBatteryOptimizationContent => 'Išjunkite šios programos akumuliatoriaus optimizavimą įrenginio nustatymuose, kad būtų galima atkurti muziką.';
+  String get disableBatteryOptimizationContent =>
+      'Išjunkite šios programos akumuliatoriaus optimizavimą įrenginio nustatymuose, kad būtų galima atkurti muziką.';
 
   @override
   String get languageScreenTitle => 'Kalba';
@@ -270,47 +277,62 @@ class AppLocalizationsLt extends AppLocalizations {
   String get deviceControlMenuTutorialText => 'Norėdami naršyti po meniu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Paspauskite mygtuką Centru, kad pasirinktumėte paryškintą meniu elementą';
+  String get centerButtonMenuTutorialText =>
+      'Paspauskite mygtuką Centru, kad pasirinktumėte paryškintą meniu elementą';
 
   @override
-  String get playPauseMenuTutorialText => 'Paspauskite šį mygtuką, kad atkurtumėte arba pristabdytumėte dainą';
+  String get playPauseMenuTutorialText =>
+      'Paspauskite šį mygtuką, kad atkurtumėte arba pristabdytumėte dainą';
 
   @override
-  String get nextButtonMenuTutorialText => 'Paspauskite šį mygtuką, jei norite pereiti prie kitos dainos';
+  String get nextButtonMenuTutorialText =>
+      'Paspauskite šį mygtuką, jei norite pereiti prie kitos dainos';
 
   @override
-  String get previousButtonMenuTutorialText => 'Paspauskite šį mygtuką, kad atsuktumėte atsukimą arba grįžtumėte į ankstesnę dainą';
+  String get previousButtonMenuTutorialText =>
+      'Paspauskite šį mygtuką, kad atsuktumėte atsukimą arba grįžtumėte į ankstesnę dainą';
 
   @override
-  String get menuButtonTutorialText => 'Paspauskite šį mygtuką, kad grįžtumėte į ankstesnį meniu. Galite paspausti ir laikyti jį iš bet kurio kito ekrano, kad galėtumėte tiesiogiai pereiti į pagrindinį meniu.';
+  String get menuButtonTutorialText =>
+      'Paspauskite šį mygtuką, kad grįžtumėte į ankstesnį meniu. Galite paspausti ir laikyti jį iš bet kurio kito ekrano, kad galėtumėte tiesiogiai pereiti į pagrindinį meniu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Tai yra ekranas. Jutiklinio ekrano ir padalijimo ekrano režimas įjungtas pagal numatytuosius nustatymus ir gali būti sukonfigūruotas toliau nustatymuose.';
+  String get deviceScreenMenuTutorialText =>
+      'Tai yra ekranas. Jutiklinio ekrano ir padalijimo ekrano režimas įjungtas pagal numatytuosius nustatymus ir gali būti sukonfigūruotas toliau nustatymuose.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Norėdami sureguliuoti garsumą, perkelkite nykštį aplink paspaudimo ratą';
+  String get deviceControlNowPlayingTutorialText =>
+      'Norėdami sureguliuoti garsumą, perkelkite nykštį aplink paspaudimo ratą';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Paspauskite centrinį mygtuką, kad važiuotumėte važiuodami per „Seew Bar“, „Scrubber“ juostą ir „Shuffle Slider“. Paspauskite ir palaikykite centrinį mygtuką, kad pasiektumėte papildomas parinktis.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Paspauskite centrinį mygtuką, kad važiuotumėte važiuodami per „Seew Bar“, „Scrubber“ juostą ir „Shuffle Slider“. Paspauskite ir palaikykite centrinį mygtuką, kad pasiektumėte papildomas parinktis.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Paspauskite ir palaikykite šį mygtuką, kad greitai persiųstų dainą';
+  String get nextButtonNowPlayingTutorialText =>
+      'Paspauskite ir palaikykite šį mygtuką, kad greitai persiųstų dainą';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Paspauskite ir palaikykite šį mygtuką, kad vėl atstumtumėte dainą';
+  String get previousButtonNowPlayingTutorialText =>
+      'Paspauskite ir palaikykite šį mygtuką, kad vėl atstumtumėte dainą';
 
   @override
-  String get deviceControlSearchTutorialText => 'Lengvai judinkite nykštį aplink paspaudimo ratą, kad paryškintumėte abėcėlę';
+  String get deviceControlSearchTutorialText =>
+      'Lengvai judinkite nykštį aplink paspaudimo ratą, kad paryškintumėte abėcėlę';
 
   @override
-  String get centerButtonSearchTutorialText => 'Paspauskite mygtuką Centrinis, kad pasirinktumėte paryškintą abėcėlę';
+  String get centerButtonSearchTutorialText =>
+      'Paspauskite mygtuką Centrinis, kad pasirinktumėte paryškintą abėcėlę';
 
   @override
-  String get nextButtonSearchTutorialText => 'Paspauskite šį mygtuką, kad pridėtumėte vietos';
+  String get nextButtonSearchTutorialText =>
+      'Paspauskite šį mygtuką, kad pridėtumėte vietos';
 
   @override
-  String get previousButtonSearchTutorialText => 'Paspauskite šį mygtuką, kad ištrintumėte paskutinį simbolią';
+  String get previousButtonSearchTutorialText =>
+      'Paspauskite šį mygtuką, kad ištrintumėte paskutinį simbolią';
 
   @override
-  String get menuButtonSearchTutorialText => 'Paspauskite šį mygtuką, kad uždarytumėte klaviatūrą ir sąveikaujtumėte su paieškos rezultatais';
+  String get menuButtonSearchTutorialText =>
+      'Paspauskite šį mygtuką, kad uždarytumėte klaviatūrą ir sąveikaujtumėte su paieškos rezultatais';
 }

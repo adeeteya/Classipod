@@ -18,13 +18,16 @@ class AppLocalizationsWar extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Kinahanglan an Pagtugot ha Audio';
 
   @override
-  String get audioAccessPermissionContent => 'Alayon paghatag hin audio nga mga file nga makasulod para makatugot kami nga magtokar han iyo mga file han musika.';
+  String get audioAccessPermissionContent =>
+      'Alayon paghatag hin audio nga mga file nga makasulod para makatugot kami nga magtokar han iyo mga file han musika.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Access Pagtugot Gindidiwara';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Access Pagtugot Gindidiwara';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Alayon paghatag hin audio nga mga file nga access para hini nga app ha mga device nga mga kahimtang para makatugot kami nga magmulay han iyo mga file han musika.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Alayon paghatag hin audio nga mga file nga access para hini nga app ha mga device nga mga kahimtang para makatugot kami nga magmulay han iyo mga file han musika.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsWar extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsWar extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsWar extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Mga Tunog nga Pagkapot';
 
   @override
-  String get touchSoundsDialogContent => 'Alayon Paghimo hin mga Tinog tikang ha Sistema nga mga Pagbutang basi mabatian an mga tunog han pag-klik';
+  String get touchSoundsDialogContent =>
+      'Alayon Paghimo hin mga Tinog tikang ha Sistema nga mga Pagbutang basi mabatian an mga tunog han pag-klik';
 
   @override
   String get immersiveModeSettingTitle => 'Luoy nga Mode';
@@ -144,7 +146,8 @@ class AppLocalizationsWar extends AppLocalizations {
   String get donateSettingTitle => 'Pagdonar';
 
   @override
-  String get donateSettingDescription => 'Kun naruruyag kamo hini nga app, alayon paghunahuna hin pagdonar.';
+  String get donateSettingDescription =>
+      'Kun naruruyag kamo hini nga app, alayon paghunahuna hin pagdonar.';
 
   @override
   String get versionAboutScreenTitle => 'Bersyon';
@@ -195,7 +198,8 @@ class AppLocalizationsWar extends AppLocalizations {
   String get retryButtonText => 'Pangalimbasog';
 
   @override
-  String get filePickerDialogTitle => 'Pilia an Direktory ha Pag-scan para ha Musika';
+  String get filePickerDialogTitle =>
+      'Pilia an Direktory ha Pag-scan para ha Musika';
 
   @override
   String get searchScreenTitle => 'Pamiling';
@@ -213,7 +217,8 @@ class AppLocalizationsWar extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Baterya nga Optimisar';
 
   @override
-  String get disableBatteryOptimizationContent => 'Alayon pag-abat hin baterya nga pag-optimisar para hini nga app ha mga device nga mga kahimtang para makatugot hin luyo nga pag-uyag hin musika.';
+  String get disableBatteryOptimizationContent =>
+      'Alayon pag-abat hin baterya nga pag-optimisar para hini nga app ha mga device nga mga kahimtang para makatugot hin luyo nga pag-uyag hin musika.';
 
   @override
   String get languageScreenTitle => 'Yinaknan';
@@ -267,50 +272,66 @@ class AppLocalizationsWar extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Mga Kabag-o ha Musika';
 
   @override
-  String get deviceControlMenuTutorialText => 'Ibalhin an imo tudlo ha tiil hin magaan ha palibot han Pag-klik nga Ligid basi mag-agi ha menu';
+  String get deviceControlMenuTutorialText =>
+      'Ibalhin an imo tudlo ha tiil hin magaan ha palibot han Pag-klik nga Ligid basi mag-agi ha menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pindota an sentro nga buton basi makapili han ginpabug-atan nga menu';
+  String get centerButtonMenuTutorialText =>
+      'Pindota an sentro nga buton basi makapili han ginpabug-atan nga menu';
 
   @override
-  String get playPauseMenuTutorialText => 'Pindota ini nga buton para magtokar o mag-undang hin kanta';
+  String get playPauseMenuTutorialText =>
+      'Pindota ini nga buton para magtokar o mag-undang hin kanta';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pindota ini nga buton para laktawan ngadto ha sunod nga kanta';
+  String get nextButtonMenuTutorialText =>
+      'Pindota ini nga buton para laktawan ngadto ha sunod nga kanta';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pindota ini nga butones para mag-reland o bumalik ha nauna nga kanta';
+  String get previousButtonMenuTutorialText =>
+      'Pindota ini nga butones para mag-reland o bumalik ha nauna nga kanta';
 
   @override
-  String get menuButtonTutorialText => 'Pindota ini nga buton para bumalik ha nauna nga menu. Mahimo mo ito ipirit ngan kaptan tikang ha bisan ano nga iba nga iskrin basi direkta nga kumadto ha nangunguna nga menu.';
+  String get menuButtonTutorialText =>
+      'Pindota ini nga buton para bumalik ha nauna nga menu. Mahimo mo ito ipirit ngan kaptan tikang ha bisan ano nga iba nga iskrin basi direkta nga kumadto ha nangunguna nga menu.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Amo ini an iskrin han pagpakita. Paghikap nga Pag-abat nga Mode nga may-ada hini nga default ngan mahimo pa ig-upod ha mga lugar.';
+  String get deviceScreenMenuTutorialText =>
+      'Amo ini an iskrin han pagpakita. Paghikap nga Pag-abat nga Mode nga may-ada hini nga default ngan mahimo pa ig-upod ha mga lugar.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Ibalhin an imo tudlo ha palibot han I-klik nga Ligid basi ipahiuyon an kadamu';
+  String get deviceControlNowPlayingTutorialText =>
+      'Ibalhin an imo tudlo ha palibot han I-klik nga Ligid basi ipahiuyon an kadamu';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pindota an butones han Sentro basi magbisikleta pinaagi hin pagbiling hin bar, pag-utod nga bar ngan pag-uwang. Pindota ngan kapti an buton han Sentro para maka-access hin kadugangan nga mga kapilian.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pindota an butones han Sentro basi magbisikleta pinaagi hin pagbiling hin bar, pag-utod nga bar ngan pag-uwang. Pindota ngan kapti an buton han Sentro para maka-access hin kadugangan nga mga kapilian.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Pindota ngan kapti ini nga buton para mag-una pag-abante an kanta';
+  String get nextButtonNowPlayingTutorialText =>
+      'Pindota ngan kapti ini nga buton para mag-una pag-abante an kanta';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pindota ngan kapti ini nga buton para mabalik an kanta';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pindota ngan kapti ini nga buton para mabalik an kanta';
 
   @override
-  String get deviceControlSearchTutorialText => 'Ibalhin an imo tudlo ha tiil hin magaan ha palibot han Pag-klik nga Ligid basi maipakita an usa nga alpabeto';
+  String get deviceControlSearchTutorialText =>
+      'Ibalhin an imo tudlo ha tiil hin magaan ha palibot han Pag-klik nga Ligid basi maipakita an usa nga alpabeto';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pindota an sentro nga buton basi makapili han ginpabug-atan nga alpabeto';
+  String get centerButtonSearchTutorialText =>
+      'Pindota an sentro nga buton basi makapili han ginpabug-atan nga alpabeto';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pindota ini nga buton para makadugang hin espasyo';
+  String get nextButtonSearchTutorialText =>
+      'Pindota ini nga buton para makadugang hin espasyo';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pindota ini nga buton para mabura an urhi nga karakter';
+  String get previousButtonSearchTutorialText =>
+      'Pindota ini nga buton para mabura an urhi nga karakter';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pindota ini nga buton para masara an keyboard ngan makig-upod ha mga resulta han pagbiling';
+  String get menuButtonSearchTutorialText =>
+      'Pindota ini nga buton para masara an keyboard ngan makig-upod ha mga resulta han pagbiling';
 }

@@ -1,8 +1,8 @@
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
+import 'package:classipod/features/music/album/widgets/album_list_tile.dart';
 import 'package:classipod/features/music/artists/providers/artist_albums_provider.dart';
-import 'package:classipod/features/music/artists/widgets/artist_album_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -10,6 +10,7 @@ import 'package:go_router/go_router.dart';
 
 class ArtistAlbumsScreen extends ConsumerStatefulWidget {
   final String artistName;
+
   const ArtistAlbumsScreen({super.key, required this.artistName});
 
   @override
@@ -67,9 +68,10 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => ArtistAlbumListTile(
+                itemBuilder: (context, index) => AlbumListTile(
                   albumDetails: displayItems[index],
                   isSelected: selectedDisplayItem == index,
+                  showArtistName: false,
                   onTap: () async => _navigateToAlbumSelectionScreen(index),
                   onLongPress: () async =>
                       _navigateToAlbumMoreOptionsScreen(index),

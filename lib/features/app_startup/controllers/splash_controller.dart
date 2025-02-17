@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -25,7 +27,7 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
   Future<void> requestStoragePermissions() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      if (!kIsWeb) {
+      if (!kIsWeb && (Platform.isAndroid || Platform.isIOS)) {
         final PermissionStatus audioPermission =
             await Permission.audio.request();
         if (audioPermission.isDenied) {

@@ -15,16 +15,20 @@ class AppLocalizationsMy extends AppLocalizations {
   String get menuButtonText => 'အစားအသောက်စာရင်း';
 
   @override
-  String get audioAccessPermissionTitle => 'အသံ Access ကိုခွင့်ပြုချက်လိုအပ်သည်';
+  String get audioAccessPermissionTitle =>
+      'အသံ Access ကိုခွင့်ပြုချက်လိုအပ်သည်';
 
   @override
-  String get audioAccessPermissionContent => 'ကျေးဇူးပြု. သင်၏တေးဂီတဖိုင်များကိုကစားရန်ခွင့်ပြုရန်အသံဖိုင်များကိုဝင်ရောက်ခွင့်ပေးပါ။';
+  String get audioAccessPermissionContent =>
+      'ကျေးဇူးပြု. သင်၏တေးဂီတဖိုင်များကိုကစားရန်ခွင့်ပြုရန်အသံဖိုင်များကိုဝင်ရောက်ခွင့်ပေးပါ။';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'အသံ Access ကိုခွင့်ပြုချက်ငြင်းပယ်';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'အသံ Access ကိုခွင့်ပြုချက်ငြင်းပယ်';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'ကျေးဇူးပြု. သင်၏တေးဂီတဖိုင်များကိုဖွင့်ရန်ခွင့်ပြုရန် device settings တွင်ဤအက်ပလီကေးရှင်းအတွက်အသံဖိုင်များကို 0 င်ရောက်ခွင့်ပြုပါ။';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'ကျေးဇူးပြု. သင်၏တေးဂီတဖိုင်များကိုဖွင့်ရန်ခွင့်ပြုရန် device settings တွင်ဤအက်ပလီကေးရှင်းအတွက်အသံဖိုင်များကို 0 င်ရောက်ခွင့်ပြုပါ။';
 
   @override
   String get menuScreenTitle => 'အစားအသောက်စာရင်း';
@@ -63,7 +67,6 @@ class AppLocalizationsMy extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsMy extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsMy extends AppLocalizations {
   String get touchSoundsDialogTitle => 'touch အသံ';
 
   @override
-  String get touchSoundsDialogContent => 'ကျေးဇူးပြု. System Settings မှ System Settings မှ touch seetings မှ touch sounds ကိုဖွင့်ပါ';
+  String get touchSoundsDialogContent =>
+      'ကျေးဇူးပြု. System Settings မှ System Settings မှ touch seetings မှ touch sounds ကိုဖွင့်ပါ';
 
   @override
   String get immersiveModeSettingTitle => 'ingsersive mode ကို';
@@ -144,7 +147,8 @@ class AppLocalizationsMy extends AppLocalizations {
   String get donateSettingTitle => 'ပေးကမ်း';
 
   @override
-  String get donateSettingDescription => 'ဤအက်ပလီကေးရှင်းကိုသင်ကြိုက်နှစ်သက်ပါက ကျေးဇူးပြု. လှူဒါန်းရန်စဉ်းစားပါ။';
+  String get donateSettingDescription =>
+      'ဤအက်ပလီကေးရှင်းကိုသင်ကြိုက်နှစ်သက်ပါက ကျေးဇူးပြု. လှူဒါန်းရန်စဉ်းစားပါ။';
 
   @override
   String get versionAboutScreenTitle => 'ထင်မြင်ချက်';
@@ -195,7 +199,8 @@ class AppLocalizationsMy extends AppLocalizations {
   String get retryButtonText => 'ကြိုးစား';
 
   @override
-  String get filePickerDialogTitle => 'တေးဂီတကိုစကင်ဖတ်စစ်ဆေးရန်လမ်းညွှန်ကိုရွေးချယ်ပါ';
+  String get filePickerDialogTitle =>
+      'တေးဂီတကိုစကင်ဖတ်စစ်ဆေးရန်လမ်းညွှန်ကိုရွေးချယ်ပါ';
 
   @override
   String get searchScreenTitle => 'ရှာဖေှခြင်း';
@@ -213,7 +218,8 @@ class AppLocalizationsMy extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'ဘက်ထရီ optimization ကိုပိတ်ပါ';
 
   @override
-  String get disableBatteryOptimizationContent => 'တေးဂီတ၏နောက်ခံပြန်ဖွင့်ခြင်းကိုခွင့်ပြုရန် device settings တွင်ဒီအက်ပလီကေးရှင်းအတွက်ဘက်ထရီ optimization ကိုပိတ်ပါ။';
+  String get disableBatteryOptimizationContent =>
+      'တေးဂီတ၏နောက်ခံပြန်ဖွင့်ခြင်းကိုခွင့်ပြုရန် device settings တွင်ဒီအက်ပလီကေးရှင်းအတွက်ဘက်ထရီ optimization ကိုပိတ်ပါ။';
 
   @override
   String get languageScreenTitle => 'ဘာသာစကား';
@@ -267,50 +273,65 @@ class AppLocalizationsMy extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Press ကန်လ်ဂီတဖိုင်များ';
 
   @override
-  String get deviceControlMenuTutorialText => 'မီနူးကိုသွားလာရန်သင်၏ thumb ကိုပေါ့ပေါ့တန်တန်ပါ';
+  String get deviceControlMenuTutorialText =>
+      'မီနူးကိုသွားလာရန်သင်၏ thumb ကိုပေါ့ပေါ့တန်တန်ပါ';
 
   @override
-  String get centerButtonMenuTutorialText => 'မီးမောင်းထိုးပြ menu ကိုရွေးရန်စင်တာခလုတ်ကိုနှိပ်ပါ';
+  String get centerButtonMenuTutorialText =>
+      'မီးမောင်းထိုးပြ menu ကိုရွေးရန်စင်တာခလုတ်ကိုနှိပ်ပါ';
 
   @override
-  String get playPauseMenuTutorialText => 'သီချင်းတစ်ပုဒ်ကိုကစားရန်သို့မဟုတ်ခေတ္တရပ်တန့်ရန်ဤခလုတ်ကိုနှိပ်ပါ';
+  String get playPauseMenuTutorialText =>
+      'သီချင်းတစ်ပုဒ်ကိုကစားရန်သို့မဟုတ်ခေတ္တရပ်တန့်ရန်ဤခလုတ်ကိုနှိပ်ပါ';
 
   @override
-  String get nextButtonMenuTutorialText => 'နောက်သီချင်း skip to skip to ဒီခလုတ်ကိုနှိပ်ပါ';
+  String get nextButtonMenuTutorialText =>
+      'နောက်သီချင်း skip to skip to ဒီခလုတ်ကိုနှိပ်ပါ';
 
   @override
-  String get previousButtonMenuTutorialText => 'ယခင်သီချင်းသို့ပြန်သွားရန်သို့မဟုတ်သွားရန်ဤခလုတ်ကိုနှိပ်ပါ';
+  String get previousButtonMenuTutorialText =>
+      'ယခင်သီချင်းသို့ပြန်သွားရန်သို့မဟုတ်သွားရန်ဤခလုတ်ကိုနှိပ်ပါ';
 
   @override
-  String get menuButtonTutorialText => 'ယခင်မီနူးသို့ပြန်သွားရန်ဤခလုတ်ကိုနှိပ်ပါ။ Main Menu သို့တိုက်ရိုက်သွားရန်အခြားမည်သည့်မျက်နှာပြင်မှမဆို၎င်းကို နှိပ်. ကိုင်နိုင်သည်။';
+  String get menuButtonTutorialText =>
+      'ယခင်မီနူးသို့ပြန်သွားရန်ဤခလုတ်ကိုနှိပ်ပါ။ Main Menu သို့တိုက်ရိုက်သွားရန်အခြားမည်သည့်မျက်နှာပြင်မှမဆို၎င်းကို နှိပ်. ကိုင်နိုင်သည်။';
 
   @override
-  String get deviceScreenMenuTutorialText => 'ဒါက display screen ပါ။ Touch screen နှင့် split screen mode ကိုပုံမှန်အားဖြင့်ဖွင့်ထားပြီးချိန်ညှိချက်များတွင် ထပ်မံ. configure လုပ်နိုင်သည်။';
+  String get deviceScreenMenuTutorialText =>
+      'ဒါက display screen ပါ။ Touch screen နှင့် split screen mode ကိုပုံမှန်အားဖြင့်ဖွင့်ထားပြီးချိန်ညှိချက်များတွင် ထပ်မံ. configure လုပ်နိုင်သည်။';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'အသံအတိုးအကျယ်ကိုထိန်းညှိရန်သင်၏လက်မကိုနှိပ်ပါ';
+  String get deviceControlNowPlayingTutorialText =>
+      'အသံအတိုးအကျယ်ကိုထိန်းညှိရန်သင်၏လက်မကိုနှိပ်ပါ';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'SCRUBBER BAR နှင့် Shuffle Slider မှတဆင့် Cyce သို့ Cyce ခလုတ်ကိုနှိပ်ပါ။ နောက်ထပ်ရွေးချယ်စရာများကိုရယူရန်ဗဟိုခလုတ်ကို နှိပ်. ဖိထားပါ။';
+  String get centerButtonNowPlayingTutorialText =>
+      'SCRUBBER BAR နှင့် Shuffle Slider မှတဆင့် Cyce သို့ Cyce ခလုတ်ကိုနှိပ်ပါ။ နောက်ထပ်ရွေးချယ်စရာများကိုရယူရန်ဗဟိုခလုတ်ကို နှိပ်. ဖိထားပါ။';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'သီချင်းကိုမြန်မြန်ဆန်ဆန်အတွက်ဤခလုတ်ကို နှိပ်. ဖိထားပါ';
+  String get nextButtonNowPlayingTutorialText =>
+      'သီချင်းကိုမြန်မြန်ဆန်ဆန်အတွက်ဤခလုတ်ကို နှိပ်. ဖိထားပါ';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'သီချင်းကိုပြန်လှည့်ရန်ဤခလုတ်ကို နှိပ်. ဖိထားပါ';
+  String get previousButtonNowPlayingTutorialText =>
+      'သီချင်းကိုပြန်လှည့်ရန်ဤခလုတ်ကို နှိပ်. ဖိထားပါ';
 
   @override
-  String get deviceControlSearchTutorialText => 'အက်ခရာကိုမီးမောင်းထိုးပြရန်သင်၏ thumb ကိုပေါ့ပေါ့တန်တန်ကြည့်ပါ';
+  String get deviceControlSearchTutorialText =>
+      'အက်ခရာကိုမီးမောင်းထိုးပြရန်သင်၏ thumb ကိုပေါ့ပေါ့တန်တန်ကြည့်ပါ';
 
   @override
-  String get centerButtonSearchTutorialText => 'မီးမောင်းထိုးထားသောအက်ခရာကိုရွေးချယ်ရန် Center ခလုတ်ကိုနှိပ်ပါ';
+  String get centerButtonSearchTutorialText =>
+      'မီးမောင်းထိုးထားသောအက်ခရာကိုရွေးချယ်ရန် Center ခလုတ်ကိုနှိပ်ပါ';
 
   @override
   String get nextButtonSearchTutorialText => 'အာကာသထည့်ရန်ဤခလုတ်ကိုနှိပ်ပါ';
 
   @override
-  String get previousButtonSearchTutorialText => 'နောက်ဆုံးဇာတ်ကောင်ကိုဖျက်ရန်ဤခလုတ်ကိုနှိပ်ပါ';
+  String get previousButtonSearchTutorialText =>
+      'နောက်ဆုံးဇာတ်ကောင်ကိုဖျက်ရန်ဤခလုတ်ကိုနှိပ်ပါ';
 
   @override
-  String get menuButtonSearchTutorialText => 'ကီးဘုတ်ကိုပိတ်ရန်နှင့်ရှာဖွေမှုရလဒ်များနှင့်အပြန်အလှန်ဆက်သွယ်ရန်ဤခလုတ်ကိုနှိပ်ပါ';
+  String get menuButtonSearchTutorialText =>
+      'ကီးဘုတ်ကိုပိတ်ရန်နှင့်ရှာဖွေမှုရလဒ်များနှင့်အပြန်အလှန်ဆက်သွယ်ရန်ဤခလုတ်ကိုနှိပ်ပါ';
 }

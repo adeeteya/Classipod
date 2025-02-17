@@ -15,16 +15,20 @@ class AppLocalizationsLv extends AppLocalizations {
   String get menuButtonText => 'Ēdienkarte';
 
   @override
-  String get audioAccessPermissionTitle => 'Nepieciešama audio piekļuves atļauja';
+  String get audioAccessPermissionTitle =>
+      'Nepieciešama audio piekļuves atļauja';
 
   @override
-  String get audioAccessPermissionContent => 'Lūdzu, piešķiriet audio failiem piekļuvi, lai ļautu mums atskaņot jūsu mūzikas failus.';
+  String get audioAccessPermissionContent =>
+      'Lūdzu, piešķiriet audio failiem piekļuvi, lai ļautu mums atskaņot jūsu mūzikas failus.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio piekļuves atļauja noliegta';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio piekļuves atļauja noliegta';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Lūdzu, piešķiriet Audio Files piekļuvi šai lietotnei ierīces iestatījumos, lai ļautu mums atskaņot jūsu mūzikas failus.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Lūdzu, piešķiriet Audio Files piekļuvi šai lietotnei ierīces iestatījumos, lai ļautu mums atskaņot jūsu mūzikas failus.';
 
   @override
   String get menuScreenTitle => 'Ēdienkarte';
@@ -63,7 +67,6 @@ class AppLocalizationsLv extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsLv extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsLv extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Pieskāriena skaņas';
 
   @override
-  String get touchSoundsDialogContent => 'Lūdzu, iespējojiet pieskāriena skaņas no sistēmas iestatījumiem, lai dzirdētu klikšķa riteņa skaņas';
+  String get touchSoundsDialogContent =>
+      'Lūdzu, iespējojiet pieskāriena skaņas no sistēmas iestatījumiem, lai dzirdētu klikšķa riteņa skaņas';
 
   @override
   String get immersiveModeSettingTitle => 'Ieskaujošs režīms';
@@ -144,7 +147,8 @@ class AppLocalizationsLv extends AppLocalizations {
   String get donateSettingTitle => 'Ziedot';
 
   @override
-  String get donateSettingDescription => 'Ja jums patīk šī lietotne, lūdzu, apsveriet iespēju ziedot.';
+  String get donateSettingDescription =>
+      'Ja jums patīk šī lietotne, lūdzu, apsveriet iespēju ziedot.';
 
   @override
   String get versionAboutScreenTitle => 'Versija';
@@ -195,7 +199,8 @@ class AppLocalizationsLv extends AppLocalizations {
   String get retryButtonText => 'Atkārtot';
 
   @override
-  String get filePickerDialogTitle => 'Atlasiet direktoriju, lai skenētu mūziku';
+  String get filePickerDialogTitle =>
+      'Atlasiet direktoriju, lai skenētu mūziku';
 
   @override
   String get searchScreenTitle => 'Meklēšana';
@@ -210,10 +215,12 @@ class AppLocalizationsLv extends AppLocalizations {
   String get resultsForText => 'Rezultāti:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Atspējot akumulatora optimizāciju';
+  String get disableBatteryOptimizationTitle =>
+      'Atspējot akumulatora optimizāciju';
 
   @override
-  String get disableBatteryOptimizationContent => 'Lūdzu, atspējojiet šīs lietotnes akumulatora optimizāciju ierīces iestatījumos, lai varētu atskaņot mūziku.';
+  String get disableBatteryOptimizationContent =>
+      'Lūdzu, atspējojiet šīs lietotnes akumulatora optimizāciju ierīces iestatījumos, lai varētu atskaņot mūziku.';
 
   @override
   String get languageScreenTitle => 'Valoda';
@@ -267,50 +274,66 @@ class AppLocalizationsLv extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan mūzikas faili';
 
   @override
-  String get deviceControlMenuTutorialText => 'Viegli pārvietojiet īkšķi ap ​​klikšķa riteni, lai pārvietotos izvēlnē';
+  String get deviceControlMenuTutorialText =>
+      'Viegli pārvietojiet īkšķi ap ​​klikšķa riteni, lai pārvietotos izvēlnē';
 
   @override
-  String get centerButtonMenuTutorialText => 'Nospiediet pogu Centrs, lai atlasītu iezīmēto izvēlnes vienumu';
+  String get centerButtonMenuTutorialText =>
+      'Nospiediet pogu Centrs, lai atlasītu iezīmēto izvēlnes vienumu';
 
   @override
-  String get playPauseMenuTutorialText => 'Nospiediet šo pogu, lai atskaņotu vai pārtrauktu dziesmu';
+  String get playPauseMenuTutorialText =>
+      'Nospiediet šo pogu, lai atskaņotu vai pārtrauktu dziesmu';
 
   @override
-  String get nextButtonMenuTutorialText => 'Nospiediet šo pogu, lai pārietu uz nākamo dziesmu';
+  String get nextButtonMenuTutorialText =>
+      'Nospiediet šo pogu, lai pārietu uz nākamo dziesmu';
 
   @override
-  String get previousButtonMenuTutorialText => 'Nospiediet šo pogu, lai pārtaisītu vai atgrieztos pie iepriekšējās dziesmas';
+  String get previousButtonMenuTutorialText =>
+      'Nospiediet šo pogu, lai pārtaisītu vai atgrieztos pie iepriekšējās dziesmas';
 
   @override
-  String get menuButtonTutorialText => 'Nospiediet šo pogu, lai atgrieztos iepriekšējā izvēlnē. Jūs varētu nospiest un turēt to no jebkura cita ekrāna, lai tieši pārietu uz galveno izvēlni.';
+  String get menuButtonTutorialText =>
+      'Nospiediet šo pogu, lai atgrieztos iepriekšējā izvēlnē. Jūs varētu nospiest un turēt to no jebkura cita ekrāna, lai tieši pārietu uz galveno izvēlni.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Šis ir displeja ekrāns. Skārienekrāns un sadalīts ekrāna režīms ir iespējots pēc noklusējuma, un to var konfigurēt vēl vairāk.';
+  String get deviceScreenMenuTutorialText =>
+      'Šis ir displeja ekrāns. Skārienekrāns un sadalīts ekrāna režīms ir iespējots pēc noklusējuma, un to var konfigurēt vēl vairāk.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Pārvietojiet īkšķi ap ​​klikšķa riteni, lai pielāgotu skaļumu';
+  String get deviceControlNowPlayingTutorialText =>
+      'Pārvietojiet īkšķi ap ​​klikšķa riteni, lai pielāgotu skaļumu';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Nospiediet centra pogu, lai pārvietotos caur meklēšanas joslu, skruberu joslu un shuffle slīdni. Nospiediet un turiet centra pogu, lai piekļūtu papildu opcijām.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Nospiediet centra pogu, lai pārvietotos caur meklēšanas joslu, skruberu joslu un shuffle slīdni. Nospiediet un turiet centra pogu, lai piekļūtu papildu opcijām.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Nospiediet un turiet šo pogu, lai ātri pārsūtītu dziesmu';
+  String get nextButtonNowPlayingTutorialText =>
+      'Nospiediet un turiet šo pogu, lai ātri pārsūtītu dziesmu';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Nospiediet un turiet šo pogu, lai pārtaisītu dziesmu';
+  String get previousButtonNowPlayingTutorialText =>
+      'Nospiediet un turiet šo pogu, lai pārtaisītu dziesmu';
 
   @override
-  String get deviceControlSearchTutorialText => 'Viegli pārvietojiet īkšķi ap ​​klikšķa riteni, lai izceltu alfabētu';
+  String get deviceControlSearchTutorialText =>
+      'Viegli pārvietojiet īkšķi ap ​​klikšķa riteni, lai izceltu alfabētu';
 
   @override
-  String get centerButtonSearchTutorialText => 'Nospiediet pogu Centrs, lai izvēlētos iezīmēto alfabētu';
+  String get centerButtonSearchTutorialText =>
+      'Nospiediet pogu Centrs, lai izvēlētos iezīmēto alfabētu';
 
   @override
-  String get nextButtonSearchTutorialText => 'Nospiediet šo pogu, lai pievienotu vietu';
+  String get nextButtonSearchTutorialText =>
+      'Nospiediet šo pogu, lai pievienotu vietu';
 
   @override
-  String get previousButtonSearchTutorialText => 'Nospiediet šo pogu, lai izdzēstu pēdējo rakstzīmi';
+  String get previousButtonSearchTutorialText =>
+      'Nospiediet šo pogu, lai izdzēstu pēdējo rakstzīmi';
 
   @override
-  String get menuButtonSearchTutorialText => 'Nospiediet šo pogu, lai aizvērtu tastatūru un mijiedarbotos ar meklēšanas rezultātiem';
+  String get menuButtonSearchTutorialText =>
+      'Nospiediet šo pogu, lai aizvērtu tastatūru un mijiedarbotos ar meklēšanas rezultātiem';
 }

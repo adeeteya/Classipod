@@ -18,13 +18,16 @@ class AppLocalizationsJv extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Ijin akses audio dibutuhake';
 
   @override
-  String get audioAccessPermissionContent => 'Mangga diwenehi akses audio file supaya bisa muter file musik.';
+  String get audioAccessPermissionContent =>
+      'Mangga diwenehi akses audio file supaya bisa muter file musik.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ijin akses audio ditolak';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Ijin akses audio ditolak';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Mangga menehi akses audio file kanggo aplikasi iki ing setelan piranti supaya bisa main file musik.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Mangga menehi akses audio file kanggo aplikasi iki ing setelan piranti supaya bisa main file musik.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -63,7 +66,6 @@ class AppLocalizationsJv extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsJv extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsJv extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Sugeng swara';
 
   @override
-  String get touchSoundsDialogContent => 'Mangga ngaktifake swara sentuhan saka setelan sistem kanggo ngrungokake swara roda klik';
+  String get touchSoundsDialogContent =>
+      'Mangga ngaktifake swara sentuhan saka setelan sistem kanggo ngrungokake swara roda klik';
 
   @override
   String get immersiveModeSettingTitle => 'Mode immersive';
@@ -144,7 +146,8 @@ class AppLocalizationsJv extends AppLocalizations {
   String get donateSettingTitle => 'Sumbang';
 
   @override
-  String get donateSettingDescription => 'Yen sampeyan seneng app iki, mangga elinga menehi sumbangan.';
+  String get donateSettingDescription =>
+      'Yen sampeyan seneng app iki, mangga elinga menehi sumbangan.';
 
   @override
   String get versionAboutScreenTitle => 'Versi';
@@ -213,7 +216,8 @@ class AppLocalizationsJv extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Pateni Optimization Baterai';
 
   @override
-  String get disableBatteryOptimizationContent => 'Mangga mateni optimalisasi baterei kanggo aplikasi iki ing setelan piranti supaya bisa muter maneh musik.';
+  String get disableBatteryOptimizationContent =>
+      'Mangga mateni optimalisasi baterei kanggo aplikasi iki ing setelan piranti supaya bisa muter maneh musik.';
 
   @override
   String get languageScreenTitle => 'Basa';
@@ -267,50 +271,66 @@ class AppLocalizationsJv extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Files Musik Rescan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Pindhah jempol kanthi entheng ing rodha klik kanggo navigasi menu';
+  String get deviceControlMenuTutorialText =>
+      'Pindhah jempol kanthi entheng ing rodha klik kanggo navigasi menu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pencet tombol Center kanggo milih item menu sing disorot';
+  String get centerButtonMenuTutorialText =>
+      'Pencet tombol Center kanggo milih item menu sing disorot';
 
   @override
-  String get playPauseMenuTutorialText => 'Pencet tombol iki kanggo muter utawa ngaso lagu';
+  String get playPauseMenuTutorialText =>
+      'Pencet tombol iki kanggo muter utawa ngaso lagu';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pencet tombol iki kanggo ngliwati lagu sabanjure';
+  String get nextButtonMenuTutorialText =>
+      'Pencet tombol iki kanggo ngliwati lagu sabanjure';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pencet tombol iki kanggo mundur cepet utawa bali menyang lagu sadurunge';
+  String get previousButtonMenuTutorialText =>
+      'Pencet tombol iki kanggo mundur cepet utawa bali menyang lagu sadurunge';
 
   @override
-  String get menuButtonTutorialText => 'Pencet tombol iki kanggo bali menyang menu sadurunge. Sampeyan bisa menet terus saka layar liyane supaya bisa langsung menyang menu utama.';
+  String get menuButtonTutorialText =>
+      'Pencet tombol iki kanggo bali menyang menu sadurunge. Sampeyan bisa menet terus saka layar liyane supaya bisa langsung menyang menu utama.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Iki layar tampilan. Tutul layar lan mode layar pamisah diaktifake kanthi gawan lan bisa dikonfigurasi luwih dhisik ing setelan kasebut.';
+  String get deviceScreenMenuTutorialText =>
+      'Iki layar tampilan. Tutul layar lan mode layar pamisah diaktifake kanthi gawan lan bisa dikonfigurasi luwih dhisik ing setelan kasebut.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Pindhah jempol ngubengi rodha klik kanggo nyetel volume';
+  String get deviceControlNowPlayingTutorialText =>
+      'Pindhah jempol ngubengi rodha klik kanggo nyetel volume';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pencet tombol tengah kanggo ngupaya Bar, Bar Scruubber lan Slider Shuffle. Pencet terus tombol tengah kanggo ngakses opsi tambahan.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pencet tombol tengah kanggo ngupaya Bar, Bar Scruubber lan Slider Shuffle. Pencet terus tombol tengah kanggo ngakses opsi tambahan.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Penet terus tombol iki kanggo cepet lagu kasebut';
+  String get nextButtonNowPlayingTutorialText =>
+      'Penet terus tombol iki kanggo cepet lagu kasebut';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pencet terus tombol iki kanggo mundur lagu';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pencet terus tombol iki kanggo mundur lagu';
 
   @override
-  String get deviceControlSearchTutorialText => 'Pindhah jempol kanthi entheng ing rodha klik kanggo nyorot alfabet';
+  String get deviceControlSearchTutorialText =>
+      'Pindhah jempol kanthi entheng ing rodha klik kanggo nyorot alfabet';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pencet tombol tengah kanggo milih aksara sing disorot';
+  String get centerButtonSearchTutorialText =>
+      'Pencet tombol tengah kanggo milih aksara sing disorot';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pencet tombol iki kanggo nambah papan';
+  String get nextButtonSearchTutorialText =>
+      'Pencet tombol iki kanggo nambah papan';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pencet tombol iki kanggo mbusak karakter pungkasan';
+  String get previousButtonSearchTutorialText =>
+      'Pencet tombol iki kanggo mbusak karakter pungkasan';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pencet tombol iki kanggo nutup keyboard lan sesambungan karo asil telusuran';
+  String get menuButtonSearchTutorialText =>
+      'Pencet tombol iki kanggo nutup keyboard lan sesambungan karo asil telusuran';
 }

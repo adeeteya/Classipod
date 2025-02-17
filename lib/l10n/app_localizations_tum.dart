@@ -15,16 +15,20 @@ class AppLocalizationsTum extends AppLocalizations {
   String get menuButtonText => 'MENU';
 
   @override
-  String get audioAccessPermissionTitle => 'Kuzomerezga kwa Adio Kukhumba Kukhumba';
+  String get audioAccessPermissionTitle =>
+      'Kuzomerezga kwa Adio Kukhumba Kukhumba';
 
   @override
-  String get audioAccessPermissionContent => 'Chonde tipeleke ku mafayilo ghakupulikika kuti ghatizomerezge kuseŵera mafayilo ghinu gha sumu.';
+  String get audioAccessPermissionContent =>
+      'Chonde tipeleke ku mafayilo ghakupulikika kuti ghatizomerezge kuseŵera mafayilo ghinu gha sumu.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Accesssion Kuchita Kuleka .';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Audio Accesssion Kuchita Kuleka .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Chonde perekani mafayilo ghakupulikikwa gha pulogiramu iyi mu vipangizo vya chipangizo kuti vizomerezgeke kuseŵera mafayilo ghinu gha sumu.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Chonde perekani mafayilo ghakupulikikwa gha pulogiramu iyi mu vipangizo vya chipangizo kuti vizomerezgeke kuseŵera mafayilo ghinu gha sumu.';
 
   @override
   String get menuScreenTitle => 'Meno';
@@ -63,7 +67,6 @@ class AppLocalizationsTum extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +84,6 @@ class AppLocalizationsTum extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +131,8 @@ class AppLocalizationsTum extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Kukhwaska Mazgu';
 
   @override
-  String get touchSoundsDialogContent => 'Chonde lembani Vimanyikwiro vyakufuma ku System Settings kuti mupulike mazgu gha thaya la click';
+  String get touchSoundsDialogContent =>
+      'Chonde lembani Vimanyikwiro vyakufuma ku System Settings kuti mupulike mazgu gha thaya la click';
 
   @override
   String get immersiveModeSettingTitle => 'Mode Yakubizga';
@@ -144,7 +147,8 @@ class AppLocalizationsTum extends AppLocalizations {
   String get donateSettingTitle => 'Peleka';
 
   @override
-  String get donateSettingDescription => 'Usange mukutemwa pulogiramu iyi, chonde khalani na mwaŵi wa kupeleka.';
+  String get donateSettingDescription =>
+      'Usange mukutemwa pulogiramu iyi, chonde khalani na mwaŵi wa kupeleka.';
 
   @override
   String get versionAboutScreenTitle => 'Baibolo';
@@ -156,7 +160,8 @@ class AppLocalizationsTum extends AppLocalizations {
   String get noMusicFilesFound => 'Palije Nyiniko';
 
   @override
-  String get noArtistsFound => 'Ŵanthu awo ŵakaŵa ŵaluso yayi, no Mafitithanji ŵacita vya Ŵaluso, ŵakusambizga vya Ŵaluso.';
+  String get noArtistsFound =>
+      'Ŵanthu awo ŵakaŵa ŵaluso yayi, no Mafitithanji ŵacita vya Ŵaluso, ŵakusambizga vya Ŵaluso.';
 
   @override
   String get noAlbumsFound => 'Palije Albums';
@@ -165,7 +170,8 @@ class AppLocalizationsTum extends AppLocalizations {
   String get unknownSong => 'Nyimbo yambura kumanyikwa';
 
   @override
-  String get unknownArtist => 'Munthu uyo ​​wakamanyikwanga yayi wakuchita maseŵero';
+  String get unknownArtist =>
+      'Munthu uyo ​​wakamanyikwanga yayi wakuchita maseŵero';
 
   @override
   String get unknownAlbum => 'Album wambura kumanyikwa';
@@ -213,7 +219,8 @@ class AppLocalizationsTum extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Batiriya ya kupendera';
 
   @override
-  String get disableBatteryOptimizationContent => 'Chonde dinable batire optimization pa pulogiramu iyi mu vipangizo vya chipangizo kuti muzomerezge kuseŵera kwa nyimbo.';
+  String get disableBatteryOptimizationContent =>
+      'Chonde dinable batire optimization pa pulogiramu iyi mu vipangizo vya chipangizo kuti muzomerezge kuseŵera kwa nyimbo.';
 
   @override
   String get languageScreenTitle => 'Chiyowoyelo';
@@ -267,50 +274,66 @@ class AppLocalizationsTum extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescani sumu';
 
   @override
-  String get deviceControlMenuTutorialText => 'Sunthani chigunwe chinu pachoko waka pafupi na Dofyani Wheel kuti muyendeske menyu';
+  String get deviceControlMenuTutorialText =>
+      'Sunthani chigunwe chinu pachoko waka pafupi na Dofyani Wheel kuti muyendeske menyu';
 
   @override
-  String get centerButtonMenuTutorialText => 'Tinikani batani la pakati kuti musankhe chinthu icho chaŵikika pa menyu .';
+  String get centerButtonMenuTutorialText =>
+      'Tinikani batani la pakati kuti musankhe chinthu icho chaŵikika pa menyu .';
 
   @override
-  String get playPauseMenuTutorialText => 'Tinikani batani ili kuti museŵerenge panji kuleka sumu .';
+  String get playPauseMenuTutorialText =>
+      'Tinikani batani ili kuti museŵerenge panji kuleka sumu .';
 
   @override
-  String get nextButtonMenuTutorialText => 'Tinikani batani ili kuti mujumphe ku sumu yakulondezgapo .';
+  String get nextButtonMenuTutorialText =>
+      'Tinikani batani ili kuti mujumphe ku sumu yakulondezgapo .';
 
   @override
-  String get previousButtonMenuTutorialText => 'Tinikani batani ili kuti muwelere panji kuwelera ku sumu iyo yikaŵako kumanyuma .';
+  String get previousButtonMenuTutorialText =>
+      'Tinikani batani ili kuti muwelere panji kuwelera ku sumu iyo yikaŵako kumanyuma .';
 
   @override
-  String get menuButtonTutorialText => 'Tinikani batani ili kuti muwelere ku menyu iyo yikaŵako kumanyuma. Mungafikiska na kuchikora pa chithuzithuzi chilichose kuti mulute ku menyu yikuru.';
+  String get menuButtonTutorialText =>
+      'Tinikani batani ili kuti muwelere ku menyu iyo yikaŵako kumanyuma. Mungafikiska na kuchikora pa chithuzithuzi chilichose kuti mulute ku menyu yikuru.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Iyi ndiyo skrini yakulongolera. Kukhwaska Screen na Split Screen Mode ŵakuzomerezgeka mwa kuŵikapo mtima ndipo ŵangakonzekeraso mu vigaŵa.';
+  String get deviceScreenMenuTutorialText =>
+      'Iyi ndiyo skrini yakulongolera. Kukhwaska Screen na Split Screen Mode ŵakuzomerezgeka mwa kuŵikapo mtima ndipo ŵangakonzekeraso mu vigaŵa.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Sinthani chigunwe chinu kuzingilizga Click Wheel kuti musinthe voliyumu .';
+  String get deviceControlNowPlayingTutorialText =>
+      'Sinthani chigunwe chinu kuzingilizga Click Wheel kuti musinthe voliyumu .';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Tinikani batani la Center kuti liyenderenge mu bar yakupenja, bar ya scrubber na slider ya slider. Dinikani na kusunga Center kuti muŵe na mwaŵi wa kusanga vinthu vinyake.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Tinikani batani la Center kuti liyenderenge mu bar yakupenja, bar ya scrubber na slider ya slider. Dinikani na kusunga Center kuti muŵe na mwaŵi wa kusanga vinthu vinyake.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Dinikani na kukora batani ili mwaluŵiro panthazi pa sumu .';
+  String get nextButtonNowPlayingTutorialText =>
+      'Dinikani na kukora batani ili mwaluŵiro panthazi pa sumu .';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Tinikani na kukora batani ili kuti muwiske sumu .';
+  String get previousButtonNowPlayingTutorialText =>
+      'Tinikani na kukora batani ili kuti muwiske sumu .';
 
   @override
-  String get deviceControlSearchTutorialText => 'Sunthani chigunwe chinu pachoko waka pafupi na Click Wheel kuti muwoneske alfabeti .';
+  String get deviceControlSearchTutorialText =>
+      'Sunthani chigunwe chinu pachoko waka pafupi na Click Wheel kuti muwoneske alfabeti .';
 
   @override
-  String get centerButtonSearchTutorialText => 'Tinikani batani la pakati kuti musankhe alfabeti iyo yalongosoreka .';
+  String get centerButtonSearchTutorialText =>
+      'Tinikani batani la pakati kuti musankhe alfabeti iyo yalongosoreka .';
 
   @override
-  String get nextButtonSearchTutorialText => 'Tinikani batani ili kuti musazgireko malo';
+  String get nextButtonSearchTutorialText =>
+      'Tinikani batani ili kuti musazgireko malo';
 
   @override
-  String get previousButtonSearchTutorialText => 'Tinikani batani ili kuti mufunyepo munthu waumaliro .';
+  String get previousButtonSearchTutorialText =>
+      'Tinikani batani ili kuti mufunyepo munthu waumaliro .';
 
   @override
-  String get menuButtonSearchTutorialText => 'Tinikani batani ili kuti mujalire kiyibodi na kuchezga na ivyo mwapenja .';
+  String get menuButtonSearchTutorialText =>
+      'Tinikani batani ili kuti mujalire kiyibodi na kuchezga na ivyo mwapenja .';
 }

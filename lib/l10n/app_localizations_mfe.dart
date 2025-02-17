@@ -18,13 +18,16 @@ class AppLocalizationsMfe extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Permision pou gagn akse a odio';
 
   @override
-  String get audioAccessPermissionContent => 'Silvouple donn akse bann fisie odio pou permet nou zwe ou bann fisie lamizik.';
+  String get audioAccessPermissionContent =>
+      'Silvouple donn akse bann fisie odio pou permet nou zwe ou bann fisie lamizik.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle => 'Permision pou gagn akse odio';
+  String get audioAccessPermissionPermanentlyDeniedTitle =>
+      'Permision pou gagn akse odio';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent => 'Silvouple donn akse bann fisie odio pou sa app-la dan bann paramet laparey-la pou permet nou zwe ou bann fisie lamizik.';
+  String get audioAccessPermissionPermanentlyDeniedContent =>
+      'Silvouple donn akse bann fisie odio pou sa app-la dan bann paramet laparey-la pou permet nou zwe ou bann fisie lamizik.';
 
   @override
   String get menuScreenTitle => 'Meni';
@@ -63,7 +66,6 @@ class AppLocalizationsMfe extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -81,7 +83,6 @@ class AppLocalizationsMfe extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
-      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -129,7 +130,8 @@ class AppLocalizationsMfe extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Bann son tous';
 
   @override
-  String get touchSoundsDialogContent => 'Aktive bann son touch depi Paramet system pou tann bann son larou klik';
+  String get touchSoundsDialogContent =>
+      'Aktive bann son touch depi Paramet system pou tann bann son larou klik';
 
   @override
   String get immersiveModeSettingTitle => 'Mod imerzif';
@@ -144,7 +146,8 @@ class AppLocalizationsMfe extends AppLocalizations {
   String get donateSettingTitle => 'Donasion';
 
   @override
-  String get donateSettingDescription => 'Si ou kontan sa app-la, silvouple konsider fer donasion.';
+  String get donateSettingDescription =>
+      'Si ou kontan sa app-la, silvouple konsider fer donasion.';
 
   @override
   String get versionAboutScreenTitle => 'Version';
@@ -195,7 +198,8 @@ class AppLocalizationsMfe extends AppLocalizations {
   String get retryButtonText => 'Re-esey';
 
   @override
-  String get filePickerDialogTitle => 'Seleksionn enn Repertwar dan skane pou Lamizik';
+  String get filePickerDialogTitle =>
+      'Seleksionn enn Repertwar dan skane pou Lamizik';
 
   @override
   String get searchScreenTitle => 'Resers';
@@ -210,10 +214,12 @@ class AppLocalizationsMfe extends AppLocalizations {
   String get resultsForText => 'Rezilta pou:';
 
   @override
-  String get disableBatteryOptimizationTitle => 'Optimizasion lor batri pou enn andikap';
+  String get disableBatteryOptimizationTitle =>
+      'Optimizasion lor batri pou enn andikap';
 
   @override
-  String get disableBatteryOptimizationContent => 'Silvouple, dezaktive optimizasion batri pou sa app-la dan bann paramet laparey pou permet enn zwe lamizik an aryer-plan.';
+  String get disableBatteryOptimizationContent =>
+      'Silvouple, dezaktive optimizasion batri pou sa app-la dan bann paramet laparey pou permet enn zwe lamizik an aryer-plan.';
 
   @override
   String get languageScreenTitle => 'Langaz';
@@ -267,50 +273,66 @@ class AppLocalizationsMfe extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Bann fisie lamizik Reskan';
 
   @override
-  String get deviceControlMenuTutorialText => 'Bouz ou pous lezeman otour Clik lor larou pou navig meni-la';
+  String get deviceControlMenuTutorialText =>
+      'Bouz ou pous lezeman otour Clik lor larou pou navig meni-la';
 
   @override
-  String get centerButtonMenuTutorialText => 'Pez bouton santral pou swazir item meni ki finn souligne';
+  String get centerButtonMenuTutorialText =>
+      'Pez bouton santral pou swazir item meni ki finn souligne';
 
   @override
-  String get playPauseMenuTutorialText => 'Pez sa bouton-la pou zwe ou poz enn sante';
+  String get playPauseMenuTutorialText =>
+      'Pez sa bouton-la pou zwe ou poz enn sante';
 
   @override
-  String get nextButtonMenuTutorialText => 'Pez sa bouton-la pou sot lor prosin sante';
+  String get nextButtonMenuTutorialText =>
+      'Pez sa bouton-la pou sot lor prosin sante';
 
   @override
-  String get previousButtonMenuTutorialText => 'Pez sa bouton-la pou rebobinn ou retourn lor sante avan';
+  String get previousButtonMenuTutorialText =>
+      'Pez sa bouton-la pou rebobinn ou retourn lor sante avan';
 
   @override
-  String get menuButtonTutorialText => 'Pez sa bouton-la pou retourn lor meni avan. Ou kapav pez ek tini li depi ninport ki lezot lekran pou al direk lor meni prinsipal.';
+  String get menuButtonTutorialText =>
+      'Pez sa bouton-la pou retourn lor meni avan. Ou kapav pez ek tini li depi ninport ki lezot lekran pou al direk lor meni prinsipal.';
 
   @override
-  String get deviceScreenMenuTutorialText => 'Sa li lekran afis. Mod Lekran ek Skreeen Touch zot aktive par defo ek kapav konfigire ankor plis dan bann paramet.';
+  String get deviceScreenMenuTutorialText =>
+      'Sa li lekran afis. Mod Lekran ek Skreeen Touch zot aktive par defo ek kapav konfigire ankor plis dan bann paramet.';
 
   @override
-  String get deviceControlNowPlayingTutorialText => 'Bouz ou pous otour Larou Klike pou aziste volim';
+  String get deviceControlNowPlayingTutorialText =>
+      'Bouz ou pous otour Larou Klike pou aziste volim';
 
   @override
-  String get centerButtonNowPlayingTutorialText => 'Pez bouton Sant pou fer sikl atraver rod bar, bar frotman ek kurser melanz. Pez ek tini bouton Sant pou gagn akse a bann opsion anplis.';
+  String get centerButtonNowPlayingTutorialText =>
+      'Pez bouton Sant pou fer sikl atraver rod bar, bar frotman ek kurser melanz. Pez ek tini bouton Sant pou gagn akse a bann opsion anplis.';
 
   @override
-  String get nextButtonNowPlayingTutorialText => 'Pez ek tini sa bouton-la pou fer sante-la avanse vit-vit';
+  String get nextButtonNowPlayingTutorialText =>
+      'Pez ek tini sa bouton-la pou fer sante-la avanse vit-vit';
 
   @override
-  String get previousButtonNowPlayingTutorialText => 'Pez ek tini sa bouton-la pou rebobinn sante-la';
+  String get previousButtonNowPlayingTutorialText =>
+      'Pez ek tini sa bouton-la pou rebobinn sante-la';
 
   @override
-  String get deviceControlSearchTutorialText => 'Bouz ou pous lezeman otour Larou-la pou met an evidans enn alfabet';
+  String get deviceControlSearchTutorialText =>
+      'Bouz ou pous lezeman otour Larou-la pou met an evidans enn alfabet';
 
   @override
-  String get centerButtonSearchTutorialText => 'Pez bouton santral pou swazir alfabet ki finn souligne';
+  String get centerButtonSearchTutorialText =>
+      'Pez bouton santral pou swazir alfabet ki finn souligne';
 
   @override
-  String get nextButtonSearchTutorialText => 'Pez sa bouton-la pou azout enn lespas';
+  String get nextButtonSearchTutorialText =>
+      'Pez sa bouton-la pou azout enn lespas';
 
   @override
-  String get previousButtonSearchTutorialText => 'Pez sa bouton-la pou efas dernie personaz-la';
+  String get previousButtonSearchTutorialText =>
+      'Pez sa bouton-la pou efas dernie personaz-la';
 
   @override
-  String get menuButtonSearchTutorialText => 'Pez sa bouton-la pou ferm klavie ek interazir avek bann rezilta resers';
+  String get menuButtonSearchTutorialText =>
+      'Pez sa bouton-la pou ferm klavie ek interazir avek bann rezilta resers';
 }

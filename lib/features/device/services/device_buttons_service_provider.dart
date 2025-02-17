@@ -7,8 +7,8 @@ import 'package:vibration/vibration.dart';
 
 final deviceButtonsServiceProvider =
     NotifierProvider<DeviceButtonsServiceNotifier, DeviceAction?>(
-  DeviceButtonsServiceNotifier.new,
-);
+      DeviceButtonsServiceNotifier.new,
+    );
 
 class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
   @override
@@ -30,10 +30,7 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
   }
 
   Future<void> setDeviceAction(DeviceAction action) async {
-    await Future.wait([
-      buttonPressVibrate(),
-      clickWheelSound(),
-    ]);
+    await Future.wait([buttonPressVibrate(), clickWheelSound()]);
     state = null;
     state = action;
   }

@@ -115,9 +115,7 @@ class _MarqueeTextState extends State<MarqueeText> {
         physics: const NeverScrollableScrollPhysics(),
         scrollDirection: Axis.horizontal,
         child: ConstrainedBox(
-          constraints: BoxConstraints(
-            minWidth: _textMinWidth,
-          ),
+          constraints: BoxConstraints(minWidth: _textMinWidth),
           child: Text(
             _endlessText ?? widget.text,
             style: widget.style,
@@ -133,10 +131,12 @@ class _MarqueeTextState extends State<MarqueeText> {
     /// If fade border is enabled
     if (widget.fadedBorder) {
       ///Fill list with amount of transparent colors to make the text visible
-      final List<Color> colors =
-          List.generate(1 ~/ widget.fadedBorderWidth! - 1, (index) {
-        return AppPalette.transparentColor;
-      });
+      final List<Color> colors = List.generate(
+        1 ~/ widget.fadedBorderWidth! - 1,
+        (index) {
+          return AppPalette.transparentColor;
+        },
+      );
 
       ///Add black color to add gradient fade out
       if (widget.fadeBorderSide == FadeBorderSide.both ||
@@ -153,8 +153,9 @@ class _MarqueeTextState extends State<MarqueeText> {
       }
 
       ///Calculate the stops for the gradient
-      final List<double> stops =
-          List.generate(1 ~/ widget.fadedBorderWidth!, (index) {
+      final List<double> stops = List.generate(1 ~/ widget.fadedBorderWidth!, (
+        index,
+      ) {
         return (index + 1) * widget.fadedBorderWidth!;
       });
 
@@ -163,10 +164,7 @@ class _MarqueeTextState extends State<MarqueeText> {
 
       /// Pre-render text to get it's width
       final TextPainter textPrototype = TextPainter(
-        text: TextSpan(
-          text: _endlessText ?? widget.text,
-          style: widget.style,
-        ),
+        text: TextSpan(text: _endlessText ?? widget.text, style: widget.style),
         textDirection: widget.textDirection,
         textScaler: MediaQuery.of(context).textScaler,
         textWidthBasis: TextWidthBasis.longestLine,
@@ -365,10 +363,7 @@ class _MarqueeTextState extends State<MarqueeText> {
   bool get _available => mounted && _scrollController.hasClients;
 }
 
-enum TextScrollMode {
-  bouncing,
-  endless,
-}
+enum TextScrollMode { bouncing, endless }
 
 enum FadeBorderSide { left, right, both }
 

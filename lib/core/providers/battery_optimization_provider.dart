@@ -6,8 +6,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final batteryOptimizationProvider =
     AsyncNotifierProvider.autoDispose<BatteryOptimizationNotifier, bool>(
-  BatteryOptimizationNotifier.new,
-);
+      BatteryOptimizationNotifier.new,
+    );
 
 class BatteryOptimizationNotifier extends AutoDisposeAsyncNotifier<bool> {
   @override
@@ -20,7 +20,7 @@ class BatteryOptimizationNotifier extends AutoDisposeAsyncNotifier<bool> {
     if (!kIsWeb && Platform.isAndroid) {
       isBatteryOptimizationDisabled =
           await DisableBatteryOptimization.isBatteryOptimizationDisabled ??
-              false;
+          false;
     }
     return isBatteryOptimizationDisabled;
   }

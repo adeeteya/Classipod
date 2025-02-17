@@ -11,9 +11,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 
 final audioFilesServiceProvider = AsyncNotifierProvider<
-    AudioFilesServiceNotifier, UnmodifiableListView<Metadata>>(
-  AudioFilesServiceNotifier.new,
-);
+  AudioFilesServiceNotifier,
+  UnmodifiableListView<Metadata>
+>(AudioFilesServiceNotifier.new);
 
 class AudioFilesServiceNotifier
     extends AsyncNotifier<UnmodifiableListView<Metadata>> {
@@ -28,8 +28,9 @@ class AudioFilesServiceNotifier
       if (ref.read(settingsPreferencesControllerProvider).fetchOnlineMusic) {
         return UnmodifiableListView(onlineDemoAudioFilesMetaData);
       } else {
-        final Box<Metadata> metadataBox =
-            Hive.box<Metadata>(Constants.metadataBoxName);
+        final Box<Metadata> metadataBox = Hive.box<Metadata>(
+          Constants.metadataBoxName,
+        );
         if (metadataBox.isEmpty) {
           final result = await compute(
             ref

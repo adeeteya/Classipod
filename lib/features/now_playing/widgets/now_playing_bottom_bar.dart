@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class NowPlayingBottomBar extends ConsumerWidget {
   final bool showScrubber;
+
   const NowPlayingBottomBar({super.key, this.showScrubber = false});
 
   @override
@@ -15,10 +16,13 @@ class NowPlayingBottomBar extends ConsumerWidget {
       child: StreamBuilder<Duration>(
         stream: ref.read(audioPlayerProvider).positionStream,
         builder: (context, snapshot) {
-          final double totalDuration = (ref
+          final double totalDuration =
+              (ref
                       .read(nowPlayingDetailsProvider)
-                      .metadataList[
-                          ref.read(audioPlayerProvider).currentIndex ?? 0]
+                      .metadataList[ref
+                              .read(audioPlayerProvider)
+                              .currentIndex ??
+                          0]
                       .trackDuration ??
                   1000) /
               1000;
@@ -52,15 +56,9 @@ class NowPlayingBottomBar extends ConsumerWidget {
                 ),
               ),
               if (showScrubber)
-                ScrubberBar(
-                  max: totalDuration,
-                  value: currentDuration,
-                ),
+                ScrubberBar(max: totalDuration, value: currentDuration),
               if (!showScrubber)
-                SeekBar(
-                  max: totalDuration,
-                  value: currentDuration,
-                ),
+                SeekBar(max: totalDuration, value: currentDuration),
               SizedBox(
                 width: 40,
                 child: Text(

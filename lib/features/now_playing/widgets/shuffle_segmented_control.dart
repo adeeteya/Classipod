@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 class ShuffleSegmentedControl extends StatelessWidget {
   final bool isShuffleEnabled;
   final ValueChanged<bool?> onValueChanged;
+
   const ShuffleSegmentedControl({
     super.key,
     required this.isShuffleEnabled,
@@ -17,10 +18,7 @@ class ShuffleSegmentedControl extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Icon(
-          CupertinoIcons.shuffle,
-          color: CupertinoColors.black,
-        ),
+        const Icon(CupertinoIcons.shuffle, color: CupertinoColors.black),
         const SizedBox(width: 20),
         CustomSlidingSegmentedControl<bool>(
           groupValue: isShuffleEnabled,
@@ -29,17 +27,19 @@ class ShuffleSegmentedControl extends StatelessWidget {
             false: Text(
               context.localization.tileValueOff,
               style: TextStyle(
-                color: !isShuffleEnabled
-                    ? AppPalette.selectedTileGradientColor2
-                    : null,
+                color:
+                    !isShuffleEnabled
+                        ? AppPalette.selectedTileGradientColor2
+                        : null,
               ),
             ),
             true: Text(
               context.localization.songsScreenTitle,
               style: TextStyle(
-                color: isShuffleEnabled
-                    ? AppPalette.selectedTileGradientColor2
-                    : null,
+                color:
+                    isShuffleEnabled
+                        ? AppPalette.selectedTileGradientColor2
+                        : null,
               ),
             ),
           },

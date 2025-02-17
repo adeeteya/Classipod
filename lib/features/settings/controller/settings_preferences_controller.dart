@@ -19,9 +19,9 @@ import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 
 final settingsPreferencesControllerProvider = NotifierProvider<
-    SettingsPreferencesControllerNotifier, SettingsPreferencesModel>(
-  SettingsPreferencesControllerNotifier.new,
-);
+  SettingsPreferencesControllerNotifier,
+  SettingsPreferencesModel
+>(SettingsPreferencesControllerNotifier.new);
 
 class SettingsPreferencesControllerNotifier
     extends Notifier<SettingsPreferencesModel> {
@@ -29,16 +29,19 @@ class SettingsPreferencesControllerNotifier
 
   @override
   SettingsPreferencesModel build() {
-    final settingsPreferencesRepository =
-        ref.read(settingsPreferencesRepositoryProvider);
+    final settingsPreferencesRepository = ref.read(
+      settingsPreferencesRepositoryProvider,
+    );
     return SettingsPreferencesModel(
       languageLocaleCode: settingsPreferencesRepository.getLanguageLocaleCode(),
-      deviceColor: DeviceColor.values
-          .byName(settingsPreferencesRepository.getDeviceColor()),
+      deviceColor: DeviceColor.values.byName(
+        settingsPreferencesRepository.getDeviceColor(),
+      ),
       isTouchScreenEnabled:
           settingsPreferencesRepository.getTouchScreenEnabled(),
-      repeatMode: RepeatMode.values
-          .byName(settingsPreferencesRepository.getRepeatMode()),
+      repeatMode: RepeatMode.values.byName(
+        settingsPreferencesRepository.getRepeatMode(),
+      ),
       vibrate: settingsPreferencesRepository.getVibrate(),
       clickWheelSound: settingsPreferencesRepository.getClickWheelSound(),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
@@ -121,7 +124,9 @@ class SettingsPreferencesControllerNotifier
   Future<void> toggleTouchScreen() async {
     state = state.copyWith(isTouchScreenEnabled: !state.isTouchScreenEnabled);
 
-    await ref.read(settingsPreferencesRepositoryProvider).setTouchScreenEnabled(
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setTouchScreenEnabled(
           isTouchScreenEnabled: state.isTouchScreenEnabled,
         );
   }
@@ -162,9 +167,9 @@ class SettingsPreferencesControllerNotifier
   Future<void> toggleClickWheelSound(BuildContext context) async {
     state = state.copyWith(clickWheelSound: !state.clickWheelSound);
 
-    await ref.read(settingsPreferencesRepositoryProvider).setClickWheelSound(
-          isClickWheelSoundEnabled: state.clickWheelSound,
-        );
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setClickWheelSound(isClickWheelSoundEnabled: state.clickWheelSound);
 
     if (state.clickWheelSound && context.mounted) {
       await Dialogs.showInfoDialog(
@@ -237,9 +242,9 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setImmersiveMode(isImmersiveModeEnabled: false);
-    await ref.read(settingsPreferencesRepositoryProvider).setMusicFolderPath(
-          musicFolderPath: Constants.defaultMusicFolderPath,
-        );
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setMusicFolderPath(musicFolderPath: Constants.defaultMusicFolderPath);
     ref.invalidateSelf();
   }
 }

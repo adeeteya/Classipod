@@ -69,15 +69,15 @@ class SettingsPreferencesModel {
 
   @override
   int get hashCode => Object.hash(
-        languageLocaleCode,
-        deviceColor,
-        isTouchScreenEnabled,
-        repeatMode,
-        vibrate,
-        clickWheelSound,
-        splitScreenEnabled,
-        immersiveMode,
-        musicFolderPath,
-        fetchOnlineMusic,
-      );
+    languageLocaleCode,
+    deviceColor,
+    isTouchScreenEnabled,
+    repeatMode,
+    vibrate,
+    clickWheelSound,
+    splitScreenEnabled,
+    immersiveMode,
+    musicFolderPath,
+    fetchOnlineMusic,
+  );
 }

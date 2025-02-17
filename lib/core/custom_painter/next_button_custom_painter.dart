@@ -31,12 +31,7 @@ class NextButtonCustomPainter extends CustomPainter {
     final Paint paint2Fill = Paint()..style = PaintingStyle.fill;
     paint2Fill.color = color ?? CupertinoColors.white;
     canvas.drawRect(
-      Rect.fromLTWH(
-        size.width,
-        0,
-        size.width * 0.03,
-        size.height,
-      ),
+      Rect.fromLTWH(size.width, 0, size.width * 0.03, size.height),
       paint2Fill,
     );
   }

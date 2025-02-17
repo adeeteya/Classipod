@@ -6,6 +6,7 @@ class IconPreviewWidget extends StatelessWidget {
   final String titleText;
   final IconData icon;
   final String contentText;
+
   const IconPreviewWidget({
     super.key,
     required this.titleText,
@@ -46,11 +47,7 @@ class IconPreviewWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              Icon(
-                icon,
-                size: 70,
-                color: CupertinoColors.white,
-              ),
+              Icon(icon, size: 70, color: CupertinoColors.white),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(

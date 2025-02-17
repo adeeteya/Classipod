@@ -6,8 +6,8 @@ import 'package:just_audio/just_audio.dart';
 
 final nowPlayingDetailsProvider =
     NotifierProvider<NowPlayingDetailsNotifier, NowPlayingModel>(
-  NowPlayingDetailsNotifier.new,
-);
+      NowPlayingDetailsNotifier.new,
+    );
 
 class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
   NowPlayingDetailsNotifier() : super();
@@ -31,10 +31,9 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
       state = state.copyWith(loopMode: loopMode);
     });
 
-    ref
-        .read(audioPlayerProvider)
-        .shuffleModeEnabledStream
-        .listen((isShuffleEnabled) {
+    ref.read(audioPlayerProvider).shuffleModeEnabledStream.listen((
+      isShuffleEnabled,
+    ) {
       state = state.copyWith(isShuffleEnabled: isShuffleEnabled);
     });
 

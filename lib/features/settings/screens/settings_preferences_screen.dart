@@ -285,21 +285,20 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.settings.title(context),
-          ),
+          StatusBar(title: Routes.settings.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => SettingsListTile(
-                  text: displayItems[index].title(context),
-                  value: _getValue(settingsState, displayItems[index]),
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () async => _settingAction(displayItems[index]),
-                ),
+                itemBuilder:
+                    (context, index) => SettingsListTile(
+                      text: displayItems[index].title(context),
+                      value: _getValue(settingsState, displayItems[index]),
+                      isSelected: selectedDisplayItem == index,
+                      onTap: () async => _settingAction(displayItems[index]),
+                    ),
               ),
             ),
           ),

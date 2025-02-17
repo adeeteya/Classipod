@@ -24,13 +24,9 @@ void main() {
   runApp(
     ProviderScope(
       child: DevicePreview(
-        tools: const [
-          ...DevicePreview.defaultTools,
-          DebuggerToolsSection(),
-        ],
-        builder: (context) => const AppStartupScreen(
-          app: DevelopmentClassipodApp(),
-        ),
+        tools: const [...DevicePreview.defaultTools, DebuggerToolsSection()],
+        builder:
+            (context) => const AppStartupScreen(app: DevelopmentClassipodApp()),
       ),
     ),
   );
@@ -42,8 +38,9 @@ class DevelopmentClassipodApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final languageLocaleCode = ref.watch(
-      settingsPreferencesControllerProvider
-          .select((value) => value.languageLocaleCode),
+      settingsPreferencesControllerProvider.select(
+        (value) => value.languageLocaleCode,
+      ),
     );
     final router = ref.watch(routerProvider);
     final debuggerTools = ref.watch(debuggerToolsProvider);
@@ -141,9 +138,7 @@ class DebuggerToolsModel {
 }
 
 class DebuggerToolsSection extends ConsumerWidget {
-  const DebuggerToolsSection({
-    super.key,
-  });
+  const DebuggerToolsSection({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -156,10 +151,10 @@ class DebuggerToolsSection extends ConsumerWidget {
           title: const Text('Show Performance Overlay'),
           trailing: Text(debuggerModel.showPerformanceOverlay ? 'ON' : 'OFF'),
           onTap: () {
-            ref.read(debuggerToolsProvider.notifier).state =
-                debuggerModel.copyWith(
-              showPerformanceOverlay: !debuggerModel.showPerformanceOverlay,
-            );
+            ref.read(debuggerToolsProvider.notifier).state = debuggerModel
+                .copyWith(
+                  showPerformanceOverlay: !debuggerModel.showPerformanceOverlay,
+                );
           },
         ),
         ListTile(
@@ -167,49 +162,52 @@ class DebuggerToolsSection extends ConsumerWidget {
           title: const Text('Show Semantics Debugger'),
           trailing: Text(debuggerModel.showSemanticsDebugger ? 'ON' : 'OFF'),
           onTap: () {
-            ref.read(debuggerToolsProvider.notifier).state =
-                debuggerModel.copyWith(
-              showSemanticsDebugger: !debuggerModel.showSemanticsDebugger,
-            );
+            ref.read(debuggerToolsProvider.notifier).state = debuggerModel
+                .copyWith(
+                  showSemanticsDebugger: !debuggerModel.showSemanticsDebugger,
+                );
           },
         ),
         ListTile(
           key: const Key('checkerboardOffscreenLayers'),
           title: const Text('Checkerboard Offscreen Layers'),
-          trailing:
-              Text(debuggerModel.checkerboardOffscreenLayers ? 'ON' : 'OFF'),
+          trailing: Text(
+            debuggerModel.checkerboardOffscreenLayers ? 'ON' : 'OFF',
+          ),
           onTap: () {
-            ref.read(debuggerToolsProvider.notifier).state =
-                debuggerModel.copyWith(
-              checkerboardOffscreenLayers:
-                  !debuggerModel.checkerboardOffscreenLayers,
-            );
+            ref.read(debuggerToolsProvider.notifier).state = debuggerModel
+                .copyWith(
+                  checkerboardOffscreenLayers:
+                      !debuggerModel.checkerboardOffscreenLayers,
+                );
           },
         ),
         ListTile(
           key: const Key('checkerboardRasterCacheImages'),
           title: const Text('Checkerboard Raster Cache Images'),
-          trailing:
-              Text(debuggerModel.checkerboardRasterCacheImages ? 'ON' : 'OFF'),
+          trailing: Text(
+            debuggerModel.checkerboardRasterCacheImages ? 'ON' : 'OFF',
+          ),
           onTap: () {
-            ref.read(debuggerToolsProvider.notifier).state =
-                debuggerModel.copyWith(
-              checkerboardRasterCacheImages:
-                  !debuggerModel.checkerboardRasterCacheImages,
-            );
+            ref.read(debuggerToolsProvider.notifier).state = debuggerModel
+                .copyWith(
+                  checkerboardRasterCacheImages:
+                      !debuggerModel.checkerboardRasterCacheImages,
+                );
           },
         ),
         ListTile(
           key: const Key('debugRepaintRainbow'),
           title: const Text('Debug Repaint Rainbow'),
-          trailing:
-              Text(debuggerModel.debugRepaintRainbowEnabled ? 'ON' : 'OFF'),
+          trailing: Text(
+            debuggerModel.debugRepaintRainbowEnabled ? 'ON' : 'OFF',
+          ),
           onTap: () {
-            ref.read(debuggerToolsProvider.notifier).state =
-                debuggerModel.copyWith(
-              debugRepaintRainbowEnabled:
-                  !debuggerModel.debugRepaintRainbowEnabled,
-            );
+            ref.read(debuggerToolsProvider.notifier).state = debuggerModel
+                .copyWith(
+                  debugRepaintRainbowEnabled:
+                      !debuggerModel.debugRepaintRainbowEnabled,
+                );
           },
         ),
         ListTile(
@@ -217,49 +215,52 @@ class DebuggerToolsSection extends ConsumerWidget {
           title: const Text('Debug Paint Size'),
           trailing: Text(debuggerModel.debugPaintSizeEnabled ? 'ON' : 'OFF'),
           onTap: () {
-            ref.read(debuggerToolsProvider.notifier).state =
-                debuggerModel.copyWith(
-              debugPaintSizeEnabled: !debuggerModel.debugPaintSizeEnabled,
-            );
+            ref.read(debuggerToolsProvider.notifier).state = debuggerModel
+                .copyWith(
+                  debugPaintSizeEnabled: !debuggerModel.debugPaintSizeEnabled,
+                );
           },
         ),
         ListTile(
           key: const Key('debugPaintBaselines'),
           title: const Text('Debug Paint Baselines'),
-          trailing:
-              Text(debuggerModel.debugPaintBaselinesEnabled ? 'ON' : 'OFF'),
+          trailing: Text(
+            debuggerModel.debugPaintBaselinesEnabled ? 'ON' : 'OFF',
+          ),
           onTap: () {
-            ref.read(debuggerToolsProvider.notifier).state =
-                debuggerModel.copyWith(
-              debugPaintBaselinesEnabled:
-                  !debuggerModel.debugPaintBaselinesEnabled,
-            );
+            ref.read(debuggerToolsProvider.notifier).state = debuggerModel
+                .copyWith(
+                  debugPaintBaselinesEnabled:
+                      !debuggerModel.debugPaintBaselinesEnabled,
+                );
           },
         ),
         ListTile(
           key: const Key('debugPaintPointers'),
           title: const Text('Debug Paint Pointers'),
-          trailing:
-              Text(debuggerModel.debugPaintPointersEnabled ? 'ON' : 'OFF'),
+          trailing: Text(
+            debuggerModel.debugPaintPointersEnabled ? 'ON' : 'OFF',
+          ),
           onTap: () {
-            ref.read(debuggerToolsProvider.notifier).state =
-                debuggerModel.copyWith(
-              debugPaintPointersEnabled:
-                  !debuggerModel.debugPaintPointersEnabled,
-            );
+            ref.read(debuggerToolsProvider.notifier).state = debuggerModel
+                .copyWith(
+                  debugPaintPointersEnabled:
+                      !debuggerModel.debugPaintPointersEnabled,
+                );
           },
         ),
         ListTile(
           key: const Key('debugPaintLayerBorders'),
           title: const Text('Debug Paint Layer Borders'),
-          trailing:
-              Text(debuggerModel.debugPaintLayerBordersEnabled ? 'ON' : 'OFF'),
+          trailing: Text(
+            debuggerModel.debugPaintLayerBordersEnabled ? 'ON' : 'OFF',
+          ),
           onTap: () {
-            ref.read(debuggerToolsProvider.notifier).state =
-                debuggerModel.copyWith(
-              debugPaintLayerBordersEnabled:
-                  !debuggerModel.debugPaintLayerBordersEnabled,
-            );
+            ref.read(debuggerToolsProvider.notifier).state = debuggerModel
+                .copyWith(
+                  debugPaintLayerBordersEnabled:
+                      !debuggerModel.debugPaintLayerBordersEnabled,
+                );
           },
         ),
       ],

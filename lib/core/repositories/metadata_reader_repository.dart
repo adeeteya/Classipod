@@ -8,10 +8,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final metadataReaderRepositoryProvider =
     Provider.autoDispose<MetadataReaderRepository>((ref) {
-  return MetadataReaderRepository(
-    ref.read(tempDirectoryProvider).requireValue.path,
-  );
-});
+      return MetadataReaderRepository(
+        ref.read(tempDirectoryProvider).requireValue.path,
+      );
+    });
 
 class MetadataReaderRepository {
   final String cacheParentDirectory;
@@ -42,8 +42,9 @@ class MetadataReaderRepository {
     } else {
       albumArtFileName = '${albumName}by$artistName';
     }
-    albumArtFileName =
-        albumArtFileName.replaceAll('/', '-').replaceAll(' ', '');
+    albumArtFileName = albumArtFileName
+        .replaceAll('/', '-')
+        .replaceAll(' ', '');
     return '$cacheParentDirectory/$albumArtFileName.jpg';
   }
 

@@ -48,10 +48,7 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
 
   Future<void> _navigateToAlbumSelectionScreen(int index) async {
     setState(() => selectedDisplayItem = index);
-    await context.pushNamed(
-      Routes.albumSongs.name,
-      extra: displayItems[index],
-    );
+    await context.pushNamed(Routes.albumSongs.name, extra: displayItems[index]);
   }
 
   @override
@@ -59,23 +56,22 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: widget.artistName,
-          ),
+          StatusBar(title: widget.artistName),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => AlbumListTile(
-                  albumDetails: displayItems[index],
-                  isSelected: selectedDisplayItem == index,
-                  showArtistName: false,
-                  onTap: () async => _navigateToAlbumSelectionScreen(index),
-                  onLongPress: () async =>
-                      _navigateToAlbumMoreOptionsScreen(index),
-                ),
+                itemBuilder:
+                    (context, index) => AlbumListTile(
+                      albumDetails: displayItems[index],
+                      isSelected: selectedDisplayItem == index,
+                      showArtistName: false,
+                      onTap: () async => _navigateToAlbumSelectionScreen(index),
+                      onLongPress:
+                          () async => _navigateToAlbumMoreOptionsScreen(index),
+                    ),
               ),
             ),
           ),

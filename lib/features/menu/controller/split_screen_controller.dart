@@ -3,8 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final splitScreenControllerProvider =
     NotifierProvider<SplitScreenControllerNotifier, SplitScreenType>(
-  SplitScreenControllerNotifier.new,
-);
+      SplitScreenControllerNotifier.new,
+    );
 
 class SplitScreenControllerNotifier extends Notifier<SplitScreenType> {
   @override

@@ -36,6 +36,7 @@ enum _SearchMoreOptions {
 class SearchMoreOptionsModal extends ConsumerStatefulWidget {
   final Metadata? songMetadata;
   final AlbumModel? albumDetail;
+
   const SearchMoreOptionsModal({
     super.key,
     this.songMetadata,
@@ -53,12 +54,12 @@ class _SearchMoreOptionsModalState extends ConsumerState<SearchMoreOptionsModal>
 
   @override
   List<_SearchMoreOptions> get displayItems => [
-        if (widget.songMetadata != null) _SearchMoreOptions.addToOnTheGo,
-        if (widget.albumDetail != null) _SearchMoreOptions.addAlbumToOnTheGo,
-        if (widget.songMetadata != null) _SearchMoreOptions.browseAlbum,
-        _SearchMoreOptions.browseArtist,
-        _SearchMoreOptions.cancel,
-      ];
+    if (widget.songMetadata != null) _SearchMoreOptions.addToOnTheGo,
+    if (widget.albumDetail != null) _SearchMoreOptions.addAlbumToOnTheGo,
+    if (widget.songMetadata != null) _SearchMoreOptions.browseAlbum,
+    _SearchMoreOptions.browseArtist,
+    _SearchMoreOptions.cancel,
+  ];
 
   @override
   Future<void> onSelectPressed() =>
@@ -94,7 +95,8 @@ class _SearchMoreOptionsModalState extends ConsumerState<SearchMoreOptionsModal>
         context.pushReplacementNamed(
           Routes.artistAlbums.name,
           pathParameters: {
-            "artistName": widget.songMetadata?.getMainArtistName ??
+            "artistName":
+                widget.songMetadata?.getMainArtistName ??
                 widget.albumDetail?.albumArtistName ??
                 '',
           },

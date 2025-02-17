@@ -19,12 +19,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:just_audio/just_audio.dart';
 
-enum _NowPlayingBottomBarPage {
-  seekBar,
-  scrubberBar,
-  volumeBar,
-  shuffleBar,
-}
+enum _NowPlayingBottomBarPage { seekBar, scrubberBar, volumeBar, shuffleBar }
 
 class NowPlayingScreen extends ConsumerStatefulWidget {
   const NowPlayingScreen({super.key});
@@ -84,8 +79,9 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     if (_lastVolumeChangeTimer.isActive) {
       _lastVolumeChangeTimer.cancel();
     }
-    _lastVolumeChangeTimer =
-        Timer.periodic(const Duration(seconds: 1), (timer) {
+    _lastVolumeChangeTimer = Timer.periodic(const Duration(seconds: 1), (
+      timer,
+    ) {
       if (timer.tick >= 3) {
         setState(() {
           _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
@@ -138,15 +134,17 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   }
 
   void seekForwardLongPress() {
-    _longPressTimer =
-        Timer.periodic(const Duration(milliseconds: 50), (_) async {
+    _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (
+      _,
+    ) async {
       await ref.read(audioPlayerServiceProvider.notifier).seekForward();
     });
   }
 
   void seekBackwardLongPress() {
-    _longPressTimer =
-        Timer.periodic(const Duration(milliseconds: 50), (_) async {
+    _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (
+      _,
+    ) async {
       await ref.read(audioPlayerServiceProvider.notifier).seekBackward();
     });
   }
@@ -241,9 +239,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.nowPlaying.title(context),
-          ),
+          StatusBar(title: Routes.nowPlaying.title(context)),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -308,24 +304,26 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                     ),
                   );
                 },
-                child: _bottomBarPage == _NowPlayingBottomBarPage.volumeBar
-                    ? const VolumeBar()
-                    : PageView(
-                        controller: _bottomBarPageController,
-                        physics: const NeverScrollableScrollPhysics(),
-                        children: [
-                          const NowPlayingBottomBar(),
-                          const NowPlayingBottomBar(showScrubber: true),
-                          ShuffleSegmentedControl(
-                            isShuffleEnabled: _isShuffleEnabled,
-                            onValueChanged: (value) {
-                              setState(() {
-                                _isShuffleEnabled = value ?? _isShuffleEnabled;
-                              });
-                            },
-                          ),
-                        ],
-                      ),
+                child:
+                    _bottomBarPage == _NowPlayingBottomBarPage.volumeBar
+                        ? const VolumeBar()
+                        : PageView(
+                          controller: _bottomBarPageController,
+                          physics: const NeverScrollableScrollPhysics(),
+                          children: [
+                            const NowPlayingBottomBar(),
+                            const NowPlayingBottomBar(showScrubber: true),
+                            ShuffleSegmentedControl(
+                              isShuffleEnabled: _isShuffleEnabled,
+                              onValueChanged: (value) {
+                                setState(() {
+                                  _isShuffleEnabled =
+                                      value ?? _isShuffleEnabled;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
               ),
             ),
           ),

@@ -1,10 +1,7 @@
 import 'package:battery_plus/battery_plus.dart';
 
 class BatteryModel {
-  const BatteryModel({
-    required this.level,
-    required this.batteryState,
-  });
+  const BatteryModel({required this.level, required this.batteryState});
 
   final int level;
   final BatteryState batteryState;

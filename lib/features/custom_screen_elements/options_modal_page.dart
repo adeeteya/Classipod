@@ -30,15 +30,15 @@ class OptionsModalPage<T> extends Page<T> {
 
   @override
   Route<T> createRoute(BuildContext context) => OptionsModalPopupRoute<T>(
-        settings: this,
-        builder: builder,
-        title: title,
-        filter: filter,
-        barrierColor: CupertinoDynamicColor.resolve(barrierColor, context),
-        barrierDismissible: barrierDismissible,
-        semanticsDismissible: semanticsDismissible,
-        anchorPoint: anchorPoint,
-      );
+    settings: this,
+    builder: builder,
+    title: title,
+    filter: filter,
+    barrierColor: CupertinoDynamicColor.resolve(barrierColor, context),
+    barrierDismissible: barrierDismissible,
+    semanticsDismissible: semanticsDismissible,
+    anchorPoint: anchorPoint,
+  );
 }
 
 class OptionsModalPopupRoute<T> extends PopupRoute<T> {
@@ -53,8 +53,8 @@ class OptionsModalPopupRoute<T> extends PopupRoute<T> {
     super.settings,
     super.requestFocus,
     this.anchorPoint,
-  })  : _barrierDismissible = barrierDismissible,
-        _semanticsDismissible = semanticsDismissible;
+  }) : _barrierDismissible = barrierDismissible,
+       _semanticsDismissible = semanticsDismissible;
 
   final WidgetBuilder builder;
 

@@ -55,20 +55,19 @@ class _GenresScreenState extends ConsumerState<GenresScreen> with CustomScreen {
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.genres.title(context),
-          ),
+          StatusBar(title: Routes.genres.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => DisplayListTile(
-                  text: displayItems[index],
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () => _selectGenre(index),
-                ),
+                itemBuilder:
+                    (context, index) => DisplayListTile(
+                      text: displayItems[index],
+                      isSelected: selectedDisplayItem == index,
+                      onTap: () => _selectGenre(index),
+                    ),
               ),
             ),
           ),

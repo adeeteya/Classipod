@@ -15,8 +15,8 @@ import 'package:permission_handler/permission_handler.dart';
 
 final splashControllerProvider =
     AsyncNotifierProvider.autoDispose<SplashControllerNotifier, void>(
-  SplashControllerNotifier.new,
-);
+      SplashControllerNotifier.new,
+    );
 
 class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
   @override
@@ -46,8 +46,9 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
       // Load the audio files metadata
-      final audioFilesMetadata =
-          await ref.refresh(audioFilesServiceProvider.future);
+      final audioFilesMetadata = await ref.refresh(
+        audioFilesServiceProvider.future,
+      );
 
       // Set the audio source
       await ref

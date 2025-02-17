@@ -29,9 +29,7 @@ class AboutScreen extends ConsumerWidget {
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.about.title(context),
-          ),
+          StatusBar(title: Routes.about.title(context)),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(

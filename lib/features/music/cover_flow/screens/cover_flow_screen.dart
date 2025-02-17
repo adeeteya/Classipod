@@ -36,10 +36,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   void _chooseAlbum(int index) {
     final albumDetail = ref.read(albumDetailsProvider).elementAt(index);
     unawaited(
-      context.pushNamed(
-        Routes.coverFlowSelection.name,
-        extra: albumDetail,
-      ),
+      context.pushNamed(Routes.coverFlowSelection.name, extra: albumDetail),
     );
   }
 
@@ -63,9 +60,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.coverFlow.title(context),
-          ),
+          StatusBar(title: Routes.coverFlow.title(context)),
           const SizedBox(height: 10),
           Flexible(
             child: PageView.builder(
@@ -77,15 +72,17 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                   onTap:
                       relativePosition == 0 ? () => _chooseAlbum(index) : null,
                   child: Transform(
-                    transform: Matrix4.identity()
-                      ..setEntry(3, 2, 0.003)
-                      ..scale(
-                        (1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4,
-                      )
-                      ..rotateY(relativePosition),
-                    alignment: relativePosition >= 0
-                        ? Alignment.centerLeft
-                        : Alignment.centerRight,
+                    transform:
+                        Matrix4.identity()
+                          ..setEntry(3, 2, 0.003)
+                          ..scale(
+                            (1 - relativePosition.abs()).clamp(0.2, 0.6) + 0.4,
+                          )
+                          ..rotateY(relativePosition),
+                    alignment:
+                        relativePosition >= 0
+                            ? Alignment.centerLeft
+                            : Alignment.centerRight,
                     child: AlbumReflectiveArt(
                       thumbnailPath: displayItems[index].albumArtPath,
                       isOnDevice: displayItems[index].isOnDevice(),

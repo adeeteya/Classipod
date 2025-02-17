@@ -22,6 +22,7 @@ class SearchBarController {
 class SearchBar extends StatefulWidget {
   final SearchBarController searchBarController;
   final ValueChanged<String> onSearchTextChanged;
+
   const SearchBar({
     super.key,
     required this.searchBarController,
@@ -73,8 +74,9 @@ class _SearchBarState extends State<SearchBar> {
             Constants.searchAlphabetContainerWidth + _scrollController.offset;
 
         if (currentSelectedDisplayItemsWidth > currentScrollWidth) {
-          _scrollController
-              .jumpTo(_scrollController.offset + Constants.searchAlphabetSize);
+          _scrollController.jumpTo(
+            _scrollController.offset + Constants.searchAlphabetSize,
+          );
         }
       }
     });
@@ -87,8 +89,9 @@ class _SearchBarState extends State<SearchBar> {
 
         if (_currentSelectedIndex * Constants.searchAlphabetSize <
             _scrollController.offset) {
-          _scrollController
-              .jumpTo(_currentSelectedIndex * Constants.searchAlphabetSize);
+          _scrollController.jumpTo(
+            _currentSelectedIndex * Constants.searchAlphabetSize,
+          );
         }
       }
     });
@@ -103,8 +106,10 @@ class _SearchBarState extends State<SearchBar> {
   }
 
   void _removeCharacter() {
-    _searchController.text =
-        _searchController.text.substring(0, _searchController.text.length - 1);
+    _searchController.text = _searchController.text.substring(
+      0,
+      _searchController.text.length - 1,
+    );
   }
 
   @override
@@ -160,9 +165,10 @@ class _SearchBarState extends State<SearchBar> {
                           width: Constants.searchAlphabetSize,
                           height: Constants.searchAlphabetSize,
                           child: ColoredBox(
-                            color: (_currentSelectedIndex == index)
-                                ? AppPalette.selectedTileGradientColor1
-                                : CupertinoColors.black,
+                            color:
+                                (_currentSelectedIndex == index)
+                                    ? AppPalette.selectedTileGradientColor1
+                                    : CupertinoColors.black,
                             child: Center(
                               child: Text(
                                 alphabets[index],

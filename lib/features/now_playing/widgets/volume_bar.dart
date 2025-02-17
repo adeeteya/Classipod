@@ -11,10 +11,7 @@ class VolumeBar extends ConsumerWidget {
     return RepaintBoundary(
       child: Row(
         children: [
-          const Icon(
-            CupertinoIcons.volume_down,
-            size: 18,
-          ),
+          const Icon(CupertinoIcons.volume_down, size: 18),
           StreamBuilder<double>(
             stream: ref.read(audioPlayerProvider).volumeStream,
             builder: (context, snapshot) {
@@ -84,10 +81,7 @@ class VolumeBar extends ConsumerWidget {
               );
             },
           ),
-          const Icon(
-            CupertinoIcons.volume_up,
-            size: 18,
-          ),
+          const Icon(CupertinoIcons.volume_up, size: 18),
         ],
       ),
     );

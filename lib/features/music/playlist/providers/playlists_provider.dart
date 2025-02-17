@@ -9,12 +9,13 @@ import 'package:hive_ce_flutter/hive_flutter.dart';
 
 final playlistsProvider =
     NotifierProvider<PlaylistsNotifier, List<PlaylistModel>>(
-  PlaylistsNotifier.new,
-);
+      PlaylistsNotifier.new,
+    );
 
 class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
-  final Box<PlaylistModel> _playlistBox =
-      Hive.box<PlaylistModel>(Constants.playlistBoxName);
+  final Box<PlaylistModel> _playlistBox = Hive.box<PlaylistModel>(
+    Constants.playlistBoxName,
+  );
 
   @override
   List<PlaylistModel> build() {
@@ -84,7 +85,9 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
       ];
     }
     if (state[0].songs.isEmpty) {
-      await ref.read(audioPlayerServiceProvider.notifier).setAudioSource(
+      await ref
+          .read(audioPlayerServiceProvider.notifier)
+          .setAudioSource(
             musicMetadataList: ref.read(audioFilesServiceProvider).requireValue,
           );
     }

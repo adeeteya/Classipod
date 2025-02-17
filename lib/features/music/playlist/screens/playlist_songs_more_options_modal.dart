@@ -22,6 +22,7 @@ enum _PlaylistSongsMoreOptions {
 
 class PlaylistSongsMoreOptionsModal extends ConsumerStatefulWidget {
   final VoidCallback onRemoveSongFromPlaylist;
+
   const PlaylistSongsMoreOptionsModal({
     super.key,
     required this.onRemoveSongFromPlaylist,
@@ -32,7 +33,8 @@ class PlaylistSongsMoreOptionsModal extends ConsumerStatefulWidget {
 }
 
 class _PlaylistSongsMoreOptionsModalState
-    extends ConsumerState<PlaylistSongsMoreOptionsModal> with CustomScreen {
+    extends ConsumerState<PlaylistSongsMoreOptionsModal>
+    with CustomScreen {
   @override
   String get routeName => Routes.playlistSongsMoreOptions.name;
 

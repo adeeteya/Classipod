@@ -18,7 +18,6 @@ final albumDetailsProvider = Provider<List<AlbumModel>>((ref) {
     if (!albumDetails.contains(albumDetail)) {
       albumDetails.add(albumDetail);
     }
-
     // If album already exists, add the song to the album
     else {
       final int existingIdx = albumDetails.indexWhere((e) => e == albumDetail);

@@ -99,20 +99,19 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.musicMenu.title(context),
-          ),
+          StatusBar(title: Routes.musicMenu.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => DisplayListTile(
-                  text: displayItems[index].title(context),
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () async => _navigateToScreen(displayItems[index]),
-                ),
+                itemBuilder:
+                    (context, index) => DisplayListTile(
+                      text: displayItems[index].title(context),
+                      isSelected: selectedDisplayItem == index,
+                      onTap: () async => _navigateToScreen(displayItems[index]),
+                    ),
               ),
             ),
           ),

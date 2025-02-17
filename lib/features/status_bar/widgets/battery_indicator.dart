@@ -13,18 +13,20 @@ class BatteryIndicator extends ConsumerWidget {
     final batteryDetails = ref.watch(batteryDetailsControllerProvider);
     return batteryDetails.when(
       data: (data) => BatteryIndicatorWidget(batteryDetails: data),
-      error: (_, __) => const BatteryIndicatorWidget(
-        batteryDetails: BatteryModel(
-          level: 100,
-          batteryState: BatteryState.unknown,
-        ),
-      ),
-      loading: () => const BatteryIndicatorWidget(
-        batteryDetails: BatteryModel(
-          level: 100,
-          batteryState: BatteryState.full,
-        ),
-      ),
+      error:
+          (_, __) => const BatteryIndicatorWidget(
+            batteryDetails: BatteryModel(
+              level: 100,
+              batteryState: BatteryState.unknown,
+            ),
+          ),
+      loading:
+          () => const BatteryIndicatorWidget(
+            batteryDetails: BatteryModel(
+              level: 100,
+              batteryState: BatteryState.full,
+            ),
+          ),
     );
   }
 }
@@ -59,10 +61,7 @@ class BatteryIndicatorWidget extends StatelessWidget {
     final track = _buildTrack(context);
     final knob = _buildKnob(context);
 
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [track, knob],
-    );
+    return Row(mainAxisSize: MainAxisSize.min, children: [track, knob]);
   }
 
   Widget _buildTrack(BuildContext context) {
@@ -87,17 +86,12 @@ class BatteryIndicatorWidget extends StatelessWidget {
             width: 0.5,
           ),
         ),
-        child: Stack(
-          children: [bar, icon],
-        ),
+        child: Stack(children: [bar, icon]),
       ),
     );
   }
 
-  Widget _buildBar(
-    BuildContext context,
-    double barHeight,
-  ) {
+  Widget _buildBar(BuildContext context, double barHeight) {
     final barWidth = trackHeight * trackAspectRatio;
 
     return Padding(
@@ -111,21 +105,22 @@ class BatteryIndicatorWidget extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: (batteryDetails.level <= 20)
-                ? [
-                    AppPalette.lowBatteryBarGradientColor1,
-                    AppPalette.lowBatteryBarGradientColor2,
-                  ]
-                : [
-                    AppPalette.batteryBarGradientColor1,
-                    AppPalette.batteryBarGradientColor2,
-                    AppPalette.batteryBarGradientColor3,
-                    AppPalette.batteryBarGradientColor4,
-                    AppPalette.batteryBarGradientColor5,
-                    AppPalette.batteryBarGradientColor6,
-                    AppPalette.batteryBarGradientColor7,
-                    AppPalette.batteryBarGradientColor6,
-                  ],
+            colors:
+                (batteryDetails.level <= 20)
+                    ? [
+                      AppPalette.lowBatteryBarGradientColor1,
+                      AppPalette.lowBatteryBarGradientColor2,
+                    ]
+                    : [
+                      AppPalette.batteryBarGradientColor1,
+                      AppPalette.batteryBarGradientColor2,
+                      AppPalette.batteryBarGradientColor3,
+                      AppPalette.batteryBarGradientColor4,
+                      AppPalette.batteryBarGradientColor5,
+                      AppPalette.batteryBarGradientColor6,
+                      AppPalette.batteryBarGradientColor7,
+                      AppPalette.batteryBarGradientColor6,
+                    ],
           ),
         ),
       ),
@@ -141,13 +136,14 @@ class BatteryIndicatorWidget extends StatelessWidget {
             duration: Duration(milliseconds: duration.inMilliseconds ~/ 5),
             switchInCurve: curve,
             switchOutCurve: curve,
-            child: batteryDetails.batteryState == BatteryState.charging
-                ? Icon(
-                    CupertinoIcons.bolt_fill,
-                    color: AppPalette.batteryBarIconColor,
-                    size: constraints.maxHeight,
-                  )
-                : null,
+            child:
+                batteryDetails.batteryState == BatteryState.charging
+                    ? Icon(
+                      CupertinoIcons.bolt_fill,
+                      color: AppPalette.batteryBarIconColor,
+                      size: constraints.maxHeight,
+                    )
+                    : null,
           );
         },
       ),

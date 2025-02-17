@@ -20,33 +20,38 @@ class AnimatedAlbumArtScroller extends ConsumerStatefulWidget {
 class _AnimatedAlbumArtScrollerState
     extends ConsumerState<AnimatedAlbumArtScroller>
     with SingleTickerProviderStateMixin {
-  ImageProvider _albumArtImage =
-      const AssetImage(Assets.defaultAlbumCoverImage);
+  ImageProvider _albumArtImage = const AssetImage(
+    Assets.defaultAlbumCoverImage,
+  );
   late final AnimationController _animationController;
   late Animation<Alignment> _alignmentAnimation;
   double alignment = 0;
   bool _isEmptyState = false;
 
   void _getRandomAlbumArt() {
-    final albumDetails = ref
-        .read(albumDetailsProvider)
-        .where((album) => album.albumArtPath != null)
-        .toList();
+    final albumDetails =
+        ref
+            .read(albumDetailsProvider)
+            .where((album) => album.albumArtPath != null)
+            .toList();
     if (albumDetails.isEmpty) {
       setState(() {
         _isEmptyState = true;
       });
       return;
     }
-    final nonEmptyAlbums =
-        albumDetails.where((album) => album.albumArtPath != null);
+    final nonEmptyAlbums = albumDetails.where(
+      (album) => album.albumArtPath != null,
+    );
     if (nonEmptyAlbums.isNotEmpty) {
-      final randomAlbum =
-          nonEmptyAlbums.elementAt(Random().nextInt(nonEmptyAlbums.length));
+      final randomAlbum = nonEmptyAlbums.elementAt(
+        Random().nextInt(nonEmptyAlbums.length),
+      );
       setState(() {
-        _albumArtImage = kIsWeb
-            ? NetworkImage(randomAlbum.albumArtPath!)
-            : FileImage(File(randomAlbum.albumArtPath!));
+        _albumArtImage =
+            kIsWeb
+                ? NetworkImage(randomAlbum.albumArtPath!)
+                : FileImage(File(randomAlbum.albumArtPath!));
       });
     }
   }
@@ -54,21 +59,25 @@ class _AnimatedAlbumArtScrollerState
   void _setRandomAnimationDirection() {
     final randomNumber = Random().nextInt(4);
     if (randomNumber == 0) {
-      _alignmentAnimation =
-          Tween<Alignment>(begin: Alignment.topLeft, end: Alignment.bottomRight)
-              .animate(_animationController);
+      _alignmentAnimation = Tween<Alignment>(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+      ).animate(_animationController);
     } else if (randomNumber == 1) {
-      _alignmentAnimation =
-          Tween<Alignment>(begin: Alignment.topRight, end: Alignment.bottomLeft)
-              .animate(_animationController);
+      _alignmentAnimation = Tween<Alignment>(
+        begin: Alignment.topRight,
+        end: Alignment.bottomLeft,
+      ).animate(_animationController);
     } else if (randomNumber == 2) {
-      _alignmentAnimation =
-          Tween<Alignment>(begin: Alignment.bottomLeft, end: Alignment.topRight)
-              .animate(_animationController);
+      _alignmentAnimation = Tween<Alignment>(
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+      ).animate(_animationController);
     } else {
-      _alignmentAnimation =
-          Tween<Alignment>(begin: Alignment.bottomRight, end: Alignment.topLeft)
-              .animate(_animationController);
+      _alignmentAnimation = Tween<Alignment>(
+        begin: Alignment.bottomRight,
+        end: Alignment.topLeft,
+      ).animate(_animationController);
     }
   }
 
@@ -116,10 +125,7 @@ class _AnimatedAlbumArtScrollerState
         animation: _alignmentAnimation,
         child: AnimatedSwitcher(
           duration: const Duration(seconds: 1),
-          child: Image(
-            key: ValueKey(_albumArtImage),
-            image: _albumArtImage,
-          ),
+          child: Image(key: ValueKey(_albumArtImage), image: _albumArtImage),
         ),
       ),
     );
@@ -128,6 +134,7 @@ class _AnimatedAlbumArtScrollerState
 
 class AnimatedAlbumArt extends AnimatedWidget {
   final Widget child;
+
   const AnimatedAlbumArt({
     super.key,
     required Animation<Alignment> animation,

@@ -35,10 +35,7 @@ class AlbumModel {
   }
 
   @override
-  int get hashCode => Object.hash(
-        albumName,
-        albumArtistName,
-      );
+  int get hashCode => Object.hash(albumName, albumArtistName);
 
   bool isOnDevice() {
     return albumSongs.first.isOnDevice;

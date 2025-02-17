@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final sharedPreferencesWithCacheProvider =
     FutureProvider<SharedPreferencesWithCache>((ref) async {
-  return SharedPreferencesWithCache.create(
-    cacheOptions: const SharedPreferencesWithCacheOptions(),
-  );
-});
+      return SharedPreferencesWithCache.create(
+        cacheOptions: const SharedPreferencesWithCacheOptions(),
+      );
+    });

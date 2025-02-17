@@ -38,10 +38,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
 
   void _navigateToSongMoreOptionsModal(int index) {
     setState(() => selectedDisplayItem = index);
-    context.goNamed(
-      Routes.songsMoreOptions.name,
-      extra: displayItems[index],
-    );
+    context.goNamed(Routes.songsMoreOptions.name, extra: displayItems[index]);
   }
 
   Future<void> _playSong(int displayIndex) async {
@@ -59,9 +56,10 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
 
   @override
   Widget build(BuildContext context) {
-    final int? currentlyPlayingOriginalIndex = ref
-        .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
-        ?.originalSongIndex;
+    final int? currentlyPlayingOriginalIndex =
+        ref
+            .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
+            ?.originalSongIndex;
     if (displayItems.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(
@@ -80,24 +78,24 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.songs.title(context),
-          ),
+          StatusBar(title: Routes.songs.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                itemBuilder: (context, index) => SongListTile(
-                  songName: displayItems[index].trackName,
-                  trackArtistNames: displayItems[index].getTrackArtistNames,
-                  isSelected: selectedDisplayItem == index,
-                  isCurrentlyPlaying: currentlyPlayingOriginalIndex ==
-                      displayItems[index].originalSongIndex,
-                  onTap: () async => _playSong(index),
-                  onLongPress: () => _navigateToSongMoreOptionsModal(index),
-                ),
+                itemBuilder:
+                    (context, index) => SongListTile(
+                      songName: displayItems[index].trackName,
+                      trackArtistNames: displayItems[index].getTrackArtistNames,
+                      isSelected: selectedDisplayItem == index,
+                      isCurrentlyPlaying:
+                          currentlyPlayingOriginalIndex ==
+                          displayItems[index].originalSongIndex,
+                      onTap: () async => _playSong(index),
+                      onLongPress: () => _navigateToSongMoreOptionsModal(index),
+                    ),
               ),
             ),
           ),

@@ -35,6 +35,7 @@ enum _MainMenuDisplayItems {
 
 class MainMenuScreen extends ConsumerStatefulWidget {
   final bool showTutorial;
+
   const MainMenuScreen({super.key, this.showTutorial = false});
 
   @override
@@ -79,10 +80,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
 
   Future<void> _navigateToNowPlayingScreen() async {
     unawaited(ref.read(splitScreenViewControllerProvider).closeSplitView());
-    await context.pushNamed(
-      Routes.nowPlaying.name,
-      extra: Routes.menu.name,
-    );
+    await context.pushNamed(Routes.nowPlaying.name, extra: Routes.menu.name);
     unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
   }
 
@@ -134,9 +132,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(
-            title: Routes.menu.title(context),
-          ),
+          StatusBar(title: Routes.menu.title(context)),
           Expanded(
             child: CupertinoScrollbar(
               controller: scrollController,

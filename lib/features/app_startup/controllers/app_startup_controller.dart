@@ -17,9 +17,10 @@ import 'package:just_audio_background/just_audio_background.dart';
 final appStartupControllerProvider = FutureProvider<void>((ref) async {
   await Future.wait([
     if (!kIsWeb && (Platform.isAndroid || Platform.isIOS)) ...[
-      SystemChrome.setPreferredOrientations(
-        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
-      ),
+      SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+        DeviceOrientation.portraitDown,
+      ]),
       JustAudioBackground.init(
         androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
         androidNotificationChannelName: 'ClassiPod Audio playback',
@@ -36,7 +37,9 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
   Hive.registerAdapters();
   await Hive.openBox<Metadata>(Constants.metadataBoxName);
   await Hive.openBox<PlaylistModel>(Constants.playlistBoxName);
-  ref.read(settingsPreferencesControllerProvider.notifier).setAudioSource(
+  ref
+      .read(settingsPreferencesControllerProvider.notifier)
+      .setAudioSource(
         isOnlineAudioSource: kIsWeb || Platform.isWindows || Platform.isLinux,
       );
   unawaited(

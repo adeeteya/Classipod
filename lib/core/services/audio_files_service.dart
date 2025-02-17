@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:collection';
 
 import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/constants/online_audio_files_metadata.dart';
 import 'package:classipod/core/models/metadata.dart';
 import 'package:classipod/core/repositories/metadata_reader_repository.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -27,7 +28,10 @@ class AudioFilesServiceNotifier
       final Box<Metadata> metadataBox =
           Hive.box<Metadata>(Constants.metadataBoxName);
 
-      if (metadataBox.isEmpty) {
+      if (kIsWeb) {
+        // Return a Pre Defined List of Metadata for Web
+        return UnmodifiableListView(onlineAudioFilesMetaData);
+      } else if (metadataBox.isEmpty) {
         final result = await compute(
           ref.read(metadataReaderRepositoryProvider).extractAudioFilesMetadata,
           ref.read(settingsPreferencesControllerProvider).musicFolderPath,

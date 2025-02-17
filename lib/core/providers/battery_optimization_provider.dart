@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:disable_battery_optimization/disable_battery_optimization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final batteryOptimizationProvider =
@@ -15,8 +16,8 @@ class BatteryOptimizationNotifier extends AutoDisposeAsyncNotifier<bool> {
   }
 
   Future<bool> checkBatteryOptimization() async {
-    bool isBatteryOptimizationDisabled = false;
-    if (Platform.isAndroid) {
+    bool isBatteryOptimizationDisabled = true;
+    if (!kIsWeb && Platform.isAndroid) {
       isBatteryOptimizationDisabled =
           await DisableBatteryOptimization.isBatteryOptimizationDisabled ??
               false;
@@ -25,7 +26,7 @@ class BatteryOptimizationNotifier extends AutoDisposeAsyncNotifier<bool> {
   }
 
   Future<void> openSettings() async {
-    if (Platform.isAndroid) {
+    if (!kIsWeb && Platform.isAndroid) {
       await DisableBatteryOptimization.showDisableBatteryOptimizationSettings();
     }
   }

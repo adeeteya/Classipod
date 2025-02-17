@@ -4,6 +4,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 
 class AlbumListTile extends StatelessWidget {
   final AlbumModel albumDetails;
@@ -43,7 +44,9 @@ class AlbumListTile extends StatelessWidget {
             children: [
               Image(
                 image: (albumDetails.albumArtPath != null)
-                    ? FileImage(File(albumDetails.albumArtPath!))
+                    ? kIsWeb
+                        ? NetworkImage(albumDetails.albumArtPath!)
+                        : FileImage(File(albumDetails.albumArtPath!))
                     : const AssetImage(Assets.defaultAlbumCoverImage),
                 errorBuilder: (_, __, ___) => Image.asset(
                   Assets.defaultAlbumCoverImage,

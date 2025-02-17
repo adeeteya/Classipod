@@ -33,6 +33,7 @@ import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -150,7 +151,9 @@ final routerProvider = Provider(
         pageBuilder: (context, state, child) {
           return CupertinoPage(
             child: ScrollConfiguration(
-              behavior: CustomScrollBehavior(),
+              behavior: kIsWeb
+                  ? ScrollConfiguration.of(context).copyWith(scrollbars: false)
+                  : CustomScrollBehavior(),
               child: CupertinoPageScaffold(
                 resizeToAvoidBottomInset: false,
                 child: DeviceFrame(key: deviceFrameGlobalKey, child: child),

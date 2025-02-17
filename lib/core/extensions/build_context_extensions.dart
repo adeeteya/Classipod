@@ -1,4 +1,4 @@
-import 'package:classipod/l10n/app_localizations.dart';
+import 'package:classipod/l10n/generated/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:go_router/go_router.dart';
 

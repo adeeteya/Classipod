@@ -109,17 +109,17 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
 
     return LayoutBuilder(
       builder: (context, constraints) {
+        final double screenWidth = constraints.maxWidth + 40;
+
         return GestureDetector(
           onPanUpdate:
               (dragUpdateDetails) async => onClickWheelScroll(
                 dragUpdateDetails,
-                (constraints.maxWidth * Constants.deviceClickWheelRadiusRatio) /
-                    2,
+                (screenWidth * Constants.deviceClickWheelRadiusRatio) / 2,
               ),
           child: Container(
-            height:
-                constraints.maxWidth * Constants.deviceClickWheelRadiusRatio,
-            width: constraints.maxWidth * Constants.deviceClickWheelRadiusRatio,
+            height: screenWidth * Constants.deviceClickWheelRadiusRatio,
+            width: screenWidth * Constants.deviceClickWheelRadiusRatio,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
@@ -196,7 +196,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                                 .read(deviceButtonsServiceProvider.notifier)
                                 .setDeviceAction(DeviceAction.longPressEnd),
                         child: SizedBox(
-                          height: constraints.maxWidth * 0.2175,
+                          height: screenWidth * 0.2175,
                           child: ColoredBox(
                             color:
                                 deviceColor == DeviceColor.black
@@ -234,12 +234,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                               .read(deviceButtonsServiceProvider.notifier)
                               .setDeviceAction(DeviceAction.longPressEnd),
                       child: SizedBox(
-                        height:
-                            constraints.maxWidth *
-                            Constants.deviceButtonSizeRatio,
-                        width:
-                            constraints.maxWidth *
-                            Constants.deviceButtonSizeRatio,
+                        height: screenWidth * Constants.deviceButtonSizeRatio,
+                        width: screenWidth * Constants.deviceButtonSizeRatio,
                         child: DecoratedBox(
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -294,9 +290,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                                 .read(deviceButtonsServiceProvider.notifier)
                                 .setDeviceAction(DeviceAction.longPressEnd),
                         child: SizedBox(
-                          height:
-                              constraints.maxWidth *
-                              Constants.deviceButtonSizeRatio,
+                          height: screenWidth * Constants.deviceButtonSizeRatio,
                           child: ColoredBox(
                             color:
                                 deviceColor == DeviceColor.black

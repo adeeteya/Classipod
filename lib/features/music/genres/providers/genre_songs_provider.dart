@@ -7,7 +7,7 @@ final genreSongsMetadataListProvider =
   final List<Metadata> genreSongsMetadataList = [];
 
   ref.read(audioFilesServiceProvider).requireValue.forEach((metadata) {
-    if (metadata.getMainGenre == genreName) {
+    if (metadata.genres.contains(genreName)) {
       genreSongsMetadataList.add(metadata);
     }
   });

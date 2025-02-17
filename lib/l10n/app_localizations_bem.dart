@@ -15,20 +15,16 @@ class AppLocalizationsBem extends AppLocalizations {
   String get menuButtonText => 'IMENU';
 
   @override
-  String get audioAccessPermissionTitle =>
-      'Ukusuminisha Ukusuminisha Kwakufwaikwa';
+  String get audioAccessPermissionTitle => 'Ukusuminisha Ukusuminisha Kwakufwaikwa';
 
   @override
-  String get audioAccessPermissionContent =>
-      'Mukwai suminisheni amafailo ya mashiwi pakuti tucite ifyo mulefwaya ukubelenga amafailo ya nyimbo.';
+  String get audioAccessPermissionContent => 'Mukwai suminisheni amafailo ya mashiwi pakuti tucite ifyo mulefwaya ukubelenga amafailo ya nyimbo.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle =>
-      'Ukusuminisha Ukusuminisha Ukwasuka';
+  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ukusuminisha Ukusuminisha Ukwasuka';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent =>
-      'Mukwai suminisheni amafailo ya mashiwi aya kuti iyi app mu fipe fya kubomfya pa kuti tuletambisha amafailo ya nyimbo.';
+  String get audioAccessPermissionPermanentlyDeniedContent => 'Mukwai suminisheni amafailo ya mashiwi aya kuti iyi app mu fipe fya kubomfya pa kuti tuletambisha amafailo ya nyimbo.';
 
   @override
   String get menuScreenTitle => 'nyny';
@@ -67,6 +63,7 @@ class AppLocalizationsBem extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -84,6 +81,7 @@ class AppLocalizationsBem extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -131,8 +129,7 @@ class AppLocalizationsBem extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Ukukumya';
 
   @override
-  String get touchSoundsDialogContent =>
-      'Mukwai Pekanishisheni Amalyashi ya Kukumya ukufuma ku Fishinka fya Nshila pa kumfwa amashiwi ya mapili aya kutinika';
+  String get touchSoundsDialogContent => 'Mukwai Pekanishisheni Amalyashi ya Kukumya ukufuma ku Fishinka fya Nshila pa kumfwa amashiwi ya mapili aya kutinika';
 
   @override
   String get immersiveModeSettingTitle => 'Inshila iyakubomfya';
@@ -147,8 +144,7 @@ class AppLocalizationsBem extends AppLocalizations {
   String get donateSettingTitle => 'Ukusonka';
 
   @override
-  String get donateSettingDescription =>
-      'Nga mwatemwa iyi app, mukwai tontonkanyeni pa kupeela.';
+  String get donateSettingDescription => 'Nga mwatemwa iyi app, mukwai tontonkanyeni pa kupeela.';
 
   @override
   String get versionAboutScreenTitle => 'Umusango';
@@ -199,8 +195,7 @@ class AppLocalizationsBem extends AppLocalizations {
   String get retryButtonText => 'Icakulya';
 
   @override
-  String get filePickerDialogTitle =>
-      'Saleni Ubutungulushi bwakukwata Inyimbo isha Nyimbo';
+  String get filePickerDialogTitle => 'Saleni Ubutungulushi bwakukwata Inyimbo isha Nyimbo';
 
   @override
   String get searchScreenTitle => 'Fwaya fwaya';
@@ -215,12 +210,10 @@ class AppLocalizationsBem extends AppLocalizations {
   String get resultsForText => 'Ifyasangwamo:';
 
   @override
-  String get disableBatteryOptimizationTitle =>
-      'Ukufumyapo Amabatiri ayakupumfyanishiwa';
+  String get disableBatteryOptimizationTitle => 'Ukufumyapo Amabatiri ayakupumfyanishiwa';
 
   @override
-  String get disableBatteryOptimizationContent =>
-      'Mukwai balemena ukubomfya amabatiri kuli iyi app mufibombelo pakuti muleke ukubelenga inyimbo.';
+  String get disableBatteryOptimizationContent => 'Mukwai balemena ukubomfya amabatiri kuli iyi app mufibombelo pakuti muleke ukubelenga inyimbo.';
 
   @override
   String get languageScreenTitle => 'Ululimi';
@@ -274,66 +267,50 @@ class AppLocalizationsBem extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Amafailo ya Nyimbo aya Resk';
 
   @override
-  String get deviceControlMenuTutorialText =>
-      'Ukutwala icikumo cenu panono panono ukushinguluka Icikumo ca ku kulyo pa kuti muloleshe pa menyu .';
+  String get deviceControlMenuTutorialText => 'Ukutwala icikumo cenu panono panono ukushinguluka Icikumo ca ku kulyo pa kuti muloleshe pa menyu .';
 
   @override
-  String get centerButtonMenuTutorialText =>
-      'Tinikeni pe batani lya pa kati pakuti musale ifya kulya ifyalangishiwa';
+  String get centerButtonMenuTutorialText => 'Tinikeni pe batani lya pa kati pakuti musale ifya kulya ifyalangishiwa';
 
   @override
-  String get playPauseMenuTutorialText =>
-      'Tinikeni ili batani pakuti musele nangu ukuleka ulwimbo';
+  String get playPauseMenuTutorialText => 'Tinikeni ili batani pakuti musele nangu ukuleka ulwimbo';
 
   @override
-  String get nextButtonMenuTutorialText =>
-      'Tinikeni ili batani pa kuti mufume ku lwimbo lwakonkapo .';
+  String get nextButtonMenuTutorialText => 'Tinikeni ili batani pa kuti mufume ku lwimbo lwakonkapo .';
 
   @override
-  String get previousButtonMenuTutorialText =>
-      'Tinikeni ili batani pakuti mubweseshepo nangu ukubwelela ku lwimbo lwapita';
+  String get previousButtonMenuTutorialText => 'Tinikeni ili batani pakuti mubweseshepo nangu ukubwelela ku lwimbo lwapita';
 
   @override
-  String get menuButtonTutorialText =>
-      'Tinikeni ili batani pakuti mubwelele ku menyu yapitapo. Kuti watinika no kucikwata ukufuma pa cikope cimbi pakuti uye ku menyu iikalamba.';
+  String get menuButtonTutorialText => 'Tinikeni ili batani pakuti mubwelele ku menyu yapitapo. Kuti watinika no kucikwata ukufuma pa cikope cimbi pakuti uye ku menyu iikalamba.';
 
   @override
-  String get deviceScreenMenuTutorialText =>
-      'Ici e cimonwa ca kulanga. Ukukuma ku Nshila ya Cifulo no Kulonganika Intanshi yasuminishiwa kabili kuti yatantikwa na fimbi mu fifulo.';
+  String get deviceScreenMenuTutorialText => 'Ici e cimonwa ca kulanga. Ukukuma ku Nshila ya Cifulo no Kulonganika Intanshi yasuminishiwa kabili kuti yatantikwa na fimbi mu fifulo.';
 
   @override
-  String get deviceControlNowPlayingTutorialText =>
-      'Suminisheni icikumo cenu ukushinguluka icikumo icakutinika pa kuti mulungike ubukulu';
+  String get deviceControlNowPlayingTutorialText => 'Suminisheni icikumo cenu ukushinguluka icikumo icakutinika pa kuti mulungike ubukulu';
 
   @override
-  String get centerButtonNowPlayingTutorialText =>
-      'Tinikeni pe batani lya pa Cifulo pa kuti mupitishe ukupitila mu kufwaya, umuputule wa kusebelelamo no kukunkuma. Tinikeni no kusunga batani lya Cifulo pakuti mukwate ifyakusalapo ifyalundwapo.';
+  String get centerButtonNowPlayingTutorialText => 'Tinikeni pe batani lya pa Cifulo pa kuti mupitishe ukupitila mu kufwaya, umuputule wa kusebelelamo no kukunkuma. Tinikeni no kusunga batani lya Cifulo pakuti mukwate ifyakusalapo ifyalundwapo.';
 
   @override
-  String get nextButtonNowPlayingTutorialText =>
-      'Tinikeni no kusunga ili batani pakuti mubutuke bwangu ku lwimbo .';
+  String get nextButtonNowPlayingTutorialText => 'Tinikeni no kusunga ili batani pakuti mubutuke bwangu ku lwimbo .';
 
   @override
-  String get previousButtonNowPlayingTutorialText =>
-      'Tinikeni no kusunga ili batani pakuti mubweseshemo ulu lwimbo';
+  String get previousButtonNowPlayingTutorialText => 'Tinikeni no kusunga ili batani pakuti mubweseshemo ulu lwimbo';
 
   @override
-  String get deviceControlSearchTutorialText =>
-      'Suminisheni umunwe wenu uwa cikumo ukushinguluka Umuti wa kutinika pa Cikumi pa kuti mulangishe alfabeti .';
+  String get deviceControlSearchTutorialText => 'Suminisheni umunwe wenu uwa cikumo ukushinguluka Umuti wa kutinika pa Cikumi pa kuti mulangishe alfabeti .';
 
   @override
-  String get centerButtonSearchTutorialText =>
-      'Tinikeni pe batani lya pakati pakuti musale alfabeti iyasokolwelwe';
+  String get centerButtonSearchTutorialText => 'Tinikeni pe batani lya pakati pakuti musale alfabeti iyasokolwelwe';
 
   @override
-  String get nextButtonSearchTutorialText =>
-      'Tinikeni ili batani pakuti mubikepo icifulo';
+  String get nextButtonSearchTutorialText => 'Tinikeni ili batani pakuti mubikepo icifulo';
 
   @override
-  String get previousButtonSearchTutorialText =>
-      'Tinikeni ili batani pakuti mufumyepo umuntu uwakulekelesha';
+  String get previousButtonSearchTutorialText => 'Tinikeni ili batani pakuti mufumyepo umuntu uwakulekelesha';
 
   @override
-  String get menuButtonSearchTutorialText =>
-      'Tinikeni ili batani pakuti mwingile mu citabo no kulanshanya ne fyasangwa mu kufwaya';
+  String get menuButtonSearchTutorialText => 'Tinikeni ili batani pakuti mwingile mu citabo no kulanshanya ne fyasangwa mu kufwaya';
 }

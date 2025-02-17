@@ -18,16 +18,13 @@ class AppLocalizationsMak extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio Akses Permintaan Permisi .';
 
   @override
-  String get audioAccessPermissionContent =>
-      'Punna rie\' tau a\'ra\' a\'lampa, a\'kulleji a\'lampa a\'pilajarang file audio sollanna a\'kulle nisare file musiknu.';
+  String get audioAccessPermissionContent => 'Punna rie\' tau a\'ra\' a\'lampa, a\'kulleji a\'lampa a\'pilajarang file audio sollanna a\'kulle nisare file musiknu.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle =>
-      'Audio Akses Permintaan Nipantamaki .';
+  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Akses Permintaan Nipantamaki .';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent =>
-      'Punna rie\' tau a\'ra\' a\'lampa, a\'lampami mange ri se\'reang pa\'rasangang maraeng.';
+  String get audioAccessPermissionPermanentlyDeniedContent => 'Punna rie\' tau a\'ra\' a\'lampa, a\'lampami mange ri se\'reang pa\'rasangang maraeng.';
 
   @override
   String get menuScreenTitle => 'Bile';
@@ -66,6 +63,7 @@ class AppLocalizationsMak extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -83,6 +81,7 @@ class AppLocalizationsMak extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -100,8 +99,7 @@ class AppLocalizationsMak extends AppLocalizations {
   String get genresScreenTitle => 'Jender';
 
   @override
-  String get genreSongsScreenTitle =>
-      'Nampa nasuromi ke’nanga a’lampa mange ri Genre.';
+  String get genreSongsScreenTitle => 'Nampa nasuromi ke’nanga a’lampa mange ri Genre.';
 
   @override
   String get deviceColorSettingTitle => 'Perangkat';
@@ -131,8 +129,7 @@ class AppLocalizationsMak extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Ana’-ana’na Auch';
 
   @override
-  String get touchSoundsDialogContent =>
-      'Punna rie\' tau a\'ra\' a\'lampa, a\'kulleji a\'lampa battu ri Sistem Settings untu\' allangngere\'i sa\'ra roda klik .';
+  String get touchSoundsDialogContent => 'Punna rie\' tau a\'ra\' a\'lampa, a\'kulleji a\'lampa battu ri Sistem Settings untu\' allangngere\'i sa\'ra roda klik .';
 
   @override
   String get immersiveModeSettingTitle => 'Mode Immersif';
@@ -147,8 +144,7 @@ class AppLocalizationsMak extends AppLocalizations {
   String get donateSettingTitle => 'Annyumbang';
 
   @override
-  String get donateSettingDescription =>
-      'Punna ero’jako anne appa, pikkiriki baji’-baji’.';
+  String get donateSettingDescription => 'Punna ero’jako anne appa, pikkiriki baji’-baji’.';
 
   @override
   String get versionAboutScreenTitle => 'Versi';
@@ -217,8 +213,7 @@ class AppLocalizationsMak extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'Optimisasi Batere Cacat';
 
   @override
-  String get disableBatteryOptimizationContent =>
-      'Punna rie\' tau a\'ra\' a\'lampa mange ri balla\'na, a\'lampami mange ri balla\'na.';
+  String get disableBatteryOptimizationContent => 'Punna rie\' tau a\'ra\' a\'lampa mange ri balla\'na, a\'lampami mange ri balla\'na.';
 
   @override
   String get languageScreenTitle => 'Bahasa';
@@ -272,66 +267,50 @@ class AppLocalizationsMak extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Reskan Film Musik';
 
   @override
-  String get deviceControlMenuTutorialText =>
-      'Pa’jari jari-jarinu ringan ri ampi’na Roda Click untu’ a’lampa mange ri menu .';
+  String get deviceControlMenuTutorialText => 'Pa’jari jari-jarinu ringan ri ampi’na Roda Click untu’ a’lampa mange ri menu .';
 
   @override
-  String get centerButtonMenuTutorialText =>
-      'Tete’mi tombol pusa’na untu’ ampilei item menu nisoronga .';
+  String get centerButtonMenuTutorialText => 'Tete’mi tombol pusa’na untu’ ampilei item menu nisoronga .';
 
   @override
-  String get playPauseMenuTutorialText =>
-      'Tete’mi anne tombolka untu’ a’joge’ yareka ampaui se’rea lagu .';
+  String get playPauseMenuTutorialText => 'Tete’mi anne tombolka untu’ a’joge’ yareka ampaui se’rea lagu .';
 
   @override
-  String get nextButtonMenuTutorialText =>
-      'Tete’mi anne tombolka untu’ a’lampa mange ri lagu ribokoangannaya .';
+  String get nextButtonMenuTutorialText => 'Tete’mi anne tombolka untu’ a’lampa mange ri lagu ribokoangannaya .';
 
   @override
-  String get previousButtonMenuTutorialText =>
-      'Tete’mi anne tombolka untu’ a’jari ammotere’ yareka ammotere’ mange ri lagu rioloa .';
+  String get previousButtonMenuTutorialText => 'Tete’mi anne tombolka untu’ a’jari ammotere’ yareka ammotere’ mange ri lagu rioloa .';
 
   @override
-  String get menuButtonTutorialText =>
-      'Tete’mi anne tombolka untu’ ammotere’ mange ri menu rioloa. Ikau akkullei nutekanngi siagang nutahang battu ri layar maraenga untu’ langsung mange ri menu utama.';
+  String get menuButtonTutorialText => 'Tete’mi anne tombolka untu’ ammotere’ mange ri menu rioloa. Ikau akkullei nutekanngi siagang nutahang battu ri layar maraenga untu’ langsung mange ri menu utama.';
 
   @override
-  String get deviceScreenMenuTutorialText =>
-      'Iaminjo layar pa’baeng-baenga. Mode Layar Auch siagang Spil Spleen niaki ri default siagang akkullei nikonfigurasi la’bi riolo ri settingang.';
+  String get deviceScreenMenuTutorialText => 'Iaminjo layar pa’baeng-baenga. Mode Layar Auch siagang Spil Spleen niaki ri default siagang akkullei nikonfigurasi la’bi riolo ri settingang.';
 
   @override
-  String get deviceControlNowPlayingTutorialText =>
-      'Pa’jari jari-jarinu ri ampi’na Weel Click untu’ ampa’jari bajiki anjo volume .';
+  String get deviceControlNowPlayingTutorialText => 'Pa’jari jari-jarinu ri ampi’na Weel Click untu’ ampa’jari bajiki anjo volume .';
 
   @override
-  String get centerButtonNowPlayingTutorialText =>
-      'Tete’mi tombol Pusat untu’ a’jappa-jappa lalang ri barra’ a’boyaya, a’gosok-gosok siagang slider shuffle. Tete’ siagang pa’jagai tombol Pusat untu’ a’lampa mange ri tampa’-tampa’ tambahan.';
+  String get centerButtonNowPlayingTutorialText => 'Tete’mi tombol Pusat untu’ a’jappa-jappa lalang ri barra’ a’boyaya, a’gosok-gosok siagang slider shuffle. Tete’ siagang pa’jagai tombol Pusat untu’ a’lampa mange ri tampa’-tampa’ tambahan.';
 
   @override
-  String get nextButtonNowPlayingTutorialText =>
-      'Tete’ siagang pa’jari anne tombol untu’ ampa’jari bajiki anjo lagua .';
+  String get nextButtonNowPlayingTutorialText => 'Tete’ siagang pa’jari anne tombol untu’ ampa’jari bajiki anjo lagua .';
 
   @override
-  String get previousButtonNowPlayingTutorialText =>
-      'Tete’ siagang pa’jari anne tombolka untu’ ampa’jari ammotere’ anjo lagua .';
+  String get previousButtonNowPlayingTutorialText => 'Tete’ siagang pa’jari anne tombolka untu’ ampa’jari ammotere’ anjo lagua .';
 
   @override
-  String get deviceControlSearchTutorialText =>
-      'Pa’jari jari-jarinu ringan ri ampi’na Roda Click untu’ ampa’nyatai abjad .';
+  String get deviceControlSearchTutorialText => 'Pa’jari jari-jarinu ringan ri ampi’na Roda Click untu’ ampa’nyatai abjad .';
 
   @override
-  String get centerButtonSearchTutorialText =>
-      'Tete’mi tombol pusaka untu’ ampilei abjad nisoronga .';
+  String get centerButtonSearchTutorialText => 'Tete’mi tombol pusaka untu’ ampilei abjad nisoronga .';
 
   @override
-  String get nextButtonSearchTutorialText =>
-      'Tete’mi anne tombolka untu’ a’jari tampa’.';
+  String get nextButtonSearchTutorialText => 'Tete’mi anne tombolka untu’ a’jari tampa’.';
 
   @override
-  String get previousButtonSearchTutorialText =>
-      'Tete’mi anne tombolka untu’ ampa’le’baki karakter kala’busanga .';
+  String get previousButtonSearchTutorialText => 'Tete’mi anne tombolka untu’ ampa’le’baki karakter kala’busanga .';
 
   @override
-  String get menuButtonSearchTutorialText =>
-      'Tete’mi anne tombolka untu’ antongkoki anjo keyboard siagang a’gau’ baji’ siagang wassele’ pa’boyaang .';
+  String get menuButtonSearchTutorialText => 'Tete’mi anne tombolka untu’ antongkoki anjo keyboard siagang a’gau’ baji’ siagang wassele’ pa’boyaang .';
 }

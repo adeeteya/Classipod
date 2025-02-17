@@ -15,20 +15,16 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get menuButtonText => 'Listahan sa mga potahe';
 
   @override
-  String get audioAccessPermissionTitle =>
-      'Gikinahanglan ang Audio Access Permiso';
+  String get audioAccessPermissionTitle => 'Gikinahanglan ang Audio Access Permiso';
 
   @override
-  String get audioAccessPermissionContent =>
-      'Palihug hatagi ang mga audio file nga pag-access aron tugutan kami nga magdula sa imong mga file sa musika.';
+  String get audioAccessPermissionContent => 'Palihug hatagi ang mga audio file nga pag-access aron tugutan kami nga magdula sa imong mga file sa musika.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle =>
-      'Ang pagtugot sa Audio Access Denied';
+  String get audioAccessPermissionPermanentlyDeniedTitle => 'Ang pagtugot sa Audio Access Denied';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent =>
-      'Palihug hatagi ang mga audio file nga pag-access alang sa kini nga app sa mga setting sa aparato aron tugutan kami nga magdula sa imong mga file sa musika.';
+  String get audioAccessPermissionPermanentlyDeniedContent => 'Palihug hatagi ang mga audio file nga pag-access alang sa kini nga app sa mga setting sa aparato aron tugutan kami nga magdula sa imong mga file sa musika.';
 
   @override
   String get menuScreenTitle => 'Listahan sa mga potahe';
@@ -67,6 +63,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -84,6 +81,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -131,8 +129,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch Sounds';
 
   @override
-  String get touchSoundsDialogContent =>
-      'Palihug himua ang mga tunog sa touch gikan sa mga setting sa sistema aron madungog ang mga tunog sa ligid sa pag-klik';
+  String get touchSoundsDialogContent => 'Palihug himua ang mga tunog sa touch gikan sa mga setting sa sistema aron madungog ang mga tunog sa ligid sa pag-klik';
 
   @override
   String get immersiveModeSettingTitle => 'Imberstive mode';
@@ -147,8 +144,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get donateSettingTitle => 'Mohatag';
 
   @override
-  String get donateSettingDescription =>
-      'Kung gusto nimo kini nga app, palihug hunahunaa ang pagdonar.';
+  String get donateSettingDescription => 'Kung gusto nimo kini nga app, palihug hunahunaa ang pagdonar.';
 
   @override
   String get versionAboutScreenTitle => 'Batbat';
@@ -199,8 +195,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get retryButtonText => 'Mopasundog';
 
   @override
-  String get filePickerDialogTitle =>
-      'Pagpili usa ka Directory aron ma-scan ang musika';
+  String get filePickerDialogTitle => 'Pagpili usa ka Directory aron ma-scan ang musika';
 
   @override
   String get searchScreenTitle => 'Mangita';
@@ -215,12 +210,10 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get resultsForText => 'Mga Resulta alang sa:';
 
   @override
-  String get disableBatteryOptimizationTitle =>
-      'I-disable ang pag-optimize sa baterya';
+  String get disableBatteryOptimizationTitle => 'I-disable ang pag-optimize sa baterya';
 
   @override
-  String get disableBatteryOptimizationContent =>
-      'Palihug isalikway ang pag-optimize sa baterya alang sa kini nga app sa mga setting sa aparato aron tugutan ang pag-playb sa background sa musika.';
+  String get disableBatteryOptimizationContent => 'Palihug isalikway ang pag-optimize sa baterya alang sa kini nga app sa mga setting sa aparato aron tugutan ang pag-playb sa background sa musika.';
 
   @override
   String get languageScreenTitle => 'Sinultihan';
@@ -274,66 +267,50 @@ class AppLocalizationsCeb extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Mga file sa musika sa Rescan';
 
   @override
-  String get deviceControlMenuTutorialText =>
-      'Ibalhin ang imong kumagko sa palibot sa click wheel aron ma-navigate ang menu';
+  String get deviceControlMenuTutorialText => 'Ibalhin ang imong kumagko sa palibot sa click wheel aron ma-navigate ang menu';
 
   @override
-  String get centerButtonMenuTutorialText =>
-      'Pindota ang button sa Center aron mapili ang gipasabut nga butang sa menu';
+  String get centerButtonMenuTutorialText => 'Pindota ang button sa Center aron mapili ang gipasabut nga butang sa menu';
 
   @override
-  String get playPauseMenuTutorialText =>
-      'Padayon kini nga butones aron magdula o mohunong usa ka kanta';
+  String get playPauseMenuTutorialText => 'Padayon kini nga butones aron magdula o mohunong usa ka kanta';
 
   @override
-  String get nextButtonMenuTutorialText =>
-      'Padayon kini nga butones aron laktawan ang sunod nga kanta';
+  String get nextButtonMenuTutorialText => 'Padayon kini nga butones aron laktawan ang sunod nga kanta';
 
   @override
-  String get previousButtonMenuTutorialText =>
-      'Ipadayon ang kini nga butones aron ma-rewind o balik sa miaging kanta';
+  String get previousButtonMenuTutorialText => 'Ipadayon ang kini nga butones aron ma-rewind o balik sa miaging kanta';
 
   @override
-  String get menuButtonTutorialText =>
-      'Padayon kini nga butones aron makabalik sa miaging menu. Mahimo nimo ipadayon ug kuptan kini gikan sa bisan unsang ubang screen aron direkta nga moadto sa main menu.';
+  String get menuButtonTutorialText => 'Padayon kini nga butones aron makabalik sa miaging menu. Mahimo nimo ipadayon ug kuptan kini gikan sa bisan unsang ubang screen aron direkta nga moadto sa main menu.';
 
   @override
-  String get deviceScreenMenuTutorialText =>
-      'Kini ang screen sa display. Ang Touch Screen ug Split Screen mode gipadagan sa default ug mahimong ma-configure sa dugang sa mga setting.';
+  String get deviceScreenMenuTutorialText => 'Kini ang screen sa display. Ang Touch Screen ug Split Screen mode gipadagan sa default ug mahimong ma-configure sa dugang sa mga setting.';
 
   @override
-  String get deviceControlNowPlayingTutorialText =>
-      'Ibalhin ang imong kumagko sa pag-klik sa ligid aron ma-adjust ang gidaghanon';
+  String get deviceControlNowPlayingTutorialText => 'Ibalhin ang imong kumagko sa pag-klik sa ligid aron ma-adjust ang gidaghanon';
 
   @override
-  String get centerButtonNowPlayingTutorialText =>
-      'Ipadayon ang button sa Center aron ma-cycle pinaagi sa pagpangita sa bar, scrubber bar ug sluffle slider. Padayon ug hupti ang button sa Center aron ma-access ang dugang nga mga kapilian.';
+  String get centerButtonNowPlayingTutorialText => 'Ipadayon ang button sa Center aron ma-cycle pinaagi sa pagpangita sa bar, scrubber bar ug sluffle slider. Padayon ug hupti ang button sa Center aron ma-access ang dugang nga mga kapilian.';
 
   @override
-  String get nextButtonNowPlayingTutorialText =>
-      'Padayon ug hupti kini nga butones aron mapadayon ang Awit';
+  String get nextButtonNowPlayingTutorialText => 'Padayon ug hupti kini nga butones aron mapadayon ang Awit';
 
   @override
-  String get previousButtonNowPlayingTutorialText =>
-      'Padayon ug hupti kini nga buton aron i-rewind ang kanta';
+  String get previousButtonNowPlayingTutorialText => 'Padayon ug hupti kini nga buton aron i-rewind ang kanta';
 
   @override
-  String get deviceControlSearchTutorialText =>
-      'Ibalhin ang imong kumagko sa palibot sa click wheel aron ipasiugda ang usa ka alpabeto';
+  String get deviceControlSearchTutorialText => 'Ibalhin ang imong kumagko sa palibot sa click wheel aron ipasiugda ang usa ka alpabeto';
 
   @override
-  String get centerButtonSearchTutorialText =>
-      'Ipadayon ang button sa Center aron mapili ang gipasiugda nga alpabeto';
+  String get centerButtonSearchTutorialText => 'Ipadayon ang button sa Center aron mapili ang gipasiugda nga alpabeto';
 
   @override
-  String get nextButtonSearchTutorialText =>
-      'Padayon kini nga butones aron makadugang usa ka wanang';
+  String get nextButtonSearchTutorialText => 'Padayon kini nga butones aron makadugang usa ka wanang';
 
   @override
-  String get previousButtonSearchTutorialText =>
-      'Ipadayon kini nga buton aron mapapas ang katapusan nga kinaiya';
+  String get previousButtonSearchTutorialText => 'Ipadayon kini nga buton aron mapapas ang katapusan nga kinaiya';
 
   @override
-  String get menuButtonSearchTutorialText =>
-      'Ipadayon kini nga butones aron isara ang keyboard ug makig-uban sa mga resulta sa pagpangita';
+  String get menuButtonSearchTutorialText => 'Ipadayon kini nga butones aron isara ang keyboard ug makig-uban sa mga resulta sa pagpangita';
 }

@@ -18,16 +18,13 @@ class AppLocalizationsMwr extends AppLocalizations {
   String get audioAccessPermissionTitle => 'ऑडियो एक्स्ट उत्सर्जन रेड्डी';
 
   @override
-  String get audioAccessPermissionContent =>
-      'कृपया ऑडियो फ़ाइलां री सुविधा प्रदान करो ताकि आपां नै आपरी संगीत फाइलां खेलण री अनुमति मिलै।';
+  String get audioAccessPermissionContent => 'कृपया ऑडियो फ़ाइलां री सुविधा प्रदान करो ताकि आपां नै आपरी संगीत फाइलां खेलण री अनुमति मिलै।';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle =>
-      'ऑटो एक्स्ट पर्सन उत्सर्जन दीनद';
+  String get audioAccessPermissionPermanentlyDeniedTitle => 'ऑटो एक्स्ट पर्सन उत्सर्जन दीनद';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent =>
-      'इण ऐप री सेटिंग्स री सेटिंग्स में पहुंच री व्यवस्था कर’र आपरी संगीत फाइलां नै खेलण री अनुमति देवण री अनुमति देवो।';
+  String get audioAccessPermissionPermanentlyDeniedContent => 'इण ऐप री सेटिंग्स री सेटिंग्स में पहुंच री व्यवस्था कर’र आपरी संगीत फाइलां नै खेलण री अनुमति देवण री अनुमति देवो।';
 
   @override
   String get menuScreenTitle => 'ठीक करणो';
@@ -66,6 +63,7 @@ class AppLocalizationsMwr extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -83,6 +81,7 @@ class AppLocalizationsMwr extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -130,8 +129,7 @@ class AppLocalizationsMwr extends AppLocalizations {
   String get touchSoundsDialogTitle => 'टच';
 
   @override
-  String get touchSoundsDialogContent =>
-      'क्लिक व्हील आवाजां नै सुणबा रै वास्तै सिस्टम सेटिंग्स सूं एकजुट टच साउंड';
+  String get touchSoundsDialogContent => 'क्लिक व्हील आवाजां नै सुणबा रै वास्तै सिस्टम सेटिंग्स सूं एकजुट टच साउंड';
 
   @override
   String get immersiveModeSettingTitle => 'इमर्सिव मोड';
@@ -146,8 +144,7 @@ class AppLocalizationsMwr extends AppLocalizations {
   String get donateSettingTitle => 'दान देणो';
 
   @override
-  String get donateSettingDescription =>
-      'अगर आप यो ऐप पसंद करो हो तो दान कर सको हो।';
+  String get donateSettingDescription => 'अगर आप यो ऐप पसंद करो हो तो दान कर सको हो।';
 
   @override
   String get versionAboutScreenTitle => 'भांत';
@@ -216,8 +213,7 @@ class AppLocalizationsMwr extends AppLocalizations {
   String get disableBatteryOptimizationTitle => 'विकलांग बैटरी विवशीकरण';
 
   @override
-  String get disableBatteryOptimizationContent =>
-      'इण ऐप रै लिए डिवाइस सेटिंग्स में संगीत री पृष्ठभूमि नै वापस करण री अनुमति देवा रै लिए उपकरण सेटिंग्स में बैटरी अनुकूलन कृपया कर सको।';
+  String get disableBatteryOptimizationContent => 'इण ऐप रै लिए डिवाइस सेटिंग्स में संगीत री पृष्ठभूमि नै वापस करण री अनुमति देवा रै लिए उपकरण सेटिंग्स में बैटरी अनुकूलन कृपया कर सको।';
 
   @override
   String get languageScreenTitle => 'भासा';
@@ -271,65 +267,50 @@ class AppLocalizationsMwr extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'रेसकूक म्यूजल्स';
 
   @override
-  String get deviceControlMenuTutorialText =>
-      'मेनू ने निकालवा वास्ते क्लिक कर’र क्लिक कर’र आपरो अंगूठो हल्को हराओ';
+  String get deviceControlMenuTutorialText => 'मेनू ने निकालवा वास्ते क्लिक कर’र क्लिक कर’र आपरो अंगूठो हल्को हराओ';
 
   @override
-  String get centerButtonMenuTutorialText =>
-      'प्रतिबिंबित मेनू आइटम नै चुणबा खातर सेंटर बटन दबाओ';
+  String get centerButtonMenuTutorialText => 'प्रतिबिंबित मेनू आइटम नै चुणबा खातर सेंटर बटन दबाओ';
 
   @override
-  String get playPauseMenuTutorialText =>
-      'गीत खेलबा या पंखों का पीछो करण खातर इस बटन दबाओ।';
+  String get playPauseMenuTutorialText => 'गीत खेलबा या पंखों का पीछो करण खातर इस बटन दबाओ।';
 
   @override
-  String get nextButtonMenuTutorialText =>
-      'अगला गीत 100 री ओर 1000 सूं 2019 तक जावा वास्ते इण बटन दबाओ।';
+  String get nextButtonMenuTutorialText => 'अगला गीत 100 री ओर 1000 सूं 2019 तक जावा वास्ते इण बटन दबाओ।';
 
   @override
-  String get previousButtonMenuTutorialText =>
-      'इण बटण दबाबा वास्ते या पिछला गीत माथे पाछा जावो';
+  String get previousButtonMenuTutorialText => 'इण बटण दबाबा वास्ते या पिछला गीत माथे पाछा जावो';
 
   @override
-  String get menuButtonTutorialText =>
-      'इण बटण नैं पैली री मेनू मांय पाछी जावण सारू दबाओ। आप किणी दूजा स्क्रीन सूं सीधा मुख्य मेनू मांय जावण सारू दबाओ अर पकड़ सको।';
+  String get menuButtonTutorialText => 'इण बटण नैं पैली री मेनू मांय पाछी जावण सारू दबाओ। आप किणी दूजा स्क्रीन सूं सीधा मुख्य मेनू मांय जावण सारू दबाओ अर पकड़ सको।';
 
   @override
-  String get deviceScreenMenuTutorialText =>
-      'यो डिस्प्ले स्क्रीन छै। टच स्कैन अर स्पार्ट स्किन मोड डिफॉल्ट रूप सूं सक्षम है अर सेटिंग्स में आगे कॉन्फ़िगर करियो जा सकै है।';
+  String get deviceScreenMenuTutorialText => 'यो डिस्प्ले स्क्रीन छै। टच स्कैन अर स्पार्ट स्किन मोड डिफॉल्ट रूप सूं सक्षम है अर सेटिंग्स में आगे कॉन्फ़िगर करियो जा सकै है।';
 
   @override
-  String get deviceControlNowPlayingTutorialText =>
-      'मात्रा नै एडजस्ट करण खातर क्लिक कर’र क्लिक करहां रै आसपास आपरो अंगूठी भेजो';
+  String get deviceControlNowPlayingTutorialText => 'मात्रा नै एडजस्ट करण खातर क्लिक कर’र क्लिक करहां रै आसपास आपरो अंगूठी भेजो';
 
   @override
-  String get centerButtonNowPlayingTutorialText =>
-      'केंद्र बटन दबाओ, वरीयता, स्प्रिंगर बार अर फ़ाइल स्लाइडर रै माध्यम सूं साइकिल माथै दबाओ। अतिरिक्त विकल्पां तक ​​पहुंचण अर केन्द्र बटन दबाओ अर राखो।';
+  String get centerButtonNowPlayingTutorialText => 'केंद्र बटन दबाओ, वरीयता, स्प्रिंगर बार अर फ़ाइल स्लाइडर रै माध्यम सूं साइकिल माथै दबाओ। अतिरिक्त विकल्पां तक ​​पहुंचण अर केन्द्र बटन दबाओ अर राखो।';
 
   @override
-  String get nextButtonNowPlayingTutorialText =>
-      'गीत नै तेज करण खातर यो बटन दबाओ अर पकड़ो';
+  String get nextButtonNowPlayingTutorialText => 'गीत नै तेज करण खातर यो बटन दबाओ अर पकड़ो';
 
   @override
-  String get previousButtonNowPlayingTutorialText =>
-      'गीतां नै याद करण सारू इण बटण माथै दबाओ अर पकड़ो';
+  String get previousButtonNowPlayingTutorialText => 'गीतां नै याद करण सारू इण बटण माथै दबाओ अर पकड़ो';
 
   @override
-  String get deviceControlSearchTutorialText =>
-      'एक विलिबिट नै उजागर करण खातर क्लिक कर’र आपरै अंगूठा नै हल्का-फुल्का हराओ';
+  String get deviceControlSearchTutorialText => 'एक विलिबिट नै उजागर करण खातर क्लिक कर’र आपरै अंगूठा नै हल्का-फुल्का हराओ';
 
   @override
-  String get centerButtonSearchTutorialText =>
-      '2019 नै उजागर करण खातर केन्द्र बटन दबाओ';
+  String get centerButtonSearchTutorialText => '2019 नै उजागर करण खातर केन्द्र बटन दबाओ';
 
   @override
   String get nextButtonSearchTutorialText => 'स्थान जोड़ण खातर इस बटन दबाओ';
 
   @override
-  String get previousButtonSearchTutorialText =>
-      'आखरी किरदार नै हटाबा रै वास्तै इण बटण माथै दबाओ';
+  String get previousButtonSearchTutorialText => 'आखरी किरदार नै हटाबा रै वास्तै इण बटण माथै दबाओ';
 
   @override
-  String get menuButtonSearchTutorialText =>
-      'कीबोर्ड नै बंद करण खातर अर खोज परिणामां तै बातचीत करण खातर इस बटन दबाओ';
+  String get menuButtonSearchTutorialText => 'कीबोर्ड नै बंद करण खातर अर खोज परिणामां तै बातचीत करण खातर इस बटन दबाओ';
 }

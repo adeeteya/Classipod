@@ -18,16 +18,13 @@ class AppLocalizationsCnh extends AppLocalizations {
   String get audioAccessPermissionTitle => 'Audio luh khawhnak nawl pek a hau';
 
   @override
-  String get audioAccessPermissionContent =>
-      'Na music file pawl kan tum khawhnak ding caah audio file pawl kha kan nawlpiak hna.';
+  String get audioAccessPermissionContent => 'Na music file pawl kan tum khawhnak ding caah audio file pawl kha kan nawlpiak hna.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle =>
-      'Audio luh khawhnak nawl a pekmi hna cu';
+  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio luh khawhnak nawl a pekmi hna cu';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent =>
-      'Na music file pawl kan tum khawhnak ding caah device settings ah hi app caah audio files luh khawhnak nawl pe.';
+  String get audioAccessPermissionPermanentlyDeniedContent => 'Na music file pawl kan tum khawhnak ding caah device settings ah hi app caah audio files luh khawhnak nawl pe.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -66,6 +63,7 @@ class AppLocalizationsCnh extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -83,6 +81,7 @@ class AppLocalizationsCnh extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -130,8 +129,7 @@ class AppLocalizationsCnh extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Touch Aw';
 
   @override
-  String get touchSoundsDialogContent =>
-      'Zaangfahnak tein System Settings in a chuakmi aw hna kha click wheel aw theih khawhnak ding caah 10';
+  String get touchSoundsDialogContent => 'Zaangfahnak tein System Settings in a chuakmi aw hna kha click wheel aw theih khawhnak ding caah 10';
 
   @override
   String get immersiveModeSettingTitle => 'Immersive Mode';
@@ -146,8 +144,7 @@ class AppLocalizationsCnh extends AppLocalizations {
   String get donateSettingTitle => 'Hlut';
 
   @override
-  String get donateSettingDescription =>
-      'Hi app na duh ahcun, bawmhnak pek ding in ruat.';
+  String get donateSettingDescription => 'Hi app na duh ahcun, bawmhnak pek ding in ruat.';
 
   @override
   String get versionAboutScreenTitle => 'Version';
@@ -198,8 +195,7 @@ class AppLocalizationsCnh extends AppLocalizations {
   String get retryButtonText => 'I zuam than';
 
   @override
-  String get filePickerDialogTitle =>
-      'Music caah Scan tuahnak ding caah Directory pakhat thim';
+  String get filePickerDialogTitle => 'Music caah Scan tuahnak ding caah Directory pakhat thim';
 
   @override
   String get searchScreenTitle => 'Kawl';
@@ -214,12 +210,10 @@ class AppLocalizationsCnh extends AppLocalizations {
   String get resultsForText => 'A phichuak cu:';
 
   @override
-  String get disableBatteryOptimizationTitle =>
-      'Pum tlamtlinglo Battery Thatnak';
+  String get disableBatteryOptimizationTitle => 'Pum tlamtlinglo Battery Thatnak';
 
   @override
-  String get disableBatteryOptimizationContent =>
-      'Zaangfahnak tein, hi app caah hin, music hnulei ah kir than khawhnak ding caah, hi app caah hin, battery ttha tein hman khawhnak ding caah, phihkharnak tuah.';
+  String get disableBatteryOptimizationContent => 'Zaangfahnak tein, hi app caah hin, music hnulei ah kir than khawhnak ding caah, hi app caah hin, battery ttha tein hman khawhnak ding caah, phihkharnak tuah.';
 
   @override
   String get languageScreenTitle => 'Holh';
@@ -273,65 +267,50 @@ class AppLocalizationsCnh extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Rescan hlasaknak file';
 
   @override
-  String get deviceControlMenuTutorialText =>
-      'Na kutdong kha click Wheel pawngkam ah tlawmpal in ṭhial law menu kha na kal khawh lai .';
+  String get deviceControlMenuTutorialText => 'Na kutdong kha click Wheel pawngkam ah tlawmpal in ṭhial law menu kha na kal khawh lai .';
 
   @override
-  String get centerButtonMenuTutorialText =>
-      'A biapi tukmi menu item kha thim awkah center button kha hmet.';
+  String get centerButtonMenuTutorialText => 'A biapi tukmi menu item kha thim awkah center button kha hmet.';
 
   @override
-  String get playPauseMenuTutorialText =>
-      'Hla pakhat chuah khawhnak ding caah hi button hi hmet .';
+  String get playPauseMenuTutorialText => 'Hla pakhat chuah khawhnak ding caah hi button hi hmet .';
 
   @override
   String get nextButtonMenuTutorialText => 'Hi button hi hmet law a hnu hla .';
 
   @override
-  String get previousButtonMenuTutorialText =>
-      'Hi button hi hmet law rewind tuah asiloah a hlan hla ah kir than .';
+  String get previousButtonMenuTutorialText => 'Hi button hi hmet law rewind tuah asiloah a hlan hla ah kir than .';
 
   @override
-  String get menuButtonTutorialText =>
-      'A hlan menu ah kir than ding in hi button hi hmet. A dang screen paohpaoh in na hmeh khawh i na tlaih khawh i, main menu ah direct in kal khawh a si.';
+  String get menuButtonTutorialText => 'A hlan menu ah kir than ding in hi button hi hmet. A dang screen paohpaoh in na hmeh khawh i na tlaih khawh i, main menu ah direct in kal khawh a si.';
 
   @override
-  String get deviceScreenMenuTutorialText =>
-      'Mah cu langhternak screen a si. Touch Screen le Split Screen Mode cu default in an tuah khawh i, settings ah cun a dang tein configure khawh a si.';
+  String get deviceScreenMenuTutorialText => 'Mah cu langhternak screen a si. Touch Screen le Split Screen Mode cu default in an tuah khawh i, settings ah cun a dang tein configure khawh a si.';
 
   @override
-  String get deviceControlNowPlayingTutorialText =>
-      'Na kutdong kha Click Wheel pawngkam ah ṭhial law volume kha remh khawh a si .';
+  String get deviceControlNowPlayingTutorialText => 'Na kutdong kha Click Wheel pawngkam ah ṭhial law volume kha remh khawh a si .';
 
   @override
-  String get centerButtonNowPlayingTutorialText =>
-      'Center button kha hmet law, kawl khawhnak bar, scrubber bar le sliffle slider hmangin cycle mawngh khawhnak ding caah hmet. A dang thimnak hmuh khawhnak ding caah Center button kha hmet law tlaih.';
+  String get centerButtonNowPlayingTutorialText => 'Center button kha hmet law, kawl khawhnak bar, scrubber bar le sliffle slider hmangin cycle mawngh khawhnak ding caah hmet. A dang thimnak hmuh khawhnak ding caah Center button kha hmet law tlaih.';
 
   @override
-  String get nextButtonNowPlayingTutorialText =>
-      'Hla kha fast forward tuah khawhnak ding caah hi button hi hmet law tlaih peng .';
+  String get nextButtonNowPlayingTutorialText => 'Hla kha fast forward tuah khawhnak ding caah hi button hi hmet law tlaih peng .';
 
   @override
-  String get previousButtonNowPlayingTutorialText =>
-      'Hla kha rewind tuah awkah hi button hi hmet law tlaih .';
+  String get previousButtonNowPlayingTutorialText => 'Hla kha rewind tuah awkah hi button hi hmet law tlaih .';
 
   @override
-  String get deviceControlSearchTutorialText =>
-      'Na kutdong kha Click Wheel pawngkam ah tlawmpal in ṭhial law alphabet pakhat kha langhter .';
+  String get deviceControlSearchTutorialText => 'Na kutdong kha Click Wheel pawngkam ah tlawmpal in ṭhial law alphabet pakhat kha langhter .';
 
   @override
-  String get centerButtonSearchTutorialText =>
-      'A biapi bikmi alphabet kha thim awkah center button kha hmet.';
+  String get centerButtonSearchTutorialText => 'A biapi bikmi alphabet kha thim awkah center button kha hmet.';
 
   @override
-  String get nextButtonSearchTutorialText =>
-      'Hi button hi hmet law space pakhat na chap lai .';
+  String get nextButtonSearchTutorialText => 'Hi button hi hmet law space pakhat na chap lai .';
 
   @override
-  String get previousButtonSearchTutorialText =>
-      'Hi button hi hmet law a donghnak bik cafang kha delete tuah .';
+  String get previousButtonSearchTutorialText => 'Hi button hi hmet law a donghnak bik cafang kha delete tuah .';
 
   @override
-  String get menuButtonSearchTutorialText =>
-      'Hi button hi hmet law keyboard kha khar law kawlnak a phichuak he pehtlaihnak tuah.';
+  String get menuButtonSearchTutorialText => 'Hi button hi hmet law keyboard kha khar law kawlnak a phichuak he pehtlaihnak tuah.';
 }

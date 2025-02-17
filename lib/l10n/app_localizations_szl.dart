@@ -15,20 +15,16 @@ class AppLocalizationsSzl extends AppLocalizations {
   String get menuButtonText => 'BEENUU; IENEU';
 
   @override
-  String get audioAccessPermissionTitle =>
-      'Dostymp do Audis Permis Wymogajōm sie';
+  String get audioAccessPermissionTitle => 'Dostymp do Audis Permis Wymogajōm sie';
 
   @override
-  String get audioAccessPermissionContent =>
-      'Proszymy prziznać pliki audio, coby przizwolić nōm na ôdtworzynie plikōw muzycznych.';
+  String get audioAccessPermissionContent => 'Proszymy prziznać pliki audio, coby przizwolić nōm na ôdtworzynie plikōw muzycznych.';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedTitle =>
-      'Audio Access Persmisyjo Zuczano';
+  String get audioAccessPermissionPermanentlyDeniedTitle => 'Audio Access Persmisyjo Zuczano';
 
   @override
-  String get audioAccessPermissionPermanentlyDeniedContent =>
-      'Proszymy prziznać pliki audio do tyj aplikacyje w ustawiyniach maszin, coby przizwolić nōm na ôdtworzynie plikōw muzycznych.';
+  String get audioAccessPermissionPermanentlyDeniedContent => 'Proszymy prziznać pliki audio do tyj aplikacyje w ustawiyniach maszin, coby przizwolić nōm na ôdtworzynie plikōw muzycznych.';
 
   @override
   String get menuScreenTitle => 'Menu';
@@ -67,6 +63,7 @@ class AppLocalizationsSzl extends AppLocalizations {
   String nSongs(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -84,6 +81,7 @@ class AppLocalizationsSzl extends AppLocalizations {
   String nAlbums(num count) {
     final intl.NumberFormat countNumberFormat = intl.NumberFormat.compact(
       locale: localeName,
+      
     );
     final String countString = countNumberFormat.format(count);
 
@@ -131,8 +129,7 @@ class AppLocalizationsSzl extends AppLocalizations {
   String get touchSoundsDialogTitle => 'Doświyżōne dźwiyrze';
 
   @override
-  String get touchSoundsDialogContent =>
-      'Proszymy Enuble dźwiynki z Ustawiyń Systymu, coby usłyszeć klangy koła klikniyńcio';
+  String get touchSoundsDialogContent => 'Proszymy Enuble dźwiynki z Ustawiyń Systymu, coby usłyszeć klangy koła klikniyńcio';
 
   @override
   String get immersiveModeSettingTitle => 'Tymeracyjny mrōwno';
@@ -147,8 +144,7 @@ class AppLocalizationsSzl extends AppLocalizations {
   String get donateSettingTitle => 'Podarować';
 
   @override
-  String get donateSettingDescription =>
-      'Jeźli ci sie podobo ta aplikacyjo, proszōm, rozwożaj podarowanie.';
+  String get donateSettingDescription => 'Jeźli ci sie podobo ta aplikacyjo, proszōm, rozwożaj podarowanie.';
 
   @override
   String get versionAboutScreenTitle => 'Wersyjo';
@@ -214,12 +210,10 @@ class AppLocalizationsSzl extends AppLocalizations {
   String get resultsForText => 'Wyniki dlo:';
 
   @override
-  String get disableBatteryOptimizationTitle =>
-      'Wyłōnczyć ôptymalizacyjo baterii';
+  String get disableBatteryOptimizationTitle => 'Wyłōnczyć ôptymalizacyjo baterii';
 
   @override
-  String get disableBatteryOptimizationContent =>
-      'Proszymy wyłōnczyć ôptymalizacyjo baterije do tyj aplikacyje w ustawiyniach maszin, coby przizwolić na ôdtworzynie muzyki.';
+  String get disableBatteryOptimizationContent => 'Proszymy wyłōnczyć ôptymalizacyjo baterije do tyj aplikacyje w ustawiyniach maszin, coby przizwolić na ôdtworzynie muzyki.';
 
   @override
   String get languageScreenTitle => 'Jynzyk';
@@ -273,66 +267,50 @@ class AppLocalizationsSzl extends AppLocalizations {
   String get rescanMusicFilesSettingTitle => 'Reskanowe File';
 
   @override
-  String get deviceControlMenuTutorialText =>
-      'Przesuń kciuk lekko naôbkoło Kliknijnego Koła, coby nawigować w menu';
+  String get deviceControlMenuTutorialText => 'Przesuń kciuk lekko naôbkoło Kliknijnego Koła, coby nawigować w menu';
 
   @override
-  String get centerButtonMenuTutorialText =>
-      'Naciśnij strzodkowy knop, coby wybrać podświytlōny przedmiot menu';
+  String get centerButtonMenuTutorialText => 'Naciśnij strzodkowy knop, coby wybrać podświytlōny przedmiot menu';
 
   @override
-  String get playPauseMenuTutorialText =>
-      'Naciśnij tyn guzicz, coby grać abo zatrzymać śpiywka';
+  String get playPauseMenuTutorialText => 'Naciśnij tyn guzicz, coby grać abo zatrzymać śpiywka';
 
   @override
-  String get nextButtonMenuTutorialText =>
-      'Naciśnij tyn guzicz, coby przeskoczyć na dalszo śpiywka';
+  String get nextButtonMenuTutorialText => 'Naciśnij tyn guzicz, coby przeskoczyć na dalszo śpiywka';
 
   @override
-  String get previousButtonMenuTutorialText =>
-      'Naciśnij tyn guzicz, coby ôdpoczyńć abo wrōcić do piyrwyjszyj śpiywki';
+  String get previousButtonMenuTutorialText => 'Naciśnij tyn guzicz, coby ôdpoczyńć abo wrōcić do piyrwyjszyj śpiywki';
 
   @override
-  String get menuButtonTutorialText =>
-      'Naciśnij tyn guzik, coby wrōcić do piyrwyjszego menu. Mogbyś nacisnōńć i utrzimać go z jakigo ino inkszygo ekranu, coby dyrekt iść do głōwnego menu.';
+  String get menuButtonTutorialText => 'Naciśnij tyn guzik, coby wrōcić do piyrwyjszego menu. Mogbyś nacisnōńć i utrzimać go z jakigo ino inkszygo ekranu, coby dyrekt iść do głōwnego menu.';
 
   @override
-  String get deviceScreenMenuTutorialText =>
-      'To je ekran wyświytlanio. Trybek ekranu ekranu i ekranu ekranu sōm domyślnie włōnczōne i mogōm być skōnfigurowane dalij w ustawiyniach.';
+  String get deviceScreenMenuTutorialText => 'To je ekran wyświytlanio. Trybek ekranu ekranu i ekranu ekranu sōm domyślnie włōnczōne i mogōm być skōnfigurowane dalij w ustawiyniach.';
 
   @override
-  String get deviceControlNowPlayingTutorialText =>
-      'Przesuń kciuk naôbkoło Kliknijnego Koła, coby przipasować głośność';
+  String get deviceControlNowPlayingTutorialText => 'Przesuń kciuk naôbkoło Kliknijnego Koła, coby przipasować głośność';
 
   @override
-  String get centerButtonNowPlayingTutorialText =>
-      'Naciśnij knopka Cyntrum, coby cyklować bez szukanie baru, szlangu i suwak shuffle. Naciśnij i utrzimuj knopka Cyntrum, coby dostymp do ekstra ôpcyjōw.';
+  String get centerButtonNowPlayingTutorialText => 'Naciśnij knopka Cyntrum, coby cyklować bez szukanie baru, szlangu i suwak shuffle. Naciśnij i utrzimuj knopka Cyntrum, coby dostymp do ekstra ôpcyjōw.';
 
   @override
-  String get nextButtonNowPlayingTutorialText =>
-      'Naciśnij i trzymaj tyn guzicz, coby wartko do przodka śpiywka';
+  String get nextButtonNowPlayingTutorialText => 'Naciśnij i trzymaj tyn guzicz, coby wartko do przodka śpiywka';
 
   @override
-  String get previousButtonNowPlayingTutorialText =>
-      'Naciśnij i trzymaj tyn guzicz, coby ôdtworzić śpiywka';
+  String get previousButtonNowPlayingTutorialText => 'Naciśnij i trzymaj tyn guzicz, coby ôdtworzić śpiywka';
 
   @override
-  String get deviceControlSearchTutorialText =>
-      'Przesuń kciuka lekko naôbkoło Kliknij, coby podświytlić abecadło';
+  String get deviceControlSearchTutorialText => 'Przesuń kciuka lekko naôbkoło Kliknij, coby podświytlić abecadło';
 
   @override
-  String get centerButtonSearchTutorialText =>
-      'Naciśnij cyntralny knop, coby wybrać podkreślōny alfabet';
+  String get centerButtonSearchTutorialText => 'Naciśnij cyntralny knop, coby wybrać podkreślōny alfabet';
 
   @override
-  String get nextButtonSearchTutorialText =>
-      'Naciśnij tyn guzicz, coby przidać przestrzyń';
+  String get nextButtonSearchTutorialText => 'Naciśnij tyn guzicz, coby przidać przestrzyń';
 
   @override
-  String get previousButtonSearchTutorialText =>
-      'Naciśnij tyn guzicz, coby ususić ôstatni postać';
+  String get previousButtonSearchTutorialText => 'Naciśnij tyn guzicz, coby ususić ôstatni postać';
 
   @override
-  String get menuButtonSearchTutorialText =>
-      'Naciśnij tyn guzicz, coby zawrzić klawiatura i wchodzić w interakcyjo z wynikami poszukowanio';
+  String get menuButtonSearchTutorialText => 'Naciśnij tyn guzicz, coby zawrzić klawiatura i wchodzić w interakcyjo z wynikami poszukowanio';
 }

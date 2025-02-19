@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter/foundation.dart';
@@ -17,7 +19,9 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
   }
 
   Future<void> buttonPressVibrate() async {
-    if (!kIsWeb && ref.read(settingsPreferencesControllerProvider).vibrate) {
+    if (!kIsWeb &&
+        (Platform.isAndroid || Platform.isIOS) &&
+        ref.read(settingsPreferencesControllerProvider).vibrate) {
       await Vibration.vibrate(duration: 3);
     }
   }

@@ -3,7 +3,6 @@ import 'dart:math';
 
 import 'package:classipod/core/constants/assets.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 
 class AlbumReflectiveArt extends StatelessWidget {
   final String? thumbnailPath;
@@ -90,9 +89,9 @@ class AlbumReflectiveArt extends StatelessWidget {
                 child: Image(
                   image:
                       (thumbnailPath != null)
-                          ? kIsWeb
-                              ? NetworkImage(thumbnailPath!)
-                              : FileImage(File(thumbnailPath!))
+                          ? isOnDevice
+                              ? FileImage(File(thumbnailPath!))
+                              : NetworkImage(thumbnailPath!)
                           : const AssetImage(Assets.defaultAlbumCoverImage),
                   errorBuilder:
                       (_, __, ___) => Image.asset(

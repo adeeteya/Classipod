@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
@@ -51,7 +53,7 @@ class SettingsPreferencesControllerNotifier
   }
 
   Future<void> setSystemUiMode() async {
-    if (!kIsWeb) {
+    if (!kIsWeb && Platform.isAndroid) {
       if (state.immersiveMode) {
         await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
       } else {

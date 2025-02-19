@@ -7,7 +7,6 @@ import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AnimatedAlbumArtScroller extends ConsumerStatefulWidget {
@@ -49,9 +48,9 @@ class _AnimatedAlbumArtScrollerState
       );
       setState(() {
         _albumArtImage =
-            kIsWeb
-                ? NetworkImage(randomAlbum.albumArtPath!)
-                : FileImage(File(randomAlbum.albumArtPath!));
+            randomAlbum.isOnDevice()
+                ? FileImage(File(randomAlbum.albumArtPath!))
+                : NetworkImage(randomAlbum.albumArtPath!);
       });
     }
   }

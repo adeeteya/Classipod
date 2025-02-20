@@ -166,6 +166,7 @@ final routerProvider = Provider(
                           child: Center(
                             child: SizedBox(
                               width: 400,
+                              height: 900,
                               child: DeviceFrame(
                                 key: deviceFrameGlobalKey,
                                 child: child,

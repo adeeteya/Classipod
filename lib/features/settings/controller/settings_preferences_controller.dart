@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
@@ -19,6 +17,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
+import 'package:universal_html/html.dart';
 
 final settingsPreferencesControllerProvider = NotifierProvider<
   SettingsPreferencesControllerNotifier,
@@ -53,7 +52,13 @@ class SettingsPreferencesControllerNotifier
   }
 
   Future<void> setSystemUiMode() async {
-    if (!kIsWeb && Platform.isAndroid) {
+    if (kIsWeb) {
+      if (state.immersiveMode) {
+        await document.documentElement?.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+    } else {
       if (state.immersiveMode) {
         await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
       } else {

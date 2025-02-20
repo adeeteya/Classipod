@@ -3,11 +3,11 @@ import 'dart:io';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:flutter/cupertino.dart';
 
 class AlbumArtSongListTile extends StatelessWidget {
-  final Metadata songMetadata;
+  final MusicMetadata songMetadata;
   final bool isSelected;
   final bool isCurrentlyPlaying;
   final VoidCallback onTap;

@@ -1,6 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
@@ -37,7 +37,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
   int get extraDisplayItems => 2;
 
   @override
-  List<Metadata> get displayItems =>
+  List<MusicMetadata> get displayItems =>
       ref.watch(playlistsProvider).elementAtOrNull(widget.playlistId)?.songs ??
       [];
 

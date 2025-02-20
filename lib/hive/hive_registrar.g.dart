@@ -7,7 +7,7 @@ import 'package:classipod/hive/hive_adapters.dart';
 
 extension HiveRegistrar on HiveInterface {
   void registerAdapters() {
-    registerAdapter(MetadataAdapter());
+    registerAdapter(MusicMetadataAdapter());
     registerAdapter(PlaylistModelAdapter());
   }
 }

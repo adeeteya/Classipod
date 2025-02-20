@@ -1,4 +1,4 @@
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 
 class PlaylistModel extends HiveObject {
@@ -6,11 +6,11 @@ class PlaylistModel extends HiveObject {
 
   String name;
 
-  List<Metadata> songs;
+  List<MusicMetadata> songs;
 
   PlaylistModel({required this.id, required this.name, required this.songs});
 
-  PlaylistModel copyWith({int? id, String? name, List<Metadata>? songs}) {
+  PlaylistModel copyWith({int? id, String? name, List<MusicMetadata>? songs}) {
     return PlaylistModel(
       id: id ?? this.id,
       name: name ?? this.name,
@@ -18,7 +18,7 @@ class PlaylistModel extends HiveObject {
     );
   }
 
-  PlaylistModel addSongToPlaylist(Metadata song) {
+  PlaylistModel addSongToPlaylist(MusicMetadata song) {
     // If song is already in the playlist then return
     if (songs.contains(song)) {
       return this;
@@ -26,7 +26,7 @@ class PlaylistModel extends HiveObject {
     return copyWith(songs: [...songs, song]);
   }
 
-  PlaylistModel removeSongFromPlaylist(Metadata song) {
+  PlaylistModel removeSongFromPlaylist(MusicMetadata song) {
     return copyWith(
       songs:
           songs

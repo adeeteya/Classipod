@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -27,7 +27,7 @@ class _AlbumSongsScreenState extends ConsumerState<AlbumSongsScreen>
   String get routeName => Routes.albumSongs.name;
 
   @override
-  List<Metadata> get displayItems => widget.albumDetail.albumSongs;
+  List<MusicMetadata> get displayItems => widget.albumDetail.albumSongs;
 
   @override
   Future<void> onSelectPressed() => _playSongFromAlbum(selectedDisplayItem);

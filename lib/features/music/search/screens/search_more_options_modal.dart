@@ -1,5 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/options_list_tile.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -34,7 +34,7 @@ enum _SearchMoreOptions {
 }
 
 class SearchMoreOptionsModal extends ConsumerStatefulWidget {
-  final Metadata? songMetadata;
+  final MusicMetadata? songMetadata;
   final AlbumModel? albumDetail;
 
   const SearchMoreOptionsModal({

@@ -1,4 +1,4 @@
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -49,7 +49,7 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
 
   void setNewMetadataList({
     NowPlayingType? nowPlayingType,
-    required List<Metadata> newMetadataList,
+    required List<MusicMetadata> newMetadataList,
   }) {
     super.state = state.copyWith(
       currentIndex: 0,

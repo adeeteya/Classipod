@@ -1,4 +1,4 @@
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
@@ -28,7 +28,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
   String get routeName => Uri.encodeComponent(widget.genreName);
 
   @override
-  List<Metadata> get displayItems =>
+  List<MusicMetadata> get displayItems =>
       ref.read(genreSongsMetadataListProvider(widget.genreName));
 
   @override

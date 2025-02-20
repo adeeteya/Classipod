@@ -1,8 +1,8 @@
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 
-final List<Metadata> onlineDemoAudioFilesMetaData = [
+final List<MusicMetadata> onlineDemoAudioFilesMetaData = [
   // Linkin Park - One More Light
-  Metadata(
+  MusicMetadata(
     trackName: "Nobody Can Save Me",
     trackArtistNames: ["Linkin Park"],
     albumName: "One More Light",
@@ -17,7 +17,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia903201.us.archive.org/26/items/linkin-park-one-more-light-2017/cover.jpg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Talking to Myself",
     trackArtistNames: ["Linkin Park"],
     albumName: "One More Light",
@@ -33,7 +33,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia903201.us.archive.org/26/items/linkin-park-one-more-light-2017/cover.jpg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Good Goodbye",
     trackArtistNames: ["Linkin Park", "Pusha T", "Stormzy"],
     albumName: "One More Light",
@@ -49,7 +49,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia903201.us.archive.org/26/items/linkin-park-one-more-light-2017/cover.jpg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Battle Symphony",
     trackArtistNames: ["Linkin Park"],
     albumName: "One More Light",
@@ -65,7 +65,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia903201.us.archive.org/26/items/linkin-park-one-more-light-2017/cover.jpg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Invisible",
     trackArtistNames: ["Linkin Park"],
     albumName: "One More Light",
@@ -81,7 +81,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia903201.us.archive.org/26/items/linkin-park-one-more-light-2017/cover.jpg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Heavy",
     trackArtistNames: ["Linkin Park", "Kiiara"],
     albumName: "One More Light",
@@ -97,7 +97,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia903201.us.archive.org/26/items/linkin-park-one-more-light-2017/cover.jpg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Sorry for Now",
     trackArtistNames: ["Linkin Park"],
     albumName: "One More Light",
@@ -113,7 +113,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia903201.us.archive.org/26/items/linkin-park-one-more-light-2017/cover.jpg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Halfway Right",
     trackArtistNames: ["Linkin Park"],
     albumName: "One More Light",
@@ -129,7 +129,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia903201.us.archive.org/26/items/linkin-park-one-more-light-2017/cover.jpg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "One More Light",
     trackArtistNames: ["Linkin Park"],
     albumName: "One More Light",
@@ -145,7 +145,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia903201.us.archive.org/26/items/linkin-park-one-more-light-2017/cover.jpg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Sharp Edges",
     trackArtistNames: ["Linkin Park"],
     albumName: "One More Light",
@@ -163,7 +163,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
   ),
 
   // Frank Ocean - Blonde
-  Metadata(
+  MusicMetadata(
     trackName: "Nikes",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -178,7 +178,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Ivy",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -193,7 +193,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Pink + White",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -209,7 +209,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Be Yourself",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -225,7 +225,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Solo",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -240,7 +240,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Skyline To",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -256,7 +256,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Self Control",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -272,7 +272,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Good Guy",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -287,7 +287,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Nights",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -302,7 +302,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Solo (Reprise)",
     trackArtistNames: ["Frank Ocean", "André 3000"],
     albumName: "Blonde",
@@ -318,7 +318,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Pretty Sweet",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -334,7 +334,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Facebook Story",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -350,7 +350,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Close to You",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -366,7 +366,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "White Ferrari",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -382,7 +382,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Seigfried",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -397,7 +397,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Godspeed",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -412,7 +412,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia800800.us.archive.org/21/items/blonde-frank-ocean/Blonde_-_Frank_Ocean.jpeg",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Futura Free",
     trackArtistNames: ["Frank Ocean"],
     albumName: "Blonde",
@@ -430,7 +430,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
   ),
 
   // Nirvana - Nevermind (1991)
-  Metadata(
+  MusicMetadata(
     trackName: "Smells Like Teen Spirit",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -446,7 +446,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "In Bloom",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -462,7 +462,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Come as You Are",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -478,7 +478,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Breed",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -494,7 +494,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Lithium",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -510,7 +510,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Polly",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -526,7 +526,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Territorial Pissings",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -542,7 +542,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Drain You",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -558,7 +558,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Lounge Act",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -574,7 +574,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Stay Away",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -590,7 +590,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "On a Plain",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -606,7 +606,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia601701.us.archive.org/33/items/nirvana-nevermind-1991_202307/Nevermind%20%281991%29/Cover%20Image.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Something in the Way",
     trackArtistNames: ["Nirvana"],
     albumName: "Nevermind",
@@ -624,7 +624,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
   ),
 
   // Dark Side of the Moon - Pink Floyd
-  Metadata(
+  MusicMetadata(
     trackName: "Speak to Me + Breathe",
     trackArtistNames: ["Pink Floyd"],
     albumName: "The Dark Side of the Moon",
@@ -640,7 +640,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia802305.us.archive.org/14/items/the-dark-side-of-the-moon-cd-rip-full-tracks/cover_itemimage.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "On the Run",
     trackArtistNames: ["Pink Floyd"],
     albumName: "The Dark Side of the Moon",
@@ -656,7 +656,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia802305.us.archive.org/14/items/the-dark-side-of-the-moon-cd-rip-full-tracks/cover_itemimage.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Time",
     trackArtistNames: ["Pink Floyd"],
     albumName: "The Dark Side of the Moon",
@@ -672,7 +672,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia802305.us.archive.org/14/items/the-dark-side-of-the-moon-cd-rip-full-tracks/cover_itemimage.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "The Great Gig in the Sky",
     trackArtistNames: ["Pink Floyd"],
     albumName: "The Dark Side of the Moon",
@@ -688,7 +688,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia802305.us.archive.org/14/items/the-dark-side-of-the-moon-cd-rip-full-tracks/cover_itemimage.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Money",
     trackArtistNames: ["Pink Floyd"],
     albumName: "The Dark Side of the Moon",
@@ -704,7 +704,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia802305.us.archive.org/14/items/the-dark-side-of-the-moon-cd-rip-full-tracks/cover_itemimage.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Us and Them",
     trackArtistNames: ["Pink Floyd"],
     albumName: "The Dark Side of the Moon",
@@ -720,7 +720,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia802305.us.archive.org/14/items/the-dark-side-of-the-moon-cd-rip-full-tracks/cover_itemimage.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Any Colour You Like",
     trackArtistNames: ["Pink Floyd"],
     albumName: "The Dark Side of the Moon",
@@ -736,7 +736,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia802305.us.archive.org/14/items/the-dark-side-of-the-moon-cd-rip-full-tracks/cover_itemimage.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Brain Damage",
     trackArtistNames: ["Pink Floyd"],
     albumName: "The Dark Side of the Moon",
@@ -752,7 +752,7 @@ final List<Metadata> onlineDemoAudioFilesMetaData = [
     thumbnailPath:
         "https://ia802305.us.archive.org/14/items/the-dark-side-of-the-moon-cd-rip-full-tracks/cover_itemimage.jpg?cnt=0",
   ),
-  Metadata(
+  MusicMetadata(
     trackName: "Eclipse",
     trackArtistNames: ["Pink Floyd"],
     albumName: "The Dark Side of the Moon",

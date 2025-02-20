@@ -1,4 +1,4 @@
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:just_audio/just_audio.dart';
 
 enum NowPlayingType { album, playlist, songs }
@@ -7,8 +7,8 @@ class NowPlayingModel {
   final int currentIndex;
   final bool isPlaying;
   final NowPlayingType nowPlayingType;
-  final Metadata? currentMetadata;
-  final List<Metadata> metadataList;
+  final MusicMetadata? currentMetadata;
+  final List<MusicMetadata> metadataList;
   final bool isShuffleEnabled;
   final LoopMode loopMode;
 
@@ -26,8 +26,8 @@ class NowPlayingModel {
     int? currentIndex,
     bool? isPlaying,
     NowPlayingType? nowPlayingType,
-    Metadata? currentMetadata,
-    List<Metadata>? metadataList,
+    MusicMetadata? currentMetadata,
+    List<MusicMetadata>? metadataList,
     bool? isShuffleEnabled,
     LoopMode? loopMode,
   }) {

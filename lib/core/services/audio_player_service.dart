@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
@@ -84,7 +84,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
 
   Future<void> setAudioSource({
     NowPlayingType nowPlayingType = NowPlayingType.songs,
-    required List<Metadata> musicMetadataList,
+    required List<MusicMetadata> musicMetadataList,
   }) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {

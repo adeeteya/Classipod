@@ -1,5 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
@@ -27,7 +27,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
   String get routeName => Routes.songs.name;
 
   @override
-  List<Metadata> get displayItems => ref.read(songsProvider);
+  List<MusicMetadata> get displayItems => ref.read(songsProvider);
 
   @override
   Future<void> onSelectPressed() => _playSong(selectedDisplayItem);

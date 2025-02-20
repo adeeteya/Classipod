@@ -1,5 +1,5 @@
 import 'package:classipod/core/constants/constants.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
@@ -56,7 +56,7 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
     }
   }
 
-  void addSongToPlaylist(Metadata? song) {
+  void addSongToPlaylist(MusicMetadata? song) {
     if (song != null) {
       state = [
         state[0].addSongToPlaylist(song),
@@ -73,7 +73,7 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
 
   Future<void> removeSongFromPlaylist({
     required int playlistId,
-    Metadata? song,
+    MusicMetadata? song,
   }) async {
     if (song != null) {
       state = [

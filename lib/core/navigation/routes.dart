@@ -1,6 +1,6 @@
 import 'package:classipod/core/constants/keys.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/page_not_found_screen.dart';
 import 'package:classipod/features/about/screen/about_screen.dart';
 import 'package:classipod/features/app_startup/screens/splash_screen.dart';
@@ -462,7 +462,7 @@ final routerProvider = Provider(
                                                     .albumSongsMoreOptions
                                                     .name,
                                             currentSongMetadata:
-                                                state.extra as Metadata,
+                                                state.extra as MusicMetadata,
                                             showAdditionalOptions: false,
                                           ),
                                     ),
@@ -559,7 +559,7 @@ final routerProvider = Provider(
                                       (context) => SongsMoreOptionsModal(
                                         routeName: Routes.songsMoreOptions.name,
                                         currentSongMetadata:
-                                            state.extra as Metadata,
+                                            state.extra as MusicMetadata,
                                       ),
                                 ),
                           ),
@@ -604,7 +604,7 @@ final routerProvider = Provider(
                                                     .genresSongsMoreOptions
                                                     .name,
                                             currentSongMetadata:
-                                                state.extra as Metadata,
+                                                state.extra as MusicMetadata,
                                           ),
                                     ),
                               ),
@@ -635,8 +635,8 @@ final routerProvider = Provider(
                                   builder:
                                       (context) => SearchMoreOptionsModal(
                                         songMetadata:
-                                            (state.extra is Metadata)
-                                                ? state.extra as Metadata
+                                            (state.extra is MusicMetadata)
+                                                ? state.extra as MusicMetadata
                                                 : null,
                                         albumDetail:
                                             (state.extra is AlbumModel)

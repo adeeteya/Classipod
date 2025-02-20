@@ -1,7 +1,10 @@
+import 'dart:async';
+import 'dart:io';
+
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
@@ -17,7 +20,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:universal_html/html.dart';
+import 'package:universal_html/html.dart' as html show document;
 
 final settingsPreferencesControllerProvider = NotifierProvider<
   SettingsPreferencesControllerNotifier,
@@ -52,11 +55,12 @@ class SettingsPreferencesControllerNotifier
   }
 
   Future<void> setSystemUiMode() async {
-    if (kIsWeb) {
+    if (kIsWeb && !(Platform.isAndroid || Platform.isIOS)) {
       if (state.immersiveMode) {
-        await document.documentElement?.requestFullscreen();
+        // ignore: unawaited_futures
+        html.document.documentElement?.requestFullscreen();
       } else {
-        document.exitFullscreen();
+        html.document.exitFullscreen();
       }
     } else {
       if (state.immersiveMode) {
@@ -203,7 +207,7 @@ class SettingsPreferencesControllerNotifier
   }
 
   Future<void> rescanMusicFiles({bool clearPlaylists = false}) async {
-    await Hive.box<Metadata>(Constants.metadataBoxName).clear();
+    await Hive.box<MusicMetadata>(Constants.metadataBoxName).clear();
     if (clearPlaylists) {
       await Hive.box<PlaylistModel>(Constants.playlistBoxName).clear();
     }

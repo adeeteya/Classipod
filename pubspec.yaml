@@ -31,7 +31,7 @@ dependencies:
   just_audio: ^0.9.46
   just_audio_background: ^0.0.1-beta.15
   path_provider: ^2.1.5
-  permission_handler: ^11.3.1
+  permission_handler: ^11.4.0
   shared_preferences: ^2.5.2
   tutorial_coach_mark: ^1.2.12
   universal_html: ^2.2.4

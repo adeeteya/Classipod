@@ -1,10 +1,10 @@
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 
 class AlbumModel {
   final String albumName;
   final String? albumArtPath;
   final String albumArtistName;
-  final List<Metadata> albumSongs;
+  final List<MusicMetadata> albumSongs;
 
   AlbumModel({
     required this.albumName,
@@ -17,7 +17,7 @@ class AlbumModel {
     String? albumName,
     String? albumArtPath,
     String? albumArtistName,
-    List<Metadata>? albumSongs,
+    List<MusicMetadata>? albumSongs,
   }) {
     return AlbumModel(
       albumName: albumName ?? this.albumName,

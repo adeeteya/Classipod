@@ -2,7 +2,7 @@ import 'dart:collection';
 import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/temp_directory_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -48,7 +48,7 @@ class MetadataReaderRepository {
     return '$cacheParentDirectory/$albumArtFileName.jpg';
   }
 
-  UnmodifiableListView<Metadata> extractAudioFilesMetadata(
+  UnmodifiableListView<MusicMetadata> extractAudioFilesMetadata(
     String musicFolderPath,
   ) {
     final Directory storageDir = Directory(musicFolderPath);
@@ -58,7 +58,7 @@ class MetadataReaderRepository {
     );
     final List<String> filePaths = files.map((e) => e.path).toList();
 
-    final List<Metadata> metadataList = [];
+    final List<MusicMetadata> metadataList = [];
 
     AudioMetadata audioMetadata;
 
@@ -77,7 +77,7 @@ class MetadataReaderRepository {
         }
 
         metadataList.add(
-          Metadata.fromAudioMetadata(
+          MusicMetadata.fromAudioMetadata(
             audioMetadata,
             thumbnailPath,
             metadataList.length,

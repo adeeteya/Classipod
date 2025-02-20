@@ -7,7 +7,7 @@ import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:just_audio_background/just_audio_background.dart';
 
-class Metadata extends HiveObject {
+class MusicMetadata extends HiveObject {
   /// Name of the track.
   final String? trackName;
 
@@ -56,7 +56,7 @@ class Metadata extends HiveObject {
   /// Bool to Indicate that the File is Located On-Device
   final bool isOnDevice;
 
-  Metadata({
+  MusicMetadata({
     this.trackName,
     this.trackArtistNames,
     this.albumName,
@@ -75,7 +75,7 @@ class Metadata extends HiveObject {
     this.isOnDevice = true,
   });
 
-  factory Metadata.fromAudioMetadata(
+  factory MusicMetadata.fromAudioMetadata(
     AudioMetadata audioMetadata,
     String? thumbnailPath,
     int originalSongIndex,
@@ -92,7 +92,7 @@ class Metadata extends HiveObject {
       trackArtistNames = [artist];
     }
 
-    return Metadata(
+    return MusicMetadata(
       trackName: audioMetadata.title ?? "Unknown Song",
       trackArtistNames: trackArtistNames,
       albumName: audioMetadata.album ?? "Unknown Album",
@@ -114,7 +114,7 @@ class Metadata extends HiveObject {
     );
   }
 
-  factory Metadata.fromMap(Map<String, dynamic> map) => Metadata(
+  factory MusicMetadata.fromMap(Map<String, dynamic> map) => MusicMetadata(
     trackName: map['metadata']['trackName'],
     trackArtistNames: map['metadata']['trackArtistNames']?.split('/'),
     albumName: map['metadata']['albumName'],
@@ -152,8 +152,8 @@ class Metadata extends HiveObject {
     'isOnDevice': isOnDevice,
   };
 
-  factory Metadata.fromJson(String source) =>
-      Metadata.fromMap(jsonDecode(source));
+  factory MusicMetadata.fromJson(String source) =>
+      MusicMetadata.fromMap(jsonDecode(source));
 
   String toJson() => jsonEncode(toMap());
 
@@ -244,7 +244,7 @@ class Metadata extends HiveObject {
 
   @override
   bool operator ==(Object other) {
-    return other is Metadata &&
+    return other is MusicMetadata &&
         trackName == other.trackName &&
         trackArtistNames == other.trackArtistNames &&
         albumName == other.albumName &&

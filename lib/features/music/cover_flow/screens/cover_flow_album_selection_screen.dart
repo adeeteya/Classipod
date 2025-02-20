@@ -1,5 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -29,7 +29,7 @@ class _CoverFlowAlbumSelectionScreenState
   String get routeName => Routes.coverFlowSelection.name;
 
   @override
-  List<Metadata> get displayItems => widget.albumDetail.albumSongs;
+  List<MusicMetadata> get displayItems => widget.albumDetail.albumSongs;
 
   @override
   Future<void> onSelectPressed() => _playSongFromAlbum(selectedDisplayItem);

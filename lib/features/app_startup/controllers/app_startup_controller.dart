@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:classipod/core/constants/constants.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
 import 'package:classipod/core/providers/temp_directory_provider.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
@@ -35,7 +35,7 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
     Hive.initFlutter(),
   ]);
   Hive.registerAdapters();
-  await Hive.openBox<Metadata>(Constants.metadataBoxName);
+  await Hive.openBox<MusicMetadata>(Constants.metadataBoxName);
   await Hive.openBox<PlaylistModel>(Constants.playlistBoxName);
   ref
       .read(settingsPreferencesControllerProvider.notifier)

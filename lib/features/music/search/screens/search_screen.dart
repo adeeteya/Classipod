@@ -1,5 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/metadata.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -75,7 +75,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
     } else {
       final searchResult = displayItems[selectedDisplayItem - 1];
       if (searchResult.searchResultType == SearchResultType.track) {
-        final metadata = searchResult.result as Metadata;
+        final metadata = searchResult.result as MusicMetadata;
         await ref
             .read(audioPlayerServiceProvider.notifier)
             .playSongFromOriginalList(metadata.originalSongIndex);
@@ -108,7 +108,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
       if (searchResult.searchResultType == SearchResultType.track) {
         context.goNamed(
           Routes.searchMoreOptions.name,
-          extra: searchResult.result as Metadata,
+          extra: searchResult.result as MusicMetadata,
         );
       } else if (searchResult.searchResultType == SearchResultType.album) {
         context.goNamed(

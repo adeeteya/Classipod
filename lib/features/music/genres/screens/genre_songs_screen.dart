@@ -25,7 +25,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
   double get displayTileHeight => 54;
 
   @override
-  String get routeName => Uri.parse(widget.genreName).path;
+  String get routeName => Uri.encodeComponent(widget.genreName);
 
   @override
   List<Metadata> get displayItems =>

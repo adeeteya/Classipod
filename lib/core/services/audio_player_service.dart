@@ -27,11 +27,16 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
   Future<void> build() async {}
 
   Future<void> play() async {
+    if (ref.read(audioPlayerProvider).playing) {
+      return;
+    }
     await ref.read(audioPlayerProvider).play();
   }
 
   Future<void> pause() async {
-    await ref.read(audioPlayerProvider).pause();
+    if (ref.read(audioPlayerProvider).playing) {
+      await ref.read(audioPlayerProvider).pause();
+    }
   }
 
   Future<void> toggleShuffleMode() async {
@@ -68,6 +73,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
       await setShuffleMode(true);
       await ref.read(audioPlayerProvider).shuffle();
       await nextSong();
+      Future.delayed(const Duration(milliseconds: 100), play);
 
       await ref
           .read(settingsPreferencesControllerProvider.notifier)
@@ -151,6 +157,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
         );
         await playSongAtIndex(songIndex);
         await setShuffleMode(false);
+        Future.delayed(const Duration(milliseconds: 100), play);
       }
     });
   }
@@ -180,6 +187,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
         );
         await playSongAtIndex(songIndex);
         await setShuffleMode(false);
+        Future.delayed(const Duration(milliseconds: 100), play);
       }
     });
   }
@@ -192,6 +200,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
         return;
       } else {
         await ref.read(audioPlayerProvider).seek(Duration.zero, index: index);
+        Future.delayed(const Duration(milliseconds: 100), play);
       }
     });
   }
@@ -221,6 +230,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
           .metadataList
           .indexWhere((element) => element.originalSongIndex == originalIndex);
       await ref.read(audioPlayerProvider).seek(Duration.zero, index: index);
+      Future.delayed(const Duration(milliseconds: 200), play);
     });
   }
 

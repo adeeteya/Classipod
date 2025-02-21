@@ -42,7 +42,7 @@ class TutorialViewWidget {
       targetContents.add(
         TargetContent(
           align: ContentAlign.custom,
-          padding: EdgeInsets.zero,
+          padding: contentPadding,
           customPosition: CustomTargetContentPosition(
             top: centerButtonOffset.dy + 25,
             left: 1,
@@ -65,7 +65,7 @@ class TutorialViewWidget {
   void showMainMenuTutorial({required VoidCallback onFinish}) {
     TutorialCoachMark(
       pulseEnable: false,
-      hideSkip: true,
+      alignSkip: Alignment.topCenter,
       targets: [
         _targetFocusWidget(
           identify: 'Device Controls',
@@ -138,13 +138,17 @@ class TutorialViewWidget {
         ),
       ],
       onFinish: onFinish,
+      onSkip: () {
+        onFinish();
+        return true;
+      },
     ).show(context: deviceFrameGlobalKey.currentContext!);
   }
 
   void showNowPlayingTutorial({required VoidCallback onFinish}) {
     TutorialCoachMark(
       pulseEnable: false,
-      hideSkip: true,
+      alignSkip: Alignment.topCenter,
       targets: [
         _targetFocusWidget(
           identify: 'Device Controls',
@@ -185,13 +189,17 @@ class TutorialViewWidget {
         ),
       ],
       onFinish: onFinish,
+      onSkip: () {
+        onFinish();
+        return true;
+      },
     ).show(context: deviceFrameGlobalKey.currentContext!);
   }
 
   void showSearchTutorial({required VoidCallback onFinish}) {
     TutorialCoachMark(
       pulseEnable: false,
-      hideSkip: true,
+      alignSkip: Alignment.topCenter,
       targets: [
         _targetFocusWidget(
           identify: 'Device Controls',
@@ -241,6 +249,10 @@ class TutorialViewWidget {
         ),
       ],
       onFinish: onFinish,
+      onSkip: () {
+        onFinish();
+        return true;
+      },
     ).show(context: deviceFrameGlobalKey.currentContext!);
   }
 }

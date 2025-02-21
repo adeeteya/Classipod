@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/constants/constants.dart';
@@ -150,6 +152,15 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                       ]);
                       if (context.mounted) {
                         context.goNamed(Routes.menu.name);
+                        if (!ref
+                            .read(splitScreenViewControllerProvider)
+                            .isScreenVisible) {
+                          unawaited(
+                            ref
+                                .read(splitScreenViewControllerProvider)
+                                .openSplitView(),
+                          );
+                        }
                       }
                     },
                     child: ColoredBox(

@@ -1,4 +1,4 @@
-import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/l10n/generated/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
 
 class AppStartupError extends StatelessWidget {
@@ -13,14 +13,21 @@ class AppStartupError extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      debugShowCheckedModeBanner: false,
       home: CupertinoPageScaffold(
         child: Center(
           child: Column(
             children: [
-              Text('${context.localization.commonErrorText} $error'),
+              Text(
+                '${AppLocalizations.of(context)?.commonErrorText ?? ''} $error',
+              ),
               CupertinoButton(
                 onPressed: onRetry,
-                child: Text(context.localization.retryButtonText),
+                child: Text(
+                  AppLocalizations.of(context)?.retryButtonText ?? 'Retry',
+                ),
               ),
             ],
           ),

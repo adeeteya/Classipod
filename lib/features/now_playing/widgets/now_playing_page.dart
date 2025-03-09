@@ -59,6 +59,7 @@ class NowPlayingWidget extends StatelessWidget {
                   style: const TextStyle(
                     color: AppPalette.hintTextColor,
                     fontSize: 16,
+                    fontWeight: FontWeight.bold,
                   ),
                   delayBefore: const Duration(seconds: 2),
                   pauseBetween: const Duration(seconds: 2),
@@ -71,6 +72,7 @@ class NowPlayingWidget extends StatelessWidget {
                   style: const TextStyle(
                     color: AppPalette.hintTextColor,
                     fontSize: 16,
+                    fontWeight: FontWeight.bold,
                   ),
                   delayBefore: const Duration(seconds: 2),
                   pauseBetween: const Duration(seconds: 2),

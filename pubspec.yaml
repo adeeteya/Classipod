@@ -57,13 +57,8 @@ flutter:
     - assets/images/
 
   fonts:
-    - family: Myriad
+    - family: Helvetica
       fonts:
-        - asset: assets/fonts/Myriad-Regular.ttf
-        - asset: assets/fonts/Myriad-Bold.ttf
-          weight: 700
-
-    - family: SF Pro Text
-      fonts:
-        - asset: assets/fonts/SFProText-Bold.otf
+        - asset: assets/fonts/Helvetica.ttf
+        - asset: assets/fonts/Helvetica-Bold.ttf
           weight: 700

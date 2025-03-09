@@ -2,8 +2,7 @@ class Assets {
   Assets._();
 
   // fonts
-  static const String myriadFont = 'Myriad';
-  static const String sfProTextFont = 'SF Pro Text';
+  static const String helveticaFont = 'Helvetica';
 
   // images
   static const String appIcon = 'assets/images/app_icon.png';

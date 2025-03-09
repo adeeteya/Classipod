@@ -180,7 +180,6 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                                     : AppPalette.lightDeviceButtonColor,
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
-                            fontFamily: Assets.sfProTextFont,
                           ),
                         ),
                       ),

@@ -68,7 +68,7 @@ class DevelopmentClassipodApp extends ConsumerWidget {
         textTheme: CupertinoTextThemeData(
           textStyle: TextStyle(
             color: CupertinoColors.black,
-            fontFamily: Assets.myriadFont,
+            fontFamily: Assets.helveticaFont,
           ),
         ),
       ),

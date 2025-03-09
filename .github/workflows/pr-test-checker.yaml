@@ -1,0 +1,27 @@
+name: Running Flutter Tests on PR
+
+on:
+  pull_request:
+
+env:
+  FLUTTER_VERSION: 3.29.1
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+
+      - name: Configure repo
+        run: |
+          flutter pub get
+          flutter gen-l10n
+
+      - name: Run Flutter Tests
+        run: |
+          flutter test

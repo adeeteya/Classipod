@@ -48,6 +48,14 @@ jobs:
   #          MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
   #          APP_BUNDLE_ID: ${{ secrets.APP_BUNDLE_ID }}
 
+  build_web:
+    name: Build Web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+      - uses: bluefireteam/flutter-gh-pages@v9
+
   build_android:
     name: Build Android
     runs-on: ubuntu-latest

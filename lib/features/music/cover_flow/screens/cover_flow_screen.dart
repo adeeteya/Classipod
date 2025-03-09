@@ -65,38 +65,42 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
           Expanded(
             child: Stack(
               children: [
-                PageView.builder(
-                  controller: pageController,
-                  itemCount: displayItems.length,
-                  itemBuilder: (context, index) {
-                    final double relativePosition = index - currentPage;
-                    return GestureDetector(
-                      onTap:
-                          relativePosition == 0
-                              ? () => _chooseAlbum(index)
-                              : null,
-                      child: Transform(
-                        transform:
-                            Matrix4.identity()
-                              ..setEntry(3, 2, 0.003)
-                              ..scale(
-                                (1 - relativePosition.abs()).clamp(0.2, 0.6) +
-                                    0.4,
-                              )
-                              ..rotateY(relativePosition),
-                        alignment:
-                            relativePosition >= 0
-                                ? Alignment.centerLeft
-                                : Alignment.centerRight,
-                        child: AlbumReflectiveArt(
-                          thumbnailPath: displayItems[index].albumArtPath,
-                          isOnDevice: displayItems[index].isOnDevice(),
-                          heroTag:
-                              "${displayItems[index].albumName}-${displayItems[index].albumArtistName}",
+                SizedBox(
+                  height: 225,
+                  child: PageView.builder(
+                    controller: pageController,
+                    itemCount: displayItems.length,
+                    itemBuilder: (context, index) {
+                      final double relativePosition = index - currentPage;
+                      return GestureDetector(
+                        onTap:
+                            relativePosition == 0
+                                ? () => _chooseAlbum(index)
+                                : null,
+                        child: Transform(
+                          transform:
+                              Matrix4.identity()
+                                ..setEntry(3, 2, 0.003)
+                                ..scale(
+                                  (1 - relativePosition.abs()).clamp(0.2, 0.6) +
+                                      0.4,
+                                )
+                                ..rotateY(relativePosition),
+                          alignment:
+                              relativePosition >= 0
+                                  ? Alignment.centerLeft
+                                  : Alignment.centerRight,
+                          child: AlbumReflectiveArt(
+                            imageWidth: 225,
+                            thumbnailPath: displayItems[index].albumArtPath,
+                            isOnDevice: displayItems[index].isOnDevice(),
+                            heroTag:
+                                "${displayItems[index].albumName}-${displayItems[index].albumArtistName}",
+                          ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    },
+                  ),
                 ),
                 Positioned(
                   bottom: 0,

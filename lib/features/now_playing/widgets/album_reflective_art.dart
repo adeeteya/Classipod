@@ -8,6 +8,7 @@ class AlbumReflectiveArt extends StatelessWidget {
   final String? thumbnailPath;
   final bool isOnDevice;
   final double reflectedImageHeight;
+  final double? imageWidth;
   final String heroTag;
 
   const AlbumReflectiveArt({
@@ -15,6 +16,7 @@ class AlbumReflectiveArt extends StatelessWidget {
     this.thumbnailPath,
     this.isOnDevice = true,
     this.reflectedImageHeight = 50,
+    this.imageWidth,
     required this.heroTag,
   });
 
@@ -61,8 +63,29 @@ class AlbumReflectiveArt extends StatelessWidget {
                 child: sourceWidget,
               );
             },
-            child: SizedBox(
-              width: double.infinity,
+            child: Image(
+              image:
+                  (thumbnailPath != null)
+                      ? isOnDevice
+                          ? FileImage(File(thumbnailPath!))
+                          : NetworkImage(thumbnailPath!)
+                      : const AssetImage(Assets.defaultAlbumCoverImage),
+              errorBuilder:
+                  (_, __, ___) => Image.asset(
+                    Assets.defaultAlbumCoverImage,
+                    fit: BoxFit.fitWidth,
+                  ),
+              height: imageWidth,
+              width: imageWidth ?? double.infinity,
+              fit: BoxFit.scaleDown,
+            ),
+          ),
+        ),
+        Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            Transform.flip(
+              flipY: true,
               child: Image(
                 image:
                     (thumbnailPath != null)
@@ -73,42 +96,22 @@ class AlbumReflectiveArt extends StatelessWidget {
                 errorBuilder:
                     (_, __, ___) => Image.asset(
                       Assets.defaultAlbumCoverImage,
+                      height: reflectedImageHeight,
+                      alignment: Alignment.bottomCenter,
                       fit: BoxFit.fitWidth,
                     ),
+                height: reflectedImageHeight,
+                width:
+                    imageWidth != null
+                        ? (imageWidth! - reflectedImageHeight)
+                        : double.infinity,
+                alignment: Alignment.bottomCenter,
                 fit: BoxFit.fitWidth,
-              ),
-            ),
-          ),
-        ),
-        Stack(
-          children: [
-            SizedBox(
-              width: double.infinity,
-              child: Transform.flip(
-                flipY: true,
-                child: Image(
-                  image:
-                      (thumbnailPath != null)
-                          ? isOnDevice
-                              ? FileImage(File(thumbnailPath!))
-                              : NetworkImage(thumbnailPath!)
-                          : const AssetImage(Assets.defaultAlbumCoverImage),
-                  errorBuilder:
-                      (_, __, ___) => Image.asset(
-                        Assets.defaultAlbumCoverImage,
-                        height: reflectedImageHeight,
-                        alignment: Alignment.bottomCenter,
-                        fit: BoxFit.fitWidth,
-                      ),
-                  height: reflectedImageHeight,
-                  alignment: Alignment.bottomCenter,
-                  fit: BoxFit.fitWidth,
-                ),
               ),
             ),
             SizedBox(
               height: reflectedImageHeight,
-              width: double.infinity,
+              width: imageWidth ?? double.infinity,
               child: DecoratedBox(
                 decoration: BoxDecoration(
                   border: const Border(

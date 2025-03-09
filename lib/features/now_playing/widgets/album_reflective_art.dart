@@ -14,7 +14,7 @@ class AlbumReflectiveArt extends StatelessWidget {
     super.key,
     this.thumbnailPath,
     this.isOnDevice = true,
-    this.reflectedImageHeight = 30,
+    this.reflectedImageHeight = 50,
     required this.heroTag,
   });
 

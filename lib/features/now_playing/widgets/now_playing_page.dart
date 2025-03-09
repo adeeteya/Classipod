@@ -27,7 +27,6 @@ class NowPlayingWidget extends StatelessWidget {
                     ..rotateY(-0.1),
               child: AlbumReflectiveArt(
                 thumbnailPath: nowPlayingDetails.currentMetadata?.thumbnailPath,
-                reflectedImageHeight: 50,
                 isOnDevice:
                     nowPlayingDetails.currentMetadata?.isOnDevice ?? true,
                 heroTag:

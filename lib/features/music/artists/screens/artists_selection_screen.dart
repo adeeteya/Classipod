@@ -1,8 +1,10 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
+import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/artists/providers/artist_names_provider.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,6 +24,9 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   String get routeName => Routes.artists.name;
 
   @override
+  int get extraDisplayItems => 1;
+
+  @override
   List<String> get displayItems => ref.read(artistNamesProvider);
 
   @override
@@ -29,11 +34,24 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
 
   void _selectArtist(int index) {
     setState(() => selectedDisplayItem = index);
-    final selectedArtistName = ref.read(artistNamesProvider).elementAt(index);
-    context.goNamed(
-      Routes.artistAlbums.name,
-      pathParameters: {"artistName": selectedArtistName},
-    );
+    if (index == 0) {
+      context.goNamed(
+        Routes.albumSongs.name,
+        extra: AlbumModel(
+          albumName: context.localization.allAlbums,
+          albumArtistName: "",
+          albumSongs: ref.read(audioFilesServiceProvider).requireValue,
+        ),
+      );
+    } else {
+      final selectedArtistName = ref
+          .read(artistNamesProvider)
+          .elementAt(index - 1);
+      context.goNamed(
+        Routes.artistAlbums.name,
+        pathParameters: {"artistName": selectedArtistName},
+      );
+    }
   }
 
   @override
@@ -62,13 +80,22 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
-                itemCount: displayItems.length,
-                itemBuilder:
-                    (context, index) => DisplayListTile(
-                      text: displayItems[index],
-                      isSelected: selectedDisplayItem == index,
-                      onTap: () => _selectArtist(index),
-                    ),
+                itemCount: displayItems.length + 1,
+                itemBuilder: (context, index) {
+                  if (index == 0) {
+                    return DisplayListTile(
+                      text: context.localization.allAlbums,
+                      isSelected: selectedDisplayItem == 0,
+                      onTap: () => _selectArtist(0),
+                    );
+                  }
+
+                  return DisplayListTile(
+                    text: displayItems[index - 1],
+                    isSelected: selectedDisplayItem == index,
+                    onTap: () => _selectArtist(index),
+                  );
+                },
               ),
             ),
           ),

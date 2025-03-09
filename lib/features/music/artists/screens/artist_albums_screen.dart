@@ -1,3 +1,5 @@
+import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
@@ -23,6 +25,9 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
   double get displayTileHeight => 54;
 
   @override
+  int get extraDisplayItems => 1;
+
+  @override
   String get routeName => Uri.encodeComponent(widget.artistName);
 
   @override
@@ -37,18 +42,46 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
   Future<void> onSelectLongPress() =>
       _navigateToAlbumMoreOptionsScreen(selectedDisplayItem);
 
+  AlbumModel allSongsAlbum() {
+    final List<MusicMetadata> allSongs = [];
+    for (int i = 0; i < displayItems.length; i++) {
+      allSongs.addAll(displayItems[i].albumSongs);
+    }
+    return AlbumModel(
+      albumName:
+          "${context.localization.repeatModeAll} ${context.localization.songsScreenTitle}",
+      albumArtistName: widget.artistName,
+      albumSongs: allSongs,
+    );
+  }
+
   Future<void> _navigateToAlbumMoreOptionsScreen(int index) async {
     setState(() => selectedDisplayItem = index);
-    await context.pushNamed(
-      Routes.artistAlbumsMoreOptions.name,
-      pathParameters: {"artistName": widget.artistName},
-      extra: displayItems[index],
-    );
+    if (index == 0) {
+      await context.pushNamed(
+        Routes.artistAlbumsMoreOptions.name,
+        pathParameters: {"artistName": widget.artistName},
+        extra: allSongsAlbum(),
+      );
+    } else {
+      await context.pushNamed(
+        Routes.artistAlbumsMoreOptions.name,
+        pathParameters: {"artistName": widget.artistName},
+        extra: displayItems[index - 1],
+      );
+    }
   }
 
   Future<void> _navigateToAlbumSelectionScreen(int index) async {
     setState(() => selectedDisplayItem = index);
-    await context.pushNamed(Routes.albumSongs.name, extra: displayItems[index]);
+    if (index == 0) {
+      await context.pushNamed(Routes.albumSongs.name, extra: allSongsAlbum());
+    } else {
+      await context.pushNamed(
+        Routes.albumSongs.name,
+        extra: displayItems[index - 1],
+      );
+    }
   }
 
   @override
@@ -62,16 +95,28 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
               controller: scrollController,
               child: ListView.builder(
                 controller: scrollController,
-                itemCount: displayItems.length,
-                itemBuilder:
-                    (context, index) => AlbumListTile(
-                      albumDetails: displayItems[index],
-                      isSelected: selectedDisplayItem == index,
+                itemCount: displayItems.length + 1,
+                itemBuilder: (context, index) {
+                  if (index == 0) {
+                    return AlbumListTile(
+                      albumDetails: allSongsAlbum(),
+                      isSelected: selectedDisplayItem == 0,
                       showArtistName: false,
-                      onTap: () async => _navigateToAlbumSelectionScreen(index),
+                      onTap: () async => _navigateToAlbumSelectionScreen(0),
                       onLongPress:
-                          () async => _navigateToAlbumMoreOptionsScreen(index),
-                    ),
+                          () async => _navigateToAlbumMoreOptionsScreen(0),
+                    );
+                  }
+
+                  return AlbumListTile(
+                    albumDetails: displayItems[index - 1],
+                    isSelected: selectedDisplayItem == index,
+                    showArtistName: false,
+                    onTap: () async => _navigateToAlbumSelectionScreen(index),
+                    onLongPress:
+                        () async => _navigateToAlbumMoreOptionsScreen(index),
+                  );
+                },
               ),
             ),
           ),

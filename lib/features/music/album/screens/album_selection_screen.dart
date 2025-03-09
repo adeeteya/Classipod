@@ -62,7 +62,6 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
         Routes.albumSongs.name,
         extra: AlbumModel(
           albumName: context.localization.allAlbums,
-          albumArtPath: null,
           albumArtistName: "",
           albumSongs: ref.read(audioFilesServiceProvider).requireValue,
         ),
@@ -106,7 +105,6 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
                     return AlbumListTile(
                       albumDetails: AlbumModel(
                         albumName: context.localization.allAlbums,
-                        albumArtPath: null,
                         albumArtistName: context.localization.nSongs(
                           allSongs.length,
                         ),

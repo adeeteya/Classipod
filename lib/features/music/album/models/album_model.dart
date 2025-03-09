@@ -8,7 +8,7 @@ class AlbumModel {
 
   AlbumModel({
     required this.albumName,
-    required this.albumArtPath,
+    this.albumArtPath,
     required this.albumArtistName,
     required this.albumSongs,
   });

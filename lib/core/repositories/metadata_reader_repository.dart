@@ -21,6 +21,7 @@ class MetadataReaderRepository {
   bool isSupportedAudioFormat(String path) {
     if (path.endsWith('.mp3') ||
         path.endsWith('.ogg') ||
+        path.endsWith('.opus') ||
         path.endsWith('.wav') ||
         path.endsWith('.flac') ||
         path.endsWith('.m4a') ||

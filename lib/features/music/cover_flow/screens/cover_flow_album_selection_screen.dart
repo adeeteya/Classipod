@@ -112,6 +112,13 @@ class _CoverFlowAlbumSelectionScreenState
                     child: ListView.builder(
                       controller: scrollController,
                       itemCount: displayItems.length,
+                      prototypeItem: CoverFlowAlbumSongListTile(
+                        songName: '',
+                        songDuration: Duration.zero,
+                        isSelected: false,
+                        isCurrentlyPlaying: false,
+                        onTap: () {},
+                      ),
                       itemBuilder:
                           (context, index) => CoverFlowAlbumSongListTile(
                             songName: displayItems[index].getTrackName,

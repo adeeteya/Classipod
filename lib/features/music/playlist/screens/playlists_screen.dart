@@ -50,6 +50,11 @@ class _PlaylistsScreenState extends ConsumerState<PlaylistsScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
+                prototypeItem: PlaylistListTile(
+                  playlistModel: PlaylistModel(id: 0, name: '', songs: []),
+                  isSelected: false,
+                  onTap: () {},
+                ),
                 itemBuilder:
                     (context, index) => PlaylistListTile(
                       playlistModel: displayItems[index],

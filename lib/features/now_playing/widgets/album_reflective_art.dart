@@ -77,11 +77,12 @@ class AlbumReflectiveArt extends StatelessWidget {
                   ),
               height: imageWidth,
               width: imageWidth ?? double.infinity,
-              fit: BoxFit.scaleDown,
+              fit: (imageWidth == null) ? BoxFit.fitWidth : BoxFit.scaleDown,
             ),
           ),
         ),
         Stack(
+          clipBehavior: Clip.none,
           alignment: Alignment.bottomCenter,
           children: [
             Transform.flip(
@@ -97,6 +98,10 @@ class AlbumReflectiveArt extends StatelessWidget {
                     (_, __, ___) => Image.asset(
                       Assets.defaultAlbumCoverImage,
                       height: reflectedImageHeight,
+                      width:
+                          imageWidth != null
+                              ? (imageWidth! - reflectedImageHeight)
+                              : double.infinity,
                       alignment: Alignment.bottomCenter,
                       fit: BoxFit.fitWidth,
                     ),
@@ -111,7 +116,10 @@ class AlbumReflectiveArt extends StatelessWidget {
             ),
             SizedBox(
               height: reflectedImageHeight,
-              width: imageWidth ?? double.infinity,
+              width:
+                  imageWidth != null
+                      ? (imageWidth! - reflectedImageHeight)
+                      : double.infinity,
               child: DecoratedBox(
                 decoration: BoxDecoration(
                   border: const Border(

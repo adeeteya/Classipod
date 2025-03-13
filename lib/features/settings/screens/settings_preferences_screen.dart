@@ -292,6 +292,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
+                prototypeItem: SettingsListTile(
+                  text: '',
+                  isSelected: false,
+                  onTap: () {},
+                ),
                 itemBuilder:
                     (context, index) => SettingsListTile(
                       text: displayItems[index].title(context),

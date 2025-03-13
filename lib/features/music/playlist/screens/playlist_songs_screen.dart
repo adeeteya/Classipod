@@ -199,6 +199,11 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length + 2,
+                prototypeItem: _customPlaylistListTile(
+                  onTap: () {},
+                  isSelected: false,
+                  isSavePlaylist: false,
+                ),
                 itemBuilder: (context, index) {
                   if (index == 0) {
                     return _customPlaylistListTile(

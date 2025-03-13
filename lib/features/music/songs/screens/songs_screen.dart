@@ -85,6 +85,14 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
+                prototypeItem: SongListTile(
+                  songName: '',
+                  trackArtistNames: '',
+                  isSelected: false,
+                  isCurrentlyPlaying: false,
+                  onTap: () {},
+                  onLongPress: () {},
+                ),
                 itemBuilder:
                     (context, index) => SongListTile(
                       songName: displayItems[index].trackName,

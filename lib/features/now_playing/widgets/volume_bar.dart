@@ -20,6 +20,7 @@ class VolumeBar extends ConsumerWidget {
                   builder: (context, constraints) {
                     final value = snapshot.data ?? 0;
                     return Stack(
+                      clipBehavior: Clip.none,
                       children: [
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),

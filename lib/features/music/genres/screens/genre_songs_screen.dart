@@ -75,6 +75,13 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
+                prototypeItem: AlbumArtSongListTile(
+                  songMetadata: MusicMetadata(),
+                  isSelected: false,
+                  isCurrentlyPlaying: false,
+                  onTap: () {},
+                  onLongPress: () {},
+                ),
                 itemBuilder:
                     (context, index) => AlbumArtSongListTile(
                       songMetadata: displayItems[index],

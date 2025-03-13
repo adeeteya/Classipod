@@ -62,6 +62,10 @@ class _GenresScreenState extends ConsumerState<GenresScreen> with CustomScreen {
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
+                prototypeItem: const DisplayListTile(
+                  text: '',
+                  isSelected: false,
+                ),
                 itemBuilder:
                     (context, index) => DisplayListTile(
                       text: displayItems[index],

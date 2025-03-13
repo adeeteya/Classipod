@@ -25,7 +25,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
   String get routeName => Routes.coverFlow.name;
 
   @override
-  double get viewPortFraction => 0.58;
+  double get viewPortFraction => 0.54;
 
   @override
   List<AlbumModel> get displayItems => ref.read(albumDetailsProvider);
@@ -64,9 +64,10 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
           const SizedBox(height: 10),
           Expanded(
             child: Stack(
+              clipBehavior: Clip.none,
               children: [
                 SizedBox(
-                  height: 225,
+                  height: 230,
                   child: PageView.builder(
                     controller: pageController,
                     itemCount: displayItems.length,
@@ -85,13 +86,13 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                                   (1 - relativePosition.abs()).clamp(0.2, 0.6) +
                                       0.4,
                                 )
-                                ..rotateY(relativePosition),
+                                ..rotateY(relativePosition * 0.9),
                           alignment:
                               relativePosition >= 0
                                   ? Alignment.centerLeft
                                   : Alignment.centerRight,
                           child: AlbumReflectiveArt(
-                            imageWidth: 225,
+                            imageWidth: 230,
                             thumbnailPath: displayItems[index].albumArtPath,
                             isOnDevice: displayItems[index].isOnDevice(),
                             heroTag:

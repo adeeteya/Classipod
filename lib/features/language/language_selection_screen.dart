@@ -46,6 +46,10 @@ class _LanguageSelectionScreenState
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
+                prototypeItem: const DisplayListTile(
+                  text: '',
+                  isSelected: false,
+                ),
                 itemBuilder:
                     (context, index) => DisplayListTile(
                       text: displayItems[index].getNativeLanguageName(),

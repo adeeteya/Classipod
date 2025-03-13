@@ -139,6 +139,10 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
+                prototypeItem: const DisplayListTile(
+                  text: '',
+                  isSelected: false,
+                ),
                 itemBuilder: (context, index) {
                   return DisplayListTile(
                     key: ValueKey(displayItems[index]),

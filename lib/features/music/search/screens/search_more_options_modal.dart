@@ -119,6 +119,7 @@ class _SearchMoreOptionsModalState extends ConsumerState<SearchMoreOptionsModal>
         shrinkWrap: true,
         controller: scrollController,
         itemCount: displayItems.length,
+        prototypeItem: const OptionsListTile(text: '', isSelected: false),
         itemBuilder: (context, index) {
           return OptionsListTile(
             text: displayItems[index].title(context),

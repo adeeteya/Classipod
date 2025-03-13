@@ -44,6 +44,7 @@ class DeviceFrame extends ConsumerWidget {
       ),
       child: Stack(
         fit: StackFit.expand,
+        clipBehavior: Clip.none,
         children: [
           Positioned(
             top: 0,

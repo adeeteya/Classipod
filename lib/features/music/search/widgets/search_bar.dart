@@ -160,6 +160,10 @@ class _SearchBarState extends State<SearchBar> {
                       controller: _scrollController,
                       scrollDirection: Axis.horizontal,
                       itemCount: alphabets.length,
+                      prototypeItem: const SizedBox(
+                        width: Constants.searchAlphabetSize,
+                        height: Constants.searchAlphabetSize,
+                      ),
                       itemBuilder: (context, index) {
                         return SizedBox(
                           width: Constants.searchAlphabetSize,

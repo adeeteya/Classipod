@@ -15,6 +15,7 @@ class SeekBar extends ConsumerWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Stack(
+            clipBehavior: Clip.none,
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),

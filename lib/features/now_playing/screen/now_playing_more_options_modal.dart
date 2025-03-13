@@ -66,14 +66,14 @@ class _NowPlayingMoreOptionsModalState
             .read(albumDetailsProvider)
             .indexWhere((e) => e == currentSongMetadata?.getAlbumDetail);
         if (albumDetailIndex != -1) {
-          context.pushReplacementNamed(
+          await context.pushNamed(
             Routes.albumSongs.name,
             extra: ref.read(albumDetailsProvider)[albumDetailIndex],
           );
         }
         break;
       case _NowPlayingMoreOptions.browseArtist:
-        context.pushReplacementNamed(
+        await context.pushNamed(
           Routes.artistAlbums.name,
           pathParameters: {
             "artistName":
@@ -98,6 +98,7 @@ class _NowPlayingMoreOptionsModalState
         shrinkWrap: true,
         controller: scrollController,
         itemCount: displayItems.length,
+        prototypeItem: const OptionsListTile(text: '', isSelected: false),
         itemBuilder: (context, index) {
           return OptionsListTile(
             text: displayItems[index].title(context),

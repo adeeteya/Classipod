@@ -86,7 +86,7 @@ class BatteryIndicatorWidget extends StatelessWidget {
             width: 0.5,
           ),
         ),
-        child: Stack(children: [bar, icon]),
+        child: Stack(clipBehavior: Clip.none, children: [bar, icon]),
       ),
     );
   }
@@ -141,7 +141,7 @@ class BatteryIndicatorWidget extends StatelessWidget {
                     ? Icon(
                       CupertinoIcons.bolt_fill,
                       color: AppPalette.batteryBarIconColor,
-                      size: constraints.maxHeight,
+                      size: constraints.maxHeight - 2,
                     )
                     : null,
           );

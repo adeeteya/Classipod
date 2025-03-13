@@ -27,11 +27,14 @@ class SettingsPreviewWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: Stack(
             fit: StackFit.expand,
+            clipBehavior: Clip.none,
             children: [
               Align(
                 alignment: Alignment.topCenter,
                 child: Text(
                   context.localization.appTitle,
+                  maxLines: 1,
+                  textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 20,
                     color: CupertinoColors.white,

@@ -70,6 +70,7 @@ class _PlaylistSongsMoreOptionsModalState
         shrinkWrap: true,
         controller: scrollController,
         itemCount: displayItems.length,
+        prototypeItem: const OptionsListTile(text: '', isSelected: false),
         itemBuilder: (context, index) {
           return OptionsListTile(
             text: displayItems[index].title(context),

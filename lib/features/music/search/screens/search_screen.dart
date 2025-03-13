@@ -168,6 +168,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
     return CupertinoPageScaffold(
       resizeToAvoidBottomInset: false,
       child: Stack(
+        clipBehavior: Clip.none,
         children: [
           Column(
             children: [
@@ -178,6 +179,15 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
                   child: ListView.builder(
                     controller: scrollController,
                     itemCount: displayItems.length + 1,
+                    prototypeItem: SearchListTile(
+                      searchResult: SearchResultsModel(
+                        searchResultType: SearchResultType.defaultSearch,
+                        result: '',
+                      ),
+                      isSelected: false,
+                      onTap: () {},
+                      onLongPress: () {},
+                    ),
                     itemBuilder: (context, index) {
                       if (index == 0) {
                         return SearchListTile(

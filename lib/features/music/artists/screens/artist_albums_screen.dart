@@ -96,6 +96,16 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length + 1,
+                prototypeItem: AlbumListTile(
+                  albumDetails: AlbumModel(
+                    albumName: '',
+                    albumArtistName: '',
+                    albumSongs: [],
+                  ),
+                  isSelected: false,
+                  onTap: () {},
+                  onLongPress: () {},
+                ),
                 itemBuilder: (context, index) {
                   if (index == 0) {
                     return AlbumListTile(

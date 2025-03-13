@@ -67,6 +67,11 @@ class _AlbumSongsScreenState extends ConsumerState<AlbumSongsScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
+                prototypeItem: const CondensedSongListTile(
+                  songName: '',
+                  isSelected: false,
+                  isCurrentlyPlaying: false,
+                ),
                 itemBuilder:
                     (context, index) => CondensedSongListTile(
                       songName: displayItems[index].getTrackName,

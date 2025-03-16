@@ -21,6 +21,19 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   final ProviderContainer providerContainer = ProviderContainer(
     overrides: [
+      deviceDirectoryProvider.overrideWith(
+        (_) => DeviceDirectory(
+          tempDirectory: Directory(
+            "${Directory.current.path}/test/test_files/temp",
+          ),
+          documentsDirectory: Directory(
+            "${Directory.current.path}/test/test_files/",
+          ),
+          downloadsDirectory: Directory(
+            "${Directory.current.path}/test/test_files/",
+          ),
+        ),
+      ),
       appStartupControllerProvider.overrideWith((ref) async {
         await ref.read(deviceDirectoryProvider.future);
         SharedPreferencesAsyncPlatform.instance =
@@ -70,21 +83,8 @@ void main() {
       ProviderScope(
         overrides: [
           deviceDirectoryProvider.overrideWith(
-            (_) => DeviceDirectory(
-              tempDirectory: Directory(
-                "${Directory.current.path}/test/test_files/temp",
-              ),
-              documentsDirectory: Directory(
-                "${Directory.current.path}/test/test_files/",
-              ),
-              downloadsDirectory: Directory(
-                "${Directory.current.path}/test/test_files/",
-              ),
-            ),
+            (_) => throw Exception('Test Exception'),
           ),
-          appStartupControllerProvider.overrideWith((ref) {
-            throw Exception('Test Exception');
-          }),
         ],
         child: const AppStartupScreen(app: ClassipodApp()),
       ),

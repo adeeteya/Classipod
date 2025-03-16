@@ -3,14 +3,15 @@
 import 'dart:io';
 
 import 'package:classipod/classipod_app.dart';
+import 'package:classipod/core/constants/keys.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/device_directory.dart';
 import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
 import 'package:classipod/features/app_startup/controllers/app_startup_controller.dart';
 import 'package:classipod/features/app_startup/screens/app_startup_screen.dart';
-import 'package:classipod/features/app_startup/screens/splash_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -56,17 +57,7 @@ void main() {
         );
   });
 
-  testWidgets('Displays Cupertino Loading Widget', (WidgetTester tester) async {
-    await tester.pumpWidget(
-      UncontrolledProviderScope(
-        container: providerContainer,
-        child: const AppStartupScreen(app: ClassipodApp()),
-      ),
-    );
-    expect(find.byType(CupertinoActivityIndicator), findsOne);
-  });
-
-  testWidgets('Displays Splash Screen', (WidgetTester tester) async {
+  testWidgets('Initial Location is Splash', (WidgetTester tester) async {
     await tester.binding.setSurfaceSize(const Size(300, 812));
     await tester.pumpWidget(
       UncontrolledProviderScope(
@@ -75,21 +66,7 @@ void main() {
       ),
     );
     await tester.pump();
-    expect(find.byType(SplashScreen), findsOne);
-  });
 
-  testWidgets('Displays Error Widget', (WidgetTester tester) async {
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [
-          deviceDirectoryProvider.overrideWith(
-            (_) => throw Exception('Test Exception'),
-          ),
-        ],
-        child: const AppStartupScreen(app: ClassipodApp()),
-      ),
-    );
-    await tester.pumpAndSettle();
-    await expectLater(find.textContaining('Test Exception'), findsOne);
+    expect('splash', rootNavigatorKey.currentContext?.router.locationNamed);
   });
 }

@@ -30,10 +30,13 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
       if (!kIsWeb && (Platform.isAndroid || Platform.isIOS)) {
         final PermissionStatus audioPermission =
             await Permission.audio.request();
-        if (audioPermission.isDenied) {
+        final PermissionStatus genericStoragePermission =
+            await Permission.storage.request();
+        if (audioPermission.isDenied && genericStoragePermission.isDenied) {
           throw const AudioPermissionDeniedException();
         }
-        if (audioPermission.isPermanentlyDenied) {
+        if (audioPermission.isPermanentlyDenied &&
+            genericStoragePermission.isPermanentlyDenied) {
           throw const AudioPermissionPermanentlyDeniedException();
         }
       }

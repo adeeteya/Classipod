@@ -1,10 +1,10 @@
-name: Running Flutter Tests on PR
+name: Lint Checking on PR
 
 on:
   pull_request:
 
 env:
-  FLUTTER_VERSION: 3.29.1
+  FLUTTER_VERSION: 3.29.2
 
 jobs:
   lint:
@@ -21,6 +21,10 @@ jobs:
         run: |
           flutter pub get
           flutter gen-l10n
+
+      - name: Lint Dart files
+        run: |
+          dart analyze --no-fatal-warnings
 
       - name: Run Flutter Tests
         run: |

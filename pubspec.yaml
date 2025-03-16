@@ -7,18 +7,18 @@ version: 1.7.7+15
 
 environment:
   sdk: ^3.7.0
-  flutter: 3.29.1
+  flutter: 3.29.2
 
 dependencies:
   audio_metadata_reader: ^1.1.0
   battery_plus: ^6.2.1
   cupertino_icons: ^1.0.8
-  device_preview_plus: ^2.3.1
+  device_preview_plus: ^2.3.3
   disable_battery_optimization:
     git:
       url: https://github.com/adeeteya/Disable-Battery-Optimizations.git
       ref: master
-  file_picker: ^9.0.2
+  file_picker: ^9.1.0
   flutter:
     sdk: flutter
   flutter_localizations:
@@ -30,6 +30,7 @@ dependencies:
   intl: any
   just_audio: ^0.9.46
   just_audio_background: ^0.0.1-beta.15
+  just_audio_windows: ^0.2.2
   path_provider: ^2.1.5
   permission_handler: ^11.4.0
   shared_preferences: ^2.5.2
@@ -41,12 +42,12 @@ dependencies:
 
 dev_dependencies:
   build_runner: ^2.4.15
-  custom_lint: ^0.7.3
+  custom_lint: ^0.7.5
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
   hive_ce_generator: ^1.8.2
-  riverpod_lint: ^2.6.4
+  riverpod_lint: ^2.6.5
 
 flutter:
   uses-material-design: true

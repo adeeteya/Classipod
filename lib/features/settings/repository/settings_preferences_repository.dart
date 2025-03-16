@@ -1,8 +1,11 @@
 import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/models/device_directory.dart';
 import 'package:classipod/core/models/shared_preference_keys.dart';
+import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -10,13 +13,18 @@ final settingsPreferencesRepositoryProvider =
     Provider.autoDispose<SettingsPreferencesRepository>((ref) {
       return SettingsPreferencesRepository(
         ref.read(sharedPreferencesWithCacheProvider).requireValue,
+        (!kIsWeb) ? ref.read(deviceDirectoryProvider).requireValue : null,
       );
     });
 
 class SettingsPreferencesRepository {
   final SharedPreferencesWithCache _sharedPreferencesWithCache;
+  final DeviceDirectory? _deviceDirectory;
 
-  SettingsPreferencesRepository(this._sharedPreferencesWithCache);
+  SettingsPreferencesRepository(
+    this._sharedPreferencesWithCache,
+    this._deviceDirectory,
+  );
 
   String getLanguageLocaleCode() {
     return _sharedPreferencesWithCache.getString(
@@ -78,7 +86,8 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache.getString(
           SharedPreferencesKeys.musicFolderPath.name,
         ) ??
-        Constants.defaultMusicFolderPath;
+        _deviceDirectory?.musicFolderPath ??
+        '';
   }
 
   Future<void> setLanguageLocaleCode({

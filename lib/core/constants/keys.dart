@@ -11,3 +11,7 @@ final GlobalKey nextButtonGlobalKey = GlobalKey();
 final GlobalKey centerButtonGlobalKey = GlobalKey();
 final GlobalKey previousButtonGlobalKey = GlobalKey();
 final GlobalKey playPauseButtonGlobalKey = GlobalKey();
+
+// Keys For the Navigator
+final rootNavigatorKey = GlobalKey<NavigatorState>();
+final menuNavigatorKey = GlobalKey<NavigatorState>();

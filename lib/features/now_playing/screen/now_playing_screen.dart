@@ -273,7 +273,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
               onTap: onSelectPressed,
               onLongPress: onSelectLongPress,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.only(left: 10),
                 child: NowPlayingWidget(nowPlayingDetails: nowPlayingDetails),
               ),
             ),

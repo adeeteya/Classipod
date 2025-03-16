@@ -1,7 +1,8 @@
 import 'dart:io';
 
+import 'package:classipod/core/models/device_directory.dart';
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:classipod/core/providers/temp_directory_provider.dart';
+import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:classipod/core/repositories/metadata_reader_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -10,8 +11,18 @@ void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   final ProviderContainer providerContainer = ProviderContainer(
     overrides: [
-      tempDirectoryProvider.overrideWith(
-        (_) => Directory("${Directory.current.path}/test/test_files/temp"),
+      deviceDirectoryProvider.overrideWith(
+        (_) => DeviceDirectory(
+          tempDirectory: Directory(
+            "${Directory.current.path}/test/test_files/temp",
+          ),
+          documentsDirectory: Directory(
+            "${Directory.current.path}/test/test_files/",
+          ),
+          downloadsDirectory: Directory(
+            "${Directory.current.path}/test/test_files/",
+          ),
+        ),
       ),
     ],
   );

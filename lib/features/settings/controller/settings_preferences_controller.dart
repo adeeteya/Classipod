@@ -255,7 +255,9 @@ class SettingsPreferencesControllerNotifier
         .setImmersiveMode(isImmersiveModeEnabled: false);
     await ref
         .read(settingsPreferencesRepositoryProvider)
-        .setMusicFolderPath(musicFolderPath: Constants.defaultMusicFolderPath);
+        .setMusicFolderPath(
+          musicFolderPath: Constants.androidDefaultMusicFolderPath,
+        );
     ref.invalidateSelf();
   }
 }

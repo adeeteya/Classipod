@@ -67,8 +67,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
           await ref
               .read(splashControllerProvider.notifier)
               .requestStoragePermissions();
-        }
-        if (context.mounted) {
+        } else if (!state.hasError && context.mounted) {
           context.goNamed(Routes.menu.name);
         }
       }

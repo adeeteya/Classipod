@@ -3,11 +3,12 @@
 import 'dart:io';
 
 import 'package:classipod/classipod_app.dart';
-import 'package:classipod/core/constants/keys.dart';
+import 'package:classipod/core/models/device_directory.dart';
+import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
-import 'package:classipod/core/providers/temp_directory_provider.dart';
 import 'package:classipod/features/app_startup/controllers/app_startup_controller.dart';
 import 'package:classipod/features/app_startup/screens/app_startup_screen.dart';
+import 'package:classipod/features/app_startup/screens/splash_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -21,7 +22,7 @@ void main() {
   final ProviderContainer providerContainer = ProviderContainer(
     overrides: [
       appStartupControllerProvider.overrideWith((ref) async {
-        await ref.read(tempDirectoryProvider.future);
+        await ref.read(deviceDirectoryProvider.future);
         SharedPreferencesAsyncPlatform.instance =
             InMemorySharedPreferencesAsync.empty();
         await ref.read(sharedPreferencesWithCacheProvider.future);
@@ -52,7 +53,7 @@ void main() {
     expect(find.byType(CupertinoActivityIndicator), findsOne);
   });
 
-  testWidgets('Displays Home Screen', (WidgetTester tester) async {
+  testWidgets('Displays Splash Screen', (WidgetTester tester) async {
     await tester.binding.setSurfaceSize(const Size(300, 812));
     await tester.pumpWidget(
       UncontrolledProviderScope(
@@ -61,15 +62,25 @@ void main() {
       ),
     );
     await tester.pump();
-    expect(find.byKey(deviceFrameGlobalKey), findsOne);
+    expect(find.byType(SplashScreen), findsOne);
   });
 
   testWidgets('Displays Error Widget', (WidgetTester tester) async {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          tempDirectoryProvider.overrideWith(
-            (_) => Directory("${Directory.current.path}/test/test_files/temp"),
+          deviceDirectoryProvider.overrideWith(
+            (_) => DeviceDirectory(
+              tempDirectory: Directory(
+                "${Directory.current.path}/test/test_files/temp",
+              ),
+              documentsDirectory: Directory(
+                "${Directory.current.path}/test/test_files/",
+              ),
+              downloadsDirectory: Directory(
+                "${Directory.current.path}/test/test_files/",
+              ),
+            ),
           ),
           appStartupControllerProvider.overrideWith((ref) {
             throw Exception('Test Exception');

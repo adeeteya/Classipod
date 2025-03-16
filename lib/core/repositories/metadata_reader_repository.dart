@@ -3,13 +3,13 @@ import 'dart:io';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:classipod/core/providers/temp_directory_provider.dart';
+import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final metadataReaderRepositoryProvider =
     Provider.autoDispose<MetadataReaderRepository>((ref) {
       return MetadataReaderRepository(
-        ref.read(tempDirectoryProvider).requireValue.path,
+        ref.read(deviceDirectoryProvider).requireValue.tempDirectory.path,
       );
     });
 

@@ -33,7 +33,6 @@ import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
@@ -131,9 +130,6 @@ enum Routes {
   }
 }
 
-final _rootNavigatorKey = GlobalKey<NavigatorState>();
-final _menuNavigatorKey = GlobalKey<NavigatorState>();
-
 final splitScreenViewControllerProvider = Provider<SplitScreenViewController>((
   ref,
 ) {
@@ -147,16 +143,11 @@ final routerProvider = Provider(
     errorBuilder: (context, state) => const PageNotFoundScreen(),
     routes: [
       ShellRoute(
-        navigatorKey: _rootNavigatorKey,
+        navigatorKey: rootNavigatorKey,
         pageBuilder: (context, state, child) {
           return CupertinoPage(
             child: ScrollConfiguration(
-              behavior:
-                  kIsWeb
-                      ? ScrollConfiguration.of(
-                        context,
-                      ).copyWith(scrollbars: false)
-                      : CustomScrollBehavior(),
+              behavior: CustomScrollBehavior(),
               child: CupertinoPageScaffold(
                 resizeToAvoidBottomInset: false,
                 child:
@@ -166,7 +157,7 @@ final routerProvider = Provider(
                           child: Center(
                             child: SizedBox(
                               width: 400,
-                              height: 900,
+                              height: 800,
                               child: DeviceFrame(
                                 key: deviceFrameGlobalKey,
                                 child: child,
@@ -190,8 +181,8 @@ final routerProvider = Provider(
                 ),
           ),
           ShellRoute(
-            parentNavigatorKey: _rootNavigatorKey,
-            navigatorKey: _menuNavigatorKey,
+            parentNavigatorKey: rootNavigatorKey,
+            navigatorKey: menuNavigatorKey,
             pageBuilder:
                 (context, state, child) => CustomTransitionPage(
                   key: state.pageKey,
@@ -214,7 +205,7 @@ final routerProvider = Provider(
               GoRoute(
                 path: Routes.menu.toString(),
                 name: Routes.menu.name,
-                parentNavigatorKey: _menuNavigatorKey,
+                parentNavigatorKey: menuNavigatorKey,
                 pageBuilder:
                     (context, state) => CupertinoPage(
                       key: state.pageKey,
@@ -224,7 +215,7 @@ final routerProvider = Provider(
                   GoRoute(
                     path: Routes.settings.name,
                     name: Routes.settings.name,
-                    parentNavigatorKey: _menuNavigatorKey,
+                    parentNavigatorKey: menuNavigatorKey,
                     pageBuilder:
                         (context, state) => CupertinoPage(
                           key: state.pageKey,
@@ -234,7 +225,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.about.name,
                         name: Routes.about.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
                             (context, state) => CupertinoPage(
                               key: state.pageKey,
@@ -244,7 +235,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.language.name,
                         name: Routes.language.name,
-                        parentNavigatorKey: _menuNavigatorKey,
+                        parentNavigatorKey: menuNavigatorKey,
                         pageBuilder:
                             (context, state) => CupertinoPage(
                               key: state.pageKey,
@@ -256,7 +247,7 @@ final routerProvider = Provider(
                   GoRoute(
                     path: Routes.nowPlaying.toString(),
                     name: Routes.nowPlaying.name,
-                    parentNavigatorKey: _rootNavigatorKey,
+                    parentNavigatorKey: rootNavigatorKey,
                     pageBuilder: (context, state) {
                       if (state.extra == Routes.menu.name &&
                           ref
@@ -292,7 +283,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.nowPlayingMoreOptions.name,
                         name: Routes.nowPlayingMoreOptions.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
                             (context, state) => OptionsModalPage(
                               context: context,
@@ -309,7 +300,7 @@ final routerProvider = Provider(
                   GoRoute(
                     path: Routes.musicMenu.toString(),
                     name: Routes.musicMenu.name,
-                    parentNavigatorKey: _menuNavigatorKey,
+                    parentNavigatorKey: menuNavigatorKey,
                     pageBuilder:
                         (context, state) => CupertinoPage(
                           key: state.pageKey,
@@ -319,7 +310,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.coverFlow.name,
                         name: Routes.coverFlow.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: rootNavigatorKey,
                         pageBuilder: (context, state) {
                           if (state.extra == Routes.musicMenu.name &&
                               ref
@@ -354,7 +345,7 @@ final routerProvider = Provider(
                           GoRoute(
                             path: Routes.coverFlowSelection.name,
                             name: Routes.coverFlowSelection.name,
-                            parentNavigatorKey: _rootNavigatorKey,
+                            parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => CustomTransitionPage(
                                   opaque: false,
@@ -377,7 +368,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.artists.name,
                         name: Routes.artists.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
                             (context, state) => CupertinoPage(
                               key: state.pageKey,
@@ -387,7 +378,7 @@ final routerProvider = Provider(
                           GoRoute(
                             path: ":artistName",
                             name: Routes.artistAlbums.name,
-                            parentNavigatorKey: _rootNavigatorKey,
+                            parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => CupertinoPage(
                                   key: state.pageKey,
@@ -401,7 +392,7 @@ final routerProvider = Provider(
                               GoRoute(
                                 path: Routes.artistAlbumsMoreOptions.name,
                                 name: Routes.artistAlbumsMoreOptions.name,
-                                parentNavigatorKey: _rootNavigatorKey,
+                                parentNavigatorKey: rootNavigatorKey,
                                 pageBuilder:
                                     (context, state) => OptionsModalPage(
                                       context: context,
@@ -426,7 +417,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.albums.name,
                         name: Routes.albums.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
                             (context, state) => CupertinoPage(
                               key: state.pageKey,
@@ -436,7 +427,7 @@ final routerProvider = Provider(
                           GoRoute(
                             path: Routes.albumSongs.name,
                             name: Routes.albumSongs.name,
-                            parentNavigatorKey: _rootNavigatorKey,
+                            parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => CupertinoPage(
                                   key: state.pageKey,
@@ -448,7 +439,7 @@ final routerProvider = Provider(
                               GoRoute(
                                 path: Routes.albumSongsMoreOptions.name,
                                 name: Routes.albumSongsMoreOptions.name,
-                                parentNavigatorKey: _rootNavigatorKey,
+                                parentNavigatorKey: rootNavigatorKey,
                                 pageBuilder:
                                     (context, state) => OptionsModalPage(
                                       context: context,
@@ -472,7 +463,7 @@ final routerProvider = Provider(
                           GoRoute(
                             path: Routes.albumMoreOptions.name,
                             name: Routes.albumMoreOptions.name,
-                            parentNavigatorKey: _rootNavigatorKey,
+                            parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => OptionsModalPage(
                                   context: context,
@@ -489,7 +480,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.playlists.name,
                         name: Routes.playlists.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
                             (context, state) => CupertinoPage(
                               key: state.pageKey,
@@ -500,7 +491,7 @@ final routerProvider = Provider(
                           GoRoute(
                             path: Routes.playlistSongs.name,
                             name: Routes.playlistSongs.name,
-                            parentNavigatorKey: _rootNavigatorKey,
+                            parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => CupertinoPage(
                                   key: state.pageKey,
@@ -519,7 +510,7 @@ final routerProvider = Provider(
                               GoRoute(
                                 path: Routes.playlistSongsMoreOptions.name,
                                 name: Routes.playlistSongsMoreOptions.name,
-                                parentNavigatorKey: _rootNavigatorKey,
+                                parentNavigatorKey: rootNavigatorKey,
                                 pageBuilder:
                                     (context, state) => OptionsModalPage(
                                       context: context,
@@ -540,7 +531,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.songs.name,
                         name: Routes.songs.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
                             (context, state) => CupertinoPage(
                               key: state.pageKey,
@@ -550,7 +541,7 @@ final routerProvider = Provider(
                           GoRoute(
                             path: Routes.songsMoreOptions.name,
                             name: Routes.songsMoreOptions.name,
-                            parentNavigatorKey: _rootNavigatorKey,
+                            parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => OptionsModalPage(
                                   context: context,
@@ -568,7 +559,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.genres.toString(),
                         name: Routes.genres.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
                             (context, state) => CupertinoPage(
                               key: state.pageKey,
@@ -578,7 +569,7 @@ final routerProvider = Provider(
                           GoRoute(
                             path: ":genreName",
                             name: Routes.genreSongs.name,
-                            parentNavigatorKey: _rootNavigatorKey,
+                            parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => CupertinoPage(
                                   key: state.pageKey,
@@ -591,7 +582,7 @@ final routerProvider = Provider(
                               GoRoute(
                                 path: Routes.genresSongsMoreOptions.name,
                                 name: Routes.genresSongsMoreOptions.name,
-                                parentNavigatorKey: _rootNavigatorKey,
+                                parentNavigatorKey: rootNavigatorKey,
                                 pageBuilder:
                                     (context, state) => OptionsModalPage(
                                       context: context,
@@ -615,7 +606,7 @@ final routerProvider = Provider(
                       GoRoute(
                         path: Routes.search.name,
                         name: Routes.search.name,
-                        parentNavigatorKey: _rootNavigatorKey,
+                        parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
                             (context, state) => CupertinoPage(
                               key: state.pageKey,
@@ -625,7 +616,7 @@ final routerProvider = Provider(
                           GoRoute(
                             path: Routes.searchMoreOptions.name,
                             name: Routes.searchMoreOptions.name,
-                            parentNavigatorKey: _rootNavigatorKey,
+                            parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => OptionsModalPage(
                                   context: context,

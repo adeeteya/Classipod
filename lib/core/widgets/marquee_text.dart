@@ -110,16 +110,19 @@ class _MarqueeTextState extends State<MarqueeText> {
 
     final Widget baseWidget = Directionality(
       textDirection: widget.textDirection,
-      child: SingleChildScrollView(
-        controller: _scrollController,
-        physics: const NeverScrollableScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        child: ConstrainedBox(
-          constraints: BoxConstraints(minWidth: _textMinWidth),
-          child: Text(
-            _endlessText ?? widget.text,
-            style: widget.style,
-            textAlign: widget.textAlign,
+      child: ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+        child: SingleChildScrollView(
+          controller: _scrollController,
+          physics: const NeverScrollableScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(minWidth: _textMinWidth),
+            child: Text(
+              _endlessText ?? widget.text,
+              style: widget.style,
+              textAlign: widget.textAlign,
+            ),
           ),
         ),
       ),
@@ -166,7 +169,7 @@ class _MarqueeTextState extends State<MarqueeText> {
       final TextPainter textPrototype = TextPainter(
         text: TextSpan(text: _endlessText ?? widget.text, style: widget.style),
         textDirection: widget.textDirection,
-        textScaler: MediaQuery.of(context).textScaler,
+        textScaler: MediaQuery.textScalerOf(context),
         textWidthBasis: TextWidthBasis.longestLine,
       )..layout();
 

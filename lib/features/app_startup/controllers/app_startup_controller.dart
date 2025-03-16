@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
-import 'package:classipod/core/providers/temp_directory_provider.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/hive/hive_registrar.g.dart';
@@ -29,8 +29,8 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
         androidNotificationOngoing: true,
         androidNotificationIcon: 'drawable/ic_stat_name',
       ),
-      ref.watch(tempDirectoryProvider.future),
     ],
+    if (!kIsWeb) ref.watch(deviceDirectoryProvider.future),
     ref.watch(sharedPreferencesWithCacheProvider.future),
     Hive.initFlutter(),
   ]);
@@ -39,9 +39,7 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
   await Hive.openBox<PlaylistModel>(Constants.playlistBoxName);
   ref
       .read(settingsPreferencesControllerProvider.notifier)
-      .setAudioSource(
-        isOnlineAudioSource: kIsWeb || Platform.isWindows || Platform.isLinux,
-      );
+      .setAudioSource(isOnlineAudioSource: kIsWeb || Platform.isLinux);
   unawaited(
     ref.read(settingsPreferencesControllerProvider.notifier).setSystemUiMode(),
   );

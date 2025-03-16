@@ -140,7 +140,11 @@ final splitScreenViewControllerProvider = Provider<SplitScreenViewController>((
 final routerProvider = Provider(
   (ref) => GoRouter(
     initialLocation: Routes.splash.toString(),
-    errorBuilder: (context, state) => const PageNotFoundScreen(),
+    errorPageBuilder:
+        (context, state) => CupertinoPage(
+          key: state.pageKey,
+          child: const PageNotFoundScreen(),
+        ),
     routes: [
       ShellRoute(
         navigatorKey: rootNavigatorKey,

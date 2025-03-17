@@ -12,4 +12,21 @@ class BatteryModel {
       batteryState: batteryState ?? this.batteryState,
     );
   }
+
+  @override
+  bool operator ==(Object other) {
+    return other is BatteryModel &&
+        other.level == level &&
+        other.batteryState == batteryState;
+  }
+
+  @override
+  int get hashCode {
+    return Object.hash(level, batteryState);
+  }
+
+  @override
+  String toString() {
+    return 'BatteryModel(level: $level, batteryState: $batteryState)';
+  }
 }

@@ -49,4 +49,9 @@ class PlaylistModel extends HiveObject {
 
   @override
   int get hashCode => Object.hash(id, name, songs);
+
+  @override
+  String toString() {
+    return 'PlaylistModel(id: $id, name: $name, songs: $songs)';
+  }
 }

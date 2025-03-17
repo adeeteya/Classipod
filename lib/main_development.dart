@@ -23,6 +23,7 @@ void main() {
 
   runApp(
     ProviderScope(
+      observers: [LoggingObserver()],
       child: DevicePreview(
         tools: const [...DevicePreview.defaultTools, DebuggerToolsSection()],
         builder:
@@ -73,6 +74,24 @@ class DevelopmentClassipodApp extends ConsumerWidget {
         ),
       ),
     );
+  }
+}
+
+class LoggingObserver extends ProviderObserver {
+  @override
+  void didUpdateProvider(
+    ProviderBase provider,
+    Object? previousValue,
+    Object? newValue,
+    ProviderContainer container,
+  ) {
+    debugPrint('''
+{
+  "provider": "${provider.name ?? provider.runtimeType}",
+  "previousValue": "$previousValue",
+  "newValue": "$newValue"
+}
+''');
   }
 }
 

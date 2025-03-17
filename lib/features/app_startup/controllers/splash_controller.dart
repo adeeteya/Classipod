@@ -46,36 +46,33 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
   }
 
   Future<void> initializeApp() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      // Load the audio files metadata
-      final audioFilesMetadata = await ref.refresh(
-        audioFilesServiceProvider.future,
-      );
+    // Load the audio files metadata
+    final audioFilesMetadata = await ref.refresh(
+      audioFilesServiceProvider.future,
+    );
 
-      // Set the audio source
-      await ref
-          .read(audioPlayerServiceProvider.notifier)
-          .setAudioSource(musicMetadataList: audioFilesMetadata);
+    // Set the audio source
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .setAudioSource(musicMetadataList: audioFilesMetadata);
 
-      // Set the initial loop mode
-      await ref
-          .read(settingsPreferencesControllerProvider.notifier)
-          .setInitialRepeatMode();
+    // Set the initial loop mode
+    await ref
+        .read(settingsPreferencesControllerProvider.notifier)
+        .setInitialRepeatMode();
 
-      // Invalidate the providers that depend on the audio files metadata
-      ref.invalidate(albumDetailsProvider);
-      ref.invalidate(artistNamesProvider);
-      ref.invalidate(songsProvider);
-      ref.invalidate(playlistsProvider);
-      ref.invalidate(tutorialControllerProvider);
+    // Invalidate the providers that depend on the audio files metadata
+    ref.invalidate(albumDetailsProvider);
+    ref.invalidate(artistNamesProvider);
+    ref.invalidate(songsProvider);
+    ref.invalidate(playlistsProvider);
+    ref.invalidate(tutorialControllerProvider);
 
-      // Load the playlists
-      await ref.read(playlistsProvider.notifier).init();
+    // Load the playlists
+    await ref.read(playlistsProvider.notifier).init();
 
-      // Navigate to the menu screen
-      ref.read(routerProvider).goNamed(Routes.menu.name);
-    });
+    // Navigate to the menu screen
+    ref.read(routerProvider).goNamed(Routes.menu.name);
   }
 }
 

@@ -21,4 +21,21 @@ class TutorialModel {
       isSearchFirstTime: isSearchFirstTime ?? this.isSearchFirstTime,
     );
   }
+
+  @override
+  bool operator ==(Object other) {
+    return other is TutorialModel &&
+        other.isMenuFirstTime == isMenuFirstTime &&
+        other.isNowPlayingFirstTime == isNowPlayingFirstTime &&
+        other.isSearchFirstTime == isSearchFirstTime;
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(isMenuFirstTime, isNowPlayingFirstTime, isSearchFirstTime);
+
+  @override
+  String toString() {
+    return 'TutorialModel(isMenuFirstTime: $isMenuFirstTime, isNowPlayingFirstTime: $isNowPlayingFirstTime, isSearchFirstTime: $isSearchFirstTime)';
+  }
 }

@@ -68,4 +68,9 @@ class NowPlayingModel {
       loopMode,
     );
   }
+
+  @override
+  String toString() {
+    return "NowPlayingModel(currentIndex: $currentIndex, isPlaying: $isPlaying, nowPlayingType: $nowPlayingType, currentMetadata: $currentMetadata, metadataList: $metadataList, isShuffleEnabled: $isShuffleEnabled, loopMode: $loopMode)";
+  }
 }

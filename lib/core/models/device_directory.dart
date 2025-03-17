@@ -42,4 +42,9 @@ class DeviceDirectory {
   @override
   int get hashCode =>
       Object.hash(tempDirectory, documentsDirectory, downloadsDirectory);
+
+  @override
+  String toString() {
+    return 'DeviceDirectory(tempDirectory: ${tempDirectory.path}, documentsDirectory: ${documentsDirectory.path}, downloadsDirectory: ${downloadsDirectory?.path})';
+  }
 }

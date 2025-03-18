@@ -111,6 +111,7 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
                       albumDetails: allSongsAlbum(),
                       isSelected: selectedDisplayItem == 0,
                       showArtistName: false,
+                      isAllSongsAlbum: true,
                       onTap: () async => _navigateToAlbumSelectionScreen(0),
                       onLongPress:
                           () async => _navigateToAlbumMoreOptionsScreen(0),

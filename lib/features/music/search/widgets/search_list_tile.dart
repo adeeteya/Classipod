@@ -68,6 +68,14 @@ class SearchListTile extends StatelessWidget {
                       ],
                     )
                     : null,
+            border:
+                isSelected
+                    ? null
+                    : const Border(
+                      bottom: BorderSide(
+                        color: AppPalette.lightDeviceFrameGradientColor1,
+                      ),
+                    ),
           ),
           child: Row(
             children: [
@@ -75,8 +83,8 @@ class SearchListTile extends StatelessWidget {
                       searchResult.searchResultType ==
                           SearchResultType.defaultSearch)
                   ? SizedBox(
-                    height: 50,
-                    width: 50,
+                    height: 54,
+                    width: 54,
                     child: ColoredBox(
                       color: AppPalette.defaultIconBackgroundColor,
                       child: Center(
@@ -85,6 +93,8 @@ class SearchListTile extends StatelessWidget {
                                   SearchResultType.artist)
                               ? CupertinoIcons.person_alt
                               : CupertinoIcons.search,
+                          size: 40,
+                          color: AppPalette.statusBarGradientColor2,
                         ),
                       ),
                     ),
@@ -101,10 +111,13 @@ class SearchListTile extends StatelessWidget {
                     errorBuilder:
                         (_, __, ___) => Image.asset(
                           Assets.defaultAlbumCoverImage,
-                          fit: BoxFit.fitWidth,
+                          fit: BoxFit.cover,
+                          height: 54,
+                          width: 54,
                         ),
-                    height: 50,
-                    width: 50,
+                    height: 54,
+                    width: 54,
+                    fit: BoxFit.cover,
                   ),
               const SizedBox(width: 10),
               Expanded(

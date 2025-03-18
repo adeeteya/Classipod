@@ -114,13 +114,14 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
                         ref.read(audioFilesServiceProvider).requireValue;
                     return AlbumListTile(
                       albumDetails: AlbumModel(
-                        albumName: context.localization.allAlbums,
+                        albumName: context.localization.allSongs,
                         albumArtistName: context.localization.nSongs(
                           allSongs.length,
                         ),
                         albumSongs: allSongs,
                       ),
                       isSelected: selectedDisplayItem == 0,
+                      isAllSongsAlbum: true,
                       onTap: () async => _navigateToAlbumSelectionScreen(0),
                       onLongPress: () {},
                     );

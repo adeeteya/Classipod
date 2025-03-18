@@ -7,7 +7,7 @@
             "type": "dart",
             "program": "lib/main.dart",
             "flutterMode": "debug",
-            "args": ["--flavor", "production","--target","lib/main.dart"],
+            "args": ["--flavor", "production","--target","lib/main.dart"]
         },
         {
             "name": "Classipod (profile mode)",
@@ -15,7 +15,7 @@
             "type": "dart",
             "program": "lib/main.dart",
             "flutterMode": "profile",
-            "args": ["--flavor", "production","--target","lib/main.dart"],
+            "args": ["--flavor", "production","--target","lib/main.dart"]
         },
         {
             "name": "Classipod (release mode)",
@@ -23,7 +23,7 @@
             "type": "dart",
             "program": "lib/main.dart",
             "flutterMode": "release",
-            "args": ["--flavor", "production","--target","lib/main.dart"],
+            "args": ["--flavor", "production","--target","lib/main.dart"]
         },
         {
             "name": "Classipod Development",
@@ -31,7 +31,7 @@
             "type": "dart",
             "program": "lib/main_development.dart",
             "flutterMode": "debug",
-            "args": ["--flavor", "dev","--target","lib/main_development.dart"],
+            "args": ["--flavor", "dev","--target","lib/main_development.dart"]
         },
         {
             "name": "Classipod Development Profile Mode",
@@ -39,7 +39,7 @@
             "type": "dart",
             "program": "lib/main_development.dart",
             "flutterMode": "profile",
-            "args": ["--flavor", "dev","--target","lib/main_development.dart"],
+            "args": ["--flavor", "dev","--target","lib/main_development.dart"]
         },
         {
             "name": "Classipod Development Release Mode",
@@ -47,7 +47,7 @@
             "type": "dart",
             "program": "lib/main_development.dart",
             "flutterMode": "release",
-            "args": ["--flavor", "dev","--target","lib/main_development.dart"],
+            "args": ["--flavor", "dev","--target","lib/main_development.dart"]
         }
     ]
 }

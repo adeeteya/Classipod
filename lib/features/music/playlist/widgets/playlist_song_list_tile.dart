@@ -43,6 +43,14 @@ class PlaylistSongListTile extends StatelessWidget {
                       ],
                     )
                     : null,
+            border:
+                isSelected
+                    ? null
+                    : const Border(
+                      bottom: BorderSide(
+                        color: AppPalette.lightDeviceFrameGradientColor1,
+                      ),
+                    ),
           ),
           child: Row(
             children: [

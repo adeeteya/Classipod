@@ -10,6 +10,7 @@ class AlbumListTile extends StatelessWidget {
   final AlbumModel albumDetails;
   final bool isSelected;
   final bool showArtistName;
+  final bool isAllSongsAlbum;
   final VoidCallback onTap;
   final VoidCallback onLongPress;
 
@@ -17,6 +18,7 @@ class AlbumListTile extends StatelessWidget {
     super.key,
     required this.albumDetails,
     required this.isSelected,
+    this.isAllSongsAlbum = false,
     this.showArtistName = true,
     required this.onTap,
     required this.onLongPress,
@@ -32,6 +34,14 @@ class AlbumListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
+            border:
+                isSelected
+                    ? null
+                    : const Border(
+                      bottom: BorderSide(
+                        color: AppPalette.lightDeviceFrameGradientColor1,
+                      ),
+                    ),
             gradient:
                 isSelected
                     ? const LinearGradient(
@@ -46,21 +56,37 @@ class AlbumListTile extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Image(
-                image:
-                    (albumDetails.albumArtPath != null)
-                        ? albumDetails.isOnDevice()
-                            ? FileImage(File(albumDetails.albumArtPath!))
-                            : NetworkImage(albumDetails.albumArtPath!)
-                        : const AssetImage(Assets.defaultAlbumCoverImage),
-                errorBuilder:
-                    (_, __, ___) => Image.asset(
-                      Assets.defaultAlbumCoverImage,
-                      fit: BoxFit.fitWidth,
+              if (isAllSongsAlbum)
+                const SizedBox(
+                  height: 54,
+                  width: 54,
+                  child: ColoredBox(
+                    color: CupertinoColors.black,
+                    child: Center(
+                      child: Icon(
+                        CupertinoIcons.music_note_2,
+                        size: 40,
+                        color: AppPalette.selectedTileGradientColor2,
+                      ),
                     ),
-                height: 54,
-                width: 54,
-              ),
+                  ),
+                ),
+              if (!isAllSongsAlbum)
+                Image(
+                  image:
+                      (albumDetails.albumArtPath != null)
+                          ? albumDetails.isOnDevice()
+                              ? FileImage(File(albumDetails.albumArtPath!))
+                              : NetworkImage(albumDetails.albumArtPath!)
+                          : const AssetImage(Assets.defaultAlbumCoverImage),
+                  errorBuilder:
+                      (_, __, ___) => Image.asset(
+                        Assets.defaultAlbumCoverImage,
+                        fit: BoxFit.fitWidth,
+                      ),
+                  height: 54,
+                  width: 54,
+                ),
               const SizedBox(width: 10),
               Expanded(
                 child: Column(

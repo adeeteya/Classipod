@@ -13,9 +13,7 @@ void main() {
     overrides: [
       deviceDirectoryProvider.overrideWith(
         (_) => DeviceDirectory(
-          cacheDirectory: Directory(
-            "${Directory.current.path}/test/test_files/temp",
-          ),
+          cacheDirectory: Directory("${Directory.current.path}/test/cache"),
           documentsDirectory: Directory(
             "${Directory.current.path}/test/test_files/",
           ),
@@ -94,7 +92,7 @@ void main() {
         bitrate: 128000,
         filePath: "${Directory.current.path}/test/test_files/mp3/Faded.mp3",
         thumbnailPath:
-            "${Directory.current.path}/test/test_files/temp/FadedbyAlanWalker.jpg",
+            "${Directory.current.path}/test/cache/FadedbyAlanWalker.jpg",
       ),
     );
   });
@@ -121,7 +119,7 @@ void main() {
         bitrate: 705600,
         filePath: "${Directory.current.path}/test/test_files/flac/Faded.flac",
         thumbnailPath:
-            "${Directory.current.path}/test/test_files/temp/FadedbyAlanWalker.jpg",
+            "${Directory.current.path}/test/cache/FadedbyAlanWalker.jpg",
       ),
     );
   });
@@ -148,7 +146,7 @@ void main() {
         bitrate: 128000,
         filePath: "${Directory.current.path}/test/test_files/ogg/Faded.ogg",
         thumbnailPath:
-            "${Directory.current.path}/test/test_files/temp/FadedbyAlanWalker.jpg",
+            "${Directory.current.path}/test/cache/FadedbyAlanWalker.jpg",
       ),
     );
   });
@@ -175,7 +173,7 @@ void main() {
         bitrate: 187,
         filePath: "${Directory.current.path}/test/test_files/opus/Faded.opus",
         thumbnailPath:
-            "${Directory.current.path}/test/test_files/temp/FadedbyAlanWalker.jpg",
+            "${Directory.current.path}/test/cache/FadedbyAlanWalker.jpg",
       ),
     );
   });

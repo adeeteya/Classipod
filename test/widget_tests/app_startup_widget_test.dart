@@ -23,9 +23,7 @@ void main() {
     overrides: [
       deviceDirectoryProvider.overrideWith(
         (_) => DeviceDirectory(
-          cacheDirectory: Directory(
-            "${Directory.current.path}/test/test_files/temp",
-          ),
+          cacheDirectory: Directory("${Directory.current.path}/test/cache"),
           documentsDirectory: Directory(
             "${Directory.current.path}/test/test_files/",
           ),
@@ -54,6 +52,7 @@ void main() {
   });
 
   testWidgets('Displays Cupertino Loading Widget', (WidgetTester tester) async {
+    await tester.binding.setSurfaceSize(const Size(300, 812));
     await tester.pumpWidget(
       UncontrolledProviderScope(
         container: providerContainer,

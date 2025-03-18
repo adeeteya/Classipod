@@ -24,9 +24,7 @@ void main() {
     overrides: [
       deviceDirectoryProvider.overrideWith(
         (_) => DeviceDirectory(
-          cacheDirectory: Directory(
-            "${Directory.current.path}/test/test_files/temp",
-          ),
+          cacheDirectory: Directory("${Directory.current.path}/test/cache"),
           documentsDirectory: Directory(
             "${Directory.current.path}/test/test_files/",
           ),
@@ -49,7 +47,7 @@ void main() {
         .setMockMethodCallHandler(
           const MethodChannel('plugins.flutter.io/path_provider'),
           (MethodCall methodCall) async {
-            return "${Directory.current.path}/test/test_files/temp";
+            return "${Directory.current.path}/test/cache";
           },
         );
   });

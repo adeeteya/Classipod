@@ -3,29 +3,23 @@ import 'dart:io';
 import 'package:classipod/core/constants/constants.dart';
 
 class DeviceDirectory {
-  final Directory tempDirectory;
+  final Directory cacheDirectory;
   final Directory documentsDirectory;
-  final Directory? downloadsDirectory;
 
   DeviceDirectory({
-    required this.tempDirectory,
+    required this.cacheDirectory,
     required this.documentsDirectory,
-    required this.downloadsDirectory,
   });
 
   String get musicFolderPath {
     if (Platform.isAndroid) {
       return Constants.androidDefaultMusicFolderPath;
     } else if (Platform.isWindows) {
-      final pathList =
-          downloadsDirectory?.path.split('\\') ??
-          documentsDirectory.path.split('\\');
+      final pathList = documentsDirectory.path.split('\\');
       pathList[pathList.length - 1] = 'Music';
       return pathList.join('\\');
     } else {
-      final pathList =
-          downloadsDirectory?.path.split('/') ??
-          documentsDirectory.path.split('/');
+      final pathList = documentsDirectory.path.split('/');
       pathList[pathList.length - 1] = 'Music';
       return pathList.join('/');
     }
@@ -34,17 +28,15 @@ class DeviceDirectory {
   @override
   bool operator ==(Object other) {
     return other is DeviceDirectory &&
-        other.tempDirectory.path == tempDirectory.path &&
-        other.documentsDirectory.path == documentsDirectory.path &&
-        other.downloadsDirectory?.path == downloadsDirectory?.path;
+        other.cacheDirectory.path == cacheDirectory.path &&
+        other.documentsDirectory.path == documentsDirectory.path;
   }
 
   @override
-  int get hashCode =>
-      Object.hash(tempDirectory, documentsDirectory, downloadsDirectory);
+  int get hashCode => Object.hash(cacheDirectory, documentsDirectory);
 
   @override
   String toString() {
-    return 'DeviceDirectory(tempDirectory: ${tempDirectory.path}, documentsDirectory: ${documentsDirectory.path}, downloadsDirectory: ${downloadsDirectory?.path})';
+    return 'DeviceDirectory(cacheDirectory: ${cacheDirectory.path}, documentsDirectory: ${documentsDirectory.path})';
   }
 }

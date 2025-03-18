@@ -9,7 +9,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 final metadataReaderRepositoryProvider =
     Provider.autoDispose<MetadataReaderRepository>((ref) {
       return MetadataReaderRepository(
-        ref.read(deviceDirectoryProvider).requireValue.tempDirectory.path,
+        ref.read(deviceDirectoryProvider).requireValue.cacheDirectory.path,
       );
     });
 

@@ -50,7 +50,7 @@ packages:
     source: hosted
     version: "1.1.0"
   audio_service:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: audio_service
       sha256: "887ddf15fce31fd12aa8044c3bffd14c58929fb20e31d96284fe3aaf48315ac6"
@@ -398,10 +398,10 @@ packages:
     dependency: "direct main"
     description:
       name: file_picker
-      sha256: "127d84b954527b2a59208c5cba556d8fb9078538f41ec869a56651f72f212a4b"
+      sha256: "8d938fd5c11dc81bf1acd4f7f0486c683fe9e79a0b13419e27730f9ce4d8a25b"
       url: "https://pub.dev"
     source: hosted
-    version: "9.2.0"
+    version: "9.2.1"
   fixnum:
     dependency: transitive
     description:

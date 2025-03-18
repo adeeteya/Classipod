@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
+import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
-import 'package:just_audio_background/just_audio_background.dart';
 
 class MusicMetadata extends HiveObject {
   /// Name of the track.
@@ -57,6 +57,9 @@ class MusicMetadata extends HiveObject {
   /// Bool to Indicate that the File is Located On-Device
   final bool isOnDevice;
 
+  /// Rating of the track.
+  final int rating;
+
   MusicMetadata({
     this.trackName,
     this.trackArtistNames,
@@ -74,6 +77,7 @@ class MusicMetadata extends HiveObject {
     this.thumbnailPath,
     this.originalSongIndex = 0,
     this.isOnDevice = true,
+    this.rating = 0,
   });
 
   factory MusicMetadata.fromAudioMetadata(
@@ -132,6 +136,7 @@ class MusicMetadata extends HiveObject {
     thumbnailPath: map['thumbnailPath'],
     originalSongIndex: map['originalSongIndex'],
     isOnDevice: map['isOnDevice'],
+    rating: map['rating'],
   );
 
   Map<String, dynamic> toMap() => {
@@ -151,12 +156,53 @@ class MusicMetadata extends HiveObject {
     'thumbnailPath': thumbnailPath,
     'originalSongIndex': originalSongIndex,
     'isOnDevice': isOnDevice,
+    'rating': rating,
   };
 
   factory MusicMetadata.fromJson(String source) =>
       MusicMetadata.fromMap(jsonDecode(source));
 
   String toJson() => jsonEncode(toMap());
+
+  MusicMetadata copyWith({
+    String? trackName,
+    List<String>? trackArtistNames,
+    String? albumName,
+    String? albumArtistName,
+    int? trackNumber,
+    int? albumLength,
+    int? year,
+    List<String>? genres,
+    int? discNumber,
+    String? mimeType,
+    int? trackDuration,
+    int? bitrate,
+    String? filePath,
+    String? thumbnailPath,
+    int? originalSongIndex,
+    bool? isOnDevice,
+    int? rating,
+  }) {
+    return MusicMetadata(
+      trackName: trackName ?? this.trackName,
+      trackArtistNames: trackArtistNames ?? this.trackArtistNames,
+      albumName: albumName ?? this.albumName,
+      albumArtistName: albumArtistName ?? this.albumArtistName,
+      trackNumber: trackNumber ?? this.trackNumber,
+      albumLength: albumLength ?? this.albumLength,
+      year: year ?? this.year,
+      genres: genres ?? this.genres,
+      discNumber: discNumber ?? this.discNumber,
+      mimeType: mimeType ?? this.mimeType,
+      trackDuration: trackDuration ?? this.trackDuration,
+      bitrate: bitrate ?? this.bitrate,
+      filePath: filePath ?? this.filePath,
+      thumbnailPath: thumbnailPath ?? this.thumbnailPath,
+      originalSongIndex: originalSongIndex ?? this.originalSongIndex,
+      isOnDevice: isOnDevice ?? this.isOnDevice,
+      rating: rating ?? this.rating,
+    );
+  }
 
   AudioSource toAudioSource() {
     if (isOnDevice) {
@@ -176,6 +222,7 @@ class MusicMetadata extends HiveObject {
               thumbnailPath == null
                   ? Uri.parse(Constants.defaultNotificationAlbumArtImageUrl)
                   : Uri.file(thumbnailPath!),
+          rating: Rating.newStarRating(RatingStyle.range5stars, rating),
         ),
       );
     } else {
@@ -195,6 +242,7 @@ class MusicMetadata extends HiveObject {
               thumbnailPath == null
                   ? Uri.parse(Constants.defaultNotificationAlbumArtImageUrl)
                   : Uri.file(thumbnailPath!),
+          rating: Rating.newStarRating(RatingStyle.range5stars, rating),
         ),
       );
     }
@@ -258,7 +306,8 @@ class MusicMetadata extends HiveObject {
         mimeType == other.mimeType &&
         trackDuration == other.trackDuration &&
         bitrate == other.bitrate &&
-        filePath == other.filePath;
+        filePath == other.filePath &&
+        rating == other.rating;
   }
 
   @override
@@ -276,6 +325,7 @@ class MusicMetadata extends HiveObject {
     trackDuration,
     bitrate,
     filePath,
+    rating,
   );
 }
 

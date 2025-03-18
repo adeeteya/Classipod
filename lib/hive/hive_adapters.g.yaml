@@ -15,7 +15,7 @@ types:
         index: 2
   MusicMetadata:
     typeId: 2
-    nextIndex: 16
+    nextIndex: 17
     fields:
       trackName:
         index: 0
@@ -49,3 +49,5 @@ types:
         index: 14
       isOnDevice:
         index: 15
+      rating:
+        index: 16

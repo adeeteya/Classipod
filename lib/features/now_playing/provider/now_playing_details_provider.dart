@@ -1,7 +1,9 @@
+import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_ce/hive.dart';
 import 'package:just_audio/just_audio.dart';
 
 final nowPlayingDetailsProvider =
@@ -10,8 +12,6 @@ final nowPlayingDetailsProvider =
     );
 
 class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
-  NowPlayingDetailsNotifier() : super();
-
   @override
   NowPlayingModel build() {
     ref.read(audioPlayerProvider).currentIndexStream.listen((newIndex) {
@@ -59,11 +59,46 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
     NowPlayingType? nowPlayingType,
     required List<MusicMetadata> newMetadataList,
   }) {
-    super.state = state.copyWith(
+    state = state.copyWith(
       currentIndex: 0,
       nowPlayingType: nowPlayingType,
       currentMetadata: newMetadataList.isNotEmpty ? newMetadataList[0] : null,
       metadataList: newMetadataList,
     );
+  }
+
+  Future<void> setCurrentMetadataRating(int val) async {
+    if (0 <= val && val <= 5 && state.currentMetadata != null) {
+      final newMetadata = state.currentMetadata!.copyWith(rating: val);
+      state = state.copyWith(
+        currentMetadata: newMetadata,
+        metadataList: [
+          for (final metadata in state.metadataList)
+            if (metadata.originalSongIndex ==
+                state.currentMetadata!.originalSongIndex)
+              newMetadata
+            else
+              metadata,
+        ],
+      );
+      final Box<MusicMetadata> metadataBox = Hive.box<MusicMetadata>(
+        Constants.metadataBoxName,
+      );
+      await metadataBox.putAt(newMetadata.originalSongIndex, newMetadata);
+    }
+  }
+
+  Future<void> increaseCurrentMetadataRating() async {
+    final int? currentRating = state.currentMetadata?.rating;
+    if (currentRating != null && currentRating < 5) {
+      await setCurrentMetadataRating(currentRating + 1);
+    }
+  }
+
+  Future<void> decreaseCurrentMetadataRating() async {
+    final int? currentRating = state.currentMetadata?.rating;
+    if (currentRating != null && currentRating > 0) {
+      await setCurrentMetadataRating(currentRating - 1);
+    }
   }
 }

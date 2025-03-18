@@ -10,6 +10,7 @@ import 'package:classipod/features/device/services/device_buttons_service_provid
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_bottom_bar.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_page.dart';
+import 'package:classipod/features/now_playing/widgets/rating_bar.dart';
 import 'package:classipod/features/now_playing/widgets/shuffle_segmented_control.dart';
 import 'package:classipod/features/now_playing/widgets/volume_bar.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
@@ -19,7 +20,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:just_audio/just_audio.dart';
 
-enum _NowPlayingBottomBarPage { seekBar, scrubberBar, volumeBar, shuffleBar }
+enum _NowPlayingBottomBarPage {
+  seekBar,
+  scrubberBar,
+  volumeBar,
+  shuffleBar,
+  ratingBar,
+}
 
 class NowPlayingScreen extends ConsumerStatefulWidget {
   const NowPlayingScreen({super.key});
@@ -61,6 +68,15 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
           .read(audioPlayerServiceProvider.notifier)
           .setShuffleMode(_isShuffleEnabled);
       await _bottomBarPageController.animateToPage(
+        3,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+      setState(() {
+        _bottomBarPage = _NowPlayingBottomBarPage.ratingBar;
+      });
+    } else if (_bottomBarPage == _NowPlayingBottomBarPage.ratingBar) {
+      await _bottomBarPageController.animateToPage(
         0,
         duration: const Duration(milliseconds: 300),
         curve: Curves.ease,
@@ -100,6 +116,11 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
         _isShuffleEnabled = true;
       });
       return;
+    } else if (_bottomBarPage == _NowPlayingBottomBarPage.ratingBar) {
+      await ref
+          .read(nowPlayingDetailsProvider.notifier)
+          .increaseCurrentMetadataRating();
+      return;
     }
     setState(() {
       _bottomBarPage = _NowPlayingBottomBarPage.volumeBar;
@@ -116,6 +137,11 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       setState(() {
         _isShuffleEnabled = false;
       });
+      return;
+    } else if (_bottomBarPage == _NowPlayingBottomBarPage.ratingBar) {
+      await ref
+          .read(nowPlayingDetailsProvider.notifier)
+          .decreaseCurrentMetadataRating();
       return;
     }
     setState(() {
@@ -320,6 +346,16 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                                   _isShuffleEnabled =
                                       value ?? _isShuffleEnabled;
                                 });
+                              },
+                            ),
+                            RatingBar(
+                              currentRating:
+                                  nowPlayingDetails.currentMetadata?.rating ??
+                                  0,
+                              onRatingClicked: (val) async {
+                                await ref
+                                    .read(nowPlayingDetailsProvider.notifier)
+                                    .setCurrentMetadataRating(val ?? 0);
                               },
                             ),
                           ],

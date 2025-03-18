@@ -77,6 +77,7 @@ If you like what you see, please ⭐ the repo.
 - ⬇️ Caching Metadata of the songs for faster boot up times
 - 📃 Ability to Create and Store Custom User Created Playlists
 - 📖 App Usage Tutorial
+- ⭐ Song Rating Feature
 
 ### 🔜 Upcoming Features
 
@@ -120,6 +121,7 @@ If you like what you see, please ⭐ the repo.
 | Name                                                                                      | Usage                                                                               |
 |-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | [**audio_metadata_reader**](https://pub.dev/packages/audio_metadata_reader)               | To read the metadata of the local mp3 files                                         |
+| [**audio_service**](https://pub.dev/packages/audio_service)                               | To support background audio playback                                                |
 | [**battery_plus**](https://pub.dev/packages/battery_plus)                                 | Shows phone battery level and status                                                |
 | [**cupertino_icons**](https://pub.dev/packages/cupertino_icons)                           | For ios style icons                                                                 |
 | [**device_preview_plus**](https://pub.dev/packages/device_preview_plus)                   | For visualizing how the app looks on different devices and screens                  |

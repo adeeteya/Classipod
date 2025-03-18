@@ -15,7 +15,9 @@ class NowPlayingWidget extends StatelessWidget {
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 300),
       child: Row(
-        key: ValueKey("Now Playing-${nowPlayingDetails.currentMetadata}"),
+        key: ValueKey(
+          "Now Playing-${nowPlayingDetails.currentMetadata?.originalSongIndex}",
+        ),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Flexible(
@@ -77,7 +79,22 @@ class NowPlayingWidget extends StatelessWidget {
                   pauseBetween: const Duration(seconds: 2),
                   pauseOnBounce: const Duration(seconds: 2),
                 ),
-                const Spacer(),
+                if ((nowPlayingDetails.currentMetadata?.rating ?? 0) != 0)
+                  Row(
+                    children: List.generate(
+                      nowPlayingDetails.currentMetadata?.rating ?? 0,
+                      (index) => const Padding(
+                        padding: EdgeInsets.only(right: 2, top: 2, bottom: 2),
+                        child: Icon(
+                          CupertinoIcons.star_fill,
+                          size: 12,
+                          color: AppPalette.selectedTileGradientColor2,
+                        ),
+                      ),
+                    ),
+                  ),
+                if ((nowPlayingDetails.currentMetadata?.rating ?? 0) == 0)
+                  const SizedBox(height: 16),
                 Text(
                   "${nowPlayingDetails.currentIndex + 1} ${context.localization.commonOfText} ${nowPlayingDetails.metadataList.length}",
                   style: const TextStyle(

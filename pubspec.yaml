@@ -11,6 +11,7 @@ environment:
 
 dependencies:
   audio_metadata_reader: ^1.1.0
+  audio_service: ^0.18.17
   battery_plus: ^6.2.1
   cupertino_icons: ^1.0.8
   device_preview_plus: ^2.3.3
@@ -18,7 +19,7 @@ dependencies:
     git:
       url: https://github.com/adeeteya/Disable-Battery-Optimizations.git
       ref: master
-  file_picker: ^9.2.0
+  file_picker: ^9.2.1
   flutter:
     sdk: flutter
   flutter_localizations:

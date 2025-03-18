@@ -15,7 +15,9 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
   @override
   NowPlayingModel build() {
     ref.read(audioPlayerProvider).currentIndexStream.listen((newIndex) {
-      if (newIndex != null && state.metadataList.isNotEmpty) {
+      if (newIndex != null &&
+          newIndex != state.currentIndex &&
+          state.metadataList.isNotEmpty) {
         state = state.copyWith(
           currentIndex: newIndex,
           currentMetadata: state.metadataList[newIndex],
@@ -24,17 +26,23 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
     });
 
     ref.read(audioPlayerProvider).playingStream.listen((isPlaying) {
-      state = state.copyWith(isPlaying: isPlaying);
+      if (isPlaying != state.isPlaying) {
+        state = state.copyWith(isPlaying: isPlaying);
+      }
     });
 
     ref.read(audioPlayerProvider).loopModeStream.listen((loopMode) {
-      state = state.copyWith(loopMode: loopMode);
+      if (loopMode != state.loopMode) {
+        state = state.copyWith(loopMode: loopMode);
+      }
     });
 
     ref.read(audioPlayerProvider).shuffleModeEnabledStream.listen((
       isShuffleEnabled,
     ) {
-      state = state.copyWith(isShuffleEnabled: isShuffleEnabled);
+      if (isShuffleEnabled != state.isShuffleEnabled) {
+        state = state.copyWith(isShuffleEnabled: isShuffleEnabled);
+      }
     });
 
     return NowPlayingModel(

@@ -5,10 +5,10 @@ All Submissions:
 
 ### New Feature Submissions:
 
-1. [ ] Does your submission work for all the platforms?
+1. [ ] Does your submission work for all the platforms (android,windows and web app)?
 2. [ ] Have you lint your code locally before submission? (using flutter_lints package)
 
 ### Changes to Core Features:
 
-* [ ] Have you added an explanation of what your changes do and why you'd like us to include them?
+* [ ] Have you added an explanation of what your changes do and why you'd like me to include them?
 * [ ] Have you added the feature to the features column of ```readme.md``` ?

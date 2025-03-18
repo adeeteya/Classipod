@@ -6,9 +6,9 @@
 
 ![Classipod App Screenshots](screenshots/combined.png)
 
-Introducing "Classipod" – Your Timeless Audio Experience
+Introducing "ClassiPod" – Your Timeless Audio Experience
 
-Step back in time with Classipod, a local music player app designed to capture the nostalgic essence
+Step back in time with ClassiPod, a local music player app designed to capture the nostalgic essence
 of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the
 joy of navigating your music library with a touch of retro charm.
 
@@ -18,27 +18,27 @@ joy of navigating your music library with a touch of retro charm.
 wheel. Scroll, click, and feel the tactile response as you rediscover the joy of selecting your
 favorite tracks with the same ease as the original iPod.
 
-🗃️ Local Music Library: Classipod is focused on your locally stored music files, ensuring that your
+🗃️ Local Music Library: ClassiPod is focused on your locally stored music files, ensuring that your
 personal music collection takes center stage. Organize your tracks, albums, and playlists just like
 you did on your trusty iPod Classic.
 
-🖌️ Customizable Themes: Personalize your Classipod experience with the option of silver or grey
+🖌️ Customizable Themes: Personalize your ClassiPod experience with the option of silver or grey
 device frame. Choose from the two different color schemes to tailor the app's appearance to your
 unique style.
 
 🖼️ Cover Art Display: Immerse yourself in your music by appreciating album artwork on the vibrant
-display. Classipod pays homage to the visual appeal of classic iPods by showcasing your favorite
+display. ClassiPod pays homage to the visual appeal of classic iPods by showcasing your favorite
 album covers in a retro-inspired format.
 
-🎼 No Frills, Just Music: Classipod stays true to the essence of a music player – no distractions, no
+🎼 No Frills, Just Music: ClassiPod stays true to the essence of a music player – no distractions, no
 unnecessary features. Focus solely on the joy of listening to your favorite tunes without the
 complexities of a modern streaming service.
 
-🎧 Offline Listening: Enjoy your music without relying on an internet connection. Classipod is
+🎧 Offline Listening: Enjoy your music without relying on an internet connection. ClassiPod is
 perfect for those moments when you want to disconnect and savor the tunes stored locally on your
 device.
 
-Relive the magic of the iPod Classic with Classipod – where timeless design meets the convenience of
+Relive the magic of the iPod Classic with ClassiPod – where timeless design meets the convenience of
 today. Download now and embark on a journey down memory lane with your music in the palm of your
 hand.
 
@@ -47,7 +47,7 @@ If you like what you see, please ⭐ the repo.
 ## ✨ Features
 
 - 🗃️ Ability to play multiple audio formats:- .mp3, .wav, .ogg, .flac, .m4a and .aac
-- 🔎 Chose a Custom Folder To Scan Music From (By Default it is the Music Folder in the root folder
+- 🔎 Choose a Custom Folder To Scan Music From (By Default it is the Device Music Folder in the root folder
   of the device)
 - 🎨 Multiple Ipod Classic Device Colors (Silver and Black)
 - 🖼️ Displays the Music Metadata (Album Art, Artist Names)
@@ -133,11 +133,12 @@ If you like what you see, please ⭐ the repo.
 | [**intl**](https://pub.dev/packages/intl)                                                 | For internalization and localization of the app                                     |
 | [**just_audio**](https://pub.dev/packages/just_audio)                                     | To play audio files                                                                 |
 | [**just_audio_background**](https://pub.dev/packages/just_audio_background)               | To control audio through media notification                                         |
+| [**just_audio_windows**](https://pub.dev/packages/just_audio_windows)                     | To play audio files on windows                                                      |
 | [**path_provider**](https://pub.dev/packages/path_provider)                               | To fetch app data directories                                                       |
 | [**permission_handler**](https://pub.dev/packages/permission_handler)                     | To check and request for file and audio access permissions                          |
 | [**shared_preferences**](https://pub.dev/packages/shared_preferences)                     | To store system settings                                                            |
 | [**tutorial_coach_mark**](https://pub.dev/packages/tutorial_coach_mark)                   | To provide app tutorial to the users                                                |
-| [**universal_html**](https://pub.dev/packages/universal_html)                                 | For Launching the app in full-screen mode on web versions                           |
+| [**universal_html**](https://pub.dev/packages/universal_html)                             | For Launching the app in full-screen mode on web versions                           |
 | [**url_launcher**](https://pub.dev/packages/url_launcher)                                 | For Launching the Donation Page Link                                                |
 | [**vibration**](https://pub.dev/packages/vibration)                                       | Used for vibration while using device controls                                      |
 | [**vibration_web**](https://pub.dev/packages/vibration_web)                               | Used for vibration on the webapp version                                            |

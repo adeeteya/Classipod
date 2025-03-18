@@ -334,4 +334,7 @@ class AppLocalizationsBbc extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tekan tombol on laho manutup keyboard jala marsaor dohot hasil pencarian .';
+
+  @override
+  String get allSongs => 'Sude Song .';
 }

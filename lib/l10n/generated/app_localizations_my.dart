@@ -334,4 +334,7 @@ class AppLocalizationsMy extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ကီးဘုတ်ကိုပိတ်ရန်နှင့်ရှာဖွေမှုရလဒ်များနှင့်အပြန်အလှန်ဆက်သွယ်ရန်ဤခလုတ်ကိုနှိပ်ပါ';
+
+  @override
+  String get allSongs => 'သီချင်းများ';
 }

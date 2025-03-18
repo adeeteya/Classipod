@@ -334,4 +334,7 @@ class AppLocalizationsUdm extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Та кнопкаез зӥбыса, клавиатураез пытсаны но взаимодействовать утчан результатъёс .';
+
+  @override
+  String get allSongs => 'вань кырӟанъёс';
 }

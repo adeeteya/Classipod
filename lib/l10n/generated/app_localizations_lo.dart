@@ -330,4 +330,7 @@ class AppLocalizationsLo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ກົດປຸ່ມນີ້ເພື່ອປິດແປ້ນພິມແລະພົວພັນກັບຜົນການຄົ້ນຫາ';
+
+  @override
+  String get allSongs => 'ທຸກໆເພງ';
 }

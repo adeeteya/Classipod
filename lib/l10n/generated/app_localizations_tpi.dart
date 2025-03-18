@@ -335,4 +335,7 @@ class AppLocalizationsTpi extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Presim dispela baten long pasim kibod na wok bung wantaim ol wok painim.';
+
+  @override
+  String get allSongs => 'Olgeta Song';
 }

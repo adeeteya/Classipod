@@ -335,4 +335,7 @@ class AppLocalizationsKn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ಕೀಬೋರ್ಡ್ ಮುಚ್ಚಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ ಮತ್ತು ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಿ';
+
+  @override
+  String get allSongs => 'ಎಲ್ಲಾ ಹಾಡುಗಳು';
 }

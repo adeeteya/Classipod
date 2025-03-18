@@ -335,4 +335,7 @@ class AppLocalizationsCrh extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Клавиатураны къапатмакъ ве къыдырув нетиджелеринен тесирлешмек ичюн бу дёгмени басынъыз .';
+
+  @override
+  String get allSongs => 'Бутюн йырлар';
 }

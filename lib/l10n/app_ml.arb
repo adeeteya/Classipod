@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "ഹൈലൈറ്റ് ചെയ്ത അക്ഷരമാല തിരഞ്ഞെടുക്കാൻ സെന്റർ ബട്ടൺ അമർത്തുക",
   "nextButtonSearchTutorialText": "ഒരു സ്ഥലം ചേർക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
   "previousButtonSearchTutorialText": "അവസാന പ്രതീകം ഇല്ലാതാക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
-  "menuButtonSearchTutorialText": "കീബോർഡ് അടച്ച് തിരയൽ ഫലങ്ങളുമായി സംവദിക്കാൻ ഈ ബട്ടൺ അമർത്തുക"
+  "menuButtonSearchTutorialText": "കീബോർഡ് അടച്ച് തിരയൽ ഫലങ്ങളുമായി സംവദിക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
+  "allSongs": "എല്ലാ പാട്ടുകളും"
 }

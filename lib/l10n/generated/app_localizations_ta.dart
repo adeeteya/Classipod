@@ -334,4 +334,7 @@ class AppLocalizationsTa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'விசைப்பலகை மூடவும், தேடல் முடிவுகளுடன் தொடர்பு கொள்ளவும் இந்த பொத்தானை அழுத்தவும்';
+
+  @override
+  String get allSongs => 'அனைத்து பாடல்களும்';
 }

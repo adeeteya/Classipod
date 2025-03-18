@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "برای انتخاب الفبای برجسته ، دکمه Center را فشار دهید",
   "nextButtonSearchTutorialText": "این دکمه را فشار دهید تا یک فضا اضافه شود",
   "previousButtonSearchTutorialText": "این دکمه را فشار دهید تا آخرین شخصیت حذف شود",
-  "menuButtonSearchTutorialText": "برای بستن صفحه کلید و تعامل با نتایج جستجو ، این دکمه را فشار دهید"
+  "menuButtonSearchTutorialText": "برای بستن صفحه کلید و تعامل با نتایج جستجو ، این دکمه را فشار دهید",
+  "allSongs": "همه آهنگ ها"
 }

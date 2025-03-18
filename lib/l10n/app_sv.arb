@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Tryck på mittknappen för att välja det markerade alfabetet",
   "nextButtonSearchTutorialText": "Tryck på den här knappen för att lägga till ett utrymme",
   "previousButtonSearchTutorialText": "Tryck på den här knappen för att ta bort det sista tecknet",
-  "menuButtonSearchTutorialText": "Tryck på den här knappen för att stänga tangentbordet och interagera med sökresultaten"
+  "menuButtonSearchTutorialText": "Tryck på den här knappen för att stänga tangentbordet och interagera med sökresultaten",
+  "allSongs": "Alla låtar"
 }

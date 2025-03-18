@@ -335,4 +335,7 @@ class AppLocalizationsFa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'برای بستن صفحه کلید و تعامل با نتایج جستجو ، این دکمه را فشار دهید';
+
+  @override
+  String get allSongs => 'همه آهنگ ها';
 }

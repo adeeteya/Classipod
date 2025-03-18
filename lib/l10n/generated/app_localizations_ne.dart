@@ -333,4 +333,7 @@ class AppLocalizationsNe extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'किबोर्ड बन्द गर्न यो बटन थिच्नुहोस् र खोज परिणामहरूको साथ अन्तर्क्रिया गर्नुहोस्';
+
+  @override
+  String get allSongs => 'सबै गीतहरू';
 }

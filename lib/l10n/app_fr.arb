@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Appuyez sur le bouton central pour sélectionner l'alphabet en surbrillance",
   "nextButtonSearchTutorialText": "Appuyez sur ce bouton pour ajouter un espace",
   "previousButtonSearchTutorialText": "Appuyez sur ce bouton pour supprimer le dernier caractère",
-  "menuButtonSearchTutorialText": "Appuyez sur ce bouton pour fermer le clavier et interagir avec les résultats de recherche"
+  "menuButtonSearchTutorialText": "Appuyez sur ce bouton pour fermer le clavier et interagir avec les résultats de recherche",
+  "allSongs": "Toutes les chansons"
 }

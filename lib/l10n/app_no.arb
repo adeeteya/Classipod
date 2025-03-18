@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Trykk på midtknappen for å velge uthevet alfabet",
   "nextButtonSearchTutorialText": "Trykk på denne knappen for å legge til et rom",
   "previousButtonSearchTutorialText": "Trykk på denne knappen for å slette det siste tegnet",
-  "menuButtonSearchTutorialText": "Trykk på denne knappen for å lukke tastaturet og samhandle med søkeresultatene"
+  "menuButtonSearchTutorialText": "Trykk på denne knappen for å lukke tastaturet og samhandle med søkeresultatene",
+  "allSongs": "Alle sanger"
 }

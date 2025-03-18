@@ -335,4 +335,7 @@ class AppLocalizationsAk extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Mia saa bɔtn yi so na to keyboard no mu na wo ne search results no nni nkitaho .';
+
+  @override
+  String get allSongs => 'Nnwom nyinaa .';
 }

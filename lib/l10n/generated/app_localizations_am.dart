@@ -329,4 +329,7 @@ class AppLocalizationsAm extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'የቁልፍ ሰሌዳውን ለመዝጋት እና ከድቶች ውጤቶች ጋር ለመግባባት ይህንን ቁልፍ ተጫን';
+
+  @override
+  String get allSongs => 'ሁሉም ዘፈኖች';
 }

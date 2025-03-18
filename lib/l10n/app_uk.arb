@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Натисніть кнопку Центру, щоб вибрати виділений алфавіт",
   "nextButtonSearchTutorialText": "Натисніть цю кнопку, щоб додати простір",
   "previousButtonSearchTutorialText": "Натисніть цю кнопку, щоб видалити останній символ",
-  "menuButtonSearchTutorialText": "Натисніть цю кнопку, щоб закрити клавіатуру та взаємодіяти з результатами пошуку"
+  "menuButtonSearchTutorialText": "Натисніть цю кнопку, щоб закрити клавіатуру та взаємодіяти з результатами пошуку",
+  "allSongs": "Всі пісні"
 }

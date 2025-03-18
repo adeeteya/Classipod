@@ -335,4 +335,7 @@ class AppLocalizationsUr extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'کی بورڈ کو بند کرنے اور تلاش کے نتائج کے ساتھ بات چیت کرنے کے لئے اس بٹن کو دبائیں';
+
+  @override
+  String get allSongs => 'تمام گانے';
 }

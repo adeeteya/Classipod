@@ -335,4 +335,7 @@ class AppLocalizationsKu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Vê bişkojka bitikînin da ku klavyeyê bigire û bi encamên lêgerînê re têkilî daynin';
+
+  @override
+  String get allSongs => 'Hemû stran';
 }

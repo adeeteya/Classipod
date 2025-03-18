@@ -333,4 +333,7 @@ class AppLocalizationsId extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tekan tombol ini untuk menutup keyboard dan berinteraksi dengan hasil pencarian';
+
+  @override
+  String get allSongs => 'Semua lagu';
 }

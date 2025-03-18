@@ -333,4 +333,7 @@ class AppLocalizationsEo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Premu ĉi tiun butonon por fermi la klavaron kaj interagi kun la serĉrezultoj';
+
+  @override
+  String get allSongs => 'Ĉiuj kantoj';
 }

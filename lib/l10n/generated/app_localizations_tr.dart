@@ -334,4 +334,7 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Klavyeyi kapatmak için bu düğmeye basın ve arama sonuçlarıyla etkileşime geçin';
+
+  @override
+  String get allSongs => 'Tüm Şarkılar';
 }

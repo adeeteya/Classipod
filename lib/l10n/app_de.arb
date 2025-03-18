@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Drücken Sie die Mitte -Taste, um das hervorgehobene Alphabet auszuwählen",
   "nextButtonSearchTutorialText": "Drücken Sie diese Taste, um einen Speicherplatz hinzuzufügen",
   "previousButtonSearchTutorialText": "Drücken Sie diese Taste, um das letzte Zeichen zu löschen",
-  "menuButtonSearchTutorialText": "Drücken Sie diese Taste, um die Tastatur zu schließen und mit den Suchergebnissen zu interagieren"
+  "menuButtonSearchTutorialText": "Drücken Sie diese Taste, um die Tastatur zu schließen und mit den Suchergebnissen zu interagieren",
+  "allSongs": "Alle Lieder"
 }

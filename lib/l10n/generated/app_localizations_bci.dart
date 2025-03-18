@@ -334,4 +334,7 @@ class AppLocalizationsBci extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Sɛ a tin buton sɔ’n su’n, á káci klaviɛti’n, kpɛkun á fá kɔ́ lika nga be kunndɛ’n .';
+
+  @override
+  String get allSongs => 'I n\'gba';
 }

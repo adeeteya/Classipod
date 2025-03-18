@@ -338,4 +338,7 @@ class AppLocalizationsLn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Finá na butɔ oyo mpo na kokanga klaviatware mpe kosala boyokani na ba résultats ya bolukiluki .';
+
+  @override
+  String get allSongs => 'Ba nzembo nionso .';
 }

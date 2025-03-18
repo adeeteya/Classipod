@@ -334,4 +334,7 @@ class AppLocalizationsSk extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Stlačením tohto tlačidla zatvorte klávesnicu a interaguje s výsledkami vyhľadávania';
+
+  @override
+  String get allSongs => 'Všetky piesne';
 }

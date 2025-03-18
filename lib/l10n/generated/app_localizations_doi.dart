@@ -334,4 +334,7 @@ class AppLocalizationsDoi extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्ड गी बंद करने ते खोज परिणामें कन्नै गल्लबात करने लेई इस बटन गी दबाओ';
+
+  @override
+  String get allSongs => 'सारे गीत';
 }

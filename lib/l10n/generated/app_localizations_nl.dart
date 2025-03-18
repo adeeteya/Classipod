@@ -335,4 +335,7 @@ class AppLocalizationsNl extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Druk op deze knop om het toetsenbord te sluiten en te communiceren met de zoekresultaten';
+
+  @override
+  String get allSongs => 'Alle liedjes';
 }

@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Vurgulanan alfabeyi seçmek için Merkez düğmesine basın",
   "nextButtonSearchTutorialText": "Bir alan eklemek için bu düğmeye basın",
   "previousButtonSearchTutorialText": "Son karakteri silmek için bu düğmeye basın",
-  "menuButtonSearchTutorialText": "Klavyeyi kapatmak için bu düğmeye basın ve arama sonuçlarıyla etkileşime geçin"
+  "menuButtonSearchTutorialText": "Klavyeyi kapatmak için bu düğmeye basın ve arama sonuçlarıyla etkileşime geçin",
+  "allSongs": "Tüm Şarkılar"
 }

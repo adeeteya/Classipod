@@ -321,4 +321,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get menuButtonSearchTutorialText => 'このボタンを押してキーボードを閉じて、検索結果と対話します';
+
+  @override
+  String get allSongs => 'すべての曲';
 }

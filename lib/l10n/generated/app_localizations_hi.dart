@@ -334,4 +334,7 @@ class AppLocalizationsHi extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्ड को बंद करने और खोज परिणामों के साथ बातचीत करने के लिए इस बटन को दबाएं';
+
+  @override
+  String get allSongs => 'सभी गाने';
 }

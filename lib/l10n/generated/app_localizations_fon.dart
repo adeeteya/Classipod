@@ -333,4 +333,7 @@ class AppLocalizationsFon extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tɛ́n butɔn elɔ bo sú klavié ɔ bo nɔ wà nǔ xá nǔ e è ba lɛ é .';
+
+  @override
+  String get allSongs => 'Han lɛ bǐ';
 }

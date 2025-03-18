@@ -335,4 +335,7 @@ class AppLocalizationsChk extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Kopwe pwarata ei button pwe kopwe suki ewe asam me chiechi ngeni ekkewe pisekin kutta .';
+
+  @override
+  String get allSongs => 'Meinisin ekkewe Sopun';
 }

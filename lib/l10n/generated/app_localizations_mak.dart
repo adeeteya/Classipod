@@ -334,4 +334,7 @@ class AppLocalizationsMak extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tete’mi anne tombolka untu’ antongkoki anjo keyboard siagang a’gau’ baji’ siagang wassele’ pa’boyaang .';
+
+  @override
+  String get allSongs => 'Sesa';
 }

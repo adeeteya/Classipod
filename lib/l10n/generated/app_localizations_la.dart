@@ -333,4 +333,7 @@ class AppLocalizationsLa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Torcular quod conjunctionem claudere keyboard et penitus per search results';
+
+  @override
+  String get allSongs => 'Omnes carmina';
 }

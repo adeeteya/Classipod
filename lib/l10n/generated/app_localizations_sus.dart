@@ -336,4 +336,7 @@ class AppLocalizationsSus extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Wo yi button makɔrɛ alako wo xa na buki balan anun wo xa wo maso na fe fenfe ra .';
+
+  @override
+  String get allSongs => 'Na sigi birin';
 }

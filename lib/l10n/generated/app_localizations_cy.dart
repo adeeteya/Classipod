@@ -334,4 +334,7 @@ class AppLocalizationsCy extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pwyswch y botwm hwn i gau\'r bysellfwrdd a rhyngweithio â\'r canlyniadau chwilio';
+
+  @override
+  String get allSongs => 'Pob Cân';
 }

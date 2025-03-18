@@ -337,4 +337,7 @@ class AppLocalizationsGd extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Brùth am putan seo gus am meur-chlàr a dhùnadh agus eadar-obrachadh leis na toraidhean rannsachaidh';
+
+  @override
+  String get allSongs => 'A h-uile òran';
 }

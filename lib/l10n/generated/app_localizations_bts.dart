@@ -335,4 +335,7 @@ class AppLocalizationsBts extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tekan ma tombol on laho manutup keyboard janah marinteraksi pakon hasil pencarian .';
+
+  @override
+  String get allSongs => 'Haganup doding';
 }

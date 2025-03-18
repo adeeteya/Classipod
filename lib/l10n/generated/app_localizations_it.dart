@@ -336,4 +336,7 @@ class AppLocalizationsIt extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Premere questo pulsante per chiudere la tastiera e interagire con i risultati di ricerca';
+
+  @override
+  String get allSongs => 'Tutte le canzoni';
 }

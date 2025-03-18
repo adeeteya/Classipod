@@ -335,4 +335,7 @@ class AppLocalizationsMfe extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pez sa bouton-la pou ferm klavie ek interazir avek bann rezilta resers';
+
+  @override
+  String get allSongs => 'Tou bann sante';
 }

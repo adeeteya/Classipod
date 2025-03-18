@@ -336,4 +336,7 @@ class AppLocalizationsSr extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Притисните ово дугме да бисте затворили тастатуру и комуницирали са резултатима претраге';
+
+  @override
+  String get allSongs => 'Све песме';
 }

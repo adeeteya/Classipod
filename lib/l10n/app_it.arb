@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Premere il pulsante Centro per selezionare l'alfabeto evidenziato",
   "nextButtonSearchTutorialText": "Premere questo pulsante per aggiungere uno spazio",
   "previousButtonSearchTutorialText": "Premere questo pulsante per eliminare l'ultimo carattere",
-  "menuButtonSearchTutorialText": "Premere questo pulsante per chiudere la tastiera e interagire con i risultati di ricerca"
+  "menuButtonSearchTutorialText": "Premere questo pulsante per chiudere la tastiera e interagire con i risultati di ricerca",
+  "allSongs": "Tutte le canzoni"
 }

@@ -334,4 +334,7 @@ class AppLocalizationsSd extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ڪيبورڊ بند ڪرڻ لاء هن بٽڻ کي دٻايو ۽ ڳولا جي نتيجن سان رابطو ڪريو';
+
+  @override
+  String get allSongs => 'سڀ گانا';
 }

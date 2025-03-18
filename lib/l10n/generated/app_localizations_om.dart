@@ -335,4 +335,7 @@ class AppLocalizationsOm extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Kiiboodii cufuuf button kana dhiibiitii bu\'aa barbaacha waliin wal qunnami .';
+
+  @override
+  String get allSongs => 'Sirboota hunda .';
 }

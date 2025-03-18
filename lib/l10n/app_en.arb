@@ -378,5 +378,9 @@
   "menuButtonSearchTutorialText": "Press this button to close the keyboard and interact with the search results",
   "@menuButtonSearchTutorialText": {
     "description": "The tutorial text for the menu button when user is in search screen for the first time"
+  },
+  "allSongs": "All Songs",
+  "@allSongs": {
+    "description": "The text for selecting all songs"
   }
 }

@@ -335,4 +335,7 @@ class AppLocalizationsTk extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Klawiaturany ýapmak we gözleg netijeleri bilen täsir etmek üçin şu düwmä basyň';
+
+  @override
+  String get allSongs => 'Songshli aýdymlar';
 }

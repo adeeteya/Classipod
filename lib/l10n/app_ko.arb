@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "중앙 버튼을 눌러 강조 표시된 알파벳을 선택하십시오",
   "nextButtonSearchTutorialText": "이 버튼을 눌러 공간을 추가하십시오",
   "previousButtonSearchTutorialText": "이 버튼을 눌러 마지막 문자를 삭제하십시오",
-  "menuButtonSearchTutorialText": "이 버튼을 누르면 키보드를 닫고 검색 결과와 상호 작용합니다."
+  "menuButtonSearchTutorialText": "이 버튼을 누르면 키보드를 닫고 검색 결과와 상호 작용합니다.",
+  "allSongs": "모든 노래"
 }

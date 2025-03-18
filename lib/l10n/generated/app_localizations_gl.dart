@@ -336,4 +336,7 @@ class AppLocalizationsGl extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Prema este botón para pechar o teclado e interactúa cos resultados da busca';
+
+  @override
+  String get allSongs => 'Todas as cancións';
 }

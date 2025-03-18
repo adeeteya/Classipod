@@ -334,4 +334,7 @@ class AppLocalizationsIba extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tekan butang tu kena nutup keyboard lalu beinteraksyen enggau asil ngiga .';
+
+  @override
+  String get allSongs => 'Semua Lagu';
 }

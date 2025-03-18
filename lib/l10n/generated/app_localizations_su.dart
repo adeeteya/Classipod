@@ -333,4 +333,7 @@ class AppLocalizationsSu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pencét tombol ieu pikeun nutup keyboard sareng berinteraksi sareng hasil pencarian';
+
+  @override
+  String get allSongs => 'Sadaya lagu';
 }

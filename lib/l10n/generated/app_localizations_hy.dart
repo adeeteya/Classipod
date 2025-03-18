@@ -336,4 +336,7 @@ class AppLocalizationsHy extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Սեղմեք այս կոճակը `ստեղնաշարը փակելու եւ որոնման արդյունքների հետ շփվելու համար';
+
+  @override
+  String get allSongs => 'Բոլոր երգերը';
 }

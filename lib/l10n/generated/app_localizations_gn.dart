@@ -338,4 +338,7 @@ class AppLocalizationsGn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Emboguejy ko botón emboty hag̃ua teclado ha eñembojoaju hag̃ua umi jeheka renda ndive';
+
+  @override
+  String get allSongs => 'Opaite purahéi .';
 }

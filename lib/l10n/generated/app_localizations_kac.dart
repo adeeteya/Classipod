@@ -335,4 +335,7 @@ class AppLocalizationsKac extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Ndai button hpe dip nna keyboard hpe pat nna tam ai mahtai ni hte matut mahkai mai ai';
+
+  @override
+  String get allSongs => 'Mahkawn yawng';
 }

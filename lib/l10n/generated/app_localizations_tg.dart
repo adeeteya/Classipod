@@ -334,4 +334,7 @@ class AppLocalizationsTg extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Барои пӯшидани клавиатура ва ҳамкорӣ бо натиҷаҳои ҷустуҷӯ ин тугмаро пахш кунед';
+
+  @override
+  String get allSongs => 'Ҳама сурудҳо';
 }

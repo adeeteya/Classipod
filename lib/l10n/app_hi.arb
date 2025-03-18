@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "हाइलाइट किए गए वर्णमाला का चयन करने के लिए केंद्र बटन दबाएं",
   "nextButtonSearchTutorialText": "एक स्थान जोड़ने के लिए इस बटन को दबाएं",
   "previousButtonSearchTutorialText": "अंतिम चरित्र को हटाने के लिए इस बटन को दबाएं",
-  "menuButtonSearchTutorialText": "कीबोर्ड को बंद करने और खोज परिणामों के साथ बातचीत करने के लिए इस बटन को दबाएं"
+  "menuButtonSearchTutorialText": "कीबोर्ड को बंद करने और खोज परिणामों के साथ बातचीत करने के लिए इस बटन को दबाएं",
+  "allSongs": "सभी गाने"
 }

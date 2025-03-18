@@ -333,4 +333,7 @@ class AppLocalizationsRw extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Kanda iyi buto kugirango ufunge clavier hanyuma usangire nibisubizo byubushakashatsi';
+
+  @override
+  String get allSongs => 'Indirimbo zose';
 }

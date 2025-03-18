@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "按中间按钮选择突出显示的字母",
   "nextButtonSearchTutorialText": "按下此按钮添加一个空间",
   "previousButtonSearchTutorialText": "按下此按钮删除最后一个字符",
-  "menuButtonSearchTutorialText": "按下此按钮关闭键盘并与搜索结果进行交互"
+  "menuButtonSearchTutorialText": "按下此按钮关闭键盘并与搜索结果进行交互",
+  "allSongs": "所有歌曲"
 }

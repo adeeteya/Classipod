@@ -333,4 +333,7 @@ class AppLocalizationsGom extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्ड बंद करपाक हें बटण दामचें आनी सोद परिणामांकडेन संवाद सादचो';
+
+  @override
+  String get allSongs => 'सगळीं गितां .';
 }

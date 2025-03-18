@@ -333,4 +333,7 @@ class AppLocalizationsNus extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Gɔ̱ri button ɛmɛ kɛ ɣöö biɛ kulɛ gäk kä biɛ ruac kɛ min ca jiek rɛy go̱rä';
+
+  @override
+  String get allSongs => 'All Cuŋ';
 }

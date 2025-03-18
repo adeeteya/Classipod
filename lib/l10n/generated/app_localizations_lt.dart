@@ -335,4 +335,7 @@ class AppLocalizationsLt extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Paspauskite šį mygtuką, kad uždarytumėte klaviatūrą ir sąveikaujtumėte su paieškos rezultatais';
+
+  @override
+  String get allSongs => 'Visos dainos';
 }

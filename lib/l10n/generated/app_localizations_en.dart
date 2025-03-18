@@ -332,4 +332,7 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Press this button to close the keyboard and interact with the search results';
+
+  @override
+  String get allSongs => 'All Songs';
 }

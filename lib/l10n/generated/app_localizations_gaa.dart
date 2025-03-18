@@ -332,4 +332,7 @@ class AppLocalizationsGaa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Nyɛɛ button nɛɛ nɔ koni oŋa keyboard lɛ ni okɛ taomɔ hetooi lɛ atsu nii';
+
+  @override
+  String get allSongs => 'Lalai lɛ fɛɛ';
 }

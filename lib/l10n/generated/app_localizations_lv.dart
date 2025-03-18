@@ -336,4 +336,7 @@ class AppLocalizationsLv extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Nospiediet šo pogu, lai aizvērtu tastatūru un mijiedarbotos ar meklēšanas rezultātiem';
+
+  @override
+  String get allSongs => 'Visas dziesmas';
 }

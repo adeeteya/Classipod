@@ -334,4 +334,7 @@ class AppLocalizationsSa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्डं बन्दं कृत्वा अन्वेषणपरिणामेन सह अन्तरक्रियां कर्तुं एतत् बटनं नुदन्तु ।';
+
+  @override
+  String get allSongs => 'सर्वाणि गीतानि .';
 }

@@ -337,4 +337,7 @@ class AppLocalizationsCa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Premeu aquest botó per tancar el teclat i interactuar amb els resultats de la cerca';
+
+  @override
+  String get allSongs => 'Totes les cançons';
 }

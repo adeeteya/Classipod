@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Tekan tombol tengah untuk memilih alfabet yang disorot",
   "nextButtonSearchTutorialText": "Tekan tombol ini untuk menambahkan ruang",
   "previousButtonSearchTutorialText": "Tekan tombol ini untuk menghapus karakter terakhir",
-  "menuButtonSearchTutorialText": "Tekan tombol ini untuk menutup keyboard dan berinteraksi dengan hasil pencarian"
+  "menuButtonSearchTutorialText": "Tekan tombol ini untuk menutup keyboard dan berinteraksi dengan hasil pencarian",
+  "allSongs": "Semua lagu"
 }

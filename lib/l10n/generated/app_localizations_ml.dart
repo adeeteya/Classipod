@@ -335,4 +335,7 @@ class AppLocalizationsMl extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'കീബോർഡ് അടച്ച് തിരയൽ ഫലങ്ങളുമായി സംവദിക്കാൻ ഈ ബട്ടൺ അമർത്തുക';
+
+  @override
+  String get allSongs => 'എല്ലാ പാട്ടുകളും';
 }

@@ -334,4 +334,7 @@ class AppLocalizationsSn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Dzvanya bhatani iri kuvhara iyo keyboard uye kudyidzana nemhedzisiro yekutsvaga';
+
+  @override
+  String get allSongs => 'Nziyo dzese';
 }

@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Tryk på midten af ​​knappen for at vælge det fremhævede alfabet",
   "nextButtonSearchTutorialText": "Tryk på denne knap for at tilføje et rum",
   "previousButtonSearchTutorialText": "Tryk på denne knap for at slette den sidste karakter",
-  "menuButtonSearchTutorialText": "Tryk på denne knap for at lukke tastaturet og interagere med søgeresultaterne"
+  "menuButtonSearchTutorialText": "Tryk på denne knap for at lukke tastaturet og interagere med søgeresultaterne",
+  "allSongs": "Alle sange"
 }

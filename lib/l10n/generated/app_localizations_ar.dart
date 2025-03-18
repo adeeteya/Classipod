@@ -332,4 +332,7 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'اضغط على هذا الزر لإغلاق لوحة المفاتيح والتفاعل مع نتائج البحث';
+
+  @override
+  String get allSongs => 'جميع الأغاني';
 }

@@ -334,4 +334,7 @@ class AppLocalizationsDyu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'I ka o butɔn digi walisa ka klaviye datugu ani ka jɛnɲɔgɔnya kɛ ni ɲinini jaabiw ye .';
+
+  @override
+  String get allSongs => 'Dɔnkiliw bɛɛ';
 }

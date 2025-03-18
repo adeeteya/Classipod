@@ -331,4 +331,7 @@ class AppLocalizationsTi extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ነዚ መጠወቒ እዚ ብምጽቃጥ ነቲ ቁልፊ ሰሌዳ ምዕጻውን ምስ ውጽኢት ምድላይ ንምትእስሳርን .';
+
+  @override
+  String get allSongs => 'ኩሉ ደርፍታት';
 }

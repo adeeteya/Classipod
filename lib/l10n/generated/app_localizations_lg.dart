@@ -335,4 +335,7 @@ class AppLocalizationsLg extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Nywa ku bbaatuuni eno okuggalawo keyboard era okwatagane n’ebivudde mu kunoonyereza .';
+
+  @override
+  String get allSongs => 'Ennyimba zonna .';
 }

@@ -334,4 +334,7 @@ class AppLocalizationsPap extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Druk e boton aki pa sera e teclado i interakshoná ku e resultadonan di búskeda .';
+
+  @override
+  String get allSongs => 'Tur Kantika .';
 }

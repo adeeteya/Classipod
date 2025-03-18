@@ -335,4 +335,7 @@ class AppLocalizationsHaw extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'E kaomi i kēia pihi e pani i ke kīwī a kamaʻilio pū me nā hopena huli';
+
+  @override
+  String get allSongs => 'Nā mele a pau';
 }

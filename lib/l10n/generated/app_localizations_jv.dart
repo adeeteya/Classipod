@@ -333,4 +333,7 @@ class AppLocalizationsJv extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pencet tombol iki kanggo nutup keyboard lan sesambungan karo asil telusuran';
+
+  @override
+  String get allSongs => 'Kabeh lagu';
 }

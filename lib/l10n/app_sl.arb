@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Pritisnite gumb Center, da izberete označeno abecedo",
   "nextButtonSearchTutorialText": "Pritisnite ta gumb, da dodate prostor",
   "previousButtonSearchTutorialText": "Pritisnite ta gumb, da izbrišete zadnji znak",
-  "menuButtonSearchTutorialText": "Pritisnite ta gumb, da zaprete tipkovnico in interakcijo z rezultati iskanja"
+  "menuButtonSearchTutorialText": "Pritisnite ta gumb, da zaprete tipkovnico in interakcijo z rezultati iskanja",
+  "allSongs": "Vse pesmi"
 }

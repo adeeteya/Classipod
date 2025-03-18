@@ -334,4 +334,7 @@ class AppLocalizationsIs extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Ýttu á þennan hnapp til að loka lyklaborðinu og hafa samskipti við leitarniðurstöðurnar';
+
+  @override
+  String get allSongs => 'Öll lög';
 }

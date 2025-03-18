@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "中央ボタンを押して、強調表示されたアルファベットを選択します",
   "nextButtonSearchTutorialText": "このボタンを押してスペースを追加します",
   "previousButtonSearchTutorialText": "このボタンを押して、最後の文字を削除します",
-  "menuButtonSearchTutorialText": "このボタンを押してキーボードを閉じて、検索結果と対話します"
+  "menuButtonSearchTutorialText": "このボタンを押してキーボードを閉じて、検索結果と対話します",
+  "allSongs": "すべての曲"
 }

@@ -334,4 +334,7 @@ class AppLocalizationsHrx extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tuu tiise knoop xmayse fer tas tastatur se mache un mit te suuchungs resultaate interakteere .';
+
+  @override
+  String get allSongs => 'Ale Liiter';
 }

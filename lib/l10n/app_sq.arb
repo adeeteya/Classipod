@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Shtypni butonin qendror për të zgjedhur alfabetin e theksuar",
   "nextButtonSearchTutorialText": "Shtypni këtë buton për të shtuar një hapësirë",
   "previousButtonSearchTutorialText": "Shtypni këtë buton për të fshirë karakterin e fundit",
-  "menuButtonSearchTutorialText": "Shtypni këtë buton për të mbyllur tastierën dhe bashkëvepruar me rezultatet e kërkimit"
+  "menuButtonSearchTutorialText": "Shtypni këtë buton për të mbyllur tastierën dhe bashkëvepruar me rezultatet e kërkimit",
+  "allSongs": "Të gjitha këngët"
 }

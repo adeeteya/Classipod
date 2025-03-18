@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "לחץ על כפתור המרכז כדי לבחור את האלף -בית המודגש",
   "nextButtonSearchTutorialText": "לחץ על כפתור זה כדי להוסיף חלל",
   "previousButtonSearchTutorialText": "לחץ על כפתור זה כדי למחוק את התו האחרון",
-  "menuButtonSearchTutorialText": "לחץ על כפתור זה כדי לסגור את המקלדת ולקיים אינטראקציה עם תוצאות החיפוש"
+  "menuButtonSearchTutorialText": "לחץ על כפתור זה כדי לסגור את המקלדת ולקיים אינטראקציה עם תוצאות החיפוש",
+  "allSongs": "כל השירים"
 }

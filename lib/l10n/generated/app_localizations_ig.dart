@@ -333,4 +333,7 @@ class AppLocalizationsIg extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pịa bọtịnụ a iji mechie usoro ma soro nsonaazụ ọchụchọ ahụ';
+
+  @override
+  String get allSongs => 'Abụ niile';
 }

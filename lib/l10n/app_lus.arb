@@ -1,5 +1,5 @@
 {
-  "@@locale": "mni",
+  "@@locale": "lus",
   "appTitle": "ꯀ꯭ꯂꯥꯁꯤꯄꯣꯗ",
   "menuButtonText": "ꯃꯦꯅꯨ",
   "audioAccessPermissionTitle": "ꯑꯣꯗꯤꯑꯣ ꯑꯦꯛꯁꯦꯁꯀꯤ ꯑꯌꯥꯕꯥ ꯂꯧꯕꯥ ꯃꯊꯧ ꯇꯥꯏ",
@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯔꯕꯥ ꯑꯥꯂꯐꯥꯕꯦꯠ ꯑꯗꯨ ꯈꯅꯕꯗꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫",
   "nextButtonSearchTutorialText": "ꯁ꯭ꯄꯦꯁ ꯑꯃꯥ ꯍꯥꯄꯆꯤꯟꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .",
   "previousButtonSearchTutorialText": "ꯑꯔꯣꯏꯕꯥ ꯆꯦꯛꯔꯦꯇꯔ ꯑꯗꯨ ꯃꯨꯠꯊꯠꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .",
-  "menuButtonSearchTutorialText": "ꯀꯤꯕꯣꯔꯗ ꯂꯣꯗ ꯇꯧꯅꯕꯥ ꯑꯃꯁꯨꯡ ꯁꯥꯔꯆ ꯔꯤꯖꯜꯇꯁꯤꯡꯒꯥ ꯏꯟꯇꯔꯦꯛꯇ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ"
+  "menuButtonSearchTutorialText": "ꯀꯤꯕꯣꯔꯗ ꯂꯣꯗ ꯇꯧꯅꯕꯥ ꯑꯃꯁꯨꯡ ꯁꯥꯔꯆ ꯔꯤꯖꯜꯇꯁꯤꯡꯒꯥ ꯏꯟꯇꯔꯦꯛꯇ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ",
+  "allSongs": "Hla zawng zawng ."
 }

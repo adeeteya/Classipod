@@ -335,4 +335,7 @@ class AppLocalizationsKek extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tat-ok sa’ li boton a’in re xtz’apb’al li teclado ut chi wank sa’ komonil rik’in li sik’ok .';
+
+  @override
+  String get allSongs => 'Chixjunileb\'';
 }

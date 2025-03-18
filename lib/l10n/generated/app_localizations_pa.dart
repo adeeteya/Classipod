@@ -334,4 +334,7 @@ class AppLocalizationsPa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ਕੀਬੋਰਡ ਨੂੰ ਬੰਦ ਕਰਨ ਅਤੇ ਖੋਜ ਨਤੀਜਿਆਂ ਨਾਲ ਗੱਲਬਾਤ ਕਰਨ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ';
+
+  @override
+  String get allSongs => 'ਸਾਰੇ ਗਾਣੇ';
 }

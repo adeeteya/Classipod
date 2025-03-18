@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Нажмите кнопку центра, чтобы выбрать выделенный алфавит",
   "nextButtonSearchTutorialText": "Нажмите эту кнопку, чтобы добавить пространство",
   "previousButtonSearchTutorialText": "Нажмите эту кнопку, чтобы удалить последний персонаж",
-  "menuButtonSearchTutorialText": "Нажмите эту кнопку, чтобы закрыть клавиатуру и взаимодействовать с результатами поиска"
+  "menuButtonSearchTutorialText": "Нажмите эту кнопку, чтобы закрыть клавиатуру и взаимодействовать с результатами поиска",
+  "allSongs": "Все песни"
 }

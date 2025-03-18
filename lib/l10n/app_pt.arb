@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Pressione o botão central para selecionar o alfabeto destacado",
   "nextButtonSearchTutorialText": "Pressione este botão para adicionar um espaço",
   "previousButtonSearchTutorialText": "Pressione este botão para excluir o último personagem",
-  "menuButtonSearchTutorialText": "Pressione este botão para fechar o teclado e interagir com os resultados da pesquisa"
+  "menuButtonSearchTutorialText": "Pressione este botão para fechar o teclado e interagir com os resultados da pesquisa",
+  "allSongs": "Todas as músicas"
 }

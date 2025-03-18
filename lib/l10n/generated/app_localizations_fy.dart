@@ -335,4 +335,7 @@ class AppLocalizationsFy extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Druk op dizze knop om it toetseboerd te sluten en ynteraksje mei de sykresultaten te sluten';
+
+  @override
+  String get allSongs => 'Alle ferskes';
 }

@@ -334,4 +334,7 @@ class AppLocalizationsMin extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Takan tombol ko untuak manutup keyboard jo bainteraksi jo hasil pancarian .';
+
+  @override
+  String get allSongs => 'Sagalo Lagu';
 }

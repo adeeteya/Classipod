@@ -336,4 +336,7 @@ class AppLocalizationsCeb extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Ipadayon kini nga butones aron isara ang keyboard ug makig-uban sa mga resulta sa pagpangita';
+
+  @override
+  String get allSongs => 'Tanan nga mga kanta';
 }

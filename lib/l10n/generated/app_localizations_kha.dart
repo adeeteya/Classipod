@@ -336,4 +336,7 @@ class AppLocalizationsKha extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pynkhih ia une u button ban khang ia u shabi bad ban iakynduh bad ki jingmih na ka jingwad .';
+
+  @override
+  String get allSongs => 'Baroh ki jingrwai';
 }

@@ -336,4 +336,7 @@ class AppLocalizationsMk extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Притиснете го ова копче за да ја затворите тастатурата и да комуницирате со резултатите од пребарувањето';
+
+  @override
+  String get allSongs => 'Сите песни';
 }

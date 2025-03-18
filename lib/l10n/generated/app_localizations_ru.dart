@@ -335,4 +335,7 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Нажмите эту кнопку, чтобы закрыть клавиатуру и взаимодействовать с результатами поиска';
+
+  @override
+  String get allSongs => 'Все песни';
 }

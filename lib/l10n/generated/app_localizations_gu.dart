@@ -334,4 +334,7 @@ class AppLocalizationsGu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'કીબોર્ડને બંધ કરવા અને શોધ પરિણામો સાથે સંપર્ક કરવા માટે આ બટન દબાવો';
+
+  @override
+  String get allSongs => 'બધા ગીતો';
 }

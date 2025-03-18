@@ -335,4 +335,7 @@ class AppLocalizationsSq extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Shtypni këtë buton për të mbyllur tastierën dhe bashkëvepruar me rezultatet e kërkimit';
+
+  @override
+  String get allSongs => 'Të gjitha këngët';
 }

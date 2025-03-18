@@ -333,4 +333,7 @@ class AppLocalizationsLuo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Dhi e batonni mondo ilor kibod kendo iti gi duoko mag manyo';
+
+  @override
+  String get allSongs => 'Nyisruok duto';
 }

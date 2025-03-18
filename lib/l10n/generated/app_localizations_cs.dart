@@ -334,4 +334,7 @@ class AppLocalizationsCs extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Stisknutím tohoto tlačítka zavřete klávesnici a komunikujte s výsledky vyhledávání';
+
+  @override
+  String get allSongs => 'Všechny písně';
 }

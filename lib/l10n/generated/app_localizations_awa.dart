@@ -334,4 +334,7 @@ class AppLocalizationsAwa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्ड बंद करै अऊर खोज परिणामन के साथ बातचीत करै के लिए ई बटन दबावा जाय';
+
+  @override
+  String get allSongs => 'तमाम गाने';
 }

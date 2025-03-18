@@ -335,4 +335,7 @@ class AppLocalizationsOr extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'କୀବୋର୍ଡ୍ ବନ୍ଦ କରିବାକୁ ଏବଂ ସନ୍ଧାନ ଫଳାଫଳ ସହିତ ଯୋଗାଯୋଗ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |';
+
+  @override
+  String get allSongs => 'ସମସ୍ତ ଗୀତ';
 }

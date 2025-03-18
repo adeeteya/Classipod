@@ -334,4 +334,7 @@ class AppLocalizationsZu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Cindezela le nkinobho ukuvala ikhibhodi futhi uhlanganyele nemiphumela yokucinga';
+
+  @override
+  String get allSongs => 'Zonke izingoma';
 }

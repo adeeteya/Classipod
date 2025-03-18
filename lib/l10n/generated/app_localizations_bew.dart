@@ -334,4 +334,7 @@ class AppLocalizationsBew extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tekan tombol ini buat nutup keyboard dan interaksiin sama hasil pencarian .';
+
+  @override
+  String get allSongs => 'Semua Lagu';
 }

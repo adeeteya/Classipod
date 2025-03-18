@@ -336,4 +336,7 @@ class AppLocalizationsLtg extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       '100 doc#1159 Nūspīž itū pogu , lai aiztaiseitu klaviaturu i sasadorbuotu ar mekliešonys rezultatim .';
+
+  @override
+  String get allSongs => 'Vysys dzīsmis .';
 }

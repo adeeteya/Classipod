@@ -333,4 +333,7 @@ class AppLocalizationsMr extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्ड बंद करण्यासाठी आणि शोध परिणामांसह संवाद साधण्यासाठी हे बटण दाबा';
+
+  @override
+  String get allSongs => 'सर्व गाणी';
 }

@@ -333,4 +333,7 @@ class AppLocalizationsSm extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Fetaomi lenei ki e tapunia le keyboard ma fegalegaleai ma le sailiga iuga';
+
+  @override
+  String get allSongs => 'Pepelo uma';
 }

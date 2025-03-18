@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Stlačením tlačidla stredu vyberte zvýraznenú abecedu",
   "nextButtonSearchTutorialText": "Stlačením tohto tlačidla pridáte priestor",
   "previousButtonSearchTutorialText": "Stlačením tohto tlačidla odstráňte posledný znak",
-  "menuButtonSearchTutorialText": "Stlačením tohto tlačidla zatvorte klávesnicu a interaguje s výsledkami vyhľadávania"
+  "menuButtonSearchTutorialText": "Stlačením tohto tlačidla zatvorte klávesnicu a interaguje s výsledkami vyhľadávania",
+  "allSongs": "Všetky piesne"
 }

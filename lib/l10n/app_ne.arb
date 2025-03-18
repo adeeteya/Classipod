@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "हाइलाइट गरिएको वर्णमाला चयन गर्न केन्द्र बटन थिच्नुहोस्",
   "nextButtonSearchTutorialText": "ठाउँ थप्न यो बटन थिच्नुहोस्",
   "previousButtonSearchTutorialText": "अन्तिम चरित्र मेट्न यो बटन थिच्नुहोस्",
-  "menuButtonSearchTutorialText": "किबोर्ड बन्द गर्न यो बटन थिच्नुहोस् र खोज परिणामहरूको साथ अन्तर्क्रिया गर्नुहोस्"
+  "menuButtonSearchTutorialText": "किबोर्ड बन्द गर्न यो बटन थिच्नुहोस् र खोज परिणामहरूको साथ अन्तर्क्रिया गर्नुहोस्",
+  "allSongs": "सबै गीतहरू"
 }

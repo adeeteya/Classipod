@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Naciśnij przycisk środkowy, aby wybrać podświetlony alfabet",
   "nextButtonSearchTutorialText": "Naciśnij ten przycisk, aby dodać miejsce",
   "previousButtonSearchTutorialText": "Naciśnij ten przycisk, aby usunąć ostatnią postać",
-  "menuButtonSearchTutorialText": "Naciśnij ten przycisk, aby zamknąć klawiaturę i wchodzić w interakcje z wynikami wyszukiwania"
+  "menuButtonSearchTutorialText": "Naciśnij ten przycisk, aby zamknąć klawiaturę i wchodzić w interakcje z wynikami wyszukiwania",
+  "allSongs": "Wszystkie piosenki"
 }

@@ -335,4 +335,7 @@ class AppLocalizationsNhe extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Xijtlatzquiltili ni botón para tijtzacuas nopa teclado huan ximocamahui ica nopa tlayejyecoli tlen tijtemos .';
+
+  @override
+  String get allSongs => 'Nochi huicalistli';
 }

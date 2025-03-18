@@ -336,4 +336,7 @@ class AppLocalizationsFur extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Preme chest botôn par sierâ il tastier e interagjî cui risultâts de ricercje';
+
+  @override
+  String get allSongs => 'Dutis lis cjançons';
 }

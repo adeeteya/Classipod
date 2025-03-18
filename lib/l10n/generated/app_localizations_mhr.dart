@@ -336,4 +336,7 @@ class AppLocalizationsMhr extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Тиде кнопкым темдал, клавиатурым петыраш да кычалмаш лектыш дене кылым кучаш .';
+
+  @override
+  String get allSongs => 'Чыла муро';
 }

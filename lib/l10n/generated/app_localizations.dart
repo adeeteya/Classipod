@@ -112,6 +112,7 @@ import 'app_localizations_lo.dart';
 import 'app_localizations_lt.dart';
 import 'app_localizations_ltg.dart';
 import 'app_localizations_luo.dart';
+import 'app_localizations_lus.dart';
 import 'app_localizations_lv.dart';
 import 'app_localizations_mai.dart';
 import 'app_localizations_mak.dart';
@@ -124,7 +125,6 @@ import 'app_localizations_min.dart';
 import 'app_localizations_mk.dart';
 import 'app_localizations_ml.dart';
 import 'app_localizations_mn.dart';
-import 'app_localizations_mni.dart';
 import 'app_localizations_mr.dart';
 import 'app_localizations_ms.dart';
 import 'app_localizations_mt.dart';
@@ -396,6 +396,7 @@ abstract class AppLocalizations {
     Locale('lt'),
     Locale('ltg'),
     Locale('luo'),
+    Locale('lus'),
     Locale('lv'),
     Locale('mai'),
     Locale('mak'),
@@ -408,7 +409,6 @@ abstract class AppLocalizations {
     Locale('mk'),
     Locale('ml'),
     Locale('mn'),
-    Locale('mni'),
     Locale('mr'),
     Locale('ms'),
     Locale('mt'),
@@ -1039,6 +1039,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Press this button to close the keyboard and interact with the search results'**
   String get menuButtonSearchTutorialText;
+
+  /// The text for selecting all songs
+  ///
+  /// In en, this message translates to:
+  /// **'All Songs'**
+  String get allSongs;
 }
 
 class _AppLocalizationsDelegate
@@ -1159,6 +1165,7 @@ class _AppLocalizationsDelegate
     'lt',
     'ltg',
     'luo',
+    'lus',
     'lv',
     'mai',
     'mak',
@@ -1171,7 +1178,6 @@ class _AppLocalizationsDelegate
     'mk',
     'ml',
     'mn',
-    'mni',
     'mr',
     'ms',
     'mt',
@@ -1472,6 +1478,8 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsLtg();
     case 'luo':
       return AppLocalizationsLuo();
+    case 'lus':
+      return AppLocalizationsLus();
     case 'lv':
       return AppLocalizationsLv();
     case 'mai':
@@ -1496,8 +1504,6 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsMl();
     case 'mn':
       return AppLocalizationsMn();
-    case 'mni':
-      return AppLocalizationsMni();
     case 'mr':
       return AppLocalizationsMr();
     case 'ms':

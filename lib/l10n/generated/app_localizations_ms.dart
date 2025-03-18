@@ -334,4 +334,7 @@ class AppLocalizationsMs extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tekan butang ini untuk menutup papan kekunci dan berinteraksi dengan hasil carian';
+
+  @override
+  String get allSongs => 'Semua lagu';
 }

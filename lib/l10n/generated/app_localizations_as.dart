@@ -334,4 +334,7 @@ class AppLocalizationsAs extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'এই বুটামটো টিপক কিবৰ্ড বন্ধ কৰিবলৈ আৰু সন্ধান ফলাফলৰ সৈতে যোগাযোগ কৰক';
+
+  @override
+  String get allSongs => 'সকলো গীত';
 }

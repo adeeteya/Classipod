@@ -336,4 +336,7 @@ class AppLocalizationsDv extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'މި ބަޓަން ފިއްތާލުމުން ކީބޯޑް ބަންދުކޮށް ސަރޗް ނަތީޖާތަކާ މުޢާމަލާތު ކުރުން';
+
+  @override
+  String get allSongs => 'ހުރިހާ ލަވައެއް';
 }

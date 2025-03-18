@@ -335,4 +335,7 @@ class AppLocalizationsUk extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Натисніть цю кнопку, щоб закрити клавіатуру та взаємодіяти з результатами пошуку';
+
+  @override
+  String get allSongs => 'Всі пісні';
 }

@@ -335,4 +335,7 @@ class AppLocalizationsRom extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Presinen akava buti te phanen o klaviatura thay te keren interakcia e rodipaskere rezultatencar .';
+
+  @override
+  String get allSongs => 'Sa le gilya';
 }

@@ -336,4 +336,7 @@ class AppLocalizationsTum extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tinikani batani ili kuti mujalire kiyibodi na kuchezga na ivyo mwapenja .';
+
+  @override
+  String get allSongs => 'Nyimbo zose';
 }

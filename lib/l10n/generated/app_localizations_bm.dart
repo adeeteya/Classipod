@@ -336,4 +336,7 @@ class AppLocalizationsBm extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'O butɔni digi walasa ka klaviyeti datugu ani ka baara kɛ ni ɲinini jaabiw ye .';
+
+  @override
+  String get allSongs => 'Dɔnkiliw bɛɛ .';
 }

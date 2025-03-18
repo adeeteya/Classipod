@@ -333,4 +333,7 @@ class AppLocalizationsAch extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Dii but man me cego kibodbod ci ilok ki adwogi me yenyo';
+
+  @override
+  String get allSongs => 'Wer weng';
 }

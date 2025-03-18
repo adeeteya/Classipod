@@ -334,4 +334,7 @@ class AppLocalizationsKa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'დააჭირეთ ამ ღილაკს კლავიშის დახურვისთვის და ძიების შედეგებთან ურთიერთობისთვის';
+
+  @override
+  String get allSongs => 'ყველა სიმღერა';
 }

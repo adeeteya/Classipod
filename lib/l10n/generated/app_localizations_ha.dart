@@ -333,4 +333,7 @@ class AppLocalizationsHa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Latsa wannan maɓallin don rufe maballin kuma yana hulɗa da sakamakon binciken';
+
+  @override
+  String get allSongs => 'Duk waƙoƙi';
 }

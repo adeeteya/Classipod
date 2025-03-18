@@ -334,4 +334,7 @@ class AppLocalizationsCkb extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ئەم دوگمەیە بکە بۆ داخستنی کیبۆردەکە و کارلێککردن لەگەڵ ئەنجامەکانی گەڕان';
+
+  @override
+  String get allSongs => 'هەموو گۆرانییەکان';
 }

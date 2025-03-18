@@ -335,4 +335,7 @@ class AppLocalizationsTet extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tekan butaun ne’e hodi taka keyboard no interasaun ho rezultadu peskiza .';
+
+  @override
+  String get allSongs => 'Knananuk hotu';
 }

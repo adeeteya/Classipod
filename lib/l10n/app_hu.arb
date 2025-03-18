@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Nyomja meg a Center gombot a kiemelt ábécé kiválasztásához",
   "nextButtonSearchTutorialText": "Nyomja meg ezt a gombot a hely hozzáadásához",
   "previousButtonSearchTutorialText": "Nyomja meg ezt a gombot az utolsó karakter törléséhez",
-  "menuButtonSearchTutorialText": "Nyomja meg ezt a gombot a billentyűzet bezárásához és a keresési eredményekkel való interakcióhoz"
+  "menuButtonSearchTutorialText": "Nyomja meg ezt a gombot a billentyűzet bezárásához és a keresési eredményekkel való interakcióhoz",
+  "allSongs": "Minden dal"
 }

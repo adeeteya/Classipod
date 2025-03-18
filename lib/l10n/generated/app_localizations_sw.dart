@@ -334,4 +334,7 @@ class AppLocalizationsSw extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Bonyeza kitufe hiki ili kufunga kibodi na kuingiliana na matokeo ya utaftaji';
+
+  @override
+  String get allSongs => 'Nyimbo zote';
 }

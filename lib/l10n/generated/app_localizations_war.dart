@@ -334,4 +334,7 @@ class AppLocalizationsWar extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pindota ini nga buton para masara an keyboard ngan makig-upod ha mga resulta han pagbiling';
+
+  @override
+  String get allSongs => 'Tanan nga mga Kanta .';
 }

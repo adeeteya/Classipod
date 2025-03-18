@@ -333,4 +333,7 @@ class AppLocalizationsSi extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'යතුරුපුවරුව වැසීමට සහ සෙවුම් ප්රති .ල සමඟ අන්තර් ක්රියා කිරීමට මෙම බොත්තම ඔබන්න';
+
+  @override
+  String get allSongs => 'සියලුම ගීත';
 }

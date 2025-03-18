@@ -336,4 +336,7 @@ class AppLocalizationsPag extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pindoten iyan buton pian nasara so keyboard tan makapideneng ed panag-anap so resulta .';
+
+  @override
+  String get allSongs => 'Amin a kansion';
 }

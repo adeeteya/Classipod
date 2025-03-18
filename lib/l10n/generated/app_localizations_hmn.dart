@@ -335,4 +335,7 @@ class AppLocalizationsHmn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Nias lub pob no kaw cov keyboard thiab cuam tshuam nrog cov kev tshawb fawb';
+
+  @override
+  String get allSongs => 'Txhua zaj nkauj';
 }

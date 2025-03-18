@@ -336,4 +336,7 @@ class AppLocalizationsTiv extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Kighir button ne sha er u cir keyboard la shi u er kwagh a kwagh u u soo u keren la yô .';
+
+  @override
+  String get allSongs => 'Icam i wan cii';
 }

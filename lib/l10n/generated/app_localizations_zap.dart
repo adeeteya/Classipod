@@ -336,4 +336,7 @@ class AppLocalizationsZap extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Biʼniʼ presionar botón riʼ para guseeguʼ tecladu ne guni interactuar né ca resultadu stiʼ búsqueda .';
+
+  @override
+  String get allSongs => 'Guiráʼ canción';
 }

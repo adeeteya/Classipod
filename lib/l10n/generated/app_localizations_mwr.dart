@@ -332,4 +332,7 @@ class AppLocalizationsMwr extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्ड नै बंद करण खातर अर खोज परिणामां तै बातचीत करण खातर इस बटन दबाओ';
+
+  @override
+  String get allSongs => 'सगळा';
 }

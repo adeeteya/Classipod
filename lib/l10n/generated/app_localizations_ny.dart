@@ -334,4 +334,7 @@ class AppLocalizationsNy extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Dinani batani ili kuti mutseke kiyibodi ndikuyanjana ndi zotsatira zakusaka';
+
+  @override
+  String get allSongs => 'Nyimbo zonse';
 }

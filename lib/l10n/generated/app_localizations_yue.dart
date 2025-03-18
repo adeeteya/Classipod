@@ -316,4 +316,7 @@ class AppLocalizationsYue extends AppLocalizations {
 
   @override
   String get menuButtonSearchTutorialText => '撳呢個掣就可以關閉鍵盤，同埋同搜尋結果互動';
+
+  @override
+  String get allSongs => '所有歌曲';
 }

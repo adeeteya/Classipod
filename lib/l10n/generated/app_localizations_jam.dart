@@ -334,4 +334,7 @@ class AppLocalizationsJam extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pres dis button fi kluoz di kiibuod ah intarak wid di saach rizolt .';
+
+  @override
+  String get allSongs => 'Aal Sangs';
 }

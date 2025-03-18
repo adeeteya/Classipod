@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Belgilangan alifboni tanlash uchun Markaz tugmasini bosing",
   "nextButtonSearchTutorialText": "Kamerani qo'shish uchun ushbu tugmani bosing",
   "previousButtonSearchTutorialText": "So'nggi belgini o'chirish uchun ushbu tugmani bosing",
-  "menuButtonSearchTutorialText": "Klaviaturani yopish va qidirish natijalari bilan o'zaro aloqada bo'lish uchun ushbu tugmani bosing"
+  "menuButtonSearchTutorialText": "Klaviaturani yopish va qidirish natijalari bilan o'zaro aloqada bo'lish uchun ushbu tugmani bosing",
+  "allSongs": "Hamma qo'shiqlar"
 }

@@ -336,4 +336,7 @@ class AppLocalizationsLij extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Premme sto botton pe serrâ o tastierino e interagî co-i resultati de reçerca';
+
+  @override
+  String get allSongs => 'Tutte e cansoin';
 }

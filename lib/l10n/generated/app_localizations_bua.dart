@@ -334,4 +334,7 @@ class AppLocalizationsBua extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Энэ тобшо даража, гар бэшэгые хаажа, хайлтын дүнгүүдтэй харилсаха';
+
+  @override
+  String get allSongs => 'Бүхы дуунууд .';
 }

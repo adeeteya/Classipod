@@ -336,4 +336,7 @@ class AppLocalizationsAlz extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Keth button maeni pi ni ketho lembe ma pigi tek man ni ketho lembe ma jubeyenyo .';
+
+  @override
+  String get allSongs => 'ceke';
 }

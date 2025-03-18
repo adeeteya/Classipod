@@ -334,4 +334,7 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Nhấn nút này để đóng bàn phím và tương tác với kết quả tìm kiếm';
+
+  @override
+  String get allSongs => 'Tất cả các bài hát';
 }

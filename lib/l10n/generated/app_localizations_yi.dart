@@ -336,4 +336,7 @@ class AppLocalizationsYi extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'דרוק דעם קנעפּל צו פאַרמאַכן די קלאַוויאַטור און ינטעראַקט מיט די זוך רעזולטאַטן';
+
+  @override
+  String get allSongs => 'כל לידער';
 }

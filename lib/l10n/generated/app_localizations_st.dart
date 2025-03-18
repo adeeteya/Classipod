@@ -334,4 +334,7 @@ class AppLocalizationsSt extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tobetsa konopo ena ho koala keyboard ebe o buisana le sephetho sa lipatlisiso';
+
+  @override
+  String get allSongs => 'Lipina tsohle';
 }

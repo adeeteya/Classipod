@@ -315,4 +315,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get menuButtonSearchTutorialText => '按下此按钮关闭键盘并与搜索结果进行交互';
+
+  @override
+  String get allSongs => '所有歌曲';
 }

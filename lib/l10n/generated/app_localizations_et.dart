@@ -333,4 +333,7 @@ class AppLocalizationsEt extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Klaviatuuri sulgemiseks ja otsingutulemustega suhtlemiseks vajutage seda nuppu';
+
+  @override
+  String get allSongs => 'Kõik laulud';
 }

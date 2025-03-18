@@ -334,4 +334,7 @@ class AppLocalizationsKri extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pres dis bɔtin fɔ lɔk di kibɔd ɛn intarakt wit di sɔch rizulyt dɛn .';
+
+  @override
+  String get allSongs => 'Ɔl di siŋ dɛn .';
 }

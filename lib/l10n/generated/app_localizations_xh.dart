@@ -335,4 +335,7 @@ class AppLocalizationsXh extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Cinezela eli qhosha ukuvala ikhibhodi kwaye unxibelelane neziphumo zokukhangela';
+
+  @override
+  String get allSongs => 'Zonke iingoma';
 }

@@ -335,4 +335,7 @@ class AppLocalizationsTt extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Клавиатура ябу һәм эзләү нәтиҗәләре белән аралашу өчен бу төймәгә басыгыз';
+
+  @override
+  String get allSongs => 'Барлык җырлар';
 }

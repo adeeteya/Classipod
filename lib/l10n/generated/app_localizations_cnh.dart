@@ -334,4 +334,7 @@ class AppLocalizationsCnh extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Hi button hi hmet law keyboard kha khar law kawlnak a phichuak he pehtlaihnak tuah.';
+
+  @override
+  String get allSongs => 'Hla vialte';
 }

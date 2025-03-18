@@ -333,4 +333,7 @@ class AppLocalizationsBan extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Teken tombol puniki anggén nutup papan ketik lan berinteraksi sareng hasil panyliksikan';
+
+  @override
+  String get allSongs => 'Saluiring Kidung';
 }

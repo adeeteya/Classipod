@@ -336,4 +336,7 @@ class AppLocalizationsUz extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Klaviaturani yopish va qidirish natijalari bilan o\'zaro aloqada bo\'lish uchun ushbu tugmani bosing';
+
+  @override
+  String get allSongs => 'Hamma qo\'shiqlar';
 }

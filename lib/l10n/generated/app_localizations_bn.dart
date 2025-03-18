@@ -335,4 +335,7 @@ class AppLocalizationsBn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'কীবোর্ডটি বন্ধ করতে এই বোতামটি টিপুন এবং অনুসন্ধান ফলাফলের সাথে ইন্টারঅ্যাক্ট করুন';
+
+  @override
+  String get allSongs => 'সব গান';
 }

@@ -335,4 +335,7 @@ class AppLocalizationsCrs extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pez sa bouton pour ferm klavye e enterakte avek rezilta resers';
+
+  @override
+  String get allSongs => 'Tou bann Sanson';
 }

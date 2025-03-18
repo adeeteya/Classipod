@@ -334,4 +334,7 @@ class AppLocalizationsScn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Prima stu buttuni pi chiudiri la tastiera e ntiraggìsciri chî risurtati di circata';
+
+  @override
+  String get allSongs => 'Tutti';
 }

@@ -333,4 +333,7 @@ class AppLocalizationsHt extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Peze bouton sa a pou fèmen klavye a epi kominike avèk rezilta rechèch la';
+
+  @override
+  String get allSongs => 'Tout chante';
 }

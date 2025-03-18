@@ -334,4 +334,7 @@ class AppLocalizationsKy extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Баскычтопту жабуу үчүн бул баскычты басыңыз жана издөө натыйжалары менен өз ара аракеттенүү';
+
+  @override
+  String get allSongs => 'Бардык ырлар';
 }

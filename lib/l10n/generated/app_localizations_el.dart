@@ -336,4 +336,7 @@ class AppLocalizationsEl extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Πατήστε αυτό το κουμπί για να κλείσετε το πληκτρολόγιο και να αλληλεπιδράσετε με τα αποτελέσματα αναζήτησης';
+
+  @override
+  String get allSongs => 'Όλα τα τραγούδια';
 }

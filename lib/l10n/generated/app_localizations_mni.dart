@@ -334,4 +334,7 @@ class AppLocalizationsMni extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ꯀꯤꯕꯣꯔꯗ ꯂꯣꯗ ꯇꯧꯅꯕꯥ ꯑꯃꯁꯨꯡ ꯁꯥꯔꯆ ꯔꯤꯖꯜꯇꯁꯤꯡꯒꯥ ꯏꯟꯇꯔꯦꯛꯇ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ';
+
+  @override
+  String get allSongs => 'All Songs';
 }

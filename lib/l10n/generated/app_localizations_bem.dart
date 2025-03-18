@@ -336,4 +336,7 @@ class AppLocalizationsBem extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tinikeni ili batani pakuti mwingile mu citabo no kulanshanya ne fyasangwa mu kufwaya';
+
+  @override
+  String get allSongs => 'Inyimbo shonse';
 }

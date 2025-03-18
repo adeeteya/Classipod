@@ -336,4 +336,7 @@ class AppLocalizationsSo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Riix badhankan si aad u xidho furaha oo aad la macaamilayso natiijooyinka raadinta';
+
+  @override
+  String get allSongs => 'Dhammaan heesaha';
 }

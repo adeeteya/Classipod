@@ -336,4 +336,7 @@ class AppLocalizationsBho extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्ड बंद करे खातिर एह बटन के दबाईं आ खोज परिणाम के साथे बातचीत करीं';
+
+  @override
+  String get allSongs => 'सब गीत 2019 के बा।';
 }

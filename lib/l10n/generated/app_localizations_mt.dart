@@ -336,4 +336,7 @@ class AppLocalizationsMt extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Agħfas din il-buttuna biex tagħlaq it-tastiera u tinteraġixxi mar-riżultati tat-tfittxija';
+
+  @override
+  String get allSongs => 'Il-kanzunetti kollha';
 }

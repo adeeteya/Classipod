@@ -336,4 +336,7 @@ class AppLocalizationsCo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pulse stu buttone per chjude u teclatu è interagisce cù i risultati di ricerca';
+
+  @override
+  String get allSongs => 'Tutti i canzoni';
 }

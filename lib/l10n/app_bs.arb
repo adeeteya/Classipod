@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Pritisnite tipku CENTER za odabir označene abecede",
   "nextButtonSearchTutorialText": "Pritisnite ovo dugme da biste dodali prostor",
   "previousButtonSearchTutorialText": "Pritisnite ovo dugme da biste izbrisali zadnji znak",
-  "menuButtonSearchTutorialText": "Pritisnite ovo dugme da biste zatvorili tastaturu i interakciju sa rezultatima pretraživanja"
+  "menuButtonSearchTutorialText": "Pritisnite ovo dugme da biste zatvorili tastaturu i interakciju sa rezultatima pretraživanja",
+  "allSongs": "Sve pjesme"
 }

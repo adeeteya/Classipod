@@ -335,4 +335,7 @@ class AppLocalizationsKtu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Fina bouton yayi samu na kukanga clavier mpe kusala mambu na ba mvutu ya kusosa .';
+
+  @override
+  String get allSongs => 'Bankunga Yonso';
 }

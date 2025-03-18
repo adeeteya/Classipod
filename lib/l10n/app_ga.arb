@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Brúigh an cnaipe Ionad chun an aibítir aibhsithe a roghnú",
   "nextButtonSearchTutorialText": "Brúigh an cnaipe seo chun spás a chur leis",
   "previousButtonSearchTutorialText": "Brúigh an cnaipe seo chun an carachtar deireanach a scriosadh",
-  "menuButtonSearchTutorialText": "Brúigh an cnaipe seo chun an méarchlár a dhúnadh agus idirghníomhú leis na torthaí cuardaigh"
+  "menuButtonSearchTutorialText": "Brúigh an cnaipe seo chun an méarchlár a dhúnadh agus idirghníomhú leis na torthaí cuardaigh",
+  "allSongs": "Gach amhrán"
 }

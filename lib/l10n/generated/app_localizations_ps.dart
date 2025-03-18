@@ -333,4 +333,7 @@ class AppLocalizationsPs extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'د کیبورډ بندولو لپاره دا ت button ۍ فشار ورکړئ او د لټون پایلو سره متقابل عمل وکړئ';
+
+  @override
+  String get allSongs => 'ټولې سندرې';
 }

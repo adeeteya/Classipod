@@ -335,4 +335,7 @@ class AppLocalizationsDin extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tääu ë ye button kënë ba keyboard thiɔ̈ɔ̈k ku yök kë cï yök .';
+
+  @override
+  String get allSongs => 'Käk ëbɛ̈n';
 }

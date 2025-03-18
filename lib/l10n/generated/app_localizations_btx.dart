@@ -334,4 +334,7 @@ class AppLocalizationsBtx extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tekan tombol enda guna nutup keyboard ras berinteraksi ras hasil pencarian .';
+
+  @override
+  String get allSongs => 'Kerina Lagu';
 }

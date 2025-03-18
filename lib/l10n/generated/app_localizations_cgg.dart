@@ -335,4 +335,7 @@ class AppLocalizationsCgg extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Nyiga akapesha aka okukinga ekiiboodi kandi okakwatanisa n\'ebyarugire omu kusherura .';
+
+  @override
+  String get allSongs => 'Ebyeshongoro byona';
 }

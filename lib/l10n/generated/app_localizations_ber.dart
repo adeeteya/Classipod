@@ -333,4 +333,7 @@ class AppLocalizationsBer extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ⵙⵙⵔⵙ ⴰⵙⵍⴽⵉⵏ ⴰⴷ ⵃⵎⴰ ⴰⴷ ⵜⵙⵔⵙⵎ ⴰⵙⵍⴽⵉⵏ ⴰⵔ ⵜⵎⵢⴰⵡⴰⴹⵎ ⴰⴽⴷ ⵜⵢⴰⴼⵓⵜⵉⵏ ⵏ ⵓⵔⵣⵣⵓ';
+
+  @override
+  String get allSongs => 'ⴽⵓⵍⵍⵓ ⵉⵣⵍⴰⵏ';
 }

@@ -333,4 +333,7 @@ class AppLocalizationsYo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tẹ bọtini yii lati pa bọtini itẹwe ati ibaraenisọrọ pẹlu awọn abajade wiwa';
+
+  @override
+  String get allSongs => 'Gbogbo awọn orin';
 }

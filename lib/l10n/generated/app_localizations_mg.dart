@@ -335,4 +335,7 @@ class AppLocalizationsMg extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tsindrio ity bokotra ity hanakatonana ny fitendry ary hifanerasera amin\'ny valin\'ny fikarohana';
+
+  @override
+  String get allSongs => 'Hira rehetra';
 }

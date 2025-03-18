@@ -335,4 +335,7 @@ class AppLocalizationsAce extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Teukan tombol nyoe untuk tapeutop keyboard dan ta interaksi ngon hasee pencarian .';
+
+  @override
+  String get allSongs => 'Mandum lagu';
 }

@@ -335,4 +335,7 @@ class AppLocalizationsKk extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Пернетақтаны жабу және іздеу нәтижелерімен өзара әрекеттесу үшін осы түймені басыңыз';
+
+  @override
+  String get allSongs => 'Барлық әндер';
 }

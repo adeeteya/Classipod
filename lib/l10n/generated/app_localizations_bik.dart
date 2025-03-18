@@ -335,4 +335,7 @@ class AppLocalizationsBik extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pinduton an buton na ini tanganing isara an keyboard asin makipag-ulay sa mga resulta nin paghanap .';
+
+  @override
+  String get allSongs => 'Gabos na Awit .';
 }

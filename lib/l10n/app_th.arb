@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "กดปุ่มกึ่งกลางเพื่อเลือกตัวอักษรที่ไฮไลต์",
   "nextButtonSearchTutorialText": "กดปุ่มนี้เพื่อเพิ่มพื้นที่",
   "previousButtonSearchTutorialText": "กดปุ่มนี้เพื่อลบอักขระสุดท้าย",
-  "menuButtonSearchTutorialText": "กดปุ่มนี้เพื่อปิดแป้นพิมพ์และโต้ตอบกับผลการค้นหา"
+  "menuButtonSearchTutorialText": "กดปุ่มนี้เพื่อปิดแป้นพิมพ์และโต้ตอบกับผลการค้นหา",
+  "allSongs": "เพลงทั้งหมด"
 }

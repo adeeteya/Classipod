@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Premeu el botó Centre per seleccionar l’alfabet ressaltat",
   "nextButtonSearchTutorialText": "Premeu aquest botó per afegir un espai",
   "previousButtonSearchTutorialText": "Premeu aquest botó per eliminar l'últim personatge",
-  "menuButtonSearchTutorialText": "Premeu aquest botó per tancar el teclat i interactuar amb els resultats de la cerca"
+  "menuButtonSearchTutorialText": "Premeu aquest botó per tancar el teclat i interactuar amb els resultats de la cerca",
+  "allSongs": "Totes les cançons"
 }

@@ -332,4 +332,7 @@ class AppLocalizationsMai extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्ड बंद करय लेल ई बटन दबाउ आ खोज परिणाम के संग बातचीत करू';
+
+  @override
+  String get allSongs => 'सब गीत';
 }

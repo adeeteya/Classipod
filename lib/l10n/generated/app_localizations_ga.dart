@@ -334,4 +334,7 @@ class AppLocalizationsGa extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Brúigh an cnaipe seo chun an méarchlár a dhúnadh agus idirghníomhú leis na torthaí cuardaigh';
+
+  @override
+  String get allSongs => 'Gach amhrán';
 }

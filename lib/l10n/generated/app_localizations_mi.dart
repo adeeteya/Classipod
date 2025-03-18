@@ -336,4 +336,7 @@ class AppLocalizationsMi extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pawhiria te paatene nei kia kati te papapātuhi me te taunekeneke ki nga hua o te rapu';
+
+  @override
+  String get allSongs => 'Nga waiata katoa';
 }

@@ -334,4 +334,7 @@ class AppLocalizationsSat extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ᱞᱟᱛᱟᱨ ᱨᱮ ᱮᱢ ᱟᱠᱟᱱ ᱠᱤᱵᱚᱨᱰ ᱨᱮ ᱠᱞᱤᱠ ᱢᱮ ᱟᱨ ᱱᱚᱣᱟ ᱥᱮᱸᱫᱽᱨᱟ ᱚᱨᱡᱚ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾';
+
+  @override
+  String get allSongs => 'ᱥᱟᱱᱟᱢ ᱠᱚ ᱜᱮ';
 }

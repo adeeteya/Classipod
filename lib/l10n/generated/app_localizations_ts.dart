@@ -338,4 +338,7 @@ class AppLocalizationsTs extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Cinekela button leyi ku pfala khibhodi na ku tirhisana na mbuyelo wa ku lavisisa';
+
+  @override
+  String get allSongs => 'Tinsimu Hinkwato .';
 }

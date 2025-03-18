@@ -334,4 +334,7 @@ class AppLocalizationsMn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Гарыг хаахын тулд энэ товчийг дараад хайлтын үр дүнтэй харилцах';
+
+  @override
+  String get allSongs => 'Бүх Дуу';
 }

@@ -336,4 +336,7 @@ class AppLocalizationsShn extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ ဢိုတ်းၶီးပူတ်ႉသေ တိတ်းတေႃႇၸွမ်း ၶေႃႈတွပ်ႇဢၼ်သွၵ်ႈႁႃၼၼ်ႉ';
+
+  @override
+  String get allSongs => 'ၵႂၢမ်းၵူႈၽဵင်း';
 }

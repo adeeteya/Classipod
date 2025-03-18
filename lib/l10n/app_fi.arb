@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "Valitse korostettu aakkoset painamalla keskuspainiketta",
   "nextButtonSearchTutorialText": "Lisää tilaa painamalla tätä painiketta",
   "previousButtonSearchTutorialText": "Poista viimeinen merkki painamalla tätä painiketta",
-  "menuButtonSearchTutorialText": "Paina tätä painiketta sulkeaksesi näppäimistön ja vuorovaikutuksessa hakutulosten kanssa"
+  "menuButtonSearchTutorialText": "Paina tätä painiketta sulkeaksesi näppäimistön ja vuorovaikutuksessa hakutulosten kanssa",
+  "allSongs": "Kaikki kappaleet"
 }

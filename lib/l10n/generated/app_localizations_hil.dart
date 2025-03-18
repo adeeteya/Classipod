@@ -336,4 +336,7 @@ class AppLocalizationsHil extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pindota ini nga buton sa pagsira sang keyboard kag makig-angot sa mga resulta sang pagpangita .';
+
+  @override
+  String get allSongs => 'Ang tanan nga mga Ambahanon .';
 }

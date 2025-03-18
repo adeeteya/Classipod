@@ -336,4 +336,7 @@ class AppLocalizationsFil extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pindutin ang pindutan na ito upang isara ang keyboard at makipag -ugnay sa mga resulta ng paghahanap';
+
+  @override
+  String get allSongs => 'Lahat ng mga kanta';
 }

@@ -334,4 +334,7 @@ class AppLocalizationsSah extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Бу кнопканы баттаан, клавиатураны сабан баран, көрдөөһүн түмүгүн кытта дьүөрэлэһиннэр';
+
+  @override
+  String get allSongs => 'Бары ырыалар';
 }

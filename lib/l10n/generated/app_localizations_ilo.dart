@@ -337,4 +337,7 @@ class AppLocalizationsIlo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pinduten daytoy a buton tapno maiserra ti teklado ken makilangen kadagiti resulta ti panagsapul .';
+
+  @override
+  String get allSongs => 'Amin a kanta .';
 }

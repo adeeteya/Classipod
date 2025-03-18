@@ -336,4 +336,7 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Apăsați acest buton pentru a închide tastatura și a interacționa cu rezultatele căutării';
+
+  @override
+  String get allSongs => 'Toate melodiile';
 }

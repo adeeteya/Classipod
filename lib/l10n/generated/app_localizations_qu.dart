@@ -336,4 +336,7 @@ class AppLocalizationsQu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Kay ñit\'inata ñit\'iy teclado wichq\'anapaq chaymanta maskana ruwaykunawan tinkiy .';
+
+  @override
+  String get allSongs => 'Tukuy takikuna .';
 }

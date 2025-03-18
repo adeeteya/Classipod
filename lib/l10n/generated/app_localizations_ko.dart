@@ -324,4 +324,7 @@ class AppLocalizationsKo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       '이 버튼을 누르면 키보드를 닫고 검색 결과와 상호 작용합니다.';
+
+  @override
+  String get allSongs => '모든 노래';
 }

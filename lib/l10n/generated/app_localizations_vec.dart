@@ -336,4 +336,7 @@ class AppLocalizationsVec extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Premi sto boton par chiudere la tastiera e interagi co i risultati de ricerca';
+
+  @override
+  String get allSongs => 'Tutte le Canzone';
 }

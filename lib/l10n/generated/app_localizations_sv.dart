@@ -334,4 +334,7 @@ class AppLocalizationsSv extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tryck på den här knappen för att stänga tangentbordet och interagera med sökresultaten';
+
+  @override
+  String get allSongs => 'Alla låtar';
 }

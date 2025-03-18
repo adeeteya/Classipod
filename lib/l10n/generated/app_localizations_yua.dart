@@ -337,4 +337,7 @@ class AppLocalizationsYua extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Presione le botón utia\'al u k\'áalal le teclado yéetel interactuar yéetel ya\'ala\'al máaxo\'ob máano\'ob le xookilo\'';
+
+  @override
+  String get allSongs => 'Tuláakal k\'aayo\'ob';
 }

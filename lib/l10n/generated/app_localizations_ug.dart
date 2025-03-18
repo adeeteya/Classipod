@@ -335,4 +335,7 @@ class AppLocalizationsUg extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'كۇنۇپكا تاختىسىنى ۋە ئىزدەش نەتىجىسىنى تاقاش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ';
+
+  @override
+  String get allSongs => 'بارلىق ناخشىلار';
 }

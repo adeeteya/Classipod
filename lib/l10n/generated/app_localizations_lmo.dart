@@ -337,4 +337,7 @@ class AppLocalizationsLmo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Clicca sul sit web de la memoria e i dat che g’he sun di dat che g’he sun.';
+
+  @override
+  String get allSongs => 'Tüt';
 }

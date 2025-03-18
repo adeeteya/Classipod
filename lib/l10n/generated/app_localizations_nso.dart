@@ -334,4 +334,7 @@ class AppLocalizationsNso extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Tobetsa konopo ye go tswalela khiiboto le go dirišana le dipoelo tša nyakišišo';
+
+  @override
+  String get allSongs => 'Dikoša ka moka .';
 }

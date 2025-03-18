@@ -331,4 +331,7 @@ class AppLocalizationsTh extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'กดปุ่มนี้เพื่อปิดแป้นพิมพ์และโต้ตอบกับผลการค้นหา';
+
+  @override
+  String get allSongs => 'เพลงทั้งหมด';
 }

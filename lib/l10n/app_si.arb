@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "උද්දීපනය කළ හෝඩිය තෝරා ගැනීමට මධ්යස්ථාන බොත්තම ඔබන්න",
   "nextButtonSearchTutorialText": "ඉඩක් එක් කිරීමට මෙම බොත්තම ඔබන්න",
   "previousButtonSearchTutorialText": "අවසාන අක්ෂරය මකා දැමීමට මෙම බොත්තම ඔබන්න",
-  "menuButtonSearchTutorialText": "යතුරුපුවරුව වැසීමට සහ සෙවුම් ප්රති .ල සමඟ අන්තර් ක්රියා කිරීමට මෙම බොත්තම ඔබන්න"
+  "menuButtonSearchTutorialText": "යතුරුපුවරුව වැසීමට සහ සෙවුම් ප්රති .ල සමඟ අන්තර් ක්රියා කිරීමට මෙම බොත්තම ඔබන්න",
+  "allSongs": "සියලුම ගීත"
 }

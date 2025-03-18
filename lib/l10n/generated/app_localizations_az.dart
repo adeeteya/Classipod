@@ -335,4 +335,7 @@ class AppLocalizationsAz extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Klaviaturanı bağlamaq və axtarış nəticələri ilə qarşılıqlı əlaqə yaratmaq üçün bu düyməni basın';
+
+  @override
+  String get allSongs => 'Bütün mahnılar';
 }

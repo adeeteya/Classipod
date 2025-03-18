@@ -333,4 +333,7 @@ class AppLocalizationsNew extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'कीबोर्ड बन्द यायेत व मालेगु लिच्वःलिसे अन्तरक्रिया यायेत थुगु बटन त्यु ।';
+
+  @override
+  String get allSongs => 'दक्वं म्ये';
 }

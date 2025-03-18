@@ -335,4 +335,7 @@ class AppLocalizationsSzl extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Naciśnij tyn guzicz, coby zawrzić klawiatura i wchodzić w interakcyjo z wynikami poszukowanio';
+
+  @override
+  String get allSongs => 'Cołke Śpije';
 }

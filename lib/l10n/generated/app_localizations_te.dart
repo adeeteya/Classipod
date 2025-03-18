@@ -335,4 +335,7 @@ class AppLocalizationsTe extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'కీబోర్డ్‌ను మూసివేయడానికి ఈ బటన్‌ను నొక్కండి మరియు శోధన ఫలితాలతో ఇంటరాక్ట్ అవ్వండి';
+
+  @override
+  String get allSongs => 'అన్ని పాటలు';
 }

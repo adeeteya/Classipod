@@ -107,5 +107,6 @@
   "centerButtonSearchTutorialText": "اضغط على زر الوسط لتحديد الأبجدية المميزة",
   "nextButtonSearchTutorialText": "اضغط على هذا الزر لإضافة مساحة",
   "previousButtonSearchTutorialText": "اضغط على هذا الزر لحذف الحرف الأخير",
-  "menuButtonSearchTutorialText": "اضغط على هذا الزر لإغلاق لوحة المفاتيح والتفاعل مع نتائج البحث"
+  "menuButtonSearchTutorialText": "اضغط على هذا الزر لإغلاق لوحة المفاتيح والتفاعل مع نتائج البحث",
+  "allSongs": "جميع الأغاني"
 }

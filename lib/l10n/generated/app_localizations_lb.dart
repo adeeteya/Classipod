@@ -336,4 +336,7 @@ class AppLocalizationsLb extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Press dëse Knäppchen fir d\'Tastatur zoumaachen an interagéieren mat de Sichresultater';
+
+  @override
+  String get allSongs => 'All Lidder';
 }

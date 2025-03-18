@@ -334,4 +334,7 @@ class AppLocalizationsKm extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'ចុចប៊ូតុងនេះដើម្បីបិទក្តារចុចនិងធ្វើអន្តរកម្មជាមួយលទ្ធផលស្វែងរក';
+
+  @override
+  String get allSongs => 'ចម្រៀងទាំងអស់';
 }

@@ -331,4 +331,7 @@ class AppLocalizationsBal extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'کی بورڈ بند کنگ ءِ ھاترا اے بٹن ءَ دپ ءَ بہ کن ءُ پٹ ءُ پول ءِ آسر ءَ گوں رابطہ بہ کن';
+
+  @override
+  String get allSongs => 'دراہیں گانا';
 }

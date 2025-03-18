@@ -335,4 +335,7 @@ class AppLocalizationsMam extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ ttzʼibʼina teclado ex jaku tzʼok tmojbʼan tibʼa tukʼilju in tzaj tqʼamaʼn xjelbʼitz .';
+
+  @override
+  String get allSongs => 'Kykyaqil';
 }

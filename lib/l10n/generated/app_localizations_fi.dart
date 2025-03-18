@@ -335,4 +335,7 @@ class AppLocalizationsFi extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Paina tätä painiketta sulkeaksesi näppäimistön ja vuorovaikutuksessa hakutulosten kanssa';
+
+  @override
+  String get allSongs => 'Kaikki kappaleet';
 }

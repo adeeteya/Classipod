@@ -48,8 +48,7 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
       allSongs.addAll(displayItems[i].albumSongs);
     }
     return AlbumModel(
-      albumName:
-          "${context.localization.repeatModeAll} ${context.localization.songsScreenTitle}",
+      albumName: context.localization.allSongs,
       albumArtistName: widget.artistName,
       albumSongs: allSongs,
     );

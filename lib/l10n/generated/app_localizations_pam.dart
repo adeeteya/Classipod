@@ -337,4 +337,7 @@ class AppLocalizationsPam extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pindutan me ining buton para isara me ing keyboard at makipag-ugnayan kareng resulta ning pamanintun .';
+
+  @override
+  String get allSongs => 'Sablang Dalit .';
 }

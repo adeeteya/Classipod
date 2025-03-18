@@ -336,4 +336,7 @@ class AppLocalizationsBs extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Pritisnite ovo dugme da biste zatvorili tastaturu i interakciju sa rezultatima pretraživanja';
+
+  @override
+  String get allSongs => 'Sve pjesme';
 }

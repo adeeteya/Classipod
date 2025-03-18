@@ -336,4 +336,7 @@ class AppLocalizationsNo extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Trykk på denne knappen for å lukke tastaturet og samhandle med søkeresultatene';
+
+  @override
+  String get allSongs => 'Alle sanger';
 }

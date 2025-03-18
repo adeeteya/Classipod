@@ -336,4 +336,7 @@ class AppLocalizationsEu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Sakatu botoi hau teklatua ixteko eta bilaketaren emaitzekin elkarreragiteko';
+
+  @override
+  String get allSongs => 'Abesti guztiak';
 }

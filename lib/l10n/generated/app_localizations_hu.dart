@@ -337,4 +337,7 @@ class AppLocalizationsHu extends AppLocalizations {
   @override
   String get menuButtonSearchTutorialText =>
       'Nyomja meg ezt a gombot a billentyűzet bezárásához és a keresési eredményekkel való interakcióhoz';
+
+  @override
+  String get allSongs => 'Minden dal';
 }

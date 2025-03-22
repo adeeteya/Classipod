@@ -23,19 +23,13 @@ class NowPlayingWidget extends StatelessWidget {
           SizedBox(
             height: 200,
             width: 150,
-            child: Transform(
-              transform:
-                  Matrix4.identity()
-                    ..setEntry(3, 2, 0.003)
-                    ..rotateY(-0.1),
-              child: AlbumReflectiveArt(
-                imageWidth: 200,
-                thumbnailPath: nowPlayingDetails.currentMetadata?.thumbnailPath,
-                isOnDevice:
-                    nowPlayingDetails.currentMetadata?.isOnDevice ?? true,
-                heroTag:
-                    "${nowPlayingDetails.currentMetadata?.albumName}-${nowPlayingDetails.currentMetadata?.albumArtistName}",
-              ),
+            child: AlbumReflectiveArt(
+              imageWidth: 200,
+              tiltedImage: true,
+              thumbnailPath: nowPlayingDetails.currentMetadata?.thumbnailPath,
+              isOnDevice: nowPlayingDetails.currentMetadata?.isOnDevice ?? true,
+              heroTag:
+                  "${nowPlayingDetails.currentMetadata?.albumName}-${nowPlayingDetails.currentMetadata?.albumArtistName}",
             ),
           ),
           Expanded(

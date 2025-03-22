@@ -69,7 +69,7 @@ lane :build_flutter_app do |options|
 
   # Check if l10n exists
   # If it does, run the flutter gen-l10n command
-  if File.exist?("#{root_path}/lib/l10n.yaml")
+  if File.exist?("#{root_path}/l10n.yaml")
     generate_localization
   end
 

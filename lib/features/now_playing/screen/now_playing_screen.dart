@@ -9,7 +9,7 @@ import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_bottom_bar.dart';
-import 'package:classipod/features/now_playing/widgets/now_playing_page.dart';
+import 'package:classipod/features/now_playing/widgets/now_playing_widget.dart';
 import 'package:classipod/features/now_playing/widgets/rating_bar.dart';
 import 'package:classipod/features/now_playing/widgets/shuffle_segmented_control.dart';
 import 'package:classipod/features/now_playing/widgets/volume_bar.dart';

@@ -73,7 +73,12 @@ class AlbumReflectiveArt extends StatelessWidget {
               errorBuilder:
                   (_, __, ___) => Image.asset(
                     Assets.defaultAlbumCoverImage,
-                    fit: BoxFit.fitWidth,
+                    height: imageWidth,
+                    width: imageWidth ?? double.infinity,
+                    fit:
+                        (imageWidth == null)
+                            ? BoxFit.fitWidth
+                            : BoxFit.scaleDown,
                   ),
               height: imageWidth,
               width: imageWidth ?? double.infinity,

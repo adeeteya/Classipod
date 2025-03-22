@@ -20,14 +20,16 @@ class NowPlayingWidget extends StatelessWidget {
         ),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Flexible(
-            flex: 7,
+          SizedBox(
+            height: 200,
+            width: 150,
             child: Transform(
               transform:
                   Matrix4.identity()
                     ..setEntry(3, 2, 0.003)
                     ..rotateY(-0.1),
               child: AlbumReflectiveArt(
+                imageWidth: 200,
                 thumbnailPath: nowPlayingDetails.currentMetadata?.thumbnailPath,
                 isOnDevice:
                     nowPlayingDetails.currentMetadata?.isOnDevice ?? true,
@@ -36,8 +38,7 @@ class NowPlayingWidget extends StatelessWidget {
               ),
             ),
           ),
-          Flexible(
-            flex: 6,
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -84,17 +85,17 @@ class NowPlayingWidget extends StatelessWidget {
                     children: List.generate(
                       nowPlayingDetails.currentMetadata?.rating ?? 0,
                       (index) => const Padding(
-                        padding: EdgeInsets.only(right: 2, top: 2, bottom: 2),
+                        padding: EdgeInsets.only(right: 2, top: 4, bottom: 4),
                         child: Icon(
                           CupertinoIcons.star_fill,
-                          size: 12,
+                          size: 14,
                           color: AppPalette.selectedTileGradientColor2,
                         ),
                       ),
                     ),
                   ),
                 if ((nowPlayingDetails.currentMetadata?.rating ?? 0) == 0)
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 22),
                 Text(
                   "${nowPlayingDetails.currentIndex + 1} ${context.localization.commonOfText} ${nowPlayingDetails.metadataList.length}",
                   style: const TextStyle(
@@ -102,7 +103,7 @@ class NowPlayingWidget extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Spacer(flex: 3),
+                const Spacer(),
               ],
             ),
           ),

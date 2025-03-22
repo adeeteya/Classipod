@@ -77,7 +77,11 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                         onTap:
                             relativePosition == 0
                                 ? () => _chooseAlbum(index)
-                                : null,
+                                : () async => pageController.animateToPage(
+                                  index,
+                                  duration: const Duration(milliseconds: 300),
+                                  curve: Curves.ease,
+                                ),
                         child: Transform(
                           transform:
                               Matrix4.identity()

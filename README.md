@@ -100,19 +100,28 @@ If you like what you see, please ⭐ the repo.
       </a>
       <br>
       <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Android.apk">
-        <img width="220" alt="APK download" src="https://img.shields.io/static/v1?label=Download&message=Android+.apk&color=2ea44f&style=for-the-badge&logo=Android&logoSize=auto">
+        <img width="220" alt="APK download" src="https://img.shields.io/static/v1?label=Download&message=Android+.apk&color=2ea44f&style=for-the-badge&logo=Android&logoColor=white&logoSize=auto">
       </a>
     </td>
+  </tr>
+
+  <tr>
+      <td>Windows</td>
+      <td>
+        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Windows.exe">
+          <img width="220" alt="Windows App" src="https://img.shields.io/static/v1?label=Download&message=Windows+App&color=blue&style=for-the-badge&logo=webtrees&logoColor=white&logoSize=auto">
+        </a>
+      </td>
   </tr>
 
   <tr>
       <td>Web App</td>
       <td>
         <a href="https://adeeteya.github.io/Classipod/#/">
-          <img width="220" alt="APK download" src="https://img.shields.io/static/v1?label=Webapp&message=Visit+Demo&color=blue&style=for-the-badge&logo=PWA&logoSize=auto">
+          <img width="220" alt="Web App" src="https://img.shields.io/static/v1?label=Webapp&message=Visit+Website&color=blueviolet&style=for-the-badge&logo=googlechrome&logoColor=white&logoSize=auto">
         </a>
       </td>
-    </tr>
+  </tr>
 
 </table>
 

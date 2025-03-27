@@ -7,6 +7,18 @@ on:
         description: 'Release Version Number'
         required: true
         type: string
+      android:
+        description: 'Build Android Release'
+        type: boolean
+        default: true
+      windows:
+        description: 'Build Windows Release'
+        type: boolean
+        default: true
+      web:
+        description: 'Build Web Release'
+        type: boolean
+        default: true
 
 env:
   FLUTTER_CHANNEL: "stable"
@@ -14,6 +26,7 @@ env:
 
 jobs:
   build_web:
+    if: ${{ inputs.web }}
     name: Build Web
     runs-on: ubuntu-latest
     steps:
@@ -30,6 +43,7 @@ jobs:
           baseHref: /Classipod/
 
   build_windows:
+    if: ${{ inputs.windows }}
     name: Build Windows
     runs-on: windows-latest
     steps:
@@ -71,6 +85,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
   build_android:
+    if: ${{ inputs.android }}
     name: Build Android
     runs-on: ubuntu-latest
     timeout-minutes: 40

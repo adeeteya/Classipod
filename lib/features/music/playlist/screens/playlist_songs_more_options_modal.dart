@@ -21,12 +21,7 @@ enum _PlaylistSongsMoreOptions {
 }
 
 class PlaylistSongsMoreOptionsModal extends ConsumerStatefulWidget {
-  final VoidCallback onRemoveSongFromPlaylist;
-
-  const PlaylistSongsMoreOptionsModal({
-    super.key,
-    required this.onRemoveSongFromPlaylist,
-  });
+  const PlaylistSongsMoreOptionsModal({super.key});
 
   @override
   ConsumerState createState() => _PlaylistSongsMoreOptionsModalState();
@@ -50,11 +45,10 @@ class _PlaylistSongsMoreOptionsModalState
     setState(() => selectedDisplayItem = displayItems.indexOf(optionItem));
     switch (optionItem) {
       case _PlaylistSongsMoreOptions.removeSongFromPlaylist:
-        widget.onRemoveSongFromPlaylist();
-        context.pop();
+        context.pop(true);
         break;
       case _PlaylistSongsMoreOptions.cancel:
-        context.pop();
+        context.pop(false);
         break;
     }
   }

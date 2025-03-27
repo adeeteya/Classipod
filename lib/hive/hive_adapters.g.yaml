@@ -7,8 +7,6 @@ types:
     typeId: 1
     nextIndex: 3
     fields:
-      id:
-        index: 0
       name:
         index: 1
       songs:

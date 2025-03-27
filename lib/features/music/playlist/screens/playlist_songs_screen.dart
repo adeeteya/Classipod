@@ -5,6 +5,7 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
+import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/music/playlist/widgets/playlist_song_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
@@ -14,9 +15,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 class PlaylistSongsScreen extends ConsumerStatefulWidget {
-  final int playlistId;
+  final int? playlistKey;
 
-  const PlaylistSongsScreen({super.key, required this.playlistId});
+  const PlaylistSongsScreen({super.key, required this.playlistKey});
 
   @override
   ConsumerState createState() => _PlaylistsSongsScreenState();
@@ -25,10 +26,7 @@ class PlaylistSongsScreen extends ConsumerStatefulWidget {
 class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
     with CustomScreen {
   @override
-  String get routeName =>
-      Uri.parse(
-        "${Routes.playlistSongs.name}?playlistId=${widget.playlistId}",
-      ).path;
+  String get routeName => Routes.playlistSongs.name;
 
   @override
   double get displayTileHeight => 54;
@@ -38,61 +36,72 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
 
   @override
   List<MusicMetadata> get displayItems =>
-      ref.watch(playlistsProvider).elementAtOrNull(widget.playlistId)?.songs ??
-      [];
+      ref
+          .watch(playlistsProvider)
+          .firstWhere((e) => e.key == widget.playlistKey)
+          .songs;
+
+  PlaylistModel get playlist => ref
+      .read(playlistsProvider)
+      .firstWhere((e) => e.key == widget.playlistKey);
 
   @override
   Future<void> onSelectPressed() => _performAction(selectedDisplayItem);
 
   @override
-  void onSelectLongPress() => _performLongPressAction(selectedDisplayItem);
+  Future<void> onSelectLongPress() =>
+      _performLongPressAction(selectedDisplayItem);
 
   Future<void> _performAction(int index) async {
     setState(() => selectedDisplayItem = index);
     if (index == 0) {
       await ref
           .read(playlistsProvider.notifier)
-          .saveNewPlaylist(context.localization.newPlaylist);
+          .saveNewPlaylist(context.localization.newPlaylist, playlist.songs);
       if (mounted) {
         context.pop();
       }
     } else if (index == 1) {
       await ref
           .read(playlistsProvider.notifier)
-          .clearPlaylist(widget.playlistId);
+          .clearPlaylist(widget.playlistKey);
       if (mounted) {
         context.pop();
       }
     } else {
       await ref
           .read(audioPlayerServiceProvider.notifier)
-          .playPlaylist(
-            playlistDetail: ref.read(playlistsProvider)[widget.playlistId],
-            songIndex: index - 2,
-          );
+          .playPlaylist(playlistDetail: playlist, songIndex: index - 2);
       if (mounted) {
         await context.pushNamed(Routes.nowPlaying.name);
       }
     }
   }
 
-  void _performLongPressAction(int index) {
+  Future<void> _performLongPressAction(int index) async {
     if (displayItems.isEmpty) return;
     setState(() => selectedDisplayItem = index);
     if (index < 2) {
       return;
     } else {
-      context.goNamed(
+      final result = await context.pushNamed(
         Routes.playlistSongsMoreOptions.name,
-        extra: () async {
-          await ref
-              .read(playlistsProvider.notifier)
-              .removeSongFromPlaylist(
-                playlistId: widget.playlistId,
-                song: displayItems[index - 2],
-              );
-        },
       );
+      if (result == true) {
+        await ref
+            .read(playlistsProvider.notifier)
+            .removeSongFromPlaylist(
+              playlistModel: playlist,
+              song: displayItems[index - 2],
+            );
+        if (playlist.songs.isEmpty) {
+          return _performAction(1);
+        } else {
+          setState(() {
+            selectedDisplayItem = index - 1;
+          });
+        }
+      }
     }
   }
 
@@ -171,9 +180,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
       return CupertinoPageScaffold(
         child: Column(
           children: [
-            StatusBar(
-              title: ref.read(playlistsProvider)[widget.playlistId].name,
-            ),
+            StatusBar(title: playlist.name),
             Expanded(
               child: EmptyStateWidget(
                 emptyDescription: context.localization.noMusicFilesFound,
@@ -192,7 +199,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: ref.read(playlistsProvider)[widget.playlistId].name),
+          StatusBar(title: playlist.name),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
@@ -226,7 +233,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
                         currentlyPlayingOriginalIndex ==
                         displayItems[index - 2].originalSongIndex,
                     onTap: () async => _performAction(index),
-                    onLongPress: () => _performLongPressAction(index),
+                    onLongPress: () async => _performLongPressAction(index),
                   );
                 },
               ),

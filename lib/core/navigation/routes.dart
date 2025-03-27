@@ -500,14 +500,9 @@ final routerProvider = Provider(
                                 (context, state) => CupertinoPage(
                                   key: state.pageKey,
                                   child: PlaylistSongsScreen(
-                                    playlistId:
-                                        int.tryParse(
-                                          state
-                                                  .uri
-                                                  .queryParameters["playlistId"] ??
-                                              '',
-                                        ) ??
-                                        0,
+                                    playlistKey: int.tryParse(
+                                      state.extra as String,
+                                    ),
                                   ),
                                 ),
                             routes: [
@@ -522,10 +517,7 @@ final routerProvider = Provider(
                                           .title(context),
                                       builder:
                                           (context) =>
-                                              PlaylistSongsMoreOptionsModal(
-                                                onRemoveSongFromPlaylist:
-                                                    state.extra as VoidCallback,
-                                              ),
+                                              const PlaylistSongsMoreOptionsModal(),
                                     ),
                               ),
                             ],

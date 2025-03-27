@@ -4,8 +4,8 @@
 
 | Version | Supported          |
 |---------|--------------------|
-| 1.7.9   | :white_check_mark: |
+| 1.8.0   | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
-Either mail to me at adeeteya@gmail.com or open a [Issue](www.github.com/Classipod/issues)
+Either mail to me at adeeteya@gmail.com or open a [Issue](https://www.github.com/Classipod/issues)

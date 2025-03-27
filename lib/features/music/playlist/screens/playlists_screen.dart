@@ -34,7 +34,7 @@ class _PlaylistsScreenState extends ConsumerState<PlaylistsScreen>
     setState(() => selectedDisplayItem = displayIndex);
     context.goNamed(
       Routes.playlistSongs.name,
-      queryParameters: {'playlistId': displayItems[displayIndex].id.toString()},
+      extra: displayItems[displayIndex].key.toString(),
     );
   }
 
@@ -51,7 +51,7 @@ class _PlaylistsScreenState extends ConsumerState<PlaylistsScreen>
                 controller: scrollController,
                 itemCount: displayItems.length,
                 prototypeItem: PlaylistListTile(
-                  playlistModel: PlaylistModel(id: 0, name: '', songs: []),
+                  playlistModel: PlaylistModel(name: '', songs: []),
                   isSelected: false,
                   onTap: () {},
                 ),

@@ -2,9 +2,7 @@
 
 # 🎵 ClassiPod
 
-![Classipod Banner](screenshots/classipod_banner.png)
-
-![Classipod App Screenshots](screenshots/combined.png)
+![Classipod App Screenshots](screenshots/combined.jpg)
 
 Introducing "ClassiPod" – Your Timeless Audio Experience
 

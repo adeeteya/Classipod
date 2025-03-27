@@ -17,7 +17,6 @@ class PlaylistModelAdapter extends TypeAdapter<PlaylistModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return PlaylistModel(
-      id: (fields[0] as num).toInt(),
       name: fields[1] as String,
       songs: (fields[2] as List).cast<MusicMetadata>(),
     );
@@ -26,9 +25,7 @@ class PlaylistModelAdapter extends TypeAdapter<PlaylistModel> {
   @override
   void write(BinaryWriter writer, PlaylistModel obj) {
     writer
-      ..writeByte(3)
-      ..writeByte(0)
-      ..write(obj.id)
+      ..writeByte(2)
       ..writeByte(1)
       ..write(obj.name)
       ..writeByte(2)

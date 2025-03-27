@@ -16,5 +16,5 @@ abstract: >-
   A local music player app designed to capture the nostalgic
   essence of the iconic iPod Classic.
 license: BSD-4-Clause
-version: 1.7.9
+version: 1.8.0
 date-released: '2025-03-20'

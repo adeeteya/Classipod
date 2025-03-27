@@ -1,7 +1,5 @@
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:classipod/core/services/audio_files_service.dart';
-import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -19,39 +17,46 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
 
   @override
   List<PlaylistModel> build() {
-    return [];
-  }
-
-  Future<void> init() async {
-    state = [
-      PlaylistModel(id: 0, name: 'On The Go', songs: []),
+    return [
+      PlaylistModel(name: 'On The Go', songs: []),
       ..._playlistBox.values,
     ];
   }
 
-  Future<void> saveNewPlaylist(String newPlaylistPlaceholderString) async {
-    final newPlaylist = state[0].copyWith(
-      id: state.length,
-      name: "$newPlaylistPlaceholderString ${state.length}",
-    );
-    await _playlistBox.add(newPlaylist);
-    state = [...state, newPlaylist];
+  void refreshProvider() {
+    state = [state[0], ..._playlistBox.values];
   }
 
-  Future<void> clearPlaylist(int id) async {
+  Future<void> saveNewPlaylist(
+    String newPlaylistPlaceholderString,
+    List<MusicMetadata> songs,
+  ) async {
+    final newPlaylist = PlaylistModel(name: '', songs: songs);
+    final newKey = await _playlistBox.add(newPlaylist);
+    await _playlistBox.put(
+      newKey,
+      newPlaylist.copyWith(name: "$newPlaylistPlaceholderString ${newKey + 1}"),
+    );
+    refreshProvider();
+  }
+
+  Future<void> clearPlaylist(dynamic key) async {
     // Can't remove the on-the-go-playlist option
-    if (id == 0) {
-      Future.delayed(const Duration(seconds: 1), () {
+    if (key == null) {
+      Future.delayed(const Duration(milliseconds: 350), () {
         state = [
           for (final playlist in state)
-            if (playlist.id == 0) playlist.copyWith(songs: []) else playlist,
+            if (playlist.key == null)
+              playlist.copyWith(songs: [])
+            else
+              playlist,
         ];
       });
       return;
     } else {
-      await _playlistBox.deleteAt(id - 1);
-      Future.delayed(const Duration(seconds: 1), () {
-        state = state.where((playlist) => playlist.id != id).toList();
+      Future.delayed(const Duration(seconds: 1), () async {
+        await _playlistBox.delete(key);
+        refreshProvider();
       });
     }
   }
@@ -72,24 +77,15 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
   }
 
   Future<void> removeSongFromPlaylist({
-    required int playlistId,
+    required PlaylistModel playlistModel,
     MusicMetadata? song,
   }) async {
     if (song != null) {
-      state = [
-        for (final playlist in state)
-          if (playlist.id == playlistId)
-            playlist.removeSongFromPlaylist(song)
-          else
-            playlist,
-      ];
-    }
-    if (state[0].songs.isEmpty) {
-      await ref
-          .read(audioPlayerServiceProvider.notifier)
-          .setAudioSource(
-            musicMetadataList: ref.read(audioFilesServiceProvider).requireValue,
-          );
+      await _playlistBox.put(
+        playlistModel.key,
+        playlistModel.removeSongFromPlaylist(song),
+      );
+      refreshProvider();
     }
   }
 }

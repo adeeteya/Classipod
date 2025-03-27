@@ -69,7 +69,7 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
     ref.invalidate(tutorialControllerProvider);
 
     // Load the playlists
-    await ref.read(playlistsProvider.notifier).init();
+    ref.read(playlistsProvider.notifier).refreshProvider();
 
     // Navigate to the menu screen
     ref.read(routerProvider).goNamed(Routes.menu.name);

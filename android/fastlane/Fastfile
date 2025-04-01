@@ -72,6 +72,7 @@ platform :android do
         release_status: 'draft',
         aab: "../build/app/outputs/bundle/productionRelease/app-production-release.aab",
         mapping_paths: [symbolsFilePath, "../build/app/outputs/mapping/productionRelease/mapping.txt"],
+        metadata_path:"../fastlane/metadata/android",
         json_key: google_service_account_json_path,
         skip_upload_apk: true, # Upload the aab instead of apk
         skip_upload_metadata: true,

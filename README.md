@@ -94,7 +94,11 @@ If you like what you see, please ⭐ the repo.
     <td>Android</td>
     <td>
       <a href="https://play.google.com/store/apps/details?id=com.adeeteya.classipod">
-        <img width="220" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+        <img height="80" alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
+      </a>
+      <br>
+      <a href="https://f-droid.org/packages/com.adeeteya.classipod">
+        <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80">
       </a>
       <br>
       <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Android.apk">

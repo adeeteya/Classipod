@@ -70,6 +70,18 @@ void main() {
     );
   });
 
+  test('Recognizing that M4a File is Supported', () {
+    final metadataReaderRepository = providerContainer.read(
+      metadataReaderRepositoryProvider,
+    );
+    expect(
+      metadataReaderRepository.isSupportedAudioFormat(
+        "${Directory.current.path}/test/test_files/m4a/Faded.m4a",
+      ),
+      true,
+    );
+  });
+
   test('Reading the mp3 Metadata correctly', () {
     final metadataReaderRepository = providerContainer.read(
       metadataReaderRepositoryProvider,
@@ -172,6 +184,32 @@ void main() {
         trackDuration: 212000,
         bitrate: 187,
         filePath: "${Directory.current.path}/test/test_files/opus/Faded.opus",
+        thumbnailPath:
+            "${Directory.current.path}/test/cache/FadedbyAlanWalker.jpg",
+      ),
+    );
+  });
+
+  test('Reading the m4a Metadata correctly', () {
+    final metadataReaderRepository = providerContainer.read(
+      metadataReaderRepositoryProvider,
+    );
+    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
+      "${Directory.current.path}/test/test_files/m4a/",
+    );
+    expect(
+      metadataList.first,
+      MusicMetadata(
+        trackName: "Faded",
+        trackArtistNames: ["Alan Walker"],
+        albumName: "Faded",
+        albumArtistName: "Alan Walker",
+        trackNumber: 1,
+        albumLength: 0,
+        year: 2015,
+        genres: ["Electro House"],
+        trackDuration: 212627,
+        filePath: "${Directory.current.path}/test/test_files/m4a/Faded.m4a",
         thumbnailPath:
             "${Directory.current.path}/test/cache/FadedbyAlanWalker.jpg",
       ),

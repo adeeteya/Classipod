@@ -38,6 +38,9 @@ jobs:
             flutter-version-file: 'pubspec.yaml'
             channel: ${{ env.FLUTTER_CHANNEL }}
 
+      - name: Generate Localizations
+        run: flutter gen-l10n
+
       - uses: bluefireteam/flutter-gh-pages@v9
         with:
           baseHref: /Classipod/
@@ -64,6 +67,9 @@ jobs:
         with:
           flutter-version-file: 'pubspec.yaml'
           channel: ${{ env.FLUTTER_CHANNEL }}
+
+      - name: Generate Localizations
+        run: flutter gen-l10n
 
       - name: Build Windows Release
         run: flutter build windows --release

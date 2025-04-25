@@ -19,7 +19,7 @@ dependencies:
     git:
       url: https://github.com/adeeteya/Disable-Battery-Optimizations.git
       ref: master
-  file_picker: ^10.1.2
+  file_picker: 9.2.3
   flutter:
     sdk: flutter
   flutter_localizations:

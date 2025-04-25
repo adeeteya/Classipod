@@ -6,6 +6,7 @@ import 'package:classipod/core/constants/online_audio_files_metadata.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/repositories/metadata_reader_repository.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
@@ -32,14 +33,45 @@ class AudioFilesServiceNotifier
           Constants.metadataBoxName,
         );
         if (metadataBox.isEmpty) {
-          final result = await compute(
-            ref
-                .read(metadataReaderRepositoryProvider)
-                .extractAudioFilesMetadata,
-            ref.read(settingsPreferencesControllerProvider).musicFolderPath,
-          );
-          await metadataBox.addAll(result);
-          return UnmodifiableListView(result);
+          if (kIsWeb) {
+            final pickedFiles = await FilePicker.platform.pickFiles(
+              dialogTitle: "Select Music Files",
+              type: FileType.audio,
+              allowMultiple: true,
+            );
+            final paths = pickedFiles?.paths
+                .map((path) => path!)
+                .toList(growable: false);
+            final result = await compute(
+              ref
+                  .read(metadataReaderRepositoryProvider)
+                  .extractMetadataFromFiles,
+              paths ?? <String>[],
+            );
+            await metadataBox.addAll(result);
+            return UnmodifiableListView(result);
+          } else {
+            if (ref
+                .read(settingsPreferencesControllerProvider)
+                .isAppFirstLaunch) {
+              await ref
+                  .read(settingsPreferencesControllerProvider.notifier)
+                  .setNewMusicFolderPath(triggerRefresh: false);
+              unawaited(
+                ref
+                    .read(settingsPreferencesControllerProvider.notifier)
+                    .setAppFirstLaunch(),
+              );
+            }
+            final result = await compute(
+              ref
+                  .read(metadataReaderRepositoryProvider)
+                  .extractMetadataFromDirectory,
+              ref.read(settingsPreferencesControllerProvider).musicFolderPath,
+            );
+            await metadataBox.addAll(result);
+            return UnmodifiableListView(result);
+          }
         } else {
           return UnmodifiableListView(metadataBox.values);
         }

@@ -141,10 +141,7 @@ final routerProvider = Provider(
   (ref) => GoRouter(
     initialLocation: Routes.splash.toString(),
     errorPageBuilder:
-        (context, state) => CupertinoPage(
-          key: state.pageKey,
-          child: const PageNotFoundScreen(),
-        ),
+        (context, state) => const CupertinoPage(child: PageNotFoundScreen()),
     routes: [
       ShellRoute(
         navigatorKey: rootNavigatorKey,
@@ -179,17 +176,13 @@ final routerProvider = Provider(
             path: Routes.splash.toString(),
             name: Routes.splash.name,
             pageBuilder:
-                (context, state) => CupertinoPage(
-                  key: state.pageKey,
-                  child: const SplashScreen(),
-                ),
+                (context, state) => const CupertinoPage(child: SplashScreen()),
           ),
           ShellRoute(
             parentNavigatorKey: rootNavigatorKey,
             navigatorKey: menuNavigatorKey,
             pageBuilder:
                 (context, state, child) => CustomTransitionPage(
-                  key: state.pageKey,
                   child: SplitScreenPlaceholder(
                     splitScreenController: ref.read(
                       splitScreenViewControllerProvider,
@@ -211,39 +204,32 @@ final routerProvider = Provider(
                 name: Routes.menu.name,
                 parentNavigatorKey: menuNavigatorKey,
                 pageBuilder:
-                    (context, state) => CupertinoPage(
-                      key: state.pageKey,
-                      child: const MainMenuScreen(),
-                    ),
+                    (context, state) =>
+                        const CupertinoPage(child: MainMenuScreen()),
                 routes: [
                   GoRoute(
                     path: Routes.settings.name,
                     name: Routes.settings.name,
                     parentNavigatorKey: menuNavigatorKey,
                     pageBuilder:
-                        (context, state) => CupertinoPage(
-                          key: state.pageKey,
-                          child: const SettingsScreen(),
-                        ),
+                        (context, state) =>
+                            const CupertinoPage(child: SettingsScreen()),
                     routes: [
                       GoRoute(
                         path: Routes.about.name,
                         name: Routes.about.name,
                         parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
-                            (context, state) => CupertinoPage(
-                              key: state.pageKey,
-                              child: const AboutScreen(),
-                            ),
+                            (context, state) =>
+                                const CupertinoPage(child: AboutScreen()),
                       ),
                       GoRoute(
                         path: Routes.language.name,
                         name: Routes.language.name,
                         parentNavigatorKey: menuNavigatorKey,
                         pageBuilder:
-                            (context, state) => CupertinoPage(
-                              key: state.pageKey,
-                              child: const LanguageSelectionScreen(),
+                            (context, state) => const CupertinoPage(
+                              child: LanguageSelectionScreen(),
                             ),
                       ),
                     ],
@@ -258,7 +244,6 @@ final routerProvider = Provider(
                               .read(settingsPreferencesControllerProvider)
                               .splitScreenEnabled) {
                         return CustomTransitionPage(
-                          key: state.pageKey,
                           child: const NowPlayingScreen(),
                           transitionsBuilder: (
                             context,
@@ -278,10 +263,7 @@ final routerProvider = Provider(
                         );
                       }
 
-                      return CupertinoPage(
-                        key: state.pageKey,
-                        child: const NowPlayingScreen(),
-                      );
+                      return const CupertinoPage(child: NowPlayingScreen());
                     },
                     routes: [
                       GoRoute(
@@ -306,10 +288,8 @@ final routerProvider = Provider(
                     name: Routes.musicMenu.name,
                     parentNavigatorKey: menuNavigatorKey,
                     pageBuilder:
-                        (context, state) => CupertinoPage(
-                          key: state.pageKey,
-                          child: const MusicMenuScreen(),
-                        ),
+                        (context, state) =>
+                            const CupertinoPage(child: MusicMenuScreen()),
                     routes: [
                       GoRoute(
                         path: Routes.coverFlow.name,
@@ -321,7 +301,6 @@ final routerProvider = Provider(
                                   .read(settingsPreferencesControllerProvider)
                                   .splitScreenEnabled) {
                             return CustomTransitionPage(
-                              key: state.pageKey,
                               child: const CoverFlowScreen(),
                               transitionsBuilder: (
                                 context,
@@ -340,10 +319,7 @@ final routerProvider = Provider(
                               },
                             );
                           }
-                          return CupertinoPage(
-                            key: state.pageKey,
-                            child: const CoverFlowScreen(),
-                          );
+                          return const CupertinoPage(child: CoverFlowScreen());
                         },
                         routes: [
                           GoRoute(
@@ -374,9 +350,8 @@ final routerProvider = Provider(
                         name: Routes.artists.name,
                         parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
-                            (context, state) => CupertinoPage(
-                              key: state.pageKey,
-                              child: const ArtistsSelectionScreen(),
+                            (context, state) => const CupertinoPage(
+                              child: ArtistsSelectionScreen(),
                             ),
                         routes: [
                           GoRoute(
@@ -385,7 +360,6 @@ final routerProvider = Provider(
                             parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => CupertinoPage(
-                                  key: state.pageKey,
                                   child: ArtistAlbumsScreen(
                                     artistName:
                                         state.pathParameters["artistName"] ??
@@ -423,9 +397,8 @@ final routerProvider = Provider(
                         name: Routes.albums.name,
                         parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
-                            (context, state) => CupertinoPage(
-                              key: state.pageKey,
-                              child: const AlbumsSelectionScreen(),
+                            (context, state) => const CupertinoPage(
+                              child: AlbumsSelectionScreen(),
                             ),
                         routes: [
                           GoRoute(
@@ -434,7 +407,6 @@ final routerProvider = Provider(
                             parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => CupertinoPage(
-                                  key: state.pageKey,
                                   child: AlbumSongsScreen(
                                     albumDetail: state.extra as AlbumModel,
                                   ),
@@ -486,10 +458,9 @@ final routerProvider = Provider(
                         name: Routes.playlists.name,
                         parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
-                            (context, state) => CupertinoPage(
-                              key: state.pageKey,
+                            (context, state) => const CupertinoPage(
                               maintainState: false,
-                              child: const PlaylistsScreen(),
+                              child: PlaylistsScreen(),
                             ),
                         routes: [
                           GoRoute(
@@ -498,7 +469,6 @@ final routerProvider = Provider(
                             parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => CupertinoPage(
-                                  key: state.pageKey,
                                   child: PlaylistSongsScreen(
                                     playlistKey: int.tryParse(
                                       state.extra as String,
@@ -529,10 +499,8 @@ final routerProvider = Provider(
                         name: Routes.songs.name,
                         parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
-                            (context, state) => CupertinoPage(
-                              key: state.pageKey,
-                              child: const SongsScreen(),
-                            ),
+                            (context, state) =>
+                                const CupertinoPage(child: SongsScreen()),
                         routes: [
                           GoRoute(
                             path: Routes.songsMoreOptions.name,
@@ -557,10 +525,8 @@ final routerProvider = Provider(
                         name: Routes.genres.name,
                         parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
-                            (context, state) => CupertinoPage(
-                              key: state.pageKey,
-                              child: const GenresScreen(),
-                            ),
+                            (context, state) =>
+                                const CupertinoPage(child: GenresScreen()),
                         routes: [
                           GoRoute(
                             path: ":genreName",
@@ -568,7 +534,6 @@ final routerProvider = Provider(
                             parentNavigatorKey: rootNavigatorKey,
                             pageBuilder:
                                 (context, state) => CupertinoPage(
-                                  key: state.pageKey,
                                   child: GenreSongsScreen(
                                     genreName:
                                         state.pathParameters["genreName"] ?? '',
@@ -604,10 +569,8 @@ final routerProvider = Provider(
                         name: Routes.search.name,
                         parentNavigatorKey: rootNavigatorKey,
                         pageBuilder:
-                            (context, state) => CupertinoPage(
-                              key: state.pageKey,
-                              child: const SearchScreen(),
-                            ),
+                            (context, state) =>
+                                const CupertinoPage(child: SearchScreen()),
                         routes: [
                           GoRoute(
                             path: Routes.searchMoreOptions.name,

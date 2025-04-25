@@ -37,6 +37,7 @@ class SettingsPreferencesControllerNotifier
       settingsPreferencesRepositoryProvider,
     );
     return SettingsPreferencesModel(
+      isAppFirstLaunch: settingsPreferencesRepository.getAppFirstLaunch(),
       languageLocaleCode: settingsPreferencesRepository.getLanguageLocaleCode(),
       deviceColor: DeviceColor.values.byName(
         settingsPreferencesRepository.getDeviceColor(),
@@ -214,17 +215,26 @@ class SettingsPreferencesControllerNotifier
     ref.read(routerProvider).goNamed(Routes.splash.name);
   }
 
-  Future<void> setNewMusicFolderPath() async {
+  Future<void> setNewMusicFolderPath({bool triggerRefresh = true}) async {
+    if (kIsWeb) {
+      return;
+    }
     final String newMusicFolderPath =
-        await FilePicker.platform.getDirectoryPath() ?? '/';
+        await FilePicker.platform.getDirectoryPath(
+          dialogTitle: "Select Music Folder Path",
+          initialDirectory: state.musicFolderPath,
+        ) ??
+        '/';
 
     if (newMusicFolderPath != '/' &&
         newMusicFolderPath != state.musicFolderPath) {
       state = state.copyWith(musicFolderPath: newMusicFolderPath);
-      await ref
-          .read(settingsPreferencesRepositoryProvider)
-          .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
-      await rescanMusicFiles(clearPlaylists: true);
+      if (triggerRefresh) {
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
+        await rescanMusicFiles(clearPlaylists: true);
+      }
     }
   }
 
@@ -259,5 +269,10 @@ class SettingsPreferencesControllerNotifier
           musicFolderPath: Constants.androidDefaultMusicFolderPath,
         );
     ref.invalidateSelf();
+  }
+
+  Future<void> setAppFirstLaunch() async {
+    state = state.copyWith(isAppFirstLaunch: false);
+    await ref.read(settingsPreferencesRepositoryProvider).setAppFirstLaunch();
   }
 }

@@ -74,7 +74,7 @@ void main() {
     final metadataReaderRepository = providerContainer.read(
       metadataReaderRepositoryProvider,
     );
-    final metadataList = metadataReaderRepository.extractAudioFilesMetadata(
+    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
       "${Directory.current.path}/test/test_files/mp3/",
     );
     expect(
@@ -101,7 +101,7 @@ void main() {
     final metadataReaderRepository = providerContainer.read(
       metadataReaderRepositoryProvider,
     );
-    final metadataList = metadataReaderRepository.extractAudioFilesMetadata(
+    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
       "${Directory.current.path}/test/test_files/flac/",
     );
     expect(
@@ -128,7 +128,7 @@ void main() {
     final metadataReaderRepository = providerContainer.read(
       metadataReaderRepositoryProvider,
     );
-    final metadataList = metadataReaderRepository.extractAudioFilesMetadata(
+    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
       "${Directory.current.path}/test/test_files/ogg/",
     );
     expect(
@@ -155,7 +155,7 @@ void main() {
     final metadataReaderRepository = providerContainer.read(
       metadataReaderRepositoryProvider,
     );
-    final metadataList = metadataReaderRepository.extractAudioFilesMetadata(
+    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
       "${Directory.current.path}/test/test_files/opus/",
     );
     expect(

@@ -2,6 +2,7 @@ import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
 
 class SettingsPreferencesModel {
+  final bool isAppFirstLaunch;
   final String languageLocaleCode;
   final DeviceColor deviceColor;
   final bool isTouchScreenEnabled;
@@ -14,6 +15,7 @@ class SettingsPreferencesModel {
   final bool fetchOnlineMusic;
 
   SettingsPreferencesModel({
+    required this.isAppFirstLaunch,
     required this.languageLocaleCode,
     required this.deviceColor,
     required this.isTouchScreenEnabled,
@@ -27,6 +29,7 @@ class SettingsPreferencesModel {
   });
 
   SettingsPreferencesModel copyWith({
+    bool? isAppFirstLaunch,
     String? languageLocaleCode,
     DeviceColor? deviceColor,
     bool? isTouchScreenEnabled,
@@ -39,6 +42,7 @@ class SettingsPreferencesModel {
     bool? fetchOnlineMusic,
   }) {
     return SettingsPreferencesModel(
+      isAppFirstLaunch: isAppFirstLaunch ?? this.isAppFirstLaunch,
       languageLocaleCode: languageLocaleCode ?? this.languageLocaleCode,
       deviceColor: deviceColor ?? this.deviceColor,
       isTouchScreenEnabled: isTouchScreenEnabled ?? this.isTouchScreenEnabled,
@@ -55,6 +59,7 @@ class SettingsPreferencesModel {
   @override
   bool operator ==(Object other) {
     return other is SettingsPreferencesModel &&
+        other.isAppFirstLaunch == isAppFirstLaunch &&
         other.languageLocaleCode == languageLocaleCode &&
         other.deviceColor == deviceColor &&
         other.isTouchScreenEnabled == isTouchScreenEnabled &&
@@ -69,6 +74,7 @@ class SettingsPreferencesModel {
 
   @override
   int get hashCode => Object.hash(
+    isAppFirstLaunch,
     languageLocaleCode,
     deviceColor,
     isTouchScreenEnabled,

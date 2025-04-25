@@ -49,7 +49,7 @@ class MetadataReaderRepository {
     return '$cacheParentDirectory/$albumArtFileName.jpg';
   }
 
-  UnmodifiableListView<MusicMetadata> extractAudioFilesMetadata(
+  UnmodifiableListView<MusicMetadata> extractMetadataFromDirectory(
     String musicFolderPath,
   ) {
     final Directory storageDir = Directory(musicFolderPath);
@@ -59,6 +59,40 @@ class MetadataReaderRepository {
     );
     final List<String> filePaths = files.map((e) => e.path).toList();
 
+    final List<MusicMetadata> metadataList = [];
+
+    AudioMetadata audioMetadata;
+
+    for (final String path in filePaths) {
+      if (isSupportedAudioFormat(path)) {
+        audioMetadata = readMetadata(File(path), getImage: true);
+
+        final String thumbnailPath = getThumbnailPath(
+          albumName: audioMetadata.album,
+          artistName: audioMetadata.artist,
+          filePath: path,
+        );
+
+        if (audioMetadata.pictures.isNotEmpty) {
+          File(thumbnailPath).writeAsBytesSync(audioMetadata.pictures[0].bytes);
+        }
+
+        metadataList.add(
+          MusicMetadata.fromAudioMetadata(
+            audioMetadata,
+            thumbnailPath,
+            metadataList.length,
+          ),
+        );
+      }
+    }
+
+    return UnmodifiableListView(metadataList);
+  }
+
+  UnmodifiableListView<MusicMetadata> extractMetadataFromFiles(
+    List<String> filePaths,
+  ) {
     final List<MusicMetadata> metadataList = [];
 
     AudioMetadata audioMetadata;

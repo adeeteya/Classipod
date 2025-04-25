@@ -70,7 +70,7 @@ void main() {
         child: const AppStartupScreen(app: ClassipodApp()),
       ),
     );
-    await tester.pump();
+    await tester.pumpAndSettle();
     expect(find.byType(SplashScreen), findsOne);
   });
 

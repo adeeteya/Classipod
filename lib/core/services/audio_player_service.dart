@@ -99,13 +99,11 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
 
       await ref
           .read(audioPlayerProvider)
-          .setAudioSource(
-            ConcatenatingAudioSource(
-              shuffleOrder: DefaultShuffleOrder(),
-              children: songSourcePlaylist,
-            ),
+          .setAudioSources(
+            songSourcePlaylist,
             initialIndex: 0,
             initialPosition: Duration.zero,
+            shuffleOrder: DefaultShuffleOrder(),
           );
 
       ref

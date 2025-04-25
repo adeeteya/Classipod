@@ -60,7 +60,7 @@ void main() {
         child: const AppStartupScreen(app: ClassipodApp()),
       ),
     );
-    await tester.pump();
+    await tester.pumpAndSettle();
 
     expect('splash', providerContainer.read(routerProvider).locationNamed);
   });

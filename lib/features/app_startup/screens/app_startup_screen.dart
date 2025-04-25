@@ -13,6 +13,7 @@ class AppStartupScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final appStartupState = ref.watch(appStartupControllerProvider);
     return appStartupState.when(
+      skipLoadingOnReload: false,
       loading: () => const AppStartupLoading(),
       error:
           (e, _) => AppStartupError(

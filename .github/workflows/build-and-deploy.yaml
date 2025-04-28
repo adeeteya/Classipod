@@ -25,6 +25,25 @@ env:
   RUBY_VERSION: "3.2.2"
 
 jobs:
+
+  create_github_release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create a GitHub Release
+        run: |
+          if gh release view "${{ inputs.version_number }}" > /dev/null 2>&1; then
+            echo "Release '${{ inputs.version_number }}' already exists. Skipping release creation."
+          else
+            echo "Release '${{ inputs.version_number }}' does not exist. Creating release..."
+            gh release create "${{ inputs.version_number }}" --title "Version ${{ inputs.version_number }}" --generate-notes
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
   build_web:
     if: ${{ inputs.web }}
     name: Build Web
@@ -52,13 +71,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Create a GitHub Release
-        shell: cmd
-        run: |
-          gh release create "${{ inputs.version_number }}" --title "Version ${{ inputs.version_number }}" --generate-notes
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
       - name: Install yq
         run: choco install yq
 
@@ -75,13 +87,14 @@ jobs:
         run: flutter build windows --release
 
       - name: Install Inno Setup
-        run: | 
-          powershell curl -o build\installer.exe http://files.jrsoftware.org/is/6/innosetup-6.4.2.exe
-          powershell git clone https://github.com/DomGries/InnoDependencyInstaller.git  build\inno-depend
-          powershell build\installer.exe /verysilent /allusers /dir=build\iscc
+        run: |
+          Invoke-WebRequest -Uri http://files.jrsoftware.org/is/6/innosetup-6.4.2.exe -OutFile build\installer.exe
+          git clone https://github.com/DomGries/InnoDependencyInstaller.git build\inno-depend
+          Start-Process -Wait -FilePath build\installer.exe -ArgumentList '/verysilent', '/allusers', '/dir=build\iscc'
 
-      - name: Run Inno Setup
-        run:  .\build\iscc\iscc.exe .\scripts\windows-setup.iss /DMyAppVersion=${{ inputs.version_number }}
+      - name: Run Inno Setup to Build Installer
+        run: |
+          build\iscc\iscc.exe scripts\windows-setup.iss /DMyAppVersion=${{ inputs.version_number }}
 
       - name: Upload Windows Release Artifact to GitHub Release
         shell: cmd

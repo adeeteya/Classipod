@@ -45,6 +45,8 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+    <string>$(PROJECT_NAME) requires access to media library</string>
 	<key>UIBackgroundModes</key>
     <array>
     	<string>audio</string>

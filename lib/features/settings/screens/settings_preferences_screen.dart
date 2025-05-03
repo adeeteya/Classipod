@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
@@ -13,6 +14,7 @@ import 'package:classipod/features/settings/models/settings_preferences_model.da
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -83,7 +85,17 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   String get routeName => Routes.settings.name;
 
   @override
-  List<_SettingsDisplayItems> get displayItems => _SettingsDisplayItems.values;
+  List<_SettingsDisplayItems> get displayItems => _SettingsDisplayItems.values
+      .fold<List<_SettingsDisplayItems>>([], (prev, element) {
+        if (element == _SettingsDisplayItems.changeDirectory) {
+          if (!kIsWeb && Platform.isWindows) {
+            prev.add(element);
+          }
+        } else {
+          prev.add(element);
+        }
+        return prev;
+      });
 
   @override
   Future<void> onSelectPressed() =>

@@ -99,25 +99,29 @@ class MetadataReaderRepository {
 
     for (final String path in filePaths) {
       if (isSupportedAudioFormat(path)) {
-        audioMetadata = readMetadata(File(path), getImage: true);
+        try {
+          audioMetadata = readMetadata(File(path), getImage: true);
 
-        final String thumbnailPath = getThumbnailPath(
-          albumName: audioMetadata.album,
-          artistName: audioMetadata.artist,
-          filePath: path,
-        );
+          final String thumbnailPath = getThumbnailPath(
+            albumName: audioMetadata.album,
+            artistName: audioMetadata.artist,
+            filePath: path,
+          );
 
-        if (audioMetadata.pictures.isNotEmpty) {
-          File(thumbnailPath).writeAsBytesSync(audioMetadata.pictures[0].bytes);
-        }
+          if (audioMetadata.pictures.isNotEmpty) {
+            File(
+              thumbnailPath,
+            ).writeAsBytesSync(audioMetadata.pictures[0].bytes);
+          }
 
-        metadataList.add(
-          MusicMetadata.fromAudioMetadata(
-            audioMetadata,
-            thumbnailPath,
-            metadataList.length,
-          ),
-        );
+          metadataList.add(
+            MusicMetadata.fromAudioMetadata(
+              audioMetadata,
+              thumbnailPath,
+              metadataList.length,
+            ),
+          );
+        } catch (_) {}
       }
     }
 

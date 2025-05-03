@@ -30,5 +30,12 @@ final albumDetailsProvider = Provider<List<AlbumModel>>((ref) {
   // Sort the album details by album name
   albumDetails.sort((a, b) => a.albumName.compareTo(b.albumName));
 
+  // Sort the songs in each album by track number
+  for (final album in albumDetails) {
+    album.albumSongs.sort(
+      (a, b) => a.getTrackNumber.compareTo(b.getTrackNumber),
+    );
+  }
+
   return albumDetails;
 });

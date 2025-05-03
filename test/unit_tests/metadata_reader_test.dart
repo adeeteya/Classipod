@@ -146,19 +146,20 @@ void main() {
     expect(
       metadataList.first,
       MusicMetadata(
-        trackName: "Faded",
-        trackArtistNames: ["Alan Walker"],
-        albumName: "Faded",
-        albumArtistName: "Alan Walker",
-        trackNumber: 1,
+        trackName: "Firefly",
+        trackArtistNames: ["Jim Yosef"],
+        albumName: "Firefly",
+        albumArtistName: "Jim Yosef",
+        trackNumber: 17,
         year: 2015,
-        genres: ["Electro House"],
+        genres: ["Dance/Electronic"],
+        discNumber: 1,
         mimeType: "image/jpeg",
-        trackDuration: 212000,
-        bitrate: 128000,
-        filePath: "${Directory.current.path}/test/test_files/ogg/Faded.ogg",
+        trackDuration: 256000,
+        bitrate: 160000,
+        filePath: "${Directory.current.path}/test/test_files/ogg/Firefly.ogg",
         thumbnailPath:
-            "${Directory.current.path}/test/cache/FadedbyAlanWalker.jpg",
+            "${Directory.current.path}/test/cache/FireflybyJimYosef.jpg",
       ),
     );
   });
@@ -173,19 +174,21 @@ void main() {
     expect(
       metadataList.first,
       MusicMetadata(
-        trackName: "Faded",
+        trackName: "Spectre",
         trackArtistNames: ["Alan Walker"],
-        albumName: "Faded",
+        albumName: "Spectre",
         albumArtistName: "Alan Walker",
         trackNumber: 1,
+        albumLength: 1,
+        discNumber: 1,
         year: 2015,
-        genres: ["Electro House"],
+        genres: ["Dance/Electronic"],
         mimeType: "image/jpeg",
-        trackDuration: 212000,
+        trackDuration: 226000,
         bitrate: 187,
-        filePath: "${Directory.current.path}/test/test_files/opus/Faded.opus",
+        filePath: "${Directory.current.path}/test/test_files/opus/Spectre.opus",
         thumbnailPath:
-            "${Directory.current.path}/test/cache/FadedbyAlanWalker.jpg",
+            "${Directory.current.path}/test/cache/SpectrebyAlanWalker.jpg",
       ),
     );
   });
@@ -200,18 +203,20 @@ void main() {
     expect(
       metadataList.first,
       MusicMetadata(
-        trackName: "Faded",
-        trackArtistNames: ["Alan Walker"],
-        albumName: "Faded",
-        albumArtistName: "Alan Walker",
-        trackNumber: 1,
-        albumLength: 0,
-        year: 2015,
-        genres: ["Electro House"],
-        trackDuration: 212627,
-        filePath: "${Directory.current.path}/test/test_files/m4a/Faded.m4a",
+        trackName: "On & On",
+        trackArtistNames: ["Cartoon & Daniel Levi"],
+        albumName: "On & On",
+        albumArtistName: "Cartoon & Daniel Levi",
+        trackNumber: 2,
+        albumLength: 2,
+        discNumber: 1,
+        mimeType: "image/jpeg",
+        year: 2019,
+        genres: ["Dance/Electronic"],
+        trackDuration: 208014,
+        filePath: "${Directory.current.path}/test/test_files/m4a/On&On.m4a",
         thumbnailPath:
-            "${Directory.current.path}/test/cache/FadedbyAlanWalker.jpg",
+            "${Directory.current.path}/test/cache/On&OnbyCartoon&DanielLevi.jpg",
       ),
     );
   });

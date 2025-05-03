@@ -264,6 +264,10 @@ class MusicMetadata extends HiveObject {
     return albumArtistName ?? "Unknown Album Artist";
   }
 
+  int get getTrackNumber {
+    return trackNumber ?? 0;
+  }
+
   int get getTrackDuration {
     return trackDuration ?? 0;
   }

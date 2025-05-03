@@ -11,3 +11,10 @@ extension HiveRegistrar on HiveInterface {
     registerAdapter(PlaylistModelAdapter());
   }
 }
+
+extension IsolatedHiveRegistrar on IsolatedHiveInterface {
+  void registerAdapters() {
+    registerAdapter(MusicMetadataAdapter());
+    registerAdapter(PlaylistModelAdapter());
+  }
+}

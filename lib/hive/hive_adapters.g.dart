@@ -8,7 +8,7 @@ part of 'hive_adapters.dart';
 
 class PlaylistModelAdapter extends TypeAdapter<PlaylistModel> {
   @override
-  final int typeId = 1;
+  final typeId = 1;
 
   @override
   PlaylistModel read(BinaryReader reader) {
@@ -45,7 +45,7 @@ class PlaylistModelAdapter extends TypeAdapter<PlaylistModel> {
 
 class MusicMetadataAdapter extends TypeAdapter<MusicMetadata> {
   @override
-  final int typeId = 2;
+  final typeId = 2;
 
   @override
   MusicMetadata read(BinaryReader reader) {

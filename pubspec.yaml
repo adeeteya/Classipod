@@ -10,7 +10,7 @@ environment:
   flutter: 3.29.3
 
 dependencies:
-  audio_metadata_reader: ^1.4.0
+  audio_metadata_reader: ^1.4.1
   audio_service: ^0.18.18
   battery_plus: ^6.2.1
   cupertino_icons: ^1.0.8
@@ -19,17 +19,17 @@ dependencies:
     git:
       url: https://github.com/adeeteya/Disable-Battery-Optimizations.git
       ref: master
-  file_picker: 9.2.3
+  file_picker: ^10.1.2
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.6.1
   go_router: ^15.1.1
-  hive_ce: ^2.10.1
-  hive_ce_flutter: ^2.2.0
+  hive_ce: ^2.11.1
+  hive_ce_flutter: ^2.3.0
   intl: any
-  just_audio: ^0.10.0
+  just_audio: ^0.10.2
   just_audio_background: ^0.0.1-beta.16
   just_audio_windows: ^0.2.2
   path_provider: ^2.1.5
@@ -47,7 +47,7 @@ dev_dependencies:
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  hive_ce_generator: ^1.8.2
+  hive_ce_generator: ^1.9.1
   riverpod_lint: ^2.6.5
 
 flutter:

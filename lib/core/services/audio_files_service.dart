@@ -1,15 +1,16 @@
 import 'dart:async';
 import 'dart:collection';
+import 'dart:io';
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/constants/online_audio_files_metadata.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/repositories/metadata_reader_repository.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
+import 'package:on_audio_query/on_audio_query.dart';
 
 final audioFilesServiceProvider = AsyncNotifierProvider<
   AudioFilesServiceNotifier,
@@ -28,25 +29,23 @@ class AudioFilesServiceNotifier
     try {
       if (ref.read(settingsPreferencesControllerProvider).fetchOnlineMusic) {
         return UnmodifiableListView(onlineDemoAudioFilesMetaData);
-      } else {
+      }
+      // Fetch metadata from local files
+      else {
         final Box<MusicMetadata> metadataBox = Hive.box<MusicMetadata>(
           Constants.metadataBoxName,
         );
+        // Check if the metadata box is empty
         if (metadataBox.isEmpty) {
-          if (kIsWeb) {
-            final pickedFiles = await FilePicker.platform.pickFiles(
-              dialogTitle: "Select Music Files",
-              type: FileType.audio,
-              allowMultiple: true,
-            );
-            final paths = pickedFiles?.paths
-                .map((path) => path!)
-                .toList(growable: false);
+          if (kIsWeb || Platform.isAndroid || Platform.isIOS) {
+            final OnAudioQuery audioQuery = OnAudioQuery();
+            final queriedSongs = await audioQuery.querySongs();
+
             final result = await compute(
               ref
                   .read(metadataReaderRepositoryProvider)
                   .extractMetadataFromFiles,
-              paths ?? <String>[],
+              queriedSongs.map((e) => e.data).toList(growable: false),
             );
             await metadataBox.addAll(result);
             return UnmodifiableListView(result);
@@ -72,7 +71,9 @@ class AudioFilesServiceNotifier
             await metadataBox.addAll(result);
             return UnmodifiableListView(result);
           }
-        } else {
+        }
+        // Return cached metadata
+        else {
           return UnmodifiableListView(metadataBox.values);
         }
       }

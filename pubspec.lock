@@ -330,13 +330,13 @@ packages:
     source: hosted
     version: "0.7.11"
   device_frame_plus:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
       name: device_frame_plus
-      sha256: "61b10153b7f2b143265cfb9b84684e660a676f7002e70cc1acd2e3a7caed958b"
+      sha256: "064e86f71f2721e66e4282c98d475cf9cd1e55d51eca6100183b7f6f2d237463"
       url: "https://pub.dev"
     source: hosted
-    version: "1.3.1"
+    version: "1.3.0"
   device_info_plus:
     dependency: transitive
     description:
@@ -398,10 +398,10 @@ packages:
     dependency: "direct main"
     description:
       name: file_picker
-      sha256: "8986dec4581b4bcd4b6df5d75a2ea0bede3db802f500635d05fa8be298f9467f"
+      sha256: "09b474c0c8117484b80cbebc043801ff91e05cfbd2874d512825c899e1754694"
       url: "https://pub.dev"
     source: hosted
-    version: "10.1.2"
+    version: "9.2.3"
   fixnum:
     dependency: transitive
     description:
@@ -566,6 +566,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.2"
+  id3:
+    dependency: transitive
+    description:
+      name: id3
+      sha256: "24176a6e08db6297c8450079e94569cd8387f913c817e5e3d862be7dc191e0b8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   intl:
     dependency: "direct main"
     description:
@@ -726,6 +734,51 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
+  on_audio_query:
+    dependency: "direct main"
+    description:
+      path: "packages/on_audio_query"
+      ref: main
+      resolved-ref: "9d28d0706f27a9dc7115c8890e9160f02bd778d1"
+      url: "https://github.com/adeeteya/on_audio_query.git"
+    source: git
+    version: "2.9.0"
+  on_audio_query_android:
+    dependency: transitive
+    description:
+      path: "packages/on_audio_query_android"
+      ref: main
+      resolved-ref: "9d28d0706f27a9dc7115c8890e9160f02bd778d1"
+      url: "https://github.com/adeeteya/on_audio_query.git"
+    source: git
+    version: "1.1.0"
+  on_audio_query_ios:
+    dependency: transitive
+    description:
+      path: "packages/on_audio_query_ios"
+      ref: main
+      resolved-ref: "9d28d0706f27a9dc7115c8890e9160f02bd778d1"
+      url: "https://github.com/adeeteya/on_audio_query.git"
+    source: git
+    version: "1.1.0"
+  on_audio_query_platform_interface:
+    dependency: transitive
+    description:
+      path: "packages/on_audio_query_platform_interface"
+      ref: main
+      resolved-ref: "9d28d0706f27a9dc7115c8890e9160f02bd778d1"
+      url: "https://github.com/adeeteya/on_audio_query.git"
+    source: git
+    version: "1.7.0"
+  on_audio_query_web:
+    dependency: transitive
+    description:
+      path: "packages/on_audio_query_web"
+      ref: main
+      resolved-ref: "9d28d0706f27a9dc7115c8890e9160f02bd778d1"
+      url: "https://github.com/adeeteya/on_audio_query.git"
+    source: git
+    version: "1.6.0"
   package_config:
     dependency: transitive
     description:

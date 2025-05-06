@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter/foundation.dart';
@@ -39,6 +40,11 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
     await Future.wait([buttonPressVibrate(), clickWheelSound()]);
     state = null;
     state = action;
+  }
+
+  Future<void> playPauseButtonClick() async {
+    await Future.wait([buttonPressVibrate(), clickWheelSound()]);
+    await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
   }
 
   void resetDeviceAction() {

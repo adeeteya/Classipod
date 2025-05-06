@@ -9,7 +9,6 @@ import 'package:classipod/core/custom_painter/play_pause_button_custom_painter.d
 import 'package:classipod/core/custom_painter/previous_button_custom_painter.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -330,8 +329,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                     onTap:
                         () async =>
                             ref
-                                .read(audioPlayerServiceProvider.notifier)
-                                .togglePlayback(),
+                                .read(deviceButtonsServiceProvider.notifier)
+                                .playPauseButtonClick(),
                     child: ColoredBox(
                       color:
                           deviceColor == DeviceColor.black

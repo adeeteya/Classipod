@@ -152,12 +152,12 @@ final routerProvider = Provider(
               child: CupertinoPageScaffold(
                 resizeToAvoidBottomInset: false,
                 child:
-                    (context.screenSize.width > 450)
+                    (context.screenSize.width > 500)
                         ? ColoredBox(
                           color: CupertinoColors.black,
                           child: Center(
                             child: SizedBox(
-                              width: 400,
+                              width: 450,
                               height: 800,
                               child: DeviceFrame(
                                 key: deviceFrameGlobalKey,

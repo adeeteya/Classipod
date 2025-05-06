@@ -96,13 +96,21 @@ class DeviceFrame extends ConsumerWidget {
           ),
           SafeArea(
             minimum: const EdgeInsets.fromLTRB(20, 30, 20, 20),
-            child: Column(
-              children: [
-                DeviceScreen(key: deviceScreenGlobalKey, child: child),
-                const Spacer(flex: 2),
-                DeviceControls(key: deviceControlsGlobalKey),
-                const Spacer(),
-              ],
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(
+                  maxHeight: 800,
+                  maxWidth: 450,
+                ),
+                child: Column(
+                  children: [
+                    DeviceScreen(key: deviceScreenGlobalKey, child: child),
+                    const Spacer(flex: 2),
+                    DeviceControls(key: deviceControlsGlobalKey),
+                    const Spacer(),
+                  ],
+                ),
+              ),
             ),
           ),
         ],

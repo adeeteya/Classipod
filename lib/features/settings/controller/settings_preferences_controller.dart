@@ -37,7 +37,6 @@ class SettingsPreferencesControllerNotifier
       settingsPreferencesRepositoryProvider,
     );
     return SettingsPreferencesModel(
-      isAppFirstLaunch: settingsPreferencesRepository.getAppFirstLaunch(),
       languageLocaleCode: settingsPreferencesRepository.getLanguageLocaleCode(),
       deviceColor: DeviceColor.values.byName(
         settingsPreferencesRepository.getDeviceColor(),
@@ -269,10 +268,5 @@ class SettingsPreferencesControllerNotifier
           musicFolderPath: Constants.androidDefaultMusicFolderPath,
         );
     ref.invalidateSelf();
-  }
-
-  Future<void> setAppFirstLaunch() async {
-    state = state.copyWith(isAppFirstLaunch: false);
-    await ref.read(settingsPreferencesRepositoryProvider).setAppFirstLaunch();
   }
 }

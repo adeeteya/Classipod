@@ -44,6 +44,7 @@ class MetadataReaderRepository {
       albumArtFileName = '${albumName}by$artistName';
     }
     albumArtFileName = albumArtFileName
+        .replaceAll(RegExp(r'[\\/:*?"<>|]'), '_')
         .replaceAll('/', '-')
         .replaceAll(' ', '');
     return '$cacheParentDirectory/$albumArtFileName.jpg';
@@ -64,42 +65,8 @@ class MetadataReaderRepository {
     AudioMetadata audioMetadata;
 
     for (final String path in filePaths) {
-      if (isSupportedAudioFormat(path)) {
-        audioMetadata = readMetadata(File(path), getImage: true);
-
-        final String thumbnailPath = getThumbnailPath(
-          albumName: audioMetadata.album,
-          artistName: audioMetadata.artist,
-          filePath: path,
-        );
-
-        if (audioMetadata.pictures.isNotEmpty) {
-          File(thumbnailPath).writeAsBytesSync(audioMetadata.pictures[0].bytes);
-        }
-
-        metadataList.add(
-          MusicMetadata.fromAudioMetadata(
-            audioMetadata,
-            thumbnailPath,
-            metadataList.length,
-          ),
-        );
-      }
-    }
-
-    return UnmodifiableListView(metadataList);
-  }
-
-  UnmodifiableListView<MusicMetadata> extractMetadataFromFiles(
-    List<String> filePaths,
-  ) {
-    final List<MusicMetadata> metadataList = [];
-
-    AudioMetadata audioMetadata;
-
-    for (final String path in filePaths) {
-      if (isSupportedAudioFormat(path)) {
-        try {
+      try {
+        if (isSupportedAudioFormat(path)) {
           audioMetadata = readMetadata(File(path), getImage: true);
 
           final String thumbnailPath = getThumbnailPath(
@@ -121,8 +88,46 @@ class MetadataReaderRepository {
               metadataList.length,
             ),
           );
-        } catch (_) {}
-      }
+        }
+      } catch (_) {}
+    }
+
+    return UnmodifiableListView(metadataList);
+  }
+
+  UnmodifiableListView<MusicMetadata> extractMetadataFromFiles(
+    List<String> filePaths,
+  ) {
+    final List<MusicMetadata> metadataList = [];
+
+    AudioMetadata audioMetadata;
+
+    for (final String path in filePaths) {
+      try {
+        if (isSupportedAudioFormat(path)) {
+          audioMetadata = readMetadata(File(path), getImage: true);
+
+          final String thumbnailPath = getThumbnailPath(
+            albumName: audioMetadata.album,
+            artistName: audioMetadata.artist,
+            filePath: path,
+          );
+
+          if (audioMetadata.pictures.isNotEmpty) {
+            File(
+              thumbnailPath,
+            ).writeAsBytesSync(audioMetadata.pictures[0].bytes);
+          }
+
+          metadataList.add(
+            MusicMetadata.fromAudioMetadata(
+              audioMetadata,
+              thumbnailPath,
+              metadataList.length,
+            ),
+          );
+        }
+      } catch (_) {}
     }
 
     return UnmodifiableListView(metadataList);

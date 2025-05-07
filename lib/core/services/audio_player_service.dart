@@ -94,8 +94,14 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
   }) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      final List<AudioSource> songSourcePlaylist =
-          musicMetadataList.map((e) => e.toAudioSource()).toList();
+      final List<AudioSource> songSourcePlaylist = [];
+      int i = 0;
+      try {
+        for (final musicMetadata in musicMetadataList) {
+          songSourcePlaylist.add(musicMetadata.toAudioSource());
+          i = i + 1;
+        }
+      } catch (_) {}
 
       await ref
           .read(audioPlayerProvider)

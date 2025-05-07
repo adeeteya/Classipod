@@ -26,13 +26,6 @@ class SettingsPreferencesRepository {
     this._deviceDirectory,
   );
 
-  bool getAppFirstLaunch() {
-    return _sharedPreferencesWithCache.getBool(
-          SharedPreferencesKeys.isAppFirstLaunch.name,
-        ) ??
-        true;
-  }
-
   String getLanguageLocaleCode() {
     return _sharedPreferencesWithCache.getString(
           SharedPreferencesKeys.languageLocaleCode.name,
@@ -95,13 +88,6 @@ class SettingsPreferencesRepository {
         ) ??
         _deviceDirectory?.musicFolderPath ??
         '';
-  }
-
-  Future<void> setAppFirstLaunch() async {
-    return _sharedPreferencesWithCache.setBool(
-      SharedPreferencesKeys.isAppFirstLaunch.name,
-      false,
-    );
   }
 
   Future<void> setLanguageLocaleCode({

@@ -1,5 +1,4 @@
 enum SharedPreferencesKeys {
-  isAppFirstLaunch,
   languageLocaleCode,
   deviceColor,
   isTouchScreenEnabled,

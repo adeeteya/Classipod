@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/constants/online_audio_files_metadata.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:classipod/core/repositories/metadata_reader_repository.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:file_picker/file_picker.dart';
@@ -44,7 +45,8 @@ class AudioFilesServiceNotifier
               lockParentWindow: true,
               initialDirectory:
                   ref
-                      .read(settingsPreferencesControllerProvider)
+                      .read(deviceDirectoryProvider)
+                      .requireValue
                       .musicFolderPath,
             );
             if (newDirectory != null) {

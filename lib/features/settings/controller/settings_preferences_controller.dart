@@ -13,7 +13,6 @@ import 'package:classipod/features/settings/models/repeat_mode.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -50,7 +49,6 @@ class SettingsPreferencesControllerNotifier
       clickWheelSound: settingsPreferencesRepository.getClickWheelSound(),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
-      musicFolderPath: settingsPreferencesRepository.getMusicFolderPath(),
     );
   }
 
@@ -214,29 +212,6 @@ class SettingsPreferencesControllerNotifier
     ref.read(routerProvider).goNamed(Routes.splash.name);
   }
 
-  Future<void> setNewMusicFolderPath({bool triggerRefresh = true}) async {
-    if (kIsWeb) {
-      return;
-    }
-    final String newMusicFolderPath =
-        await FilePicker.platform.getDirectoryPath(
-          dialogTitle: "Select Music Folder Path",
-          initialDirectory: state.musicFolderPath,
-        ) ??
-        '/';
-
-    if (newMusicFolderPath != '/' &&
-        newMusicFolderPath != state.musicFolderPath) {
-      state = state.copyWith(musicFolderPath: newMusicFolderPath);
-      if (triggerRefresh) {
-        await ref
-            .read(settingsPreferencesRepositoryProvider)
-            .setMusicFolderPath(musicFolderPath: newMusicFolderPath);
-        await rescanMusicFiles(clearPlaylists: true);
-      }
-    }
-  }
-
   Future<void> resetSettings() async {
     await ref
         .read(settingsPreferencesRepositoryProvider)
@@ -262,11 +237,6 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setImmersiveMode(isImmersiveModeEnabled: false);
-    await ref
-        .read(settingsPreferencesRepositoryProvider)
-        .setMusicFolderPath(
-          musicFolderPath: Constants.androidDefaultMusicFolderPath,
-        );
     ref.invalidateSelf();
   }
 }

@@ -13,7 +13,6 @@ enum SplitScreenType {
   immersiveMode,
   showTutorialScreen,
   rescanMusicFiles,
-  changeDirectory,
   resetSettings,
   donate,
 }

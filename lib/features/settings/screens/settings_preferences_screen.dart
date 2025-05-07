@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
@@ -14,7 +13,6 @@ import 'package:classipod/features/settings/models/settings_preferences_model.da
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -32,7 +30,6 @@ enum _SettingsDisplayItems {
   immersiveMode,
   showAppTutorial,
   rescanMusicFiles,
-  changeDirectory,
   resetSettings,
   donate;
 
@@ -62,8 +59,6 @@ enum _SettingsDisplayItems {
         return context.localization.showAppTutorialSettingTitle;
       case rescanMusicFiles:
         return context.localization.rescanMusicFilesSettingTitle;
-      case changeDirectory:
-        return context.localization.changeDirectorySettingTitle;
       case resetSettings:
         return context.localization.resetSettingsTitle;
       case donate:
@@ -85,17 +80,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   String get routeName => Routes.settings.name;
 
   @override
-  List<_SettingsDisplayItems> get displayItems => _SettingsDisplayItems.values
-      .fold<List<_SettingsDisplayItems>>([], (prev, element) {
-        if (element == _SettingsDisplayItems.changeDirectory) {
-          if (!kIsWeb && Platform.isWindows) {
-            prev.add(element);
-          }
-        } else {
-          prev.add(element);
-        }
-        return prev;
-      });
+  List<_SettingsDisplayItems> get displayItems => _SettingsDisplayItems.values;
 
   @override
   Future<void> onSelectPressed() =>
@@ -157,11 +142,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .rescanMusicFiles();
-        break;
-      case _SettingsDisplayItems.changeDirectory:
-        await ref
-            .read(settingsPreferencesControllerProvider.notifier)
-            .setNewMusicFolderPath();
         break;
       case _SettingsDisplayItems.resetSettings:
         await ref
@@ -268,10 +248,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.rescanMusicFiles:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.rescanMusicFiles;
-        break;
-      case _SettingsDisplayItems.changeDirectory:
-        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
-            SplitScreenType.changeDirectory;
         break;
       case _SettingsDisplayItems.resetSettings:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

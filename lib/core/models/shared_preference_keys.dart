@@ -7,7 +7,6 @@ enum SharedPreferencesKeys {
   clickWheelSound,
   splitScreenEnabled,
   immersiveMode,
-  musicFolderPath,
   isMenuFirstTime,
   isNowPlayingFirstTime,
   isSearchFirstTime,

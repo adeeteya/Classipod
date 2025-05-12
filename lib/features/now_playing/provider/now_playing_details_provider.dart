@@ -1,6 +1,9 @@
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/features/music/album/providers/album_details_provider.dart';
+import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce/hive.dart';
@@ -85,6 +88,9 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
         Constants.metadataBoxName,
       );
       await metadataBox.putAt(newMetadata.originalSongIndex, newMetadata);
+      ref.invalidate(audioFilesServiceProvider);
+      ref.invalidate(albumDetailsProvider);
+      ref.invalidate(playlistsProvider);
     }
   }
 

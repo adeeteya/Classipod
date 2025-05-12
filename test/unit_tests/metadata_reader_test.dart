@@ -82,6 +82,18 @@ void main() {
     );
   });
 
+  test('Recognizing that wav File is Supported', () {
+    final metadataReaderRepository = providerContainer.read(
+      metadataReaderRepositoryProvider,
+    );
+    expect(
+      metadataReaderRepository.isSupportedAudioFormat(
+        "${Directory.current.path}/test/test_files/wav/Invincible.wav",
+      ),
+      true,
+    );
+  });
+
   test('Reading the mp3 Metadata correctly', () {
     final metadataReaderRepository = providerContainer.read(
       metadataReaderRepositoryProvider,
@@ -217,6 +229,32 @@ void main() {
         filePath: "${Directory.current.path}/test/test_files/m4a/On&On.m4a",
         thumbnailPath:
             "${Directory.current.path}/test/cache/On&OnbyCartoon&DanielLevi.jpg",
+      ),
+    );
+  });
+
+  test('Reading the wav Metadata correctly', () {
+    final metadataReaderRepository = providerContainer.read(
+      metadataReaderRepositoryProvider,
+    );
+    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
+      "${Directory.current.path}/test/test_files/wav/",
+    );
+    expect(
+      metadataList.first,
+      MusicMetadata(
+        trackName: "Invincible",
+        trackArtistNames: ["Deaf Kev"],
+        albumName: "Invincible",
+        albumArtistName: "Deaf Kev",
+        year: 2015,
+        genres: ["Glitch Hop"],
+        trackDuration: 273084,
+        bitrate: 176400,
+        filePath:
+            "${Directory.current.path}/test/test_files/wav/Invincible.wav",
+        thumbnailPath:
+            "${Directory.current.path}/test/cache/InvinciblebyDeafKev.jpg",
       ),
     );
   });

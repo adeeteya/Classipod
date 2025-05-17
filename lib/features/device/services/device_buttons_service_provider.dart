@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -18,7 +20,8 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
   }
 
   Future<void> buttonPressVibrate() async {
-    if (ref.read(settingsPreferencesControllerProvider).vibrate) {
+    if (ref.read(settingsPreferencesControllerProvider).vibrate &&
+        (kIsWeb || Platform.isAndroid || Platform.isIOS)) {
       await Vibration.vibrate(duration: 5);
     }
   }

@@ -31,7 +31,9 @@ dependencies:
   intl: any
   just_audio: ^0.10.3
   just_audio_background: ^0.0.1-beta.17
-  just_audio_windows: ^0.2.2
+  just_audio_media_kit: ^2.1.0
+  media_kit_libs_linux: ^1.2.1
+  media_kit_libs_windows_audio: ^1.0.9
   on_audio_query:
     git:
       url: https://github.com/adeeteya/on_audio_query.git

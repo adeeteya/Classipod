@@ -19,18 +19,18 @@ dependencies:
     git:
       url: https://github.com/adeeteya/Disable-Battery-Optimizations.git
       ref: master
-  file_picker: ^10.1.8
+  file_picker: ^10.1.9
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.6.1
   go_router: ^15.1.2
-  hive_ce: ^2.11.1
-  hive_ce_flutter: ^2.3.0
+  hive_ce: ^2.11.2
+  hive_ce_flutter: ^2.3.1
   intl: any
-  just_audio: ^0.10.2
-  just_audio_background: ^0.0.1-beta.16
+  just_audio: ^0.10.3
+  just_audio_background: ^0.0.1-beta.17
   just_audio_windows: ^0.2.2
   on_audio_query:
     git:

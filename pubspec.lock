@@ -77,10 +77,10 @@ packages:
     dependency: transitive
     description:
       name: audio_session
-      sha256: f100a780050adf5c552d8b59d7af32a60229fda79c623e64004caf9368ccc748
+      sha256: "8f96a7fecbb718cb093070f868b4cdcb8a9b1053dce342ff8ab2fde10eb9afb7"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.1"
+    version: "0.2.2"
   battery_plus:
     dependency: "direct main"
     description:
@@ -398,10 +398,10 @@ packages:
     dependency: "direct main"
     description:
       name: file_picker
-      sha256: dd51fd20fdc45e073529c102376d54deba3e120603fe711c848ce44575b838e6
+      sha256: "77f8e81d22d2a07d0dee2c62e1dda71dc1da73bf43bb2d45af09727406167964"
       url: "https://pub.dev"
     source: hosted
-    version: "10.1.8"
+    version: "10.1.9"
   fixnum:
     dependency: transitive
     description:
@@ -506,18 +506,18 @@ packages:
     dependency: "direct main"
     description:
       name: hive_ce
-      sha256: fdc19336f03ecd01dbc1d1afe69d87ed9336bdf996c5374a25f9c21ef5f2989e
+      sha256: "192b7334299e3672efa1f85d544fef0091c5c592be5caada61417e37723addc6"
       url: "https://pub.dev"
     source: hosted
-    version: "2.11.1"
+    version: "2.11.2"
   hive_ce_flutter:
     dependency: "direct main"
     description:
       name: hive_ce_flutter
-      sha256: "5eaf57a5af980eda63ddaa8c34d618dc446f76fe79410f2a283522744291c05c"
+      sha256: a0989670652eab097b47544f1e5a4456e861b1b01b050098ea0b80a5fabe9909
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.0"
+    version: "2.3.1"
   hive_ce_generator:
     dependency: "direct dev"
     description:
@@ -626,10 +626,10 @@ packages:
     dependency: "direct main"
     description:
       name: just_audio_background
-      sha256: e6e2575f21a609c9281c8dd7a4983570de47269768b5ec59218e92f22a6bda00
+      sha256: "3900825701164577db65337792bc122b66f9eb1245ee47e7ae8244ae5ceb8030"
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.1-beta.16"
+    version: "0.0.1-beta.17"
   just_audio_platform_interface:
     dependency: transitive
     description:
@@ -642,10 +642,10 @@ packages:
     dependency: transitive
     description:
       name: just_audio_web
-      sha256: "8c7e779892e180cbc9ffb5a3c52f6e90e1cbbf4a63694cc450972a7edbd2bb6d"
+      sha256: "6ba8a2a7e87d57d32f0f7b42856ade3d6a9fbe0f1a11fabae0a4f00bb73f0663"
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.15"
+    version: "0.4.16"
   just_audio_windows:
     dependency: "direct main"
     description:

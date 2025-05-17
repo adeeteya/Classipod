@@ -18,6 +18,8 @@ class DeviceDirectory {
       final pathList = documentsDirectory.path.split('\\');
       pathList[pathList.length - 1] = 'Music';
       return pathList.join('\\');
+    } else if (Platform.isLinux) {
+      return Platform.environment['HOME'] ?? '/';
     } else {
       final pathList = documentsDirectory.path.split('/');
       pathList[pathList.length - 1] = 'Music';

@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/device_directory_provider.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final metadataReaderRepositoryProvider =
@@ -89,7 +90,9 @@ class MetadataReaderRepository {
             ),
           );
         }
-      } catch (_) {}
+      } catch (e) {
+        debugPrint("Metadata Parsing Error: $e");
+      }
     }
 
     return UnmodifiableListView(metadataList);
@@ -127,7 +130,9 @@ class MetadataReaderRepository {
             ),
           );
         }
-      } catch (_) {}
+      } catch (e) {
+        debugPrint("Metadata Parsing Error: $e");
+      }
     }
 
     return UnmodifiableListView(metadataList);

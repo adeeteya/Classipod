@@ -13,7 +13,7 @@ base: core22
 grade: stable
 
 slots:
-  classipod:
+  dbus-classipod:
     interface: dbus
     bus: session
     name: com.adeeteya.classipod
@@ -26,11 +26,30 @@ apps:
       - audio-playback
       - removable-media
       - desktop
+      - desktop-legacy
       - home
     slots:
-      - classipod
+      - dbus-classipod
 parts:
   classipod:
     source: .
     plugin: flutter
     flutter-target: lib/main.dart
+    stage-packages:
+      - libmpv1
+      - libmpv-dev
+      - libasound2
+      - libpulse0
+    override-pull: |
+      snapcraftctl pull
+      if [ ! -d flutter-sdk ]; then
+        git clone https://github.com/flutter/flutter.git -b 3.29.3 flutter-sdk
+      fi
+    override-build: |
+      export PATH=$PWD/flutter-sdk/bin:$PATH
+      flutter --version  # sanity check
+      flutter pub get
+      flutter gen-l10n
+      flutter build linux --release --target lib/main.dart
+      install -D build/linux/x64/release/bundle/classipod $CRAFT_PART_INSTALL/classipod
+      cp -r build/linux/x64/release/bundle/* $CRAFT_PART_INSTALL/

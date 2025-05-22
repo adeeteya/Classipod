@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.10.1
+Name=ClassiPod
+Comment=An iPod Classic-inspired local music player with playlists, cover art, and shuffle mode and dark mode support
+Exec=classipod
+Icon=${SNAP}/meta/gui/classipod.png
+Terminal=false
+Type=Application
+Categories=AudioVideo;Player;Music;Utility;Application;
+Keywords=music;player;audio;ipod;local;songs;offline;

@@ -136,7 +136,7 @@ If you like what you see, please ⭐ the repo.
 | [**battery_plus**](https://pub.dev/packages/battery_plus)                                 | Shows phone battery level and status                                                |
 | [**cupertino_icons**](https://pub.dev/packages/cupertino_icons)                           | For ios style icons                                                                 |
 | [**device_preview_plus**](https://pub.dev/packages/device_preview_plus)                   | For visualizing how the app looks on different devices and screens                  |
-| [**disable_battery_optimization**](https://pub.dev/packages/disable_battery_optimization) | To Disable vendor or android specific battery optimizations fo rbackground playback |
+| [**disable_battery_optimization**](https://pub.dev/packages/disable_battery_optimization) | To Disable vendor or android specific battery optimizations for background playback |
 | [**file_picker**](https://pub.dev/packages/file_picker)                                   | To select the directory from which the music files are scanned                      |
 | [**flutter_localizations**](https://pub.dev/packages/flutter_localizations)               | For in-app localization map data                                                    |
 | [**flutter_riverpod**](https://pub.dev/packages/flutter_riverpod)                         | For State Management                                                                |

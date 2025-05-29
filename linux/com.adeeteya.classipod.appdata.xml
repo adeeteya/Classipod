@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.adeeteya.classipod</id>
+  <name>Classipod</name>
+  <summary>
+    Local Music Player Inspired by the iPod Classic
+  </summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>BSD-4-Clause</project_license>
+  <recommends>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+  <developer_name>Aditya</developer_name>
+  <url type="bugtracker">https://github.com/adeeteya/Classipod/issues</url>
+  <url type="homepage">https://github.com/adeeteya/Classipod</url>
+  <url type="donation">https://buymeacoffee.com/adeeteya</url>
+  <description>
+    <p>Introducing "ClassiPod" – Your Timeless Audio Experience</p>
+    <p>Step back in time with ClassiPod, a local music player app designed to capture the nostalgic essence of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the joy of navigating your music library with a touch of retro charm.</p>
+
+    <ul>
+        <li>🧭 <strong>Intuitive Navigation:</strong> Navigate through your music library effortlessly using the virtual click wheel. Scroll, click, and feel the tactile response as you rediscover the joy of selecting your favorite tracks with the same ease as the original iPod.</li>
+        <li>🗃️ <strong>Local Music Library:</strong> ClassiPod is focused on your locally stored music files, ensuring that your personal music collection takes center stage. Organize your tracks, albums, and playlists just like you did on your trusty iPod Classic.</li>
+        <li>🖌️ <strong>Customizable Themes:</strong> Personalize your ClassiPod experience with the option of silver or grey device frame. Choose from the two different color schemes to tailor the app's appearance to your unique style.</li>
+        <li>🖼️ <strong>Cover Art Display:</strong> Immerse yourself in your music by appreciating album artwork on the vibrant display. ClassiPod pays homage to the visual appeal of classic iPods by showcasing your favorite album covers in a retro-inspired format.</li>
+        <li>🎼 <strong>No Frills, Just Music:</strong> ClassiPod stays true to the essence of a music player – no distractions, no unnecessary features. Focus solely on the joy of listening to your favorite tunes without the complexities of a modern streaming service.</li>
+        <li>🎧 <strong>Offline Listening:</strong> Enjoy your music without relying on an internet connection. ClassiPod is perfect for those moments when you want to disconnect and savor the tunes stored locally on your device.</li>
+    </ul>
+
+    <p>Relive the magic of the iPod Classic with ClassiPod – where timeless design meets the convenience of today. Download now and embark on a journey down memory lane with your music in the palm of your hand.</p>
+    <p>If you like what you see, please ⭐ the repo.</p>
+
+    <p><strong>✨ Features:</strong></p>
+    <ul>
+        <li>🗃️ Play multiple audio formats: .mp3, .wav, .ogg, .flac, .m4a, .aac</li>
+        <li>🔎 Choose a custom folder to scan music from</li>
+        <li>🎨 Multiple iPod Classic device colors (Silver and Black)</li>
+        <li>🖼️ Displays music metadata (Album Art, Artist Names)</li>
+        <li>⏩ Seek forward/backward by long pressing</li>
+        <li>⏮️ Previous and next track navigation</li>
+        <li>📱 iPod Classic user interface</li>
+        <li>🎞️ Cover Flow view</li>
+        <li>🎡 Click Wheel with scrollable rotation</li>
+        <li>💿 Now Playing screen with current music progress</li>
+        <li>🎶 Songs screen with all songs from the selected directory</li>
+        <li>🧑‍🎤 Filter and select by artist, album, or genre</li>
+        <li>📲 Responsive design for all screen sizes</li>
+        <li>🔋 Battery level and charging status display</li>
+        <li>🎧 Background playback with notification control</li>
+        <li>🔀 Shuffle songs</li>
+        <li>➰ Loop one song or entire playlist</li>
+        <li>🔉 Click wheel sounds</li>
+        <li>📳 Vibration feedback for clicks and scroll</li>
+        <li>🔇 In-app volume control</li>
+        <li>🪞 Reflective cover art</li>
+        <li>ℹ️ About screen</li>
+        <li>🌍 Multilanguage support (197+ languages)</li>
+        <li>👆 Touch screen support</li>
+        <li>📺 Split screen view (6th and 7th Gen iPods)</li>
+        <li>🔍 Search songs, artists, playlists, and albums</li>
+        <li>⬇️ Cache metadata for faster startup</li>
+        <li>📃 Create and store custom playlists</li>
+        <li>📖 App usage tutorial</li>
+        <li>⭐ Song rating feature</li>
+    </ul>
+
+    <p><strong>🔜 Upcoming Features:</strong></p>
+    <ul>
+        <li>🎮 iPod built-in games</li>
+        <li>📸 View photos and videos from device</li>
+        <li>📝 Lyrics support</li>
+    </ul>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">
+        https://rawcdn.githack.com/adeeteya/Classipod/refs/heads/master/screenshots/combined.jpg
+      </image>
+      <caption>Classipod features</caption>
+    </screenshot>
+  </screenshots>
+  <launchable type="desktop-id">com.adeeteya.classipod.desktop</launchable>
+  <releases> %{{APPDATA_RELEASE}}% <release version="1.10.1" date="2025-30-05" />
+  </releases>
+  <content_rating type="oars-1.1" />
+  <update_contact>adeeteya@gmail.com</update_contact>
+</component>

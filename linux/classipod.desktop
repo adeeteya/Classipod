@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Classipod
+Comment=An iPod Classic-inspired local music player with playlists, cover art, and shuffle mode and dark mode support
+Exec=/usr/bin/classipod
+Icon=/usr/share/icons/classipod/classipod.png
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;Player;Music;

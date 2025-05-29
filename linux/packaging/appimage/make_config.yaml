@@ -12,3 +12,5 @@ keywords:
 generic_name: Local Music Player
 categories:
   - Music
+
+startup_notify: true

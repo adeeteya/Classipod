@@ -98,20 +98,39 @@ If you like what you see, please ⭐ the repo.
       </a>
       <br>
       <a href="https://f-droid.org/packages/com.adeeteya.classipod">
-        <img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80">
+        <img height="80" alt="Get it on F-Droid" src="https://f-droid.org/badge/get-it-on.png">
       </a>
       <br>
       <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Android.apk">
-        <img width="220" alt="APK download" src="https://img.shields.io/static/v1?label=Download&message=Android+.apk&color=2ea44f&style=for-the-badge&logo=Android&logoColor=white&logoSize=auto">
+        <img alt="APK download" src="https://img.shields.io/static/v1?label=Download&message=Android+.apk&color=2ea44f&style=for-the-badge&logo=Android&logoColor=white&logoSize=auto">
       </a>
     </td>
+  </tr>
+
+  <tr>
+      <td>Linux</td>
+      <td>
+        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Linux-AppImage.AppImage">
+          <img alt="Download .AppImage" src="https://img.shields.io/static/v1?label=Download&message=.AppImage&color=FCC624&style=for-the-badge&logo=linux&logoColor=white&logoSize=auto">
+        </a>
+        <br>
+        <br>
+        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Linux-deb.deb">
+          <img alt="Download .deb" src="https://img.shields.io/static/v1?label=Download&message=%20%20%20%20%20.deb&color=A81D33&style=for-the-badge&logo=debian&logoColor=white&logoSize=auto">
+        </a>
+        <br>
+        <br>
+        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Linux-rpm.rpm">
+          <img alt="Download .rpm" src="https://img.shields.io/static/v1?label=Download&message=.rpm&color=EE0000&style=for-the-badge&logo=redhat&logoColor=white&logoSize=auto">
+        </a>
+      </td>
   </tr>
 
   <tr>
       <td>Windows</td>
       <td>
         <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-Windows.exe">
-          <img width="220" alt="Windows App" src="https://img.shields.io/static/v1?label=Download&message=Windows+App&color=blue&style=for-the-badge&logo=webtrees&logoColor=white&logoSize=auto">
+          <img alt="Download Windows Installer" src="https://img.shields.io/static/v1?label=Download&message=Windows+.exe&color=blue&style=for-the-badge&logo=webtrees&logoColor=white&logoSize=auto">
         </a>
       </td>
   </tr>
@@ -120,7 +139,7 @@ If you like what you see, please ⭐ the repo.
       <td>Web App</td>
       <td>
         <a href="https://adeeteya.github.io/Classipod/#/">
-          <img width="220" alt="Web App" src="https://img.shields.io/static/v1?label=Webapp&message=Visit+Website&color=blueviolet&style=for-the-badge&logo=googlechrome&logoColor=white&logoSize=auto">
+          <img alt="Web App" src="https://img.shields.io/static/v1?label=Webapp&message=Visit+Website&color=blueviolet&style=for-the-badge&logo=googlechrome&logoColor=white&logoSize=auto">
         </a>
       </td>
   </tr>

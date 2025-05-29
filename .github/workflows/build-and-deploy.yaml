@@ -87,6 +87,7 @@ jobs:
       
       - name: Install System Dependencies
         run: |
+          sudo apt-get update -y && sudo apt-get upgrade -y
           sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev libstdc++-12-dev
       
       - name: Install Flutter Dependencies

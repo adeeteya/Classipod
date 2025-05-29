@@ -115,7 +115,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           REL_VER=$(grep "^version" pubspec.yaml | cut -d' ' -f2)
-          for PKG in AppImage deb rpm zip; do
+          for PKG in AppImage deb rpm; do
             mv "dist/${REL_VER}/classipod-${REL_VER}-linux.${PKG}" "Classipod-Linux-${PKG}.${PKG}"
             gh release upload ${{ inputs.version_number }} "Classipod-Linux-${PKG}.${PKG}" --clobber
           done

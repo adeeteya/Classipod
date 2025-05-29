@@ -11,6 +11,10 @@ on:
         description: 'Build Android Release'
         type: boolean
         default: true
+      linux:
+        description: 'Build Linux Release'
+        type: boolean
+        default: true
       windows:
         description: 'Build Windows Release'
         type: boolean
@@ -63,6 +67,57 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v9
         with:
           baseHref: /Classipod/
+
+  build_linux:
+    if: ${{ inputs.linux }}
+    name: Build Linux
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Flutter tasks
+        uses: subosito/flutter-action@v2.16.0
+        with:
+          flutter-version-file: 'pubspec.yaml'
+          channel: ${{ env.FLUTTER_CHANNEL }}
+          architecture: x64
+          cache: true
+      
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get -y install clang cmake libblkid1 liblzma5 libgtk-3-0 libgtk-3-dev ninja-build pkg-config
+      
+      - name: Install Flutter Dependencies
+        run: flutter pub get
+
+      - name: Generate Localizations
+        run: flutter gen-l10n
+      
+      - name: Install Fastforge
+        run: dart pub global activate fastforge
+
+      - name: Install Build Dependencies
+        run: |
+          sudo apt-get -y install libfuse-dev locate
+          wget -q "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage" -O /usr/local/bin/appimagetool
+          chmod +x /usr/local/bin/appimagetool
+          sudo apt-get -y install dpkg
+          sudo apt-get -y install patchelf rpm
+      
+      - name: Build and release
+        run: fastforge release --name production
+      
+      - name: "Publish Linux Release"
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          REL_VER=$(grep "^version" pubspec.yaml | cut -d' ' -f2)
+          for PKG in AppImage deb rpm zip; do
+            mv "dist/${REL_VER}/classipod-${REL_VER}-linux.${PKG}" "Classipod-Linux-${PKG}.${PKG}"
+            gh release upload ${{ inputs.version_number }} "Classipod-Linux-${PKG}.${PKG}" --clobber
+          done
 
   build_windows:
     if: ${{ inputs.windows }}

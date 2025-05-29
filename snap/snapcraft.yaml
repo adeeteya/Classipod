@@ -1,0 +1,49 @@
+name: classipod
+version: 1.10.1
+summary: Local Music Player Inspired by the iPod Classic
+description: ClassiPod is a lightweight, offline music player app that emulates the experience of the legendary iPod Classic. It supports local music playback, shuffle/repeat, custom playlists, cover art, and more — all in a nostalgic design.
+icon: snap/gui/classipod.png
+contact: mailto:adeeteya@gmail.com
+source-code: https://github.com/adeeteya/Classipod
+issues: https://github.com/adeeteya/Classipod/issues
+license: BSD-4-Clause
+
+confinement: strict
+base: core22
+grade: stable
+
+slots:
+  dbus-classipod:
+    interface: dbus
+    bus: session
+    name: com.adeeteya.classipod
+
+apps:
+  classipod:
+    command: classipod
+    extensions: [gnome]
+    plugs:
+      - audio-playback
+      - removable-media
+      - desktop
+      - desktop-legacy
+      - home
+    slots:
+      - dbus-classipod
+parts:
+  classipod:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart
+    override-pull: |
+      snapcraftctl pull
+      if [ ! -d flutter-sdk ]; then
+        git clone https://github.com/flutter/flutter.git -b 3.29.3 flutter-sdk
+      fi
+    override-build: |
+      export PATH=$PWD/flutter-sdk/bin:$PATH
+      flutter pub get
+      flutter gen-l10n
+      flutter build linux --release --target lib/main.dart
+      install -D build/linux/x64/release/bundle/classipod $CRAFT_PART_INSTALL/classipod
+      cp -r build/linux/x64/release/bundle/* $CRAFT_PART_INSTALL/

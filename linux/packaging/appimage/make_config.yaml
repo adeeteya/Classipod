@@ -1,0 +1,16 @@
+display_name: Classipod
+icon: snap/gui/classipod.png
+
+keywords:
+  - Music
+  - Audio
+  - iPod
+  - Local
+  - Songs
+  - Offline
+
+generic_name: Local Music Player
+categories:
+  - Music
+
+startup_notify: true

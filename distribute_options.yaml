@@ -1,0 +1,16 @@
+output: dist/
+releases:
+  - name: production
+    jobs:
+      - name: release-production-linux-deb
+        package:
+          platform: linux
+          target: deb
+      - name: release-production-linux-rpm
+        package:
+          platform: linux
+          target: rpm
+      - name: release-production-linux-appimage
+        package:
+          platform: linux
+          target: appimage

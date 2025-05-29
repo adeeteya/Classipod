@@ -1,0 +1,28 @@
+icon: snap/gui/classipod.png
+summary: Local Music Player Inspired by the iPod Classic
+group: Applications/Multimedia
+vendor: adeeteya
+packager: Aditya R
+packagerEmail: adeeteya@gmail.com
+license: BSD-4-Clause
+url: https://github.com/adeeteya/Classipod
+requires:
+  - mpv
+  - libmpv1
+  - libmpv-dev
+
+display_name: Classipod
+
+keywords:
+  - Music
+  - Audio
+  - iPod
+  - Local
+  - Songs
+  - Offline
+
+generic_name: Local Music Player
+categories:
+  - Music
+
+startup_notify: true

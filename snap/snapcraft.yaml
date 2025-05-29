@@ -6,7 +6,7 @@ icon: snap/gui/classipod.png
 contact: mailto:adeeteya@gmail.com
 source-code: https://github.com/adeeteya/Classipod
 issues: https://github.com/adeeteya/Classipod/issues
-license: MIT
+license: BSD-4-Clause
 
 confinement: strict
 base: core22
@@ -35,11 +35,6 @@ parts:
     source: .
     plugin: flutter
     flutter-target: lib/main.dart
-    stage-packages:
-      - libmpv1
-      - libmpv-dev
-      - libasound2
-      - libpulse0
     override-pull: |
       snapcraftctl pull
       if [ ! -d flutter-sdk ]; then
@@ -47,7 +42,6 @@ parts:
       fi
     override-build: |
       export PATH=$PWD/flutter-sdk/bin:$PATH
-      flutter --version  # sanity check
       flutter pub get
       flutter gen-l10n
       flutter build linux --release --target lib/main.dart

@@ -6,5 +6,5 @@ Exec=classipod
 Icon=${SNAP}/meta/gui/classipod.png
 Terminal=false
 Type=Application
-Categories=AudioVideo;Player;Music;Utility;Application;
+Categories=AudioVideo;Audio;Player;Music;
 Keywords=music;player;audio;ipod;local;songs;offline;

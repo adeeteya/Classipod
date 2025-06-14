@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Nyɛɛ button nɛɛ nɔ koni okɛ he ko afata he",
   "previousButtonInputTextBarTutorialText": "Nyɛɛ button nɛɛ nɔ koni ojie naagbee niŋmaa lɛ",
   "menuButtonInputTextBarTutorialText": "Nyɛɛ button nɛɛ nɔ koni oŋa keyboard lɛ ni okɛ taomɔ hetooi lɛ atsu nii",
-  "allSongs": "Lalai lɛ fɛɛ"
+  "allSongs": "Lalai lɛ fɛɛ",
+  "clickWheelSizeSettingTitle": "Klikimɔ Wheel dalɛ",
+  "clickWheelSensitivitySettingTitle": "Klikimɔ Wheel henumɔ",
+  "small": "Bibioo",
+  "medium": "Teŋ",
+  "large": "Eda",
+  "low": "Shi",
+  "high": "Ŋwɛi",
+  "volumeModeSettingTitle": "Volume Mode",
+  "appVolumeMode": "Ada",
+  "systemVolumeMode": "Gbɛjianɔtoo",
+  "renamePlaylist": "Gbɛi ni akɛshwɛɔ",
+  "excludeDirectoriesScreenTitle": "Nɔ ni fataaa he"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Bir boşluq əlavə etmək üçün bu düyməni basın",
   "previousButtonInputTextBarTutorialText": "Son simvolu silmək üçün bu düyməni basın",
   "menuButtonInputTextBarTutorialText": "Klaviaturanı bağlamaq və axtarış nəticələri ilə qarşılıqlı əlaqə yaratmaq üçün bu düyməni basın",
-  "allSongs": "Bütün mahnılar"
+  "allSongs": "Bütün mahnılar",
+  "clickWheelSizeSettingTitle": "Təkər ölçüsünü vurun",
+  "clickWheelSensitivitySettingTitle": "Təkər həssaslığını vurun",
+  "small": "Kiçik",
+  "medium": "Mühit",
+  "large": "Böyük",
+  "low": "Alçaq",
+  "high": "Yüksək",
+  "volumeModeSettingTitle": "Səs səviyyəsi",
+  "appVolumeMode": "Tətbiq",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Çalğı siyahısının adını dəyişdirin",
+  "excludeDirectoriesScreenTitle": "Qovluqları istisna etmək"
 }

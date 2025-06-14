@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Bakka itti dabaluuf button kana dhiibaa .",
   "previousButtonInputTextBarTutorialText": "Arfii dhumaa haquuf qaree kana dhiibi .",
   "menuButtonInputTextBarTutorialText": "Kiiboodii cufuuf button kana dhiibiitii bu'aa barbaacha waliin wal qunnami .",
-  "allSongs": "Sirboota hunda ."
+  "allSongs": "Sirboota hunda .",
+  "clickWheelSizeSettingTitle": "Saayizii Gingilchaa cuqaasi .",
+  "clickWheelSensitivitySettingTitle": "Miira Gingilchaa cuqaasi .",
+  "small": "Xiqqoo",
+  "medium": "Giddugaleessa",
+  "large": "Bal'aa",
+  "low": "Gadi bu'aa",
+  "high": "Ol aanaa",
+  "volumeModeSettingTitle": "Haala Jildii .",
+  "appVolumeMode": "App .",
+  "systemVolumeMode": "Sirna",
+  "renamePlaylist": "Maqaa jijjiiri playlist .",
+  "excludeDirectoriesScreenTitle": "Daayirektaroota osoo hin dabalatin ."
 }

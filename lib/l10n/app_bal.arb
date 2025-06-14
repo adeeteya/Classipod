@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "اے بٹن ءَ دپ ءَ بہ جن اِت",
   "previousButtonInputTextBarTutorialText": "اے بٹن ئا دپ جن",
   "menuButtonInputTextBarTutorialText": "کی بورڈ بند کنگ ءِ ھاترا اے بٹن ءَ دپ ءَ بہ کن ءُ پٹ ءُ پول ءِ آسر ءَ گوں رابطہ بہ کن",
-  "allSongs": "دراہیں گانا"
+  "allSongs": "دراہیں گانا",
+  "clickWheelSizeSettingTitle": "گندی ئے سائز ئا کلک بہ کن",
+  "clickWheelSensitivitySettingTitle": "وہیل ءِ سیت ءِ سرا کلک بہ کن اِت",
+  "small": "کسان",
+  "medium": "میان ءِ",
+  "large": "مزنیں",
+  "low": "جَهل",
+  "high": "مزنیں",
+  "volumeModeSettingTitle": "ولاد موڈ",
+  "appVolumeMode": "‏",
+  "systemVolumeMode": "راہبند",
+  "renamePlaylist": "نامینگ",
+  "excludeDirectoriesScreenTitle": "کارا"
 }

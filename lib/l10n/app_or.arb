@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ଏକ ସ୍ଥାନ ଯୋଡିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |",
   "previousButtonInputTextBarTutorialText": "ଶେଷ ବର୍ଣ୍ଣ ବିଲୋପ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |",
   "menuButtonInputTextBarTutorialText": "କୀବୋର୍ଡ୍ ବନ୍ଦ କରିବାକୁ ଏବଂ ସନ୍ଧାନ ଫଳାଫଳ ସହିତ ଯୋଗାଯୋଗ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |",
-  "allSongs": "ସମସ୍ତ ଗୀତ"
+  "allSongs": "ସମସ୍ତ ଗୀତ",
+  "clickWheelSizeSettingTitle": "ଚକ ଆକାର କ୍ଲିକ୍ କରନ୍ତୁ |",
+  "clickWheelSensitivitySettingTitle": "ଚକ ସମ୍ବେଦନଶୀଳତା କ୍ଲିକ୍ କରନ୍ତୁ |",
+  "small": "ଛୋଟ",
+  "medium": "ମଧ୍ୟମ",
+  "large": "ବଡ",
+  "low": "ନିମ୍ନ",
+  "high": "ଉଚ୍ଚ",
+  "volumeModeSettingTitle": "ଭଲ୍ୟୁମ୍ ମୋଡ୍",
+  "appVolumeMode": "ଆପ୍",
+  "systemVolumeMode": "ସିଷ୍ଟମ୍",
+  "renamePlaylist": "ପ୍ଲେଲିଷ୍ଟର ନାମ",
+  "excludeDirectoriesScreenTitle": "ଡିରେକ୍ଟୋରୀଗୁଡିକୁ ବାଦ ଦିଅନ୍ତୁ |"
 }

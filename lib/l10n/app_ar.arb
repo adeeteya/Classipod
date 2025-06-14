@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "اضغط على هذا الزر لإضافة مساحة",
   "previousButtonInputTextBarTutorialText": "اضغط على هذا الزر لحذف الحرف الأخير",
   "menuButtonInputTextBarTutorialText": "اضغط على هذا الزر لإغلاق لوحة المفاتيح والتفاعل مع نتائج البحث",
-  "allSongs": "جميع الأغاني"
+  "allSongs": "جميع الأغاني",
+  "clickWheelSizeSettingTitle": "انقر فوق حجم العجلة",
+  "clickWheelSensitivitySettingTitle": "انقر فوق حساسية العجلة",
+  "small": "صغير",
+  "medium": "واسطة",
+  "large": "كبير",
+  "low": "قليل",
+  "high": "عالي",
+  "volumeModeSettingTitle": "وضع مستوى الصوت",
+  "appVolumeMode": "برنامج",
+  "systemVolumeMode": "نظام",
+  "renamePlaylist": "إعادة تسمية قائمة التشغيل",
+  "excludeDirectoriesScreenTitle": "استبعاد الدلائل"
 }

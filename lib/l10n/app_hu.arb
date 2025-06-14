@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Nyomja meg ezt a gombot a hely hozzáadásához",
   "previousButtonInputTextBarTutorialText": "Nyomja meg ezt a gombot az utolsó karakter törléséhez",
   "menuButtonInputTextBarTutorialText": "Nyomja meg ezt a gombot a billentyűzet bezárásához és a keresési eredményekkel való interakcióhoz",
-  "allSongs": "Minden dal"
+  "allSongs": "Minden dal",
+  "clickWheelSizeSettingTitle": "Kattintson a kerék méretére",
+  "clickWheelSensitivitySettingTitle": "Kattintson a kerékérzékenységre",
+  "small": "Kicsi",
+  "medium": "Közepes",
+  "large": "Nagy",
+  "low": "Alacsony",
+  "high": "Magas",
+  "volumeModeSettingTitle": "Hangerő üzemmód",
+  "appVolumeMode": "Alkalmazás",
+  "systemVolumeMode": "Rendszer",
+  "renamePlaylist": "Átnevezze a lejátszási listát",
+  "excludeDirectoriesScreenTitle": "Kizárja a könyvtárakat"
 }

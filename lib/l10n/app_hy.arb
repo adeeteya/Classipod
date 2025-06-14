@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Սեղմեք այս կոճակը `տարածք ավելացնելու համար",
   "previousButtonInputTextBarTutorialText": "Վերջին կերպարը ջնջելու համար սեղմեք այս կոճակը",
   "menuButtonInputTextBarTutorialText": "Սեղմեք այս կոճակը `ստեղնաշարը փակելու եւ որոնման արդյունքների հետ շփվելու համար",
-  "allSongs": "Բոլոր երգերը"
+  "allSongs": "Բոլոր երգերը",
+  "clickWheelSizeSettingTitle": "Կտտացրեք անիվի չափը",
+  "clickWheelSensitivitySettingTitle": "Կտտացրեք անիվի զգայունությունը",
+  "small": "Փոքր",
+  "medium": "Միջին",
+  "large": "Մեծ",
+  "low": "Ցածր",
+  "high": "Բարձր",
+  "volumeModeSettingTitle": "Գունավոր ռեժիմ",
+  "appVolumeMode": "Ծրագիր",
+  "systemVolumeMode": "Համակարգ",
+  "renamePlaylist": "Վերանվանեցացանկը",
+  "excludeDirectoriesScreenTitle": "Բացառեք գրացուցակները"
 }

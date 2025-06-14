@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "స్థలాన్ని జోడించడానికి ఈ బటన్‌ను నొక్కండి",
   "previousButtonInputTextBarTutorialText": "చివరి అక్షరాన్ని తొలగించడానికి ఈ బటన్‌ను నొక్కండి",
   "menuButtonInputTextBarTutorialText": "కీబోర్డ్‌ను మూసివేయడానికి ఈ బటన్‌ను నొక్కండి మరియు శోధన ఫలితాలతో ఇంటరాక్ట్ అవ్వండి",
-  "allSongs": "అన్ని పాటలు"
+  "allSongs": "అన్ని పాటలు",
+  "clickWheelSizeSettingTitle": "చక్రాల పరిమాణం క్లిక్ చేయండి",
+  "clickWheelSensitivitySettingTitle": "వీల్ సున్నితత్వాన్ని క్లిక్ చేయండి",
+  "small": "చిన్నది",
+  "medium": "మధ్యస్థం",
+  "large": "పెద్దది",
+  "low": "తక్కువ",
+  "high": "అధిక",
+  "volumeModeSettingTitle": "వాల్యూమ్ మోడ్",
+  "appVolumeMode": "అనువర్తనం",
+  "systemVolumeMode": "వ్యవస్థ",
+  "renamePlaylist": "ప్లేజాబితా పేరు మార్చండి",
+  "excludeDirectoriesScreenTitle": "డైరెక్టరీలను మినహాయించండి"
 }

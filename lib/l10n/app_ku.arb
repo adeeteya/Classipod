@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Vê bişkojka çap bikin da ku cîhek zêde bikin",
   "previousButtonInputTextBarTutorialText": "Vê bişkojka çap bikin da ku karaktera paşîn jêbirin",
   "menuButtonInputTextBarTutorialText": "Vê bişkojka bitikînin da ku klavyeyê bigire û bi encamên lêgerînê re têkilî daynin",
-  "allSongs": "Hemû stran"
+  "allSongs": "Hemû stran",
+  "clickWheelSizeSettingTitle": "Mezinahiya wheelê bikirtînin",
+  "clickWheelSensitivitySettingTitle": "Hestiyariya Wheel bikirtînin",
+  "small": "Biçûk",
+  "medium": "Medya",
+  "large": "Mezin",
+  "low": "Nizm",
+  "high": "Bilind",
+  "volumeModeSettingTitle": "Mode Mode",
+  "appVolumeMode": "Berpax kirin",
+  "systemVolumeMode": "Sîstem",
+  "renamePlaylist": "Playlist navdêr",
+  "excludeDirectoriesScreenTitle": "Rêbernameyên derveyî"
 }

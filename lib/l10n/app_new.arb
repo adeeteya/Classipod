@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "थाय् तनेत थुगु बटन त्यु ।",
   "previousButtonInputTextBarTutorialText": "लिपांगु पात्र हुइकेत थुगु बटन त्यु ।",
   "menuButtonInputTextBarTutorialText": "कीबोर्ड बन्द यायेत व मालेगु लिच्वःलिसे अन्तरक्रिया यायेत थुगु बटन त्यु ।",
-  "allSongs": "दक्वं म्ये"
+  "allSongs": "दक्वं म्ये",
+  "clickWheelSizeSettingTitle": "ह्वील साइजय् क्लिक यानादिसँ",
+  "clickWheelSensitivitySettingTitle": "ह्वील संवेदनशीलताय् क्लिक यानादिसँ",
+  "small": "चिधङु",
+  "medium": "मध्यम",
+  "large": "तर्ह्वगु",
+  "low": "कम",
+  "high": "च्वे",
+  "volumeModeSettingTitle": "खण्ड",
+  "appVolumeMode": "एप",
+  "systemVolumeMode": "प्रणाली",
+  "renamePlaylist": "प्लेलिस्टया नां हिलेगु",
+  "excludeDirectoriesScreenTitle": "निर्देशिका निर्देशिका"
 }

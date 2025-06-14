@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Kay ñit'inata ñit'iy huk espaciota yapanaykipaq .",
   "previousButtonInputTextBarTutorialText": "Kay ñit'inata ñit'iy qhipa kaq qillqata qulluchinaykipaq .",
   "menuButtonInputTextBarTutorialText": "Kay ñit'inata ñit'iy teclado wichq'anapaq chaymanta maskana ruwaykunawan tinkiy .",
-  "allSongs": "Tukuy takikuna ."
+  "allSongs": "Tukuy takikuna .",
+  "clickWheelSizeSettingTitle": "Ruedapa sayayninpi ñitiy .",
+  "clickWheelSensitivitySettingTitle": "Rueda sensibilidad nisqapi ñit'iy .",
+  "small": "Uchuy",
+  "medium": "Chawpi",
+  "large": "Hatun",
+  "low": "Pisi",
+  "high": "Hatun",
+  "volumeModeSettingTitle": "Modo de volumen .",
+  "appVolumeMode": "App .",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Pukllay listata tikray .",
+  "excludeDirectoriesScreenTitle": "Directorios nisqakunata qarquy ."
 }

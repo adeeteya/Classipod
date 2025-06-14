@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Нажмите эту кнопку, чтобы добавить пространство",
   "previousButtonInputTextBarTutorialText": "Нажмите эту кнопку, чтобы удалить последний персонаж",
   "menuButtonInputTextBarTutorialText": "Нажмите эту кнопку, чтобы закрыть клавиатуру и взаимодействовать с результатами поиска",
-  "allSongs": "Все песни"
+  "allSongs": "Все песни",
+  "clickWheelSizeSettingTitle": "Нажмите размер колеса",
+  "clickWheelSensitivitySettingTitle": "Нажмите на чувствительность колеса",
+  "small": "Маленький",
+  "medium": "Середина",
+  "large": "Большой",
+  "low": "Низкий",
+  "high": "Высокий",
+  "volumeModeSettingTitle": "Громкость режима",
+  "appVolumeMode": "Приложение",
+  "systemVolumeMode": "Система",
+  "renamePlaylist": "Переименовать плейлист",
+  "excludeDirectoriesScreenTitle": "Исключить каталоги"
 }

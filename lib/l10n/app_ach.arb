@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Dii but man me medo kabedo",
   "previousButtonInputTextBarTutorialText": "Dii but man me kwanyo kit me agikki .",
   "menuButtonInputTextBarTutorialText": "Dii but man me cego kibodbod ci ilok ki adwogi me yenyo",
-  "allSongs": "Wer weng"
+  "allSongs": "Wer weng",
+  "clickWheelSizeSettingTitle": "Dii rwom me ngwec pa tyen",
+  "clickWheelSensitivitySettingTitle": "Dii ngec ma tye ki lak",
+  "small": "Tidi",
+  "medium": "Dyere",
+  "large": "Lac",
+  "low": "Nok",
+  "high": "Bor",
+  "volumeModeSettingTitle": "yoo me tuku",
+  "appVolumeMode": "Appp",
+  "systemVolumeMode": "Cictim",
+  "renamePlaylist": "Lok nying ngat ma imito",
+  "excludeDirectoriesScreenTitle": "Karatac me tic woko"
 }

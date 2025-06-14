@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pindota ini nga buton para makadugang sang espasyo .",
   "previousButtonInputTextBarTutorialText": "Pindota ini nga buton para ma-delete ang katapusan nga karakter .",
   "menuButtonInputTextBarTutorialText": "Pindota ini nga buton sa pagsira sang keyboard kag makig-angot sa mga resulta sang pagpangita .",
-  "allSongs": "Ang tanan nga mga Ambahanon ."
+  "allSongs": "Ang tanan nga mga Ambahanon .",
+  "clickWheelSizeSettingTitle": "I-klik ang Sukod sa Sulundon .",
+  "clickWheelSensitivitySettingTitle": "I-klik ang Sensitibo sa Balay",
+  "small": "Magamay",
+  "medium": "Medyo",
+  "large": "Dako",
+  "low": "Manaba",
+  "high": "Mataas",
+  "volumeModeSettingTitle": "Mode sa Tomo .",
+  "appVolumeMode": "Apto",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Playlilista sa Basya .",
+  "excludeDirectoriesScreenTitle": "I-exclude ang mga Direktories ."
 }

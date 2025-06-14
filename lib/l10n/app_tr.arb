@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Bir alan eklemek için bu düğmeye basın",
   "previousButtonInputTextBarTutorialText": "Son karakteri silmek için bu düğmeye basın",
   "menuButtonInputTextBarTutorialText": "Klavyeyi kapatmak için bu düğmeye basın ve arama sonuçlarıyla etkileşime geçin",
-  "allSongs": "Tüm Şarkılar"
+  "allSongs": "Tüm Şarkılar",
+  "clickWheelSizeSettingTitle": "Tekerlek boyutunu tıklayın",
+  "clickWheelSensitivitySettingTitle": "Tekerlek hassasiyetini tıklayın",
+  "small": "Küçük",
+  "medium": "Orta",
+  "large": "Büyük",
+  "low": "Düşük",
+  "high": "Yüksek",
+  "volumeModeSettingTitle": "Hacim modu",
+  "appVolumeMode": "Uygulama",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Oynat listesini yeniden adlandır",
+  "excludeDirectoriesScreenTitle": "Dizinleri hariç tut"
 }

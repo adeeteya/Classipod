@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pynkhih ia kane ka button ban pyndap ia ka jaka .",
   "previousButtonInputTextBarTutorialText": "Pynkhih ia une u button ban pynduh ia u briew uba khatduh .",
   "menuButtonInputTextBarTutorialText": "Pynkhih ia une u button ban khang ia u shabi bad ban iakynduh bad ki jingmih na ka jingwad .",
-  "allSongs": "Baroh ki jingrwai"
+  "allSongs": "Baroh ki jingrwai",
+  "clickWheelSizeSettingTitle": "Klick Ia Ka Jingialang",
+  "clickWheelSensitivitySettingTitle": "Ka Jingsngewthuh kaba sniew",
+  "small": "Barit",
+  "medium": "Ba pdeng",
+  "large": "Ba heh",
+  "low": "Duna",
+  "high": "Jrong",
+  "volumeModeSettingTitle": "Ka Mode",
+  "appVolumeMode": "Ap",
+  "systemVolumeMode": "Ka rukom pyniaid",
+  "renamePlaylist": "Rename Claylist",
+  "excludeDirectoriesScreenTitle": "Pynduh noh ia ki jingpule"
 }

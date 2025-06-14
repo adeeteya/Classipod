@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pez sa bouton-la pou azout enn lespas",
   "previousButtonInputTextBarTutorialText": "Pez sa bouton-la pou efas dernie personaz-la",
   "menuButtonInputTextBarTutorialText": "Pez sa bouton-la pou ferm klavie ek interazir avek bann rezilta resers",
-  "allSongs": "Tou bann sante"
+  "allSongs": "Tou bann sante",
+  "clickWheelSizeSettingTitle": "Klik lor groser larou",
+  "clickWheelSensitivitySettingTitle": "Klik lor sansibilite pou larou",
+  "small": "Tipti",
+  "medium": "Mwayin",
+  "large": "Larz",
+  "low": "Tigit",
+  "high": "Lao",
+  "volumeModeSettingTitle": "Mod volim",
+  "appVolumeMode": "Ap",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Renom zwe",
+  "excludeDirectoriesScreenTitle": "Exklir bann rezis"
 }

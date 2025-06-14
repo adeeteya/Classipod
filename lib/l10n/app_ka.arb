@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "დააჭირეთ ამ ღილაკს, რომ დაამატოთ სივრცე",
   "previousButtonInputTextBarTutorialText": "დააჭირეთ ამ ღილაკს ბოლო პერსონაჟის წაშლისთვის",
   "menuButtonInputTextBarTutorialText": "დააჭირეთ ამ ღილაკს კლავიშის დახურვისთვის და ძიების შედეგებთან ურთიერთობისთვის",
-  "allSongs": "ყველა სიმღერა"
+  "allSongs": "ყველა სიმღერა",
+  "clickWheelSizeSettingTitle": "დააჭირეთ ბორბლის ზომას",
+  "clickWheelSensitivitySettingTitle": "დააჭირეთ ბორბლის მგრძნობელობას",
+  "small": "პატარა",
+  "medium": "საშუალო",
+  "large": "დიდი",
+  "low": "დაბლა",
+  "high": "მაღალი",
+  "volumeModeSettingTitle": "მოცულობის რეჟიმი",
+  "appVolumeMode": "აპი",
+  "systemVolumeMode": "სისტემა",
+  "renamePlaylist": "დაარქმეთ დასაკრავი სია",
+  "excludeDirectoriesScreenTitle": "გამორიცხეთ დირექტორიები"
 }

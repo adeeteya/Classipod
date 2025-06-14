@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "د ځای اضافه کولو لپاره دا ت button ۍ کېکاږئ",
   "previousButtonInputTextBarTutorialText": "د وروستي کرکټر حذف کولو لپاره دا ت button ۍ فشار ورکړئ",
   "menuButtonInputTextBarTutorialText": "د کیبورډ بندولو لپاره دا ت button ۍ فشار ورکړئ او د لټون پایلو سره متقابل عمل وکړئ",
-  "allSongs": "ټولې سندرې"
+  "allSongs": "ټولې سندرې",
+  "clickWheelSizeSettingTitle": "د ویلډ اندازه کلیک وکړئ",
+  "clickWheelSensitivitySettingTitle": "د ویل په حساسیت کلیک وکړئ",
+  "small": "کوچنی",
+  "medium": "متوسط",
+  "large": "لوی",
+  "low": "ټیټ",
+  "high": "لوړ",
+  "volumeModeSettingTitle": "د حجم اکر",
+  "appVolumeMode": "ایپ",
+  "systemVolumeMode": "سیستم",
+  "renamePlaylist": "نوم",
+  "excludeDirectoriesScreenTitle": "د لارښودونو لرې کول"
 }

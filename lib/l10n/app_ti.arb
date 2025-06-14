@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ነዚ መጠወቒ እዚ ብምጽቃጥ ቦታ ንምውሳኽ .",
   "previousButtonInputTextBarTutorialText": "ነዚ ቁልፊ ብምጽቃጥ ናይ መወዳእታ ፊደል ንምድምሳስ .",
   "menuButtonInputTextBarTutorialText": "ነዚ መጠወቒ እዚ ብምጽቃጥ ነቲ ቁልፊ ሰሌዳ ምዕጻውን ምስ ውጽኢት ምድላይ ንምትእስሳርን .",
-  "allSongs": "ኩሉ ደርፍታት"
+  "allSongs": "ኩሉ ደርፍታት",
+  "clickWheelSizeSettingTitle": "ናይ መንኰርኰር ዓቐን ጠውቂ .",
+  "clickWheelSensitivitySettingTitle": "ናይ መንኰርኰር ተነቃፍነት ጠውቕ",
+  "small": "ንኡስ",
+  "medium": "ማእኸላይ",
+  "large": "ገዚፍ",
+  "low": "ውሑድ",
+  "high": "ላዕሊ",
+  "volumeModeSettingTitle": "ሞድ ድምጺ .",
+  "appVolumeMode": "ኣፕ",
+  "systemVolumeMode": "ስርዓት",
+  "renamePlaylist": "ስያመ ፕለይሊስት",
+  "excludeDirectoriesScreenTitle": "ዳይረክተራት ምግላል"
 }

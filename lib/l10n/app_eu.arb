@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Sakatu botoi hau espazio bat gehitzeko",
   "previousButtonInputTextBarTutorialText": "Sakatu botoi hau azken karakterea ezabatzeko",
   "menuButtonInputTextBarTutorialText": "Sakatu botoi hau teklatua ixteko eta bilaketaren emaitzekin elkarreragiteko",
-  "allSongs": "Abesti guztiak"
+  "allSongs": "Abesti guztiak",
+  "clickWheelSizeSettingTitle": "Egin klik Gurpilaren tamaina",
+  "clickWheelSensitivitySettingTitle": "Egin klik Gurpilaren sentsibilitatea",
+  "small": "Txiki",
+  "medium": "Bitarte",
+  "large": "Handi",
+  "low": "Baxu",
+  "high": "Garai",
+  "volumeModeSettingTitle": "Bolumen modua",
+  "appVolumeMode": "Martxa",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Berrezarri erreprodukzio zerrenda",
+  "excludeDirectoriesScreenTitle": "Baztertu Direktorioak"
 }

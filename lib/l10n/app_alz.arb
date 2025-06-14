@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Keth button maeni imed kabedo moko .",
   "previousButtonInputTextBarTutorialText": "Keth button maeni i kum lembe maeni .",
   "menuButtonInputTextBarTutorialText": "Keth button maeni pi ni ketho lembe ma pigi tek man ni ketho lembe ma jubeyenyo .",
-  "allSongs": "ceke"
+  "allSongs": "ceke",
+  "clickWheelSizeSettingTitle": "Dii iwi kite m’ibed ko .",
+  "clickWheelSensitivitySettingTitle": "Dii iwi kite ma jwigere ko",
+  "small": "Nyanok",
+  "medium": "Idyere",
+  "large": "Dit",
+  "low": "Nyanok",
+  "high": "Malo",
+  "volumeModeSettingTitle": "Volol dede",
+  "appVolumeMode": "Apple",
+  "systemVolumeMode": "Kite mi time lembe",
+  "renamePlaylist": "Jugor mi lembe mi ng’om zoo.",
+  "excludeDirectoriesScreenTitle": "Ju mapol ma gibedo i tic mi ketho lembe i tic."
 }

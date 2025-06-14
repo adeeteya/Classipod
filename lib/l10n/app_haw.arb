@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "E kaomi i kēia pihi e hoʻohui i kahi wahi",
   "previousButtonInputTextBarTutorialText": "E kaomi i kēia pihi e hoʻopau i keʻano hope",
   "menuButtonInputTextBarTutorialText": "E kaomi i kēia pihi e pani i ke kīwī a kamaʻilio pū me nā hopena huli",
-  "allSongs": "Nā mele a pau"
+  "allSongs": "Nā mele a pau",
+  "clickWheelSizeSettingTitle": "Kaomi i ka nui",
+  "clickWheelSensitivitySettingTitle": "Kaomi aku i kaʻike",
+  "small": "Liʻiliʻi",
+  "medium": "Kūpono",
+  "large": "Nui",
+  "low": "Hoʻohaʻahaʻa",
+  "high": "High",
+  "volumeModeSettingTitle": "Molohu mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "'Ōnaehana'ōnaehana",
+  "renamePlaylist": "ʻO ka inoaʻo hoʻolālā i ka papa inoa",
+  "excludeDirectoriesScreenTitle": "ʻAʻole i haʻalele i nā kuhikuhi"
 }

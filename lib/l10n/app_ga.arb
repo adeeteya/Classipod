@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Brúigh an cnaipe seo chun spás a chur leis",
   "previousButtonInputTextBarTutorialText": "Brúigh an cnaipe seo chun an carachtar deireanach a scriosadh",
   "menuButtonInputTextBarTutorialText": "Brúigh an cnaipe seo chun an méarchlár a dhúnadh agus idirghníomhú leis na torthaí cuardaigh",
-  "allSongs": "Gach amhrán"
+  "allSongs": "Gach amhrán",
+  "clickWheelSizeSettingTitle": "Cliceáil Méid Roth",
+  "clickWheelSensitivitySettingTitle": "Cliceáil íogaireacht roth",
+  "small": "Beag",
+  "medium": "Meánach",
+  "large": "Mór",
+  "low": "Íseal",
+  "high": "In airde",
+  "volumeModeSettingTitle": "Mód toirte",
+  "appVolumeMode": "Barr",
+  "systemVolumeMode": "Córas",
+  "renamePlaylist": "Athainmnigh seinmliosta",
+  "excludeDirectoriesScreenTitle": "Eolairí a eisiamh"
 }

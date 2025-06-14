@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Latsa wannan maɓallin don ƙara sarari",
   "previousButtonInputTextBarTutorialText": "Latsa wannan maɓallin don share halayyar ƙarshe",
   "menuButtonInputTextBarTutorialText": "Latsa wannan maɓallin don rufe maballin kuma yana hulɗa da sakamakon binciken",
-  "allSongs": "Duk waƙoƙi"
+  "allSongs": "Duk waƙoƙi",
+  "clickWheelSizeSettingTitle": "Latsa girman kek",
+  "clickWheelSensitivitySettingTitle": "Latsa Abinci",
+  "small": "Ƙanƙane",
+  "medium": "Matsakaici",
+  "large": "M",
+  "low": "M",
+  "high": "M",
+  "volumeModeSettingTitle": "Yanayin ƙara",
+  "appVolumeMode": "Yi kuka",
+  "systemVolumeMode": "Hanya",
+  "renamePlaylist": "Ra'ana Lissafi",
+  "excludeDirectoriesScreenTitle": "Ware adireshi"
 }

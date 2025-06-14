@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Nhấn nút này để thêm một khoảng trống",
   "previousButtonInputTextBarTutorialText": "Nhấn nút này để xóa ký tự cuối cùng",
   "menuButtonInputTextBarTutorialText": "Nhấn nút này để đóng bàn phím và tương tác với kết quả tìm kiếm",
-  "allSongs": "Tất cả các bài hát"
+  "allSongs": "Tất cả các bài hát",
+  "clickWheelSizeSettingTitle": "Nhấp vào kích thước bánh xe",
+  "clickWheelSensitivitySettingTitle": "Nhấp vào độ nhạy của bánh xe",
+  "small": "Bé nhỏ",
+  "medium": "Trung bình",
+  "large": "Lớn",
+  "low": "Thấp",
+  "high": "Cao",
+  "volumeModeSettingTitle": "Chế độ âm lượng",
+  "appVolumeMode": "Ứng dụng",
+  "systemVolumeMode": "Hệ thống",
+  "renamePlaylist": "Đổi tên danh sách phát",
+  "excludeDirectoriesScreenTitle": "Loại trừ thư mục"
 }

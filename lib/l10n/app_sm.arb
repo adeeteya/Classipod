@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Fetaomi lenei ki e faaopoopo ai se avanoa",
   "previousButtonInputTextBarTutorialText": "Fetaomi lenei ki e tape le uiga mulimuli",
   "menuButtonInputTextBarTutorialText": "Fetaomi lenei ki e tapunia le keyboard ma fegalegaleai ma le sailiga iuga",
-  "allSongs": "Pepelo uma"
+  "allSongs": "Pepelo uma",
+  "clickWheelSizeSettingTitle": "Kiliki uili",
+  "clickWheelSensitivitySettingTitle": "Kiliki uili le mafaufau",
+  "small": "Laiti",
+  "medium": "Feololo",
+  "large": "Lapoa",
+  "low": "Maualalo",
+  "high": "Maualuga",
+  "volumeModeSettingTitle": "Tusi Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Faiga",
+  "renamePlaylist": "Toe Fanan Playlist",
+  "excludeDirectoriesScreenTitle": "Le aofia ai poloaiga"
 }

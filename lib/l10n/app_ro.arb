@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Apăsați acest buton pentru a adăuga un spațiu",
   "previousButtonInputTextBarTutorialText": "Apăsați acest buton pentru a șterge ultimul personaj",
   "menuButtonInputTextBarTutorialText": "Apăsați acest buton pentru a închide tastatura și a interacționa cu rezultatele căutării",
-  "allSongs": "Toate melodiile"
+  "allSongs": "Toate melodiile",
+  "clickWheelSizeSettingTitle": "Faceți clic pe dimensiunea roții",
+  "clickWheelSensitivitySettingTitle": "Faceți clic pe sensibilitatea roții",
+  "small": "Mic",
+  "medium": "Mediu",
+  "large": "Mare",
+  "low": "Scăzut",
+  "high": "Ridicat",
+  "volumeModeSettingTitle": "Mod de volum",
+  "appVolumeMode": "Aplicație",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Redenumiți playlist",
+  "excludeDirectoriesScreenTitle": "Exclude directoarele"
 }

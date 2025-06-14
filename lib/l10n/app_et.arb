@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Ruumi lisamiseks vajutage seda nuppu",
   "previousButtonInputTextBarTutorialText": "Viimase tähemärgi kustutamiseks vajutage seda nuppu",
   "menuButtonInputTextBarTutorialText": "Klaviatuuri sulgemiseks ja otsingutulemustega suhtlemiseks vajutage seda nuppu",
-  "allSongs": "Kõik laulud"
+  "allSongs": "Kõik laulud",
+  "clickWheelSizeSettingTitle": "Klõpsake ratta suurus",
+  "clickWheelSensitivitySettingTitle": "Klõpsake ratta tundlikkust",
+  "small": "Väike",
+  "medium": "Vahend",
+  "large": "Suur",
+  "low": "Madal",
+  "high": "Kõrge",
+  "volumeModeSettingTitle": "Helitugevuse režiim",
+  "appVolumeMode": "Rakendus",
+  "systemVolumeMode": "Süsteem",
+  "renamePlaylist": "Nimetage esitusloend ümber",
+  "excludeDirectoriesScreenTitle": "Välistama katalooge"
 }

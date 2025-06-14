@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Bonyeza kitufe hiki ili kuongeza nafasi",
   "previousButtonInputTextBarTutorialText": "Bonyeza kitufe hiki kufuta tabia ya mwisho",
   "menuButtonInputTextBarTutorialText": "Bonyeza kitufe hiki ili kufunga kibodi na kuingiliana na matokeo ya utaftaji",
-  "allSongs": "Nyimbo zote"
+  "allSongs": "Nyimbo zote",
+  "clickWheelSizeSettingTitle": "Bonyeza saizi ya gurudumu",
+  "clickWheelSensitivitySettingTitle": "Bonyeza usikivu wa gurudumu",
+  "small": "Ndogo",
+  "medium": "Kati",
+  "large": "Kubwa",
+  "low": "Chini",
+  "high": "Juu",
+  "volumeModeSettingTitle": "Njia ya kiasi",
+  "appVolumeMode": "Programu",
+  "systemVolumeMode": "Mfumo",
+  "renamePlaylist": "Badilisha orodha ya kucheza",
+  "excludeDirectoriesScreenTitle": "Ondoa saraka"
 }

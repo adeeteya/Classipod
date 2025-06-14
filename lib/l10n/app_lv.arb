@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Nospiediet šo pogu, lai pievienotu vietu",
   "previousButtonInputTextBarTutorialText": "Nospiediet šo pogu, lai izdzēstu pēdējo rakstzīmi",
   "menuButtonInputTextBarTutorialText": "Nospiediet šo pogu, lai aizvērtu tastatūru un mijiedarbotos ar meklēšanas rezultātiem",
-  "allSongs": "Visas dziesmas"
+  "allSongs": "Visas dziesmas",
+  "clickWheelSizeSettingTitle": "Noklikšķiniet uz riteņa izmēra",
+  "clickWheelSensitivitySettingTitle": "Noklikšķiniet uz riteņu jutības",
+  "small": "Mazs",
+  "medium": "Vidējs",
+  "large": "Liels",
+  "low": "Zems",
+  "high": "Augsts",
+  "volumeModeSettingTitle": "Skaļuma režīms",
+  "appVolumeMode": "Lietotne",
+  "systemVolumeMode": "Sistēma",
+  "renamePlaylist": "Pārdēvēt atskaņošanas sarakstu",
+  "excludeDirectoriesScreenTitle": "Izslēgt direktorijus"
 }

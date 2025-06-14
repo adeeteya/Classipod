@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Naciśnij ten przycisk, aby dodać miejsce",
   "previousButtonInputTextBarTutorialText": "Naciśnij ten przycisk, aby usunąć ostatnią postać",
   "menuButtonInputTextBarTutorialText": "Naciśnij ten przycisk, aby zamknąć klawiaturę i wchodzić w interakcje z wynikami wyszukiwania",
-  "allSongs": "Wszystkie piosenki"
+  "allSongs": "Wszystkie piosenki",
+  "clickWheelSizeSettingTitle": "Kliknij rozmiar koła",
+  "clickWheelSensitivitySettingTitle": "Kliknij Czułość kół",
+  "small": "Mały",
+  "medium": "Średni",
+  "large": "Duży",
+  "low": "Niski",
+  "high": "Wysoki",
+  "volumeModeSettingTitle": "Tryb głośności",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "System",
+  "renamePlaylist": "Zmień nazwę listy odtwarzania",
+  "excludeDirectoriesScreenTitle": "Wykluczyć katalogi"
 }

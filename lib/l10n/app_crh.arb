@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Бу дёгмени басынъыз, бошлукъ къошмакъ ичюн .",
   "previousButtonInputTextBarTutorialText": "Сонъки ишаретни ёкъ этмек ичюн бу дёгмени басынъыз .",
   "menuButtonInputTextBarTutorialText": "Клавиатураны къапатмакъ ве къыдырув нетиджелеринен тесирлешмек ичюн бу дёгмени басынъыз .",
-  "allSongs": "Бутюн йырлар"
+  "allSongs": "Бутюн йырлар",
+  "clickWheelSizeSettingTitle": "Копчекнинъ колемини басынъыз .",
+  "clickWheelSensitivitySettingTitle": "Копчеклернинъ сезимлилигини басынъыз .",
+  "small": "Кичик",
+  "medium": "Орта",
+  "large": "Буюк",
+  "low": "Алчакъ",
+  "high": "Юксек",
+  "volumeModeSettingTitle": "Себеп режими.",
+  "appVolumeMode": "Аппарат",
+  "systemVolumeMode": "Тертибат",
+  "renamePlaylist": "Ады «Плейлист» .",
+  "excludeDirectoriesScreenTitle": "Каталогларны истисна ."
 }

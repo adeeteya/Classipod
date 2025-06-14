@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tryck på den här knappen för att lägga till ett utrymme",
   "previousButtonInputTextBarTutorialText": "Tryck på den här knappen för att ta bort det sista tecknet",
   "menuButtonInputTextBarTutorialText": "Tryck på den här knappen för att stänga tangentbordet och interagera med sökresultaten",
-  "allSongs": "Alla låtar"
+  "allSongs": "Alla låtar",
+  "clickWheelSizeSettingTitle": "Klicka på hjulstorlek",
+  "clickWheelSensitivitySettingTitle": "Klicka på hjulkänsligheten",
+  "small": "Små",
+  "medium": "Medium",
+  "large": "Stor",
+  "low": "Låg",
+  "high": "Hög",
+  "volumeModeSettingTitle": "Volymläge",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "System",
+  "renamePlaylist": "Byta namn på spellista",
+  "excludeDirectoriesScreenTitle": "Utesluta kataloger"
 }

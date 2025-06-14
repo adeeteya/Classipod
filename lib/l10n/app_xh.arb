@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Cinezela eli qhosha ukongeza indawo",
   "previousButtonInputTextBarTutorialText": "Cinezela eli qhosha ukucima umlinganiswa wokugqibela",
   "menuButtonInputTextBarTutorialText": "Cinezela eli qhosha ukuvala ikhibhodi kwaye unxibelelane neziphumo zokukhangela",
-  "allSongs": "Zonke iingoma"
+  "allSongs": "Zonke iingoma",
+  "clickWheelSizeSettingTitle": "Cofa ubungakanani bevili",
+  "clickWheelSensitivitySettingTitle": "Cofa imvakalelo ye-Wheel",
+  "small": "Encinci",
+  "medium": "Phakathi",
+  "large": "Enkulu",
+  "low": "Iphantsi",
+  "high": "Phezulu",
+  "volumeModeSettingTitle": "Imo yevolumu",
+  "appVolumeMode": "I-app",
+  "systemVolumeMode": "Inkqubo",
+  "renamePlaylist": "Qanjwa ngokutsha",
+  "excludeDirectoriesScreenTitle": "Ngaphandle kwekholamu"
 }

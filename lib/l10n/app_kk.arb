@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Бос орын қосу үшін осы түймені басыңыз",
   "previousButtonInputTextBarTutorialText": "Соңғы таңбаны жою үшін осы түймені басыңыз",
   "menuButtonInputTextBarTutorialText": "Пернетақтаны жабу және іздеу нәтижелерімен өзара әрекеттесу үшін осы түймені басыңыз",
-  "allSongs": "Барлық әндер"
+  "allSongs": "Барлық әндер",
+  "clickWheelSizeSettingTitle": "Доңғалақтың өлшемін таңдаңыз",
+  "clickWheelSensitivitySettingTitle": "Доңғалақты сезімталдық түймесін басыңыз",
+  "small": "Кішкене",
+  "medium": "Амал",
+  "large": "Ірі",
+  "low": "Аласа",
+  "high": "Биік",
+  "volumeModeSettingTitle": "Көлем режимі",
+  "appVolumeMode": "Бағдарша",
+  "systemVolumeMode": "Жүйе",
+  "renamePlaylist": "Ойнату тізімінің атын өзгерту",
+  "excludeDirectoriesScreenTitle": "Дәрігерлерді алып тастау"
 }

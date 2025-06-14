@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "જગ્યા ઉમેરવા માટે આ બટન દબાવો",
   "previousButtonInputTextBarTutorialText": "છેલ્લું પાત્ર કા delete ી નાખવા માટે આ બટન દબાવો",
   "menuButtonInputTextBarTutorialText": "કીબોર્ડને બંધ કરવા અને શોધ પરિણામો સાથે સંપર્ક કરવા માટે આ બટન દબાવો",
-  "allSongs": "બધા ગીતો"
+  "allSongs": "બધા ગીતો",
+  "clickWheelSizeSettingTitle": "વ્હીલ કદ ક્લિક કરો",
+  "clickWheelSensitivitySettingTitle": "વ્હીલ સંવેદનશીલતાને ક્લિક કરો",
+  "small": "નાનું",
+  "medium": "માધ્યમ",
+  "large": "મોટું",
+  "low": "નીચું",
+  "high": "Highંચું",
+  "volumeModeSettingTitle": "વોલ્યુમ",
+  "appVolumeMode": "ઉપયોગ",
+  "systemVolumeMode": "પદ્ધતિ",
+  "renamePlaylist": "પ્લેલિસ્ટનું નામ બદલો",
+  "excludeDirectoriesScreenTitle": "ડિરેક્ટરીઓ બાકાત રાખવી"
 }

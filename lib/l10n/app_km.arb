@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ចុចប៊ូតុងនេះដើម្បីបន្ថែមចន្លោះមួយ",
   "previousButtonInputTextBarTutorialText": "ចុចប៊ូតុងនេះដើម្បីលុបតួអក្សរចុងក្រោយ",
   "menuButtonInputTextBarTutorialText": "ចុចប៊ូតុងនេះដើម្បីបិទក្តារចុចនិងធ្វើអន្តរកម្មជាមួយលទ្ធផលស្វែងរក",
-  "allSongs": "ចម្រៀងទាំងអស់"
+  "allSongs": "ចម្រៀងទាំងអស់",
+  "clickWheelSizeSettingTitle": "ចុចកង់ទំហំ",
+  "clickWheelSensitivitySettingTitle": "ចុចពន្លឺកង់",
+  "small": "តុចតិច",
+  "medium": "នៃមច្ឈកតិ",
+  "large": "ធម",
+  "low": "តាប",
+  "high": "ខ្ពស់",
+  "volumeModeSettingTitle": "កម្រិតសំឡេង",
+  "appVolumeMode": "បមនុស",
+  "systemVolumeMode": "របប័ន្ធ",
+  "renamePlaylist": "ប្តូរឈ្មោះបញ្ជីចាក់",
+  "excludeDirectoriesScreenTitle": "មិនរាប់បញ្ចូលថតឯកសារ"
 }

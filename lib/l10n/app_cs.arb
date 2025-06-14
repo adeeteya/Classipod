@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Stisknutím tohoto tlačítka přidejte prostor",
   "previousButtonInputTextBarTutorialText": "Stisknutím tohoto tlačítka odstraníte poslední znak",
   "menuButtonInputTextBarTutorialText": "Stisknutím tohoto tlačítka zavřete klávesnici a komunikujte s výsledky vyhledávání",
-  "allSongs": "Všechny písně"
+  "allSongs": "Všechny písně",
+  "clickWheelSizeSettingTitle": "Klikněte na velikost kola",
+  "clickWheelSensitivitySettingTitle": "Klikněte na citlivost kola",
+  "small": "Malý",
+  "medium": "Střední",
+  "large": "Velký",
+  "low": "Nízký",
+  "high": "Vysoký",
+  "volumeModeSettingTitle": "Režim objemu",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Systém",
+  "renamePlaylist": "Přejmenovat seznam skladeb",
+  "excludeDirectoriesScreenTitle": "Vyloučit adresáře"
 }

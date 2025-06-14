@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pez sa bouton pour azout en lespas",
   "previousButtonInputTextBarTutorialText": "Pez sa bouton pour efas dernyen karakter",
   "menuButtonInputTextBarTutorialText": "Pez sa bouton pour ferm klavye e enterakte avek rezilta resers",
-  "allSongs": "Tou bann Sanson"
+  "allSongs": "Tou bann Sanson",
+  "clickWheelSizeSettingTitle": "Klik lo groser larou",
+  "clickWheelSensitivitySettingTitle": "Klik lo sansibilite larou",
+  "small": "Ptipti",
+  "medium": "Mwayenn",
+  "large": "Larz",
+  "low": "Ba",
+  "high": "O",
+  "volumeModeSettingTitle": "Mod Volim",
+  "appVolumeMode": "Aplik",
+  "systemVolumeMode": "Sistenm",
+  "renamePlaylist": "Lalis zwe renonmen",
+  "excludeDirectoriesScreenTitle": "Eksklir bann Repertwar"
 }

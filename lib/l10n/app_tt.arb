@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Космос өстәү өчен бу төймәгә басыгыз",
   "previousButtonInputTextBarTutorialText": "Соңгы характерны бетерү өчен бу төймәгә басыгыз",
   "menuButtonInputTextBarTutorialText": "Клавиатура ябу һәм эзләү нәтиҗәләре белән аралашу өчен бу төймәгә басыгыз",
-  "allSongs": "Барлык җырлар"
+  "allSongs": "Барлык җырлар",
+  "clickWheelSizeSettingTitle": "Тәгәрмәч зурлыгына басыгыз",
+  "clickWheelSensitivitySettingTitle": "Тәгәрмәч сизгерлеге белән басыгыз",
+  "small": "Кечкенә",
+  "medium": "Урта",
+  "large": "Зур",
+  "low": "Түбән",
+  "high": "Югары",
+  "volumeModeSettingTitle": "Күләм режимы",
+  "appVolumeMode": "Кушымта",
+  "systemVolumeMode": "Система",
+  "renamePlaylist": "Плейлистның исемен үзгәртү",
+  "excludeDirectoriesScreenTitle": "Чыгару"
 }

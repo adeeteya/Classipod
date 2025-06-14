@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Kanda iyi buto kugirango wongere umwanya",
   "previousButtonInputTextBarTutorialText": "Kanda iyi buto kugirango usibe inyuguti yanyuma",
   "menuButtonInputTextBarTutorialText": "Kanda iyi buto kugirango ufunge clavier hanyuma usangire nibisubizo byubushakashatsi",
-  "allSongs": "Indirimbo zose"
+  "allSongs": "Indirimbo zose",
+  "clickWheelSizeSettingTitle": "Kanda Ingano yiziga",
+  "clickWheelSensitivitySettingTitle": "Kanda Ibiziga",
+  "small": "Nto",
+  "medium": "Giciriritse",
+  "large": "Binini",
+  "low": "Hasi",
+  "high": "Hejuru",
+  "volumeModeSettingTitle": "Uburyo bwa Rembo",
+  "appVolumeMode": "Porogaramu",
+  "systemVolumeMode": "Sisitemu",
+  "renamePlaylist": "Hindura izina",
+  "excludeDirectoriesScreenTitle": "Kureka Ubuyobozi"
 }

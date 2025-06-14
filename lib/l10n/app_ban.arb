@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Teken tombol puniki anggén nambahin genah",
   "previousButtonInputTextBarTutorialText": "Teken tombol puniki anggén ngicalang karakter sané kaping untat",
   "menuButtonInputTextBarTutorialText": "Teken tombol puniki anggén nutup papan ketik lan berinteraksi sareng hasil panyliksikan",
-  "allSongs": "Saluiring Kidung"
+  "allSongs": "Saluiring Kidung",
+  "clickWheelSizeSettingTitle": "Klik Ukuran Rodael",
+  "clickWheelSensitivitySettingTitle": "Klik Sensitivitas Rodael",
+  "small": "Cenik",
+  "medium": "Parantara",
+  "large": "Gedé",
+  "low": "Éndép",
+  "high": "Tegeh",
+  "volumeModeSettingTitle": "Mode Volume",
+  "appVolumeMode": "Lampiran",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Wastanin Daftar Maplalianan",
+  "excludeDirectoriesScreenTitle": "Nlugrain Direktori"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pinduten daytoy a buton tapno mangnayon iti espasio .",
   "previousButtonInputTextBarTutorialText": "Pinduten daytoy a buton tapno mapunas ti maudi a karakter .",
   "menuButtonInputTextBarTutorialText": "Pinduten daytoy a buton tapno maiserra ti teklado ken makilangen kadagiti resulta ti panagsapul .",
-  "allSongs": "Amin a kanta ."
+  "allSongs": "Amin a kanta .",
+  "clickWheelSizeSettingTitle": "I-click ti kadakkel ti pilid .",
+  "clickWheelSensitivitySettingTitle": "I-click ti sensibilidad ti pilid .",
+  "small": "Bassit",
+  "medium": "Medio",
+  "large": "Dakkel",
+  "low": "Ababa",
+  "high": "Nangato",
+  "volumeModeSettingTitle": "Modo ti tomo .",
+  "appVolumeMode": "App .",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Rename ti playlist .",
+  "excludeDirectoriesScreenTitle": "Ilaksid dagiti direktorio ."
 }

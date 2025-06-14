@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pulse stu buttone per aghjunghje un spaziu",
   "previousButtonInputTextBarTutorialText": "Pulse stu buttone per sguassà l'ultimu caratteru",
   "menuButtonInputTextBarTutorialText": "Pulse stu buttone per chjude u teclatu è interagisce cù i risultati di ricerca",
-  "allSongs": "Tutti i canzoni"
+  "allSongs": "Tutti i canzoni",
+  "clickWheelSizeSettingTitle": "Cliccate nantu à a Dimensione di rota",
+  "clickWheelSensitivitySettingTitle": "Cliccate nantu à a sensibilità di a rota",
+  "small": "Picculu",
+  "medium": "MEDIUM",
+  "large": "Grande",
+  "low": "Bassa",
+  "high": "Altu",
+  "volumeModeSettingTitle": "Modalità volume",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Rename Playlist",
+  "excludeDirectoriesScreenTitle": "ESCLUVE DI COLORI"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pinduton an butones na ini tanganing makadagdag nin espasyo .",
   "previousButtonInputTextBarTutorialText": "Pinduton an buton tanganing buraon an huring karakter .",
   "menuButtonInputTextBarTutorialText": "Pinduton an buton na ini tanganing isara an keyboard asin makipag-ulay sa mga resulta nin paghanap .",
-  "allSongs": "Gabos na Awit ."
+  "allSongs": "Gabos na Awit .",
+  "clickWheelSizeSettingTitle": "I-klik an Sukol kan Rueda .",
+  "clickWheelSensitivitySettingTitle": "I-click an Pagkasensitibo sa Ruweda .",
+  "small": "Sadit",
+  "medium": "Paagihan",
+  "large": "Dakula",
+  "low": "Hababa",
+  "high": "Halangkaw",
+  "volumeModeSettingTitle": "Mode sa Tomo",
+  "appVolumeMode": "Apply",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Liwat sa Pangaranan .",
+  "excludeDirectoriesScreenTitle": "Iiba an mga Direktoryo ."
 }

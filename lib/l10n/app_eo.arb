@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Premu ĉi tiun butonon por aldoni spacon",
   "previousButtonInputTextBarTutorialText": "Premu ĉi tiun butonon por forigi la lastan karakteron",
   "menuButtonInputTextBarTutorialText": "Premu ĉi tiun butonon por fermi la klavaron kaj interagi kun la serĉrezultoj",
-  "allSongs": "Ĉiuj kantoj"
+  "allSongs": "Ĉiuj kantoj",
+  "clickWheelSizeSettingTitle": "Alklaku radon",
+  "clickWheelSensitivitySettingTitle": "Alklaku Rulan Sentemon",
+  "small": "Malgranda",
+  "medium": "Meza",
+  "large": "Granda",
+  "low": "Malalta",
+  "high": "Alta",
+  "volumeModeSettingTitle": "Voluma reĝimo",
+  "appVolumeMode": "Programo",
+  "systemVolumeMode": "Sistemo",
+  "renamePlaylist": "Alinomi ludliston",
+  "excludeDirectoriesScreenTitle": "Ekskludu dosierujojn"
 }

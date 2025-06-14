@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "100 doc#1159 Nūspīž itū pogu , lai pīvīnuotu telpu .",
   "previousButtonInputTextBarTutorialText": "100 doc#1159 Nūspīž itū pogu , lai izdzēstu pādejū raksturu .",
   "menuButtonInputTextBarTutorialText": "100 doc#1159 Nūspīž itū pogu , lai aiztaiseitu klaviaturu i sasadorbuotu ar mekliešonys rezultatim .",
-  "allSongs": "Vysys dzīsmis ."
+  "allSongs": "Vysys dzīsmis .",
+  "clickWheelSizeSettingTitle": "100 doc#1159 Nūspīž iz riteņu izmārs .",
+  "clickWheelSensitivitySettingTitle": "Nūspīd iz Ritys jiuteibu .",
+  "small": "Mozeņš",
+  "medium": "Videjs",
+  "large": "Lels",
+  "low": "Zamai",
+  "high": "Augsts",
+  "volumeModeSettingTitle": "Apjūma režims",
+  "appVolumeMode": "Apps",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Pōrsaukuma saroksts",
+  "excludeDirectoriesScreenTitle": "Izslādz direktorejis ."
 }

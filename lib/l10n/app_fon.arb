@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tɛ́n butɔn elɔ bo na dó gɔ́ tɛnmɛ ɖé .",
   "previousButtonInputTextBarTutorialText": "Tɛ́n butɔn elɔ bo súnsún wuntun gudo tɔn ɔ .",
   "menuButtonInputTextBarTutorialText": "Tɛ́n butɔn elɔ bo sú klavié ɔ bo nɔ wà nǔ xá nǔ e è ba lɛ é .",
-  "allSongs": "Han lɛ bǐ"
+  "allSongs": "Han lɛ bǐ",
+  "clickWheelSizeSettingTitle": "Zǐn Wɛlu ɖaxó",
+  "clickWheelSensitivitySettingTitle": "Zǐn Nǔ e è nɔ ylɔ ɖɔ Sensitivité de lui é",
+  "small": "Kpɛví",
+  "medium": "Nùxámɛ",
+  "large": "Ɖaxó",
+  "low": "Hwe",
+  "high": "Nùxámɛ",
+  "volumeModeSettingTitle": "Volume Sùn",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Azɔwanú",
+  "renamePlaylist": "Ðyɔ nyikɔ Playlist",
+  "excludeDirectoriesScreenTitle": "Nǔ E È Nɔ Zán Ðò Wema lɛ Mɛ É"
 }

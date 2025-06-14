@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Ndai button hpe dip nna shara langai mi bang u",
   "previousButtonInputTextBarTutorialText": "Hpang jahtum na hkrang hpe delete galaw na matu ndai button hpe dip u",
   "menuButtonInputTextBarTutorialText": "Ndai button hpe dip nna keyboard hpe pat nna tam ai mahtai ni hte matut mahkai mai ai",
-  "allSongs": "Mahkawn yawng"
+  "allSongs": "Mahkawn yawng",
+  "clickWheelSizeSettingTitle": "Wheel Size hpe dip dat u",
+  "clickWheelSensitivitySettingTitle": "Wheel Sensitivity hpe dip dat u",
+  "small": "Kaji ai",
+  "medium": "Myi htoi",
+  "large": "Kaba ai",
+  "low": "Nyem ai",
+  "high": "Tsaw ai",
+  "volumeModeSettingTitle": "Volume Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Lai len",
+  "renamePlaylist": "Playlist hpe galai shai u",
+  "excludeDirectoriesScreenTitle": "Director ni hpe n lawm ai"
 }

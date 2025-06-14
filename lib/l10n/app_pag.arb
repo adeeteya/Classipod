@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pindoten iyan buton pian makadagdag na espasyo .",
   "previousButtonInputTextBarTutorialText": "Pindoten iyan buton pian buralen so unor a karakter .",
   "menuButtonInputTextBarTutorialText": "Pindoten iyan buton pian nasara so keyboard tan makapideneng ed panag-anap so resulta .",
-  "allSongs": "Amin a kansion"
+  "allSongs": "Amin a kansion",
+  "clickWheelSizeSettingTitle": "Pindoten so Sukat na Wheel .",
+  "clickWheelSensitivitySettingTitle": "Pindoten so Pan-ensensi .",
+  "small": "Melag",
+  "medium": "Medyum",
+  "large": "Baleg",
+  "low": "Abeba",
+  "high": "Atagey",
+  "volumeModeSettingTitle": "Mode na Tomo",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Saray Alaham na Allan",
+  "excludeDirectoriesScreenTitle": "Ipaliis so Saray Direktoryan ."
 }

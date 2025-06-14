@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Націсніце гэтую кнопку, каб дадаць прастору",
   "previousButtonInputTextBarTutorialText": "Націсніце гэтую кнопку, каб выдаліць апошні сімвал",
   "menuButtonInputTextBarTutorialText": "Націсніце гэтую кнопку, каб закрыць клавіятуру і ўзаемадзейнічаць з вынікамі пошуку",
-  "allSongs": "Усе песні"
+  "allSongs": "Усе песні",
+  "clickWheelSizeSettingTitle": "Націсніце памер кола",
+  "clickWheelSensitivitySettingTitle": "Націсніце адчувальнасць да кола",
+  "small": "Маленькі",
+  "medium": "Сярэдні",
+  "large": "Вялікі",
+  "low": "Нізкі",
+  "high": "Высокі",
+  "volumeModeSettingTitle": "Рэжым аб'ёму",
+  "appVolumeMode": "Прыкладанне",
+  "systemVolumeMode": "Сістэма",
+  "renamePlaylist": "Перайменаваць спіс прайгравання",
+  "excludeDirectoriesScreenTitle": "Выключыць каталогі"
 }

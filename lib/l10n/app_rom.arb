@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Presinen akava buti vash te qhiven yek than .",
   "previousButtonInputTextBarTutorialText": "Presinen akava buti te čhiven o paluno personažo .",
   "menuButtonInputTextBarTutorialText": "Presinen akava buti te phanen o klaviatura thay te keren interakcia e rodipaskere rezultatencar .",
-  "allSongs": "Sa le gilya"
+  "allSongs": "Sa le gilya",
+  "clickWheelSizeSettingTitle": "Klik",
+  "clickWheelSensitivitySettingTitle": "Klikni",
+  "small": "Tikno",
+  "medium": "Maśkarutno",
+  "large": "Buxlo",
+  "low": "Tikno",
+  "high": "Ućo",
+  "volumeModeSettingTitle": "Modo Volume",
+  "appVolumeMode": "Apple",
+  "systemVolumeMode": "Sistèmo",
+  "renamePlaylist": "Renameski Khellista",
+  "excludeDirectoriesScreenTitle": "ekskluzia"
 }

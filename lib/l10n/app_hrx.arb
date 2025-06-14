@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tuu tiise knoop xmayse fer een plats se tuun .",
   "previousButtonInputTextBarTutorialText": "Tuu tiise knoop xmayse fer te letste persoon aus lëye .",
   "menuButtonInputTextBarTutorialText": "Tuu tiise knoop xmayse fer tas tastatur se mache un mit te suuchungs resultaate interakteere .",
-  "allSongs": "Ale Liiter"
+  "allSongs": "Ale Liiter",
+  "clickWheelSizeSettingTitle": "Klik uf Wheel Greene",
+  "clickWheelSensitivitySettingTitle": "Klik uf Wheel sensiiwliteet .",
+  "small": "Kleen",
+  "medium": "Mitel",
+  "large": "Kroos",
+  "low": "Niter",
+  "high": "Hoch",
+  "volumeModeSettingTitle": "Volume Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sisteem",
+  "renamePlaylist": "Renaame Playlist",
+  "excludeDirectoriesScreenTitle": "Exklutsioone fon te Direktore ."
 }

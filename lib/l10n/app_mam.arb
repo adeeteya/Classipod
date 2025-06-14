@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ tqʼoʼna jun .",
   "previousButtonInputTextBarTutorialText": "Jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ tnajsaʼna aju bʼajsbʼil xjal .",
   "menuButtonInputTextBarTutorialText": "Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ ttzʼibʼina teclado ex jaku tzʼok tmojbʼan tibʼa tukʼilju in tzaj tqʼamaʼn xjelbʼitz .",
-  "allSongs": "Kykyaqil"
+  "allSongs": "Kykyaqil",
+  "clickWheelSizeSettingTitle": "Qʼonka twitza tiʼj wheel .",
+  "clickWheelSensitivitySettingTitle": "Jaku tzʼok ttzyuʼna Ssensibilidad .",
+  "small": "Mux. nuch",
+  "medium": "Xol",
+  "large": "Xji´l",
+  "low": "Ch'in",
+  "high": "Nimin twe",
+  "volumeModeSettingTitle": "Tonchb´il",
+  "appVolumeMode": "maxil",
+  "systemVolumeMode": "Nuk'ul ttxolil",
+  "renamePlaylist": "Aju qʼol tqanil",
+  "excludeDirectoriesScreenTitle": "Excario"
 }

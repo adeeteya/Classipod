@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Boş ýer goşmak üçin şu düwmä basyň",
   "previousButtonInputTextBarTutorialText": "Iň soňky häsiýeti pozmak üçin şu düwmä basyň",
   "menuButtonInputTextBarTutorialText": "Klawiaturany ýapmak we gözleg netijeleri bilen täsir etmek üçin şu düwmä basyň",
-  "allSongs": "Songshli aýdymlar"
+  "allSongs": "Songshli aýdymlar",
+  "clickWheelSizeSettingTitle": "Tigiriň ululygyny basyň",
+  "clickWheelSensitivitySettingTitle": "Tigir duýgurlygyny basyň",
+  "small": "Kiçi",
+  "medium": "Orta",
+  "large": "Uly",
+  "low": "Pes",
+  "high": "Beýik",
+  "volumeModeSettingTitle": "Ses re modeimi",
+  "appVolumeMode": "Programma",
+  "systemVolumeMode": "Ulgam",
+  "renamePlaylist": "Plagisti adyny üýtgetmek",
+  "excludeDirectoriesScreenTitle": "Kataloglaryny aýyryň"
 }

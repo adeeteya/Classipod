@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "एह बटन के दबा के एगो स्पेस जोड़ल जाला .",
   "previousButtonInputTextBarTutorialText": "अंतिम वर्ण के हटावे खातिर एह बटन के दबाईं",
   "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करे खातिर एह बटन के दबाईं आ खोज परिणाम के साथे बातचीत करीं",
-  "allSongs": "सब गीत 2019 के बा।"
+  "allSongs": "सब गीत 2019 के बा।",
+  "clickWheelSizeSettingTitle": "पहिया के साइज पर क्लिक करीं",
+  "clickWheelSensitivitySettingTitle": "पहिया के संवेदनशीलता पर क्लिक करीं",
+  "small": "छोट",
+  "medium": "माध्यम",
+  "large": "बड़हन",
+  "low": "कम",
+  "high": "ऊँच",
+  "volumeModeSettingTitle": "वॉल्यूम मोड के बा .",
+  "appVolumeMode": "एपीपी के बा .",
+  "systemVolumeMode": "प्रणाली",
+  "renamePlaylist": "प्लेलिस्ट के नाम बदल दीं",
+  "excludeDirectoriesScreenTitle": "डाइरेक्टरी के बाहर कर दिहल जाव."
 }

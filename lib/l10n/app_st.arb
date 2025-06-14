@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tobetsa konopo ena ho eketsa sebaka",
   "previousButtonInputTextBarTutorialText": "Tobetsa konopo ena ho hlakola sebopeho sa ho qetela",
   "menuButtonInputTextBarTutorialText": "Tobetsa konopo ena ho koala keyboard ebe o buisana le sephetho sa lipatlisiso",
-  "allSongs": "Lipina tsohle"
+  "allSongs": "Lipina tsohle",
+  "clickWheelSizeSettingTitle": "Tobetsa saese sa mabili",
+  "clickWheelSensitivitySettingTitle": "Tobetsa Wheel Consitivity",
+  "small": "Nyane",
+  "medium": "Metsi a mahareng",
+  "large": "Kholo",
+  "low": "Tlase",
+  "high": "Phahameng",
+  "volumeModeSettingTitle": "Mokhoa oa molumo",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistimi",
+  "renamePlaylist": "RONANYA CHEMPILIST",
+  "excludeDirectoriesScreenTitle": "Li-directories"
 }

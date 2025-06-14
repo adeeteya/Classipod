@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Premme sto botton pe azzonze un spaçio",
   "previousButtonInputTextBarTutorialText": "Premme sto botton pe cancellâ l'urtimo carattere",
   "menuButtonInputTextBarTutorialText": "Premme sto botton pe serrâ o tastierino e interagî co-i resultati de reçerca",
-  "allSongs": "Tutte e cansoin"
+  "allSongs": "Tutte e cansoin",
+  "clickWheelSizeSettingTitle": "Clicca Dimenscion da reua",
+  "clickWheelSensitivitySettingTitle": "Clicca in sciâ meriçion de reua",
+  "small": "Piccin",
+  "medium": "Medio",
+  "large": "Grande",
+  "low": "Basso",
+  "high": "Erto",
+  "volumeModeSettingTitle": "Modo volumme",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Scistemaçion",
+  "renamePlaylist": "Renominâ de zugo",
+  "excludeDirectoriesScreenTitle": "No tegnî feua de Direçioin"
 }

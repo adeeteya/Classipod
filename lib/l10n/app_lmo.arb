@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Clicca sü un spazi per illustraziun de la foto.",
   "previousButtonInputTextBarTutorialText": "Cerca el numer de la fotocamera per la prima volta.",
   "menuButtonInputTextBarTutorialText": "Clicca sul sit web de la memoria e i dat che g’he sun di dat che g’he sun.",
-  "allSongs": "Tüt"
+  "allSongs": "Tüt",
+  "clickWheelSizeSettingTitle": "Clicca sul pulsant.",
+  "clickWheelSensitivitySettingTitle": "Clicca sul sit web de la pagina",
+  "small": "Picinin",
+  "medium": "Medi",
+  "large": "Grand",
+  "low": "Bass",
+  "high": "Volt",
+  "volumeModeSettingTitle": "linian",
+  "appVolumeMode": "Trit",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "El ritorn l’ha anca dit",
+  "excludeDirectoriesScreenTitle": "Sultant de l’integrazion dei sistema"
 }

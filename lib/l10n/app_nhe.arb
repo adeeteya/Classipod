@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Xijtlatzquiltili ni botón para tijtlalis se lugar .",
   "previousButtonInputTextBarTutorialText": "Xijtlachili ni botón para tijtlamiltis nopa último personaje",
   "menuButtonInputTextBarTutorialText": "Xijtlatzquiltili ni botón para tijtzacuas nopa teclado huan ximocamahui ica nopa tlayejyecoli tlen tijtemos .",
-  "allSongs": "Nochi huicalistli"
+  "allSongs": "Nochi huicalistli",
+  "clickWheelSizeSettingTitle": "Xijtlachili nopa rueda Tamaño",
+  "clickWheelSensitivitySettingTitle": "Xijchiua clic ipan ruedas .",
+  "small": "Kuekuetsi",
+  "medium": "Tkajko",
+  "large": "Uextik",
+  "low": "Tlatsintla",
+  "high": "Uejkapantik",
+  "volumeModeSettingTitle": "Modo de volumen",
+  "appVolumeMode": "app",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Tlenamatoli",
+  "excludeDirectoriesScreenTitle": "Xijquixti nopa Direcciones"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "按下此按钮添加一个空间",
   "previousButtonInputTextBarTutorialText": "按下此按钮删除最后一个字符",
   "menuButtonInputTextBarTutorialText": "按下此按钮关闭键盘并与搜索结果进行交互",
-  "allSongs": "所有歌曲"
+  "allSongs": "所有歌曲",
+  "clickWheelSizeSettingTitle": "点击车轮尺寸",
+  "clickWheelSensitivitySettingTitle": "点击车轮灵敏度",
+  "small": "小的",
+  "medium": "中等的",
+  "large": "大的",
+  "low": "低的",
+  "high": "高的",
+  "volumeModeSettingTitle": "音量模式",
+  "appVolumeMode": "应用程序",
+  "systemVolumeMode": "系统",
+  "renamePlaylist": "重命名播放列表",
+  "excludeDirectoriesScreenTitle": "排除目录"
 }

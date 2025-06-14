@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Premeu aquest botó per afegir un espai",
   "previousButtonInputTextBarTutorialText": "Premeu aquest botó per eliminar l'últim personatge",
   "menuButtonInputTextBarTutorialText": "Premeu aquest botó per tancar el teclat i interactuar amb els resultats de la cerca",
-  "allSongs": "Totes les cançons"
+  "allSongs": "Totes les cançons",
+  "clickWheelSizeSettingTitle": "Feu clic a la mida de la roda",
+  "clickWheelSensitivitySettingTitle": "Feu clic a la sensibilitat de la roda",
+  "small": "Petit",
+  "medium": "Mitjà",
+  "large": "Gran",
+  "low": "Baix",
+  "high": "Alt",
+  "volumeModeSettingTitle": "Mode de volum",
+  "appVolumeMode": "Aplicació",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Canviar el nom de la llista de reproducció",
+  "excludeDirectoriesScreenTitle": "Exclou els directoris"
 }

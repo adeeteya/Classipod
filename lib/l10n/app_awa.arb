@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "इस बटन को दबाने के लए एक जगह जोड़ने के लए",
   "previousButtonInputTextBarTutorialText": "ई बटन दबा के अंतिम चरित्र का हटावा जाय",
   "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करै अऊर खोज परिणामन के साथ बातचीत करै के लिए ई बटन दबावा जाय",
-  "allSongs": "तमाम गाने"
+  "allSongs": "तमाम गाने",
+  "clickWheelSizeSettingTitle": "पहिया आकार पर क्लिक करे",
+  "clickWheelSensitivitySettingTitle": "पहिया संवेदनशीलता पर क्लिक करे",
+  "small": "छ्वाट",
+  "medium": "औसत",
+  "large": "बड़ा",
+  "low": "कमु",
+  "high": "उच्च",
+  "volumeModeSettingTitle": "वॉल्यूम मोड म",
+  "appVolumeMode": "एप",
+  "systemVolumeMode": "ब्यवस्था",
+  "renamePlaylist": "प्लेलिस्ट का नाम बताओ",
+  "excludeDirectoriesScreenTitle": "डायरेक्टरी का बाहर निकाला जाय"
 }

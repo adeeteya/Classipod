@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Druk op dizze knop om in romte ta te foegjen",
   "previousButtonInputTextBarTutorialText": "Druk op dizze knop om it lêste karakter te wiskjen",
   "menuButtonInputTextBarTutorialText": "Druk op dizze knop om it toetseboerd te sluten en ynteraksje mei de sykresultaten te sluten",
-  "allSongs": "Alle ferskes"
+  "allSongs": "Alle ferskes",
+  "clickWheelSizeSettingTitle": "KLIK WAIL SIZE",
+  "clickWheelSensitivitySettingTitle": "Klikje op soalsensitiviteit",
+  "small": "Lyts",
+  "medium": "Medium",
+  "large": "Grut",
+  "low": "Leech",
+  "high": "Heech",
+  "volumeModeSettingTitle": "Volume Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Systeem",
+  "renamePlaylist": "Playlist omneame",
+  "excludeDirectoriesScreenTitle": "Directories útslute"
 }

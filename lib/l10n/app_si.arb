@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ඉඩක් එක් කිරීමට මෙම බොත්තම ඔබන්න",
   "previousButtonInputTextBarTutorialText": "අවසාන අක්ෂරය මකා දැමීමට මෙම බොත්තම ඔබන්න",
   "menuButtonInputTextBarTutorialText": "යතුරුපුවරුව වැසීමට සහ සෙවුම් ප්රති .ල සමඟ අන්තර් ක්රියා කිරීමට මෙම බොත්තම ඔබන්න",
-  "allSongs": "සියලුම ගීත"
+  "allSongs": "සියලුම ගීත",
+  "clickWheelSizeSettingTitle": "රෝද ප්රමාණය ක්ලික් කරන්න",
+  "clickWheelSensitivitySettingTitle": "රෝද සංවේදීතාව ක්ලික් කරන්න",
+  "small": "කුඩා",
+  "medium": "මාධ්යය",
+  "large": "විශාල",
+  "low": "අඩු",
+  "high": "ඉහළ",
+  "volumeModeSettingTitle": "වෙළුම් මාදිලිය",
+  "appVolumeMode": "යෙදුම",
+  "systemVolumeMode": "පද්ධතිය",
+  "renamePlaylist": "ධාවන ලැයිස්තුව නැවත නම් කරන්න",
+  "excludeDirectoriesScreenTitle": "නාමාවලි බැහැර කරන්න"
 }

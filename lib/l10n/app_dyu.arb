@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "I ka butɔn nin digi walisa ka yɔrɔ dɔ fara a kan .",
   "previousButtonInputTextBarTutorialText": "I ka nin butɔn digi walisa ka mɔgɔ laban jɔsi .",
   "menuButtonInputTextBarTutorialText": "I ka o butɔn digi walisa ka klaviye datugu ani ka jɛnɲɔgɔnya kɛ ni ɲinini jaabiw ye .",
-  "allSongs": "Dɔnkiliw bɛɛ"
+  "allSongs": "Dɔnkiliw bɛɛ",
+  "clickWheelSizeSettingTitle": "I ka Whel bonya digi .",
+  "clickWheelSensitivitySettingTitle": "I ka Wheel Sensitivite digi .",
+  "small": "Fitinin",
+  "medium": "Hakɛ",
+  "large": "Ba",
+  "low": "Kadɔgɔ",
+  "high": "Gongolima",
+  "volumeModeSettingTitle": "Volume Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sisitɛmu",
+  "renamePlaylist": "Tɔgɔ yɛlɛma .",
+  "excludeDirectoriesScreenTitle": "A’ y’a to Directires ."
 }

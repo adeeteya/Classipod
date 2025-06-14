@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Presione le botón utia'al u ts'áabal jump'éel kúuchil",
   "previousButtonInputTextBarTutorialText": "Presione le botón utia'al u borrar le ts'ook personaje",
   "menuButtonInputTextBarTutorialText": "Presione le botón utia'al u k'áalal le teclado yéetel interactuar yéetel ya'ala'al máaxo'ob máano'ob le xookilo'",
-  "allSongs": "Tuláakal k'aayo'ob"
+  "allSongs": "Tuláakal k'aayo'ob",
+  "clickWheelSizeSettingTitle": "U beetik clic ti' Balk'es Buka'aj",
+  "clickWheelSensitivitySettingTitle": "Mentik clic ti' Sensibilidad u ruedas",
+  "small": "Chichan",
+  "medium": "Chúumuk",
+  "large": "Chowak",
+  "low": "Kaabal",
+  "high": "Ka'anal",
+  "volumeModeSettingTitle": "Modo u volumen",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sisteema",
+  "renamePlaylist": "K'ex u k'aaba' tsoolol kuxtal kajnáalo'ob",
+  "excludeDirectoriesScreenTitle": "Excluyen Directorios"
 }

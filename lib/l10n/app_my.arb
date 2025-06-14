@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "အာကာသထည့်ရန်ဤခလုတ်ကိုနှိပ်ပါ",
   "previousButtonInputTextBarTutorialText": "နောက်ဆုံးဇာတ်ကောင်ကိုဖျက်ရန်ဤခလုတ်ကိုနှိပ်ပါ",
   "menuButtonInputTextBarTutorialText": "ကီးဘုတ်ကိုပိတ်ရန်နှင့်ရှာဖွေမှုရလဒ်များနှင့်အပြန်အလှန်ဆက်သွယ်ရန်ဤခလုတ်ကိုနှိပ်ပါ",
-  "allSongs": "သီချင်းများ"
+  "allSongs": "သီချင်းများ",
+  "clickWheelSizeSettingTitle": "ဘီးအရွယ်အစားကိုနှိပ်ပါ",
+  "clickWheelSensitivitySettingTitle": "ဘီး sensitivity ကိုကလစ်နှိပ်ပါ",
+  "small": "သေးငယ်သော",
+  "medium": "အလယ်အလတ်ဖြစ်သော",
+  "large": "ကြီးကျယ်သော",
+  "low": "နိမ့်သော",
+  "high": "မြင့်သော",
+  "volumeModeSettingTitle": "Volume စနစ်",
+  "appVolumeMode": "ဆန့်",
+  "systemVolumeMode": "စံနစ်",
+  "renamePlaylist": "Playlist အမည်ပြောင်း",
+  "excludeDirectoriesScreenTitle": "directory ဖယ်ထုတ်ပါ"
 }

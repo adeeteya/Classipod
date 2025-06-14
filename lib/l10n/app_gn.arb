@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Emboguejy ko botón remoĩ hag̃ua peteĩ espacio",
   "previousButtonInputTextBarTutorialText": "Emboguejy ko botón embogue hag̃ua pe karameg̃ua paha",
   "menuButtonInputTextBarTutorialText": "Emboguejy ko botón emboty hag̃ua teclado ha eñembojoaju hag̃ua umi jeheka renda ndive",
-  "allSongs": "Opaite purahéi ."
+  "allSongs": "Opaite purahéi .",
+  "clickWheelSizeSettingTitle": "Click Rueda Tamaño rehegua .",
+  "clickWheelSensitivitySettingTitle": "Emboguejy Sensibilidad de Rueda .",
+  "small": "Michĩ",
+  "medium": "Mbyte",
+  "large": "Tuicha",
+  "low": "Iguýpe",
+  "high": "Yvate",
+  "volumeModeSettingTitle": "Modo de volumen rehegua .",
+  "appVolumeMode": "App .",
+  "systemVolumeMode": "Mohendapyrã",
+  "renamePlaylist": "Ombohéra jey lista de reproducción .",
+  "excludeDirectoriesScreenTitle": "Omboyke umi directorio ."
 }

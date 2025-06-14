@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Dréckt dëse Knäppchen fir e Raum ze addéieren",
   "previousButtonInputTextBarTutorialText": "Dréckt dëse Knäppchen fir de leschte Charakter ze läschen",
   "menuButtonInputTextBarTutorialText": "Press dëse Knäppchen fir d'Tastatur zoumaachen an interagéieren mat de Sichresultater",
-  "allSongs": "All Lidder"
+  "allSongs": "All Lidder",
+  "clickWheelSizeSettingTitle": "Klickt Radgréisst",
+  "clickWheelSensitivitySettingTitle": "Klickt op Radempfindlechkeet",
+  "small": "Klengen",
+  "medium": "Mëttelméisseg",
+  "large": "Grouss",
+  "low": "Wéineg bannen",
+  "high": "Héichheet",
+  "volumeModeSettingTitle": "Vl'era Modus",
+  "appVolumeMode": "Appa",
+  "systemVolumeMode": "System de System",
+  "renamePlaylist": "Reame Playlist",
+  "excludeDirectoriesScreenTitle": "Ausgeschloss Direkter"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ഒരു സ്ഥലം ചേർക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
   "previousButtonInputTextBarTutorialText": "അവസാന പ്രതീകം ഇല്ലാതാക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
   "menuButtonInputTextBarTutorialText": "കീബോർഡ് അടച്ച് തിരയൽ ഫലങ്ങളുമായി സംവദിക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
-  "allSongs": "എല്ലാ പാട്ടുകളും"
+  "allSongs": "എല്ലാ പാട്ടുകളും",
+  "clickWheelSizeSettingTitle": "വീൽ വലുപ്പം ക്ലിക്കുചെയ്യുക",
+  "clickWheelSensitivitySettingTitle": "ക്ലിക്ക് വീൽ സെൻസിറ്റിവിറ്റി",
+  "small": "ചെറിയ",
+  "medium": "മധസ്ഥാനം",
+  "large": "വലിയ",
+  "low": "താണനിലയില്",
+  "high": "ഉയര്ന്ന",
+  "volumeModeSettingTitle": "വോളിയം മോഡ്",
+  "appVolumeMode": "അപ്ലിക്കേഷൻ",
+  "systemVolumeMode": "ഏര്പ്പാട്",
+  "renamePlaylist": "പ്ലേലിസ്റ്റിനെ പുനർനാമകരണം ചെയ്യുക",
+  "excludeDirectoriesScreenTitle": "ഡയറക്ടറികളെ ഒഴിവാക്കുക"
 }

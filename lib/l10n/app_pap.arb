@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Dòbel e boton aki pa añadí un espasio .",
   "previousButtonInputTextBarTutorialText": "Dòbel e boton aki pa eliminá e último personahe .",
   "menuButtonInputTextBarTutorialText": "Druk e boton aki pa sera e teclado i interakshoná ku e resultadonan di búskeda .",
-  "allSongs": "Tur Kantika ."
+  "allSongs": "Tur Kantika .",
+  "clickWheelSizeSettingTitle": "Klik riba Tamaño di Wiel",
+  "clickWheelSensitivitySettingTitle": "Klik riba Sensibilidat di Wiel",
+  "small": "Chikí",
+  "medium": "Mediano",
+  "large": "Grandi",
+  "low": "Abou",
+  "high": "Haltu",
+  "volumeModeSettingTitle": "Modo di Volumen",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Renombra Playlist",
+  "excludeDirectoriesScreenTitle": "Ekskluí Direktorionan"
 }

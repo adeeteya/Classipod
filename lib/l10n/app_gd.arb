@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Brùth am putan seo gus àite a chuir ris",
   "previousButtonInputTextBarTutorialText": "Brùth am putan seo gus cuir às don charactar mu dheireadh",
   "menuButtonInputTextBarTutorialText": "Brùth am putan seo gus am meur-chlàr a dhùnadh agus eadar-obrachadh leis na toraidhean rannsachaidh",
-  "allSongs": "A h-uile òran"
+  "allSongs": "A h-uile òran",
+  "clickWheelSizeSettingTitle": "Cliog air meud cuibhle",
+  "clickWheelSensitivitySettingTitle": "Cliog air cugallachd cuibhle",
+  "small": "Beag",
+  "medium": "Meadhanach",
+  "large": "Mòr",
+  "low": "Ìosal",
+  "high": "Àrd",
+  "volumeModeSettingTitle": "Modh Leabhar",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Siostam",
+  "renamePlaylist": "Ath-ainmich an liosta-liosta",
+  "excludeDirectoriesScreenTitle": "Cuir a-mach stiùirichean"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Dzvanya bhatani iri kuti uwedzere nzvimbo",
   "previousButtonInputTextBarTutorialText": "Dzvanya bhatani iri kuti ubvise hunhu hwekupedzisira",
   "menuButtonInputTextBarTutorialText": "Dzvanya bhatani iri kuvhara iyo keyboard uye kudyidzana nemhedzisiro yekutsvaga",
-  "allSongs": "Nziyo dzese"
+  "allSongs": "Nziyo dzese",
+  "clickWheelSizeSettingTitle": "Dzvanya vhiri vhiri",
+  "clickWheelSensitivitySettingTitle": "Dzvanya wheel wide",
+  "small": "Zvidiki",
+  "medium": "Pakati",
+  "large": "Hombe",
+  "low": "Zvakaderera",
+  "high": "Kukwirira",
+  "volumeModeSettingTitle": "Vhoriyamu Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "System",
+  "renamePlaylist": "REPA PLAYLLY",
+  "excludeDirectoriesScreenTitle": "Kunze kwekunze madhairekitori"
 }

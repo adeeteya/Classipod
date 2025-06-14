@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Энэ тобшо даража, зай нэмэхэ .",
   "previousButtonInputTextBarTutorialText": "Энэ тобшо даража, һүүлшын дүрэ усадхаха .",
   "menuButtonInputTextBarTutorialText": "Энэ тобшо даража, гар бэшэгые хаажа, хайлтын дүнгүүдтэй харилсаха",
-  "allSongs": "Бүхы дуунууд ."
+  "allSongs": "Бүхы дуунууд .",
+  "clickWheelSizeSettingTitle": "Түхэреэн Хэмжээ дээрэ дараха хэрэгтэй.",
+  "clickWheelSensitivitySettingTitle": "Түхэреэн мэдрэмтгий болохо гэдэгые дараха хэрэгтэй.",
+  "small": "Заахан",
+  "medium": "Дундахи",
+  "large": "Ехэ",
+  "low": "Доро",
+  "high": "Үндэр",
+  "volumeModeSettingTitle": "Эзэмшэлгын горим",
+  "appVolumeMode": "Апп",
+  "systemVolumeMode": "Системэ",
+  "renamePlaylist": "Нааданай жагсаалтые нэрлэхэ",
+  "excludeDirectoriesScreenTitle": "Сүмые оруулхагүй"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pritisnite ta gumb, da dodate prostor",
   "previousButtonInputTextBarTutorialText": "Pritisnite ta gumb, da izbrišete zadnji znak",
   "menuButtonInputTextBarTutorialText": "Pritisnite ta gumb, da zaprete tipkovnico in interakcijo z rezultati iskanja",
-  "allSongs": "Vse pesmi"
+  "allSongs": "Vse pesmi",
+  "clickWheelSizeSettingTitle": "Kliknite velikost kolesa",
+  "clickWheelSensitivitySettingTitle": "Kliknite občutljivost na kolesu",
+  "small": "Majhno",
+  "medium": "Srednje",
+  "large": "Veliko",
+  "low": "Nizka",
+  "high": "Visok",
+  "volumeModeSettingTitle": "Način glasnosti",
+  "appVolumeMode": "APP",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Preimenuj seznam predvajanja",
+  "excludeDirectoriesScreenTitle": "Izključite imenike"
 }

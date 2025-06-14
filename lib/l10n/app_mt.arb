@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Agħfas din il-buttuna biex iżżid spazju",
   "previousButtonInputTextBarTutorialText": "Agħfas din il-buttuna biex tħassar l-aħħar karattru",
   "menuButtonInputTextBarTutorialText": "Agħfas din il-buttuna biex tagħlaq it-tastiera u tinteraġixxi mar-riżultati tat-tfittxija",
-  "allSongs": "Il-kanzunetti kollha"
+  "allSongs": "Il-kanzunetti kollha",
+  "clickWheelSizeSettingTitle": "Ikklikkja Daqs tar-Rota",
+  "clickWheelSensitivitySettingTitle": "Ikklikkja Sensittività tar-Rota",
+  "small": "Żgħir",
+  "medium": "Medju",
+  "large": "Kbir",
+  "low": "Baxx",
+  "high": "Għoli",
+  "volumeModeSettingTitle": "Modalità tal-Volum",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Semmi mill-ġdid il-playlist",
+  "excludeDirectoriesScreenTitle": "Jeskludu direttorji"
 }

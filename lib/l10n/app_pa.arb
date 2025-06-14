@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ਇੱਕ ਸਪੇਸ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ",
   "previousButtonInputTextBarTutorialText": "ਆਖਰੀ ਅੱਖਰ ਨੂੰ ਮਿਟਾਉਣ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ",
   "menuButtonInputTextBarTutorialText": "ਕੀਬੋਰਡ ਨੂੰ ਬੰਦ ਕਰਨ ਅਤੇ ਖੋਜ ਨਤੀਜਿਆਂ ਨਾਲ ਗੱਲਬਾਤ ਕਰਨ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ",
-  "allSongs": "ਸਾਰੇ ਗਾਣੇ"
+  "allSongs": "ਸਾਰੇ ਗਾਣੇ",
+  "clickWheelSizeSettingTitle": "ਕਲਿਕ ਕਰੋ ਚੱਕਰ ਦਾ ਆਕਾਰ",
+  "clickWheelSensitivitySettingTitle": "ਕਲਿਕ ਕਰੋ ਵ੍ਹੀਲ ਸੰਵੇਦਨਸ਼ੀਲਤਾ",
+  "small": "ਛੋਟਾ",
+  "medium": "ਮਾਧਿਅਮ",
+  "large": "ਵੱਡਾ",
+  "low": "ਘੱਟ",
+  "high": "ਉੱਚ",
+  "volumeModeSettingTitle": "ਵਾਲੀਅਮ ਮੋਡ",
+  "appVolumeMode": "ਐਪ",
+  "systemVolumeMode": "ਸਿਸਟਮ",
+  "renamePlaylist": "ਪਲੇਲਿਸਟ ਦਾ ਨਾਮ ਬਦਲੋ",
+  "excludeDirectoriesScreenTitle": "ਡਾਇਰੈਕਟਰੀਆਂ ਨੂੰ ਬਾਹਰ ਕੱ .ੋ"
 }

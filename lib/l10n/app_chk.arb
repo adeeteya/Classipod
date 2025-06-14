@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Kopwe äeä ei föün äsefich pwe kopwe apacha ngeni eü leeni .",
   "previousButtonInputTextBarTutorialText": "Kopwe suki ei ngonuk pwe kopwe amoielo ewe amuchunon mak .",
   "menuButtonInputTextBarTutorialText": "Kopwe pwarata ei button pwe kopwe suki ewe asam me chiechi ngeni ekkewe pisekin kutta .",
-  "allSongs": "Meinisin ekkewe Sopun"
+  "allSongs": "Meinisin ekkewe Sopun",
+  "clickWheelSizeSettingTitle": "Klik won Wiel Siis",
+  "clickWheelSensitivitySettingTitle": "Klik won Wil",
+  "small": "Kukkun",
+  "medium": "Ekis",
+  "large": "Watte",
+  "low": "Tekison",
+  "high": "Tekia",
+  "volumeModeSettingTitle": "Ewe Mokutun Mokutukut",
+  "appVolumeMode": "Apwen",
+  "systemVolumeMode": "Urenapan angang",
+  "renamePlaylist": "Emon chon for pisek",
+  "excludeDirectoriesScreenTitle": "Ekkewe Ekkesiwin"
 }

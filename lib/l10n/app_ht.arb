@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Peze bouton sa a pou ajoute yon espas",
   "previousButtonInputTextBarTutorialText": "Peze bouton sa a pou efase dènye karaktè a",
   "menuButtonInputTextBarTutorialText": "Peze bouton sa a pou fèmen klavye a epi kominike avèk rezilta rechèch la",
-  "allSongs": "Tout chante"
+  "allSongs": "Tout chante",
+  "clickWheelSizeSettingTitle": "Klike sou gwosè wou",
+  "clickWheelSensitivitySettingTitle": "Klike sou sansiblite wou",
+  "small": "Piti",
+  "medium": "Mwayen",
+  "large": "Laj",
+  "low": "Ba",
+  "high": "Wo",
+  "volumeModeSettingTitle": "Mòd volim",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistèm",
+  "renamePlaylist": "Chanje non playlist",
+  "excludeDirectoriesScreenTitle": "Eskli repèrtwar"
 }

@@ -109,7 +109,7 @@ class SearchListTile extends StatelessWidget {
                                 : NetworkImage(imageFilePath)
                             : const AssetImage(Assets.defaultAlbumCoverImage),
                     errorBuilder:
-                        (_, __, ___) => Image.asset(
+                        (_, _, _) => Image.asset(
                           Assets.defaultAlbumCoverImage,
                           fit: BoxFit.cover,
                           height: 54,

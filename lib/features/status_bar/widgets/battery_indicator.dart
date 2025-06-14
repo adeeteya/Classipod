@@ -14,7 +14,7 @@ class BatteryIndicator extends ConsumerWidget {
     return batteryDetails.when(
       data: (data) => BatteryIndicatorWidget(batteryDetails: data),
       error:
-          (_, __) => const BatteryIndicatorWidget(
+          (_, _) => const BatteryIndicatorWidget(
             batteryDetails: BatteryModel(
               level: 100,
               batteryState: BatteryState.unknown,

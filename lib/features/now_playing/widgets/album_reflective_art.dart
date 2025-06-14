@@ -111,7 +111,7 @@ class _AlbumReflectiveArtState extends State<AlbumReflectiveArt>
                             : NetworkImage(widget.thumbnailPath!)
                         : const AssetImage(Assets.defaultAlbumCoverImage),
                 errorBuilder:
-                    (_, __, ___) => Image.asset(
+                    (_, _, _) => Image.asset(
                       Assets.defaultAlbumCoverImage,
                       height: widget.imageWidth,
                       width: widget.imageWidth ?? double.infinity,
@@ -144,7 +144,7 @@ class _AlbumReflectiveArtState extends State<AlbumReflectiveArt>
                                   : NetworkImage(widget.thumbnailPath!)
                               : const AssetImage(Assets.defaultAlbumCoverImage),
                       errorBuilder:
-                          (_, __, ___) => Image.asset(
+                          (_, _, _) => Image.asset(
                             Assets.defaultAlbumCoverImage,
                             height: widget.reflectedImageHeight,
                             width:

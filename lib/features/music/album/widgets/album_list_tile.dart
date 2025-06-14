@@ -80,7 +80,7 @@ class AlbumListTile extends StatelessWidget {
                               : NetworkImage(albumDetails.albumArtPath!)
                           : const AssetImage(Assets.defaultAlbumCoverImage),
                   errorBuilder:
-                      (_, __, ___) => Image.asset(
+                      (_, _, _) => Image.asset(
                         Assets.defaultAlbumCoverImage,
                         fit: BoxFit.fitWidth,
                       ),

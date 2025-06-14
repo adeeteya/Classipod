@@ -8,3 +8,4 @@ Terminal=false
 Type=Application
 Categories=AudioVideo;Audio;Player;Music;
 Keywords=music;player;audio;ipod;local;songs;offline;
+StartupWMClass=classipod

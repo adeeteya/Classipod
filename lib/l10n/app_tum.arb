@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tinikani batani ili kuti musazgireko malo",
   "previousButtonInputTextBarTutorialText": "Tinikani batani ili kuti mufunyepo munthu waumaliro .",
   "menuButtonInputTextBarTutorialText": "Tinikani batani ili kuti mujalire kiyibodi na kuchezga na ivyo mwapenja .",
-  "allSongs": "Nyimbo zose"
+  "allSongs": "Nyimbo zose",
+  "clickWheelSizeSettingTitle": "Dofyanani",
+  "clickWheelSensitivitySettingTitle": "Dofyani pa Malo gha Wheel",
+  "small": "Kachoko",
+  "medium": "Pakatikati",
+  "large": "Chikulu",
+  "low": "Pasi",
+  "high": "Kuchanya",
+  "volumeModeSettingTitle": "Phindo la Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Ndondomeko",
+  "renamePlaylist": "Manambalis Playlist",
+  "excludeDirectoriesScreenTitle": "Kupatulako ŵalongozgi"
 }

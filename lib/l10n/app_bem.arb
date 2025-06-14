@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tinikeni ili batani pakuti mubikepo icifulo",
   "previousButtonInputTextBarTutorialText": "Tinikeni ili batani pakuti mufumyepo umuntu uwakulekelesha",
   "menuButtonInputTextBarTutorialText": "Tinikeni ili batani pakuti mwingile mu citabo no kulanshanya ne fyasangwa mu kufwaya",
-  "allSongs": "Inyimbo shonse"
+  "allSongs": "Inyimbo shonse",
+  "clickWheelSizeSettingTitle": "Tinikeni pa bukulu bwa Ciwa",
+  "clickWheelSensitivitySettingTitle": "Tinikeni pa Kumfwa kwa Ciwa",
+  "small": "Utunono",
+  "medium": "Ishila",
+  "large": "Icikulu",
+  "low": "Ukucepa",
+  "high": "Pamulu",
+  "volumeModeSettingTitle": "Inshila imo",
+  "appVolumeMode": "Appp",
+  "systemVolumeMode": "Imibombele",
+  "renamePlaylist": "Ishina lyakubelenga",
+  "excludeDirectoriesScreenTitle": "Ukufumyamo Amafunde"
 }

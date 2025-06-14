@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Πατήστε αυτό το κουμπί για να προσθέσετε ένα χώρο",
   "previousButtonInputTextBarTutorialText": "Πατήστε αυτό το κουμπί για να διαγράψετε τον τελευταίο χαρακτήρα",
   "menuButtonInputTextBarTutorialText": "Πατήστε αυτό το κουμπί για να κλείσετε το πληκτρολόγιο και να αλληλεπιδράσετε με τα αποτελέσματα αναζήτησης",
-  "allSongs": "Όλα τα τραγούδια"
+  "allSongs": "Όλα τα τραγούδια",
+  "clickWheelSizeSettingTitle": "Κάντε κλικ στο μέγεθος του τροχού",
+  "clickWheelSensitivitySettingTitle": "Κάντε κλικ στην ευαισθησία του τροχού",
+  "small": "Μικρό",
+  "medium": "Μέσον",
+  "large": "Μεγάλο",
+  "low": "Χαμηλός",
+  "high": "Ψηλά",
+  "volumeModeSettingTitle": "Λειτουργία έντασης ήχου",
+  "appVolumeMode": "Εφαρμογή",
+  "systemVolumeMode": "Σύστημα",
+  "renamePlaylist": "Μετονομάστε τη λίστα αναπαραγωγής",
+  "excludeDirectoriesScreenTitle": "Εξαιρέστε τους καταλόγους"
 }

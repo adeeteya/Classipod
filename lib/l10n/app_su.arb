@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pencét tombol ieu pikeun nambihan rohangan",
   "previousButtonInputTextBarTutorialText": "Pencét tombol ieu pikeun mupus karakter anu terakhir",
   "menuButtonInputTextBarTutorialText": "Pencét tombol ieu pikeun nutup keyboard sareng berinteraksi sareng hasil pencarian",
-  "allSongs": "Sadaya lagu"
+  "allSongs": "Sadaya lagu",
+  "clickWheelSizeSettingTitle": "Pencét ukuran roda",
+  "clickWheelSensitivitySettingTitle": "Klik sensitipitas roda",
+  "small": "Leutik",
+  "medium": "Sedeng",
+  "large": "Gede",
+  "low": "Rendah",
+  "high": "Luhur",
+  "volumeModeSettingTitle": "Modeu Musum",
+  "appVolumeMode": "Aplikasi",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Ganti ngaran deui",
+  "excludeDirectoriesScreenTitle": "Istilah direktori"
 }

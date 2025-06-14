@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "اسپيس شامل ڪرڻ لاء هن بٽڻ کي دٻايو",
   "previousButtonInputTextBarTutorialText": "آخري ڪردار کي ختم ڪرڻ لاء هن بٽڻ کي دٻايو",
   "menuButtonInputTextBarTutorialText": "ڪيبورڊ بند ڪرڻ لاء هن بٽڻ کي دٻايو ۽ ڳولا جي نتيجن سان رابطو ڪريو",
-  "allSongs": "سڀ گانا"
+  "allSongs": "سڀ گانا",
+  "clickWheelSizeSettingTitle": "ويل سائيز تي ڪلڪ ڪريو",
+  "clickWheelSensitivitySettingTitle": "ڪلڪ ڪريو سائيڪل حساسيت",
+  "small": "نن small و",
+  "medium": "وچب",
+  "large": "وڏو",
+  "low": "گهٽ",
+  "high": "وڏو",
+  "volumeModeSettingTitle": "حجم موڊ",
+  "appVolumeMode": "ايپ",
+  "systemVolumeMode": "سسٽم بيان ڪيل",
+  "renamePlaylist": "راند جي فهرست جو نالو",
+  "excludeDirectoriesScreenTitle": "ڊائريڪٽريز کي خارج ڪريو"
 }

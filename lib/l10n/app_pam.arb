@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pindutan me ining buton para dagdagan me ing espasyu .",
   "previousButtonInputTextBarTutorialText": "Pindutan me ini para buraran ing tauling tauan .",
   "menuButtonInputTextBarTutorialText": "Pindutan me ining buton para isara me ing keyboard at makipag-ugnayan kareng resulta ning pamanintun .",
-  "allSongs": "Sablang Dalit ."
+  "allSongs": "Sablang Dalit .",
+  "clickWheelSizeSettingTitle": "Pindutan me ing Sukat ning Gulong",
+  "clickWheelSensitivitySettingTitle": "Pindutan me ing Sensitibidad ning Gulong",
+  "small": "Malati",
+  "medium": "Ayal",
+  "large": "Maragul",
+  "low": "Lalam",
+  "high": "Matas",
+  "volumeModeSettingTitle": "Mode ning Bunggu .",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Playlistang lagyu",
+  "excludeDirectoriesScreenTitle": "Kapupusan ning Direktory ."
 }

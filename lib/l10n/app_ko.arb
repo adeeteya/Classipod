@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "이 버튼을 눌러 공간을 추가하십시오",
   "previousButtonInputTextBarTutorialText": "이 버튼을 눌러 마지막 문자를 삭제하십시오",
   "menuButtonInputTextBarTutorialText": "이 버튼을 누르면 키보드를 닫고 검색 결과와 상호 작용합니다.",
-  "allSongs": "모든 노래"
+  "allSongs": "모든 노래",
+  "clickWheelSizeSettingTitle": "휠 크기를 클릭하십시오",
+  "clickWheelSensitivitySettingTitle": "휠 감도를 클릭하십시오",
+  "small": "작은",
+  "medium": "중간",
+  "large": "크기가 큰",
+  "low": "낮은",
+  "high": "높은",
+  "volumeModeSettingTitle": "볼륨 모드",
+  "appVolumeMode": "앱",
+  "systemVolumeMode": "체계",
+  "renamePlaylist": "재생 목록 이름을 바꿉니다",
+  "excludeDirectoriesScreenTitle": "디렉토리 제외"
 }

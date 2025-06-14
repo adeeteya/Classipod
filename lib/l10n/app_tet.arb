@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tekan butaun ne’e hodi aumenta espasu ida .",
   "previousButtonInputTextBarTutorialText": "Tekan butaun ne’e hodi apaga karakter ikus .",
   "menuButtonInputTextBarTutorialText": "Tekan butaun ne’e hodi taka keyboard no interasaun ho rezultadu peskiza .",
-  "allSongs": "Knananuk hotu"
+  "allSongs": "Knananuk hotu",
+  "clickWheelSizeSettingTitle": "Klik Tamañu Roda",
+  "clickWheelSensitivitySettingTitle": "Klik Sensibilidade Roda",
+  "small": "Kiik",
+  "medium": "Médiu",
+  "large": "Boot",
+  "low": "Baixa",
+  "high": "Aas",
+  "volumeModeSettingTitle": "Modu Volume",
+  "appVolumeMode": "Aplika",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Rename Joga lista",
+  "excludeDirectoriesScreenTitle": "Exklui Diretores sira ."
 }

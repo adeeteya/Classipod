@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ⵃⴹⵓ ⴰⵙⴱⴷⴰⴷ ⴰⴷ ⴰⴼⴰⴷ ⴰⴷ ⵜⵔⵏⵓⵎ ⵢⴰⵏ ⵓⵙⴰⵢⵔⴰⵔ",
   "previousButtonInputTextBarTutorialText": "ⵃⴹⵓ ⴰⵙⵍⴽⵉⵏ ⴰⴷ ⵃⵎⴰ ⴰⴷ ⵜⵙⵙⵓⴼⵖⴷ ⴰⵡⵔⵉⴽ ⴰⵏⴳⴳⴰⵔⵓ .",
   "menuButtonInputTextBarTutorialText": "ⵙⵙⵔⵙ ⴰⵙⵍⴽⵉⵏ ⴰⴷ ⵃⵎⴰ ⴰⴷ ⵜⵙⵔⵙⵎ ⴰⵙⵍⴽⵉⵏ ⴰⵔ ⵜⵎⵢⴰⵡⴰⴹⵎ ⴰⴽⴷ ⵜⵢⴰⴼⵓⵜⵉⵏ ⵏ ⵓⵔⵣⵣⵓ",
-  "allSongs": "ⴽⵓⵍⵍⵓ ⵉⵣⵍⴰⵏ"
+  "allSongs": "ⴽⵓⵍⵍⵓ ⵉⵣⵍⴰⵏ",
+  "clickWheelSizeSettingTitle": "ⴽⵍⵉⴽ ⵡⵉⵍ ⵙⵉⵣⵉ",
+  "clickWheelSensitivitySettingTitle": "ⴽⵍⵉⴽ ⵡⵉⵍ ⵙⵉⵏⵉⵙⵉⵜⵉ.",
+  "small": "ⵎⴻⵞⵜⵓⵃ",
+  "medium": "ⴰⴻⴳⴻⵏ",
+  "large": "ⵡⴻⵙⵉⵉ",
+  "low": "ⴷⴻⵔⵓⵙ",
+  "high": "ⵄⴻⵍⴰⵢ",
+  "volumeModeSettingTitle": "ⴰⵙⴽⴽⵉⵏ ⵏ ⵓⴽⵙⴰⵢ",
+  "appVolumeMode": "ⴰⴱ",
+  "systemVolumeMode": "ⴰⵏⴰⴳⵔⴰⵡ",
+  "renamePlaylist": "ⴰⵙⵉⵙⵎ ⵏ ⵉⵙⵎⵔⴰⵙ",
+  "excludeDirectoriesScreenTitle": "ⴰⵙⵓⵜⵍ ⵏ ⵉⵏⵎⵀⴰⵍⵏ"
 }

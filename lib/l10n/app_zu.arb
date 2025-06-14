@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Cindezela le nkinobho ukwengeza isikhala",
   "previousButtonInputTextBarTutorialText": "Cindezela le nkinobho ukuze ususe umlingiswa wokugcina",
   "menuButtonInputTextBarTutorialText": "Cindezela le nkinobho ukuvala ikhibhodi futhi uhlanganyele nemiphumela yokucinga",
-  "allSongs": "Zonke izingoma"
+  "allSongs": "Zonke izingoma",
+  "clickWheelSizeSettingTitle": "Chofoza usayizi wesondo",
+  "clickWheelSensitivitySettingTitle": "Chofoza Wheel Sensitivity",
+  "small": "-Ncinyane",
+  "medium": "Okuphakathi",
+  "large": "-Ningi",
+  "low": "-Ehlile",
+  "high": "-Phezulu",
+  "volumeModeSettingTitle": "Imodi yevolumu",
+  "appVolumeMode": "Uhlelo lokusebenza",
+  "systemVolumeMode": "Indlela yokwenza",
+  "renamePlaylist": "Qamba kabusha uhlu lwadlalwayo",
+  "excludeDirectoriesScreenTitle": "Khipha izinkomba"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tääu ë button kënë yic ba të lääu juak thïn .",
   "previousButtonInputTextBarTutorialText": "Tääu ë button kënë yic ba kë tɔ̈u ciëën nyaai .",
   "menuButtonInputTextBarTutorialText": "Tääu ë ye button kënë ba keyboard thiɔ̈ɔ̈k ku yök kë cï yök .",
-  "allSongs": "Käk ëbɛ̈n"
+  "allSongs": "Käk ëbɛ̈n",
+  "clickWheelSizeSettingTitle": "Cɔl Dheel",
+  "clickWheelSensitivitySettingTitle": "Cööc Cösïël Pësël üür",
+  "small": "Kë nyot",
+  "medium": "Ye kaam",
+  "large": "Dït",
+  "low": "Ye piny",
+  "high": "Bär",
+  "volumeModeSettingTitle": "Aköl ë thök ë pïïr",
+  "appVolumeMode": "Kë",
+  "systemVolumeMode": "Kë ye rot looi",
+  "renamePlaylist": "Religliy de rin",
+  "excludeDirectoriesScreenTitle": "Kä ye keek nyuɔɔth"
 }

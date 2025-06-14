@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "कोनो जगह जोड़बाक लेल ई बटन दबाउ",
   "previousButtonInputTextBarTutorialText": "अंतिम वर्ण के हटाबै के लेल ई बटन दबाउ",
   "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करय लेल ई बटन दबाउ आ खोज परिणाम के संग बातचीत करू",
-  "allSongs": "सब गीत"
+  "allSongs": "सब गीत",
+  "clickWheelSizeSettingTitle": "क्लिक पहिया आकार",
+  "clickWheelSensitivitySettingTitle": "पहिया संवेदनशीलता पर क्लिक करू",
+  "small": "छोट",
+  "medium": "माध्यम",
+  "large": "नमहर",
+  "low": "कम",
+  "high": "ऊंच",
+  "volumeModeSettingTitle": "वॉल्यूम मोड 10।",
+  "appVolumeMode": "ऐप 2019।",
+  "systemVolumeMode": "तरीका",
+  "renamePlaylist": "प्लेलिस्ट के नाम बदलें",
+  "excludeDirectoriesScreenTitle": "निर्देशिका के बाहर"
 }

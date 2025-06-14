@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "กดปุ่มนี้เพื่อเพิ่มพื้นที่",
   "previousButtonInputTextBarTutorialText": "กดปุ่มนี้เพื่อลบอักขระสุดท้าย",
   "menuButtonInputTextBarTutorialText": "กดปุ่มนี้เพื่อปิดแป้นพิมพ์และโต้ตอบกับผลการค้นหา",
-  "allSongs": "เพลงทั้งหมด"
+  "allSongs": "เพลงทั้งหมด",
+  "clickWheelSizeSettingTitle": "ขนาดล้อคลิก",
+  "clickWheelSensitivitySettingTitle": "คลิกความไวของล้อ",
+  "small": "เล็ก",
+  "medium": "ปานกลาง",
+  "large": "ใหญ่",
+  "low": "ต่ำ",
+  "high": "สูง",
+  "volumeModeSettingTitle": "โหมดระดับเสียง",
+  "appVolumeMode": "แอป",
+  "systemVolumeMode": "ระบบ",
+  "renamePlaylist": "เปลี่ยนชื่อเพลย์ลิสต์",
+  "excludeDirectoriesScreenTitle": "ไม่รวมไดเร็กทอรี"
 }

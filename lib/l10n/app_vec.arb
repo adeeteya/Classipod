@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Preme sto boton par zontar un spasio",
   "previousButtonInputTextBarTutorialText": "Preme sto boton par cancełar l'ultimo caratere",
   "menuButtonInputTextBarTutorialText": "Premi sto boton par chiudere la tastiera e interagi co i risultati de ricerca",
-  "allSongs": "Tutte le Canzone"
+  "allSongs": "Tutte le Canzone",
+  "clickWheelSizeSettingTitle": "Cliccata de taja de tajo",
+  "clickWheelSensitivitySettingTitle": "Clicca Sensibilità",
+  "small": "Picolo",
+  "medium": "Medio",
+  "large": "Grando",
+  "low": "Basso",
+  "high": "Alto",
+  "volumeModeSettingTitle": "Volume Modi",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Rename Playłista",
+  "excludeDirectoriesScreenTitle": "Direti esclude"
 }

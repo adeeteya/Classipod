@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pritisnite ovo dugme da biste dodali prostor",
   "previousButtonInputTextBarTutorialText": "Pritisnite ovo dugme da biste izbrisali zadnji znak",
   "menuButtonInputTextBarTutorialText": "Pritisnite ovo dugme da biste zatvorili tastaturu i interakciju sa rezultatima pretraživanja",
-  "allSongs": "Sve pjesme"
+  "allSongs": "Sve pjesme",
+  "clickWheelSizeSettingTitle": "Kliknite Veličina kotača",
+  "clickWheelSensitivitySettingTitle": "Kliknite osetljivost na točkove",
+  "small": "Mali",
+  "medium": "Srednji",
+  "large": "Veliki",
+  "low": "Niska",
+  "high": "Visoko",
+  "volumeModeSettingTitle": "Režim volumena",
+  "appVolumeMode": "Aplikacija",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Preimenujte listu reprodukcije",
+  "excludeDirectoriesScreenTitle": "Izuzeti direktoriji"
 }

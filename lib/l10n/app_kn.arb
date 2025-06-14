@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ಜಾಗವನ್ನು ಸೇರಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ",
   "previousButtonInputTextBarTutorialText": "ಕೊನೆಯ ಅಕ್ಷರವನ್ನು ಅಳಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ",
   "menuButtonInputTextBarTutorialText": "ಕೀಬೋರ್ಡ್ ಮುಚ್ಚಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ ಮತ್ತು ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಿ",
-  "allSongs": "ಎಲ್ಲಾ ಹಾಡುಗಳು"
+  "allSongs": "ಎಲ್ಲಾ ಹಾಡುಗಳು",
+  "clickWheelSizeSettingTitle": "ಚಕ್ರ ಗಾತ್ರ ಕ್ಲಿಕ್ ಮಾಡಿ",
+  "clickWheelSensitivitySettingTitle": "ಚಕ್ರ ಸಂವೇದನೆ ಕ್ಲಿಕ್ ಮಾಡಿ",
+  "small": "ಸಣ್ಣ",
+  "medium": "ಮಧ್ಯಮ",
+  "large": "ದೊಡ್ಡದಾದ",
+  "low": "ಕಡಿಮೆ ಪ್ರಮಾಣದ",
+  "high": "ಎತ್ತರದ",
+  "volumeModeSettingTitle": "ಸಂಪುಟ",
+  "appVolumeMode": "ಸಂಚಾರಿ",
+  "systemVolumeMode": "ವ್ಯವಸ್ಥೆ",
+  "renamePlaylist": "ಪ್ಲೇಪಟ್ಟಿಯನ್ನು ಮರುಹೆಸರಿಸಿ",
+  "excludeDirectoriesScreenTitle": "ಡೈರೆಕ್ಟರಿಗಳನ್ನು ಹೊರಗಿಡಿ"
 }

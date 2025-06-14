@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pencet tombol iki kanggo nambah papan",
   "previousButtonInputTextBarTutorialText": "Pencet tombol iki kanggo mbusak karakter pungkasan",
   "menuButtonInputTextBarTutorialText": "Pencet tombol iki kanggo nutup keyboard lan sesambungan karo asil telusuran",
-  "allSongs": "Kabeh lagu"
+  "allSongs": "Kabeh lagu",
+  "clickWheelSizeSettingTitle": "Klik ukuran rodha",
+  "clickWheelSensitivitySettingTitle": "Klik sensitivitas rodha",
+  "small": "Cilik",
+  "medium": "Medium",
+  "large": "Gedhe",
+  "low": "Kurang",
+  "high": "Dhuwur",
+  "volumeModeSettingTitle": "Mode volume",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Ganti jeneng dhaptar",
+  "excludeDirectoriesScreenTitle": "Eksprodi direktori"
 }

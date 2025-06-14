@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pịa bọtịnụ a ka ịgbakwunye oghere",
   "previousButtonInputTextBarTutorialText": "Pịa bọtịnụ a ka ihichapụ agwa ikpeazụ",
   "menuButtonInputTextBarTutorialText": "Pịa bọtịnụ a iji mechie usoro ma soro nsonaazụ ọchụchọ ahụ",
-  "allSongs": "Abụ niile"
+  "allSongs": "Abụ niile",
+  "clickWheelSizeSettingTitle": "Pịa wiil",
+  "clickWheelSensitivitySettingTitle": "Pịa wheel maara",
+  "small": "Nke ntakiri",
+  "medium": "Keusoro",
+  "large": "Keibu",
+  "low": "Kediala",
+  "high": "Keelu",
+  "volumeModeSettingTitle": "Modie mode",
+  "appVolumeMode": "A",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Denye aha ọkpụkpọ",
+  "excludeDirectoriesScreenTitle": "Ewepu ntuziaka"
 }

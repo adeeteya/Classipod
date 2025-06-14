@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Naciśnij tyn guzicz, coby przidać przestrzyń",
   "previousButtonInputTextBarTutorialText": "Naciśnij tyn guzicz, coby ususić ôstatni postać",
   "menuButtonInputTextBarTutorialText": "Naciśnij tyn guzicz, coby zawrzić klawiatura i wchodzić w interakcyjo z wynikami poszukowanio",
-  "allSongs": "Cołke Śpije"
+  "allSongs": "Cołke Śpije",
+  "clickWheelSizeSettingTitle": "Kliknij na Dziewczyna Srogość",
+  "clickWheelSensitivitySettingTitle": "Kliknij Synsywność Koła",
+  "small": "Mały",
+  "medium": "Postrzedni",
+  "large": "Srogi",
+  "low": "Niski",
+  "high": "Wysoki",
+  "volumeModeSettingTitle": "Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Systym",
+  "renamePlaylist": "Regulacyjo planu",
+  "excludeDirectoriesScreenTitle": "Dysors"
 }

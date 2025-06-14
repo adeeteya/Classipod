@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Энэ товчийг дарна уу",
   "previousButtonInputTextBarTutorialText": "Сүүлийн дүрийг устгахын тулд энэ товчийг дарна уу",
   "menuButtonInputTextBarTutorialText": "Гарыг хаахын тулд энэ товчийг дараад хайлтын үр дүнтэй харилцах",
-  "allSongs": "Бүх Дуу"
+  "allSongs": "Бүх Дуу",
+  "clickWheelSizeSettingTitle": "Дугуйны хэмжээг дарна уу",
+  "clickWheelSensitivitySettingTitle": "Дугуйны мэдрэмжийг дарна уу",
+  "small": "Жижиг",
+  "medium": "Дунд",
+  "large": "Том",
+  "low": "Олиггүй",
+  "high": "Өндөр",
+  "volumeModeSettingTitle": "Байдлын горимын горим",
+  "appVolumeMode": "Ашиг",
+  "systemVolumeMode": "Журам",
+  "renamePlaylist": "Тоглуулах жагсаалтыг өөрчлөх",
+  "excludeDirectoriesScreenTitle": "Дирсийг оруулахгүй байх"
 }

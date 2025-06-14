@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Druk op hierdie knoppie om 'n ruimte by te voeg",
   "previousButtonInputTextBarTutorialText": "Druk op hierdie knoppie om die laaste karakter te verwyder",
   "menuButtonInputTextBarTutorialText": "Druk op hierdie knoppie om die sleutelbord te sluit en met die soekresultate te kommunikeer",
-  "allSongs": "Alle liedjies"
+  "allSongs": "Alle liedjies",
+  "clickWheelSizeSettingTitle": "Klik wielgrootte",
+  "clickWheelSensitivitySettingTitle": "Klik op wielgevoeligheid",
+  "small": "Klein",
+  "medium": "Medium",
+  "large": "Groot",
+  "low": "Laag",
+  "high": "Hoog",
+  "volumeModeSettingTitle": "Volume modus",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sisteem",
+  "renamePlaylist": "Hernoem snitlys",
+  "excludeDirectoriesScreenTitle": "Sluit gidse uit"
 }

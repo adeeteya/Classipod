@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Lisää tilaa painamalla tätä painiketta",
   "previousButtonInputTextBarTutorialText": "Poista viimeinen merkki painamalla tätä painiketta",
   "menuButtonInputTextBarTutorialText": "Paina tätä painiketta sulkeaksesi näppäimistön ja vuorovaikutuksessa hakutulosten kanssa",
-  "allSongs": "Kaikki kappaleet"
+  "allSongs": "Kaikki kappaleet",
+  "clickWheelSizeSettingTitle": "Napsauta pyörän kokoa",
+  "clickWheelSensitivitySettingTitle": "Napsauta pyörän herkkyyttä",
+  "small": "Pieni",
+  "medium": "Keskipitkä",
+  "large": "Suuri",
+  "low": "Matala",
+  "high": "Korkea",
+  "volumeModeSettingTitle": "Tilavuustila",
+  "appVolumeMode": "Soveltaa",
+  "systemVolumeMode": "Järjestelmä",
+  "renamePlaylist": "Nimeä soittolista uudelleen",
+  "excludeDirectoriesScreenTitle": "Sulkea pois hakemistot"
 }

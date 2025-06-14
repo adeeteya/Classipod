@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tekan butang tu kena nambahka ruang .",
   "previousButtonInputTextBarTutorialText": "Tekan butang tu kena madamka watak kepenudi .",
   "menuButtonInputTextBarTutorialText": "Tekan butang tu kena nutup keyboard lalu beinteraksyen enggau asil ngiga .",
-  "allSongs": "Semua Lagu"
+  "allSongs": "Semua Lagu",
+  "clickWheelSizeSettingTitle": "Klik Saiz Roda",
+  "clickWheelSensitivitySettingTitle": "Klik Sensitiviti Roda",
+  "small": "Mit",
+  "medium": "Sederhana",
+  "large": "Besai",
+  "low": "Lemi",
+  "high": "Tinggi",
+  "volumeModeSettingTitle": "Mod Volume",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Meri nama baru lis main .",
+  "excludeDirectoriesScreenTitle": "Enda nyengkaum Direktori"
 }

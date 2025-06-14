@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ठाउँ थप्न यो बटन थिच्नुहोस्",
   "previousButtonInputTextBarTutorialText": "अन्तिम चरित्र मेट्न यो बटन थिच्नुहोस्",
   "menuButtonInputTextBarTutorialText": "किबोर्ड बन्द गर्न यो बटन थिच्नुहोस् र खोज परिणामहरूको साथ अन्तर्क्रिया गर्नुहोस्",
-  "allSongs": "सबै गीतहरू"
+  "allSongs": "सबै गीतहरू",
+  "clickWheelSizeSettingTitle": "व्हील आकार क्लिक गर्नुहोस्",
+  "clickWheelSensitivitySettingTitle": "व्हील संवेदनशीलता क्लिक गर्नुहोस्",
+  "small": "सानो",
+  "medium": "माध्यम",
+  "large": "ठूलो",
+  "low": "मन्द",
+  "high": "उच्च",
+  "volumeModeSettingTitle": "भोल्युम मोड",
+  "appVolumeMode": "सहायक",
+  "systemVolumeMode": "प्रणाली",
+  "renamePlaylist": "प्लेलिस्टको नाम बदल्नुहोस्",
+  "excludeDirectoriesScreenTitle": "निर्देशिकाहरू बाहेक"
 }

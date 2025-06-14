@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Preme chest botôn par zontâ un spazi",
   "previousButtonInputTextBarTutorialText": "Preme chest botôn par cancelâ l’ultin caratar",
   "menuButtonInputTextBarTutorialText": "Preme chest botôn par sierâ il tastier e interagjî cui risultâts de ricercje",
-  "allSongs": "Dutis lis cjançons"
+  "allSongs": "Dutis lis cjançons",
+  "clickWheelSizeSettingTitle": "Clicâ su Dimen",
+  "clickWheelSensitivitySettingTitle": "Clicâ su la sensibilitât a Rueel",
+  "small": "Piçul",
+  "medium": "Medi",
+  "large": "Larc",
+  "low": "Bas",
+  "high": "Alt",
+  "volumeModeSettingTitle": "Mode di volum",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sisteme",
+  "renamePlaylist": "Cambiâ il non di playlist di zûc",
+  "excludeDirectoriesScreenTitle": "Escludi i Repertoris"
 }

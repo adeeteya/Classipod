@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "একটি স্থান যুক্ত করতে এই বোতামটি টিপুন",
   "previousButtonInputTextBarTutorialText": "শেষ চরিত্রটি মুছতে এই বোতামটি টিপুন",
   "menuButtonInputTextBarTutorialText": "কীবোর্ডটি বন্ধ করতে এই বোতামটি টিপুন এবং অনুসন্ধান ফলাফলের সাথে ইন্টারঅ্যাক্ট করুন",
-  "allSongs": "সব গান"
+  "allSongs": "সব গান",
+  "clickWheelSizeSettingTitle": "চাকা আকার ক্লিক করুন",
+  "clickWheelSensitivitySettingTitle": "চাকা সংবেদনশীলতা ক্লিক করুন",
+  "small": "ছোট",
+  "medium": "মাধ্যম",
+  "large": "বড়",
+  "low": "কম",
+  "high": "উচ্চ",
+  "volumeModeSettingTitle": "ভলিউম মোড",
+  "appVolumeMode": "অ্যাপ",
+  "systemVolumeMode": "সিস্টেম",
+  "renamePlaylist": "প্লেলিস্টের নাম পরিবর্তন করুন",
+  "excludeDirectoriesScreenTitle": "ডিরেক্টরিগুলি বাদ দিন"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pawhiria te paatene ki te taapiri i tetahi waahi",
   "previousButtonInputTextBarTutorialText": "Pawhiria te paatene nei ki te muku i te ahuatanga whakamutunga",
   "menuButtonInputTextBarTutorialText": "Pawhiria te paatene nei kia kati te papapātuhi me te taunekeneke ki nga hua o te rapu",
-  "allSongs": "Nga waiata katoa"
+  "allSongs": "Nga waiata katoa",
+  "clickWheelSizeSettingTitle": "Patohia te rahi o te wira",
+  "clickWheelSensitivitySettingTitle": "Pāwhiritia Raina Tira",
+  "small": "Iti",
+  "medium": "Kauwaka",
+  "large": "Nui",
+  "low": "Pāpaku",
+  "high": "Teitei",
+  "volumeModeSettingTitle": "Aratau Rau",
+  "appVolumeMode": "Taupānga",
+  "systemVolumeMode": "Pūnaha",
+  "renamePlaylist": "Whakaingoa ano te kaitakaro",
+  "excludeDirectoriesScreenTitle": "Kaua e arai"
 }

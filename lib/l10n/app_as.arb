@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "এটা স্থান যোগ কৰিবলৈ এই বুটাম টিপক",
   "previousButtonInputTextBarTutorialText": "শেষ আখৰ মচি পেলাবলৈ এই বুটাম টিপক",
   "menuButtonInputTextBarTutorialText": "এই বুটামটো টিপক কিবৰ্ড বন্ধ কৰিবলৈ আৰু সন্ধান ফলাফলৰ সৈতে যোগাযোগ কৰক",
-  "allSongs": "সকলো গীত"
+  "allSongs": "সকলো গীত",
+  "clickWheelSizeSettingTitle": "চকাৰ আকাৰ ক্লিক কৰক",
+  "clickWheelSensitivitySettingTitle": "ক্লিক কৰক চকা সংবেদনশীলতা",
+  "small": "সৰু",
+  "medium": "মাধ্যম",
+  "large": "ডাঙৰ",
+  "low": "নিম্ন",
+  "high": "ওখ",
+  "volumeModeSettingTitle": "আয়তন ধৰণ",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "পদ্ধতি",
+  "renamePlaylist": "PlayList ৰ নাম সলনি কৰক",
+  "excludeDirectoriesScreenTitle": "পঞ্জিকাসমূহ বাদ দিয়ক"
 }

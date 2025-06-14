@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Biʼniʼ clic lu botón riʼ para ganda gucaaluʼ ti lugar .",
   "previousButtonInputTextBarTutorialText": "Biʼniʼ clic lu botón riʼ para gucaaluʼ últimu carácter .",
   "menuButtonInputTextBarTutorialText": "Biʼniʼ presionar botón riʼ para guseeguʼ tecladu ne guni interactuar né ca resultadu stiʼ búsqueda .",
-  "allSongs": "Guiráʼ canción"
+  "allSongs": "Guiráʼ canción",
+  "clickWheelSizeSettingTitle": "Biʼniʼ clic lu tamañu stiʼ rueda .",
+  "clickWheelSensitivitySettingTitle": "Biʼniʼ clic lu sensibilidad stiʼ Rueda .",
+  "small": "Nahuiini",
+  "medium": "Modo",
+  "large": "Naziuula",
+  "low": "Xaguete",
+  "high": "Nasoo",
+  "volumeModeSettingTitle": "Modo de volumen",
+  "appVolumeMode": "App .",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Bichaa láʼ lista de reproducción .",
+  "excludeDirectoriesScreenTitle": "Biʼniʼ excluir ca directoriu"
 }

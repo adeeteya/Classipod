@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tekan tombol on laho manambai ruang .",
   "previousButtonInputTextBarTutorialText": "Tekan ma tombol on asa boi dihapus karakter na parpudi .",
   "menuButtonInputTextBarTutorialText": "Tekan tombol on laho manutup keyboard jala marsaor dohot hasil pencarian .",
-  "allSongs": "Sude Song ."
+  "allSongs": "Sude Song .",
+  "clickWheelSizeSettingTitle": "Klik ma Ukuran Roda .",
+  "clickWheelSensitivitySettingTitle": "Klik ma Kepekaan Roda .",
+  "small": "Menek",
+  "medium": "Manonga",
+  "large": "Bolon",
+  "low": "Rendah",
+  "high": "Timbo",
+  "volumeModeSettingTitle": "Mode Jilid .",
+  "appVolumeMode": "AC",
+  "systemVolumeMode": "Sistim",
+  "renamePlaylist": "Goar ni Pamutar Ulang .",
+  "excludeDirectoriesScreenTitle": "Ndang ."
 }

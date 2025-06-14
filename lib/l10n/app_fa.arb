@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "این دکمه را فشار دهید تا یک فضا اضافه شود",
   "previousButtonInputTextBarTutorialText": "این دکمه را فشار دهید تا آخرین شخصیت حذف شود",
   "menuButtonInputTextBarTutorialText": "برای بستن صفحه کلید و تعامل با نتایج جستجو ، این دکمه را فشار دهید",
-  "allSongs": "همه آهنگ ها"
+  "allSongs": "همه آهنگ ها",
+  "clickWheelSizeSettingTitle": "روی اندازه چرخ کلیک کنید",
+  "clickWheelSensitivitySettingTitle": "روی حساسیت چرخ کلیک کنید",
+  "small": "کوچک",
+  "medium": "واسطه",
+  "large": "بزرگ",
+  "low": "کم",
+  "high": "عالی",
+  "volumeModeSettingTitle": "حالت حجم",
+  "appVolumeMode": "برنامه",
+  "systemVolumeMode": "سیستم",
+  "renamePlaylist": "تغییر نام لیست پخش",
+  "excludeDirectoriesScreenTitle": "دایرکتوری ها را حذف کنید"
 }

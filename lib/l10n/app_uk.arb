@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Натисніть цю кнопку, щоб додати простір",
   "previousButtonInputTextBarTutorialText": "Натисніть цю кнопку, щоб видалити останній символ",
   "menuButtonInputTextBarTutorialText": "Натисніть цю кнопку, щоб закрити клавіатуру та взаємодіяти з результатами пошуку",
-  "allSongs": "Всі пісні"
+  "allSongs": "Всі пісні",
+  "clickWheelSizeSettingTitle": "Клацніть розмір колеса",
+  "clickWheelSensitivitySettingTitle": "Клацніть Чутливість колеса",
+  "small": "Невеликий",
+  "medium": "Середній",
+  "large": "Великий",
+  "low": "Низький",
+  "high": "Високий",
+  "volumeModeSettingTitle": "Режим гучності",
+  "appVolumeMode": "Додаток",
+  "systemVolumeMode": "Система",
+  "renamePlaylist": "Перейменувати список відтворення",
+  "excludeDirectoriesScreenTitle": "Виключіть каталоги"
 }

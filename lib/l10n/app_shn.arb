@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ သႂ်ႇပၼ်တီႈ space",
   "previousButtonInputTextBarTutorialText": "တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ မွတ်ႇပႅတ်ႈ တူဝ်လိၵ်ႈၵမ်းလိုၼ်းသုတ်း",
   "menuButtonInputTextBarTutorialText": "တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ ဢိုတ်းၶီးပူတ်ႉသေ တိတ်းတေႃႇၸွမ်း ၶေႃႈတွပ်ႇဢၼ်သွၵ်ႈႁႃၼၼ်ႉ",
-  "allSongs": "ၵႂၢမ်းၵူႈၽဵင်း"
+  "allSongs": "ၵႂၢမ်းၵူႈၽဵင်း",
+  "clickWheelSizeSettingTitle": "ၼဵၵ်း Wheel Size",
+  "clickWheelSensitivitySettingTitle": "ၼဵၵ်းတီႈလွင်ႈႁူႉႁၼ်လႆႈ",
+  "small": "လဵၵ်ႉ",
+  "medium": "ပၢၼ်ၵၢင်",
+  "large": "လူင်",
+  "low": "တီႈတႂ်ႈ",
+  "high": "ဢၼ်သုင်",
+  "volumeModeSettingTitle": "Volume Mode",
+  "appVolumeMode": "ဢႅပ်ႉ",
+  "systemVolumeMode": "ယူင်ႉ",
+  "renamePlaylist": "မႄးတၢင်ႇၸိုဝ်ႈ Playlist",
+  "excludeDirectoriesScreenTitle": "ထႅမ်သ်ႂႇထႅင်ႈ"
 }

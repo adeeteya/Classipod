@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Dier baton ni mondo imed thuolo",
   "previousButtonInputTextBarTutorialText": "Dier baton ni mondo iduok kido mogik",
   "menuButtonInputTextBarTutorialText": "Dhi e batonni mondo ilor kibod kendo iti gi duoko mag manyo",
-  "allSongs": "Nyisruok duto"
+  "allSongs": "Nyisruok duto",
+  "clickWheelSizeSettingTitle": "Gwel ng’eyo mar ng’ut ng’ato",
+  "clickWheelSensitivitySettingTitle": "Gwel Gima Owinjore itim gi lweti",
+  "small": "Matin",
+  "medium": "Man ediere",
+  "large": "Malach",
+  "low": "Piny",
+  "high": "Malo",
+  "volumeModeSettingTitle": "Mode mar ng’anjo",
+  "appVolumeMode": "Apom",
+  "systemVolumeMode": "Chenro",
+  "renamePlaylist": "Listi mar nying'",
+  "excludeDirectoriesScreenTitle": "Gik ma ok ondiki e pinje ma oko"
 }

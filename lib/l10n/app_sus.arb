@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Wo yi button makɔrɛ alako wo xa yire nde sa a ma .",
   "previousButtonInputTextBarTutorialText": "Wo yi button makɔrɛ alako wo xa na sɛbɛli dɔnxɔɛ raxara .",
   "menuButtonInputTextBarTutorialText": "Wo yi button makɔrɛ alako wo xa na buki balan anun wo xa wo maso na fe fenfe ra .",
-  "allSongs": "Na sigi birin"
+  "allSongs": "Na sigi birin",
+  "clickWheelSizeSettingTitle": "Wo yi buki mato .",
+  "clickWheelSensitivitySettingTitle": "Wo yi buki mato .",
+  "small": "Akhouri",
+  "medium": "Fèrè",
+  "large": "Khoungbé",
+  "low": "Yelefoui",
+  "high": "Koré",
+  "volumeModeSettingTitle": "Volume Mode",
+  "appVolumeMode": "Applé",
+  "systemVolumeMode": "Arabaki",
+  "renamePlaylist": "Wo xa na xili masara .",
+  "excludeDirectoriesScreenTitle": "Direkteree naxee e yɛtɛ kan xa fe raɲɛrɛma ."
 }

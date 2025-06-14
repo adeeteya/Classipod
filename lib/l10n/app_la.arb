@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Torcular quod conjunctionem addere spatium",
   "previousButtonInputTextBarTutorialText": "Torcular quod conjunctionem delere ultimum mores",
   "menuButtonInputTextBarTutorialText": "Torcular quod conjunctionem claudere keyboard et penitus per search results",
-  "allSongs": "Omnes carmina"
+  "allSongs": "Omnes carmina",
+  "clickWheelSizeSettingTitle": "Click rota magnitudine",
+  "clickWheelSensitivitySettingTitle": "Click rota sensitivity",
+  "small": "Parvus",
+  "medium": "Medium",
+  "large": "Magna",
+  "low": "Humilis",
+  "high": "Altum",
+  "volumeModeSettingTitle": "Volumen modus",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Ratio",
+  "renamePlaylist": "Rename playlist",
+  "excludeDirectoriesScreenTitle": "Excludere directoriis"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tete’mi anne tombolka untu’ a’jari tampa’.",
   "previousButtonInputTextBarTutorialText": "Tete’mi anne tombolka untu’ ampa’le’baki karakter kala’busanga .",
   "menuButtonInputTextBarTutorialText": "Tete’mi anne tombolka untu’ antongkoki anjo keyboard siagang a’gau’ baji’ siagang wassele’ pa’boyaang .",
-  "allSongs": "Sesa"
+  "allSongs": "Sesa",
+  "clickWheelSizeSettingTitle": "Klikmi Ukurang Roda .",
+  "clickWheelSensitivitySettingTitle": "Klikmi Sensitivitasna Roda .",
+  "small": "Caddi",
+  "medium": "Sedang",
+  "large": "Lompo",
+  "low": "Rendah",
+  "high": "Tinggi",
+  "volumeModeSettingTitle": "Mode Volume",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Menam-menam Play Play",
+  "excludeDirectoriesScreenTitle": "Pa'pilajarang"
 }

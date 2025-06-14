@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "O butɔni digi walasa ka yɔrɔ dɔ fara a kan .",
   "previousButtonInputTextBarTutorialText": "O butɔni digi walasa ka sɛbɛnni laban bɔ .",
   "menuButtonInputTextBarTutorialText": "O butɔni digi walasa ka klaviyeti datugu ani ka baara kɛ ni ɲinini jaabiw ye .",
-  "allSongs": "Dɔnkiliw bɛɛ ."
+  "allSongs": "Dɔnkiliw bɛɛ .",
+  "clickWheelSizeSettingTitle": "Click wheel size .",
+  "clickWheelSensitivitySettingTitle": "Click wheel sensitivity .",
+  "small": "Fitinin",
+  "medium": "Hakɛ",
+  "large": "Belebeleba",
+  "low": "Fɛ́gɛn",
+  "high": "Jamanjan",
+  "volumeModeSettingTitle": "Modèle de volume .",
+  "appVolumeMode": "App .",
+  "systemVolumeMode": "Sisitɛmu",
+  "renamePlaylist": "Tɔgɔ caman b'a la .",
+  "excludeDirectoriesScreenTitle": "Directeurs (daɲɛw) bɔ yen ."
 }

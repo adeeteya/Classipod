@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tekan tombol enda guna nambahi ruang .",
   "previousButtonInputTextBarTutorialText": "Tekan tombol enda guna menghapus karakter si terakhir .",
   "menuButtonInputTextBarTutorialText": "Tekan tombol enda guna nutup keyboard ras berinteraksi ras hasil pencarian .",
-  "allSongs": "Kerina Lagu"
+  "allSongs": "Kerina Lagu",
+  "clickWheelSizeSettingTitle": "Klik Ukuren Roda .",
+  "clickWheelSensitivitySettingTitle": "Klik Sensitivitas Roda .",
+  "small": "Kitik",
+  "medium": "Sedang",
+  "large": "Galang",
+  "low": "Teruh",
+  "high": "Meganjang",
+  "volumeModeSettingTitle": "Mode Volume",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Daftar Putar Kereta Sibadia",
+  "excludeDirectoriesScreenTitle": "Direktori si luar ."
 }

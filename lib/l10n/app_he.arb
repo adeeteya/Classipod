@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "לחץ על כפתור זה כדי להוסיף חלל",
   "previousButtonInputTextBarTutorialText": "לחץ על כפתור זה כדי למחוק את התו האחרון",
   "menuButtonInputTextBarTutorialText": "לחץ על כפתור זה כדי לסגור את המקלדת ולקיים אינטראקציה עם תוצאות החיפוש",
-  "allSongs": "כל השירים"
+  "allSongs": "כל השירים",
+  "clickWheelSizeSettingTitle": "לחץ על גודל הגלגל",
+  "clickWheelSensitivitySettingTitle": "לחץ על רגישות לגלגל",
+  "small": "קָטָן",
+  "medium": "בֵּינוֹנִי",
+  "large": "גָדוֹל",
+  "low": "נָמוּך",
+  "high": "גָבוֹהַ",
+  "volumeModeSettingTitle": "מצב נפח",
+  "appVolumeMode": "אפליקציה",
+  "systemVolumeMode": "מַעֲרֶכֶת",
+  "renamePlaylist": "שנה שם רשימת השמעה",
+  "excludeDirectoriesScreenTitle": "לא לכלול ספריות"
 }

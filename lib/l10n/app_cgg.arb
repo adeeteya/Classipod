@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Nyiga akapesha aka okwongyeraho omwanya",
   "previousButtonInputTextBarTutorialText": "Nyiga akapesha aka okusazaho omuntu owahererukireyo",
   "menuButtonInputTextBarTutorialText": "Nyiga akapesha aka okukinga ekiiboodi kandi okakwatanisa n'ebyarugire omu kusherura .",
-  "allSongs": "Ebyeshongoro byona"
+  "allSongs": "Ebyeshongoro byona",
+  "clickWheelSizeSettingTitle": "Nyiga aha Muhanda gwa Wheel",
+  "clickWheelSensitivitySettingTitle": "Nyiga aha nshonga",
+  "small": "Kace",
+  "medium": "Ekya rwagati",
+  "large": "Kihango",
+  "low": "Kace",
+  "high": "Ahaiguru",
+  "volumeModeSettingTitle": "Ekiro",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Enkora",
+  "renamePlaylist": "Eiziina",
+  "excludeDirectoriesScreenTitle": "Exchade"
 }

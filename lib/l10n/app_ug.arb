@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "بوشلۇق قوشۇش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ",
   "previousButtonInputTextBarTutorialText": "بۇ كۇنۇپكىنى بېسىپ ئاخىرقى ھەرپنى ئۆچۈرۈڭ",
   "menuButtonInputTextBarTutorialText": "كۇنۇپكا تاختىسىنى ۋە ئىزدەش نەتىجىسىنى تاقاش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ",
-  "allSongs": "بارلىق ناخشىلار"
+  "allSongs": "بارلىق ناخشىلار",
+  "clickWheelSizeSettingTitle": "چاقنىڭ چوڭلۇقىنى چېكىڭ",
+  "clickWheelSensitivitySettingTitle": "چاق سەزگۈرلۈكنى چېكىڭ",
+  "small": "كىچىك",
+  "medium": "ئوتتۇراھال",
+  "large": "چوڭ",
+  "low": "تۆۋەن",
+  "high": "ئېگىز",
+  "volumeModeSettingTitle": "ھەجىمى ھالىتى",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "سىستېما",
+  "renamePlaylist": "Shold Matchist نى ئۆزگەرتىڭ",
+  "excludeDirectoriesScreenTitle": "مۇندەرىجە"
 }

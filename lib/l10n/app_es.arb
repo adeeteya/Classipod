@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Presione este botón para agregar un espacio",
   "previousButtonInputTextBarTutorialText": "Presione este botón para eliminar el último personaje",
   "menuButtonInputTextBarTutorialText": "Presione este botón para cerrar el teclado e interactuar con los resultados de la búsqueda",
-  "allSongs": "Todas las canciones"
+  "allSongs": "Todas las canciones",
+  "clickWheelSizeSettingTitle": "Haga clic en el tamaño de la rueda",
+  "clickWheelSensitivitySettingTitle": "Haga clic en la sensibilidad de la rueda",
+  "small": "Pequeño",
+  "medium": "Medio",
+  "large": "Grande",
+  "low": "Bajo",
+  "high": "Alto",
+  "volumeModeSettingTitle": "Modo de volumen",
+  "appVolumeMode": "Aplicación",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Cambiar el nombre de la lista de reproducción",
+  "excludeDirectoriesScreenTitle": "Excluir directorios"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Riix badhankan si aad ugu darto meel bannaan",
   "previousButtonInputTextBarTutorialText": "Riix badhankan si aad u tirtirto dabeecada ugu dambeysay",
   "menuButtonInputTextBarTutorialText": "Riix badhankan si aad u xidho furaha oo aad la macaamilayso natiijooyinka raadinta",
-  "allSongs": "Dhammaan heesaha"
+  "allSongs": "Dhammaan heesaha",
+  "clickWheelSizeSettingTitle": "Dhagsii cabirka giraangiraha",
+  "clickWheelSensitivitySettingTitle": "Dhagsii dareenka giraangiraha",
+  "small": "Yar",
+  "medium": "Heer dhexe ah",
+  "large": "Weyn",
+  "low": "Hooseeya",
+  "high": "Sare ah",
+  "volumeModeSettingTitle": "Qaabka mugga",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Nidaam",
+  "renamePlaylist": "Liistada magacyada",
+  "excludeDirectoriesScreenTitle": "Ka saar Tilmaamaha"
 }

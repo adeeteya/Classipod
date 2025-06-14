@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Finá butɔ oyo mpo na kobakisa esika moko .",
   "previousButtonInputTextBarTutorialText": "Finá na butɔ oyo mpo na kosilisa elembo ya nsuka .",
   "menuButtonInputTextBarTutorialText": "Finá na butɔ oyo mpo na kokanga klaviatware mpe kosala boyokani na ba résultats ya bolukiluki .",
-  "allSongs": "Ba nzembo nionso ."
+  "allSongs": "Ba nzembo nionso .",
+  "clickWheelSizeSettingTitle": "Finá na bonene ya roue .",
+  "clickWheelSensitivitySettingTitle": "Bo finga sensibilisation ya roue .",
+  "small": "Moke",
+  "medium": "Katikati",
+  "large": "Monene",
+  "low": "Nse",
+  "high": "Likolo",
+  "volumeModeSettingTitle": "Mode ya volume .",
+  "appVolumeMode": "APP .",
+  "systemVolumeMode": "Ebongiseli",
+  "renamePlaylist": "Bobongola kombo ya liste ya ba plays .",
+  "excludeDirectoriesScreenTitle": "Kolongola ba répertoires ."
 }

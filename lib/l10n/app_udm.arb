@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Та кнопкаез зӥбыса, ватсаса инты .",
   "previousButtonInputTextBarTutorialText": "Та кнопкаез зӥбыса, берпуметӥ символэз утялтыны .",
   "menuButtonInputTextBarTutorialText": "Та кнопкаез зӥбыса, клавиатураез пытсаны но взаимодействовать утчан результатъёс .",
-  "allSongs": "вань кырӟанъёс"
+  "allSongs": "вань кырӟанъёс",
+  "clickWheelSizeSettingTitle": "Клик колёса быдӟалаез",
+  "clickWheelSensitivitySettingTitle": "Клик колёса чувствительность",
+  "small": "Пичи",
+  "medium": "Шорыз",
+  "large": "Бадӟым",
+  "low": "Лапег",
+  "high": "Инмар",
+  "volumeModeSettingTitle": "объемной Режим",
+  "appVolumeMode": "Приложение",
+  "systemVolumeMode": "Система",
+  "renamePlaylist": "Переименовать плейлист",
+  "excludeDirectoriesScreenTitle": "Каталогъёсты палэнтон"
 }

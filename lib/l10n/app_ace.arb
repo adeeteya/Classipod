@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Teukan tombol nyoe keu neu tamah saboh ruang .",
   "previousButtonInputTextBarTutorialText": "Teukan tombol nyoe keu neusampôh karakter nyang akhé .",
   "menuButtonInputTextBarTutorialText": "Teukan tombol nyoe untuk tapeutop keyboard dan ta interaksi ngon hasee pencarian .",
-  "allSongs": "Mandum lagu"
+  "allSongs": "Mandum lagu",
+  "clickWheelSizeSettingTitle": "Klik Ukuran Kisah .",
+  "clickWheelSensitivitySettingTitle": "Klik Sensitivitas Roda .",
+  "small": "Haloh",
+  "medium": "Seudang",
+  "large": "Rayeuk",
+  "low": "Miyup",
+  "high": "Manyang",
+  "volumeModeSettingTitle": "Mode Volume .",
+  "appVolumeMode": "Aplikasi App",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Rename Playlist",
+  "excludeDirectoriesScreenTitle": "Peuteubiet Direktori ."
 }

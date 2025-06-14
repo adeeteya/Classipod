@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Бу кнопканы баттаан, миэстэни эбэбит",
   "previousButtonInputTextBarTutorialText": "Бу кнопканы баттаан, бүтэһик персонажы суох оҥоруҥ",
   "menuButtonInputTextBarTutorialText": "Бу кнопканы баттаан, клавиатураны сабан баран, көрдөөһүн түмүгүн кытта дьүөрэлэһиннэр",
-  "allSongs": "Бары ырыалар"
+  "allSongs": "Бары ырыалар",
+  "clickWheelSizeSettingTitle": "Колесо размера диэни баттаан",
+  "clickWheelSensitivitySettingTitle": "Колесо чувствительность диэни баттаан",
+  "small": "Кыра",
+  "medium": "Орто",
+  "large": "Улахан",
+  "low": "Намыһах",
+  "high": "Үрдүк",
+  "volumeModeSettingTitle": "Режим объема",
+  "appVolumeMode": "Приложение",
+  "systemVolumeMode": "Система",
+  "renamePlaylist": "Плейлист диэн ааты хат ааттыҥ",
+  "excludeDirectoriesScreenTitle": "Дирекциялары таһаарыҥ"
 }

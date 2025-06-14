@@ -107,5 +107,17 @@
   "nextButtonInputTextBarTutorialText": "ກົດປຸ່ມນີ້ເພື່ອເພີ່ມພື້ນທີ່",
   "previousButtonInputTextBarTutorialText": "ກົດປຸ່ມນີ້ເພື່ອລຶບຕົວລະຄອນສຸດທ້າຍ",
   "menuButtonInputTextBarTutorialText": "ກົດປຸ່ມນີ້ເພື່ອປິດແປ້ນພິມແລະພົວພັນກັບຜົນການຄົ້ນຫາ",
-  "allSongs": "ທຸກໆເພງ"
+  "allSongs": "ທຸກໆເພງ",
+  "clickWheelSizeSettingTitle": "ກົດຂະຫນາດລໍ້",
+  "clickWheelSensitivitySettingTitle": "ກົດຄວາມອ່ອນໄຫວຂອງລໍ້",
+  "small": "ຂະຫນາດນ້ອຍ",
+  "medium": "ກາງ",
+  "large": "ປຸ້ມ",
+  "low": "ຕ່ໍາ",
+  "high": "ສູງ",
+  "volumeModeSettingTitle": "ຮູບແບບບໍລິມາດ",
+  "appVolumeMode": "ໂປໂລ",
+  "systemVolumeMode": "ລະບົບ",
+  "renamePlaylist": "ປ່ຽນຊື່ Playlist",
+  "excludeDirectoriesScreenTitle": "ຍົກເວັ້ນທິດທາງ"
 }

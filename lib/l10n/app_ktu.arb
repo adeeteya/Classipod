@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Fina bouton yai sambu na kuyika kisika .",
   "previousButtonInputTextBarTutorialText": "Fina bouton yai sambu na kufwa muntu ya nsuka .",
   "menuButtonInputTextBarTutorialText": "Fina bouton yayi samu na kukanga clavier mpe kusala mambu na ba mvutu ya kusosa .",
-  "allSongs": "Bankunga Yonso"
+  "allSongs": "Bankunga Yonso",
+  "clickWheelSizeSettingTitle": "Fina Bunene ya Roue",
+  "clickWheelSensitivitySettingTitle": "Fina Exécie Roue",
+  "small": "Fioti",
+  "medium": "Kati-kati",
+  "large": "Nene",
+  "low": "Na nsi",
+  "high": "Na zulu",
+  "volumeModeSettingTitle": "Moye Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Ngidika",
+  "renamePlaylist": "Kusoba zina",
+  "excludeDirectoriesScreenTitle": "Kukatula Ba-Arote ya Kukatula"
 }

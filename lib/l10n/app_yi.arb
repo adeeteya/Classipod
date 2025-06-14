@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "דרוק דעם קנעפּל צו לייגן אַ פּלאַץ",
   "previousButtonInputTextBarTutorialText": "דרוק דעם קנעפּל צו ויסמעקן די לעצטע כאַראַקטער",
   "menuButtonInputTextBarTutorialText": "דרוק דעם קנעפּל צו פאַרמאַכן די קלאַוויאַטור און ינטעראַקט מיט די זוך רעזולטאַטן",
-  "allSongs": "כל לידער"
+  "allSongs": "כל לידער",
+  "clickWheelSizeSettingTitle": "דריקט ראָד גרייס",
+  "clickWheelSensitivitySettingTitle": "דריקט ראָד סענסיטיוויטי",
+  "small": "קליין",
+  "medium": "מיטל",
+  "large": "גרויס",
+  "low": "נידעריק",
+  "high": "הויך",
+  "volumeModeSettingTitle": "באַנד מאָדע",
+  "appVolumeMode": "אַפּ",
+  "systemVolumeMode": "סיסטעמע",
+  "renamePlaylist": "רענאַמע פּלייַליסט",
+  "excludeDirectoriesScreenTitle": "ויסשליסן דיירעקטעריז"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Ýttu á þennan hnapp til að bæta við rými",
   "previousButtonInputTextBarTutorialText": "Ýttu á þennan hnapp til að eyða síðasta staf",
   "menuButtonInputTextBarTutorialText": "Ýttu á þennan hnapp til að loka lyklaborðinu og hafa samskipti við leitarniðurstöðurnar",
-  "allSongs": "Öll lög"
+  "allSongs": "Öll lög",
+  "clickWheelSizeSettingTitle": "Smelltu á hjólastærð",
+  "clickWheelSensitivitySettingTitle": "Smelltu á næmni á hjólum",
+  "small": "Lítið",
+  "medium": "Miðlungs",
+  "large": "Stór",
+  "low": "Lágt",
+  "high": "High",
+  "volumeModeSettingTitle": "Hljóðstyrk",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Kerfi",
+  "renamePlaylist": "Endurnefna lagalista",
+  "excludeDirectoriesScreenTitle": "Útiloka möppur"
 }

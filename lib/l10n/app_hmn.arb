@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Nias lub pob no kom ntxiv chaw",
   "previousButtonInputTextBarTutorialText": "Nias lub pob no kom rho tawm tus cwj pwm kawg",
   "menuButtonInputTextBarTutorialText": "Nias lub pob no kaw cov keyboard thiab cuam tshuam nrog cov kev tshawb fawb",
-  "allSongs": "Txhua zaj nkauj"
+  "allSongs": "Txhua zaj nkauj",
+  "clickWheelSizeSettingTitle": "Nyem lub log loj",
+  "clickWheelSensitivitySettingTitle": "Nyem lub log rhiab",
+  "small": "Me",
+  "medium": "Nruab nrab",
+  "large": "Loj",
+  "low": "Qi",
+  "high": "Siab",
+  "volumeModeSettingTitle": "Ntim hom",
+  "appVolumeMode": "Qho tu",
+  "systemVolumeMode": "Txoj hau kev",
+  "renamePlaylist": "Rename playlist",
+  "excludeDirectoriesScreenTitle": "Kev Tshem Tawm Cov Ntawv Sau"
 }

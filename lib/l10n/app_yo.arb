@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tẹ bọtini yii lati ṣafikun aaye kan",
   "previousButtonInputTextBarTutorialText": "Tẹ bọtini yii lati pa ohun kikọ ikẹhin",
   "menuButtonInputTextBarTutorialText": "Tẹ bọtini yii lati pa bọtini itẹwe ati ibaraenisọrọ pẹlu awọn abajade wiwa",
-  "allSongs": "Gbogbo awọn orin"
+  "allSongs": "Gbogbo awọn orin",
+  "clickWheelSizeSettingTitle": "Tẹ Iwọn kẹkẹ",
+  "clickWheelSensitivitySettingTitle": "Tẹ ifamọ kẹkẹ",
+  "small": "Kekere",
+  "medium": "Laarin",
+  "large": "Nla",
+  "low": "Lọ silẹ",
+  "high": "Giga",
+  "volumeModeSettingTitle": "Ipo iwọn didun",
+  "appVolumeMode": "Ohun elo",
+  "systemVolumeMode": "Eto",
+  "renamePlaylist": "Lorukọ akojọ orin",
+  "excludeDirectoriesScreenTitle": "Ṣe iyasọtọ awọn ilana"
 }

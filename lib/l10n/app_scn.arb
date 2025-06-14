@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Primi stu buttuni pi agghiùnciri nu spazziu",
   "previousButtonInputTextBarTutorialText": "Prima stu buttuni pi cancillari l'ùrtimu caràttiri",
   "menuButtonInputTextBarTutorialText": "Prima stu buttuni pi chiudiri la tastiera e ntiraggìsciri chî risurtati di circata",
-  "allSongs": "Tutti"
+  "allSongs": "Tutti",
+  "clickWheelSizeSettingTitle": "Clicca Diminsioni dû Rota",
+  "clickWheelSensitivitySettingTitle": "Clicca Sinsibilità a Rota",
+  "small": "Nicu",
+  "medium": "Mediu",
+  "large": "Granni",
+  "low": "Vasciu",
+  "high": "Autu",
+  "volumeModeSettingTitle": "Modu di vulumi",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Playlista di Renome",
+  "excludeDirectoriesScreenTitle": "Escludiri li Dirittori"
 }

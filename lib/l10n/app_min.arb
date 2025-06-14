@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Takan tombol ko untuak manambah ruang",
   "previousButtonInputTextBarTutorialText": "Takan tombol ko untuak maapuih karakter tarakhia .",
   "menuButtonInputTextBarTutorialText": "Takan tombol ko untuak manutup keyboard jo bainteraksi jo hasil pancarian .",
-  "allSongs": "Sagalo Lagu"
+  "allSongs": "Sagalo Lagu",
+  "clickWheelSizeSettingTitle": "Klik Ukuran Roda",
+  "clickWheelSensitivitySettingTitle": "Klik Sensitivitas Roda",
+  "small": "Ketek",
+  "medium": "Sadang",
+  "large": "Paliang gadang",
+  "low": "Randah",
+  "high": "Tinggi",
+  "volumeModeSettingTitle": "Mode Jilid",
+  "appVolumeMode": "Aplikasi",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Daftar Main namo",
+  "excludeDirectoriesScreenTitle": "Direktori nan dikaluakan"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Dinani batani ili kuti muwonjezere danga",
   "previousButtonInputTextBarTutorialText": "Dinani batani ili kuti muchotse mawonekedwe omaliza",
   "menuButtonInputTextBarTutorialText": "Dinani batani ili kuti mutseke kiyibodi ndikuyanjana ndi zotsatira zakusaka",
-  "allSongs": "Nyimbo zonse"
+  "allSongs": "Nyimbo zonse",
+  "clickWheelSizeSettingTitle": "Dinani kukula kwa gudumu",
+  "clickWheelSensitivitySettingTitle": "Dinani gudumu",
+  "small": "Ochepa",
+  "medium": "Wapakati",
+  "large": "Chachikulu",
+  "low": "Pansi",
+  "high": "M'mwamba",
+  "volumeModeSettingTitle": "Mtundu wa voliyumu",
+  "appVolumeMode": "Wothandizira",
+  "systemVolumeMode": "Makhalidwe",
+  "renamePlaylist": "Sinthani playlist",
+  "excludeDirectoriesScreenTitle": "Osapatula makonda"
 }

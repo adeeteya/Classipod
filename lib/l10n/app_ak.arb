@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Mia saa bɔtn yi so na fa baabi bi ka ho .",
   "previousButtonInputTextBarTutorialText": "Mia saa bɔtn yi so na popa nkyerɛwde a etwa to no .",
   "menuButtonInputTextBarTutorialText": "Mia saa bɔtn yi so na to keyboard no mu na wo ne search results no nni nkitaho .",
-  "allSongs": "Nnwom nyinaa ."
+  "allSongs": "Nnwom nyinaa .",
+  "clickWheelSizeSettingTitle": "Klik Wheel Size so .",
+  "clickWheelSensitivitySettingTitle": "Klik Wheel Sensitivity so .",
+  "small": "Ketewa",
+  "medium": "Kwan",
+  "large": "Kakraa",
+  "low": "Fam",
+  "high": "Soro",
+  "volumeModeSettingTitle": "Volume mode .",
+  "appVolumeMode": "App .",
+  "systemVolumeMode": "Sestɛm",
+  "renamePlaylist": "Sesa playlist din .",
+  "excludeDirectoriesScreenTitle": "Fa directory ahorow no ka ho ."
 }

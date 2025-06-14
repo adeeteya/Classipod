@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Kighir button ne sha er u seer ijiir yô .",
   "previousButtonInputTextBarTutorialText": "Kighir button ne sha er u delete or u masetyô la .",
   "menuButtonInputTextBarTutorialText": "Kighir button ne sha er u cir keyboard la shi u er kwagh a kwagh u u soo u keren la yô .",
-  "allSongs": "Icam i wan cii"
+  "allSongs": "Icam i wan cii",
+  "clickWheelSizeSettingTitle": "Kighir Wheel Size",
+  "clickWheelSensitivitySettingTitle": "Kighir ikyav i tesen kwagh",
+  "small": "Kpuaa",
+  "medium": "Akuma akuma",
+  "large": "Gbogbonan",
+  "low": "Kpeng",
+  "high": "Hembasha",
+  "volumeModeSettingTitle": "Volume",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Shighr",
+  "renamePlaylist": "U umbur kwagh",
+  "excludeDirectoriesScreenTitle": "U wa akaa"
 }

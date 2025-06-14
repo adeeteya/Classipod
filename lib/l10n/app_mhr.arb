@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Тиде кнопкым темдал, верым ешарен .",
   "previousButtonInputTextBarTutorialText": "Тиде кнопкым темдал, пытартыш персонажым кораҥдаш манын .",
   "menuButtonInputTextBarTutorialText": "Тиде кнопкым темдал, клавиатурым петыраш да кычалмаш лектыш дене кылым кучаш .",
-  "allSongs": "Чыла муро"
+  "allSongs": "Чыла муро",
+  "clickWheelSizeSettingTitle": "Колеса кугытым темдал",
+  "clickWheelSensitivitySettingTitle": "Колесный чулымлыкым темдал .",
+  "small": "Изи",
+  "medium": "Кыдалаш",
+  "large": "Кугу",
+  "low": "Лапка",
+  "high": "Кукшо",
+  "volumeModeSettingTitle": "Том Режим",
+  "appVolumeMode": "Приложений",
+  "systemVolumeMode": "Система",
+  "renamePlaylist": "Плейлист лӱмым вашталташ",
+  "excludeDirectoriesScreenTitle": "Каталог-влакым луктын ."
 }

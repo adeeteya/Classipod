@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Trykk på denne knappen for å legge til et rom",
   "previousButtonInputTextBarTutorialText": "Trykk på denne knappen for å slette det siste tegnet",
   "menuButtonInputTextBarTutorialText": "Trykk på denne knappen for å lukke tastaturet og samhandle med søkeresultatene",
-  "allSongs": "Alle sanger"
+  "allSongs": "Alle sanger",
+  "clickWheelSizeSettingTitle": "Klikk på hjulstørrelse",
+  "clickWheelSensitivitySettingTitle": "Klikk på hjulfølsomhet",
+  "small": "Liten",
+  "medium": "Medium",
+  "large": "Stor",
+  "low": "Lav",
+  "high": "Høy",
+  "volumeModeSettingTitle": "Volummodus",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "System",
+  "renamePlaylist": "Gi nytt navn til spilleliste",
+  "excludeDirectoriesScreenTitle": "Ekskludere kataloger"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tekan ma tombol on laho manambah ruang .",
   "previousButtonInputTextBarTutorialText": "Tekan ma tombol on laho manghapus karakter na parpudi .",
   "menuButtonInputTextBarTutorialText": "Tekan ma tombol on laho manutup keyboard janah marinteraksi pakon hasil pencarian .",
-  "allSongs": "Haganup doding"
+  "allSongs": "Haganup doding",
+  "clickWheelSizeSettingTitle": "Klik ma Ukuran ni Roda",
+  "clickWheelSensitivitySettingTitle": "Klik ma Sensitivitas Roda .",
+  "small": "Etek",
+  "medium": "Tongah tongan",
+  "large": "Banggal",
+  "low": "Toruh",
+  "high": "Gijang",
+  "volumeModeSettingTitle": "Mode Volume",
+  "appVolumeMode": "Aplikasi",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Goran nasiam ma Playlist",
+  "excludeDirectoriesScreenTitle": "Patubuhkon"
 }

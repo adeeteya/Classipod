@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "एकं स्थानं योजयितुं एतत् बटनं नुदन्तु ।",
   "previousButtonInputTextBarTutorialText": "अन्तिमवर्णं विलोपयितुं एतत् बटनं नुदन्तु ।",
   "menuButtonInputTextBarTutorialText": "कीबोर्डं बन्दं कृत्वा अन्वेषणपरिणामेन सह अन्तरक्रियां कर्तुं एतत् बटनं नुदन्तु ।",
-  "allSongs": "सर्वाणि गीतानि ."
+  "allSongs": "सर्वाणि गीतानि .",
+  "clickWheelSizeSettingTitle": "चक्र आकार को क्लिक करें .",
+  "clickWheelSensitivitySettingTitle": "चक्र संवेदनशीलता क्लिक करें .",
+  "small": "लघु",
+  "medium": "मध्यम",
+  "large": "बृहत्‌",
+  "low": "न्यूनम्‌",
+  "high": "उच्चैः",
+  "volumeModeSettingTitle": "आयतन मोड 1 .",
+  "appVolumeMode": "एप् .",
+  "systemVolumeMode": "व्यवस्था",
+  "renamePlaylist": "रनाम प्लेलिस्ट .",
+  "excludeDirectoriesScreenTitle": "निदेशिकाः बहिष्कृत्य ."
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Kamerani qo'shish uchun ushbu tugmani bosing",
   "previousButtonInputTextBarTutorialText": "So'nggi belgini o'chirish uchun ushbu tugmani bosing",
   "menuButtonInputTextBarTutorialText": "Klaviaturani yopish va qidirish natijalari bilan o'zaro aloqada bo'lish uchun ushbu tugmani bosing",
-  "allSongs": "Hamma qo'shiqlar"
+  "allSongs": "Hamma qo'shiqlar",
+  "clickWheelSizeSettingTitle": "G'ildirak hajmini bosing",
+  "clickWheelSensitivitySettingTitle": "G'ildirak sezgirligini bosing",
+  "small": "Kichik",
+  "medium": "O'rta",
+  "large": "Katta",
+  "low": "Past",
+  "high": "Baland",
+  "volumeModeSettingTitle": "Tovush rejimi",
+  "appVolumeMode": "Ilova",
+  "systemVolumeMode": "Tizim",
+  "renamePlaylist": "SpleyList nomini o'zgartirish",
+  "excludeDirectoriesScreenTitle": "Kataloglarni chiqarib tashlash"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Taak’e li boton a’in re xk’eeb’al jun li na’ajej .",
   "previousButtonInputTextBarTutorialText": "Tat-ok sa’ li boton a’in re xsachb’al li roso’jik tz’iib’ .",
   "menuButtonInputTextBarTutorialText": "Tat-ok sa’ li boton a’in re xtz’apb’al li teclado ut chi wank sa’ komonil rik’in li sik’ok .",
-  "allSongs": "Chixjunileb'"
+  "allSongs": "Chixjunileb'",
+  "clickWheelSizeSettingTitle": "K’e li Sizar .",
+  "clickWheelSensitivitySettingTitle": "K’e li Sensibilidad de ruedas .",
+  "small": "Kachin",
+  "medium": "Xyii",
+  "large": "Nim",
+  "low": "Rubel",
+  "high": "Ka'aq ru",
+  "volumeModeSettingTitle": "Modo de volumen",
+  "appVolumeMode": "Aplica",
+  "systemVolumeMode": "Rulul kaxmu",
+  "renamePlaylist": "Li k’ab’a’ej re li k’ab’a’ej",
+  "excludeDirectoriesScreenTitle": "Ink’a’ te’xk’e li k’anjel"
 }

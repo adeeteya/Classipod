@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Cinekela button leyi ku engetela ndhawu",
   "previousButtonInputTextBarTutorialText": "Cinekela button leyi ku susa xihlawulekisi xo hetelela",
   "menuButtonInputTextBarTutorialText": "Cinekela button leyi ku pfala khibhodi na ku tirhisana na mbuyelo wa ku lavisisa",
-  "allSongs": "Tinsimu Hinkwato ."
+  "allSongs": "Tinsimu Hinkwato .",
+  "clickWheelSizeSettingTitle": "Click eka sayizi ya vhilwa .",
+  "clickWheelSensitivitySettingTitle": "Click eka ku twisisa ka mavhilwa .",
+  "small": "Xitsongo",
+  "medium": "Xikarhi",
+  "large": "Lexikulu",
+  "low": "Hansi",
+  "high": "Henhla",
+  "volumeModeSettingTitle": "Mode ya vholumo .",
+  "appVolumeMode": "App .",
+  "systemVolumeMode": "Sisitimi",
+  "renamePlaylist": "Tlhela u thya nxaxamelo wa swichayachayana .",
+  "excludeDirectoriesScreenTitle": "Ku katsa na tidayirekitara ."
 }

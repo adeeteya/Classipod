@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "جگہ شامل کرنے کے لئے اس بٹن کو دبائیں",
   "previousButtonInputTextBarTutorialText": "آخری کردار کو حذف کرنے کے لئے اس بٹن کو دبائیں",
   "menuButtonInputTextBarTutorialText": "کی بورڈ کو بند کرنے اور تلاش کے نتائج کے ساتھ بات چیت کرنے کے لئے اس بٹن کو دبائیں",
-  "allSongs": "تمام گانے"
+  "allSongs": "تمام گانے",
+  "clickWheelSizeSettingTitle": "پہیے کے سائز پر کلک کریں",
+  "clickWheelSensitivitySettingTitle": "پہیے کی حساسیت پر کلک کریں",
+  "small": "چھوٹا",
+  "medium": "میڈیم",
+  "large": "بڑا",
+  "low": "کم",
+  "high": "اعلی",
+  "volumeModeSettingTitle": "حجم موڈ",
+  "appVolumeMode": "ایپ",
+  "systemVolumeMode": "نظام",
+  "renamePlaylist": "پلے لسٹ کا نام تبدیل کریں",
+  "excludeDirectoriesScreenTitle": "ڈائریکٹریوں کو خارج کریں"
 }

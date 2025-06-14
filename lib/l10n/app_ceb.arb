@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Padayon kini nga butones aron makadugang usa ka wanang",
   "previousButtonInputTextBarTutorialText": "Ipadayon kini nga buton aron mapapas ang katapusan nga kinaiya",
   "menuButtonInputTextBarTutorialText": "Ipadayon kini nga butones aron isara ang keyboard ug makig-uban sa mga resulta sa pagpangita",
-  "allSongs": "Tanan nga mga kanta"
+  "allSongs": "Tanan nga mga kanta",
+  "clickWheelSizeSettingTitle": "Pag-klik sa gidak-on sa ligid",
+  "clickWheelSensitivitySettingTitle": "Pag-klik sa pagkasensitibo sa ligid",
+  "small": "Gamay",
+  "medium": "Tungatunga",
+  "large": "Dako",
+  "low": "Ubos",
+  "high": "Taas",
+  "volumeModeSettingTitle": "Tomo nga mode",
+  "appVolumeMode": "Kagamitan",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Pag-usab sa Playlist",
+  "excludeDirectoriesScreenTitle": "I-apil ang mga direktoryo"
 }

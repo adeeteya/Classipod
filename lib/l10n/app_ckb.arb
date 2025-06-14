@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "بۆ زیادکردنی بۆشایی ئەم دوگمەیە داگرە",
   "previousButtonInputTextBarTutorialText": "بۆ سڕینەوەی دوا پیت ئەم دوگمەیە بکە",
   "menuButtonInputTextBarTutorialText": "ئەم دوگمەیە بکە بۆ داخستنی کیبۆردەکە و کارلێککردن لەگەڵ ئەنجامەکانی گەڕان",
-  "allSongs": "هەموو گۆرانییەکان"
+  "allSongs": "هەموو گۆرانییەکان",
+  "clickWheelSizeSettingTitle": "کلیک لە قەبارەی ویل بکە",
+  "clickWheelSensitivitySettingTitle": "کلیک لە هەستیاری ویل بکە",
+  "small": "بچووک",
+  "medium": "ناوەند",
+  "large": "گەورە",
+  "low": "نزم",
+  "high": "بەرز",
+  "volumeModeSettingTitle": "دۆخی دەنگی",
+  "appVolumeMode": "ئەپ",
+  "systemVolumeMode": "سیستەم",
+  "renamePlaylist": "ناوی پلەی لیستەکە بگۆڕە",
+  "excludeDirectoriesScreenTitle": "بەڕێوەبەرایەتییەکان بەدەر بکە"
 }

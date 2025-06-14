@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "撳呢個掣就可以加入空間",
   "previousButtonInputTextBarTutorialText": "撳呢個掣就可以刪除最後一個字元",
   "menuButtonInputTextBarTutorialText": "撳呢個掣就可以關閉鍵盤，同埋同搜尋結果互動",
-  "allSongs": "所有歌曲"
+  "allSongs": "所有歌曲",
+  "clickWheelSizeSettingTitle": "撳一下輪大小",
+  "clickWheelSensitivitySettingTitle": "點擊輪感光度",
+  "small": "細",
+  "medium": "中度",
+  "large": "大",
+  "low": "低",
+  "high": "高",
+  "volumeModeSettingTitle": "音量模式",
+  "appVolumeMode": "應用程式",
+  "systemVolumeMode": "系統",
+  "renamePlaylist": "重新命名播放清單",
+  "excludeDirectoriesScreenTitle": "排除目錄"
 }

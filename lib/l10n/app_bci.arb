@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tin buton sɔ’n su naan w’a fa lika kun w’a wlɛ i nun .",
   "previousButtonInputTextBarTutorialText": "Tin buton sɔ’n su naan w’a nunnun ndɛ mma kasiɛn’n .",
   "menuButtonInputTextBarTutorialText": "Sɛ a tin buton sɔ’n su’n, á káci klaviɛti’n, kpɛkun á fá kɔ́ lika nga be kunndɛ’n .",
-  "allSongs": "I n'gba"
+  "allSongs": "I n'gba",
+  "clickWheelSizeSettingTitle": "Tin Anuannzɛ’n i dan su",
+  "clickWheelSensitivitySettingTitle": "Sɛ a tin nnɛn kpanngɔ’m be su’n .",
+  "small": "Kanhan",
+  "medium": "Be n'ga be ni wunmiɛn’mu bé yijɔ",
+  "large": "Gba hum",
+  "low": "Ibolɔ",
+  "high": "N'glo",
+  "volumeModeSettingTitle": "Mode tu",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Iyowlɛnu",
+  "renamePlaylist": "fueman jue tofuɛ",
+  "excludeDirectoriesScreenTitle": "Fa Directeurs"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "जागो जोडपाक हें बटण दामचें",
   "previousButtonInputTextBarTutorialText": "निमाणें वर्ण काडून उडोवपाक हें बटण दामचें",
   "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करपाक हें बटण दामचें आनी सोद परिणामांकडेन संवाद सादचो",
-  "allSongs": "सगळीं गितां ."
+  "allSongs": "सगळीं गितां .",
+  "clickWheelSizeSettingTitle": "व्हील आकार क्लिक करात .",
+  "clickWheelSensitivitySettingTitle": "क्लिक व्हील संवेदनशीलता .",
+  "small": "ल्हान",
+  "medium": "मध्यम",
+  "large": "व्हड",
+  "low": "कमी",
+  "high": "उच्च",
+  "volumeModeSettingTitle": "खंड मोड 1 .",
+  "appVolumeMode": "अॅप 1 .",
+  "systemVolumeMode": "प्रणाली",
+  "renamePlaylist": "प्लेलिस्ट नांव बदलचें .",
+  "excludeDirectoriesScreenTitle": "निर्देशिका वगळून ."
 }

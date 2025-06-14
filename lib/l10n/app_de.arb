@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Drücken Sie diese Taste, um einen Speicherplatz hinzuzufügen",
   "previousButtonInputTextBarTutorialText": "Drücken Sie diese Taste, um das letzte Zeichen zu löschen",
   "menuButtonInputTextBarTutorialText": "Drücken Sie diese Taste, um die Tastatur zu schließen und mit den Suchergebnissen zu interagieren",
-  "allSongs": "Alle Lieder"
+  "allSongs": "Alle Lieder",
+  "clickWheelSizeSettingTitle": "Klicken Sie auf Radgröße",
+  "clickWheelSensitivitySettingTitle": "Klicken Sie auf Radempfindlichkeit",
+  "small": "Klein",
+  "medium": "Medium",
+  "large": "Groß",
+  "low": "Niedrig",
+  "high": "Hoch",
+  "volumeModeSettingTitle": "Volumenmodus",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "System",
+  "renamePlaylist": "Playlist umbenennen",
+  "excludeDirectoriesScreenTitle": "Verzeichnisse ausschließen"
 }

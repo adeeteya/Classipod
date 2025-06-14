@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ꯁ꯭ꯄꯦꯁ ꯑꯃꯥ ꯍꯥꯄꯆꯤꯟꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .",
   "previousButtonInputTextBarTutorialText": "ꯑꯔꯣꯏꯕꯥ ꯆꯦꯛꯔꯦꯇꯔ ꯑꯗꯨ ꯃꯨꯠꯊꯠꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .",
   "menuButtonInputTextBarTutorialText": "ꯀꯤꯕꯣꯔꯗ ꯂꯣꯗ ꯇꯧꯅꯕꯥ ꯑꯃꯁꯨꯡ ꯁꯥꯔꯆ ꯔꯤꯖꯜꯇꯁꯤꯡꯒꯥ ꯏꯟꯇꯔꯦꯛꯇ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ",
-  "allSongs": "Hla zawng zawng ."
+  "allSongs": "Hla zawng zawng .",
+  "clickWheelSizeSettingTitle": "Click wheel size .",
+  "clickWheelSensitivitySettingTitle": "Click wheel sensitivity .",
+  "small": "Te",
+  "medium": "Hmanrua",
+  "large": "Hrawl",
+  "low": "Hniam",
+  "high": "Sang",
+  "volumeModeSettingTitle": "Volume mode a ni a.",
+  "appVolumeMode": "App a ni a .",
+  "systemVolumeMode": "Tihdan",
+  "renamePlaylist": "Playlist tih hming thlak leh rawh.",
+  "excludeDirectoriesScreenTitle": "Directory te chu a tel lo ."
 }

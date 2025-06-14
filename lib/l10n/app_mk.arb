@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Притиснете го ова копче за да додадете простор",
   "previousButtonInputTextBarTutorialText": "Притиснете го ова копче за да го избришете последниот знак",
   "menuButtonInputTextBarTutorialText": "Притиснете го ова копче за да ја затворите тастатурата и да комуницирате со резултатите од пребарувањето",
-  "allSongs": "Сите песни"
+  "allSongs": "Сите песни",
+  "clickWheelSizeSettingTitle": "Кликнете на големината на тркалото",
+  "clickWheelSensitivitySettingTitle": "Кликнете на чувствителноста на тркалото",
+  "small": "Мал",
+  "medium": "Среден",
+  "large": "Голем",
+  "low": "Ниско",
+  "high": "Високо",
+  "volumeModeSettingTitle": "Режим на јачина на звук",
+  "appVolumeMode": "Апликација",
+  "systemVolumeMode": "Систем",
+  "renamePlaylist": "Преименувајте ја плејлистата",
+  "excludeDirectoriesScreenTitle": "Исклучете ги директориумите"
 }

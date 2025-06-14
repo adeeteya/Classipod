@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pwyswch y botwm hwn i ychwanegu lle",
   "previousButtonInputTextBarTutorialText": "Pwyswch y botwm hwn i ddileu'r cymeriad olaf",
   "menuButtonInputTextBarTutorialText": "Pwyswch y botwm hwn i gau'r bysellfwrdd a rhyngweithio â'r canlyniadau chwilio",
-  "allSongs": "Pob Cân"
+  "allSongs": "Pob Cân",
+  "clickWheelSizeSettingTitle": "Cliciwch Maint yr Olwyn",
+  "clickWheelSensitivitySettingTitle": "Cliciwch Sensitifrwydd Olwyn",
+  "small": "Bach",
+  "medium": "Nghanolig",
+  "large": "Fawr",
+  "low": "Frefer",
+  "high": "High",
+  "volumeModeSettingTitle": "Modd Cyfrol",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "System",
+  "renamePlaylist": "Ailenwi Rhestr Chwarae",
+  "excludeDirectoriesScreenTitle": "Eithrio cyfeirlyfrau"
 }

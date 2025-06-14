@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Мейкиндик кошуу үчүн бул баскычты басыңыз",
   "previousButtonInputTextBarTutorialText": "Акыркы белгинин жок кылуу үчүн бул баскычты басыңыз",
   "menuButtonInputTextBarTutorialText": "Баскычтопту жабуу үчүн бул баскычты басыңыз жана издөө натыйжалары менен өз ара аракеттенүү",
-  "allSongs": "Бардык ырлар"
+  "allSongs": "Бардык ырлар",
+  "clickWheelSizeSettingTitle": "Дөңгөлөктүн өлчөмүн чыкылдатыңыз",
+  "clickWheelSensitivitySettingTitle": "Дөңгөлөктүн сезгичтигин баскынчылык",
+  "small": "Кичинекей",
+  "medium": "Орто",
+  "large": "Чоң",
+  "low": "Төмөн",
+  "high": "Бийик",
+  "volumeModeSettingTitle": "Көлөм режими",
+  "appVolumeMode": "Колдонмо",
+  "systemVolumeMode": "Тутум",
+  "renamePlaylist": "Ойнотмо тизмесин өзгөртүү",
+  "excludeDirectoriesScreenTitle": "Каталогдорду алып салуу"
 }

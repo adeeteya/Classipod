@@ -107,5 +107,17 @@
   "nextButtonInputTextBarTutorialText": "Tekan butang ini untuk menambah ruang",
   "previousButtonInputTextBarTutorialText": "Tekan butang ini untuk memadam watak terakhir",
   "menuButtonInputTextBarTutorialText": "Tekan butang ini untuk menutup papan kekunci dan berinteraksi dengan hasil carian",
-  "allSongs": "Semua lagu"
+  "allSongs": "Semua lagu",
+  "clickWheelSizeSettingTitle": "Klik Saiz Roda",
+  "clickWheelSensitivitySettingTitle": "Klik Sensitiviti Roda",
+  "small": "Kecil",
+  "medium": "Medium",
+  "large": "Besar",
+  "low": "Rendah",
+  "high": "Tinggi",
+  "volumeModeSettingTitle": "Mod kelantangan",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Namakan semula senarai main",
+  "excludeDirectoriesScreenTitle": "Tidak termasuk direktori"
 }

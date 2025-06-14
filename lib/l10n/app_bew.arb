@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tekan tombol ini buat nambah ruang .",
   "previousButtonInputTextBarTutorialText": "Tekan tombol ini buat ngapus karakter terakhir .",
   "menuButtonInputTextBarTutorialText": "Tekan tombol ini buat nutup keyboard dan interaksiin sama hasil pencarian .",
-  "allSongs": "Semua Lagu"
+  "allSongs": "Semua Lagu",
+  "clickWheelSizeSettingTitle": "Klik Ukuran Roda .",
+  "clickWheelSensitivitySettingTitle": "Klik Kepekaan Roda .",
+  "small": "Kecil",
+  "medium": "Sedeng",
+  "large": "Gede",
+  "low": "Tiris",
+  "high": "Tinggi",
+  "volumeModeSettingTitle": "Mode Jilid",
+  "appVolumeMode": "Aplik",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Ganti nama Daftar",
+  "excludeDirectoriesScreenTitle": "Kecualiin Direktur ."
 }

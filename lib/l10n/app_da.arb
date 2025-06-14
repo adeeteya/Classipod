@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tryk på denne knap for at tilføje et rum",
   "previousButtonInputTextBarTutorialText": "Tryk på denne knap for at slette den sidste karakter",
   "menuButtonInputTextBarTutorialText": "Tryk på denne knap for at lukke tastaturet og interagere med søgeresultaterne",
-  "allSongs": "Alle sange"
+  "allSongs": "Alle sange",
+  "clickWheelSizeSettingTitle": "Klik på hjulstørrelse",
+  "clickWheelSensitivitySettingTitle": "Klik på hjulfølsomhed",
+  "small": "Lille",
+  "medium": "Medium",
+  "large": "Stor",
+  "low": "Lav",
+  "high": "Høj",
+  "volumeModeSettingTitle": "Bindstilstand",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "System",
+  "renamePlaylist": "Omdøbe afspilningsliste",
+  "excludeDirectoriesScreenTitle": "Ekskluder mapper"
 }

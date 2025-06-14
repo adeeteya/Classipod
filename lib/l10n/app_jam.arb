@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pres dis button fi ad wan spies .",
   "previousButtonInputTextBarTutorialText": "Pres dis button fi diliit di laas kiarakta .",
   "menuButtonInputTextBarTutorialText": "Pres dis button fi kluoz di kiibuod ah intarak wid di saach rizolt .",
-  "allSongs": "Aal Sangs"
+  "allSongs": "Aal Sangs",
+  "clickWheelSizeSettingTitle": "Klik Wiel Saiz .",
+  "clickWheelSensitivitySettingTitle": "Klik Wiel Sensitiviti .",
+  "small": "Likkle",
+  "medium": "Medium",
+  "large": "Big",
+  "low": "Down",
+  "high": "Tall",
+  "volumeModeSettingTitle": "Volyum Mod",
+  "appVolumeMode": "Ap",
+  "systemVolumeMode": "Systim",
+  "renamePlaylist": "Riniem Plies",
+  "excludeDirectoriesScreenTitle": "Exclucy"
 }

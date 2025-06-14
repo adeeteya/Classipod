@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ቦታ ለማከል ይህንን ቁልፍ ተጫን",
   "previousButtonInputTextBarTutorialText": "የመጨረሻውን ገጸ-ባህሪ ለመሰረዝ ይህንን ቁልፍ ተጫን",
   "menuButtonInputTextBarTutorialText": "የቁልፍ ሰሌዳውን ለመዝጋት እና ከድቶች ውጤቶች ጋር ለመግባባት ይህንን ቁልፍ ተጫን",
-  "allSongs": "ሁሉም ዘፈኖች"
+  "allSongs": "ሁሉም ዘፈኖች",
+  "clickWheelSizeSettingTitle": "የተሽከርካሪ መጠን ጠቅ ያድርጉ",
+  "clickWheelSensitivitySettingTitle": "የተሽከርካሪ ስሜትን ጠቅ ያድርጉ",
+  "small": "ትንሽ",
+  "medium": "መካከለኛ",
+  "large": "ትልቅ",
+  "low": "ዝቅተኛ",
+  "high": "ከፍተኛ",
+  "volumeModeSettingTitle": "የድምፅ ሁኔታ",
+  "appVolumeMode": "መተግበሪያ",
+  "systemVolumeMode": "ስርዓት",
+  "renamePlaylist": "የጨዋታ ዝርዝርን እንደገና ይሰይሙ",
+  "excludeDirectoriesScreenTitle": "ዳይሬክቶቼን አያካትቱም"
 }

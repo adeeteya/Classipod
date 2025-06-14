@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Натиснете този бутон, за да добавите място",
   "previousButtonInputTextBarTutorialText": "Натиснете този бутон, за да изтриете последния символ",
   "menuButtonInputTextBarTutorialText": "Натиснете този бутон, за да затворите клавиатурата и да взаимодействате с резултатите от търсенето",
-  "allSongs": "Всички песни"
+  "allSongs": "Всички песни",
+  "clickWheelSizeSettingTitle": "Кликнете върху размера на колелото",
+  "clickWheelSensitivitySettingTitle": "Кликнете върху чувствителността на колелото",
+  "small": "Малък",
+  "medium": "Среден",
+  "large": "Голям",
+  "low": "Ниско",
+  "high": "Високо",
+  "volumeModeSettingTitle": "Режим на силата на звука",
+  "appVolumeMode": "Приложение",
+  "systemVolumeMode": "Система",
+  "renamePlaylist": "Преименувайте плейлиста",
+  "excludeDirectoriesScreenTitle": "Изключете директории"
 }

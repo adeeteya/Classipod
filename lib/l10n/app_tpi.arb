@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Presim dispela baten long putim spes",
   "previousButtonInputTextBarTutorialText": "Presim dispela baten long rausim laspela pasin",
   "menuButtonInputTextBarTutorialText": "Presim dispela baten long pasim kibod na wok bung wantaim ol wok painim.",
-  "allSongs": "Olgeta Song"
+  "allSongs": "Olgeta Song",
+  "clickWheelSizeSettingTitle": "Klik Wil Sais",
+  "clickWheelSensitivitySettingTitle": "Klik long Wheel Sensitiviti",
+  "small": "Liklik",
+  "medium": "Midium",
+  "large": "Bikpela",
+  "low": "Daunbilo",
+  "high": "Hai",
+  "volumeModeSettingTitle": "Volium Mod",
+  "appVolumeMode": "Ap",
+  "systemVolumeMode": "Sistem",
+  "renamePlaylist": "Renem Pleilis",
+  "excludeDirectoriesScreenTitle": "Noken putim ol Dairektri"
 }

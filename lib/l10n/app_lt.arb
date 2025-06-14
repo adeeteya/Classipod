@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Paspauskite šį mygtuką, kad pridėtumėte vietos",
   "previousButtonInputTextBarTutorialText": "Paspauskite šį mygtuką, kad ištrintumėte paskutinį simbolią",
   "menuButtonInputTextBarTutorialText": "Paspauskite šį mygtuką, kad uždarytumėte klaviatūrą ir sąveikaujtumėte su paieškos rezultatais",
-  "allSongs": "Visos dainos"
+  "allSongs": "Visos dainos",
+  "clickWheelSizeSettingTitle": "Spustelėkite rato dydį",
+  "clickWheelSensitivitySettingTitle": "Spustelėkite rato jautrumą",
+  "small": "Mažas",
+  "medium": "Vidutinis",
+  "large": "Didelis",
+  "low": "Žemas",
+  "high": "Aukštas",
+  "volumeModeSettingTitle": "Garsumo režimas",
+  "appVolumeMode": "Programa",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Pervardyti grojaraštį",
+  "excludeDirectoriesScreenTitle": "Išskyrus katalogus"
 }

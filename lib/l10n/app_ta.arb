@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "ஒரு இடத்தைச் சேர்க்க இந்த பொத்தானை அழுத்தவும்",
   "previousButtonInputTextBarTutorialText": "கடைசி எழுத்தை நீக்க இந்த பொத்தானை அழுத்தவும்",
   "menuButtonInputTextBarTutorialText": "விசைப்பலகை மூடவும், தேடல் முடிவுகளுடன் தொடர்பு கொள்ளவும் இந்த பொத்தானை அழுத்தவும்",
-  "allSongs": "அனைத்து பாடல்களும்"
+  "allSongs": "அனைத்து பாடல்களும்",
+  "clickWheelSizeSettingTitle": "சக்கர அளவைக் கிளிக் செய்க",
+  "clickWheelSensitivitySettingTitle": "சக்கர உணர்திறன் என்பதைக் கிளிக் செய்க",
+  "small": "சிறிய",
+  "medium": "நடுத்தர",
+  "large": "பெரிய",
+  "low": "குறைந்த",
+  "high": "உயர்ந்த",
+  "volumeModeSettingTitle": "தொகுதி முறை",
+  "appVolumeMode": "பயன்பாடு",
+  "systemVolumeMode": "அமைப்பு",
+  "renamePlaylist": "பிளேலிஸ்ட்டை மறுபெயரிடுங்கள்",
+  "excludeDirectoriesScreenTitle": "கோப்பகங்களை விலக்கு"
 }

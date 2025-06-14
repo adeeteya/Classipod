@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "このボタンを押してスペースを追加します",
   "previousButtonInputTextBarTutorialText": "このボタンを押して、最後の文字を削除します",
   "menuButtonInputTextBarTutorialText": "このボタンを押してキーボードを閉じて、検索結果と対話します",
-  "allSongs": "すべての曲"
+  "allSongs": "すべての曲",
+  "clickWheelSizeSettingTitle": "[ホイールサイズ]をクリックします",
+  "clickWheelSensitivitySettingTitle": "[ホイール感度]をクリックします",
+  "small": "小さい",
+  "medium": "中くらい",
+  "large": "大きい",
+  "low": "低い",
+  "high": "高い",
+  "volumeModeSettingTitle": "ボリュームモード",
+  "appVolumeMode": "アプリ",
+  "systemVolumeMode": "システム",
+  "renamePlaylist": "プレイリストの名前を変更します",
+  "excludeDirectoriesScreenTitle": "ディレクトリを除外します"
 }

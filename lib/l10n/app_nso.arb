@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Tobetsa konopo ye go oketša sekgoba",
   "previousButtonInputTextBarTutorialText": "Tobetsa konopo ena ho hlakola tlhaku ya ho qetela",
   "menuButtonInputTextBarTutorialText": "Tobetsa konopo ye go tswalela khiiboto le go dirišana le dipoelo tša nyakišišo",
-  "allSongs": "Dikoša ka moka ."
+  "allSongs": "Dikoša ka moka .",
+  "clickWheelSizeSettingTitle": "Klika Bogolo bja Leotwana .",
+  "clickWheelSensitivitySettingTitle": "Tobetsa lebili kutloisiso .",
+  "small": "Nnyane",
+  "medium": "Dirišwago",
+  "large": "Kgolo",
+  "low": "Fase",
+  "high": "Godimo",
+  "volumeModeSettingTitle": "Mokgwa wa Bolumo .",
+  "appVolumeMode": "App .",
+  "systemVolumeMode": "Tshepedišo",
+  "renamePlaylist": "Rena lenane la dipapadi leina lefsa .",
+  "excludeDirectoriesScreenTitle": "Ntšha dipuku tša ditaelo ."
 }

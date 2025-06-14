@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "जागा जोडण्यासाठी हे बटण दाबा",
   "previousButtonInputTextBarTutorialText": "शेवटचे वर्ण हटविण्यासाठी हे बटण दाबा",
   "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करण्यासाठी आणि शोध परिणामांसह संवाद साधण्यासाठी हे बटण दाबा",
-  "allSongs": "सर्व गाणी"
+  "allSongs": "सर्व गाणी",
+  "clickWheelSizeSettingTitle": "चाक आकार क्लिक करा",
+  "clickWheelSensitivitySettingTitle": "चाक संवेदनशीलता क्लिक करा",
+  "small": "लहान",
+  "medium": "मध्यम",
+  "large": "मोठा",
+  "low": "निम्न",
+  "high": "उच्च",
+  "volumeModeSettingTitle": "व्हॉल्यूम मोड",
+  "appVolumeMode": "अॅप",
+  "systemVolumeMode": "प्रणाली",
+  "renamePlaylist": "प्लेलिस्टचे नाव बदला",
+  "excludeDirectoriesScreenTitle": "निर्देशिका वगळा"
 }

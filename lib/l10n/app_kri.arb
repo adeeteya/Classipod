@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pres dis bɔtin fɔ ad wan spɛshal ples .",
   "previousButtonInputTextBarTutorialText": "Pres dis bɔtin fɔ dilit di las aks .",
   "menuButtonInputTextBarTutorialText": "Pres dis bɔtin fɔ lɔk di kibɔd ɛn intarakt wit di sɔch rizulyt dɛn .",
-  "allSongs": "Ɔl di siŋ dɛn ."
+  "allSongs": "Ɔl di siŋ dɛn .",
+  "clickWheelSizeSettingTitle": "Klik di wil saiz .",
+  "clickWheelSensitivitySettingTitle": "Klik Wil Sɛnsitiviti .",
+  "small": "Smɔl",
+  "medium": "Lukin-grɔn uman",
+  "large": "Big",
+  "low": "Lo",
+  "high": "Ay",
+  "volumeModeSettingTitle": "Volyum mod .",
+  "appVolumeMode": "APP .",
+  "systemVolumeMode": "Sistɛm",
+  "renamePlaylist": "Rinem Plɛylist .",
+  "excludeDirectoriesScreenTitle": "nɔ de pan di dairektrɔ dɛn ."
 }

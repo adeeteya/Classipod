@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Aka botón ukar ch’iqt’aña mä chiqaru yapxatañataki .",
   "previousButtonInputTextBarTutorialText": "Aka botón ukar ch’iqt’aña qhipa chimpu chhaqtayañataki .",
   "menuButtonInputTextBarTutorialText": "Aka botón ukar ch’iqt’aña teclado jist’antañataki ukat thakhinchawimp chikt’ata .",
-  "allSongs": "Taqi q'uchunaka ."
+  "allSongs": "Taqi q'uchunaka .",
+  "clickWheelSizeSettingTitle": "Ukax mä ruedan tamaparuw ch’iqt’añama .",
+  "clickWheelSensitivitySettingTitle": "Ukaxa rueda sensibilidad ukawa .",
+  "small": "Jisk'a",
+  "medium": "Chika",
+  "large": "Jach'a",
+  "low": "Jask'a",
+  "high": "Jach'a",
+  "volumeModeSettingTitle": "Modo de Volumen ukax 1.1.",
+  "appVolumeMode": "App ukax 1000 ukhaniwa.",
+  "systemVolumeMode": "Sistima",
+  "renamePlaylist": "Suti mayjt’ayaña Lista de reproducción .",
+  "excludeDirectoriesScreenTitle": "Directorios ukanaka jan uñt’ayaña ."
 }

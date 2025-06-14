@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Pindota ini nga buton para makadugang hin espasyo",
   "previousButtonInputTextBarTutorialText": "Pindota ini nga buton para mabura an urhi nga karakter",
   "menuButtonInputTextBarTutorialText": "Pindota ini nga buton para masara an keyboard ngan makig-upod ha mga resulta han pagbiling",
-  "allSongs": "Tanan nga mga Kanta ."
+  "allSongs": "Tanan nga mga Kanta .",
+  "clickWheelSizeSettingTitle": "I-klik an Sukol han Liko .",
+  "clickWheelSensitivitySettingTitle": "I-klik an Pag-abat hin Pag-abat .",
+  "small": "Gutiay",
+  "medium": "Kasangkapan",
+  "large": "Daku",
+  "low": "Ubos",
+  "high": "Hitaas",
+  "volumeModeSettingTitle": "Mode sa Tomo",
+  "appVolumeMode": "app",
+  "systemVolumeMode": "Sistema",
+  "renamePlaylist": "Mga ngaran nga Lamaryo .",
+  "excludeDirectoriesScreenTitle": "Ig-upod an mga Direktor"
 }

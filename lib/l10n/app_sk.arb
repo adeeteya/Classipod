@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Stlačením tohto tlačidla pridáte priestor",
   "previousButtonInputTextBarTutorialText": "Stlačením tohto tlačidla odstráňte posledný znak",
   "menuButtonInputTextBarTutorialText": "Stlačením tohto tlačidla zatvorte klávesnicu a interaguje s výsledkami vyhľadávania",
-  "allSongs": "Všetky piesne"
+  "allSongs": "Všetky piesne",
+  "clickWheelSizeSettingTitle": "Kliknite na veľkosť kolies",
+  "clickWheelSensitivitySettingTitle": "Kliknite na citlivosť kolies",
+  "small": "Malý",
+  "medium": "Médium",
+  "large": "Veľký",
+  "low": "Nízky",
+  "high": "Vysoký",
+  "volumeModeSettingTitle": "Objemový režim",
+  "appVolumeMode": "Aplikácia",
+  "systemVolumeMode": "Systém",
+  "renamePlaylist": "Premenovať zoznam skladieb",
+  "excludeDirectoriesScreenTitle": "Vylúčiť adresáre"
 }

@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "La̱tdɛ button ɛmɛ kɛ ɣöö biɛ mat thi̱n.",
   "previousButtonInputTextBarTutorialText": "Gɔ̱ri button ɛmɛ kɛ ɣöö biɛ woc kä ram in jɔak",
   "menuButtonInputTextBarTutorialText": "Gɔ̱ri button ɛmɛ kɛ ɣöö biɛ kulɛ gäk kä biɛ ruac kɛ min ca jiek rɛy go̱rä",
-  "allSongs": "All Cuŋ"
+  "allSongs": "All Cuŋ",
+  "clickWheelSizeSettingTitle": "Kä Wëëth Wëëth",
+  "clickWheelSensitivitySettingTitle": "Ki̱lik Wi̱th Thɛnthi̱ti̱bi̱ti̱",
+  "small": "Mi tɔt",
+  "medium": "Mi tëë där",
+  "large": "Mi diit",
+  "low": "Tëë pi̱ny",
+  "high": "Nhia̱l",
+  "volumeModeSettingTitle": "Bɛlömɛn Modɛ",
+  "appVolumeMode": "Ta̱c",
+  "systemVolumeMode": "Min lät kɛ naath",
+  "renamePlaylist": "Ŋäämɛ",
+  "excludeDirectoriesScreenTitle": "Ɛkthklod di̱e̱wni."
 }

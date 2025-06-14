@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Барои илова кардани фазо ин тугмаро пахш кунед",
   "previousButtonInputTextBarTutorialText": "Барои тоза кардани аломати охирин ин тугмаро пахш кунед",
   "menuButtonInputTextBarTutorialText": "Барои пӯшидани клавиатура ва ҳамкорӣ бо натиҷаҳои ҷустуҷӯ ин тугмаро пахш кунед",
-  "allSongs": "Ҳама сурудҳо"
+  "allSongs": "Ҳама сурудҳо",
+  "clickWheelSizeSettingTitle": "Андозаи чархро клик кунед",
+  "clickWheelSensitivitySettingTitle": "Ҳассосияти калимаҳоро клик кунед",
+  "small": "Хурд",
+  "medium": "Миёна",
+  "large": "Калон",
+  "low": "Паст",
+  "high": "Баланд",
+  "volumeModeSettingTitle": "Ҳолд",
+  "appVolumeMode": "Барнома",
+  "systemVolumeMode": "Система",
+  "renamePlaylist": "Тағир додани рӯйхати мусиқӣ",
+  "excludeDirectoriesScreenTitle": "Маълумиротро истисно мекунад"
 }

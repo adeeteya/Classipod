@@ -108,5 +108,17 @@
   "nextButtonInputTextBarTutorialText": "Hi button hi hmet law space pakhat na chap lai .",
   "previousButtonInputTextBarTutorialText": "Hi button hi hmet law a donghnak bik cafang kha delete tuah .",
   "menuButtonInputTextBarTutorialText": "Hi button hi hmet law keyboard kha khar law kawlnak a phichuak he pehtlaihnak tuah.",
-  "allSongs": "Hla vialte"
+  "allSongs": "Hla vialte",
+  "clickWheelSizeSettingTitle": "Wheel Size .",
+  "clickWheelSensitivitySettingTitle": "Wheel sentivity kha hmet .",
+  "small": "A hmemi",
+  "medium": "A laifang",
+  "large": "A ngan",
+  "low": "A tlawm",
+  "high": "A sangmi",
+  "volumeModeSettingTitle": "Volume Mode",
+  "appVolumeMode": "App",
+  "systemVolumeMode": "Ningcang",
+  "renamePlaylist": "Rename Playlist min",
+  "excludeDirectoriesScreenTitle": "Directory pawl kha hlonh hna"
 }

@@ -155,7 +155,7 @@ jobs:
       - name: Upload Windows Release Artifact to GitHub Release
         shell: cmd
         run: |
-          gh release upload ${{ inputs.version_number }} D:\a\Classipod\Classipod\Classipod-Windows.exe
+          gh release upload ${{ inputs.version_number }} C:\a\Classipod\Classipod\Classipod-Windows.exe
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 

@@ -110,6 +110,18 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
           icon: CupertinoIcons.device_phone_portrait,
           contentText: currentSettings.deviceColor.name,
         );
+      } else if (splitScreenType == SplitScreenType.clickWheelSize) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.clickWheelSizeSettingTitle,
+          icon: CupertinoIcons.smallcircle_fill_circle_fill,
+          contentText: currentSettings.clickWheelSize.title(context),
+        );
+      } else if (splitScreenType == SplitScreenType.clickWheelSensitivity) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.clickWheelSensitivitySettingTitle,
+          icon: CupertinoIcons.memories_badge_plus,
+          contentText: currentSettings.clickWheelSensitivity.title(context),
+        );
       } else if (splitScreenType == SplitScreenType.touchScreen) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.touchScreenSettingTitle,
@@ -143,6 +155,12 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
                   ? context.localization.tileValueOn
                   : context.localization.tileValueOff,
         );
+      } else if (splitScreenType == SplitScreenType.volumeMode) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.volumeModeSettingTitle,
+          icon: CupertinoIcons.hifispeaker,
+          contentText: currentSettings.volumeMode.title(context),
+        );
       } else if (splitScreenType == SplitScreenType.splitScreenMode) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.splitScreenSettingTitle,
@@ -171,6 +189,12 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.rescanMusicFilesSettingTitle,
           icon: CupertinoIcons.music_albums,
+          contentText: "",
+        );
+      } else if (splitScreenType == SplitScreenType.excludeDirectories) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.excludeDirectoriesScreenTitle,
+          icon: CupertinoIcons.folder_fill_badge_minus,
           contentText: "",
         );
       } else if (splitScreenType == SplitScreenType.resetSettings) {

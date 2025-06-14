@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Presem Senta baten blong saekol tru long lukaotem bar, skraba bar mo slaida we i shuffle. Presem mo holem baten blong Senta blong kasem sam moa opsen.",
   "nextButtonNowPlayingTutorialText": "Presim na holim dispela baten long hariapim dispela singsing",
   "previousButtonNowPlayingTutorialText": "Presim na holim dispela baten long kisim bek singsing",
-  "deviceControlSearchTutorialText": "Muvum bigfala fingga blong yu raon long Click Wheel blong haelaetem wan alfabet",
-  "centerButtonSearchTutorialText": "Presim senta baten bilong makim alfabet ol i bin hailait",
-  "nextButtonSearchTutorialText": "Presim dispela baten long putim spes",
-  "previousButtonSearchTutorialText": "Presim dispela baten long rausim laspela pasin",
-  "menuButtonSearchTutorialText": "Presim dispela baten long pasim kibod na wok bung wantaim ol wok painim.",
+  "clickWheelInputTextBarTutorialText": "Muvum bigfala fingga blong yu raon long Click Wheel blong haelaetem wan alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Presim senta baten bilong makim alfabet ol i bin hailait",
+  "nextButtonInputTextBarTutorialText": "Presim dispela baten long putim spes",
+  "previousButtonInputTextBarTutorialText": "Presim dispela baten long rausim laspela pasin",
+  "menuButtonInputTextBarTutorialText": "Presim dispela baten long pasim kibod na wok bung wantaim ol wok painim.",
   "allSongs": "Olgeta Song"
 }

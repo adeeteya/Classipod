@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ടിച്ച് ബാർ, സ്ക്രബ്ബർ ബാർ, ഷഫിൾ സ്ലൈഡർ എന്നിവയിലൂടെ സൈക്കിളിലേക്ക് സെന്റർ ബട്ടൺ അമർത്തുക. അധിക ഓപ്ഷനുകൾ ആക്സസ് ചെയ്യുന്നതിന് സെന്റർ ബട്ടൺ അമർത്തിപ്പിടിക്കുക.",
   "nextButtonNowPlayingTutorialText": "പാട്ട് വേഗത്തിൽ കൈമാറാൻ ഈ ബട്ടൺ അമർത്തിപ്പിടിക്കുക",
   "previousButtonNowPlayingTutorialText": "പാട്ട് റിവൈൻഡ് ചെയ്യുന്നതിന് ഈ ബട്ടൺ അമർത്തിപ്പിടിക്കുക",
-  "deviceControlSearchTutorialText": "ഒരു അക്ഷരമാല ഹൈലൈറ്റ് ചെയ്യുന്നതിന് നിങ്ങളുടെ തള്ളവിരൽ ലഘുവായി നീക്കുക",
-  "centerButtonSearchTutorialText": "ഹൈലൈറ്റ് ചെയ്ത അക്ഷരമാല തിരഞ്ഞെടുക്കാൻ സെന്റർ ബട്ടൺ അമർത്തുക",
-  "nextButtonSearchTutorialText": "ഒരു സ്ഥലം ചേർക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
-  "previousButtonSearchTutorialText": "അവസാന പ്രതീകം ഇല്ലാതാക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
-  "menuButtonSearchTutorialText": "കീബോർഡ് അടച്ച് തിരയൽ ഫലങ്ങളുമായി സംവദിക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
+  "clickWheelInputTextBarTutorialText": "ഒരു അക്ഷരമാല ഹൈലൈറ്റ് ചെയ്യുന്നതിന് നിങ്ങളുടെ തള്ളവിരൽ ലഘുവായി നീക്കുക",
+  "centerButtonInputTextBarScreenTutorialText": "ഹൈലൈറ്റ് ചെയ്ത അക്ഷരമാല തിരഞ്ഞെടുക്കാൻ സെന്റർ ബട്ടൺ അമർത്തുക",
+  "nextButtonInputTextBarTutorialText": "ഒരു സ്ഥലം ചേർക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
+  "previousButtonInputTextBarTutorialText": "അവസാന പ്രതീകം ഇല്ലാതാക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
+  "menuButtonInputTextBarTutorialText": "കീബോർഡ് അടച്ച് തിരയൽ ഫലങ്ങളുമായി സംവദിക്കാൻ ഈ ബട്ടൺ അമർത്തുക",
   "allSongs": "എല്ലാ പാട്ടുകളും"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tekan tombol tengah untuk bersepeda melalui pencarian bar, scrubber bar, dan slider shuffle. Tekan dan tahan tombol tengah untuk mengakses opsi tambahan.",
   "nextButtonNowPlayingTutorialText": "Tekan dan tahan tombol ini untuk menyalakan lagunya",
   "previousButtonNowPlayingTutorialText": "Tekan dan tahan tombol ini untuk memundurkan kembali lagu",
-  "deviceControlSearchTutorialText": "Pindahkan ibu jari Anda dengan ringan di sekitar roda klik untuk menyorot alfabet",
-  "centerButtonSearchTutorialText": "Tekan tombol tengah untuk memilih alfabet yang disorot",
-  "nextButtonSearchTutorialText": "Tekan tombol ini untuk menambahkan ruang",
-  "previousButtonSearchTutorialText": "Tekan tombol ini untuk menghapus karakter terakhir",
-  "menuButtonSearchTutorialText": "Tekan tombol ini untuk menutup keyboard dan berinteraksi dengan hasil pencarian",
+  "clickWheelInputTextBarTutorialText": "Pindahkan ibu jari Anda dengan ringan di sekitar roda klik untuk menyorot alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Tekan tombol tengah untuk memilih alfabet yang disorot",
+  "nextButtonInputTextBarTutorialText": "Tekan tombol ini untuk menambahkan ruang",
+  "previousButtonInputTextBarTutorialText": "Tekan tombol ini untuk menghapus karakter terakhir",
+  "menuButtonInputTextBarTutorialText": "Tekan tombol ini untuk menutup keyboard dan berinteraksi dengan hasil pencarian",
   "allSongs": "Semua lagu"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Centre ngu ai hpe dip dat jang, bar, scrubber bar hte shuffle slider hpe tam na matu cycle hte hkawm sa wa na re. Kaga lata la mai ai lam ni hpe lu la na matu Centre ngu ai hpe dip nna jum da u.",
   "nextButtonNowPlayingTutorialText": "Mahkawn hpe lawan ai hku shawng de sit sa na matu ndai button hpe dip nna jum da u",
   "previousButtonNowPlayingTutorialText": "Ndai button hpe dip nna jum da nna mahkawn hpe bai nhtang wa na .",
-  "deviceControlSearchTutorialText": "Na a layung hpe Click Wheel grup yin hta loi loi hte htawt nna, alphabet langai hpe madi madun u",
-  "centerButtonSearchTutorialText": "Dai hpe madi madun da ai laika buk hpe lata na matu center button hpe dip u .",
-  "nextButtonSearchTutorialText": "Ndai button hpe dip nna shara langai mi bang u",
-  "previousButtonSearchTutorialText": "Hpang jahtum na hkrang hpe delete galaw na matu ndai button hpe dip u",
-  "menuButtonSearchTutorialText": "Ndai button hpe dip nna keyboard hpe pat nna tam ai mahtai ni hte matut mahkai mai ai",
+  "clickWheelInputTextBarTutorialText": "Na a layung hpe Click Wheel grup yin hta loi loi hte htawt nna, alphabet langai hpe madi madun u",
+  "centerButtonInputTextBarScreenTutorialText": "Dai hpe madi madun da ai laika buk hpe lata na matu center button hpe dip u .",
+  "nextButtonInputTextBarTutorialText": "Ndai button hpe dip nna shara langai mi bang u",
+  "previousButtonInputTextBarTutorialText": "Hpang jahtum na hkrang hpe delete galaw na matu ndai button hpe dip u",
+  "menuButtonInputTextBarTutorialText": "Ndai button hpe dip nna keyboard hpe pat nna tam ai mahtai ni hte matut mahkai mai ai",
   "allSongs": "Mahkawn yawng"
 }

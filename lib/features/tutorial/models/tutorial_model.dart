@@ -1,24 +1,25 @@
 class TutorialModel {
   final bool isMenuFirstTime;
   final bool isNowPlayingFirstTime;
-  final bool isSearchFirstTime;
+  final bool isInputTextBarFirstTime;
 
   TutorialModel({
     required this.isMenuFirstTime,
     required this.isNowPlayingFirstTime,
-    required this.isSearchFirstTime,
+    required this.isInputTextBarFirstTime,
   });
 
   TutorialModel copyWith({
     bool? isMenuFirstTime,
     bool? isNowPlayingFirstTime,
-    bool? isSearchFirstTime,
+    bool? isInputTextBarFirstTime,
   }) {
     return TutorialModel(
       isMenuFirstTime: isMenuFirstTime ?? this.isMenuFirstTime,
       isNowPlayingFirstTime:
           isNowPlayingFirstTime ?? this.isNowPlayingFirstTime,
-      isSearchFirstTime: isSearchFirstTime ?? this.isSearchFirstTime,
+      isInputTextBarFirstTime:
+          isInputTextBarFirstTime ?? this.isInputTextBarFirstTime,
     );
   }
 
@@ -27,15 +28,18 @@ class TutorialModel {
     return other is TutorialModel &&
         other.isMenuFirstTime == isMenuFirstTime &&
         other.isNowPlayingFirstTime == isNowPlayingFirstTime &&
-        other.isSearchFirstTime == isSearchFirstTime;
+        other.isInputTextBarFirstTime == isInputTextBarFirstTime;
   }
 
   @override
-  int get hashCode =>
-      Object.hash(isMenuFirstTime, isNowPlayingFirstTime, isSearchFirstTime);
+  int get hashCode => Object.hash(
+    isMenuFirstTime,
+    isNowPlayingFirstTime,
+    isInputTextBarFirstTime,
+  );
 
   @override
   String toString() {
-    return 'TutorialModel(isMenuFirstTime: $isMenuFirstTime, isNowPlayingFirstTime: $isNowPlayingFirstTime, isSearchFirstTime: $isSearchFirstTime)';
+    return 'TutorialModel(isMenuFirstTime: $isMenuFirstTime, isNowPlayingFirstTime: $isNowPlayingFirstTime, isInputTextBarFirstTime: $isInputTextBarFirstTime)';
   }
 }

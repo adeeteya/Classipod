@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pez bouton Sant pou fer sikl atraver rod bar, bar frotman ek kurser melanz. Pez ek tini bouton Sant pou gagn akse a bann opsion anplis.",
   "nextButtonNowPlayingTutorialText": "Pez ek tini sa bouton-la pou fer sante-la avanse vit-vit",
   "previousButtonNowPlayingTutorialText": "Pez ek tini sa bouton-la pou rebobinn sante-la",
-  "deviceControlSearchTutorialText": "Bouz ou pous lezeman otour Larou-la pou met an evidans enn alfabet",
-  "centerButtonSearchTutorialText": "Pez bouton santral pou swazir alfabet ki finn souligne",
-  "nextButtonSearchTutorialText": "Pez sa bouton-la pou azout enn lespas",
-  "previousButtonSearchTutorialText": "Pez sa bouton-la pou efas dernie personaz-la",
-  "menuButtonSearchTutorialText": "Pez sa bouton-la pou ferm klavie ek interazir avek bann rezilta resers",
+  "clickWheelInputTextBarTutorialText": "Bouz ou pous lezeman otour Larou-la pou met an evidans enn alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Pez bouton santral pou swazir alfabet ki finn souligne",
+  "nextButtonInputTextBarTutorialText": "Pez sa bouton-la pou azout enn lespas",
+  "previousButtonInputTextBarTutorialText": "Pez sa bouton-la pou efas dernie personaz-la",
+  "menuButtonInputTextBarTutorialText": "Pez sa bouton-la pou ferm klavie ek interazir avek bann rezilta resers",
   "allSongs": "Tou bann sante"
 }

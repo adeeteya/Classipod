@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "SCRUBBER BAR နှင့် Shuffle Slider မှတဆင့် Cyce သို့ Cyce ခလုတ်ကိုနှိပ်ပါ။ နောက်ထပ်ရွေးချယ်စရာများကိုရယူရန်ဗဟိုခလုတ်ကို နှိပ်. ဖိထားပါ။",
   "nextButtonNowPlayingTutorialText": "သီချင်းကိုမြန်မြန်ဆန်ဆန်အတွက်ဤခလုတ်ကို နှိပ်. ဖိထားပါ",
   "previousButtonNowPlayingTutorialText": "သီချင်းကိုပြန်လှည့်ရန်ဤခလုတ်ကို နှိပ်. ဖိထားပါ",
-  "deviceControlSearchTutorialText": "အက်ခရာကိုမီးမောင်းထိုးပြရန်သင်၏ thumb ကိုပေါ့ပေါ့တန်တန်ကြည့်ပါ",
-  "centerButtonSearchTutorialText": "မီးမောင်းထိုးထားသောအက်ခရာကိုရွေးချယ်ရန် Center ခလုတ်ကိုနှိပ်ပါ",
-  "nextButtonSearchTutorialText": "အာကာသထည့်ရန်ဤခလုတ်ကိုနှိပ်ပါ",
-  "previousButtonSearchTutorialText": "နောက်ဆုံးဇာတ်ကောင်ကိုဖျက်ရန်ဤခလုတ်ကိုနှိပ်ပါ",
-  "menuButtonSearchTutorialText": "ကီးဘုတ်ကိုပိတ်ရန်နှင့်ရှာဖွေမှုရလဒ်များနှင့်အပြန်အလှန်ဆက်သွယ်ရန်ဤခလုတ်ကိုနှိပ်ပါ",
+  "clickWheelInputTextBarTutorialText": "အက်ခရာကိုမီးမောင်းထိုးပြရန်သင်၏ thumb ကိုပေါ့ပေါ့တန်တန်ကြည့်ပါ",
+  "centerButtonInputTextBarScreenTutorialText": "မီးမောင်းထိုးထားသောအက်ခရာကိုရွေးချယ်ရန် Center ခလုတ်ကိုနှိပ်ပါ",
+  "nextButtonInputTextBarTutorialText": "အာကာသထည့်ရန်ဤခလုတ်ကိုနှိပ်ပါ",
+  "previousButtonInputTextBarTutorialText": "နောက်ဆုံးဇာတ်ကောင်ကိုဖျက်ရန်ဤခလုတ်ကိုနှိပ်ပါ",
+  "menuButtonInputTextBarTutorialText": "ကီးဘုတ်ကိုပိတ်ရန်နှင့်ရှာဖွေမှုရလဒ်များနှင့်အပြန်အလှန်ဆက်သွယ်ရန်ဤခလုတ်ကိုနှိပ်ပါ",
   "allSongs": "သီချင်းများ"
 }

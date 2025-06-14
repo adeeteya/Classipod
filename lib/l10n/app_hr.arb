@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pritisnite središnji gumb za vožnju kroz traženje trake, trake za pročišćavanje i klizača. Pritisnite i držite gumb Center za pristup dodatnim opcijama.",
   "nextButtonNowPlayingTutorialText": "Pritisnite i držite ovaj gumb da biste brzo proslijedili pjesmu",
   "previousButtonNowPlayingTutorialText": "Pritisnite i držite ovaj gumb da biste premotali pjesmu",
-  "deviceControlSearchTutorialText": "Lagano pomaknite palac oko kotača klika kako biste istaknuli abecedu",
-  "centerButtonSearchTutorialText": "Pritisnite središnji gumb za odabir istaknute abecede",
-  "nextButtonSearchTutorialText": "Pritisnite ovaj gumb za dodavanje prostora",
-  "previousButtonSearchTutorialText": "Pritisnite ovaj gumb da biste izbrisali posljednji znak",
-  "menuButtonSearchTutorialText": "Pritisnite ovaj gumb za zatvaranje tipkovnice i interakciju s rezultatima pretraživanja",
+  "clickWheelInputTextBarTutorialText": "Lagano pomaknite palac oko kotača klika kako biste istaknuli abecedu",
+  "centerButtonInputTextBarScreenTutorialText": "Pritisnite središnji gumb za odabir istaknute abecede",
+  "nextButtonInputTextBarTutorialText": "Pritisnite ovaj gumb za dodavanje prostora",
+  "previousButtonInputTextBarTutorialText": "Pritisnite ovaj gumb da biste izbrisali posljednji znak",
+  "menuButtonInputTextBarTutorialText": "Pritisnite ovaj gumb za zatvaranje tipkovnice i interakciju s rezultatima pretraživanja",
   "allSongs": "Sve pjesme"
 }

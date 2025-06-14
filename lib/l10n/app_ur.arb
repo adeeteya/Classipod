@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "سیچ بار ، اسکربر بار اور شفل سلائیڈر کے ذریعے سائیکل کے لئے سینٹر کے بٹن کو دبائیں۔ اضافی اختیارات تک رسائی کے ل the سینٹر کے بٹن کو دبائیں اور تھامیں۔",
   "nextButtonNowPlayingTutorialText": "گانے کو تیزی سے آگے بڑھانے کے لئے اس بٹن کو دبائیں اور تھامیں",
   "previousButtonNowPlayingTutorialText": "گانے کو دوبارہ بنانے کے لئے اس بٹن کو دبائیں اور تھامیں",
-  "deviceControlSearchTutorialText": "حرف تہجی کو اجاگر کرنے کے لئے اپنے انگوٹھے کو ہلکے سے کلک پہیے کے گرد منتقل کریں",
-  "centerButtonSearchTutorialText": "نمایاں حروف تہجی کو منتخب کرنے کے لئے سینٹر کے بٹن کو دبائیں",
-  "nextButtonSearchTutorialText": "جگہ شامل کرنے کے لئے اس بٹن کو دبائیں",
-  "previousButtonSearchTutorialText": "آخری کردار کو حذف کرنے کے لئے اس بٹن کو دبائیں",
-  "menuButtonSearchTutorialText": "کی بورڈ کو بند کرنے اور تلاش کے نتائج کے ساتھ بات چیت کرنے کے لئے اس بٹن کو دبائیں",
+  "clickWheelInputTextBarTutorialText": "حرف تہجی کو اجاگر کرنے کے لئے اپنے انگوٹھے کو ہلکے سے کلک پہیے کے گرد منتقل کریں",
+  "centerButtonInputTextBarScreenTutorialText": "نمایاں حروف تہجی کو منتخب کرنے کے لئے سینٹر کے بٹن کو دبائیں",
+  "nextButtonInputTextBarTutorialText": "جگہ شامل کرنے کے لئے اس بٹن کو دبائیں",
+  "previousButtonInputTextBarTutorialText": "آخری کردار کو حذف کرنے کے لئے اس بٹن کو دبائیں",
+  "menuButtonInputTextBarTutorialText": "کی بورڈ کو بند کرنے اور تلاش کے نتائج کے ساتھ بات چیت کرنے کے لئے اس بٹن کو دبائیں",
   "allSongs": "تمام گانے"
 }

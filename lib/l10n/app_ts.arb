@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Cinekela button ya le xikarhi ku rhendzeleka hi seek bar, scrubber bar na shuffle slider. Cinekela u khoma buti ya le xikarhi ku fikelela swihlawulekisi swo engetela.",
   "nextButtonNowPlayingTutorialText": "Cinekela u khoma button leyi ku fast forward risimu",
   "previousButtonNowPlayingTutorialText": "Cinekela u khoma button leyi ku rewind risimu",
-  "deviceControlSearchTutorialText": "Susa xikunwana xa wena hi ku olova ku rhendzela vhilwa ra ku tsindziyela leswaku u kombisa maletere",
-  "centerButtonSearchTutorialText": "Cinekela eka buti ya le xikarhi ku hlawula alifabete leyi kombisiweke",
-  "nextButtonSearchTutorialText": "Cinekela button leyi ku engetela ndhawu",
-  "previousButtonSearchTutorialText": "Cinekela button leyi ku susa xihlawulekisi xo hetelela",
-  "menuButtonSearchTutorialText": "Cinekela button leyi ku pfala khibhodi na ku tirhisana na mbuyelo wa ku lavisisa",
+  "clickWheelInputTextBarTutorialText": "Susa xikunwana xa wena hi ku olova ku rhendzela vhilwa ra ku tsindziyela leswaku u kombisa maletere",
+  "centerButtonInputTextBarScreenTutorialText": "Cinekela eka buti ya le xikarhi ku hlawula alifabete leyi kombisiweke",
+  "nextButtonInputTextBarTutorialText": "Cinekela button leyi ku engetela ndhawu",
+  "previousButtonInputTextBarTutorialText": "Cinekela button leyi ku susa xihlawulekisi xo hetelela",
+  "menuButtonInputTextBarTutorialText": "Cinekela button leyi ku pfala khibhodi na ku tirhisana na mbuyelo wa ku lavisisa",
   "allSongs": "Tinsimu Hinkwato ."
 }

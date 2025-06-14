@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Націсніце кнопку Цэнтральнага, каб перавесці панэль Seek, Scrubber Bar і Shuffle Slider. Націсніце і ўтрымлівайце цэнтральную кнопку, каб атрымаць доступ да дадатковых варыянтаў.",
   "nextButtonNowPlayingTutorialText": "Націсніце і ўтрымлівайце гэтую кнопку, каб хутка накіраваць песню",
   "previousButtonNowPlayingTutorialText": "Націсніце і ўтрымлівайце гэтую кнопку, каб перамагчы песню",
-  "deviceControlSearchTutorialText": "Злёгку перамясціце вялікі палец вакол кола націску, каб вылучыць алфавіт",
-  "centerButtonSearchTutorialText": "Націсніце кнопку цэнтральнай кнопкі, каб выбраць выдзелены алфавіт",
-  "nextButtonSearchTutorialText": "Націсніце гэтую кнопку, каб дадаць прастору",
-  "previousButtonSearchTutorialText": "Націсніце гэтую кнопку, каб выдаліць апошні сімвал",
-  "menuButtonSearchTutorialText": "Націсніце гэтую кнопку, каб закрыць клавіятуру і ўзаемадзейнічаць з вынікамі пошуку",
+  "clickWheelInputTextBarTutorialText": "Злёгку перамясціце вялікі палец вакол кола націску, каб вылучыць алфавіт",
+  "centerButtonInputTextBarScreenTutorialText": "Націсніце кнопку цэнтральнай кнопкі, каб выбраць выдзелены алфавіт",
+  "nextButtonInputTextBarTutorialText": "Націсніце гэтую кнопку, каб дадаць прастору",
+  "previousButtonInputTextBarTutorialText": "Націсніце гэтую кнопку, каб выдаліць апошні сімвал",
+  "menuButtonInputTextBarTutorialText": "Націсніце гэтую кнопку, каб закрыць клавіятуру і ўзаемадзейнічаць з вынікамі пошуку",
   "allSongs": "Усе песні"
 }

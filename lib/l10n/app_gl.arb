@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pulse o botón central para percorrer a barra de busca, barra de lavadoiros e control deslizante. Prema e manteña o botón central para acceder a opcións adicionais.",
   "nextButtonNowPlayingTutorialText": "Prema e manteña este botón para avanzar na canción",
   "previousButtonNowPlayingTutorialText": "Prema e manteña este botón para rebobinar a canción",
-  "deviceControlSearchTutorialText": "Mova o polgar lixeiramente ao redor da roda de clic para resaltar un alfabeto",
-  "centerButtonSearchTutorialText": "Prema o botón central para seleccionar o alfabeto resaltado",
-  "nextButtonSearchTutorialText": "Preme este botón para engadir un espazo",
-  "previousButtonSearchTutorialText": "Preme este botón para eliminar o último personaxe",
-  "menuButtonSearchTutorialText": "Prema este botón para pechar o teclado e interactúa cos resultados da busca",
+  "clickWheelInputTextBarTutorialText": "Mova o polgar lixeiramente ao redor da roda de clic para resaltar un alfabeto",
+  "centerButtonInputTextBarScreenTutorialText": "Prema o botón central para seleccionar o alfabeto resaltado",
+  "nextButtonInputTextBarTutorialText": "Preme este botón para engadir un espazo",
+  "previousButtonInputTextBarTutorialText": "Preme este botón para eliminar o último personaxe",
+  "menuButtonInputTextBarTutorialText": "Prema este botón para pechar o teclado e interactúa cos resultados da busca",
   "allSongs": "Todas as cancións"
 }

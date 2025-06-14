@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Nias lub chaw nruab nrab mus rau voj voog los ntawm nrhiav bar, cov kab ntawv kom nruj thiab ua rau slider. Nias thiab tuav lub pob nruab nrab kom nkag mus rau cov kev xaiv ntxiv.",
   "nextButtonNowPlayingTutorialText": "Nias thiab tuav lub pob no kom khiav tawm rau yav tsaus ntuj",
   "previousButtonNowPlayingTutorialText": "Nias thiab tuav lub pob no kom rewind zaj nkauj",
-  "deviceControlSearchTutorialText": "Txav koj tus ntiv tes xoo me ntsis nyob ib ncig ntawm nias log kom nrov rau cov tsiaj ntawv",
-  "centerButtonSearchTutorialText": "Nias khawm nruab nrab kom xaiv cov tsiaj ntawv tseem ceeb",
-  "nextButtonSearchTutorialText": "Nias lub pob no kom ntxiv chaw",
-  "previousButtonSearchTutorialText": "Nias lub pob no kom rho tawm tus cwj pwm kawg",
-  "menuButtonSearchTutorialText": "Nias lub pob no kaw cov keyboard thiab cuam tshuam nrog cov kev tshawb fawb",
+  "clickWheelInputTextBarTutorialText": "Txav koj tus ntiv tes xoo me ntsis nyob ib ncig ntawm nias log kom nrov rau cov tsiaj ntawv",
+  "centerButtonInputTextBarScreenTutorialText": "Nias khawm nruab nrab kom xaiv cov tsiaj ntawv tseem ceeb",
+  "nextButtonInputTextBarTutorialText": "Nias lub pob no kom ntxiv chaw",
+  "previousButtonInputTextBarTutorialText": "Nias lub pob no kom rho tawm tus cwj pwm kawg",
+  "menuButtonInputTextBarTutorialText": "Nias lub pob no kaw cov keyboard thiab cuam tshuam nrog cov kev tshawb fawb",
   "allSongs": "Txhua zaj nkauj"
 }

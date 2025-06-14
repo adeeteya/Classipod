@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "د بار وړلو لپاره د مرکز ت button ۍ فشار ورکړئ، د پرببار بار او شفل سلایډونو څخه. اضافي اختیارونو ته د لاسرسي لپاره د مرکز ت button ۍ فشار او ونیسئ.",
   "nextButtonNowPlayingTutorialText": "د دې ت button ۍ فشار ورکړئ",
   "previousButtonNowPlayingTutorialText": "د سندرو بیا کلیک کولو لپاره دا ت button ۍ فشار ورکړئ او ونیسئ",
-  "deviceControlSearchTutorialText": "خپل ګوتو ته د الفبا په اوږدو کې د کلیک ویل په شاوخوا کلیک وکړئ",
-  "centerButtonSearchTutorialText": "د روښانه شوي الفبا د ټاکلو لپاره د مرکز ت button ۍ فشار ورکړئ",
-  "nextButtonSearchTutorialText": "د ځای اضافه کولو لپاره دا ت button ۍ کېکاږئ",
-  "previousButtonSearchTutorialText": "د وروستي کرکټر حذف کولو لپاره دا ت button ۍ فشار ورکړئ",
-  "menuButtonSearchTutorialText": "د کیبورډ بندولو لپاره دا ت button ۍ فشار ورکړئ او د لټون پایلو سره متقابل عمل وکړئ",
+  "clickWheelInputTextBarTutorialText": "خپل ګوتو ته د الفبا په اوږدو کې د کلیک ویل په شاوخوا کلیک وکړئ",
+  "centerButtonInputTextBarScreenTutorialText": "د روښانه شوي الفبا د ټاکلو لپاره د مرکز ت button ۍ فشار ورکړئ",
+  "nextButtonInputTextBarTutorialText": "د ځای اضافه کولو لپاره دا ت button ۍ کېکاږئ",
+  "previousButtonInputTextBarTutorialText": "د وروستي کرکټر حذف کولو لپاره دا ت button ۍ فشار ورکړئ",
+  "menuButtonInputTextBarTutorialText": "د کیبورډ بندولو لپاره دا ت button ۍ فشار ورکړئ او د لټون پایلو سره متقابل عمل وکړئ",
   "allSongs": "ټولې سندرې"
 }

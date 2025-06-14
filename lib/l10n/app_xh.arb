@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Cinezela iqhosha leZiko ukujikeleza ngokufuna i-bar, i-scrubber bar kunye nesilayidi seShuffle. Cinezela kwaye ubambe iqhosha leZiko ukufikelela kwizinto ongezelelweyo.",
   "nextButtonNowPlayingTutorialText": "Cinezela kwaye ubambe eli qhosha ukuze uqhubeke nengoma",
   "previousButtonNowPlayingTutorialText": "Cinezela kwaye ubambe eli qhosha ukubuyisela ingoma",
-  "deviceControlSearchTutorialText": "Hambisa isithupha sakho nge-term ijikeleze ivili lokucofa ukuqaqambisa ialfabhethi",
-  "centerButtonSearchTutorialText": "Cinezela iqhosha leZiko ukukhetha ialfabhethi eqaqambileyo",
-  "nextButtonSearchTutorialText": "Cinezela eli qhosha ukongeza indawo",
-  "previousButtonSearchTutorialText": "Cinezela eli qhosha ukucima umlinganiswa wokugqibela",
-  "menuButtonSearchTutorialText": "Cinezela eli qhosha ukuvala ikhibhodi kwaye unxibelelane neziphumo zokukhangela",
+  "clickWheelInputTextBarTutorialText": "Hambisa isithupha sakho nge-term ijikeleze ivili lokucofa ukuqaqambisa ialfabhethi",
+  "centerButtonInputTextBarScreenTutorialText": "Cinezela iqhosha leZiko ukukhetha ialfabhethi eqaqambileyo",
+  "nextButtonInputTextBarTutorialText": "Cinezela eli qhosha ukongeza indawo",
+  "previousButtonInputTextBarTutorialText": "Cinezela eli qhosha ukucima umlinganiswa wokugqibela",
+  "menuButtonInputTextBarTutorialText": "Cinezela eli qhosha ukuvala ikhibhodi kwaye unxibelelane neziphumo zokukhangela",
   "allSongs": "Zonke iingoma"
 }

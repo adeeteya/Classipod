@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pynkhih ia u button Centre lyngba wad ia u bar, u scrubber bar bad u slur. Press bad pynlong ia u button Centre ban ioh ia ki lad ki lynti kiba kham bun.",
   "nextButtonNowPlayingTutorialText": "Press bad pynlong ia une u button ban iaid stet sha khmat ia ka jingrwai .",
   "previousButtonNowPlayingTutorialText": "Press bad bat ia une u button ban pynliem biang ia ka jingrwai .",
-  "deviceControlSearchTutorialText": "Pynkhih ia u thylliej jong phi da kaba jem bha sawdong u Wheel u Wheel ban pynpaw ia ka alphabet .",
-  "centerButtonSearchTutorialText": "Pynkhih ia u button pdeng ban jied ia u alphabet ba la pynpaw .",
-  "nextButtonSearchTutorialText": "Pynkhih ia kane ka button ban pyndap ia ka jaka .",
-  "previousButtonSearchTutorialText": "Pynkhih ia une u button ban pynduh ia u briew uba khatduh .",
-  "menuButtonSearchTutorialText": "Pynkhih ia une u button ban khang ia u shabi bad ban iakynduh bad ki jingmih na ka jingwad .",
+  "clickWheelInputTextBarTutorialText": "Pynkhih ia u thylliej jong phi da kaba jem bha sawdong u Wheel u Wheel ban pynpaw ia ka alphabet .",
+  "centerButtonInputTextBarScreenTutorialText": "Pynkhih ia u button pdeng ban jied ia u alphabet ba la pynpaw .",
+  "nextButtonInputTextBarTutorialText": "Pynkhih ia kane ka button ban pyndap ia ka jaka .",
+  "previousButtonInputTextBarTutorialText": "Pynkhih ia une u button ban pynduh ia u briew uba khatduh .",
+  "menuButtonInputTextBarTutorialText": "Pynkhih ia une u button ban khang ia u shabi bad ban iakynduh bad ki jingmih na ka jingwad .",
   "allSongs": "Baroh ki jingrwai"
 }

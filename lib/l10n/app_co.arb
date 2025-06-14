@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pulsà u buttone centru per ciclu per mezu di veh, barra di scrubbu è slider shutle. Pulse è manteneu u buttone centru per accede à l'opzioni supplementari.",
   "nextButtonNowPlayingTutorialText": "Pulse è mantene stu buttone per rinvià a canzone",
   "previousButtonNowPlayingTutorialText": "Pulse è tenite stu buttone per rimpruverà a canzone",
-  "deviceControlSearchTutorialText": "Move u to pollice ligeramente intornu à a rota di cliccà per evidenziare un alfabetu",
-  "centerButtonSearchTutorialText": "Pulse u buttone centru per selezziunate l'alfabetu evidenziatu",
-  "nextButtonSearchTutorialText": "Pulse stu buttone per aghjunghje un spaziu",
-  "previousButtonSearchTutorialText": "Pulse stu buttone per sguassà l'ultimu caratteru",
-  "menuButtonSearchTutorialText": "Pulse stu buttone per chjude u teclatu è interagisce cù i risultati di ricerca",
+  "clickWheelInputTextBarTutorialText": "Move u to pollice ligeramente intornu à a rota di cliccà per evidenziare un alfabetu",
+  "centerButtonInputTextBarScreenTutorialText": "Pulse u buttone centru per selezziunate l'alfabetu evidenziatu",
+  "nextButtonInputTextBarTutorialText": "Pulse stu buttone per aghjunghje un spaziu",
+  "previousButtonInputTextBarTutorialText": "Pulse stu buttone per sguassà l'ultimu caratteru",
+  "menuButtonInputTextBarTutorialText": "Pulse stu buttone per chjude u teclatu è interagisce cù i risultati di ricerca",
   "allSongs": "Tutti i canzoni"
 }

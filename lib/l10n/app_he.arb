@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "לחץ על כפתור המרכז כדי למחזור דרך סרגל חיפוש, סרגל קרצוף ומחוון דשדוש. לחץ והחזק את לחצן המרכז כדי לגשת לאפשרויות נוספות.",
   "nextButtonNowPlayingTutorialText": "לחץ לחיצה ארוכה על כפתור זה כדי לקדם את השיר במהירות",
   "previousButtonNowPlayingTutorialText": "לחץ והחזק לחצן זה כדי לרדת מחדש את השיר",
-  "deviceControlSearchTutorialText": "הזז את האגודל שלך קלות סביב גלגל הלחיצה כדי להדגיש אלף -בית",
-  "centerButtonSearchTutorialText": "לחץ על כפתור המרכז כדי לבחור את האלף -בית המודגש",
-  "nextButtonSearchTutorialText": "לחץ על כפתור זה כדי להוסיף חלל",
-  "previousButtonSearchTutorialText": "לחץ על כפתור זה כדי למחוק את התו האחרון",
-  "menuButtonSearchTutorialText": "לחץ על כפתור זה כדי לסגור את המקלדת ולקיים אינטראקציה עם תוצאות החיפוש",
+  "clickWheelInputTextBarTutorialText": "הזז את האגודל שלך קלות סביב גלגל הלחיצה כדי להדגיש אלף -בית",
+  "centerButtonInputTextBarScreenTutorialText": "לחץ על כפתור המרכז כדי לבחור את האלף -בית המודגש",
+  "nextButtonInputTextBarTutorialText": "לחץ על כפתור זה כדי להוסיף חלל",
+  "previousButtonInputTextBarTutorialText": "לחץ על כפתור זה כדי למחוק את התו האחרון",
+  "menuButtonInputTextBarTutorialText": "לחץ על כפתור זה כדי לסגור את המקלדת ולקיים אינטראקציה עם תוצאות החיפוש",
   "allSongs": "כל השירים"
 }

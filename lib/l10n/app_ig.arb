@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pịa bọtịnụ etiti iji chọọ mmanya, sctufber mmanya na mmịfe mmịfe. Pịa ma jide bọtịnụ etiti iji nweta nhọrọ ndị ọzọ.",
   "nextButtonNowPlayingTutorialText": "Pịa ma jide bọtịnụ a iji bulie egwu ahụ ọsọ",
   "previousButtonNowPlayingTutorialText": "Pịa ma jide bọtịnụ a iji weghachi abụ ahụ",
-  "deviceControlSearchTutorialText": "Bugharịa mkpịsị aka ukwu gị gburugburu n'akụkụ wiilịpụta iji gosipụta mkpụrụedemede",
-  "centerButtonSearchTutorialText": "Pịa bọtịnụ etiti iji họrọ mkpụrụ akwụkwọ akọwapụtara",
-  "nextButtonSearchTutorialText": "Pịa bọtịnụ a ka ịgbakwunye oghere",
-  "previousButtonSearchTutorialText": "Pịa bọtịnụ a ka ihichapụ agwa ikpeazụ",
-  "menuButtonSearchTutorialText": "Pịa bọtịnụ a iji mechie usoro ma soro nsonaazụ ọchụchọ ahụ",
+  "clickWheelInputTextBarTutorialText": "Bugharịa mkpịsị aka ukwu gị gburugburu n'akụkụ wiilịpụta iji gosipụta mkpụrụedemede",
+  "centerButtonInputTextBarScreenTutorialText": "Pịa bọtịnụ etiti iji họrọ mkpụrụ akwụkwọ akọwapụtara",
+  "nextButtonInputTextBarTutorialText": "Pịa bọtịnụ a ka ịgbakwunye oghere",
+  "previousButtonInputTextBarTutorialText": "Pịa bọtịnụ a ka ihichapụ agwa ikpeazụ",
+  "menuButtonInputTextBarTutorialText": "Pịa bọtịnụ a iji mechie usoro ma soro nsonaazụ ọchụchọ ahụ",
   "allSongs": "Abụ niile"
 }

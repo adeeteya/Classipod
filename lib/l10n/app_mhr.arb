@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Центр кнопкым темдал, цикл гоч цикл кычалаш барыште, скраббер барыште да шуффл ползунок. Рӱдер кнопкым темдал да ешартыш вариант-влак деке пураш лиймашым налын.",
   "nextButtonNowPlayingTutorialText": "Муром писын ончыко каяш манын, тиде кнопкым темдал да кучен .",
   "previousButtonNowPlayingTutorialText": "Муром угыч вӱдаш да тиде кнопкым темдал .",
-  "deviceControlSearchTutorialText": "Тендан оҥдам йӱштӧ йыр куснаш Кликовный алфавитым ойырен налаш манын",
-  "centerButtonSearchTutorialText": "Рӱдӧ кнопкым темдал, ойырен налме алфавит ойырен налме .",
-  "nextButtonSearchTutorialText": "Тиде кнопкым темдал, верым ешарен .",
-  "previousButtonSearchTutorialText": "Тиде кнопкым темдал, пытартыш персонажым кораҥдаш манын .",
-  "menuButtonSearchTutorialText": "Тиде кнопкым темдал, клавиатурым петыраш да кычалмаш лектыш дене кылым кучаш .",
+  "clickWheelInputTextBarTutorialText": "Тендан оҥдам йӱштӧ йыр куснаш Кликовный алфавитым ойырен налаш манын",
+  "centerButtonInputTextBarScreenTutorialText": "Рӱдӧ кнопкым темдал, ойырен налме алфавит ойырен налме .",
+  "nextButtonInputTextBarTutorialText": "Тиде кнопкым темдал, верым ешарен .",
+  "previousButtonInputTextBarTutorialText": "Тиде кнопкым темдал, пытартыш персонажым кораҥдаш манын .",
+  "menuButtonInputTextBarTutorialText": "Тиде кнопкым темдал, клавиатурым петыраш да кычалмаш лектыш дене кылым кучаш .",
   "allSongs": "Чыла муро"
 }

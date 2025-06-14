@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Naciśnij knopka Cyntrum, coby cyklować bez szukanie baru, szlangu i suwak shuffle. Naciśnij i utrzimuj knopka Cyntrum, coby dostymp do ekstra ôpcyjōw.",
   "nextButtonNowPlayingTutorialText": "Naciśnij i trzymaj tyn guzicz, coby wartko do przodka śpiywka",
   "previousButtonNowPlayingTutorialText": "Naciśnij i trzymaj tyn guzicz, coby ôdtworzić śpiywka",
-  "deviceControlSearchTutorialText": "Przesuń kciuka lekko naôbkoło Kliknij, coby podświytlić abecadło",
-  "centerButtonSearchTutorialText": "Naciśnij cyntralny knop, coby wybrać podkreślōny alfabet",
-  "nextButtonSearchTutorialText": "Naciśnij tyn guzicz, coby przidać przestrzyń",
-  "previousButtonSearchTutorialText": "Naciśnij tyn guzicz, coby ususić ôstatni postać",
-  "menuButtonSearchTutorialText": "Naciśnij tyn guzicz, coby zawrzić klawiatura i wchodzić w interakcyjo z wynikami poszukowanio",
+  "clickWheelInputTextBarTutorialText": "Przesuń kciuka lekko naôbkoło Kliknij, coby podświytlić abecadło",
+  "centerButtonInputTextBarScreenTutorialText": "Naciśnij cyntralny knop, coby wybrać podkreślōny alfabet",
+  "nextButtonInputTextBarTutorialText": "Naciśnij tyn guzicz, coby przidać przestrzyń",
+  "previousButtonInputTextBarTutorialText": "Naciśnij tyn guzicz, coby ususić ôstatni postać",
+  "menuButtonInputTextBarTutorialText": "Naciśnij tyn guzicz, coby zawrzić klawiatura i wchodzić w interakcyjo z wynikami poszukowanio",
   "allSongs": "Cołke Śpije"
 }

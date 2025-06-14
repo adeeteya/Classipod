@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pindutan me ing button ning Sentru bang magbisikleta kapamilatan ning pamanintun bar, scrubble bar at sliffer slice. Pindutan me at pitalan ing buton ning Sentru bang makalub lang karagdagang opsyun.",
   "nextButtonNowPlayingTutorialText": "Pindutan me ini para mag-ayunu ya ing kanta .",
   "previousButtonNowPlayingTutorialText": "Pindutan me ini at tanggapan me ini para ibayu me ing kanta .",
-  "deviceControlSearchTutorialText": "Ilipat meng bagya ing thumb mu king paligid ning Click Gulong bang ipakilala me ing metung a alpabetu .",
-  "centerButtonSearchTutorialText": "Pindutan me ing sentru ning buton bang mamili king mipakilalang alpabetu .",
-  "nextButtonSearchTutorialText": "Pindutan me ining buton para dagdagan me ing espasyu .",
-  "previousButtonSearchTutorialText": "Pindutan me ini para buraran ing tauling tauan .",
-  "menuButtonSearchTutorialText": "Pindutan me ining buton para isara me ing keyboard at makipag-ugnayan kareng resulta ning pamanintun .",
+  "clickWheelInputTextBarTutorialText": "Ilipat meng bagya ing thumb mu king paligid ning Click Gulong bang ipakilala me ing metung a alpabetu .",
+  "centerButtonInputTextBarScreenTutorialText": "Pindutan me ing sentru ning buton bang mamili king mipakilalang alpabetu .",
+  "nextButtonInputTextBarTutorialText": "Pindutan me ining buton para dagdagan me ing espasyu .",
+  "previousButtonInputTextBarTutorialText": "Pindutan me ini para buraran ing tauling tauan .",
+  "menuButtonInputTextBarTutorialText": "Pindutan me ining buton para isara me ing keyboard at makipag-ugnayan kareng resulta ning pamanintun .",
   "allSongs": "Sablang Dalit ."
 }

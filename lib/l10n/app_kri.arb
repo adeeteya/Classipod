@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pres di senta bɔtin fɔ saykl tru Seek Bar, Scrubber bar ɛn shuffle slider. Pres ɛn ol di Sɛntral bɔtin fɔ akses ɔda opshɔn dɛn.",
   "nextButtonNowPlayingTutorialText": "Pres ɛn ol dis bɔtin fɔ fast fɔwad di siŋ .",
   "previousButtonNowPlayingTutorialText": "Pres ɛn ol dis bɔtin fɔ riwind di siŋ .",
-  "deviceControlSearchTutorialText": "Muv yu tumbu layt wan rawnd di klik wil fɔ aylayt wan alfabɛt .",
-  "centerButtonSearchTutorialText": "Pres di Senta bɔtin fɔ pik di alfabɛt we dɛn aylayt .",
-  "nextButtonSearchTutorialText": "Pres dis bɔtin fɔ ad wan spɛshal ples .",
-  "previousButtonSearchTutorialText": "Pres dis bɔtin fɔ dilit di las aks .",
-  "menuButtonSearchTutorialText": "Pres dis bɔtin fɔ lɔk di kibɔd ɛn intarakt wit di sɔch rizulyt dɛn .",
+  "clickWheelInputTextBarTutorialText": "Muv yu tumbu layt wan rawnd di klik wil fɔ aylayt wan alfabɛt .",
+  "centerButtonInputTextBarScreenTutorialText": "Pres di Senta bɔtin fɔ pik di alfabɛt we dɛn aylayt .",
+  "nextButtonInputTextBarTutorialText": "Pres dis bɔtin fɔ ad wan spɛshal ples .",
+  "previousButtonInputTextBarTutorialText": "Pres dis bɔtin fɔ dilit di las aks .",
+  "menuButtonInputTextBarTutorialText": "Pres dis bɔtin fɔ lɔk di kibɔd ɛn intarakt wit di sɔch rizulyt dɛn .",
   "allSongs": "Ɔl di siŋ dɛn ."
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Нажмите кнопку центра, чтобы пройти велосипед через бар, скруббер и ползунок. Нажмите и удерживайте центральную кнопку, чтобы получить доступ к дополнительным параметрам.",
   "nextButtonNowPlayingTutorialText": "Нажмите и удерживайте эту кнопку, чтобы перенести песню",
   "previousButtonNowPlayingTutorialText": "Нажмите и удерживайте эту кнопку, чтобы перемотать песню",
-  "deviceControlSearchTutorialText": "Слегка переместите большой палец вокруг щелчка, чтобы выделить алфавит",
-  "centerButtonSearchTutorialText": "Нажмите кнопку центра, чтобы выбрать выделенный алфавит",
-  "nextButtonSearchTutorialText": "Нажмите эту кнопку, чтобы добавить пространство",
-  "previousButtonSearchTutorialText": "Нажмите эту кнопку, чтобы удалить последний персонаж",
-  "menuButtonSearchTutorialText": "Нажмите эту кнопку, чтобы закрыть клавиатуру и взаимодействовать с результатами поиска",
+  "clickWheelInputTextBarTutorialText": "Слегка переместите большой палец вокруг щелчка, чтобы выделить алфавит",
+  "centerButtonInputTextBarScreenTutorialText": "Нажмите кнопку центра, чтобы выбрать выделенный алфавит",
+  "nextButtonInputTextBarTutorialText": "Нажмите эту кнопку, чтобы добавить пространство",
+  "previousButtonInputTextBarTutorialText": "Нажмите эту кнопку, чтобы удалить последний персонаж",
+  "menuButtonInputTextBarTutorialText": "Нажмите эту кнопку, чтобы закрыть клавиатуру и взаимодействовать с результатами поиска",
   "allSongs": "Все песни"
 }

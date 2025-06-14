@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tekan tombol Pusat buat sepedaan lewat cari bar, srubber bar dan slider acak. Tekan terus tombol Pusat buat akses opsi tambahan.",
   "nextButtonNowPlayingTutorialText": "Tekan dan tahan tombol ini buat ngebut majuin lagu .",
   "previousButtonNowPlayingTutorialText": "Tekan terus tombol ini buat mundurin lagu .",
-  "deviceControlSearchTutorialText": "Gerakin jempol enteng di sekitar Roda Klik buat nyorot alfabet .",
-  "centerButtonSearchTutorialText": "Tekan tombol tengah buat pilih alfabet yang disorot .",
-  "nextButtonSearchTutorialText": "Tekan tombol ini buat nambah ruang .",
-  "previousButtonSearchTutorialText": "Tekan tombol ini buat ngapus karakter terakhir .",
-  "menuButtonSearchTutorialText": "Tekan tombol ini buat nutup keyboard dan interaksiin sama hasil pencarian .",
+  "clickWheelInputTextBarTutorialText": "Gerakin jempol enteng di sekitar Roda Klik buat nyorot alfabet .",
+  "centerButtonInputTextBarScreenTutorialText": "Tekan tombol tengah buat pilih alfabet yang disorot .",
+  "nextButtonInputTextBarTutorialText": "Tekan tombol ini buat nambah ruang .",
+  "previousButtonInputTextBarTutorialText": "Tekan tombol ini buat ngapus karakter terakhir .",
+  "menuButtonInputTextBarTutorialText": "Tekan tombol ini buat nutup keyboard dan interaksiin sama hasil pencarian .",
   "allSongs": "Semua Lagu"
 }

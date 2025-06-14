@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Түбэй тобшо даража, бэдэрэлгын зурлаа, скруббер бар болон шуффель гулдирмагаар велосипедээр ябаха. Нэмэлтэ опцинуудта орохын тула Түбэй тобшо даража, барижа байгты.",
   "nextButtonNowPlayingTutorialText": "Энэ тобшо даража, дуугаа түргэн урагшань ябуулжа байгты",
   "previousButtonNowPlayingTutorialText": "Энэ тобшо даража, дуугаа бусааха .",
-  "deviceControlSearchTutorialText": "Өөрынгөө эрхиеэ хүнгэнөөр даража, алфавид онсолхын тула алфавит онсолон тэмдэглэхэ .",
-  "centerButtonSearchTutorialText": "Түбэй тобшо даража, онсолһон үзэг шэлэхэ .",
-  "nextButtonSearchTutorialText": "Энэ тобшо даража, зай нэмэхэ .",
-  "previousButtonSearchTutorialText": "Энэ тобшо даража, һүүлшын дүрэ усадхаха .",
-  "menuButtonSearchTutorialText": "Энэ тобшо даража, гар бэшэгые хаажа, хайлтын дүнгүүдтэй харилсаха",
+  "clickWheelInputTextBarTutorialText": "Өөрынгөө эрхиеэ хүнгэнөөр даража, алфавид онсолхын тула алфавит онсолон тэмдэглэхэ .",
+  "centerButtonInputTextBarScreenTutorialText": "Түбэй тобшо даража, онсолһон үзэг шэлэхэ .",
+  "nextButtonInputTextBarTutorialText": "Энэ тобшо даража, зай нэмэхэ .",
+  "previousButtonInputTextBarTutorialText": "Энэ тобшо даража, һүүлшын дүрэ усадхаха .",
+  "menuButtonInputTextBarTutorialText": "Энэ тобшо даража, гар бэшэгые хаажа, хайлтын дүнгүүдтэй харилсаха",
   "allSongs": "Бүхы дуунууд ."
 }

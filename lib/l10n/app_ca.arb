@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Premeu el botó Centre per anar a través de la barra de cerca, la barra de fregament i el control lliscant. Manteniu premut el botó Centre per accedir a opcions addicionals.",
   "nextButtonNowPlayingTutorialText": "Premeu i manteniu premut aquest botó per reenviar la cançó",
   "previousButtonNowPlayingTutorialText": "Premeu i manteniu premut aquest botó per rebobinar la cançó",
-  "deviceControlSearchTutorialText": "Moveu el polze lleugerament al voltant de la roda de clic per ressaltar un alfabet",
-  "centerButtonSearchTutorialText": "Premeu el botó Centre per seleccionar l’alfabet ressaltat",
-  "nextButtonSearchTutorialText": "Premeu aquest botó per afegir un espai",
-  "previousButtonSearchTutorialText": "Premeu aquest botó per eliminar l'últim personatge",
-  "menuButtonSearchTutorialText": "Premeu aquest botó per tancar el teclat i interactuar amb els resultats de la cerca",
+  "clickWheelInputTextBarTutorialText": "Moveu el polze lleugerament al voltant de la roda de clic per ressaltar un alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Premeu el botó Centre per seleccionar l’alfabet ressaltat",
+  "nextButtonInputTextBarTutorialText": "Premeu aquest botó per afegir un espai",
+  "previousButtonInputTextBarTutorialText": "Premeu aquest botó per eliminar l'últim personatge",
+  "menuButtonInputTextBarTutorialText": "Premeu aquest botó per tancar el teclat i interactuar amb els resultats de la cerca",
   "allSongs": "Totes les cançons"
 }

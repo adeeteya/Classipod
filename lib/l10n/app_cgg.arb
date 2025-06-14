@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Nyiga akapesha ka Center kugyendera omu roon, scrubber bar na shuffle slider. Nyiga kandi okwate akapesha ka Centre kubaasa kutunga emiringo endiijo.",
   "nextButtonNowPlayingTutorialText": "Nyiga kandi okwate akapesha aka okusiiba ekyeshongoro",
   "previousButtonNowPlayingTutorialText": "Nyiga kandi okwate akapesha aka ogaruke ekyeshongoro",
-  "deviceControlSearchTutorialText": "Taho ekikumu kyawe omu muringo mukye munonga aha Click Wheel kworeka alfabeti .",
-  "centerButtonSearchTutorialText": "Nyiga akapesha ka rwagati kutoorana alfabeti erikworekwa .",
-  "nextButtonSearchTutorialText": "Nyiga akapesha aka okwongyeraho omwanya",
-  "previousButtonSearchTutorialText": "Nyiga akapesha aka okusazaho omuntu owahererukireyo",
-  "menuButtonSearchTutorialText": "Nyiga akapesha aka okukinga ekiiboodi kandi okakwatanisa n'ebyarugire omu kusherura .",
+  "clickWheelInputTextBarTutorialText": "Taho ekikumu kyawe omu muringo mukye munonga aha Click Wheel kworeka alfabeti .",
+  "centerButtonInputTextBarScreenTutorialText": "Nyiga akapesha ka rwagati kutoorana alfabeti erikworekwa .",
+  "nextButtonInputTextBarTutorialText": "Nyiga akapesha aka okwongyeraho omwanya",
+  "previousButtonInputTextBarTutorialText": "Nyiga akapesha aka okusazaho omuntu owahererukireyo",
+  "menuButtonInputTextBarTutorialText": "Nyiga akapesha aka okukinga ekiiboodi kandi okakwatanisa n'ebyarugire omu kusherura .",
   "allSongs": "Ebyeshongoro byona"
 }

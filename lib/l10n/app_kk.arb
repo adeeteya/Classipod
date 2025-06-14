@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Жолақты, скраббер жолағының және араластырғыш жүгірткіні цикл алу үшін Орталық түймесін басыңыз. Қосымша опцияларға қол жеткізу үшін Орталық түймесін басып тұрыңыз.",
   "nextButtonNowPlayingTutorialText": "Әнді алға қарай жылдам басып тұрыңыз",
   "previousButtonNowPlayingTutorialText": "Әнді кері айналдыру үшін осы түймені басып тұрыңыз",
-  "deviceControlSearchTutorialText": "Алфавитті бөлектеу үшін бас бармағыңызды шертуді шертіңіз",
-  "centerButtonSearchTutorialText": "Бөлектелген әліпбиді таңдау үшін Орталық түймесін басыңыз",
-  "nextButtonSearchTutorialText": "Бос орын қосу үшін осы түймені басыңыз",
-  "previousButtonSearchTutorialText": "Соңғы таңбаны жою үшін осы түймені басыңыз",
-  "menuButtonSearchTutorialText": "Пернетақтаны жабу және іздеу нәтижелерімен өзара әрекеттесу үшін осы түймені басыңыз",
+  "clickWheelInputTextBarTutorialText": "Алфавитті бөлектеу үшін бас бармағыңызды шертуді шертіңіз",
+  "centerButtonInputTextBarScreenTutorialText": "Бөлектелген әліпбиді таңдау үшін Орталық түймесін басыңыз",
+  "nextButtonInputTextBarTutorialText": "Бос орын қосу үшін осы түймені басыңыз",
+  "previousButtonInputTextBarTutorialText": "Соңғы таңбаны жою үшін осы түймені басыңыз",
+  "menuButtonInputTextBarTutorialText": "Пернетақтаны жабу және іздеу нәтижелерімен өзара әрекеттесу үшін осы түймені басыңыз",
   "allSongs": "Барлық әндер"
 }

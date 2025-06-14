@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Shtypni butonin qendror për të ciklin përmes kërkimit të shiritit, shiritit pastrues dhe rrëshqitjes së shuffle. Shtypni dhe mbani butonin qendror për të hyrë në opsione shtesë.",
   "nextButtonNowPlayingTutorialText": "Shtypni dhe mbajeni këtë buton për të shpejtuar këngën",
   "previousButtonNowPlayingTutorialText": "Shtypni dhe mbajeni këtë buton për të rivendosur këngën",
-  "deviceControlSearchTutorialText": "Lëvizni gishtin e madh lehtë rreth timonit të klikimit për të nënvizuar një alfabet",
-  "centerButtonSearchTutorialText": "Shtypni butonin qendror për të zgjedhur alfabetin e theksuar",
-  "nextButtonSearchTutorialText": "Shtypni këtë buton për të shtuar një hapësirë",
-  "previousButtonSearchTutorialText": "Shtypni këtë buton për të fshirë karakterin e fundit",
-  "menuButtonSearchTutorialText": "Shtypni këtë buton për të mbyllur tastierën dhe bashkëvepruar me rezultatet e kërkimit",
+  "clickWheelInputTextBarTutorialText": "Lëvizni gishtin e madh lehtë rreth timonit të klikimit për të nënvizuar një alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Shtypni butonin qendror për të zgjedhur alfabetin e theksuar",
+  "nextButtonInputTextBarTutorialText": "Shtypni këtë buton për të shtuar një hapësirë",
+  "previousButtonInputTextBarTutorialText": "Shtypni këtë buton për të fshirë karakterin e fundit",
+  "menuButtonInputTextBarTutorialText": "Shtypni këtë buton për të mbyllur tastierën dhe bashkëvepruar me rezultatet e kërkimit",
   "allSongs": "Të gjitha këngët"
 }

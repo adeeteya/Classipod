@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "सीक बार, स्क्रबर बार आणि शफल स्लाइडरद्वारे सायकल करण्यासाठी मध्यभागी बटण दाबा. अतिरिक्त पर्यायांमध्ये प्रवेश करण्यासाठी केंद्र बटण दाबा आणि धरून ठेवा.",
   "nextButtonNowPlayingTutorialText": "गाणे वेगवान करण्यासाठी हे बटण दाबा आणि धरून ठेवा",
   "previousButtonNowPlayingTutorialText": "गाणे पुन्हा भरण्यासाठी हे बटण दाबा आणि धरून ठेवा",
-  "deviceControlSearchTutorialText": "वर्णमाला हायलाइट करण्यासाठी आपला अंगठा क्लिक व्हीलच्या भोवती हलका हलवा",
-  "centerButtonSearchTutorialText": "हायलाइट केलेले वर्णमाला निवडण्यासाठी मध्यभागी बटण दाबा",
-  "nextButtonSearchTutorialText": "जागा जोडण्यासाठी हे बटण दाबा",
-  "previousButtonSearchTutorialText": "शेवटचे वर्ण हटविण्यासाठी हे बटण दाबा",
-  "menuButtonSearchTutorialText": "कीबोर्ड बंद करण्यासाठी आणि शोध परिणामांसह संवाद साधण्यासाठी हे बटण दाबा",
+  "clickWheelInputTextBarTutorialText": "वर्णमाला हायलाइट करण्यासाठी आपला अंगठा क्लिक व्हीलच्या भोवती हलका हलवा",
+  "centerButtonInputTextBarScreenTutorialText": "हायलाइट केलेले वर्णमाला निवडण्यासाठी मध्यभागी बटण दाबा",
+  "nextButtonInputTextBarTutorialText": "जागा जोडण्यासाठी हे बटण दाबा",
+  "previousButtonInputTextBarTutorialText": "शेवटचे वर्ण हटविण्यासाठी हे बटण दाबा",
+  "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करण्यासाठी आणि शोध परिणामांसह संवाद साधण्यासाठी हे बटण दाबा",
   "allSongs": "सर्व गाणी"
 }

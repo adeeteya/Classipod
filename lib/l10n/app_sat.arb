@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ᱵᱟᱨ ᱥᱤᱲᱦᱤ ᱨᱮ ᱢᱤᱫ ᱵᱮᱨᱮᱞ ᱵᱩᱛᱟᱹᱢ ᱨᱮ ᱠᱞᱤᱠ ᱢᱮ, ᱟᱨ ᱛᱟᱭᱚᱢ ᱛᱮ ᱢᱤᱫ ᱵᱮᱫᱷᱟᱣ ᱵᱩᱛᱟᱹᱢ ᱨᱮ ᱫᱚᱦᱚᱭ ᱢᱮ ᱾ ᱞᱟᱛᱟᱨ ᱨᱮ ᱮᱢ ᱟᱠᱟᱱ ᱵᱩᱛᱟᱹᱢ ᱨᱮ ᱚᱛᱟᱭ ᱢᱮ ᱟᱨ ᱵᱟᱹᱲᱛᱤ ᱵᱩᱛᱟᱹᱢ ᱨᱮ ᱚᱛᱟᱭ ᱢᱮ ᱾",
   "nextButtonNowPlayingTutorialText": "ᱮᱛᱚᱦᱚᱵ ᱞᱟᱹᱜᱤᱫ ᱱᱚᱣᱟ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱟᱨ ᱴᱮᱯ ᱢᱮ ᱾",
   "previousButtonNowPlayingTutorialText": "ᱱᱚᱣᱟ ᱠᱚᱨᱟᱣ ᱢᱮ ᱟᱨ ᱵᱩᱛᱟᱹᱢ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾",
-  "deviceControlSearchTutorialText": "ᱟᱢᱟᱜ ᱢᱟᱨᱥᱟᱞ ᱪᱮᱛᱟᱱ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱡᱮᱢᱚᱱ ᱦᱟᱭᱞᱟᱭᱤᱴᱤᱝ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾",
-  "centerButtonSearchTutorialText": "ᱞᱮᱵᱮᱞ ᱜᱞᱩᱴᱮᱱ ᱵᱩᱛᱟᱹᱢ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾",
-  "nextButtonSearchTutorialText": "ᱥᱮᱴᱤᱝ ᱨᱮ ᱞᱤᱱ ᱠᱟᱛᱮ ᱱᱚᱣᱟ ᱥᱮᱞᱮᱫ ᱢᱮ ᱾",
-  "previousButtonSearchTutorialText": "ᱞᱟᱛᱟᱨ ᱨᱮ ᱮᱢ ᱟᱠᱟᱱ ᱰᱟᱭᱜᱽᱨᱟᱢ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾",
-  "menuButtonSearchTutorialText": "ᱞᱟᱛᱟᱨ ᱨᱮ ᱮᱢ ᱟᱠᱟᱱ ᱠᱤᱵᱚᱨᱰ ᱨᱮ ᱠᱞᱤᱠ ᱢᱮ ᱟᱨ ᱱᱚᱣᱟ ᱥᱮᱸᱫᱽᱨᱟ ᱚᱨᱡᱚ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾",
+  "clickWheelInputTextBarTutorialText": "ᱟᱢᱟᱜ ᱢᱟᱨᱥᱟᱞ ᱪᱮᱛᱟᱱ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱡᱮᱢᱚᱱ ᱦᱟᱭᱞᱟᱭᱤᱴᱤᱝ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾",
+  "centerButtonInputTextBarScreenTutorialText": "ᱞᱮᱵᱮᱞ ᱜᱞᱩᱴᱮᱱ ᱵᱩᱛᱟᱹᱢ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾",
+  "nextButtonInputTextBarTutorialText": "ᱥᱮᱴᱤᱝ ᱨᱮ ᱞᱤᱱ ᱠᱟᱛᱮ ᱱᱚᱣᱟ ᱥᱮᱞᱮᱫ ᱢᱮ ᱾",
+  "previousButtonInputTextBarTutorialText": "ᱞᱟᱛᱟᱨ ᱨᱮ ᱮᱢ ᱟᱠᱟᱱ ᱰᱟᱭᱜᱽᱨᱟᱢ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾",
+  "menuButtonInputTextBarTutorialText": "ᱞᱟᱛᱟᱨ ᱨᱮ ᱮᱢ ᱟᱠᱟᱱ ᱠᱤᱵᱚᱨᱰ ᱨᱮ ᱠᱞᱤᱠ ᱢᱮ ᱟᱨ ᱱᱚᱣᱟ ᱥᱮᱸᱫᱽᱨᱟ ᱚᱨᱡᱚ ᱨᱮ ᱞᱤᱱ ᱢᱮ ᱾",
   "allSongs": "ᱥᱟᱱᱟᱢ ᱠᱚ ᱜᱮ"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "खोज बार, स्क्रबबर बार र spulfle स्लाइड मार्फत साइकल गर्न केन्द्र बटन थिच्नुहोस्। थप विकल्पहरू पहुँच गर्न केन्द्र बटन थिच्नुहोस् र होल्ड गर्नुहोस्।",
   "nextButtonNowPlayingTutorialText": "प्रेस गर्नुहोस् र यो बटन थिच्नुहोस् गीत अगाडि बढ्न अगाडि बढ्न",
   "previousButtonNowPlayingTutorialText": "गीत पुनर्जीवी बनाउन यो बटन थिच्नुहोस् र होल्ड गर्नुहोस्",
-  "deviceControlSearchTutorialText": "तपाईंको औंलालाई हल्का रूपमा वर्णमाला जितेन वर्णमाला जितेलीमा सार्नुहोस्",
-  "centerButtonSearchTutorialText": "हाइलाइट गरिएको वर्णमाला चयन गर्न केन्द्र बटन थिच्नुहोस्",
-  "nextButtonSearchTutorialText": "ठाउँ थप्न यो बटन थिच्नुहोस्",
-  "previousButtonSearchTutorialText": "अन्तिम चरित्र मेट्न यो बटन थिच्नुहोस्",
-  "menuButtonSearchTutorialText": "किबोर्ड बन्द गर्न यो बटन थिच्नुहोस् र खोज परिणामहरूको साथ अन्तर्क्रिया गर्नुहोस्",
+  "clickWheelInputTextBarTutorialText": "तपाईंको औंलालाई हल्का रूपमा वर्णमाला जितेन वर्णमाला जितेलीमा सार्नुहोस्",
+  "centerButtonInputTextBarScreenTutorialText": "हाइलाइट गरिएको वर्णमाला चयन गर्न केन्द्र बटन थिच्नुहोस्",
+  "nextButtonInputTextBarTutorialText": "ठाउँ थप्न यो बटन थिच्नुहोस्",
+  "previousButtonInputTextBarTutorialText": "अन्तिम चरित्र मेट्न यो बटन थिच्नुहोस्",
+  "menuButtonInputTextBarTutorialText": "किबोर्ड बन्द गर्न यो बटन थिच्नुहोस् र खोज परिणामहरूको साथ अन्तर्क्रिया गर्नुहोस्",
   "allSongs": "सबै गीतहरू"
 }

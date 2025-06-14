@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "सीक बार, स्क्रबर बार ते स्लाइडर दे माध्यम कन्नै साइकिल चलाने लेई केंद्र बटन दबाओ। अतिरिक्त विकल्पें गी एक्सेस करने लेई सेंटर बटन गी दबाओ ते पकड़ो।",
   "nextButtonNowPlayingTutorialText": "गीत गी तेजी कन्नै अग्गें बधाने लेई इस बटन गी दबाओ ते पकड़ो",
   "previousButtonNowPlayingTutorialText": "गीत रिवाइंड करने लेई इस बटन गी दबाओ ते पकड़ो",
-  "deviceControlSearchTutorialText": "इक वर्णमाला हाइलाइट करने आस्तै क्लिक चक्के दे चारों-पार अपने अंगूठे गी हल्के ढंगै कन्नै लेई जाओ",
-  "centerButtonSearchTutorialText": "हाइलाइट कीती गेदी वर्णमाला गी चुनने लेई केंद्र बटन दबाओ",
-  "nextButtonSearchTutorialText": "इक स्पेस जोड़ने लेई इस बटन गी दबाओ",
-  "previousButtonSearchTutorialText": "पिछले वर्ण गी हटाने लेई इस बटन गी दबाओ",
-  "menuButtonSearchTutorialText": "कीबोर्ड गी बंद करने ते खोज परिणामें कन्नै गल्लबात करने लेई इस बटन गी दबाओ",
+  "clickWheelInputTextBarTutorialText": "इक वर्णमाला हाइलाइट करने आस्तै क्लिक चक्के दे चारों-पार अपने अंगूठे गी हल्के ढंगै कन्नै लेई जाओ",
+  "centerButtonInputTextBarScreenTutorialText": "हाइलाइट कीती गेदी वर्णमाला गी चुनने लेई केंद्र बटन दबाओ",
+  "nextButtonInputTextBarTutorialText": "इक स्पेस जोड़ने लेई इस बटन गी दबाओ",
+  "previousButtonInputTextBarTutorialText": "पिछले वर्ण गी हटाने लेई इस बटन गी दबाओ",
+  "menuButtonInputTextBarTutorialText": "कीबोर्ड गी बंद करने ते खोज परिणामें कन्नै गल्लबात करने लेई इस बटन गी दबाओ",
   "allSongs": "सारे गीत"
 }

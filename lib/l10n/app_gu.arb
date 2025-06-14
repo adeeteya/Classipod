@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "સીક બાર, સ્ક્રબર બાર અને શફલ સ્લાઇડર દ્વારા ચક્ર કરવા માટે કેન્દ્ર બટન દબાવો. વધારાના વિકલ્પોને to ક્સેસ કરવા માટે કેન્દ્ર બટન દબાવો અને હોલ્ડ કરો.",
   "nextButtonNowPlayingTutorialText": "ગીતને ઝડપથી આગળ વધારવા માટે આ બટન દબાવો અને હોલ્ડ કરો",
   "previousButtonNowPlayingTutorialText": "ગીતને ફરીથી દોરવા માટે આ બટન દબાવો અને પકડી રાખો",
-  "deviceControlSearchTutorialText": "મૂળાક્ષરોને પ્રકાશિત કરવા માટે તમારા અંગૂઠાને ક્લિક વ્હીલની આસપાસ થોડું ખસેડો",
-  "centerButtonSearchTutorialText": "પ્રકાશિત મૂળાક્ષરોને પસંદ કરવા માટે કેન્દ્ર બટન દબાવો",
-  "nextButtonSearchTutorialText": "જગ્યા ઉમેરવા માટે આ બટન દબાવો",
-  "previousButtonSearchTutorialText": "છેલ્લું પાત્ર કા delete ી નાખવા માટે આ બટન દબાવો",
-  "menuButtonSearchTutorialText": "કીબોર્ડને બંધ કરવા અને શોધ પરિણામો સાથે સંપર્ક કરવા માટે આ બટન દબાવો",
+  "clickWheelInputTextBarTutorialText": "મૂળાક્ષરોને પ્રકાશિત કરવા માટે તમારા અંગૂઠાને ક્લિક વ્હીલની આસપાસ થોડું ખસેડો",
+  "centerButtonInputTextBarScreenTutorialText": "પ્રકાશિત મૂળાક્ષરોને પસંદ કરવા માટે કેન્દ્ર બટન દબાવો",
+  "nextButtonInputTextBarTutorialText": "જગ્યા ઉમેરવા માટે આ બટન દબાવો",
+  "previousButtonInputTextBarTutorialText": "છેલ્લું પાત્ર કા delete ી નાખવા માટે આ બટન દબાવો",
+  "menuButtonInputTextBarTutorialText": "કીબોર્ડને બંધ કરવા અને શોધ પરિણામો સાથે સંપર્ક કરવા માટે આ બટન દબાવો",
   "allSongs": "બધા ગીતો"
 }

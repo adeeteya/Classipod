@@ -359,25 +359,25 @@
   "@previousButtonNowPlayingTutorialText": {
     "description": "The tutorial text for the previous button when user is in now playing screen for the first time"
   },
-  "deviceControlSearchTutorialText": "Move your thumb lightly around the Click Wheel to highlight a alphabet",
-  "@deviceControlSearchTutorialText": {
-    "description": "The tutorial text for the device controls when user is in search screen for the first time"
+  "clickWheelInputTextBarTutorialText": "Move your thumb lightly around the Click Wheel to highlight a alphabet",
+  "@clickWheelInputTextBarTutorialText": {
+    "description": "The tutorial text for the click wheel when user is in input text bar screen for the first time"
   },
-  "centerButtonSearchTutorialText": "Press the center button to select the highlighted alphabet",
-  "@centerButtonSearchTutorialText": {
-    "description": "The tutorial text for the center button when user is in search screen for the first time"
+  "centerButtonInputTextBarScreenTutorialText": "Press the center button to select the highlighted alphabet",
+  "@centerButtonInputTextBarScreenTutorialText": {
+    "description": "The tutorial text for the center button when user is in input text bar screen for the first time"
   },
-  "nextButtonSearchTutorialText": "Press this button to add a space",
-  "@nextButtonSearchTutorialText": {
-    "description": "The tutorial text for the next button when user is in search screen for the first time"
+  "nextButtonInputTextBarTutorialText": "Press this button to add a space",
+  "@nextButtonInputTextBarTutorialText": {
+    "description": "The tutorial text for the next button when user is in input text bar screen for the first time"
   },
-  "previousButtonSearchTutorialText": "Press this button to delete the last character",
-  "@previousButtonSearchTutorialText": {
-    "description": "The tutorial text for the previous button when user is in search screen for the first time"
+  "previousButtonInputTextBarTutorialText": "Press this button to delete the last character",
+  "@previousButtonInputTextBarTutorialText": {
+    "description": "The tutorial text for the previous button when user is in input text bar screen for the first time"
   },
-  "menuButtonSearchTutorialText": "Press this button to close the keyboard and interact with the search results",
-  "@menuButtonSearchTutorialText": {
-    "description": "The tutorial text for the menu button when user is in search screen for the first time"
+  "menuButtonInputTextBarTutorialText": "Press this button to close the keyboard and interact with the search results",
+  "@menuButtonInputTextBarTutorialText": {
+    "description": "The tutorial text for the menu button when user is in the input text bar screen for the first time"
   },
   "allSongs": "All Songs",
   "@allSongs": {
@@ -422,5 +422,9 @@
   "systemVolumeMode": "System",
   "@systemVolumeMode": {
     "description": "The text for system volume mode"
+  },
+  "renamePlaylist": "Rename Playlist",
+  "@renamePlaylist": {
+    "description": "The text of the rename playlist option"
   }
 }

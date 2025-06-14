@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ਬਾਰ, ਰਗੜ ਪੱਟੀ ਅਤੇ ਸ਼ਫਲਡ ਸਲਾਇਡਰ ਨੂੰ ਵੇਖਣ ਲਈ ਸਾਈਕਲ ਬਟਨ ਨੂੰ ਦਬਾਓ. ਵਾਧੂ ਵਿਕਲਪਾਂ ਤਕ ਪਹੁੰਚਣ ਲਈ ਸੈਂਟਰ ਬਟਨ ਨੂੰ ਦਬਾਓ ਅਤੇ ਹੋਲਡ ਕਰੋ.",
   "nextButtonNowPlayingTutorialText": "ਗਾਣੇ ਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਅੱਗੇ ਵਧਾਉਣ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ ਅਤੇ ਹੋਲਡ ਕਰੋ",
   "previousButtonNowPlayingTutorialText": "ਗਾਣੇ ਨੂੰ ਮੁੜ ਸੁਰਜੀਤ ਕਰਨ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ ਅਤੇ ਹੋਲਡ ਕਰੋ",
-  "deviceControlSearchTutorialText": "ਵਰਣਮਾਲਾ ਨੂੰ ਉਜਾਗਰ ਕਰਨ ਲਈ ਕਲਿਕ ਵੀ ਵ੍ਹੀਲੇ ਦੇ ਦੁਆਲੇ ਹਲਕੇ ਪਹੀਏ ਨੂੰ ਹਲਕੇ ਜਿਹੇ ਹਿਲਾਓ",
-  "centerButtonSearchTutorialText": "ਹਾਈਲਾਈਟ ਕੀਤੇ ਅੱਖਰ ਨੂੰ ਚੁਣਨ ਲਈ ਸੈਂਟਰ ਬਟਨ ਨੂੰ ਦਬਾਓ",
-  "nextButtonSearchTutorialText": "ਇੱਕ ਸਪੇਸ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ",
-  "previousButtonSearchTutorialText": "ਆਖਰੀ ਅੱਖਰ ਨੂੰ ਮਿਟਾਉਣ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ",
-  "menuButtonSearchTutorialText": "ਕੀਬੋਰਡ ਨੂੰ ਬੰਦ ਕਰਨ ਅਤੇ ਖੋਜ ਨਤੀਜਿਆਂ ਨਾਲ ਗੱਲਬਾਤ ਕਰਨ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ",
+  "clickWheelInputTextBarTutorialText": "ਵਰਣਮਾਲਾ ਨੂੰ ਉਜਾਗਰ ਕਰਨ ਲਈ ਕਲਿਕ ਵੀ ਵ੍ਹੀਲੇ ਦੇ ਦੁਆਲੇ ਹਲਕੇ ਪਹੀਏ ਨੂੰ ਹਲਕੇ ਜਿਹੇ ਹਿਲਾਓ",
+  "centerButtonInputTextBarScreenTutorialText": "ਹਾਈਲਾਈਟ ਕੀਤੇ ਅੱਖਰ ਨੂੰ ਚੁਣਨ ਲਈ ਸੈਂਟਰ ਬਟਨ ਨੂੰ ਦਬਾਓ",
+  "nextButtonInputTextBarTutorialText": "ਇੱਕ ਸਪੇਸ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ",
+  "previousButtonInputTextBarTutorialText": "ਆਖਰੀ ਅੱਖਰ ਨੂੰ ਮਿਟਾਉਣ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ",
+  "menuButtonInputTextBarTutorialText": "ਕੀਬੋਰਡ ਨੂੰ ਬੰਦ ਕਰਨ ਅਤੇ ਖੋਜ ਨਤੀਜਿਆਂ ਨਾਲ ਗੱਲਬਾਤ ਕਰਨ ਲਈ ਇਸ ਬਟਨ ਨੂੰ ਦਬਾਓ",
   "allSongs": "ਸਾਰੇ ਗਾਣੇ"
 }

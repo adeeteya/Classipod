@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "مەركەزنى بېسىپ ئۆتۈش بالدىكنى بېسىپ ئۆگزىسى, سۈرتكۈچ بالداق ۋە Shuffle Sliffer ئارقىلىق دەۋرىيلەڭ. قوشۇمچە تاللاشلارنى زىيارەت قىلىش ئۈچۈن مەركىزى كۇنۇپكىنى بېسىڭ.",
   "nextButtonNowPlayingTutorialText": "بۇ كۇنۇپكىنى بېسىپ بۇ كۇنۇپكىنى بېسىڭ",
   "previousButtonNowPlayingTutorialText": "بۇ كۇنۇپكىنى بېسىپ بۇ كۇنۇپكىنى بېسىپ ناخشىنى ئەسلىگە كەلتۈرۈڭ",
-  "deviceControlSearchTutorialText": "باش بارمىقىڭىزنى لامپۇچكىڭىزنى چېكىپ ئېلىپبەنى گەۋدىلەندۈرۈش ئۈچۈن چېكىڭ",
-  "centerButtonSearchTutorialText": "مەركىزى كۇنۇپكىنى بېسىپ گەۋدىلەنگەن ئېلىپبەنى تاللاڭ",
-  "nextButtonSearchTutorialText": "بوشلۇق قوشۇش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ",
-  "previousButtonSearchTutorialText": "بۇ كۇنۇپكىنى بېسىپ ئاخىرقى ھەرپنى ئۆچۈرۈڭ",
-  "menuButtonSearchTutorialText": "كۇنۇپكا تاختىسىنى ۋە ئىزدەش نەتىجىسىنى تاقاش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ",
+  "clickWheelInputTextBarTutorialText": "باش بارمىقىڭىزنى لامپۇچكىڭىزنى چېكىپ ئېلىپبەنى گەۋدىلەندۈرۈش ئۈچۈن چېكىڭ",
+  "centerButtonInputTextBarScreenTutorialText": "مەركىزى كۇنۇپكىنى بېسىپ گەۋدىلەنگەن ئېلىپبەنى تاللاڭ",
+  "nextButtonInputTextBarTutorialText": "بوشلۇق قوشۇش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ",
+  "previousButtonInputTextBarTutorialText": "بۇ كۇنۇپكىنى بېسىپ ئاخىرقى ھەرپنى ئۆچۈرۈڭ",
+  "menuButtonInputTextBarTutorialText": "كۇنۇپكا تاختىسىنى ۋە ئىزدەش نەتىجىسىنى تاقاش ئۈچۈن بۇ كۇنۇپكىنى بېسىڭ",
   "allSongs": "بارلىق ناخشىلار"
 }

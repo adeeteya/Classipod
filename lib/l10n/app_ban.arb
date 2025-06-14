@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Teken tombol Pusat mangda prasida masepeda ring ngrereh bar, bar scrubber lan slider sliffle. Teken lan tahan tombol Pusat mangda prasida ngakses opsi tambahan.",
   "nextButtonNowPlayingTutorialText": "Teken lan tahan tombol puniki mangda gelis maju lagu",
   "previousButtonNowPlayingTutorialText": "Teken lan tahan tombol puniki mangda prasida mundur tembang punika",
-  "deviceControlSearchTutorialText": "Pindahang jempol semetone enteng-enteng ring sawewengkon Roda .",
-  "centerButtonSearchTutorialText": "Teken tombol tengah anggén milih aksara sané kasorot",
-  "nextButtonSearchTutorialText": "Teken tombol puniki anggén nambahin genah",
-  "previousButtonSearchTutorialText": "Teken tombol puniki anggén ngicalang karakter sané kaping untat",
-  "menuButtonSearchTutorialText": "Teken tombol puniki anggén nutup papan ketik lan berinteraksi sareng hasil panyliksikan",
+  "clickWheelInputTextBarTutorialText": "Pindahang jempol semetone enteng-enteng ring sawewengkon Roda .",
+  "centerButtonInputTextBarScreenTutorialText": "Teken tombol tengah anggén milih aksara sané kasorot",
+  "nextButtonInputTextBarTutorialText": "Teken tombol puniki anggén nambahin genah",
+  "previousButtonInputTextBarTutorialText": "Teken tombol puniki anggén ngicalang karakter sané kaping untat",
+  "menuButtonInputTextBarTutorialText": "Teken tombol puniki anggén nutup papan ketik lan berinteraksi sareng hasil panyliksikan",
   "allSongs": "Saluiring Kidung"
 }

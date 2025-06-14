@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tekan tombol Pusat guna ersepeda arah bar, bar scrubber ras slider shuffle. Tekan ras tahan tombol Pusat guna ndatken pilihen tambahen.",
   "nextButtonNowPlayingTutorialText": "Tekan ras tahan tombol enda guna cepat maju lagu .",
   "previousButtonNowPlayingTutorialText": "Tekan ras tahan tombol enda guna mulihi lagu .",
-  "deviceControlSearchTutorialText": "Pindahken jempolndu ringan i sekelewet Roda Klik guna menyoroti alfabet .",
-  "centerButtonSearchTutorialText": "Tekan tombol pusat guna milih alfabet si isoroti .",
-  "nextButtonSearchTutorialText": "Tekan tombol enda guna nambahi ruang .",
-  "previousButtonSearchTutorialText": "Tekan tombol enda guna menghapus karakter si terakhir .",
-  "menuButtonSearchTutorialText": "Tekan tombol enda guna nutup keyboard ras berinteraksi ras hasil pencarian .",
+  "clickWheelInputTextBarTutorialText": "Pindahken jempolndu ringan i sekelewet Roda Klik guna menyoroti alfabet .",
+  "centerButtonInputTextBarScreenTutorialText": "Tekan tombol pusat guna milih alfabet si isoroti .",
+  "nextButtonInputTextBarTutorialText": "Tekan tombol enda guna nambahi ruang .",
+  "previousButtonInputTextBarTutorialText": "Tekan tombol enda guna menghapus karakter si terakhir .",
+  "menuButtonInputTextBarTutorialText": "Tekan tombol enda guna nutup keyboard ras berinteraksi ras hasil pencarian .",
   "allSongs": "Kerina Lagu"
 }

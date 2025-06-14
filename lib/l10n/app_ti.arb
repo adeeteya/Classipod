@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ነቲ ናይ ማእከል መጠወቒ ብምጽቃጥ ብመንገዲ Seek Bar, Scrubber Bar and Shuffle Slider ብሽክለታ ዑደት ግበር። ተወሳኺ ኣማራጺታት ንምርካብ ነቲ ናይ ማእከል መጠወቒ ጸቒጥካ ምሓዝ።",
   "nextButtonNowPlayingTutorialText": "ነዚ መጠወቒ ጸቒጥካ ሒዝካ ሒዝካ ንቕጽላት እታ ደርፊ",
   "previousButtonNowPlayingTutorialText": "ነዚ መጠወቒ እዚ ጸቒጥካ ሒዝካ ሒዝካ 2019።",
-  "deviceControlSearchTutorialText": "ንኣጻብዕቲ ኢድካ ኣብ ዙርያ እቲ ናይ ጠውቂ መንኰርኰር ብቐሊሉ ኣንቀሳቕሶ እሞ ንሓደ ፊደላት ንምጉላሕ .",
-  "centerButtonSearchTutorialText": "ነቲ ዝጐልሐ ፊደላት ንምምራጽ ነቲ ናይ ማእከል መጠወቒ ምጽቃጥ .",
-  "nextButtonSearchTutorialText": "ነዚ መጠወቒ እዚ ብምጽቃጥ ቦታ ንምውሳኽ .",
-  "previousButtonSearchTutorialText": "ነዚ ቁልፊ ብምጽቃጥ ናይ መወዳእታ ፊደል ንምድምሳስ .",
-  "menuButtonSearchTutorialText": "ነዚ መጠወቒ እዚ ብምጽቃጥ ነቲ ቁልፊ ሰሌዳ ምዕጻውን ምስ ውጽኢት ምድላይ ንምትእስሳርን .",
+  "clickWheelInputTextBarTutorialText": "ንኣጻብዕቲ ኢድካ ኣብ ዙርያ እቲ ናይ ጠውቂ መንኰርኰር ብቐሊሉ ኣንቀሳቕሶ እሞ ንሓደ ፊደላት ንምጉላሕ .",
+  "centerButtonInputTextBarScreenTutorialText": "ነቲ ዝጐልሐ ፊደላት ንምምራጽ ነቲ ናይ ማእከል መጠወቒ ምጽቃጥ .",
+  "nextButtonInputTextBarTutorialText": "ነዚ መጠወቒ እዚ ብምጽቃጥ ቦታ ንምውሳኽ .",
+  "previousButtonInputTextBarTutorialText": "ነዚ ቁልፊ ብምጽቃጥ ናይ መወዳእታ ፊደል ንምድምሳስ .",
+  "menuButtonInputTextBarTutorialText": "ነዚ መጠወቒ እዚ ብምጽቃጥ ነቲ ቁልፊ ሰሌዳ ምዕጻውን ምስ ውጽኢት ምድላይ ንምትእስሳርን .",
   "allSongs": "ኩሉ ደርፍታት"
 }

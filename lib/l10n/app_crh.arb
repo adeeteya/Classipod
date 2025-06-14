@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "«Меркез» дёгмесини басынъыз, къыдырмакъ ичюн пансионат, скруббер бар ве къарыштырув слайдер ярдымынен чалышмакъ керек. Къошма вариантларгъа кирмек ичюн «Меркез» дёгмесини басып тутынъыз.",
   "nextButtonNowPlayingTutorialText": "Бу дёгмени басып тутынъыз, йырны тез илерилемек .",
   "previousButtonNowPlayingTutorialText": "Йырны къайтармакъ ичюн бу дёгмени басып тутынъыз .",
-  "deviceControlSearchTutorialText": "Элифбени айдынлатмакъ ичюн баш пармагъынъны енгильден «Клик копчеги» этрафында авуштырынъыз .",
-  "centerButtonSearchTutorialText": "Тасвирленген элифбени сечип алмакъ ичюн орта дёгмесини басынъыз .",
-  "nextButtonSearchTutorialText": "Бу дёгмени басынъыз, бошлукъ къошмакъ ичюн .",
-  "previousButtonSearchTutorialText": "Сонъки ишаретни ёкъ этмек ичюн бу дёгмени басынъыз .",
-  "menuButtonSearchTutorialText": "Клавиатураны къапатмакъ ве къыдырув нетиджелеринен тесирлешмек ичюн бу дёгмени басынъыз .",
+  "clickWheelInputTextBarTutorialText": "Элифбени айдынлатмакъ ичюн баш пармагъынъны енгильден «Клик копчеги» этрафында авуштырынъыз .",
+  "centerButtonInputTextBarScreenTutorialText": "Тасвирленген элифбени сечип алмакъ ичюн орта дёгмесини басынъыз .",
+  "nextButtonInputTextBarTutorialText": "Бу дёгмени басынъыз, бошлукъ къошмакъ ичюн .",
+  "previousButtonInputTextBarTutorialText": "Сонъки ишаретни ёкъ этмек ичюн бу дёгмени басынъыз .",
+  "menuButtonInputTextBarTutorialText": "Клавиатураны къапатмакъ ве къыдырув нетиджелеринен тесирлешмек ичюн бу дёгмени басынъыз .",
   "allSongs": "Бутюн йырлар"
 }

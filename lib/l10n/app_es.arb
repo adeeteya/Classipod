@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Presione el botón central para recorrer la barra de búsqueda, la barra de depuración y el control deslizante de barajas. Mantenga presionado el botón central para acceder a opciones adicionales.",
   "nextButtonNowPlayingTutorialText": "Mantenga presionado este botón para avanzar rápidamente la canción",
   "previousButtonNowPlayingTutorialText": "Mantenga presionado este botón para rebobinar la canción",
-  "deviceControlSearchTutorialText": "Mueva el pulgar ligeramente alrededor de la rueda de clic para resaltar un alfabeto",
-  "centerButtonSearchTutorialText": "Presione el botón central para seleccionar el alfabeto resaltado",
-  "nextButtonSearchTutorialText": "Presione este botón para agregar un espacio",
-  "previousButtonSearchTutorialText": "Presione este botón para eliminar el último personaje",
-  "menuButtonSearchTutorialText": "Presione este botón para cerrar el teclado e interactuar con los resultados de la búsqueda",
+  "clickWheelInputTextBarTutorialText": "Mueva el pulgar ligeramente alrededor de la rueda de clic para resaltar un alfabeto",
+  "centerButtonInputTextBarScreenTutorialText": "Presione el botón central para seleccionar el alfabeto resaltado",
+  "nextButtonInputTextBarTutorialText": "Presione este botón para agregar un espacio",
+  "previousButtonInputTextBarTutorialText": "Presione este botón para eliminar el último personaje",
+  "menuButtonInputTextBarTutorialText": "Presione este botón para cerrar el teclado e interactuar con los resultados de la búsqueda",
   "allSongs": "Todas las canciones"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Chawpi boton ñit’iy bicicletapi purinaykipaq Seek Bar, Scrubber Bar chaymanta Shuffle Slider kaqnintakama. Chawpi kaq botonta ñit’iy hinaspa hap’iy huk akllanakunaman haykunapaq.",
   "nextButtonNowPlayingTutorialText": "Kay botonta ñit'ispa hap'iy takita usqhaylla ñawpaqman purichinaykipaq .",
   "previousButtonNowPlayingTutorialText": "Kay ñit'inata ñit'ispa hap'iy takiyta kutinanpaq .",
-  "deviceControlSearchTutorialText": "Rueda de clic nisqapi hatun makiykita llampullata kuyuchiy huk alfabetota resaltanaykipaq .",
-  "centerButtonSearchTutorialText": "Chawpi kaq botonta ñit’iy resaltasqa alfabetota akllanaykipaq .",
-  "nextButtonSearchTutorialText": "Kay ñit'inata ñit'iy huk espaciota yapanaykipaq .",
-  "previousButtonSearchTutorialText": "Kay ñit'inata ñit'iy qhipa kaq qillqata qulluchinaykipaq .",
-  "menuButtonSearchTutorialText": "Kay ñit'inata ñit'iy teclado wichq'anapaq chaymanta maskana ruwaykunawan tinkiy .",
+  "clickWheelInputTextBarTutorialText": "Rueda de clic nisqapi hatun makiykita llampullata kuyuchiy huk alfabetota resaltanaykipaq .",
+  "centerButtonInputTextBarScreenTutorialText": "Chawpi kaq botonta ñit’iy resaltasqa alfabetota akllanaykipaq .",
+  "nextButtonInputTextBarTutorialText": "Kay ñit'inata ñit'iy huk espaciota yapanaykipaq .",
+  "previousButtonInputTextBarTutorialText": "Kay ñit'inata ñit'iy qhipa kaq qillqata qulluchinaykipaq .",
+  "menuButtonInputTextBarTutorialText": "Kay ñit'inata ñit'iy teclado wichq'anapaq chaymanta maskana ruwaykunawan tinkiy .",
   "allSongs": "Tukuy takikuna ."
 }

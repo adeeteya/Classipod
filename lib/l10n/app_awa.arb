@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "बार, स्क्रबर बार और शफल स्लाइडर के माध्यम से साइकिल चलावै के लिए सेंटर बटन दबावा जाय। अतिरिक्त विकल्पन तक पहुंचै के लिए सेंटर बटन दबावा अउर पकड़ा जाय।",
   "nextButtonNowPlayingTutorialText": "प्रेस कइके आगे बढाये ई बटन दौये",
   "previousButtonNowPlayingTutorialText": "गीत दुबारा विस्तान करै के लिए ई बटन दबावैं अउर धरौ",
-  "deviceControlSearchTutorialText": "क्लिक व्हील के आसपास हल्के से अपने अंगूठा हल्के से एक वर्णमाला को उजागर करे",
-  "centerButtonSearchTutorialText": "हाइलाइट किए गए वर्णमाला का चयन करे खातिर सेंटर बटन दबावा जाय",
-  "nextButtonSearchTutorialText": "इस बटन को दबाने के लए एक जगह जोड़ने के लए",
-  "previousButtonSearchTutorialText": "ई बटन दबा के अंतिम चरित्र का हटावा जाय",
-  "menuButtonSearchTutorialText": "कीबोर्ड बंद करै अऊर खोज परिणामन के साथ बातचीत करै के लिए ई बटन दबावा जाय",
+  "clickWheelInputTextBarTutorialText": "क्लिक व्हील के आसपास हल्के से अपने अंगूठा हल्के से एक वर्णमाला को उजागर करे",
+  "centerButtonInputTextBarScreenTutorialText": "हाइलाइट किए गए वर्णमाला का चयन करे खातिर सेंटर बटन दबावा जाय",
+  "nextButtonInputTextBarTutorialText": "इस बटन को दबाने के लए एक जगह जोड़ने के लए",
+  "previousButtonInputTextBarTutorialText": "ई बटन दबा के अंतिम चरित्र का हटावा जाय",
+  "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करै अऊर खोज परिणामन के साथ बातचीत करै के लिए ई बटन दबावा जाय",
   "allSongs": "तमाम गाने"
 }

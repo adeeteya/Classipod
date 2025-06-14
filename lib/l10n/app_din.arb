@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tääu ë thëm de Center ba thëm në thëm de bar, bar ë thëm ku thëm de thëm. Tääu ku dɔm ë thäät ë Center yiic ku yök kä juëc ë lööŋ.",
   "nextButtonNowPlayingTutorialText": "Tääu ku muk ye button kënë ba diɛt lac tääu tueŋ .",
   "previousButtonNowPlayingTutorialText": "Tääu ku dɔm ye button kënë ba diɛt bɛɛr kueen .",
-  "deviceControlSearchTutorialText": "Tääu ë cindu yic në Cɔ̈k Wheel yic ba kë cï gɔ̈t në alfabet nyuɔɔth",
-  "centerButtonSearchTutorialText": "Tääu ë thëm de ciɛɛl ba kë cï juiir de alphabet kuany",
-  "nextButtonSearchTutorialText": "Tääu ë button kënë yic ba të lääu juak thïn .",
-  "previousButtonSearchTutorialText": "Tääu ë button kënë yic ba kë tɔ̈u ciëën nyaai .",
-  "menuButtonSearchTutorialText": "Tääu ë ye button kënë ba keyboard thiɔ̈ɔ̈k ku yök kë cï yök .",
+  "clickWheelInputTextBarTutorialText": "Tääu ë cindu yic në Cɔ̈k Wheel yic ba kë cï gɔ̈t në alfabet nyuɔɔth",
+  "centerButtonInputTextBarScreenTutorialText": "Tääu ë thëm de ciɛɛl ba kë cï juiir de alphabet kuany",
+  "nextButtonInputTextBarTutorialText": "Tääu ë button kënë yic ba të lääu juak thïn .",
+  "previousButtonInputTextBarTutorialText": "Tääu ë button kënë yic ba kë tɔ̈u ciëën nyaai .",
+  "menuButtonInputTextBarTutorialText": "Tääu ë ye button kënë ba keyboard thiɔ̈ɔ̈k ku yök kë cï yök .",
   "allSongs": "Käk ëbɛ̈n"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "බාර්එක, ස්ක්රබර් බාර් සහ ෂෆල් ස්ලයිඩරය සෙවීම තුළින් මැද චක්රයට ඔබන්න. අතිරේක විකල්ප වෙත ප්රවේශ වීම සඳහා මධ්යස්ථාන බොත්තම ඔබාගෙන සිටින්න.",
   "nextButtonNowPlayingTutorialText": "ගීතය වේගයෙන් ඉදිරියට ගෙන යාමට මෙම බොත්තම ඔබන්න",
   "previousButtonNowPlayingTutorialText": "ගීතය පෙරළීමට මෙම බොත්තම ඔබන්න",
-  "deviceControlSearchTutorialText": "හෝඩියක් ඉස්මතු කිරීම සඳහා ඔබේ මාපටැඟිල්ල ක්ලික් කරන්න ක්ලික් කරන්න",
-  "centerButtonSearchTutorialText": "උද්දීපනය කළ හෝඩිය තෝරා ගැනීමට මධ්යස්ථාන බොත්තම ඔබන්න",
-  "nextButtonSearchTutorialText": "ඉඩක් එක් කිරීමට මෙම බොත්තම ඔබන්න",
-  "previousButtonSearchTutorialText": "අවසාන අක්ෂරය මකා දැමීමට මෙම බොත්තම ඔබන්න",
-  "menuButtonSearchTutorialText": "යතුරුපුවරුව වැසීමට සහ සෙවුම් ප්රති .ල සමඟ අන්තර් ක්රියා කිරීමට මෙම බොත්තම ඔබන්න",
+  "clickWheelInputTextBarTutorialText": "හෝඩියක් ඉස්මතු කිරීම සඳහා ඔබේ මාපටැඟිල්ල ක්ලික් කරන්න ක්ලික් කරන්න",
+  "centerButtonInputTextBarScreenTutorialText": "උද්දීපනය කළ හෝඩිය තෝරා ගැනීමට මධ්යස්ථාන බොත්තම ඔබන්න",
+  "nextButtonInputTextBarTutorialText": "ඉඩක් එක් කිරීමට මෙම බොත්තම ඔබන්න",
+  "previousButtonInputTextBarTutorialText": "අවසාන අක්ෂරය මකා දැමීමට මෙම බොත්තම ඔබන්න",
+  "menuButtonInputTextBarTutorialText": "යතුරුපුවරුව වැසීමට සහ සෙවුම් ප්රති .ල සමඟ අන්තර් ක්රියා කිරීමට මෙම බොත්තම ඔබන්න",
   "allSongs": "සියලුම ගීත"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Gysga, swöter bar we çalçly slaýderi gözlemek arkaly sikl üçin merkezi düwmesini basyň. Goşmaça wariantlara girmek üçin merkez düwmesine basyň we saklaň.",
   "nextButtonNowPlayingTutorialText": "Aýdymy çalt öňe sürmek üçin bu düwmä basyň we saklaň",
   "previousButtonNowPlayingTutorialText": "Aýdymy yza öwürmek üçin bu düwmäni basyň we saklaň",
-  "deviceControlSearchTutorialText": "Elipbiýi bellemek üçin başam barmagyňyzy ýeňilleşdiriň",
-  "centerButtonSearchTutorialText": "Aýratynlandyrylan elipbiýi saýlamak üçin merkez düwmesine basyň",
-  "nextButtonSearchTutorialText": "Boş ýer goşmak üçin şu düwmä basyň",
-  "previousButtonSearchTutorialText": "Iň soňky häsiýeti pozmak üçin şu düwmä basyň",
-  "menuButtonSearchTutorialText": "Klawiaturany ýapmak we gözleg netijeleri bilen täsir etmek üçin şu düwmä basyň",
+  "clickWheelInputTextBarTutorialText": "Elipbiýi bellemek üçin başam barmagyňyzy ýeňilleşdiriň",
+  "centerButtonInputTextBarScreenTutorialText": "Aýratynlandyrylan elipbiýi saýlamak üçin merkez düwmesine basyň",
+  "nextButtonInputTextBarTutorialText": "Boş ýer goşmak üçin şu düwmä basyň",
+  "previousButtonInputTextBarTutorialText": "Iň soňky häsiýeti pozmak üçin şu düwmä basyň",
+  "menuButtonInputTextBarTutorialText": "Klawiaturany ýapmak we gözleg netijeleri bilen täsir etmek üçin şu düwmä basyň",
   "allSongs": "Songshli aýdymlar"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "مرکز ءِ بٹن ءَ چہ شوھاز ءَ بہ کن اِت کہ چہ آئی ءِ شوھاز ءَ بہ کن اِت، سکڑیں بار ءُ شفل سلائیڈر۔ مرکز ءِ بٹن ءَ دپ ءَ بہ دار اِت ءُ گیشیں آپشنانی رسائی ءَ بہ دار اِت۔",
   "nextButtonNowPlayingTutorialText": "اے بٹن ءَ دپ ءَ بہ دار اِت ءُ گانا ءِ دیم ءَ بہ دار اِت",
   "previousButtonNowPlayingTutorialText": "گانا ءِ پدا گرگ ءِ ھاترا اے بٹن ءَ بہ دار اِت",
-  "deviceControlSearchTutorialText": "وتی انگوٹھے ءَ چہ کلک ءِ کش ءُ گور ءَ دیم ءَ بیار",
-  "centerButtonSearchTutorialText": "مرخص الففی ءِ گچین کنگ ءِ ھاترا مرکز ءِ بٹن ءَ دپ ءَ بہ کن اِت",
-  "nextButtonSearchTutorialText": "اے بٹن ءَ دپ ءَ بہ جن اِت",
-  "previousButtonSearchTutorialText": "اے بٹن ئا دپ جن",
-  "menuButtonSearchTutorialText": "کی بورڈ بند کنگ ءِ ھاترا اے بٹن ءَ دپ ءَ بہ کن ءُ پٹ ءُ پول ءِ آسر ءَ گوں رابطہ بہ کن",
+  "clickWheelInputTextBarTutorialText": "وتی انگوٹھے ءَ چہ کلک ءِ کش ءُ گور ءَ دیم ءَ بیار",
+  "centerButtonInputTextBarScreenTutorialText": "مرخص الففی ءِ گچین کنگ ءِ ھاترا مرکز ءِ بٹن ءَ دپ ءَ بہ کن اِت",
+  "nextButtonInputTextBarTutorialText": "اے بٹن ءَ دپ ءَ بہ جن اِت",
+  "previousButtonInputTextBarTutorialText": "اے بٹن ئا دپ جن",
+  "menuButtonInputTextBarTutorialText": "کی بورڈ بند کنگ ءِ ھاترا اے بٹن ءَ دپ ءَ بہ کن ءُ پٹ ءُ پول ءِ آسر ءَ گوں رابطہ بہ کن",
   "allSongs": "دراہیں گانا"
 }

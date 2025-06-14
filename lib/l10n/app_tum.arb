@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tinikani batani la Center kuti liyenderenge mu bar yakupenja, bar ya scrubber na slider ya slider. Dinikani na kusunga Center kuti muŵe na mwaŵi wa kusanga vinthu vinyake.",
   "nextButtonNowPlayingTutorialText": "Dinikani na kukora batani ili mwaluŵiro panthazi pa sumu .",
   "previousButtonNowPlayingTutorialText": "Tinikani na kukora batani ili kuti muwiske sumu .",
-  "deviceControlSearchTutorialText": "Sunthani chigunwe chinu pachoko waka pafupi na Click Wheel kuti muwoneske alfabeti .",
-  "centerButtonSearchTutorialText": "Tinikani batani la pakati kuti musankhe alfabeti iyo yalongosoreka .",
-  "nextButtonSearchTutorialText": "Tinikani batani ili kuti musazgireko malo",
-  "previousButtonSearchTutorialText": "Tinikani batani ili kuti mufunyepo munthu waumaliro .",
-  "menuButtonSearchTutorialText": "Tinikani batani ili kuti mujalire kiyibodi na kuchezga na ivyo mwapenja .",
+  "clickWheelInputTextBarTutorialText": "Sunthani chigunwe chinu pachoko waka pafupi na Click Wheel kuti muwoneske alfabeti .",
+  "centerButtonInputTextBarScreenTutorialText": "Tinikani batani la pakati kuti musankhe alfabeti iyo yalongosoreka .",
+  "nextButtonInputTextBarTutorialText": "Tinikani batani ili kuti musazgireko malo",
+  "previousButtonInputTextBarTutorialText": "Tinikani batani ili kuti mufunyepo munthu waumaliro .",
+  "menuButtonInputTextBarTutorialText": "Tinikani batani ili kuti mujalire kiyibodi na kuchezga na ivyo mwapenja .",
   "allSongs": "Nyimbo zose"
 }

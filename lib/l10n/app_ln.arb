@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Finá bouton ya katikati mpo na kosala cycle na nzela ya bar ya Seek, barre ya scrubber mpe shuffle slider. Finá mpe simbá bouton ya katikati mpo na kokɔta na ba options mosusu.",
   "nextButtonNowPlayingTutorialText": "Finá mpe simbá bouton oyo mpo na kotinda nzembo yango nokinoki .",
   "previousButtonNowPlayingTutorialText": "Finá mpe simbá bouton oyo mpo na kozongisa nzembo yango .",
-  "deviceControlSearchTutorialText": "Bokende na mosapi na bino ya monene na pete zingazinga ya roue ya cliquage mpo na kosala ete alfabɛ́ moko ezala na ntina mingi .",
-  "centerButtonSearchTutorialText": "Finá na butɔ ya katikati mpo na kopona alfabɛ oyo ezali na elembo ya malamu .",
-  "nextButtonSearchTutorialText": "Finá butɔ oyo mpo na kobakisa esika moko .",
-  "previousButtonSearchTutorialText": "Finá na butɔ oyo mpo na kosilisa elembo ya nsuka .",
-  "menuButtonSearchTutorialText": "Finá na butɔ oyo mpo na kokanga klaviatware mpe kosala boyokani na ba résultats ya bolukiluki .",
+  "clickWheelInputTextBarTutorialText": "Bokende na mosapi na bino ya monene na pete zingazinga ya roue ya cliquage mpo na kosala ete alfabɛ́ moko ezala na ntina mingi .",
+  "centerButtonInputTextBarScreenTutorialText": "Finá na butɔ ya katikati mpo na kopona alfabɛ oyo ezali na elembo ya malamu .",
+  "nextButtonInputTextBarTutorialText": "Finá butɔ oyo mpo na kobakisa esika moko .",
+  "previousButtonInputTextBarTutorialText": "Finá na butɔ oyo mpo na kosilisa elembo ya nsuka .",
+  "menuButtonInputTextBarTutorialText": "Finá na butɔ oyo mpo na kokanga klaviatware mpe kosala boyokani na ba résultats ya bolukiluki .",
   "allSongs": "Ba nzembo nionso ."
 }

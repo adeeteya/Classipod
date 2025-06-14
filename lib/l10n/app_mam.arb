@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Jaku tzʼok ttzyuʼna aju botón Center tuʼn t-xiʼya toj bicicleta toj barra, toj barra te scribber ex toj deslizador te shuffle. Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna aju botón Center tuʼntzun tokxa toj junjuntl tten.",
   "nextButtonNowPlayingTutorialText": "Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna aju botón lu tuʼn t-xi t-xnaqʼtzaʼna aju bʼitz .",
   "previousButtonNowPlayingTutorialText": "Jaku tzʼok ttzyuʼna ex jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ t-ximana juntl maj aju bʼitz .",
-  "deviceControlSearchTutorialText": "Qʼonxa chʼin t-xbʼaluna tiʼjele Beel Click tuʼntzun tkubʼ tyekʼina jun alfabeto .",
-  "centerButtonSearchTutorialText": "Jaku tzʼok ttzyuʼna aju botón centro tuʼn tjaw tjyoʼna aju alfabeto resaltado .",
-  "nextButtonSearchTutorialText": "Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ tqʼoʼna jun .",
-  "previousButtonSearchTutorialText": "Jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ tnajsaʼna aju bʼajsbʼil xjal .",
-  "menuButtonSearchTutorialText": "Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ ttzʼibʼina teclado ex jaku tzʼok tmojbʼan tibʼa tukʼilju in tzaj tqʼamaʼn xjelbʼitz .",
+  "clickWheelInputTextBarTutorialText": "Qʼonxa chʼin t-xbʼaluna tiʼjele Beel Click tuʼntzun tkubʼ tyekʼina jun alfabeto .",
+  "centerButtonInputTextBarScreenTutorialText": "Jaku tzʼok ttzyuʼna aju botón centro tuʼn tjaw tjyoʼna aju alfabeto resaltado .",
+  "nextButtonInputTextBarTutorialText": "Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ tqʼoʼna jun .",
+  "previousButtonInputTextBarTutorialText": "Jaku tzʼok ttzyuʼna aju botón lu tuʼn tkubʼ tnajsaʼna aju bʼajsbʼil xjal .",
+  "menuButtonInputTextBarTutorialText": "Jaku tzʼok ttzyuʼna aju botón tuʼn tkubʼ ttzʼibʼina teclado ex jaku tzʼok tmojbʼan tibʼa tukʼilju in tzaj tqʼamaʼn xjelbʼitz .",
   "allSongs": "Kykyaqil"
 }

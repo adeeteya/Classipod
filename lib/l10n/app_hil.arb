@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "I-press ang button sang Sentro agud magbisikleta sa pagpangita sang bar, scrubber bar kag slider sang shuffle. Pindota kag hupti ang button sang Sentro agud ma-access ang dugang nga mga kapilian.",
   "nextButtonNowPlayingTutorialText": "Pindota kag hupti ini nga buton para mapadasig ang kanta .",
   "previousButtonNowPlayingTutorialText": "Pindota kag hupti ini nga buton para ma-rewind ang kanta .",
-  "deviceControlSearchTutorialText": "Ibalhin ang imo kumalagko sing mahapos sa palibot sang Click Wheel agod ipadaku ang isa ka alpabeto .",
-  "centerButtonSearchTutorialText": "Pindota ang button sa sentro sa pagpili sang gin-highlight nga alpabeto .",
-  "nextButtonSearchTutorialText": "Pindota ini nga buton para makadugang sang espasyo .",
-  "previousButtonSearchTutorialText": "Pindota ini nga buton para ma-delete ang katapusan nga karakter .",
-  "menuButtonSearchTutorialText": "Pindota ini nga buton sa pagsira sang keyboard kag makig-angot sa mga resulta sang pagpangita .",
+  "clickWheelInputTextBarTutorialText": "Ibalhin ang imo kumalagko sing mahapos sa palibot sang Click Wheel agod ipadaku ang isa ka alpabeto .",
+  "centerButtonInputTextBarScreenTutorialText": "Pindota ang button sa sentro sa pagpili sang gin-highlight nga alpabeto .",
+  "nextButtonInputTextBarTutorialText": "Pindota ini nga buton para makadugang sang espasyo .",
+  "previousButtonInputTextBarTutorialText": "Pindota ini nga buton para ma-delete ang katapusan nga karakter .",
+  "menuButtonInputTextBarTutorialText": "Pindota ini nga buton sa pagsira sang keyboard kag makig-angot sa mga resulta sang pagpangita .",
   "allSongs": "Ang tanan nga mga Ambahanon ."
 }

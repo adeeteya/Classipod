@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Presione le botón Centro u ciclo yo'osal kaxtik barra, barra matorcha yéetel deslizante baraja. Presione yéetel mantenga pulsado le botón Centro utia'al tsáabaltio'ob áantaj opciones adicionales.",
   "nextButtonNowPlayingTutorialText": "Presione yéetel mantenga pulsado le botón utia'al u ayunar táanil le k'aayo'",
   "previousButtonNowPlayingTutorialText": "Presione yéetel mantenga pulsado le botón utia'al u rebobinar le k'aayo'",
-  "deviceControlSearchTutorialText": "Péeksik u pulgar ligeramente mentik kex le Brija Click utia'al u resaltar jump'éel alfabeto",
-  "centerButtonSearchTutorialText": "Pulse le botón chúumukil utia'al u seleccionar le alfabeto resaltado",
-  "nextButtonSearchTutorialText": "Presione le botón utia'al u ts'áabal jump'éel kúuchil",
-  "previousButtonSearchTutorialText": "Presione le botón utia'al u borrar le ts'ook personaje",
-  "menuButtonSearchTutorialText": "Presione le botón utia'al u k'áalal le teclado yéetel interactuar yéetel ya'ala'al máaxo'ob máano'ob le xookilo'",
+  "clickWheelInputTextBarTutorialText": "Péeksik u pulgar ligeramente mentik kex le Brija Click utia'al u resaltar jump'éel alfabeto",
+  "centerButtonInputTextBarScreenTutorialText": "Pulse le botón chúumukil utia'al u seleccionar le alfabeto resaltado",
+  "nextButtonInputTextBarTutorialText": "Presione le botón utia'al u ts'áabal jump'éel kúuchil",
+  "previousButtonInputTextBarTutorialText": "Presione le botón utia'al u borrar le ts'ook personaje",
+  "menuButtonInputTextBarTutorialText": "Presione le botón utia'al u k'áalal le teclado yéetel interactuar yéetel ya'ala'al máaxo'ob máano'ob le xookilo'",
   "allSongs": "Tuláakal k'aayo'ob"
 }

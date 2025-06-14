@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Bonyeza kitufe cha katikati ili kuzunguka kupitia bar ya kutafuta, bar ya scrubber na slider. Bonyeza na ushikilie kitufe cha kituo ili kufikia chaguzi za ziada.",
   "nextButtonNowPlayingTutorialText": "Bonyeza na ushikilie kitufe hiki ili kusonga mbele wimbo",
   "previousButtonNowPlayingTutorialText": "Bonyeza na ushikilie kitufe hiki kurudisha wimbo",
-  "deviceControlSearchTutorialText": "Sogeza kidole chako kidogo kuzunguka gurudumu la kubonyeza ili kuonyesha alfabeti",
-  "centerButtonSearchTutorialText": "Bonyeza kitufe cha katikati kuchagua alfabeti iliyoangaziwa",
-  "nextButtonSearchTutorialText": "Bonyeza kitufe hiki ili kuongeza nafasi",
-  "previousButtonSearchTutorialText": "Bonyeza kitufe hiki kufuta tabia ya mwisho",
-  "menuButtonSearchTutorialText": "Bonyeza kitufe hiki ili kufunga kibodi na kuingiliana na matokeo ya utaftaji",
+  "clickWheelInputTextBarTutorialText": "Sogeza kidole chako kidogo kuzunguka gurudumu la kubonyeza ili kuonyesha alfabeti",
+  "centerButtonInputTextBarScreenTutorialText": "Bonyeza kitufe cha katikati kuchagua alfabeti iliyoangaziwa",
+  "nextButtonInputTextBarTutorialText": "Bonyeza kitufe hiki ili kuongeza nafasi",
+  "previousButtonInputTextBarTutorialText": "Bonyeza kitufe hiki kufuta tabia ya mwisho",
+  "menuButtonInputTextBarTutorialText": "Bonyeza kitufe hiki ili kufunga kibodi na kuingiliana na matokeo ya utaftaji",
   "allSongs": "Nyimbo zote"
 }

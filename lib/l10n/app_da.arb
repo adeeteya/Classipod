@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tryk på midten af ​​knappen for at cykle gennem søgen, skrubberbjælke og bland skyderen. Tryk og hold på midten af ​​knappen for at få adgang til yderligere indstillinger.",
   "nextButtonNowPlayingTutorialText": "Tryk på og hold på denne knap for at faste sangen frem",
   "previousButtonNowPlayingTutorialText": "Tryk og hold på denne knap for at spole tilbage sangen",
-  "deviceControlSearchTutorialText": "Flyt tommelfingeren let rundt om klikhjulet for at fremhæve et alfabet",
-  "centerButtonSearchTutorialText": "Tryk på midten af ​​knappen for at vælge det fremhævede alfabet",
-  "nextButtonSearchTutorialText": "Tryk på denne knap for at tilføje et rum",
-  "previousButtonSearchTutorialText": "Tryk på denne knap for at slette den sidste karakter",
-  "menuButtonSearchTutorialText": "Tryk på denne knap for at lukke tastaturet og interagere med søgeresultaterne",
+  "clickWheelInputTextBarTutorialText": "Flyt tommelfingeren let rundt om klikhjulet for at fremhæve et alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Tryk på midten af ​​knappen for at vælge det fremhævede alfabet",
+  "nextButtonInputTextBarTutorialText": "Tryk på denne knap for at tilføje et rum",
+  "previousButtonInputTextBarTutorialText": "Tryk på denne knap for at slette den sidste karakter",
+  "menuButtonInputTextBarTutorialText": "Tryk på denne knap for at lukke tastaturet og interagere med søgeresultaterne",
   "allSongs": "Alle sange"
 }

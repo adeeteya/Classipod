@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "సీక్ బార్, స్క్రబ్బర్ బార్ మరియు షఫుల్ స్లైడర్ ద్వారా సైకిల్ చేయడానికి సెంటర్ బటన్‌ను నొక్కండి. అదనపు ఎంపికలను యాక్సెస్ చేయడానికి సెంటర్ బటన్‌ను నొక్కి ఉంచండి.",
   "nextButtonNowPlayingTutorialText": "పాటను వేగంగా ఫార్వార్డ్ చేయడానికి ఈ బటన్‌ను నొక్కి ఉంచండి",
   "previousButtonNowPlayingTutorialText": "పాటను రివైండ్ చేయడానికి ఈ బటన్‌ను నొక్కి ఉంచండి",
-  "deviceControlSearchTutorialText": "వర్ణమాలను హైలైట్ చేయడానికి క్లిక్ వీల్ చుట్టూ మీ బొటనవేలును తేలికగా తరలించండి",
-  "centerButtonSearchTutorialText": "హైలైట్ చేసిన వర్ణమాలను ఎంచుకోవడానికి సెంటర్ బటన్ నొక్కండి",
-  "nextButtonSearchTutorialText": "స్థలాన్ని జోడించడానికి ఈ బటన్‌ను నొక్కండి",
-  "previousButtonSearchTutorialText": "చివరి అక్షరాన్ని తొలగించడానికి ఈ బటన్‌ను నొక్కండి",
-  "menuButtonSearchTutorialText": "కీబోర్డ్‌ను మూసివేయడానికి ఈ బటన్‌ను నొక్కండి మరియు శోధన ఫలితాలతో ఇంటరాక్ట్ అవ్వండి",
+  "clickWheelInputTextBarTutorialText": "వర్ణమాలను హైలైట్ చేయడానికి క్లిక్ వీల్ చుట్టూ మీ బొటనవేలును తేలికగా తరలించండి",
+  "centerButtonInputTextBarScreenTutorialText": "హైలైట్ చేసిన వర్ణమాలను ఎంచుకోవడానికి సెంటర్ బటన్ నొక్కండి",
+  "nextButtonInputTextBarTutorialText": "స్థలాన్ని జోడించడానికి ఈ బటన్‌ను నొక్కండి",
+  "previousButtonInputTextBarTutorialText": "చివరి అక్షరాన్ని తొలగించడానికి ఈ బటన్‌ను నొక్కండి",
+  "menuButtonInputTextBarTutorialText": "కీబోర్డ్‌ను మూసివేయడానికి ఈ బటన్‌ను నొక్కండి మరియు శోధన ఫలితాలతో ఇంటరాక్ట్ అవ్వండి",
   "allSongs": "అన్ని పాటలు"
 }

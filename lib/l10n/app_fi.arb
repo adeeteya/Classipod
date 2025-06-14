@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Paina keskipainiketta kiertääksesi Seek -palkin, pesulapalkin ja sekoituksen liukusäätimen läpi. Pidä keski -painiketta painamalla lisävaihtoehtoja.",
   "nextButtonNowPlayingTutorialText": "Pidä tätä painiketta painettuna eteenpäin kappaleen eteenpäin",
   "previousButtonNowPlayingTutorialText": "Pidä tätä painiketta painettuna takaisin kappaleeseen",
-  "deviceControlSearchTutorialText": "Siirrä peukaloa kevyesti napsautuskohdan ympäri korostaaksesi aakkoset",
-  "centerButtonSearchTutorialText": "Valitse korostettu aakkoset painamalla keskuspainiketta",
-  "nextButtonSearchTutorialText": "Lisää tilaa painamalla tätä painiketta",
-  "previousButtonSearchTutorialText": "Poista viimeinen merkki painamalla tätä painiketta",
-  "menuButtonSearchTutorialText": "Paina tätä painiketta sulkeaksesi näppäimistön ja vuorovaikutuksessa hakutulosten kanssa",
+  "clickWheelInputTextBarTutorialText": "Siirrä peukaloa kevyesti napsautuskohdan ympäri korostaaksesi aakkoset",
+  "centerButtonInputTextBarScreenTutorialText": "Valitse korostettu aakkoset painamalla keskuspainiketta",
+  "nextButtonInputTextBarTutorialText": "Lisää tilaa painamalla tätä painiketta",
+  "previousButtonInputTextBarTutorialText": "Poista viimeinen merkki painamalla tätä painiketta",
+  "menuButtonInputTextBarTutorialText": "Paina tätä painiketta sulkeaksesi näppäimistön ja vuorovaikutuksessa hakutulosten kanssa",
   "allSongs": "Kaikki kappaleet"
 }

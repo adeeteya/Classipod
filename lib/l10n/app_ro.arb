@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Apăsați butonul central pentru a circula printr -o bară de căutare, bara de scrubber și shuffle shuffle. Apăsați și mențineți apăsat butonul Center pentru a accesa opțiuni suplimentare.",
   "nextButtonNowPlayingTutorialText": "Apăsați și mențineți apăsat acest buton pentru a transmite rapid melodia",
   "previousButtonNowPlayingTutorialText": "Apăsați și mențineți apăsat acest buton pentru a derula melodia",
-  "deviceControlSearchTutorialText": "Mutați -vă ușor degetul în jurul roții de clic pentru a evidenția un alfabet",
-  "centerButtonSearchTutorialText": "Apăsați butonul central pentru a selecta alfabetul evidențiat",
-  "nextButtonSearchTutorialText": "Apăsați acest buton pentru a adăuga un spațiu",
-  "previousButtonSearchTutorialText": "Apăsați acest buton pentru a șterge ultimul personaj",
-  "menuButtonSearchTutorialText": "Apăsați acest buton pentru a închide tastatura și a interacționa cu rezultatele căutării",
+  "clickWheelInputTextBarTutorialText": "Mutați -vă ușor degetul în jurul roții de clic pentru a evidenția un alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Apăsați butonul central pentru a selecta alfabetul evidențiat",
+  "nextButtonInputTextBarTutorialText": "Apăsați acest buton pentru a adăuga un spațiu",
+  "previousButtonInputTextBarTutorialText": "Apăsați acest buton pentru a șterge ultimul personaj",
+  "menuButtonInputTextBarTutorialText": "Apăsați acest buton pentru a închide tastatura și a interacționa cu rezultatele căutării",
   "allSongs": "Toate melodiile"
 }

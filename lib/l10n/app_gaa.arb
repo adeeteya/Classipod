@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Nyɛɛ Center button lɛ nɔ koni otsɔ taomɔ bar, scrubber bar kɛ shuffle slider nɔ. Nyɛɛ Center button lɛ nɔ ni omɔ mli koni ona nibii krokomɛi ni obaanyɛ ohala.",
   "nextButtonNowPlayingTutorialText": "Nyɛɛ nɔ ni omɔ mli koni okɛ lala lɛ aya hiɛ oya",
   "previousButtonNowPlayingTutorialText": "Nyɛɛ nɔ ni omɔ mli koni okɛ lala lɛ aku sɛɛ aba",
-  "deviceControlSearchTutorialText": "Tsi oshishifa lɛ he fioo yɛ Click Wheel lɛ he koni okɛtsɔɔ niŋmaa okadii lɛ .",
-  "centerButtonSearchTutorialText": "Nyɛɛ teŋgbɛ button lɛ nɔ koni ohala alfabɛta ni ajie lɛ kpo lɛ",
-  "nextButtonSearchTutorialText": "Nyɛɛ button nɛɛ nɔ koni okɛ he ko afata he",
-  "previousButtonSearchTutorialText": "Nyɛɛ button nɛɛ nɔ koni ojie naagbee niŋmaa lɛ",
-  "menuButtonSearchTutorialText": "Nyɛɛ button nɛɛ nɔ koni oŋa keyboard lɛ ni okɛ taomɔ hetooi lɛ atsu nii",
+  "clickWheelInputTextBarTutorialText": "Tsi oshishifa lɛ he fioo yɛ Click Wheel lɛ he koni okɛtsɔɔ niŋmaa okadii lɛ .",
+  "centerButtonInputTextBarScreenTutorialText": "Nyɛɛ teŋgbɛ button lɛ nɔ koni ohala alfabɛta ni ajie lɛ kpo lɛ",
+  "nextButtonInputTextBarTutorialText": "Nyɛɛ button nɛɛ nɔ koni okɛ he ko afata he",
+  "previousButtonInputTextBarTutorialText": "Nyɛɛ button nɛɛ nɔ koni ojie naagbee niŋmaa lɛ",
+  "menuButtonInputTextBarTutorialText": "Nyɛɛ button nɛɛ nɔ koni oŋa keyboard lɛ ni okɛ taomɔ hetooi lɛ atsu nii",
   "allSongs": "Lalai lɛ fɛɛ"
 }

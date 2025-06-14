@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "সিক বার, স্ক্রাবার বার এবং শ্যাফল স্লাইডারের মাধ্যমে চক্রের জন্য সেন্টার বোতামটি টিপুন। অতিরিক্ত বিকল্পগুলি অ্যাক্সেস করতে সেন্টার বোতাম টিপুন এবং ধরে রাখুন।",
   "nextButtonNowPlayingTutorialText": "গানটি দ্রুত ফরোয়ার্ড করতে এই বোতামটি টিপুন এবং ধরে রাখুন",
   "previousButtonNowPlayingTutorialText": "গানটি রিওয়াইন্ড করতে এই বোতামটি টিপুন এবং ধরে রাখুন",
-  "deviceControlSearchTutorialText": "একটি বর্ণমালা হাইলাইট করতে আপনার থাম্বটি ক্লিক হুইলের চারপাশে হালকাভাবে সরান",
-  "centerButtonSearchTutorialText": "হাইলাইট বর্ণমালা নির্বাচন করতে সেন্টার বোতাম টিপুন",
-  "nextButtonSearchTutorialText": "একটি স্থান যুক্ত করতে এই বোতামটি টিপুন",
-  "previousButtonSearchTutorialText": "শেষ চরিত্রটি মুছতে এই বোতামটি টিপুন",
-  "menuButtonSearchTutorialText": "কীবোর্ডটি বন্ধ করতে এই বোতামটি টিপুন এবং অনুসন্ধান ফলাফলের সাথে ইন্টারঅ্যাক্ট করুন",
+  "clickWheelInputTextBarTutorialText": "একটি বর্ণমালা হাইলাইট করতে আপনার থাম্বটি ক্লিক হুইলের চারপাশে হালকাভাবে সরান",
+  "centerButtonInputTextBarScreenTutorialText": "হাইলাইট বর্ণমালা নির্বাচন করতে সেন্টার বোতাম টিপুন",
+  "nextButtonInputTextBarTutorialText": "একটি স্থান যুক্ত করতে এই বোতামটি টিপুন",
+  "previousButtonInputTextBarTutorialText": "শেষ চরিত্রটি মুছতে এই বোতামটি টিপুন",
+  "menuButtonInputTextBarTutorialText": "কীবোর্ডটি বন্ধ করতে এই বোতামটি টিপুন এবং অনুসন্ধান ফলাফলের সাথে ইন্টারঅ্যাক্ট করুন",
   "allSongs": "সব গান"
 }

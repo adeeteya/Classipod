@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Bar barbaa, barruu scrubber fi shuffle slider keessa marsaa gochuuf button giddu galeessaa dhiibi. Filannoo dabalataa argachuuf qaree Giddugaleessaa dhiibaa qabadhaa.",
   "nextButtonNowPlayingTutorialText": "Faarfannaa saffisaan fuulduratti tarkaanfachiisuuf button kana dhiibaa qabadhaa .",
   "previousButtonNowPlayingTutorialText": "Sirba sana duubatti deebisuuf button kana dhiibaa qabadhaa .",
-  "deviceControlSearchTutorialText": "Quba kee salphaatti naannoo wiil cuqaasuutti sochoosi .",
-  "centerButtonSearchTutorialText": "Qubee calaqqise filachuuf button giddu galeessaa dhiibi .",
-  "nextButtonSearchTutorialText": "Bakka itti dabaluuf button kana dhiibaa .",
-  "previousButtonSearchTutorialText": "Arfii dhumaa haquuf qaree kana dhiibi .",
-  "menuButtonSearchTutorialText": "Kiiboodii cufuuf button kana dhiibiitii bu'aa barbaacha waliin wal qunnami .",
+  "clickWheelInputTextBarTutorialText": "Quba kee salphaatti naannoo wiil cuqaasuutti sochoosi .",
+  "centerButtonInputTextBarScreenTutorialText": "Qubee calaqqise filachuuf button giddu galeessaa dhiibi .",
+  "nextButtonInputTextBarTutorialText": "Bakka itti dabaluuf button kana dhiibaa .",
+  "previousButtonInputTextBarTutorialText": "Arfii dhumaa haquuf qaree kana dhiibi .",
+  "menuButtonInputTextBarTutorialText": "Kiiboodii cufuuf button kana dhiibiitii bu'aa barbaacha waliin wal qunnami .",
   "allSongs": "Sirboota hunda ."
 }

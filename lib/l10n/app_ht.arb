@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Peze bouton an sant sik nan chèche ba, baraj bar ak kurseur chefeul. Peze epi kenbe bouton an sant jwenn aksè nan opsyon adisyonèl.",
   "nextButtonNowPlayingTutorialText": "Peze epi kenbe bouton sa a vit pou pi devan chan an",
   "previousButtonNowPlayingTutorialText": "Peze epi kenbe bouton sa a pou remonte chan an",
-  "deviceControlSearchTutorialText": "Deplase gwo pous ou alalejè alantou wou a klike sou mete aksan sou yon alfabè",
-  "centerButtonSearchTutorialText": "Peze bouton sant lan pou chwazi alfabè a make",
-  "nextButtonSearchTutorialText": "Peze bouton sa a pou ajoute yon espas",
-  "previousButtonSearchTutorialText": "Peze bouton sa a pou efase dènye karaktè a",
-  "menuButtonSearchTutorialText": "Peze bouton sa a pou fèmen klavye a epi kominike avèk rezilta rechèch la",
+  "clickWheelInputTextBarTutorialText": "Deplase gwo pous ou alalejè alantou wou a klike sou mete aksan sou yon alfabè",
+  "centerButtonInputTextBarScreenTutorialText": "Peze bouton sant lan pou chwazi alfabè a make",
+  "nextButtonInputTextBarTutorialText": "Peze bouton sa a pou ajoute yon espas",
+  "previousButtonInputTextBarTutorialText": "Peze bouton sa a pou efase dènye karaktè a",
+  "menuButtonInputTextBarTutorialText": "Peze bouton sa a pou fèmen klavye a epi kominike avèk rezilta rechèch la",
   "allSongs": "Tout chante"
 }

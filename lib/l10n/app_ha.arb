@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Latsa maɓallin tsakiyar zuwa sake zagayowar ta hanyar neman mashaya, goge goge kuma supfle Slider. Latsa ka riƙe maɓallin cibiyar don samun damar ƙarin zaɓuɓɓuka.",
   "nextButtonNowPlayingTutorialText": "Latsa ka riƙe wannan maɓallin don saurin tura waƙar",
   "previousButtonNowPlayingTutorialText": "Latsa ka riƙe wannan maɓallin don sake kunna wakar",
-  "deviceControlSearchTutorialText": "Matsar da yatsa a kusa da dannawa don ƙarin haruffa",
-  "centerButtonSearchTutorialText": "Latsa maɓallin tsakiyar don zaɓar wasika mai alama",
-  "nextButtonSearchTutorialText": "Latsa wannan maɓallin don ƙara sarari",
-  "previousButtonSearchTutorialText": "Latsa wannan maɓallin don share halayyar ƙarshe",
-  "menuButtonSearchTutorialText": "Latsa wannan maɓallin don rufe maballin kuma yana hulɗa da sakamakon binciken",
+  "clickWheelInputTextBarTutorialText": "Matsar da yatsa a kusa da dannawa don ƙarin haruffa",
+  "centerButtonInputTextBarScreenTutorialText": "Latsa maɓallin tsakiyar don zaɓar wasika mai alama",
+  "nextButtonInputTextBarTutorialText": "Latsa wannan maɓallin don ƙara sarari",
+  "previousButtonInputTextBarTutorialText": "Latsa wannan maɓallin don share halayyar ƙarshe",
+  "menuButtonInputTextBarTutorialText": "Latsa wannan maɓallin don rufe maballin kuma yana hulɗa da sakamakon binciken",
   "allSongs": "Duk waƙoƙi"
 }

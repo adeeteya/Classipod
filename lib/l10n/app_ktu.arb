@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Fina bouton ya Centre sambu na kutambula na nzila ya bar, bar ya kuyobisa mpi curseur ya kuvukisa. Fina mpi simba buto ya Centre sambu na kubaka mitindu ya nkaka.",
   "nextButtonNowPlayingTutorialText": "Fina mpi simba bouton yai sambu na kunata nswalu nkunga .",
   "previousButtonNowPlayingTutorialText": "Fina mpi simba bouton yai sambu na kuvutula nkunga .",
-  "deviceControlSearchTutorialText": "Tula musapi na nge na pete na nziunga ya Roue ya Kufimpa sambu na kutula dikebi na alfabe .",
-  "centerButtonSearchTutorialText": "Fina bouton ya kati-kati sambu na kupona alfabe yina bo me tula dikebi .",
-  "nextButtonSearchTutorialText": "Fina bouton yai sambu na kuyika kisika .",
-  "previousButtonSearchTutorialText": "Fina bouton yai sambu na kufwa muntu ya nsuka .",
-  "menuButtonSearchTutorialText": "Fina bouton yayi samu na kukanga clavier mpe kusala mambu na ba mvutu ya kusosa .",
+  "clickWheelInputTextBarTutorialText": "Tula musapi na nge na pete na nziunga ya Roue ya Kufimpa sambu na kutula dikebi na alfabe .",
+  "centerButtonInputTextBarScreenTutorialText": "Fina bouton ya kati-kati sambu na kupona alfabe yina bo me tula dikebi .",
+  "nextButtonInputTextBarTutorialText": "Fina bouton yai sambu na kuyika kisika .",
+  "previousButtonInputTextBarTutorialText": "Fina bouton yai sambu na kufwa muntu ya nsuka .",
+  "menuButtonInputTextBarTutorialText": "Fina bouton yayi samu na kukanga clavier mpe kusala mambu na ba mvutu ya kusosa .",
   "allSongs": "Bankunga Yonso"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Натиснете централния бутон, за да преминете през Bar, Bar, Barber Bar и Shuffle Slider. Натиснете и задръжте центъра на бутона, за да получите достъп до допълнителни опции.",
   "nextButtonNowPlayingTutorialText": "Натиснете и задръжте този бутон, за да бързо напредвате песента",
   "previousButtonNowPlayingTutorialText": "Натиснете и задръжте този бутон, за да пренастроите песента",
-  "deviceControlSearchTutorialText": "Преместете палеца леко около колелото за щракване, за да подчертаете азбука",
-  "centerButtonSearchTutorialText": "Натиснете бутона Център, за да изберете маркираната азбука",
-  "nextButtonSearchTutorialText": "Натиснете този бутон, за да добавите място",
-  "previousButtonSearchTutorialText": "Натиснете този бутон, за да изтриете последния символ",
-  "menuButtonSearchTutorialText": "Натиснете този бутон, за да затворите клавиатурата и да взаимодействате с резултатите от търсенето",
+  "clickWheelInputTextBarTutorialText": "Преместете палеца леко около колелото за щракване, за да подчертаете азбука",
+  "centerButtonInputTextBarScreenTutorialText": "Натиснете бутона Център, за да изберете маркираната азбука",
+  "nextButtonInputTextBarTutorialText": "Натиснете този бутон, за да добавите място",
+  "previousButtonInputTextBarTutorialText": "Натиснете този бутон, за да изтриете последния символ",
+  "menuButtonInputTextBarTutorialText": "Натиснете този бутон, за да затворите клавиатурата и да взаимодействате с резултатите от търсенето",
   "allSongs": "Всички песни"
 }

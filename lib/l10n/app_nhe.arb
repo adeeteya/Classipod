@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Xijtlatzquiltili nopa botón tlen nopa Centro ipan ciclo ica barra tlen tijtemos, barra tlen escrubador huan nopa slider tlen motlalana. Xijtlapejpeni uan xijpixto nopa botón Centro para tijpantis sekinok tlamantli.",
   "nextButtonNowPlayingTutorialText": "Xijtlatzquiltili huan xijpixto ni botón para tijtoquilis nopa huicatl .",
   "previousButtonNowPlayingTutorialText": "Xijtsonpechili uan xijpixto ni botón para tijkuepilis nopa uikatl .",
-  "deviceControlSearchTutorialText": "Xijpatla mometz san pilquentzi campa hueli ipan nopa rueda Click para tijnextis se alfabeto .",
-  "centerButtonSearchTutorialText": "Xijtlatzquiltili nopa botón tlen tlatlajco para tijtlapejpenis nopa alfabeto tlen más nesi .",
-  "nextButtonSearchTutorialText": "Xijtlatzquiltili ni botón para tijtlalis se lugar .",
-  "previousButtonSearchTutorialText": "Xijtlachili ni botón para tijtlamiltis nopa último personaje",
-  "menuButtonSearchTutorialText": "Xijtlatzquiltili ni botón para tijtzacuas nopa teclado huan ximocamahui ica nopa tlayejyecoli tlen tijtemos .",
+  "clickWheelInputTextBarTutorialText": "Xijpatla mometz san pilquentzi campa hueli ipan nopa rueda Click para tijnextis se alfabeto .",
+  "centerButtonInputTextBarScreenTutorialText": "Xijtlatzquiltili nopa botón tlen tlatlajco para tijtlapejpenis nopa alfabeto tlen más nesi .",
+  "nextButtonInputTextBarTutorialText": "Xijtlatzquiltili ni botón para tijtlalis se lugar .",
+  "previousButtonInputTextBarTutorialText": "Xijtlachili ni botón para tijtlamiltis nopa último personaje",
+  "menuButtonInputTextBarTutorialText": "Xijtlatzquiltili ni botón para tijtzacuas nopa teclado huan ximocamahui ica nopa tlayejyecoli tlen tijtemos .",
   "allSongs": "Nochi huicalistli"
 }

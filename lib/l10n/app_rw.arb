@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Kanda buto ya Centre kugirango ukoreshe bar, Scrubber Bar na Shuffle Slider. Kanda hanyuma ufate buto yo hagati kugirango ugere kumahitamo yinyongera.",
   "nextButtonNowPlayingTutorialText": "Kanda kandi ufate iyi buto kugirango wihute imbere indirimbo",
   "previousButtonNowPlayingTutorialText": "Kanda kandi ufate iyi buto kugirango usubize indirimbo",
-  "deviceControlSearchTutorialText": "Kwimura igikumwe cyawe kumurika kuzenguruka uruziga kugirango ugaragaze inyuguti",
-  "centerButtonSearchTutorialText": "Kanda buto ya Centre kugirango uhitemo inyuguti zerekanwe",
-  "nextButtonSearchTutorialText": "Kanda iyi buto kugirango wongere umwanya",
-  "previousButtonSearchTutorialText": "Kanda iyi buto kugirango usibe inyuguti yanyuma",
-  "menuButtonSearchTutorialText": "Kanda iyi buto kugirango ufunge clavier hanyuma usangire nibisubizo byubushakashatsi",
+  "clickWheelInputTextBarTutorialText": "Kwimura igikumwe cyawe kumurika kuzenguruka uruziga kugirango ugaragaze inyuguti",
+  "centerButtonInputTextBarScreenTutorialText": "Kanda buto ya Centre kugirango uhitemo inyuguti zerekanwe",
+  "nextButtonInputTextBarTutorialText": "Kanda iyi buto kugirango wongere umwanya",
+  "previousButtonInputTextBarTutorialText": "Kanda iyi buto kugirango usibe inyuguti yanyuma",
+  "menuButtonInputTextBarTutorialText": "Kanda iyi buto kugirango ufunge clavier hanyuma usangire nibisubizo byubushakashatsi",
   "allSongs": "Indirimbo zose"
 }

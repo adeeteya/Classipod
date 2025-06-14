@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "बार, स्क्रबर बार व शफल स्लाइडर मालेगु माध्यमं साइकल चले यायेत सेन्टर बटन त्यु । तँसा विकल्प कायेत सेन्टर बटन त्यु अले तयादिसँ ।",
   "nextButtonNowPlayingTutorialText": "म्येयात फास्ट फर्वार्ड यायेत थुगु बटन त्यु अले ज्वनादिसँ ।",
   "previousButtonNowPlayingTutorialText": "म्येयात हाकनं चलन यायेत थुगु बटन त्यु अले ज्वनादिसँ ।",
-  "deviceControlSearchTutorialText": "अल्फाबेटयात हाइलाइट यायेत क्लिक व्हीलया चाकःलिं छंगु थुम्बः हल्का चाःहिकि ।",
-  "centerButtonSearchTutorialText": "हाइलाइट यानातःगु अल्फाबेट ल्ययेत सेन्टर बटन त्यु ।",
-  "nextButtonSearchTutorialText": "थाय् तनेत थुगु बटन त्यु ।",
-  "previousButtonSearchTutorialText": "लिपांगु पात्र हुइकेत थुगु बटन त्यु ।",
-  "menuButtonSearchTutorialText": "कीबोर्ड बन्द यायेत व मालेगु लिच्वःलिसे अन्तरक्रिया यायेत थुगु बटन त्यु ।",
+  "clickWheelInputTextBarTutorialText": "अल्फाबेटयात हाइलाइट यायेत क्लिक व्हीलया चाकःलिं छंगु थुम्बः हल्का चाःहिकि ।",
+  "centerButtonInputTextBarScreenTutorialText": "हाइलाइट यानातःगु अल्फाबेट ल्ययेत सेन्टर बटन त्यु ।",
+  "nextButtonInputTextBarTutorialText": "थाय् तनेत थुगु बटन त्यु ।",
+  "previousButtonInputTextBarTutorialText": "लिपांगु पात्र हुइकेत थुगु बटन त्यु ।",
+  "menuButtonInputTextBarTutorialText": "कीबोर्ड बन्द यायेत व मालेगु लिच्वःलिसे अन्तरक्रिया यायेत थुगु बटन त्यु ।",
   "allSongs": "दक्वं म्ये"
 }

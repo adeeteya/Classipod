@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Нажмите кнопку Центр, чтобы велосипедить через поиск бар, скраббер-бар и слайдер перемешивания. Эбии варианнарга киирэргэ Киин кнопканы баттаан, тут.",
   "nextButtonNowPlayingTutorialText": "Бу кнопканы баттаан баран, ырыаны түргэнник инники диэки тардан кэбиһиҥ",
   "previousButtonNowPlayingTutorialText": "Бу кнопканы баттаан баран, ырыаны хат көтөҕүллүүгэ тутуһуҥ",
-  "deviceControlSearchTutorialText": "Улахан тарбаххын баттаан, алфавиты бэлиэтээн, баттааҥ.",
-  "centerButtonSearchTutorialText": "Нажмите на кнопку центра, чтобы выбрать выделенную алфавит",
-  "nextButtonSearchTutorialText": "Бу кнопканы баттаан, миэстэни эбэбит",
-  "previousButtonSearchTutorialText": "Бу кнопканы баттаан, бүтэһик персонажы суох оҥоруҥ",
-  "menuButtonSearchTutorialText": "Бу кнопканы баттаан, клавиатураны сабан баран, көрдөөһүн түмүгүн кытта дьүөрэлэһиннэр",
+  "clickWheelInputTextBarTutorialText": "Улахан тарбаххын баттаан, алфавиты бэлиэтээн, баттааҥ.",
+  "centerButtonInputTextBarScreenTutorialText": "Нажмите на кнопку центра, чтобы выбрать выделенную алфавит",
+  "nextButtonInputTextBarTutorialText": "Бу кнопканы баттаан, миэстэни эбэбит",
+  "previousButtonInputTextBarTutorialText": "Бу кнопканы баттаан, бүтэһик персонажы суох оҥоруҥ",
+  "menuButtonInputTextBarTutorialText": "Бу кнопканы баттаан, клавиатураны сабан баран, көрдөөһүн түмүгүн кытта дьүөрэлэһиннэр",
   "allSongs": "Бары ырыалар"
 }

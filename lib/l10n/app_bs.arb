@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pritisnite središnju tipku za ciklus kroz tražite bar, čivnica i klizač shuffle. Pritisnite i držite središnju tipku za pristup dodatnim opcijama.",
   "nextButtonNowPlayingTutorialText": "Pritisnite i držite ovo dugme da biste brzo nadjeli pjesmu",
   "previousButtonNowPlayingTutorialText": "Pritisnite i držite ovo dugme da biste premotali pjesmu",
-  "deviceControlSearchTutorialText": "Lagano pomaknite palac oko kotača kliknite da biste istakli abecedu",
-  "centerButtonSearchTutorialText": "Pritisnite tipku CENTER za odabir označene abecede",
-  "nextButtonSearchTutorialText": "Pritisnite ovo dugme da biste dodali prostor",
-  "previousButtonSearchTutorialText": "Pritisnite ovo dugme da biste izbrisali zadnji znak",
-  "menuButtonSearchTutorialText": "Pritisnite ovo dugme da biste zatvorili tastaturu i interakciju sa rezultatima pretraživanja",
+  "clickWheelInputTextBarTutorialText": "Lagano pomaknite palac oko kotača kliknite da biste istakli abecedu",
+  "centerButtonInputTextBarScreenTutorialText": "Pritisnite tipku CENTER za odabir označene abecede",
+  "nextButtonInputTextBarTutorialText": "Pritisnite ovo dugme da biste dodali prostor",
+  "previousButtonInputTextBarTutorialText": "Pritisnite ovo dugme da biste izbrisali zadnji znak",
+  "menuButtonInputTextBarTutorialText": "Pritisnite ovo dugme da biste zatvorili tastaturu i interakciju sa rezultatima pretraživanja",
   "allSongs": "Sve pjesme"
 }

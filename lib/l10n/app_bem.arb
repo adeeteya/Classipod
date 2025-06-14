@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tinikeni pe batani lya pa Cifulo pa kuti mupitishe ukupitila mu kufwaya, umuputule wa kusebelelamo no kukunkuma. Tinikeni no kusunga batani lya Cifulo pakuti mukwate ifyakusalapo ifyalundwapo.",
   "nextButtonNowPlayingTutorialText": "Tinikeni no kusunga ili batani pakuti mubutuke bwangu ku lwimbo .",
   "previousButtonNowPlayingTutorialText": "Tinikeni no kusunga ili batani pakuti mubweseshemo ulu lwimbo",
-  "deviceControlSearchTutorialText": "Suminisheni umunwe wenu uwa cikumo ukushinguluka Umuti wa kutinika pa Cikumi pa kuti mulangishe alfabeti .",
-  "centerButtonSearchTutorialText": "Tinikeni pe batani lya pakati pakuti musale alfabeti iyasokolwelwe",
-  "nextButtonSearchTutorialText": "Tinikeni ili batani pakuti mubikepo icifulo",
-  "previousButtonSearchTutorialText": "Tinikeni ili batani pakuti mufumyepo umuntu uwakulekelesha",
-  "menuButtonSearchTutorialText": "Tinikeni ili batani pakuti mwingile mu citabo no kulanshanya ne fyasangwa mu kufwaya",
+  "clickWheelInputTextBarTutorialText": "Suminisheni umunwe wenu uwa cikumo ukushinguluka Umuti wa kutinika pa Cikumi pa kuti mulangishe alfabeti .",
+  "centerButtonInputTextBarScreenTutorialText": "Tinikeni pe batani lya pakati pakuti musale alfabeti iyasokolwelwe",
+  "nextButtonInputTextBarTutorialText": "Tinikeni ili batani pakuti mubikepo icifulo",
+  "previousButtonInputTextBarTutorialText": "Tinikeni ili batani pakuti mufumyepo umuntu uwakulekelesha",
+  "menuButtonInputTextBarTutorialText": "Tinikeni ili batani pakuti mwingile mu citabo no kulanshanya ne fyasangwa mu kufwaya",
   "allSongs": "Inyimbo shonse"
 }

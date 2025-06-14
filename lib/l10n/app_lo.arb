@@ -102,10 +102,10 @@
   "centerButtonNowPlayingTutorialText": "ກົດປຸ່ມສູນກາງຫາວົງຈອນໂດຍຜ່ານການສະແຫວງຫາແຖບ, ແຖບ Scrubber ແລະເລື່ອນເລື່ອນ. ກົດແລະກົດປຸ່ມສູນກາງເພື່ອເຂົ້າຫາຕົວເລືອກເພີ່ມເຕີມ.",
   "nextButtonNowPlayingTutorialText": "ກົດປຸ່ມແລະກົດປຸ່ມນີ້ເພື່ອກ້າວໄປຂ້າງຫນ້າເພງ",
   "previousButtonNowPlayingTutorialText": "ກົດປຸ່ມແລະກົດປຸ່ມນີ້ເພື່ອຫວນຄືນເພງ",
-  "deviceControlSearchTutorialText": "ຍ້າຍນິ້ວໂປ້ຂອງທ່ານເບົາລົງຮອບລໍ້ກົດເພື່ອຊີ້ໃຫ້ເຫັນຕົວຫນັງສື",
-  "centerButtonSearchTutorialText": "ກົດປຸ່ມ STENTS ເພື່ອເລືອກຕົວຫນັງສືທີ່ໂດດເດັ່ນ",
-  "nextButtonSearchTutorialText": "ກົດປຸ່ມນີ້ເພື່ອເພີ່ມພື້ນທີ່",
-  "previousButtonSearchTutorialText": "ກົດປຸ່ມນີ້ເພື່ອລຶບຕົວລະຄອນສຸດທ້າຍ",
-  "menuButtonSearchTutorialText": "ກົດປຸ່ມນີ້ເພື່ອປິດແປ້ນພິມແລະພົວພັນກັບຜົນການຄົ້ນຫາ",
+  "clickWheelInputTextBarTutorialText": "ຍ້າຍນິ້ວໂປ້ຂອງທ່ານເບົາລົງຮອບລໍ້ກົດເພື່ອຊີ້ໃຫ້ເຫັນຕົວຫນັງສື",
+  "centerButtonInputTextBarScreenTutorialText": "ກົດປຸ່ມ STENTS ເພື່ອເລືອກຕົວຫນັງສືທີ່ໂດດເດັ່ນ",
+  "nextButtonInputTextBarTutorialText": "ກົດປຸ່ມນີ້ເພື່ອເພີ່ມພື້ນທີ່",
+  "previousButtonInputTextBarTutorialText": "ກົດປຸ່ມນີ້ເພື່ອລຶບຕົວລະຄອນສຸດທ້າຍ",
+  "menuButtonInputTextBarTutorialText": "ກົດປຸ່ມນີ້ເພື່ອປິດແປ້ນພິມແລະພົວພັນກັບຜົນການຄົ້ນຫາ",
   "allSongs": "ທຸກໆເພງ"
 }

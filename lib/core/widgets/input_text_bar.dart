@@ -2,11 +2,11 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:flutter/cupertino.dart';
 
-class SearchBarController {
-  final String initialSearchText;
-  _SearchBarState? _state;
+class InputTextBarController {
+  final String initialText;
+  _InputTextBarState? _state;
 
-  SearchBarController({this.initialSearchText = ''});
+  InputTextBarController({this.initialText = ''});
 
   void moveToNextAlphabet() => _state?._moveToNextAlphabet();
 
@@ -19,45 +19,45 @@ class SearchBarController {
   void removeCharacter() => _state?._removeCharacter();
 }
 
-class SearchBar extends StatefulWidget {
-  final SearchBarController searchBarController;
+class InputTextBar extends StatefulWidget {
+  final InputTextBarController inputTextBarController;
   final ValueChanged<String> onSearchTextChanged;
 
-  const SearchBar({
+  const InputTextBar({
     super.key,
-    required this.searchBarController,
+    required this.inputTextBarController,
     required this.onSearchTextChanged,
   });
 
   @override
-  State<SearchBar> createState() => _SearchBarState();
+  State<InputTextBar> createState() => _InputTextBarState();
 }
 
-class _SearchBarState extends State<SearchBar> {
-  late final TextEditingController _searchController;
+class _InputTextBarState extends State<InputTextBar> {
+  late final TextEditingController _inputTextController;
   late final ScrollController _scrollController;
   final String alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   int _currentSelectedIndex = 0;
 
   @override
   void initState() {
-    widget.searchBarController._state = this;
-    _searchController = TextEditingController(
-      text: widget.searchBarController.initialSearchText,
+    widget.inputTextBarController._state = this;
+    _inputTextController = TextEditingController(
+      text: widget.inputTextBarController.initialText,
     );
-    _searchController.addListener(_onTextChanged);
+    _inputTextController.addListener(_onTextChanged);
     _scrollController = ScrollController();
     super.initState();
   }
 
   void _onTextChanged() {
-    widget.onSearchTextChanged(_searchController.text);
+    widget.onSearchTextChanged(_inputTextController.text);
   }
 
   @override
   void dispose() {
-    _searchController.removeListener(_onTextChanged);
-    _searchController.dispose();
+    _inputTextController.removeListener(_onTextChanged);
+    _inputTextController.dispose();
     _scrollController.dispose();
     super.dispose();
   }
@@ -68,14 +68,15 @@ class _SearchBarState extends State<SearchBar> {
         _currentSelectedIndex++;
 
         final double currentSelectedDisplayItemsWidth =
-            (_currentSelectedIndex + 1) * Constants.searchAlphabetSize;
+            (_currentSelectedIndex + 1) * Constants.inputTextAlphabetSize;
 
         final double currentScrollWidth =
-            Constants.searchAlphabetContainerWidth + _scrollController.offset;
+            Constants.inputTextAlphabetContainerWidth +
+            _scrollController.offset;
 
         if (currentSelectedDisplayItemsWidth > currentScrollWidth) {
           _scrollController.jumpTo(
-            _scrollController.offset + Constants.searchAlphabetSize,
+            _scrollController.offset + Constants.inputTextAlphabetSize,
           );
         }
       }
@@ -87,10 +88,10 @@ class _SearchBarState extends State<SearchBar> {
       if (_currentSelectedIndex > 0) {
         _currentSelectedIndex--;
 
-        if (_currentSelectedIndex * Constants.searchAlphabetSize <
+        if (_currentSelectedIndex * Constants.inputTextAlphabetSize <
             _scrollController.offset) {
           _scrollController.jumpTo(
-            _currentSelectedIndex * Constants.searchAlphabetSize,
+            _currentSelectedIndex * Constants.inputTextAlphabetSize,
           );
         }
       }
@@ -98,17 +99,17 @@ class _SearchBarState extends State<SearchBar> {
   }
 
   void _selectAlphabet() {
-    _searchController.text += alphabets[_currentSelectedIndex].toLowerCase();
+    _inputTextController.text += alphabets[_currentSelectedIndex].toLowerCase();
   }
 
   void _addSpace() {
-    _searchController.text += ' ';
+    _inputTextController.text += ' ';
   }
 
   void _removeCharacter() {
-    _searchController.text = _searchController.text.substring(
+    _inputTextController.text = _inputTextController.text.substring(
       0,
-      _searchController.text.length - 1,
+      _inputTextController.text.length - 1,
     );
   }
 
@@ -139,7 +140,7 @@ class _SearchBarState extends State<SearchBar> {
                   child: CupertinoTextField(
                     padding: const EdgeInsets.all(4),
                     cursorColor: CupertinoColors.black,
-                    controller: _searchController,
+                    controller: _inputTextController,
                     style: const TextStyle(
                       color: CupertinoColors.black,
                       fontSize: 16,
@@ -149,8 +150,8 @@ class _SearchBarState extends State<SearchBar> {
                 ),
                 const SizedBox(width: 10),
                 SizedBox(
-                  height: Constants.searchAlphabetSize,
-                  width: Constants.searchAlphabetContainerWidth,
+                  height: Constants.inputTextAlphabetSize,
+                  width: Constants.inputTextAlphabetContainerWidth,
                   child: DecoratedBox(
                     decoration: const BoxDecoration(
                       color: CupertinoColors.black,
@@ -161,13 +162,13 @@ class _SearchBarState extends State<SearchBar> {
                       scrollDirection: Axis.horizontal,
                       itemCount: alphabets.length,
                       prototypeItem: const SizedBox(
-                        width: Constants.searchAlphabetSize,
-                        height: Constants.searchAlphabetSize,
+                        width: Constants.inputTextAlphabetSize,
+                        height: Constants.inputTextAlphabetSize,
                       ),
                       itemBuilder: (context, index) {
                         return SizedBox(
-                          width: Constants.searchAlphabetSize,
-                          height: Constants.searchAlphabetSize,
+                          width: Constants.inputTextAlphabetSize,
+                          height: Constants.inputTextAlphabetSize,
                           child: ColoredBox(
                             color:
                                 (_currentSelectedIndex == index)
@@ -177,7 +178,7 @@ class _SearchBarState extends State<SearchBar> {
                               child: Text(
                                 alphabets[index],
                                 style: const TextStyle(
-                                  fontSize: Constants.searchAlphabetSize,
+                                  fontSize: Constants.inputTextAlphabetSize,
                                   color: CupertinoColors.white,
                                   fontWeight: FontWeight.bold,
                                 ),

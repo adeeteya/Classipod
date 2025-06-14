@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Druk op 'e sintrumknop om te fytsen troch te syklus, sykje, scrubberbar en shuffle Slider. Druk op en hâld de sintrumknop yn om tagong te krijen ta ekstra opsjes.",
   "nextButtonNowPlayingTutorialText": "Druk op dizze knop en hâld op om it ferske te rapjen",
   "previousButtonNowPlayingTutorialText": "Druk op dizze knop en hâld op om it ferske werom te reitsjen",
-  "deviceControlSearchTutorialText": "Ferpleatse jo tomme ljocht om it klik tsjil om in alfabet te markearjen",
-  "centerButtonSearchTutorialText": "Druk op 'e sintrumknop om it markearre alfabet te selektearjen",
-  "nextButtonSearchTutorialText": "Druk op dizze knop om in romte ta te foegjen",
-  "previousButtonSearchTutorialText": "Druk op dizze knop om it lêste karakter te wiskjen",
-  "menuButtonSearchTutorialText": "Druk op dizze knop om it toetseboerd te sluten en ynteraksje mei de sykresultaten te sluten",
+  "clickWheelInputTextBarTutorialText": "Ferpleatse jo tomme ljocht om it klik tsjil om in alfabet te markearjen",
+  "centerButtonInputTextBarScreenTutorialText": "Druk op 'e sintrumknop om it markearre alfabet te selektearjen",
+  "nextButtonInputTextBarTutorialText": "Druk op dizze knop om in romte ta te foegjen",
+  "previousButtonInputTextBarTutorialText": "Druk op dizze knop om it lêste karakter te wiskjen",
+  "menuButtonInputTextBarTutorialText": "Druk op dizze knop om it toetseboerd te sluten en ynteraksje mei de sykresultaten te sluten",
   "allSongs": "Alle ferskes"
 }

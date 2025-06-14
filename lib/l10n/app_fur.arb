@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Preme il botôn dal Centri par lâ in biciclete traviers de barre di ricercje, dal bar di scrupul e dal cursôr di tremul. Preme e tignî il botôn dal Centri par vê acès a opzions adizionâls.",
   "nextButtonNowPlayingTutorialText": "Preme e tignî chest botôn par sveltî indenant la cjançon",
   "previousButtonNowPlayingTutorialText": "Preme e tignî chest botôn par tornâ a meti sù la cjançon",
-  "deviceControlSearchTutorialText": "Spostâ il polsar a pôc ator ator de Ruede Clic par evidenziâ un alfabet",
-  "centerButtonSearchTutorialText": "Preme il tast centrâl par selezionâ il alfabet evidenziât",
-  "nextButtonSearchTutorialText": "Preme chest botôn par zontâ un spazi",
-  "previousButtonSearchTutorialText": "Preme chest botôn par cancelâ l’ultin caratar",
-  "menuButtonSearchTutorialText": "Preme chest botôn par sierâ il tastier e interagjî cui risultâts de ricercje",
+  "clickWheelInputTextBarTutorialText": "Spostâ il polsar a pôc ator ator de Ruede Clic par evidenziâ un alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Preme il tast centrâl par selezionâ il alfabet evidenziât",
+  "nextButtonInputTextBarTutorialText": "Preme chest botôn par zontâ un spazi",
+  "previousButtonInputTextBarTutorialText": "Preme chest botôn par cancelâ l’ultin caratar",
+  "menuButtonInputTextBarTutorialText": "Preme chest botôn par sierâ il tastier e interagjî cui risultâts de ricercje",
   "allSongs": "Dutis lis cjançons"
 }

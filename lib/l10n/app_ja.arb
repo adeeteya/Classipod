@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "センターボタンを押して、シークバー、スクラバーバー、シャッフルスライダーをサイクリングします。センターボタンを押し続けて、追加のオプションにアクセスします。",
   "nextButtonNowPlayingTutorialText": "このボタンを押して、曲を早送りする",
   "previousButtonNowPlayingTutorialText": "このボタンを押し続けて、曲を巻き戻します",
-  "deviceControlSearchTutorialText": "クリックホイールの周りに親指を軽く動かして、アルファベットを強調表示します",
-  "centerButtonSearchTutorialText": "中央ボタンを押して、強調表示されたアルファベットを選択します",
-  "nextButtonSearchTutorialText": "このボタンを押してスペースを追加します",
-  "previousButtonSearchTutorialText": "このボタンを押して、最後の文字を削除します",
-  "menuButtonSearchTutorialText": "このボタンを押してキーボードを閉じて、検索結果と対話します",
+  "clickWheelInputTextBarTutorialText": "クリックホイールの周りに親指を軽く動かして、アルファベットを強調表示します",
+  "centerButtonInputTextBarScreenTutorialText": "中央ボタンを押して、強調表示されたアルファベットを選択します",
+  "nextButtonInputTextBarTutorialText": "このボタンを押してスペースを追加します",
+  "previousButtonInputTextBarTutorialText": "このボタンを押して、最後の文字を削除します",
+  "menuButtonInputTextBarTutorialText": "このボタンを押してキーボードを閉じて、検索結果と対話します",
   "allSongs": "すべての曲"
 }

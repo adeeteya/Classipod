@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "E kaomi i ke pihi Center e hiki ai i ke kiʻi ma o kaʻimiʻana, scrubber bar a shuffle slider. E kaomi a hoʻopaʻa i ka pihi Center e komo ai i nā koho hou aʻe.",
   "nextButtonNowPlayingTutorialText": "E kaomi a hoʻopaʻa i kēia pihi e wikiwiki i ka mele",
   "previousButtonNowPlayingTutorialText": "E kaomi a hoʻopaʻa i kēia pihi e hana hou i ke mele",
-  "deviceControlSearchTutorialText": "E neʻe i kāu manamana aniani e pili ana i ka paena kaomi e hōʻike i kahi kiʻi",
-  "centerButtonSearchTutorialText": "E kaomi i ke pihi Center e koho i ka leka i hōʻikeʻia",
-  "nextButtonSearchTutorialText": "E kaomi i kēia pihi e hoʻohui i kahi wahi",
-  "previousButtonSearchTutorialText": "E kaomi i kēia pihi e hoʻopau i keʻano hope",
-  "menuButtonSearchTutorialText": "E kaomi i kēia pihi e pani i ke kīwī a kamaʻilio pū me nā hopena huli",
+  "clickWheelInputTextBarTutorialText": "E neʻe i kāu manamana aniani e pili ana i ka paena kaomi e hōʻike i kahi kiʻi",
+  "centerButtonInputTextBarScreenTutorialText": "E kaomi i ke pihi Center e koho i ka leka i hōʻikeʻia",
+  "nextButtonInputTextBarTutorialText": "E kaomi i kēia pihi e hoʻohui i kahi wahi",
+  "previousButtonInputTextBarTutorialText": "E kaomi i kēia pihi e hoʻopau i keʻano hope",
+  "menuButtonInputTextBarTutorialText": "E kaomi i kēia pihi e pani i ke kīwī a kamaʻilio pū me nā hopena huli",
   "allSongs": "Nā mele a pau"
 }

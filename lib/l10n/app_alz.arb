@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Keth cing’i i kum button mi Center pi nisayu bar, ng’atu m’utimo lembe m’ukwayere. Di man iketh button mi Center ni nwang’u lembe mange.",
   "nextButtonNowPlayingTutorialText": "Diss kendo imak button ma kamano mondo odhi nyime gi werno .",
   "previousButtonNowPlayingTutorialText": "Diss kendo imak button ma kamano mondo owek wer .",
-  "deviceControlSearchTutorialText": "Move mbau mari mayot e alwora mar Click Wheel mondo onyis ng’at ma nigi alfabe .",
-  "centerButtonSearchTutorialText": "Keth button mi center ma juketho i ie alfabe ma pire tek .",
-  "nextButtonSearchTutorialText": "Keth button maeni imed kabedo moko .",
-  "previousButtonSearchTutorialText": "Keth button maeni i kum lembe maeni .",
-  "menuButtonSearchTutorialText": "Keth button maeni pi ni ketho lembe ma pigi tek man ni ketho lembe ma jubeyenyo .",
+  "clickWheelInputTextBarTutorialText": "Move mbau mari mayot e alwora mar Click Wheel mondo onyis ng’at ma nigi alfabe .",
+  "centerButtonInputTextBarScreenTutorialText": "Keth button mi center ma juketho i ie alfabe ma pire tek .",
+  "nextButtonInputTextBarTutorialText": "Keth button maeni imed kabedo moko .",
+  "previousButtonInputTextBarTutorialText": "Keth button maeni i kum lembe maeni .",
+  "menuButtonInputTextBarTutorialText": "Keth button maeni pi ni ketho lembe ma pigi tek man ni ketho lembe ma jubeyenyo .",
   "allSongs": "ceke"
 }

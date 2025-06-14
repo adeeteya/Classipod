@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Барои давидан тавассути сикл кардани сатр, пардаи скраббонро пахш кунед. Барои дастрасӣ ба имконоти иловагӣ тугмаи марказиро пахш карда нигоҳ доред.",
   "nextButtonNowPlayingTutorialText": "Ин кнопкаро пахш карда нигоҳ доред, то ки сурудро зуд пеш гирад",
   "previousButtonNowPlayingTutorialText": "Барои гирифтани суруд ин тугмаро пахш карда нигоҳ доред",
-  "deviceControlSearchTutorialText": "Ангушти худро каме каме дар атрофи чархи клик барои таъкид кардани алифбо",
-  "centerButtonSearchTutorialText": "Тугмаи марказиро пахш кунед, то алифбои равшанро интихоб кунед",
-  "nextButtonSearchTutorialText": "Барои илова кардани фазо ин тугмаро пахш кунед",
-  "previousButtonSearchTutorialText": "Барои тоза кардани аломати охирин ин тугмаро пахш кунед",
-  "menuButtonSearchTutorialText": "Барои пӯшидани клавиатура ва ҳамкорӣ бо натиҷаҳои ҷустуҷӯ ин тугмаро пахш кунед",
+  "clickWheelInputTextBarTutorialText": "Ангушти худро каме каме дар атрофи чархи клик барои таъкид кардани алифбо",
+  "centerButtonInputTextBarScreenTutorialText": "Тугмаи марказиро пахш кунед, то алифбои равшанро интихоб кунед",
+  "nextButtonInputTextBarTutorialText": "Барои илова кардани фазо ин тугмаро пахш кунед",
+  "previousButtonInputTextBarTutorialText": "Барои тоза кардани аломати охирин ин тугмаро пахш кунед",
+  "menuButtonInputTextBarTutorialText": "Барои пӯшидани клавиатура ва ҳамкорӣ бо натиҷаҳои ҷустуҷӯ ин тугмаро пахш кунед",
   "allSongs": "Ҳама сурудҳо"
 }

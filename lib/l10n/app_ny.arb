@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Kanikizani batani la Center kuti muchepetse ndalama, scrubber bar ndi shuffle slider. Kanikizani ndikugwira batani la pakati kuti mupeze zosankha zowonjezera.",
   "nextButtonNowPlayingTutorialText": "Kanikizani ndikusunga batani ili kuti mupitilize",
   "previousButtonNowPlayingTutorialText": "Kanikizani ndikusunga batani ili kuti mubwezereni nyimbo",
-  "deviceControlSearchTutorialText": "Sunthani chala chanu mopepuka mozungulira",
-  "centerButtonSearchTutorialText": "Kanikizani batani la Center kuti musankhe zilembo zapamwamba",
-  "nextButtonSearchTutorialText": "Dinani batani ili kuti muwonjezere danga",
-  "previousButtonSearchTutorialText": "Dinani batani ili kuti muchotse mawonekedwe omaliza",
-  "menuButtonSearchTutorialText": "Dinani batani ili kuti mutseke kiyibodi ndikuyanjana ndi zotsatira zakusaka",
+  "clickWheelInputTextBarTutorialText": "Sunthani chala chanu mopepuka mozungulira",
+  "centerButtonInputTextBarScreenTutorialText": "Kanikizani batani la Center kuti musankhe zilembo zapamwamba",
+  "nextButtonInputTextBarTutorialText": "Dinani batani ili kuti muwonjezere danga",
+  "previousButtonInputTextBarTutorialText": "Dinani batani ili kuti muchotse mawonekedwe omaliza",
+  "menuButtonInputTextBarTutorialText": "Dinani batani ili kuti mutseke kiyibodi ndikuyanjana ndi zotsatira zakusaka",
   "allSongs": "Nyimbo zonse"
 }

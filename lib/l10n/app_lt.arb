@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Paspauskite centrinį mygtuką, kad važiuotumėte važiuodami per „Seew Bar“, „Scrubber“ juostą ir „Shuffle Slider“. Paspauskite ir palaikykite centrinį mygtuką, kad pasiektumėte papildomas parinktis.",
   "nextButtonNowPlayingTutorialText": "Paspauskite ir palaikykite šį mygtuką, kad greitai persiųstų dainą",
   "previousButtonNowPlayingTutorialText": "Paspauskite ir palaikykite šį mygtuką, kad vėl atstumtumėte dainą",
-  "deviceControlSearchTutorialText": "Lengvai judinkite nykštį aplink paspaudimo ratą, kad paryškintumėte abėcėlę",
-  "centerButtonSearchTutorialText": "Paspauskite mygtuką Centrinis, kad pasirinktumėte paryškintą abėcėlę",
-  "nextButtonSearchTutorialText": "Paspauskite šį mygtuką, kad pridėtumėte vietos",
-  "previousButtonSearchTutorialText": "Paspauskite šį mygtuką, kad ištrintumėte paskutinį simbolią",
-  "menuButtonSearchTutorialText": "Paspauskite šį mygtuką, kad uždarytumėte klaviatūrą ir sąveikaujtumėte su paieškos rezultatais",
+  "clickWheelInputTextBarTutorialText": "Lengvai judinkite nykštį aplink paspaudimo ratą, kad paryškintumėte abėcėlę",
+  "centerButtonInputTextBarScreenTutorialText": "Paspauskite mygtuką Centrinis, kad pasirinktumėte paryškintą abėcėlę",
+  "nextButtonInputTextBarTutorialText": "Paspauskite šį mygtuką, kad pridėtumėte vietos",
+  "previousButtonInputTextBarTutorialText": "Paspauskite šį mygtuką, kad ištrintumėte paskutinį simbolią",
+  "menuButtonInputTextBarTutorialText": "Paspauskite šį mygtuką, kad uždarytumėte klaviatūrą ir sąveikaujtumėte su paieškos rezultatais",
   "allSongs": "Visos dainos"
 }

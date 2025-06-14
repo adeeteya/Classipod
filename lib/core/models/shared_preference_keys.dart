@@ -12,5 +12,5 @@ enum SharedPreferencesKeys {
   immersiveMode,
   isMenuFirstTime,
   isNowPlayingFirstTime,
-  isSearchFirstTime,
+  isInputTextBarFirstTime,
 }

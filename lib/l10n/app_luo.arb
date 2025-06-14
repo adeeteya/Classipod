@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Dier baton mar Center ma inyalo luwo e wi bar, ng’ado mtoka ma ng’ato nyalo ng’adoe. Dier kendo imak baton mar Senta mondo iyud yore mamoko ma inyalo yiero.",
   "nextButtonNowPlayingTutorialText": "Di kendo mako baton ni mondo idhi nyime gi wero wende mapiyo",
   "previousButtonNowPlayingTutorialText": "Dhi kendo imak baton mar baton ni mondo iduok wende",
-  "deviceControlSearchTutorialText": "Inyalo ng’ado lith lweti matin mana ka idhi e Wiel mondo oket ler kuom alfabet",
-  "centerButtonSearchTutorialText": "Dier baton mar diere mondo iyier alfabet ma nigi ler",
-  "nextButtonSearchTutorialText": "Dier baton ni mondo imed thuolo",
-  "previousButtonSearchTutorialText": "Dier baton ni mondo iduok kido mogik",
-  "menuButtonSearchTutorialText": "Dhi e batonni mondo ilor kibod kendo iti gi duoko mag manyo",
+  "clickWheelInputTextBarTutorialText": "Inyalo ng’ado lith lweti matin mana ka idhi e Wiel mondo oket ler kuom alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Dier baton mar diere mondo iyier alfabet ma nigi ler",
+  "nextButtonInputTextBarTutorialText": "Dier baton ni mondo imed thuolo",
+  "previousButtonInputTextBarTutorialText": "Dier baton ni mondo iduok kido mogik",
+  "menuButtonInputTextBarTutorialText": "Dhi e batonni mondo ilor kibod kendo iti gi duoko mag manyo",
   "allSongs": "Nyisruok duto"
 }

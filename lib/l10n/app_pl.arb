@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Naciśnij przycisk środkowy, aby przełączać się przez pasek Seek, pasek do szorowania i suwaka do przetasowania. Naciśnij i przytrzymaj przycisk środkowy, aby uzyskać dostęp do dodatkowych opcji.",
   "nextButtonNowPlayingTutorialText": "Naciśnij i przytrzymaj ten przycisk, aby szybko przekazać piosenkę",
   "previousButtonNowPlayingTutorialText": "Naciśnij i przytrzymaj ten przycisk, aby przewidzieć piosenkę",
-  "deviceControlSearchTutorialText": "Lekko przesuń kciuk wokół kliknięcia, aby podświetlić alfabet",
-  "centerButtonSearchTutorialText": "Naciśnij przycisk środkowy, aby wybrać podświetlony alfabet",
-  "nextButtonSearchTutorialText": "Naciśnij ten przycisk, aby dodać miejsce",
-  "previousButtonSearchTutorialText": "Naciśnij ten przycisk, aby usunąć ostatnią postać",
-  "menuButtonSearchTutorialText": "Naciśnij ten przycisk, aby zamknąć klawiaturę i wchodzić w interakcje z wynikami wyszukiwania",
+  "clickWheelInputTextBarTutorialText": "Lekko przesuń kciuk wokół kliknięcia, aby podświetlić alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Naciśnij przycisk środkowy, aby wybrać podświetlony alfabet",
+  "nextButtonInputTextBarTutorialText": "Naciśnij ten przycisk, aby dodać miejsce",
+  "previousButtonInputTextBarTutorialText": "Naciśnij ten przycisk, aby usunąć ostatnią postać",
+  "menuButtonInputTextBarTutorialText": "Naciśnij ten przycisk, aby zamknąć klawiaturę i wchodzić w interakcje z wynikami wyszukiwania",
   "allSongs": "Wszystkie piosenki"
 }

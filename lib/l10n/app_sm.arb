@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Fetaomi le Center button e taamilosaga e ala i le saili pa, scrubber bar ma shuffle slider. Fetaomi ma taofi le ogatotonu faamau e ulufale ai i isi filifiliga.",
   "nextButtonNowPlayingTutorialText": "Fetaomi ma taofi lenei ki e vave agai i luma le pese",
   "previousButtonNowPlayingTutorialText": "Fetaomi ma taofi lenei ki e toe tusi ai le pese",
-  "deviceControlSearchTutorialText": "Agai i luga o lou limamatua i luga o le kiliki uili e faamamafa ai se mataitusi",
-  "centerButtonSearchTutorialText": "Fetaomi le ogatotonu faamau e filifili ai le maualuga o le alafapeta",
-  "nextButtonSearchTutorialText": "Fetaomi lenei ki e faaopoopo ai se avanoa",
-  "previousButtonSearchTutorialText": "Fetaomi lenei ki e tape le uiga mulimuli",
-  "menuButtonSearchTutorialText": "Fetaomi lenei ki e tapunia le keyboard ma fegalegaleai ma le sailiga iuga",
+  "clickWheelInputTextBarTutorialText": "Agai i luga o lou limamatua i luga o le kiliki uili e faamamafa ai se mataitusi",
+  "centerButtonInputTextBarScreenTutorialText": "Fetaomi le ogatotonu faamau e filifili ai le maualuga o le alafapeta",
+  "nextButtonInputTextBarTutorialText": "Fetaomi lenei ki e faaopoopo ai se avanoa",
+  "previousButtonInputTextBarTutorialText": "Fetaomi lenei ki e tape le uiga mulimuli",
+  "menuButtonInputTextBarTutorialText": "Fetaomi lenei ki e tapunia le keyboard ma fegalegaleai ma le sailiga iuga",
   "allSongs": "Pepelo uma"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tekan ma tombol Pusat laho marsepeda marhitei bar mangindahi bar, scrubber bar pakon sliffer sliffer. Tekan janah jolom ma tombol Pusat laho mangakses pilihan tambahan.",
   "nextButtonNowPlayingTutorialText": "Tekan janah tahan ma tombol on ase podas hu lobei doding ai .",
   "previousButtonNowPlayingTutorialText": "Tekan janah jolom ma tombol on laho mambahen ulang doding ai .",
-  "deviceControlSearchTutorialText": "Pindahkon ma jari-jari ni tanganmu ringan-ringan i sekitar Wheel Klik laho pataridahkon albeet .",
-  "centerButtonSearchTutorialText": "Tekan ma tombol pusat laho mamilih alfabet na isorot .",
-  "nextButtonSearchTutorialText": "Tekan ma tombol on laho manambah ruang .",
-  "previousButtonSearchTutorialText": "Tekan ma tombol on laho manghapus karakter na parpudi .",
-  "menuButtonSearchTutorialText": "Tekan ma tombol on laho manutup keyboard janah marinteraksi pakon hasil pencarian .",
+  "clickWheelInputTextBarTutorialText": "Pindahkon ma jari-jari ni tanganmu ringan-ringan i sekitar Wheel Klik laho pataridahkon albeet .",
+  "centerButtonInputTextBarScreenTutorialText": "Tekan ma tombol pusat laho mamilih alfabet na isorot .",
+  "nextButtonInputTextBarTutorialText": "Tekan ma tombol on laho manambah ruang .",
+  "previousButtonInputTextBarTutorialText": "Tekan ma tombol on laho manghapus karakter na parpudi .",
+  "menuButtonInputTextBarTutorialText": "Tekan ma tombol on laho manutup keyboard janah marinteraksi pakon hasil pencarian .",
   "allSongs": "Haganup doding"
 }

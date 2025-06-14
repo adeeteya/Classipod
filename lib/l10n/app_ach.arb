@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Diyo bute me Cender me ngwec ki i yenyo bar, bar ki yamo ma ngweco. Dii ki mako bute ma ki lwongo ni dul me nongo jami mukene.",
   "nextButtonNowPlayingTutorialText": "Dii ki mako bute man me keto wer ni anyim",
   "previousButtonNowPlayingTutorialText": "Dii ki mako bute ni me dwoko cen wer ni",
-  "deviceControlSearchTutorialText": "Kwany lwet cingi manok i kom yat ma ki lwongo ni alfabet",
-  "centerButtonSearchTutorialText": "Diyo but ma idyere me yero alfabet ma kinyuto",
-  "nextButtonSearchTutorialText": "Dii but man me medo kabedo",
-  "previousButtonSearchTutorialText": "Dii but man me kwanyo kit me agikki .",
-  "menuButtonSearchTutorialText": "Dii but man me cego kibodbod ci ilok ki adwogi me yenyo",
+  "clickWheelInputTextBarTutorialText": "Kwany lwet cingi manok i kom yat ma ki lwongo ni alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Diyo but ma idyere me yero alfabet ma kinyuto",
+  "nextButtonInputTextBarTutorialText": "Dii but man me medo kabedo",
+  "previousButtonInputTextBarTutorialText": "Dii but man me kwanyo kit me agikki .",
+  "menuButtonInputTextBarTutorialText": "Dii but man me cego kibodbod ci ilok ki adwogi me yenyo",
   "allSongs": "Wer weng"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "सीक बार, स्क्रबर बार आनी शफल स्लायडरांतल्यान सायकल करपाक सेंटर बटण दामचें. अतिरिक्त पर्याय ऍक्सॅस करपाक केंद्र बटण दामून दवरात.",
   "nextButtonNowPlayingTutorialText": "गीत फास्ट फॉरवर्ड करपाक हें बटण दामून दवरचें गीत",
   "previousButtonNowPlayingTutorialText": "गीत रिवाइंड करपाक हें बटण दामून दवरात",
-  "deviceControlSearchTutorialText": "वर्णमाळेचेर हायलाइट करपाक क्लिक चाका भोंवतणी हळूच आंगठो हालोवचो",
-  "centerButtonSearchTutorialText": "हायलाइट केल्लें वर्णमाला निवडपाक केंद्र बटण दामचें",
-  "nextButtonSearchTutorialText": "जागो जोडपाक हें बटण दामचें",
-  "previousButtonSearchTutorialText": "निमाणें वर्ण काडून उडोवपाक हें बटण दामचें",
-  "menuButtonSearchTutorialText": "कीबोर्ड बंद करपाक हें बटण दामचें आनी सोद परिणामांकडेन संवाद सादचो",
+  "clickWheelInputTextBarTutorialText": "वर्णमाळेचेर हायलाइट करपाक क्लिक चाका भोंवतणी हळूच आंगठो हालोवचो",
+  "centerButtonInputTextBarScreenTutorialText": "हायलाइट केल्लें वर्णमाला निवडपाक केंद्र बटण दामचें",
+  "nextButtonInputTextBarTutorialText": "जागो जोडपाक हें बटण दामचें",
+  "previousButtonInputTextBarTutorialText": "निमाणें वर्ण काडून उडोवपाक हें बटण दामचें",
+  "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करपाक हें बटण दामचें आनी सोद परिणामांकडेन संवाद सादचो",
   "allSongs": "सगळीं गितां ."
 }

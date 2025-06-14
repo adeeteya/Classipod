@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Trykk på midtknappen for å sykle gjennom Seek Bar, Scrubber Bar og Shuffle Slider. Trykk og hold på midtknappen for å få tilgang til flere alternativer.",
   "nextButtonNowPlayingTutorialText": "Trykk og hold denne knappen for å spole frem sangen",
   "previousButtonNowPlayingTutorialText": "Trykk og hold denne knappen for å spole tilbake sangen",
-  "deviceControlSearchTutorialText": "Flytt tommelen lett rundt klikkhjulet for å markere et alfabet",
-  "centerButtonSearchTutorialText": "Trykk på midtknappen for å velge uthevet alfabet",
-  "nextButtonSearchTutorialText": "Trykk på denne knappen for å legge til et rom",
-  "previousButtonSearchTutorialText": "Trykk på denne knappen for å slette det siste tegnet",
-  "menuButtonSearchTutorialText": "Trykk på denne knappen for å lukke tastaturet og samhandle med søkeresultatene",
+  "clickWheelInputTextBarTutorialText": "Flytt tommelen lett rundt klikkhjulet for å markere et alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Trykk på midtknappen for å velge uthevet alfabet",
+  "nextButtonInputTextBarTutorialText": "Trykk på denne knappen for å legge til et rom",
+  "previousButtonInputTextBarTutorialText": "Trykk på denne knappen for å slette det siste tegnet",
+  "menuButtonInputTextBarTutorialText": "Trykk på denne knappen for å lukke tastaturet og samhandle med søkeresultatene",
   "allSongs": "Alle sanger"
 }

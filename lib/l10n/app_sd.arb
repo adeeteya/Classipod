@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "بار بار بار، اسڪربر بار ۽ شفل سلائيڊر ذريعي سائيڪل جو بٽڻ دٻايو. پريس ڪريو ۽ وچ واري بٽڻ کي اضافي اختيارن تائين رسائي لاء دٻايو.",
   "nextButtonNowPlayingTutorialText": "پريس کي دٻايو ۽ هن بٽڻ کي تيز ڪرڻ لاء",
   "previousButtonNowPlayingTutorialText": "پريس ڪريو ۽ هن بٽڻ کي گانو کي ٻيهر کولڻ لاء دٻايو",
-  "deviceControlSearchTutorialText": "ڪلڪ ڪريو پنھنجي آ thumb يء ريت ڪلڪ ڪريو ڪلڪ ڪريو ھڪڙي الفابيٽ کي اجاگر ڪرڻ لاء",
-  "centerButtonSearchTutorialText": "نمايان ٿيل الفابيٽ کي چونڊڻ لاء سينٽر جو بٽڻ دٻايو",
-  "nextButtonSearchTutorialText": "اسپيس شامل ڪرڻ لاء هن بٽڻ کي دٻايو",
-  "previousButtonSearchTutorialText": "آخري ڪردار کي ختم ڪرڻ لاء هن بٽڻ کي دٻايو",
-  "menuButtonSearchTutorialText": "ڪيبورڊ بند ڪرڻ لاء هن بٽڻ کي دٻايو ۽ ڳولا جي نتيجن سان رابطو ڪريو",
+  "clickWheelInputTextBarTutorialText": "ڪلڪ ڪريو پنھنجي آ thumb يء ريت ڪلڪ ڪريو ڪلڪ ڪريو ھڪڙي الفابيٽ کي اجاگر ڪرڻ لاء",
+  "centerButtonInputTextBarScreenTutorialText": "نمايان ٿيل الفابيٽ کي چونڊڻ لاء سينٽر جو بٽڻ دٻايو",
+  "nextButtonInputTextBarTutorialText": "اسپيس شامل ڪرڻ لاء هن بٽڻ کي دٻايو",
+  "previousButtonInputTextBarTutorialText": "آخري ڪردار کي ختم ڪرڻ لاء هن بٽڻ کي دٻايو",
+  "menuButtonInputTextBarTutorialText": "ڪيبورڊ بند ڪرڻ لاء هن بٽڻ کي دٻايو ۽ ڳولا جي نتيجن سان رابطو ڪريو",
   "allSongs": "سڀ گانا"
 }

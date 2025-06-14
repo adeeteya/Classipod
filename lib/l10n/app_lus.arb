@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ꯁꯤꯛ ꯕꯥꯔ, ꯁ꯭ꯛꯔꯕꯔ ꯕꯥꯔ ꯑꯃꯁꯨꯡ ꯁ꯭ꯂꯥꯏꯗꯔꯒꯤ ꯃꯔꯛꯇꯥ ꯁꯥꯏꯀꯜ ꯊꯧꯅꯕꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫ ꯑꯍꯦꯅꯕꯥ ꯑꯣꯄꯁꯅꯁꯤꯡ ꯑꯦꯛꯁꯦꯁ ꯇꯧꯅꯕꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ ꯑꯃꯁꯨꯡ ꯊꯝꯃꯨ꯫",
   "nextButtonNowPlayingTutorialText": "ꯏꯁꯩ ꯑꯁꯤ ꯌꯥꯝꯅꯥ ꯊꯨꯅꯥ ꯃꯥꯡꯂꯣꯃꯗꯥ ꯆꯪꯁꯤꯟꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ ꯑꯃꯁꯨꯡ ꯊꯝꯃꯨ .",
   "previousButtonNowPlayingTutorialText": "ꯏꯁꯩ ꯑꯁꯤ ꯔꯤꯋꯥꯏꯟꯗ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ ꯑꯃꯁꯨꯡ ꯊꯝꯃꯨ .",
-  "deviceControlSearchTutorialText": "ꯑꯂꯐꯥꯕꯦꯠ ꯑꯃꯥ ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯅꯕꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯑꯗꯨꯒꯤ ꯑꯀꯣꯌꯕꯗꯥ ꯅꯍꯥꯛꯀꯤ ꯊꯣꯡꯅꯥꯎ ꯑꯗꯨ ꯂꯥꯏꯅꯥ ꯂꯧꯊꯣꯀꯎ",
-  "centerButtonSearchTutorialText": "ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯔꯕꯥ ꯑꯥꯂꯐꯥꯕꯦꯠ ꯑꯗꯨ ꯈꯅꯕꯗꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫",
-  "nextButtonSearchTutorialText": "ꯁ꯭ꯄꯦꯁ ꯑꯃꯥ ꯍꯥꯄꯆꯤꯟꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .",
-  "previousButtonSearchTutorialText": "ꯑꯔꯣꯏꯕꯥ ꯆꯦꯛꯔꯦꯇꯔ ꯑꯗꯨ ꯃꯨꯠꯊꯠꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .",
-  "menuButtonSearchTutorialText": "ꯀꯤꯕꯣꯔꯗ ꯂꯣꯗ ꯇꯧꯅꯕꯥ ꯑꯃꯁꯨꯡ ꯁꯥꯔꯆ ꯔꯤꯖꯜꯇꯁꯤꯡꯒꯥ ꯏꯟꯇꯔꯦꯛꯇ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ",
+  "clickWheelInputTextBarTutorialText": "ꯑꯂꯐꯥꯕꯦꯠ ꯑꯃꯥ ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯅꯕꯥ ꯀ꯭ꯂꯤꯛ ꯍꯨꯏꯜ ꯑꯗꯨꯒꯤ ꯑꯀꯣꯌꯕꯗꯥ ꯅꯍꯥꯛꯀꯤ ꯊꯣꯡꯅꯥꯎ ꯑꯗꯨ ꯂꯥꯏꯅꯥ ꯂꯧꯊꯣꯀꯎ",
+  "centerButtonInputTextBarScreenTutorialText": "ꯍꯥꯏꯂꯥꯏꯠ ꯇꯧꯔꯕꯥ ꯑꯥꯂꯐꯥꯕꯦꯠ ꯑꯗꯨ ꯈꯅꯕꯗꯥ ꯁꯦꯟꯇꯔ ꯕꯇꯟ ꯑꯗꯨ ꯊꯝꯃꯨ꯫",
+  "nextButtonInputTextBarTutorialText": "ꯁ꯭ꯄꯦꯁ ꯑꯃꯥ ꯍꯥꯄꯆꯤꯟꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .",
+  "previousButtonInputTextBarTutorialText": "ꯑꯔꯣꯏꯕꯥ ꯆꯦꯛꯔꯦꯇꯔ ꯑꯗꯨ ꯃꯨꯠꯊꯠꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ .",
+  "menuButtonInputTextBarTutorialText": "ꯀꯤꯕꯣꯔꯗ ꯂꯣꯗ ꯇꯧꯅꯕꯥ ꯑꯃꯁꯨꯡ ꯁꯥꯔꯆ ꯔꯤꯖꯜꯇꯁꯤꯡꯒꯥ ꯏꯟꯇꯔꯦꯛꯇ ꯇꯧꯅꯕꯥ ꯕꯇꯟ ꯑꯁꯤ ꯊꯝꯃꯨ",
   "allSongs": "Hla zawng zawng ."
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pencét tombol PUSAT pikeun siklus ngalangkungan bar, scrubber sareng lepeng geser. Pencét sareng tahan tombol Pusat pikeun ngakses pilihan tambahan.",
   "nextButtonNowPlayingTutorialText": "Pencét sareng tahan tombol ieu pikeun gancang maju lagu",
   "previousButtonNowPlayingTutorialText": "Pencét sareng tahan tombol ieu pikeun ngintunkeun lagu",
-  "deviceControlSearchTutorialText": "Mindahkeun jempol anjeun enteng sakitar roda klik pikeun nyorot alfabét",
-  "centerButtonSearchTutorialText": "Pencét tombol pusat pikeun milih alfabét anu disorot",
-  "nextButtonSearchTutorialText": "Pencét tombol ieu pikeun nambihan rohangan",
-  "previousButtonSearchTutorialText": "Pencét tombol ieu pikeun mupus karakter anu terakhir",
-  "menuButtonSearchTutorialText": "Pencét tombol ieu pikeun nutup keyboard sareng berinteraksi sareng hasil pencarian",
+  "clickWheelInputTextBarTutorialText": "Mindahkeun jempol anjeun enteng sakitar roda klik pikeun nyorot alfabét",
+  "centerButtonInputTextBarScreenTutorialText": "Pencét tombol pusat pikeun milih alfabét anu disorot",
+  "nextButtonInputTextBarTutorialText": "Pencét tombol ieu pikeun nambihan rohangan",
+  "previousButtonInputTextBarTutorialText": "Pencét tombol ieu pikeun mupus karakter anu terakhir",
+  "menuButtonInputTextBarTutorialText": "Pencét tombol ieu pikeun nutup keyboard sareng berinteraksi sareng hasil pencarian",
   "allSongs": "Sadaya lagu"
 }

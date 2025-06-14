@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pawhiria te paatene pokapū ki te huringa ma te rapu pae, paataki scruffle me te raima shuffle. Press me te pupuri i te paatene pokapū kia uru atu ai etahi atu taapiri.",
   "nextButtonNowPlayingTutorialText": "Press me te pupuri i tenei paatene kia tere ai te waiata",
   "previousButtonNowPlayingTutorialText": "Press me te pupuri i tenei paatene ki te whakahoki ano i te waiata",
-  "deviceControlSearchTutorialText": "Nukuhia to koromatua huri noa i te wira click hei whakanui i te taatai",
-  "centerButtonSearchTutorialText": "Pawhiria te paatene pokapū ki te whiriwhiri i te reta nui",
-  "nextButtonSearchTutorialText": "Pawhiria te paatene ki te taapiri i tetahi waahi",
-  "previousButtonSearchTutorialText": "Pawhiria te paatene nei ki te muku i te ahuatanga whakamutunga",
-  "menuButtonSearchTutorialText": "Pawhiria te paatene nei kia kati te papapātuhi me te taunekeneke ki nga hua o te rapu",
+  "clickWheelInputTextBarTutorialText": "Nukuhia to koromatua huri noa i te wira click hei whakanui i te taatai",
+  "centerButtonInputTextBarScreenTutorialText": "Pawhiria te paatene pokapū ki te whiriwhiri i te reta nui",
+  "nextButtonInputTextBarTutorialText": "Pawhiria te paatene ki te taapiri i tetahi waahi",
+  "previousButtonInputTextBarTutorialText": "Pawhiria te paatene nei ki te muku i te ahuatanga whakamutunga",
+  "menuButtonInputTextBarTutorialText": "Pawhiria te paatene nei kia kati te papapātuhi me te taunekeneke ki nga hua o te rapu",
   "allSongs": "Nga waiata katoa"
 }

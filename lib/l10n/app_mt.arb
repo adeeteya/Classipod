@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Agħfas il-buttuna Ċentru biex tiċċikla permezz ta 'SEEF BAR, SCRUBBER BAR u SHUFFLE SLIDER. Agħfas u żomm il-buttuna Ċentru biex taċċessa għażliet addizzjonali.",
   "nextButtonNowPlayingTutorialText": "Agħfas u żomm din il-buttuna biex tgħaddi l-kanzunetta",
   "previousButtonNowPlayingTutorialText": "Agħfas u żomm din il-buttuna biex terġa 'tidwir il-kanzunetta",
-  "deviceControlSearchTutorialText": "Mexxi l-kbir tiegħek ħafif madwar ir-rota tal-ikklikkja biex tenfasizza alfabett",
-  "centerButtonSearchTutorialText": "Agħfas il-buttuna Ċentru biex tagħżel l-alfabett enfasizzat",
-  "nextButtonSearchTutorialText": "Agħfas din il-buttuna biex iżżid spazju",
-  "previousButtonSearchTutorialText": "Agħfas din il-buttuna biex tħassar l-aħħar karattru",
-  "menuButtonSearchTutorialText": "Agħfas din il-buttuna biex tagħlaq it-tastiera u tinteraġixxi mar-riżultati tat-tfittxija",
+  "clickWheelInputTextBarTutorialText": "Mexxi l-kbir tiegħek ħafif madwar ir-rota tal-ikklikkja biex tenfasizza alfabett",
+  "centerButtonInputTextBarScreenTutorialText": "Agħfas il-buttuna Ċentru biex tagħżel l-alfabett enfasizzat",
+  "nextButtonInputTextBarTutorialText": "Agħfas din il-buttuna biex iżżid spazju",
+  "previousButtonInputTextBarTutorialText": "Agħfas din il-buttuna biex tħassar l-aħħar karattru",
+  "menuButtonInputTextBarTutorialText": "Agħfas din il-buttuna biex tagħlaq it-tastiera u tinteraġixxi mar-riżultati tat-tfittxija",
   "allSongs": "Il-kanzunetti kollha"
 }

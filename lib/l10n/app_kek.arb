@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tat-ok sa’ li boton re li Centro re naq taa’ok sa’ li b’eleb’aal ch’iich’ sa’ li bar sik’b’il, li barra de scrubber ut li deslizador re li b’atz’unk. Tat-ok sa’ li boton re li Centro re naq taa’ok sa’ jalan chik li na’leb’.",
   "nextButtonNowPlayingTutorialText": "Taqab’ ut chap li boton a’in re naq taa’ayuun chi us li b’ich .",
   "previousButtonNowPlayingTutorialText": "Taqab’i ut chap li boton a’in re xk’eeb’al wi’chik li b’ich .",
-  "deviceControlSearchTutorialText": "K’am laa nim uq’ chi kok’ aj xsa’ sa’ xsutam li Wheel Click re xk’eeb’al chi nawe’k jun li tz’iib’leb’ .",
-  "centerButtonSearchTutorialText": "Tat-ok sa’ li boton sa’ xyi re xsik’b’al ru li tz’iib’anb’il esil li k’eeb’il chi ilmank .",
-  "nextButtonSearchTutorialText": "Taak’e li boton a’in re xk’eeb’al jun li na’ajej .",
-  "previousButtonSearchTutorialText": "Tat-ok sa’ li boton a’in re xsachb’al li roso’jik tz’iib’ .",
-  "menuButtonSearchTutorialText": "Tat-ok sa’ li boton a’in re xtz’apb’al li teclado ut chi wank sa’ komonil rik’in li sik’ok .",
+  "clickWheelInputTextBarTutorialText": "K’am laa nim uq’ chi kok’ aj xsa’ sa’ xsutam li Wheel Click re xk’eeb’al chi nawe’k jun li tz’iib’leb’ .",
+  "centerButtonInputTextBarScreenTutorialText": "Tat-ok sa’ li boton sa’ xyi re xsik’b’al ru li tz’iib’anb’il esil li k’eeb’il chi ilmank .",
+  "nextButtonInputTextBarTutorialText": "Taak’e li boton a’in re xk’eeb’al jun li na’ajej .",
+  "previousButtonInputTextBarTutorialText": "Tat-ok sa’ li boton a’in re xsachb’al li roso’jik tz’iib’ .",
+  "menuButtonInputTextBarTutorialText": "Tat-ok sa’ li boton a’in re xtz’apb’al li teclado ut chi wank sa’ komonil rik’in li sik’ok .",
   "allSongs": "Chixjunileb'"
 }

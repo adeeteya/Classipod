@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Arama çubuğu, yıkama çubuğu ve shuffle kaydırıcısından geçerek merkez düğmesine basın. Ek seçeneklere erişmek için Orta düğmesini basılı tutun.",
   "nextButtonNowPlayingTutorialText": "Şarkıyı hızlı bir şekilde ileriye götürmek için bu düğmeye basın ve basılı tutun",
   "previousButtonNowPlayingTutorialText": "Şarkıyı geri sarmak için bu düğmeyi basılı tutun",
-  "deviceControlSearchTutorialText": "Bir alfabeyi vurgulamak için başparmağınızı tıklama tekerleğinin etrafında hafifçe hareket ettirin",
-  "centerButtonSearchTutorialText": "Vurgulanan alfabeyi seçmek için Merkez düğmesine basın",
-  "nextButtonSearchTutorialText": "Bir alan eklemek için bu düğmeye basın",
-  "previousButtonSearchTutorialText": "Son karakteri silmek için bu düğmeye basın",
-  "menuButtonSearchTutorialText": "Klavyeyi kapatmak için bu düğmeye basın ve arama sonuçlarıyla etkileşime geçin",
+  "clickWheelInputTextBarTutorialText": "Bir alfabeyi vurgulamak için başparmağınızı tıklama tekerleğinin etrafında hafifçe hareket ettirin",
+  "centerButtonInputTextBarScreenTutorialText": "Vurgulanan alfabeyi seçmek için Merkez düğmesine basın",
+  "nextButtonInputTextBarTutorialText": "Bir alan eklemek için bu düğmeye basın",
+  "previousButtonInputTextBarTutorialText": "Son karakteri silmek için bu düğmeye basın",
+  "menuButtonInputTextBarTutorialText": "Klavyeyi kapatmak için bu düğmeye basın ve arama sonuçlarıyla etkileşime geçin",
   "allSongs": "Tüm Şarkılar"
 }

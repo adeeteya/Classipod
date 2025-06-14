@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Ipadayon ang button sa Center aron ma-cycle pinaagi sa pagpangita sa bar, scrubber bar ug sluffle slider. Padayon ug hupti ang button sa Center aron ma-access ang dugang nga mga kapilian.",
   "nextButtonNowPlayingTutorialText": "Padayon ug hupti kini nga butones aron mapadayon ang Awit",
   "previousButtonNowPlayingTutorialText": "Padayon ug hupti kini nga buton aron i-rewind ang kanta",
-  "deviceControlSearchTutorialText": "Ibalhin ang imong kumagko sa palibot sa click wheel aron ipasiugda ang usa ka alpabeto",
-  "centerButtonSearchTutorialText": "Ipadayon ang button sa Center aron mapili ang gipasiugda nga alpabeto",
-  "nextButtonSearchTutorialText": "Padayon kini nga butones aron makadugang usa ka wanang",
-  "previousButtonSearchTutorialText": "Ipadayon kini nga buton aron mapapas ang katapusan nga kinaiya",
-  "menuButtonSearchTutorialText": "Ipadayon kini nga butones aron isara ang keyboard ug makig-uban sa mga resulta sa pagpangita",
+  "clickWheelInputTextBarTutorialText": "Ibalhin ang imong kumagko sa palibot sa click wheel aron ipasiugda ang usa ka alpabeto",
+  "centerButtonInputTextBarScreenTutorialText": "Ipadayon ang button sa Center aron mapili ang gipasiugda nga alpabeto",
+  "nextButtonInputTextBarTutorialText": "Padayon kini nga butones aron makadugang usa ka wanang",
+  "previousButtonInputTextBarTutorialText": "Ipadayon kini nga buton aron mapapas ang katapusan nga kinaiya",
+  "menuButtonInputTextBarTutorialText": "Ipadayon kini nga butones aron isara ang keyboard ug makig-uban sa mga resulta sa pagpangita",
   "allSongs": "Tanan nga mga kanta"
 }

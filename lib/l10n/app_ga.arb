@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Brúigh an cnaipe Ionad chun rothaíocht a dhéanamh trí bharra, barra sciúrtha agus sleamhnán a shuaitheadh. Brúigh agus coinnigh an cnaipe Ionad chun rochtain a fháil ar roghanna breise.",
   "nextButtonNowPlayingTutorialText": "Brúigh agus coinnigh an cnaipe seo chun an t -amhrán a chur ar aghaidh go tapa",
   "previousButtonNowPlayingTutorialText": "Brúigh agus coinnigh an cnaipe seo chun an t -amhrán a athsheoladh",
-  "deviceControlSearchTutorialText": "Bog do ordóg go héadrom timpeall an roth cliceáil chun aibítir a aibhsiú",
-  "centerButtonSearchTutorialText": "Brúigh an cnaipe Ionad chun an aibítir aibhsithe a roghnú",
-  "nextButtonSearchTutorialText": "Brúigh an cnaipe seo chun spás a chur leis",
-  "previousButtonSearchTutorialText": "Brúigh an cnaipe seo chun an carachtar deireanach a scriosadh",
-  "menuButtonSearchTutorialText": "Brúigh an cnaipe seo chun an méarchlár a dhúnadh agus idirghníomhú leis na torthaí cuardaigh",
+  "clickWheelInputTextBarTutorialText": "Bog do ordóg go héadrom timpeall an roth cliceáil chun aibítir a aibhsiú",
+  "centerButtonInputTextBarScreenTutorialText": "Brúigh an cnaipe Ionad chun an aibítir aibhsithe a roghnú",
+  "nextButtonInputTextBarTutorialText": "Brúigh an cnaipe seo chun spás a chur leis",
+  "previousButtonInputTextBarTutorialText": "Brúigh an cnaipe seo chun an carachtar deireanach a scriosadh",
+  "menuButtonInputTextBarTutorialText": "Brúigh an cnaipe seo chun an méarchlár a dhúnadh agus idirghníomhú leis na torthaí cuardaigh",
   "allSongs": "Gach amhrán"
 }

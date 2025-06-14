@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "按中心按鈕循環穿過尋求棒、洗衣機棒和混搭滑桿。按住中心掣，就可以存取額外嘅選項。",
   "nextButtonNowPlayingTutorialText": "按住呢個掣，就可以快速向前行呢首歌",
   "previousButtonNowPlayingTutorialText": "按住呢個掣，就可以倒轉歌曲",
-  "deviceControlSearchTutorialText": "輕輕將拇指移動到點擊輪，突顯字母",
-  "centerButtonSearchTutorialText": "按中心按鈕，選取突顯字母",
-  "nextButtonSearchTutorialText": "撳呢個掣就可以加入空間",
-  "previousButtonSearchTutorialText": "撳呢個掣就可以刪除最後一個字元",
-  "menuButtonSearchTutorialText": "撳呢個掣就可以關閉鍵盤，同埋同搜尋結果互動",
+  "clickWheelInputTextBarTutorialText": "輕輕將拇指移動到點擊輪，突顯字母",
+  "centerButtonInputTextBarScreenTutorialText": "按中心按鈕，選取突顯字母",
+  "nextButtonInputTextBarTutorialText": "撳呢個掣就可以加入空間",
+  "previousButtonInputTextBarTutorialText": "撳呢個掣就可以刪除最後一個字元",
+  "menuButtonInputTextBarTutorialText": "撳呢個掣就可以關閉鍵盤，同埋同搜尋結果互動",
   "allSongs": "所有歌曲"
 }

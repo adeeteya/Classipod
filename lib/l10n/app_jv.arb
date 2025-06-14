@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pencet tombol tengah kanggo ngupaya Bar, Bar Scruubber lan Slider Shuffle. Pencet terus tombol tengah kanggo ngakses opsi tambahan.",
   "nextButtonNowPlayingTutorialText": "Penet terus tombol iki kanggo cepet lagu kasebut",
   "previousButtonNowPlayingTutorialText": "Pencet terus tombol iki kanggo mundur lagu",
-  "deviceControlSearchTutorialText": "Pindhah jempol kanthi entheng ing rodha klik kanggo nyorot alfabet",
-  "centerButtonSearchTutorialText": "Pencet tombol tengah kanggo milih aksara sing disorot",
-  "nextButtonSearchTutorialText": "Pencet tombol iki kanggo nambah papan",
-  "previousButtonSearchTutorialText": "Pencet tombol iki kanggo mbusak karakter pungkasan",
-  "menuButtonSearchTutorialText": "Pencet tombol iki kanggo nutup keyboard lan sesambungan karo asil telusuran",
+  "clickWheelInputTextBarTutorialText": "Pindhah jempol kanthi entheng ing rodha klik kanggo nyorot alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Pencet tombol tengah kanggo milih aksara sing disorot",
+  "nextButtonInputTextBarTutorialText": "Pencet tombol iki kanggo nambah papan",
+  "previousButtonInputTextBarTutorialText": "Pencet tombol iki kanggo mbusak karakter pungkasan",
+  "menuButtonInputTextBarTutorialText": "Pencet tombol iki kanggo nutup keyboard lan sesambungan karo asil telusuran",
   "allSongs": "Kabeh lagu"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Nyomja meg a középső gombot a kerekes sávon, a súrolóval és a csúszdán való kerékpározáshoz. Nyomja meg és tartsa be a Center gombot a további beállítások eléréséhez.",
   "nextButtonNowPlayingTutorialText": "Nyomja meg és tartsa be ezt a gombot a dal gyors előmozdításához",
   "previousButtonNowPlayingTutorialText": "Nyomja meg és tartsa be ezt a gombot a dal visszatekeréséhez",
-  "deviceControlSearchTutorialText": "Mozgassa a hüvelykujját enyhén a kattintó kerék körül, hogy kiemelje az ábécét",
-  "centerButtonSearchTutorialText": "Nyomja meg a Center gombot a kiemelt ábécé kiválasztásához",
-  "nextButtonSearchTutorialText": "Nyomja meg ezt a gombot a hely hozzáadásához",
-  "previousButtonSearchTutorialText": "Nyomja meg ezt a gombot az utolsó karakter törléséhez",
-  "menuButtonSearchTutorialText": "Nyomja meg ezt a gombot a billentyűzet bezárásához és a keresési eredményekkel való interakcióhoz",
+  "clickWheelInputTextBarTutorialText": "Mozgassa a hüvelykujját enyhén a kattintó kerék körül, hogy kiemelje az ábécét",
+  "centerButtonInputTextBarScreenTutorialText": "Nyomja meg a Center gombot a kiemelt ábécé kiválasztásához",
+  "nextButtonInputTextBarTutorialText": "Nyomja meg ezt a gombot a hely hozzáadásához",
+  "previousButtonInputTextBarTutorialText": "Nyomja meg ezt a gombot az utolsó karakter törléséhez",
+  "menuButtonInputTextBarTutorialText": "Nyomja meg ezt a gombot a billentyűzet bezárásához és a keresési eredményekkel való interakcióhoz",
   "allSongs": "Minden dal"
 }

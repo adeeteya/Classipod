@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Drücken Sie die Mitte -Taste, um durch die Suchleiste, den Schrubbenbalken und den Shuffle Slider zu fahren. Halten Sie die Mitte -Taste gedrückt, um auf zusätzliche Optionen zuzugreifen.",
   "nextButtonNowPlayingTutorialText": "Halten Sie diese Taste gedrückt, um das Lied zu schnell voranzutreiben",
   "previousButtonNowPlayingTutorialText": "Halten Sie diese Taste gedrückt, um das Lied zurückzuspulen",
-  "deviceControlSearchTutorialText": "Bewegen Sie Ihren Daumen leicht um das Klickrad, um ein Alphabet hervorzuheben",
-  "centerButtonSearchTutorialText": "Drücken Sie die Mitte -Taste, um das hervorgehobene Alphabet auszuwählen",
-  "nextButtonSearchTutorialText": "Drücken Sie diese Taste, um einen Speicherplatz hinzuzufügen",
-  "previousButtonSearchTutorialText": "Drücken Sie diese Taste, um das letzte Zeichen zu löschen",
-  "menuButtonSearchTutorialText": "Drücken Sie diese Taste, um die Tastatur zu schließen und mit den Suchergebnissen zu interagieren",
+  "clickWheelInputTextBarTutorialText": "Bewegen Sie Ihren Daumen leicht um das Klickrad, um ein Alphabet hervorzuheben",
+  "centerButtonInputTextBarScreenTutorialText": "Drücken Sie die Mitte -Taste, um das hervorgehobene Alphabet auszuwählen",
+  "nextButtonInputTextBarTutorialText": "Drücken Sie diese Taste, um einen Speicherplatz hinzuzufügen",
+  "previousButtonInputTextBarTutorialText": "Drücken Sie diese Taste, um das letzte Zeichen zu löschen",
+  "menuButtonInputTextBarTutorialText": "Drücken Sie diese Taste, um die Tastatur zu schließen und mit den Suchergebnissen zu interagieren",
   "allSongs": "Alle Lieder"
 }

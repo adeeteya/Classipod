@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Center button kha hmet law, kawl khawhnak bar, scrubber bar le sliffle slider hmangin cycle mawngh khawhnak ding caah hmet. A dang thimnak hmuh khawhnak ding caah Center button kha hmet law tlaih.",
   "nextButtonNowPlayingTutorialText": "Hla kha fast forward tuah khawhnak ding caah hi button hi hmet law tlaih peng .",
   "previousButtonNowPlayingTutorialText": "Hla kha rewind tuah awkah hi button hi hmet law tlaih .",
-  "deviceControlSearchTutorialText": "Na kutdong kha Click Wheel pawngkam ah tlawmpal in ṭhial law alphabet pakhat kha langhter .",
-  "centerButtonSearchTutorialText": "A biapi bikmi alphabet kha thim awkah center button kha hmet.",
-  "nextButtonSearchTutorialText": "Hi button hi hmet law space pakhat na chap lai .",
-  "previousButtonSearchTutorialText": "Hi button hi hmet law a donghnak bik cafang kha delete tuah .",
-  "menuButtonSearchTutorialText": "Hi button hi hmet law keyboard kha khar law kawlnak a phichuak he pehtlaihnak tuah.",
+  "clickWheelInputTextBarTutorialText": "Na kutdong kha Click Wheel pawngkam ah tlawmpal in ṭhial law alphabet pakhat kha langhter .",
+  "centerButtonInputTextBarScreenTutorialText": "A biapi bikmi alphabet kha thim awkah center button kha hmet.",
+  "nextButtonInputTextBarTutorialText": "Hi button hi hmet law space pakhat na chap lai .",
+  "previousButtonInputTextBarTutorialText": "Hi button hi hmet law a donghnak bik cafang kha delete tuah .",
+  "menuButtonInputTextBarTutorialText": "Hi button hi hmet law keyboard kha khar law kawlnak a phichuak he pehtlaihnak tuah.",
   "allSongs": "Hla vialte"
 }

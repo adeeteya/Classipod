@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Nospiediet centra pogu, lai pārvietotos caur meklēšanas joslu, skruberu joslu un shuffle slīdni. Nospiediet un turiet centra pogu, lai piekļūtu papildu opcijām.",
   "nextButtonNowPlayingTutorialText": "Nospiediet un turiet šo pogu, lai ātri pārsūtītu dziesmu",
   "previousButtonNowPlayingTutorialText": "Nospiediet un turiet šo pogu, lai pārtaisītu dziesmu",
-  "deviceControlSearchTutorialText": "Viegli pārvietojiet īkšķi ap ​​klikšķa riteni, lai izceltu alfabētu",
-  "centerButtonSearchTutorialText": "Nospiediet pogu Centrs, lai izvēlētos iezīmēto alfabētu",
-  "nextButtonSearchTutorialText": "Nospiediet šo pogu, lai pievienotu vietu",
-  "previousButtonSearchTutorialText": "Nospiediet šo pogu, lai izdzēstu pēdējo rakstzīmi",
-  "menuButtonSearchTutorialText": "Nospiediet šo pogu, lai aizvērtu tastatūru un mijiedarbotos ar meklēšanas rezultātiem",
+  "clickWheelInputTextBarTutorialText": "Viegli pārvietojiet īkšķi ap ​​klikšķa riteni, lai izceltu alfabētu",
+  "centerButtonInputTextBarScreenTutorialText": "Nospiediet pogu Centrs, lai izvēlētos iezīmēto alfabētu",
+  "nextButtonInputTextBarTutorialText": "Nospiediet šo pogu, lai pievienotu vietu",
+  "previousButtonInputTextBarTutorialText": "Nospiediet šo pogu, lai izdzēstu pēdējo rakstzīmi",
+  "menuButtonInputTextBarTutorialText": "Nospiediet šo pogu, lai aizvērtu tastatūru un mijiedarbotos ar meklēšanas rezultātiem",
   "allSongs": "Visas dziesmas"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Натисніть центральну кнопку, щоб провести кругообігу через смугу пошуку, скрубер -смужку та повзунок для перетасування. Натисніть і утримуйте центральну кнопку, щоб отримати доступ до додаткових параметрів.",
   "nextButtonNowPlayingTutorialText": "Натисніть і утримуйте цю кнопку, щоб поститися вперед пісню",
   "previousButtonNowPlayingTutorialText": "Натисніть і утримуйте цю кнопку, щоб перемотати пісню",
-  "deviceControlSearchTutorialText": "Злегка перемістіть великий палець навколо колеса, щоб виділити алфавіт",
-  "centerButtonSearchTutorialText": "Натисніть кнопку Центру, щоб вибрати виділений алфавіт",
-  "nextButtonSearchTutorialText": "Натисніть цю кнопку, щоб додати простір",
-  "previousButtonSearchTutorialText": "Натисніть цю кнопку, щоб видалити останній символ",
-  "menuButtonSearchTutorialText": "Натисніть цю кнопку, щоб закрити клавіатуру та взаємодіяти з результатами пошуку",
+  "clickWheelInputTextBarTutorialText": "Злегка перемістіть великий палець навколо колеса, щоб виділити алфавіт",
+  "centerButtonInputTextBarScreenTutorialText": "Натисніть кнопку Центру, щоб вибрати виділений алфавіт",
+  "nextButtonInputTextBarTutorialText": "Натисніть цю кнопку, щоб додати простір",
+  "previousButtonInputTextBarTutorialText": "Натисніть цю кнопку, щоб видалити останній символ",
+  "menuButtonInputTextBarTutorialText": "Натисніть цю кнопку, щоб закрити клавіатуру та взаємодіяти з результатами пошуку",
   "allSongs": "Всі пісні"
 }

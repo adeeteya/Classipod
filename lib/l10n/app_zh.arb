@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "按下中心按钮以循环循环，通过Seek Bar，Scrubber Bar和Shuffle Slider循环。按住中心按钮以访问其他选项。",
   "nextButtonNowPlayingTutorialText": "按并按住此按钮快速前进这首歌",
   "previousButtonNowPlayingTutorialText": "按并按住此按钮倒带歌曲",
-  "deviceControlSearchTutorialText": "轻轻地将拇指移动到单击车轮上以突出显示字母",
-  "centerButtonSearchTutorialText": "按中间按钮选择突出显示的字母",
-  "nextButtonSearchTutorialText": "按下此按钮添加一个空间",
-  "previousButtonSearchTutorialText": "按下此按钮删除最后一个字符",
-  "menuButtonSearchTutorialText": "按下此按钮关闭键盘并与搜索结果进行交互",
+  "clickWheelInputTextBarTutorialText": "轻轻地将拇指移动到单击车轮上以突出显示字母",
+  "centerButtonInputTextBarScreenTutorialText": "按中间按钮选择突出显示的字母",
+  "nextButtonInputTextBarTutorialText": "按下此按钮添加一个空间",
+  "previousButtonInputTextBarTutorialText": "按下此按钮删除最后一个字符",
+  "menuButtonInputTextBarTutorialText": "按下此按钮关闭键盘并与搜索结果进行交互",
   "allSongs": "所有歌曲"
 }

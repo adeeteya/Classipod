@@ -1,5 +1,5 @@
 name: classipod
-version: 1.10.1
+version: 1.11.0
 summary: Local Music Player Inspired by the iPod Classic
 description: ClassiPod is a lightweight, offline music player app that emulates the experience of the legendary iPod Classic. It supports local music playback, shuffle/repeat, custom playlists, cover art, and more — all in a nostalgic design.
 icon: snap/gui/classipod.png

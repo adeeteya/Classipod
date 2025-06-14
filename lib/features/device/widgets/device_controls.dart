@@ -12,6 +12,8 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
+import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -27,10 +29,12 @@ class DeviceControls extends ConsumerStatefulWidget {
 class _DeviceControlsState extends ConsumerState<DeviceControls> {
   Duration durationSinceLastScroll = Duration.zero;
 
-  Future<void> onClickWheelScroll(
-    DragUpdateDetails dragUpdateDetails,
-    double radius,
-  ) async {
+  Future<void> onClickWheelScroll({
+    required DragUpdateDetails dragUpdateDetails,
+    required double radius,
+    required double smallThresholdRotationalChange,
+    required double bigThresholdRotationalChange,
+  }) async {
     // Pan location on the wheel
     final bool onTop = dragUpdateDetails.localPosition.dy <= radius;
     final bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;
@@ -70,17 +74,15 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
           dragUpdateDetails.sourceTimeStamp!.inMilliseconds -
           durationSinceLastScroll.inMilliseconds;
     } else {
-      setState(() {
-        durationSinceLastScroll =
-            dragUpdateDetails.sourceTimeStamp ?? Duration.zero;
-      });
+      durationSinceLastScroll =
+          dragUpdateDetails.sourceTimeStamp ?? Duration.zero;
     }
 
     final bool isForwardDirection = rotationalChange > 0;
     final double absRotationalChange = rotationalChange.abs();
 
-    if ((absRotationalChange > 150) ||
-        (absRotationalChange > 4 &&
+    if ((absRotationalChange > bigThresholdRotationalChange) ||
+        (absRotationalChange > smallThresholdRotationalChange &&
             millisecondsSinceLastScroll >
                 Constants.milliSecondsBeforeNextScroll)) {
       await ref
@@ -96,17 +98,66 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
             .read(deviceButtonsServiceProvider.notifier)
             .setDeviceAction(DeviceAction.rotateBackward);
       }
-      setState(() {
-        durationSinceLastScroll = Duration.zero;
-      });
+      durationSinceLastScroll = Duration.zero;
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final deviceColor = ref.watch(
-      settingsPreferencesControllerProvider.select((e) => e.deviceColor),
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.deviceColor,
+      ),
     );
+    final clickWheelSize = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.clickWheelSize,
+      ),
+    );
+    final clickWheelSensitivity = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.clickWheelSensitivity,
+      ),
+    );
+    late final double clickWheelRadiusRatio;
+    late final double selectButtonRadiusRatio;
+    switch (clickWheelSize) {
+      case ClickWheelSize.small:
+        clickWheelRadiusRatio = Constants.deviceClickWheelSmallRadiusRatio;
+        selectButtonRadiusRatio = Constants.deviceSelectButtonSmallRadiusRatio;
+        break;
+      case ClickWheelSize.medium:
+        clickWheelRadiusRatio = Constants.deviceClickWheelMediumRadiusRatio;
+        selectButtonRadiusRatio = Constants.deviceSelectButtonMediumRadiusRatio;
+        break;
+      case ClickWheelSize.large:
+        clickWheelRadiusRatio = Constants.deviceClickWheelLargeRadiusRatio;
+        selectButtonRadiusRatio = Constants.deviceSelectButtonLargeRadiusRatio;
+        break;
+    }
+
+    late final double smallThresholdRotationalChange;
+    late final double bigThresholdRotationalChange;
+    switch (clickWheelSensitivity) {
+      case ClickWheelSensitivity.low:
+        smallThresholdRotationalChange =
+            Constants.clickWheelLowSensitivitySmallThreshold;
+        bigThresholdRotationalChange =
+            Constants.clickWheelLowSensitivityBigThreshold;
+        break;
+      case ClickWheelSensitivity.medium:
+        smallThresholdRotationalChange =
+            Constants.clickWheelMediumSensitivitySmallThreshold;
+        bigThresholdRotationalChange =
+            Constants.clickWheelMediumSensitivityBigThreshold;
+        break;
+      case ClickWheelSensitivity.high:
+        smallThresholdRotationalChange =
+            Constants.clickWheelHighSensitivitySmallThreshold;
+        bigThresholdRotationalChange =
+            Constants.clickWheelHighSensitivityBigThreshold;
+        break;
+    }
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -114,13 +165,15 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
 
         return GestureDetector(
           onPanUpdate:
-              (dragUpdateDetails) async => onClickWheelScroll(
-                dragUpdateDetails,
-                (screenWidth * Constants.deviceClickWheelRadiusRatio) / 2,
+              (dragUpdateDetails) => onClickWheelScroll(
+                dragUpdateDetails: dragUpdateDetails,
+                radius: (screenWidth * clickWheelRadiusRatio) / 2,
+                smallThresholdRotationalChange: smallThresholdRotationalChange,
+                bigThresholdRotationalChange: bigThresholdRotationalChange,
               ),
           child: Container(
-            height: screenWidth * Constants.deviceClickWheelRadiusRatio,
-            width: screenWidth * Constants.deviceClickWheelRadiusRatio,
+            height: screenWidth * clickWheelRadiusRatio,
+            width: screenWidth * clickWheelRadiusRatio,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
@@ -243,8 +296,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                               .read(deviceButtonsServiceProvider.notifier)
                               .setDeviceAction(DeviceAction.longPressEnd),
                       child: SizedBox(
-                        height: screenWidth * Constants.deviceButtonSizeRatio,
-                        width: screenWidth * Constants.deviceButtonSizeRatio,
+                        height: screenWidth * selectButtonRadiusRatio,
+                        width: screenWidth * selectButtonRadiusRatio,
                         child: DecoratedBox(
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -299,7 +352,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                                 .read(deviceButtonsServiceProvider.notifier)
                                 .setDeviceAction(DeviceAction.longPressEnd),
                         child: SizedBox(
-                          height: screenWidth * Constants.deviceButtonSizeRatio,
+                          height: screenWidth * selectButtonRadiusRatio,
                           child: ColoredBox(
                             color:
                                 deviceColor == DeviceColor.black

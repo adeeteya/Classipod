@@ -382,5 +382,45 @@
   "allSongs": "All Songs",
   "@allSongs": {
     "description": "The text for selecting all songs"
+  },
+  "clickWheelSizeSettingTitle": "Click Wheel Size",
+  "@clickWheelSizeSettingTitle": {
+    "description": "The title of the click wheel size setting"
+  },
+  "clickWheelSensitivitySettingTitle": "Click Wheel Sensitivity",
+  "@clickWheelSensitivitySettingTitle": {
+    "description": "The title of the click wheel sensitivity setting"
+  },
+  "small": "Small",
+  "@small": {
+    "description": "The text for small click wheel size"
+  },
+  "medium": "Medium",
+  "@medium": {
+    "description": "The text for medium click wheel size and sensitivity"
+  },
+  "large": "Large",
+  "@large": {
+    "description": "The text for large click wheel size"
+  },
+  "low": "Low",
+  "@low": {
+    "description": "The text for low click wheel sensitivity"
+  },
+  "high": "High",
+  "@high": {
+    "description": "The text for high click wheel sensitivity"
+  },
+  "volumeModeSettingTitle": "Volume Mode",
+  "@volumeModeSettingTitle": {
+    "description": "The title of the volume mode setting"
+  },
+  "appVolumeMode": "App",
+  "@appVolumeMode": {
+    "description": "The text for app volume mode"
+  },
+  "systemVolumeMode": "System",
+  "@systemVolumeMode": {
+    "description": "The text for system volume mode"
   }
 }

@@ -297,28 +297,4 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
           .seek(Duration(seconds: targetDurationInSeconds));
     });
   }
-
-  Future<void> decreaseVolume() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final double currentVolume = ref.read(audioPlayerProvider).volume;
-      if (currentVolume > 0) {
-        if (currentVolume <= 0.05) {
-          await ref.read(audioPlayerProvider).setVolume(0);
-        } else {
-          await ref.read(audioPlayerProvider).setVolume(currentVolume - 0.05);
-        }
-      }
-    });
-  }
-
-  Future<void> increaseVolume() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final double currentVolume = ref.read(audioPlayerProvider).volume;
-      if (currentVolume < 1) {
-        await ref.read(audioPlayerProvider).setVolume(currentVolume + 0.05);
-      }
-    });
-  }
 }

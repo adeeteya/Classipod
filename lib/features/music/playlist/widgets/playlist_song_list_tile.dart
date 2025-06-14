@@ -62,7 +62,7 @@ class PlaylistSongListTile extends StatelessWidget {
                             : NetworkImage(songMetadata.thumbnailPath!)
                         : const AssetImage(Assets.defaultAlbumCoverImage),
                 errorBuilder:
-                    (_, __, ___) => Image.asset(
+                    (_, _, _) => Image.asset(
                       Assets.defaultAlbumCoverImage,
                       fit: BoxFit.fitWidth,
                     ),

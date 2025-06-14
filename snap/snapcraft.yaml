@@ -38,7 +38,7 @@ parts:
     override-pull: |
       snapcraftctl pull
       if [ ! -d flutter-sdk ]; then
-        git clone https://github.com/flutter/flutter.git -b 3.29.3 flutter-sdk
+        git clone https://github.com/flutter/flutter.git -b 3.32.4 flutter-sdk
       fi
     override-build: |
       export PATH=$PWD/flutter-sdk/bin:$PATH

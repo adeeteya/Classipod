@@ -13,6 +13,7 @@ import 'package:classipod/features/now_playing/widgets/now_playing_widget.dart';
 import 'package:classipod/features/now_playing/widgets/rating_bar.dart';
 import 'package:classipod/features/now_playing/widgets/shuffle_segmented_control.dart';
 import 'package:classipod/features/now_playing/widgets/volume_bar.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter/cupertino.dart';
@@ -125,7 +126,9 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     setState(() {
       _bottomBarPage = _NowPlayingBottomBarPage.volumeBar;
     });
-    await ref.read(audioPlayerServiceProvider.notifier).increaseVolume();
+    await ref
+        .read(settingsPreferencesControllerProvider.notifier)
+        .increaseVolume();
     startVolumeTimer();
   }
 
@@ -147,7 +150,9 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     setState(() {
       _bottomBarPage = _NowPlayingBottomBarPage.volumeBar;
     });
-    await ref.read(audioPlayerServiceProvider.notifier).decreaseVolume();
+    await ref
+        .read(settingsPreferencesControllerProvider.notifier)
+        .decreaseVolume();
     startVolumeTimer();
   }
 

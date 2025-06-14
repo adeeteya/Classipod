@@ -19,13 +19,16 @@ import 'package:url_launcher/url_launcher.dart';
 
 enum _SettingsDisplayItems {
   about,
-  language,
-  deviceColor,
-  isTouchScreenEnabled,
   shuffle,
   repeat,
+  language,
+  deviceColor,
+  clickWheelSize,
+  clickWheelSensitivity,
+  isTouchScreenEnabled,
   vibrate,
   clickWheelSound,
+  volumeMode,
   splitScreenEnabled,
   immersiveMode,
   showAppTutorial,
@@ -37,16 +40,22 @@ enum _SettingsDisplayItems {
     switch (this) {
       case about:
         return context.localization.aboutScreenTitle;
+      case shuffle:
+        return context.localization.shuffleSettingTitle;
+      case repeat:
+        return context.localization.repeatModeSettingTitle;
       case language:
         return context.localization.languageScreenTitle;
       case isTouchScreenEnabled:
         return context.localization.touchScreenSettingTitle;
       case deviceColor:
         return context.localization.deviceColorSettingTitle;
-      case shuffle:
-        return context.localization.shuffleSettingTitle;
-      case repeat:
-        return context.localization.repeatModeSettingTitle;
+      case clickWheelSize:
+        return context.localization.clickWheelSizeSettingTitle;
+      case clickWheelSensitivity:
+        return context.localization.clickWheelSensitivitySettingTitle;
+      case volumeMode:
+        return context.localization.volumeModeSettingTitle;
       case vibrate:
         return context.localization.vibrateSettingTitle;
       case clickWheelSound:
@@ -95,16 +104,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.language:
         context.goNamed(Routes.language.name);
         break;
-      case _SettingsDisplayItems.deviceColor:
-        await ref
-            .read(settingsPreferencesControllerProvider.notifier)
-            .toggleDeviceColor();
-        break;
-      case _SettingsDisplayItems.isTouchScreenEnabled:
-        await ref
-            .read(settingsPreferencesControllerProvider.notifier)
-            .toggleTouchScreen();
-        break;
       case _SettingsDisplayItems.shuffle:
         await ref.read(audioPlayerServiceProvider.notifier).toggleShuffleMode();
         break;
@@ -112,6 +111,26 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleRepeatMode();
+        break;
+      case _SettingsDisplayItems.deviceColor:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleDeviceColor();
+        break;
+      case _SettingsDisplayItems.clickWheelSize:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleClickWheelSize();
+        break;
+      case _SettingsDisplayItems.clickWheelSensitivity:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleClickWheelSensitivity();
+        break;
+      case _SettingsDisplayItems.isTouchScreenEnabled:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleTouchScreen();
         break;
       case _SettingsDisplayItems.vibrate:
         await ref
@@ -122,6 +141,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleClickWheelSound(context);
+        break;
+      case _SettingsDisplayItems.volumeMode:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleVolumeMode();
         break;
       case _SettingsDisplayItems.splitScreenEnabled:
         await ref
@@ -186,8 +210,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     switch (settingsItem) {
       case _SettingsDisplayItems.deviceColor:
         return settingsState.deviceColor.title(context);
+      case _SettingsDisplayItems.clickWheelSize:
+        return settingsState.clickWheelSize.title(context);
+      case _SettingsDisplayItems.clickWheelSensitivity:
+        return settingsState.clickWheelSensitivity.title(context);
       case _SettingsDisplayItems.repeat:
         return settingsState.repeatMode.title(context);
+      case _SettingsDisplayItems.volumeMode:
+        return settingsState.volumeMode.title(context);
       default:
         final bool? isOn = _isOn(settingsState, settingsItem);
         if (isOn != null) {

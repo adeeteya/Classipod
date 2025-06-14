@@ -322,7 +322,7 @@ final routerProvider = Provider(
                                     milliseconds: 500,
                                   ),
                                   transitionsBuilder:
-                                      (context, _, __, child) => child,
+                                      (context, _, _, child) => child,
                                   child: CoverFlowAlbumSelectionScreen(
                                     albumDetail: state.extra as AlbumModel,
                                   ),

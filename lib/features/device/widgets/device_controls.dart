@@ -71,10 +71,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
           dragUpdateDetails.sourceTimeStamp!.inMilliseconds -
           durationSinceLastScroll.inMilliseconds;
     } else {
-      setState(() {
-        durationSinceLastScroll =
-            dragUpdateDetails.sourceTimeStamp ?? Duration.zero;
-      });
+      durationSinceLastScroll =
+          dragUpdateDetails.sourceTimeStamp ?? Duration.zero;
     }
 
     final bool isForwardDirection = rotationalChange > 0;
@@ -97,21 +95,25 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
             .read(deviceButtonsServiceProvider.notifier)
             .setDeviceAction(DeviceAction.rotateBackward);
       }
-      setState(() {
-        durationSinceLastScroll = Duration.zero;
-      });
+      durationSinceLastScroll = Duration.zero;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    final settingsPreferences = ref.watch(
-      settingsPreferencesControllerProvider,
+    final deviceColor = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.deviceColor,
+      ),
     );
-    final deviceColor = settingsPreferences.deviceColor;
+    final clickWheelSize = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.clickWheelSize,
+      ),
+    );
     late final double clickWheelRadiusRatio;
     late final double selectButtonRadiusRatio;
-    switch (settingsPreferences.clickWheelSize) {
+    switch (clickWheelSize) {
       case ClickWheelSize.small:
         clickWheelRadiusRatio = Constants.deviceClickWheelSmallRadiusRatio;
         selectButtonRadiusRatio = Constants.deviceSelectButtonSmallRadiusRatio;

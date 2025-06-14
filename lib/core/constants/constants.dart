@@ -14,7 +14,15 @@ class Constants {
   //If you are seeing this please consider donating to the below link😉
   static const String donationLinkUrl = "https://buymeacoffee.com/adeeteya";
 
+  // Click Wheel Sensitivity Constants
+  static const double clickWheelLowSensitivitySmallThreshold = 16;
+  static const double clickWheelLowSensitivityBigThreshold = 200;
+  static const double clickWheelMediumSensitivitySmallThreshold = 4;
+  static const double clickWheelMediumSensitivityBigThreshold = 50;
+  static const double clickWheelHighSensitivitySmallThreshold = 0.2;
+  static const double clickWheelHighSensitivityBigThreshold = 10;
   static const int milliSecondsBeforeNextScroll = 75;
+
   static const double screenHeight = 300;
   static const double deviceClickWheelSmallRadiusRatio = 0.45;
   static const double deviceClickWheelMediumRadiusRatio = 0.61;

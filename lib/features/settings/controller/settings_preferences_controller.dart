@@ -8,6 +8,7 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
+import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
@@ -45,6 +46,9 @@ class SettingsPreferencesControllerNotifier
       ),
       clickWheelSize: ClickWheelSize.values.byName(
         settingsPreferencesRepository.getClickWheelSize(),
+      ),
+      clickWheelSensitivity: ClickWheelSensitivity.values.byName(
+        settingsPreferencesRepository.getClickWheelSensitivity(),
       ),
       isTouchScreenEnabled:
           settingsPreferencesRepository.getTouchScreenEnabled(),
@@ -158,6 +162,41 @@ class SettingsPreferencesControllerNotifier
             .read(settingsPreferencesRepositoryProvider)
             .setClickWheelSize(clickWheelSizeName: ClickWheelSize.small.name);
         state = state.copyWith(clickWheelSize: ClickWheelSize.small);
+        break;
+    }
+  }
+
+  Future<void> toggleClickWheelSensitivity() async {
+    switch (state.clickWheelSensitivity) {
+      case ClickWheelSensitivity.low:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setClickWheelSensitivity(
+              clickWheelSensitivityName: ClickWheelSensitivity.medium.name,
+            );
+        state = state.copyWith(
+          clickWheelSensitivity: ClickWheelSensitivity.medium,
+        );
+        break;
+      case ClickWheelSensitivity.medium:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setClickWheelSensitivity(
+              clickWheelSensitivityName: ClickWheelSensitivity.high.name,
+            );
+        state = state.copyWith(
+          clickWheelSensitivity: ClickWheelSensitivity.high,
+        );
+        break;
+      case ClickWheelSensitivity.high:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setClickWheelSensitivity(
+              clickWheelSensitivityName: ClickWheelSensitivity.low.name,
+            );
+        state = state.copyWith(
+          clickWheelSensitivity: ClickWheelSensitivity.low,
+        );
         break;
     }
   }

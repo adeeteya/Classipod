@@ -12,6 +12,7 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:flutter/cupertino.dart';
@@ -28,10 +29,12 @@ class DeviceControls extends ConsumerStatefulWidget {
 class _DeviceControlsState extends ConsumerState<DeviceControls> {
   Duration durationSinceLastScroll = Duration.zero;
 
-  Future<void> onClickWheelScroll(
-    DragUpdateDetails dragUpdateDetails,
-    double radius,
-  ) async {
+  Future<void> onClickWheelScroll({
+    required DragUpdateDetails dragUpdateDetails,
+    required double radius,
+    required double smallThresholdRotationalChange,
+    required double bigThresholdRotationalChange,
+  }) async {
     // Pan location on the wheel
     final bool onTop = dragUpdateDetails.localPosition.dy <= radius;
     final bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;
@@ -78,8 +81,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
     final bool isForwardDirection = rotationalChange > 0;
     final double absRotationalChange = rotationalChange.abs();
 
-    if ((absRotationalChange > 150) ||
-        (absRotationalChange > 4 &&
+    if ((absRotationalChange > bigThresholdRotationalChange) ||
+        (absRotationalChange > smallThresholdRotationalChange &&
             millisecondsSinceLastScroll >
                 Constants.milliSecondsBeforeNextScroll)) {
       await ref
@@ -111,6 +114,11 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         (settings) => settings.clickWheelSize,
       ),
     );
+    final clickWheelSensitivity = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.clickWheelSensitivity,
+      ),
+    );
     late final double clickWheelRadiusRatio;
     late final double selectButtonRadiusRatio;
     switch (clickWheelSize) {
@@ -128,15 +136,40 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         break;
     }
 
+    late final double smallThresholdRotationalChange;
+    late final double bigThresholdRotationalChange;
+    switch (clickWheelSensitivity) {
+      case ClickWheelSensitivity.low:
+        smallThresholdRotationalChange =
+            Constants.clickWheelLowSensitivitySmallThreshold;
+        bigThresholdRotationalChange =
+            Constants.clickWheelLowSensitivityBigThreshold;
+        break;
+      case ClickWheelSensitivity.medium:
+        smallThresholdRotationalChange =
+            Constants.clickWheelMediumSensitivitySmallThreshold;
+        bigThresholdRotationalChange =
+            Constants.clickWheelMediumSensitivityBigThreshold;
+        break;
+      case ClickWheelSensitivity.high:
+        smallThresholdRotationalChange =
+            Constants.clickWheelHighSensitivitySmallThreshold;
+        bigThresholdRotationalChange =
+            Constants.clickWheelHighSensitivityBigThreshold;
+        break;
+    }
+
     return LayoutBuilder(
       builder: (context, constraints) {
         final double screenWidth = constraints.maxWidth + 40;
 
         return GestureDetector(
           onPanUpdate:
-              (dragUpdateDetails) async => onClickWheelScroll(
-                dragUpdateDetails,
-                (screenWidth * clickWheelRadiusRatio) / 2,
+              (dragUpdateDetails) => onClickWheelScroll(
+                dragUpdateDetails: dragUpdateDetails,
+                radius: (screenWidth * clickWheelRadiusRatio) / 2,
+                smallThresholdRotationalChange: smallThresholdRotationalChange,
+                bigThresholdRotationalChange: bigThresholdRotationalChange,
               ),
           child: Container(
             height: screenWidth * clickWheelRadiusRatio,

@@ -1,3 +1,4 @@
+import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
@@ -7,6 +8,7 @@ class SettingsPreferencesModel {
   final String languageLocaleCode;
   final DeviceColor deviceColor;
   final ClickWheelSize clickWheelSize;
+  final ClickWheelSensitivity clickWheelSensitivity;
   final bool isTouchScreenEnabled;
   final RepeatMode repeatMode;
   final bool vibrate;
@@ -20,6 +22,7 @@ class SettingsPreferencesModel {
     required this.languageLocaleCode,
     required this.deviceColor,
     required this.clickWheelSize,
+    required this.clickWheelSensitivity,
     required this.isTouchScreenEnabled,
     required this.repeatMode,
     required this.vibrate,
@@ -34,6 +37,7 @@ class SettingsPreferencesModel {
     String? languageLocaleCode,
     DeviceColor? deviceColor,
     ClickWheelSize? clickWheelSize,
+    ClickWheelSensitivity? clickWheelSensitivity,
     bool? isTouchScreenEnabled,
     RepeatMode? repeatMode,
     bool? vibrate,
@@ -47,6 +51,8 @@ class SettingsPreferencesModel {
       languageLocaleCode: languageLocaleCode ?? this.languageLocaleCode,
       deviceColor: deviceColor ?? this.deviceColor,
       clickWheelSize: clickWheelSize ?? this.clickWheelSize,
+      clickWheelSensitivity:
+          clickWheelSensitivity ?? this.clickWheelSensitivity,
       isTouchScreenEnabled: isTouchScreenEnabled ?? this.isTouchScreenEnabled,
       repeatMode: repeatMode ?? this.repeatMode,
       vibrate: vibrate ?? this.vibrate,
@@ -64,6 +70,7 @@ class SettingsPreferencesModel {
         other.languageLocaleCode == languageLocaleCode &&
         other.deviceColor == deviceColor &&
         other.clickWheelSize == clickWheelSize &&
+        other.clickWheelSensitivity == clickWheelSensitivity &&
         other.isTouchScreenEnabled == isTouchScreenEnabled &&
         other.repeatMode == repeatMode &&
         other.vibrate == vibrate &&
@@ -79,6 +86,7 @@ class SettingsPreferencesModel {
     languageLocaleCode,
     deviceColor,
     clickWheelSize,
+    clickWheelSensitivity,
     isTouchScreenEnabled,
     repeatMode,
     vibrate,

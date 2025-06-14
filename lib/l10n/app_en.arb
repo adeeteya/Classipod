@@ -382,5 +382,21 @@
   "allSongs": "All Songs",
   "@allSongs": {
     "description": "The text for selecting all songs"
-  }
+  },
+  "clickWheelSizeSettingTitle": "Click Wheel Size",
+    "@clickWheelSizeSettingTitle": {
+        "description": "The title of the click wheel size setting"
+    },
+  "small": "Small",
+    "@small": {
+        "description": "The text for small click wheel size"
+    },
+    "medium": "Medium",
+    "@medium": {
+        "description": "The text for medium click wheel size"
+    },
+    "large": "Large",
+    "@large": {
+        "description": "The text for large click wheel size"
+    }
 }

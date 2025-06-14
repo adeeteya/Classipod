@@ -16,8 +16,12 @@ class Constants {
 
   static const int milliSecondsBeforeNextScroll = 75;
   static const double screenHeight = 300;
-  static const double deviceClickWheelRadiusRatio = 0.61;
-  static const double deviceButtonSizeRatio = 0.2175;
+  static const double deviceClickWheelSmallRadiusRatio = 0.45;
+  static const double deviceClickWheelMediumRadiusRatio = 0.61;
+  static const double deviceClickWheelLargeRadiusRatio = 0.80;
+  static const double deviceSelectButtonSmallRadiusRatio = 0.1500;
+  static const double deviceSelectButtonMediumRadiusRatio = 0.2175;
+  static const double deviceSelectButtonLargeRadiusRatio = 0.3000;
 
   static const double searchAlphabetContainerWidth = 180;
   static const double searchAlphabetSize = 15;

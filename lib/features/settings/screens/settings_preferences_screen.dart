@@ -19,11 +19,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 enum _SettingsDisplayItems {
   about,
-  language,
-  deviceColor,
-  isTouchScreenEnabled,
   shuffle,
   repeat,
+  language,
+  deviceColor,
+  clickWheelSize,
+  isTouchScreenEnabled,
   vibrate,
   clickWheelSound,
   splitScreenEnabled,
@@ -37,16 +38,18 @@ enum _SettingsDisplayItems {
     switch (this) {
       case about:
         return context.localization.aboutScreenTitle;
+      case shuffle:
+        return context.localization.shuffleSettingTitle;
+      case repeat:
+        return context.localization.repeatModeSettingTitle;
       case language:
         return context.localization.languageScreenTitle;
       case isTouchScreenEnabled:
         return context.localization.touchScreenSettingTitle;
       case deviceColor:
         return context.localization.deviceColorSettingTitle;
-      case shuffle:
-        return context.localization.shuffleSettingTitle;
-      case repeat:
-        return context.localization.repeatModeSettingTitle;
+      case clickWheelSize:
+        return context.localization.clickWheelSizeSettingTitle;
       case vibrate:
         return context.localization.vibrateSettingTitle;
       case clickWheelSound:
@@ -95,16 +98,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.language:
         context.goNamed(Routes.language.name);
         break;
-      case _SettingsDisplayItems.deviceColor:
-        await ref
-            .read(settingsPreferencesControllerProvider.notifier)
-            .toggleDeviceColor();
-        break;
-      case _SettingsDisplayItems.isTouchScreenEnabled:
-        await ref
-            .read(settingsPreferencesControllerProvider.notifier)
-            .toggleTouchScreen();
-        break;
       case _SettingsDisplayItems.shuffle:
         await ref.read(audioPlayerServiceProvider.notifier).toggleShuffleMode();
         break;
@@ -112,6 +105,21 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleRepeatMode();
+        break;
+      case _SettingsDisplayItems.deviceColor:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleDeviceColor();
+        break;
+      case _SettingsDisplayItems.clickWheelSize:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleClickWheelSize();
+        break;
+      case _SettingsDisplayItems.isTouchScreenEnabled:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleTouchScreen();
         break;
       case _SettingsDisplayItems.vibrate:
         await ref
@@ -186,6 +194,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     switch (settingsItem) {
       case _SettingsDisplayItems.deviceColor:
         return settingsState.deviceColor.title(context);
+      case _SettingsDisplayItems.clickWheelSize:
+        return settingsState.clickWheelSize.title(context);
       case _SettingsDisplayItems.repeat:
         return settingsState.repeatMode.title(context);
       default:

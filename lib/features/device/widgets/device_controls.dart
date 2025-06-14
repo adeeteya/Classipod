@@ -12,6 +12,7 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -104,9 +105,26 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
 
   @override
   Widget build(BuildContext context) {
-    final deviceColor = ref.watch(
-      settingsPreferencesControllerProvider.select((e) => e.deviceColor),
+    final settingsPreferences = ref.watch(
+      settingsPreferencesControllerProvider,
     );
+    final deviceColor = settingsPreferences.deviceColor;
+    late final double clickWheelRadiusRatio;
+    late final double selectButtonRadiusRatio;
+    switch (settingsPreferences.clickWheelSize) {
+      case ClickWheelSize.small:
+        clickWheelRadiusRatio = Constants.deviceClickWheelSmallRadiusRatio;
+        selectButtonRadiusRatio = Constants.deviceSelectButtonSmallRadiusRatio;
+        break;
+      case ClickWheelSize.medium:
+        clickWheelRadiusRatio = Constants.deviceClickWheelMediumRadiusRatio;
+        selectButtonRadiusRatio = Constants.deviceSelectButtonMediumRadiusRatio;
+        break;
+      case ClickWheelSize.large:
+        clickWheelRadiusRatio = Constants.deviceClickWheelLargeRadiusRatio;
+        selectButtonRadiusRatio = Constants.deviceSelectButtonLargeRadiusRatio;
+        break;
+    }
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -116,11 +134,11 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
           onPanUpdate:
               (dragUpdateDetails) async => onClickWheelScroll(
                 dragUpdateDetails,
-                (screenWidth * Constants.deviceClickWheelRadiusRatio) / 2,
+                (screenWidth * clickWheelRadiusRatio) / 2,
               ),
           child: Container(
-            height: screenWidth * Constants.deviceClickWheelRadiusRatio,
-            width: screenWidth * Constants.deviceClickWheelRadiusRatio,
+            height: screenWidth * clickWheelRadiusRatio,
+            width: screenWidth * clickWheelRadiusRatio,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
@@ -243,8 +261,8 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                               .read(deviceButtonsServiceProvider.notifier)
                               .setDeviceAction(DeviceAction.longPressEnd),
                       child: SizedBox(
-                        height: screenWidth * Constants.deviceButtonSizeRatio,
-                        width: screenWidth * Constants.deviceButtonSizeRatio,
+                        height: screenWidth * selectButtonRadiusRatio,
+                        width: screenWidth * selectButtonRadiusRatio,
                         child: DecoratedBox(
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
@@ -299,7 +317,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
                                 .read(deviceButtonsServiceProvider.notifier)
                                 .setDeviceAction(DeviceAction.longPressEnd),
                         child: SizedBox(
-                          height: screenWidth * Constants.deviceButtonSizeRatio,
+                          height: screenWidth * selectButtonRadiusRatio,
                           child: ColoredBox(
                             color:
                                 deviceColor == DeviceColor.black

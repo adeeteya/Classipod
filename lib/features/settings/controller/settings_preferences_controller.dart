@@ -8,6 +8,7 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
+import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
@@ -39,6 +40,9 @@ class SettingsPreferencesControllerNotifier
       languageLocaleCode: settingsPreferencesRepository.getLanguageLocaleCode(),
       deviceColor: DeviceColor.values.byName(
         settingsPreferencesRepository.getDeviceColor(),
+      ),
+      clickWheelSize: ClickWheelSize.values.byName(
+        settingsPreferencesRepository.getClickWheelSize(),
       ),
       isTouchScreenEnabled:
           settingsPreferencesRepository.getTouchScreenEnabled(),
@@ -126,6 +130,29 @@ class SettingsPreferencesControllerNotifier
             .read(settingsPreferencesRepositoryProvider)
             .setDeviceColor(deviceColorName: DeviceColor.silver.name);
         state = state.copyWith(deviceColor: DeviceColor.silver);
+        break;
+    }
+  }
+
+  Future<void> toggleClickWheelSize() async {
+    switch (state.clickWheelSize) {
+      case ClickWheelSize.small:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setClickWheelSize(clickWheelSizeName: ClickWheelSize.medium.name);
+        state = state.copyWith(clickWheelSize: ClickWheelSize.medium);
+        break;
+      case ClickWheelSize.medium:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setClickWheelSize(clickWheelSizeName: ClickWheelSize.large.name);
+        state = state.copyWith(clickWheelSize: ClickWheelSize.large);
+        break;
+      case ClickWheelSize.large:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setClickWheelSize(clickWheelSizeName: ClickWheelSize.small.name);
+        state = state.copyWith(clickWheelSize: ClickWheelSize.small);
         break;
     }
   }

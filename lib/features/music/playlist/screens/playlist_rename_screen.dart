@@ -1,10 +1,9 @@
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/input_text_bar.dart';
-import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
+import 'package:classipod/features/custom_screen_elements/custom_input_text_screen.dart';
 import 'package:classipod/features/music/playlist/models/playlist_option_type.dart';
 import 'package:classipod/features/music/playlist/widgets/playlist_option_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
-import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -18,15 +17,7 @@ class PlaylistRenameScreen extends ConsumerStatefulWidget {
 }
 
 class _PlaylistRenameScreenState extends ConsumerState<PlaylistRenameScreen>
-    with CustomScreen {
-  String _newPlaylistName = '';
-  bool _isInputTextBarActive = true;
-  final InputTextBarController _inputTextBarController =
-      InputTextBarController();
-
-  @override
-  double get displayTileHeight => 54;
-
+    with CustomInputTextScreen {
   @override
   String get routeName => Routes.playlistRename.name;
 
@@ -38,79 +29,20 @@ class _PlaylistRenameScreenState extends ConsumerState<PlaylistRenameScreen>
   ];
 
   @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(tutorialControllerProvider.notifier).playInputTextBarTutorial();
-    });
-  }
-
-  @override
-  void onMenuButtonPressed() {
-    if (_isInputTextBarActive) {
-      setState(() {
-        _isInputTextBarActive = false;
-      });
-    } else {
-      context.pop();
-    }
-  }
-
-  @override
-  Future<void> onSelectPressed() async {
-    if (_isInputTextBarActive) {
-      _inputTextBarController.selectAlphabet();
-    } else {
-      await _onPlaylistRenameAction(selectedDisplayItem);
-    }
+  Future<void> onSelectAction() async {
+    await _onPlaylistRenameAction(selectedDisplayItem);
   }
 
   Future<void> _onPlaylistRenameAction(int displayIndex) async {
     setState(() => selectedDisplayItem = displayIndex);
     if (selectedDisplayItem == 0) {
-      _reopenInputTextBar();
+      reopenInputTextBar();
       return;
     } else if (selectedDisplayItem == 1) {
-      context.pop(_newPlaylistName);
+      context.pop(inputText);
     } else if (selectedDisplayItem == 2) {
       context.pop();
     }
-  }
-
-  void _reopenInputTextBar() {
-    setState(() {
-      selectedDisplayItem = 0;
-      _isInputTextBarActive = !_isInputTextBarActive;
-    });
-  }
-
-  @override
-  Future<void> seekForward() async {
-    _inputTextBarController.addSpace();
-  }
-
-  @override
-  Future<void> seekBackward() async {
-    _inputTextBarController.removeCharacter();
-  }
-
-  @override
-  void scrollForward() {
-    if (_isInputTextBarActive) {
-      _inputTextBarController.moveToNextAlphabet();
-      return;
-    }
-
-    super.scrollForward();
-  }
-
-  @override
-  void scrollBackward() {
-    if (_isInputTextBarActive) {
-      _inputTextBarController.moveBackToPreviousAlphabet();
-      return;
-    }
-    super.scrollBackward();
   }
 
   @override
@@ -145,16 +77,16 @@ class _PlaylistRenameScreenState extends ConsumerState<PlaylistRenameScreen>
               ),
             ],
           ),
-          if (_isInputTextBarActive)
+          if (isInputTextBarActive)
             Positioned(
               bottom: 0,
               left: 0,
               right: 0,
               child: InputTextBar(
-                inputTextBarController: _inputTextBarController,
+                inputTextBarController: inputTextBarController,
                 onSearchTextChanged: (value) {
                   setState(() {
-                    _newPlaylistName = value;
+                    inputText = value;
                   });
                 },
               ),

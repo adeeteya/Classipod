@@ -3,13 +3,12 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/input_text_bar.dart';
-import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
+import 'package:classipod/features/custom_screen_elements/custom_input_text_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:classipod/features/music/search/provider/search_provider.dart';
 import 'package:classipod/features/music/search/widgets/search_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
-import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -21,50 +20,21 @@ class SearchScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _SearchScreenState();
 }
 
-class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
-  String _searchText = '';
-  bool _isSearchBarActive = true;
-  final InputTextBarController _searchBarController = InputTextBarController();
-
+class _SearchScreenState extends ConsumerState<SearchScreen>
+    with CustomInputTextScreen {
   @override
   int get extraDisplayItems => 1;
-
-  @override
-  double get displayTileHeight => 54;
 
   @override
   String get routeName => Routes.search.name;
 
   @override
   List<SearchResultsModel> get displayItems =>
-      ref.watch(searchProvider(_searchText));
+      ref.watch(searchProvider(inputText));
 
   @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(tutorialControllerProvider.notifier).playInputTextBarTutorial();
-    });
-  }
-
-  @override
-  void onMenuButtonPressed() {
-    if (_isSearchBarActive) {
-      setState(() {
-        _isSearchBarActive = false;
-      });
-    } else {
-      context.pop();
-    }
-  }
-
-  @override
-  Future<void> onSelectPressed() async {
-    if (_isSearchBarActive) {
-      _searchBarController.selectAlphabet();
-    } else {
-      await _onSearchResultAction(selectedDisplayItem);
-    }
+  Future<void> onSelectAction() async {
+    await _onSearchResultAction(selectedDisplayItem);
   }
 
   Future<void> _onSearchResultAction(int displayIndex) async {
@@ -100,7 +70,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
       _navigateToSearchMoreOptionsModal(selectedDisplayItem);
 
   void _navigateToSearchMoreOptionsModal(int index) {
-    if (_isSearchBarActive || index == 0) {
+    if (isInputTextBarActive || index == 0) {
       return;
     } else {
       setState(() => selectedDisplayItem = index);
@@ -122,37 +92,8 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
   void _onSearchDefaultTileAction() {
     setState(() {
       selectedDisplayItem = 0;
-      _isSearchBarActive = !_isSearchBarActive;
+      isInputTextBarActive = !isInputTextBarActive;
     });
-  }
-
-  @override
-  Future<void> seekForward() async {
-    _searchBarController.addSpace();
-  }
-
-  @override
-  Future<void> seekBackward() async {
-    _searchBarController.removeCharacter();
-  }
-
-  @override
-  void scrollForward() {
-    if (_isSearchBarActive) {
-      _searchBarController.moveToNextAlphabet();
-      return;
-    }
-
-    super.scrollForward();
-  }
-
-  @override
-  void scrollBackward() {
-    if (_isSearchBarActive) {
-      _searchBarController.moveBackToPreviousAlphabet();
-      return;
-    }
-    super.scrollBackward();
   }
 
   @override
@@ -193,7 +134,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
                         return SearchListTile(
                           searchResult: SearchResultsModel(
                             searchResultType: SearchResultType.defaultSearch,
-                            result: _searchText,
+                            result: inputText,
                             count: displayItems.length,
                           ),
                           isSelected: selectedDisplayItem == 0,
@@ -214,16 +155,16 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
               ),
             ],
           ),
-          if (_isSearchBarActive)
+          if (isInputTextBarActive)
             Positioned(
               bottom: 0,
               left: 0,
               right: 0,
               child: InputTextBar(
-                inputTextBarController: _searchBarController,
+                inputTextBarController: inputTextBarController,
                 onSearchTextChanged: (value) {
                   setState(() {
-                    _searchText = value;
+                    inputText = value;
                   });
                 },
               ),

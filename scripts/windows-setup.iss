@@ -7,8 +7,6 @@
 #define MyAppCopyright "Copyright (C) 2025 Adeeteya"
 
 [Setup]
-; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
-; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
 AppId={{94F37DBE-FC81-4E38-B1F1-701EEE9C3D0A}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
@@ -23,9 +21,9 @@ AppContact={#MyAppContact}
 AppCopyright={#MyAppCopyright}
 DefaultDirName={autopf}\{#MyAppName}
 DisableProgramGroupPage=yes
-OutputDir=D:\a\Classipod\Classipod\
+OutputDir=.
 OutputBaseFilename=Classipod-Windows
-SetupIconFile=D:\a\Classipod\Classipod\windows\runner\resources\app_icon.ico
+SetupIconFile=windows\runner\resources\app_icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -45,7 +43,7 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "D:\a\Classipod\Classipod\build\windows\x64\runner\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "build\windows\x64\runner\Release\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -60,3 +58,5 @@ Type: files; Name: "{userdocs}\metadata_box.hive"
 Type: files; Name: "{userdocs}\metadata_box.lock"
 Type: files; Name: "{userdocs}\playlist_box.hive"
 Type: files; Name: "{userdocs}\playlist_box.lock"
+Type: files; Name: "{userdocs}\excluded_directories_box.hive"
+Type: files; Name: "{userdocs}\excluded_directories_box.lock"

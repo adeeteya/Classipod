@@ -4,6 +4,7 @@ import 'package:classipod/core/providers/shared_preferences_with_cache_provider.
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
+import 'package:classipod/features/settings/models/volume_mode.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -75,6 +76,13 @@ class SettingsPreferencesRepository {
         false;
   }
 
+  String getVolumeMode() {
+    return _sharedPreferencesWithCache.getString(
+          SharedPreferencesKeys.volumeMode.name,
+        ) ??
+        VolumeMode.app.name;
+  }
+
   bool getImmersiveMode() {
     return _sharedPreferencesWithCache.getBool(
           SharedPreferencesKeys.immersiveMode.name,
@@ -134,6 +142,13 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache.setBool(
       SharedPreferencesKeys.clickWheelSound.name,
       isClickWheelSoundEnabled,
+    );
+  }
+
+  Future<void> setVolumeMode({required String volumeModeName}) async {
+    return _sharedPreferencesWithCache.setString(
+      SharedPreferencesKeys.volumeMode.name,
+      volumeModeName,
     );
   }
 

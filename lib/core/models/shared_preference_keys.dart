@@ -6,6 +6,7 @@ enum SharedPreferencesKeys {
   repeatMode,
   vibrate,
   clickWheelSound,
+  volumeMode,
   splitScreenEnabled,
   immersiveMode,
   isMenuFirstTime,

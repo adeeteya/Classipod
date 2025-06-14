@@ -12,6 +12,7 @@ import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
+import 'package:classipod/features/settings/models/volume_mode.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter/cupertino.dart';
@@ -21,6 +22,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:universal_html/html.dart';
+import 'package:volume_controller/volume_controller.dart';
 
 final settingsPreferencesControllerProvider = NotifierProvider<
   SettingsPreferencesControllerNotifier,
@@ -51,6 +53,9 @@ class SettingsPreferencesControllerNotifier
       ),
       vibrate: settingsPreferencesRepository.getVibrate(),
       clickWheelSound: settingsPreferencesRepository.getClickWheelSound(),
+      volumeMode: VolumeMode.values.byName(
+        settingsPreferencesRepository.getVolumeMode(),
+      ),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
     );
@@ -216,6 +221,23 @@ class SettingsPreferencesControllerNotifier
     }
   }
 
+  Future<void> toggleVolumeMode() async {
+    switch (state.volumeMode) {
+      case VolumeMode.app:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setVolumeMode(volumeModeName: VolumeMode.system.name);
+        state = state.copyWith(volumeMode: VolumeMode.system);
+        break;
+      case VolumeMode.system:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setVolumeMode(volumeModeName: VolumeMode.app.name);
+        state = state.copyWith(volumeMode: VolumeMode.app);
+        break;
+    }
+  }
+
   Future<void> toggleSplitScreen() async {
     state = state.copyWith(splitScreenEnabled: !state.splitScreenEnabled);
     await ref
@@ -265,5 +287,41 @@ class SettingsPreferencesControllerNotifier
         .read(settingsPreferencesRepositoryProvider)
         .setImmersiveMode(isImmersiveModeEnabled: false);
     ref.invalidateSelf();
+  }
+
+  Future<void> increaseVolume() async {
+    if (state.volumeMode == VolumeMode.app) {
+      final double currentVolume = ref.read(audioPlayerProvider).volume;
+      if (currentVolume < 1) {
+        await ref.read(audioPlayerProvider).setVolume(currentVolume + 0.05);
+      }
+    } else {
+      final double currentVolume = await VolumeController.instance.getVolume();
+      if (currentVolume < 1) {
+        await VolumeController.instance.setVolume(
+          (currentVolume + 0.05).clamp(0, 1),
+        );
+      }
+    }
+  }
+
+  Future<void> decreaseVolume() async {
+    if (state.volumeMode == VolumeMode.app) {
+      final double currentVolume = ref.read(audioPlayerProvider).volume;
+      if (currentVolume > 0) {
+        if (currentVolume <= 0.05) {
+          await ref.read(audioPlayerProvider).setVolume(0);
+        } else {
+          await ref.read(audioPlayerProvider).setVolume(currentVolume - 0.05);
+        }
+      }
+    } else {
+      final double currentVolume = await VolumeController.instance.getVolume();
+      if (currentVolume > 0) {
+        await VolumeController.instance.setVolume(
+          (currentVolume - 0.05).clamp(0, 1),
+        );
+      }
+    }
   }
 }

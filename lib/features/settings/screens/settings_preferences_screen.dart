@@ -27,6 +27,7 @@ enum _SettingsDisplayItems {
   isTouchScreenEnabled,
   vibrate,
   clickWheelSound,
+  volumeMode,
   splitScreenEnabled,
   immersiveMode,
   showAppTutorial,
@@ -50,6 +51,8 @@ enum _SettingsDisplayItems {
         return context.localization.deviceColorSettingTitle;
       case clickWheelSize:
         return context.localization.clickWheelSizeSettingTitle;
+      case volumeMode:
+        return context.localization.volumeModeSettingTitle;
       case vibrate:
         return context.localization.vibrateSettingTitle;
       case clickWheelSound:
@@ -131,6 +134,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleClickWheelSound(context);
         break;
+      case _SettingsDisplayItems.volumeMode:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleVolumeMode();
+        break;
       case _SettingsDisplayItems.splitScreenEnabled:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
@@ -198,6 +206,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         return settingsState.clickWheelSize.title(context);
       case _SettingsDisplayItems.repeat:
         return settingsState.repeatMode.title(context);
+      case _SettingsDisplayItems.volumeMode:
+        return settingsState.volumeMode.title(context);
       default:
         final bool? isOn = _isOn(settingsState, settingsItem);
         if (isOn != null) {

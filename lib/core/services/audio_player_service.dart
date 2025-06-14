@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
@@ -66,7 +66,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
       if (ref.read(nowPlayingDetailsProvider).nowPlayingType !=
           NowPlayingType.songs) {
         await setAudioSource(
-          musicMetadataList: ref.read(audioFilesServiceProvider).requireValue,
+          musicMetadataList: ref.read(filteredAudioFilesProvider).requireValue,
         );
       }
 
@@ -216,7 +216,7 @@ class AudioPlayerServiceNotifier extends AutoDisposeAsyncNotifier<void> {
       if (ref.read(nowPlayingDetailsProvider).nowPlayingType !=
           NowPlayingType.songs) {
         await setAudioSource(
-          musicMetadataList: ref.read(audioFilesServiceProvider).requireValue,
+          musicMetadataList: ref.read(filteredAudioFilesProvider).requireValue,
         );
       }
 

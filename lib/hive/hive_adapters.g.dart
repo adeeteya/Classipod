@@ -124,3 +124,40 @@ class MusicMetadataAdapter extends TypeAdapter<MusicMetadata> {
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }
+
+class ExcludeDirectoryModelAdapter extends TypeAdapter<ExcludeDirectoryModel> {
+  @override
+  final typeId = 3;
+
+  @override
+  ExcludeDirectoryModel read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return ExcludeDirectoryModel(
+      directoryPath: fields[0] as String,
+      isExcluded: fields[1] as bool,
+    );
+  }
+
+  @override
+  void write(BinaryWriter writer, ExcludeDirectoryModel obj) {
+    writer
+      ..writeByte(2)
+      ..writeByte(0)
+      ..write(obj.directoryPath)
+      ..writeByte(1)
+      ..write(obj.isExcluded);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ExcludeDirectoryModelAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}

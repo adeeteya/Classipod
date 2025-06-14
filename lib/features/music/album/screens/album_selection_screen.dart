@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
@@ -63,7 +63,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
         extra: AlbumModel(
           albumName: context.localization.allAlbums,
           albumArtistName: "",
-          albumSongs: ref.read(audioFilesServiceProvider).requireValue,
+          albumSongs: ref.read(filteredAudioFilesProvider).requireValue,
         ),
       );
     } else {
@@ -111,7 +111,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
                 itemBuilder: (context, index) {
                   if (index == 0) {
                     final allSongs =
-                        ref.read(audioFilesServiceProvider).requireValue;
+                        ref.read(filteredAudioFilesProvider).requireValue;
                     return AlbumListTile(
                       albumDetails: AlbumModel(
                         albumName: context.localization.allSongs,

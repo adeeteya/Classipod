@@ -1,9 +1,9 @@
-import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final artistNamesProvider = Provider<List<String>>((ref) {
   final artistNamesSet = <String>{};
-  ref.read(audioFilesServiceProvider).requireValue.forEach((audioFile) {
+  ref.read(filteredAudioFilesProvider).requireValue.forEach((audioFile) {
     artistNamesSet.add(audioFile.getMainArtistName);
   });
 

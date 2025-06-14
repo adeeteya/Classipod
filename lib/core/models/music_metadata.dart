@@ -296,6 +296,38 @@ class MusicMetadata extends HiveObject {
     );
   }
 
+  String? get parentDirectoryPath {
+    if (filePath == null) return null;
+
+    // Normalize separators to forward slash for processing
+    String normalizedPath = filePath!.replaceAll('\\', '/');
+
+    // Remove trailing slash if present
+    if (normalizedPath.endsWith('/')) {
+      normalizedPath = normalizedPath.substring(0, normalizedPath.length - 1);
+    }
+
+    // Find the last separator index
+    final int lastSeparatorIndex = normalizedPath.lastIndexOf('/');
+
+    // If no separator found, return root (or empty string)
+    if (lastSeparatorIndex == -1) return null;
+
+    String parent = normalizedPath.substring(0, lastSeparatorIndex);
+
+    // For Windows: if the path is like C:/folder, preserve the drive letter and slash
+    if (parent.length == 2 && parent[1] == ':') {
+      parent += '/';
+    }
+
+    // Restore original backslashes on Windows if needed
+    if (filePath!.contains('\\')) {
+      parent = parent.replaceAll('/', '\\');
+    }
+
+    return parent;
+  }
+
   @override
   bool operator ==(Object other) {
     return other is MusicMetadata &&

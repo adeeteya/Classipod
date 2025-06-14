@@ -33,6 +33,7 @@ enum _SettingsDisplayItems {
   immersiveMode,
   showAppTutorial,
   rescanMusicFiles,
+  excludeDirectories,
   resetSettings,
   donate;
 
@@ -70,6 +71,8 @@ enum _SettingsDisplayItems {
         return context.localization.rescanMusicFilesSettingTitle;
       case resetSettings:
         return context.localization.resetSettingsTitle;
+      case excludeDirectories:
+        return context.localization.excludeDirectoriesScreenTitle;
       case donate:
         return context.localization.donateSettingTitle;
     }
@@ -167,6 +170,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .rescanMusicFiles();
         break;
+      case _SettingsDisplayItems.excludeDirectories:
+        context.goNamed(Routes.excludeDirectories.name);
+        break;
       case _SettingsDisplayItems.resetSettings:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
@@ -243,6 +249,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.deviceColor;
         break;
+      case _SettingsDisplayItems.clickWheelSize:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.clickWheelSize;
+        break;
+      case _SettingsDisplayItems.clickWheelSensitivity:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.clickWheelSensitivity;
+        break;
       case _SettingsDisplayItems.isTouchScreenEnabled:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.touchScreen;
@@ -263,6 +277,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.clickWheelSound;
         break;
+      case _SettingsDisplayItems.volumeMode:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.volumeMode;
+        break;
       case _SettingsDisplayItems.splitScreenEnabled:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.splitScreenMode;
@@ -278,6 +296,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.rescanMusicFiles:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.rescanMusicFiles;
+        break;
+      case _SettingsDisplayItems.excludeDirectories:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.excludeDirectories;
         break;
       case _SettingsDisplayItems.resetSettings:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

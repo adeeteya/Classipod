@@ -31,6 +31,6 @@ class Constants {
   static const double deviceSelectButtonMediumRadiusRatio = 0.2175;
   static const double deviceSelectButtonLargeRadiusRatio = 0.3000;
 
-  static const double searchAlphabetContainerWidth = 180;
-  static const double searchAlphabetSize = 15;
+  static const double inputTextAlphabetContainerWidth = 180;
+  static const double inputTextAlphabetSize = 15;
 }

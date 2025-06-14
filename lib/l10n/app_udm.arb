@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Центр кнопкаез зӥбыса, цикл пыр утчан бар, скраббер бар но перетасовывать ползунок. Центр кнопкаез зӥбыса, ватсаса вариантъёс доры кариськыны.",
   "nextButtonNowPlayingTutorialText": "Та кнопкаез зӥбыса, кырӟанэз ӝог азьланьтыны .",
   "previousButtonNowPlayingTutorialText": "Та кнопкаез зӥбыса, кырӟанэз выльысь ӝутыны .",
-  "deviceControlSearchTutorialText": "Перемещать тон пальто котыр Клик колёса пусъён понна алфавит .",
-  "centerButtonSearchTutorialText": "Центр кнопкаез зӥбыса, бырйыны пусъемын алфавит .",
-  "nextButtonSearchTutorialText": "Та кнопкаез зӥбыса, ватсаса инты .",
-  "previousButtonSearchTutorialText": "Та кнопкаез зӥбыса, берпуметӥ символэз утялтыны .",
-  "menuButtonSearchTutorialText": "Та кнопкаез зӥбыса, клавиатураез пытсаны но взаимодействовать утчан результатъёс .",
+  "clickWheelInputTextBarTutorialText": "Перемещать тон пальто котыр Клик колёса пусъён понна алфавит .",
+  "centerButtonInputTextBarScreenTutorialText": "Центр кнопкаез зӥбыса, бырйыны пусъемын алфавит .",
+  "nextButtonInputTextBarTutorialText": "Та кнопкаез зӥбыса, ватсаса инты .",
+  "previousButtonInputTextBarTutorialText": "Та кнопкаез зӥбыса, берпуметӥ символэз утялтыны .",
+  "menuButtonInputTextBarTutorialText": "Та кнопкаез зӥбыса, клавиатураез пытсаны но взаимодействовать утчан результатъёс .",
   "allSongs": "вань кырӟанъёс"
 }

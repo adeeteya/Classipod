@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "กดปุ่มกึ่งกลางเพื่อปั่นจักรยานผ่านแถบแสวงหาบาร์สครับและตัวเลื่อนสลับ กดปุ่มกึ่งกลางค้างไว้เพื่อเข้าถึงตัวเลือกเพิ่มเติม",
   "nextButtonNowPlayingTutorialText": "กดปุ่มนี้ค้างไว้เพื่อส่งต่อเพลงอย่างรวดเร็ว",
   "previousButtonNowPlayingTutorialText": "กดปุ่มนี้ค้างไว้เพื่อย้อนกลับเพลง",
-  "deviceControlSearchTutorialText": "เลื่อนนิ้วโป้งของคุณเบา ๆ รอบล้อคลิกเพื่อเน้นตัวอักษร",
-  "centerButtonSearchTutorialText": "กดปุ่มกึ่งกลางเพื่อเลือกตัวอักษรที่ไฮไลต์",
-  "nextButtonSearchTutorialText": "กดปุ่มนี้เพื่อเพิ่มพื้นที่",
-  "previousButtonSearchTutorialText": "กดปุ่มนี้เพื่อลบอักขระสุดท้าย",
-  "menuButtonSearchTutorialText": "กดปุ่มนี้เพื่อปิดแป้นพิมพ์และโต้ตอบกับผลการค้นหา",
+  "clickWheelInputTextBarTutorialText": "เลื่อนนิ้วโป้งของคุณเบา ๆ รอบล้อคลิกเพื่อเน้นตัวอักษร",
+  "centerButtonInputTextBarScreenTutorialText": "กดปุ่มกึ่งกลางเพื่อเลือกตัวอักษรที่ไฮไลต์",
+  "nextButtonInputTextBarTutorialText": "กดปุ่มนี้เพื่อเพิ่มพื้นที่",
+  "previousButtonInputTextBarTutorialText": "กดปุ่มนี้เพื่อลบอักขระสุดท้าย",
+  "menuButtonInputTextBarTutorialText": "กดปุ่มนี้เพื่อปิดแป้นพิมพ์และโต้ตอบกับผลการค้นหา",
   "allSongs": "เพลงทั้งหมด"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Wo xa Centre xa button makɔrɛ alako wo xa nɔ wo xa bar, wo xa scrubber bar nun wo xa shuffle slider rawali. Wo yi buki rawali alako wo xa nɔ yi buki rawalide.",
   "nextButtonNowPlayingTutorialText": "Wo yi button makɔrɛ alako wo xa na sigi rawali mafuren .",
   "previousButtonNowPlayingTutorialText": "Wo yi buki ragoro wo ma alako wo xa na sigi rawali .",
-  "deviceControlSearchTutorialText": "Wo xa wo bɛlɛxɛsole ragoro Click Wheel ma alako wo xa alfabe masen .",
-  "centerButtonSearchTutorialText": "Wo xa na button makɔrɛ alako wo xa na sɛbɛli sugandi naxan xili alphabet .",
-  "nextButtonSearchTutorialText": "Wo yi button makɔrɛ alako wo xa yire nde sa a ma .",
-  "previousButtonSearchTutorialText": "Wo yi button makɔrɛ alako wo xa na sɛbɛli dɔnxɔɛ raxara .",
-  "menuButtonSearchTutorialText": "Wo yi button makɔrɛ alako wo xa na buki balan anun wo xa wo maso na fe fenfe ra .",
+  "clickWheelInputTextBarTutorialText": "Wo xa wo bɛlɛxɛsole ragoro Click Wheel ma alako wo xa alfabe masen .",
+  "centerButtonInputTextBarScreenTutorialText": "Wo xa na button makɔrɛ alako wo xa na sɛbɛli sugandi naxan xili alphabet .",
+  "nextButtonInputTextBarTutorialText": "Wo yi button makɔrɛ alako wo xa yire nde sa a ma .",
+  "previousButtonInputTextBarTutorialText": "Wo yi button makɔrɛ alako wo xa na sɛbɛli dɔnxɔɛ raxara .",
+  "menuButtonInputTextBarTutorialText": "Wo yi button makɔrɛ alako wo xa na buki balan anun wo xa wo maso na fe fenfe ra .",
   "allSongs": "Na sigi birin"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Притисните средишњи тастер да бисте се возили кроз тражење траке, траке за прочишћавање и клизач за померање. Притисните и држите дугме Центра за приступ додатним опцијама.",
   "nextButtonNowPlayingTutorialText": "Притисните и држите ово дугме да бисте брзо проследили песму",
   "previousButtonNowPlayingTutorialText": "Притисните и држите ово дугме да бисте премотали песму",
-  "deviceControlSearchTutorialText": "Лагано померите палцу око точка на клику да бисте истакли абецеду",
-  "centerButtonSearchTutorialText": "Притисните дугме Центра за одабир означене абецеде",
-  "nextButtonSearchTutorialText": "Притисните ово дугме да бисте додали простор",
-  "previousButtonSearchTutorialText": "Притисните ово дугме да бисте избрисали последњи знак",
-  "menuButtonSearchTutorialText": "Притисните ово дугме да бисте затворили тастатуру и комуницирали са резултатима претраге",
+  "clickWheelInputTextBarTutorialText": "Лагано померите палцу око точка на клику да бисте истакли абецеду",
+  "centerButtonInputTextBarScreenTutorialText": "Притисните дугме Центра за одабир означене абецеде",
+  "nextButtonInputTextBarTutorialText": "Притисните ово дугме да бисте додали простор",
+  "previousButtonInputTextBarTutorialText": "Притисните ово дугме да бисте избрисали последњи знак",
+  "menuButtonInputTextBarTutorialText": "Притисните ово дугме да бисте затворили тастатуру и комуницирали са резултатима претраге",
   "allSongs": "Све песме"
 }

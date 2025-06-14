@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "खोज बार, स्क्रबर बार और शफल स्लाइडर के माध्यम से साइकिल चलाने के लिए केंद्र बटन दबाएं। अतिरिक्त विकल्पों तक पहुंचने के लिए सेंटर बटन दबाएं और दबाए रखें।",
   "nextButtonNowPlayingTutorialText": "गाने को तेजी से आगे बढ़ाने के लिए इस बटन को दबाए रखें और दबाए रखें",
   "previousButtonNowPlayingTutorialText": "गीत को रिवाइंड करने के लिए इस बटन को दबाए रखें और दबाए रखें",
-  "deviceControlSearchTutorialText": "एक वर्णमाला को उजागर करने के लिए क्लिक व्हील के चारों ओर अपने अंगूठे को हल्के से ले जाएं",
-  "centerButtonSearchTutorialText": "हाइलाइट किए गए वर्णमाला का चयन करने के लिए केंद्र बटन दबाएं",
-  "nextButtonSearchTutorialText": "एक स्थान जोड़ने के लिए इस बटन को दबाएं",
-  "previousButtonSearchTutorialText": "अंतिम चरित्र को हटाने के लिए इस बटन को दबाएं",
-  "menuButtonSearchTutorialText": "कीबोर्ड को बंद करने और खोज परिणामों के साथ बातचीत करने के लिए इस बटन को दबाएं",
+  "clickWheelInputTextBarTutorialText": "एक वर्णमाला को उजागर करने के लिए क्लिक व्हील के चारों ओर अपने अंगूठे को हल्के से ले जाएं",
+  "centerButtonInputTextBarScreenTutorialText": "हाइलाइट किए गए वर्णमाला का चयन करने के लिए केंद्र बटन दबाएं",
+  "nextButtonInputTextBarTutorialText": "एक स्थान जोड़ने के लिए इस बटन को दबाएं",
+  "previousButtonInputTextBarTutorialText": "अंतिम चरित्र को हटाने के लिए इस बटन को दबाएं",
+  "menuButtonInputTextBarTutorialText": "कीबोर्ड को बंद करने और खोज परिणामों के साथ बातचीत करने के लिए इस बटन को दबाएं",
   "allSongs": "सभी गाने"
 }

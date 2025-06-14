@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "დააჭირეთ ღილაკს ცენტრის ღილაკს, რომლითაც Seeg Bar, Scrubber Bar და Shuffle Slider. დააჭირეთ და დააჭირეთ ღილაკს ცენტრის ღილაკს დამატებითი ვარიანტების მისაღებად.",
   "nextButtonNowPlayingTutorialText": "დააჭირეთ და დააჭირეთ ამ ღილაკს, რომ სწრაფად გადადოთ სიმღერა",
   "previousButtonNowPlayingTutorialText": "დააჭირეთ და დააჭირეთ ამ ღილაკს სიმღერის გადასინჯვისთვის",
-  "deviceControlSearchTutorialText": "ანბანის ხაზგასასმელად მიიტანეთ თქვენი ცერა თითი მსუბუქად",
-  "centerButtonSearchTutorialText": "დააჭირეთ ცენტრის ღილაკს, რომ შეარჩიოთ მონიშნული ანბანი",
-  "nextButtonSearchTutorialText": "დააჭირეთ ამ ღილაკს, რომ დაამატოთ სივრცე",
-  "previousButtonSearchTutorialText": "დააჭირეთ ამ ღილაკს ბოლო პერსონაჟის წაშლისთვის",
-  "menuButtonSearchTutorialText": "დააჭირეთ ამ ღილაკს კლავიშის დახურვისთვის და ძიების შედეგებთან ურთიერთობისთვის",
+  "clickWheelInputTextBarTutorialText": "ანბანის ხაზგასასმელად მიიტანეთ თქვენი ცერა თითი მსუბუქად",
+  "centerButtonInputTextBarScreenTutorialText": "დააჭირეთ ცენტრის ღილაკს, რომ შეარჩიოთ მონიშნული ანბანი",
+  "nextButtonInputTextBarTutorialText": "დააჭირეთ ამ ღილაკს, რომ დაამატოთ სივრცე",
+  "previousButtonInputTextBarTutorialText": "დააჭირეთ ამ ღილაკს ბოლო პერსონაჟის წაშლისთვის",
+  "menuButtonInputTextBarTutorialText": "დააჭირეთ ამ ღილაკს კლავიშის დახურვისთვის და ძიების შედეგებთან ურთიერთობისთვის",
   "allSongs": "ყველა სიმღერა"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Druk op de middelste knop om door zoekbalk, scrubberbar en shuffle schuifregelaar te fietsen. Druk op de middelste knop ingedrukt om toegang te krijgen tot extra opties.",
   "nextButtonNowPlayingTutorialText": "Houd deze knop ingedrukt om het nummer snel vooruit te maken",
   "previousButtonNowPlayingTutorialText": "Houd deze knop ingedrukt om het nummer terug te spoelen",
-  "deviceControlSearchTutorialText": "Verplaats uw duim lichtjes rond het klikwiel om een ​​alfabet te markeren",
-  "centerButtonSearchTutorialText": "Druk op de middelste knop om het gemarkeerde alfabet te selecteren",
-  "nextButtonSearchTutorialText": "Druk op deze knop om een ​​ruimte toe te voegen",
-  "previousButtonSearchTutorialText": "Druk op deze knop om het laatste teken te verwijderen",
-  "menuButtonSearchTutorialText": "Druk op deze knop om het toetsenbord te sluiten en te communiceren met de zoekresultaten",
+  "clickWheelInputTextBarTutorialText": "Verplaats uw duim lichtjes rond het klikwiel om een ​​alfabet te markeren",
+  "centerButtonInputTextBarScreenTutorialText": "Druk op de middelste knop om het gemarkeerde alfabet te selecteren",
+  "nextButtonInputTextBarTutorialText": "Druk op deze knop om een ​​ruimte toe te voegen",
+  "previousButtonInputTextBarTutorialText": "Druk op deze knop om het laatste teken te verwijderen",
+  "menuButtonInputTextBarTutorialText": "Druk op deze knop om het toetsenbord te sluiten en te communiceren met de zoekresultaten",
   "allSongs": "Alle liedjes"
 }

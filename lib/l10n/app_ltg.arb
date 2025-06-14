@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Nūspīž Centra pogu, lai brauktu ar velosipedu caur mekliešonu stygu, skruberi stygu i slīkšņa slīdi. Nūspīd i turēt Centra pogu, lai pīkļyutu papyldu opcejis.",
   "nextButtonNowPlayingTutorialText": "100 doc#1159 Nūspīž i turi itū pogu, lai gavētu iz prīšku dzīsmi .",
   "previousButtonNowPlayingTutorialText": "100 doc#1159 Nūspīž i turi itū pogu, lai attīcynuotu dzīsmi .",
-  "deviceControlSearchTutorialText": "100 doc#1159 Pōrvītoj sovu īkšķi vīgli ap Click Wheel , lai izceļ ābeci .",
-  "centerButtonSearchTutorialText": "100 doc#1159 Nūspīž centra pogu , lai atlaseitu izcaltū ābeci .",
-  "nextButtonSearchTutorialText": "100 doc#1159 Nūspīž itū pogu , lai pīvīnuotu telpu .",
-  "previousButtonSearchTutorialText": "100 doc#1159 Nūspīž itū pogu , lai izdzēstu pādejū raksturu .",
-  "menuButtonSearchTutorialText": "100 doc#1159 Nūspīž itū pogu , lai aiztaiseitu klaviaturu i sasadorbuotu ar mekliešonys rezultatim .",
+  "clickWheelInputTextBarTutorialText": "100 doc#1159 Pōrvītoj sovu īkšķi vīgli ap Click Wheel , lai izceļ ābeci .",
+  "centerButtonInputTextBarScreenTutorialText": "100 doc#1159 Nūspīž centra pogu , lai atlaseitu izcaltū ābeci .",
+  "nextButtonInputTextBarTutorialText": "100 doc#1159 Nūspīž itū pogu , lai pīvīnuotu telpu .",
+  "previousButtonInputTextBarTutorialText": "100 doc#1159 Nūspīž itū pogu , lai izdzēstu pādejū raksturu .",
+  "menuButtonInputTextBarTutorialText": "100 doc#1159 Nūspīž itū pogu , lai aiztaiseitu klaviaturu i sasadorbuotu ar mekliešonys rezultatim .",
   "allSongs": "Vysys dzīsmis ."
 }

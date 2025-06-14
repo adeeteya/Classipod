@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Presinen o butikoni e Centrosko vash te phiren kotar o rode bar, scrubber bar thaj shuflo glider. Presa thaj te inkren o Center buti te shaj resen maj but opciji.",
   "nextButtonNowPlayingTutorialText": "Press thaj inkren kado button te maj sigo angle si e gili .",
   "previousButtonNowPlayingTutorialText": "Press thaj ingrel kado button te shaj rewind-in e gili .",
-  "deviceControlSearchTutorialText": "Move o vast light-l-o krujal o Click Wheel te sikavel jekh alfabeto .",
-  "centerButtonSearchTutorialText": "Presinen o butikoni centresko vash te alosaren o alfabeti e vastune .",
-  "nextButtonSearchTutorialText": "Presinen akava buti vash te qhiven yek than .",
-  "previousButtonSearchTutorialText": "Presinen akava buti te čhiven o paluno personažo .",
-  "menuButtonSearchTutorialText": "Presinen akava buti te phanen o klaviatura thay te keren interakcia e rodipaskere rezultatencar .",
+  "clickWheelInputTextBarTutorialText": "Move o vast light-l-o krujal o Click Wheel te sikavel jekh alfabeto .",
+  "centerButtonInputTextBarScreenTutorialText": "Presinen o butikoni centresko vash te alosaren o alfabeti e vastune .",
+  "nextButtonInputTextBarTutorialText": "Presinen akava buti vash te qhiven yek than .",
+  "previousButtonInputTextBarTutorialText": "Presinen akava buti te čhiven o paluno personažo .",
+  "menuButtonInputTextBarTutorialText": "Presinen akava buti te phanen o klaviatura thay te keren interakcia e rodipaskere rezultatencar .",
   "allSongs": "Sa le gilya"
 }

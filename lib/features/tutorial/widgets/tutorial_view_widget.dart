@@ -196,7 +196,7 @@ class TutorialViewWidget {
     ).show(context: deviceFrameGlobalKey.currentContext!);
   }
 
-  void showSearchTutorial({required VoidCallback onFinish}) {
+  void showInputTextBarTutorial({required VoidCallback onFinish}) {
     TutorialCoachMark(
       pulseEnable: false,
       alignSkip: Alignment.topCenter,
@@ -208,7 +208,7 @@ class TutorialViewWidget {
               deviceFrameGlobalKey
                   .currentContext!
                   .localization
-                  .deviceControlSearchTutorialText,
+                  .clickWheelInputTextBarTutorialText,
         ),
         _targetFocusWidget(
           identify: 'Center Button',
@@ -217,7 +217,7 @@ class TutorialViewWidget {
               deviceFrameGlobalKey
                   .currentContext!
                   .localization
-                  .centerButtonSearchTutorialText,
+                  .centerButtonInputTextBarScreenTutorialText,
         ),
         _targetFocusWidget(
           identify: 'Next Button',
@@ -226,7 +226,7 @@ class TutorialViewWidget {
               deviceFrameGlobalKey
                   .currentContext!
                   .localization
-                  .nextButtonSearchTutorialText,
+                  .nextButtonInputTextBarTutorialText,
         ),
         _targetFocusWidget(
           identify: 'Previous Button',
@@ -235,7 +235,7 @@ class TutorialViewWidget {
               deviceFrameGlobalKey
                   .currentContext!
                   .localization
-                  .previousButtonSearchTutorialText,
+                  .previousButtonInputTextBarTutorialText,
         ),
         _targetFocusWidget(
           identify: 'Menu Button',
@@ -245,7 +245,7 @@ class TutorialViewWidget {
               deviceFrameGlobalKey
                   .currentContext!
                   .localization
-                  .menuButtonSearchTutorialText,
+                  .menuButtonInputTextBarTutorialText,
         ),
       ],
       onFinish: onFinish,

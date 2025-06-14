@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Dzvanya bhatani reCentral kune kutenderera kuburikidza nekutsvaga bar, scrubber bar uye shuffle slider. Dzvanya uye Bata iyo Center bhatani kuti uwane mamwe sarudzo.",
   "nextButtonNowPlayingTutorialText": "Dzvanya uye bata bhatani iri kuti usimudzire rwiyo",
   "previousButtonNowPlayingTutorialText": "Dzvanya uye bata bhatani iri kuti udzorere rwiyo",
-  "deviceControlSearchTutorialText": "Fambisa chigunwe chako chakareruka kutenderedza vhiri vhiri kusimbisa mavara",
-  "centerButtonSearchTutorialText": "Dzvanya bhatani repakati kuti usarudze mavara akaratidzwa",
-  "nextButtonSearchTutorialText": "Dzvanya bhatani iri kuti uwedzere nzvimbo",
-  "previousButtonSearchTutorialText": "Dzvanya bhatani iri kuti ubvise hunhu hwekupedzisira",
-  "menuButtonSearchTutorialText": "Dzvanya bhatani iri kuvhara iyo keyboard uye kudyidzana nemhedzisiro yekutsvaga",
+  "clickWheelInputTextBarTutorialText": "Fambisa chigunwe chako chakareruka kutenderedza vhiri vhiri kusimbisa mavara",
+  "centerButtonInputTextBarScreenTutorialText": "Dzvanya bhatani repakati kuti usarudze mavara akaratidzwa",
+  "nextButtonInputTextBarTutorialText": "Dzvanya bhatani iri kuti uwedzere nzvimbo",
+  "previousButtonInputTextBarTutorialText": "Dzvanya bhatani iri kuti ubvise hunhu hwekupedzisira",
+  "menuButtonInputTextBarTutorialText": "Dzvanya bhatani iri kuvhara iyo keyboard uye kudyidzana nemhedzisiro yekutsvaga",
   "allSongs": "Nziyo dzese"
 }

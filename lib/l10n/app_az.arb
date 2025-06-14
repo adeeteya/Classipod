@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Çubuğu, ovucu çubuğu və qarışıq kaydırıcıyı keçmək üçün mərkəz düyməsini basın. Əlavə seçimlərə daxil olmaq üçün mərkəz düyməsini basıb saxlayın.",
   "nextButtonNowPlayingTutorialText": "Mahnını sürətlə irəli sürmək üçün bu düyməni basıb saxlayın",
   "previousButtonNowPlayingTutorialText": "Mahnını geri qaytarmaq üçün bu düyməni basıb saxlayın",
-  "deviceControlSearchTutorialText": "Bir əlifbanı vurğulamaq üçün baş barmağınızı klik təkəri ətrafında gəzin",
-  "centerButtonSearchTutorialText": "Yüklənmiş əlifbanı seçmək üçün mərkəz düyməsini basın",
-  "nextButtonSearchTutorialText": "Bir boşluq əlavə etmək üçün bu düyməni basın",
-  "previousButtonSearchTutorialText": "Son simvolu silmək üçün bu düyməni basın",
-  "menuButtonSearchTutorialText": "Klaviaturanı bağlamaq və axtarış nəticələri ilə qarşılıqlı əlaqə yaratmaq üçün bu düyməni basın",
+  "clickWheelInputTextBarTutorialText": "Bir əlifbanı vurğulamaq üçün baş barmağınızı klik təkəri ətrafında gəzin",
+  "centerButtonInputTextBarScreenTutorialText": "Yüklənmiş əlifbanı seçmək üçün mərkəz düyməsini basın",
+  "nextButtonInputTextBarTutorialText": "Bir boşluq əlavə etmək üçün bu düyməni basın",
+  "previousButtonInputTextBarTutorialText": "Son simvolu silmək üçün bu düyməni basın",
+  "menuButtonInputTextBarTutorialText": "Klaviaturanı bağlamaq və axtarış nəticələri ilə qarşılıqlı əlaqə yaratmaq üçün bu düyməni basın",
   "allSongs": "Bütün mahnılar"
 }

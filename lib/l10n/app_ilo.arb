@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pinduten ti center button tapno agbisikleta babaen ti Seek bar, scrubber bar ken shuffle slider. Pinduten ken i-hold ti center button tapno makastrek kadagiti kanayonan a pagpilian.",
   "nextButtonNowPlayingTutorialText": "Pinduten ken i-hold daytoy a buton tapno mapapartak ti kanta .",
   "previousButtonNowPlayingTutorialText": "Pinduten ken i-hold daytoy a buton tapno mai-rewind ti kanta .",
-  "deviceControlSearchTutorialText": "Iyakarmo a nalag-an ti abaga ti imam iti aglawlaw ti click wheel tapno maitampok ti alpabeto .",
-  "centerButtonSearchTutorialText": "Pinduten ti center button tapno pilien ti nai-highlight nga alpabeto .",
-  "nextButtonSearchTutorialText": "Pinduten daytoy a buton tapno mangnayon iti espasio .",
-  "previousButtonSearchTutorialText": "Pinduten daytoy a buton tapno mapunas ti maudi a karakter .",
-  "menuButtonSearchTutorialText": "Pinduten daytoy a buton tapno maiserra ti teklado ken makilangen kadagiti resulta ti panagsapul .",
+  "clickWheelInputTextBarTutorialText": "Iyakarmo a nalag-an ti abaga ti imam iti aglawlaw ti click wheel tapno maitampok ti alpabeto .",
+  "centerButtonInputTextBarScreenTutorialText": "Pinduten ti center button tapno pilien ti nai-highlight nga alpabeto .",
+  "nextButtonInputTextBarTutorialText": "Pinduten daytoy a buton tapno mangnayon iti espasio .",
+  "previousButtonInputTextBarTutorialText": "Pinduten daytoy a buton tapno mapunas ti maudi a karakter .",
+  "menuButtonInputTextBarTutorialText": "Pinduten daytoy a buton tapno maiserra ti teklado ken makilangen kadagiti resulta ti panagsapul .",
   "allSongs": "Amin a kanta ."
 }

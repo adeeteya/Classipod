@@ -23,7 +23,7 @@ class TutorialControllerNotifier extends Notifier<TutorialModel> {
     return TutorialModel(
       isMenuFirstTime: tutorialRepository.getMenuOpenedFirstTime(),
       isNowPlayingFirstTime: tutorialRepository.getNowPlayingFirstTime(),
-      isSearchFirstTime: tutorialRepository.getSearchFirstTime(),
+      isInputTextBarFirstTime: tutorialRepository.getInputTextBarFirstTime(),
     );
   }
 
@@ -54,14 +54,14 @@ class TutorialControllerNotifier extends Notifier<TutorialModel> {
     }
   }
 
-  void playSearchTutorial() {
-    if (state.isSearchFirstTime) {
-      TutorialViewWidget().showSearchTutorial(
+  void playInputTextBarTutorial() {
+    if (state.isInputTextBarFirstTime) {
+      TutorialViewWidget().showInputTextBarTutorial(
         onFinish: () async {
-          state = state.copyWith(isSearchFirstTime: false);
+          state = state.copyWith(isInputTextBarFirstTime: false);
           await ref
               .read(tutorialRepositoryProvider)
-              .setSearchTutorialCompleted();
+              .setInputTextBarTutorialCompleted();
         },
       );
     }
@@ -93,15 +93,15 @@ class TutorialControllerNotifier extends Notifier<TutorialModel> {
     state = state.copyWith(
       isMenuFirstTime: true,
       isNowPlayingFirstTime: true,
-      isSearchFirstTime: true,
+      isInputTextBarFirstTime: true,
     );
     final tutorialRepository = ref.read(tutorialRepositoryProvider);
     await tutorialRepository.setMenuTutorialCompleted(isMenuFirstTime: true);
     await tutorialRepository.setNowPlayingTutorialCompleted(
       isNowPlayingFirstTime: true,
     );
-    await tutorialRepository.setSearchTutorialCompleted(
-      isSearchFirstTime: true,
+    await tutorialRepository.setInputTextBarTutorialCompleted(
+      isInputTextBarFirstTime: true,
     );
   }
 }

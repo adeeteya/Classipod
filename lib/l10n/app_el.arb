@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Πατήστε το κεντρικό κουμπί για να κάνετε ποδηλασία μέσα από το Seek Bar, το Scrubber Bar και το Slider Shuffle. Πατήστε και κρατήστε πατημένο το κεντρικό κουμπί για να αποκτήσετε πρόσβαση σε πρόσθετες επιλογές.",
   "nextButtonNowPlayingTutorialText": "Πατήστε και κρατήστε πατημένο αυτό το κουμπί για να προωθήσετε γρήγορα το τραγούδι",
   "previousButtonNowPlayingTutorialText": "Πατήστε και κρατήστε πατημένο αυτό το κουμπί για να επιστρέψετε το τραγούδι",
-  "deviceControlSearchTutorialText": "Μετακινήστε τον αντίχειρά σας ελαφρώς γύρω από τον τροχό κλικ για να επισημάνετε ένα αλφάβητο",
-  "centerButtonSearchTutorialText": "Πατήστε το κουμπί ΚΕΝΤΡΟ για να επιλέξετε το επισημασμένο αλφάβητο",
-  "nextButtonSearchTutorialText": "Πατήστε αυτό το κουμπί για να προσθέσετε ένα χώρο",
-  "previousButtonSearchTutorialText": "Πατήστε αυτό το κουμπί για να διαγράψετε τον τελευταίο χαρακτήρα",
-  "menuButtonSearchTutorialText": "Πατήστε αυτό το κουμπί για να κλείσετε το πληκτρολόγιο και να αλληλεπιδράσετε με τα αποτελέσματα αναζήτησης",
+  "clickWheelInputTextBarTutorialText": "Μετακινήστε τον αντίχειρά σας ελαφρώς γύρω από τον τροχό κλικ για να επισημάνετε ένα αλφάβητο",
+  "centerButtonInputTextBarScreenTutorialText": "Πατήστε το κουμπί ΚΕΝΤΡΟ για να επιλέξετε το επισημασμένο αλφάβητο",
+  "nextButtonInputTextBarTutorialText": "Πατήστε αυτό το κουμπί για να προσθέσετε ένα χώρο",
+  "previousButtonInputTextBarTutorialText": "Πατήστε αυτό το κουμπί για να διαγράψετε τον τελευταίο χαρακτήρα",
+  "menuButtonInputTextBarTutorialText": "Πατήστε αυτό το κουμπί για να κλείσετε το πληκτρολόγιο και να αλληλεπιδράσετε με τα αποτελέσματα αναζήτησης",
   "allSongs": "Όλα τα τραγούδια"
 }

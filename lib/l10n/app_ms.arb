@@ -102,10 +102,10 @@
   "centerButtonNowPlayingTutorialText": "Tekan butang tengah untuk menembusi Bar, Bar Scrubber dan Slider Shuffle. Tekan dan tahan butang Pusat untuk mengakses pilihan tambahan.",
   "nextButtonNowPlayingTutorialText": "Tekan dan tahan butang ini untuk meneruskan lagu",
   "previousButtonNowPlayingTutorialText": "Tekan dan tahan butang ini untuk memutar balik lagu",
-  "deviceControlSearchTutorialText": "Gerakkan ibu jari anda dengan ringan di sekitar roda klik untuk menyerlahkan abjad",
-  "centerButtonSearchTutorialText": "Tekan butang Pusat untuk memilih abjad yang diserlahkan",
-  "nextButtonSearchTutorialText": "Tekan butang ini untuk menambah ruang",
-  "previousButtonSearchTutorialText": "Tekan butang ini untuk memadam watak terakhir",
-  "menuButtonSearchTutorialText": "Tekan butang ini untuk menutup papan kekunci dan berinteraksi dengan hasil carian",
+  "clickWheelInputTextBarTutorialText": "Gerakkan ibu jari anda dengan ringan di sekitar roda klik untuk menyerlahkan abjad",
+  "centerButtonInputTextBarScreenTutorialText": "Tekan butang Pusat untuk memilih abjad yang diserlahkan",
+  "nextButtonInputTextBarTutorialText": "Tekan butang ini untuk menambah ruang",
+  "previousButtonInputTextBarTutorialText": "Tekan butang ini untuk memadam watak terakhir",
+  "menuButtonInputTextBarTutorialText": "Tekan butang ini untuk menutup papan kekunci dan berinteraksi dengan hasil carian",
   "allSongs": "Semua lagu"
 }

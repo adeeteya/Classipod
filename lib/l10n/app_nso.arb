@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tobetsa konopo ya bogareng go sepela ka gare ga baara ya go nyaka, bareng ya go gohla le sedirišwa sa go thelela sa go hlakanya. Tobetsa le ho tshwara konopo ya setsi ho fihlella dikgetho tse eketsehileng.",
   "nextButtonNowPlayingTutorialText": "Tobetsa o tshware konopo ena ho itima lijo pele pina",
   "previousButtonNowPlayingTutorialText": "Tobetsa o tshware konopo ye go bušetša koša morago",
-  "deviceControlSearchTutorialText": "Suthiša monwana wa gago wa godimo gabonolo go dikologa leotwana la go kgotla go hlaola alfabete",
-  "centerButtonSearchTutorialText": "Tobetsa konopo ya setsi ho kgetha alfabeta e hlalositsoeng",
-  "nextButtonSearchTutorialText": "Tobetsa konopo ye go oketša sekgoba",
-  "previousButtonSearchTutorialText": "Tobetsa konopo ena ho hlakola tlhaku ya ho qetela",
-  "menuButtonSearchTutorialText": "Tobetsa konopo ye go tswalela khiiboto le go dirišana le dipoelo tša nyakišišo",
+  "clickWheelInputTextBarTutorialText": "Suthiša monwana wa gago wa godimo gabonolo go dikologa leotwana la go kgotla go hlaola alfabete",
+  "centerButtonInputTextBarScreenTutorialText": "Tobetsa konopo ya setsi ho kgetha alfabeta e hlalositsoeng",
+  "nextButtonInputTextBarTutorialText": "Tobetsa konopo ye go oketša sekgoba",
+  "previousButtonInputTextBarTutorialText": "Tobetsa konopo ena ho hlakola tlhaku ya ho qetela",
+  "menuButtonInputTextBarTutorialText": "Tobetsa konopo ye go tswalela khiiboto le go dirišana le dipoelo tša nyakišišo",
   "allSongs": "Dikoša ka moka ."
 }

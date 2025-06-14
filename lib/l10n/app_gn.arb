@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Ojepyso pe botón centro ojejapo hagua ciclo barra de búsqueda rupive, barra de fregadora ha deslizador de baraja. Ojepyso ha ojejoko pe botón centro ojeike hag̃ua opciones adicionales-pe.",
   "nextButtonNowPlayingTutorialText": "Emboguapy ha eñongatu ko botón rembohasa pya'e hag̃ua purahéi",
   "previousButtonNowPlayingTutorialText": "Emboguejy ha eñongatu ko botón rembojere hag̃ua pe purahéi",
-  "deviceControlSearchTutorialText": "Emoinge michĩmi nde poguasu pe rueda clic jerére rerresalta hag̃ua peteĩ alfabeto",
-  "centerButtonSearchTutorialText": "Ojepyso pe botón mbytegua ojeporavo hag̃ua pe alfabeto ojerresaltáva",
-  "nextButtonSearchTutorialText": "Emboguejy ko botón remoĩ hag̃ua peteĩ espacio",
-  "previousButtonSearchTutorialText": "Emboguejy ko botón embogue hag̃ua pe karameg̃ua paha",
-  "menuButtonSearchTutorialText": "Emboguejy ko botón emboty hag̃ua teclado ha eñembojoaju hag̃ua umi jeheka renda ndive",
+  "clickWheelInputTextBarTutorialText": "Emoinge michĩmi nde poguasu pe rueda clic jerére rerresalta hag̃ua peteĩ alfabeto",
+  "centerButtonInputTextBarScreenTutorialText": "Ojepyso pe botón mbytegua ojeporavo hag̃ua pe alfabeto ojerresaltáva",
+  "nextButtonInputTextBarTutorialText": "Emboguejy ko botón remoĩ hag̃ua peteĩ espacio",
+  "previousButtonInputTextBarTutorialText": "Emboguejy ko botón embogue hag̃ua pe karameg̃ua paha",
+  "menuButtonInputTextBarTutorialText": "Emboguejy ko botón emboty hag̃ua teclado ha eñembojoaju hag̃ua umi jeheka renda ndive",
   "allSongs": "Opaite purahéi ."
 }

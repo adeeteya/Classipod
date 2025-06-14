@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Nhấn nút trung tâm để đạp qua thanh tìm kiếm, thanh chà sàn và thanh trượt xáo trộn. Nhấn và giữ nút trung tâm để truy cập các tùy chọn bổ sung.",
   "nextButtonNowPlayingTutorialText": "Nhấn và giữ nút này để nhanh chóng chuyển tiếp bài hát",
   "previousButtonNowPlayingTutorialText": "Nhấn và giữ nút này để tua lại bài hát",
-  "deviceControlSearchTutorialText": "Di chuyển nhẹ ngón tay cái của bạn xung quanh bánh xe nhấp chuột để tô sáng bảng chữ cái",
-  "centerButtonSearchTutorialText": "Nhấn nút trung tâm để chọn bảng chữ cái được tô sáng",
-  "nextButtonSearchTutorialText": "Nhấn nút này để thêm một khoảng trống",
-  "previousButtonSearchTutorialText": "Nhấn nút này để xóa ký tự cuối cùng",
-  "menuButtonSearchTutorialText": "Nhấn nút này để đóng bàn phím và tương tác với kết quả tìm kiếm",
+  "clickWheelInputTextBarTutorialText": "Di chuyển nhẹ ngón tay cái của bạn xung quanh bánh xe nhấp chuột để tô sáng bảng chữ cái",
+  "centerButtonInputTextBarScreenTutorialText": "Nhấn nút trung tâm để chọn bảng chữ cái được tô sáng",
+  "nextButtonInputTextBarTutorialText": "Nhấn nút này để thêm một khoảng trống",
+  "previousButtonInputTextBarTutorialText": "Nhấn nút này để xóa ký tự cuối cùng",
+  "menuButtonInputTextBarTutorialText": "Nhấn nút này để đóng bàn phím và tương tác với kết quả tìm kiếm",
   "allSongs": "Tất cả các bài hát"
 }

@@ -27,10 +27,10 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
     state = [state[0], ..._playlistBox.values];
   }
 
-  Future<void> saveNewPlaylist(
-    String newPlaylistPlaceholderString,
-    List<MusicMetadata> songs,
-  ) async {
+  Future<void> saveNewPlaylist({
+    required String newPlaylistPlaceholderString,
+    required List<MusicMetadata> songs,
+  }) async {
     final newPlaylist = PlaylistModel(name: '', songs: songs);
     final newKey = await _playlistBox.add(newPlaylist);
     await _playlistBox.put(
@@ -40,9 +40,28 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
     refreshProvider();
   }
 
-  Future<void> clearPlaylist(dynamic key) async {
+  Future<void> renamePlaylist({
+    required dynamic playlistKey,
+    required String newPlaylistName,
+  }) async {
+    // Can't rename the on-the-go-playlist option
+    if (playlistKey == null) {
+      return;
+    } else {
+      final currentPlaylist = _playlistBox.get(playlistKey);
+      if (currentPlaylist != null) {
+        await _playlistBox.put(
+          playlistKey,
+          currentPlaylist.copyWith(name: newPlaylistName),
+        );
+        refreshProvider();
+      }
+    }
+  }
+
+  Future<void> clearPlaylist({required dynamic playlistKey}) async {
     // Can't remove the on-the-go-playlist option
-    if (key == null) {
+    if (playlistKey == null) {
       Future.delayed(const Duration(milliseconds: 350), () {
         state = [
           for (final playlist in state)
@@ -55,7 +74,7 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
       return;
     } else {
       Future.delayed(const Duration(seconds: 1), () async {
-        await _playlistBox.delete(key);
+        await _playlistBox.delete(playlistKey);
         refreshProvider();
       });
     }

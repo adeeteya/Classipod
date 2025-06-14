@@ -30,9 +30,9 @@ class TutorialRepository {
         true;
   }
 
-  bool getSearchFirstTime() {
+  bool getInputTextBarFirstTime() {
     return _sharedPreferencesWithCache.getBool(
-          SharedPreferencesKeys.isSearchFirstTime.name,
+          SharedPreferencesKeys.isInputTextBarFirstTime.name,
         ) ??
         true;
   }
@@ -53,12 +53,12 @@ class TutorialRepository {
     );
   }
 
-  Future<void> setSearchTutorialCompleted({
-    bool isSearchFirstTime = false,
+  Future<void> setInputTextBarTutorialCompleted({
+    bool isInputTextBarFirstTime = false,
   }) async {
     return _sharedPreferencesWithCache.setBool(
-      SharedPreferencesKeys.isSearchFirstTime.name,
-      isSearchFirstTime,
+      SharedPreferencesKeys.isInputTextBarFirstTime.name,
+      isInputTextBarFirstTime,
     );
   }
 }

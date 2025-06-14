@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pinduton an buton kan Sentro tanganing magbisikleta sa paagi nin paghanap nin bar, pag-scrubr bar asin pag-iiriwal-iwal. Pinduton asin kapotan an buton kan Sentro tanganing makakua nin dagdag na mga opsyon.",
   "nextButtonNowPlayingTutorialText": "Pinduton asin kapotan an butones na ini tanganing marikas an pag-abante kan kanta .",
   "previousButtonNowPlayingTutorialText": "Pinduton asin kapotan an butones na ini tanganing mabawi an kanta .",
-  "deviceControlSearchTutorialText": "Liwaton nin magaan an saindong muro sa palibot kan Ruweda nin Pag-klik tanganing itampok an sarong alpabeto .",
-  "centerButtonSearchTutorialText": "Pinduton an sentro kan buton tanganing mapili an itinampok na alpabeto .",
-  "nextButtonSearchTutorialText": "Pinduton an butones na ini tanganing makadagdag nin espasyo .",
-  "previousButtonSearchTutorialText": "Pinduton an buton tanganing buraon an huring karakter .",
-  "menuButtonSearchTutorialText": "Pinduton an buton na ini tanganing isara an keyboard asin makipag-ulay sa mga resulta nin paghanap .",
+  "clickWheelInputTextBarTutorialText": "Liwaton nin magaan an saindong muro sa palibot kan Ruweda nin Pag-klik tanganing itampok an sarong alpabeto .",
+  "centerButtonInputTextBarScreenTutorialText": "Pinduton an sentro kan buton tanganing mapili an itinampok na alpabeto .",
+  "nextButtonInputTextBarTutorialText": "Pinduton an butones na ini tanganing makadagdag nin espasyo .",
+  "previousButtonInputTextBarTutorialText": "Pinduton an buton tanganing buraon an huring karakter .",
+  "menuButtonInputTextBarTutorialText": "Pinduton an buton na ini tanganing isara an keyboard asin makipag-ulay sa mga resulta nin paghanap .",
   "allSongs": "Gabos na Awit ."
 }

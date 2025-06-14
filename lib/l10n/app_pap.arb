@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Druk riba e boton di Centro pa ciclo door di busca bar, scrubber bar y slider di shuffle. Prensa y tene e boton Centro pa haya acceso na opcionnan adicional.",
   "nextButtonNowPlayingTutorialText": "Prensa y tene e boton aki pa bo yuna e cancion .",
   "previousButtonNowPlayingTutorialText": "Prensa y tene e boton aki pa rewind e cantica .",
-  "deviceControlSearchTutorialText": "Move bo duim lihé rònt di e Wiel di Klik pa resaltá un alfabèt .",
-  "centerButtonSearchTutorialText": "Druk riba e boton di sentro pa selektá e alfabet resaltá",
-  "nextButtonSearchTutorialText": "Dòbel e boton aki pa añadí un espasio .",
-  "previousButtonSearchTutorialText": "Dòbel e boton aki pa eliminá e último personahe .",
-  "menuButtonSearchTutorialText": "Druk e boton aki pa sera e teclado i interakshoná ku e resultadonan di búskeda .",
+  "clickWheelInputTextBarTutorialText": "Move bo duim lihé rònt di e Wiel di Klik pa resaltá un alfabèt .",
+  "centerButtonInputTextBarScreenTutorialText": "Druk riba e boton di sentro pa selektá e alfabet resaltá",
+  "nextButtonInputTextBarTutorialText": "Dòbel e boton aki pa añadí un espasio .",
+  "previousButtonInputTextBarTutorialText": "Dòbel e boton aki pa eliminá e último personahe .",
+  "menuButtonInputTextBarTutorialText": "Druk e boton aki pa sera e teclado i interakshoná ku e resultadonan di búskeda .",
   "allSongs": "Tur Kantika ."
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pres di Senta button fi saikl chuu luk baal, skruuba baal ahn shub-saaf sliida. Pres ahn huol di Senta button fi akses ada opshan.",
   "nextButtonNowPlayingTutorialText": "Pres ahn huol dis button fi faas forda di sang .",
   "previousButtonNowPlayingTutorialText": "Pres ahn huol dis button fi riwind di sang .",
-  "deviceControlSearchTutorialText": "Muuv yu tumbu lait roun di Klik Wiel fi hailai wan alfabet .",
-  "centerButtonSearchTutorialText": "Pres di senta boton fi silek di hailait alfabet .",
-  "nextButtonSearchTutorialText": "Pres dis button fi ad wan spies .",
-  "previousButtonSearchTutorialText": "Pres dis button fi diliit di laas kiarakta .",
-  "menuButtonSearchTutorialText": "Pres dis button fi kluoz di kiibuod ah intarak wid di saach rizolt .",
+  "clickWheelInputTextBarTutorialText": "Muuv yu tumbu lait roun di Klik Wiel fi hailai wan alfabet .",
+  "centerButtonInputTextBarScreenTutorialText": "Pres di senta boton fi silek di hailait alfabet .",
+  "nextButtonInputTextBarTutorialText": "Pres dis button fi ad wan spies .",
+  "previousButtonInputTextBarTutorialText": "Pres dis button fi diliit di laas kiarakta .",
+  "menuButtonInputTextBarTutorialText": "Pres dis button fi kluoz di kiibuod ah intarak wid di saach rizolt .",
   "allSongs": "Aal Sangs"
 }

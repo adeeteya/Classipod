@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ၼဵၵ်းတီႈ Center သေ လႄႇလဵပ်ႈ ႁႃ bar ၊ ၼဵၵ်းလႄႈ ယိပ်းဝႆႉ ၼဵၼ် Center သေ ၶဝ်ႈတူၺ်းလႆႈ တၢင်းလိူၵ်ႈထႅင်ႈ။",
   "nextButtonNowPlayingTutorialText": "ၼဵၵ်းလႄႈယိပ်းဝႆႉ ၼဵၼ်ၼႆႉ ႁႂ်ႈဝႆးၽဵင်းၵႂၢမ်း",
   "previousButtonNowPlayingTutorialText": "ၼဵၵ်းတိတ်းတၢမ်းပၼ် ၼဵၼ်ဢၼ်ၼႆႉ တႃႇၶိုၼ်းပိုတ်ႇၽဵင်းၵႂၢမ်း",
-  "deviceControlSearchTutorialText": "ၶၢႆႉၼိဝ်ႉမိုဝ်းၸဝ်ႈၵဝ်ႇ ဢိတ်းဢွတ်း ႁိမ်းႁွမ်း Click Wheel သေ ၼႄပၼ် တူဝ်မႄႈလိၵ်ႈ",
-  "centerButtonSearchTutorialText": "ၼဵၵ်းတီႈ ၼဵၼ်ၵၢင်သေ လိူၵ်ႈဢဝ် တူဝ်မႄႈလိၵ်ႈဢၼ်ၼႄဝႆႉၼၼ်ႉ",
-  "nextButtonSearchTutorialText": "တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ သႂ်ႇပၼ်တီႈ space",
-  "previousButtonSearchTutorialText": "တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ မွတ်ႇပႅတ်ႈ တူဝ်လိၵ်ႈၵမ်းလိုၼ်းသုတ်း",
-  "menuButtonSearchTutorialText": "တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ ဢိုတ်းၶီးပူတ်ႉသေ တိတ်းတေႃႇၸွမ်း ၶေႃႈတွပ်ႇဢၼ်သွၵ်ႈႁႃၼၼ်ႉ",
+  "clickWheelInputTextBarTutorialText": "ၶၢႆႉၼိဝ်ႉမိုဝ်းၸဝ်ႈၵဝ်ႇ ဢိတ်းဢွတ်း ႁိမ်းႁွမ်း Click Wheel သေ ၼႄပၼ် တူဝ်မႄႈလိၵ်ႈ",
+  "centerButtonInputTextBarScreenTutorialText": "ၼဵၵ်းတီႈ ၼဵၼ်ၵၢင်သေ လိူၵ်ႈဢဝ် တူဝ်မႄႈလိၵ်ႈဢၼ်ၼႄဝႆႉၼၼ်ႉ",
+  "nextButtonInputTextBarTutorialText": "တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ သႂ်ႇပၼ်တီႈ space",
+  "previousButtonInputTextBarTutorialText": "တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ မွတ်ႇပႅတ်ႈ တူဝ်လိၵ်ႈၵမ်းလိုၼ်းသုတ်း",
+  "menuButtonInputTextBarTutorialText": "တဵၵ်းၼဵၼ်ဢၼ်ၼႆႉသေ ဢိုတ်းၶီးပူတ်ႉသေ တိတ်းတေႃႇၸွမ်း ၶေႃႈတွပ်ႇဢၼ်သွၵ်ႈႁႃၼၼ်ႉ",
   "allSongs": "ၵႂၢမ်းၵူႈၽဵင်း"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Barmoq panjarasi, skruber barda va aralash slayderni aylanib o'tish uchun CARC tugmasini bosing. Qo'shimcha variantlarga kirish uchun Markaz tugmasini bosing va ushlab turing.",
   "nextButtonNowPlayingTutorialText": "Qo'shiqni oldinga o'tkazish uchun ushbu tugmani bosing va ushlab turing",
   "previousButtonNowPlayingTutorialText": "Qo'shiqni orqaga qaytarish uchun ushbu tugmani bosing va ushlab turing",
-  "deviceControlSearchTutorialText": "Alifboni ajratib ko'rsatish uchun bosh barmog'ingizni engil siljiting",
-  "centerButtonSearchTutorialText": "Belgilangan alifboni tanlash uchun Markaz tugmasini bosing",
-  "nextButtonSearchTutorialText": "Kamerani qo'shish uchun ushbu tugmani bosing",
-  "previousButtonSearchTutorialText": "So'nggi belgini o'chirish uchun ushbu tugmani bosing",
-  "menuButtonSearchTutorialText": "Klaviaturani yopish va qidirish natijalari bilan o'zaro aloqada bo'lish uchun ushbu tugmani bosing",
+  "clickWheelInputTextBarTutorialText": "Alifboni ajratib ko'rsatish uchun bosh barmog'ingizni engil siljiting",
+  "centerButtonInputTextBarScreenTutorialText": "Belgilangan alifboni tanlash uchun Markaz tugmasini bosing",
+  "nextButtonInputTextBarTutorialText": "Kamerani qo'shish uchun ushbu tugmani bosing",
+  "previousButtonInputTextBarTutorialText": "So'nggi belgini o'chirish uchun ushbu tugmani bosing",
+  "menuButtonInputTextBarTutorialText": "Klaviaturani yopish va qidirish natijalari bilan o'zaro aloqada bo'lish uchun ushbu tugmani bosing",
   "allSongs": "Hamma qo'shiqlar"
 }

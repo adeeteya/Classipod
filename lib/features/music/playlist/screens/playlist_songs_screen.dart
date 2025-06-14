@@ -1,4 +1,3 @@
-import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
@@ -6,7 +5,9 @@ import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
+import 'package:classipod/features/music/playlist/models/playlist_option_type.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
+import 'package:classipod/features/music/playlist/widgets/playlist_option_list_tile.dart';
 import 'package:classipod/features/music/playlist/widgets/playlist_song_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
@@ -55,16 +56,38 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
   Future<void> _performAction(int index) async {
     setState(() => selectedDisplayItem = index);
     if (index == 0) {
-      await ref
-          .read(playlistsProvider.notifier)
-          .saveNewPlaylist(context.localization.newPlaylist, playlist.songs);
-      if (mounted) {
-        context.pop();
+      if (widget.playlistKey == null) {
+        await ref
+            .read(playlistsProvider.notifier)
+            .saveNewPlaylist(
+              newPlaylistPlaceholderString: context.localization.newPlaylist,
+              songs: playlist.songs,
+            );
+        if (mounted) {
+          context.pop();
+        }
+      }
+      // If the playlist is not on-the-go, it means we are renaming an existing playlist
+      else {
+        final newPlaylistName = await context.pushNamed(
+          Routes.playlistRename.name,
+          extra: playlist.name,
+        );
+        if (newPlaylistName != null &&
+            newPlaylistName is String &&
+            newPlaylistName.isNotEmpty) {
+          await ref
+              .read(playlistsProvider.notifier)
+              .renamePlaylist(
+                playlistKey: widget.playlistKey,
+                newPlaylistName: newPlaylistName,
+              );
+        }
       }
     } else if (index == 1) {
       await ref
           .read(playlistsProvider.notifier)
-          .clearPlaylist(widget.playlistKey);
+          .clearPlaylist(playlistKey: widget.playlistKey);
       if (mounted) {
         context.pop();
       }
@@ -105,75 +128,6 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
     }
   }
 
-  Widget _customPlaylistListTile({
-    required final VoidCallback onTap,
-    required bool isSelected,
-    required bool isSavePlaylist,
-  }) {
-    return GestureDetector(
-      onTap: onTap,
-      child: SizedBox(
-        height: 54,
-        width: double.infinity,
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            gradient:
-                isSelected
-                    ? const LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        AppPalette.selectedTileGradientColor1,
-                        AppPalette.selectedTileGradientColor2,
-                      ],
-                    )
-                    : null,
-          ),
-          child: Row(
-            children: [
-              SizedBox(
-                height: 54,
-                width: 54,
-                child: ColoredBox(
-                  color: AppPalette.defaultIconBackgroundColor,
-                  child: Icon(
-                    isSavePlaylist
-                        ? CupertinoIcons.plus_app
-                        : CupertinoIcons.clear_circled,
-                    size: 25,
-                    color: CupertinoColors.black,
-                  ),
-                ),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  isSavePlaylist
-                      ? context.localization.savePlaylist
-                      : context.localization.clearPlaylist,
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color:
-                        isSelected
-                            ? CupertinoColors.white
-                            : CupertinoColors.black,
-                  ),
-                  maxLines: 1,
-                ),
-              ),
-              if (isSelected)
-                const Icon(
-                  CupertinoIcons.right_chevron,
-                  color: CupertinoColors.white,
-                ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     if (displayItems.isEmpty) {
@@ -206,23 +160,26 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length + 2,
-                prototypeItem: _customPlaylistListTile(
+                prototypeItem: PlaylistOptionListTile(
                   onTap: () {},
                   isSelected: false,
-                  isSavePlaylist: false,
+                  type: PlaylistOptionType.savePlaylist,
                 ),
                 itemBuilder: (context, index) {
                   if (index == 0) {
-                    return _customPlaylistListTile(
+                    return PlaylistOptionListTile(
                       onTap: () async => _performAction(0),
                       isSelected: selectedDisplayItem == 0,
-                      isSavePlaylist: true,
+                      type:
+                          widget.playlistKey == null
+                              ? PlaylistOptionType.savePlaylist
+                              : PlaylistOptionType.renamePlaylist,
                     );
                   } else if (index == 1) {
-                    return _customPlaylistListTile(
+                    return PlaylistOptionListTile(
                       onTap: () async => _performAction(1),
                       isSelected: selectedDisplayItem == 1,
-                      isSavePlaylist: false,
+                      type: PlaylistOptionType.clearPlaylist,
                     );
                   }
 

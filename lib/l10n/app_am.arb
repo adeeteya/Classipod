@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "አሞሌ, Scrubber አሞሌ እና ተንሸራታች ወደ ጩኸት ወደ ፈልግ ማእከል ቁልፍን ይጫኑ. ተጨማሪ አማራጮችን ለመድረስ የመሃል ቁልፍን ተጭነው ይቆዩ.",
   "nextButtonNowPlayingTutorialText": "ዘፈኑን በፍጥነት ለማስተካከል ይህንን ቁልፍ ተጭነው ይቆዩ",
   "previousButtonNowPlayingTutorialText": "ዘፈኑን ለመመልከት ይህንን ቁልፍ ተጭነው ይቆዩ እና ይያዙ",
-  "deviceControlSearchTutorialText": "ጣትዎን አንድ ፊደል ለማጉላት በመዝህሩ ዙሪያ አሽጉን ያዛውሩ",
-  "centerButtonSearchTutorialText": "የደመቀውን ፊደል ለመምረጥ የመሃል ቁልፍን ተጫን",
-  "nextButtonSearchTutorialText": "ቦታ ለማከል ይህንን ቁልፍ ተጫን",
-  "previousButtonSearchTutorialText": "የመጨረሻውን ገጸ-ባህሪ ለመሰረዝ ይህንን ቁልፍ ተጫን",
-  "menuButtonSearchTutorialText": "የቁልፍ ሰሌዳውን ለመዝጋት እና ከድቶች ውጤቶች ጋር ለመግባባት ይህንን ቁልፍ ተጫን",
+  "clickWheelInputTextBarTutorialText": "ጣትዎን አንድ ፊደል ለማጉላት በመዝህሩ ዙሪያ አሽጉን ያዛውሩ",
+  "centerButtonInputTextBarScreenTutorialText": "የደመቀውን ፊደል ለመምረጥ የመሃል ቁልፍን ተጫን",
+  "nextButtonInputTextBarTutorialText": "ቦታ ለማከል ይህንን ቁልፍ ተጫን",
+  "previousButtonInputTextBarTutorialText": "የመጨረሻውን ገጸ-ባህሪ ለመሰረዝ ይህንን ቁልፍ ተጫን",
+  "menuButtonInputTextBarTutorialText": "የቁልፍ ሰሌዳውን ለመዝጋት እና ከድቶች ውጤቶች ጋር ለመግባባት ይህንን ቁልፍ ተጫን",
   "allSongs": "ሁሉም ዘፈኖች"
 }

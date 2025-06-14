@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ছিক বাৰ, স্ক্ৰাবাৰ বাৰ আৰু শ্বাফেল স্লাইডাৰৰ মাজেৰে চাইকেল চলাবলৈ কেন্দ্ৰ বুটাম টিপক। অতিৰিক্ত বিকল্পসমূহ অভিগম কৰিবলে কেন্দ্ৰ বুটাম টিপক আৰু ধৰি ৰাখক।",
   "nextButtonNowPlayingTutorialText": "গীতটো দ্ৰুতভাৱে আগুৱাই নিবলৈ এই বুটামটো টিপি ধৰি ৰাখক",
   "previousButtonNowPlayingTutorialText": "গীতটো পুনৰ ঘূৰাই দিবলৈ এই বুটামটো টিপি ধৰি ৰাখক",
-  "deviceControlSearchTutorialText": "এটা বৰ্ণমালা হাইলাইট কৰিবলৈ ক্লিক চকাটোৰ চাৰিওফালে আপোনাৰ বুঢ়া আঙুলিটো লাহেকৈ লৰচৰ কৰক",
-  "centerButtonSearchTutorialText": "হাইলাইট কৰা বৰ্ণমালা নিৰ্ব্বাচন কৰিবলে কেন্দ্ৰ বুটাম টিপক",
-  "nextButtonSearchTutorialText": "এটা স্থান যোগ কৰিবলৈ এই বুটাম টিপক",
-  "previousButtonSearchTutorialText": "শেষ আখৰ মচি পেলাবলৈ এই বুটাম টিপক",
-  "menuButtonSearchTutorialText": "এই বুটামটো টিপক কিবৰ্ড বন্ধ কৰিবলৈ আৰু সন্ধান ফলাফলৰ সৈতে যোগাযোগ কৰক",
+  "clickWheelInputTextBarTutorialText": "এটা বৰ্ণমালা হাইলাইট কৰিবলৈ ক্লিক চকাটোৰ চাৰিওফালে আপোনাৰ বুঢ়া আঙুলিটো লাহেকৈ লৰচৰ কৰক",
+  "centerButtonInputTextBarScreenTutorialText": "হাইলাইট কৰা বৰ্ণমালা নিৰ্ব্বাচন কৰিবলে কেন্দ্ৰ বুটাম টিপক",
+  "nextButtonInputTextBarTutorialText": "এটা স্থান যোগ কৰিবলৈ এই বুটাম টিপক",
+  "previousButtonInputTextBarTutorialText": "শেষ আখৰ মচি পেলাবলৈ এই বুটাম টিপক",
+  "menuButtonInputTextBarTutorialText": "এই বুটামটো টিপক কিবৰ্ড বন্ধ কৰিবলৈ আৰু সন্ধান ফলাফলৰ সৈতে যোগাযোগ কৰক",
   "allSongs": "সকলো গীত"
 }

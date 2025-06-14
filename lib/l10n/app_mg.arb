@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tsindrio ny bokotra Centre amin'ny tsingerin-taona amin'ny alàlan'ny fikatsahana bara, barazy scrubber ary slider shuffle. Tsindrio ary mitazona ny bokotra Center mba hidirana safidy fanampiny.",
   "nextButtonNowPlayingTutorialText": "Tsindrio ary hazaho ity bokotra ity mba hanamafisana ny hira",
   "previousButtonNowPlayingTutorialText": "Tsindrio ary hazaho ity bokotra ity mba hamerenanao ny hira",
-  "deviceControlSearchTutorialText": "Arosoy moramora ny kitrokelinao manodidina ny kitiho tsindrio mba hanasongadinana ny abidia",
-  "centerButtonSearchTutorialText": "Tsindrio ny bokotra Center hisafidy ny abidia nasongadina",
-  "nextButtonSearchTutorialText": "Tsindrio ity bokotra ity mba hanampiana toerana",
-  "previousButtonSearchTutorialText": "Tsindrio ity bokotra ity mba hamafa ny toetra farany",
-  "menuButtonSearchTutorialText": "Tsindrio ity bokotra ity hanakatonana ny fitendry ary hifanerasera amin'ny valin'ny fikarohana",
+  "clickWheelInputTextBarTutorialText": "Arosoy moramora ny kitrokelinao manodidina ny kitiho tsindrio mba hanasongadinana ny abidia",
+  "centerButtonInputTextBarScreenTutorialText": "Tsindrio ny bokotra Center hisafidy ny abidia nasongadina",
+  "nextButtonInputTextBarTutorialText": "Tsindrio ity bokotra ity mba hanampiana toerana",
+  "previousButtonInputTextBarTutorialText": "Tsindrio ity bokotra ity mba hamafa ny toetra farany",
+  "menuButtonInputTextBarTutorialText": "Tsindrio ity bokotra ity hanakatonana ny fitendry ary hifanerasera amin'ny valin'ny fikarohana",
   "allSongs": "Hira rehetra"
 }

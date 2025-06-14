@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "सीक बार, स्क्रबर बार आ शफल स्लाइडर के माध्यम सं साइकिल चलाबय लेल केंद्र बटन दबाउ. अतिरिक्त विकल्पक कें एक्सेस करय कें लेल केंद्र बटन दबाउ आ राखू.",
   "nextButtonNowPlayingTutorialText": "गीत के फास्ट फॉरवर्ड करय लेल एहि बटन के दबाउ आ पकड़ू",
   "previousButtonNowPlayingTutorialText": "गीत के रिवाइंड करय लेल एहि बटन के दबाउ आ पकड़ू",
-  "deviceControlSearchTutorialText": "एकटा वर्णमाला के हाइलाइट करय लेल क्लिक के पहिया के चारू कात अपन अंगूठा के हल्का स घुमाउ",
-  "centerButtonSearchTutorialText": "हाइलाइट कएल गेल वर्णमाला चुनबाक लेल केंद्र बटन दबाउ",
-  "nextButtonSearchTutorialText": "कोनो जगह जोड़बाक लेल ई बटन दबाउ",
-  "previousButtonSearchTutorialText": "अंतिम वर्ण के हटाबै के लेल ई बटन दबाउ",
-  "menuButtonSearchTutorialText": "कीबोर्ड बंद करय लेल ई बटन दबाउ आ खोज परिणाम के संग बातचीत करू",
+  "clickWheelInputTextBarTutorialText": "एकटा वर्णमाला के हाइलाइट करय लेल क्लिक के पहिया के चारू कात अपन अंगूठा के हल्का स घुमाउ",
+  "centerButtonInputTextBarScreenTutorialText": "हाइलाइट कएल गेल वर्णमाला चुनबाक लेल केंद्र बटन दबाउ",
+  "nextButtonInputTextBarTutorialText": "कोनो जगह जोड़बाक लेल ई बटन दबाउ",
+  "previousButtonInputTextBarTutorialText": "अंतिम वर्ण के हटाबै के लेल ई बटन दबाउ",
+  "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करय लेल ई बटन दबाउ आ खोज परिणाम के संग बातचीत करू",
   "allSongs": "सब गीत"
 }

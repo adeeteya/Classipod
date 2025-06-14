@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pritisnite Center Gumb, da kolesarite skozi Bar Seek, Scrubber Bar in Shiffle Slider. Pritisnite in pridržite gumb Center, da dostopate do dodatnih možnosti.",
   "nextButtonNowPlayingTutorialText": "Pritisnite in držite ta gumb, da hitro posredujete pesem",
   "previousButtonNowPlayingTutorialText": "Pritisnite in pridržite ta gumb, da previjate pesem",
-  "deviceControlSearchTutorialText": "Palec rahlo premaknite okoli kolesa za klik, da označite abecedo",
-  "centerButtonSearchTutorialText": "Pritisnite gumb Center, da izberete označeno abecedo",
-  "nextButtonSearchTutorialText": "Pritisnite ta gumb, da dodate prostor",
-  "previousButtonSearchTutorialText": "Pritisnite ta gumb, da izbrišete zadnji znak",
-  "menuButtonSearchTutorialText": "Pritisnite ta gumb, da zaprete tipkovnico in interakcijo z rezultati iskanja",
+  "clickWheelInputTextBarTutorialText": "Palec rahlo premaknite okoli kolesa za klik, da označite abecedo",
+  "centerButtonInputTextBarScreenTutorialText": "Pritisnite gumb Center, da izberete označeno abecedo",
+  "nextButtonInputTextBarTutorialText": "Pritisnite ta gumb, da dodate prostor",
+  "previousButtonInputTextBarTutorialText": "Pritisnite ta gumb, da izbrišete zadnji znak",
+  "menuButtonInputTextBarTutorialText": "Pritisnite ta gumb, da zaprete tipkovnico in interakcijo z rezultati iskanja",
   "allSongs": "Vse pesmi"
 }

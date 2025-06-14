@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Cindezela inkinobho yesikhungo ukuze ujikeleze ibha yokufuna, ibha ye-scrubber nesilayidi esishisayo. Cindezela ubambe inkinobho yesikhungo ukufinyelela izinketho ezengeziwe.",
   "nextButtonNowPlayingTutorialText": "Cindezela ubambe le nkinobho ukuze uqhubeke ngokushesha iculo",
   "previousButtonNowPlayingTutorialText": "Cindezela bese ubamba le nkinobho ukuze ubuyise kabusha iculo",
-  "deviceControlSearchTutorialText": "Hambisa isithupha sakho kancane uzungeze isondo lokuchofoza ukugqamisa izinhlamvu",
-  "centerButtonSearchTutorialText": "Cindezela inkinobho yesikhungo ukukhetha i-Alfabhethi egqanyisiwe",
-  "nextButtonSearchTutorialText": "Cindezela le nkinobho ukwengeza isikhala",
-  "previousButtonSearchTutorialText": "Cindezela le nkinobho ukuze ususe umlingiswa wokugcina",
-  "menuButtonSearchTutorialText": "Cindezela le nkinobho ukuvala ikhibhodi futhi uhlanganyele nemiphumela yokucinga",
+  "clickWheelInputTextBarTutorialText": "Hambisa isithupha sakho kancane uzungeze isondo lokuchofoza ukugqamisa izinhlamvu",
+  "centerButtonInputTextBarScreenTutorialText": "Cindezela inkinobho yesikhungo ukukhetha i-Alfabhethi egqanyisiwe",
+  "nextButtonInputTextBarTutorialText": "Cindezela le nkinobho ukwengeza isikhala",
+  "previousButtonInputTextBarTutorialText": "Cindezela le nkinobho ukuze ususe umlingiswa wokugcina",
+  "menuButtonInputTextBarTutorialText": "Cindezela le nkinobho ukuvala ikhibhodi futhi uhlanganyele nemiphumela yokucinga",
   "allSongs": "Zonke izingoma"
 }

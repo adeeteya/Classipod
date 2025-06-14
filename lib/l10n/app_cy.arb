@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pwyswch y botwm canol i feicio trwy'r bar ceisio, bar sgwrio a llithrydd siffrwd. Pwyswch a dal y botwm canol i gael mynediad at opsiynau ychwanegol.",
   "nextButtonNowPlayingTutorialText": "Pwyswch a dal y botwm hwn i gyflymu'r gân",
   "previousButtonNowPlayingTutorialText": "Pwyswch a dal y botwm hwn i ailddirwyn y gân",
-  "deviceControlSearchTutorialText": "Symudwch eich bawd yn ysgafn o amgylch yr olwyn clicio i dynnu sylw at wyddor",
-  "centerButtonSearchTutorialText": "Pwyswch y botwm canol i ddewis yr wyddor a amlygwyd",
-  "nextButtonSearchTutorialText": "Pwyswch y botwm hwn i ychwanegu lle",
-  "previousButtonSearchTutorialText": "Pwyswch y botwm hwn i ddileu'r cymeriad olaf",
-  "menuButtonSearchTutorialText": "Pwyswch y botwm hwn i gau'r bysellfwrdd a rhyngweithio â'r canlyniadau chwilio",
+  "clickWheelInputTextBarTutorialText": "Symudwch eich bawd yn ysgafn o amgylch yr olwyn clicio i dynnu sylw at wyddor",
+  "centerButtonInputTextBarScreenTutorialText": "Pwyswch y botwm canol i ddewis yr wyddor a amlygwyd",
+  "nextButtonInputTextBarTutorialText": "Pwyswch y botwm hwn i ychwanegu lle",
+  "previousButtonInputTextBarTutorialText": "Pwyswch y botwm hwn i ddileu'r cymeriad olaf",
+  "menuButtonInputTextBarTutorialText": "Pwyswch y botwm hwn i gau'r bysellfwrdd a rhyngweithio â'r canlyniadau chwilio",
   "allSongs": "Pob Cân"
 }

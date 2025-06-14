@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Ka u eren tom a button u Center la sha u keren bar, u eren ikyav mbi eren tom a mi la man shuffle slider. Ka u eren tom a button la sha er u zua a akaa agen a u er yô.",
   "nextButtonNowPlayingTutorialText": "Ka u eren tom a button ne sha er u za hemen a icam la fese yô .",
   "previousButtonNowPlayingTutorialText": "Ka u eren tom a button ne sha er u hide u wa icam la yô .",
-  "deviceControlSearchTutorialText": "Mough sha ityough ki Click Wheel la sha u tesen alphabet .",
-  "centerButtonSearchTutorialText": "Kighir ikyondo i i yer ér center la sha er u tsua alphabet u i tese la yô .",
-  "nextButtonSearchTutorialText": "Kighir button ne sha er u seer ijiir yô .",
-  "previousButtonSearchTutorialText": "Kighir button ne sha er u delete or u masetyô la .",
-  "menuButtonSearchTutorialText": "Kighir button ne sha er u cir keyboard la shi u er kwagh a kwagh u u soo u keren la yô .",
+  "clickWheelInputTextBarTutorialText": "Mough sha ityough ki Click Wheel la sha u tesen alphabet .",
+  "centerButtonInputTextBarScreenTutorialText": "Kighir ikyondo i i yer ér center la sha er u tsua alphabet u i tese la yô .",
+  "nextButtonInputTextBarTutorialText": "Kighir button ne sha er u seer ijiir yô .",
+  "previousButtonInputTextBarTutorialText": "Kighir button ne sha er u delete or u masetyô la .",
+  "menuButtonInputTextBarTutorialText": "Kighir button ne sha er u cir keyboard la shi u er kwagh a kwagh u u soo u keren la yô .",
   "allSongs": "Icam i wan cii"
 }

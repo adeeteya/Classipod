@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Seek bar, Scubber bar तथा Shuffle स्लाइडर इत्येतयोः माध्यमेन चक्रं कर्तुं Center इति बटनं नुदन्तु । अतिरिक्तविकल्पान् प्राप्तुं Center बटनं नुदन्तु, धारयन्तु च।",
   "nextButtonNowPlayingTutorialText": "गीतं द्रुतं कर्तुं एतत् बटनं दबावन्तु, धारयन्तु च ।",
   "previousButtonNowPlayingTutorialText": "गीतं पुनः वारयितुं एतत् बटनं दबावन्तु, धारयन्तु च",
-  "deviceControlSearchTutorialText": "वर्णमालां प्रकाशयितुं क्लिक् चक्रस्य परितः लघुतया अङ्गुष्ठं चालयन्तु ।",
-  "centerButtonSearchTutorialText": "Highlighted Alphabet इत्यस्य चयनार्थं Center इति बटनं नुदन्तु ।",
-  "nextButtonSearchTutorialText": "एकं स्थानं योजयितुं एतत् बटनं नुदन्तु ।",
-  "previousButtonSearchTutorialText": "अन्तिमवर्णं विलोपयितुं एतत् बटनं नुदन्तु ।",
-  "menuButtonSearchTutorialText": "कीबोर्डं बन्दं कृत्वा अन्वेषणपरिणामेन सह अन्तरक्रियां कर्तुं एतत् बटनं नुदन्तु ।",
+  "clickWheelInputTextBarTutorialText": "वर्णमालां प्रकाशयितुं क्लिक् चक्रस्य परितः लघुतया अङ्गुष्ठं चालयन्तु ।",
+  "centerButtonInputTextBarScreenTutorialText": "Highlighted Alphabet इत्यस्य चयनार्थं Center इति बटनं नुदन्तु ।",
+  "nextButtonInputTextBarTutorialText": "एकं स्थानं योजयितुं एतत् बटनं नुदन्तु ।",
+  "previousButtonInputTextBarTutorialText": "अन्तिमवर्णं विलोपयितुं एतत् बटनं नुदन्तु ।",
+  "menuButtonInputTextBarTutorialText": "कीबोर्डं बन्दं कृत्वा अन्वेषणपरिणामेन सह अन्तरक्रियां कर्तुं एतत् बटनं नुदन्तु ।",
   "allSongs": "सर्वाणि गीतानि ."
 }

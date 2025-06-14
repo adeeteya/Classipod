@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Төвийн товчийг дарж, Scrubber Bar болон Sluffle Slider-ээр дамжуулан дугуйг дарна уу. Төвийг дараад Нэмэлт сонголтууд руу нэвтрэхийн тулд дарна уу.",
   "nextButtonNowPlayingTutorialText": "Дууг хурдан дамжуулахын тулд энэ товчийг дараад барина уу",
   "previousButtonNowPlayingTutorialText": "Дууг буцаахын тулд энэ товчийг дараад барина уу",
-  "deviceControlSearchTutorialText": "Цагаан толгойн тодрохын тулд эрхий хуруугаа нүүж ав",
-  "centerButtonSearchTutorialText": "Тодруулсан цагаан толгойг сонгохын тулд төв товчийг дарна уу",
-  "nextButtonSearchTutorialText": "Энэ товчийг дарна уу",
-  "previousButtonSearchTutorialText": "Сүүлийн дүрийг устгахын тулд энэ товчийг дарна уу",
-  "menuButtonSearchTutorialText": "Гарыг хаахын тулд энэ товчийг дараад хайлтын үр дүнтэй харилцах",
+  "clickWheelInputTextBarTutorialText": "Цагаан толгойн тодрохын тулд эрхий хуруугаа нүүж ав",
+  "centerButtonInputTextBarScreenTutorialText": "Тодруулсан цагаан толгойг сонгохын тулд төв товчийг дарна уу",
+  "nextButtonInputTextBarTutorialText": "Энэ товчийг дарна уу",
+  "previousButtonInputTextBarTutorialText": "Сүүлийн дүрийг устгахын тулд энэ товчийг дарна уу",
+  "menuButtonInputTextBarTutorialText": "Гарыг хаахын тулд энэ товчийг дараад хайлтын үр дүнтэй харилцах",
   "allSongs": "Бүх Дуу"
 }

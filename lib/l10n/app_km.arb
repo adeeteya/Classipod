@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ចុចប៊ូតុងកណ្តាលដើម្បីវដ្តដែលឆ្លងកាត់ការស្វែងរករបារដាស់ត្នោតរបារព្រងើយកន្តើយនិងសាប់គ្រាប់រំកិល។ ចុចនិងសង្កត់ប៊ូតុងកណ្តាលដើម្បីចូលប្រើជម្រើសបន្ថែម។",
   "nextButtonNowPlayingTutorialText": "ចុចហើយសង្កត់ប៊ូតុងនេះដើម្បីបញ្ជូនបន្តទៅមុខ",
   "previousButtonNowPlayingTutorialText": "ចុចហើយសង្កត់ប៊ូតុងនេះដើម្បីបង្វែរបទចម្រៀងឡើងវិញ",
-  "deviceControlSearchTutorialText": "ផ្លាស់ទីមេដៃរបស់អ្នកស្រាល ៗ ជុំវិញកង់ចុចដើម្បីរំលេចអក្ខរក្រម",
-  "centerButtonSearchTutorialText": "ចុចប៊ូតុងកណ្តាលដើម្បីជ្រើសរើសអក្ខរក្រមដែលបានបន្លិច",
-  "nextButtonSearchTutorialText": "ចុចប៊ូតុងនេះដើម្បីបន្ថែមចន្លោះមួយ",
-  "previousButtonSearchTutorialText": "ចុចប៊ូតុងនេះដើម្បីលុបតួអក្សរចុងក្រោយ",
-  "menuButtonSearchTutorialText": "ចុចប៊ូតុងនេះដើម្បីបិទក្តារចុចនិងធ្វើអន្តរកម្មជាមួយលទ្ធផលស្វែងរក",
+  "clickWheelInputTextBarTutorialText": "ផ្លាស់ទីមេដៃរបស់អ្នកស្រាល ៗ ជុំវិញកង់ចុចដើម្បីរំលេចអក្ខរក្រម",
+  "centerButtonInputTextBarScreenTutorialText": "ចុចប៊ូតុងកណ្តាលដើម្បីជ្រើសរើសអក្ខរក្រមដែលបានបន្លិច",
+  "nextButtonInputTextBarTutorialText": "ចុចប៊ូតុងនេះដើម្បីបន្ថែមចន្លោះមួយ",
+  "previousButtonInputTextBarTutorialText": "ចុចប៊ូតុងនេះដើម្បីលុបតួអក្សរចុងក្រោយ",
+  "menuButtonInputTextBarTutorialText": "ចុចប៊ូតុងនេះដើម្បីបិទក្តារចុចនិងធ្វើអន្តរកម្មជាមួយលទ្ធផលស្វែងរក",
   "allSongs": "ចម្រៀងទាំងអស់"
 }

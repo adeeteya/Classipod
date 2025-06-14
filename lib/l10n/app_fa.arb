@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "دکمه مرکز را فشار دهید تا از طریق نوار جستجو ، نوار اسکراب و کشویی Shuffle چرخه بزنید. دکمه مرکز را فشار داده و نگه دارید تا به گزینه های اضافی دسترسی پیدا کنید.",
   "nextButtonNowPlayingTutorialText": "این دکمه را فشار داده و نگه دارید تا سریع آهنگ را به جلو بکشید",
   "previousButtonNowPlayingTutorialText": "این دکمه را فشار داده و نگه دارید تا دوباره آهنگ شود",
-  "deviceControlSearchTutorialText": "انگشت شست خود را به آرامی در اطراف چرخ کلیک حرکت دهید تا یک الفبای برجسته شود",
-  "centerButtonSearchTutorialText": "برای انتخاب الفبای برجسته ، دکمه Center را فشار دهید",
-  "nextButtonSearchTutorialText": "این دکمه را فشار دهید تا یک فضا اضافه شود",
-  "previousButtonSearchTutorialText": "این دکمه را فشار دهید تا آخرین شخصیت حذف شود",
-  "menuButtonSearchTutorialText": "برای بستن صفحه کلید و تعامل با نتایج جستجو ، این دکمه را فشار دهید",
+  "clickWheelInputTextBarTutorialText": "انگشت شست خود را به آرامی در اطراف چرخ کلیک حرکت دهید تا یک الفبای برجسته شود",
+  "centerButtonInputTextBarScreenTutorialText": "برای انتخاب الفبای برجسته ، دکمه Center را فشار دهید",
+  "nextButtonInputTextBarTutorialText": "این دکمه را فشار دهید تا یک فضا اضافه شود",
+  "previousButtonInputTextBarTutorialText": "این دکمه را فشار دهید تا آخرین شخصیت حذف شود",
+  "menuButtonInputTextBarTutorialText": "برای بستن صفحه کلید و تعامل با نتایج جستجو ، این دکمه را فشار دهید",
   "allSongs": "همه آهنگ ها"
 }

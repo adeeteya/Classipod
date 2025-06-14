@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Stlačením tlačidla stredu prechádzate cez prúžok vyhľadávania, prabeckej tyčinky a posúvača Shuffle. Stlačením a podržaním tlačidla stredu získate prístup k ďalším možnostiam.",
   "nextButtonNowPlayingTutorialText": "Stlačte a podržte toto tlačidlo, aby ste pieseň rýchlo postlali vpred",
   "previousButtonNowPlayingTutorialText": "Stlačte a podržte toto tlačidlo, aby ste pieseň pretočili",
-  "deviceControlSearchTutorialText": "Pohybujte palcom okolo kliknutia a zvýraznite abecedu",
-  "centerButtonSearchTutorialText": "Stlačením tlačidla stredu vyberte zvýraznenú abecedu",
-  "nextButtonSearchTutorialText": "Stlačením tohto tlačidla pridáte priestor",
-  "previousButtonSearchTutorialText": "Stlačením tohto tlačidla odstráňte posledný znak",
-  "menuButtonSearchTutorialText": "Stlačením tohto tlačidla zatvorte klávesnicu a interaguje s výsledkami vyhľadávania",
+  "clickWheelInputTextBarTutorialText": "Pohybujte palcom okolo kliknutia a zvýraznite abecedu",
+  "centerButtonInputTextBarScreenTutorialText": "Stlačením tlačidla stredu vyberte zvýraznenú abecedu",
+  "nextButtonInputTextBarTutorialText": "Stlačením tohto tlačidla pridáte priestor",
+  "previousButtonInputTextBarTutorialText": "Stlačením tohto tlačidla odstráňte posledný znak",
+  "menuButtonInputTextBarTutorialText": "Stlačením tohto tlačidla zatvorte klávesnicu a interaguje s výsledkami vyhľadávania",
   "allSongs": "Všetky piesne"
 }

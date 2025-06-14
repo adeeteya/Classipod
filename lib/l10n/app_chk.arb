@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Kopwe pwarata ewe puun Center pwe kopwe fiti ewe angangen kutta bar, brabber me ekkewe sling mi fitikoko. Kopwe suki me amwochu ewe puun Cent pwe kopwe tongeni angei pwan ekkoch tufich.",
   "nextButtonNowPlayingTutorialText": "Kopwe fiti me amwochu ei but pwe kopwe mwitir ngeni ewe kon .",
   "previousButtonNowPlayingTutorialText": "Kopwe fiti me amwochu ei button pwe kopwe niwinsefaniti ewe kon .",
-  "deviceControlSearchTutorialText": "Kopwe suki om we asam ngeni ewe Wiik Wick pwe epwe menlapei eu alfabet .",
-  "centerButtonSearchTutorialText": "Kopwe fiti ewe biton seni ewe puun pwe kopwe filatá ewe alfabet mi menlapei .",
-  "nextButtonSearchTutorialText": "Kopwe äeä ei föün äsefich pwe kopwe apacha ngeni eü leeni .",
-  "previousButtonSearchTutorialText": "Kopwe suki ei ngonuk pwe kopwe amoielo ewe amuchunon mak .",
-  "menuButtonSearchTutorialText": "Kopwe pwarata ei button pwe kopwe suki ewe asam me chiechi ngeni ekkewe pisekin kutta .",
+  "clickWheelInputTextBarTutorialText": "Kopwe suki om we asam ngeni ewe Wiik Wick pwe epwe menlapei eu alfabet .",
+  "centerButtonInputTextBarScreenTutorialText": "Kopwe fiti ewe biton seni ewe puun pwe kopwe filatá ewe alfabet mi menlapei .",
+  "nextButtonInputTextBarTutorialText": "Kopwe äeä ei föün äsefich pwe kopwe apacha ngeni eü leeni .",
+  "previousButtonInputTextBarTutorialText": "Kopwe suki ei ngonuk pwe kopwe amoielo ewe amuchunon mak .",
+  "menuButtonInputTextBarTutorialText": "Kopwe pwarata ei button pwe kopwe suki ewe asam me chiechi ngeni ekkewe pisekin kutta .",
   "allSongs": "Meinisin ekkewe Sopun"
 }

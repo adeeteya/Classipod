@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "சீக்கர் பொத்தானை சுழற்சி செய்ய சீர் பொத்தானை அழுத்தவும், ஸ்க்ரப்பர் பார் மற்றும் ஷஃபிள் ஸ்லைடர் மூலம் சுழற்சி செய்யவும். கூடுதல் விருப்பங்களை அணுக மைய பொத்தானை அழுத்திப் பிடிக்கவும்.",
   "nextButtonNowPlayingTutorialText": "பாடலை வேகமாக அனுப்ப இந்த பொத்தானை அழுத்திப் பிடிக்கவும்",
   "previousButtonNowPlayingTutorialText": "பாடலை முன்னாடி இந்த பொத்தானை அழுத்திப் பிடிக்கவும்",
-  "deviceControlSearchTutorialText": "ஒரு எழுத்துக்களை முன்னிலைப்படுத்த கிளிக் சக்கரத்தைச் சுற்றி உங்கள் கட்டைவிரலை லேசாக நகர்த்தவும்",
-  "centerButtonSearchTutorialText": "சிறப்பிக்கப்பட்ட எழுத்துக்களைத் தேர்ந்தெடுக்க மைய பொத்தானை அழுத்தவும்",
-  "nextButtonSearchTutorialText": "ஒரு இடத்தைச் சேர்க்க இந்த பொத்தானை அழுத்தவும்",
-  "previousButtonSearchTutorialText": "கடைசி எழுத்தை நீக்க இந்த பொத்தானை அழுத்தவும்",
-  "menuButtonSearchTutorialText": "விசைப்பலகை மூடவும், தேடல் முடிவுகளுடன் தொடர்பு கொள்ளவும் இந்த பொத்தானை அழுத்தவும்",
+  "clickWheelInputTextBarTutorialText": "ஒரு எழுத்துக்களை முன்னிலைப்படுத்த கிளிக் சக்கரத்தைச் சுற்றி உங்கள் கட்டைவிரலை லேசாக நகர்த்தவும்",
+  "centerButtonInputTextBarScreenTutorialText": "சிறப்பிக்கப்பட்ட எழுத்துக்களைத் தேர்ந்தெடுக்க மைய பொத்தானை அழுத்தவும்",
+  "nextButtonInputTextBarTutorialText": "ஒரு இடத்தைச் சேர்க்க இந்த பொத்தானை அழுத்தவும்",
+  "previousButtonInputTextBarTutorialText": "கடைசி எழுத்தை நீக்க இந்த பொத்தானை அழுத்தவும்",
+  "menuButtonInputTextBarTutorialText": "விசைப்பலகை மூடவும், தேடல் முடிவுகளுடன் தொடர்பு கொள்ளவும் இந்த பொத்தானை அழுத்தவும்",
   "allSongs": "அனைத்து பாடல்களும்"
 }

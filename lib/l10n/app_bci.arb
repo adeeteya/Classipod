@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Sɛ a tin Center su’n, á fá kɔ́ lika nga be kunndɛ ba’n, nin scrubber bar’n, ɔ nin shuffle slider’n. Tin buton’n su naan w’a wun ninnge uflɛ wie mun ekun.",
   "nextButtonNowPlayingTutorialText": "Sɛ a tin buton sɔ’n su naan w’a fa jue’n w’a ɔ i ɲrun’n .",
   "previousButtonNowPlayingTutorialText": "Tin buton sɔ’n su naan w’a yi jue’n i uflɛ .",
-  "deviceControlSearchTutorialText": "Fa ɔ sa dan’n kɔ lika kan naan w’a yi alfabɛti kun w’a kle .",
-  "centerButtonSearchTutorialText": "Tin buton ng’ɔ o afiɛn’n su naan w’a fa alfabɛti nga be yili i nglo’n .",
-  "nextButtonSearchTutorialText": "Tin buton sɔ’n su naan w’a fa lika kun w’a wlɛ i nun .",
-  "previousButtonSearchTutorialText": "Tin buton sɔ’n su naan w’a nunnun ndɛ mma kasiɛn’n .",
-  "menuButtonSearchTutorialText": "Sɛ a tin buton sɔ’n su’n, á káci klaviɛti’n, kpɛkun á fá kɔ́ lika nga be kunndɛ’n .",
+  "clickWheelInputTextBarTutorialText": "Fa ɔ sa dan’n kɔ lika kan naan w’a yi alfabɛti kun w’a kle .",
+  "centerButtonInputTextBarScreenTutorialText": "Tin buton ng’ɔ o afiɛn’n su naan w’a fa alfabɛti nga be yili i nglo’n .",
+  "nextButtonInputTextBarTutorialText": "Tin buton sɔ’n su naan w’a fa lika kun w’a wlɛ i nun .",
+  "previousButtonInputTextBarTutorialText": "Tin buton sɔ’n su naan w’a nunnun ndɛ mma kasiɛn’n .",
+  "menuButtonInputTextBarTutorialText": "Sɛ a tin buton sɔ’n su’n, á káci klaviɛti’n, kpɛkun á fá kɔ́ lika nga be kunndɛ’n .",
   "allSongs": "I n'gba"
 }

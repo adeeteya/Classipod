@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tẹ bọtini oju-ajo si ọmọ nipasẹ awọn abe, igi idẹjẹ ati didaworan sloffle. Tẹ mọlẹ bọtini ile-iṣẹ lati wọle si awọn aṣayan afikun.",
   "nextButtonNowPlayingTutorialText": "Tẹ mọlẹ bọtini yii lati yara mu orin siwaju",
   "previousButtonNowPlayingTutorialText": "Tẹ ki o mu bọtini yi lati tun orin naa",
-  "deviceControlSearchTutorialText": "Gbe atanpako rẹ ni irọrun yika kẹkẹ tẹ lati ṣe afihan abidi kan",
-  "centerButtonSearchTutorialText": "Tẹ bọtini aarin lati yan abidi ti a ṣe afihan",
-  "nextButtonSearchTutorialText": "Tẹ bọtini yii lati ṣafikun aaye kan",
-  "previousButtonSearchTutorialText": "Tẹ bọtini yii lati pa ohun kikọ ikẹhin",
-  "menuButtonSearchTutorialText": "Tẹ bọtini yii lati pa bọtini itẹwe ati ibaraenisọrọ pẹlu awọn abajade wiwa",
+  "clickWheelInputTextBarTutorialText": "Gbe atanpako rẹ ni irọrun yika kẹkẹ tẹ lati ṣe afihan abidi kan",
+  "centerButtonInputTextBarScreenTutorialText": "Tẹ bọtini aarin lati yan abidi ti a ṣe afihan",
+  "nextButtonInputTextBarTutorialText": "Tẹ bọtini yii lati ṣafikun aaye kan",
+  "previousButtonInputTextBarTutorialText": "Tẹ bọtini yii lati pa ohun kikọ ikẹhin",
+  "menuButtonInputTextBarTutorialText": "Tẹ bọtini yii lati pa bọtini itẹwe ati ibaraenisọrọ pẹlu awọn abajade wiwa",
   "allSongs": "Gbogbo awọn orin"
 }

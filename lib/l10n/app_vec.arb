@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Premi el pulsante Centro per ciclè traverso cercar bar, bar de scrubri e scivoloso. Premi e tegner el pulsante del Centro par acedar opsion in pì.",
   "nextButtonNowPlayingTutorialText": "Premi e tien sto boton par digiunare in vanti ła canson",
   "previousButtonNowPlayingTutorialText": "Premi e tien sto boton par rimensare la canson",
-  "deviceControlSearchTutorialText": "Spostate el pollice leggermente intorno al Click Rota per evidenziar un alfabeto",
-  "centerButtonSearchTutorialText": "Premi el pulsante sentro pa sełesionar l’alfabeto evidensià",
-  "nextButtonSearchTutorialText": "Preme sto boton par zontar un spasio",
-  "previousButtonSearchTutorialText": "Preme sto boton par cancełar l'ultimo caratere",
-  "menuButtonSearchTutorialText": "Premi sto boton par chiudere la tastiera e interagi co i risultati de ricerca",
+  "clickWheelInputTextBarTutorialText": "Spostate el pollice leggermente intorno al Click Rota per evidenziar un alfabeto",
+  "centerButtonInputTextBarScreenTutorialText": "Premi el pulsante sentro pa sełesionar l’alfabeto evidensià",
+  "nextButtonInputTextBarTutorialText": "Preme sto boton par zontar un spasio",
+  "previousButtonInputTextBarTutorialText": "Preme sto boton par cancełar l'ultimo caratere",
+  "menuButtonInputTextBarTutorialText": "Premi sto boton par chiudere la tastiera e interagi co i risultati de ricerca",
   "allSongs": "Tutte le Canzone"
 }

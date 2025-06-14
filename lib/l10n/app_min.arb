@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Takan tombol Pusat untuak basepeda malalui mancari batang, batang scrubber jo slider asok. Takan jo tahan tombol Pusat untuak maakses pilihan tambahan.",
   "nextButtonNowPlayingTutorialText": "Takan jo tahan tombol ko untuak kancang maju lagu .",
   "previousButtonNowPlayingTutorialText": "Takan jo tahan tombol ko untuak malapehan lagu .",
-  "deviceControlSearchTutorialText": "Pindahkan jari tunjuak ringan di sakitar Klik Roda untuak manyoroti abjad .",
-  "centerButtonSearchTutorialText": "Takan tombol tangah untuak mamiliah abjad nan disorot .",
-  "nextButtonSearchTutorialText": "Takan tombol ko untuak manambah ruang",
-  "previousButtonSearchTutorialText": "Takan tombol ko untuak maapuih karakter tarakhia .",
-  "menuButtonSearchTutorialText": "Takan tombol ko untuak manutup keyboard jo bainteraksi jo hasil pancarian .",
+  "clickWheelInputTextBarTutorialText": "Pindahkan jari tunjuak ringan di sakitar Klik Roda untuak manyoroti abjad .",
+  "centerButtonInputTextBarScreenTutorialText": "Takan tombol tangah untuak mamiliah abjad nan disorot .",
+  "nextButtonInputTextBarTutorialText": "Takan tombol ko untuak manambah ruang",
+  "previousButtonInputTextBarTutorialText": "Takan tombol ko untuak maapuih karakter tarakhia .",
+  "menuButtonInputTextBarTutorialText": "Takan tombol ko untuak manutup keyboard jo bainteraksi jo hasil pancarian .",
   "allSongs": "Sagalo Lagu"
 }

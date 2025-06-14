@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "केंद्र बटन दबाओ, वरीयता, स्प्रिंगर बार अर फ़ाइल स्लाइडर रै माध्यम सूं साइकिल माथै दबाओ। अतिरिक्त विकल्पां तक ​​पहुंचण अर केन्द्र बटन दबाओ अर राखो।",
   "nextButtonNowPlayingTutorialText": "गीत नै तेज करण खातर यो बटन दबाओ अर पकड़ो",
   "previousButtonNowPlayingTutorialText": "गीतां नै याद करण सारू इण बटण माथै दबाओ अर पकड़ो",
-  "deviceControlSearchTutorialText": "एक विलिबिट नै उजागर करण खातर क्लिक कर’र आपरै अंगूठा नै हल्का-फुल्का हराओ",
-  "centerButtonSearchTutorialText": "2019 नै उजागर करण खातर केन्द्र बटन दबाओ",
-  "nextButtonSearchTutorialText": "स्थान जोड़ण खातर इस बटन दबाओ",
-  "previousButtonSearchTutorialText": "आखरी किरदार नै हटाबा रै वास्तै इण बटण माथै दबाओ",
-  "menuButtonSearchTutorialText": "कीबोर्ड नै बंद करण खातर अर खोज परिणामां तै बातचीत करण खातर इस बटन दबाओ",
+  "clickWheelInputTextBarTutorialText": "एक विलिबिट नै उजागर करण खातर क्लिक कर’र आपरै अंगूठा नै हल्का-फुल्का हराओ",
+  "centerButtonInputTextBarScreenTutorialText": "2019 नै उजागर करण खातर केन्द्र बटन दबाओ",
+  "nextButtonInputTextBarTutorialText": "स्थान जोड़ण खातर इस बटन दबाओ",
+  "previousButtonInputTextBarTutorialText": "आखरी किरदार नै हटाबा रै वास्तै इण बटण माथै दबाओ",
+  "menuButtonInputTextBarTutorialText": "कीबोर्ड नै बंद करण खातर अर खोज परिणामां तै बातचीत करण खातर इस बटन दबाओ",
   "allSongs": "सगळा"
 }

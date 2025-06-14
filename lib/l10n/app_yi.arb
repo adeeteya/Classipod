@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "דרוק דעם צענטער קנעפּל צו ציקל דורך זוכן באַר, סקרובבער באַר און שאַרן סליידער. דריקן און האַלטן די צענטער קנעפּל צו אַקסעס נאָך אָפּציעס.",
   "nextButtonNowPlayingTutorialText": "דריקן און האַלטן דעם קנעפּל צו געשווינד פאָרלייגן די ליד",
   "previousButtonNowPlayingTutorialText": "דריקן און האַלטן דעם קנעפּל צו ריוויינד די ליד",
-  "deviceControlSearchTutorialText": "מאַך דיין גראָבער פינגער לייטלי אַרום די קליק ראָד צו הויכפּונקט אַ אלפאבעט",
-  "centerButtonSearchTutorialText": "דרוק דעם צענטער קנעפּל צו סעלעקטירן דעם כיילייטיד אלפאבעט",
-  "nextButtonSearchTutorialText": "דרוק דעם קנעפּל צו לייגן אַ פּלאַץ",
-  "previousButtonSearchTutorialText": "דרוק דעם קנעפּל צו ויסמעקן די לעצטע כאַראַקטער",
-  "menuButtonSearchTutorialText": "דרוק דעם קנעפּל צו פאַרמאַכן די קלאַוויאַטור און ינטעראַקט מיט די זוך רעזולטאַטן",
+  "clickWheelInputTextBarTutorialText": "מאַך דיין גראָבער פינגער לייטלי אַרום די קליק ראָד צו הויכפּונקט אַ אלפאבעט",
+  "centerButtonInputTextBarScreenTutorialText": "דרוק דעם צענטער קנעפּל צו סעלעקטירן דעם כיילייטיד אלפאבעט",
+  "nextButtonInputTextBarTutorialText": "דרוק דעם קנעפּל צו לייגן אַ פּלאַץ",
+  "previousButtonInputTextBarTutorialText": "דרוק דעם קנעפּל צו ויסמעקן די לעצטע כאַראַקטער",
+  "menuButtonInputTextBarTutorialText": "דרוק דעם קנעפּל צו פאַרמאַכן די קלאַוויאַטור און ינטעראַקט מיט די זוך רעזולטאַטן",
   "allSongs": "כל לידער"
 }

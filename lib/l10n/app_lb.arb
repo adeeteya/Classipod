@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Dréckt op den Zentrum Knäppchen fir duerch Seiger Bar ze verzöltegen, Scrubber Bar an Shuffle Schieber. Dréckt an hält den Zentrum Knäppchen fir op zousätzlech Optiounen ze kréien.",
   "nextButtonNowPlayingTutorialText": "Dréckt op an hält dëse Knäppchen fir de Song weiderzeféieren",
   "previousButtonNowPlayingTutorialText": "Dréckt an hält dëse Knäppchen fir d'Lidd ze widderhuelen",
-  "deviceControlSearchTutorialText": "Réckelt Ären Daum liicht ronderëm de Klickrad fir en Alfabet ze markéieren",
-  "centerButtonSearchTutorialText": "Dréckt op den Zentrum Knäppchen fir den Highlighted Alphabet ze wielen",
-  "nextButtonSearchTutorialText": "Dréckt dëse Knäppchen fir e Raum ze addéieren",
-  "previousButtonSearchTutorialText": "Dréckt dëse Knäppchen fir de leschte Charakter ze läschen",
-  "menuButtonSearchTutorialText": "Press dëse Knäppchen fir d'Tastatur zoumaachen an interagéieren mat de Sichresultater",
+  "clickWheelInputTextBarTutorialText": "Réckelt Ären Daum liicht ronderëm de Klickrad fir en Alfabet ze markéieren",
+  "centerButtonInputTextBarScreenTutorialText": "Dréckt op den Zentrum Knäppchen fir den Highlighted Alphabet ze wielen",
+  "nextButtonInputTextBarTutorialText": "Dréckt dëse Knäppchen fir e Raum ze addéieren",
+  "previousButtonInputTextBarTutorialText": "Dréckt dëse Knäppchen fir de leschte Charakter ze läschen",
+  "menuButtonInputTextBarTutorialText": "Press dëse Knäppchen fir d'Tastatur zoumaachen an interagéieren mat de Sichresultater",
   "allSongs": "All Lidder"
 }

@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pindota an butones han Sentro basi magbisikleta pinaagi hin pagbiling hin bar, pag-utod nga bar ngan pag-uwang. Pindota ngan kapti an buton han Sentro para maka-access hin kadugangan nga mga kapilian.",
   "nextButtonNowPlayingTutorialText": "Pindota ngan kapti ini nga buton para mag-una pag-abante an kanta",
   "previousButtonNowPlayingTutorialText": "Pindota ngan kapti ini nga buton para mabalik an kanta",
-  "deviceControlSearchTutorialText": "Ibalhin an imo tudlo ha tiil hin magaan ha palibot han Pag-klik nga Ligid basi maipakita an usa nga alpabeto",
-  "centerButtonSearchTutorialText": "Pindota an sentro nga buton basi makapili han ginpabug-atan nga alpabeto",
-  "nextButtonSearchTutorialText": "Pindota ini nga buton para makadugang hin espasyo",
-  "previousButtonSearchTutorialText": "Pindota ini nga buton para mabura an urhi nga karakter",
-  "menuButtonSearchTutorialText": "Pindota ini nga buton para masara an keyboard ngan makig-upod ha mga resulta han pagbiling",
+  "clickWheelInputTextBarTutorialText": "Ibalhin an imo tudlo ha tiil hin magaan ha palibot han Pag-klik nga Ligid basi maipakita an usa nga alpabeto",
+  "centerButtonInputTextBarScreenTutorialText": "Pindota an sentro nga buton basi makapili han ginpabug-atan nga alpabeto",
+  "nextButtonInputTextBarTutorialText": "Pindota ini nga buton para makadugang hin espasyo",
+  "previousButtonInputTextBarTutorialText": "Pindota ini nga buton para mabura an urhi nga karakter",
+  "menuButtonInputTextBarTutorialText": "Pindota ini nga buton para masara an keyboard ngan makig-upod ha mga resulta han pagbiling",
   "allSongs": "Tanan nga mga Kanta ."
 }

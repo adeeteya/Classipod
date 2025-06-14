@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Bişkojka navendê bitikîne ku bi riya baranê vegerin, barika scrubber û şilika shuffle. Bişkojka navendê bigire û bigire da ku vebijarkên zêde bigihîje.",
   "nextButtonNowPlayingTutorialText": "Vê bişkojka bikişînin û bisekinin ku stranê zûtir bikin",
   "previousButtonNowPlayingTutorialText": "Vebijêrin û vê bişkojka bigire da ku stranê bişîne",
-  "deviceControlSearchTutorialText": "Tiliya xwe bi rengek sivik li dora pêlika klîk hilînin da ku alfabeyek ronî bikin",
-  "centerButtonSearchTutorialText": "Bişkojka navendê bitikîne da ku alfabeya balkêş hilbijêrin",
-  "nextButtonSearchTutorialText": "Vê bişkojka çap bikin da ku cîhek zêde bikin",
-  "previousButtonSearchTutorialText": "Vê bişkojka çap bikin da ku karaktera paşîn jêbirin",
-  "menuButtonSearchTutorialText": "Vê bişkojka bitikînin da ku klavyeyê bigire û bi encamên lêgerînê re têkilî daynin",
+  "clickWheelInputTextBarTutorialText": "Tiliya xwe bi rengek sivik li dora pêlika klîk hilînin da ku alfabeyek ronî bikin",
+  "centerButtonInputTextBarScreenTutorialText": "Bişkojka navendê bitikîne da ku alfabeya balkêş hilbijêrin",
+  "nextButtonInputTextBarTutorialText": "Vê bişkojka çap bikin da ku cîhek zêde bikin",
+  "previousButtonInputTextBarTutorialText": "Vê bişkojka çap bikin da ku karaktera paşîn jêbirin",
+  "menuButtonInputTextBarTutorialText": "Vê bişkojka bitikînin da ku klavyeyê bigire û bi encamên lêgerînê re têkilî daynin",
   "allSongs": "Hemû stran"
 }

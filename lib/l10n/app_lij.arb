@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Premme o botton do Çentro pe çiclâ pe mezo da barra, unna barra de scrubber e de cursô de sfummatua. Premme e tegnî o botton do Çentro pe açede à de opçioin in ciù.",
   "nextButtonNowPlayingTutorialText": "Premme e tegnî sto botton pe inversâ a canson",
   "previousButtonNowPlayingTutorialText": "Premme e tegnî sto botton pe reverze a canson",
-  "deviceControlSearchTutorialText": "Mesciâ o polegâ de lengê in gio a-a reua de clic pe mette in luxe un alfabeto",
-  "centerButtonSearchTutorialText": "Premme o botton çentrale pe seleçionâ l’alfabeto evidençiou",
-  "nextButtonSearchTutorialText": "Premme sto botton pe azzonze un spaçio",
-  "previousButtonSearchTutorialText": "Premme sto botton pe cancellâ l'urtimo carattere",
-  "menuButtonSearchTutorialText": "Premme sto botton pe serrâ o tastierino e interagî co-i resultati de reçerca",
+  "clickWheelInputTextBarTutorialText": "Mesciâ o polegâ de lengê in gio a-a reua de clic pe mette in luxe un alfabeto",
+  "centerButtonInputTextBarScreenTutorialText": "Premme o botton çentrale pe seleçionâ l’alfabeto evidençiou",
+  "nextButtonInputTextBarTutorialText": "Premme sto botton pe azzonze un spaçio",
+  "previousButtonInputTextBarTutorialText": "Premme sto botton pe cancellâ l'urtimo carattere",
+  "menuButtonInputTextBarTutorialText": "Premme sto botton pe serrâ o tastierino e interagî co-i resultati de reçerca",
   "allSongs": "Tutte e cansoin"
 }

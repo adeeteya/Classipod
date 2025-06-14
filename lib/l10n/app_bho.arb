@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "सीक बार, स्क्रबर बार आ शफल स्लाइडर के माध्यम से साइकिल चलावे खातिर सेंटर बटन दबाईं। अतिरिक्त विकल्प तक पहुंचे खातिर सेंटर बटन के दबा के रखीं।",
   "nextButtonNowPlayingTutorialText": "गाना के फास्ट फॉरवर्ड करे खातिर एह बटन के दबा के रखीं",
   "previousButtonNowPlayingTutorialText": "गीत के रिवाइंड करे खातिर एह बटन के दबा के रखीं",
-  "deviceControlSearchTutorialText": "एगो वर्णमाला के हाइलाइट करे खातिर क्लिक व्हील के चारों ओर हल्का से आपन अंगूठा ले जाईं",
-  "centerButtonSearchTutorialText": "हाइलाइट कइल वर्णमाला चुने खातिर सेंटर बटन दबाईं",
-  "nextButtonSearchTutorialText": "एह बटन के दबा के एगो स्पेस जोड़ल जाला .",
-  "previousButtonSearchTutorialText": "अंतिम वर्ण के हटावे खातिर एह बटन के दबाईं",
-  "menuButtonSearchTutorialText": "कीबोर्ड बंद करे खातिर एह बटन के दबाईं आ खोज परिणाम के साथे बातचीत करीं",
+  "clickWheelInputTextBarTutorialText": "एगो वर्णमाला के हाइलाइट करे खातिर क्लिक व्हील के चारों ओर हल्का से आपन अंगूठा ले जाईं",
+  "centerButtonInputTextBarScreenTutorialText": "हाइलाइट कइल वर्णमाला चुने खातिर सेंटर बटन दबाईं",
+  "nextButtonInputTextBarTutorialText": "एह बटन के दबा के एगो स्पेस जोड़ल जाला .",
+  "previousButtonInputTextBarTutorialText": "अंतिम वर्ण के हटावे खातिर एह बटन के दबाईं",
+  "menuButtonInputTextBarTutorialText": "कीबोर्ड बंद करे खातिर एह बटन के दबाईं आ खोज परिणाम के साथे बातचीत करीं",
   "allSongs": "सब गीत 2019 के बा।"
 }

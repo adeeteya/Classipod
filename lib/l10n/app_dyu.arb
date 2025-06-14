@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "I ka Centre butɔn digi walisa ka se ka nɛgɛso ɲini, ka scrubber bar ani shuffle slider ɲini. I ka Centre butɔn digi ani k’a minɛ walisa ka se ka fɛɛn wɛrɛw sɔrɔ.",
   "nextButtonNowPlayingTutorialText": "Aw ye nin butɔn digi ani k’a minɛ walisa ka dɔnkili nin ɲɛfɛ .",
   "previousButtonNowPlayingTutorialText": "Aw ye nin butɔn digi ani k’a minɛ walisa ka dɔnkili nin bɔ tugun .",
-  "deviceControlSearchTutorialText": "Aw k’aw bolokunnaden yɛlɛma dɔɔni dɔɔni ka se ka yɔrɔ dɔ lamini walisa ka alfabɛti dɔ yira .",
-  "centerButtonSearchTutorialText": "I ka yɔrɔ cɛmancɛ butɔn digi walisa ka alfabɛti yiranin sugandi .",
-  "nextButtonSearchTutorialText": "I ka butɔn nin digi walisa ka yɔrɔ dɔ fara a kan .",
-  "previousButtonSearchTutorialText": "I ka nin butɔn digi walisa ka mɔgɔ laban jɔsi .",
-  "menuButtonSearchTutorialText": "I ka o butɔn digi walisa ka klaviye datugu ani ka jɛnɲɔgɔnya kɛ ni ɲinini jaabiw ye .",
+  "clickWheelInputTextBarTutorialText": "Aw k’aw bolokunnaden yɛlɛma dɔɔni dɔɔni ka se ka yɔrɔ dɔ lamini walisa ka alfabɛti dɔ yira .",
+  "centerButtonInputTextBarScreenTutorialText": "I ka yɔrɔ cɛmancɛ butɔn digi walisa ka alfabɛti yiranin sugandi .",
+  "nextButtonInputTextBarTutorialText": "I ka butɔn nin digi walisa ka yɔrɔ dɔ fara a kan .",
+  "previousButtonInputTextBarTutorialText": "I ka nin butɔn digi walisa ka mɔgɔ laban jɔsi .",
+  "menuButtonInputTextBarTutorialText": "I ka o butɔn digi walisa ka klaviye datugu ani ka jɛnɲɔgɔnya kɛ ni ɲinini jaabiw ye .",
   "allSongs": "Dɔnkiliw bɛɛ"
 }

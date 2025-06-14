@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tryck på mittknappen för att cykla genom sökstång, skrubberfält och skjutreglage. Tryck och håll i mittknappen för att komma åt ytterligare alternativ.",
   "nextButtonNowPlayingTutorialText": "Tryck och håll den här knappen för att snabbt framåt låten",
   "previousButtonNowPlayingTutorialText": "Tryck och håll den här knappen för att spola tillbaka låten",
-  "deviceControlSearchTutorialText": "Flytta tummen lätt runt klickhjulet för att markera ett alfabet",
-  "centerButtonSearchTutorialText": "Tryck på mittknappen för att välja det markerade alfabetet",
-  "nextButtonSearchTutorialText": "Tryck på den här knappen för att lägga till ett utrymme",
-  "previousButtonSearchTutorialText": "Tryck på den här knappen för att ta bort det sista tecknet",
-  "menuButtonSearchTutorialText": "Tryck på den här knappen för att stänga tangentbordet och interagera med sökresultaten",
+  "clickWheelInputTextBarTutorialText": "Flytta tummen lätt runt klickhjulet för att markera ett alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Tryck på mittknappen för att välja det markerade alfabetet",
+  "nextButtonInputTextBarTutorialText": "Tryck på den här knappen för att lägga till ett utrymme",
+  "previousButtonInputTextBarTutorialText": "Tryck på den här knappen för att ta bort det sista tecknet",
+  "menuButtonInputTextBarTutorialText": "Tryck på den här knappen för att stänga tangentbordet och interagera med sökresultaten",
   "allSongs": "Alla låtar"
 }

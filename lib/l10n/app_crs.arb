@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pez bouton Sant pour mont lo nivo bar, bar frotman ek glisman melanz. Pez e tenir bouton Sant pour ganny akse avek bann opsyon adisyonnel.",
   "nextButtonNowPlayingTutorialText": "Pez e tenir sa bouton pour zennen devan sanson",
   "previousButtonNowPlayingTutorialText": "Pez e tenir sa bouton pour rebobin sanson",
-  "deviceControlSearchTutorialText": "Bouz ou pous lezeman otour Larou Klik pour fer resorti en alfabet",
-  "centerButtonSearchTutorialText": "Pez bouton sant pour swazir sa alfabet ki'n ganny fer resorti",
-  "nextButtonSearchTutorialText": "Pez sa bouton pour azout en lespas",
-  "previousButtonSearchTutorialText": "Pez sa bouton pour efas dernyen karakter",
-  "menuButtonSearchTutorialText": "Pez sa bouton pour ferm klavye e enterakte avek rezilta resers",
+  "clickWheelInputTextBarTutorialText": "Bouz ou pous lezeman otour Larou Klik pour fer resorti en alfabet",
+  "centerButtonInputTextBarScreenTutorialText": "Pez bouton sant pour swazir sa alfabet ki'n ganny fer resorti",
+  "nextButtonInputTextBarTutorialText": "Pez sa bouton pour azout en lespas",
+  "previousButtonInputTextBarTutorialText": "Pez sa bouton pour efas dernyen karakter",
+  "menuButtonInputTextBarTutorialText": "Pez sa bouton pour ferm klavye e enterakte avek rezilta resers",
   "allSongs": "Tou bann Sanson"
 }

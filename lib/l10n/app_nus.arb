@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Kämni button Centre kä thärkäl kɛ rɛy bar in görkɛ, scrubber bar kɛnɛ shruffle slider. Käpdɛ raar kɛnɛ ɣöö ba Centre button te thi̱n kɛ ɣöö ba ca̱p mi̱ dɔ̱ŋ kulɛ jiek.",
   "nextButtonNowPlayingTutorialText": "Press kä käp button ɛmɛ bɛ dit ɛmɛ käp kɛ pɛ̈th .",
   "previousButtonNowPlayingTutorialText": "Käpdɛ kä käp button ɛmɛ kɛ ɣöö ba dit nyɔk kɛ loc thi̱n",
-  "deviceControlSearchTutorialText": "La̱tdɛ min ci̱ rɔ lɛp kä Cuk Wheel kɛ ɣöö biɛ nyoth ɛ la alpabet",
-  "centerButtonSearchTutorialText": "Kämni button in te däär thi̱n kɛ ɣöö biɛ kuany ɛn alpabet min ca lar",
-  "nextButtonSearchTutorialText": "La̱tdɛ button ɛmɛ kɛ ɣöö biɛ mat thi̱n.",
-  "previousButtonSearchTutorialText": "Gɔ̱ri button ɛmɛ kɛ ɣöö biɛ woc kä ram in jɔak",
-  "menuButtonSearchTutorialText": "Gɔ̱ri button ɛmɛ kɛ ɣöö biɛ kulɛ gäk kä biɛ ruac kɛ min ca jiek rɛy go̱rä",
+  "clickWheelInputTextBarTutorialText": "La̱tdɛ min ci̱ rɔ lɛp kä Cuk Wheel kɛ ɣöö biɛ nyoth ɛ la alpabet",
+  "centerButtonInputTextBarScreenTutorialText": "Kämni button in te däär thi̱n kɛ ɣöö biɛ kuany ɛn alpabet min ca lar",
+  "nextButtonInputTextBarTutorialText": "La̱tdɛ button ɛmɛ kɛ ɣöö biɛ mat thi̱n.",
+  "previousButtonInputTextBarTutorialText": "Gɔ̱ri button ɛmɛ kɛ ɣöö biɛ woc kä ram in jɔak",
+  "menuButtonInputTextBarTutorialText": "Gɔ̱ri button ɛmɛ kɛ ɣöö biɛ kulɛ gäk kä biɛ ruac kɛ min ca jiek rɛy go̱rä",
   "allSongs": "All Cuŋ"
 }

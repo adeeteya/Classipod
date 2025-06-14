@@ -2,11 +2,11 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/widgets/input_text_bar.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:classipod/features/music/search/provider/search_provider.dart';
-import 'package:classipod/features/music/search/widgets/search_bar.dart';
 import 'package:classipod/features/music/search/widgets/search_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
@@ -24,7 +24,7 @@ class SearchScreen extends ConsumerStatefulWidget {
 class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
   String _searchText = '';
   bool _isSearchBarActive = true;
-  final SearchBarController _searchBarController = SearchBarController();
+  final InputTextBarController _searchBarController = InputTextBarController();
 
   @override
   int get extraDisplayItems => 1;
@@ -43,7 +43,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(tutorialControllerProvider.notifier).playSearchTutorial();
+      ref.read(tutorialControllerProvider.notifier).playInputTextBarTutorial();
     });
   }
 
@@ -219,8 +219,8 @@ class _SearchScreenState extends ConsumerState<SearchScreen> with CustomScreen {
               bottom: 0,
               left: 0,
               right: 0,
-              child: SearchBar(
-                searchBarController: _searchBarController,
+              child: InputTextBar(
+                inputTextBarController: _searchBarController,
                 onSearchTextChanged: (value) {
                   setState(() {
                     _searchText = value;

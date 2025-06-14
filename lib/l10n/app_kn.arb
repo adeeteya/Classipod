@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ಸೀಕ್ ಬಾರ್, ಸ್ಕ್ರಬ್ಬರ್ ಬಾರ್ ಮತ್ತು ಶಫಲ್ ಸ್ಲೈಡರ್ ಮೂಲಕ ಸೈಕಲ್ ಮಾಡಲು ಸೆಂಟರ್ ಬಟನ್ ಒತ್ತಿರಿ. ಹೆಚ್ಚುವರಿ ಆಯ್ಕೆಗಳನ್ನು ಪ್ರವೇಶಿಸಲು ಸೆಂಟರ್ ಬಟನ್ ಒತ್ತಿ ಮತ್ತು ಹಿಡಿದುಕೊಳ್ಳಿ.",
   "nextButtonNowPlayingTutorialText": "ಹಾಡನ್ನು ವೇಗವಾಗಿ ಫಾರ್ವರ್ಡ್ ಮಾಡಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ ಮತ್ತು ಹಿಡಿದುಕೊಳ್ಳಿ",
   "previousButtonNowPlayingTutorialText": "ಹಾಡನ್ನು ರಿವೈಂಡ್ ಮಾಡಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ ಮತ್ತು ಹಿಡಿದುಕೊಳ್ಳಿ",
-  "deviceControlSearchTutorialText": "ವರ್ಣಮಾಲೆಯನ್ನು ಹೈಲೈಟ್ ಮಾಡಲು ನಿಮ್ಮ ಹೆಬ್ಬೆರಳನ್ನು ಕ್ಲಿಕ್ ಚಕ್ರದ ಸುತ್ತಲೂ ಲಘುವಾಗಿ ಸರಿಸಿ",
-  "centerButtonSearchTutorialText": "ಹೈಲೈಟ್ ಮಾಡಿದ ವರ್ಣಮಾಲೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಸೆಂಟರ್ ಬಟನ್ ಒತ್ತಿರಿ",
-  "nextButtonSearchTutorialText": "ಜಾಗವನ್ನು ಸೇರಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ",
-  "previousButtonSearchTutorialText": "ಕೊನೆಯ ಅಕ್ಷರವನ್ನು ಅಳಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ",
-  "menuButtonSearchTutorialText": "ಕೀಬೋರ್ಡ್ ಮುಚ್ಚಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ ಮತ್ತು ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಿ",
+  "clickWheelInputTextBarTutorialText": "ವರ್ಣಮಾಲೆಯನ್ನು ಹೈಲೈಟ್ ಮಾಡಲು ನಿಮ್ಮ ಹೆಬ್ಬೆರಳನ್ನು ಕ್ಲಿಕ್ ಚಕ್ರದ ಸುತ್ತಲೂ ಲಘುವಾಗಿ ಸರಿಸಿ",
+  "centerButtonInputTextBarScreenTutorialText": "ಹೈಲೈಟ್ ಮಾಡಿದ ವರ್ಣಮಾಲೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಲು ಸೆಂಟರ್ ಬಟನ್ ಒತ್ತಿರಿ",
+  "nextButtonInputTextBarTutorialText": "ಜಾಗವನ್ನು ಸೇರಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ",
+  "previousButtonInputTextBarTutorialText": "ಕೊನೆಯ ಅಕ್ಷರವನ್ನು ಅಳಿಸಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ",
+  "menuButtonInputTextBarTutorialText": "ಕೀಬೋರ್ಡ್ ಮುಚ್ಚಲು ಈ ಗುಂಡಿಯನ್ನು ಒತ್ತಿ ಮತ್ತು ಹುಡುಕಾಟ ಫಲಿತಾಂಶಗಳೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸಿ",
   "allSongs": "ಎಲ್ಲಾ ಹಾಡುಗಳು"
 }

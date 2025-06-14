@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Pindoten so buton na Sentro pian manbisikleta diad pananap na bar, panagkiskis tan panag-slip. Pindoten tan bembenan so buton na Sentro pian makagamor na kaaruman iran opsyon.",
   "nextButtonNowPlayingTutorialText": "Pindoten tan bembenan mo iyan buton pian naayunal so kansion .",
   "previousButtonNowPlayingTutorialText": "Pindoten tan bembenan mo iyan buton pian naala lamet so kansion .",
-  "deviceControlSearchTutorialText": "Igalaw mon magano so thumb mo ed kaliberliber na Pindoten ya Alahas pian ipabitar so alpabeto .",
-  "centerButtonSearchTutorialText": "I-press so sentro na buton pian napili so nipabitar ya albeta .",
-  "nextButtonSearchTutorialText": "Pindoten iyan buton pian makadagdag na espasyo .",
-  "previousButtonSearchTutorialText": "Pindoten iyan buton pian buralen so unor a karakter .",
-  "menuButtonSearchTutorialText": "Pindoten iyan buton pian nasara so keyboard tan makapideneng ed panag-anap so resulta .",
+  "clickWheelInputTextBarTutorialText": "Igalaw mon magano so thumb mo ed kaliberliber na Pindoten ya Alahas pian ipabitar so alpabeto .",
+  "centerButtonInputTextBarScreenTutorialText": "I-press so sentro na buton pian napili so nipabitar ya albeta .",
+  "nextButtonInputTextBarTutorialText": "Pindoten iyan buton pian makadagdag na espasyo .",
+  "previousButtonInputTextBarTutorialText": "Pindoten iyan buton pian buralen so unor a karakter .",
+  "menuButtonInputTextBarTutorialText": "Pindoten iyan buton pian nasara so keyboard tan makapideneng ed panag-anap so resulta .",
   "allSongs": "Amin a kansion"
 }

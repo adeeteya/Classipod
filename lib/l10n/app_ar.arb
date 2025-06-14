@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "اضغط على زر المركز للتنقل من خلال شريط Seek و Scrubber Bar و Shuffle Randider. اضغط مع الاستمرار على زر الوسط للوصول إلى خيارات إضافية.",
   "nextButtonNowPlayingTutorialText": "اضغط مع الاستمرار على هذا الزر لإعادة توجيه الأغنية بسرعة",
   "previousButtonNowPlayingTutorialText": "اضغط مع الاستمرار على هذا الزر لإرجاع الأغنية",
-  "deviceControlSearchTutorialText": "حرك إبهامك بخفة حول عجلة النقر لتسليط الضوء على الأبجدية",
-  "centerButtonSearchTutorialText": "اضغط على زر الوسط لتحديد الأبجدية المميزة",
-  "nextButtonSearchTutorialText": "اضغط على هذا الزر لإضافة مساحة",
-  "previousButtonSearchTutorialText": "اضغط على هذا الزر لحذف الحرف الأخير",
-  "menuButtonSearchTutorialText": "اضغط على هذا الزر لإغلاق لوحة المفاتيح والتفاعل مع نتائج البحث",
+  "clickWheelInputTextBarTutorialText": "حرك إبهامك بخفة حول عجلة النقر لتسليط الضوء على الأبجدية",
+  "centerButtonInputTextBarScreenTutorialText": "اضغط على زر الوسط لتحديد الأبجدية المميزة",
+  "nextButtonInputTextBarTutorialText": "اضغط على هذا الزر لإضافة مساحة",
+  "previousButtonInputTextBarTutorialText": "اضغط على هذا الزر لحذف الحرف الأخير",
+  "menuButtonInputTextBarTutorialText": "اضغط على هذا الزر لإغلاق لوحة المفاتيح والتفاعل مع نتائج البحث",
   "allSongs": "جميع الأغاني"
 }

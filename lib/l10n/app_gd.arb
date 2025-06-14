@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Brùth putan an ionaid gus rothaireachd tro shireadh bàr, bàr scuubber bàr agus sleamhnaiche shuffle. Brùth agus cùm putan an ionaid gus faighinn gu roghainnean a bharrachd.",
   "nextButtonNowPlayingTutorialText": "Brùth agus cùm am putan seo gus an t-òran a chuir air adhart gu luath air adhart",
   "previousButtonNowPlayingTutorialText": "Brùth agus cùm am putan seo gus an t-òran ath-shuidheachadh",
-  "deviceControlSearchTutorialText": "Gluais do òrdag timcheall air a 'chuibhle cliog gus a bhith a' soilleireachadh aibideil",
-  "centerButtonSearchTutorialText": "Brùth putan an Ionaid gus an aibideil a tha air an comharrachadh",
-  "nextButtonSearchTutorialText": "Brùth am putan seo gus àite a chuir ris",
-  "previousButtonSearchTutorialText": "Brùth am putan seo gus cuir às don charactar mu dheireadh",
-  "menuButtonSearchTutorialText": "Brùth am putan seo gus am meur-chlàr a dhùnadh agus eadar-obrachadh leis na toraidhean rannsachaidh",
+  "clickWheelInputTextBarTutorialText": "Gluais do òrdag timcheall air a 'chuibhle cliog gus a bhith a' soilleireachadh aibideil",
+  "centerButtonInputTextBarScreenTutorialText": "Brùth putan an Ionaid gus an aibideil a tha air an comharrachadh",
+  "nextButtonInputTextBarTutorialText": "Brùth am putan seo gus àite a chuir ris",
+  "previousButtonInputTextBarTutorialText": "Brùth am putan seo gus cuir às don charactar mu dheireadh",
+  "menuButtonInputTextBarTutorialText": "Brùth am putan seo gus am meur-chlàr a dhùnadh agus eadar-obrachadh leis na toraidhean rannsachaidh",
   "allSongs": "A h-uile òran"
 }

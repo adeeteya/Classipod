@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Эзләү өчен цикл өчен үзәк төймәсенә басыгыз, Скраббер бар һәм слайдерны алыштырагыз. Өстәмә вариантларга керү өчен үзәк төймәсен басыгыз һәм тотыгыз.",
   "nextButtonNowPlayingTutorialText": "Songырны тиз алга җибәрү өчен бу төймәгә басыгыз һәм тотыгыз",
   "previousButtonNowPlayingTutorialText": "Җырны кире кайтару өчен бу төймәгә басыгыз һәм тотыгыз",
-  "deviceControlSearchTutorialText": "Алфавитны яктырту өчен бармакны җиңел генә кулланыгыз",
-  "centerButtonSearchTutorialText": "Күрсәтелгән алфавитны сайлау өчен үзәк төймәсенә басыгыз",
-  "nextButtonSearchTutorialText": "Космос өстәү өчен бу төймәгә басыгыз",
-  "previousButtonSearchTutorialText": "Соңгы характерны бетерү өчен бу төймәгә басыгыз",
-  "menuButtonSearchTutorialText": "Клавиатура ябу һәм эзләү нәтиҗәләре белән аралашу өчен бу төймәгә басыгыз",
+  "clickWheelInputTextBarTutorialText": "Алфавитны яктырту өчен бармакны җиңел генә кулланыгыз",
+  "centerButtonInputTextBarScreenTutorialText": "Күрсәтелгән алфавитны сайлау өчен үзәк төймәсенә басыгыз",
+  "nextButtonInputTextBarTutorialText": "Космос өстәү өчен бу төймәгә басыгыз",
+  "previousButtonInputTextBarTutorialText": "Соңгы характерны бетерү өчен бу төймәгә басыгыз",
+  "menuButtonInputTextBarTutorialText": "Клавиатура ябу һәм эзләү нәтиҗәләре белән аралашу өчен бу төймәгә басыгыз",
   "allSongs": "Барлык җырлар"
 }

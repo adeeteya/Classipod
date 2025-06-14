@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "ଅନୁସନ୍ଧାନ ଦଣ୍ଡିକା, ସ୍କ୍ରବର୍ ବାର୍ ଏବଂ ଶଫର୍ ସ୍ଲାଇଡର୍ ମାଧ୍ୟମରେ ଚକ୍ରକୁ ଚକ୍ରକୁ ବ char ାନ୍ତୁ | ଅତିରିକ୍ତ ବିକଳ୍ପଗୁଡିକ ପ୍ରବେଶ କରିବାକୁ କେନ୍ଦ୍ର ବଟନ୍ ଦବାନ୍ତୁ ଏବଂ ଧରି ରଖନ୍ତୁ |",
   "nextButtonNowPlayingTutorialText": "ଗୀତକୁ ଶୀଘ୍ର ଆଗକୁ ବ to ିବାକୁ ଏବଂ ଧରି ରଖନ୍ତୁ |",
   "previousButtonNowPlayingTutorialText": "ଗୀତକୁ ପୁନ brand କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ ଏବଂ ଧରି ରଖନ୍ତୁ |",
-  "deviceControlSearchTutorialText": "ଏକ ବର୍ଣ୍ଣମାଳା ହାଇଲାଇଟ୍ କରିବା ପାଇଁ ଆପଣଙ୍କର ଆଙ୍ଗୁଠିକୁ ହାଲୁକା ଘୁଞ୍ଚାନ୍ତୁ |",
-  "centerButtonSearchTutorialText": "ହାଇଲାଇଟ୍ ହୋଇଥିବା ବର୍ଣ୍ଣମାଳା ବାଛିବା ପାଇଁ କେନ୍ଦ୍ର ବଟନ୍ ଦବାନ୍ତୁ |",
-  "nextButtonSearchTutorialText": "ଏକ ସ୍ଥାନ ଯୋଡିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |",
-  "previousButtonSearchTutorialText": "ଶେଷ ବର୍ଣ୍ଣ ବିଲୋପ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |",
-  "menuButtonSearchTutorialText": "କୀବୋର୍ଡ୍ ବନ୍ଦ କରିବାକୁ ଏବଂ ସନ୍ଧାନ ଫଳାଫଳ ସହିତ ଯୋଗାଯୋଗ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |",
+  "clickWheelInputTextBarTutorialText": "ଏକ ବର୍ଣ୍ଣମାଳା ହାଇଲାଇଟ୍ କରିବା ପାଇଁ ଆପଣଙ୍କର ଆଙ୍ଗୁଠିକୁ ହାଲୁକା ଘୁଞ୍ଚାନ୍ତୁ |",
+  "centerButtonInputTextBarScreenTutorialText": "ହାଇଲାଇଟ୍ ହୋଇଥିବା ବର୍ଣ୍ଣମାଳା ବାଛିବା ପାଇଁ କେନ୍ଦ୍ର ବଟନ୍ ଦବାନ୍ତୁ |",
+  "nextButtonInputTextBarTutorialText": "ଏକ ସ୍ଥାନ ଯୋଡିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |",
+  "previousButtonInputTextBarTutorialText": "ଶେଷ ବର୍ଣ୍ଣ ବିଲୋପ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |",
+  "menuButtonInputTextBarTutorialText": "କୀବୋର୍ଡ୍ ବନ୍ଦ କରିବାକୁ ଏବଂ ସନ୍ଧାନ ଫଳାଫଳ ସହିତ ଯୋଗାଯୋଗ କରିବାକୁ ଏହି ବଟନ୍ ଦବାନ୍ତୁ |",
   "allSongs": "ସମସ୍ତ ଗୀତ"
 }

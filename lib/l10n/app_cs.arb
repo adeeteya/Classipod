@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Stisknutím tlačítka středu procházejte vyhledáváním tyče, pračky a posuvníku shuffle. Stisknutím a podržením tlačítka Centra přistupujte k dalším možnostem.",
   "nextButtonNowPlayingTutorialText": "Stisknutím a podržením tohoto tlačítka rychle přesunujte skladbu",
   "previousButtonNowPlayingTutorialText": "Stisknutím a podržením tohoto tlačítka převinete píseň",
-  "deviceControlSearchTutorialText": "Přesuňte palec lehce kolem kliknutí a zvýrazněte abecedu",
-  "centerButtonSearchTutorialText": "Stisknutím tlačítka středu vyberte zvýrazněnou abecedu",
-  "nextButtonSearchTutorialText": "Stisknutím tohoto tlačítka přidejte prostor",
-  "previousButtonSearchTutorialText": "Stisknutím tohoto tlačítka odstraníte poslední znak",
-  "menuButtonSearchTutorialText": "Stisknutím tohoto tlačítka zavřete klávesnici a komunikujte s výsledky vyhledávání",
+  "clickWheelInputTextBarTutorialText": "Přesuňte palec lehce kolem kliknutí a zvýrazněte abecedu",
+  "centerButtonInputTextBarScreenTutorialText": "Stisknutím tlačítka středu vyberte zvýrazněnou abecedu",
+  "nextButtonInputTextBarTutorialText": "Stisknutím tohoto tlačítka přidejte prostor",
+  "previousButtonInputTextBarTutorialText": "Stisknutím tohoto tlačítka odstraníte poslední znak",
+  "menuButtonInputTextBarTutorialText": "Stisknutím tohoto tlačítka zavřete klávesnici a komunikujte s výsledky vyhledávání",
   "allSongs": "Všechny písně"
 }

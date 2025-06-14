@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tete’mi tombol Pusat untu’ a’jappa-jappa lalang ri barra’ a’boyaya, a’gosok-gosok siagang slider shuffle. Tete’ siagang pa’jagai tombol Pusat untu’ a’lampa mange ri tampa’-tampa’ tambahan.",
   "nextButtonNowPlayingTutorialText": "Tete’ siagang pa’jari anne tombol untu’ ampa’jari bajiki anjo lagua .",
   "previousButtonNowPlayingTutorialText": "Tete’ siagang pa’jari anne tombolka untu’ ampa’jari ammotere’ anjo lagua .",
-  "deviceControlSearchTutorialText": "Pa’jari jari-jarinu ringan ri ampi’na Roda Click untu’ ampa’nyatai abjad .",
-  "centerButtonSearchTutorialText": "Tete’mi tombol pusaka untu’ ampilei abjad nisoronga .",
-  "nextButtonSearchTutorialText": "Tete’mi anne tombolka untu’ a’jari tampa’.",
-  "previousButtonSearchTutorialText": "Tete’mi anne tombolka untu’ ampa’le’baki karakter kala’busanga .",
-  "menuButtonSearchTutorialText": "Tete’mi anne tombolka untu’ antongkoki anjo keyboard siagang a’gau’ baji’ siagang wassele’ pa’boyaang .",
+  "clickWheelInputTextBarTutorialText": "Pa’jari jari-jarinu ringan ri ampi’na Roda Click untu’ ampa’nyatai abjad .",
+  "centerButtonInputTextBarScreenTutorialText": "Tete’mi tombol pusaka untu’ ampilei abjad nisoronga .",
+  "nextButtonInputTextBarTutorialText": "Tete’mi anne tombolka untu’ a’jari tampa’.",
+  "previousButtonInputTextBarTutorialText": "Tete’mi anne tombolka untu’ ampa’le’baki karakter kala’busanga .",
+  "menuButtonInputTextBarTutorialText": "Tete’mi anne tombolka untu’ antongkoki anjo keyboard siagang a’gau’ baji’ siagang wassele’ pa’boyaang .",
   "allSongs": "Sesa"
 }

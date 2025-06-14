@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Appuyez sur le bouton central pour faire le tour de la barre de recherche, de la barre d'époudeur et du curseur de remaniement. Appuyez et maintenez le bouton central pour accéder aux options supplémentaires.",
   "nextButtonNowPlayingTutorialText": "Appuyez et maintenez ce bouton pour faire avancer rapidement la chanson",
   "previousButtonNowPlayingTutorialText": "Appuyez et maintenez ce bouton pour rembobiner la chanson",
-  "deviceControlSearchTutorialText": "Déplacez votre pouce légèrement autour de la roue cliquetis pour mettre en surbrillance un alphabet",
-  "centerButtonSearchTutorialText": "Appuyez sur le bouton central pour sélectionner l'alphabet en surbrillance",
-  "nextButtonSearchTutorialText": "Appuyez sur ce bouton pour ajouter un espace",
-  "previousButtonSearchTutorialText": "Appuyez sur ce bouton pour supprimer le dernier caractère",
-  "menuButtonSearchTutorialText": "Appuyez sur ce bouton pour fermer le clavier et interagir avec les résultats de recherche",
+  "clickWheelInputTextBarTutorialText": "Déplacez votre pouce légèrement autour de la roue cliquetis pour mettre en surbrillance un alphabet",
+  "centerButtonInputTextBarScreenTutorialText": "Appuyez sur le bouton central pour sélectionner l'alphabet en surbrillance",
+  "nextButtonInputTextBarTutorialText": "Appuyez sur ce bouton pour ajouter un espace",
+  "previousButtonInputTextBarTutorialText": "Appuyez sur ce bouton pour supprimer le dernier caractère",
+  "menuButtonInputTextBarTutorialText": "Appuyez sur ce bouton pour fermer le clavier et interagir avec les résultats de recherche",
   "allSongs": "Toutes les chansons"
 }

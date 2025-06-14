@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "دوگمەی ناوەڕاست داگرە بۆ ئەوەی لە ڕێگەی Seek Bar و Scrubber Bar و Shuffle Slider ەوە بڕۆن. دوگمەی ناوەڕاست داگرە و ڕایبگرە بۆ دەستگەیشتن بە بژاردەی زیادە.",
   "nextButtonNowPlayingTutorialText": "ئەم دوگمەیە داگرە و ڕایبگرە بۆ ئەوەی گۆرانییەکە بەخێرایی بکەیتە پێشەوە",
   "previousButtonNowPlayingTutorialText": "ئەم دوگمەیە داگرە و ڕایبگرە بۆ ئەوەی گۆرانییەکە بگەڕێنێتەوە",
-  "deviceControlSearchTutorialText": "پەنجەی گەورەت بە سووکیی بە دەوری ویلەکەی کلیکەکەدا بجوڵێنە بۆ ئەوەی ئەلفوبێیەک تیشک بخەیتە سەر",
-  "centerButtonSearchTutorialText": "دوگمەی ناوەڕاست داگرە بۆ هەڵبژاردنی ئەلفوبێی دیاریکراو",
-  "nextButtonSearchTutorialText": "بۆ زیادکردنی بۆشایی ئەم دوگمەیە داگرە",
-  "previousButtonSearchTutorialText": "بۆ سڕینەوەی دوا پیت ئەم دوگمەیە بکە",
-  "menuButtonSearchTutorialText": "ئەم دوگمەیە بکە بۆ داخستنی کیبۆردەکە و کارلێککردن لەگەڵ ئەنجامەکانی گەڕان",
+  "clickWheelInputTextBarTutorialText": "پەنجەی گەورەت بە سووکیی بە دەوری ویلەکەی کلیکەکەدا بجوڵێنە بۆ ئەوەی ئەلفوبێیەک تیشک بخەیتە سەر",
+  "centerButtonInputTextBarScreenTutorialText": "دوگمەی ناوەڕاست داگرە بۆ هەڵبژاردنی ئەلفوبێی دیاریکراو",
+  "nextButtonInputTextBarTutorialText": "بۆ زیادکردنی بۆشایی ئەم دوگمەیە داگرە",
+  "previousButtonInputTextBarTutorialText": "بۆ سڕینەوەی دوا پیت ئەم دوگمەیە بکە",
+  "menuButtonInputTextBarTutorialText": "ئەم دوگمەیە بکە بۆ داخستنی کیبۆردەکە و کارلێککردن لەگەڵ ئەنجامەکانی گەڕان",
   "allSongs": "هەموو گۆرانییەکان"
 }

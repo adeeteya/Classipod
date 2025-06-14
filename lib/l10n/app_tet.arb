@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Prense butaun Center hodi halo siklu liu husi barra buka, scrubber bar no shuffle slider. Prense no kaer metin butaun Center hodi asesu ba opsaun adisional.",
   "nextButtonNowPlayingTutorialText": "Prense no kaer butaun ne'e hodi fast forward ba knananuk .",
   "previousButtonNowPlayingTutorialText": "Prense no kaer butaun ne’e hodi rewind knananuk .",
-  "deviceControlSearchTutorialText": "Muda ita-nia liman-fuan boot ho kmaan iha Wheel nia sorin-sorin hodi destaka alfabetu ida .",
-  "centerButtonSearchTutorialText": "Tekan butaun sentru hodi hili alfabetu ne’ebé destakadu .",
-  "nextButtonSearchTutorialText": "Tekan butaun ne’e hodi aumenta espasu ida .",
-  "previousButtonSearchTutorialText": "Tekan butaun ne’e hodi apaga karakter ikus .",
-  "menuButtonSearchTutorialText": "Tekan butaun ne’e hodi taka keyboard no interasaun ho rezultadu peskiza .",
+  "clickWheelInputTextBarTutorialText": "Muda ita-nia liman-fuan boot ho kmaan iha Wheel nia sorin-sorin hodi destaka alfabetu ida .",
+  "centerButtonInputTextBarScreenTutorialText": "Tekan butaun sentru hodi hili alfabetu ne’ebé destakadu .",
+  "nextButtonInputTextBarTutorialText": "Tekan butaun ne’e hodi aumenta espasu ida .",
+  "previousButtonInputTextBarTutorialText": "Tekan butaun ne’e hodi apaga karakter ikus .",
+  "menuButtonInputTextBarTutorialText": "Tekan butaun ne’e hodi taka keyboard no interasaun ho rezultadu peskiza .",
   "allSongs": "Knananuk hotu"
 }

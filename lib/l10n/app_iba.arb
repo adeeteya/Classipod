@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Tekan butang Pusat kena ngena basikal nengah bar ngiga, bar scrubber enggau slider shuffle. Tekan lalu pegai butang Pusat ngambika ulih ngulihka pilih tambah.",
   "nextButtonNowPlayingTutorialText": "Tekan lalu pegai butang tu ngambika jampat ke mua lagu .",
   "previousButtonNowPlayingTutorialText": "Tekan lalu pegai butang tu kena rewind lagu .",
-  "deviceControlSearchTutorialText": "Mindahka jemari nuan enggau ringan ngelingi Wheel Klik ngambika ulih ngayanka urup .",
-  "centerButtonSearchTutorialText": "Tekan butang tengah kena milih urup ti dikemeratka .",
-  "nextButtonSearchTutorialText": "Tekan butang tu kena nambahka ruang .",
-  "previousButtonSearchTutorialText": "Tekan butang tu kena madamka watak kepenudi .",
-  "menuButtonSearchTutorialText": "Tekan butang tu kena nutup keyboard lalu beinteraksyen enggau asil ngiga .",
+  "clickWheelInputTextBarTutorialText": "Mindahka jemari nuan enggau ringan ngelingi Wheel Klik ngambika ulih ngayanka urup .",
+  "centerButtonInputTextBarScreenTutorialText": "Tekan butang tengah kena milih urup ti dikemeratka .",
+  "nextButtonInputTextBarTutorialText": "Tekan butang tu kena nambahka ruang .",
+  "previousButtonInputTextBarTutorialText": "Tekan butang tu kena madamka watak kepenudi .",
+  "menuButtonInputTextBarTutorialText": "Tekan butang tu kena nutup keyboard lalu beinteraksyen enggau asil ngiga .",
   "allSongs": "Semua Lagu"
 }

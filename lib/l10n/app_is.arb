@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Ýttu á miðjuhnappinn til að hjóla í gegnum LEEK Bar, Scrubber Bar og stokka rennibraut. Haltu inni miðjuhnappnum til að fá aðgang að viðbótarvalkostum.",
   "nextButtonNowPlayingTutorialText": "Haltu þessum hnapp til að halda laginu áfram",
   "previousButtonNowPlayingTutorialText": "Haltu þessum hnapp til að spóla til baka lagið",
-  "deviceControlSearchTutorialText": "Færðu þumalfingurinn létt um smellihjólið til að auðkenna stafrófið",
-  "centerButtonSearchTutorialText": "Ýttu á miðjuhnappinn til að velja auðkennda stafrófið",
-  "nextButtonSearchTutorialText": "Ýttu á þennan hnapp til að bæta við rými",
-  "previousButtonSearchTutorialText": "Ýttu á þennan hnapp til að eyða síðasta staf",
-  "menuButtonSearchTutorialText": "Ýttu á þennan hnapp til að loka lyklaborðinu og hafa samskipti við leitarniðurstöðurnar",
+  "clickWheelInputTextBarTutorialText": "Færðu þumalfingurinn létt um smellihjólið til að auðkenna stafrófið",
+  "centerButtonInputTextBarScreenTutorialText": "Ýttu á miðjuhnappinn til að velja auðkennda stafrófið",
+  "nextButtonInputTextBarTutorialText": "Ýttu á þennan hnapp til að bæta við rými",
+  "previousButtonInputTextBarTutorialText": "Ýttu á þennan hnapp til að eyða síðasta staf",
+  "menuButtonInputTextBarTutorialText": "Ýttu á þennan hnapp til að loka lyklaborðinu og hafa samskipti við leitarniðurstöðurnar",
   "allSongs": "Öll lög"
 }

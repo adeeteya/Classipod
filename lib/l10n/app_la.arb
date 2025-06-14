@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Torcular ad centrum puga pyga ad cycle per quaerite bar, scrubber talea et shuffle labor lapsus. Torcular et tenere centrum puga accedere additional optiones.",
   "nextButtonNowPlayingTutorialText": "Torcular et hunc felis ieiunium deinceps carmen",
   "previousButtonNowPlayingTutorialText": "Torcular et teneat conjunctionem rewind carmen",
-  "deviceControlSearchTutorialText": "Movere pollice leviter circa click rota ad highlight a alphabeto",
-  "centerButtonSearchTutorialText": "Torcular ad Centrum Puga pyga eligere in luce alphabet",
-  "nextButtonSearchTutorialText": "Torcular quod conjunctionem addere spatium",
-  "previousButtonSearchTutorialText": "Torcular quod conjunctionem delere ultimum mores",
-  "menuButtonSearchTutorialText": "Torcular quod conjunctionem claudere keyboard et penitus per search results",
+  "clickWheelInputTextBarTutorialText": "Movere pollice leviter circa click rota ad highlight a alphabeto",
+  "centerButtonInputTextBarScreenTutorialText": "Torcular ad Centrum Puga pyga eligere in luce alphabet",
+  "nextButtonInputTextBarTutorialText": "Torcular quod conjunctionem addere spatium",
+  "previousButtonInputTextBarTutorialText": "Torcular quod conjunctionem delere ultimum mores",
+  "menuButtonInputTextBarTutorialText": "Torcular quod conjunctionem claudere keyboard et penitus per search results",
   "allSongs": "Omnes carmina"
 }

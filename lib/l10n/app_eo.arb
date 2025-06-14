@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Premu la centran butonon por bicikli tra Seek Bar, Scrubber Bar kaj Shuffle Slider. Premu kaj tenu la centran butonon por aliri pliajn eblojn.",
   "nextButtonNowPlayingTutorialText": "Premu kaj tenu ĉi tiun butonon por antaŭenigi la kanton",
   "previousButtonNowPlayingTutorialText": "Premu kaj tenu ĉi tiun butonon por rebobini la kanton",
-  "deviceControlSearchTutorialText": "Movu vian dikfingron malpeze ĉirkaŭ la klakan radon por reliefigi alfabeton",
-  "centerButtonSearchTutorialText": "Premu la centran butonon por elekti la reliefigitan alfabeton",
-  "nextButtonSearchTutorialText": "Premu ĉi tiun butonon por aldoni spacon",
-  "previousButtonSearchTutorialText": "Premu ĉi tiun butonon por forigi la lastan karakteron",
-  "menuButtonSearchTutorialText": "Premu ĉi tiun butonon por fermi la klavaron kaj interagi kun la serĉrezultoj",
+  "clickWheelInputTextBarTutorialText": "Movu vian dikfingron malpeze ĉirkaŭ la klakan radon por reliefigi alfabeton",
+  "centerButtonInputTextBarScreenTutorialText": "Premu la centran butonon por elekti la reliefigitan alfabeton",
+  "nextButtonInputTextBarTutorialText": "Premu ĉi tiun butonon por aldoni spacon",
+  "previousButtonInputTextBarTutorialText": "Premu ĉi tiun butonon por forigi la lastan karakteron",
+  "menuButtonInputTextBarTutorialText": "Premu ĉi tiun butonon por fermi la klavaron kaj interagi kun la serĉrezultoj",
   "allSongs": "Ĉiuj kantoj"
 }

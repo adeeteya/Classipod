@@ -103,10 +103,10 @@
   "centerButtonNowPlayingTutorialText": "Սեղմեք կենտրոնի կոճակը `փխրուն բար, մացառի բար եւ խորամանկ սահող: Լրացուցիչ ընտրանքներ մուտք գործելու համար սեղմեք եւ պահեք կենտրոնի կոճակը:",
   "nextButtonNowPlayingTutorialText": "Սեղմեք եւ պահեք այս կոճակը `երգը արագ առաջ տանելու համար",
   "previousButtonNowPlayingTutorialText": "Սեղմեք եւ պահեք այս կոճակը `երգը վերափոխելու համար",
-  "deviceControlSearchTutorialText": "Այբուբենն ընդգծելու համար ձեր մատը թեթեւ տեղափոխեք կտտոցով",
-  "centerButtonSearchTutorialText": "Սեղմեք կենտրոնի կոճակը `ընդգծված այբուբենը ընտրելու համար",
-  "nextButtonSearchTutorialText": "Սեղմեք այս կոճակը `տարածք ավելացնելու համար",
-  "previousButtonSearchTutorialText": "Վերջին կերպարը ջնջելու համար սեղմեք այս կոճակը",
-  "menuButtonSearchTutorialText": "Սեղմեք այս կոճակը `ստեղնաշարը փակելու եւ որոնման արդյունքների հետ շփվելու համար",
+  "clickWheelInputTextBarTutorialText": "Այբուբենն ընդգծելու համար ձեր մատը թեթեւ տեղափոխեք կտտոցով",
+  "centerButtonInputTextBarScreenTutorialText": "Սեղմեք կենտրոնի կոճակը `ընդգծված այբուբենը ընտրելու համար",
+  "nextButtonInputTextBarTutorialText": "Սեղմեք այս կոճակը `տարածք ավելացնելու համար",
+  "previousButtonInputTextBarTutorialText": "Վերջին կերպարը ջնջելու համար սեղմեք այս կոճակը",
+  "menuButtonInputTextBarTutorialText": "Սեղմեք այս կոճակը `ստեղնաշարը փակելու եւ որոնման արդյունքների հետ շփվելու համար",
   "allSongs": "Բոլոր երգերը"
 }

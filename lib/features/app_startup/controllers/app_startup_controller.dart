@@ -7,6 +7,7 @@ import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/exclude_directory_model.dart';
 import 'package:classipod/hive/hive_registrar.g.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -38,6 +39,9 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
   Hive.registerAdapters();
   await Hive.openBox<MusicMetadata>(Constants.metadataBoxName);
   await Hive.openBox<PlaylistModel>(Constants.playlistBoxName);
+  await Hive.openBox<ExcludeDirectoryModel>(
+    Constants.excludedDirectoriesBoxName,
+  );
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux)) {
     JustAudioMediaKit.ensureInitialized();
     JustAudioMediaKit.title = 'ClassiPod';

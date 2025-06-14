@@ -33,6 +33,7 @@ enum _SettingsDisplayItems {
   immersiveMode,
   showAppTutorial,
   rescanMusicFiles,
+  excludeDirectories,
   resetSettings,
   donate;
 
@@ -70,6 +71,8 @@ enum _SettingsDisplayItems {
         return context.localization.rescanMusicFilesSettingTitle;
       case resetSettings:
         return context.localization.resetSettingsTitle;
+      case excludeDirectories:
+        return context.localization.excludeDirectoriesScreenTitle;
       case donate:
         return context.localization.donateSettingTitle;
     }
@@ -166,6 +169,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .rescanMusicFiles();
+        break;
+      case _SettingsDisplayItems.excludeDirectories:
+        context.goNamed(Routes.excludeDirectories.name);
         break;
       case _SettingsDisplayItems.resetSettings:
         await ref

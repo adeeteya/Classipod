@@ -1,10 +1,11 @@
 import 'dart:io';
 
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/artists/providers/artist_names_provider.dart';
+import 'package:classipod/features/music/genres/providers/genres_provider.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -46,15 +47,15 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
   }
 
   Future<void> initializeApp() async {
-    // Load the audio files metadata
-    final audioFilesMetadata = await ref.refresh(
-      audioFilesServiceProvider.future,
-    );
+    // Load the filtered audio files metadata
+    final filteredAudioFilesMetadata = await ref
+        .read(filteredAudioFilesProvider.future)
+        .then((value) => value.toList());
 
     // Set the audio source
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .setAudioSource(musicMetadataList: audioFilesMetadata);
+        .setAudioSource(musicMetadataList: filteredAudioFilesMetadata);
 
     // Set the initial loop mode
     await ref
@@ -66,6 +67,7 @@ class SplashControllerNotifier extends AutoDisposeAsyncNotifier<void> {
     ref.invalidate(artistNamesProvider);
     ref.invalidate(songsProvider);
     ref.invalidate(playlistsProvider);
+    ref.invalidate(genresProvider);
     ref.invalidate(tutorialControllerProvider);
 
     // Load the playlists

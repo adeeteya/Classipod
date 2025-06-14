@@ -1,6 +1,6 @@
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
@@ -88,7 +88,7 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
         Constants.metadataBoxName,
       );
       await metadataBox.putAt(newMetadata.originalSongIndex, newMetadata);
-      ref.invalidate(audioFilesServiceProvider);
+      ref.invalidate(filteredAudioFilesProvider);
       ref.invalidate(albumDetailsProvider);
       ref.invalidate(playlistsProvider);
     }

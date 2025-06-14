@@ -1,10 +1,10 @@
-import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final albumDetailsProvider = Provider<List<AlbumModel>>((ref) {
   final List<AlbumModel> albumDetails = [];
-  final metadataList = ref.read(audioFilesServiceProvider).requireValue;
+  final metadataList = ref.read(filteredAudioFilesProvider).requireValue;
 
   for (int i = 0; i < metadataList.length; i++) {
     final albumDetail = AlbumModel(

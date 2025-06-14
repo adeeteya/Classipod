@@ -426,5 +426,9 @@
   "renamePlaylist": "Rename Playlist",
   "@renamePlaylist": {
     "description": "The text of the rename playlist option"
-  }
+  },
+  "excludeDirectoriesScreenTitle": "Exclude Directories",
+    "@excludeDirectoriesScreenTitle": {
+        "description": "The title of the exclude directories screen"
+    }
 }

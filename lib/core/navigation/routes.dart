@@ -2,12 +2,10 @@ import 'package:classipod/core/constants/keys.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/page_not_found_screen.dart';
-import 'package:classipod/features/about/screen/about_screen.dart';
 import 'package:classipod/features/app_startup/screens/splash_screen.dart';
 import 'package:classipod/features/custom_screen_elements/custom_scroll_behavior.dart';
 import 'package:classipod/features/custom_screen_elements/options_modal_page.dart';
 import 'package:classipod/features/device/widgets/device_frame.dart';
-import 'package:classipod/features/language/language_selection_screen.dart';
 import 'package:classipod/features/menu/screens/main_menu_screen.dart';
 import 'package:classipod/features/menu/screens/music_menu_screen.dart';
 import 'package:classipod/features/menu/screens/split_screen_placeholder.dart';
@@ -32,6 +30,9 @@ import 'package:classipod/features/music/songs/screens/songs_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_more_options_modal.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/screens/about_screen.dart';
+import 'package:classipod/features/settings/screens/exclude_directories_screen.dart';
+import 'package:classipod/features/settings/screens/language_selection_screen.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -43,6 +44,7 @@ enum Routes {
   settings,
   about,
   language,
+  excludeDirectories,
   nowPlaying,
   nowPlayingMoreOptions,
   musicMenu,
@@ -84,6 +86,8 @@ enum Routes {
         return context.localization.aboutScreenTitle;
       case language:
         return context.localization.languageScreenTitle;
+      case excludeDirectories:
+        return context.localization.excludeDirectoriesScreenTitle;
       case nowPlaying:
         return context.localization.nowPlayingScreenTitle;
       case nowPlayingMoreOptions:
@@ -219,6 +223,23 @@ final routerProvider = Provider(
                         pageBuilder:
                             (context, state) => const CupertinoPage(
                               child: LanguageSelectionScreen(),
+                            ),
+                      ),
+                      GoRoute(
+                        path: Routes.excludeDirectories.name,
+                        name: Routes.excludeDirectories.name,
+                        parentNavigatorKey: rootNavigatorKey,
+                        onExit: (context, state) async {
+                          await ref
+                              .read(
+                                settingsPreferencesControllerProvider.notifier,
+                              )
+                              .rescanMusicFiles();
+                          return true;
+                        },
+                        pageBuilder:
+                            (context, state) => const CupertinoPage(
+                              child: ExcludeDirectoriesScreen(),
                             ),
                       ),
                     ],

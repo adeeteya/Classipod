@@ -1,6 +1,6 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -40,7 +40,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
         extra: AlbumModel(
           albumName: context.localization.allAlbums,
           albumArtistName: "",
-          albumSongs: ref.read(audioFilesServiceProvider).requireValue,
+          albumSongs: ref.read(filteredAudioFilesProvider).requireValue,
         ),
       );
     } else {

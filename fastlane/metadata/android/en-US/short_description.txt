@@ -1,1 +1,0 @@
-A local music player app designed to capture the essence of the iPod Classic.

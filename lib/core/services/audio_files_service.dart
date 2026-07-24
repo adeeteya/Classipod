@@ -41,7 +41,7 @@ class AudioFilesServiceNotifier
         // Check if the metadata box is empty
         if (metadataBox.isEmpty) {
           if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
-            final newDirectory = await FilePicker.platform.getDirectoryPath(
+            final newDirectory = await FilePicker.getDirectoryPath(
               dialogTitle: "Select Music Directory",
               lockParentWindow: true,
               initialDirectory: ref
@@ -62,7 +62,7 @@ class AudioFilesServiceNotifier
               return UnmodifiableListView([]);
             }
           } else if (Platform.isIOS) {
-            final pickedFiles = await FilePicker.platform.pickFiles(
+            final pickedFiles = await FilePicker.pickFiles(
               allowMultiple: true,
               dialogTitle: "Pick Song Files",
             );

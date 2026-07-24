@@ -17,7 +17,7 @@ import 'package:classipod/features/settings/models/settings_preferences_model.da
 import 'package:classipod/features/settings/models/volume_mode.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
 import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart' hide RepeatMode;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

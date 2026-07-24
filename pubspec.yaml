@@ -10,7 +10,7 @@ environment:
   flutter: 3.44.7
 
 dependencies:
-  audio_metadata_reader: ^1.4.2
+  audio_metadata_reader: ^1.6.0
   audio_service: ^0.18.18
   battery_plus: ^7.0.0
   cupertino_icons: ^1.0.8

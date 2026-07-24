@@ -29,7 +29,7 @@ dependencies:
   hive_ce: ^2.19.3
   hive_ce_flutter: ^2.3.4
   intl: any
-  just_audio: ^0.10.5
+  just_audio: ^0.10.6
   just_audio_background: ^0.0.1-beta.17
   just_audio_media_kit: ^2.1.0
   media_kit_libs_linux: ^1.2.1

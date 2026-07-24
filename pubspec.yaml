@@ -47,7 +47,7 @@ dependencies:
   url_launcher: ^6.3.2
   vibration: ^3.2.0
   vibration_web: ^1.6.8
-  volume_controller: ^3.4.0
+  volume_controller: ^3.6.0
 
 dev_dependencies:
   build_runner: ^2.15.2

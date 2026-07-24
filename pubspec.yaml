@@ -11,7 +11,7 @@ environment:
 
 dependencies:
   audio_metadata_reader: ^1.6.0
-  audio_service: ^0.18.18
+  audio_service: ^0.18.19
   battery_plus: ^7.0.0
   cupertino_icons: ^1.0.8
   device_preview_plus: ^2.5.3

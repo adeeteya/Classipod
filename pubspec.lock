@@ -342,10 +342,10 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: fe575d9ae2c0444341296d77f8187ee9942c13fa
+      resolved-ref: d2368e90148eccccbe4418030eb2ce0b1a88b23b
       url: "https://github.com/adeeteya/Disable-Battery-Optimizations.git"
     source: git
-    version: "1.1.1"
+    version: "2.0.0"
   fake_async:
     dependency: transitive
     description:

@@ -60,7 +60,6 @@ dev_dependencies:
 
 dependency_overrides:
   analyzer: ^8.4.0
-  intl: 0.20.2
 
 flutter:
   generate: true

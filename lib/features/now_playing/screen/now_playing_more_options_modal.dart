@@ -15,6 +15,7 @@ enum _NowPlayingMoreOptions {
   browseAlbum,
   browseArtist,
   editSong,
+  sleepTimer,
   cancel;
 
   String title(BuildContext context) {
@@ -27,6 +28,8 @@ enum _NowPlayingMoreOptions {
         return context.localization.browseArtist;
       case editSong:
         return context.localization.editSongOption;
+      case sleepTimer:
+        return context.localization.sleepTimerTitle;
       case cancel:
         return context.localization.cancelText;
     }
@@ -99,6 +102,9 @@ class _NowPlayingMoreOptionsModalState
         if (mounted) {
           context.pop();
         }
+        break;
+      case _NowPlayingMoreOptions.sleepTimer:
+        await context.pushNamed(Routes.sleepTimer.name);
         break;
       case _NowPlayingMoreOptions.cancel:
         context.pop();

@@ -1,4 +1,5 @@
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/utils/artist_name_utils.dart';
 
 class AlbumModel {
   final String albumName;
@@ -30,12 +31,22 @@ class AlbumModel {
   @override
   bool operator ==(Object other) {
     return other is AlbumModel &&
-        other.albumName == albumName &&
-        other.albumArtistName == albumArtistName;
+        other.albumName.trim().toLowerCase() ==
+            albumName.trim().toLowerCase() &&
+        _primaryArtist(other.albumArtistName) ==
+            _primaryArtist(albumArtistName);
   }
 
   @override
-  int get hashCode => Object.hash(albumName, albumArtistName);
+  int get hashCode => Object.hash(
+    albumName.trim().toLowerCase(),
+    _primaryArtist(albumArtistName),
+  );
+
+  static String _primaryArtist(String artistNames) {
+    final artists = splitArtistNames(artistNames);
+    return (artists.isEmpty ? artistNames : artists.first).trim().toLowerCase();
+  }
 
   bool isOnDevice() {
     return albumSongs.first.isOnDevice;

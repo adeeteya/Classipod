@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/utils/artist_name_utils.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
@@ -36,16 +37,8 @@ String? normalizeMetadataString(String? value) {
   return normalizedValue.isEmpty ? value : normalizedValue;
 }
 
-List<String> _splitArtistNames(String artist) {
-  if (artist.contains(',')) {
-    return artist.split(',').map((name) => name.trim()).toList();
-  } else if (artist.contains('/')) {
-    return artist.split('/').map((name) => name.trim()).toList();
-  } else if (artist.contains(';')) {
-    return artist.split(';').map((name) => name.trim()).toList();
-  }
-
-  return [artist];
+List<String>? _splitNullableArtistNames(String? artist) {
+  return artist == null ? null : splitArtistNames(artist);
 }
 
 class MusicMetadata extends HiveObject {
@@ -130,7 +123,7 @@ class MusicMetadata extends HiveObject {
   ) {
     final artist =
         normalizeMetadataString(audioMetadata.artist) ?? "Unknown Artist";
-    final List<String> trackArtistNames = _splitArtistNames(artist);
+    final List<String> trackArtistNames = splitArtistNames(artist);
 
     return MusicMetadata(
       trackName: normalizeMetadataString(audioMetadata.title) ?? "Unknown Song",
@@ -157,9 +150,9 @@ class MusicMetadata extends HiveObject {
 
   factory MusicMetadata.fromMap(Map<String, dynamic> map) => MusicMetadata(
     trackName: normalizeMetadataString(map['metadata']['trackName']),
-    trackArtistNames: normalizeMetadataString(
-      map['metadata']['trackArtistNames'],
-    )?.split('/'),
+    trackArtistNames: _splitNullableArtistNames(
+      normalizeMetadataString(map['metadata']['trackArtistNames']),
+    ),
     albumName: normalizeMetadataString(map['metadata']['albumName']),
     albumArtistName: normalizeMetadataString(
       map['metadata']['albumArtistName'],
@@ -302,6 +295,11 @@ class MusicMetadata extends HiveObject {
 
   String get getAlbumArtistName {
     return albumArtistName ?? "Unknown Album Artist";
+  }
+
+  String get getPrimaryAlbumArtistName {
+    final artistNames = splitArtistNames(getAlbumArtistName);
+    return artistNames.isEmpty ? "Unknown Album Artist" : artistNames.first;
   }
 
   int get getTrackNumber {

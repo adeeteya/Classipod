@@ -60,7 +60,7 @@ final List<MusicMetadata> onlineDemoAudioFilesMetaData = [
   ),
   MusicMetadata(
     trackName: "On & On",
-    trackArtistNames: ["Cartoon & Daniel Levi"],
+    trackArtistNames: ["Cartoon", "Daniel Levi"],
     albumName: "On & On",
     albumArtistName: "Cartoon & Daniel Levi",
     trackNumber: 2,

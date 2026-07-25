@@ -219,9 +219,9 @@ void main() {
       metadataList.first,
       MusicMetadata(
         trackName: "On & On",
-        trackArtistNames: ["Cartoon & Daniel Levi"],
+        trackArtistNames: ["Cartoon", "Daniel Levi"],
         albumName: "On & On",
-        albumArtistName: "Cartoon & Daniel Levi",
+        albumArtistName: "Cartoon",
         trackNumber: 2,
         albumLength: 2,
         discNumber: 1,

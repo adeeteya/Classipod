@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -136,7 +137,7 @@ class _DeviceColorOptionTile extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: isSelected
                           ? CupertinoColors.white
-                          : CupertinoColors.black,
+                          : context.appPrimaryTextColor,
                     ),
                     maxLines: 1,
                   ),

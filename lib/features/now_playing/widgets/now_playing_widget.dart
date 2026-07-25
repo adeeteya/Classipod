@@ -52,8 +52,8 @@ class NowPlayingWidget extends StatelessWidget {
                 MarqueeText(
                   nowPlayingDetails.currentMetadata?.getTrackArtistNames ??
                       context.localization.unknownArtist,
-                  style: const TextStyle(
-                    color: AppPalette.hintTextColor,
+                  style: context.appTextStyle.copyWith(
+                    color: context.appSecondaryTextColor,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
@@ -65,8 +65,8 @@ class NowPlayingWidget extends StatelessWidget {
                 MarqueeText(
                   nowPlayingDetails.currentMetadata?.albumName ??
                       context.localization.unknownAlbum,
-                  style: const TextStyle(
-                    color: AppPalette.hintTextColor,
+                  style: context.appTextStyle.copyWith(
+                    color: context.appSecondaryTextColor,
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),

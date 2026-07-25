@@ -111,7 +111,7 @@ void main() {
         year: 2015,
         genres: ["Electro House"],
         mimeType: "image/jpeg",
-        trackDuration: 212697,
+        trackDuration: 212688,
         bitrate: 128000,
         filePath: "${Directory.current.path}/test/test_files/mp3/Faded.mp3",
         thumbnailPath:
@@ -250,6 +250,7 @@ void main() {
         trackArtistNames: ["Deaf Kev"],
         albumName: "Invincible",
         albumArtistName: "Deaf Kev",
+        trackNumber: 1,
         year: 2015,
         genres: ["Glitch Hop"],
         trackDuration: 273084,

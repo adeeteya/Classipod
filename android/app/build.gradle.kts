@@ -19,15 +19,11 @@ try {
 android {
     namespace = "com.adeeteya.classipod"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973"
+    ndkVersion = "28.2.13676358"
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     defaultConfig {
@@ -37,6 +33,10 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
         ndk.abiFilters.addAll(arrayOf("armeabi-v7a", "arm64-v8a", "x86_64"))
+    }
+
+    buildFeatures {
+        resValues = true
     }
 
     signingConfigs {
@@ -73,6 +73,12 @@ android {
             applicationIdSuffix = ".dev"
             versionNameSuffix = "-dev"
         }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
     }
 }
 

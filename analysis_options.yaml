@@ -13,7 +13,7 @@ analyzer:
   exclude:
     - '**/*.g.dart'
   plugins:
-    - custom_lint
+    - riverpod_lint
 
 formatter:
   page_width: 80

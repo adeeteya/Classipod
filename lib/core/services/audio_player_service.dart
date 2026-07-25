@@ -39,6 +39,10 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
     }
   }
 
+  Future<void> stop() async {
+    await ref.read(audioPlayerProvider).stop();
+  }
+
   Future<void> toggleShuffleMode() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {

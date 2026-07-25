@@ -20,7 +20,7 @@ abstract interface class SleepTimerPlayback {
   Stream<bool> get playingStream;
   Stream<Duration> get positionStream;
   Stream<double> get speedStream;
-  Future<void> pause();
+  Future<void> stop();
 }
 
 final sleepTimerClockProvider = Provider<SleepTimerClock>((_) => DateTime.now);
@@ -32,7 +32,7 @@ final sleepTimerSchedulerProvider = Provider<SleepTimerScheduler>(
 final sleepTimerPlaybackProvider = Provider<SleepTimerPlayback>((ref) {
   return _AudioPlayerSleepTimerPlayback(
     player: ref.read(audioPlayerProvider),
-    pausePlayback: ref.read(audioPlayerServiceProvider.notifier).pause,
+    stopPlayback: ref.read(audioPlayerServiceProvider.notifier).stop,
   );
 });
 
@@ -189,7 +189,7 @@ class SleepTimerController extends Notifier<SleepTimerState> {
     if (generation != _generation || !state.isActive) {
       return;
     }
-    await _playback.pause();
+    await _playback.stop();
     if (generation == _generation) {
       _resetResources();
       state = const SleepTimerState.off();
@@ -222,11 +222,11 @@ class SleepTimerController extends Notifier<SleepTimerState> {
 
 class _AudioPlayerSleepTimerPlayback implements SleepTimerPlayback {
   final AudioPlayer player;
-  final Future<void> Function() pausePlayback;
+  final Future<void> Function() stopPlayback;
 
   const _AudioPlayerSleepTimerPlayback({
     required this.player,
-    required this.pausePlayback,
+    required this.stopPlayback,
   });
 
   @override
@@ -260,5 +260,5 @@ class _AudioPlayerSleepTimerPlayback implements SleepTimerPlayback {
   Stream<double> get speedStream => player.speedStream;
 
   @override
-  Future<void> pause() => pausePlayback();
+  Future<void> stop() => stopPlayback();
 }

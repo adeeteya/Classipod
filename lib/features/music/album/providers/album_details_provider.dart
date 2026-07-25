@@ -49,12 +49,43 @@ List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
     return a.albumName.compareTo(b.albumName);
   });
 
-  // Sort the songs in each album by track number
+  // Sort the songs in each album by disc number, then track number.
   for (final album in albumDetails) {
-    album.albumSongs.sort(
-      (a, b) => a.getTrackNumber.compareTo(b.getTrackNumber),
-    );
+    album.albumSongs.sort(_compareAlbumTracks);
   }
 
   return albumDetails;
+}
+
+int _compareAlbumTracks(MusicMetadata a, MusicMetadata b) {
+  final aDiscNumber = (a.discNumber ?? 0) > 0 ? a.discNumber! : 1;
+  final bDiscNumber = (b.discNumber ?? 0) > 0 ? b.discNumber! : 1;
+  final discComparison = aDiscNumber.compareTo(bDiscNumber);
+  if (discComparison != 0) {
+    return discComparison;
+  }
+
+  final aTrackNumber = (a.trackNumber ?? 0) > 0 ? a.trackNumber : null;
+  final bTrackNumber = (b.trackNumber ?? 0) > 0 ? b.trackNumber : null;
+  if (aTrackNumber == null && bTrackNumber != null) {
+    return 1;
+  }
+  if (aTrackNumber != null && bTrackNumber == null) {
+    return -1;
+  }
+  if (aTrackNumber != null && bTrackNumber != null) {
+    final trackComparison = aTrackNumber.compareTo(bTrackNumber);
+    if (trackComparison != 0) {
+      return trackComparison;
+    }
+  }
+
+  final songNameComparison = a.getTrackName.toLowerCase().compareTo(
+    b.getTrackName.toLowerCase(),
+  );
+  if (songNameComparison != 0) {
+    return songNameComparison;
+  }
+
+  return a.originalSongIndex.compareTo(b.originalSongIndex);
 }

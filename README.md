@@ -44,7 +44,7 @@ If you like what you see, please ⭐ the repo.
 
 ## ✨ Features
 
-- 🗃️ Ability to play multiple audio formats:- .mp3, .wav, .ogg, .flac, .m4a and .aac
+- 🗃️ Plays MP3, WAV, FLAC, M4A, MP4, Ogg, Opus, AAC, AIFF, APE, and MOV audio
 - 🔎 Choose a Custom Folder To Scan Music From (By Default it is the Device Music Folder in the root folder
   of the device)
 - 🎨 Multiple Ipod Classic Device Colors (Silver and Black)
@@ -76,12 +76,31 @@ If you like what you see, please ⭐ the repo.
 - 📃 Ability to Create and Store Custom User Created Playlists
 - 📖 App Usage Tutorial
 - ⭐ Song Rating Feature
+- 📝 Displays embedded lyrics in Now Playing
+
+### 🎵 Supported audio formats
+
+ClassiPod imports a format when its metadata can be read and at least one
+configured playback backend can play it. Playback availability therefore varies
+by platform:
+
+| Format         | Extensions               | Expected playback                               |
+|----------------|--------------------------|-------------------------------------------------|
+| MP3            | `.mp3`                   | Android, iOS, Windows, Linux, web               |
+| PCM WAV        | `.wav`                   | Android, iOS, Windows, Linux, web               |
+| FLAC           | `.flac`                  | Android, iOS, Windows, Linux, major browsers    |
+| AAC in MP4     | `.m4a`, `.mp4`           | Android, iOS, Windows, Linux, major browsers    |
+| Ogg Vorbis     | `.ogg`                   | Android, Windows, Linux, supporting browsers    |
+| Ogg Opus       | `.opus`                  | Android, Windows, Linux, supporting browsers    |
+| Raw ADTS AAC   | `.aac`                   | Android, iOS, Windows, Linux; browser-dependent |
+| AIFF / AIFF-C  | `.aif`, `.aiff`, `.aifc` | iOS, Windows, Linux                             |
+| Monkey's Audio | `.ape`                   | Windows, Linux                                  |
+| QuickTime      | `.mov`                   | iOS, Windows, Linux; browser-dependent          |
 
 ### 🔜 Upcoming Features
 
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
-- 📝 Lyrics Support
 
 ## 💻 Installation links
 

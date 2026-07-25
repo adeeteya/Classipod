@@ -6,6 +6,7 @@ import 'package:flutter/cupertino.dart';
 class DeviceColorStyle {
   final double noiseOpacity;
   final List<Color> frameGradientColors;
+  final Color? solidFrameColor;
   final Color controlBackgroundColor;
   final Color controlBorderColor;
   final List<Color> innerButtonGradientColors;
@@ -16,6 +17,7 @@ class DeviceColorStyle {
   const DeviceColorStyle({
     required this.noiseOpacity,
     required this.frameGradientColors,
+    this.solidFrameColor,
     required this.controlBackgroundColor,
     required this.controlBorderColor,
     required this.innerButtonGradientColors,
@@ -28,6 +30,7 @@ class DeviceColorStyle {
 enum DeviceColor {
   silver,
   black,
+  oledBlack,
   red,
   orange,
   yellow,
@@ -74,6 +77,8 @@ enum DeviceColor {
         return context.localization.silverDeviceColor;
       case black:
         return context.localization.blackDeviceColor;
+      case oledBlack:
+        return context.localization.oledBlackDeviceColor;
       case red:
         return context.localization.redDeviceColor;
       case orange:
@@ -123,6 +128,21 @@ enum DeviceColor {
             AppPalette.darkDeviceFrameGradientColor1,
             AppPalette.darkDeviceFrameGradientColor2,
           ],
+          controlBackgroundColor: AppPalette.darkDeviceControlBackgroundColor,
+          controlBorderColor: CupertinoColors.black,
+          innerButtonGradientColors: [
+            AppPalette.darkDeviceControlInnerButtonGradientColor1,
+            AppPalette.darkDeviceControlInnerButtonGradientColor2,
+          ],
+          buttonAccentColor: CupertinoColors.white,
+          buttonIconColor: CupertinoColors.white,
+          isDark: true,
+        );
+      case DeviceColor.oledBlack:
+        return const DeviceColorStyle(
+          noiseOpacity: 0,
+          frameGradientColors: [CupertinoColors.black, CupertinoColors.black],
+          solidFrameColor: CupertinoColors.black,
           controlBackgroundColor: AppPalette.darkDeviceControlBackgroundColor,
           controlBorderColor: CupertinoColors.black,
           innerButtonGradientColors: [

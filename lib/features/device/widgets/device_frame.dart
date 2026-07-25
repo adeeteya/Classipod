@@ -19,19 +19,25 @@ class DeviceFrame extends ConsumerWidget {
       settingsPreferencesControllerProvider.select((e) => e.deviceColor),
     );
     final deviceColorStyle = deviceColor.style;
+    final solidFrameColor = deviceColorStyle.solidFrameColor;
 
     return DecoratedBox(
       decoration: BoxDecoration(
-        image: DecorationImage(
-          image: const AssetImage(Assets.noiseImage),
-          fit: BoxFit.cover,
-          opacity: deviceColorStyle.noiseOpacity,
-        ),
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: deviceColorStyle.frameGradientColors,
-        ),
+        color: solidFrameColor,
+        image: solidFrameColor == null
+            ? DecorationImage(
+                image: const AssetImage(Assets.noiseImage),
+                fit: BoxFit.cover,
+                opacity: deviceColorStyle.noiseOpacity,
+              )
+            : null,
+        gradient: solidFrameColor == null
+            ? LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: deviceColorStyle.frameGradientColors,
+              )
+            : null,
       ),
       child: Stack(
         fit: StackFit.expand,

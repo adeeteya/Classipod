@@ -81,6 +81,7 @@ class _DeviceColorOptionTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final deviceColorStyle = deviceColor.style;
+    final solidFrameColor = deviceColorStyle.solidFrameColor;
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
@@ -116,11 +117,14 @@ class _DeviceColorOptionTile extends StatelessWidget {
                 DecoratedBox(
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: deviceColorStyle.frameGradientColors,
-                    ),
+                    color: solidFrameColor,
+                    gradient: solidFrameColor == null
+                        ? LinearGradient(
+                            begin: Alignment.topCenter,
+                            end: Alignment.bottomCenter,
+                            colors: deviceColorStyle.frameGradientColors,
+                          )
+                        : null,
                     border: Border.all(
                       color: deviceColorStyle.controlBorderColor,
                       width: 1.5,

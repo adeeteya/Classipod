@@ -263,6 +263,10 @@
   "@blackDeviceColor": {
     "description": "The name of the black device color"
   },
+  "oledBlackDeviceColor": "OLED Black",
+  "@oledBlackDeviceColor": {
+    "description": "The name of the OLED black device color"
+  },
   "lightThemeTitle": "Light",
   "@lightThemeTitle": {
     "description": "Label for the light theme option"

@@ -8,6 +8,8 @@ extension BuildContextExtensions on BuildContext {
     return MediaQuery.sizeOf(this);
   }
 
+  TextStyle get appTextStyle => CupertinoTheme.of(this).textTheme.textStyle;
+
   GoRouter get router {
     return GoRouter.of(this);
   }

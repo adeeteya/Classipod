@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/constants.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:flutter/cupertino.dart';
 
 class InputTextBarController {
@@ -139,10 +140,9 @@ class _InputTextBarState extends State<InputTextBar> {
                 Expanded(
                   child: CupertinoTextField(
                     padding: const EdgeInsets.all(4),
-                    cursorColor: CupertinoColors.black,
+                    cursorColor: context.appTextStyle.color,
                     controller: _inputTextController,
-                    style: const TextStyle(
-                      color: CupertinoColors.black,
+                    style: context.appTextStyle.copyWith(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),

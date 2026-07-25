@@ -26,7 +26,6 @@ void main() {
 
   runApp(
     ProviderScope(
-      observers: [LoggingObserver()],
       child: DevicePreview(
         tools: const [...DevicePreview.defaultTools, DebuggerToolsSection()],
         builder: (context) =>
@@ -71,23 +70,6 @@ class DevelopmentClassipodApp extends ConsumerWidget {
       routerConfig: router,
       theme: appTheme.toCupertinoTheme(),
     );
-  }
-}
-
-final class LoggingObserver extends ProviderObserver {
-  @override
-  void didUpdateProvider(
-    ProviderObserverContext context,
-    Object? previousValue,
-    Object? newValue,
-  ) {
-    debugPrint('''
-{
-  "provider": "${context.provider.name ?? context.provider.runtimeType}",
-  "previousValue": "$previousValue",
-  "newValue": "$newValue"
-}
-''');
   }
 }
 

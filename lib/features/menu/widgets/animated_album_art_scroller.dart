@@ -29,29 +29,35 @@ class _AnimatedAlbumArtScrollerState
   bool _isEmptyState = false;
 
   void _getRandomAlbumArt() {
-    final albumDetails = ref
-        .read(albumDetailsProvider)
-        .where((album) => album.albumArtPath != null)
-        .toList();
+    final albumDetails = ref.read(albumDetailsProvider);
     if (albumDetails.isEmpty) {
       setState(() {
         _isEmptyState = true;
       });
       return;
     }
-    final nonEmptyAlbums = albumDetails.where(
-      (album) => album.albumArtPath != null,
-    );
-    if (nonEmptyAlbums.isNotEmpty) {
-      final randomAlbum = nonEmptyAlbums.elementAt(
-        Random().nextInt(nonEmptyAlbums.length),
-      );
-      setState(() {
+
+    final albumsWithArtwork = albumDetails.where((album) {
+      final albumArtPath = album.albumArtPath;
+      if (albumArtPath == null) {
+        return false;
+      }
+      return !album.isOnDevice() || File(albumArtPath).existsSync();
+    }).toList();
+
+    setState(() {
+      _isEmptyState = false;
+      if (albumsWithArtwork.isEmpty) {
+        _albumArtImage = const AssetImage(Assets.defaultAlbumCoverImage);
+      } else {
+        final randomAlbum = albumsWithArtwork.elementAt(
+          Random().nextInt(albumsWithArtwork.length),
+        );
         _albumArtImage = randomAlbum.isOnDevice()
             ? FileImage(File(randomAlbum.albumArtPath!))
             : NetworkImage(randomAlbum.albumArtPath!);
-      });
-    }
+      }
+    });
   }
 
   void _setRandomAnimationDirection() {
@@ -123,7 +129,13 @@ class _AnimatedAlbumArtScrollerState
         animation: _alignmentAnimation,
         child: AnimatedSwitcher(
           duration: const Duration(seconds: 1),
-          child: Image(key: ValueKey(_albumArtImage), image: _albumArtImage),
+          child: Image(
+            key: ValueKey(_albumArtImage),
+            image: _albumArtImage,
+            errorBuilder: (context, error, stackTrace) {
+              return Image.asset(Assets.defaultAlbumCoverImage);
+            },
+          ),
         ),
       ),
     );

@@ -257,8 +257,6 @@ void main() {
         bitrate: 176400,
         filePath:
             "${Directory.current.path}/test/test_files/wav/Invincible.wav",
-        thumbnailPath:
-            "${Directory.current.path}/test/test_files/ClassiPod/thumbnails/InvinciblebyDeafKev.jpg",
       ),
     );
   });

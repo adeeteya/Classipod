@@ -128,13 +128,13 @@ class MetadataReaderRepository {
         if (isSupportedAudioFormat(path)) {
           audioMetadata = _readAudioMetadata(path);
 
-          final String thumbnailPath = getThumbnailPath(
-            albumName: audioMetadata.album,
-            artistName: audioMetadata.artist,
-            filePath: path,
-          );
-
+          String? thumbnailPath;
           if (audioMetadata.pictures.isNotEmpty) {
+            thumbnailPath = getThumbnailPath(
+              albumName: audioMetadata.album,
+              artistName: audioMetadata.artist,
+              filePath: path,
+            );
             File(
               thumbnailPath,
             ).writeAsBytesSync(audioMetadata.pictures[0].bytes);
@@ -168,13 +168,13 @@ class MetadataReaderRepository {
         if (isSupportedAudioFormat(path)) {
           audioMetadata = _readAudioMetadata(path);
 
-          final String thumbnailPath = getThumbnailPath(
-            albumName: audioMetadata.album,
-            artistName: audioMetadata.artist,
-            filePath: path,
-          );
-
+          String? thumbnailPath;
           if (audioMetadata.pictures.isNotEmpty) {
+            thumbnailPath = getThumbnailPath(
+              albumName: audioMetadata.album,
+              artistName: audioMetadata.artist,
+              filePath: path,
+            );
             File(
               thumbnailPath,
             ).writeAsBytesSync(audioMetadata.pictures[0].bytes);

@@ -10,6 +10,7 @@ import 'package:classipod/features/menu/widgets/now_playing_preview_widget.dart'
 import 'package:classipod/features/menu/widgets/settings_preview_widget.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/sleep_timer/widgets/sleep_timer_preview_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -102,6 +103,8 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
         splitScreenWidget = const SettingsPreviewWidget();
       } else if (splitScreenType == SplitScreenType.nowPlaying) {
         splitScreenWidget = const NowPlayingPreviewWidget();
+      } else if (splitScreenType == SplitScreenType.sleepTimer) {
+        splitScreenWidget = const SleepTimerPreviewWidget();
       } else if (splitScreenType == SplitScreenType.language) {
         splitScreenWidget = const LanguagePreviewWidget();
       } else if (splitScreenType == SplitScreenType.appTheme) {

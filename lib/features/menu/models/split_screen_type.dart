@@ -3,6 +3,7 @@ enum SplitScreenType {
   settings,
   shuffle,
   nowPlaying,
+  sleepTimer,
   language,
   appTheme,
   deviceColor,

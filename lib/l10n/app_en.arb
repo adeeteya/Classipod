@@ -35,6 +35,27 @@
   "@nowPlayingScreenTitle": {
     "description": "The title of the now playing screen"
   },
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerTitle": {
+    "description": "The title of the sleep timer feature"
+  },
+  "sleepTimerMinutes": "{minutes} Minutes",
+  "@sleepTimerMinutes": {
+    "description": "A sleep timer duration in minutes",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "End of Current Song",
+  "@sleepTimerEndOfCurrentSong": {
+    "description": "The option to pause after the current song finishes"
+  },
+  "sleepTimerRemainingLabel": "Remaining",
+  "@sleepTimerRemainingLabel": {
+    "description": "A label below the remaining sleep timer duration"
+  },
   "shuffleSongsMenuTitle": "Shuffle Songs",
   "@shuffleSongsMenuTitle": {
     "description": "The title of shuffle songs feature"

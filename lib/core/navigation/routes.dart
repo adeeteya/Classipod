@@ -35,6 +35,7 @@ import 'package:classipod/features/settings/screens/device_color_selection_scree
 import 'package:classipod/features/settings/screens/exclude_directories_screen.dart';
 import 'package:classipod/features/settings/screens/language_selection_screen.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
+import 'package:classipod/features/sleep_timer/screens/sleep_timer_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -49,6 +50,7 @@ enum Routes {
   excludeDirectories,
   nowPlaying,
   nowPlayingMoreOptions,
+  sleepTimer,
   musicMenu,
   coverFlow,
   coverFlowSelection,
@@ -96,6 +98,8 @@ enum Routes {
         return context.localization.nowPlayingScreenTitle;
       case nowPlayingMoreOptions:
         return context.localization.nowPlayingScreenTitle;
+      case sleepTimer:
+        return context.localization.sleepTimerTitle;
       case musicMenu:
         return context.localization.musicMenuScreenTitle;
       case coverFlow:
@@ -283,6 +287,17 @@ final routerProvider = Provider(
                           title: Routes.nowPlayingMoreOptions.title(context),
                           builder: (context) =>
                               const NowPlayingMoreOptionsModal(),
+                        ),
+                      ),
+                      GoRoute(
+                        path: Routes.sleepTimer.name,
+                        name: Routes.sleepTimer.name,
+                        parentNavigatorKey: rootNavigatorKey,
+                        pageBuilder: (context, state) => CupertinoPage(
+                          child: SplitScreenPlaceholder(
+                            splitScreenController: SplitScreenViewController(),
+                            child: const SleepTimerScreen(),
+                          ),
                         ),
                       ),
                     ],

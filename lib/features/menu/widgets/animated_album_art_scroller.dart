@@ -132,8 +132,16 @@ class _AnimatedAlbumArtScrollerState
           child: Image(
             key: ValueKey(_albumArtImage),
             image: _albumArtImage,
+            width: double.infinity,
+            height: double.infinity,
+            fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) {
-              return Image.asset(Assets.defaultAlbumCoverImage);
+              return Image.asset(
+                Assets.defaultAlbumCoverImage,
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.cover,
+              );
             },
           ),
         ),
@@ -158,14 +166,11 @@ class AnimatedAlbumArt extends AnimatedWidget {
       width: double.infinity,
       child: AspectRatio(
         aspectRatio: 1 / 2,
-        child: FittedBox(
-          fit: BoxFit.cover,
-          clipBehavior: Clip.hardEdge,
-          alignment: animation.value,
+        child: ClipRect(
           child: Transform.scale(
             scale: 1.5,
             alignment: animation.value,
-            child: child,
+            child: SizedBox.expand(child: child),
           ),
         ),
       ),

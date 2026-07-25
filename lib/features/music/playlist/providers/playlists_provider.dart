@@ -31,6 +31,10 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
     required String newPlaylistPlaceholderString,
     required List<MusicMetadata> songs,
   }) async {
+    if (songs.isEmpty) {
+      return;
+    }
+
     final newPlaylist = PlaylistModel(name: '', songs: songs);
     final newKey = await _playlistBox.add(newPlaylist);
     await _playlistBox.put(

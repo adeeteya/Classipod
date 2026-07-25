@@ -53,6 +53,12 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
       _performLongPressAction(selectedDisplayItem);
 
   Future<void> _performAction(int index) async {
+    final isSavingEmptyOnTheGoPlaylist =
+        index == 0 && widget.playlistKey == null && displayItems.isEmpty;
+    if (isSavingEmptyOnTheGoPlaylist) {
+      return;
+    }
+
     setState(() => selectedDisplayItem = index);
     if (index == 0) {
       if (widget.playlistKey == null) {

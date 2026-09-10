@@ -34,6 +34,7 @@ import 'package:classipod/features/settings/screens/about_screen.dart';
 import 'package:classipod/features/settings/screens/device_color_selection_screen.dart';
 import 'package:classipod/features/settings/screens/exclude_directories_screen.dart';
 import 'package:classipod/features/settings/screens/language_selection_screen.dart';
+import 'package:classipod/features/settings/screens/music_root_selection_screen.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
 import 'package:classipod/features/sleep_timer/screens/sleep_timer_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -47,6 +48,7 @@ enum Routes {
   about,
   language,
   deviceColor,
+  musicRoot,
   excludeDirectories,
   nowPlaying,
   nowPlayingMoreOptions,
@@ -92,6 +94,8 @@ enum Routes {
         return context.localization.languageScreenTitle;
       case deviceColor:
         return context.localization.deviceColorSettingTitle;
+      case musicRoot:
+        return context.localization.musicRootSettingTitle;
       case excludeDirectories:
         return context.localization.excludeDirectoriesScreenTitle;
       case nowPlaying:
@@ -230,6 +234,22 @@ final routerProvider = Provider(
                         parentNavigatorKey: menuNavigatorKey,
                         pageBuilder: (context, state) => const CupertinoPage(
                           child: DeviceColorSelectionScreen(),
+                        ),
+                      ),
+                      GoRoute(
+                        path: Routes.musicRoot.name,
+                        name: Routes.musicRoot.name,
+                        parentNavigatorKey: menuNavigatorKey,
+                        onExit: (context, state) async {
+                          await ref
+                              .read(
+                                settingsPreferencesControllerProvider.notifier,
+                              )
+                              .rescanMusicFiles();
+                          return true;
+                        },
+                        pageBuilder: (context, state) => const CupertinoPage(
+                          child: MusicRootSelectionScreen(),
                         ),
                       ),
                       GoRoute(

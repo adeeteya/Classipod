@@ -106,6 +106,12 @@ class SettingsPreferencesRepository {
         false;
   }
 
+  String? getMusicRootPath() {
+    return _sharedPreferencesWithCache.getString(
+      SharedPreferencesKeys.musicRootPath.name,
+    );
+  }
+
   Future<void> setLanguageLocaleCode({
     required String languageLocaleCode,
   }) async {
@@ -190,6 +196,18 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache.setBool(
       SharedPreferencesKeys.splitScreenEnabled.name,
       isSplitScreenEnabled,
+    );
+  }
+
+  Future<void> setMusicRootPath({required String? musicRootPath}) async {
+    if (musicRootPath == null) {
+      return _sharedPreferencesWithCache.remove(
+        SharedPreferencesKeys.musicRootPath.name,
+      );
+    }
+    return _sharedPreferencesWithCache.setString(
+      SharedPreferencesKeys.musicRootPath.name,
+      musicRootPath,
     );
   }
 

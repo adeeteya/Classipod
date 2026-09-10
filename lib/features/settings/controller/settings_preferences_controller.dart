@@ -64,6 +64,7 @@ class SettingsPreferencesControllerNotifier
       ),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
+      musicRootPath: settingsPreferencesRepository.getMusicRootPath(),
       appTheme: AppTheme.fromName(settingsPreferencesRepository.getAppTheme()),
     );
   }
@@ -308,6 +309,21 @@ class SettingsPreferencesControllerNotifier
     await setSystemUiMode();
   }
 
+  /// Restricts the library to the tracks stored below [musicRootPath].
+  /// Passing null scans every folder the device reports.
+  Future<void> setMusicRootPath(String? musicRootPath) async {
+    if (state.musicRootPath == musicRootPath) {
+      return;
+    }
+    state = state.copyWith(
+      musicRootPath: musicRootPath,
+      clearMusicRootPath: musicRootPath == null,
+    );
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setMusicRootPath(musicRootPath: musicRootPath);
+  }
+
   Future<void> rescanMusicFiles({bool clearPlaylists = false}) async {
     await Hive.box<MusicMetadata>(Constants.metadataBoxName).clear();
     if (clearPlaylists) {
@@ -341,6 +357,9 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setImmersiveMode(isImmersiveModeEnabled: false);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setMusicRootPath(musicRootPath: null);
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setAppTheme(appThemeName: AppTheme.light.name);

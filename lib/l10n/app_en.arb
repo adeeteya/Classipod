@@ -160,6 +160,14 @@
   "@immersiveModeSettingTitle": {
     "description": "The title of the immersive mode setting"
   },
+  "musicRootSettingTitle": "Music Folder",
+  "@musicRootSettingTitle": {
+    "description": "The title of the setting that picks the root folder to scan"
+  },
+  "allFoldersMenuTitle": "All Folders",
+  "@allFoldersMenuTitle": {
+    "description": "The entry that scans every folder on the device"
+  },
   "showAppTutorialSettingTitle": "Show Tutorial",
   "@showAppTutorialSettingTitle": {
     "description": "The title of the show app tutorial setting"

@@ -48,6 +48,8 @@
   "touchSoundsDialogTitle": "Toccare i suoni",
   "touchSoundsDialogContent": "Abilita i suoni touch dalle impostazioni del sistema per ascoltare i suoni della ruota clicca",
   "immersiveModeSettingTitle": "Modalità immersiva",
+  "musicRootSettingTitle": "Cartella musica",
+  "allFoldersMenuTitle": "Tutte le cartelle",
   "showAppTutorialSettingTitle": "Tutorial dello spettacolo",
   "changeDirectorySettingTitle": "Cambia directory",
   "donateSettingTitle": "Donare",

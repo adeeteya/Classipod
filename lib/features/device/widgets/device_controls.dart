@@ -8,12 +8,12 @@ import 'package:classipod/core/custom_painter/play_pause_button_custom_painter.d
 import 'package:classipod/core/custom_painter/previous_button_custom_painter.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/providers/device_appearance_provider.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
-import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -103,12 +103,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
 
   @override
   Widget build(BuildContext context) {
-    final DeviceColor deviceColor = ref.watch(
-      settingsPreferencesControllerProvider.select(
-        (settings) => settings.deviceColor,
-      ),
-    );
-    final deviceColorStyle = deviceColor.style;
+    final deviceColorStyle = ref.watch(deviceAppearanceProvider).style;
     final clickWheelSize = ref.watch(
       settingsPreferencesControllerProvider.select(
         (settings) => settings.clickWheelSize,

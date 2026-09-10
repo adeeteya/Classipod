@@ -65,6 +65,7 @@ flutter:
     - assets/
     - assets/fonts/
     - assets/images/
+    - assets/images/textures/
 
   fonts:
     - family: Helvetica

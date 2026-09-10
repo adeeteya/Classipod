@@ -31,7 +31,9 @@ import 'package:classipod/features/now_playing/screen/now_playing_more_options_m
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/screens/about_screen.dart';
+import 'package:classipod/features/settings/screens/custom_device_color_screen.dart';
 import 'package:classipod/features/settings/screens/device_color_selection_screen.dart';
+import 'package:classipod/features/settings/screens/device_texture_selection_screen.dart';
 import 'package:classipod/features/settings/screens/exclude_directories_screen.dart';
 import 'package:classipod/features/settings/screens/language_selection_screen.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
@@ -47,6 +49,8 @@ enum Routes {
   about,
   language,
   deviceColor,
+  customDeviceColor,
+  deviceTexture,
   excludeDirectories,
   nowPlaying,
   nowPlayingMoreOptions,
@@ -92,6 +96,10 @@ enum Routes {
         return context.localization.languageScreenTitle;
       case deviceColor:
         return context.localization.deviceColorSettingTitle;
+      case customDeviceColor:
+        return context.localization.customDeviceColorSettingTitle;
+      case deviceTexture:
+        return context.localization.deviceTextureSettingTitle;
       case excludeDirectories:
         return context.localization.excludeDirectoriesScreenTitle;
       case nowPlaying:
@@ -230,6 +238,22 @@ final routerProvider = Provider(
                         parentNavigatorKey: menuNavigatorKey,
                         pageBuilder: (context, state) => const CupertinoPage(
                           child: DeviceColorSelectionScreen(),
+                        ),
+                      ),
+                      GoRoute(
+                        path: Routes.customDeviceColor.name,
+                        name: Routes.customDeviceColor.name,
+                        parentNavigatorKey: menuNavigatorKey,
+                        pageBuilder: (context, state) => const CupertinoPage(
+                          child: CustomDeviceColorScreen(),
+                        ),
+                      ),
+                      GoRoute(
+                        path: Routes.deviceTexture.name,
+                        name: Routes.deviceTexture.name,
+                        parentNavigatorKey: menuNavigatorKey,
+                        pageBuilder: (context, state) => const CupertinoPage(
+                          child: DeviceTextureSelectionScreen(),
                         ),
                       ),
                       GoRoute(

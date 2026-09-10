@@ -12,6 +12,8 @@ import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
+import 'package:classipod/features/settings/models/device_finish.dart';
+import 'package:classipod/features/settings/models/device_texture.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/models/volume_mode.dart';
@@ -64,6 +66,12 @@ class SettingsPreferencesControllerNotifier
       ),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
+      deviceFinish: DeviceFinish.fromName(
+        settingsPreferencesRepository.getDeviceFinish(),
+      ),
+      customDeviceColorValue: settingsPreferencesRepository
+          .getCustomDeviceColorValue(),
+      deviceTexture: settingsPreferencesRepository.getDeviceTexture(),
       appTheme: AppTheme.fromName(settingsPreferencesRepository.getAppTheme()),
     );
   }
@@ -308,6 +316,37 @@ class SettingsPreferencesControllerNotifier
     await setSystemUiMode();
   }
 
+  Future<void> setDeviceFinish(DeviceFinish deviceFinish) async {
+    if (state.deviceFinish == deviceFinish) {
+      return;
+    }
+    state = state.copyWith(deviceFinish: deviceFinish);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setDeviceFinish(deviceFinishName: deviceFinish.name);
+  }
+
+  /// Passing null goes back to the colour of the selected preset device.
+  Future<void> setCustomDeviceColor(Color? color) async {
+    state = state.copyWith(
+      customDeviceColorValue: color?.toARGB32(),
+      clearCustomDeviceColor: color == null,
+    );
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setCustomDeviceColorValue(colorValue: color?.toARGB32());
+  }
+
+  Future<void> setDeviceTexture(DeviceTexture? deviceTexture) async {
+    state = state.copyWith(
+      deviceTexture: deviceTexture?.toStored(),
+      clearDeviceTexture: deviceTexture == null,
+    );
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setDeviceTexture(deviceTexture: deviceTexture?.toStored());
+  }
+
   Future<void> rescanMusicFiles({bool clearPlaylists = false}) async {
     await Hive.box<MusicMetadata>(Constants.metadataBoxName).clear();
     if (clearPlaylists) {
@@ -344,6 +383,15 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setAppTheme(appThemeName: AppTheme.light.name);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setDeviceFinish(deviceFinishName: DeviceFinish.classic.name);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setCustomDeviceColorValue(colorValue: null);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setDeviceTexture(deviceTexture: null);
     ref.invalidateSelf();
   }
 

@@ -77,6 +77,8 @@ If you like what you see, please ⭐ the repo.
 - 📖 App Usage Tutorial
 - ⭐ Song Rating Feature
 - 📝 Displays embedded lyrics in Now Playing
+- 🎨 Flat and Textured Device Finishes, with a Free Choice of Device Colour and
+  the Option of Using Your Own Image as the Frame Texture
 
 ### 🎵 Supported audio formats
 

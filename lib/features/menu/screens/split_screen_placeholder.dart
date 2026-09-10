@@ -10,6 +10,7 @@ import 'package:classipod/features/menu/widgets/now_playing_preview_widget.dart'
 import 'package:classipod/features/menu/widgets/settings_preview_widget.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/device_texture.dart';
 import 'package:classipod/features/sleep_timer/widgets/sleep_timer_preview_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -118,6 +119,30 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
           titleText: context.localization.deviceColorSettingTitle,
           icon: CupertinoIcons.device_phone_portrait,
           contentText: currentSettings.deviceColor.title(context),
+        );
+      } else if (splitScreenType == SplitScreenType.deviceFinish) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.deviceFinishSettingTitle,
+          icon: CupertinoIcons.paintbrush,
+          contentText: currentSettings.deviceFinish.title(context),
+        );
+      } else if (splitScreenType == SplitScreenType.customDeviceColor) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.customDeviceColorSettingTitle,
+          icon: CupertinoIcons.eyedropper,
+          contentText: currentSettings.customDeviceColorValue == null
+              ? context.localization.tileValueOff
+              : context.localization.tileValueOn,
+        );
+      } else if (splitScreenType == SplitScreenType.deviceTexture) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.deviceTextureSettingTitle,
+          icon: CupertinoIcons.square_grid_2x2,
+          contentText:
+              DeviceTexture.fromStored(
+                currentSettings.deviceTexture,
+              )?.title(context) ??
+              context.localization.noTextureSelected,
         );
       } else if (splitScreenType == SplitScreenType.clickWheelSize) {
         splitScreenWidget = IconPreviewWidget(

@@ -50,6 +50,8 @@
   "immersiveModeSettingTitle": "Modalità immersiva",
   "screenUsageSettingTitle": "Uso dello schermo",
   "showOnLockScreenSettingTitle": "Mostra sulla schermata di blocco",
+  "lockScreenPermissionDialogTitle": "Permesso necessario",
+  "lockScreenPermissionDialogContent": "Per sostituire la schermata di blocco, ClassiPod ha bisogno del permesso \"Mostra sopra altre app\". Vuoi aprire le impostazioni di sistema per concederlo?",
   "showAppTutorialSettingTitle": "Tutorial dello spettacolo",
   "changeDirectorySettingTitle": "Cambia directory",
   "donateSettingTitle": "Donare",

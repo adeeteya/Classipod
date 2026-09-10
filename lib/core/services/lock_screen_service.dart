@@ -14,17 +14,33 @@ abstract final class LockScreenService {
   static bool get isSupported => !kIsWeb && io.Platform.isAndroid;
 
   static Future<void> setShowWhenLocked({required bool enabled}) async {
+    await _invoke<void>('setShowWhenLocked', {'enabled': enabled});
+  }
+
+  /// Whether the app may start itself over the keyguard. Without it Android
+  /// blocks the activity start that replaces the lock screen.
+  static Future<bool> canDrawOverlays() async {
+    final bool? result = await _invoke<bool>('canDrawOverlays');
+    return result ?? false;
+  }
+
+  /// Sends the user to the system page where the permission is granted.
+  static Future<void> requestDrawOverlays() async {
+    await _invoke<void>('requestDrawOverlays');
+  }
+
+  static Future<T?> _invoke<T>(String method, [Object? arguments]) async {
     if (!isSupported) {
-      return;
+      return null;
     }
     try {
-      await _channel.invokeMethod<void>('setShowWhenLocked', {
-        'enabled': enabled,
-      });
+      return await _channel.invokeMethod<T>(method, arguments);
     } on PlatformException catch (error) {
-      debugPrint('Failed to update the lock screen flag: ${error.message}');
+      debugPrint('Lock screen channel failed on $method: ${error.message}');
+      return null;
     } on MissingPluginException {
       debugPrint('Lock screen channel is not available on this platform.');
+      return null;
     }
   }
 }

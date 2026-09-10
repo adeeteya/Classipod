@@ -328,12 +328,31 @@ class SettingsPreferencesControllerNotifier
         .setScreenUsagePercentage(screenUsagePercentage: sanitizedPercentage);
   }
 
-  Future<void> toggleShowOnLockScreen() async {
+  Future<void> toggleShowOnLockScreen(BuildContext context) async {
     state = state.copyWith(showOnLockScreen: !state.showOnLockScreen);
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setShowOnLockScreen(isShowOnLockScreenEnabled: state.showOnLockScreen);
     await setLockScreenMode();
+
+    if (!state.showOnLockScreen ||
+        !LockScreenService.isSupported ||
+        await LockScreenService.canDrawOverlays()) {
+      return;
+    }
+    // Without this permission Android refuses the activity start that puts
+    // the device back in front of the keyguard.
+    if (!context.mounted) {
+      return;
+    }
+    final bool shouldOpenSettings = await Dialogs.showConfirmationDialog(
+      context: context,
+      title: context.localization.lockScreenPermissionDialogTitle,
+      content: context.localization.lockScreenPermissionDialogContent,
+    );
+    if (shouldOpenSettings) {
+      await LockScreenService.requestDrawOverlays();
+    }
   }
 
   Future<void> rescanMusicFiles({bool clearPlaylists = false}) async {

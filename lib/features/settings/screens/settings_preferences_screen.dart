@@ -179,7 +179,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.showOnLockScreen:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
-            .toggleShowOnLockScreen();
+            .toggleShowOnLockScreen(context);
         break;
       case _SettingsDisplayItems.showAppTutorial:
         await ref

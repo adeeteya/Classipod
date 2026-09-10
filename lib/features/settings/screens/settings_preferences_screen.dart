@@ -9,6 +9,7 @@ import 'package:classipod/features/menu/controller/split_screen_controller.dart'
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/screen_usage.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
@@ -32,6 +33,8 @@ enum _SettingsDisplayItems {
   volumeMode,
   splitScreenEnabled,
   immersiveMode,
+  screenUsage,
+  showOnLockScreen,
   showAppTutorial,
   rescanMusicFiles,
   excludeDirectories,
@@ -68,6 +71,10 @@ enum _SettingsDisplayItems {
         return context.localization.splitScreenSettingTitle;
       case immersiveMode:
         return context.localization.immersiveModeSettingTitle;
+      case screenUsage:
+        return context.localization.screenUsageSettingTitle;
+      case showOnLockScreen:
+        return context.localization.showOnLockScreenSettingTitle;
       case showAppTutorial:
         return context.localization.showAppTutorialSettingTitle;
       case rescanMusicFiles:
@@ -166,6 +173,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleImmersiveMode();
         break;
+      case _SettingsDisplayItems.screenUsage:
+        context.goNamed(Routes.screenUsage.name);
+        break;
+      case _SettingsDisplayItems.showOnLockScreen:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleShowOnLockScreen();
+        break;
       case _SettingsDisplayItems.showAppTutorial:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
@@ -210,6 +225,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         return settingsState.splitScreenEnabled;
       case _SettingsDisplayItems.immersiveMode:
         return settingsState.immersiveMode;
+      case _SettingsDisplayItems.showOnLockScreen:
+        return settingsState.showOnLockScreen;
       default:
         return null;
     }
@@ -232,6 +249,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         return settingsState.repeatMode.title(context);
       case _SettingsDisplayItems.volumeMode:
         return settingsState.volumeMode.title(context);
+      case _SettingsDisplayItems.screenUsage:
+        return ScreenUsage.title(settingsState.screenUsagePercentage);
       default:
         final bool? isOn = _isOn(settingsState, settingsItem);
         if (isOn != null) {
@@ -300,6 +319,14 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.immersiveMode:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.immersiveMode;
+        break;
+      case _SettingsDisplayItems.screenUsage:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.screenUsage;
+        break;
+      case _SettingsDisplayItems.showOnLockScreen:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.lockScreen;
         break;
       case _SettingsDisplayItems.showAppTutorial:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

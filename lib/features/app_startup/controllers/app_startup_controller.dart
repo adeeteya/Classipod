@@ -52,4 +52,9 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
   unawaited(
     ref.read(settingsPreferencesControllerProvider.notifier).setSystemUiMode(),
   );
+  unawaited(
+    ref
+        .read(settingsPreferencesControllerProvider.notifier)
+        .setLockScreenMode(),
+  );
 });

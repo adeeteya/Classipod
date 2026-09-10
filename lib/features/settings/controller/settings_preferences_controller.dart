@@ -7,12 +7,14 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/services/lock_screen_service.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
+import 'package:classipod/features/settings/models/screen_usage.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/models/volume_mode.dart';
 import 'package:classipod/features/settings/repository/settings_preferences_repository.dart';
@@ -64,6 +66,9 @@ class SettingsPreferencesControllerNotifier
       ),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
+      screenUsagePercentage: settingsPreferencesRepository
+          .getScreenUsagePercentage(),
+      showOnLockScreen: settingsPreferencesRepository.getShowOnLockScreen(),
       appTheme: AppTheme.fromName(settingsPreferencesRepository.getAppTheme()),
     );
   }
@@ -83,6 +88,10 @@ class SettingsPreferencesControllerNotifier
         await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
       }
     }
+  }
+
+  Future<void> setLockScreenMode() async {
+    await LockScreenService.setShowWhenLocked(enabled: state.showOnLockScreen);
   }
 
   void setAudioSource({required bool isOnlineAudioSource}) {
@@ -308,6 +317,29 @@ class SettingsPreferencesControllerNotifier
     await setSystemUiMode();
   }
 
+  Future<void> setScreenUsagePercentage(int screenUsagePercentage) async {
+    final int sanitizedPercentage = ScreenUsage.sanitize(
+      screenUsagePercentage,
+    );
+    if (state.screenUsagePercentage == sanitizedPercentage) {
+      return;
+    }
+    state = state.copyWith(screenUsagePercentage: sanitizedPercentage);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setScreenUsagePercentage(screenUsagePercentage: sanitizedPercentage);
+  }
+
+  Future<void> toggleShowOnLockScreen() async {
+    state = state.copyWith(showOnLockScreen: !state.showOnLockScreen);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setShowOnLockScreen(
+          isShowOnLockScreenEnabled: state.showOnLockScreen,
+        );
+    await setLockScreenMode();
+  }
+
   Future<void> rescanMusicFiles({bool clearPlaylists = false}) async {
     await Hive.box<MusicMetadata>(Constants.metadataBoxName).clear();
     if (clearPlaylists) {
@@ -344,6 +376,15 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setAppTheme(appThemeName: AppTheme.light.name);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setScreenUsagePercentage(
+          screenUsagePercentage: ScreenUsage.fullUsagePercentage,
+        );
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setShowOnLockScreen(isShowOnLockScreenEnabled: false);
+    await LockScreenService.setShowWhenLocked(enabled: false);
     ref.invalidateSelf();
   }
 

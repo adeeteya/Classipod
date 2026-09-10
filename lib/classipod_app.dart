@@ -1,5 +1,6 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/widgets/screen_usage_wrapper.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/l10n/generated/app_localizations.dart';
 import 'package:flutter/cupertino.dart';
@@ -25,6 +26,8 @@ class ClassipodApp extends ConsumerWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       debugShowCheckedModeBanner: false,
       routerConfig: router,
+      builder: (context, child) =>
+          ScreenUsageWrapper(child: child ?? const SizedBox.shrink()),
       locale: Locale(languageLocaleCode),
       theme: appTheme.toCupertinoTheme(),
     );

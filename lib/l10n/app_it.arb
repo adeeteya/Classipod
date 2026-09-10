@@ -48,6 +48,8 @@
   "touchSoundsDialogTitle": "Toccare i suoni",
   "touchSoundsDialogContent": "Abilita i suoni touch dalle impostazioni del sistema per ascoltare i suoni della ruota clicca",
   "immersiveModeSettingTitle": "Modalità immersiva",
+  "screenUsageSettingTitle": "Uso dello schermo",
+  "showOnLockScreenSettingTitle": "Mostra sulla schermata di blocco",
   "showAppTutorialSettingTitle": "Tutorial dello spettacolo",
   "changeDirectorySettingTitle": "Cambia directory",
   "donateSettingTitle": "Donare",

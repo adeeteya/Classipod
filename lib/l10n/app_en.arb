@@ -160,6 +160,14 @@
   "@immersiveModeSettingTitle": {
     "description": "The title of the immersive mode setting"
   },
+  "screenUsageSettingTitle": "Screen Usage",
+  "@screenUsageSettingTitle": {
+    "description": "The title of the vertical screen usage setting"
+  },
+  "showOnLockScreenSettingTitle": "Show on Lock Screen",
+  "@showOnLockScreenSettingTitle": {
+    "description": "The title of the show on lock screen setting"
+  },
   "showAppTutorialSettingTitle": "Show Tutorial",
   "@showAppTutorialSettingTitle": {
     "description": "The title of the show app tutorial setting"

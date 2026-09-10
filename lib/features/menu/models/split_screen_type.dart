@@ -16,6 +16,8 @@ enum SplitScreenType {
   volumeMode,
   splitScreenMode,
   immersiveMode,
+  screenUsage,
+  lockScreen,
   showTutorialScreen,
   rescanMusicFiles,
   excludeDirectories,

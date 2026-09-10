@@ -9,6 +9,8 @@ import 'package:classipod/features/menu/controller/split_screen_controller.dart'
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/device_finish.dart';
+import 'package:classipod/features/settings/models/device_texture.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
@@ -24,6 +26,9 @@ enum _SettingsDisplayItems {
   language,
   appTheme,
   deviceColor,
+  deviceFinish,
+  customDeviceColor,
+  deviceTexture,
   clickWheelSize,
   clickWheelSensitivity,
   isTouchScreenEnabled,
@@ -54,6 +59,12 @@ enum _SettingsDisplayItems {
         return context.localization.touchScreenSettingTitle;
       case deviceColor:
         return context.localization.deviceColorSettingTitle;
+      case deviceFinish:
+        return context.localization.deviceFinishSettingTitle;
+      case customDeviceColor:
+        return context.localization.customDeviceColorSettingTitle;
+      case deviceTexture:
+        return context.localization.deviceTextureSettingTitle;
       case clickWheelSize:
         return context.localization.clickWheelSizeSettingTitle;
       case clickWheelSensitivity:
@@ -125,6 +136,24 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         break;
       case _SettingsDisplayItems.deviceColor:
         context.goNamed(Routes.deviceColor.name);
+        break;
+      case _SettingsDisplayItems.deviceFinish:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .setDeviceFinish(
+              DeviceFinish.values[(ref
+                          .read(settingsPreferencesControllerProvider)
+                          .deviceFinish
+                          .index +
+                      1) %
+                  DeviceFinish.values.length],
+            );
+        break;
+      case _SettingsDisplayItems.customDeviceColor:
+        context.goNamed(Routes.customDeviceColor.name);
+        break;
+      case _SettingsDisplayItems.deviceTexture:
+        context.goNamed(Routes.deviceTexture.name);
         break;
       case _SettingsDisplayItems.clickWheelSize:
         await ref
@@ -222,6 +251,13 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     switch (settingsItem) {
       case _SettingsDisplayItems.deviceColor:
         return settingsState.deviceColor.title(context);
+      case _SettingsDisplayItems.deviceFinish:
+        return settingsState.deviceFinish.title(context);
+      case _SettingsDisplayItems.deviceTexture:
+        return DeviceTexture.fromStored(
+              settingsState.deviceTexture,
+            )?.title(context) ??
+            context.localization.noTextureSelected;
       case _SettingsDisplayItems.clickWheelSize:
         return settingsState.clickWheelSize.title(context);
       case _SettingsDisplayItems.clickWheelSensitivity:
@@ -256,6 +292,18 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.deviceColor:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.deviceColor;
+        break;
+      case _SettingsDisplayItems.deviceFinish:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.deviceFinish;
+        break;
+      case _SettingsDisplayItems.customDeviceColor:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.customDeviceColor;
+        break;
+      case _SettingsDisplayItems.deviceTexture:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.deviceTexture;
         break;
       case _SettingsDisplayItems.appTheme:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

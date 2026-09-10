@@ -1,6 +1,7 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 
 @immutable
 class DeviceColorStyle {
@@ -25,6 +26,36 @@ class DeviceColorStyle {
     required this.buttonIconColor,
     required this.isDark,
   });
+
+  @override
+  bool operator ==(Object other) {
+    return other is DeviceColorStyle &&
+        other.noiseOpacity == noiseOpacity &&
+        listEquals(other.frameGradientColors, frameGradientColors) &&
+        other.solidFrameColor == solidFrameColor &&
+        other.controlBackgroundColor == controlBackgroundColor &&
+        other.controlBorderColor == controlBorderColor &&
+        listEquals(
+          other.innerButtonGradientColors,
+          innerButtonGradientColors,
+        ) &&
+        other.buttonAccentColor == buttonAccentColor &&
+        other.buttonIconColor == buttonIconColor &&
+        other.isDark == isDark;
+  }
+
+  @override
+  int get hashCode => Object.hash(
+    noiseOpacity,
+    Object.hashAll(frameGradientColors),
+    solidFrameColor,
+    controlBackgroundColor,
+    controlBorderColor,
+    Object.hashAll(innerButtonGradientColors),
+    buttonAccentColor,
+    buttonIconColor,
+    isDark,
+  );
 }
 
 enum DeviceColor {

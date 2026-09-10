@@ -160,6 +160,74 @@
   "@immersiveModeSettingTitle": {
     "description": "The title of the immersive mode setting"
   },
+  "deviceFinishSettingTitle": "Frame Finish",
+  "@deviceFinishSettingTitle": {
+    "description": "The title of the setting choosing how the frame is painted"
+  },
+  "classicDeviceFinish": "Classic",
+  "@classicDeviceFinish": {
+    "description": "The original gradient and noise finish"
+  },
+  "flatDeviceFinish": "Flat",
+  "@flatDeviceFinish": {
+    "description": "A single solid colour finish"
+  },
+  "textureDeviceFinish": "Texture",
+  "@textureDeviceFinish": {
+    "description": "A finish covered by a texture image"
+  },
+  "customDeviceColorSettingTitle": "Custom Colour",
+  "@customDeviceColorSettingTitle": {
+    "description": "The title of the setting picking an arbitrary device colour"
+  },
+  "customDeviceColorHue": "Hue",
+  "@customDeviceColorHue": {
+    "description": "The hue slider of the colour picker"
+  },
+  "customDeviceColorSaturation": "Saturation",
+  "@customDeviceColorSaturation": {
+    "description": "The saturation slider of the colour picker"
+  },
+  "customDeviceColorBrightness": "Brightness",
+  "@customDeviceColorBrightness": {
+    "description": "The brightness slider of the colour picker"
+  },
+  "usePresetDeviceColor": "Use Preset Colour",
+  "@usePresetDeviceColor": {
+    "description": "Clears the custom colour and goes back to the selected preset"
+  },
+  "deviceTextureSettingTitle": "Frame Texture",
+  "@deviceTextureSettingTitle": {
+    "description": "The title of the setting picking the frame texture"
+  },
+  "brushedAluminiumTexture": "Brushed Aluminium",
+  "@brushedAluminiumTexture": {
+    "description": "A bundled texture"
+  },
+  "carbonFibreTexture": "Carbon Fibre",
+  "@carbonFibreTexture": {
+    "description": "A bundled texture"
+  },
+  "denimTexture": "Denim",
+  "@denimTexture": {
+    "description": "A bundled texture"
+  },
+  "linenTexture": "Linen",
+  "@linenTexture": {
+    "description": "A bundled texture"
+  },
+  "customImageTexture": "Custom Image",
+  "@customImageTexture": {
+    "description": "A texture picked from the device storage"
+  },
+  "chooseImageTexture": "Choose Image...",
+  "@chooseImageTexture": {
+    "description": "Opens the picker to select a texture image from the device"
+  },
+  "noTextureSelected": "None",
+  "@noTextureSelected": {
+    "description": "Shown when no texture has been picked"
+  },
   "showAppTutorialSettingTitle": "Show Tutorial",
   "@showAppTutorialSettingTitle": {
     "description": "The title of the show app tutorial setting"

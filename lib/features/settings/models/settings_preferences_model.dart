@@ -2,6 +2,7 @@ import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
+import 'package:classipod/features/settings/models/device_finish.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
 import 'package:classipod/features/settings/models/volume_mode.dart';
 
@@ -17,6 +18,9 @@ class SettingsPreferencesModel {
   final VolumeMode volumeMode;
   final bool splitScreenEnabled;
   final bool immersiveMode;
+  final DeviceFinish deviceFinish;
+  final int? customDeviceColorValue;
+  final String? deviceTexture;
   final bool fetchOnlineMusic;
   final AppTheme appTheme;
 
@@ -32,6 +36,9 @@ class SettingsPreferencesModel {
     required this.volumeMode,
     required this.splitScreenEnabled,
     required this.immersiveMode,
+    this.deviceFinish = DeviceFinish.classic,
+    this.customDeviceColorValue,
+    this.deviceTexture,
     required this.appTheme,
     this.fetchOnlineMusic = false,
   });
@@ -48,6 +55,11 @@ class SettingsPreferencesModel {
     VolumeMode? volumeMode,
     bool? splitScreenEnabled,
     bool? immersiveMode,
+    DeviceFinish? deviceFinish,
+    int? customDeviceColorValue,
+    bool clearCustomDeviceColor = false,
+    String? deviceTexture,
+    bool clearDeviceTexture = false,
     bool? fetchOnlineMusic,
     AppTheme? appTheme,
   }) {
@@ -64,6 +76,13 @@ class SettingsPreferencesModel {
       volumeMode: volumeMode ?? this.volumeMode,
       splitScreenEnabled: splitScreenEnabled ?? this.splitScreenEnabled,
       immersiveMode: immersiveMode ?? this.immersiveMode,
+      deviceFinish: deviceFinish ?? this.deviceFinish,
+      customDeviceColorValue: clearCustomDeviceColor
+          ? null
+          : (customDeviceColorValue ?? this.customDeviceColorValue),
+      deviceTexture: clearDeviceTexture
+          ? null
+          : (deviceTexture ?? this.deviceTexture),
       appTheme: appTheme ?? this.appTheme,
       fetchOnlineMusic: fetchOnlineMusic ?? this.fetchOnlineMusic,
     );
@@ -83,6 +102,9 @@ class SettingsPreferencesModel {
         other.volumeMode == volumeMode &&
         other.splitScreenEnabled == splitScreenEnabled &&
         other.immersiveMode == immersiveMode &&
+        other.deviceFinish == deviceFinish &&
+        other.customDeviceColorValue == customDeviceColorValue &&
+        other.deviceTexture == deviceTexture &&
         other.fetchOnlineMusic == fetchOnlineMusic &&
         other.appTheme == appTheme;
   }
@@ -100,6 +122,9 @@ class SettingsPreferencesModel {
     volumeMode,
     splitScreenEnabled,
     immersiveMode,
+    deviceFinish,
+    customDeviceColorValue,
+    deviceTexture,
     appTheme,
     fetchOnlineMusic,
   );

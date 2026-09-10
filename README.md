@@ -77,6 +77,10 @@ If you like what you see, please ⭐ the repo.
 - 📖 App Usage Tutorial
 - ⭐ Song Rating Feature
 - 📝 Displays embedded lyrics in Now Playing
+- 📐 Adjustable Screen Usage (shrink the device into the bottom part of tall
+  displays and black out the unused area above it)
+- 🔒 Optional Show on Lock Screen (Android), to keep using the device without
+  unlocking the phone
 
 ### 🎵 Supported audio formats
 

@@ -1,6 +1,7 @@
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/screen_usage.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
@@ -14,24 +15,29 @@ class ScreenUsageSelectionScreen extends ConsumerStatefulWidget {
   ConsumerState createState() => _ScreenUsageSelectionScreenState();
 }
 
-class _ScreenUsageSelectionScreenState extends ConsumerState
-    with CustomScreen {
+class _ScreenUsageSelectionScreenState extends ConsumerState with CustomScreen {
   @override
   String get routeName => Routes.screenUsage.name;
 
-  @override
-  List<int> get displayItems => ScreenUsage.options;
+  List<int> _options = ScreenUsage.allOptions;
 
   @override
-  void initState() {
-    super.initState();
+  List<int> get displayItems => _options;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final ClickWheelSize clickWheelSize = ref
+        .read(settingsPreferencesControllerProvider)
+        .clickWheelSize;
+    _options = ScreenUsage.optionsFor(context, clickWheelSize);
     final int currentPercentage = ref
         .read(settingsPreferencesControllerProvider)
         .screenUsagePercentage;
-    final int currentIndex = displayItems.indexOf(currentPercentage);
-    if (currentIndex != -1) {
-      selectedDisplayItem = currentIndex;
-    }
+    final int currentIndex = _options.indexOf(currentPercentage);
+    selectedDisplayItem = currentIndex == -1
+        ? _options.length - 1
+        : currentIndex;
   }
 
   @override

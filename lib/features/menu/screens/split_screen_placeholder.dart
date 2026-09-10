@@ -188,9 +188,7 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.screenUsageSettingTitle,
           icon: CupertinoIcons.rectangle_compress_vertical,
-          contentText: ScreenUsage.title(
-            currentSettings.screenUsagePercentage,
-          ),
+          contentText: ScreenUsage.title(currentSettings.screenUsagePercentage),
         );
       } else if (splitScreenType == SplitScreenType.lockScreen) {
         splitScreenWidget = IconPreviewWidget(

@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/screen_usage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -19,15 +20,27 @@ class ScreenUsageWrapper extends ConsumerWidget {
         (settings) => settings.screenUsagePercentage,
       ),
     );
+    final ClickWheelSize clickWheelSize = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.clickWheelSize,
+      ),
+    );
 
-    if (screenUsagePercentage >= ScreenUsage.fullUsagePercentage) {
+    // The click wheel has to stay reachable, so it caps how far the device is
+    // allowed to shrink, whatever was stored in the preferences.
+    final int effectivePercentage = math.max(
+      screenUsagePercentage,
+      ScreenUsage.minimumUsagePercentage(context, clickWheelSize),
+    );
+
+    if (effectivePercentage >= ScreenUsage.fullUsagePercentage) {
       return child;
     }
 
     final MediaQueryData mediaQuery = MediaQuery.of(context);
     final double fullHeight = mediaQuery.size.height;
     final double usedHeight =
-        fullHeight * screenUsagePercentage / ScreenUsage.fullUsagePercentage;
+        fullHeight * effectivePercentage / ScreenUsage.fullUsagePercentage;
     final double blackedOutHeight = fullHeight - usedHeight;
 
     // The blacked out area already covers the status bar and any notch, so the

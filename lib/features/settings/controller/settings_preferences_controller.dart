@@ -318,9 +318,7 @@ class SettingsPreferencesControllerNotifier
   }
 
   Future<void> setScreenUsagePercentage(int screenUsagePercentage) async {
-    final int sanitizedPercentage = ScreenUsage.sanitize(
-      screenUsagePercentage,
-    );
+    final int sanitizedPercentage = ScreenUsage.sanitize(screenUsagePercentage);
     if (state.screenUsagePercentage == sanitizedPercentage) {
       return;
     }
@@ -334,9 +332,7 @@ class SettingsPreferencesControllerNotifier
     state = state.copyWith(showOnLockScreen: !state.showOnLockScreen);
     await ref
         .read(settingsPreferencesRepositoryProvider)
-        .setShowOnLockScreen(
-          isShowOnLockScreenEnabled: state.showOnLockScreen,
-        );
+        .setShowOnLockScreen(isShowOnLockScreenEnabled: state.showOnLockScreen);
     await setLockScreenMode();
   }
 

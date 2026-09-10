@@ -1,12 +1,12 @@
-import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
-import 'package:classipod/core/widgets/marquee_text.dart';
+
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/music_folder_node.dart';
+import 'package:classipod/features/settings/widgets/selection_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -76,25 +76,23 @@ class _MusicRootSelectionScreenState extends ConsumerState with CustomScreen {
               child: ListView.builder(
                 controller: scrollController,
                 itemCount: displayItems.length,
-                prototypeItem: const _MusicFolderTile(
-                  label: '',
-                  depth: 0,
-                  trackCount: 0,
+                prototypeItem: SelectionListTile(
+                  text: '',
                   isSelected: false,
-                  isCurrentRoot: false,
-                  onTap: _noop,
+                  onTap: () {},
                 ),
                 itemBuilder: (context, index) {
                   final MusicFolderNode? node = displayItems[index];
-                  return _MusicFolderTile(
-                    label:
+                  final int? trackCount =
+                      node?.trackCount ??
+                      ref.read(audioFilesServiceProvider).value?.length;
+                  return SelectionListTile(
+                    text:
                         node?.label ?? context.localization.allFoldersMenuTitle,
-                    depth: node?.depth ?? 0,
-                    trackCount:
-                        node?.trackCount ??
-                        ref.read(audioFilesServiceProvider).value?.length,
+                    value: trackCount == null ? null : "$trackCount",
+                    indentLevel: node?.depth ?? 0,
+                    isActive: node?.path == currentRootPath,
                     isSelected: selectedDisplayItem == index,
-                    isCurrentRoot: node?.path == currentRootPath,
                     onTap: () async => _selectRoot(index),
                   );
                 },
@@ -102,102 +100,6 @@ class _MusicRootSelectionScreenState extends ConsumerState with CustomScreen {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-void _noop() {}
-
-class _MusicFolderTile extends StatelessWidget {
-  final String label;
-  final int depth;
-  final int? trackCount;
-  final bool isSelected;
-  final bool isCurrentRoot;
-  final VoidCallback onTap;
-
-  const _MusicFolderTile({
-    required this.label,
-    required this.depth,
-    required this.trackCount,
-    required this.isSelected,
-    required this.isCurrentRoot,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final Color textColor = isSelected
-        ? context.appInverseTextColor
-        : context.appPrimaryTextColor;
-
-    return GestureDetector(
-      onTap: onTap,
-      child: SizedBox(
-        height: 30,
-        width: double.infinity,
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
-          ),
-          child: Padding(
-            padding: EdgeInsets.only(
-              left: 4 + (depth * 10).toDouble(),
-              right: 4,
-            ),
-            child: Row(
-              spacing: 5,
-              children: [
-                Icon(
-                  isCurrentRoot
-                      ? CupertinoIcons.checkmark_circle_fill
-                      : CupertinoIcons.folder,
-                  size: 16,
-                  color: textColor,
-                ),
-                Flexible(
-                  child: MarqueeText(
-                    label,
-                    mode: TextScrollMode.bouncing,
-                    intervalSpaces: null,
-                    delayBefore: const Duration(seconds: 2),
-                    pauseBetween: const Duration(seconds: 2),
-                    pauseOnBounce: const Duration(seconds: 2),
-                    style: CupertinoTheme.of(context).textTheme.textStyle
-                        .copyWith(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: textColor,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                  ),
-                ),
-                if (trackCount != null)
-                  Text(
-                    "$trackCount",
-                    style: CupertinoTheme.of(context).textTheme.textStyle
-                        .copyWith(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: isSelected
-                              ? context.appInverseTextColor
-                              : context.appSecondaryTextColor,
-                        ),
-                  ),
-              ],
-            ),
-          ),
-        ),
       ),
     );
   }

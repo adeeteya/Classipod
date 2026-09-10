@@ -77,6 +77,8 @@ If you like what you see, please ⭐ the repo.
 - 📖 App Usage Tutorial
 - ⭐ Song Rating Feature
 - 📝 Displays embedded lyrics in Now Playing
+- 📂 Ability to Scope the Library to a Chosen Music Folder (applies to every
+  sub folder below it)
 
 ### 🎵 Supported audio formats
 

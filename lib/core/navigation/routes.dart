@@ -245,7 +245,7 @@ final routerProvider = Provider(
                               .read(
                                 settingsPreferencesControllerProvider.notifier,
                               )
-                              .rescanMusicFiles();
+                              .reloadLibrary();
                           return true;
                         },
                         pageBuilder: (context, state) => const CupertinoPage(

@@ -9,6 +9,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final filteredAudioFilesProvider =
     FutureProvider<UnmodifiableListView<MusicMetadata>>((ref) async {
+      // Watched before the first await, since Riverpod only allows reading
+      // dependencies while the provider body is running synchronously.
+      final String? musicRootPath = ref.watch(
+        settingsPreferencesControllerProvider.select(
+          (settings) => settings.musicRootPath,
+        ),
+      );
+
       // Load the audio files metadata
       final audioFilesMetadata = await ref.refresh(
         audioFilesServiceProvider.future,
@@ -24,11 +32,6 @@ final filteredAudioFilesProvider =
           .where((excludeDirectoryModel) => excludeDirectoryModel.isExcluded)
           .map((excludedDirectoryModel) => excludedDirectoryModel.directoryPath)
           .toList();
-      final String? musicRootPath = ref.watch(
-        settingsPreferencesControllerProvider.select(
-          (settings) => settings.musicRootPath,
-        ),
-      );
 
       final List<MusicMetadata> filteredList = [];
       for (final audioFileMetadata in audioFilesMetadata) {

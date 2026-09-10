@@ -77,6 +77,7 @@ If you like what you see, please ⭐ the repo.
 - 📖 App Usage Tutorial
 - ⭐ Song Rating Feature
 - 📝 Displays embedded lyrics in Now Playing
+- 🖼️ Ability to Fetch Missing Album Covers Online (manual, opt in)
 
 ### 🎵 Supported audio formats
 

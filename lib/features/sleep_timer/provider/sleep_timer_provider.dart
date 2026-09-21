@@ -6,8 +6,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
 typedef SleepTimerClock = DateTime Function();
-typedef SleepTimerScheduler =
-    Timer Function(Duration duration, void Function() callback);
+typedef SleepTimerScheduler = Timer Function(
+  Duration duration,
+  void Function() callback,
+);
 
 abstract interface class SleepTimerPlayback {
   int? get currentIndex;

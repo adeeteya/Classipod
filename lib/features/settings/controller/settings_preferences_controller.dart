@@ -6,8 +6,13 @@ import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/features/music/album/providers/album_details_provider.dart';
+import 'package:classipod/features/music/artists/providers/artist_names_provider.dart';
+import 'package:classipod/features/music/genres/providers/genres_provider.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
+import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
@@ -306,6 +311,21 @@ class SettingsPreferencesControllerNotifier
         .read(settingsPreferencesRepositoryProvider)
         .setImmersiveMode(isImmersiveModeEnabled: state.immersiveMode);
     await setSystemUiMode();
+  }
+
+  /// Reads the library back from the metadata cache, without rescanning the
+  /// files on disk.
+  Future<void> reloadLibrary() async {
+    ref.invalidate(filteredAudioFilesProvider);
+    final musicMetadataList = await ref.read(filteredAudioFilesProvider.future);
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .setAudioSource(musicMetadataList: musicMetadataList.toList());
+    ref
+      ..invalidate(albumDetailsProvider)
+      ..invalidate(artistNamesProvider)
+      ..invalidate(songsProvider)
+      ..invalidate(genresProvider);
   }
 
   Future<void> rescanMusicFiles({bool clearPlaylists = false}) async {

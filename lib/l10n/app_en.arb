@@ -160,6 +160,34 @@
   "@immersiveModeSettingTitle": {
     "description": "The title of the immersive mode setting"
   },
+  "artworkScraperSettingTitle": "Fetch Missing Artwork",
+  "@artworkScraperSettingTitle": {
+    "description": "The title of the setting that downloads missing album covers"
+  },
+  "artworkScraperSearching": "Searching",
+  "@artworkScraperSearching": {
+    "description": "Shown while the albums without artwork are being collected"
+  },
+  "artworkScraperRunning": "Looking up album covers online",
+  "@artworkScraperRunning": {
+    "description": "Shown while covers are being downloaded"
+  },
+  "artworkScraperDone": "Press select to run it again",
+  "@artworkScraperDone": {
+    "description": "Shown once the lookup has finished"
+  },
+  "artworkScraperHint": "Album and artist names are sent to the iTunes Search service",
+  "@artworkScraperHint": {
+    "description": "Explains what leaves the device"
+  },
+  "artworkScraperNothingMissing": "Nothing Missing",
+  "@artworkScraperNothingMissing": {
+    "description": "Shown when every album already has a cover"
+  },
+  "artworkScraperFailed": "Lookup Failed",
+  "@artworkScraperFailed": {
+    "description": "Shown when the lookup could not be completed"
+  },
   "showAppTutorialSettingTitle": "Show Tutorial",
   "@showAppTutorialSettingTitle": {
     "description": "The title of the show app tutorial setting"

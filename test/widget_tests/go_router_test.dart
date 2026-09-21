@@ -64,6 +64,36 @@ void main() {
     expect('splash', providerContainer.read(routerProvider).locationNamed);
   });
 
+  testWidgets('Popping an unknown route restores the splash shell', (
+    WidgetTester tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(300, 812));
+    await tester.pumpWidget(
+      UncontrolledProviderScope(
+        container: providerContainer,
+        child: const AppStartupScreen(app: ClassipodApp()),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    final router = providerContainer.read(routerProvider);
+    router.goNamed(Routes.splash.name);
+    await tester.pumpAndSettle();
+    final navigation = router.push<void>('/unknown-route');
+    await tester.pumpAndSettle();
+
+    expect(find.byType(PageNotFoundScreen), findsOneWidget);
+    expect(router.canPop(), isTrue);
+
+    router.pop();
+    await tester.pumpAndSettle();
+    await navigation;
+
+    expect(router.locationNamed, Routes.splash.name);
+    expect(find.byType(PageNotFoundScreen), findsNothing);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets('Show Page Not Found on Error Screen', (
     WidgetTester tester,
   ) async {

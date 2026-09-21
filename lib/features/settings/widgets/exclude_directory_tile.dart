@@ -2,7 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 
 class ExcludeDirectoryTile extends StatelessWidget {
   final ExcludeDirectoryModel excludeDirectoryModel;

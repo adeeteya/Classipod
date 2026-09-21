@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'dart:math';
 
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/physics.dart';

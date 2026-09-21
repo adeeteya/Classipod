@@ -1,5 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 
 class LanguagePreviewWidget extends StatelessWidget {
   const LanguagePreviewWidget({super.key});

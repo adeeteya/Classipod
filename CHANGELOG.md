@@ -1,3 +1,7 @@
+## Unreleased
+
+- Migrate design widgets to cupertino_ui and material_ui packages.
+
 [🚀 updated CI/CD to build windows installer](https://github.com/adeeteya/Classipod/commit/3fc038606228a9c1e70404b7b902806a97c89324)
 
 [✨ added ability to run debug app without keystore](https://github.com/adeeteya/Classipod/commit/549c6cfec0bb33ae0b565b42a8077dc458a9ac1e)

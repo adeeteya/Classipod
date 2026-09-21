@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 
 class OptionsModalPage<T> extends Page<T> {
   final BuildContext context;

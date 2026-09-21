@@ -6,7 +6,7 @@ import 'package:classipod/core/extensions/duration_extensions.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/sleep_timer/models/sleep_timer_model.dart';
 import 'package:classipod/features/sleep_timer/provider/sleep_timer_provider.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SleepTimerPreviewWidget extends ConsumerStatefulWidget {
@@ -93,9 +93,8 @@ class _TimerDuration extends ConsumerWidget {
         value: context.localization.tileValueOff,
       ),
       SleepTimerMode.fixedDuration => _DurationText(
-        value: _remainingFixedDuration(
-          ref.read(sleepTimerClockProvider)(),
-        ).getMinuteAndSecondString,
+        value: _remainingFixedDuration(ref.read(sleepTimerClockProvider)())
+            .getMinuteAndSecondString,
         label: context.localization.sleepTimerRemainingLabel,
       ),
       SleepTimerMode.endOfCurrentSong => StreamBuilder<Duration>(

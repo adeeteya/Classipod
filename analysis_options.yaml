@@ -64,7 +64,6 @@ linter:
     sort_pub_dependencies: true
     sort_unnamed_constructors_first: true
     type_annotate_public_apis: true
-    unnecessary_await_in_return: true
     unnecessary_lambdas: true
     unnecessary_parenthesis: true
     unnecessary_statements: true

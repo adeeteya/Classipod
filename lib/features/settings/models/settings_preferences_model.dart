@@ -17,6 +17,7 @@ class SettingsPreferencesModel {
   final VolumeMode volumeMode;
   final bool splitScreenEnabled;
   final bool immersiveMode;
+  final String? musicRootPath;
   final bool fetchOnlineMusic;
   final AppTheme appTheme;
 
@@ -32,6 +33,7 @@ class SettingsPreferencesModel {
     required this.volumeMode,
     required this.splitScreenEnabled,
     required this.immersiveMode,
+    this.musicRootPath,
     required this.appTheme,
     this.fetchOnlineMusic = false,
   });
@@ -48,6 +50,8 @@ class SettingsPreferencesModel {
     VolumeMode? volumeMode,
     bool? splitScreenEnabled,
     bool? immersiveMode,
+    String? musicRootPath,
+    bool clearMusicRootPath = false,
     bool? fetchOnlineMusic,
     AppTheme? appTheme,
   }) {
@@ -64,6 +68,9 @@ class SettingsPreferencesModel {
       volumeMode: volumeMode ?? this.volumeMode,
       splitScreenEnabled: splitScreenEnabled ?? this.splitScreenEnabled,
       immersiveMode: immersiveMode ?? this.immersiveMode,
+      musicRootPath: clearMusicRootPath
+          ? null
+          : (musicRootPath ?? this.musicRootPath),
       appTheme: appTheme ?? this.appTheme,
       fetchOnlineMusic: fetchOnlineMusic ?? this.fetchOnlineMusic,
     );
@@ -83,6 +90,7 @@ class SettingsPreferencesModel {
         other.volumeMode == volumeMode &&
         other.splitScreenEnabled == splitScreenEnabled &&
         other.immersiveMode == immersiveMode &&
+        other.musicRootPath == musicRootPath &&
         other.fetchOnlineMusic == fetchOnlineMusic &&
         other.appTheme == appTheme;
   }
@@ -100,6 +108,7 @@ class SettingsPreferencesModel {
     volumeMode,
     splitScreenEnabled,
     immersiveMode,
+    musicRootPath,
     appTheme,
     fetchOnlineMusic,
   );

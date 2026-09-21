@@ -6,8 +6,13 @@ import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/features/music/album/providers/album_details_provider.dart';
+import 'package:classipod/features/music/artists/providers/artist_names_provider.dart';
+import 'package:classipod/features/music/genres/providers/genres_provider.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
+import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
@@ -64,6 +69,7 @@ class SettingsPreferencesControllerNotifier
       ),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
+      musicRootPath: settingsPreferencesRepository.getMusicRootPath(),
       appTheme: AppTheme.fromName(settingsPreferencesRepository.getAppTheme()),
     );
   }
@@ -308,6 +314,38 @@ class SettingsPreferencesControllerNotifier
     await setSystemUiMode();
   }
 
+  /// Restricts the library to the tracks stored below [musicRootPath].
+  /// Passing null scans every folder the device reports.
+  Future<void> setMusicRootPath(String? musicRootPath) async {
+    if (state.musicRootPath == musicRootPath) {
+      return;
+    }
+    state = state.copyWith(
+      musicRootPath: musicRootPath,
+      clearMusicRootPath: musicRootPath == null,
+    );
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setMusicRootPath(musicRootPath: musicRootPath);
+  }
+
+  /// Re-applies the library filters without touching the metadata cache.
+  ///
+  /// Changing which folder is scanned only narrows the tracks already read
+  /// from disk, so there is nothing to scan again.
+  Future<void> reloadLibrary() async {
+    ref.invalidate(filteredAudioFilesProvider);
+    final musicMetadataList = await ref.read(filteredAudioFilesProvider.future);
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .setAudioSource(musicMetadataList: musicMetadataList.toList());
+    ref
+      ..invalidate(albumDetailsProvider)
+      ..invalidate(artistNamesProvider)
+      ..invalidate(songsProvider)
+      ..invalidate(genresProvider);
+  }
+
   Future<void> rescanMusicFiles({bool clearPlaylists = false}) async {
     await Hive.box<MusicMetadata>(Constants.metadataBoxName).clear();
     if (clearPlaylists) {
@@ -341,6 +379,9 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setImmersiveMode(isImmersiveModeEnabled: false);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setMusicRootPath(musicRootPath: null);
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setAppTheme(appThemeName: AppTheme.light.name);

@@ -751,7 +751,7 @@ packages:
     source: hosted
     version: "0.13.0"
   material_ui:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: material_ui
       sha256: "6d056d60ce745335fcf1c726a4fc46a481a62229f202b65dbc2db5edbbabc7e2"

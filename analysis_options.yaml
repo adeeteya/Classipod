@@ -12,8 +12,16 @@ include: package:flutter_lints/flutter.yaml
 analyzer:
   exclude:
     - '**/*.g.dart'
-  plugins:
-    - riverpod_lint
+    - build/**
+    - android/**
+    - ios/**
+    - web/**
+    - windows/**
+    - macos/**
+    - linux/**
+
+plugins:
+  riverpod_lint: ^3.1.9
 
 formatter:
   page_width: 80
@@ -57,7 +65,6 @@ linter:
     sort_pub_dependencies: true
     sort_unnamed_constructors_first: true
     type_annotate_public_apis: true
-    unnecessary_await_in_return: true
     unnecessary_lambdas: true
     unnecessary_parenthesis: true
     unnecessary_statements: true

@@ -135,9 +135,8 @@ class MetadataReaderRepository {
               artistName: audioMetadata.artist,
               filePath: path,
             );
-            File(
-              thumbnailPath,
-            ).writeAsBytesSync(audioMetadata.pictures[0].bytes);
+            File(thumbnailPath)
+                .writeAsBytesSync(audioMetadata.pictures[0].bytes);
           }
 
           metadataList.add(
@@ -175,9 +174,8 @@ class MetadataReaderRepository {
               artistName: audioMetadata.artist,
               filePath: path,
             );
-            File(
-              thumbnailPath,
-            ).writeAsBytesSync(audioMetadata.pictures[0].bytes);
+            File(thumbnailPath)
+                .writeAsBytesSync(audioMetadata.pictures[0].bytes);
           }
 
           metadataList.add(

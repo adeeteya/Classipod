@@ -6,7 +6,7 @@ import 'package:classipod/features/settings/controller/exclude_directories_contr
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
 import 'package:classipod/features/settings/widgets/exclude_directory_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ExcludeDirectoriesScreen extends ConsumerStatefulWidget {

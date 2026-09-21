@@ -43,7 +43,8 @@ class AudioFilesServiceNotifier
           if (Platform.isWindows || Platform.isLinux || Platform.isMacOS) {
             final newDirectory = await FilePicker.getDirectoryPath(
               dialogTitle: "Select Music Directory",
-              lockParentWindow: true,
+              windowsOptions: const WindowsOptions(lockParentWindow: true),
+              linuxOptions: const LinuxOptions(lockParentWindow: true),
               initialDirectory: ref
                   .read(deviceDirectoryProvider)
                   .requireValue
@@ -63,11 +64,10 @@ class AudioFilesServiceNotifier
             }
           } else if (Platform.isIOS) {
             final pickedFiles = await FilePicker.pickFiles(
-              allowMultiple: true,
               dialogTitle: "Pick Song Files",
             );
 
-            if (pickedFiles == null || pickedFiles.files.isEmpty) {
+            if (pickedFiles.isEmpty) {
               return UnmodifiableListView([]);
             }
 
@@ -75,7 +75,7 @@ class AudioFilesServiceNotifier
               ref
                   .read(metadataReaderRepositoryProvider)
                   .extractMetadataFromFiles,
-              pickedFiles.files.map((f) => f.path!).toList(),
+              pickedFiles.map((f) => f.path!).toList(),
             );
 
             await metadataBox.addAll(result);

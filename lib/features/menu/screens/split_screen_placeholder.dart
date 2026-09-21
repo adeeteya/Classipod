@@ -11,7 +11,7 @@ import 'package:classipod/features/menu/widgets/settings_preview_widget.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/sleep_timer/widgets/sleep_timer_preview_widget.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SplitScreenViewController {

@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 
 // Keys For the Device
 final GlobalKey deviceFrameGlobalKey = GlobalKey();

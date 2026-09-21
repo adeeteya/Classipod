@@ -10,7 +10,7 @@ import 'package:classipod/features/app_startup/controllers/app_startup_controlle
 import 'package:classipod/features/app_startup/screens/app_startup_screen.dart';
 import 'package:classipod/features/app_startup/screens/splash_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -18,7 +18,7 @@ try {
 
 android {
     namespace = "com.adeeteya.classipod"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 37
     ndkVersion = "28.2.13676358"
 
     compileOptions {

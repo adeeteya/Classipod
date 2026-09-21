@@ -2,7 +2,7 @@ import 'package:battery_plus/battery_plus.dart';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/features/status_bar/controller/battery_controller.dart';
 import 'package:classipod/features/status_bar/model/battery_model.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class BatteryIndicator extends ConsumerWidget {

@@ -9,7 +9,7 @@ import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:classipod/features/music/search/provider/search_provider.dart';
 import 'package:classipod/features/music/search/widgets/search_list_tile.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 

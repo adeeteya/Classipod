@@ -13,10 +13,12 @@ val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build"
 rootProject.layout.buildDirectory.value(newBuildDir)
 
 subprojects {
-    // file_picker 11.0.2 assumes AGP 9 always uses built-in Kotlin. Flutter
-    // currently opts out of built-in Kotlin, so explicitly compile the
-    // plugin's Kotlin sources until the package accounts for that setting.
-    if (name == "file_picker") {
+    // device_info_plus assumes AGP 9 always uses built-in Kotlin.
+    // This project opts out, so compile the plugin's Kotlin sources
+    // explicitly until the package accounts for that setting.
+    if (name == "device_info_plus" &&
+        providers.gradleProperty("android.builtInKotlin").orNull == "false"
+    ) {
         pluginManager.apply("org.jetbrains.kotlin.android")
         extensions.configure<
             org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension

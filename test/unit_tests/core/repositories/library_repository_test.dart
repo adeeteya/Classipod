@@ -203,6 +203,33 @@ void main() {
     expect(await Hive.boxExists(Constants.metadataBoxName), isFalse);
   });
 
+  test('incompatible cache refresh preserves ratings and playlists', () async {
+    final songs = await repository.load(progress.add);
+    final playlists = Hive.box<PlaylistModel>(Constants.playlistBoxName);
+    await playlists.add(
+      PlaylistModel(name: 'Favorites', songs: [songs.last, songs.first]),
+    );
+    await LibraryRepository.updateRating(songs.last.copyWith(rating: 5));
+    final box = Hive.box<dynamic>(LibraryRepository.boxName);
+    final saved = Map<String, dynamic>.from(box.get('snapshot') as Map);
+    await box.put('snapshot', {
+      ...saved,
+      'version': LibraryRepository.cacheVersion - 1,
+    });
+    reads.clear();
+    final refreshed = await repository.load(progress.add);
+    expect(reads, hasLength(2));
+    expect(refreshed.last.rating, 5);
+    expect(playlists.values.single.songs.map((song) => song.identity), [
+      songs.last.identity,
+      songs.first.identity,
+    ]);
+    expect(playlists.values.single.songs.first.rating, 5);
+    reads.clear();
+    await repository.load(progress.add);
+    expect(reads, isEmpty);
+  });
+
   test('query failure preserves last snapshot', () async {
     await repository.load(progress.add);
     final box = Hive.box<dynamic>(LibraryRepository.boxName);

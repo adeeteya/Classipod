@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:isolate';
 
-import 'package:classipod/core/repositories/library/file_metadata_reader.dart';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_taglib/flutter_taglib.dart';
@@ -72,47 +71,20 @@ class MetadataWorker {
       TagLibFile? file;
       try {
         List<int>? bytes;
-        if (Platform.isAndroid) {
-          file = await TagLibFile.openAsync(uri);
-          if (file == null) throw StateError('Cannot read tags');
-          if (directory == null) {
-            reply.send({
-              'properties': file.properties,
-              'duration': file.duration.inMilliseconds,
-              'bitrate': file.bitrate,
-              'hasCover': file.hasCover,
-            });
-          } else {
-            bytes = file.coverData;
-          }
+        final path = uri.startsWith('file:')
+            ? Uri.parse(uri).toFilePath()
+            : uri;
+        file = await TagLibFile.openAsync(path);
+        if (file == null) throw StateError('Cannot read tags');
+        if (directory == null) {
+          reply.send({
+            'properties': file.properties,
+            'duration': file.duration.inMilliseconds,
+            'bitrate': file.bitrate,
+            'hasCover': file.hasCover,
+          });
         } else {
-          final metadata = const FileMetadataReader().readAudioMetadata(uri);
-          if (directory == null) {
-            reply.send({
-              'properties': {
-                if (metadata.title != null) 'TITLE': [metadata.title],
-                if (metadata.artist != null) 'ARTIST': [metadata.artist],
-                if (metadata.album != null) 'ALBUM': [metadata.album],
-                if (metadata.albumArtist != null)
-                  'ALBUMARTIST': [metadata.albumArtist],
-                if (metadata.year != null)
-                  'DATE': [metadata.year!.year.toString()],
-                if (metadata.trackNumber != null)
-                  'TRACKNUMBER': [metadata.trackNumber.toString()],
-                if (metadata.trackTotal != null)
-                  'TRACKTOTAL': [metadata.trackTotal.toString()],
-                if (metadata.discNumber != null)
-                  'DISCNUMBER': [metadata.discNumber.toString()],
-                'GENRE': metadata.genres,
-                if (metadata.lyrics != null) 'LYRICS': [metadata.lyrics],
-              },
-              'duration': metadata.duration?.inMilliseconds,
-              'bitrate': metadata.bitrate,
-              'hasCover': metadata.pictures.isNotEmpty,
-            });
-          } else {
-            bytes = metadata.pictures.firstOrNull?.bytes;
-          }
+          bytes = file.coverData;
         }
         if (directory != null) {
           if (bytes == null || bytes.isEmpty) {

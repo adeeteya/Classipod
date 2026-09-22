@@ -2,7 +2,7 @@ import 'dart:io';
 import 'dart:isolate';
 
 import 'package:classipod/core/constants/constants.dart';
-import 'package:classipod/core/repositories/library/file_metadata_reader.dart';
+import 'package:classipod/core/repositories/library/audio_file_formats.dart';
 import 'package:classipod/core/repositories/library/library_source.dart';
 import 'package:hive_ce/hive.dart';
 
@@ -47,10 +47,9 @@ Future<LibrarySnapshot> discoverFileLocations(
 ) async {
   final songs = <LibrarySong>[];
   final volumes = <String>{};
-  const reader = FileMetadataReader();
 
   Future<void> addFile(File file, String volume) async {
-    if (!reader.isSupportedAudioFormat(file.path)) return;
+    if (!isSupportedAudioFormat(file.path)) return;
     final stat = await file.stat();
     if (stat.type == FileSystemEntityType.notFound) return;
     if (stat.type != FileSystemEntityType.file) return;

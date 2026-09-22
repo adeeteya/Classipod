@@ -1,6 +1,6 @@
 platforms:
   android: true
-  ios: false
-  macos: false
-  windows: false
-  linux: false
+  ios: true
+  macos: true
+  windows: true
+  linux: true

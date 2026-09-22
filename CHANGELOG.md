@@ -1,5 +1,8 @@
 ## Unreleased
 
+- Use TagLib for metadata and artwork on every native platform; remove
+  audio_metadata_reader while keeping cache version 1.
+
 - Share bounded playback queues across Android, iOS, macOS, Windows, Linux,
   and web; remove the separate full-native-queue playback path.
 - Share incremental indexing, artwork caching, progress, and `library_v1`

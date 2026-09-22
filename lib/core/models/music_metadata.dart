@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/utils/artist_name_utils.dart';
@@ -126,38 +125,6 @@ class MusicMetadata extends HiveObject {
     this.rating = 0,
     this.lyrics,
   });
-
-  factory MusicMetadata.fromAudioMetadata(
-    AudioMetadata audioMetadata,
-    String? thumbnailPath,
-    int originalSongIndex,
-  ) {
-    final artist =
-        normalizeMetadataString(audioMetadata.artist) ?? "Unknown Artist";
-    final List<String> trackArtistNames = splitArtistNames(artist);
-
-    return MusicMetadata(
-      trackName: normalizeMetadataString(audioMetadata.title) ?? "Unknown Song",
-      trackArtistNames: trackArtistNames,
-      albumName:
-          normalizeMetadataString(audioMetadata.album) ?? "Unknown Album",
-      albumArtistName: trackArtistNames[0],
-      trackNumber: audioMetadata.trackNumber,
-      albumLength: audioMetadata.trackTotal,
-      year: audioMetadata.year?.year,
-      genres: audioMetadata.genres,
-      discNumber: audioMetadata.discNumber,
-      mimeType: audioMetadata.pictures.isEmpty
-          ? null
-          : audioMetadata.pictures[0].mimetype,
-      trackDuration: audioMetadata.duration?.inMilliseconds,
-      bitrate: audioMetadata.bitrate,
-      filePath: audioMetadata.file.path,
-      thumbnailPath: thumbnailPath,
-      originalSongIndex: originalSongIndex,
-      lyrics: audioMetadata.lyrics,
-    );
-  }
 
   factory MusicMetadata.fromMap(Map<String, dynamic> map) => MusicMetadata(
     trackName: normalizeMetadataString(map['metadata']['trackName']),

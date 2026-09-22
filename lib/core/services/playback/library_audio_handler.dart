@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/services/playback/logical_queue.dart';
+import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
 
 class LibraryAudioHandler extends BaseAudioHandler {
@@ -85,6 +86,10 @@ class LibraryAudioHandler extends BaseAudioHandler {
     _error = null;
     try {
       await player.pause();
+      // just_audio_web caches the playlist by ID, which setAudioSource reuses.
+      // Release that backend before replacing its source to avoid replaying
+      // the first track. https://github.com/ryanheise/just_audio/issues/1513
+      if (kIsWeb) await player.stop();
       final source = _songs[index].toAudioSource() as UriAudioSource;
       logicalQueue.index = index;
       _indices.add(index);

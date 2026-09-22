@@ -1,5 +1,8 @@
 ## Unreleased
 
+- Fix web playback repeating the first loaded song when selecting or skipping
+  tracks; reset the web audio backend before replacing its source.
+
 - Enable built-in Kotlin for the Android app and both audio plugins.
 - Pin flutter_taglib to the adeeteya fork, with native binaries and source
   archives hosted in that fork’s releases.

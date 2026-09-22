@@ -33,15 +33,16 @@ class AlbumModel {
     return other is AlbumModel &&
         other.albumName.trim().toLowerCase() ==
             albumName.trim().toLowerCase() &&
-        _primaryArtist(other.albumArtistName) ==
-            _primaryArtist(albumArtistName);
+        other._artistIdentity == _artistIdentity;
   }
 
   @override
-  int get hashCode => Object.hash(
-    albumName.trim().toLowerCase(),
-    _primaryArtist(albumArtistName),
-  );
+  int get hashCode =>
+      Object.hash(albumName.trim().toLowerCase(), _artistIdentity);
+
+  String get _artistIdentity => albumSongs.firstOrNull?.songId != null
+      ? albumArtistName.trim().toLowerCase()
+      : _primaryArtist(albumArtistName);
 
   static String _primaryArtist(String artistNames) {
     final artists = splitArtistNames(artistNames);

@@ -48,7 +48,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen>
         final metadata = searchResult.result as MusicMetadata;
         await ref
             .read(audioPlayerServiceProvider.notifier)
-            .playSongFromOriginalList(metadata.originalSongIndex);
+            .playSongFromLibrary(metadata.identity);
         if (mounted) {
           await context.pushNamed(Routes.nowPlaying.name);
         }

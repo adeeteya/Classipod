@@ -1,3 +1,15 @@
+## Unreleased
+
+- Fix Android playback crashes on large libraries by keeping the queue in Dart
+  and loading only the current track into the native player and media session.
+
+- Refactor Android library discovery and incremental metadata indexing with TagLib.
+- Preserve album artists and ambiguous artist names.
+- Delete the legacy Android metadata cache and scan afresh for 2.0; old ratings
+  are not migrated. Subsequent scans retain ratings from the new library.
+- Show song and artwork cache progress above the startup loader.
+- Repair missing artwork caches and reconcile library changes on startup.
+
 [🚀 updated CI/CD to build Windows installer](https://github.com/adeeteya/Classipod/commit/3fc038606228a9c1e70404b7b902806a97c89324)
 
 [✨ added ability to run debug app without keystore](https://github.com/adeeteya/Classipod/commit/549c6cfec0bb33ae0b565b42a8077dc458a9ac1e)

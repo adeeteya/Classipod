@@ -229,10 +229,10 @@ packages:
     dependency: transitive
     description:
       name: code_assets
-      sha256: "828110d598123b5ea96c00c9f3c72105bf79f8ee36c20a39b26209ade421ec57"
+      sha256: bf394f466ba9205f1812a0433b392d6af280f155f56651eda7c18cc32ed493b8
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.0"
+    version: "1.2.1"
   collection:
     dependency: transitive
     description:
@@ -258,7 +258,7 @@ packages:
     source: hosted
     version: "0.3.5+5"
   crypto:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: crypto
       sha256: c8ea0233063ba03258fbcf2ca4d6dadfefe14f02fab57702265467a19f27fadf
@@ -390,10 +390,10 @@ packages:
     dependency: transitive
     description:
       name: file_picker_darwin
-      sha256: "3bdc8cb665aaacff378238a6f1ff62058c763a834690ceb613b1804a0b1727e2"
+      sha256: "51aef9f4c80449c736e7cc02198675fda73689f0bd45a84da642cfeab0250d46"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.1"
+    version: "2.1.2"
   file_picker_linux:
     dependency: transitive
     description:
@@ -460,6 +460,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.4.3"
+  flutter_taglib:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "1f69a6a80957a9f0fce52f82633cc8ba597ba3b1"
+      resolved-ref: "1f69a6a80957a9f0fce52f82633cc8ba597ba3b1"
+      url: "https://github.com/MSOB7YY/flutter_taglib.git"
+    source: git
+    version: "1.5.7"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -798,6 +807,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  native_toolchain_c:
+    dependency: transitive
+    description:
+      name: native_toolchain_c
+      sha256: a1c26117c48cebe5677b0cf0e33a980a79a7c5577effc86f52e5a0d309cdcb60
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.19.3"
   nested:
     dependency: transitive
     description:
@@ -810,16 +827,16 @@ packages:
     dependency: transitive
     description:
       name: objective_c
-      sha256: ad56fd53a78ff6b1472fa59ff2a4e8b8ccabafc586fc263a1dfad0b99b5553e3
+      sha256: b7fb95a6d9a4f009edd63dc5ac69f07420b23a16161c6dd8660290b59c602e8e
       url: "https://pub.dev"
     source: hosted
-    version: "9.6.0"
+    version: "9.5.0"
   on_audio_query:
     dependency: "direct main"
     description:
       path: "packages/on_audio_query"
-      ref: main
-      resolved-ref: a0cc31269678d75a39f33b375c91481ae9a17b72
+      ref: "aramesh/android-library-indexing"
+      resolved-ref: "74330078eca412f1a39a09e7bd198d68dd0a200d"
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "2.9.0"
@@ -827,8 +844,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/on_audio_query_android"
-      ref: main
-      resolved-ref: a0cc31269678d75a39f33b375c91481ae9a17b72
+      ref: "aramesh/android-library-indexing"
+      resolved-ref: "74330078eca412f1a39a09e7bd198d68dd0a200d"
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "1.1.0"
@@ -836,8 +853,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/on_audio_query_ios"
-      ref: main
-      resolved-ref: a0cc31269678d75a39f33b375c91481ae9a17b72
+      ref: "aramesh/android-library-indexing"
+      resolved-ref: "74330078eca412f1a39a09e7bd198d68dd0a200d"
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "1.1.0"
@@ -845,8 +862,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/on_audio_query_platform_interface"
-      ref: main
-      resolved-ref: a0cc31269678d75a39f33b375c91481ae9a17b72
+      ref: "aramesh/android-library-indexing"
+      resolved-ref: "74330078eca412f1a39a09e7bd198d68dd0a200d"
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "1.7.0"
@@ -854,8 +871,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/on_audio_query_web"
-      ref: main
-      resolved-ref: a0cc31269678d75a39f33b375c91481ae9a17b72
+      ref: "aramesh/android-library-indexing"
+      resolved-ref: "74330078eca412f1a39a09e7bd198d68dd0a200d"
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "1.6.0"

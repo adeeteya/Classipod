@@ -14,7 +14,7 @@ class PlaylistModel extends HiveObject {
 
   PlaylistModel addSongToPlaylist(MusicMetadata song) {
     // If song is already in the playlist then return
-    if (songs.contains(song)) {
+    if (songs.any((item) => item.identity == song.identity)) {
       return this;
     }
     return copyWith(songs: [...songs, song]);
@@ -22,9 +22,7 @@ class PlaylistModel extends HiveObject {
 
   PlaylistModel removeSongFromPlaylist(MusicMetadata song) {
     return copyWith(
-      songs: songs
-          .where((e) => e.originalSongIndex != song.originalSongIndex)
-          .toList(),
+      songs: songs.where((e) => e.identity != song.identity).toList(),
     );
   }
 

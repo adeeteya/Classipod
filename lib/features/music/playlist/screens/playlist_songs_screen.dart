@@ -1,6 +1,7 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -36,10 +37,21 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
   int get extraDisplayItems => 2;
 
   @override
-  List<MusicMetadata> get displayItems => ref
-      .watch(playlistsProvider)
-      .firstWhere((e) => e.key == widget.playlistKey)
-      .songs;
+  List<MusicMetadata> get displayItems {
+    final stored = ref
+        .watch(playlistsProvider)
+        .firstWhere((e) => e.key == widget.playlistKey)
+        .songs;
+    final library = ref.watch(filteredAudioFilesProvider).value;
+    if (library == null || !stored.any((song) => song.songId != null)) {
+      return stored;
+    }
+    final byId = {for (final song in library) song.identity: song};
+    return [
+      for (final song in stored)
+        if (byId[song.identity] != null) byId[song.identity]!,
+    ];
+  }
 
   PlaylistModel get playlist => ref
       .read(playlistsProvider)
@@ -99,7 +111,10 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
     } else {
       await ref
           .read(audioPlayerServiceProvider.notifier)
-          .playPlaylist(playlistDetail: playlist, songIndex: index - 2);
+          .playPlaylist(
+            playlistDetail: playlist.copyWith(songs: displayItems),
+            songIndex: index - 2,
+          );
       if (mounted) {
         await context.pushNamed(Routes.nowPlaying.name);
       }

@@ -1,14 +1,20 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/repositories/android_library/library_progress.dart';
+import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/features/app_startup/controllers/splash_controller.dart';
+import 'package:classipod/features/app_startup/widgets/library_loading_progress.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});
@@ -41,6 +47,8 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final startup = ref.watch(splashControllerProvider);
+    final android = !kIsWeb && Platform.isAndroid;
     ref.listen(splashControllerProvider, (_, state) async {
       if (state.hasError) {
         if (state.error is AudioPermissionDeniedException) {
@@ -49,9 +57,11 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
             title: context.localization.audioAccessPermissionTitle,
             content: context.localization.audioAccessPermissionContent,
           );
-          await ref
-              .read(splashControllerProvider.notifier)
-              .requestStoragePermissions();
+          if (!android) {
+            await ref
+                .read(splashControllerProvider.notifier)
+                .requestStoragePermissions();
+          }
         } else if (state.error is AudioPermissionPermanentlyDeniedException) {
           await Dialogs.showInfoDialog(
             context: context,
@@ -62,9 +72,13 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
                 .localization
                 .audioAccessPermissionPermanentlyDeniedContent,
           );
-          await ref
-              .read(splashControllerProvider.notifier)
-              .requestStoragePermissions();
+          if (android) {
+            await openAppSettings();
+          } else {
+            await ref
+                .read(splashControllerProvider.notifier)
+                .requestStoragePermissions();
+          }
         } else if (!state.hasError && context.mounted) {
           context.goNamed(Routes.menu.name);
         }
@@ -95,7 +109,25 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
                   width: 64,
                   color: CupertinoColors.white,
                 ),
-                if (_showScanningMusicText)
+                if (android && !startup.hasError)
+                  LibraryLoadingProgress(
+                    progress: ref.watch(libraryProgressProvider),
+                  ),
+                if (android && startup.hasError) ...[
+                  Text(
+                    context.localization.libraryLoadError,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(color: CupertinoColors.white),
+                  ),
+                  CupertinoButton(
+                    onPressed: () {
+                      ref.invalidate(audioFilesServiceProvider);
+                      ref.invalidate(splashControllerProvider);
+                    },
+                    child: Text(context.localization.libraryRetry),
+                  ),
+                ],
+                if (!android && _showScanningMusicText)
                   Padding(
                     padding: const EdgeInsets.all(20),
                     child: Row(

@@ -12,6 +12,7 @@ import 'package:classipod/features/settings/controller/settings_preferences_cont
 import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:on_audio_query/on_audio_query.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 final splashControllerProvider =
@@ -22,29 +23,37 @@ final splashControllerProvider =
 class SplashControllerNotifier extends AsyncNotifier<void> {
   @override
   Future<void> build() async {
-    await requestStoragePermissions();
+    await _requestStoragePermissions();
   }
 
   Future<void> requestStoragePermissions() async {
     state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      if (!kIsWeb && (Platform.isAndroid || Platform.isIOS)) {
-        final PermissionStatus audioPermission = await Permission.audio
-            .request();
-        final PermissionStatus genericStoragePermission = await Permission
-            .storage
-            .request();
-        if (audioPermission.isDenied && genericStoragePermission.isDenied) {
-          throw const AudioPermissionDeniedException();
-        }
-        if (audioPermission.isPermanentlyDenied &&
-            genericStoragePermission.isPermanentlyDenied) {
-          throw const AudioPermissionPermanentlyDeniedException();
-        }
-      }
+    state = await AsyncValue.guard(_requestStoragePermissions);
+  }
 
-      await initializeApp();
-    });
+  Future<void> _requestStoragePermissions() async {
+    if (!kIsWeb && Platform.isAndroid) {
+      final version = (await OnAudioQuery().queryDeviceInfo()).version;
+      final permission = version >= 33 ? Permission.audio : Permission.storage;
+      final result = await permission.request();
+      if (result.isPermanentlyDenied) {
+        throw const AudioPermissionPermanentlyDeniedException();
+      }
+      if (!result.isGranted) throw const AudioPermissionDeniedException();
+    } else if (!kIsWeb && Platform.isIOS) {
+      final PermissionStatus audioPermission = await Permission.audio.request();
+      final PermissionStatus genericStoragePermission = await Permission.storage
+          .request();
+      if (audioPermission.isDenied && genericStoragePermission.isDenied) {
+        throw const AudioPermissionDeniedException();
+      }
+      if (audioPermission.isPermanentlyDenied &&
+          genericStoragePermission.isPermanentlyDenied) {
+        throw const AudioPermissionPermanentlyDeniedException();
+      }
+    }
+
+    await initializeApp();
   }
 
   Future<void> initializeApp() async {
@@ -56,7 +65,15 @@ class SplashControllerNotifier extends AsyncNotifier<void> {
     // Set the audio source
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .setAudioSource(musicMetadataList: filteredAudioFilesMetadata);
+        .setAudioSource(
+          musicMetadataList: filteredAudioFilesMetadata,
+          preload: kIsWeb || !Platform.isAndroid,
+        );
+
+    final playbackError = ref.read(audioPlayerServiceProvider).error;
+    if (playbackError != null) {
+      throw StateError('Playback initialization failed: $playbackError');
+    }
 
     // Set the initial loop mode
     await ref

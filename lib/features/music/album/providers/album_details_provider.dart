@@ -14,9 +14,11 @@ List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
 
   for (final metadata in metadataList) {
     final albumName = metadata.getAlbumName.trim().toLowerCase();
-    final primaryArtist = metadata.getPrimaryAlbumArtistName
-        .trim()
-        .toLowerCase();
+    final primaryArtist = metadata.songId == null
+        ? metadata.getPrimaryAlbumArtistName.trim().toLowerCase()
+        : (metadata.albumArtistNames ?? metadata.trackArtistNames ?? [])
+              .map((name) => name.trim().toLowerCase())
+              .join('\u0001');
     final albumIdentity = '$albumName\u0000$primaryArtist';
     albumsByIdentity.putIfAbsent(albumIdentity, () => []).add(metadata);
   }
@@ -24,8 +26,9 @@ List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
   final albumDetails = albumsByIdentity.values.map((albumSongs) {
     final albumArtists = <String>{};
     for (final song in albumSongs) {
-      final artistNames =
-          song.trackArtistNames ?? splitArtistNames(song.getAlbumArtistName);
+      final artistNames = song.songId != null
+          ? song.albumArtistNames ?? song.trackArtistNames ?? []
+          : song.trackArtistNames ?? splitArtistNames(song.getAlbumArtistName);
       albumArtists.addAll(artistNames);
     }
 
@@ -37,7 +40,9 @@ List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
     return AlbumModel(
       albumName: albumSongs.first.getAlbumName,
       albumArtPath: albumArtPath,
-      albumArtistName: albumArtists.join(', '),
+      albumArtistName: albumArtists.join(
+        albumSongs.first.songId == null ? ', ' : '; ',
+      ),
       albumSongs: albumSongs,
     );
   }).toList();

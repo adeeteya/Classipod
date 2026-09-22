@@ -11,9 +11,11 @@ final artistAlbumDetailListProvider = Provider.autoDispose
         final isContributingArtist = albumDetail.albumSongs.any(
           (song) => song.trackArtistNames?.contains(artistName) ?? false,
         );
-        final isListedAlbumArtist = splitArtistNames(
-          albumDetail.albumArtistName,
-        ).contains(artistName);
+        final isListedAlbumArtist = albumDetail.albumSongs.any(
+          (song) => song.songId != null
+              ? song.albumArtistNames?.contains(artistName) ?? false
+              : splitArtistNames(song.getAlbumArtistName).contains(artistName),
+        );
         if (isListedAlbumArtist || isContributingArtist) {
           artistAlbumDetailsList.add(albumDetail);
         }

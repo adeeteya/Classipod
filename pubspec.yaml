@@ -28,8 +28,8 @@ dependencies:
   flutter_riverpod: ^3.4.3
   flutter_taglib:
     git:
-      url: https://github.com/MSOB7YY/flutter_taglib.git
-      ref: 1f69a6a80957a9f0fce52f82633cc8ba597ba3b1
+      url: https://github.com/adeeteya/flutter_taglib.git
+      ref: 588e4d8e35a39d46ee29f01e4d42dc23dde93bc3
   go_router: ^18.0.1
   hive_ce: ^2.20.0
   hive_ce_flutter: ^2.3.4

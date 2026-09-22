@@ -1,5 +1,9 @@
 ## Unreleased
 
+- Enable built-in Kotlin for the Android app and both audio plugins.
+- Pin flutter_taglib to the adeeteya fork, with native binaries and source
+  archives hosted in that fork’s releases.
+
 - Remove obsolete iOS CocoaPods integration; use Swift Package Manager
   for all iOS plugin dependencies.
 

@@ -1,5 +1,9 @@
 ## Unreleased
 
+- Add the missing macOS dev scheme and CocoaPods configuration mapping so
+  the Android Studio development configuration can select the dev flavor.
+  Use local ad-hoc signing for Debug-dev without a development certificate.
+
 - Use TagLib for metadata and artwork on every native platform; remove
   audio_metadata_reader while keeping cache version 1.
 

@@ -1,5 +1,8 @@
 ## Unreleased
 
+- Remove obsolete macOS CocoaPods integration; use Swift Package Manager
+  for macOS plugin dependencies.
+
 - Add the missing macOS dev scheme and CocoaPods configuration mapping so
   the Android Studio development configuration can select the dev flavor.
   Use local ad-hoc signing for Debug-dev without a development certificate.

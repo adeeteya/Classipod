@@ -10,6 +10,7 @@ import 'package:classipod/features/menu/widgets/now_playing_preview_widget.dart'
 import 'package:classipod/features/menu/widgets/settings_preview_widget.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/screen_usage.dart';
 import 'package:classipod/features/sleep_timer/widgets/sleep_timer_preview_widget.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -180,6 +181,20 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
           titleText: context.localization.immersiveModeSettingTitle,
           icon: CupertinoIcons.arrow_up_left_arrow_down_right,
           contentText: currentSettings.immersiveMode
+              ? context.localization.tileValueOn
+              : context.localization.tileValueOff,
+        );
+      } else if (splitScreenType == SplitScreenType.screenUsage) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.screenUsageSettingTitle,
+          icon: CupertinoIcons.rectangle_compress_vertical,
+          contentText: ScreenUsage.title(currentSettings.screenUsagePercentage),
+        );
+      } else if (splitScreenType == SplitScreenType.lockScreen) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.showOnLockScreenSettingTitle,
+          icon: CupertinoIcons.lock_shield,
+          contentText: currentSettings.showOnLockScreen
               ? context.localization.tileValueOn
               : context.localization.tileValueOff,
         );

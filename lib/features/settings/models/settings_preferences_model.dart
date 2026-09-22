@@ -17,6 +17,8 @@ class SettingsPreferencesModel {
   final VolumeMode volumeMode;
   final bool splitScreenEnabled;
   final bool immersiveMode;
+  final int screenUsagePercentage;
+  final bool showOnLockScreen;
   final bool fetchOnlineMusic;
   final AppTheme appTheme;
 
@@ -32,6 +34,8 @@ class SettingsPreferencesModel {
     required this.volumeMode,
     required this.splitScreenEnabled,
     required this.immersiveMode,
+    required this.screenUsagePercentage,
+    required this.showOnLockScreen,
     required this.appTheme,
     this.fetchOnlineMusic = false,
   });
@@ -48,6 +52,8 @@ class SettingsPreferencesModel {
     VolumeMode? volumeMode,
     bool? splitScreenEnabled,
     bool? immersiveMode,
+    int? screenUsagePercentage,
+    bool? showOnLockScreen,
     bool? fetchOnlineMusic,
     AppTheme? appTheme,
   }) {
@@ -64,6 +70,9 @@ class SettingsPreferencesModel {
       volumeMode: volumeMode ?? this.volumeMode,
       splitScreenEnabled: splitScreenEnabled ?? this.splitScreenEnabled,
       immersiveMode: immersiveMode ?? this.immersiveMode,
+      screenUsagePercentage:
+          screenUsagePercentage ?? this.screenUsagePercentage,
+      showOnLockScreen: showOnLockScreen ?? this.showOnLockScreen,
       appTheme: appTheme ?? this.appTheme,
       fetchOnlineMusic: fetchOnlineMusic ?? this.fetchOnlineMusic,
     );
@@ -83,6 +92,8 @@ class SettingsPreferencesModel {
         other.volumeMode == volumeMode &&
         other.splitScreenEnabled == splitScreenEnabled &&
         other.immersiveMode == immersiveMode &&
+        other.screenUsagePercentage == screenUsagePercentage &&
+        other.showOnLockScreen == showOnLockScreen &&
         other.fetchOnlineMusic == fetchOnlineMusic &&
         other.appTheme == appTheme;
   }
@@ -100,6 +111,8 @@ class SettingsPreferencesModel {
     volumeMode,
     splitScreenEnabled,
     immersiveMode,
+    screenUsagePercentage,
+    showOnLockScreen,
     appTheme,
     fetchOnlineMusic,
   );

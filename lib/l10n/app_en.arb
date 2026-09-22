@@ -160,6 +160,22 @@
   "@immersiveModeSettingTitle": {
     "description": "The title of the immersive mode setting"
   },
+  "screenUsageSettingTitle": "Screen Usage",
+  "@screenUsageSettingTitle": {
+    "description": "The title of the vertical screen usage setting"
+  },
+  "showOnLockScreenSettingTitle": "Show on Lock Screen",
+  "@showOnLockScreenSettingTitle": {
+    "description": "The title of the show on lock screen setting"
+  },
+  "lockScreenPermissionDialogTitle": "Permission Needed",
+  "@lockScreenPermissionDialogTitle": {
+    "description": "Title of the dialog asking for the display over other apps permission"
+  },
+  "lockScreenPermissionDialogContent": "To replace the lock screen, ClassiPod needs the \"Display over other apps\" permission. Open the system settings to grant it?",
+  "@lockScreenPermissionDialogContent": {
+    "description": "Contents of the dialog asking for the display over other apps permission"
+  },
   "showAppTutorialSettingTitle": "Show Tutorial",
   "@showAppTutorialSettingTitle": {
     "description": "The title of the show app tutorial setting"

@@ -12,7 +12,6 @@ import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
-import 'package:classipod/features/settings/models/click_wheel_size.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -119,22 +118,9 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         (settings) => settings.clickWheelSensitivity,
       ),
     );
-    late final double clickWheelRadiusRatio;
-    late final double selectButtonRadiusRatio;
-    switch (clickWheelSize) {
-      case ClickWheelSize.small:
-        clickWheelRadiusRatio = Constants.deviceClickWheelSmallRadiusRatio;
-        selectButtonRadiusRatio = Constants.deviceSelectButtonSmallRadiusRatio;
-        break;
-      case ClickWheelSize.medium:
-        clickWheelRadiusRatio = Constants.deviceClickWheelMediumRadiusRatio;
-        selectButtonRadiusRatio = Constants.deviceSelectButtonMediumRadiusRatio;
-        break;
-      case ClickWheelSize.large:
-        clickWheelRadiusRatio = Constants.deviceClickWheelLargeRadiusRatio;
-        selectButtonRadiusRatio = Constants.deviceSelectButtonLargeRadiusRatio;
-        break;
-    }
+    final double clickWheelRadiusRatio = clickWheelSize.radiusRatio;
+    final double selectButtonRadiusRatio =
+        clickWheelSize.selectButtonRadiusRatio;
 
     late final double smallThresholdRotationalChange;
     late final double bigThresholdRotationalChange;

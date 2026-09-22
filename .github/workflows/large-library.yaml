@@ -1,0 +1,56 @@
+name: Large-library stress tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      tracks:
+        description: Tracks per generated library
+        type: choice
+        options: ['1000', '10000', '50000']
+        default: '10000'
+      native_platforms:
+        description: Include Windows and macOS release validation
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  stress:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ${{ fromJSON(inputs.native_platforms && '["ubuntu-latest", "windows-latest", "macos-latest"]' || '["ubuntu-latest"]') }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 180
+    env:
+      TRACKS: ${{ inputs.tracks }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.47.5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install FFmpeg on Linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install FFmpeg on Windows
+        if: runner.os == 'Windows'
+        run: choco install ffmpeg --no-progress -y
+      - name: Install FFmpeg on macOS
+        if: runner.os == 'macOS'
+        run: command -v ffmpeg || brew install ffmpeg
+      - run: flutter pub get --suppress-analytics
+      - run: flutter gen-l10n
+      - name: Run stress suite
+        shell: bash
+        run: python scripts/large_library.py --tracks "$TRACKS"
+      - name: Upload metrics and failure logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: large-library-${{ env.TRACKS }}-${{ matrix.os }}
+          path: build/large-library/

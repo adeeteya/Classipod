@@ -1,5 +1,10 @@
 ## Unreleased
 
+- Remove obsolete iOS CocoaPods integration; use Swift Package Manager
+  for all iOS plugin dependencies.
+
+- Update on_audio_query to use its iOS Swift Package Manager implementation.
+
 - Remove obsolete macOS CocoaPods integration; use Swift Package Manager
   for macOS plugin dependencies.
 

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:classipod/core/services/audio_player_service.dart';
-import 'package:classipod/core/services/playback/android_audio_handler.dart';
+import 'package:classipod/core/services/playback/library_audio_handler.dart';
 import 'package:classipod/features/sleep_timer/models/sleep_timer_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
@@ -35,7 +35,7 @@ final sleepTimerSchedulerProvider = Provider<SleepTimerScheduler>(
 final sleepTimerPlaybackProvider = Provider<SleepTimerPlayback>((ref) {
   return _AudioPlayerSleepTimerPlayback(
     player: ref.read(audioPlayerProvider),
-    handler: usesAndroidQueue ? ref.read(androidAudioHandlerProvider) : null,
+    handler: ref.read(libraryAudioHandlerProvider),
     stopPlayback: ref.read(audioPlayerServiceProvider.notifier).stop,
   );
 });
@@ -226,18 +226,17 @@ class SleepTimerController extends Notifier<SleepTimerState> {
 
 class _AudioPlayerSleepTimerPlayback implements SleepTimerPlayback {
   final AudioPlayer player;
-  final AndroidAudioHandler? handler;
+  final LibraryAudioHandler handler;
   final Future<void> Function() stopPlayback;
 
   const _AudioPlayerSleepTimerPlayback({
     required this.player,
-    this.handler,
+    required this.handler,
     required this.stopPlayback,
   });
 
   @override
-  int? get currentIndex =>
-      handler == null ? player.currentIndex : handler!.currentIndex;
+  int? get currentIndex => handler.currentIndex;
 
   @override
   Duration? get duration => player.duration;
@@ -252,8 +251,7 @@ class _AudioPlayerSleepTimerPlayback implements SleepTimerPlayback {
   double get speed => player.speed;
 
   @override
-  Stream<int?> get currentIndexStream =>
-      handler?.indexStream ?? player.currentIndexStream;
+  Stream<int?> get currentIndexStream => handler.indexStream;
 
   @override
   Stream<Duration?> get durationStream => player.durationStream;

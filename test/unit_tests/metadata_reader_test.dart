@@ -1,32 +1,16 @@
 import 'dart:io';
 
-import 'package:classipod/core/models/device_directory.dart';
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:classipod/core/providers/device_directory_provider.dart';
-import 'package:classipod/core/repositories/metadata_reader_repository.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:classipod/core/repositories/library/file_metadata_reader.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  final ProviderContainer providerContainer = ProviderContainer(
-    overrides: [
-      deviceDirectoryProvider.overrideWith(
-        (_) => DeviceDirectory(
-          documentsDirectory: Directory(
-            "${Directory.current.path}/test/test_files",
-          ),
-        ),
-      ),
-    ],
-  );
+  const metadataReader = FileMetadataReader();
 
   test('Recognizing that Mp3 File is Supported', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
     expect(
-      metadataReaderRepository.isSupportedAudioFormat(
+      metadataReader.isSupportedAudioFormat(
         "${Directory.current.path}/test/test_files/mp3/Faded.mp3",
       ),
       true,
@@ -34,11 +18,8 @@ void main() {
   });
 
   test('Recognizing that Flac File is Supported', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
     expect(
-      metadataReaderRepository.isSupportedAudioFormat(
+      metadataReader.isSupportedAudioFormat(
         "${Directory.current.path}/test/test_files/flac/Faded.flac",
       ),
       true,
@@ -46,11 +27,8 @@ void main() {
   });
 
   test('Recognizing that Ogg File is Supported', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
     expect(
-      metadataReaderRepository.isSupportedAudioFormat(
+      metadataReader.isSupportedAudioFormat(
         "${Directory.current.path}/test/test_files/ogg/Faded.ogg",
       ),
       true,
@@ -58,11 +36,8 @@ void main() {
   });
 
   test('Recognizing that Opus File is Supported', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
     expect(
-      metadataReaderRepository.isSupportedAudioFormat(
+      metadataReader.isSupportedAudioFormat(
         "${Directory.current.path}/test/test_files/opus/Faded.opus",
       ),
       true,
@@ -70,11 +45,8 @@ void main() {
   });
 
   test('Recognizing that M4a File is Supported', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
     expect(
-      metadataReaderRepository.isSupportedAudioFormat(
+      metadataReader.isSupportedAudioFormat(
         "${Directory.current.path}/test/test_files/m4a/Faded.m4a",
       ),
       true,
@@ -82,11 +54,8 @@ void main() {
   });
 
   test('Recognizing that wav File is Supported', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
     expect(
-      metadataReaderRepository.isSupportedAudioFormat(
+      metadataReader.isSupportedAudioFormat(
         "${Directory.current.path}/test/test_files/wav/Invincible.wav",
       ),
       true,
@@ -94,14 +63,15 @@ void main() {
   });
 
   test('Reading the mp3 Metadata correctly', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
-    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
-      "${Directory.current.path}/test/test_files/mp3/",
+    final metadata = MusicMetadata.fromAudioMetadata(
+      metadataReader.readAudioMetadata(
+        "${Directory.current.path}/test/test_files/mp3/Faded.mp3",
+      ),
+      null,
+      0,
     );
     expect(
-      metadataList.first,
+      metadata,
       MusicMetadata(
         trackName: "Faded",
         trackArtistNames: ["Alan Walker"],
@@ -122,14 +92,15 @@ void main() {
   });
 
   test('Reading the flac Metadata correctly', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
-    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
-      "${Directory.current.path}/test/test_files/flac/",
+    final metadata = MusicMetadata.fromAudioMetadata(
+      metadataReader.readAudioMetadata(
+        "${Directory.current.path}/test/test_files/flac/Faded.flac",
+      ),
+      null,
+      0,
     );
     expect(
-      metadataList.first,
+      metadata,
       MusicMetadata(
         trackName: "Faded",
         trackArtistNames: ["Alan Walker"],
@@ -150,14 +121,15 @@ void main() {
   });
 
   test('Reading the ogg Metadata correctly', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
-    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
-      "${Directory.current.path}/test/test_files/ogg/",
+    final metadata = MusicMetadata.fromAudioMetadata(
+      metadataReader.readAudioMetadata(
+        "${Directory.current.path}/test/test_files/ogg/Firefly.ogg",
+      ),
+      null,
+      0,
     );
     expect(
-      metadataList.first,
+      metadata,
       MusicMetadata(
         trackName: "Firefly",
         trackArtistNames: ["Jim Yosef"],
@@ -178,14 +150,15 @@ void main() {
   });
 
   test('Reading the opus Metadata correctly', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
-    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
-      "${Directory.current.path}/test/test_files/opus/",
+    final metadata = MusicMetadata.fromAudioMetadata(
+      metadataReader.readAudioMetadata(
+        "${Directory.current.path}/test/test_files/opus/Spectre.opus",
+      ),
+      null,
+      0,
     );
     expect(
-      metadataList.first,
+      metadata,
       MusicMetadata(
         trackName: "Spectre",
         trackArtistNames: ["Alan Walker"],
@@ -207,14 +180,15 @@ void main() {
   });
 
   test('Reading the m4a Metadata correctly', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
-    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
-      "${Directory.current.path}/test/test_files/m4a/",
+    final metadata = MusicMetadata.fromAudioMetadata(
+      metadataReader.readAudioMetadata(
+        "${Directory.current.path}/test/test_files/m4a/On&On.m4a",
+      ),
+      null,
+      0,
     );
     expect(
-      metadataList.first,
+      metadata,
       MusicMetadata(
         trackName: "On & On",
         trackArtistNames: ["Cartoon", "Daniel Levi"],
@@ -235,14 +209,15 @@ void main() {
   });
 
   test('Reading the wav Metadata correctly', () {
-    final metadataReaderRepository = providerContainer.read(
-      metadataReaderRepositoryProvider,
-    );
-    final metadataList = metadataReaderRepository.extractMetadataFromDirectory(
-      "${Directory.current.path}/test/test_files/wav/",
+    final metadata = MusicMetadata.fromAudioMetadata(
+      metadataReader.readAudioMetadata(
+        "${Directory.current.path}/test/test_files/wav/Invincible.wav",
+      ),
+      null,
+      0,
     );
     expect(
-      metadataList.first,
+      metadata,
       MusicMetadata(
         trackName: "Invincible",
         trackArtistNames: ["Deaf Kev"],

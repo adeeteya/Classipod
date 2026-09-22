@@ -3,8 +3,10 @@ import 'dart:math';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:classipod/core/services/playback/android_audio_handler.dart';
+import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/services/playback/library_audio_handler.dart';
 import 'package:classipod/core/services/playback/logical_queue.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -103,14 +105,29 @@ Future<void> flushEvents() => Future.delayed(const Duration(milliseconds: 10));
 
 void main() {
   late TestPlayer player;
-  late AndroidAudioHandler handler;
+  late LibraryAudioHandler handler;
   setUp(() {
     player = TestPlayer();
-    handler = AndroidAudioHandler(player);
+    handler = LibraryAudioHandler(player);
   });
   tearDown(() async {
     await handler.dispose();
     await player.close();
+  });
+
+  test('service uses the bounded queue on the desktop test host too', () async {
+    final container = ProviderContainer(
+      overrides: [audioPlayerProvider.overrideWithValue(player)],
+    );
+    addTearDown(container.dispose);
+    await container.read(audioPlayerServiceProvider.future);
+    final service = container.read(audioPlayerServiceProvider.notifier);
+    await service.setAudioSource(musicMetadataList: List.generate(50000, song));
+    expect(container.read(audioPlayerServiceProvider).hasError, isFalse);
+    await service.playSongAtIndex(49999);
+    expect(player.sourceCount, 1);
+    expect(player.loadedIds, ['song-0', 'song-49999']);
+    expect(container.read(libraryAudioHandlerProvider).currentIndex, 49999);
   });
 
   test('50k library loads one source and exports no native queue', () async {

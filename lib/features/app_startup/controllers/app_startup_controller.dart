@@ -1,13 +1,11 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/constants/constants.dart';
-import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
-import 'package:classipod/core/repositories/android_library/android_library_repository.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/services/playback/playback_bootstrap.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
@@ -16,7 +14,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
-import 'package:just_audio_background/just_audio_background.dart';
 import 'package:just_audio_media_kit/just_audio_media_kit.dart';
 
 final appStartupControllerProvider = FutureProvider<void>((ref) async {
@@ -26,38 +23,12 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
         DeviceOrientation.portraitUp,
         DeviceOrientation.portraitDown,
       ]),
-      if (Platform.isAndroid)
-        AudioService.init(
-          builder: () => ref.read(androidAudioHandlerProvider),
-          config: const AudioServiceConfig(
-            androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
-            androidNotificationChannelName: 'ClassiPod Audio playback',
-            androidNotificationChannelDescription:
-                'Notification to control the currently playing music files',
-            androidNotificationOngoing: true,
-            androidNotificationIcon: 'drawable/ic_stat_name',
-          ),
-        ),
-      if (Platform.isIOS)
-        JustAudioBackground.init(
-          androidNotificationChannelId: 'com.ryanheise.bg_demo.channel.audio',
-          androidNotificationChannelName: 'ClassiPod Audio playback',
-          androidNotificationChannelDescription:
-              'Notification to control the currently playing music files',
-          androidNotificationOngoing: true,
-          androidNotificationIcon: 'drawable/ic_stat_name',
-        ),
     ],
     if (!kIsWeb) ref.watch(deviceDirectoryProvider.future),
     ref.watch(sharedPreferencesWithCacheProvider.future),
     Hive.initFlutter("ClassiPod"),
   ]);
   Hive.registerAdapters();
-  if (!kIsWeb && Platform.isAndroid) {
-    await AndroidLibraryRepository.deleteLegacyMetadata();
-  } else {
-    await Hive.openBox<MusicMetadata>(Constants.metadataBoxName);
-  }
   await Hive.openBox<PlaylistModel>(Constants.playlistBoxName);
   await Hive.openBox<ExcludeDirectoryModel>(
     Constants.excludedDirectoriesBoxName,
@@ -66,6 +37,7 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
     JustAudioMediaKit.ensureInitialized();
     JustAudioMediaKit.title = 'ClassiPod';
   }
+  await initializeMediaSession(ref.read(libraryAudioHandlerProvider));
   ref
       .read(settingsPreferencesControllerProvider.notifier)
       .setAudioSource(isOnlineAudioSource: kIsWeb);

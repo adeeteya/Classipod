@@ -1,11 +1,9 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:audio_service/audio_service.dart';
-
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
-import 'package:classipod/core/services/playback/android_audio_handler.dart';
+import 'package:classipod/core/services/playback/library_audio_handler.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
@@ -19,10 +17,8 @@ final audioPlayerProvider = Provider<AudioPlayer>((_) {
   return AudioPlayer();
 });
 
-final usesAndroidQueue = !kIsWeb && Platform.isAndroid;
-
-final androidAudioHandlerProvider = Provider<AndroidAudioHandler>((ref) {
-  final handler = AndroidAudioHandler(ref.read(audioPlayerProvider));
+final libraryAudioHandlerProvider = Provider<LibraryAudioHandler>((ref) {
+  final handler = LibraryAudioHandler(ref.read(audioPlayerProvider));
   ref.onDispose(() => unawaited(handler.dispose()));
   return handler;
 });
@@ -42,27 +38,16 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
     if (ref.read(audioPlayerProvider).playing) {
       return;
     }
-    if (usesAndroidQueue) {
-      await ref.read(androidAudioHandlerProvider).play();
-    } else {
-      await ref.read(audioPlayerProvider).play();
-    }
+
+    await ref.read(libraryAudioHandlerProvider).play();
   }
 
   Future<void> pause() async {
-    if (usesAndroidQueue) {
-      await ref.read(androidAudioHandlerProvider).pause();
-    } else if (ref.read(audioPlayerProvider).playing) {
-      await ref.read(audioPlayerProvider).pause();
-    }
+    await ref.read(libraryAudioHandlerProvider).pause();
   }
 
   Future<void> stop() async {
-    if (usesAndroidQueue) {
-      await ref.read(androidAudioHandlerProvider).stop();
-    } else {
-      await ref.read(audioPlayerProvider).stop();
-    }
+    await ref.read(libraryAudioHandlerProvider).stop();
   }
 
   Future<void> toggleShuffleMode() async {
@@ -71,17 +56,13 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
 
   Future<void> setShuffleMode(bool enabled) async {
     state = await AsyncValue.guard(() async {
-      if (usesAndroidQueue) {
-        await ref
-            .read(androidAudioHandlerProvider)
-            .setShuffleMode(
-              enabled
-                  ? AudioServiceShuffleMode.all
-                  : AudioServiceShuffleMode.none,
-            );
-      } else {
-        await ref.read(audioPlayerProvider).setShuffleModeEnabled(enabled);
-      }
+      await ref
+          .read(libraryAudioHandlerProvider)
+          .setShuffleMode(
+            enabled
+                ? AudioServiceShuffleMode.all
+                : AudioServiceShuffleMode.none,
+          );
     });
   }
 
@@ -97,9 +78,6 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
       }
 
       await setShuffleMode(true);
-      if (!usesAndroidQueue) {
-        await ref.read(audioPlayerProvider).shuffle();
-      }
       await nextSong();
       Future.delayed(const Duration(milliseconds: 100), play);
 
@@ -112,17 +90,13 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   Future<void> setLoopMode(LoopMode loopMode) async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      if (usesAndroidQueue) {
-        await ref.read(androidAudioHandlerProvider).setRepeatMode(
-          switch (loopMode) {
-            LoopMode.off => AudioServiceRepeatMode.none,
-            LoopMode.one => AudioServiceRepeatMode.one,
-            LoopMode.all => AudioServiceRepeatMode.all,
-          },
-        );
-      } else {
-        await ref.read(audioPlayerProvider).setLoopMode(loopMode);
-      }
+      await ref.read(libraryAudioHandlerProvider).setRepeatMode(
+        switch (loopMode) {
+          LoopMode.off => AudioServiceRepeatMode.none,
+          LoopMode.one => AudioServiceRepeatMode.one,
+          LoopMode.all => AudioServiceRepeatMode.all,
+        },
+      );
     });
   }
 
@@ -139,42 +113,21 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
             nowPlayingType: nowPlayingType,
             newMetadataList: musicMetadataList,
           );
-      if (usesAndroidQueue) {
-        await ref
-            .read(androidAudioHandlerProvider)
-            .setSongs(musicMetadataList, preload: preload);
-      } else {
-        await ref
-            .read(audioPlayerProvider)
-            .setAudioSources(
-              musicMetadataList.map((song) => song.toAudioSource()).toList(),
-              preload: preload,
-              initialIndex: 0,
-              initialPosition: Duration.zero,
-              shuffleOrder: DefaultShuffleOrder(),
-            );
-      }
+
+      await ref
+          .read(libraryAudioHandlerProvider)
+          .setSongs(musicMetadataList, preload: preload);
     });
   }
 
   Future<void> nextSong() async {
-    if (usesAndroidQueue) {
-      await ref.read(androidAudioHandlerProvider).skipToNext();
-    } else {
-      await ref.read(audioPlayerProvider).seekToNext();
-    }
+    await ref.read(libraryAudioHandlerProvider).skipToNext();
   }
 
   Future<void> seekBackwards() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      if (usesAndroidQueue) {
-        await ref.read(androidAudioHandlerProvider).skipToPrevious();
-      } else if (ref.read(audioPlayerProvider).position.inSeconds > 3) {
-        await ref.read(audioPlayerProvider).seek(Duration.zero);
-      } else {
-        await ref.read(audioPlayerProvider).seekToPrevious();
-      }
+      await ref.read(libraryAudioHandlerProvider).skipToPrevious();
     });
   }
 
@@ -239,19 +192,11 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   }
 
   Future<void> playSongAtIndex(int index) async {
-    state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      //In case the same song is already playing
       if (ref.read(nowPlayingDetailsProvider).currentIndex == index) {
-        unawaited(play());
-        return;
+        await play();
       } else {
-        if (usesAndroidQueue) {
-          await ref.read(androidAudioHandlerProvider).select(index);
-          return;
-        }
-        await ref.read(audioPlayerProvider).seek(Duration.zero, index: index);
-        Future.delayed(const Duration(milliseconds: 100), play);
+        await ref.read(libraryAudioHandlerProvider).select(index);
       }
     });
   }
@@ -279,12 +224,7 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
           .metadataList
           .indexWhere((element) => element.identity == songId);
       if (index < 0) return;
-      if (usesAndroidQueue) {
-        await ref.read(androidAudioHandlerProvider).select(index);
-        return;
-      }
-      await ref.read(audioPlayerProvider).seek(Duration.zero, index: index);
-      Future.delayed(const Duration(milliseconds: 200), play);
+      await ref.read(libraryAudioHandlerProvider).select(index);
     });
   }
 

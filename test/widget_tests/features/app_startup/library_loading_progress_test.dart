@@ -1,4 +1,4 @@
-import 'package:classipod/core/repositories/android_library/library_progress.dart';
+import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:classipod/features/app_startup/widgets/library_loading_progress.dart';
 import 'package:classipod/l10n/generated/app_localizations.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';

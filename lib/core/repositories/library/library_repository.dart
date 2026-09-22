@@ -2,56 +2,50 @@ import 'dart:io';
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:classipod/core/providers/device_directory_provider.dart';
-import 'package:classipod/core/repositories/android_library/android_metadata.dart';
-import 'package:classipod/core/repositories/android_library/library_progress.dart';
-import 'package:classipod/core/repositories/android_library/taglib_worker.dart';
+import 'package:classipod/core/repositories/library/library_metadata.dart';
+import 'package:classipod/core/repositories/library/library_progress.dart';
+import 'package:classipod/core/repositories/library/library_source.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce/hive.dart';
-import 'package:on_audio_query/on_audio_query.dart'
-    show AndroidLibrarySnapshot, OnAudioQuery;
 
 typedef ReadTags = Future<Map<String, dynamic>> Function(
   String uri, {
   String? artworkDirectory,
 });
 
-final androidLibraryRepositoryProvider = Provider<AndroidLibraryRepository>((
-  ref,
-) {
-  final directory = ref.read(deviceDirectoryProvider).requireValue;
-  return AndroidLibraryRepository(
-    artworkDirectory:
-        '${directory.documentsDirectory.path}/ClassiPod/artwork-v1',
-    discover: OnAudioQuery().queryAndroidLibrary,
-  );
-});
-
-class AndroidLibraryRepository {
-  static const boxName = 'android_library_v1';
+class LibraryRepository {
+  static const boxName = Constants.libraryBoxName;
   static const cacheVersion = 1;
   final String artworkDirectory;
-  final Future<AndroidLibrarySnapshot> Function() discover;
-  final ReadTags? readTags;
+  final Future<LibrarySnapshot> Function() discover;
+  final ReadTags readTags;
+  final Future<void> Function()? closeReader;
+  final void Function()? selectSource;
   bool forceNextScan = false;
   Future<List<MusicMetadata>>? _pending;
 
-  AndroidLibraryRepository({
+  LibraryRepository({
     required this.artworkDirectory,
     required this.discover,
-    this.readTags,
+    required this.readTags,
+    this.closeReader,
+    this.selectSource,
   });
+
+  void requestRescan() {
+    forceNextScan = true;
+    selectSource?.call();
+  }
 
   Future<List<MusicMetadata>> load(void Function(LibraryProgress) report) {
     return _pending ??= _load(report).whenComplete(() => _pending = null);
   }
 
-  /// Android 2.0 rebuilds metadata instead of migrating the legacy cache.
+  /// Used by MediaStore discovery for the Android 2.0 cache reset.
   /// Other Hive boxes (playlists and preferences) are not library caches.
   static Future<void> deleteLegacyMetadata() async {
-    if (await Hive.boxExists(Constants.metadataBoxName)) {
-      await Hive.deleteBoxFromDisk(Constants.metadataBoxName);
+    for (final name in [Constants.metadataBoxName, 'android_library_v1']) {
+      if (await Hive.boxExists(name)) await Hive.deleteBoxFromDisk(name);
     }
   }
 
@@ -116,17 +110,6 @@ class AndroidLibraryRepository {
         failures: failures,
       ),
     );
-    TaglibWorker? worker;
-    Future<Map<String, dynamic>> read(
-      String uri, {
-      String? artworkDirectory,
-    }) async {
-      if (readTags != null) {
-        return readTags!(uri, artworkDirectory: artworkDirectory);
-      }
-      worker ??= await TaglibWorker.start();
-      return worker!.read(uri, artworkDirectory: artworkDirectory);
-    }
 
     try {
       emit(LibraryPhase.metadata);
@@ -152,7 +135,7 @@ class AndroidLibraryRepository {
           };
           cached++;
         } else {
-          final tags = await read(song.path ?? song.uri);
+          final tags = await readTags(song.path ?? song.uri);
           final success = !tags.containsKey('error');
           if (!success) failures++;
           row = {
@@ -161,7 +144,7 @@ class AndroidLibraryRepository {
             'modified': song.modified,
             'readSuccess': success,
             'hasCover': tags['hasCover'] == true,
-            'music': androidMetadata(
+            'music': libraryMetadata(
               song,
               tags,
               index: previous?.originalSongIndex ?? nextIndex++,
@@ -186,7 +169,7 @@ class AndroidLibraryRepository {
           verifiedArtwork.add(path);
           artworkCached++;
         } else {
-          final result = await read(
+          final result = await readTags(
             song.filePath ?? row['uri'] as String,
             artworkDirectory: artworkDirectory,
           );
@@ -237,7 +220,7 @@ class AndroidLibraryRepository {
       emit(LibraryPhase.complete);
       return active;
     } finally {
-      await worker?.close();
+      await closeReader?.call();
     }
   }
 }

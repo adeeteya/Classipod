@@ -2,6 +2,7 @@ class Constants {
   Constants._();
 
   // Hive Box Constants
+  static const String libraryBoxName = 'library_v1';
   static const String metadataBoxName = "metadata_box";
   static const String playlistBoxName = "playlist_box";
   static const String excludedDirectoriesBoxName = "excluded_directories_box";

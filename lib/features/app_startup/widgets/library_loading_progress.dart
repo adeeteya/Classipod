@@ -1,5 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/repositories/android_library/library_progress.dart';
+import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class LibraryLoadingProgress extends StatelessWidget {

@@ -2,54 +2,36 @@ import 'dart:io';
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:classipod/core/repositories/android_library/android_library_repository.dart';
-import 'package:classipod/core/repositories/android_library/android_metadata.dart';
-import 'package:classipod/core/repositories/android_library/library_progress.dart';
+import 'package:classipod/core/repositories/library/library_metadata.dart';
+import 'package:classipod/core/repositories/library/library_progress.dart';
+import 'package:classipod/core/repositories/library/library_repository.dart';
+import 'package:classipod/core/repositories/library/library_source.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/hive/hive_registrar.g.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hive_ce/hive.dart';
-import 'package:on_audio_query/on_audio_query.dart'
-    show AndroidLibrarySnapshot, AndroidAudioRecord;
 
-AndroidAudioRecord record(
-  int id, {
-  String volume = 'primary',
-  int modified = 1,
-}) => AndroidAudioRecord.fromMap({
-  'uri': 'content://media/$volume/audio/media/$id',
-  'volume': volume,
-  'path': '/$volume/$id.mp3',
-  'size': 100,
-  'modified': modified,
-  'metadata': {'title': 'Fallback $id', 'duration': 1234},
-});
+LibrarySong record(int id, {String volume = 'primary', int modified = 1}) =>
+    LibrarySong(
+      uri: 'content://media/$volume/audio/media/$id',
+      volume: volume,
+      path: '/$volume/$id.mp3',
+      size: 100,
+      modified: modified,
+      metadata: {'title': 'Fallback $id', 'duration': 1234},
+    );
 
-AndroidLibrarySnapshot snapshot(
-  List<AndroidAudioRecord> songs, {
+LibrarySnapshot snapshot(
+  List<LibrarySong> songs, {
   List<String> volumes = const ['primary'],
-}) => AndroidLibrarySnapshot.fromMap({
-  'sdkVersion': 33,
-  'volumes': volumes,
-  'songs': [
-    for (final song in songs)
-      {
-        'uri': song.uri,
-        'volume': song.volume,
-        'path': song.path,
-        'size': song.size,
-        'modified': song.modified,
-        'metadata': song.metadata,
-      },
-  ],
-});
+}) => LibrarySnapshot(songs: songs, volumes: volumes);
 
 void main() {
   late Directory directory;
-  late AndroidLibrarySnapshot discovered;
-  late AndroidLibraryRepository repository;
+  late LibrarySnapshot discovered;
+  late LibraryRepository repository;
   late List<String> reads;
   late List<LibraryProgress> progress;
   var artwork = false;
@@ -67,7 +49,7 @@ void main() {
     artwork = false;
     fail = false;
     failArtwork = false;
-    repository = AndroidLibraryRepository(
+    repository = LibraryRepository(
       artworkDirectory: '${directory.path}/art',
       discover: () async => discovered,
       readTags: (uri, {artworkDirectory}) async {
@@ -144,9 +126,8 @@ void main() {
         next.last.originalSongIndex,
         greaterThan(first.last.originalSongIndex),
       );
-      final stored = Hive.box<dynamic>(
-        AndroidLibraryRepository.boxName,
-      ).get('snapshot') as Map;
+      final stored =
+          Hive.box<dynamic>(LibraryRepository.boxName).get('snapshot') as Map;
       expect(stored['records'], hasLength(2));
     },
   );
@@ -161,9 +142,8 @@ void main() {
       await repository.load(progress.add);
       discovered = snapshot([record(1)]);
       expect(await repository.load(progress.add), hasLength(1));
-      final stored = Hive.box<dynamic>(
-        AndroidLibraryRepository.boxName,
-      ).get('snapshot') as Map;
+      final stored =
+          Hive.box<dynamic>(LibraryRepository.boxName).get('snapshot') as Map;
       expect(stored['records'], hasLength(2));
       reads.clear();
       discovered = snapshot(
@@ -187,7 +167,7 @@ void main() {
       ),
     );
     await legacyBox.close();
-    await AndroidLibraryRepository.deleteLegacyMetadata();
+    await LibraryRepository.deleteLegacyMetadata();
     expect(await Hive.boxExists(Constants.metadataBoxName), isFalse);
     expect(Hive.isBoxOpen(Constants.metadataBoxName), isFalse);
     final songs = await repository.load(progress.add);
@@ -203,13 +183,13 @@ void main() {
     await playlists.add(
       PlaylistModel(name: 'Favorites', songs: [songs.last, songs.first]),
     );
-    await AndroidLibraryRepository.updateRating(songs.last.copyWith(rating: 5));
+    await LibraryRepository.updateRating(songs.last.copyWith(rating: 5));
     final legacyBox = await Hive.openBox<MusicMetadata>(
       Constants.metadataBoxName,
     );
     await legacyBox.add(MusicMetadata(filePath: '/unused.mp3'));
-    await AndroidLibraryRepository.deleteLegacyMetadata();
-    await AndroidLibraryRepository.deleteLegacyMetadata();
+    await LibraryRepository.deleteLegacyMetadata();
+    await LibraryRepository.deleteLegacyMetadata();
     reads.clear();
     final refreshed = await repository.load(progress.add);
     expect(reads, isEmpty);
@@ -225,11 +205,12 @@ void main() {
 
   test('query failure preserves last snapshot', () async {
     await repository.load(progress.add);
-    final box = Hive.box<dynamic>(AndroidLibraryRepository.boxName);
+    final box = Hive.box<dynamic>(LibraryRepository.boxName);
     final before = box.get('snapshot');
-    final broken = AndroidLibraryRepository(
+    final broken = LibraryRepository(
       artworkDirectory: directory.path,
       discover: () async => throw StateError('permission revoked'),
+      readTags: (_, {artworkDirectory}) async => {},
     );
     await expectLater(broken.load(progress.add), throwsStateError);
     expect(box.get('snapshot'), before);
@@ -237,9 +218,9 @@ void main() {
 
   test('extraction interruption does not commit a partial index', () async {
     await repository.load(progress.add);
-    final box = Hive.box<dynamic>(AndroidLibraryRepository.boxName);
+    final box = Hive.box<dynamic>(LibraryRepository.boxName);
     final before = box.get('snapshot');
-    final interrupted = AndroidLibraryRepository(
+    final interrupted = LibraryRepository(
       artworkDirectory: directory.path,
       discover: () async => snapshot([record(1, modified: 3)]),
       readTags: (_, {artworkDirectory}) async =>

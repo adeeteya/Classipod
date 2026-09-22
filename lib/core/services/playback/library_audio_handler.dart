@@ -5,7 +5,7 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/services/playback/logical_queue.dart';
 import 'package:just_audio/just_audio.dart';
 
-class AndroidAudioHandler extends BaseAudioHandler {
+class LibraryAudioHandler extends BaseAudioHandler {
   final AudioPlayer player;
   final LogicalQueue logicalQueue = LogicalQueue();
   final StreamController<int?> _indices = StreamController.broadcast();
@@ -15,7 +15,7 @@ class AndroidAudioHandler extends BaseAudioHandler {
   bool _loading = false;
   String? _error;
 
-  AndroidAudioHandler(this.player) {
+  LibraryAudioHandler(this.player) {
     _subscriptions.add(player.playbackEventStream.listen((_) => _broadcast()));
     _subscriptions.add(player.playingStream.listen((_) => _broadcast()));
     _subscriptions.add(

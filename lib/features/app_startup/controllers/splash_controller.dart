@@ -67,7 +67,7 @@ class SplashControllerNotifier extends AsyncNotifier<void> {
         .read(audioPlayerServiceProvider.notifier)
         .setAudioSource(
           musicMetadataList: filteredAudioFilesMetadata,
-          preload: kIsWeb || !Platform.isAndroid,
+          preload: false,
         );
 
     final playbackError = ref.read(audioPlayerServiceProvider).error;

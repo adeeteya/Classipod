@@ -1,5 +1,12 @@
 ## Unreleased
 
+- Share bounded playback queues across Android, iOS, macOS, Windows, Linux,
+  and web; remove the separate full-native-queue playback path.
+- Share incremental indexing, artwork caching, progress, and `library_v1`
+  storage for native libraries, with MediaStore and file-picker adapters.
+- Remember selected folders/files between launches and keep metadata parsing
+  off the UI isolate on desktop and iOS.
+
 - Fix Android playback crashes on large libraries by keeping the queue in Dart
   and loading only the current track into the native player and media session.
 

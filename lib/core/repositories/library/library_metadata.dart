@@ -1,5 +1,5 @@
 import 'package:classipod/core/models/music_metadata.dart';
-import 'package:on_audio_query/on_audio_query.dart';
+import 'package:classipod/core/repositories/library/library_source.dart';
 
 List<String> conservativeNames(Iterable<String> values) => values
     .expand((value) => value.split(';'))
@@ -8,8 +8,8 @@ List<String> conservativeNames(Iterable<String> values) => values
     .toSet()
     .toList();
 
-MusicMetadata androidMetadata(
-  AndroidAudioRecord song,
+MusicMetadata libraryMetadata(
+  LibrarySong song,
   Map<String, dynamic> tags, {
   required int index,
   MusicMetadata? previous,
@@ -87,3 +87,5 @@ MusicMetadata androidMetadata(
     rating: previous?.rating ?? 0,
   );
 }
+
+int? parseInteger(String? value) => int.tryParse(value?.split('/').first ?? '');

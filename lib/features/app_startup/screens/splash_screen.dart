@@ -1,19 +1,13 @@
-import 'dart:async';
-import 'dart:io';
-
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/repositories/android_library/library_progress.dart';
+import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/features/app_startup/controllers/splash_controller.dart';
 import 'package:classipod/features/app_startup/widgets/library_loading_progress.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class SplashScreen extends ConsumerStatefulWidget {
@@ -24,31 +18,9 @@ class SplashScreen extends ConsumerStatefulWidget {
 }
 
 class _SplashScreenState extends ConsumerState<SplashScreen> {
-  bool _showScanningMusicText = false;
-  late final Timer _timer;
-
-  void _toggleScanningMusicText() {
-    setState(() {
-      _showScanningMusicText = true;
-    });
-  }
-
-  @override
-  void initState() {
-    _timer = Timer(const Duration(seconds: 5), _toggleScanningMusicText);
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _timer.cancel();
-    super.dispose();
-  }
-
   @override
   Widget build(BuildContext context) {
     final startup = ref.watch(splashControllerProvider);
-    final android = !kIsWeb && Platform.isAndroid;
     ref.listen(splashControllerProvider, (_, state) async {
       if (state.hasError) {
         if (state.error is AudioPermissionDeniedException) {
@@ -57,11 +29,6 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
             title: context.localization.audioAccessPermissionTitle,
             content: context.localization.audioAccessPermissionContent,
           );
-          if (!android) {
-            await ref
-                .read(splashControllerProvider.notifier)
-                .requestStoragePermissions();
-          }
         } else if (state.error is AudioPermissionPermanentlyDeniedException) {
           await Dialogs.showInfoDialog(
             context: context,
@@ -72,15 +39,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
                 .localization
                 .audioAccessPermissionPermanentlyDeniedContent,
           );
-          if (android) {
-            await openAppSettings();
-          } else {
-            await ref
-                .read(splashControllerProvider.notifier)
-                .requestStoragePermissions();
-          }
-        } else if (!state.hasError && context.mounted) {
-          context.goNamed(Routes.menu.name);
+          await openAppSettings();
         }
       }
     });
@@ -109,11 +68,11 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
                   width: 64,
                   color: CupertinoColors.white,
                 ),
-                if (android && !startup.hasError)
+                if (!startup.hasError)
                   LibraryLoadingProgress(
                     progress: ref.watch(libraryProgressProvider),
                   ),
-                if (android && startup.hasError) ...[
+                if (startup.hasError) ...[
                   Text(
                     context.localization.libraryLoadError,
                     textAlign: TextAlign.center,
@@ -127,27 +86,6 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
                     child: Text(context.localization.libraryRetry),
                   ),
                 ],
-                if (!android && _showScanningMusicText)
-                  Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          context.localization.scanningMusicFiles,
-                          style: const TextStyle(
-                            color: CupertinoColors.white,
-                            fontSize: 16,
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        const CupertinoActivityIndicator(
-                          radius: 8,
-                          color: CupertinoColors.white,
-                        ),
-                      ],
-                    ),
-                  ),
               ],
             ),
           ),

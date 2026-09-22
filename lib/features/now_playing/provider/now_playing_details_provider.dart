@@ -1,17 +1,15 @@
 import 'dart:async';
 
 import 'package:audio_service/audio_service.dart';
-import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
-import 'package:classipod/core/repositories/android_library/android_library_repository.dart';
+import 'package:classipod/core/repositories/library/library_repository.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:hive_ce/hive.dart';
 import 'package:just_audio/just_audio.dart';
 
 final nowPlayingDetailsProvider =
@@ -23,12 +21,10 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
   @override
   NowPlayingModel build() {
     final player = ref.read(audioPlayerProvider);
-    final handler = usesAndroidQueue
-        ? ref.read(androidAudioHandlerProvider)
-        : null;
+    final handler = ref.read(libraryAudioHandlerProvider);
     final subscriptions = <StreamSubscription<dynamic>>[];
     subscriptions.add(
-      (handler?.indexStream ?? player.currentIndexStream).listen((newIndex) {
+      handler.indexStream.listen((newIndex) {
         if (newIndex != null &&
             newIndex != state.currentIndex &&
             newIndex < state.metadataList.length) {
@@ -48,18 +44,16 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
       }),
     );
 
-    final loopStream = handler == null
-        ? player.loopModeStream
-        : handler.playbackState
-              .map(
-                (value) => switch (value.repeatMode) {
-                  AudioServiceRepeatMode.one => LoopMode.one,
-                  AudioServiceRepeatMode.all ||
-                  AudioServiceRepeatMode.group => LoopMode.all,
-                  AudioServiceRepeatMode.none => LoopMode.off,
-                },
-              )
-              .distinct();
+    final loopStream = handler.playbackState
+        .map(
+          (value) => switch (value.repeatMode) {
+            AudioServiceRepeatMode.one => LoopMode.one,
+            AudioServiceRepeatMode.all ||
+            AudioServiceRepeatMode.group => LoopMode.all,
+            AudioServiceRepeatMode.none => LoopMode.off,
+          },
+        )
+        .distinct();
     subscriptions.add(
       loopStream.listen((loopMode) {
         if (loopMode != state.loopMode) {
@@ -68,11 +62,9 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
       }),
     );
 
-    final shuffleStream = handler == null
-        ? player.shuffleModeEnabledStream
-        : handler.playbackState
-              .map((value) => value.shuffleMode != AudioServiceShuffleMode.none)
-              .distinct();
+    final shuffleStream = handler.playbackState
+        .map((value) => value.shuffleMode != AudioServiceShuffleMode.none)
+        .distinct();
     subscriptions.add(
       shuffleStream.listen((isShuffleEnabled) {
         if (isShuffleEnabled != state.isShuffleEnabled) {
@@ -148,14 +140,10 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
     );
 
     if (updatedMetadata.songId != null) {
-      await AndroidLibraryRepository.updateRating(updatedMetadata);
+      await LibraryRepository.updateRating(updatedMetadata);
       ref
           .read(audioFilesServiceProvider.notifier)
           .replaceMetadata(updatedMetadata);
-    } else {
-      await Hive.box<MusicMetadata>(Constants.metadataBoxName)
-          .putAt(updatedMetadata.originalSongIndex, updatedMetadata);
-      ref.invalidate(audioFilesServiceProvider);
     }
     ref.invalidate(filteredAudioFilesProvider);
     ref.invalidate(albumDetailsProvider);

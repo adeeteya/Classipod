@@ -155,9 +155,11 @@ by platform:
   </tr>
 
   <tr>
-      <td>iOS / iPadOS</td>
+      <td>iOS</td>
       <td>
-        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-iOS.ipa">Download IPA</a>
+        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-iOS.ipa">
+          <img alt="Download .ipa" src="https://img.shields.io/static/v1?label=Download&message=.ipa&color=black&style=for-the-badge&logo=ios&logoColor=white&logoSize=auto">
+        </a>
         <br>Unsigned; requires sideloading and signing on your device.
       </td>
   </tr>
@@ -165,7 +167,9 @@ by platform:
   <tr>
       <td>macOS</td>
       <td>
-        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-macOS.dmg">Download DMG</a>
+        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-macOS.dmg">
+          <img alt="Download .dmg" src="https://img.shields.io/static/v1?label=Download&message=.dmg&color=lightgray&style=for-the-badge&logo=macos&logoColor=white&logoSize=auto">
+        </a>
         <br>Apple Silicon and Intel; no Developer ID signature or notarization.
       </td>
   </tr>

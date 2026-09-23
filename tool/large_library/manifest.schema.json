@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Classipod generated large-library manifest",
+  "type": "object",
+  "required": ["schemaVersion", "profile", "validTracks", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "profile": {"enum": ["clean", "mixed"]},
+    "validTracks": {"type": "integer", "minimum": 1},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "outcome", "exists"],
+        "additionalProperties": false,
+        "properties": {
+          "path": {"type": "string", "description": "Forward-slash path relative to the profile's music directory."},
+          "outcome": {"enum": ["import", "skip"]},
+          "exists": {"type": "boolean"},
+          "expected": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["trackName", "trackArtistNames", "albumName", "albumArtistName", "trackNumber", "year", "genres", "albumLength", "discNumber", "lyrics", "mimeType", "isOnDevice", "rating"],
+            "properties": {
+              "trackName": {"type": "string"},
+              "trackArtistNames": {"type": "array", "items": {"type": "string"}},
+              "albumName": {"type": "string"},
+              "albumArtistName": {"type": "string"},
+              "trackNumber": {"type": ["integer", "null"]},
+              "year": {"type": ["integer", "null"]},
+              "genres": {"type": "array", "items": {"type": "string"}},
+              "albumLength": {"type": ["integer", "null"]},
+              "discNumber": {"type": ["integer", "null"]},
+              "lyrics": {"type": ["string", "null"]},
+              "mimeType": {"type": ["string", "null"]},
+              "isOnDevice": {"type": "boolean"},
+              "rating": {"type": "integer"}
+            }
+          },
+          "durationMs": {"type": "integer", "minimum": 1},
+          "durationToleranceMs": {"type": "integer", "minimum": 0},
+          "artwork": {"type": ["string", "null"], "description": "Original PNG relative to the disposable workspace."}
+        },
+        "allOf": [{
+          "if": {"properties": {"outcome": {"const": "import"}}},
+          "then": {"required": ["expected", "durationMs", "durationToleranceMs", "artwork"], "properties": {"exists": {"const": true}}}
+        }]
+      }
+    }
+  }
+}

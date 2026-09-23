@@ -1,5 +1,8 @@
 ## Unreleased
 
+- Restart splash initialization on manual rescan, resetting progress and
+  rebuilding playback after forced metadata and artwork extraction.
+
 - Split artist and album-artist tags on &, ;, commas, //, ft., x, featuring,
   and feat, while preserving single slashes and genre names.
 

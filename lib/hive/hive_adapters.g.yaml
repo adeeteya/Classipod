@@ -13,7 +13,7 @@ types:
         index: 2
   MusicMetadata:
     typeId: 2
-    nextIndex: 18
+    nextIndex: 22
     fields:
       trackName:
         index: 0
@@ -51,6 +51,14 @@ types:
         index: 16
       lyrics:
         index: 17
+      songId:
+        index: 18
+      sourceVolume:
+        index: 19
+      contentUri:
+        index: 20
+      albumArtistNames:
+        index: 21
   ExcludeDirectoryModel:
     typeId: 3
     nextIndex: 2

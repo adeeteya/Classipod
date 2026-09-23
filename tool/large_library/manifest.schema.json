@@ -16,15 +16,16 @@
         "additionalProperties": false,
         "properties": {
           "path": {"type": "string", "description": "Forward-slash path relative to the profile's music directory."},
-          "outcome": {"enum": ["import", "skip"]},
+          "outcome": {"enum": ["import", "fallback", "skip"]},
           "exists": {"type": "boolean"},
           "expected": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["trackName", "trackArtistNames", "albumName", "albumArtistName", "trackNumber", "year", "genres", "albumLength", "discNumber", "lyrics", "mimeType", "isOnDevice", "rating"],
+            "required": ["trackName", "trackArtistNames", "albumArtistNames", "albumName", "albumArtistName", "trackNumber", "year", "genres", "albumLength", "discNumber", "lyrics", "mimeType", "isOnDevice", "rating"],
             "properties": {
               "trackName": {"type": "string"},
               "trackArtistNames": {"type": "array", "items": {"type": "string"}},
+              "albumArtistNames": {"type": "array", "items": {"type": "string"}},
               "albumName": {"type": "string"},
               "albumArtistName": {"type": "string"},
               "trackNumber": {"type": ["integer", "null"]},

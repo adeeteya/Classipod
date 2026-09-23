@@ -543,5 +543,36 @@
   "excludeDirectoriesScreenTitle": "Exclude Directories",
   "@excludeDirectoriesScreenTitle": {
     "description": "The title of the exclude directories screen"
+  },
+  "findingSongs": "Finding songs…",
+  "songsLoaded": "Songs loaded: {loaded} / {total}",
+  "artworkCached": "Artwork cached: {cached}",
+  "libraryReadFailures": "Could not read {count} items",
+  "libraryLoadError": "Unable to load the music library. Please retry.",
+  "libraryRetry": "Retry",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+
+      }
+    }
+  },
+  "@libraryReadFailures": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
   }
 }

@@ -1,7 +1,6 @@
-import 'dart:io';
-
-import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/repositories/library/library_metadata.dart';
+import 'package:classipod/core/repositories/library/library_source.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -16,22 +15,27 @@ void main() {
     expect(normalizeMetadataString(malformedValue), expectedValue);
   });
 
-  test(
-    'MusicMetadata.fromAudioMetadata normalizes malformed metadata fields',
-    () {
-      final audioMetadata = AudioMetadata(
-        album: malformedValue,
-        artist: malformedValue,
-        title: malformedValue,
-        file: File('test.mp3'),
-      );
+  test('libraryMetadata normalizes malformed metadata fields', () {
+    final metadata = libraryMetadata(
+      const LibrarySong(
+        uri: 'file:///test.mp3',
+        volume: 'test',
+        size: 1,
+        modified: 1,
+      ),
+      {
+        'properties': {
+          'TITLE': [malformedValue],
+          'ALBUM': [malformedValue],
+          'ARTIST': [malformedValue],
+        },
+      },
+      index: 0,
+    );
 
-      final metadata = MusicMetadata.fromAudioMetadata(audioMetadata, null, 0);
-
-      expect(metadata.trackName, expectedValue);
-      expect(metadata.albumName, expectedValue);
-      expect(metadata.albumArtistName, expectedValue);
-      expect(metadata.trackArtistNames, [expectedValue]);
-    },
-  );
+    expect(metadata.trackName, expectedValue);
+    expect(metadata.albumName, expectedValue);
+    expect(metadata.albumArtistName, expectedValue);
+    expect(metadata.trackArtistNames, [expectedValue]);
+  });
 }

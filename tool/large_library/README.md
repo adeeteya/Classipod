@@ -27,16 +27,17 @@ in MP3/FLAC. WAV uses ASCII INFO tags and no artwork; Unicode metadata is tested
 in MP3/FLAC and Unicode paths in all formats. This is a scale suite, not an
 exhaustive format or tagging conformance suite.
 
-FFmpeg writes WAV track numbers as `IPRT`, while the current metadata reader
-recognizes `ITRK`. The generator explicitly changes that chunk identifier to
-`ITRK` for this corpus. Support for FFmpeg's `IPRT` spelling remains a separate
-format-compatibility gap; this suite does not silently accept a dropped tag.
-Missing MP3 years are expected to be `0`, matching the dependency's explicit
-`DateTime(0)` fallback; missing FLAC/WAV years are expected to be null.
+FFmpeg's native WAV `IPRT` track-number tags are passed directly to TagLib.
+Missing years are expected to be null across formats. File discovery does not
+supply MIME types, so those are null; embedded image MIME types are not used as
+audio MIME types.
 
 Each tier creates both a clean library and a mixed library. The mixed library
 adds empty/truncated files, unsupported text, and a missing MP3 path (explicit
-file imports only). Each contains exactly the requested number of valid tracks.
+file discovery only). Each contains exactly the requested number of valid tracks.
+Existing audio candidates that cannot provide tags are retained with fallback
+metadata, matching production indexing. Unsupported text and missing paths are
+excluded. The manifest distinguishes `import`, `fallback`, and `skip` outcomes.
 The manifest follows `manifest.schema.json`; expected metadata comes from the
 generation recipe, not the parser's output. MP3 duration allows 100 ms for codec
 padding; FLAC/WAV allow 1 ms. Bitrate must be positive, but is not compared across
@@ -56,22 +57,27 @@ Logs and reports survive cleanup in a unique `build/large-library/run-*` folder;
 
 ## Assertions and measurements
 
-For each profile, both repository entry points run via `compute`, twice, in
-separate Flutter processes. The worker verifies exact valid path sets/counts,
-all recipe metadata, duration, and artwork bytes. It writes Hive using production
-adapters, flushes/closes it, and saves a full-field snapshot. A fresh process
-reopens the database and checks both the manifest and snapshot. No filesystem
-enumeration ordering or deduplication behavior is assumed.
-Normalized full-field snapshots must also match across repeated imports and
-entry points, excluding traversal indices and temporary thumbnail directories.
+For each profile, both directory and explicit-file discovery feed the production
+`LibraryRepository` and `MetadataWorker`, twice, in separate Flutter processes.
+The worker verifies exact discovered path sets/counts, recipe metadata, duration,
+and artwork bytes. Cold indexing must make one combined metadata/artwork read
+per song and persist the production `library_v1` snapshot using Hive adapters.
+A fresh process reopens that snapshot and checks every metadata field, including
+song identity, content URI, storage source, and album artists. It then runs warm
+indexing and asserts that valid songs require no metadata/artwork rereads; failed
+reads may be retried. Playlists are initialized as required by the repository.
+No filesystem enumeration ordering is assumed. Normalized full-field snapshots
+must match across repeated imports and discovery methods, excluding traversal
+indices, temporary thumbnail directories, and source-volume labels (directory
+and explicit-file discovery assign those differently).
 
 A separate synthetic worker creates the same number of metadata records with
 ten tracks per album, two discs per album, and 100 artists. It overrides the
 library provider and tests production song sorting, album grouping/order, and
 empty, absent, exact, case-insensitive, broad, artist and album searches.
 
-`report.json` includes generation time, per-case parse/Hive write/Hive reopen
-times, sort/group/search times, input/thumbnail/database bytes, OS, Python,
+`report.json` includes generation time, per-case combined indexing, Hive reopen,
+and warm-index times, sort/group/search times, input/thumbnail/database bytes, OS, Python,
 Flutter/Dart, FFmpeg, and Git revision. Each case has a separate log and result.
 Peak RSS is the entire Flutter **test worker** (all its isolates, runtime and
 Hive), excluding the launcher/compiler; it is not parser-only memory. Assertions
@@ -92,7 +98,8 @@ manual dispatch, which selects a tier and can include Windows/macOS for release
 validation. Metrics and failure logs are
 uploaded even when tests fail.
 
-This tests repository import and Hive operations, not OS media discovery,
-picker orchestration, UI frame timing, or playback. Android/iOS device testing
+This tests file discovery, repository indexing, TagLib, and Hive operations, not
+Android MediaStore discovery, picker orchestration, UI frame timing, or playback.
+Android/iOS device testing
 and browser playback/import need their own integration suite. Short clips prove
 record-count scaling, not behavior with huge individual audio files or artwork.

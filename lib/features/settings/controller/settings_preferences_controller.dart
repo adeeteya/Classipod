@@ -4,9 +4,12 @@ import 'dart:io' as io;
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/repositories/library/library_progress.dart';
+import 'package:classipod/core/repositories/library/library_provider.dart';
+import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/features/app_startup/controllers/splash_controller.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
@@ -309,10 +312,15 @@ class SettingsPreferencesControllerNotifier
   }
 
   Future<void> rescanMusicFiles({bool clearPlaylists = false}) async {
-    await Hive.box<MusicMetadata>(Constants.metadataBoxName).clear();
+    if (!state.fetchOnlineMusic) {
+      ref.read(libraryRepositoryProvider).requestRescan();
+    }
     if (clearPlaylists) {
       await Hive.box<PlaylistModel>(Constants.playlistBoxName).clear();
     }
+    ref.read(libraryProgressProvider.notifier).report(const LibraryProgress());
+    ref.invalidate(audioFilesServiceProvider);
+    ref.invalidate(splashControllerProvider);
     ref.read(routerProvider).goNamed(Routes.splash.name);
   }
 

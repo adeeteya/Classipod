@@ -53,7 +53,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
     setState(() => selectedDisplayItem = index);
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .playSongFromOriginalList(displayItems[index].originalSongIndex);
+        .playSongFromLibrary(displayItems[index].identity);
     if (mounted) {
       await context.pushNamed(Routes.nowPlaying.name);
     }

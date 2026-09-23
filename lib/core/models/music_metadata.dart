@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:audio_metadata_reader/audio_metadata_reader.dart';
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/utils/artist_name_utils.dart';
@@ -42,6 +41,13 @@ List<String>? _splitNullableArtistNames(String? artist) {
 }
 
 class MusicMetadata extends HiveObject {
+  final String? songId;
+  final String? sourceVolume;
+  final String? contentUri;
+  final List<String>? albumArtistNames;
+
+  String get identity => songId ?? filePath ?? '$originalSongIndex';
+
   /// Name of the track.
   final String? trackName;
 
@@ -96,6 +102,10 @@ class MusicMetadata extends HiveObject {
   final String? lyrics;
 
   MusicMetadata({
+    this.songId,
+    this.sourceVolume,
+    this.contentUri,
+    this.albumArtistNames,
     this.trackName,
     this.trackArtistNames,
     this.albumName,
@@ -115,38 +125,6 @@ class MusicMetadata extends HiveObject {
     this.rating = 0,
     this.lyrics,
   });
-
-  factory MusicMetadata.fromAudioMetadata(
-    AudioMetadata audioMetadata,
-    String? thumbnailPath,
-    int originalSongIndex,
-  ) {
-    final artist =
-        normalizeMetadataString(audioMetadata.artist) ?? "Unknown Artist";
-    final List<String> trackArtistNames = splitArtistNames(artist);
-
-    return MusicMetadata(
-      trackName: normalizeMetadataString(audioMetadata.title) ?? "Unknown Song",
-      trackArtistNames: trackArtistNames,
-      albumName:
-          normalizeMetadataString(audioMetadata.album) ?? "Unknown Album",
-      albumArtistName: trackArtistNames[0],
-      trackNumber: audioMetadata.trackNumber,
-      albumLength: audioMetadata.trackTotal,
-      year: audioMetadata.year?.year,
-      genres: audioMetadata.genres,
-      discNumber: audioMetadata.discNumber,
-      mimeType: audioMetadata.pictures.isEmpty
-          ? null
-          : audioMetadata.pictures[0].mimetype,
-      trackDuration: audioMetadata.duration?.inMilliseconds,
-      bitrate: audioMetadata.bitrate,
-      filePath: audioMetadata.file.path,
-      thumbnailPath: thumbnailPath,
-      originalSongIndex: originalSongIndex,
-      lyrics: audioMetadata.lyrics,
-    );
-  }
 
   factory MusicMetadata.fromMap(Map<String, dynamic> map) => MusicMetadata(
     trackName: normalizeMetadataString(map['metadata']['trackName']),
@@ -200,6 +178,10 @@ class MusicMetadata extends HiveObject {
   String toJson() => jsonEncode(toMap());
 
   MusicMetadata copyWith({
+    String? songId,
+    String? sourceVolume,
+    String? contentUri,
+    List<String>? albumArtistNames,
     String? trackName,
     List<String>? trackArtistNames,
     String? albumName,
@@ -220,6 +202,10 @@ class MusicMetadata extends HiveObject {
     String? lyrics,
   }) {
     return MusicMetadata(
+      songId: songId ?? this.songId,
+      sourceVolume: sourceVolume ?? this.sourceVolume,
+      contentUri: contentUri ?? this.contentUri,
+      albumArtistNames: albumArtistNames ?? this.albumArtistNames,
       trackName: trackName ?? this.trackName,
       trackArtistNames: trackArtistNames ?? this.trackArtistNames,
       albumName: albumName ?? this.albumName,
@@ -243,10 +229,10 @@ class MusicMetadata extends HiveObject {
 
   AudioSource toAudioSource() {
     if (isOnDevice) {
-      return AudioSource.file(
-        filePath ?? '',
+      return AudioSource.uri(
+        contentUri != null ? Uri.parse(contentUri!) : Uri.file(filePath ?? ''),
         tag: MediaItem(
-          id: filePath ?? '',
+          id: identity,
           title: trackName ?? "Unknown Song",
           album: albumName ?? "Unknown Album",
           artist: getTrackArtistNames,
@@ -254,9 +240,7 @@ class MusicMetadata extends HiveObject {
           duration: trackDuration != null
               ? Duration(milliseconds: trackDuration!)
               : null,
-          artUri: thumbnailPath == null
-              ? Uri.file(filePath!)
-              : Uri.file(thumbnailPath!),
+          artUri: thumbnailPath == null ? null : Uri.file(thumbnailPath!),
           rating: Rating.newStarRating(RatingStyle.range5stars, rating),
           extras: {"loadThumbnailUri": true},
         ),
@@ -265,7 +249,7 @@ class MusicMetadata extends HiveObject {
       return AudioSource.uri(
         Uri.parse(filePath ?? ''),
         tag: MediaItem(
-          id: filePath ?? '',
+          id: identity,
           title: trackName ?? "Unknown Song",
           album: albumName ?? "Unknown Album",
           artist: getTrackArtistNames,
@@ -311,7 +295,7 @@ class MusicMetadata extends HiveObject {
   }
 
   String get getMainArtistName {
-    return trackArtistNames?[0] ?? "Unknown Artist";
+    return trackArtistNames?.firstOrNull ?? "Unknown Artist";
   }
 
   String? get getTrackArtistNames {

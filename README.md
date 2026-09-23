@@ -169,7 +169,6 @@ by platform:
 
 | Name                                                                                          | Usage                                                                               |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
-| [**audio_metadata_reader**](https://pub.dev/packages/audio_metadata_reader)                   | To read the metadata of the local mp3 files                                         |
 | [**audio_service**](https://pub.dev/packages/audio_service)                                   | To support background audio playback                                                |
 | [**battery_plus**](https://pub.dev/packages/battery_plus)                                     | Shows phone battery level and status                                                |
 | [**cupertino_icons**](https://pub.dev/packages/cupertino_icons)                               | For ios style icons                                                                 |
@@ -178,6 +177,7 @@ by platform:
 | [**file_picker**](https://pub.dev/packages/file_picker)                                       | To select the directory from which the music files are scanned                      |
 | [**flutter_localizations**](https://pub.dev/packages/flutter_localizations)                   | For in-app localization map data                                                    |
 | [**flutter_riverpod**](https://pub.dev/packages/flutter_riverpod)                             | For State Management                                                                |
+| [**flutter_taglib**](https://github.com/MSOB7YY/flutter_taglib)                               | To read local audio metadata and embedded artwork                                   |
 | [**go_router**](https://pub.dev/packages/go_router)                                           | To handle routing within the app                                                    |
 | [**hive_ce**](https://pub.dev/packages/hive_ce)                                               | To Cache Auio Metadata and store playlists                                          |
 | [**hive_ce_flutter**](https://pub.dev/packages/hive_ce_flutter)                               | For flutter specific libs of hive                                                   |

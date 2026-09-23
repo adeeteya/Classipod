@@ -18,12 +18,9 @@ class NowPlayingBottomBar extends ConsumerWidget {
         builder: (context, snapshot) {
           final double totalDuration =
               (ref
-                      .read(nowPlayingDetailsProvider)
-                      .metadataList[ref
-                              .read(audioPlayerProvider)
-                              .currentIndex ??
-                          0]
-                      .trackDuration ??
+                      .watch(nowPlayingDetailsProvider)
+                      .currentMetadata
+                      ?.trackDuration ??
                   1000) /
               1000;
           double currentDuration = snapshot.data?.inSeconds.toDouble() ?? 0;

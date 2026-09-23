@@ -96,27 +96,17 @@ def generate(root, count, timeout):
                             "-metadata", "genre=Electronic"]
             command += [str(target)]
             execute(command, root / "generation.log", timeout)
-            if extension == "wav" and optional:
-                # FFmpeg emits IPRT; the current metadata dependency reads ITRK.
-                # Use its supported RIFF track-number spelling for this scale
-                # corpus, without deriving expectations from parsed output.
-                data = target.read_bytes()
-                old = b"IPRT\x02\x00\x00\x001\x00"
-                if data.count(old) != 1:
-                    raise RuntimeError("Unexpected FFmpeg WAV track chunk")
-                target.write_bytes(data.replace(old, b"ITRK\x02\x00\x00\x001\x00", 1))
             specs.append({
                 "template": target,
                 "expected": {
                     "trackName": title, "trackArtistNames": [artist],
                     "albumName": album_name, "albumArtistName": artist,
                     "trackNumber": 1 if optional else None,
-                    # The MP3 reader's documented source-level fallback is
-                    # DateTime(0), unlike FLAC/WAV's nullable missing year.
-                    "year": 2020 if optional else (0 if extension == "mp3" else None),
+                    "year": 2020 if optional else None,
                     "genres": ["Electronic"] if optional else [],
                     "albumLength": None, "discNumber": None, "lyrics": None,
-                    "mimeType": "image/png" if artwork else None,
+                    "mimeType": None,
+                    "albumArtistNames": [artist],
                     "isOnDevice": True, "rating": 0,
                 },
                 "durationMs": 1000,
@@ -150,7 +140,11 @@ def generate(root, count, timeout):
             for name, data in bad.items():
                 (music / name).write_bytes(data)
                 size += len(data)
-                entries.append({"path": name, "outcome": "skip", "exists": True})
+                entries.append({
+                    "path": name,
+                    "outcome": "skip" if name.endswith(".txt") else "fallback",
+                    "exists": True,
+                })
             entries.append({"path": "missing.mp3", "outcome": "skip", "exists": False})
         manifest = root / profile / "manifest.json"
         write_json(manifest, {"schemaVersion": 1, "profile": profile,
@@ -216,6 +210,7 @@ def main():
                     for record in snapshot:
                         # Original indices reflect filesystem traversal order.
                         record.pop("originalSongIndex")
+                        record.pop("sourceVolume")
                         if record["thumbnailPath"]:
                             record["thumbnailPath"] = Path(record["thumbnailPath"]).name
                     snapshot.sort(key=lambda record: record["filePath"])

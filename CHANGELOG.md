@@ -1,5 +1,9 @@
 ## Unreleased
 
+- Add optional iOS and macOS GitHub release jobs: an unsigned sideloadable IPA
+  and a universal, ad-hoc-signed DMG without Developer ID or notarization.
+  Include SHA-256 checksums and Apple installation/build documentation.
+
 - Select a parent music folder on iOS and macOS on first launch or Settings
   rescan, remember access across launches, and recursively cache metadata and
   artwork using the shared library indexer.

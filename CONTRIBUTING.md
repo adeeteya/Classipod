@@ -45,6 +45,14 @@ Finally you can debug/run the app by `flutter run --flavor dev --target=lib/main
 
 There you go, you can now open & edit the project. Enjoy!
 
+## Building Apple release downloads
+
+The existing `Build and Deploy Releases` workflow includes optional iOS and
+macOS jobs. These use the shared Fastlane `build_apple_release` lane and require
+no Apple account, signing certificates, provisioning profiles, or notarization
+credentials. See [Apple releases](docs/apple-releases.md) for local commands,
+artifact validation, and installation testing before publishing.
+
 ## How to Report Bugs and Request Feature
 
 Please open [a new issue in the GitHub repository](https://github.com/adeeteya/Classipod/issues) with steps to reproduce the problem you're experiencing.

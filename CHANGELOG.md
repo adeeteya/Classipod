@@ -1,5 +1,9 @@
 ## Unreleased
 
+- Select a parent music folder on iOS and macOS on first launch or Settings
+  rescan, remember access across launches, and recursively cache metadata and
+  artwork using the shared library indexer.
+
 - Show song and artwork counters only for initial indexing or re-indexing,
   keeping normal cached startup free of briefly flashing totals.
 

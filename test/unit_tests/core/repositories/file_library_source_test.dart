@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/repositories/library/library_repository.dart';
@@ -79,6 +80,149 @@ void main() {
       final deleted = await reopened.discover();
       expect(deleted.songs, isEmpty);
       expect(deleted.volumes, isNotEmpty);
+    },
+  );
+
+  test(
+    'parent directory includes nested music and ignores other files',
+    () async {
+      final album = await Directory('${music.path}/Artist/Album')
+          .create(recursive: true);
+      final song = await File('${album.path}/Track.FLAC').writeAsBytes([1]);
+      await File('${album.path}/cover.jpg').writeAsBytes([2]);
+      final source = FileLibrarySource(
+        pickLocations: () async => {'directory': music.path},
+      );
+      final result = await source.discover();
+      expect(result.songs.single.path, song.absolute.path);
+      expect(result.songs.single.volume, music.absolute.uri.toString());
+    },
+  );
+
+  test('folder bookmark is restored and refreshed across launches', () async {
+    await File('${music.path}/song.mp3').writeAsBytes([1]);
+    var picks = 0;
+    final bookmark = Uint8List.fromList([1, 2, 3]);
+    final source = FileLibrarySource(
+      pickLocations: () async {
+        picks++;
+        return {'directory': music.path, 'bookmark': bookmark};
+      },
+      authorize: (locations) async => locations,
+    );
+    expect((await source.discover()).songs, hasLength(1));
+    await Hive.close();
+    final refreshed = Uint8List.fromList([4, 5, 6]);
+    final reopened = FileLibrarySource(
+      pickLocations: () async {
+        picks++;
+        return null;
+      },
+      authorize: (locations) async {
+        expect(locations['bookmark'], bookmark);
+        return {...locations, 'bookmark': refreshed};
+      },
+    );
+    expect((await reopened.discover()).songs, hasLength(1));
+    expect(picks, 1);
+    final box = Hive.box<dynamic>(Constants.libraryBoxName);
+    expect((box.get('locations') as Map)['bookmark'], refreshed);
+  });
+
+  test(
+    'revoked folder access preserves selection and asks again on retry',
+    () async {
+      final box = await Hive.openBox<dynamic>(Constants.libraryBoxName);
+      final saved = {
+        'directory': music.path,
+        'bookmark': [1],
+      };
+      await box.put('locations', saved);
+      var picks = 0;
+      var revoked = true;
+      final source = FileLibrarySource(
+        pickLocations: () async {
+          picks++;
+          return {
+            'directory': music.path,
+            'bookmark': [2],
+          };
+        },
+        authorize: (locations) async {
+          if (revoked) throw StateError('Access revoked');
+          return locations;
+        },
+      );
+      await expectLater(source.discover(), throwsStateError);
+      expect(box.get('locations'), saved);
+      expect(picks, 0);
+      revoked = false;
+      await source.discover();
+      expect(picks, 1);
+      expect((box.get('locations') as Map)['bookmark'], [2]);
+    },
+  );
+
+  test('first-launch cancellation leaves folder selection pending', () async {
+    var picks = 0;
+    final source = FileLibrarySource(
+      pickLocations: () async {
+        picks++;
+        return null;
+      },
+    );
+    expect((await source.discover()).songs, isEmpty);
+    expect((await source.discover()).songs, isEmpty);
+    expect(picks, 2);
+    expect(
+      Hive.box<dynamic>(Constants.libraryBoxName).get('locations'),
+      isNull,
+    );
+  });
+
+  test(
+    'rescan reopens folder picker and rebuilds metadata and artwork',
+    () async {
+      final fixture = File('test/test_files/mp3/Faded.mp3');
+      final album = await Directory('${music.path}/Artist/Album')
+          .create(recursive: true);
+      await fixture.copy('${album.path}/Faded.mp3');
+      var picks = 0;
+      var reads = 0;
+      var cancel = false;
+      final source = FileLibrarySource(
+        pickLocations: () async {
+          picks++;
+          return cancel ? null : {'directory': music.path};
+        },
+      );
+      final worker = await MetadataWorker.start();
+      addTearDown(worker.close);
+      final repository = LibraryRepository(
+        artworkDirectory: '${temporary.path}/artwork',
+        discover: source.discover,
+        selectSource: source.selectAgain,
+        readTags: (uri, {artworkDirectory}) async {
+          reads++;
+          return worker.read(uri, artworkDirectory: artworkDirectory);
+        },
+      );
+      final first = await repository.load((_) {});
+      expect(first.single.trackName, 'Faded');
+      expect(await File(first.single.thumbnailPath!).exists(), isTrue);
+      await repository.load((_) {});
+      expect(picks, 1);
+      expect(reads, 1);
+      repository.requestRescan();
+      await repository.load((_) {});
+      expect(picks, 2);
+      expect(reads, 2);
+      cancel = true;
+      repository.requestRescan();
+      final retained = await repository.load((_) {});
+      expect(retained.single.identity, first.single.identity);
+      expect(picks, 3);
+      expect(reads, 3);
     },
   );
 

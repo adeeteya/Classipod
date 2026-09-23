@@ -40,17 +40,6 @@ class SplashControllerNotifier extends AsyncNotifier<void> {
         throw const AudioPermissionPermanentlyDeniedException();
       }
       if (!result.isGranted) throw const AudioPermissionDeniedException();
-    } else if (!kIsWeb && Platform.isIOS) {
-      final PermissionStatus audioPermission = await Permission.audio.request();
-      final PermissionStatus genericStoragePermission = await Permission.storage
-          .request();
-      if (audioPermission.isDenied && genericStoragePermission.isDenied) {
-        throw const AudioPermissionDeniedException();
-      }
-      if (audioPermission.isPermanentlyDenied &&
-          genericStoragePermission.isPermanentlyDenied) {
-        throw const AudioPermissionPermanentlyDeniedException();
-      }
     }
 
     await initializeApp();

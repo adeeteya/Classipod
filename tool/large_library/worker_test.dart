@@ -5,15 +5,18 @@ import 'dart:io';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
-import 'package:classipod/core/repositories/metadata_reader_repository.dart';
+import 'package:classipod/core/repositories/library/library_progress.dart';
+import 'package:classipod/core/repositories/library/library_repository.dart';
+import 'package:classipod/core/repositories/library/metadata_worker.dart';
+import 'package:classipod/core/repositories/library/sources/file_library_source.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/artists/providers/artist_names_provider.dart';
+import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:classipod/features/music/search/provider/search_provider.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/hive/hive_registrar.g.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hive_ce/hive.dart';
@@ -29,6 +32,19 @@ int _bytes(Directory directory) => directory
     .whereType<File>()
     .fold(0, (size, file) => size + file.lengthSync());
 
+Map<String, dynamic> _fields(MusicMetadata song) => {
+  ...song.toMap(),
+  'songId': song.songId,
+  'sourceVolume': song.sourceVolume,
+  'contentUri': song.contentUri,
+  'albumArtistNames': song.albumArtistNames,
+};
+
+List<MusicMetadata> _savedRecords(Box<dynamic> box) => [
+  for (final row in (box.get('snapshot') as Map)['records'] as List)
+    (row as Map)['music'] as MusicMetadata,
+];
+
 void _verify(
   List<MusicMetadata> records,
   Map<String, dynamic> manifest,
@@ -38,9 +54,17 @@ void _verify(
   final entries = (manifest['entries'] as List).cast<Map<String, dynamic>>();
   final expected = {
     for (final entry in entries)
-      if (entry['outcome'] == 'import') _join(music, entry['path']): entry,
+      if (entry['outcome'] != 'skip') _join(music, entry['path']): entry,
   };
-  expect(records.length, manifest['validTracks']);
+  expect(records.length, expected.length);
+  expect(
+    entries.where((entry) => entry['outcome'] == 'import').length,
+    manifest['validTracks'],
+  );
+  expect(
+    records.map((record) => record.identity).toSet().length,
+    records.length,
+  );
   final actualPaths = records.map((record) => record.filePath).toSet();
   final expectedPaths = expected.keys.toSet();
   // Deep matcher equality on sets scans pairs of elements. Hash-set differences
@@ -70,8 +94,18 @@ void _verify(
   final checkedArtwork = <String>{};
   for (final record in records) {
     final entry = expected[record.filePath]!;
+    expect(record.songId, File(record.filePath!).uri.toString());
+    expect(record.contentUri, record.songId);
+    expect(record.sourceVolume, isNotEmpty);
+    if (entry['outcome'] == 'fallback') {
+      expect(record.trackName, File(record.filePath!).uri.pathSegments.last);
+      expect(record.trackArtistNames, ['Unknown Artist']);
+      expect(record.albumName, 'Unknown Album');
+      expect(record.thumbnailPath, isNull);
+      continue;
+    }
     final fields = entry['expected'] as Map<String, dynamic>;
-    final actual = record.toMap();
+    final actual = _fields(record);
     for (final field in fields.entries) {
       expect(
         actual[field.key],
@@ -119,36 +153,55 @@ Future<Map<String, dynamic>> _importOrReopen(
   addTearDown(Hive.close);
   final timer = Stopwatch();
 
+  database.createSync(recursive: true);
+  thumbnails.createSync(recursive: true);
+  await Hive.openBox<PlaylistModel>(Constants.playlistBoxName);
+  final paths = (manifest['entries'] as List)
+      .map((entry) => _join(music, entry['path'] as String))
+      .toList();
+  final locations = config['method'] == 'directory'
+      ? <String, dynamic>{'directory': music}
+      : <String, dynamic>{'files': paths};
+  MetadataWorker? worker;
+  final reads = <String>[];
+  LibraryProgress? progress;
+  final repository = LibraryRepository(
+    artworkDirectory: thumbnails.path,
+    discover: () => discoverFileLocations(locations),
+    readTags: (uri, {artworkDirectory}) async {
+      reads.add(uri);
+      worker ??= await MetadataWorker.start();
+      return worker!.read(uri, artworkDirectory: artworkDirectory);
+    },
+    closeReader: () async {
+      final previous = worker;
+      worker = null;
+      await previous?.close();
+    },
+  );
+
   if (config['mode'] == 'import') {
-    database.createSync();
-    thumbnails.createSync();
-    final repository = MetadataReaderRepository(thumbnails.path);
-    final paths = (manifest['entries'] as List)
-        .map((entry) => _join(music, entry['path'] as String))
-        .toList();
     timer.start();
-    final records = config['method'] == 'directory'
-        ? await compute(repository.extractMetadataFromDirectory, music)
-        : await compute(repository.extractMetadataFromFiles, paths);
-    metrics['parseMs'] = timer.elapsedMicroseconds / 1000;
-    _verify(records, manifest, music, config['root'] as String);
-    // Full field snapshot is only the persistence oracle. Parsing expectations
-    // above always come from the independently generated manifest.
-    snapshot.writeAsStringSync(
-      jsonEncode(records.map((record) => record.toMap()).toList()),
+    final records = await repository.load((value) => progress = value);
+    metrics['indexMs'] = timer.elapsedMicroseconds / 1000;
+    expect(
+      reads.length,
+      records.length,
+      reason: 'Metadata and artwork should use one read per discovered file',
     );
-    timer
-      ..reset()
-      ..start();
-    final box = await Hive.openBox<MusicMetadata>(Constants.metadataBoxName);
-    await box.addAll(records);
-    await box.flush();
-    await Hive.close();
-    metrics['hiveWriteMs'] = timer.elapsedMicroseconds / 1000;
+    expect(progress!.phase, LibraryPhase.complete);
+    expect(progress!.songsCached, 0);
+    _verify(records, manifest, music, config['root'] as String);
+    final stored = _savedRecords(Hive.box<dynamic>(Constants.libraryBoxName));
+    expect(stored.length, records.length);
+    for (var index = 0; index < records.length; index++) {
+      expect(_fields(stored[index]), _fields(records[index]));
+    }
+    snapshot.writeAsStringSync(jsonEncode(records.map(_fields).toList()));
   } else {
     timer.start();
-    final box = await Hive.openBox<MusicMetadata>(Constants.metadataBoxName);
-    final records = box.values.toList();
+    final box = await Hive.openBox<dynamic>(Constants.libraryBoxName);
+    final records = _savedRecords(box);
     metrics['hiveReopenMs'] = timer.elapsedMicroseconds / 1000;
     _verify(records, manifest, music, config['root'] as String);
     final saved = (jsonDecode(snapshot.readAsStringSync()) as List)
@@ -156,13 +209,46 @@ Future<Map<String, dynamic>> _importOrReopen(
     expect(records.length, saved.length);
     for (var index = 0; index < records.length; index++) {
       expect(
-        records[index].toMap(),
+        _fields(records[index]),
         saved[index],
         reason: 'Persisted row $index',
       );
     }
-    await Hive.close();
+    timer
+      ..reset()
+      ..start();
+    final warm = await repository.load((value) => progress = value);
+    metrics['warmIndexMs'] = timer.elapsedMicroseconds / 1000;
+    final retryable = {
+      for (final entry
+          in (manifest['entries'] as List).cast<Map<String, dynamic>>())
+        if (entry['outcome'] == 'fallback')
+          _join(music, entry['path'] as String),
+    };
+    expect(
+      reads.where((path) => !retryable.contains(path)).take(10),
+      isEmpty,
+      reason: 'Warm startup must not reread valid metadata or artwork',
+    );
+    expect(
+      progress!.songsCached,
+      greaterThanOrEqualTo(manifest['validTracks'] as int),
+    );
+    _verify(warm, manifest, music, config['root'] as String);
+    final savedByPath = {for (final row in saved) row['filePath']: row};
+    for (final song in warm) {
+      expect(
+        _fields(song),
+        savedByPath[song.filePath],
+        reason: 'Warm cache row',
+      );
+    }
   }
+  metrics['metadataReads'] = reads.length;
+  metrics['songsCached'] = progress!.songsCached;
+  metrics['artworkCached'] = progress!.artworkCached;
+  metrics['failures'] = progress!.failures;
+  await Hive.close();
   metrics.addAll({
     'validTracks': manifest['validTracks'],
     'profile': manifest['profile'],

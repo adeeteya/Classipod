@@ -1,5 +1,11 @@
 ## Unreleased
 
+- Split artist and album-artist tags on &, ;, commas, //, ft., x, featuring,
+  and feat, while preserving single slashes and genre names.
+
+- Read metadata and cache embedded artwork in one file open per song, with
+  live startup counts and repair of missing artwork on cached songs.
+
 - Fix web playback repeating the first loaded song when selecting or skipping
   tracks; reset the web audio backend before replacing its source.
 

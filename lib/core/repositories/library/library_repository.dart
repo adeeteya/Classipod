@@ -111,6 +111,16 @@ class LibraryRepository {
       ),
     );
 
+    final verifiedArtwork = <String>{};
+    Future<bool> artworkExists(String? path) async {
+      if (path == null) return false;
+      if (verifiedArtwork.contains(path)) return true;
+      final file = File(path);
+      if (!await file.exists() || await file.length() == 0) return false;
+      verifiedArtwork.add(path);
+      return true;
+    }
+
     try {
       emit(LibraryPhase.metadata);
       for (final song in songs) {
@@ -134,8 +144,24 @@ class LibraryRepository {
             ),
           };
           cached++;
+          if (row['hasCover'] == true &&
+              !await artworkExists(previous.thumbnailPath)) {
+            final result = await readTags(
+              song.path ?? song.uri,
+              artworkDirectory: artworkDirectory,
+            );
+            final path = result['artworkPath'] as String?;
+            if (path != null) {
+              row['music'] = (row['music'] as MusicMetadata).copyWith(
+                thumbnailPath: path,
+              );
+            }
+          }
         } else {
-          final tags = await readTags(song.path ?? song.uri);
+          final tags = await readTags(
+            song.path ?? song.uri,
+            artworkDirectory: artworkDirectory,
+          );
           final success = !tags.containsKey('error');
           if (!success) failures++;
           row = {
@@ -152,39 +178,20 @@ class LibraryRepository {
             ),
           };
         }
+        if (row['hasCover'] == true) {
+          final music = row['music'] as MusicMetadata;
+          if (await artworkExists(music.thumbnailPath)) {
+            artworkCached++;
+          } else {
+            failures++;
+          }
+        }
         records.add(row);
         loaded++;
         emit(LibraryPhase.metadata);
       }
       artworkTotal = records.where((row) => row['hasCover'] == true).length;
       emit(LibraryPhase.artwork);
-      final verifiedArtwork = <String>{};
-      for (final row in records) {
-        if (row['hasCover'] != true) continue;
-        final song = row['music'] as MusicMetadata;
-        final path = song.thumbnailPath;
-        if (path != null &&
-            (verifiedArtwork.contains(path) ||
-                (await File(path).exists() && await File(path).length() > 0))) {
-          verifiedArtwork.add(path);
-          artworkCached++;
-        } else {
-          final result = await readTags(
-            song.filePath ?? row['uri'] as String,
-            artworkDirectory: artworkDirectory,
-          );
-          if (result['artworkPath'] != null) {
-            row['music'] = song.copyWith(
-              thumbnailPath: result['artworkPath'] as String,
-            );
-            verifiedArtwork.add(result['artworkPath'] as String);
-            artworkCached++;
-          } else {
-            failures++;
-          }
-        }
-        emit(LibraryPhase.artwork);
-      }
       final active = records
           .map((row) => row['music'] as MusicMetadata)
           .toList();

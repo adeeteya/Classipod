@@ -16,11 +16,24 @@ void main() {
     );
   }
 
-  testWidgets('unknown totals have discovery labels', (tester) async {
-    await show(tester, const LibraryProgress());
-    expect(find.text('Finding songs…'), findsOneWidget);
-    expect(find.text('Checking artwork…'), findsOneWidget);
-  });
+  testWidgets(
+    'discovery shows its label and extraction shows the artwork count',
+    (tester) async {
+      await show(tester, const LibraryProgress());
+      expect(find.text('Finding songs…'), findsOneWidget);
+      expect(find.textContaining('Artwork cached:'), findsNothing);
+      await show(
+        tester,
+        const LibraryProgress(
+          phase: LibraryPhase.metadata,
+          songsLoaded: 1,
+          songsTotal: 2,
+          artworkCached: 1,
+        ),
+      );
+      expect(find.text('Artwork cached: 1'), findsOneWidget);
+    },
+  );
 
   testWidgets('song and artwork counts are above the loader', (tester) async {
     await show(
@@ -35,7 +48,7 @@ void main() {
       ),
     );
     final songs = find.text('Songs loaded: 120 / 120');
-    final artwork = find.text('Artwork cached: 80 / 100');
+    final artwork = find.text('Artwork cached: 80');
     expect(songs, findsOneWidget);
     expect(artwork, findsOneWidget);
     expect(find.text('Could not read 2 items'), findsOneWidget);
@@ -52,6 +65,6 @@ void main() {
       const LibraryProgress(phase: LibraryPhase.complete, artworkTotal: 0),
     );
     expect(find.text('Songs loaded: 0 / 0'), findsOneWidget);
-    expect(find.text('Artwork cached: 0 / 0'), findsOneWidget);
+    expect(find.text('Artwork cached: 0'), findsOneWidget);
   });
 }

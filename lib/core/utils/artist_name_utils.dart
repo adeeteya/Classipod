@@ -1,12 +1,11 @@
-List<String> splitArtistNames(String artistNames) {
-  final separator = RegExp(
-    r'\s*(?:[,;/&+]|\s(?:and|feat(?:uring)?\.?|ft\.?|x)\s)\s*',
-    caseSensitive: false,
-  );
+final _artistSeparator = RegExp(
+  r'\s*(?:[&;,]|//|\s+(?:ft\.|featuring|feat\.?|x)\s+)\s*',
+  caseSensitive: false,
+);
 
-  return artistNames
-      .split(separator)
-      .map((name) => name.trim())
-      .where((name) => name.isNotEmpty)
-      .toList();
-}
+List<String> splitArtistNames(String artistNames) => artistNames
+    .split(_artistSeparator)
+    .map((name) => name.trim())
+    .where((name) => name.isNotEmpty)
+    .toSet()
+    .toList();

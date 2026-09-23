@@ -545,9 +545,8 @@
     "description": "The title of the exclude directories screen"
   },
   "findingSongs": "Finding songs…",
-  "checkingArtwork": "Checking artwork…",
   "songsLoaded": "Songs loaded: {loaded} / {total}",
-  "artworkCached": "Artwork cached: {cached} / {total}",
+  "artworkCached": "Artwork cached: {cached}",
   "libraryReadFailures": "Could not read {count} items",
   "libraryLoadError": "Unable to load the music library. Please retry.",
   "libraryRetry": "Retry",
@@ -565,9 +564,7 @@
     "placeholders": {
       "cached": {
         "type": "int"
-      },
-      "total": {
-        "type": "int"
+
       }
     }
   },

@@ -6,6 +6,7 @@ import 'package:classipod/core/repositories/library/library_metadata.dart';
 import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:classipod/core/repositories/library/library_repository.dart';
 import 'package:classipod/core/repositories/library/library_source.dart';
+import 'package:classipod/core/utils/artist_name_utils.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/hive/hive_registrar.g.dart';
@@ -55,12 +56,12 @@ void main() {
       readTags: (uri, {artworkDirectory}) async {
         reads.add(artworkDirectory == null ? uri : 'art:$uri');
         if (fail) return {'error': 'bad file'};
-        if (artworkDirectory != null) {
-          if (failArtwork) return {'error': 'disk unavailable'};
+        String? artworkPath;
+        if (artwork && artworkDirectory != null && !failArtwork) {
           final image = File('$artworkDirectory/shared');
           await image.parent.create(recursive: true);
           await image.writeAsBytes([1, 2, 3]);
-          return {'artworkPath': image.path};
+          artworkPath = image.path;
         }
         return {
           'properties': {
@@ -72,6 +73,8 @@ void main() {
             'DISCNUMBER': ['1/2'],
           },
           'hasCover': artwork,
+          'artworkPath': artworkPath,
+          if (failArtwork) 'artworkError': 'disk unavailable',
           'duration': 12345,
           'bitrate': 320,
         };
@@ -262,6 +265,10 @@ void main() {
     final songs = await repository.load(progress.add);
     expect(progress.last.artworkTotal, 2);
     expect(progress.last.artworkCached, 2);
+    expect(reads, ['art:${record(1).path}', 'art:${record(2).path}']);
+    final firstLoaded = progress.firstWhere((value) => value.songsLoaded == 1);
+    expect(firstLoaded.artworkCached, 1);
+    expect(firstLoaded.artworkTotal, isNull);
     reads.clear();
     await repository.load(progress.add);
     expect(reads, isEmpty);
@@ -297,7 +304,8 @@ void main() {
   test('artwork failures do not count as cached and are retried', () async {
     artwork = true;
     failArtwork = true;
-    await repository.load(progress.add);
+    final songs = await repository.load(progress.add);
+    expect(songs.first.trackName, 'Track');
     expect(progress.last.artworkTotal, 2);
     expect(progress.last.artworkCached, 0);
     expect(progress.last.failures, 2);
@@ -324,7 +332,39 @@ void main() {
     expect(progress.last.artworkTotal, 0);
   });
 
-  test('conservative artists and compilation album grouping', () async {
+  test('artist separators and compilation album grouping', () async {
+    expect(
+      splitArtistNames('AC/DC & A; B, C // D ft. E x F featuring G feat H'),
+      ['AC/DC', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'],
+    );
+    expect(splitArtistNames('Xavier FEAT. X Japan X Björk & Björk'), [
+      'Xavier',
+      'X Japan',
+      'Björk',
+    ]);
+    final parsed = libraryMetadata(record(1), {
+      'properties': {
+        'ARTIST': ['A & B', 'B // AC/DC'],
+        'ALBUMARTIST': ['C featuring D'],
+        'GENRE': ['R&B', 'Rock; Pop'],
+      },
+    }, index: 0);
+    expect(parsed.trackArtistNames, ['A', 'B', 'AC/DC']);
+    expect(parsed.albumArtistNames, ['C', 'D']);
+    expect(parsed.genres, ['R&B', 'Rock', 'Pop']);
+    final fallback = libraryMetadata(
+      const LibrarySong(
+        uri: 'file:///song',
+        volume: 'disk',
+        size: 1,
+        modified: 1,
+        metadata: {'artist': 'A & B', 'album_artist': 'C ft. D'},
+      ),
+      {},
+      index: 0,
+    );
+    expect(fallback.trackArtistNames, ['A', 'B']);
+    expect(fallback.albumArtistNames, ['C', 'D']);
     expect(conservativeNames(['AC/DC', 'Earth, Wind & Fire', 'A; B']), [
       'AC/DC',
       'Earth, Wind & Fire',

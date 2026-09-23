@@ -1,5 +1,6 @@
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/repositories/library/library_source.dart';
+import 'package:classipod/core/utils/artist_name_utils.dart';
 
 List<String> conservativeNames(Iterable<String> values) => values
     .expand((value) => value.split(';'))
@@ -34,12 +35,12 @@ MusicMetadata libraryMetadata(
   }
 
   int? number(String key) => parseInteger(text(key));
+  List<String> parseArtists(Iterable<String> entries) =>
+      conservativeNames(entries).expand(splitArtistNames).toSet().toList();
   List<String> names(String key, String fallback, List<String> defaults) {
-    final tagged = conservativeNames(values(key));
+    final tagged = parseArtists(values(key));
     if (tagged.isNotEmpty) return tagged;
-    final media = conservativeNames([
-      song.metadata[fallback]?.toString() ?? '',
-    ]);
+    final media = parseArtists([song.metadata[fallback]?.toString() ?? '']);
     return media.isNotEmpty ? media : defaults;
   }
 
@@ -83,6 +84,7 @@ MusicMetadata libraryMetadata(
         : (song.metadata['duration'] as num?)?.toInt(),
     bitrate: tags['bitrate'] as int?,
     filePath: song.path ?? song.uri,
+    thumbnailPath: tags['artworkPath'] as String?,
     originalSongIndex: index,
     rating: previous?.rating ?? 0,
   );

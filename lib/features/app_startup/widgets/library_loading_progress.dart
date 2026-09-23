@@ -23,15 +23,14 @@ class LibraryLoadingProgress extends StatelessWidget {
                   ),
             style: const TextStyle(color: CupertinoColors.white, fontSize: 13),
           ),
-          Text(
-            progress.artworkTotal == null
-                ? strings.checkingArtwork
-                : strings.artworkCached(
-                    progress.artworkCached,
-                    progress.artworkTotal!,
-                  ),
-            style: const TextStyle(color: CupertinoColors.white, fontSize: 13),
-          ),
+          if (progress.phase != LibraryPhase.discovering)
+            Text(
+              strings.artworkCached(progress.artworkCached),
+              style: const TextStyle(
+                color: CupertinoColors.white,
+                fontSize: 13,
+              ),
+            ),
           if (progress.failures > 0)
             Text(
               strings.libraryReadFailures(progress.failures),

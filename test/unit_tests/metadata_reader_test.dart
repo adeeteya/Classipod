@@ -4,6 +4,7 @@ import 'package:classipod/core/repositories/library/audio_file_formats.dart';
 import 'package:classipod/core/repositories/library/library_metadata.dart';
 import 'package:classipod/core/repositories/library/library_source.dart';
 import 'package:classipod/core/repositories/library/metadata_worker.dart';
+import 'package:crypto/crypto.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -32,7 +33,12 @@ void main() {
         final worker = await MetadataWorker.start();
         addTearDown(worker.close);
         final file = File('test/test_files/${entry.key}').absolute;
-        final tags = await worker.read(file.uri.toString());
+        final artwork = await Directory.systemTemp.createTemp('taglib-art-');
+        addTearDown(() => artwork.delete(recursive: true));
+        final tags = await worker.read(
+          file.uri.toString(),
+          artworkDirectory: artwork.path,
+        );
         expect(tags['error'], isNull);
         final metadata = libraryMetadata(
           LibrarySong(
@@ -52,6 +58,22 @@ void main() {
         if (entry.key.startsWith('mp3/') || entry.key.startsWith('flac/')) {
           expect(metadata.lyrics, contains('You were the shadow to my light'));
           expect(tags['hasCover'], isTrue);
+          final cover = File(tags['artworkPath'] as String);
+          expect(
+            cover.uri.pathSegments.last,
+            sha256.convert(await cover.readAsBytes()).toString(),
+          );
+          expect(metadata.thumbnailPath, cover.path);
+          final blocked = File('${artwork.path}/blocked');
+          await blocked.writeAsString('not a directory');
+          final retry = await worker.read(
+            file.uri.toString(),
+            artworkDirectory: blocked.path,
+          );
+          expect(retry['error'], isNull);
+          expect(retry['properties'], tags['properties']);
+          expect(retry['artworkError'], isNotNull);
+          expect(retry['artworkPath'], isNull);
         }
       },
     );

@@ -70,35 +70,36 @@ class MetadataWorker {
       final (reply, uri, directory) = message as (SendPort, String, String?);
       TagLibFile? file;
       try {
-        List<int>? bytes;
         final path = uri.startsWith('file:')
             ? Uri.parse(uri).toFilePath()
             : uri;
         file = await TagLibFile.openAsync(path);
         if (file == null) throw StateError('Cannot read tags');
-        if (directory == null) {
-          reply.send({
-            'properties': file.properties,
-            'duration': file.duration.inMilliseconds,
-            'bitrate': file.bitrate,
-            'hasCover': file.hasCover,
-          });
-        } else {
-          bytes = file.coverData;
-        }
-        if (directory != null) {
-          if (bytes == null || bytes.isEmpty) {
-            throw StateError('Embedded artwork is unreadable');
+        final result = <String, dynamic>{
+          'properties': file.properties,
+          'duration': file.duration.inMilliseconds,
+          'bitrate': file.bitrate,
+          'hasCover': file.hasCover,
+        };
+        if (directory != null && result['hasCover'] == true) {
+          try {
+            final bytes = file.coverData;
+            if (bytes == null || bytes.isEmpty) {
+              throw StateError('Embedded artwork is unreadable');
+            }
+            final target = File('$directory/${sha256.convert(bytes)}');
+            await target.parent.create(recursive: true);
+            if (!await target.exists() || await target.length() == 0) {
+              final temporary = File('${target.path}.tmp');
+              await temporary.writeAsBytes(bytes, flush: true);
+              await temporary.rename(target.path);
+            }
+            result['artworkPath'] = target.path;
+          } catch (error) {
+            result['artworkError'] = error.toString();
           }
-          final target = File('$directory/${sha256.convert(bytes)}');
-          await target.parent.create(recursive: true);
-          if (!await target.exists() || await target.length() == 0) {
-            final temporary = File('${target.path}.tmp');
-            await temporary.writeAsBytes(bytes, flush: true);
-            await temporary.rename(target.path);
-          }
-          reply.send({'artworkPath': target.path});
         }
+        reply.send(result);
       } catch (error) {
         reply.send({'error': error.toString()});
       } finally {

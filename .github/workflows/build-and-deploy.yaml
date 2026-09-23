@@ -19,6 +19,14 @@ on:
         description: 'Build Windows Release'
         type: boolean
         default: true
+      ios:
+        description: 'Build unsigned iOS IPA'
+        type: boolean
+        default: true
+      macos:
+        description: 'Build macOS DMG'
+        type: boolean
+        default: true
       web:
         description: 'Build Web Release'
         type: boolean
@@ -32,21 +40,24 @@ jobs:
 
   create_github_release:
     name: Create GitHub Release
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Create a GitHub Release
-        run: |
-          if gh release view "${{ inputs.version_number }}" > /dev/null 2>&1; then
-            echo "Release '${{ inputs.version_number }}' already exists. Skipping release creation."
-          else
-            echo "Release '${{ inputs.version_number }}' does not exist. Creating release..."
-            gh release create "${{ inputs.version_number }}" --title "Version ${{ inputs.version_number }}" --generate-notes
-          fi
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
+          RELEASE_TAG: ${{ inputs.version_number }}
+        run: |
+          if gh release view "$RELEASE_TAG" > /dev/null 2>&1; then
+            echo "Release '$RELEASE_TAG' already exists. Skipping release creation."
+          else
+            gh release create "$RELEASE_TAG" --target "$GITHUB_SHA" \
+              --title "Version $RELEASE_TAG" --generate-notes
+          fi
 
   build_web:
     if: ${{ inputs.web }}
@@ -88,7 +99,7 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update -y && sudo apt-get upgrade -y
-          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev libstdc++-12-dev libasound2-dev
+          sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev libstdc++-12-dev libasound2-dev libcurl4-openssl-dev
       
       - name: Install Flutter Dependencies
         run: flutter pub get
@@ -221,3 +232,93 @@ jobs:
           options: '{ "version_number": "${{ inputs.version_number }}" }'
         env:
           APP_PACKAGE_NAME: ${{ secrets.APP_PACKAGE_NAME }}
+
+  build_ios:
+    if: ${{ inputs.ios }}
+    needs: create_github_release
+    name: Build unsigned iOS IPA
+    runs-on: macos-26
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: pubspec.yaml
+          channel: ${{ env.FLUTTER_CHANNEL }}
+          cache: true
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+          working-directory: ios
+
+      - name: Build and package without Apple credentials
+        working-directory: ios
+        run: bundle exec fastlane build_apple_release platform:ios
+
+      - name: Save release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: classipod-ios
+          path: |
+            build/releases/Classipod-iOS.ipa
+            build/releases/Classipod-iOS.ipa.sha256
+          if-no-files-found: error
+
+      - name: Upload to GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
+          RELEASE_TAG: ${{ inputs.version_number }}
+        run: |
+          gh release upload "$RELEASE_TAG" \
+            "build/releases/Classipod-iOS.ipa" \
+            "build/releases/Classipod-iOS.ipa.sha256" --clobber
+
+  build_macos:
+    if: ${{ inputs.macos }}
+    needs: create_github_release
+    name: Build macOS DMG (not notarized)
+    runs-on: macos-26
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: pubspec.yaml
+          channel: ${{ env.FLUTTER_CHANNEL }}
+          cache: true
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+          working-directory: ios
+
+      - name: Build and package without Apple credentials
+        working-directory: ios
+        run: bundle exec fastlane build_apple_release platform:macos
+
+      - name: Save release artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: classipod-macos
+          path: |
+            build/releases/Classipod-macOS.dmg
+            build/releases/Classipod-macOS.dmg.sha256
+          if-no-files-found: error
+
+      - name: Upload to GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
+          RELEASE_TAG: ${{ inputs.version_number }}
+        run: |
+          gh release upload "$RELEASE_TAG" \
+            "build/releases/Classipod-macOS.dmg" \
+            "build/releases/Classipod-macOS.dmg.sha256" --clobber

@@ -45,8 +45,8 @@ If you like what you see, please ⭐ the repo.
 ## ✨ Features
 
 - 🗃️ Plays MP3, WAV, FLAC, M4A, MP4, Ogg, Opus, AAC, AIFF, APE, and MOV audio
-- 🔎 Choose a Custom Folder To Scan Music From (By Default it is the Device Music Folder in the root folder
-  of the device)
+- 🔎 Discover music through Android MediaStore, or select a parent music folder
+  on iOS, macOS, Windows, and Linux; nested folders are scanned automatically
 - 🎨 Multiple Ipod Classic Device Colors (Silver and Black)
 - 🖼️ Displays the Music Metadata (Album Art, Artist Names)
 - ⏩ Ability to seek forward and backwards on a audio file (By Long Pressing the seek
@@ -155,6 +155,22 @@ by platform:
   </tr>
 
   <tr>
+      <td>iOS / iPadOS</td>
+      <td>
+        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-iOS.ipa">Download IPA</a>
+        <br>Unsigned; requires sideloading and signing on your device.
+      </td>
+  </tr>
+
+  <tr>
+      <td>macOS</td>
+      <td>
+        <a href="https://github.com/adeeteya/Classipod/releases/latest/download/Classipod-macOS.dmg">Download DMG</a>
+        <br>Apple Silicon and Intel; no Developer ID signature or notarization.
+      </td>
+  </tr>
+
+  <tr>
       <td>Web App</td>
       <td>
         <a href="https://adeeteya.github.io/Classipod/#/">
@@ -164,6 +180,40 @@ by platform:
   </tr>
 
 </table>
+
+### Installing on iPhone or iPad
+
+Download `Classipod-iOS.ipa` from a release that includes Apple builds. This is
+an unsigned device build, not an App Store or TestFlight download. Install it
+using [AltStore Classic](https://faq.altstore.io/altstore-classic) with AltServer,
+or another compatible sideloading tool, which signs it using your Apple account.
+Downloading the IPA in Safari alone does not install it.
+
+With a free account, AltStore apps need refreshing every seven days, and the
+three-active-app limit includes AltStore itself. Follow the tool's installation
+instructions, including Developer Mode where required. See
+[AltStore's account limits](https://faq.altstore.io/altstore-classic/your-altstore).
+
+### Installing on macOS
+
+Download `Classipod-macOS.dmg`, open it, and drag `classipod.app` into
+**Applications**. The universal app supports Apple Silicon and Intel Macs
+running macOS 12 or later.
+
+The app is **not notarized or signed with an Apple Developer ID**. It carries a
+local ad-hoc signature for execution on Apple Silicon; this does not verify a
+developer identity. Gatekeeper may block the first launch. If you trust the
+release, try opening the app, then use **System Settings → Privacy & Security →
+Open Anyway** and confirm. See [Apple's instructions](https://support.apple.com/en-us/102445).
+
+On both platforms, choose a parent music folder when prompted. ClassiPod scans
+its subfolders and caches metadata and artwork. Use **Settings → Rescan Music
+Files** to select a folder again and rebuild the index.
+
+Apple downloads appear only on releases built with their platform options
+selected. See [Apple release documentation](docs/apple-releases.md) for build
+commands, checksums, and release configuration. The web version remains an
+online demo and does not import local folders.
 
 ## 🔌 Plugins
 
@@ -187,7 +237,7 @@ by platform:
 | [**just_audio_media_kit**](https://pub.dev/packages/just_audio_media_kit)                     | To play audio files on Windows and Linux                                            |
 | [**media_kit_libs_linux**](https://pub.dev/packages/media_kit_libs_linux)                     | Media kit Libraries for Linux                                                       |
 | [**media_kit_libs_windows_audio**](https://pub.dev/packages/media_kit_libs_windows_audio)     | Media kit Libraries for Windows                                                     |
-| [**on_audio_query**](https://github.com/adeeteya/on_audio_query)                              | To fetch all the music files from Android and iOS                                   |
+| [**on_audio_query**](https://github.com/adeeteya/on_audio_query)                              | To discover music through Android MediaStore                                   |
 | [**path_provider**](https://pub.dev/packages/path_provider)                                   | To fetch app data directories                                                       |
 | [**permission_handler**](https://pub.dev/packages/permission_handler)                         | To check and request for file and audio access permissions                          |
 | [**shared_preferences**](https://pub.dev/packages/shared_preferences)                         | To store system settings                                                            |

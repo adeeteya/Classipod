@@ -15,15 +15,8 @@ final libraryRepositoryProvider = Provider<LibraryRepository>((ref) {
   final files = FileLibrarySource(
     authorize: authorizeFileLocations,
     pickLocations: () async {
-      if (Platform.isIOS) {
-        final picked = await FilePicker.pickFiles(
-          dialogTitle: 'Pick Song Files',
-        );
-        final paths = picked
-            .map((file) => file.path)
-            .whereType<String>()
-            .toList();
-        return paths.isEmpty ? null : {'files': paths};
+      if (Platform.isIOS || Platform.isMacOS) {
+        return pickMusicDirectory();
       }
       final path = await FilePicker.getDirectoryPath(
         dialogTitle: 'Select Music Directory',

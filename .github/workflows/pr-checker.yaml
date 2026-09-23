@@ -17,6 +17,11 @@ jobs:
         with:
           flutter-version: ${{ env.FLUTTER_VERSION }}
 
+      - name: Install native metadata build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libcurl4-openssl-dev
+
       - name: Configure repo
         run: |
           flutter pub get
@@ -41,7 +46,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Install native metadata and fixture dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg libcurl4-openssl-dev
       - run: flutter pub get --suppress-analytics
       - run: flutter gen-l10n
       - name: Test stress-runner watchdog

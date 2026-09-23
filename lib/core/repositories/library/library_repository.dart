@@ -102,6 +102,7 @@ class LibraryRepository {
     void emit(LibraryPhase phase) => report(
       LibraryProgress(
         phase: phase,
+        showCounts: force || saved == null || saved['version'] != cacheVersion,
         songsTotal: songs.length,
         songsLoaded: loaded,
         songsCached: cached,

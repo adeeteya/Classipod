@@ -14,16 +14,22 @@ class LibraryLoadingProgress extends StatelessWidget {
       padding: const EdgeInsets.all(12),
       child: Column(
         children: [
-          Text(
-            progress.phase == LibraryPhase.discovering
-                ? strings.findingSongs
-                : strings.songsLoaded(
-                    progress.songsLoaded,
-                    progress.songsTotal,
-                  ),
-            style: const TextStyle(color: CupertinoColors.white, fontSize: 13),
-          ),
-          if (progress.phase != LibraryPhase.discovering)
+          if (progress.phase == LibraryPhase.discovering)
+            Text(
+              strings.findingSongs,
+              style: const TextStyle(
+                color: CupertinoColors.white,
+                fontSize: 13,
+              ),
+            )
+          else if (progress.showCounts) ...[
+            Text(
+              strings.songsLoaded(progress.songsLoaded, progress.songsTotal),
+              style: const TextStyle(
+                color: CupertinoColors.white,
+                fontSize: 13,
+              ),
+            ),
             Text(
               strings.artworkCached(progress.artworkCached),
               style: const TextStyle(
@@ -31,6 +37,7 @@ class LibraryLoadingProgress extends StatelessWidget {
                 fontSize: 13,
               ),
             ),
+          ],
           if (progress.failures > 0)
             Text(
               strings.libraryReadFailures(progress.failures),

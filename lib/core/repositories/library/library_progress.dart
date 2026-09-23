@@ -4,6 +4,7 @@ enum LibraryPhase { discovering, metadata, artwork, saving, complete }
 
 class LibraryProgress {
   final LibraryPhase phase;
+  final bool showCounts;
   final int songsTotal;
   final int songsLoaded;
   final int songsCached;
@@ -13,6 +14,7 @@ class LibraryProgress {
 
   const LibraryProgress({
     this.phase = LibraryPhase.discovering,
+    this.showCounts = false,
     this.songsTotal = 0,
     this.songsLoaded = 0,
     this.songsCached = 0,

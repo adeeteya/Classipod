@@ -136,11 +136,14 @@ void main() {
 
   test('warm startup reuses tags and counts cache hits', () async {
     await repository.load(progress.add);
+    expect(progress.last.showCounts, isTrue);
+    progress.clear();
     reads.clear();
     final result = await repository.load(progress.add);
     expect(result, hasLength(2));
     expect(reads, isEmpty);
     expect(progress.last.songsCached, 2);
+    expect(progress.every((value) => !value.showCounts), isTrue);
     expect(progress.last.phase, LibraryPhase.complete);
   });
 
@@ -370,6 +373,7 @@ void main() {
       expect(updates.first.artworkCached, 0);
       expect(updates.last.phase, LibraryPhase.complete);
       expect(updates.last.songsCached, 0);
+      expect(updates.last.showCounts, isTrue);
       expect(router.routeInformationProvider.value.uri.path, '/menu');
       await container
           .read(settingsPreferencesControllerProvider.notifier)

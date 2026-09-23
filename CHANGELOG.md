@@ -1,5 +1,8 @@
 ## Unreleased
 
+- Show song and artwork counters only for initial indexing or re-indexing,
+  keeping normal cached startup free of briefly flashing totals.
+
 - Restart splash initialization on manual rescan, resetting progress and
   rebuilding playback after forced metadata and artwork extraction.
 

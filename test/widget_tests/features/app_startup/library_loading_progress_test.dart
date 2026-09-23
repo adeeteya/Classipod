@@ -26,6 +26,7 @@ void main() {
         tester,
         const LibraryProgress(
           phase: LibraryPhase.metadata,
+          showCounts: true,
           songsLoaded: 1,
           songsTotal: 2,
           artworkCached: 1,
@@ -40,6 +41,7 @@ void main() {
       tester,
       const LibraryProgress(
         phase: LibraryPhase.artwork,
+        showCounts: true,
         songsLoaded: 120,
         songsTotal: 120,
         artworkCached: 80,
@@ -59,10 +61,38 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
+  testWidgets('warm startup hides counts through completion', (tester) async {
+    for (final phase in [
+      LibraryPhase.metadata,
+      LibraryPhase.artwork,
+      LibraryPhase.saving,
+      LibraryPhase.complete,
+    ]) {
+      await show(
+        tester,
+        LibraryProgress(
+          phase: phase,
+          songsLoaded: 100,
+          songsTotal: 100,
+          artworkCached: 80,
+          failures: 1,
+        ),
+      );
+      expect(find.textContaining('Songs loaded:'), findsNothing);
+      expect(find.textContaining('Artwork cached:'), findsNothing);
+      expect(find.byType(CupertinoActivityIndicator), findsOneWidget);
+      expect(find.text('Could not read 1 items'), findsOneWidget);
+    }
+  });
+
   testWidgets('empty library shows zero totals', (tester) async {
     await show(
       tester,
-      const LibraryProgress(phase: LibraryPhase.complete, artworkTotal: 0),
+      const LibraryProgress(
+        phase: LibraryPhase.complete,
+        showCounts: true,
+        artworkTotal: 0,
+      ),
     );
     expect(find.text('Songs loaded: 0 / 0'), findsOneWidget);
     expect(find.text('Artwork cached: 0'), findsOneWidget);

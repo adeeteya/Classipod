@@ -448,8 +448,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "588e4d8e35a39d46ee29f01e4d42dc23dde93bc3"
-      resolved-ref: "588e4d8e35a39d46ee29f01e4d42dc23dde93bc3"
+      ref: master
+      resolved-ref: dc557c69b4f06478d36c7736db00b5eeb5cc3b4b
       url: "https://github.com/adeeteya/flutter_taglib.git"
     source: git
     version: "1.5.7"
@@ -811,8 +811,8 @@ packages:
     dependency: "direct main"
     description:
       path: "packages/on_audio_query"
-      ref: "aramesh/android-library-indexing"
-      resolved-ref: "5841295625a9d29ab4c83efa5f70a895ab9eb41d"
+      ref: main
+      resolved-ref: c2f5563ee3c5d530d407e61d5c7174c22bbdedc6
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "2.9.0"
@@ -820,8 +820,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/on_audio_query_android"
-      ref: "aramesh/android-library-indexing"
-      resolved-ref: "5841295625a9d29ab4c83efa5f70a895ab9eb41d"
+      ref: main
+      resolved-ref: c2f5563ee3c5d530d407e61d5c7174c22bbdedc6
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "1.1.0"
@@ -829,8 +829,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/on_audio_query_ios"
-      ref: "aramesh/android-library-indexing"
-      resolved-ref: "5841295625a9d29ab4c83efa5f70a895ab9eb41d"
+      ref: main
+      resolved-ref: c2f5563ee3c5d530d407e61d5c7174c22bbdedc6
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "1.1.0"
@@ -838,8 +838,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/on_audio_query_platform_interface"
-      ref: "aramesh/android-library-indexing"
-      resolved-ref: "5841295625a9d29ab4c83efa5f70a895ab9eb41d"
+      ref: main
+      resolved-ref: c2f5563ee3c5d530d407e61d5c7174c22bbdedc6
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "1.7.0"
@@ -847,8 +847,8 @@ packages:
     dependency: transitive
     description:
       path: "packages/on_audio_query_web"
-      ref: "aramesh/android-library-indexing"
-      resolved-ref: "5841295625a9d29ab4c83efa5f70a895ab9eb41d"
+      ref: main
+      resolved-ref: c2f5563ee3c5d530d407e61d5c7174c22bbdedc6
       url: "https://github.com/adeeteya/on_audio_query.git"
     source: git
     version: "1.6.0"

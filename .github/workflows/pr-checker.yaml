@@ -28,4 +28,29 @@ jobs:
 
       - name: Run Flutter Tests
         run: |
-          flutter test
+          flutter test --no-pub --coverage --suppress-analytics
+
+  large-library:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: flutter pub get --suppress-analytics
+      - run: flutter gen-l10n
+      - name: Test stress-runner watchdog
+        run: python -m unittest discover -s scripts -p 'test_large_library.py'
+      - name: Test 1,000-track libraries
+        run: python scripts/large_library.py --tracks 1000
+      - name: Upload metrics and failure logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: large-library-1000-linux
+          path: build/large-library/

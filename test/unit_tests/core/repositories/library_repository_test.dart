@@ -157,7 +157,7 @@ void main() {
 
   test('legacy cache is deleted and ratings are not imported', () async {
     final legacyBox = await Hive.openBox<MusicMetadata>(
-      Constants.metadataBoxName,
+      Constants.legacyMetadataBoxName,
     );
     await legacyBox.add(
       MusicMetadata(
@@ -168,8 +168,8 @@ void main() {
     );
     await legacyBox.close();
     await LibraryRepository.deleteLegacyMetadata();
-    expect(await Hive.boxExists(Constants.metadataBoxName), isFalse);
-    expect(Hive.isBoxOpen(Constants.metadataBoxName), isFalse);
+    expect(await Hive.boxExists(Constants.legacyMetadataBoxName), isFalse);
+    expect(Hive.isBoxOpen(Constants.legacyMetadataBoxName), isFalse);
     final songs = await repository.load(progress.add);
     expect(songs.last.rating, 0);
     expect(songs.last.originalSongIndex, 1);
@@ -185,7 +185,7 @@ void main() {
     );
     await LibraryRepository.updateRating(songs.last.copyWith(rating: 5));
     final legacyBox = await Hive.openBox<MusicMetadata>(
-      Constants.metadataBoxName,
+      Constants.legacyMetadataBoxName,
     );
     await legacyBox.add(MusicMetadata(filePath: '/unused.mp3'));
     await LibraryRepository.deleteLegacyMetadata();
@@ -200,7 +200,7 @@ void main() {
       songs.first.identity,
     ]);
     expect(playlists.values.single.songs.first.rating, 5);
-    expect(await Hive.boxExists(Constants.metadataBoxName), isFalse);
+    expect(await Hive.boxExists(Constants.legacyMetadataBoxName), isFalse);
   });
 
   test('incompatible cache refresh preserves ratings and playlists', () async {

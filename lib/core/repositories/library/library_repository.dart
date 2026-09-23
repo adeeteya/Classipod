@@ -44,8 +44,8 @@ class LibraryRepository {
   /// Used by MediaStore discovery for the Android 2.0 cache reset.
   /// Other Hive boxes (playlists and preferences) are not library caches.
   static Future<void> deleteLegacyMetadata() async {
-    for (final name in [Constants.metadataBoxName, 'android_library_v1']) {
-      if (await Hive.boxExists(name)) await Hive.deleteBoxFromDisk(name);
+    if (await Hive.boxExists(Constants.legacyMetadataBoxName)) {
+      await Hive.deleteBoxFromDisk(Constants.legacyMetadataBoxName);
     }
   }
 

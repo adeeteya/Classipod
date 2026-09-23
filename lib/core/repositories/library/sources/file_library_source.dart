@@ -51,7 +51,6 @@ Future<LibrarySnapshot> discoverFileLocations(
   Future<void> addFile(File file, String volume) async {
     if (!isSupportedAudioFormat(file.path)) return;
     final stat = await file.stat();
-    if (stat.type == FileSystemEntityType.notFound) return;
     if (stat.type != FileSystemEntityType.file) return;
     songs.add(
       LibrarySong(

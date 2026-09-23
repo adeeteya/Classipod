@@ -114,7 +114,7 @@ void main() {
       expect(reads, 1);
       expect(await File(repaired.single.thumbnailPath!).exists(), isTrue);
       expect(Hive.isBoxOpen(Constants.libraryBoxName), isTrue);
-      expect(Hive.isBoxOpen(Constants.metadataBoxName), isFalse);
+      expect(Hive.isBoxOpen(Constants.legacyMetadataBoxName), isFalse);
     },
   );
 }

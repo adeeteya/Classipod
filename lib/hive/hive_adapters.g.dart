@@ -54,6 +54,10 @@ class MusicMetadataAdapter extends TypeAdapter<MusicMetadata> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return MusicMetadata(
+      songId: fields[18] as String?,
+      sourceVolume: fields[19] as String?,
+      contentUri: fields[20] as String?,
+      albumArtistNames: (fields[21] as List?)?.cast<String>(),
       trackName: fields[0] as String?,
       trackArtistNames: (fields[1] as List?)?.cast<String>(),
       albumName: fields[2] as String?,
@@ -78,7 +82,7 @@ class MusicMetadataAdapter extends TypeAdapter<MusicMetadata> {
   @override
   void write(BinaryWriter writer, MusicMetadata obj) {
     writer
-      ..writeByte(18)
+      ..writeByte(22)
       ..writeByte(0)
       ..write(obj.trackName)
       ..writeByte(1)
@@ -114,7 +118,15 @@ class MusicMetadataAdapter extends TypeAdapter<MusicMetadata> {
       ..writeByte(16)
       ..write(obj.rating)
       ..writeByte(17)
-      ..write(obj.lyrics);
+      ..write(obj.lyrics)
+      ..writeByte(18)
+      ..write(obj.songId)
+      ..writeByte(19)
+      ..write(obj.sourceVolume)
+      ..writeByte(20)
+      ..write(obj.contentUri)
+      ..writeByte(21)
+      ..write(obj.albumArtistNames);
   }
 
   @override

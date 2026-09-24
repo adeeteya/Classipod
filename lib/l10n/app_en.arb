@@ -34,6 +34,10 @@
   },
   "refreshLibrarySettingDescription": "Check for added or deleted music. Keep existing metadata and artwork.",
   "librarySettingsScreenTitle": "Library Settings",
+  "librarySettingsDescription": "Manage music indexing and excluded folders.",
+  "@librarySettingsDescription": {
+    "description": "The split-screen preview description for Library Settings"
+  },
   "@librarySettingsScreenTitle": {
     "description": "The title of the settings page for music library indexing"
   },

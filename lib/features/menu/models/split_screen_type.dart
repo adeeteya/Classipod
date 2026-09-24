@@ -1,6 +1,7 @@
 enum SplitScreenType {
   albumArt,
   settings,
+  librarySettings,
   shuffle,
   nowPlaying,
   sleepTimer,

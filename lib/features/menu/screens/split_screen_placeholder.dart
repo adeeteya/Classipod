@@ -189,6 +189,12 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
           icon: CupertinoIcons.play_rectangle_fill,
           contentText: "",
         );
+      } else if (splitScreenType == SplitScreenType.librarySettings) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.librarySettingsScreenTitle,
+          icon: CupertinoIcons.music_albums,
+          contentText: context.localization.librarySettingsDescription,
+        );
       } else if (splitScreenType == SplitScreenType.rescanMusicFiles) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.reindexLibrarySettingTitle,

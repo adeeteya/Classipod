@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 
@@ -15,9 +16,26 @@ class ExcludeDirectoryNotifier extends Notifier<List<ExcludeDirectoryModel>> {
   final Box<ExcludeDirectoryModel> _excludeDirectoryBox =
       Hive.box<ExcludeDirectoryModel>(Constants.excludedDirectoriesBoxName);
 
+  Set<String>? _exclusionsOnEntry;
+
   @override
   List<ExcludeDirectoryModel> build() {
     return _excludeDirectoryBox.values.toList();
+  }
+
+  Set<String> get _excludedPaths => _excludeDirectoryBox.values
+      .where((directory) => directory.isExcluded)
+      .map((directory) => directory.directoryPath)
+      .toSet();
+
+  void beginEditing() {
+    _exclusionsOnEntry = _excludedPaths;
+  }
+
+  bool takeExclusionChanges() {
+    final initial = _exclusionsOnEntry;
+    _exclusionsOnEntry = null;
+    return initial != null && !setEquals(initial, _excludedPaths);
   }
 
   List<String> get _parentDirectoryPaths {

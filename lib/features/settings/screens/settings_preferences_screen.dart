@@ -33,8 +33,7 @@ enum _SettingsDisplayItems {
   splitScreenEnabled,
   immersiveMode,
   showAppTutorial,
-  rescanMusicFiles,
-  excludeDirectories,
+  librarySettings,
   resetSettings,
   donate;
 
@@ -70,12 +69,10 @@ enum _SettingsDisplayItems {
         return context.localization.immersiveModeSettingTitle;
       case showAppTutorial:
         return context.localization.showAppTutorialSettingTitle;
-      case rescanMusicFiles:
-        return context.localization.rescanMusicFilesSettingTitle;
+      case librarySettings:
+        return context.localization.librarySettingsScreenTitle;
       case resetSettings:
         return context.localization.resetSettingsTitle;
-      case excludeDirectories:
-        return context.localization.excludeDirectoriesScreenTitle;
       case donate:
         return context.localization.donateSettingTitle;
     }
@@ -171,13 +168,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .showAppTutorial();
         break;
-      case _SettingsDisplayItems.rescanMusicFiles:
-        await ref
-            .read(settingsPreferencesControllerProvider.notifier)
-            .rescanMusicFiles();
-        break;
-      case _SettingsDisplayItems.excludeDirectories:
-        context.goNamed(Routes.excludeDirectories.name);
+      case _SettingsDisplayItems.librarySettings:
+        context.goNamed(Routes.librarySettings.name);
         break;
       case _SettingsDisplayItems.resetSettings:
         await ref
@@ -304,14 +296,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.showAppTutorial:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.showTutorialScreen;
-        break;
-      case _SettingsDisplayItems.rescanMusicFiles:
-        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
-            SplitScreenType.rescanMusicFiles;
-        break;
-      case _SettingsDisplayItems.excludeDirectories:
-        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
-            SplitScreenType.excludeDirectories;
         break;
       case _SettingsDisplayItems.resetSettings:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

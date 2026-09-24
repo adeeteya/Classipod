@@ -22,6 +22,7 @@ class LibraryRepository {
   final Future<void> Function()? closeReader;
   final void Function()? selectSource;
   bool forceNextScan = false;
+  bool _refreshNextScan = false;
   Future<List<MusicMetadata>>? _pending;
 
   LibraryRepository({
@@ -34,7 +35,13 @@ class LibraryRepository {
 
   void requestRescan() {
     forceNextScan = true;
+    _refreshNextScan = false;
     selectSource?.call();
+  }
+
+  void requestRefresh() {
+    _refreshNextScan = true;
+    forceNextScan = false;
   }
 
   Future<List<MusicMetadata>> load(void Function(LibraryProgress) report) {
@@ -91,6 +98,7 @@ class LibraryRepository {
       }
     }
     final force = forceNextScan;
+    final refresh = _refreshNextScan && !force;
     final records = <Map<String, dynamic>>[];
     final seen = <String>{};
     final songs = snapshot.songs.where((song) => seen.add(song.uri)).toList();
@@ -131,9 +139,10 @@ class LibraryRepository {
             !force &&
             saved?['version'] == cacheVersion &&
             old != null &&
-            old['size'] == song.size &&
-            old['modified'] == song.modified &&
-            old['readSuccess'] == true;
+            (refresh ||
+                (old['size'] == song.size &&
+                    old['modified'] == song.modified &&
+                    old['readSuccess'] == true));
         late Map<String, dynamic> row;
         if (unchanged) {
           row = {
@@ -145,7 +154,8 @@ class LibraryRepository {
             ),
           };
           cached++;
-          if (row['hasCover'] == true &&
+          if (!refresh &&
+              row['hasCover'] == true &&
               !await artworkExists(previous.thumbnailPath)) {
             final result = await readTags(
               song.path ?? song.uri,
@@ -225,6 +235,7 @@ class LibraryRepository {
       }
       await playlists.flush();
       forceNextScan = false;
+      _refreshNextScan = false;
       emit(LibraryPhase.complete);
       return active;
     } finally {

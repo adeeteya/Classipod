@@ -167,6 +167,78 @@ void main() {
     },
   );
 
+  test('refresh only reads additions and removes deleted tracks', () async {
+    final first = await repository.load(progress.add);
+    await LibraryRepository.updateRating(first.last.copyWith(rating: 5));
+    reads.clear();
+    discovered = snapshot([record(2, modified: 2), record(3)]);
+
+    repository.requestRefresh();
+    final refreshed = await repository.load(progress.add);
+
+    expect(reads, ['art:${record(3).path}']);
+    expect(refreshed.map((song) => song.identity), [
+      first.last.identity,
+      record(3).uri,
+    ]);
+    expect(refreshed.first.originalSongIndex, first.last.originalSongIndex);
+    expect(refreshed.first.rating, 5);
+    final saved =
+        Hive.box<dynamic>(LibraryRepository.boxName).get('snapshot') as Map;
+    expect(saved['records'], hasLength(2));
+
+    reads.clear();
+    repository.requestRescan();
+    final reindexed = await repository.load(progress.add);
+    expect(reads, ['art:${record(2).path}', 'art:${record(3).path}']);
+    expect(reindexed.first.rating, 5);
+  });
+
+  test(
+    'refresh does not repair existing artwork or retry failed tags',
+    () async {
+      artwork = true;
+      final first = await repository.load(progress.add);
+      await File(first.first.thumbnailPath!).delete();
+      reads.clear();
+      repository.requestRefresh();
+      await repository.load(progress.add);
+      expect(reads, isEmpty);
+
+      fail = true;
+      repository.requestRescan();
+      await repository.load(progress.add);
+      reads.clear();
+      repository.requestRefresh();
+      await repository.load(progress.add);
+      expect(reads, isEmpty);
+    },
+  );
+
+  test(
+    'refresh reuses selected locations and can initialize an empty cache',
+    () async {
+      var selections = 0;
+      final sourceRepository = LibraryRepository(
+        artworkDirectory: directory.path,
+        discover: () async => discovered,
+        readTags: (uri, {artworkDirectory}) async {
+          reads.add(uri);
+          return <String, dynamic>{};
+        },
+        selectSource: () => selections++,
+      );
+      sourceRepository.requestRefresh();
+      expect(await sourceRepository.load(progress.add), hasLength(2));
+      expect(reads, hasLength(2));
+      expect(selections, 0);
+      sourceRepository.requestRescan();
+      await sourceRepository.load(progress.add);
+      expect(selections, 1);
+      expect(reads, hasLength(4));
+    },
+  );
+
   test(
     'disconnected volume is retained and restored without tag reads',
     () async {
@@ -375,12 +447,25 @@ void main() {
       expect(updates.last.songsCached, 0);
       expect(updates.last.showCounts, isTrue);
       expect(router.routeInformationProvider.value.uri.path, '/menu');
+      discovered = snapshot([record(2, modified: 2), record(3)]);
+      reads.clear();
+      await container
+          .read(settingsPreferencesControllerProvider.notifier)
+          .refreshLibrary();
+      await container.read(splashControllerProvider.future);
+      expect(reads, ['art:${record(3).path}']);
+      expect(playback.queues, hasLength(3));
+      expect(playback.queues.last.map((song) => song.identity), [
+        record(2).uri,
+        record(3).uri,
+      ]);
+      expect(playlists.values.single.name, 'Favorites');
       await container
           .read(settingsPreferencesControllerProvider.notifier)
           .rescanMusicFiles(clearPlaylists: true);
       await container.read(splashControllerProvider.future);
       expect(playlists.isEmpty, isTrue);
-      expect(playback.queues, hasLength(3));
+      expect(playback.queues, hasLength(4));
     },
   );
 

@@ -318,6 +318,17 @@ class SettingsPreferencesControllerNotifier
     if (clearPlaylists) {
       await Hive.box<PlaylistModel>(Constants.playlistBoxName).clear();
     }
+    _reloadLibrary();
+  }
+
+  Future<void> refreshLibrary() async {
+    if (!state.fetchOnlineMusic) {
+      ref.read(libraryRepositoryProvider).requestRefresh();
+    }
+    _reloadLibrary();
+  }
+
+  void _reloadLibrary() {
     ref.read(libraryProgressProvider.notifier).report(const LibraryProgress());
     ref.invalidate(audioFilesServiceProvider);
     ref.invalidate(splashControllerProvider);

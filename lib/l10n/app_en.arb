@@ -23,6 +23,20 @@
   "@audioAccessPermissionPermanentlyDeniedContent": {
     "description": "The content of the audio files access permission permanently denied dialog"
   },
+  "reindexLibrarySettingTitle": "Re-index",
+  "@reindexLibrarySettingTitle": {
+    "description": "The action that reads metadata and artwork for every track again"
+  },
+  "reindexLibrarySettingDescription": "Read metadata and artwork for all music files again.",
+  "refreshLibrarySettingTitle": "Refresh Library",
+  "@refreshLibrarySettingTitle": {
+    "description": "The action that checks for newly added or deleted music files"
+  },
+  "refreshLibrarySettingDescription": "Check for added or deleted music. Keep existing metadata and artwork.",
+  "librarySettingsScreenTitle": "Library Settings",
+  "@librarySettingsScreenTitle": {
+    "description": "The title of the settings page for music library indexing"
+  },
   "menuScreenTitle": "Menu",
   "@menuScreenTitle": {
     "description": "The title of the menu screen"

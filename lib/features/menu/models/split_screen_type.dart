@@ -18,6 +18,7 @@ enum SplitScreenType {
   immersiveMode,
   showTutorialScreen,
   rescanMusicFiles,
+  refreshLibrary,
   excludeDirectories,
   resetSettings,
   donate,

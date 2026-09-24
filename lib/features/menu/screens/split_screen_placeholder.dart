@@ -191,9 +191,15 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
         );
       } else if (splitScreenType == SplitScreenType.rescanMusicFiles) {
         splitScreenWidget = IconPreviewWidget(
-          titleText: context.localization.rescanMusicFilesSettingTitle,
+          titleText: context.localization.reindexLibrarySettingTitle,
           icon: CupertinoIcons.music_albums,
-          contentText: "",
+          contentText: context.localization.reindexLibrarySettingDescription,
+        );
+      } else if (splitScreenType == SplitScreenType.refreshLibrary) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.refreshLibrarySettingTitle,
+          icon: CupertinoIcons.refresh,
+          contentText: context.localization.refreshLibrarySettingDescription,
         );
       } else if (splitScreenType == SplitScreenType.excludeDirectories) {
         splitScreenWidget = IconPreviewWidget(

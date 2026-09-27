@@ -34,7 +34,7 @@ on:
 
 env:
   FLUTTER_CHANNEL: "stable"
-  RUBY_VERSION: "3.2.2"
+  RUBY_VERSION: "3.4"
 
 jobs:
 
@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Create a GitHub Release
         env:
@@ -64,7 +64,7 @@ jobs:
     name: Build Web
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Run Flutter tasks
         uses: subosito/flutter-action@v2
@@ -86,7 +86,7 @@ jobs:
     timeout-minutes: 40
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Run Flutter tasks
         uses: subosito/flutter-action@v2.16.0
@@ -139,7 +139,7 @@ jobs:
     name: Build Windows
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Install yq
         run: choco install yq
@@ -180,7 +180,7 @@ jobs:
     timeout-minutes: 40
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
@@ -245,7 +245,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: subosito/flutter-action@v2
         with:
@@ -264,7 +264,7 @@ jobs:
         run: bundle exec fastlane build_apple_release platform:ios
 
       - name: Save release artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: classipod-ios
           path: |
@@ -290,7 +290,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: subosito/flutter-action@v2
         with:
@@ -309,7 +309,7 @@ jobs:
         run: bundle exec fastlane build_apple_release platform:macos
 
       - name: Save release artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: classipod-macos
           path: |

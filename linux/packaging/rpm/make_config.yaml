@@ -24,6 +24,7 @@ requires:
   - sqlite-libs
   - xz-libs
   - libcurl
+  - libsecret >= 0.18.4
   - alsa-lib
   - xdg-utils
   - ca-certificates

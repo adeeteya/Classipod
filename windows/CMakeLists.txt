@@ -57,6 +57,19 @@ add_subdirectory("runner")
 # them to the application.
 include(flutter/generated_plugins.cmake)
 
+# permission_handler_windows 0.2.2 enables C++20 but also adds legacy /await.
+# MSVC in Visual Studio 2026 rejects that experimental coroutine mode.
+# Use the plugin's C++20 coroutines until upstream removes the legacy flag.
+if(MSVC AND TARGET permission_handler_windows_plugin)
+  get_target_property(PERMISSION_HANDLER_COMPILE_OPTIONS
+    permission_handler_windows_plugin COMPILE_OPTIONS)
+  if(PERMISSION_HANDLER_COMPILE_OPTIONS)
+    list(REMOVE_ITEM PERMISSION_HANDLER_COMPILE_OPTIONS "/await")
+    set_property(TARGET permission_handler_windows_plugin PROPERTY
+      COMPILE_OPTIONS "${PERMISSION_HANDLER_COMPILE_OPTIONS}")
+  endif()
+endif()
+
 
 # === Installation ===
 # Support files are copied into place next to the executable, so that it can

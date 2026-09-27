@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:classipod/core/constants/constants.dart';
-import 'package:classipod/core/services/audio_files_service.dart';
+import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -44,19 +44,23 @@ class ExcludeDirectoryNotifier extends Notifier<List<ExcludeDirectoryModel>> {
         .toList();
   }
 
-  Future<void> createDefaultDirectories() async {
-    final audioFiles = ref.read(audioFilesServiceProvider).requireValue;
+  Future<void> createDefaultDirectories(
+    Iterable<MusicMetadata> audioFiles,
+  ) async {
+    var changed = false;
     for (final musicMetadata in audioFiles) {
-      if (musicMetadata.parentDirectoryPath != null &&
+      if (!musicMetadata.isSubsonic &&
+          musicMetadata.parentDirectoryPath != null &&
           !_parentDirectoryPaths.contains(musicMetadata.parentDirectoryPath)) {
         final newExcludeDirectoryModel = ExcludeDirectoryModel(
           directoryPath: musicMetadata.parentDirectoryPath!,
           isExcluded: false,
         );
         await _excludeDirectoryBox.add(newExcludeDirectoryModel);
+        changed = true;
       }
     }
-    state = _excludeDirectoryBox.values.toList();
+    if (changed && ref.mounted) state = _excludeDirectoryBox.values.toList();
   }
 
   Future<void> toggleExcludeDirectory({

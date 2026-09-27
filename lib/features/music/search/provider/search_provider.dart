@@ -12,7 +12,7 @@ final searchProvider = Provider.autoDispose
       }
       final List<SearchResultsModel> searchResults = [];
 
-      final songsList = ref.read(songsProvider);
+      final songsList = ref.watch(songsProvider);
       for (final song in songsList) {
         if (song.getTrackName.toLowerCase().contains(
           searchQuery.toLowerCase(),
@@ -26,11 +26,11 @@ final searchProvider = Provider.autoDispose
         }
       }
 
-      final artistsNames = ref.read(artistNamesProvider);
+      final artistsNames = ref.watch(artistNamesProvider);
       for (final artist in artistsNames) {
         if (artist.toLowerCase().contains(searchQuery.toLowerCase())) {
           final numberOfSongs = ref
-              .read(artistAlbumDetailListProvider(artist))
+              .watch(artistAlbumDetailListProvider(artist))
               .length;
           searchResults.add(
             SearchResultsModel(
@@ -42,7 +42,7 @@ final searchProvider = Provider.autoDispose
         }
       }
 
-      final albumDetails = ref.read(albumDetailsProvider);
+      final albumDetails = ref.watch(albumDetailsProvider);
       for (final album in albumDetails) {
         if (album.albumName.toLowerCase().contains(searchQuery.toLowerCase())) {
           final int numberOfSongs = album.albumSongs.length;

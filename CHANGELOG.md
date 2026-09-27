@@ -1,4 +1,56 @@
-## Unreleased
+## 2.0.0 (Unreleased)
+
+- Fix first-run splash hanging after local indexing by preventing newly
+  discovered folders from invalidating the pending library load.
+
+- Delay the Now Playing buffering spinner by one second to avoid flashing
+  during brief track changes and seeks.
+
+- Prepare the initial library queue without native playback calls; avoid
+  rebuilding the catalog for scan progress or unchanged directory lists.
+  Update menu counts and artwork when the library arrives asynchronously.
+
+- Release stalled native seeks after stream failures so recovery and track
+  controls remain responsive; resume at the requested seek position.
+
+- Preserve server playback position across network interruptions, show a
+  spinner on the Now Playing progress bar, and retry with backoff to resume.
+
+- Show a connection-lost message and Retry action in Now Playing when a
+  server stream fails due to a network interruption.
+
+- Hide errors from excluded folders in Missing Tracks, updating immediately
+  when directory exclusions change.
+
+- Ignore delayed menu preview updates after navigation or library refresh
+  removes the originating screen, preventing disposed-widget errors.
+
+- Move per-file read failures from splash into a conditional Missing Tracks
+  settings page with song names, file locations, and retry guidance. Continue
+  indexing other songs when a tag reader throws.
+
+- Show initial server indexing in the connection dialog with retry and
+  continue-in-background actions; move background status into its preview.
+
+- Keep Library Settings and its preview stable behind the Subsonic dialog
+  when the keyboard opens; keep dialog fields and actions above the keyboard.
+
+- Defer opening local audio until playback so an unavailable first track
+  cannot leave startup waiting on the splash screen.
+
+- Allow native HTTP Subsonic connections to user-configured hosts, including
+  local IP addresses, for indexing, artwork, and audio playback.
+
+- Handle playback failures without uncaught UI exceptions and identify
+  platform-blocked HTTP streams with an actionable HTTPS message.
+
+- Update flutter_secure_storage to 11.2.0.
+
+- Add a Subsonic server connection in Library Settings, with secure native
+  credentials, session-only Web sign-in, cached catalog/artwork, and streaming.
+  Merge server music with local tracks and preserve server playlist entries
+  when disconnected. Web servers must allow CORS; HTTP access follows each
+  platform's transport restrictions.
 
 - Add optional iOS and macOS GitHub release jobs: an unsigned sideloadable IPA
   and a universal, ad-hoc-signed DMG without Developer ID or notarization.

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -239,6 +240,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
 
   Future<void> _changeSplitScreenType() async {
     await Future.delayed(const Duration(milliseconds: 150));
+    if (!mounted || context.router.locationNamed != routeName) return;
     switch (displayItems[selectedDisplayItem]) {
       case _SettingsDisplayItems.language:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

@@ -1,13 +1,14 @@
-import 'dart:io';
-
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/widgets/artwork_image.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class PlaylistSongListTile extends StatelessWidget {
+class PlaylistSongListTile extends ConsumerWidget {
   final MusicMetadata songMetadata;
+  final bool unavailable;
   final bool isSelected;
   final bool isCurrentlyPlaying;
   final VoidCallback onTap;
@@ -16,6 +17,7 @@ class PlaylistSongListTile extends StatelessWidget {
   const PlaylistSongListTile({
     super.key,
     required this.songMetadata,
+    this.unavailable = false,
     required this.isSelected,
     required this.isCurrentlyPlaying,
     required this.onTap,
@@ -23,7 +25,7 @@ class PlaylistSongListTile extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return GestureDetector(
       onTap: onTap,
       onLongPress: onLongPress,
@@ -53,11 +55,7 @@ class PlaylistSongListTile extends StatelessWidget {
           child: Row(
             children: [
               Image(
-                image: (songMetadata.thumbnailPath != null)
-                    ? (songMetadata.isOnDevice)
-                          ? FileImage(File(songMetadata.thumbnailPath!))
-                          : NetworkImage(songMetadata.thumbnailPath!)
-                    : const AssetImage(Assets.defaultAlbumCoverImage),
+                image: artworkImage(ref, songMetadata.thumbnailPath),
                 errorBuilder: (_, _, _) => Image.asset(
                   Assets.defaultAlbumCoverImage,
                   fit: BoxFit.fitWidth,
@@ -89,8 +87,10 @@ class PlaylistSongListTile extends StatelessWidget {
                     const SizedBox(height: 2),
                     Flexible(
                       child: Text(
-                        songMetadata.getTrackArtistNames ??
-                            context.localization.unknownArtist,
+                        unavailable
+                            ? context.localization.subsonicUnavailable
+                            : songMetadata.getTrackArtistNames ??
+                                  context.localization.unknownArtist,
                         style: CupertinoTheme.of(context).textTheme.textStyle
                             .copyWith(
                               color: isSelected

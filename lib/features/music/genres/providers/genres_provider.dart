@@ -3,9 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final genresProvider = Provider<List<String>>((ref) {
   final genreNamesSet = <String>{};
-  ref.read(filteredAudioFilesProvider).requireValue.forEach((audioFile) {
+  for (final audioFile in ref.watch(filteredAudioFilesProvider).value ?? []) {
     genreNamesSet.addAll(audioFile.genres);
-  });
+  }
 
   final genreNames = genreNamesSet.toList();
   genreNames.sort();

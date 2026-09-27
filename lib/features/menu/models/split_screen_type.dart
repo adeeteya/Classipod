@@ -2,6 +2,8 @@ enum SplitScreenType {
   albumArt,
   settings,
   librarySettings,
+  subsonic,
+  missingTracks,
   shuffle,
   nowPlaying,
   sleepTimer,

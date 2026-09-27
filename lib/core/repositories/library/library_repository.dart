@@ -120,6 +120,14 @@ class LibraryRepository {
       ),
     );
 
+    Future<Map<String, dynamic>> readSongTags(String uri) async {
+      try {
+        return await readTags(uri, artworkDirectory: artworkDirectory);
+      } on Exception {
+        return {'error': 'unreadable'};
+      }
+    }
+
     final verifiedArtwork = <String>{};
     Future<bool> artworkExists(String? path) async {
       if (path == null) return false;
@@ -157,10 +165,7 @@ class LibraryRepository {
           if (!refresh &&
               row['hasCover'] == true &&
               !await artworkExists(previous.thumbnailPath)) {
-            final result = await readTags(
-              song.path ?? song.uri,
-              artworkDirectory: artworkDirectory,
-            );
+            final result = await readSongTags(song.path ?? song.uri);
             final path = result['artworkPath'] as String?;
             if (path != null) {
               row['music'] = (row['music'] as MusicMetadata).copyWith(
@@ -169,10 +174,7 @@ class LibraryRepository {
             }
           }
         } else {
-          final tags = await readTags(
-            song.path ?? song.uri,
-            artworkDirectory: artworkDirectory,
-          );
+          final tags = await readSongTags(song.path ?? song.uri);
           final success = !tags.containsKey('error');
           if (!success) failures++;
           row = {
@@ -189,12 +191,14 @@ class LibraryRepository {
             ),
           };
         }
+        row['artworkReadFailed'] = false;
         if (row['hasCover'] == true) {
           final music = row['music'] as MusicMetadata;
           if (await artworkExists(music.thumbnailPath)) {
             artworkCached++;
           } else {
             failures++;
+            row['artworkReadFailed'] = true;
           }
         }
         records.add(row);
@@ -228,7 +232,9 @@ class LibraryRepository {
           playlist.copyWith(
             songs: [
               for (final song in playlist.songs)
-                byId[song.identity] ?? byPath[song.filePath] ?? song,
+                song.isSubsonic
+                    ? song
+                    : byId[song.identity] ?? byPath[song.filePath] ?? song,
             ],
           ),
         );
@@ -239,7 +245,9 @@ class LibraryRepository {
       emit(LibraryPhase.complete);
       return active;
     } finally {
-      await closeReader?.call();
+      try {
+        await closeReader?.call();
+      } catch (_) {}
     }
   }
 }

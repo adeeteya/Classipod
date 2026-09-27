@@ -19,26 +19,30 @@ import 'package:shared_preferences_platform_interface/shared_preferences_async_p
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
-  final ProviderContainer providerContainer = ProviderContainer(
-    overrides: [
-      deviceDirectoryProvider.overrideWith(
-        (_) => DeviceDirectory(
-          documentsDirectory: Directory(
-            "${Directory.current.path}/test/test_files",
+  late ProviderContainer providerContainer;
+  setUp(() {
+    providerContainer = ProviderContainer(
+      overrides: [
+        deviceDirectoryProvider.overrideWith(
+          (_) => DeviceDirectory(
+            documentsDirectory: Directory(
+              "${Directory.current.path}/test/test_files",
+            ),
           ),
         ),
-      ),
-      appStartupControllerProvider.overrideWith((ref) async {
-        await ref.read(deviceDirectoryProvider.future);
-        SharedPreferencesAsyncPlatform.instance =
-            InMemorySharedPreferencesAsync.empty();
-        await ref.read(sharedPreferencesWithCacheProvider.future);
-        ref
-            .read(settingsPreferencesControllerProvider.notifier)
-            .setAudioSource(isOnlineAudioSource: false);
-      }),
-    ],
-  );
+        appStartupControllerProvider.overrideWith((ref) async {
+          await ref.read(deviceDirectoryProvider.future);
+          SharedPreferencesAsyncPlatform.instance =
+              InMemorySharedPreferencesAsync.empty();
+          await ref.read(sharedPreferencesWithCacheProvider.future);
+          ref
+              .read(settingsPreferencesControllerProvider.notifier)
+              .setAudioSource(isOnlineAudioSource: false);
+        }),
+      ],
+    );
+    addTearDown(providerContainer.dispose);
+  });
 
   setUpAll(() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
@@ -69,7 +73,9 @@ void main() {
         child: const AppStartupScreen(app: ClassipodApp()),
       ),
     );
-    await tester.pumpAndSettle();
+    // The splash may keep animating while a library source is pending.
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 100));
     expect(find.byType(SplashScreen), findsOne);
   });
 

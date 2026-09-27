@@ -5,7 +5,8 @@ import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final albumDetailsProvider = Provider<List<AlbumModel>>((ref) {
-  final metadataList = ref.read(filteredAudioFilesProvider).requireValue;
+  final metadataList =
+      ref.watch(filteredAudioFilesProvider).value ?? <MusicMetadata>[];
   return buildAlbumDetails(metadataList);
 });
 
@@ -19,7 +20,9 @@ List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
         : (metadata.albumArtistNames ?? metadata.trackArtistNames ?? [])
               .map((name) => name.trim().toLowerCase())
               .join('\u0001');
-    final albumIdentity = '$albumName\u0000$primaryArtist';
+    final albumIdentity = metadata.isSubsonic
+        ? '${metadata.serverId}:${metadata.remoteAlbumId ?? albumName}'
+        : '$albumName\u0000$primaryArtist';
     albumsByIdentity.putIfAbsent(albumIdentity, () => []).add(metadata);
   }
 

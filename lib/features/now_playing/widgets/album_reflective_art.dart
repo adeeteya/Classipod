@@ -1,12 +1,13 @@
 import 'dart:async';
-import 'dart:io';
 import 'dart:math';
 
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
+import 'package:classipod/core/widgets/artwork_image.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AlbumReflectiveArt extends StatefulWidget {
+class AlbumReflectiveArt extends ConsumerStatefulWidget {
   final String? thumbnailPath;
   final bool isOnDevice;
   final double reflectedImageHeight;
@@ -25,10 +26,10 @@ class AlbumReflectiveArt extends StatefulWidget {
   });
 
   @override
-  State<AlbumReflectiveArt> createState() => _AlbumReflectiveArtState();
+  ConsumerState<AlbumReflectiveArt> createState() => _AlbumReflectiveArtState();
 }
 
-class _AlbumReflectiveArtState extends State<AlbumReflectiveArt>
+class _AlbumReflectiveArtState extends ConsumerState<AlbumReflectiveArt>
     with SingleTickerProviderStateMixin {
   late final AnimationController _controller;
   late final Animation<double> _animation;
@@ -118,11 +119,7 @@ class _AlbumReflectiveArtState extends State<AlbumReflectiveArt>
           children: [
             Flexible(
               child: Image(
-                image: (widget.thumbnailPath != null)
-                    ? widget.isOnDevice
-                          ? FileImage(File(widget.thumbnailPath!))
-                          : NetworkImage(widget.thumbnailPath!)
-                    : const AssetImage(Assets.defaultAlbumCoverImage),
+                image: artworkImage(ref, widget.thumbnailPath),
                 errorBuilder: (_, _, _) => Image.asset(
                   Assets.defaultAlbumCoverImage,
                   height: widget.imageWidth,
@@ -147,11 +144,7 @@ class _AlbumReflectiveArtState extends State<AlbumReflectiveArt>
                   Transform.flip(
                     flipY: true,
                     child: Image(
-                      image: (widget.thumbnailPath != null)
-                          ? widget.isOnDevice
-                                ? FileImage(File(widget.thumbnailPath!))
-                                : NetworkImage(widget.thumbnailPath!)
-                          : const AssetImage(Assets.defaultAlbumCoverImage),
+                      image: artworkImage(ref, widget.thumbnailPath),
                       errorBuilder: (_, _, _) => Image.asset(
                         Assets.defaultAlbumCoverImage,
                         height: widget.reflectedImageHeight,

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/menu/widgets/animated_album_art_scroller.dart';
@@ -10,6 +11,7 @@ import 'package:classipod/features/menu/widgets/now_playing_preview_widget.dart'
 import 'package:classipod/features/menu/widgets/settings_preview_widget.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
 import 'package:classipod/features/sleep_timer/widgets/sleep_timer_preview_widget.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -97,7 +99,7 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
           titleText: context.localization.shuffleSongsMenuTitle,
           icon: CupertinoIcons.shuffle,
           contentText:
-              "${ref.read(songsProvider).length} ${context.localization.songsScreenTitle}",
+              "${ref.watch(songsProvider).length} ${context.localization.songsScreenTitle}",
         );
       } else if (splitScreenType == SplitScreenType.settings) {
         splitScreenWidget = const SettingsPreviewWidget();
@@ -195,6 +197,27 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
           icon: CupertinoIcons.music_albums,
           contentText: context.localization.librarySettingsDescription,
         );
+      } else if (splitScreenType == SplitScreenType.missingTracks) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.missingTracksTitle,
+          icon: CupertinoIcons.exclamationmark_triangle,
+          contentText: context.localization.missingTracksDescription,
+        );
+      } else if (splitScreenType == SplitScreenType.subsonic) {
+        final remote = ref.watch(subsonicControllerProvider).value;
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.subsonicTitle,
+          icon: CupertinoIcons.globe,
+          contentText: remote?.enabled != true
+              ? context.localization.subsonicDescription
+              : remote?.signedIn != true
+              ? context.localization.subsonicSignIn
+              : remote?.scanning == true
+              ? context.localization.subsonicIndexing
+              : remote?.error != null
+              ? subsonicError(context, remote!.error!)
+              : context.localization.subsonicDescription,
+        );
       } else if (splitScreenType == SplitScreenType.rescanMusicFiles) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.reindexLibrarySettingTitle,
@@ -230,6 +253,8 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
       }
     }
     return CupertinoPageScaffold(
+      // Dialogs handle keyboard insets above the fixed-height device screen.
+      resizeToAvoidBottomInset: false,
       child: currentSettings.splitScreenEnabled
           ? Row(
               children: [

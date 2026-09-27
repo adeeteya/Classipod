@@ -1,12 +1,12 @@
-import 'dart:io';
-
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/widgets/artwork_image.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AlbumArtSongListTile extends StatelessWidget {
+class AlbumArtSongListTile extends ConsumerWidget {
   final MusicMetadata songMetadata;
   final bool isSelected;
   final bool isCurrentlyPlaying;
@@ -23,7 +23,7 @@ class AlbumArtSongListTile extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return GestureDetector(
       onTap: onTap,
       onLongPress: onLongPress,
@@ -46,11 +46,7 @@ class AlbumArtSongListTile extends StatelessWidget {
           child: Row(
             children: [
               Image(
-                image: (songMetadata.thumbnailPath != null)
-                    ? songMetadata.isOnDevice
-                          ? FileImage(File(songMetadata.thumbnailPath!))
-                          : NetworkImage(songMetadata.thumbnailPath!)
-                    : const AssetImage(Assets.defaultAlbumCoverImage),
+                image: artworkImage(ref, songMetadata.thumbnailPath),
                 errorBuilder: (_, _, _) => Image.asset(
                   Assets.defaultAlbumCoverImage,
                   fit: BoxFit.fitWidth,

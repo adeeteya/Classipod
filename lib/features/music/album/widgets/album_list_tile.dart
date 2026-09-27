@@ -1,12 +1,12 @@
-import 'dart:io';
-
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/widgets/artwork_image.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AlbumListTile extends StatelessWidget {
+class AlbumListTile extends ConsumerWidget {
   final AlbumModel albumDetails;
   final bool isSelected;
   final bool showArtistName;
@@ -25,7 +25,7 @@ class AlbumListTile extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final isDarkTheme =
         CupertinoTheme.of(context).brightness == Brightness.dark;
     final borderColor = isDarkTheme
@@ -74,11 +74,7 @@ class AlbumListTile extends StatelessWidget {
                 ),
               if (!isAllSongsAlbum)
                 Image(
-                  image: (albumDetails.albumArtPath != null)
-                      ? albumDetails.isOnDevice()
-                            ? FileImage(File(albumDetails.albumArtPath!))
-                            : NetworkImage(albumDetails.albumArtPath!)
-                      : const AssetImage(Assets.defaultAlbumCoverImage),
+                  image: artworkImage(ref, albumDetails.albumArtPath),
                   errorBuilder: (_, _, _) => Image.asset(
                     Assets.defaultAlbumCoverImage,
                     fit: BoxFit.fitWidth,

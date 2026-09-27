@@ -1,3 +1,7 @@
+import 'dart:async';
+
+import 'package:audio_service/audio_service.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/scrubber_bar.dart';
@@ -12,9 +16,11 @@ class NowPlayingBottomBar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final handler = ref.watch(libraryAudioHandlerProvider);
     return RepaintBoundary(
-      child: StreamBuilder<Duration>(
-        stream: ref.read(audioPlayerProvider).positionStream,
+      child: StreamBuilder<PlaybackState>(
+        stream: handler.playbackState,
+        initialData: handler.playbackState.value,
         builder: (context, snapshot) {
           final double totalDuration =
               (ref
@@ -23,7 +29,15 @@ class NowPlayingBottomBar extends ConsumerWidget {
                       ?.trackDuration ??
                   1000) /
               1000;
-          double currentDuration = snapshot.data?.inSeconds.toDouble() ?? 0;
+          final playback = snapshot.data!;
+          final buffering =
+              playback.processingState == AudioProcessingState.buffering ||
+              playback.processingState == AudioProcessingState.loading;
+          double currentDuration = playback.updatePosition.inSeconds.toDouble();
+          currentDuration = currentDuration.clamp(
+            0,
+            totalDuration > 0 ? totalDuration : 0,
+          );
           if (currentDuration < 0) {
             currentDuration = 0;
           }
@@ -58,10 +72,25 @@ class NowPlayingBottomBar extends ConsumerWidget {
                   ),
                 ),
               ),
-              if (showScrubber)
-                ScrubberBar(max: totalDuration, value: currentDuration),
-              if (!showScrubber)
-                SeekBar(max: totalDuration, value: currentDuration),
+              Expanded(
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Row(
+                      children: [
+                        if (showScrubber)
+                          ScrubberBar(
+                            max: totalDuration,
+                            value: currentDuration,
+                          ),
+                        if (!showScrubber)
+                          SeekBar(max: totalDuration, value: currentDuration),
+                      ],
+                    ),
+                    if (buffering) const _DelayedBufferingIndicator(),
+                  ],
+                ),
+              ),
               SizedBox(
                 width: 40,
                 child: FittedBox(
@@ -81,6 +110,45 @@ class NowPlayingBottomBar extends ConsumerWidget {
             ],
           );
         },
+      ),
+    );
+  }
+}
+
+class _DelayedBufferingIndicator extends StatefulWidget {
+  const _DelayedBufferingIndicator();
+
+  @override
+  State<_DelayedBufferingIndicator> createState() =>
+      _DelayedBufferingIndicatorState();
+}
+
+class _DelayedBufferingIndicatorState
+    extends State<_DelayedBufferingIndicator> {
+  late final Timer _delay;
+  bool _visible = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _delay = Timer(const Duration(seconds: 1), () {
+      setState(() => _visible = true);
+    });
+  }
+
+  @override
+  void dispose() {
+    _delay.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!_visible) return const SizedBox.shrink();
+    return IgnorePointer(
+      child: Semantics(
+        label: context.localization.playbackBuffering,
+        child: const CupertinoActivityIndicator(radius: 8),
       ),
     );
   }

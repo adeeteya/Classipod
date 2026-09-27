@@ -16,7 +16,7 @@ class NowPlayingWidget extends StatelessWidget {
       duration: const Duration(milliseconds: 300),
       child: Row(
         key: ValueKey(
-          "Now Playing-${nowPlayingDetails.currentMetadata?.originalSongIndex}",
+          "Now Playing-${nowPlayingDetails.currentMetadata?.identity}",
         ),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

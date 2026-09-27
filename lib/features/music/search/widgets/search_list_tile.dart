@@ -1,14 +1,14 @@
-import 'dart:io';
-
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/widgets/artwork_image.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class SearchListTile extends StatelessWidget {
+class SearchListTile extends ConsumerWidget {
   final SearchResultsModel searchResult;
   final bool isSelected;
   final VoidCallback onTap;
@@ -23,7 +23,7 @@ class SearchListTile extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final isDarkTheme =
         CupertinoTheme.of(context).brightness == Brightness.dark;
     final borderColor = isDarkTheme
@@ -101,14 +101,12 @@ class SearchListTile extends StatelessWidget {
                       ),
                     )
                   : Image(
-                      image:
-                          (searchResult.searchResultType ==
-                                  SearchResultType.album &&
-                              imageFilePath != null)
-                          ? (searchResult.result as AlbumModel).isOnDevice()
-                                ? FileImage(File(imageFilePath))
-                                : NetworkImage(imageFilePath)
-                          : const AssetImage(Assets.defaultAlbumCoverImage),
+                      image: artworkImage(
+                        ref,
+                        searchResult.searchResultType == SearchResultType.album
+                            ? imageFilePath
+                            : null,
+                      ),
                       errorBuilder: (_, _, _) => Image.asset(
                         Assets.defaultAlbumCoverImage,
                         fit: BoxFit.cover,

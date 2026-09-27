@@ -1,14 +1,17 @@
 import 'dart:async';
 
 import 'package:audio_service/audio_service.dart';
+import 'package:classipod/core/constants/keys.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/playback/library_audio_handler.dart';
+import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
@@ -18,10 +21,49 @@ final audioPlayerProvider = Provider<AudioPlayer>((_) {
 });
 
 final libraryAudioHandlerProvider = Provider<LibraryAudioHandler>((ref) {
-  final handler = LibraryAudioHandler(ref.read(audioPlayerProvider));
+  final handler = LibraryAudioHandler(
+    ref.read(audioPlayerProvider),
+    resolveSource: (song) async {
+      if (!song.isSubsonic) return song.toAudioSource() as UriAudioSource;
+      final remote = ref.read(subsonicControllerProvider).value;
+      final context = rootNavigatorKey.currentContext;
+      if (remote?.enabled == true &&
+          remote?.signedIn != true &&
+          context != null) {
+        await showSubsonicDialog(context);
+      }
+      return ref.read(subsonicControllerProvider.notifier).resolve(song);
+    },
+  );
+  ref.listen(
+    subsonicControllerProvider.select(
+      (value) => (value.value?.enabled, value.value?.config?.id),
+    ),
+    (_, _) => _reconcileLibrary(ref, handler),
+  );
   ref.onDispose(() => unawaited(handler.dispose()));
   return handler;
 });
+
+void _reconcileLibrary(Ref ref, LibraryAudioHandler handler) {
+  final now = ref.read(nowPlayingDetailsProvider);
+  if (now.metadataList.isEmpty) return;
+  final remote = ref.read(subsonicControllerProvider).value;
+  final library = ref.read(filteredAudioFilesProvider).value;
+  final songs = now.nowPlayingType == NowPlayingType.songs && library != null
+      ? library.toList()
+      : now.metadataList;
+  final retained = songs
+      .where(
+        (song) =>
+            !song.isSubsonic ||
+            (remote?.enabled == true && remote?.config?.id == song.serverId),
+      )
+      .toList();
+  if (listEquals(now.metadataList, retained)) return;
+  ref.read(nowPlayingDetailsProvider.notifier).reconcileMetadata(retained);
+  unawaited(handler.reconcileSongs(retained));
+}
 
 final audioPlayerServiceProvider =
     AsyncNotifierProvider<AudioPlayerServiceNotifier, void>(
@@ -32,14 +74,27 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   AudioPlayerServiceNotifier() : super();
 
   @override
-  Future<void> build() async {}
+  Future<void> build() async {
+    ref.listen(filteredAudioFilesProvider, (previous, next) {
+      if (next.hasValue && previous?.value != next.value) {
+        _reconcileLibrary(ref, ref.read(libraryAudioHandlerProvider));
+      }
+    });
+  }
 
   Future<void> play() async {
-    if (ref.read(audioPlayerProvider).playing) {
+    state = await AsyncValue.guard(_play);
+  }
+
+  Future<void> _play() async {
+    final handler = ref.read(libraryAudioHandlerProvider);
+    if (ref.read(audioPlayerProvider).playing &&
+        handler.playbackState.value.errorCode == null &&
+        !handler.recovering) {
       return;
     }
 
-    await ref.read(libraryAudioHandlerProvider).play();
+    await handler.play();
   }
 
   Future<void> pause() async {
@@ -71,7 +126,8 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
     state = await AsyncValue.guard(() async {
       //If Album or Playlist is being played then Switch to original List of Songs
       if (ref.read(nowPlayingDetailsProvider).nowPlayingType !=
-          NowPlayingType.songs) {
+              NowPlayingType.songs ||
+          ref.read(nowPlayingDetailsProvider).metadataList.isEmpty) {
         await setAudioSource(
           musicMetadataList: ref.read(filteredAudioFilesProvider).requireValue,
         );
@@ -121,7 +177,9 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   }
 
   Future<void> nextSong() async {
-    await ref.read(libraryAudioHandlerProvider).skipToNext();
+    state = await AsyncValue.guard(
+      () => ref.read(libraryAudioHandlerProvider).skipToNext(),
+    );
   }
 
   Future<void> seekBackwards() async {
@@ -151,6 +209,7 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
         return;
       } else {
         await setAudioSource(
+          preload: false,
           nowPlayingType: NowPlayingType.album,
           musicMetadataList: albumDetail.albumSongs,
         );
@@ -181,6 +240,7 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
         return;
       } else {
         await setAudioSource(
+          preload: false,
           nowPlayingType: NowPlayingType.playlist,
           musicMetadataList: playlistDetail.songs,
         );
@@ -194,7 +254,7 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   Future<void> playSongAtIndex(int index) async {
     state = await AsyncValue.guard(() async {
       if (ref.read(nowPlayingDetailsProvider).currentIndex == index) {
-        await play();
+        await _play();
       } else {
         await ref.read(libraryAudioHandlerProvider).select(index);
       }
@@ -206,7 +266,8 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
     state = await AsyncValue.guard(() async {
       //If Album or Playlist is being played then Switch to original List of Songs
       if (ref.read(nowPlayingDetailsProvider).nowPlayingType !=
-          NowPlayingType.songs) {
+              NowPlayingType.songs ||
+          ref.read(nowPlayingDetailsProvider).metadataList.isEmpty) {
         await setAudioSource(
           musicMetadataList: ref.read(filteredAudioFilesProvider).requireValue,
         );
@@ -215,7 +276,7 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
       //In case the same song is already playing
       if (songId ==
           ref.read(nowPlayingDetailsProvider).currentMetadata?.identity) {
-        unawaited(play());
+        await _play();
         return;
       }
 
@@ -231,62 +292,39 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   Future<void> togglePlayback() async {
     state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      if (ref.read(audioPlayerProvider).playing) {
+      final handler = ref.read(libraryAudioHandlerProvider);
+      if (handler.recovering
+          ? handler.wantsPlayback
+          : ref.read(audioPlayerProvider).playing) {
         await pause();
       } else {
-        await play();
+        await _play();
       }
     });
   }
 
-  Future<void> seekForward() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      final int currentDurationInSeconds = ref
-          .read(audioPlayerProvider)
-          .position
-          .inSeconds;
-      final int maxDurationInSeconds =
-          ref.read(audioPlayerProvider).duration?.inSeconds ?? 0;
-      if (currentDurationInSeconds + 1 < maxDurationInSeconds) {
-        await ref
-            .read(audioPlayerProvider)
-            .seek(
-              Duration(
-                seconds: ref.read(audioPlayerProvider).position.inSeconds + 1,
-              ),
-            );
-      }
-    });
-  }
+  Future<void> seekForward() => seekToDuration(
+    ref.read(libraryAudioHandlerProvider).displayPosition.inSeconds + 1,
+  );
 
-  Future<void> seekBackward() async {
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() async {
-      await ref
-          .read(audioPlayerProvider)
-          .seek(
-            Duration(
-              seconds: ref.read(audioPlayerProvider).position.inSeconds - 1,
-            ),
-          );
-    });
-  }
+  Future<void> seekBackward() => seekToDuration(
+    ref.read(libraryAudioHandlerProvider).displayPosition.inSeconds - 1,
+  );
 
   Future<void> seekToDuration(int targetDurationInSeconds) async {
-    state = const AsyncLoading();
     state = await AsyncValue.guard(() async {
-      final int maxDurationInSeconds =
-          ref.read(audioPlayerProvider).duration?.inSeconds ?? 0;
-      if (targetDurationInSeconds > 0 &&
-          targetDurationInSeconds <= maxDurationInSeconds) {
-        await ref
-            .read(audioPlayerProvider)
-            .seek(Duration(seconds: targetDurationInSeconds));
-      }
+      final duration =
+          ref
+              .read(nowPlayingDetailsProvider)
+              .currentMetadata
+              ?.getTrackDuration ??
+          0;
+      final target = duration > 0
+          ? targetDurationInSeconds.clamp(0, duration ~/ 1000)
+          : targetDurationInSeconds.clamp(0, 1 << 31);
       await ref
-          .read(audioPlayerProvider)
-          .seek(Duration(seconds: targetDurationInSeconds));
+          .read(libraryAudioHandlerProvider)
+          .seek(Duration(seconds: target));
     });
   }
 }

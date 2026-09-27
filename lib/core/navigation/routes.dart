@@ -36,6 +36,7 @@ import 'package:classipod/features/settings/screens/device_color_selection_scree
 import 'package:classipod/features/settings/screens/exclude_directories_screen.dart';
 import 'package:classipod/features/settings/screens/language_selection_screen.dart';
 import 'package:classipod/features/settings/screens/library_settings_screen.dart';
+import 'package:classipod/features/settings/screens/missing_tracks_screen.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
 import 'package:classipod/features/sleep_timer/screens/sleep_timer_screen.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -51,6 +52,7 @@ enum Routes {
   language,
   deviceColor,
   excludeDirectories,
+  missingTracks,
   nowPlaying,
   nowPlayingMoreOptions,
   sleepTimer,
@@ -97,6 +99,8 @@ enum Routes {
         return context.localization.languageScreenTitle;
       case deviceColor:
         return context.localization.deviceColorSettingTitle;
+      case missingTracks:
+        return context.localization.missingTracksTitle;
       case excludeDirectories:
         return context.localization.excludeDirectoriesScreenTitle;
       case nowPlaying:
@@ -247,6 +251,15 @@ final routerProvider = Provider(
                         pageBuilder: (context, state) =>
                             const CupertinoPage(child: LibrarySettingsScreen()),
                         routes: [
+                          GoRoute(
+                            path: Routes.missingTracks.name,
+                            name: Routes.missingTracks.name,
+                            parentNavigatorKey: rootNavigatorKey,
+                            pageBuilder: (context, state) =>
+                                const CupertinoPage(
+                                  child: MissingTracksScreen(),
+                                ),
+                          ),
                           GoRoute(
                             path: Routes.excludeDirectories.name,
                             name: Routes.excludeDirectories.name,

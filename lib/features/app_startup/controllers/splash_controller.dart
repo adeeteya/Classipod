@@ -18,6 +18,7 @@ import 'package:permission_handler/permission_handler.dart';
 final splashControllerProvider =
     AsyncNotifierProvider<SplashControllerNotifier, void>(
       SplashControllerNotifier.new,
+      retry: (_, _) => null,
     );
 
 class SplashControllerNotifier extends AsyncNotifier<void> {
@@ -35,11 +36,7 @@ class SplashControllerNotifier extends AsyncNotifier<void> {
     if (!kIsWeb && Platform.isAndroid) {
       final version = (await OnAudioQuery().queryDeviceInfo()).version;
       final permission = version >= 33 ? Permission.audio : Permission.storage;
-      final result = await permission.request();
-      if (result.isPermanentlyDenied) {
-        throw const AudioPermissionPermanentlyDeniedException();
-      }
-      if (!result.isGranted) throw const AudioPermissionDeniedException();
+      await permission.request();
     }
 
     await initializeApp();

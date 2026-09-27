@@ -45,7 +45,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   Timer _lastVolumeChangeTimer = Timer(Duration.zero, () {});
   bool _isShuffleEnabled = false;
   _NowPlayingBottomBarPage _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
-  int? _lastLyricsSongIndex;
+  String? _lastLyricsSongIndex;
 
   String get routeName => Routes.nowPlaying.name;
 
@@ -310,8 +310,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     final nowPlayingDetails = ref.watch(nowPlayingDetailsProvider);
     final String? lyrics = nowPlayingDetails.currentMetadata?.lyrics;
     final bool hasLyrics = lyrics != null && lyrics.trim().isNotEmpty;
-    final int? currentLyricsSongIndex =
-        nowPlayingDetails.currentMetadata?.originalSongIndex;
+    final String? currentLyricsSongIndex =
+        nowPlayingDetails.currentMetadata?.identity;
 
     if (_lastLyricsSongIndex != currentLyricsSongIndex) {
       _lastLyricsSongIndex = currentLyricsSongIndex;
@@ -399,7 +399,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                           hasLyrics)
                       ? LyricsView(
                           key: ValueKey(
-                            'lyrics-view-${nowPlayingDetails.currentMetadata?.originalSongIndex ?? 0}',
+                            'lyrics-view-${nowPlayingDetails.currentMetadata?.identity ?? 0}',
                           ),
                           lyrics: lyrics,
                           scrollController: _lyricsScrollController,

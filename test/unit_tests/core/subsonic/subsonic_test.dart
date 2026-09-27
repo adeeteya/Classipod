@@ -333,7 +333,10 @@ void main() {
       await repository.box.close();
       final reopened = await Hive.openBox<dynamic>('remote');
       final saved = reopened.get('song') as MusicMetadata;
+      expect(saved.remoteSongId, 'song');
+      expect(saved.remoteAlbumId, 'album');
       expect(saved.remoteArtworkId, 'art');
+      expect(saved.isOnDevice, isFalse);
       expect(saved.serverId, config.id);
     });
   });

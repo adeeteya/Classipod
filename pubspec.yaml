@@ -26,6 +26,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^3.4.3
+  flutter_secure_storage: ^11.2.0
   flutter_taglib:
     git:
       url: https://github.com/adeeteya/flutter_taglib.git
@@ -33,6 +34,7 @@ dependencies:
   go_router: ^18.0.1
   hive_ce: ^2.20.0
   hive_ce_flutter: ^2.3.4
+  http: ^1.6.0
   intl: any
   just_audio: ^0.10.6
   just_audio_media_kit: ^2.1.0

@@ -28,11 +28,17 @@
     "description": "The action that reads metadata and artwork for every track again"
   },
   "reindexLibrarySettingDescription": "Read metadata and artwork for all music files again.",
+  "@reindexLibrarySettingDescription": {
+    "description": "The Library Settings preview explaining that re-indexing rereads metadata and artwork for every music file"
+  },
   "refreshLibrarySettingTitle": "Refresh Library",
   "@refreshLibrarySettingTitle": {
     "description": "The action that checks for newly added or deleted music files"
   },
   "refreshLibrarySettingDescription": "Check for added or deleted music. Keep existing metadata and artwork.",
+  "@refreshLibrarySettingDescription": {
+    "description": "The Library Settings preview explaining that refreshing checks for added or deleted music while keeping existing metadata and artwork"
+  },
   "librarySettingsScreenTitle": "Library Settings",
   "librarySettingsDescription": "Manage music indexing and excluded folders.",
   "@librarySettingsDescription": {
@@ -563,12 +569,22 @@
     "description": "The title of the exclude directories screen"
   },
   "findingSongs": "Finding songs…",
+  "@findingSongs": {
+    "description": "The library loading status shown while searching for music files"
+  },
   "songsLoaded": "Songs loaded: {loaded} / {total}",
   "artworkCached": "Artwork cached: {cached}",
   "libraryReadFailures": "Could not read {count} items",
   "libraryLoadError": "Unable to load the music library. Please retry.",
+  "@libraryLoadError": {
+    "description": "The splash screen error when loading the music library fails"
+  },
   "libraryRetry": "Retry",
+  "@libraryRetry": {
+    "description": "The button to retry a failed library load or indexing operation"
+  },
   "@songsLoaded": {
+    "description": "Library indexing progress; loaded is the number of songs processed and total is the number discovered",
     "placeholders": {
       "loaded": {
         "type": "int"
@@ -579,18 +595,135 @@
     }
   },
   "@artworkCached": {
+    "description": "Library indexing progress; cached is the number of artwork items cached",
     "placeholders": {
       "cached": {
         "type": "int"
-
       }
     }
   },
   "@libraryReadFailures": {
+    "description": "A summary of library read failures; count is the number of items that could not be read",
     "placeholders": {
       "count": {
         "type": "int"
       }
     }
+  },
+  "missingTracksTitle": "Missing Tracks",
+  "@missingTracksTitle": {
+    "description": "The Library Settings option and page title for files with metadata or artwork read errors"
+  },
+  "missingTracksDescription": "Review files that could not be read.",
+  "@missingTracksDescription": {
+    "description": "The Library Settings preview explaining the Missing Tracks page"
+  },
+  "missingTracksEmpty": "No unreadable tracks.",
+  "@missingTracksEmpty": {
+    "description": "The empty state on the Missing Tracks page when no unreadable tracks remain"
+  },
+  "missingTrackRead": "Could not read this file’s metadata. Check the file location and access permissions, then reindex the library to retry.",
+  "@missingTrackRead": {
+    "description": "The explanation and retry guidance for a file whose metadata could not be read on the Missing Tracks page"
+  },
+  "missingTrackArtwork": "Could not read this file’s artwork. Audio may still play. Reindex the library to retry.",
+  "@missingTrackArtwork": {
+    "description": "The explanation and retry guidance for a file whose artwork could not be read on the Missing Tracks page"
+  },
+  "playbackBuffering": "Buffering…",
+  "@playbackBuffering": {
+    "description": "The accessibility label for the buffering indicator on the Now Playing progress bar"
+  },
+  "subsonicTitle": "Subsonic Server",
+  "@subsonicTitle": {
+    "description": "The Library Settings title and configuration dialog title for a Subsonic-compatible music server; Subsonic is the protocol name"
+  },
+  "subsonicDescription": "Stream music from Navidrome, gonic, and compatible servers.",
+  "@subsonicDescription": {
+    "description": "The split-screen preview describing compatible music servers; Navidrome and gonic are product names and should not be translated"
+  },
+  "subsonicConfigure": "Configure Subsonic",
+  "@subsonicConfigure": {
+    "description": "The Library Settings action that opens the Subsonic server configuration dialog"
+  },
+  "subsonicUrl": "Server URL",
+  "@subsonicUrl": {
+    "description": "The label for the server address field in the Subsonic configuration dialog"
+  },
+  "subsonicUsername": "Username",
+  "@subsonicUsername": {
+    "description": "The label for the server account username field in the Subsonic configuration dialog"
+  },
+  "subsonicPassword": "Password",
+  "@subsonicPassword": {
+    "description": "The label for the server account password field in the Subsonic configuration dialog"
+  },
+  "subsonicConnect": "Connect",
+  "@subsonicConnect": {
+    "description": "The configuration dialog button that validates the server connection and saves the credentials"
+  },
+  "subsonicRemove": "Remove Server",
+  "@subsonicRemove": {
+    "description": "The configuration dialog action that removes the saved server connection, credentials, and cached catalog"
+  },
+  "subsonicOn": "On",
+  "@subsonicOn": {
+    "description": "The value of the Subsonic Server setting when server music is enabled"
+  },
+  "subsonicOff": "Off",
+  "@subsonicOff": {
+    "description": "The value of the Subsonic Server setting when server music is disabled"
+  },
+  "subsonicSignIn": "Sign in required",
+  "@subsonicSignIn": {
+    "description": "The server status prompting the user to sign in when credentials are unavailable, such as after a Web reload"
+  },
+  "subsonicLoadingLibrary": "Loading your library…",
+  "@subsonicLoadingLibrary": {
+    "description": "The configuration dialog status while loading the server music catalog after connecting"
+  },
+  "subsonicContinueBackground": "Continue in background",
+  "@subsonicContinueBackground": {
+    "description": "The configuration dialog button that dismisses the dialog while server indexing continues in the background"
+  },
+  "subsonicClose": "Close",
+  "@subsonicClose": {
+    "description": "The button that closes the Subsonic configuration dialog"
+  },
+  "subsonicIndexing": "Indexing server music…",
+  "@subsonicIndexing": {
+    "description": "The background status while indexing music from the configured server"
+  },
+  "subsonicUnavailable": "Unavailable",
+  "@subsonicUnavailable": {
+    "description": "The status of a saved playlist track that cannot currently be played from its server"
+  },
+  "subsonicInvalidUrl": "Enter an HTTP or HTTPS server URL without a query, fragment, or embedded login.",
+  "@subsonicInvalidUrl": {
+    "description": "The configuration dialog validation error for an invalid server URL or an address containing unsupported URL components"
+  },
+  "subsonicCredentialsError": "Check your username, password, and server permissions.",
+  "@subsonicCredentialsError": {
+    "description": "The server error asking the user to check their login credentials and access permissions"
+  },
+  "subsonicUnsupported": "This server does not support the required Subsonic API or token authentication.",
+  "@subsonicUnsupported": {
+    "description": "The error when a server does not support the required Subsonic API version or token authentication"
+  },
+  "subsonicStorageError": "Could not save credentials. Check that secure storage is available and try again.",
+  "@subsonicStorageError": {
+    "description": "The configuration dialog error when credentials cannot be saved in secure storage"
+  },
+  "subsonicTimeout": "The server timed out. Please try again.",
+  "@subsonicTimeout": {
+    "description": "The error when a request to the music server exceeds its time limit"
+  },
+  "subsonicConnectionError": "Cannot connect. Check the URL, network, and HTTPS certificate. On Web, the server must allow CORS and an HTTPS app cannot connect to HTTP.",
+  "@subsonicConnectionError": {
+    "description": "The server connection error with network, certificate, and Web browser troubleshooting guidance; CORS means Cross-Origin Resource Sharing"
+  },
+  "subsonicServerError": "Could not read the server library. The previous catalog is retained. Refresh Library to retry.",
+  "@subsonicServerError": {
+    "description": "The server indexing error explaining that the previously cached catalog is preserved and Refresh Library can retry the scan"
   }
 }

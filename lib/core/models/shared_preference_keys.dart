@@ -11,6 +11,7 @@ enum SharedPreferencesKeys {
   appTheme,
   splitScreenEnabled,
   immersiveMode,
+  hideLocalMusic,
   isMenuFirstTime,
   isNowPlayingFirstTime,
   isInputTextBarFirstTime,

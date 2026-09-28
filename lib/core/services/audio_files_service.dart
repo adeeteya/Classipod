@@ -1,3 +1,4 @@
+
 import 'dart:collection';
 
 import 'package:classipod/core/constants/online_audio_files_metadata.dart';
@@ -5,6 +6,7 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:classipod/core/repositories/library/library_provider.dart';
 import 'package:classipod/core/subsonic/subsonic_controller.dart';
+import 'package:classipod/features/settings/controller/hide_local_music_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -58,6 +60,7 @@ class AudioFilesServiceNotifier
     final demo = ref
         .read(settingsPreferencesControllerProvider)
         .fetchOnlineMusic;
+    final hideLocalMusic = ref.watch(hideLocalMusicProvider);
     final remote = await remoteFuture;
     List<MusicMetadata> songs;
     if (kIsWeb || demo) {
@@ -66,7 +69,7 @@ class AudioFilesServiceNotifier
       songs = await localFuture;
     }
     return UnmodifiableListView([
-      ...songs,
+      if (!remote.enabled || !hideLocalMusic) ...songs,
       if (remote.enabled) ...remote.songs,
     ]);
   }

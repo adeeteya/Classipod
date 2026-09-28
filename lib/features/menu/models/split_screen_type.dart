@@ -3,6 +3,7 @@ enum SplitScreenType {
   settings,
   librarySettings,
   subsonic,
+  hideLocalMusic,
   missingTracks,
   shuffle,
   nowPlaying,

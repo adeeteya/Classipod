@@ -1,5 +1,8 @@
 ## 2.0.0 (Unreleased)
 
+- Add a saved Hide Local Music setting while Subsonic is enabled, with
+  immediate catalog updates and local music restored when Subsonic is off.
+
 - Update music browsing screens when the library changes so Subsonic songs
   appear after connection or enabling without starting playback. Avoid
   awaiting an artwork request from its own cleanup callback.

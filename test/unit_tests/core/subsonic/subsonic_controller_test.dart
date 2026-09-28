@@ -11,6 +11,7 @@ import 'package:classipod/core/subsonic/subsonic_client.dart';
 import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/core/subsonic/subsonic_credentials.dart';
 import 'package:classipod/core/subsonic/subsonic_repository.dart';
+import 'package:classipod/features/settings/controller/hide_local_music_controller.dart';
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
 import 'package:classipod/hive/hive_registrar.g.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -104,6 +105,61 @@ void main() {
     await Hive.close();
     await directory.delete(recursive: true);
   });
+
+  test(
+    'hide local music persists and only applies while Subsonic is on',
+    () async {
+      const config = SubsonicConfig('https://one.test', 'user', enabled: true);
+      final repository = await container.read(
+        subsonicRepositoryProvider.future,
+      );
+      final remote = MusicMetadata(serverId: config.id, remoteSongId: 'remote');
+      await repository.box.put('catalog:${config.id}', [remote]);
+      final prefs = await container.read(
+        sharedPreferencesWithCacheProvider.future,
+      );
+      await prefs.setString(
+        'subsonicConfig',
+        jsonEncode({
+          'url': config.url,
+          'username': config.username,
+          'enabled': true,
+        }),
+      );
+      container.invalidate(subsonicControllerProvider);
+      await container.read(subsonicControllerProvider.future);
+      final subscription = container.listen(
+        audioFilesServiceProvider,
+        (_, _) {},
+      );
+      addTearDown(subscription.close);
+      expect(
+        await container.read(audioFilesServiceProvider.future),
+        hasLength(2),
+      );
+      final settings = container.read(hideLocalMusicProvider.notifier);
+      await settings.setHidden(true);
+      expect(await container.read(audioFilesServiceProvider.future), [remote]);
+      expect(await container.read(localLibraryProvider.future), hasLength(1));
+      container.invalidate(hideLocalMusicProvider);
+      expect(container.read(hideLocalMusicProvider), isTrue);
+      expect(await container.read(audioFilesServiceProvider.future), [remote]);
+      await container
+          .read(subsonicControllerProvider.notifier)
+          .setEnabled(false);
+      await pumpEventQueue();
+      expect(
+        (await container.read(audioFilesServiceProvider.future)).single.songId,
+        'local',
+      );
+      expect(container.read(hideLocalMusicProvider), isTrue);
+      await container.read(hideLocalMusicProvider.notifier).setHidden(false);
+      expect(
+        (await container.read(audioFilesServiceProvider.future)).single.songId,
+        'local',
+      );
+    },
+  );
 
   test('scan progress does not rebuild the merged catalog', () async {
     final isolated = ProviderContainer(

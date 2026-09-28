@@ -10,6 +10,7 @@ import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
+import 'package:classipod/features/settings/controller/hide_local_music_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
 import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
@@ -21,6 +22,7 @@ import 'package:go_router/go_router.dart';
 enum _LibrarySettingsItems {
   subsonic,
   configureSubsonic,
+  hideLocalMusic,
   reindex,
   refreshLibrary,
   missingTracks,
@@ -28,6 +30,7 @@ enum _LibrarySettingsItems {
 
   String title(BuildContext context) => switch (this) {
     subsonic => context.localization.subsonicTitle,
+    hideLocalMusic => context.localization.hideLocalMusicTitle,
     missingTracks => context.localization.missingTracksTitle,
     configureSubsonic => context.localization.subsonicConfigure,
     excludeDirectories => context.localization.excludeDirectoriesScreenTitle,
@@ -37,6 +40,7 @@ enum _LibrarySettingsItems {
 
   SplitScreenType get preview => switch (this) {
     subsonic || configureSubsonic => SplitScreenType.subsonic,
+    hideLocalMusic => SplitScreenType.hideLocalMusic,
     excludeDirectories => SplitScreenType.excludeDirectories,
     missingTracks => SplitScreenType.missingTracks,
     reindex => SplitScreenType.rescanMusicFiles,
@@ -58,6 +62,7 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
   List<_LibrarySettingsItems> _displayItems = [
     for (final item in _LibrarySettingsItems.values)
       if (item != _LibrarySettingsItems.configureSubsonic &&
+          item != _LibrarySettingsItems.hideLocalMusic &&
           item != _LibrarySettingsItems.missingTracks)
         item,
   ];
@@ -94,6 +99,11 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
               );
             }
           }
+          break;
+        case _LibrarySettingsItems.hideLocalMusic:
+          await ref
+              .read(hideLocalMusicProvider.notifier)
+              .setHidden(!ref.read(hideLocalMusicProvider));
           break;
         case _LibrarySettingsItems.configureSubsonic:
           await showSubsonicDialog(context);
@@ -141,13 +151,15 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
   @override
   Widget build(BuildContext context) {
     unawaited(_changeSplitScreenType());
+    final hideLocalMusic = ref.watch(hideLocalMusicProvider);
     final remote = ref.watch(subsonicControllerProvider).value;
     final local = ref.watch(localLibraryProvider);
     final missingTracks = ref.watch(missingTracksProvider);
     final selectedItem = displayItems[selectedDisplayItem];
     _displayItems = [
       for (final item in _LibrarySettingsItems.values)
-        if ((item != _LibrarySettingsItems.configureSubsonic ||
+        if (((item != _LibrarySettingsItems.configureSubsonic &&
+                    item != _LibrarySettingsItems.hideLocalMusic) ||
                 remote?.enabled == true) &&
             (item != _LibrarySettingsItems.missingTracks ||
                 missingTracks.isNotEmpty))
@@ -181,6 +193,11 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
                   text: displayItems[index].title(context),
                   value: displayItems[index] == _LibrarySettingsItems.subsonic
                       ? remote?.enabled == true
+                            ? context.localization.subsonicOn
+                            : context.localization.subsonicOff
+                      : displayItems[index] ==
+                            _LibrarySettingsItems.hideLocalMusic
+                      ? hideLocalMusic
                             ? context.localization.subsonicOn
                             : context.localization.subsonicOff
                       : null,

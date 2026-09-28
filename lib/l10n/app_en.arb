@@ -634,6 +634,14 @@
   "@playbackBuffering": {
     "description": "The accessibility label for the buffering indicator on the Now Playing progress bar"
   },
+  "hideLocalMusicTitle": "Hide Local Music",
+  "@hideLocalMusicTitle": {
+    "description": "The Library Settings toggle that hides device music while the Subsonic server is enabled"
+  },
+  "hideLocalMusicDescription": "Show only server music in your library while Subsonic is on. Local files stay on your device.",
+  "@hideLocalMusicDescription": {
+    "description": "The split-screen preview explaining the Hide Local Music setting"
+  },
   "subsonicTitle": "Subsonic Server",
   "@subsonicTitle": {
     "description": "The Library Settings title and configuration dialog title for a Subsonic-compatible music server; Subsonic is the protocol name"

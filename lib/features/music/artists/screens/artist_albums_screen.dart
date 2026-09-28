@@ -85,6 +85,7 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
 
   @override
   Widget build(BuildContext context) {
+    ref.watch(artistAlbumDetailListProvider(widget.artistName));
     return CupertinoPageScaffold(
       child: Column(
         children: [

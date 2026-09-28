@@ -56,6 +56,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
 
   @override
   Widget build(BuildContext context) {
+    ref.watch(artistNamesProvider);
     if (displayItems.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(

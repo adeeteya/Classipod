@@ -1,5 +1,9 @@
 ## 2.0.0 (Unreleased)
 
+- Update music browsing screens when the library changes so Subsonic songs
+  appear after connection or enabling without starting playback. Avoid
+  awaiting an artwork request from its own cleanup callback.
+
 - Fix first-run splash hanging after local indexing by preventing newly
   discovered folders from invalidating the pending library load.
 

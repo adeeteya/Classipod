@@ -73,6 +73,7 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
 
   @override
   Widget build(BuildContext context) {
+    ref.watch(albumDetailsProvider);
     if (displayItems.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(

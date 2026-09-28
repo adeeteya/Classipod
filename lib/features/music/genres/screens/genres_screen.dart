@@ -37,6 +37,7 @@ class _GenresScreenState extends ConsumerState<GenresScreen> with CustomScreen {
 
   @override
   Widget build(BuildContext context) {
+    ref.watch(genresProvider);
     if (displayItems.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(

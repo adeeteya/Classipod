@@ -61,6 +61,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
 
   @override
   Widget build(BuildContext context) {
+    ref.watch(genreSongsMetadataListProvider(widget.genreName));
     final String? currentlyPlayingOriginalIndex = ref
         .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
         ?.identity;

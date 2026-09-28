@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:typed_data';
 
 import 'package:classipod/core/models/music_metadata.dart';
@@ -67,7 +68,7 @@ class SubsonicRepository {
         await box.put(key, data);
         return data;
       } finally {
-        await _artwork.remove(key);
+        unawaited(_artwork.remove(key));
       }
     });
   }

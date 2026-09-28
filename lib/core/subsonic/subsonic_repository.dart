@@ -67,7 +67,7 @@ class SubsonicRepository {
         await box.put(key, data);
         return data;
       } finally {
-        _artwork.remove(key);
+        await _artwork.remove(key);
       }
     });
   }

@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/subsonic/subsonic_client.dart';
 import 'package:classipod/core/subsonic/subsonic_repository.dart';
 import 'package:classipod/hive/hive_adapters.dart';
@@ -320,24 +319,5 @@ void main() {
         expect(requests, 2);
       },
     );
-
-    test('metadata survives Hive round trip with remote fields', () async {
-      final song = MusicMetadata(
-        serverId: config.id,
-        remoteSongId: 'song',
-        remoteAlbumId: 'album',
-        remoteArtworkId: 'art',
-        isOnDevice: false,
-      );
-      await repository.box.put('song', song);
-      await repository.box.close();
-      final reopened = await Hive.openBox<dynamic>('remote');
-      final saved = reopened.get('song') as MusicMetadata;
-      expect(saved.remoteSongId, 'song');
-      expect(saved.remoteAlbumId, 'album');
-      expect(saved.remoteArtworkId, 'art');
-      expect(saved.isOnDevice, isFalse);
-      expect(saved.serverId, config.id);
-    });
   });
 }

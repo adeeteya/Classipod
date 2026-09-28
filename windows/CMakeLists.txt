@@ -55,7 +55,14 @@ add_subdirectory("runner")
 
 # Generated plugin build rules, which manage building the plugins and adding
 # them to the application.
+if(POLICY CMP0175)
+  cmake_policy(PUSH)
+  cmake_policy(SET CMP0175 OLD)
+endif()
 include(flutter/generated_plugins.cmake)
+if(POLICY CMP0175)
+  cmake_policy(POP)
+endif()
 
 # permission_handler_windows 0.2.2 enables C++20 but also adds legacy /await.
 # MSVC in Visual Studio 2026 rejects that experimental coroutine mode.

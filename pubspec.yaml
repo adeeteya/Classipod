@@ -32,8 +32,8 @@ dependencies:
       url: https://github.com/adeeteya/flutter_taglib.git
       ref: master
   go_router: ^18.0.1
-  hive_ce: ^2.20.0
-  hive_ce_flutter: ^2.3.4
+  hive_ce: ^2.20.1
+  hive_ce_flutter: ^2.4.0
   http: ^1.6.0
   intl: any
   just_audio: ^0.10.6

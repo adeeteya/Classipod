@@ -93,7 +93,7 @@ class SubsonicController extends AsyncNotifier<SubsonicState> {
     );
   }
 
-  SubsonicState get current => state.value ?? const SubsonicState();
+  SubsonicState get _current => state.value ?? const SubsonicState();
 
   Future<void> connect(
     String url,
@@ -107,7 +107,7 @@ class SubsonicController extends AsyncNotifier<SubsonicState> {
     }
     final config = SubsonicConfig(normalized, username.trim(), enabled: true);
     final repository = await ref.read(subsonicRepositoryProvider.future);
-    final previous = current.config;
+    final previous = _current.config;
     final store = ref.read(subsonicCredentialsProvider);
     final previousPassword = await store.read(config.id);
     final candidate = ref.read(subsonicClientFactoryProvider)(config, password);
@@ -163,7 +163,7 @@ class SubsonicController extends AsyncNotifier<SubsonicState> {
   }
 
   Future<bool> setEnabled(bool enabled) async {
-    final old = current;
+    final old = _current;
     if (old.config == null) return false;
     final repository = await ref.read(subsonicRepositoryProvider.future);
     String? password;
@@ -193,7 +193,7 @@ class SubsonicController extends AsyncNotifier<SubsonicState> {
   }
 
   Future<void> remove() async {
-    final config = current.config;
+    final config = _current.config;
     if (config == null) return;
     await setEnabled(false);
     await ref.read(subsonicCredentialsProvider).delete(config.id);
@@ -204,7 +204,7 @@ class SubsonicController extends AsyncNotifier<SubsonicState> {
   }
 
   Future<void> refresh({bool clearArtwork = false}) async {
-    final old = current;
+    final old = _current;
     final client = _client;
     if (!old.enabled || client == null) return;
     final generation = ++_generation;
@@ -256,7 +256,7 @@ class SubsonicController extends AsyncNotifier<SubsonicState> {
 
   Future<void> updateSong(MusicMetadata song) async {
     await (await ref.read(subsonicRepositoryProvider.future)).update(song);
-    final old = current;
+    final old = _current;
     state = AsyncData(
       SubsonicState(
         config: old.config,
@@ -274,7 +274,7 @@ class SubsonicController extends AsyncNotifier<SubsonicState> {
   Future<Uint8List> artwork(String reference) async {
     final uri = Uri.parse(reference);
     final client = _client;
-    if (!current.enabled || uri.host != current.config?.id) {
+    if (!_current.enabled || uri.host != _current.config?.id) {
       throw const SubsonicException('unavailable');
     }
     final repository = await ref.read(subsonicRepositoryProvider.future);
@@ -287,7 +287,7 @@ class SubsonicController extends AsyncNotifier<SubsonicState> {
 
   Future<UriAudioSource> resolve(MusicMetadata song) async {
     if (!song.isSubsonic) return song.toAudioSource() as UriAudioSource;
-    if (!current.enabled || current.config?.id != song.serverId) {
+    if (!_current.enabled || _current.config?.id != song.serverId) {
       throw const SubsonicException('unavailable');
     }
     final client = _client;

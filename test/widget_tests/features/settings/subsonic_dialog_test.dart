@@ -13,12 +13,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class DialogController extends SubsonicController {
-  bool fail = false;
-  bool failScan = false;
-  Completer<void>? scan;
-  int refreshes = 0;
-  int connections = 0;
-  String? password;
+  bool _fail = false;
+  bool _failScan = false;
+  Completer<void>? _scan;
+  int _refreshes = 0;
+  int _connections = 0;
+  String? _password;
   @override
   Future<SubsonicState> build() async => const SubsonicState();
   @override
@@ -28,9 +28,9 @@ class DialogController extends SubsonicController {
     String password, {
     void Function()? onConnected,
   }) async {
-    connections++;
-    if (fail) throw const SubsonicException('credentials');
-    this.password = password;
+    _connections++;
+    if (_fail) throw const SubsonicException('credentials');
+    _password = password;
     onConnected?.call();
     state = AsyncData(
       SubsonicState(
@@ -43,13 +43,13 @@ class DialogController extends SubsonicController {
 
   @override
   Future<void> refresh({bool clearArtwork = false}) async {
-    refreshes++;
-    await scan?.future;
+    _refreshes++;
+    await _scan?.future;
     state = AsyncData(
       SubsonicState(
-        config: current.config,
+        config: state.requireValue.config,
         signedIn: true,
-        error: failScan ? 'connection' : null,
+        error: _failScan ? 'connection' : null,
       ),
     );
   }
@@ -126,8 +126,8 @@ void main() {
     await tester.enterText(password, 'password');
     await tester.tap(find.text('Connect'));
     await tester.pumpAndSettle();
-    expect(controller.connections, 1);
-    expect(controller.password, 'password');
+    expect(controller._connections, 1);
+    expect(controller._password, 'password');
     expect(find.byType(SubsonicDialog), findsNothing);
   });
 
@@ -160,13 +160,13 @@ void main() {
     tester,
   ) async {
     await open(tester);
-    controller.scan = Completer<void>();
+    controller._scan = Completer<void>();
     await tester.tap(find.text('Connect'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
     expect(find.text('Loading your library…'), findsOneWidget);
     expect(find.text('Continue in background'), findsOneWidget);
-    controller.scan!.complete();
+    controller._scan!.complete();
     await tester.pumpAndSettle();
     expect(find.byType(SubsonicDialog), findsNothing);
   });
@@ -175,7 +175,7 @@ void main() {
     tester,
   ) async {
     await open(tester);
-    controller.scan = Completer<void>();
+    controller._scan = Completer<void>();
     await tester.tap(find.text('Connect'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 300));
@@ -185,7 +185,7 @@ void main() {
     // Open a second dialog before the first scan completes.
     await tester.tap(find.text('Open'));
     await tester.pumpAndSettle();
-    controller.scan!.complete();
+    controller._scan!.complete();
     await tester.pumpAndSettle();
     expect(find.byType(SubsonicDialog), findsOneWidget);
     await tester.tap(find.text('Cancel'));
@@ -196,16 +196,16 @@ void main() {
     tester,
   ) async {
     await open(tester);
-    controller.failScan = true;
+    controller._failScan = true;
     await tester.tap(find.text('Connect'));
     await tester.pumpAndSettle();
     expect(find.text('Retry'), findsOneWidget);
     expect(find.text('Close'), findsOneWidget);
-    controller.failScan = false;
+    controller._failScan = false;
     await tester.tap(find.text('Retry'));
     await tester.pumpAndSettle();
-    expect(controller.connections, 1);
-    expect(controller.refreshes, 2);
+    expect(controller._connections, 1);
+    expect(controller._refreshes, 2);
     expect(find.byType(SubsonicDialog), findsNothing);
   });
 
@@ -213,17 +213,23 @@ void main() {
     tester,
   ) async {
     await open(tester);
-    controller.fail = true;
+    controller._fail = true;
     await tester.tap(find.text('Connect'));
     await tester.pumpAndSettle();
     expect(
       find.text('Check your username, password, and server permissions.'),
       findsOneWidget,
     );
-    expect(controller.current.config, isNull);
+    final container = ProviderScope.containerOf(
+      tester.element(find.byType(SubsonicDialog)),
+    );
+    expect(
+      container.read(subsonicControllerProvider).requireValue.config,
+      isNull,
+    );
     await tester.tap(find.text('Cancel'));
     await tester.pumpAndSettle();
     expect(find.byType(SubsonicDialog), findsNothing);
-    expect(controller.password, isNull);
+    expect(controller._password, isNull);
   });
 }

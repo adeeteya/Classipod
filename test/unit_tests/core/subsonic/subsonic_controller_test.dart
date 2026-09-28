@@ -42,7 +42,11 @@ class ProgressOnlyController extends SubsonicController {
 
   void reportProgress() {
     state = AsyncData(
-      SubsonicState(songs: current.songs, scanning: true, indexedSongs: 375),
+      SubsonicState(
+        songs: state.requireValue.songs,
+        scanning: true,
+        indexedSongs: 375,
+      ),
     );
   }
 }
@@ -149,13 +153,20 @@ void main() {
     final controller = container.read(subsonicControllerProvider.notifier);
     await controller.connect('https://one.test', 'user', 'first');
     await pumpEventQueue();
-    final id = controller.current.config!.id;
+    final id = container
+        .read(subsonicControllerProvider)
+        .requireValue
+        .config!
+        .id;
     failPing = true;
     await expectLater(
       controller.connect('https://two.test', 'user', 'second'),
       throwsA(isA<SubsonicException>()),
     );
-    expect(controller.current.config!.id, id);
+    expect(
+      container.read(subsonicControllerProvider).requireValue.config!.id,
+      id,
+    );
     expect(credentials.passwords, {id: 'first'});
     final prefs = await container.read(
       sharedPreferencesWithCacheProvider.future,
@@ -169,7 +180,11 @@ void main() {
       final controller = container.read(subsonicControllerProvider.notifier);
       await controller.connect('https://one.test', 'user', 'secret');
       await pumpEventQueue();
-      final id = controller.current.config!.id;
+      final id = container
+          .read(subsonicControllerProvider)
+          .requireValue
+          .config!
+          .id;
       final song = MusicMetadata(serverId: id, remoteSongId: 'song');
       expect(
         (await controller.resolve(song)).uri.queryParameters['id'],
@@ -190,7 +205,10 @@ void main() {
       expect(credentials.passwords[id], 'secret');
       await controller.setEnabled(true);
       await pumpEventQueue();
-      expect(controller.current.enabled, isTrue);
+      expect(
+        container.read(subsonicControllerProvider).requireValue.enabled,
+        isTrue,
+      );
     },
   );
 

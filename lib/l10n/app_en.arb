@@ -634,6 +634,14 @@
   "@playbackBuffering": {
     "description": "The accessibility label for the buffering indicator on the Now Playing progress bar"
   },
+  "preventDuplicateTracksTitle": "Prevent Duplicate Tracks",
+  "@preventDuplicateTracksTitle": {
+    "description": "Library Settings toggle to hide tracks with duplicate file names"
+  },
+  "preventDuplicateTracksDescription": "Keep one track per file name, including its extension, ignoring letter case. Local copies take priority. Files are not deleted.",
+  "@preventDuplicateTracksDescription": {
+    "description": "Split-screen explanation of the file-name duplicate filter and which copy is kept"
+  },
   "hideLocalMusicTitle": "Hide Local Music",
   "@hideLocalMusicTitle": {
     "description": "The Library Settings toggle that hides device music while the Subsonic server is enabled"

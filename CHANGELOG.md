@@ -1,5 +1,8 @@
 ## 2.0.0 (Unreleased)
 
+- Add a saved filename-based duplicate filter in Library Settings. Keep
+  the first visible copy without deleting files or saved playlist entries.
+
 - Add a saved Hide Local Music setting while Subsonic is enabled, with
   immediate catalog updates and local music restored when Subsonic is off.
 

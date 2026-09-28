@@ -12,6 +12,7 @@ import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/core/subsonic/subsonic_credentials.dart';
 import 'package:classipod/core/subsonic/subsonic_repository.dart';
 import 'package:classipod/features/settings/controller/hide_local_music_controller.dart';
+import 'package:classipod/features/settings/controller/prevent_duplicate_tracks_controller.dart';
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
 import 'package:classipod/hive/hive_registrar.g.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -158,6 +159,59 @@ void main() {
         (await container.read(audioFilesServiceProvider.future)).single.songId,
         'local',
       );
+    },
+  );
+
+  test(
+    'duplicate toggle persists, applies exclusions first and restores copies',
+    () async {
+      final box = await Hive.openBox<ExcludeDirectoryModel>(
+        Constants.excludedDirectoriesBoxName,
+      );
+      await box.add(
+        ExcludeDirectoryModel(directoryPath: '/excluded', isExcluded: true),
+      );
+      final songs = [
+        MusicMetadata(filePath: '/excluded/song.mp3'),
+        MusicMetadata(filePath: '/music/song.mp3'),
+        MusicMetadata(filePath: '/copies/SONG.MP3'),
+      ];
+      final isolated = ProviderContainer(
+        overrides: [
+          localLibraryProvider.overrideWith((_) async => songs),
+          subsonicControllerProvider.overrideWith(ProgressOnlyController.new),
+        ],
+      );
+      addTearDown(isolated.dispose);
+      await isolated.read(sharedPreferencesWithCacheProvider.future);
+      final subscription = isolated.listen(
+        filteredAudioFilesProvider,
+        (_, _) {},
+      );
+      addTearDown(subscription.close);
+      expect(
+        await isolated.read(filteredAudioFilesProvider.future),
+        songs.skip(1).toList(),
+      );
+      await isolated
+          .read(preventDuplicateTracksProvider.notifier)
+          .setEnabled(true);
+      expect(await isolated.read(filteredAudioFilesProvider.future), [
+        songs[1],
+      ]);
+      isolated.invalidate(preventDuplicateTracksProvider);
+      expect(isolated.read(preventDuplicateTracksProvider), isTrue);
+      expect(await isolated.read(filteredAudioFilesProvider.future), [
+        songs[1],
+      ]);
+      await isolated
+          .read(preventDuplicateTracksProvider.notifier)
+          .setEnabled(false);
+      expect(
+        await isolated.read(filteredAudioFilesProvider.future),
+        songs.skip(1).toList(),
+      );
+      expect(await isolated.read(localLibraryProvider.future), songs);
     },
   );
 

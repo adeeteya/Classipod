@@ -176,6 +176,7 @@ class SubsonicRepository {
       serverId: serverId,
       remoteSongId: id,
       remoteAlbumId: string(data['albumId'] ?? album['id']),
+      filePath: string(data['path']),
       remoteArtworkId: art,
       songId: 'subsonic:$serverId:${Uri.encodeComponent(id)}',
       isOnDevice: false,

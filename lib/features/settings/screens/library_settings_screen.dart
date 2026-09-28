@@ -11,6 +11,7 @@ import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/settings/controller/hide_local_music_controller.dart';
+import 'package:classipod/features/settings/controller/prevent_duplicate_tracks_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
 import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
@@ -23,6 +24,7 @@ enum _LibrarySettingsItems {
   subsonic,
   configureSubsonic,
   hideLocalMusic,
+  preventDuplicateTracks,
   reindex,
   refreshLibrary,
   missingTracks,
@@ -30,6 +32,7 @@ enum _LibrarySettingsItems {
 
   String title(BuildContext context) => switch (this) {
     subsonic => context.localization.subsonicTitle,
+    preventDuplicateTracks => context.localization.preventDuplicateTracksTitle,
     hideLocalMusic => context.localization.hideLocalMusicTitle,
     missingTracks => context.localization.missingTracksTitle,
     configureSubsonic => context.localization.subsonicConfigure,
@@ -41,6 +44,7 @@ enum _LibrarySettingsItems {
   SplitScreenType get preview => switch (this) {
     subsonic || configureSubsonic => SplitScreenType.subsonic,
     hideLocalMusic => SplitScreenType.hideLocalMusic,
+    preventDuplicateTracks => SplitScreenType.preventDuplicateTracks,
     excludeDirectories => SplitScreenType.excludeDirectories,
     missingTracks => SplitScreenType.missingTracks,
     reindex => SplitScreenType.rescanMusicFiles,
@@ -100,6 +104,11 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
             }
           }
           break;
+        case _LibrarySettingsItems.preventDuplicateTracks:
+          await ref
+              .read(preventDuplicateTracksProvider.notifier)
+              .setEnabled(!ref.read(preventDuplicateTracksProvider));
+          break;
         case _LibrarySettingsItems.hideLocalMusic:
           await ref
               .read(hideLocalMusicProvider.notifier)
@@ -151,6 +160,7 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
   @override
   Widget build(BuildContext context) {
     unawaited(_changeSplitScreenType());
+    final preventDuplicates = ref.watch(preventDuplicateTracksProvider);
     final hideLocalMusic = ref.watch(hideLocalMusicProvider);
     final remote = ref.watch(subsonicControllerProvider).value;
     final local = ref.watch(localLibraryProvider);
@@ -198,6 +208,11 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
                       : displayItems[index] ==
                             _LibrarySettingsItems.hideLocalMusic
                       ? hideLocalMusic
+                            ? context.localization.subsonicOn
+                            : context.localization.subsonicOff
+                      : displayItems[index] ==
+                            _LibrarySettingsItems.preventDuplicateTracks
+                      ? preventDuplicates
                             ? context.localization.subsonicOn
                             : context.localization.subsonicOff
                       : null,

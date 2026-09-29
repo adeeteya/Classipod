@@ -41,6 +41,7 @@ class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent>
   _Header? _current;
   _Header? _previous;
   String? _location;
+  String? _routeName;
   bool _changesLayout = false;
   bool _waitingForTransition = false;
   int _transitionRevision = -1;
@@ -75,6 +76,11 @@ class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent>
           );
           final location = '${state.pageKey}:${state.uri}';
           if (_location != location) {
+            final preserveCoverFlowSelectionHeader =
+                _routeName == Routes.coverFlowSelection.name &&
+                (state.name == Routes.coverFlow.name ||
+                    state.name == Routes.nowPlaying.name);
+            _routeName = state.name;
             _previous = _current;
             _changesLayout =
                 _previous != null &&
@@ -85,7 +91,9 @@ class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent>
                 _changesLayout && _transitionRevision == observer.revision;
             _location = location;
             _entrance.cancelEntrance();
-            if (header.delayedEntrance) {
+            if (preserveCoverFlowSelectionHeader) {
+              _entrance.value = 1;
+            } else if (header.delayedEntrance) {
               _entrance.prepare();
               WidgetsBinding.instance.addPostFrameCallback((_) {
                 if (!mounted || _location != location) return;

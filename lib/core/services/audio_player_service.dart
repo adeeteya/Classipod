@@ -47,7 +47,6 @@ final libraryAudioHandlerProvider = Provider<LibraryAudioHandler>((ref) {
 
 void _reconcileLibrary(Ref ref, LibraryAudioHandler handler) {
   final now = ref.read(nowPlayingDetailsProvider);
-  if (now.metadataList.isEmpty) return;
   final remote = ref.read(subsonicControllerProvider).value;
   final library = ref.read(filteredAudioFilesProvider).value;
   final songs = now.nowPlayingType == NowPlayingType.songs && library != null
@@ -75,9 +74,10 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
 
   @override
   Future<void> build() async {
+    final handler = ref.watch(libraryAudioHandlerProvider);
     ref.listen(filteredAudioFilesProvider, (previous, next) {
       if (next.hasValue && previous?.value != next.value) {
-        _reconcileLibrary(ref, ref.read(libraryAudioHandlerProvider));
+        _reconcileLibrary(ref, handler);
       }
     });
   }

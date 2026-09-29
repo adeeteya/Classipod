@@ -3,6 +3,7 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
@@ -11,6 +12,7 @@ import 'package:classipod/features/music/playlist/providers/playlists_provider.d
 import 'package:classipod/features/music/playlist/widgets/playlist_option_list_tile.dart';
 import 'package:classipod/features/music/playlist/widgets/playlist_song_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
+import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -49,7 +51,8 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
     final byId = {for (final song in library) song.identity: song};
     return [
       for (final song in stored)
-        if (byId[song.identity] != null) byId[song.identity]!,
+        if (song.isSubsonic || byId[song.identity] != null)
+          byId[song.identity] ?? song,
     ];
   }
 
@@ -109,11 +112,29 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
         context.pop();
       }
     } else {
+      final selected = displayItems[index - 2];
+      var remote = ref.read(subsonicControllerProvider).value;
+      if (selected.isSubsonic &&
+          remote?.enabled == true &&
+          remote?.config?.id == selected.serverId &&
+          remote?.signedIn != true) {
+        await showSubsonicDialog(context);
+        if (!mounted) return;
+        remote = ref.read(subsonicControllerProvider).value;
+      }
+      if (selected.isSubsonic && !(remote?.available(selected) ?? false)) {
+        return;
+      }
+      final playable = displayItems
+          .where(
+            (song) => !song.isSubsonic || (remote?.available(song) ?? false),
+          )
+          .toList();
       await ref
           .read(audioPlayerServiceProvider.notifier)
           .playPlaylist(
-            playlistDetail: playlist.copyWith(songs: displayItems),
-            songIndex: index - 2,
+            playlistDetail: playlist.copyWith(songs: playable),
+            songIndex: playable.indexOf(selected),
           );
       if (mounted) {
         await context.pushNamed(Routes.nowPlaying.name);
@@ -165,9 +186,9 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
       );
     }
 
-    final int? currentlyPlayingOriginalIndex = ref
+    final String? currentlyPlayingOriginalIndex = ref
         .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
-        ?.originalSongIndex;
+        ?.identity;
 
     return CupertinoPageScaffold(
       child: Column(
@@ -203,10 +224,17 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
 
                   return PlaylistSongListTile(
                     songMetadata: displayItems[index - 2],
+                    unavailable:
+                        displayItems[index - 2].isSubsonic &&
+                        !(ref
+                                .watch(subsonicControllerProvider)
+                                .value
+                                ?.available(displayItems[index - 2]) ??
+                            false),
                     isSelected: selectedDisplayItem == index,
                     isCurrentlyPlaying:
                         currentlyPlayingOriginalIndex ==
-                        displayItems[index - 2].originalSongIndex,
+                        displayItems[index - 2].identity,
                     onTap: () async => _performAction(index),
                     onLongPress: () async => _performLongPressAction(index),
                   );

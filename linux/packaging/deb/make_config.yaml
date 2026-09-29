@@ -27,6 +27,7 @@ dependencies:
   - libsqlite3-0
   - liblzma5
   - libcurl4
+  - libsecret-1-0 (>= 0.18.4)
   - libasound2
   - xdg-utils
   - ca-certificates

@@ -1,14 +1,13 @@
 import 'dart:async';
 import 'dart:io' as io;
 
-import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/constants.dart';
-import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:classipod/core/repositories/library/library_provider.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/app_startup/controllers/splash_controller.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/models/app_theme.dart';
@@ -28,6 +27,7 @@ import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:universal_html/html.dart';
 import 'package:volume_controller/volume_controller.dart';
+import 'package:window_manager/window_manager.dart';
 
 final settingsPreferencesControllerProvider =
     NotifierProvider<
@@ -85,6 +85,11 @@ class SettingsPreferencesControllerNotifier
       } else {
         await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
       }
+    } else if (io.Platform.isMacOS ||
+        io.Platform.isWindows ||
+        io.Platform.isLinux) {
+      await windowManager.ensureInitialized();
+      await windowManager.setFullScreen(state.immersiveMode);
     }
   }
 
@@ -253,20 +258,12 @@ class SettingsPreferencesControllerNotifier
         .setVibrate(isVibrateEnabled: state.vibrate);
   }
 
-  Future<void> toggleClickWheelSound(BuildContext context) async {
+  Future<void> toggleClickWheelSound() async {
     state = state.copyWith(clickWheelSound: !state.clickWheelSound);
 
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setClickWheelSound(isClickWheelSoundEnabled: state.clickWheelSound);
-
-    if (state.clickWheelSound && context.mounted) {
-      await Dialogs.showInfoDialog(
-        context: context,
-        title: context.localization.touchSoundsDialogTitle,
-        content: context.localization.touchSoundsDialogContent,
-      );
-    }
   }
 
   Future<void> toggleVolumeMode() async {
@@ -318,7 +315,23 @@ class SettingsPreferencesControllerNotifier
     if (clearPlaylists) {
       await Hive.box<PlaylistModel>(Constants.playlistBoxName).clear();
     }
+    unawaited(
+      ref.read(subsonicControllerProvider.notifier).refresh(clearArtwork: true),
+    );
+    _reloadLibrary();
+  }
+
+  Future<void> refreshLibrary() async {
+    if (!state.fetchOnlineMusic) {
+      ref.read(libraryRepositoryProvider).requestRefresh();
+    }
+    unawaited(ref.read(subsonicControllerProvider.notifier).refresh());
+    _reloadLibrary();
+  }
+
+  void _reloadLibrary() {
     ref.read(libraryProgressProvider.notifier).report(const LibraryProgress());
+    ref.invalidate(localLibraryProvider);
     ref.invalidate(audioFilesServiceProvider);
     ref.invalidate(splashControllerProvider);
     ref.read(routerProvider).goNamed(Routes.splash.name);
@@ -342,7 +355,7 @@ class SettingsPreferencesControllerNotifier
         .setVibrate(isVibrateEnabled: true);
     await ref
         .read(settingsPreferencesRepositoryProvider)
-        .setClickWheelSound(isClickWheelSoundEnabled: false);
+        .setClickWheelSound(isClickWheelSoundEnabled: true);
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setSplitScreenEnabled(isSplitScreenEnabled: true);

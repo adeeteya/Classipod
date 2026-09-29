@@ -31,14 +31,25 @@ class AlbumModel {
   @override
   bool operator ==(Object other) {
     return other is AlbumModel &&
+        other._remoteIdentity == _remoteIdentity &&
         other.albumName.trim().toLowerCase() ==
             albumName.trim().toLowerCase() &&
         other._artistIdentity == _artistIdentity;
   }
 
   @override
-  int get hashCode =>
-      Object.hash(albumName.trim().toLowerCase(), _artistIdentity);
+  int get hashCode => Object.hash(
+    albumName.trim().toLowerCase(),
+    _artistIdentity,
+    _remoteIdentity,
+  );
+
+  String? get _remoteIdentity {
+    final song = albumSongs.firstOrNull;
+    return song?.isSubsonic == true
+        ? '${song!.serverId}:${song.remoteAlbumId ?? albumName}'
+        : null;
+  }
 
   String get _artistIdentity => albumSongs.firstOrNull?.songId != null
       ? albumArtistName.trim().toLowerCase()

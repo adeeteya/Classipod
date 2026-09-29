@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
@@ -81,11 +82,13 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
   Future<void> _navigateToNowPlayingScreen() async {
     unawaited(ref.read(splitScreenViewControllerProvider).closeSplitView());
     await context.pushNamed(Routes.nowPlaying.name, extra: Routes.menu.name);
+    if (!mounted) return;
     unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
   }
 
   Future<void> _changeSplitScreenType() async {
     await Future.delayed(const Duration(milliseconds: 150));
+    if (!mounted || context.router.locationNamed != routeName) return;
     switch (displayItems[selectedDisplayItem]) {
       case _MainMenuDisplayItems.music:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

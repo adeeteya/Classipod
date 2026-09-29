@@ -27,7 +27,7 @@ jobs:
     env:
       TRACKS: ${{ inputs.tracks }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: 3.47.5
@@ -52,7 +52,7 @@ jobs:
         run: python scripts/large_library.py --tracks "$TRACKS"
       - name: Upload metrics and failure logs
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: large-library-${{ env.TRACKS }}-${{ matrix.os }}
           path: build/large-library/

@@ -53,7 +53,7 @@ void main() {
     final artwork = find.text('Artwork cached: 80');
     expect(songs, findsOneWidget);
     expect(artwork, findsOneWidget);
-    expect(find.text('Could not read 2 items'), findsOneWidget);
+    expect(find.text('Could not read 2 items'), findsNothing);
     expect(
       tester.getBottomLeft(artwork).dy,
       lessThan(tester.getTopLeft(find.byType(CupertinoActivityIndicator)).dy),
@@ -81,7 +81,7 @@ void main() {
       expect(find.textContaining('Songs loaded:'), findsNothing);
       expect(find.textContaining('Artwork cached:'), findsNothing);
       expect(find.byType(CupertinoActivityIndicator), findsOneWidget);
-      expect(find.text('Could not read 1 items'), findsOneWidget);
+      expect(find.text('Could not read 1 items'), findsNothing);
     }
   });
 

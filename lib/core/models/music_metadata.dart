@@ -41,6 +41,13 @@ List<String>? _splitNullableArtistNames(String? artist) {
 }
 
 class MusicMetadata extends HiveObject {
+  final String? serverId;
+  final String? remoteSongId;
+  final String? remoteAlbumId;
+  final String? remoteArtworkId;
+
+  bool get isSubsonic => serverId != null && remoteSongId != null;
+
   final String? songId;
   final String? sourceVolume;
   final String? contentUri;
@@ -102,6 +109,10 @@ class MusicMetadata extends HiveObject {
   final String? lyrics;
 
   MusicMetadata({
+    this.serverId,
+    this.remoteSongId,
+    this.remoteAlbumId,
+    this.remoteArtworkId,
     this.songId,
     this.sourceVolume,
     this.contentUri,
@@ -127,6 +138,11 @@ class MusicMetadata extends HiveObject {
   });
 
   factory MusicMetadata.fromMap(Map<String, dynamic> map) => MusicMetadata(
+    serverId: map['serverId'],
+    remoteSongId: map['remoteSongId'],
+    remoteAlbumId: map['remoteAlbumId'],
+    remoteArtworkId: map['remoteArtworkId'],
+    songId: map['songId'],
     trackName: normalizeMetadataString(map['metadata']['trackName']),
     trackArtistNames: _splitNullableArtistNames(
       normalizeMetadataString(map['metadata']['trackArtistNames']),
@@ -152,6 +168,11 @@ class MusicMetadata extends HiveObject {
   );
 
   Map<String, dynamic> toMap() => {
+    'serverId': serverId,
+    'remoteSongId': remoteSongId,
+    'remoteAlbumId': remoteAlbumId,
+    'remoteArtworkId': remoteArtworkId,
+    'songId': songId,
     'trackName': trackName,
     'trackArtistNames': trackArtistNames,
     'albumName': albumName,
@@ -178,6 +199,10 @@ class MusicMetadata extends HiveObject {
   String toJson() => jsonEncode(toMap());
 
   MusicMetadata copyWith({
+    String? serverId,
+    String? remoteSongId,
+    String? remoteAlbumId,
+    String? remoteArtworkId,
     String? songId,
     String? sourceVolume,
     String? contentUri,
@@ -202,6 +227,10 @@ class MusicMetadata extends HiveObject {
     String? lyrics,
   }) {
     return MusicMetadata(
+      serverId: serverId ?? this.serverId,
+      remoteSongId: remoteSongId ?? this.remoteSongId,
+      remoteAlbumId: remoteAlbumId ?? this.remoteAlbumId,
+      remoteArtworkId: remoteArtworkId ?? this.remoteArtworkId,
       songId: songId ?? this.songId,
       sourceVolume: sourceVolume ?? this.sourceVolume,
       contentUri: contentUri ?? this.contentUri,
@@ -228,6 +257,9 @@ class MusicMetadata extends HiveObject {
   }
 
   AudioSource toAudioSource() {
+    if (isSubsonic) {
+      throw StateError('Subsonic tracks require a playback resolver');
+    }
     if (isOnDevice) {
       return AudioSource.uri(
         contentUri != null ? Uri.parse(contentUri!) : Uri.file(filePath ?? ''),
@@ -319,7 +351,7 @@ class MusicMetadata extends HiveObject {
   }
 
   String? get parentDirectoryPath {
-    if (filePath == null) return null;
+    if (!isOnDevice || filePath == null) return null;
 
     // Normalize separators to forward slash for processing
     String normalizedPath = filePath!.replaceAll('\\', '/');
@@ -353,6 +385,8 @@ class MusicMetadata extends HiveObject {
   @override
   bool operator ==(Object other) {
     return other is MusicMetadata &&
+        serverId == other.serverId &&
+        remoteSongId == other.remoteSongId &&
         trackName == other.trackName &&
         listEquals(trackArtistNames, other.trackArtistNames) &&
         albumName == other.albumName &&
@@ -372,6 +406,8 @@ class MusicMetadata extends HiveObject {
 
   @override
   int get hashCode => Object.hash(
+    serverId,
+    remoteSongId,
     trackName,
     trackArtistNames,
     albumName,

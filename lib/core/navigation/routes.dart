@@ -29,11 +29,14 @@ import 'package:classipod/features/music/songs/screens/songs_more_options_modal.
 import 'package:classipod/features/music/songs/screens/songs_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_more_options_modal.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
+import 'package:classipod/features/settings/controller/exclude_directories_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/screens/about_screen.dart';
 import 'package:classipod/features/settings/screens/device_color_selection_screen.dart';
 import 'package:classipod/features/settings/screens/exclude_directories_screen.dart';
 import 'package:classipod/features/settings/screens/language_selection_screen.dart';
+import 'package:classipod/features/settings/screens/library_settings_screen.dart';
+import 'package:classipod/features/settings/screens/missing_tracks_screen.dart';
 import 'package:classipod/features/settings/screens/settings_preferences_screen.dart';
 import 'package:classipod/features/sleep_timer/screens/sleep_timer_screen.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -44,10 +47,12 @@ enum Routes {
   splash,
   menu,
   settings,
+  librarySettings,
   about,
   language,
   deviceColor,
   excludeDirectories,
+  missingTracks,
   nowPlaying,
   nowPlayingMoreOptions,
   sleepTimer,
@@ -86,12 +91,16 @@ enum Routes {
         return context.localization.menuScreenTitle;
       case settings:
         return context.localization.settingsScreenTitle;
+      case librarySettings:
+        return context.localization.librarySettingsScreenTitle;
       case about:
         return context.localization.aboutScreenTitle;
       case language:
         return context.localization.languageScreenTitle;
       case deviceColor:
         return context.localization.deviceColorSettingTitle;
+      case missingTracks:
+        return context.localization.missingTracksTitle;
       case excludeDirectories:
         return context.localization.excludeDirectoriesScreenTitle;
       case nowPlaying:
@@ -176,13 +185,16 @@ final routerProvider = Provider(
           GoRoute(
             path: Routes.splash.toString(),
             name: Routes.splash.name,
-            pageBuilder: (context, state) =>
-                const CupertinoPage(child: SplashScreen()),
+            pageBuilder: (context, state) => NoTransitionPage(
+              key: state.pageKey,
+              child: const SplashScreen(),
+            ),
           ),
           ShellRoute(
             parentNavigatorKey: rootNavigatorKey,
             navigatorKey: menuNavigatorKey,
             pageBuilder: (context, state, child) => CustomTransitionPage(
+              key: state.pageKey,
               child: SplitScreenPlaceholder(
                 splitScreenController: ref.read(
                   splitScreenViewControllerProvider,
@@ -233,20 +245,44 @@ final routerProvider = Provider(
                         ),
                       ),
                       GoRoute(
-                        path: Routes.excludeDirectories.name,
-                        name: Routes.excludeDirectories.name,
-                        parentNavigatorKey: rootNavigatorKey,
-                        onExit: (context, state) async {
-                          await ref
-                              .read(
-                                settingsPreferencesControllerProvider.notifier,
-                              )
-                              .rescanMusicFiles();
-                          return true;
-                        },
-                        pageBuilder: (context, state) => const CupertinoPage(
-                          child: ExcludeDirectoriesScreen(),
-                        ),
+                        path: Routes.librarySettings.name,
+                        name: Routes.librarySettings.name,
+                        parentNavigatorKey: menuNavigatorKey,
+                        pageBuilder: (context, state) =>
+                            const CupertinoPage(child: LibrarySettingsScreen()),
+                        routes: [
+                          GoRoute(
+                            path: Routes.missingTracks.name,
+                            name: Routes.missingTracks.name,
+                            parentNavigatorKey: rootNavigatorKey,
+                            pageBuilder: (context, state) =>
+                                const CupertinoPage(
+                                  child: MissingTracksScreen(),
+                                ),
+                          ),
+                          GoRoute(
+                            path: Routes.excludeDirectories.name,
+                            name: Routes.excludeDirectories.name,
+                            parentNavigatorKey: rootNavigatorKey,
+                            onExit: (context, state) async {
+                              final changed = ref
+                                  .read(excludedDirectoriesProvider.notifier)
+                                  .takeExclusionChanges();
+                              if (!changed) return true;
+                              await ref
+                                  .read(
+                                    settingsPreferencesControllerProvider
+                                        .notifier,
+                                  )
+                                  .refreshLibrary();
+                              return true;
+                            },
+                            pageBuilder: (context, state) =>
+                                const CupertinoPage(
+                                  child: ExcludeDirectoriesScreen(),
+                                ),
+                          ),
+                        ],
                       ),
                     ],
                   ),

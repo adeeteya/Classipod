@@ -84,10 +84,6 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         (absRotationalChange > smallThresholdRotationalChange &&
             millisecondsSinceLastScroll >
                 Constants.milliSecondsBeforeNextScroll)) {
-      await ref
-          .read(deviceButtonsServiceProvider.notifier)
-          .buttonPressVibrate();
-      await ref.read(deviceButtonsServiceProvider.notifier).clickWheelSound();
       if (isForwardDirection) {
         await ref
             .read(deviceButtonsServiceProvider.notifier)

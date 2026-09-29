@@ -20,6 +20,12 @@ class _ExcludeDirectoriesScreenState
     extends ConsumerState<ExcludeDirectoriesScreen>
     with CustomScreen {
   @override
+  void initState() {
+    super.initState();
+    ref.read(excludedDirectoriesProvider.notifier).beginEditing();
+  }
+
+  @override
   String get routeName => Routes.excludeDirectories.name;
 
   @override
@@ -43,7 +49,7 @@ class _ExcludeDirectoriesScreenState
       return CupertinoPageScaffold(
         child: Column(
           children: [
-            StatusBar(title: Routes.nowPlaying.title(context)),
+            StatusBar(title: Routes.excludeDirectories.title(context)),
             Expanded(
               child: EmptyStateWidget(
                 emptyDescription: context.localization.noMusicFilesFound,

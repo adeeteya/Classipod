@@ -42,6 +42,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
 
   @override
   Widget build(BuildContext context) {
+    ref.watch(albumDetailsProvider);
     if (displayItems.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(

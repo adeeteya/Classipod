@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -33,8 +34,7 @@ enum _SettingsDisplayItems {
   splitScreenEnabled,
   immersiveMode,
   showAppTutorial,
-  rescanMusicFiles,
-  excludeDirectories,
+  librarySettings,
   resetSettings,
   donate;
 
@@ -70,12 +70,10 @@ enum _SettingsDisplayItems {
         return context.localization.immersiveModeSettingTitle;
       case showAppTutorial:
         return context.localization.showAppTutorialSettingTitle;
-      case rescanMusicFiles:
-        return context.localization.rescanMusicFilesSettingTitle;
+      case librarySettings:
+        return context.localization.librarySettingsScreenTitle;
       case resetSettings:
         return context.localization.resetSettingsTitle;
-      case excludeDirectories:
-        return context.localization.excludeDirectoriesScreenTitle;
       case donate:
         return context.localization.donateSettingTitle;
     }
@@ -149,7 +147,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.clickWheelSound:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
-            .toggleClickWheelSound(context);
+            .toggleClickWheelSound();
         break;
       case _SettingsDisplayItems.volumeMode:
         await ref
@@ -171,13 +169,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .showAppTutorial();
         break;
-      case _SettingsDisplayItems.rescanMusicFiles:
-        await ref
-            .read(settingsPreferencesControllerProvider.notifier)
-            .rescanMusicFiles();
-        break;
-      case _SettingsDisplayItems.excludeDirectories:
-        context.goNamed(Routes.excludeDirectories.name);
+      case _SettingsDisplayItems.librarySettings:
+        context.goNamed(Routes.librarySettings.name);
         break;
       case _SettingsDisplayItems.resetSettings:
         await ref
@@ -247,6 +240,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
 
   Future<void> _changeSplitScreenType() async {
     await Future.delayed(const Duration(milliseconds: 150));
+    if (!mounted || context.router.locationNamed != routeName) return;
     switch (displayItems[selectedDisplayItem]) {
       case _SettingsDisplayItems.language:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
@@ -305,13 +299,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.showTutorialScreen;
         break;
-      case _SettingsDisplayItems.rescanMusicFiles:
+      case _SettingsDisplayItems.librarySettings:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
-            SplitScreenType.rescanMusicFiles;
-        break;
-      case _SettingsDisplayItems.excludeDirectories:
-        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
-            SplitScreenType.excludeDirectories;
+            SplitScreenType.librarySettings;
         break;
       case _SettingsDisplayItems.resetSettings:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

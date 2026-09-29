@@ -10,6 +10,7 @@ import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:classipod/core/repositories/library/library_provider.dart';
 import 'package:classipod/core/repositories/library/library_repository.dart';
 import 'package:classipod/core/repositories/library/library_source.dart';
+import 'package:classipod/core/repositories/library/missing_tracks_provider.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/utils/artist_name_utils.dart';
@@ -17,7 +18,9 @@ import 'package:classipod/features/app_startup/controllers/splash_controller.dar
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
+import 'package:classipod/features/settings/controller/exclude_directories_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/exclude_directory_model.dart';
 import 'package:classipod/hive/hive_registrar.g.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -73,6 +76,9 @@ void main() {
     Hive.init(directory.path);
     Hive.registerAdapters();
     await Hive.openBox<PlaylistModel>(Constants.playlistBoxName);
+    await Hive.openBox<ExcludeDirectoryModel>(
+      Constants.excludedDirectoriesBoxName,
+    );
     discovered = snapshot([record(1), record(2)]);
     reads = [];
     progress = [];
@@ -134,6 +140,93 @@ void main() {
     },
   );
 
+  test('missing tracks persist and clear after successful reindex', () async {
+    fail = true;
+    await repository.load(progress.add);
+    final container = ProviderContainer(
+      overrides: [localLibraryProvider.overrideWith((_) async => [])],
+    );
+    addTearDown(container.dispose);
+    await container.read(localLibraryProvider.future);
+    final missing = container.read(missingTracksProvider);
+    expect(missing, hasLength(2));
+    expect(missing.first.location, '/primary/1.mp3');
+    expect(missing.first.song.getTrackName, 'Fallback 1');
+    expect(missing.first.artworkOnly, isFalse);
+    fail = false;
+    repository.requestRescan();
+    await repository.load(progress.add);
+    container.invalidate(localLibraryProvider);
+    await container.read(localLibraryProvider.future);
+    expect(container.read(missingTracksProvider), isEmpty);
+  });
+
+  test(
+    'missing tracks react to exclusions without discarding diagnostics',
+    () async {
+      fail = true;
+      discovered = snapshot([record(1), record(2, volume: 'other')]);
+      await repository.load(progress.add);
+      final box = Hive.box<ExcludeDirectoryModel>(
+        Constants.excludedDirectoriesBoxName,
+      );
+      final primaryKey = await box.add(
+        ExcludeDirectoryModel(directoryPath: '/primary', isExcluded: false),
+      );
+      final otherKey = await box.add(
+        ExcludeDirectoryModel(directoryPath: '/other', isExcluded: false),
+      );
+      final container = ProviderContainer(
+        overrides: [localLibraryProvider.overrideWith((_) async => [])],
+      );
+      addTearDown(container.dispose);
+      await container.read(localLibraryProvider.future);
+      final subscription = container.listen(missingTracksProvider, (_, _) {});
+      addTearDown(subscription.close);
+      expect(container.read(missingTracksProvider), hasLength(2));
+      final exclusions = container.read(excludedDirectoriesProvider.notifier);
+      await exclusions.toggleExcludeDirectory(
+        excludeDirectoryModelKey: primaryKey,
+      );
+      expect(
+        container.read(missingTracksProvider).map((track) => track.location),
+        ['/other/2.mp3'],
+      );
+      await exclusions.toggleExcludeDirectory(
+        excludeDirectoryModelKey: otherKey,
+      );
+      expect(container.read(missingTracksProvider), isEmpty);
+      await exclusions.toggleExcludeDirectory(
+        excludeDirectoryModelKey: primaryKey,
+      );
+      expect(
+        container.read(missingTracksProvider).map((track) => track.location),
+        ['/primary/1.mp3'],
+      );
+    },
+  );
+
+  test('thrown tag errors do not abort other songs or startup', () async {
+    final resilient = LibraryRepository(
+      artworkDirectory: '${directory.path}/art',
+      discover: () async => discovered,
+      readTags: (uri, {artworkDirectory}) async {
+        if (uri.endsWith('1.mp3')) {
+          throw const FileSystemException('unreadable');
+        }
+        return {'properties': <String, dynamic>{}};
+      },
+      closeReader: () async => throw StateError('cleanup failed'),
+    );
+    final songs = await resilient.load(progress.add);
+    expect(songs, hasLength(2));
+    expect(progress.last.phase, LibraryPhase.complete);
+    expect(progress.last.failures, 1);
+    final saved = Hive.box<dynamic>(LibraryRepository.boxName).get('snapshot');
+    expect(saved['records'][0]['readSuccess'], isFalse);
+    expect(saved['records'][1]['readSuccess'], isTrue);
+  });
+
   test('warm startup reuses tags and counts cache hits', () async {
     await repository.load(progress.add);
     expect(progress.last.showCounts, isTrue);
@@ -164,6 +257,78 @@ void main() {
       final stored =
           Hive.box<dynamic>(LibraryRepository.boxName).get('snapshot') as Map;
       expect(stored['records'], hasLength(2));
+    },
+  );
+
+  test('refresh only reads additions and removes deleted tracks', () async {
+    final first = await repository.load(progress.add);
+    await LibraryRepository.updateRating(first.last.copyWith(rating: 5));
+    reads.clear();
+    discovered = snapshot([record(2, modified: 2), record(3)]);
+
+    repository.requestRefresh();
+    final refreshed = await repository.load(progress.add);
+
+    expect(reads, ['art:${record(3).path}']);
+    expect(refreshed.map((song) => song.identity), [
+      first.last.identity,
+      record(3).uri,
+    ]);
+    expect(refreshed.first.originalSongIndex, first.last.originalSongIndex);
+    expect(refreshed.first.rating, 5);
+    final saved =
+        Hive.box<dynamic>(LibraryRepository.boxName).get('snapshot') as Map;
+    expect(saved['records'], hasLength(2));
+
+    reads.clear();
+    repository.requestRescan();
+    final reindexed = await repository.load(progress.add);
+    expect(reads, ['art:${record(2).path}', 'art:${record(3).path}']);
+    expect(reindexed.first.rating, 5);
+  });
+
+  test(
+    'refresh does not repair existing artwork or retry failed tags',
+    () async {
+      artwork = true;
+      final first = await repository.load(progress.add);
+      await File(first.first.thumbnailPath!).delete();
+      reads.clear();
+      repository.requestRefresh();
+      await repository.load(progress.add);
+      expect(reads, isEmpty);
+
+      fail = true;
+      repository.requestRescan();
+      await repository.load(progress.add);
+      reads.clear();
+      repository.requestRefresh();
+      await repository.load(progress.add);
+      expect(reads, isEmpty);
+    },
+  );
+
+  test(
+    'refresh reuses selected locations and can initialize an empty cache',
+    () async {
+      var selections = 0;
+      final sourceRepository = LibraryRepository(
+        artworkDirectory: directory.path,
+        discover: () async => discovered,
+        readTags: (uri, {artworkDirectory}) async {
+          reads.add(uri);
+          return <String, dynamic>{};
+        },
+        selectSource: () => selections++,
+      );
+      sourceRepository.requestRefresh();
+      expect(await sourceRepository.load(progress.add), hasLength(2));
+      expect(reads, hasLength(2));
+      expect(selections, 0);
+      sourceRepository.requestRescan();
+      await sourceRepository.load(progress.add);
+      expect(selections, 1);
+      expect(reads, hasLength(4));
     },
   );
 
@@ -325,7 +490,7 @@ void main() {
   );
 
   test(
-    'settings rescan restarts completed splash and rebuilds playback',
+    'first-run discovery, rescans and exclusions complete with real filtering',
     () async {
       final previousPreferences = SharedPreferencesAsyncPlatform.instance;
       SharedPreferencesAsyncPlatform.instance =
@@ -337,9 +502,6 @@ void main() {
       final container = ProviderContainer(
         overrides: [
           libraryRepositoryProvider.overrideWithValue(repository),
-          filteredAudioFilesProvider.overrideWith(
-            (ref) => ref.watch(audioFilesServiceProvider.future),
-          ),
           audioPlayerServiceProvider.overrideWith(() => playback),
         ],
       );
@@ -351,10 +513,14 @@ void main() {
         libraryProgressProvider,
         (_, value) => updates.add(value),
       );
-      await container.read(splashControllerProvider.future);
+      await container
+          .read(splashControllerProvider.future)
+          .timeout(const Duration(seconds: 3));
       final router = container.read(routerProvider);
       addTearDown(router.dispose);
       expect(playback.queues, hasLength(1));
+      expect(playback.queues.single, hasLength(2));
+      expect(router.routeInformationProvider.value.uri.path, '/menu');
       final playlists = Hive.box<PlaylistModel>(Constants.playlistBoxName);
       await playlists.add(
         PlaylistModel(name: 'Favorites', songs: playback.queues.single),
@@ -364,7 +530,9 @@ void main() {
       await container
           .read(settingsPreferencesControllerProvider.notifier)
           .rescanMusicFiles();
-      await container.read(splashControllerProvider.future);
+      await container
+          .read(splashControllerProvider.future)
+          .timeout(const Duration(seconds: 3));
       expect(reads, hasLength(2)); // Unchanged files must still be extracted.
       expect(playback.queues, hasLength(2));
       expect(playlists.values.single.name, 'Favorites');
@@ -375,12 +543,46 @@ void main() {
       expect(updates.last.songsCached, 0);
       expect(updates.last.showCounts, isTrue);
       expect(router.routeInformationProvider.value.uri.path, '/menu');
+      discovered = snapshot([record(2, modified: 2), record(3)]);
+      reads.clear();
+      await container
+          .read(settingsPreferencesControllerProvider.notifier)
+          .refreshLibrary();
+      await container
+          .read(splashControllerProvider.future)
+          .timeout(const Duration(seconds: 3));
+      expect(reads, ['art:${record(3).path}']);
+      expect(playback.queues, hasLength(3));
+      expect(playback.queues.last.map((song) => song.identity), [
+        record(2).uri,
+        record(3).uri,
+      ]);
+      expect(playlists.values.single.name, 'Favorites');
       await container
           .read(settingsPreferencesControllerProvider.notifier)
           .rescanMusicFiles(clearPlaylists: true);
-      await container.read(splashControllerProvider.future);
+      await container
+          .read(splashControllerProvider.future)
+          .timeout(const Duration(seconds: 3));
       expect(playlists.isEmpty, isTrue);
-      expect(playback.queues, hasLength(3));
+      expect(playback.queues, hasLength(4));
+
+      final directories = Hive.box<ExcludeDirectoryModel>(
+        Constants.excludedDirectoriesBoxName,
+      );
+      expect(directories.values.single.directoryPath, '/primary');
+      final exclusions = container.read(excludedDirectoriesProvider.notifier);
+      await exclusions.toggleExcludeDirectory(
+        excludeDirectoryModelKey: directories.keys.single,
+      );
+      expect(await container.read(filteredAudioFilesProvider.future), isEmpty);
+      await exclusions.toggleExcludeDirectory(
+        excludeDirectoryModelKey: directories.keys.single,
+      );
+      expect(
+        await container.read(filteredAudioFilesProvider.future),
+        hasLength(2),
+      );
     },
   );
 

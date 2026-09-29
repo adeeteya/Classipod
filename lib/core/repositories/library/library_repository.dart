@@ -22,6 +22,7 @@ class LibraryRepository {
   final Future<void> Function()? closeReader;
   final void Function()? selectSource;
   bool forceNextScan = false;
+  bool _refreshNextScan = false;
   Future<List<MusicMetadata>>? _pending;
 
   LibraryRepository({
@@ -34,7 +35,13 @@ class LibraryRepository {
 
   void requestRescan() {
     forceNextScan = true;
+    _refreshNextScan = false;
     selectSource?.call();
+  }
+
+  void requestRefresh() {
+    _refreshNextScan = true;
+    forceNextScan = false;
   }
 
   Future<List<MusicMetadata>> load(void Function(LibraryProgress) report) {
@@ -91,6 +98,7 @@ class LibraryRepository {
       }
     }
     final force = forceNextScan;
+    final refresh = _refreshNextScan && !force;
     final records = <Map<String, dynamic>>[];
     final seen = <String>{};
     final songs = snapshot.songs.where((song) => seen.add(song.uri)).toList();
@@ -112,6 +120,14 @@ class LibraryRepository {
       ),
     );
 
+    Future<Map<String, dynamic>> readSongTags(String uri) async {
+      try {
+        return await readTags(uri, artworkDirectory: artworkDirectory);
+      } on Exception {
+        return {'error': 'unreadable'};
+      }
+    }
+
     final verifiedArtwork = <String>{};
     Future<bool> artworkExists(String? path) async {
       if (path == null) return false;
@@ -131,9 +147,10 @@ class LibraryRepository {
             !force &&
             saved?['version'] == cacheVersion &&
             old != null &&
-            old['size'] == song.size &&
-            old['modified'] == song.modified &&
-            old['readSuccess'] == true;
+            (refresh ||
+                (old['size'] == song.size &&
+                    old['modified'] == song.modified &&
+                    old['readSuccess'] == true));
         late Map<String, dynamic> row;
         if (unchanged) {
           row = {
@@ -145,12 +162,10 @@ class LibraryRepository {
             ),
           };
           cached++;
-          if (row['hasCover'] == true &&
+          if (!refresh &&
+              row['hasCover'] == true &&
               !await artworkExists(previous.thumbnailPath)) {
-            final result = await readTags(
-              song.path ?? song.uri,
-              artworkDirectory: artworkDirectory,
-            );
+            final result = await readSongTags(song.path ?? song.uri);
             final path = result['artworkPath'] as String?;
             if (path != null) {
               row['music'] = (row['music'] as MusicMetadata).copyWith(
@@ -159,10 +174,7 @@ class LibraryRepository {
             }
           }
         } else {
-          final tags = await readTags(
-            song.path ?? song.uri,
-            artworkDirectory: artworkDirectory,
-          );
+          final tags = await readSongTags(song.path ?? song.uri);
           final success = !tags.containsKey('error');
           if (!success) failures++;
           row = {
@@ -179,12 +191,14 @@ class LibraryRepository {
             ),
           };
         }
+        row['artworkReadFailed'] = false;
         if (row['hasCover'] == true) {
           final music = row['music'] as MusicMetadata;
           if (await artworkExists(music.thumbnailPath)) {
             artworkCached++;
           } else {
             failures++;
+            row['artworkReadFailed'] = true;
           }
         }
         records.add(row);
@@ -218,17 +232,22 @@ class LibraryRepository {
           playlist.copyWith(
             songs: [
               for (final song in playlist.songs)
-                byId[song.identity] ?? byPath[song.filePath] ?? song,
+                song.isSubsonic
+                    ? song
+                    : byId[song.identity] ?? byPath[song.filePath] ?? song,
             ],
           ),
         );
       }
       await playlists.flush();
       forceNextScan = false;
+      _refreshNextScan = false;
       emit(LibraryPhase.complete);
       return active;
     } finally {
-      await closeReader?.call();
+      try {
+        await closeReader?.call();
+      } catch (_) {}
     }
   }
 }

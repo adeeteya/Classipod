@@ -1,22 +1,26 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
-import 'package:classipod/features/now_playing/models/now_playing_model.dart';
+import 'package:classipod/features/music/album/providers/album_details_provider.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class NowPlayingWidget extends StatelessWidget {
-  final NowPlayingModel nowPlayingDetails;
-
-  const NowPlayingWidget({super.key, required this.nowPlayingDetails});
+class NowPlayingWidget extends ConsumerWidget {
+  const NowPlayingWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final nowPlayingDetails = ref.watch(nowPlayingDetailsProvider);
+    final artworkPath = ref.watch(
+      songAlbumArtworkProvider(nowPlayingDetails.currentMetadata),
+    );
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 300),
       child: Row(
         key: ValueKey(
-          "Now Playing-${nowPlayingDetails.currentMetadata?.originalSongIndex}",
+          "Now Playing-${nowPlayingDetails.currentMetadata?.identity}",
         ),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,7 +30,7 @@ class NowPlayingWidget extends StatelessWidget {
             child: AlbumReflectiveArt(
               imageWidth: 200,
               tiltedImage: true,
-              thumbnailPath: nowPlayingDetails.currentMetadata?.thumbnailPath,
+              thumbnailPath: artworkPath,
               isOnDevice: nowPlayingDetails.currentMetadata?.isOnDevice ?? true,
               heroTag:
                   "${nowPlayingDetails.currentMetadata?.albumName}-${nowPlayingDetails.currentMetadata?.albumArtistName}",

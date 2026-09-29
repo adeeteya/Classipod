@@ -6,6 +6,7 @@ import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/repositories/library/library_repository.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
@@ -88,6 +89,21 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
     );
   }
 
+  void reconcileMetadata(List<MusicMetadata> songs) {
+    final index = songs.indexWhere(
+      (song) => song.identity == state.currentMetadata?.identity,
+    );
+    state = NowPlayingModel(
+      metadataList: songs,
+      currentIndex: index < 0 ? 0 : index,
+      currentMetadata: songs.isEmpty ? null : songs[index < 0 ? 0 : index],
+      isPlaying: index >= 0 && state.isPlaying,
+      isShuffleEnabled: state.isShuffleEnabled,
+      loopMode: state.loopMode,
+      nowPlayingType: state.nowPlayingType,
+    );
+  }
+
   void setNewMetadataList({
     NowPlayingType? nowPlayingType,
     required List<MusicMetadata> newMetadataList,
@@ -139,7 +155,11 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
       ],
     );
 
-    if (updatedMetadata.songId != null) {
+    if (updatedMetadata.isSubsonic) {
+      await ref
+          .read(subsonicControllerProvider.notifier)
+          .updateSong(updatedMetadata);
+    } else if (updatedMetadata.songId != null) {
       await LibraryRepository.updateRating(updatedMetadata);
       ref
           .read(audioFilesServiceProvider.notifier)

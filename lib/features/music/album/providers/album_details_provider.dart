@@ -5,9 +5,27 @@ import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final albumDetailsProvider = Provider<List<AlbumModel>>((ref) {
-  final metadataList = ref.read(filteredAudioFilesProvider).requireValue;
+  final metadataList =
+      ref.watch(filteredAudioFilesProvider).value ?? <MusicMetadata>[];
   return buildAlbumDetails(metadataList);
 });
+
+final songAlbumArtworkProvider = Provider.autoDispose
+    .family<String?, MusicMetadata?>((ref, song) {
+      if (song == null) return null;
+      if (!song.isSubsonic || song.remoteAlbumId == null) {
+        return song.thumbnailPath;
+      }
+      final albums = ref.watch(albumDetailsProvider);
+      for (final album in albums) {
+        final first = album.albumSongs.firstOrNull;
+        if (first?.serverId == song.serverId &&
+            first?.remoteAlbumId == song.remoteAlbumId) {
+          return album.albumArtPath ?? song.thumbnailPath;
+        }
+      }
+      return song.thumbnailPath;
+    });
 
 List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
   final albumsByIdentity = <String, List<MusicMetadata>>{};
@@ -19,7 +37,9 @@ List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
         : (metadata.albumArtistNames ?? metadata.trackArtistNames ?? [])
               .map((name) => name.trim().toLowerCase())
               .join('\u0001');
-    final albumIdentity = '$albumName\u0000$primaryArtist';
+    final albumIdentity = metadata.isSubsonic
+        ? '${metadata.serverId}:${metadata.remoteAlbumId ?? albumName}'
+        : '$albumName\u0000$primaryArtist';
     albumsByIdentity.putIfAbsent(albumIdentity, () => []).add(metadata);
   }
 

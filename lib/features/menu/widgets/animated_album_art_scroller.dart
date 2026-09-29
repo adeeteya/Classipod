@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'dart:io';
 import 'dart:math';
 
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/widgets/artwork_image.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
@@ -20,9 +20,7 @@ class AnimatedAlbumArtScroller extends ConsumerStatefulWidget {
 class _AnimatedAlbumArtScrollerState
     extends ConsumerState<AnimatedAlbumArtScroller>
     with SingleTickerProviderStateMixin {
-  ImageProvider _albumArtImage = const AssetImage(
-    Assets.defaultAlbumCoverImage,
-  );
+  String? _albumArtPath;
   late final AnimationController _animationController;
   late Animation<Alignment> _alignmentAnimation;
   double alignment = 0;
@@ -42,20 +40,18 @@ class _AnimatedAlbumArtScrollerState
       if (albumArtPath == null) {
         return false;
       }
-      return !album.isOnDevice() || File(albumArtPath).existsSync();
+      return true;
     }).toList();
 
     setState(() {
       _isEmptyState = false;
       if (albumsWithArtwork.isEmpty) {
-        _albumArtImage = const AssetImage(Assets.defaultAlbumCoverImage);
+        _albumArtPath = null;
       } else {
         final randomAlbum = albumsWithArtwork.elementAt(
           Random().nextInt(albumsWithArtwork.length),
         );
-        _albumArtImage = randomAlbum.isOnDevice()
-            ? FileImage(File(randomAlbum.albumArtPath!))
-            : NetworkImage(randomAlbum.albumArtPath!);
+        _albumArtPath = randomAlbum.albumArtPath;
       }
     });
   }
@@ -101,11 +97,18 @@ class _AnimatedAlbumArtScrollerState
       vsync: this,
       duration: const Duration(seconds: 10),
     );
-    if (!_isEmptyState) {
-      _setRandomAnimationDirection();
-      unawaited(_animationController.forward());
-      _animationController.addListener(_repeatAnimation);
-    }
+    _setRandomAnimationDirection();
+    _animationController.addListener(_repeatAnimation);
+    if (!_isEmptyState) unawaited(_animationController.forward());
+    ref.listenManual(albumDetailsProvider, (_, albums) {
+      _getRandomAlbumArt();
+      if (albums.isEmpty) {
+        _animationController.stop();
+      } else if (!_animationController.isAnimating) {
+        _setRandomAnimationDirection();
+        unawaited(_animationController.forward(from: 0));
+      }
+    });
   }
 
   @override
@@ -130,8 +133,8 @@ class _AnimatedAlbumArtScrollerState
         child: AnimatedSwitcher(
           duration: const Duration(seconds: 1),
           child: Image(
-            key: ValueKey(_albumArtImage),
-            image: _albumArtImage,
+            key: ValueKey(_albumArtPath),
+            image: artworkImage(ref, _albumArtPath),
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,

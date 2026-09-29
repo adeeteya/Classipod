@@ -270,3 +270,33 @@ Copyright (c) 2025 Aditya R
 
 <a href="https://www.flaticon.com/free-icons/ipod" title="ipod icons">Ipod icons created by
 Freepik - Flaticon</a>
+
+## Subsonic servers
+
+Open **Settings → Library Settings → Subsonic** and enter the server's base
+URL (including any reverse-proxy path), username and password. ClassiPod
+supports token-authenticated Subsonic API 1.13+ servers. The connection is
+checked before saving. Native apps combine server and local music; Web shows
+the server library instead of demo songs while enabled.
+
+**Configure Subsonic** edits the connection or removes it. Turning Subsonic off
+keeps its configuration and cache, hides its tracks, and stops server playback.
+Saved playlist entries remain available when the same server is reconnected.
+**Refresh Library** fetches a new catalog; **Reindex Library** also clears cached
+server artwork. Failed scans retain the previous catalog. Ratings and edits
+stay in ClassiPod and are not written back to the server.
+
+Native passwords use OS secure storage. Web passwords last only until reload;
+re-enter the password through Configure Subsonic or when starting playback.
+Metadata and artwork are cached, but audio is streamed and requires a connection.
+Server playlist synchronization and offline audio downloads are not included.
+
+Web servers must allow CORS from the ClassiPod origin. Browsers block HTTP
+servers from an HTTPS app. Native apps allow HTTP for user-configured servers,
+including LAN IP addresses, using app-wide Android and Apple transport
+exceptions because server hosts are not known at build time. HTTPS certificates
+are still validated. HTTP traffic is unencrypted; prefer HTTPS when available.
+Transport configuration changes require rebuilding and reinstalling the app;
+hot reload does not apply them.
+Linux secure storage requires the system Secret Service/libsecret; Windows
+builds require the Visual Studio ATL component used by flutter_secure_storage.

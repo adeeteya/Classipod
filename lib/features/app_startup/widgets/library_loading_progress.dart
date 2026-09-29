@@ -38,14 +38,6 @@ class LibraryLoadingProgress extends StatelessWidget {
               ),
             ),
           ],
-          if (progress.failures > 0)
-            Text(
-              strings.libraryReadFailures(progress.failures),
-              style: const TextStyle(
-                color: CupertinoColors.white,
-                fontSize: 12,
-              ),
-            ),
           const SizedBox(height: 10),
           const CupertinoActivityIndicator(color: CupertinoColors.white),
         ],

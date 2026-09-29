@@ -4,8 +4,24 @@ import 'package:classipod/core/constants/online_audio_files_metadata.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:classipod/core/repositories/library/library_provider.dart';
+import 'package:classipod/core/subsonic/subsonic_controller.dart';
+import 'package:classipod/features/settings/controller/hide_local_music_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final localLibraryProvider = FutureProvider<List<MusicMetadata>>(
+  retry: (_, _) => null,
+  (ref) async {
+    if (kIsWeb ||
+        ref.read(settingsPreferencesControllerProvider).fetchOnlineMusic) {
+      return [];
+    }
+    return ref
+        .read(libraryRepositoryProvider)
+        .load(ref.read(libraryProgressProvider.notifier).report);
+  },
+);
 
 final audioFilesServiceProvider =
     AsyncNotifierProvider<
@@ -28,18 +44,32 @@ class AudioFilesServiceNotifier
   }
 
   @override
-  Future<UnmodifiableListView<MusicMetadata>> build() async {
-    return getAudioFilesMetadata();
-  }
+  Future<UnmodifiableListView<MusicMetadata>> build() =>
+      getAudioFilesMetadata();
 
   Future<UnmodifiableListView<MusicMetadata>> getAudioFilesMetadata() async {
-    state = const AsyncLoading();
-    if (ref.read(settingsPreferencesControllerProvider).fetchOnlineMusic) {
-      return UnmodifiableListView(onlineDemoAudioFilesMetaData);
+    final remoteFuture = ref.watch(
+      subsonicControllerProvider.selectAsync(
+        (remote) => (enabled: remote.enabled, songs: remote.songs),
+      ),
+    );
+    final localFuture = ref
+        .watch(localLibraryProvider.future)
+        .catchError((Object _) => <MusicMetadata>[]);
+    final demo = ref
+        .read(settingsPreferencesControllerProvider)
+        .fetchOnlineMusic;
+    final hideLocalMusic = ref.watch(hideLocalMusicProvider);
+    final remote = await remoteFuture;
+    List<MusicMetadata> songs;
+    if (kIsWeb || demo) {
+      songs = remote.enabled ? [] : onlineDemoAudioFilesMetaData;
+    } else {
+      songs = await localFuture;
     }
-    final songs = await ref
-        .read(libraryRepositoryProvider)
-        .load(ref.read(libraryProgressProvider.notifier).report);
-    return UnmodifiableListView(songs);
+    return UnmodifiableListView([
+      if (!remote.enabled || !hideLocalMusic) ...songs,
+      if (remote.enabled) ...remote.songs,
+    ]);
   }
 }

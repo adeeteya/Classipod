@@ -7,7 +7,7 @@ final artistAlbumDetailListProvider = Provider.autoDispose
     .family<List<AlbumModel>, String>((ref, artistName) {
       final List<AlbumModel> artistAlbumDetailsList = [];
 
-      ref.read(albumDetailsProvider).forEach((albumDetail) {
+      ref.watch(albumDetailsProvider).forEach((albumDetail) {
         final isContributingArtist = albumDetail.albumSongs.any(
           (song) => song.trackArtistNames?.contains(artistName) ?? false,
         );

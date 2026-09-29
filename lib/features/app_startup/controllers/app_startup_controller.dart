@@ -5,6 +5,7 @@ import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/providers/device_directory_provider.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/services/click_sound_service.dart';
 import 'package:classipod/core/services/playback/playback_bootstrap.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -38,6 +39,7 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
     JustAudioMediaKit.title = 'ClassiPod';
   }
   await initializeMediaSession(ref.read(libraryAudioHandlerProvider));
+  unawaited(ref.read(clickSoundServiceProvider).preload());
   ref
       .read(settingsPreferencesControllerProvider.notifier)
       .setAudioSource(isOnlineAudioSource: kIsWeb);

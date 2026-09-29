@@ -3,10 +3,6 @@ name: Build and Deploy Releases
 on:
   workflow_dispatch:
     inputs:
-      version_number:
-        description: 'Release Version Number'
-        required: true
-        type: string
       android:
         description: 'Build Android Release'
         type: boolean
@@ -40,6 +36,8 @@ jobs:
 
   create_github_release:
     name: Create GitHub Release
+    outputs:
+      version_number: ${{ steps.version.outputs.version_number }}
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -47,10 +45,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      - name: Read release version from pubspec.yaml
+        id: version
+        run: |
+          ruby -ryaml <<'RUBY'
+          version = YAML.load_file('pubspec.yaml').fetch('version').to_s
+          match = /\A(\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?)(?:\+\d+)?\z/.match(version)
+          abort "Invalid pubspec.yaml version: #{version.inspect}" unless match
+          File.open(ENV.fetch('GITHUB_OUTPUT'), 'a') do |file|
+            file.puts("version_number=#{match[1]}")
+          end
+          puts "Release version: #{match[1]} (pubspec: #{version})"
+          RUBY
+
       - name: Create a GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
-          RELEASE_TAG: ${{ inputs.version_number }}
+          RELEASE_TAG: ${{ steps.version.outputs.version_number }}
         run: |
           if gh release view "$RELEASE_TAG" > /dev/null 2>&1; then
             echo "Release '$RELEASE_TAG' already exists. Skipping release creation."
@@ -135,7 +146,7 @@ jobs:
           REL_VER=$(grep "^version" pubspec.yaml | cut -d' ' -f2)
           for PKG in AppImage deb rpm; do
             mv "dist/${REL_VER}/classipod-${REL_VER}-linux.${PKG}" "Classipod-Linux-${PKG}.${PKG}"
-            gh release upload ${{ inputs.version_number }} "Classipod-Linux-${PKG}.${PKG}" --clobber
+            gh release upload ${{ needs.create_github_release.outputs.version_number }} "Classipod-Linux-${PKG}.${PKG}" --clobber
           done
 
   build_windows:
@@ -169,12 +180,12 @@ jobs:
 
       - name: Run Inno Setup to Build Installer
         run: |
-          build\iscc\iscc.exe scripts\windows-setup.iss /DMyAppVersion=${{ inputs.version_number }}
+          build\iscc\iscc.exe scripts\windows-setup.iss /DMyAppVersion=${{ needs.create_github_release.outputs.version_number }}
 
       - name: Upload Windows Release Artifact to GitHub Release
         shell: cmd
         run: |
-          gh release upload ${{ inputs.version_number }} "%GITHUB_WORKSPACE%\Classipod-Windows.exe" --clobber
+          gh release upload ${{ needs.create_github_release.outputs.version_number }} "%GITHUB_WORKSPACE%\Classipod-Windows.exe" --clobber
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -235,10 +246,10 @@ jobs:
         with:
           lane: 'build_apk'
           subdirectory: android
-          options: '{ "version_number": "${{ inputs.version_number }}" }'
+          options: '{ "version_number": "${{ needs.create_github_release.outputs.version_number }}" }'
       
       - name: Upload APK Artifact to GitHub Release
-        run:  gh release upload ${{ inputs.version_number }} build/app/outputs/flutter-apk/Classipod-Android.apk --clobber
+        run:  gh release upload ${{ needs.create_github_release.outputs.version_number }} build/app/outputs/flutter-apk/Classipod-Android.apk --clobber
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
@@ -247,7 +258,7 @@ jobs:
         with:
           lane: 'release_play_store'
           subdirectory: android
-          options: '{ "version_number": "${{ inputs.version_number }}" }'
+          options: '{ "version_number": "${{ needs.create_github_release.outputs.version_number }}" }'
         env:
           APP_PACKAGE_NAME: ${{ secrets.APP_PACKAGE_NAME }}
 
@@ -290,7 +301,7 @@ jobs:
       - name: Upload to GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
-          RELEASE_TAG: ${{ inputs.version_number }}
+          RELEASE_TAG: ${{ needs.create_github_release.outputs.version_number }}
         run: |
           gh release upload "$RELEASE_TAG" \
             "build/releases/Classipod-iOS.ipa" \
@@ -335,7 +346,7 @@ jobs:
       - name: Upload to GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN || github.token }}
-          RELEASE_TAG: ${{ inputs.version_number }}
+          RELEASE_TAG: ${{ needs.create_github_release.outputs.version_number }}
         run: |
           gh release upload "$RELEASE_TAG" \
             "build/releases/Classipod-macOS.dmg" \

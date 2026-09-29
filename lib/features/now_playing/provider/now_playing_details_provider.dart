@@ -31,6 +31,7 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
             newIndex < state.metadataList.length) {
           state = state.copyWith(
             currentIndex: newIndex,
+            queuePosition: handler.logicalQueue.position,
             currentMetadata: state.metadataList[newIndex],
           );
         }
@@ -63,14 +64,20 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
       }),
     );
 
-    final shuffleStream = handler.playbackState
-        .map((value) => value.shuffleMode != AudioServiceShuffleMode.none)
+    final queueOrderStream = handler.playbackState
+        .map(
+          (value) => (
+            isShuffleEnabled: value.shuffleMode != AudioServiceShuffleMode.none,
+            position: handler.logicalQueue.position,
+          ),
+        )
         .distinct();
     subscriptions.add(
-      shuffleStream.listen((isShuffleEnabled) {
-        if (isShuffleEnabled != state.isShuffleEnabled) {
-          state = state.copyWith(isShuffleEnabled: isShuffleEnabled);
-        }
+      queueOrderStream.listen((order) {
+        state = state.copyWith(
+          isShuffleEnabled: order.isShuffleEnabled,
+          queuePosition: order.position,
+        );
       }),
     );
     ref.onDispose(() {
@@ -96,6 +103,10 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
     state = NowPlayingModel(
       metadataList: songs,
       currentIndex: index < 0 ? 0 : index,
+      queuePosition: ref
+          .read(libraryAudioHandlerProvider)
+          .logicalQueue
+          .position,
       currentMetadata: songs.isEmpty ? null : songs[index < 0 ? 0 : index],
       isPlaying: index >= 0 && state.isPlaying,
       isShuffleEnabled: state.isShuffleEnabled,

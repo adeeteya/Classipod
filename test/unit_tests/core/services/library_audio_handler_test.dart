@@ -7,6 +7,7 @@ import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/services/playback/library_audio_handler.dart';
 import 'package:classipod/core/services/playback/logical_queue.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:just_audio/just_audio.dart';
@@ -617,17 +618,70 @@ void main() {
   });
 
   test(
+    'Now Playing follows shuffle order and restores the original index',
+    () async {
+      final container = ProviderContainer(
+        overrides: [
+          audioPlayerProvider.overrideWithValue(player),
+          libraryAudioHandlerProvider.overrideWithValue(handler),
+        ],
+      );
+      addTearDown(container.dispose);
+      final songs = List.generate(309, song);
+      container
+          .read(nowPlayingDetailsProvider.notifier)
+          .setNewMetadataList(newMetadataList: songs);
+      await handler.setSongs(songs);
+      await handler.select(70);
+      await flushEvents();
+      expect(container.read(nowPlayingDetailsProvider).queuePosition, 70);
+
+      await handler.setShuffleMode(AudioServiceShuffleMode.all);
+      await flushEvents();
+      var details = container.read(nowPlayingDetailsProvider);
+      expect(details.queuePosition, 0);
+      expect(details.currentIndex, 70);
+      expect(details.currentMetadata, songs[70]);
+      expect(details.metadataList.length, 309);
+
+      await handler.skipToNext();
+      await flushEvents();
+      details = container.read(nowPlayingDetailsProvider);
+      expect(details.queuePosition, 1);
+      expect(details.currentMetadata, songs[handler.currentIndex!]);
+
+      await handler.skipToPrevious();
+      await flushEvents();
+      expect(container.read(nowPlayingDetailsProvider).queuePosition, 0);
+      expect(handler.currentIndex, 70);
+
+      await handler.setShuffleMode(AudioServiceShuffleMode.none);
+      await flushEvents();
+      details = container.read(nowPlayingDetailsProvider);
+      expect(details.queuePosition, 70);
+      expect(details.currentIndex, 70);
+      expect(details.currentMetadata, songs[70]);
+
+      await handler.skipToNext();
+      await flushEvents();
+      expect(container.read(nowPlayingDetailsProvider).queuePosition, 71);
+    },
+  );
+
+  test(
     'shuffle visits all 50k positions once and restores sequential order',
     () {
       final queue = LogicalQueue(random: Random(42));
       queue.reset(50000);
       queue.index = 123;
       queue.setShuffle(true);
+      expect(queue.position, 0);
       final visited = <int>{queue.index};
       while (queue.next() != null) {
         final next = queue.next()!;
         queue.index = next;
         expect(visited.add(next), isTrue);
+        expect(queue.position, visited.length - 1);
       }
       expect(visited.length, 50000);
       queue.setShuffle(false);

@@ -14,6 +14,8 @@ class LogicalQueue {
 
   int get length => _order.length;
 
+  int get position => _positions.isEmpty ? 0 : _positions[index];
+
   void reset(int length) {
     index = 0;
     _order = List.generate(length, (index) => index);

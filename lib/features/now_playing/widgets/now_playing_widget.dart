@@ -87,7 +87,7 @@ class NowPlayingWidget extends ConsumerWidget {
                 if ((nowPlayingDetails.currentMetadata?.rating ?? 0) == 0)
                   const SizedBox(height: 22),
                 Text(
-                  "${nowPlayingDetails.currentIndex + 1} ${context.localization.commonOfText} ${nowPlayingDetails.metadataList.length}",
+                  "${nowPlayingDetails.queuePosition + 1} ${context.localization.commonOfText} ${nowPlayingDetails.metadataList.length}",
                   style: IpodTypography.caption,
                 ),
                 const Spacer(),

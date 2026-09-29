@@ -5,6 +5,7 @@ enum NowPlayingType { album, playlist, songs }
 
 class NowPlayingModel {
   final int currentIndex;
+  final int queuePosition;
   final bool isPlaying;
   final NowPlayingType nowPlayingType;
   final MusicMetadata? currentMetadata;
@@ -14,16 +15,18 @@ class NowPlayingModel {
 
   NowPlayingModel({
     required this.currentIndex,
+    int? queuePosition,
     required this.isPlaying,
     required this.nowPlayingType,
     this.currentMetadata,
     required this.metadataList,
     required this.isShuffleEnabled,
     required this.loopMode,
-  });
+  }) : queuePosition = queuePosition ?? currentIndex;
 
   NowPlayingModel copyWith({
     int? currentIndex,
+    int? queuePosition,
     bool? isPlaying,
     NowPlayingType? nowPlayingType,
     MusicMetadata? currentMetadata,
@@ -33,6 +36,7 @@ class NowPlayingModel {
   }) {
     return NowPlayingModel(
       currentIndex: currentIndex ?? this.currentIndex,
+      queuePosition: queuePosition ?? this.queuePosition,
       isPlaying: isPlaying ?? this.isPlaying,
       nowPlayingType: nowPlayingType ?? this.nowPlayingType,
       currentMetadata: currentMetadata ?? this.currentMetadata,
@@ -48,6 +52,7 @@ class NowPlayingModel {
 
     return other is NowPlayingModel &&
         other.currentIndex == currentIndex &&
+        other.queuePosition == queuePosition &&
         other.isPlaying == isPlaying &&
         other.nowPlayingType == nowPlayingType &&
         other.currentMetadata == currentMetadata &&
@@ -60,6 +65,7 @@ class NowPlayingModel {
   int get hashCode {
     return Object.hash(
       currentIndex,
+      queuePosition,
       isPlaying,
       nowPlayingType,
       currentMetadata,
@@ -71,6 +77,6 @@ class NowPlayingModel {
 
   @override
   String toString() {
-    return "NowPlayingModel(currentIndex: $currentIndex, isPlaying: $isPlaying, nowPlayingType: $nowPlayingType, currentMetadata: $currentMetadata, metadataList: $metadataList, isShuffleEnabled: $isShuffleEnabled, loopMode: $loopMode)";
+    return "NowPlayingModel(currentIndex: $currentIndex, queuePosition: $queuePosition, isPlaying: $isPlaying, nowPlayingType: $nowPlayingType, currentMetadata: $currentMetadata, metadataList: $metadataList, isShuffleEnabled: $isShuffleEnabled, loopMode: $loopMode)";
   }
 }

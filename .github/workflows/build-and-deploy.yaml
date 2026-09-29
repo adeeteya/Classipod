@@ -60,6 +60,7 @@ jobs:
           fi
 
   build_web:
+    needs: create_github_release
     if: ${{ inputs.web }}
     name: Build Web
     runs-on: ubuntu-latest
@@ -78,10 +79,11 @@ jobs:
       - uses: bluefireteam/flutter-gh-pages@v9
         with:
           baseHref: /Classipod/
-          compileToWasm: true
-          customArgs: --enable-wasm-deferred-loading
+          # universal_html still depends on dart:html; use JavaScript.
+          compileToWasm: false
 
   build_linux:
+    needs: create_github_release
     if: ${{ inputs.linux }}
     name: Build Linux
     runs-on: ubuntu-latest
@@ -137,6 +139,7 @@ jobs:
           done
 
   build_windows:
+    needs: create_github_release
     if: ${{ inputs.windows }}
     name: Build Windows
     runs-on: windows-latest
@@ -171,15 +174,21 @@ jobs:
       - name: Upload Windows Release Artifact to GitHub Release
         shell: cmd
         run: |
-          gh release upload ${{ inputs.version_number }} "%GITHUB_WORKSPACE%\Classipod-Windows.exe
+          gh release upload ${{ inputs.version_number }} "%GITHUB_WORKSPACE%\Classipod-Windows.exe" --clobber
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
   build_android:
+    needs: create_github_release
     if: ${{ inputs.android }}
     name: Build Android
     runs-on: ubuntu-latest
     timeout-minutes: 40
+    concurrency:
+      group: classipod-google-play-release
+      cancel-in-progress: false
+    env:
+      APP_PACKAGE_NAME: ${{ secrets.APP_PACKAGE_NAME }}
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -217,6 +226,10 @@ jobs:
         env:
           ANDROID_KEY_STORE_PASSWORD: ${{ secrets.ANDROID_KEY_STORE_PASSWORD }}
 
+      - name: Select next Google Play build number
+        working-directory: android
+        run: bundle exec fastlane prepare_build_number
+
       - name: Build APK
         uses: maierj/fastlane-action@v3.1.0
         with:
@@ -225,7 +238,7 @@ jobs:
           options: '{ "version_number": "${{ inputs.version_number }}" }'
       
       - name: Upload APK Artifact to GitHub Release
-        run:  gh release upload ${{ inputs.version_number }} build/app/outputs/flutter-apk/Classipod-Android.apk
+        run:  gh release upload ${{ inputs.version_number }} build/app/outputs/flutter-apk/Classipod-Android.apk --clobber
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 

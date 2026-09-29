@@ -64,6 +64,10 @@ if(POLICY CMP0175)
   cmake_policy(POP)
 endif()
 
+if(MSVC AND TARGET audio_service_win_plugin)
+  target_compile_features(audio_service_win_plugin PRIVATE cxx_std_20)
+endif()
+
 # permission_handler_windows 0.2.2 enables C++20 but also adds legacy /await.
 # MSVC in Visual Studio 2026 rejects that experimental coroutine mode.
 # Use the plugin's C++20 coroutines until upstream removes the legacy flag.

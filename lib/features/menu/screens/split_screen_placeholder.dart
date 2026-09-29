@@ -278,7 +278,6 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
       }
     }
     return CupertinoPageScaffold(
-      // Dialogs handle keyboard insets above the fixed-height device screen.
       resizeToAvoidBottomInset: false,
       child: currentSettings.splitScreenEnabled
           ? Row(
@@ -292,9 +291,34 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
                 Expanded(
                   child: SlideTransition(
                     position: _rightSlideAnimation,
-                    child: SplitScreenPreviewTransition(
-                      type: splitScreenType,
-                      child: splitScreenWidget,
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        SplitScreenPreviewTransition(
+                          type: splitScreenType,
+                          child: splitScreenWidget,
+                        ),
+                        const Positioned(
+                          left: 0,
+                          top: 0,
+                          bottom: 0,
+                          width: 8,
+                          child: IgnorePointer(
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color(0x52000000),
+                                    Color(0x1F000000),
+                                    Color(0x00000000),
+                                  ],
+                                  stops: [0, 0.4, 1],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),

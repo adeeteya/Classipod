@@ -365,7 +365,7 @@ class SettingsPreferencesControllerNotifier
         .setVibrate(isVibrateEnabled: true);
     await ref
         .read(settingsPreferencesRepositoryProvider)
-        .setClickWheelSound(isClickWheelSoundEnabled: false);
+        .setClickWheelSound(isClickWheelSoundEnabled: true);
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setSplitScreenEnabled(isSplitScreenEnabled: true);

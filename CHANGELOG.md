@@ -1,5 +1,10 @@
 ## 2.0.0 (Unreleased)
 
+- Replace system wheel sounds with a bundled iPod-inspired click on all
+  platforms, using a separate player without taking audio focus from music.
+  Avoid duplicate click and vibration feedback for each scroll step.
+  Enable click sounds by default for new preferences and settings resets.
+
 - Make Immersive Mode toggle native fullscreen on macOS, Windows, and Linux,
   restoring the saved preference at startup.
 

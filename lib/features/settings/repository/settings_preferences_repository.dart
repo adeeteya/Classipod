@@ -82,7 +82,7 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache.getBool(
           SharedPreferencesKeys.clickWheelSound.name,
         ) ??
-        false;
+        true;
   }
 
   String getVolumeMode() {

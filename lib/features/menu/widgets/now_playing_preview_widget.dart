@@ -2,6 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
+import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -35,17 +36,19 @@ class NowPlayingPreviewWidget extends ConsumerWidget {
               ),
               const Spacer(),
               if (currentMetadata != null) ...[
-                Text(
+                MarqueeText(
                   currentMetadata.getTrackName,
+                  key: ValueKey(currentMetadata.identity),
+                  textAlign: TextAlign.center,
                   style: IpodTypography.menu.copyWith(
                     color: AppPalette.previewForeground,
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 const SizedBox(height: 5),
                 Text(
                   currentMetadata.getTrackArtistNames ??
                       context.localization.unknownArtist,
+                  maxLines: 1,
                   style: IpodTypography.metadata.copyWith(
                     color: AppPalette.previewForeground,
                     overflow: TextOverflow.ellipsis,
@@ -54,6 +57,7 @@ class NowPlayingPreviewWidget extends ConsumerWidget {
                 const SizedBox(height: 5),
                 Text(
                   currentMetadata.getAlbumName,
+                  maxLines: 1,
                   style: IpodTypography.metadata.copyWith(
                     color: AppPalette.previewForeground,
                     overflow: TextOverflow.ellipsis,

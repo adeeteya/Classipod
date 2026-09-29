@@ -5,6 +5,7 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/artwork_image.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -116,14 +117,14 @@ class SearchListTile extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    SelectedMarqueeText(
                       title,
+                      isSelected: isSelected,
                       style: IpodTypography.title.copyWith(
                         color: isSelected
                             ? context.appInverseTextColor
                             : context.appPrimaryTextColor,
                       ),
-                      maxLines: 1,
                     ),
                     const SizedBox(height: 2),
                     Text(
@@ -134,6 +135,7 @@ class SearchListTile extends ConsumerWidget {
                             : context.appSecondaryTextColor,
                       ),
                       maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),

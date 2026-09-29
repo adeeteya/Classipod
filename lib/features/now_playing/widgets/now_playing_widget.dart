@@ -45,9 +45,6 @@ class NowPlayingWidget extends ConsumerWidget {
                   nowPlayingDetails.currentMetadata?.trackName ??
                       context.localization.unknownSong,
                   style: IpodTypography.title,
-                  delayBefore: const Duration(seconds: 1),
-                  pauseBetween: const Duration(seconds: 1),
-                  velocity: const Velocity(pixelsPerSecond: Offset(30, 0)),
                 ),
                 const SizedBox(height: 5),
                 Text(

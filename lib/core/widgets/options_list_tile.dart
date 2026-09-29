@@ -2,6 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class OptionsListTile extends StatelessWidget {
@@ -40,14 +41,15 @@ class OptionsListTile extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),
             child: Center(
-              child: Text(
+              child: SelectedMarqueeText(
                 text,
+                isSelected: isSelected,
+                textAlign: TextAlign.center,
                 style: IpodTypography.menu.copyWith(
                   color: isSelected
                       ? context.appInverseTextColor
                       : context.appPrimaryTextColor,
                 ),
-                maxLines: 1,
               ),
             ),
           ),

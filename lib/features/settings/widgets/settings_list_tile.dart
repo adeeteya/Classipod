@@ -1,7 +1,7 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
-import 'package:classipod/core/widgets/marquee_text.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class SettingsListTile extends StatelessWidget {
@@ -36,18 +36,13 @@ class SettingsListTile extends StatelessWidget {
               spacing: 5,
               children: [
                 Flexible(
-                  child: MarqueeText(
+                  child: SelectedMarqueeText(
                     text,
-                    mode: TextScrollMode.bouncing,
-                    intervalSpaces: null,
-                    delayBefore: const Duration(seconds: 2),
-                    pauseBetween: const Duration(seconds: 2),
-                    pauseOnBounce: const Duration(seconds: 2),
+                    isSelected: isSelected,
                     style: IpodTypography.menu.copyWith(
                       color: isSelected
                           ? context.appInverseTextColor
                           : context.appPrimaryTextColor,
-                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ),

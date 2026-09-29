@@ -5,6 +5,7 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/artwork_image.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -63,15 +64,15 @@ class PlaylistSongListTile extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Flexible(
-                      child: Text(
+                      child: SelectedMarqueeText(
                         songMetadata.trackName ??
                             context.localization.unknownSong,
+                        isSelected: isSelected,
                         style: IpodTypography.title.copyWith(
                           color: isSelected
                               ? context.appInverseTextColor
                               : context.appPrimaryTextColor,
                         ),
-                        maxLines: 1,
                       ),
                     ),
                     const SizedBox(height: 2),
@@ -87,6 +88,7 @@ class PlaylistSongListTile extends ConsumerWidget {
                               : context.appSecondaryTextColor,
                         ),
                         maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ],

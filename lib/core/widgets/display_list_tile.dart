@@ -2,6 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class DisplayListTile extends StatelessWidget {
@@ -18,6 +19,12 @@ class DisplayListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textStyle = IpodTypography.menu.copyWith(
+      color: isSelected
+          ? context.appInverseTextColor
+          : context.appPrimaryTextColor,
+    );
+
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
@@ -43,14 +50,10 @@ class DisplayListTile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(
-                  child: Text(
+                  child: SelectedMarqueeText(
                     text,
-                    style: IpodTypography.menu.copyWith(
-                      color: isSelected
-                          ? context.appInverseTextColor
-                          : context.appPrimaryTextColor,
-                    ),
-                    maxLines: 1,
+                    isSelected: isSelected,
+                    style: textStyle,
                   ),
                 ),
                 if (isSelected)

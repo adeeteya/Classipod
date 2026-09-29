@@ -2,6 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:classipod/features/music/playlist/models/playlist_option_type.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
@@ -70,14 +71,14 @@ class PlaylistOptionListTile extends StatelessWidget {
               ),
               const SizedBox(width: 10),
               Expanded(
-                child: Text(
+                child: SelectedMarqueeText(
                   title,
+                  isSelected: isSelected,
                   style: IpodTypography.title.copyWith(
                     color: isSelected
                         ? context.appInverseTextColor
                         : context.appPrimaryTextColor,
                   ),
-                  maxLines: 1,
                 ),
               ),
               if (isSelected)

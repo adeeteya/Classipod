@@ -2,6 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class CondensedSongListTile extends StatelessWidget {
@@ -45,14 +46,14 @@ class CondensedSongListTile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(
-                  child: Text(
+                  child: SelectedMarqueeText(
                     songName,
+                    isSelected: isSelected,
                     style: IpodTypography.menu.copyWith(
                       color: isSelected
                           ? context.appInverseTextColor
                           : context.appPrimaryTextColor,
                     ),
-                    maxLines: 1,
                   ),
                 ),
                 if (isCurrentlyPlaying)

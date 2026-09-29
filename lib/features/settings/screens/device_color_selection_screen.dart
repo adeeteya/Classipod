@@ -2,6 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
@@ -124,8 +125,9 @@ class _DeviceColorOptionTile extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
+                  child: SelectedMarqueeText(
                     deviceColor.title(context),
+                    isSelected: isSelected,
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -133,7 +135,6 @@ class _DeviceColorOptionTile extends StatelessWidget {
                           ? CupertinoColors.white
                           : context.appPrimaryTextColor,
                     ),
-                    maxLines: 1,
                   ),
                 ),
                 if (isSelected)

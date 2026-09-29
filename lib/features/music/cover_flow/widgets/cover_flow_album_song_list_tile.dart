@@ -2,7 +2,7 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/duration_extensions.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
-import 'package:classipod/core/widgets/marquee_text.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class CoverFlowAlbumSongListTile extends StatelessWidget {
@@ -39,8 +39,9 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
               children: [
                 Flexible(
                   flex: 5,
-                  child: MarqueeText(
+                  child: SelectedMarqueeText(
                     songName,
+                    isSelected: isSelected,
                     style: IpodTypography.menu.copyWith(
                       color: isSelected
                           ? context.appInverseTextColor

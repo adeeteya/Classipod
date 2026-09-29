@@ -2,7 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
-import 'package:classipod/core/widgets/marquee_text.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
@@ -44,18 +44,13 @@ class ExcludeDirectoryTile extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  child: MarqueeText(
+                  child: SelectedMarqueeText(
                     excludeDirectoryModel.directoryPath,
-                    mode: TextScrollMode.bouncing,
-                    intervalSpaces: null,
-                    delayBefore: const Duration(seconds: 2),
-                    pauseBetween: const Duration(seconds: 2),
-                    pauseOnBounce: const Duration(seconds: 2),
+                    isSelected: isSelected,
                     style: IpodTypography.menu.copyWith(
                       color: isSelected
                           ? context.appInverseTextColor
                           : context.appPrimaryTextColor,
-                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ),

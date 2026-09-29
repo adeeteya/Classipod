@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Ngirit pangowahan",
-  "veryLow": "Sithik"
+  "veryLow": "Sithik",
+  "reindexLibrarySettingTitle": "Re-indeks",
+  "reindexLibrarySettingDescription": "Waca metadata lan kriya kanggo kabeh file musik maneh.",
+  "refreshLibrarySettingTitle": "Refresh Pustaka",
+  "refreshLibrarySettingDescription": "Priksa musik sing ditambahake utawa dibusak. Tansah metadata lan karya seni sing ana.",
+  "librarySettingsScreenTitle": "Setelan Pustaka",
+  "librarySettingsDescription": "Ngatur indeksasi musik lan folder sing ora kalebu.",
+  "sleepTimerTitle": "Timer turu",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Pungkasan Lagu Saiki",
+  "sleepTimerRemainingLabel": "Sisa",
+  "findingSongs": "Nemokake lagu…",
+  "songsLoaded": "Lagu dimuat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork cached: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ora bisa mbukak perpustakaan musik. Mangga coba maneh.",
+  "missingTracksTitle": "Ilang Trek",
+  "missingTracksDescription": "Deleng file sing ora bisa diwaca.",
+  "missingTracksEmpty": "Ora ana trek sing ora bisa diwaca.",
+  "missingTrackRead": "Ora bisa maca metadata file iki. Priksa lokasi file lan ijin akses, banjur reindex perpustakaan kanggo nyoba maneh.",
+  "missingTrackArtwork": "Ora bisa maca karya seni berkas iki. Audio isih bisa diputer. Reindex perpustakaan kanggo nyoba maneh.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "Nyegah Duplikat Trek",
+  "preventDuplicateTracksDescription": "Singidaken trek kanthi jeneng berkas duplikat.",
+  "hideLocalMusicTitle": "Singidaken Musik Lokal",
+  "hideLocalMusicDescription": "Tampilake mung musik server ing perpustakaan nalika Subsonic urip. File lokal tetep ana ing piranti sampeyan.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Streaming musik saka Navidrome, gonic, lan server sing kompatibel.",
+  "subsonicConfigure": "Ngatur Subsonic",
+  "subsonicUsername": "Jeneng panganggo",
+  "subsonicPassword": "Sandi",
+  "subsonicConnect": "Nyambung",
+  "subsonicRemove": "Mbusak Server",
+  "subsonicSignIn": "Mlebu dibutuhake",
+  "subsonicLoadingLibrary": "Ngunggah perpustakaan sampeyan…",
+  "subsonicContinueBackground": "Terusake ing latar mburi",
+  "subsonicClose": "Nutup",
+  "subsonicIndexing": "Ngindeks musik server…",
+  "subsonicUnavailable": "Ora kasedhiya",
+  "subsonicCredentialsError": "Priksa jeneng pangguna, sandhi, lan ijin server sampeyan.",
+  "subsonicStorageError": "Ora bisa nyimpen kredensial. Priksa manawa panyimpenan aman kasedhiya lan coba maneh.",
+  "subsonicTimeout": "Server wis entek wektune. Coba maneh.",
+  "subsonicServerError": "Ora bisa maca perpustakaan server. Katalog sadurunge disimpen. Refresh Pustaka kanggo nyoba maneh.",
+  "libraryRetry": "Coba maneh",
+  "subsonicOn": "Ing",
+  "subsonicOff": "Mati",
+  "sleepTimerMinutes": "{minutes} Menit",
+  "oledBlackDeviceColor": "OLED ireng",
+  "subsonicUrl": "URL server",
+  "subsonicInvalidUrl": "Ketik URL server HTTP utawa HTTPS tanpa pitakon, fragmen, utawa mlebu mlebu.",
+  "subsonicUnsupported": "Server iki ora ndhukung API Subsonic sing dibutuhake utawa bukti asli token.",
+  "subsonicConnectionError": "Ora bisa nyambung. Priksa URL, jaringan, lan sertifikat HTTPS. Ing Web, server kudu ngidini CORS lan aplikasi HTTPS ora bisa nyambung menyang HTTP."
 }

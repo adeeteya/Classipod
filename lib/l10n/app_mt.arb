@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ġeneru",
   "editSongLyricsLabel": "Lirika",
   "saveChangesButton": "Ħlief Bidliet",
-  "veryLow": "Baxx ħafna"
+  "veryLow": "Baxx ħafna",
+  "reindexLibrarySettingTitle": "Erġa' indiċi",
+  "reindexLibrarySettingDescription": "Aqra l-metadata u l-arti għall-fajls tal-mużika kollha mill-ġdid.",
+  "refreshLibrarySettingTitle": "Aġġorna l-Librerija",
+  "refreshLibrarySettingDescription": "Iċċekkja għal mużika miżjuda jew imħassra. Żomm il-metadejta u l-arti eżistenti.",
+  "librarySettingsScreenTitle": "Settings tal-Librerija",
+  "librarySettingsDescription": "Immaniġġja l-indiċjar tal-mużika u l-folders esklużi.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Tmiem tal-Kanzunetta Kurrenti",
+  "sleepTimerRemainingLabel": "Fadal",
+  "findingSongs": "Insib kanzunetti...",
+  "songsLoaded": "Kanzunetti mgħobbija: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Xogħol tal-arti fil-cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Mhux kapaċi tagħbija l-librerija tal-mużika. Jekk jogħġbok erġa' pprova.",
+  "missingTracksTitle": "Binarji Neqsin",
+  "missingTracksDescription": "Irrevedi fajls li ma setgħux jinqraw.",
+  "missingTracksEmpty": "Ebda binarji li ma jinqrawx.",
+  "missingTrackRead": "Ma setgħetx taqra l-metadejta ta’ dan il-fajl. Iċċekkja l-post tal-fajl u l-permessi ta’ aċċess, imbagħad erġa’ indiċi l-librerija biex terġa’ tipprova.",
+  "missingTrackArtwork": "Ma setax jaqra l-arti ta' dan il-fajl. L-awdjo xorta jista' jilgħab. Indiċi mill-ġdid il-librerija biex terġa' tipprova.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Prevenzjoni Binarji Duplikati",
+  "preventDuplicateTracksDescription": "Aħbi binarji b'ismijiet ta 'fajls duplikati.",
+  "hideLocalMusicTitle": "Aħbi Mużika Lokali",
+  "hideLocalMusicDescription": "Uri biss mużika server fil-librerija tiegħek waqt li Subsonic ikun mixgħul. Fajls lokali jibqgħu fuq it-tagħmir tiegħek.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Stream mużika minn Navidrome, gonic, u servers kompatibbli.",
+  "subsonicConfigure": "Ikkonfigura Subsonic",
+  "subsonicUsername": "Isem tal-utent",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Qabbad",
+  "subsonicRemove": "Neħħi Server",
+  "subsonicSignIn": "Sign in meħtieġa",
+  "subsonicLoadingLibrary": "Qiegħed ittella' l-librerija tiegħek...",
+  "subsonicContinueBackground": "Kompli fl-isfond",
+  "subsonicClose": "Agħlaq",
+  "subsonicIndexing": "L-indiċjar tal-mużika tas-server...",
+  "subsonicUnavailable": "Mhux disponibbli",
+  "subsonicCredentialsError": "Iċċekkja l-username, il-password, u l-permessi tas-server.",
+  "subsonicStorageError": "Ma setgħetx issalva l-kredenzjali. Iċċekkja li ħażna sigura hija disponibbli u erġa' pprova.",
+  "subsonicTimeout": "Is-server skada. Jekk jogħġbok erġa' pprova.",
+  "subsonicServerError": "Ma setax jaqra l-librerija tas-server. Il-katalgu preċedenti jinżamm. Aġġorna l-Librerija biex terġa' tipprova.",
+  "libraryRetry": "Erġa 'erġa'",
+  "subsonicOn": "Fuq",
+  "subsonicOff": "Off",
+  "sleepTimerMinutes": "{minutes} Minuti",
+  "oledBlackDeviceColor": "OLED Iswed",
+  "subsonicUrl": "URL tas-server",
+  "subsonicInvalidUrl": "Daħħal URL ta' server HTTP jew HTTPS mingħajr mistoqsija, framment jew login inkorporat.",
+  "subsonicUnsupported": "Dan is-server ma jappoġġjax l-API Subsonic jew l-awtentikazzjoni token meħtieġa.",
+  "subsonicConnectionError": "Ma tistax tikkonnettja. Iċċekkja l-URL, in-netwerk, u ċ-ċertifikat HTTPS. Fuq il-Web, is-server għandu jippermetti CORS u app HTTPS ma tistax tikkonnettja ma' HTTP."
 }

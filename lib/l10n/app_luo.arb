@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Kido",
   "editSongLyricsLabel": "Ligrik",
   "saveChangesButton": "Ket lokruok mag lokruok",
-  "veryLow": "Mane matut ahinya"
+  "veryLow": "Mane matut ahinya",
+  "reindexLibrarySettingTitle": "Indeks kendo",
+  "reindexLibrarySettingDescription": "Som metadata kod piche mag fainde duto mag thum kendo.",
+  "refreshLibrarySettingTitle": "Los kar somo kendo",
+  "refreshLibrarySettingDescription": "Rang ka be nitie thum ma omedi kata ma ogol oko. Ket metadata kod gik ma osebedo ka nitie.",
+  "librarySettingsScreenTitle": "Chenro mag od somo",
+  "librarySettingsDescription": "Rit indeks mar thum kod folda ma ok oketi.",
+  "sleepTimerTitle": "Seche mag nindo",
+  "sleepTimerEndOfCurrentSong": "Giko mar Weche ma sani",
+  "sleepTimerRemainingLabel": "Gima odong'",
+  "findingSongs": "Manyo wende...",
+  "songsLoaded": "Nyiem ma oseket: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Tich moketi: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ok nyal keto laibri mar thum. Yie mondo item kendo.",
+  "missingTracksTitle": "Trak ma olal",
+  "missingTracksDescription": "Neno fainde ma ne ok nyal somo.",
+  "missingTracksEmpty": "Onge trak ma ok nyal somo.",
+  "missingTrackRead": "Ok nyal somo metadata mar fail ni. Rang kama fail nitie kod ratiro mag donjo, kae to ilok laibri mondo item kendo.",
+  "missingTrackArtwork": "Ok nyal somo piche mag failni. Odio pod nyalo winjore. Indeks kendo laibri mondo item kendo.",
+  "playbackBuffering": "Keto...",
+  "preventDuplicateTracksTitle": "Ogeng'o trak maromre",
+  "preventDuplicateTracksDescription": "Pando trak ma nigi nyinge mag fail ma chalre.",
+  "hideLocalMusicTitle": "Pando thum ma ni e alwora",
+  "hideLocalMusicDescription": "Nyis mana thum mag sava e od somo mari ka Subsonic ochung’. Fail mag alwora bedo e simu mari.",
+  "subsonicDescription": "Inyalo winjo thum kowuok e Navidrome, gonic, kod sava ma nyalo tiyo kanyakla.",
+  "subsonicConfigure": "Los chenro mar Subsonic",
+  "subsonicUsername": "Nying jatiyo",
+  "subsonicPassword": "Wach mar kadho",
+  "subsonicConnect": "Tudruok",
+  "subsonicRemove": "Gol oko Sava",
+  "subsonicSignIn": "Owinjore donjo",
+  "subsonicLoadingLibrary": "Iketo laibri mari...",
+  "subsonicContinueBackground": "Dhi nyime e mbui",
+  "subsonicClose": "Lor",
+  "subsonicIndexing": "Keto thum e sava e indeks...",
+  "subsonicUnavailable": "Ok yudre",
+  "subsonicCredentialsError": "Rang nying’ ma itiyogo, wach mar kadho, kod ratiro mag sava.",
+  "subsonicStorageError": "Ne ok nyal kano weche mag ng’eyo. Rang ni nitie kar keno ma nigi arita kendo tem kendo.",
+  "subsonicTimeout": "Sava oserumo kinde. Yie mondo item kendo.",
+  "subsonicServerError": "Ne ok nyal somo laibri mar sava. Katalog ma ne okalo osedong’. Dwok Laibri mondo item kendo.",
+  "libraryRetry": "kendo",
+  "subsonicOn": "Kuom",
+  "subsonicOff": "Not translatable on its own",
+  "sleepTimerMinutes": "Dakika {minutes}",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "OLED Rateng'",
+  "subsonicTitle": "Subsonic Sava",
+  "subsonicUrl": "URL mar sava",
+  "subsonicInvalidUrl": "Inyalo keto URL mar sava mar HTTP kata HTTPS maonge penjo, ng’injo, kata donjo ma oketi.",
+  "subsonicUnsupported": "Sava ni ok oyie gi API ma dwarore mar Subsonic kata ng’eyo adier mar token.",
+  "subsonicConnectionError": "Ok nyal tudruok. Rang’ URL, mbui, kod oboke mar HTTPS. E mbui, sava nyaka oyiene CORS kendo program mar HTTPS ok nyal tudruok gi HTTP."
 }

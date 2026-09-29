@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gatōnek muzyczny",
   "editSongLyricsLabel": "Ciynka",
   "saveChangesButton": "Zmiyń Chszenie",
-  "veryLow": "Barzo Niski"
+  "veryLow": "Barzo Niski",
+  "reindexLibrarySettingTitle": "Reindeks",
+  "reindexLibrarySettingDescription": "Przeczytaj zaś metadane i grafiki wszyjskich plikōw muzycznych.",
+  "refreshLibrarySettingTitle": "Ôdświyż Bibliōtyka",
+  "refreshLibrarySettingDescription": "Sprawdź, eli muzyka je przidano abo usuniynto. Trzimaj istniyjōnce metadane i dzieła kōnsztu.",
+  "librarySettingsScreenTitle": "Ustawiynia bibliotyki",
+  "librarySettingsDescription": "Zarzōndzaj indeksowaniym muzyki i wykluczōnymi folderami.",
+  "sleepTimerTitle": "Czasownik spanio",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Kōniec teroźnyj śpiywki",
+  "sleepTimerRemainingLabel": "Ôstane",
+  "findingSongs": "Znojdowanie śpiywek...",
+  "songsLoaded": "Załadowane śpiywki: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Grafika kōnsztu przechowywane w pamiyńci podrzōdkowyj: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Niy może sie załadować bibliotyki muzycznyj. Proszōm sprōbować ponownie.",
+  "missingTracksTitle": "Brakujōnce szlaki",
+  "missingTracksDescription": "Przejzdrzij pliki, co niy mogły być ôdczytane.",
+  "missingTracksEmpty": "Brak niyczytelnych szlakōw.",
+  "missingTrackRead": "Niy mōg ôdczytać metadanych tego pliku. Sprawdź lokalizacyjo pliku i prawa dostympu, a potym reindeksować bibliotyka, coby sprōbować powtōrnie.",
+  "missingTrackArtwork": "Niy mōg przeczytać dzieła kōnsztu tego pliku. Audio może durch ôdtworzać. Reindeksuj bibliotyka, coby sprōbować ponownie.",
+  "playbackBuffering": "Buforowanie...",
+  "preventDuplicateTracksTitle": "Zapobiyganie duplikacyjōm szlakōw",
+  "preventDuplicateTracksDescription": "Ukryj szlaki z duplikatymi mianami plikōw.",
+  "hideLocalMusicTitle": "Ukryj lokalno muzyka",
+  "hideLocalMusicDescription": "Pokazuj ino muzyka serwera we swojij bibliotyce, kej Subsonic je włōnczōny. Lokalne pliki ôstowajōm na twojim urzōndzyniu.",
+  "subsonicTitle": "Serwer Subsonic",
+  "subsonicDescription": "Przesyłaj muzyka z Navidrome, gonic i zgodliwych serwerōw.",
+  "subsonicConfigure": "Skōnfiguruj Subsonic",
+  "subsonicUsername": "Miano ôd używocza",
+  "subsonicPassword": "Hasło",
+  "subsonicConnect": "Pōłōnczyć",
+  "subsonicRemove": "Usuń serwer",
+  "subsonicSignIn": "Wymogane zalogowanie sie",
+  "subsonicLoadingLibrary": "Załadujōm swoja bibliotyka...",
+  "subsonicContinueBackground": "Dalij na zadku",
+  "subsonicClose": "Zamknij",
+  "subsonicIndexing": "Indeksowanie muzyki serwera...",
+  "subsonicUnavailable": "Niydostympne",
+  "subsonicCredentialsError": "Sprawdź swoje miano ôd używocza, hasło i prawa serwera.",
+  "subsonicStorageError": "Niy mōg zapisać ôdpowiedzialności. Sprawdź, eli bezpieczne przechowowanie je dostympne i sprōbuj powtōrnie.",
+  "subsonicTimeout": "Serwer wykōńczōł czas. Proszōm sprōbować jeszcze raz.",
+  "subsonicServerError": "Niy mōg ôdczytać bibliotyki serwera. Piyrwyjszy katalog je zachowany. Ôdświyż Bibliōtyka, coby sprōbować ponownie.",
+  "libraryRetry": "Retrya",
+  "subsonicOn": "Na",
+  "subsonicOff": "Wyłōnczōny",
+  "sleepTimerMinutes": "{minutes} minut",
+  "oledBlackDeviceColor": "Czōrny OLED",
+  "subsonicUrl": "URL serwera",
+  "subsonicInvalidUrl": "Wkludź URL serwera HTTP abo HTTPS bez zapytanio, fragmyntu abo wbudowanego logowanio.",
+  "subsonicUnsupported": "Tyn serwer niy ôbsługuje wymoganego API Subsonic ani autoryzacyje tokenōw.",
+  "subsonicConnectionError": "Niy może sie łōnczyć. Sprawdź URL, nec i certyfikat HTTPS. W necie serwer musi przizwolić na CORS, a aplikacyjo HTTPS niy może sie łōnczyć ze HTTP."
 }

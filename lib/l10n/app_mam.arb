@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Xe´chil",
   "editSongLyricsLabel": "Lu .",
   "saveChangesButton": "Sa Chans",
-  "veryLow": "Verde"
+  "veryLow": "Verde",
+  "reindexLibrarySettingTitle": "Tz´ib´in juntl majl",
+  "reindexLibrarySettingDescription": "U´jinxa juntl majl metadatos extzen tilb´ilal kye kykyaqil archivos te b´itz.",
+  "refreshLibrarySettingTitle": "Tzaj t-xnaq´tza´n t-xnaq´tzb´il",
+  "refreshLibrarySettingDescription": "Qʼonka twitza tiʼj bʼitz ma tzʼokx qʼoʼn moqa ma tzʼel qʼiʼn. Q´onk t-xilen aye metadatos extzen aye b´inchb´en.",
+  "librarySettingsScreenTitle": "T-xilen t-xnaq´tzb´il u´jb´il",
+  "librarySettingsDescription": "Q´onk t-xnaq´tzb´il ti´j b´itz extzen kyi´j carpetas excluidas.",
+  "sleepTimerTitle": "Ajb´el te q´ij",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Tb´ajlenxi b´itz jalin",
+  "sleepTimerRemainingLabel": "N-chi kyaj ten",
+  "findingSongs": "N-jyone b´itz...",
+  "songsLoaded": "B´itz tzaj q´o´n: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "A b´inchb´en t-xilen: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Mya b´a´n tu´n t-xi q´et t-xaq u´j te b´itz. B´a´n tu´n t-xi t-ximana juntl maj.",
+  "missingTracksTitle": "Aye b´e n-el kyi´n",
+  "missingTracksDescription": "Qʼonka twitza kyiʼj archivo mintiʼ bʼant tuʼn tjaw uʼjit.",
+  "missingTracksEmpty": "Myia jun b´e mya b´a´n t-xnaq´tza´n.",
+  "missingTrackRead": "Mya b´ant t-xnaq´tza´n t-xnaq´tzb´il t-xmilal u´j lu. Qʼonka twitza tiʼj jatumel taʼ archivo ex tiʼj ambʼil tuʼn tokxa, yajxitl qʼonka juntl maj toj tajlal aju biblioteca tuʼn tok tilil tuʼna juntl maj.",
+  "missingTrackArtwork": "Mya b´ant t-xnaq´tza´n t-xim u´j lu. A audio b´a´n t-xi b´inchet. Q´onxa juntl majl aju´ biblioteca tun t-xi´ t-ximana juntl majl.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Qʼonka twitza kyiʼj pistas duplicadas",
+  "preventDuplicateTracksDescription": "Q´onk t-xmoxin qe b´itz tuk´e kab´e kyb´i archivo.",
+  "hideLocalMusicTitle": "Ewin b´itz te tnam",
+  "hideLocalMusicDescription": "Noq o´kx yek´unxa b´itz te t-xnaq´tzb´il toj t-xnaq´tzb´ila aj t-xi´ t-xnaq´tza´na Subsonic. Aye archivos locales n-chi kyaj ten toj t-dispositivo.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Q´onxa b´itz te Navidrome, gonic, extzen kye servidores compatibles.",
+  "subsonicConfigure": "B´inchama Subsonic",
+  "subsonicUsername": "B´ib´etz",
+  "subsonicPassword": "t-xilen",
+  "subsonicConnect": "Q´onk t-xilen",
+  "subsonicRemove": "Q´i´n t-xilen",
+  "subsonicSignIn": "Ilti´j tu´n tokxa",
+  "subsonicLoadingLibrary": "N-chi tzaj t-xo´na t-u´j t-xaq u´j...",
+  "subsonicContinueBackground": "Kukx bʼeta toj t-xe t-xaq",
+  "subsonicClose": "tz´apin",
+  "subsonicIndexing": "Indexación de música del servidor...",
+  "subsonicUnavailable": "myia b´i´n",
+  "subsonicCredentialsError": "Qʼonka twitza tiʼj tbʼiya, tiʼj t-ximbʼetza ex tiʼj toklen t-servidor.",
+  "subsonicStorageError": "Mya b´ant t-xq´uqin qe credenciales. Qʼonka twitza tiʼj qa at jun kʼubʼil qʼuqbʼil ex tzʼok tilil tuʼna juntl maj.",
+  "subsonicTimeout": "A servidor otaq b´aj amb´il te. B´a´n tu´n t-xi t-ximana juntl majl.",
+  "subsonicServerError": "Mya b´ant t-xnaq´tza´n aju´ t-xnaq´tzb´il te t-xnaq´tzb´en. A tnejel catálogo n-ok t-xq´uqin. Q´onk t-xnaq´tzb´il te Biblioteca tun t-xi t-ximana juntl majl.",
+  "libraryRetry": "Aju qʼol chojbʼil",
+  "subsonicOn": "Toj",
+  "subsonicOff": "Yupin",
+  "sleepTimerMinutes": "{minutes} Minutos",
+  "oledBlackDeviceColor": "OLED Negro",
+  "subsonicUrl": "URL te servidor",
+  "subsonicInvalidUrl": "tz´ib´inxa jun HTTP mo HTTPS URL te t-xilen t-xilen ex mya jun xjelb´itz, jun t-xaq, moqa jun t-xilen t-xilen.",
+  "subsonicUnsupported": "A t-xnaq´tzb´en lu mya n-ok t-xnaq´tza´n ti´j Subsonic API moqa ti´j t-xnaq´tzb´il token.",
+  "subsonicConnectionError": "Mya b´a´n tu´n t-xi tmojb´an tib´a. Qʼonka twitza tiʼj URL, tiʼj ttxolil ex tiʼj uʼj HTTPS. Toj Web, a servidor il ti´j tu´n t-xi tq´o´n amb´il te CORS extzen jun aplicación HTTPS mya b´a´n tu´n t-xi tmojb´an tib´ tuk´il HTTP."
 }

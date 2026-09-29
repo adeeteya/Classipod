@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Dyanra",
   "editSongLyricsLabel": "Liriko",
   "saveChangesButton": "I-save an mga Pagbabago",
-  "veryLow": "Hababang marhay"
+  "veryLow": "Hababang marhay",
+  "reindexLibrarySettingTitle": "I-indeks giraray",
+  "reindexLibrarySettingDescription": "Basahon giraray an metadata asin artwork para sa gabos na mga file nin musika.",
+  "refreshLibrarySettingTitle": "I-refresh an Library",
+  "refreshLibrarySettingDescription": "Hilingon kun igwa nin idinagdag o pinara na musika. Itago an mga eksistidong metadata asin artwork.",
+  "librarySettingsScreenTitle": "Mga Setting kan Libreriya",
+  "librarySettingsDescription": "Pamahalaan an pag-indeks nin musika asin mga dai kabali na mga folder.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Katapusan kan Kasalukuyang Awit",
+  "sleepTimerRemainingLabel": "Natatada",
+  "findingSongs": "Naghahanap nin mga kanta...",
+  "songsLoaded": "Mga kanta na nakakarga: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork naka-cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Dai kayang i-load an libreriya nin musika. Pakiprobaran giraray.",
+  "missingTracksTitle": "Nawawarang mga Track",
+  "missingTracksDescription": "Repasuhon an mga sagunson na dai nababasa.'",
+  "missingTracksEmpty": "Mayo nin dai mababasa na mga agihan.",
+  "missingTrackRead": "Dai nabasa an metadata kan sagunson na ini. Hilingon an lokasyon kan sagunson asin mga permiso sa pag-access, dangan i-reindex an libreriya tanganing probaran giraray.",
+  "missingTrackArtwork": "Dai nabasa an artwork kan sagunson na ini. An audio pwedeng magtugtog pa. I-reindex an libreriya tanganing probaran giraray.",
+  "playbackBuffering": "Pag-buffer...",
+  "preventDuplicateTracksTitle": "Ibitaran an mga Duplikadong Track",
+  "preventDuplicateTracksDescription": "Itago an mga track na may dobleng pangaran nin sagunson.",
+  "hideLocalMusicTitle": "Itago an Lokal na Musika",
+  "hideLocalMusicDescription": "Ipahiling sana an musika kan server sa saimong libreriya mantang nakabukas an Subsonic. An mga lokal na file nagdadanay sa saimong aparato.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Mag-stream nin musika gikan sa Navidrome, gonic, asin mga compatible server.",
+  "subsonicConfigure": "I-configure an Subsonic",
+  "subsonicUsername": "Pangaran nin Paragamit",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Magkonektar",
+  "subsonicRemove": "Haleon an Serbidor",
+  "subsonicSignIn": "Kaipuhan mag-sign in",
+  "subsonicLoadingLibrary": "Nagkakarga kan saimong libreriya...",
+  "subsonicContinueBackground": "Padagos sa likod",
+  "subsonicClose": "Isara",
+  "subsonicIndexing": "Pag-index kan musika sa server...",
+  "subsonicUnavailable": "Dai makukua",
+  "subsonicCredentialsError": "Hilingon an saimong pangaran nin paragamit, sekretong panlaog, asin mga permiso sa server.",
+  "subsonicStorageError": "Dai nai-save an mga kredensyal. Hilingon na igwa nin ligtas na pagtipig asin probaran giraray.",
+  "subsonicTimeout": "An serbidor natapos na. Pakiprobaran giraray.",
+  "subsonicServerError": "Dai nabasa an libreriya kan server. An nakaaging katalogo pinapagdanay. I-refresh an Library tanganing probaran giraray.",
+  "libraryRetry": "Pagpurbaran giraray",
+  "subsonicOn": "Sa ibabaw",
+  "subsonicOff": "Punduhon",
+  "sleepTimerMinutes": "{minutes} Minutos",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "URL kan server",
+  "subsonicInvalidUrl": "Maglaog nin HTTP o HTTPS server URL na mayong kahaputan, fragment, o naka-embed na login.",
+  "subsonicUnsupported": "An server na ini dai nagsusuportar kan kinakaipuhan na Subsonic API o token authentication.",
+  "subsonicConnectionError": "Dai makakonektar. Hilingon an URL, network, asin sertipiko kan HTTPS. Sa Web, an server dapat na magtugot sa CORS asin an sarong HTTPS app dai pwedeng magkonektar sa HTTP."
 }

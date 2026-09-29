@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Género",
   "editSongLyricsLabel": "Letra",
   "saveChangesButton": "Guardar cambios",
-  "veryLow": "Muy baja"
+  "veryLow": "Muy baja",
+  "reindexLibrarySettingTitle": "Volver a indexar",
+  "reindexLibrarySettingDescription": "Lea los metadatos y las ilustraciones de todos los archivos de música nuevamente.",
+  "refreshLibrarySettingTitle": "Actualizar biblioteca",
+  "refreshLibrarySettingDescription": "Comprueba si hay música agregada o eliminada. Mantenga los metadatos y las ilustraciones existentes.",
+  "librarySettingsScreenTitle": "Configuración de la biblioteca",
+  "librarySettingsDescription": "Administre la indexación de música y las carpetas excluidas.",
+  "sleepTimerTitle": "Temporizador de apagado",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fin de la canción actual",
+  "sleepTimerRemainingLabel": "restante",
+  "findingSongs": "Buscando canciones...",
+  "songsLoaded": "Canciones cargadas: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ilustraciones almacenadas en caché: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "No se puede cargar la biblioteca de música. Vuelva a intentarlo.",
+  "missingTracksTitle": "Pistas perdidas",
+  "missingTracksDescription": "Revisar archivos que no se pudieron leer.",
+  "missingTracksEmpty": "No hay pistas ilegibles.",
+  "missingTrackRead": "No se pudieron leer los metadatos de este archivo. Verifique la ubicación del archivo y los permisos de acceso, luego vuelva a indexar la biblioteca para volver a intentarlo.",
+  "missingTrackArtwork": "No se pudo leer la obra de arte de este archivo. Es posible que el audio aún se reproduzca. Vuelva a indexar la biblioteca para volver a intentarlo.",
+  "playbackBuffering": "Almacenamiento en búfer…",
+  "preventDuplicateTracksTitle": "Evitar pistas duplicadas",
+  "preventDuplicateTracksDescription": "Oculte pistas con nombres de archivos duplicados.",
+  "hideLocalMusicTitle": "Ocultar música local",
+  "hideLocalMusicDescription": "Muestra solo la música del servidor en tu biblioteca mientras Subsonic esté activado. Los archivos locales permanecen en su dispositivo.",
+  "subsonicTitle": "Servidor Subsonic",
+  "subsonicDescription": "Transmita música desde Navidrome, gonic y servidores compatibles.",
+  "subsonicConfigure": "Configurar Subsonic",
+  "subsonicUsername": "Nombre de usuario",
+  "subsonicPassword": "Contraseña",
+  "subsonicConnect": "Conectar",
+  "subsonicRemove": "Quitar servidor",
+  "subsonicSignIn": "Es necesario iniciar sesión",
+  "subsonicLoadingLibrary": "Cargando tu biblioteca…",
+  "subsonicContinueBackground": "Continuar en segundo plano",
+  "subsonicClose": "Cerrar",
+  "subsonicIndexing": "Servidor de indexación de música...",
+  "subsonicUnavailable": "No disponible",
+  "subsonicCredentialsError": "Verifique su nombre de usuario, contraseña y permisos del servidor.",
+  "subsonicStorageError": "No se pudieron guardar las credenciales. Verifique que haya almacenamiento seguro disponible e inténtelo nuevamente.",
+  "subsonicTimeout": "El servidor agotó el tiempo de espera. Por favor inténtalo de nuevo.",
+  "subsonicServerError": "No se pudo leer la biblioteca del servidor. Se mantiene el catálogo anterior. Actualiza la biblioteca para volver a intentarlo.",
+  "libraryRetry": "Reintentar",
+  "subsonicOn": "Activado",
+  "subsonicOff": "Desactivado",
+  "sleepTimerMinutes": "{minutes} minutos",
+  "oledBlackDeviceColor": "OLED Negro",
+  "subsonicUrl": "URL del servidor",
+  "subsonicInvalidUrl": "Ingrese una URL de servidor HTTP o HTTPS sin consulta, fragmento o inicio de sesión integrado.",
+  "subsonicUnsupported": "Este servidor no admite la API Subsonic requerida ni la autenticación de token.",
+  "subsonicConnectionError": "No se puede conectar. Verifique la URL, la red y el certificado HTTPS. En la Web, el servidor debe permitir CORS y una aplicación HTTPS no puede conectarse a HTTP."
 }

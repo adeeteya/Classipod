@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Mofuta o mong",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Boloka liphetoho",
-  "veryLow": "E tlase haholo"
+  "veryLow": "E tlase haholo",
+  "reindexLibrarySettingTitle": "Lethathamo hape",
+  "reindexLibrarySettingDescription": "Bala boitsebiso bo bong le botaki bakeng sa lifaele tsa 'mino hape.",
+  "refreshLibrarySettingTitle": "Hlahisa Laebrari",
+  "refreshLibrarySettingDescription": "Sheba 'mino o ekelitsoeng kapa o hlakotsoeng. Boloka metadata e teng le mesebetsi ea bonono.",
+  "librarySettingsScreenTitle": "Litlhophiso tsa Laebrari",
+  "librarySettingsDescription": "Laola indexing ea 'mino le lifoldara tse sa kenyelletsoeng.",
+  "sleepTimerTitle": "Nako ea ho Robala",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Qetello ea Pina ea Hona Joale",
+  "sleepTimerRemainingLabel": "E setseng",
+  "findingSongs": "E batla lipina…",
+  "songsLoaded": "Lipina tse kentsoeng: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Setšoantšo se bolokiloe: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ha e khone ho kenya laeborari ea 'mino. Ka kopo, leka hape.",
+  "missingTracksTitle": "Lipina Tse sieo",
+  "missingTracksDescription": "Hlahloba lifaele tse neng li sa baloe.",
+  "missingTracksEmpty": "Ha ho lipina tse sa baleheng.",
+  "missingTrackRead": "Ha e khone ho bala metadata ea faele ena. Lekola sebaka sa faele le litumello tsa phihlello, ebe u supa laeborari hape ho leka hape.",
+  "missingTrackArtwork": "Ha e khone ho bala mosebetsi oa bonono oa faele ena. Audio e kanna ea bapala. Hlahisa laebrari hape ho leka hape.",
+  "playbackBuffering": "Buffer...",
+  "preventDuplicateTracksTitle": "Thibela ho Duplicate Tracks",
+  "preventDuplicateTracksDescription": "Pata lipina tse nang le mabitso a tšoanang a lifaele.",
+  "hideLocalMusicTitle": "Pata 'Mino oa Lehae",
+  "hideLocalMusicDescription": "Hlahisa 'mino oa seva feela laeboraring ea hau ha Subsonic e ntse e buletsoe. Lifaele tsa lehae li lula sesebelisoa sa hau.",
+  "subsonicTitle": "Seva ea Subsonic",
+  "subsonicDescription": "Tsamaisa 'mino ho tsoa ho Navidrome, gonic, le li-server tse lumellanang.",
+  "subsonicConfigure": "Ntlafatsa lintlha tsa Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Hokela",
+  "subsonicRemove": "Tlosa Seva",
+  "subsonicSignIn": "Ho hlokahala ho kena",
+  "subsonicLoadingLibrary": "E kenya laeborari ea hau…",
+  "subsonicContinueBackground": "Tsoela pele ka morao",
+  "subsonicClose": "Koala",
+  "subsonicIndexing": "E hlahisa 'mino oa seva…",
+  "subsonicUnavailable": "Ha e fumanehe",
+  "subsonicCredentialsError": "Sheba lebitso la hau la mosebelisi, password, le litumello tsa seva.",
+  "subsonicStorageError": "E hlolehile ho boloka boitsebiso. Hlahloba hore na polokelo e sireletsehileng e teng ebe o leka hape.",
+  "subsonicTimeout": "Seva e feletsoe ke nako. Ka kopo, leka hape.",
+  "subsonicServerError": "Ha e khone ho bala laebrari ea seva. Lethathamo le fetileng le bolokiloe. Hlahisa Laebrari ho leka hape.",
+  "libraryRetry": "Leka hape",
+  "subsonicOn": "Ho",
+  "subsonicOff": "Theoha",
+  "sleepTimerMinutes": "{minutes} Metsotso",
+  "oledBlackDeviceColor": "OLED e Ntšo",
+  "subsonicUrl": "URL ea seva",
+  "subsonicInvalidUrl": "Kenya seva sa HTTP kapa HTTPS URL ntle le potso, sekhechana, kapa ho kena ho kenyelelitsoeng.",
+  "subsonicUnsupported": "Seva ena ha e tšehetse Subsonic API kapa netefatso ea matšoao.",
+  "subsonicConnectionError": "Ha e khone ho hokela. Sheba URL, marang-rang, le setifikeiti sa HTTPS. Oebong, seva se tlameha ho lumella CORS 'me sesebelisoa sa HTTPS ha se khone ho hokela HTTP."
 }

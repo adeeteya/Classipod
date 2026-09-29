@@ -134,5 +134,78 @@
   "editSongGenreLabel": "शैली",
   "editSongLyricsLabel": "बोल के बोल बा .",
   "saveChangesButton": "बदलाव के सहेजीं",
-  "veryLow": "बहुत कम बा ."
+  "veryLow": "बहुत कम बा .",
+  "reindexLibrarySettingTitle": "फिर से अनुक्रमणिका बनावल जाला",
+  "reindexLibrarySettingDescription": "सभ संगीत फाइल खातिर मेटाडाटा आ कलाकृति के दोबारा पढ़ीं।",
+  "refreshLibrarySettingTitle": "लाइब्रेरी के ताजा करे के बा",
+  "refreshLibrarySettingDescription": "संगीत जोड़ल भा हटावल जाँच करीं. मौजूदा मेटाडाटा आ कलाकृति के रखीं।",
+  "librarySettingsScreenTitle": "लाइब्रेरी के सेटिंग्स के बारे में बतावल गइल बा",
+  "librarySettingsDescription": "संगीत अनुक्रमणिका आ बहिष्कृत फोल्डर के प्रबंधन करीं।",
+  "sleepTimerTitle": "नींद के टाइमर बा",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "वर्तमान गीत के अंत बा",
+  "sleepTimerRemainingLabel": "बाचल बा",
+  "findingSongs": "गीत खोजत बानी...",
+  "songsLoaded": "गीत लोड भइल: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "कलाकृति कैश कइल गइल: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "संगीत लाइब्रेरी लोड करे में असमर्थ बा. कृपया दोबारा कोशिश करीं।",
+  "missingTracksTitle": "लापता पटरी के बा",
+  "missingTracksDescription": "जवना फाइल के पढ़ल ना जा सकल ओकर समीक्षा करीं.",
+  "missingTracksEmpty": "कवनो अपठनीय पटरी ना होखे.",
+  "missingTrackRead": "एह फाइल के मेटाडाटा ना पढ़ पावल. फाइल के लोकेशन आ एक्सेस के अनुमति के जांच करीं, फिर लाइब्रेरी के फिर से अनुक्रमित क के दोबारा कोसिस करीं।",
+  "missingTrackArtwork": "एह फाइल के कलाकृति ना पढ़ पवनी. हो सकेला कि अबहियों ऑडियो बाजत बा. दोबारा कोशिश करे खातिर लाइब्रेरी के फिर से अनुक्रमित करीं।",
+  "playbackBuffering": "बफरिंग के बा...",
+  "preventDuplicateTracksTitle": "डुप्लिकेट ट्रैक के रोके के बा",
+  "preventDuplicateTracksDescription": "डुप्लिकेट फाइल नाम वाला ट्रैक छिपाईं।",
+  "hideLocalMusicTitle": "स्थानीय संगीत के छिपावल जाला",
+  "hideLocalMusicDescription": "जब Subsonic चालू होखे तबले अपना लाइब्रेरी में खाली सर्वर संगीत देखाईं। स्थानीय फाइल आपके डिवाइस पर रहेला।",
+  "subsonicDescription": "Navidrome, gonic, आ संगत सर्वर से संगीत स्ट्रीम करीं।",
+  "subsonicConfigure": "Subsonic के कॉन्फ़िगर करीं",
+  "subsonicUsername": "प्रयोगकर्ता के नाम बा",
+  "subsonicPassword": "पासवर्ड के बा",
+  "subsonicConnect": "कनेक्ट हो गइल बा",
+  "subsonicRemove": "सर्वर के हटा दिहल जाव",
+  "subsonicSignIn": "साइन इन करे के पड़ी",
+  "subsonicLoadingLibrary": "आपन लाइब्रेरी लोड हो रहल बा...",
+  "subsonicContinueBackground": "पृष्ठभूमि में जारी रखे के बा",
+  "subsonicClose": "बंद कर दीं",
+  "subsonicIndexing": "सर्वर संगीत के अनुक्रमणिका कइल जा रहल बा...",
+  "subsonicUnavailable": "अनुपलब्ध बा",
+  "subsonicCredentialsError": "आपन यूजरनेम, पासवर्ड, आ सर्वर के अनुमति जाँच करीं.",
+  "subsonicStorageError": "क्रेडेंशियल सेव ना कइल जा सकल. जांच करीं कि सुरक्षित भंडारण उपलब्ध बा कि ना आ फेर से कोशिश करीं.",
+  "subsonicTimeout": "सर्वर के टाइम आउट हो गइल. कृपया दोबारा कोशिश करीं।",
+  "subsonicServerError": "सर्वर लाइब्रेरी के पढ़ल ना जा सकल. पिछला कैटलॉग के बरकरार राखल गइल बा. दोबारा कोशिश करे खातिर लाइब्रेरी के ताजा करीं।",
+  "libraryRetry": "दोबारा कोशिश करे के बा .",
+  "subsonicOn": "ऊपरे",
+  "subsonicOff": "बंद",
+  "sleepTimerMinutes": "{minutes} मिनट के बा",
+  "oledBlackDeviceColor": "ओएलईडी ब्लैक के बा",
+  "subsonicTitle": "Subsonic सर्वर के बा",
+  "subsonicUrl": "सर्वर के यूआरएल बा",
+  "subsonicInvalidUrl": "बिना कवनो क्वेरी, टुकड़ा, भा एम्बेडेड लॉगिन के HTTP भा HTTPS सर्वर यूआरएल दर्ज करीं.",
+  "subsonicUnsupported": "ई सर्वर जरूरी Subsonic एपीआई भा टोकन प्रमाणीकरण के सपोर्ट ना करे ला।",
+  "subsonicConnectionError": "कनेक्ट नइखे हो सकत। यूआरएल, नेटवर्क, आ एचटीटीपीएस प्रमाणपत्र के जांच करीं। वेब पर सर्वर के CORS के अनुमति देबे के पड़ी आ एचटीटीपीएस ऐप एचटीटीपी से कनेक्ट ना हो सके."
 }

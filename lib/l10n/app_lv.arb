@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Žanrs",
   "editSongLyricsLabel": "Dziesmu vārdi",
   "saveChangesButton": "Saglabāt izmaiņas",
-  "veryLow": "Ļoti zems"
+  "veryLow": "Ļoti zems",
+  "reindexLibrarySettingTitle": "Pārindeksēt",
+  "reindexLibrarySettingDescription": "Vēlreiz izlasiet visu mūzikas failu metadatus un mākslas darbus.",
+  "refreshLibrarySettingTitle": "Atsvaidzināt bibliotēku",
+  "refreshLibrarySettingDescription": "Pārbaudiet, vai nav pievienota vai dzēsta mūzika. Saglabājiet esošos metadatus un mākslas darbus.",
+  "librarySettingsScreenTitle": "Bibliotēkas iestatījumi",
+  "librarySettingsDescription": "Pārvaldiet mūzikas indeksēšanu un izslēgtās mapes.",
+  "sleepTimerTitle": "Miega taimeris",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Pašreizējās dziesmas beigas",
+  "sleepTimerRemainingLabel": "Atlikušais",
+  "findingSongs": "Notiek dziesmu meklēšana…",
+  "songsLoaded": "Ielādētās dziesmas: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Mākslas darbs kešatmiņā: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nevar ielādēt mūzikas bibliotēku. Lūdzu, mēģiniet vēlreiz.",
+  "missingTracksTitle": "Trūkst celiņu",
+  "missingTracksDescription": "Pārskatiet failus, kurus nevarēja nolasīt.",
+  "missingTracksEmpty": "Nav nelasāmu ierakstu.",
+  "missingTrackRead": "Nevarēja nolasīt šī faila metadatus. Pārbaudiet faila atrašanās vietu un piekļuves atļaujas, pēc tam atkārtoti indeksējiet bibliotēku, lai mēģinātu vēlreiz.",
+  "missingTrackArtwork": "Nevarēja nolasīt šī faila mākslas darbu. Audio joprojām var tikt atskaņots. Pārindeksējiet bibliotēku, lai mēģinātu vēlreiz.",
+  "playbackBuffering": "Notiek buferizācija…",
+  "preventDuplicateTracksTitle": "Novērst ierakstu dublikātus",
+  "preventDuplicateTracksDescription": "Slēpt ierakstus ar dublētiem failu nosaukumiem.",
+  "hideLocalMusicTitle": "Slēpt vietējo mūziku",
+  "hideLocalMusicDescription": "Rādīt tikai servera mūziku savā bibliotēkā, kamēr Subsonic ir ieslēgts. Vietējie faili paliek jūsu ierīcē.",
+  "subsonicTitle": "Subsonic serveris",
+  "subsonicDescription": "Straumējiet mūziku no Navidrome, gonic un saderīgiem serveriem.",
+  "subsonicConfigure": "Konfigurējiet Subsonic",
+  "subsonicUsername": "Lietotājvārds",
+  "subsonicPassword": "Parole",
+  "subsonicConnect": "Savienot",
+  "subsonicRemove": "Noņemt serveri",
+  "subsonicSignIn": "Nepieciešama pierakstīšanās",
+  "subsonicLoadingLibrary": "Notiek jūsu bibliotēkas ielāde…",
+  "subsonicContinueBackground": "Turpināt fonā",
+  "subsonicClose": "Aizvērt",
+  "subsonicIndexing": "Notiek servera mūzikas indeksēšana…",
+  "subsonicUnavailable": "Nav pieejams",
+  "subsonicCredentialsError": "Pārbaudiet savu lietotājvārdu, paroli un servera atļaujas.",
+  "subsonicStorageError": "Nevarēja saglabāt akreditācijas datus. Pārbaudiet, vai ir pieejama droša krātuve, un mēģiniet vēlreiz.",
+  "subsonicTimeout": "Serverim iestājās taimauts. Lūdzu, mēģiniet vēlreiz.",
+  "subsonicServerError": "Nevarēja nolasīt servera bibliotēku. Iepriekšējais katalogs ir saglabāts. Atsvaidziniet bibliotēku, lai mēģinātu vēlreiz.",
+  "libraryRetry": "Atkārtot",
+  "subsonicOn": "Uz",
+  "subsonicOff": "Ārpus",
+  "sleepTimerMinutes": "{minutes} minūtes",
+  "oledBlackDeviceColor": "OLED melns",
+  "subsonicUrl": "Servera URL",
+  "subsonicInvalidUrl": "Ievadiet HTTP vai HTTPS servera URL bez vaicājuma, fragmenta vai iegulta pieteikšanās.",
+  "subsonicUnsupported": "Šis serveris neatbalsta nepieciešamo Subsonic API vai marķiera autentifikāciju.",
+  "subsonicConnectionError": "Nevar izveidot savienojumu. Pārbaudiet URL, tīklu un HTTPS sertifikātu. Tīmeklī serverim ir jāatļauj CORS, un HTTPS lietotne nevar izveidot savienojumu ar HTTP."
 }

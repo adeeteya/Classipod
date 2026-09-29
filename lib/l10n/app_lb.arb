@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Ännerunge späicheren",
-  "veryLow": "Ganz niddereg"
+  "veryLow": "Ganz niddereg",
+  "reindexLibrarySettingTitle": "Re-indexéieren",
+  "reindexLibrarySettingDescription": "Liest Metadaten a Konschtwierker fir all Musekdateien erëm.",
+  "refreshLibrarySettingTitle": "Bibliothéik erfrëschen",
+  "refreshLibrarySettingDescription": "Check fir dobäi oder geläscht Musek. Haalt existent Metadaten a Konschtwierker.",
+  "librarySettingsScreenTitle": "Bibliothéik Astellunge",
+  "librarySettingsDescription": "Verwalte Museksindexéierung an ausgeschlossen Ordner.",
+  "sleepTimerTitle": "Schlof Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Enn vum aktuelle Song",
+  "sleepTimerRemainingLabel": "Rescht",
+  "findingSongs": "Lidder fannen ...",
+  "songsLoaded": "Lidder gelueden: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Kann d'Museksbibliothéik net lueden. Probéiert w.e.g. nach eng Kéier.",
+  "missingTracksTitle": "Vermësst Tracks",
+  "missingTracksDescription": "Iwwerpréift Dateien déi net gelies kënne ginn.",
+  "missingTracksEmpty": "Keng onliesbar Tracks.",
+  "missingTrackRead": "Konnt d'Metadate vun dësem Fichier net liesen. Kontrolléiert d'Dateiplaz an d'Zougangsrechter, indexéiert dann d'Bibliothéik fir erëm ze probéieren.",
+  "missingTrackArtwork": "Konnt d'Artwork vun dësem Fichier net liesen. Audio kann nach spillen. Reindexéiert d'Bibliothéik fir erëm ze probéieren.",
+  "playbackBuffering": "Buffer…",
+  "preventDuplicateTracksTitle": "Vermeiden Duplikat Tracks",
+  "preventDuplicateTracksDescription": "Verstoppt Tracks mat duplizéierte Dateinumm.",
+  "hideLocalMusicTitle": "Lokal Musek verstoppen",
+  "hideLocalMusicDescription": "Show nëmmen Server Musek an Ärer Bibliothéik iwwerdeems Subsonic ass. Lokal Dateie bleiwen op Ärem Apparat.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Stream Musek vun Navidrome, gonic, a kompatiblen Serveren.",
+  "subsonicConfigure": "Subsonic konfiguréieren",
+  "subsonicUsername": "Benotzernumm",
+  "subsonicPassword": "Passwuert",
+  "subsonicConnect": "Connect",
+  "subsonicRemove": "Ewechzehuelen Server",
+  "subsonicSignIn": "Umellen néideg",
+  "subsonicLoadingLibrary": "Luet Är Bibliothéik ...",
+  "subsonicContinueBackground": "Fuert weider am Hannergrond",
+  "subsonicClose": "Zoumaachen",
+  "subsonicIndexing": "Indexéiert Server Musek…",
+  "subsonicUnavailable": "Net verfügbar",
+  "subsonicCredentialsError": "Kontrolléiert Äre Benotzernumm, Passwuert a Server Permissiounen.",
+  "subsonicStorageError": "Konnt d'Umeldungsinformatiounen net späicheren. Kontrolléiert datt sécher Späichere verfügbar ass a probéiert nach eng Kéier.",
+  "subsonicTimeout": "De Server huet Timeout. Probéiert w.e.g. nach eng Kéier.",
+  "subsonicServerError": "Konnt d'Serverbibliothéik net liesen. Dee fréiere Katalog gëtt behalen. Erfrëscht d'Bibliothéik fir erëm ze probéieren.",
+  "libraryRetry": "Erëmkréien",
+  "subsonicOn": "Onemkrech sinn",
+  "subsonicOff": "Vun der ze",
+  "sleepTimerMinutes": "{minutes} Minutten",
+  "oledBlackDeviceColor": "OLED Schwaarz",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "Gitt eng HTTP oder HTTPS Server URL ouni Ufro, Fragment oder Embedded Login un.",
+  "subsonicUnsupported": "Dëse Server ënnerstëtzt net déi néideg Subsonic API oder Token Authentifikatioun.",
+  "subsonicConnectionError": "Kann net konnektéieren. Kontrolléiert d'URL, Netzwierk an HTTPS Zertifikat. Um Web muss de Server CORS erlaben an eng HTTPS App kann net mat HTTP verbannen."
 }

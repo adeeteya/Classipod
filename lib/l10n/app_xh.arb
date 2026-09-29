@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Uhlobo",
   "editSongLyricsLabel": "Amazwi",
   "saveChangesButton": "Gcina Utshintsho",
-  "veryLow": "Isezantsi kakhulu"
+  "veryLow": "Isezantsi kakhulu",
+  "reindexLibrarySettingTitle": "Isalathisi kwakhona",
+  "reindexLibrarySettingDescription": "Funda imetadata kunye nomsebenzi wobugcisa kuzo zonke iifayile zomculo kwakhona.",
+  "refreshLibrarySettingTitle": "Hlaziya ithala leencwadi",
+  "refreshLibrarySettingDescription": "Jonga umculo owongeziweyo okanye ocinyiweyo. Gcina imetadata ekhoyo kunye nomsebenzi wobugcisa.",
+  "librarySettingsScreenTitle": "Izicwangciso zethala leencwadi",
+  "librarySettingsDescription": "Lawula isalathisi somculo kunye neefolda ezingabandakanywayo.",
+  "sleepTimerTitle": "Isibali-xesha sokulala",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Isiphelo seNgoma yangoku",
+  "sleepTimerRemainingLabel": "Eseleyo",
+  "findingSongs": "Ifumana iingoma...",
+  "songsLoaded": "Iingoma ezilayishiweyo: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Umsebenzi wobugcisa uvalelwe: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ayikwazanga ukulayisha ithala leencwadi lomculo. Nceda uzame kwakhona.",
+  "missingTracksTitle": "Iingoma ezilahlekileyo",
+  "missingTracksDescription": "Phonononga iifayile ezingafundekiyo.",
+  "missingTracksEmpty": "Akukho ngoma ezingafundekiyo.",
+  "missingTrackRead": "Ayikwazanga ukufunda imetadata yale fayile. Jonga indawo yefayile kunye neemvume zofikelelo, uze uphinde ubonise ithala leencwadi ukuze uzame kwakhona.",
+  "missingTrackArtwork": "Ayikwazanga ukufunda umzobo wale fayile. Isandi sisenokudlala. Phinda ubonise ithala leencwadi ukuze uzame kwakhona.",
+  "playbackBuffering": "Ukunqanda...",
+  "preventDuplicateTracksTitle": "Thintela ukuPhindwa kwengoma",
+  "preventDuplicateTracksDescription": "Fihla iingoma ezinamagama efayile aphindwe kabini.",
+  "hideLocalMusicTitle": "Fihla Umculo wasekuhlaleni",
+  "hideLocalMusicDescription": "Bonisa kuphela umculo weseva kwithala leencwadi lakho ngelixa i-Subsonic ivuliwe. Iifayile zasekhaya zihlala kwisixhobo sakho.",
+  "subsonicTitle": "Iseva ye-Subsonic",
+  "subsonicDescription": "Ukusasaza umculo kwi-Navidrome, gonic, kunye neeseva ezihambelanayo.",
+  "subsonicConfigure": "Qwalasela i-Subsonic",
+  "subsonicUsername": "Igama lomsebenzisi",
+  "subsonicPassword": "Igama lokugqithisa",
+  "subsonicConnect": "Qhagamshela",
+  "subsonicRemove": "Susa iseva",
+  "subsonicSignIn": "Ukungena kuyafuneka",
+  "subsonicLoadingLibrary": "Ilayisha ithala lakho...",
+  "subsonicContinueBackground": "Qhubeka ngasemva",
+  "subsonicClose": "Vala",
+  "subsonicIndexing": "Isalathisa umculo weseva...",
+  "subsonicUnavailable": "Ayifumaneki",
+  "subsonicCredentialsError": "Jonga igama lakho lomsebenzisi, igama lokugqitha, kunye neemvume zeseva.",
+  "subsonicStorageError": "Ayikwazanga ukugcina iinkcukacha. Jonga ukuba kukho indawo yokugcina ekhuselekileyo kwaye uzame kwakhona.",
+  "subsonicTimeout": "Iseva iphelelwe lixesha. Nceda zama kwakhona.",
+  "subsonicServerError": "Ayikwazanga ukufunda ithala leencwadi leseva. Ikhathalogu yangaphambili igciniwe. Hlaziya ithala leencwadi ukuzama kwakhona.",
+  "libraryRetry": "Phinda uzame",
+  "subsonicOn": "Kwi",
+  "subsonicOff": "Ngaphandle",
+  "sleepTimerMinutes": "{minutes} Imizuzu",
+  "oledBlackDeviceColor": "OLED Mnyama",
+  "subsonicUrl": "Iseva ye-URL",
+  "subsonicInvalidUrl": "Ngenisa i-HTTP okanye i-URL yeseva ye-HTTPS ngaphandle kombuzo, iqhekeza, okanye ukungena okuzinzisiweyo.",
+  "subsonicUnsupported": "Lo mncedisi akayixhasi i-Subsonic API efunekayo okanye uqinisekiso lophawu.",
+  "subsonicConnectionError": "Ayinakunxibelelana. Jonga i-URL, inethiwekhi, kunye nesatifikethi se-HTTPS. KwiWebhu, umncedisi kufuneka avumele i-CORS kunye ne-app ye-HTTPS ayikwazi ukuxhuma kwi-HTTP."
 }

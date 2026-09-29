@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Reanr",
   "editSongLyricsLabel": "Sözleri",
   "saveChangesButton": "Üýtgeşmeleri belläň",
-  "veryLow": "Gaty pes"
+  "veryLow": "Gaty pes",
+  "reindexLibrarySettingTitle": "Gaýtadan görkeziji",
+  "reindexLibrarySettingDescription": "Musichli aýdym-saz faýllary üçin metadata we çeper eserleri täzeden okaň.",
+  "refreshLibrarySettingTitle": "Kitaphanany täzeläň",
+  "refreshLibrarySettingDescription": "Goşulan ýa-da öçürilen sazy barlaň. Bar bolan metadatalary we çeper eserleri saklaň.",
+  "librarySettingsScreenTitle": "Kitaphana sazlamalary",
+  "librarySettingsDescription": "Saz indeksirlemesini we aýrylan bukjalary dolandyryň.",
+  "sleepTimerTitle": "Uky taýmeri",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Häzirki aýdymyň soňy",
+  "sleepTimerRemainingLabel": "Galan",
+  "findingSongs": "Aýdym tapmak…",
+  "songsLoaded": "Edüklenen aýdymlar: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Çeper eser keş: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Saz kitaphanasyny ýükläp bolmaýar. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
+  "missingTracksTitle": "Ingitirilen ýollar",
+  "missingTracksDescription": "Okap bolmaýan faýllary gözden geçiriň.",
+  "missingTracksEmpty": "Okalmaýan sazlar ýok.",
+  "missingTrackRead": "Bu faýlyň meta-maglumatyny okap bilmedim. Faýlyň ýerleşişini we giriş rugsatlaryny barlaň, gaýtadan synanyşmak üçin kitaphanany täzeden gözden geçiriň.",
+  "missingTrackArtwork": "Bu faýlyň eserlerini okap bilmedim. Ses henizem oýnap biler. Gaýtadan synanyşmak üçin kitaphanany täzeden gözden geçiriň.",
+  "playbackBuffering": "Bufer…",
+  "preventDuplicateTracksTitle": "Dublikat ýollaryň öňüni alyň",
+  "preventDuplicateTracksDescription": "Dublikat faýl atlary bilen ýollary gizläň.",
+  "hideLocalMusicTitle": "Localerli sazy gizläň",
+  "hideLocalMusicDescription": "Subsonic açyk wagty kitaphanaňyzda diňe serwer sazyny görkeziň. Fileerli faýllar enjamyňyzda galýar.",
+  "subsonicTitle": "Subsonic serweri",
+  "subsonicDescription": "Navidrome, gonic we gabat gelýän serwerlerden aýdym-saz.",
+  "subsonicConfigure": "Subsonic sazlaň",
+  "subsonicUsername": "Ulanyjy ady",
+  "subsonicPassword": "Parol",
+  "subsonicConnect": "Birikdiriň",
+  "subsonicRemove": "Serweri aýyryň",
+  "subsonicSignIn": "Giriş zerur",
+  "subsonicLoadingLibrary": "Kitaphanaňyzy ýüklemek…",
+  "subsonicContinueBackground": "Fonda dowam ediň",
+  "subsonicClose": ".Akyn",
+  "subsonicIndexing": "Serwer sazyny indekslemek…",
+  "subsonicUnavailable": "Elýeterli däl",
+  "subsonicCredentialsError": "Ulanyjy adyňyzy, parolyňyzy we serwer rugsatlaryňyzy barlaň.",
+  "subsonicStorageError": "Şahsyýet maglumatlaryny saklap bolmady Howpsuz ammaryň bardygyny barlaň we gaýtadan synanyşyň.",
+  "subsonicTimeout": "Serwer gutardy. Gaýtadan synanyşmagyňyzy haýyş edýäris.",
+  "subsonicServerError": "Serwer kitaphanasyny okap bilmedim. Öňki katalog saklanýar. Gaýtadan synanyşmak üçin kitaphanany täzeläň.",
+  "libraryRetry": "Gaýtadan synanyşyň",
+  "subsonicOn": "Üstünde",
+  "subsonicOff": "Ondan offter",
+  "sleepTimerMinutes": "{minutes} minut",
+  "oledBlackDeviceColor": "OLED Gara",
+  "subsonicUrl": "Serwer URL",
+  "subsonicInvalidUrl": "Talap, bölek ýa-da oturdylan girişsiz HTTP ýa-da HTTPS serwer URL-i giriziň.",
+  "subsonicUnsupported": "Bu serwer zerur Subsonic API ýa-da token tassyklamasyny goldamaýar.",
+  "subsonicConnectionError": "Birikip bolmaýar. URL, tor we HTTPS şahadatnamasyny barlaň. Webde, serwer CORS-a rugsat bermeli we HTTPS programmasy HTTP-e birigip bilmeýär."
 }

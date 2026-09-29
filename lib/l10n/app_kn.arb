@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ಪ್ರಕಾರ",
   "editSongLyricsLabel": "ಸಾಹಿತ್ಯ",
   "saveChangesButton": "ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಿ",
-  "veryLow": "ತುಂಬಾ ಕಡಿಮೆ"
+  "veryLow": "ತುಂಬಾ ಕಡಿಮೆ",
+  "reindexLibrarySettingTitle": "ಮರು ಸೂಚ್ಯಂಕ",
+  "reindexLibrarySettingDescription": "ಎಲ್ಲಾ ಸಂಗೀತ ಫೈಲ್‌ಗಳಿಗಾಗಿ ಮೆಟಾಡೇಟಾ ಮತ್ತು ಕಲಾಕೃತಿಯನ್ನು ಮತ್ತೊಮ್ಮೆ ಓದಿ.",
+  "refreshLibrarySettingTitle": "ಲೈಬ್ರರಿಯನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಿ",
+  "refreshLibrarySettingDescription": "ಸೇರಿಸಲಾಗಿದೆ ಅಥವಾ ಅಳಿಸಲಾದ ಸಂಗೀತವನ್ನು ಪರಿಶೀಲಿಸಿ. ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಮೆಟಾಡೇಟಾ ಮತ್ತು ಕಲಾಕೃತಿಗಳನ್ನು ಇರಿಸಿಕೊಳ್ಳಿ.",
+  "librarySettingsScreenTitle": "ಲೈಬ್ರರಿ ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+  "librarySettingsDescription": "ಸಂಗೀತ ಇಂಡೆಕ್ಸಿಂಗ್ ಮತ್ತು ಹೊರಗಿಡಲಾದ ಫೋಲ್ಡರ್‌ಗಳನ್ನು ನಿರ್ವಹಿಸಿ.",
+  "sleepTimerTitle": "ಸ್ಲೀಪ್ ಟೈಮರ್",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "ಪ್ರಸ್ತುತ ಹಾಡಿನ ಅಂತ್ಯ",
+  "sleepTimerRemainingLabel": "ಉಳಿದಿದೆ",
+  "findingSongs": "ಹಾಡುಗಳನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ...",
+  "songsLoaded": "ಹಾಡುಗಳನ್ನು ಲೋಡ್ ಮಾಡಲಾಗಿದೆ: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "ಕಲಾಕೃತಿಯನ್ನು ಸಂಗ್ರಹಿಸಲಾಗಿದೆ: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ಸಂಗೀತ ಲೈಬ್ರರಿಯನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ. ದಯವಿಟ್ಟು ಮರುಪ್ರಯತ್ನಿಸಿ.",
+  "missingTracksTitle": "ಕಾಣೆಯಾದ ಟ್ರ್ಯಾಕ್‌ಗಳು",
+  "missingTracksDescription": "ಓದಲು ಸಾಧ್ಯವಾಗದ ಫೈಲ್‌ಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.",
+  "missingTracksEmpty": "ಓದಲಾಗದ ಟ್ರ್ಯಾಕ್‌ಗಳಿಲ್ಲ.",
+  "missingTrackRead": "ಈ ಫೈಲ್‌ನ ಮೆಟಾಡೇಟಾವನ್ನು ಓದಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಫೈಲ್ ಸ್ಥಳ ಮತ್ತು ಪ್ರವೇಶ ಅನುಮತಿಗಳನ್ನು ಪರಿಶೀಲಿಸಿ, ನಂತರ ಮರುಪ್ರಯತ್ನಿಸಲು ಲೈಬ್ರರಿಯನ್ನು ಮರುಸೂಚಿಸಿ.",
+  "missingTrackArtwork": "ಈ ಫೈಲ್‌ನ ಕಲಾಕೃತಿಯನ್ನು ಓದಲಾಗಲಿಲ್ಲ. ಆಡಿಯೋ ಇನ್ನೂ ಪ್ಲೇ ಆಗಬಹುದು. ಮರುಪ್ರಯತ್ನಿಸಲು ಲೈಬ್ರರಿಯನ್ನು ಮರುಸೂಚಿಸಿ.",
+  "playbackBuffering": "ಬಫರಿಂಗ್...",
+  "preventDuplicateTracksTitle": "ನಕಲಿ ಟ್ರ್ಯಾಕ್‌ಗಳನ್ನು ತಡೆಯಿರಿ",
+  "preventDuplicateTracksDescription": "ನಕಲಿ ಫೈಲ್ ಹೆಸರುಗಳೊಂದಿಗೆ ಟ್ರ್ಯಾಕ್‌ಗಳನ್ನು ಮರೆಮಾಡಿ.",
+  "hideLocalMusicTitle": "ಸ್ಥಳೀಯ ಸಂಗೀತವನ್ನು ಮರೆಮಾಡಿ",
+  "hideLocalMusicDescription": "Subsonic ಆನ್ ಆಗಿರುವಾಗ ನಿಮ್ಮ ಲೈಬ್ರರಿಯಲ್ಲಿ ಸರ್ವರ್ ಸಂಗೀತವನ್ನು ಮಾತ್ರ ತೋರಿಸಿ. ಸ್ಥಳೀಯ ಫೈಲ್‌ಗಳು ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ಉಳಿಯುತ್ತವೆ.",
+  "subsonicTitle": "Subsonic ಸರ್ವರ್",
+  "subsonicDescription": "Navidrome, gonic, ಮತ್ತು ಹೊಂದಾಣಿಕೆಯ ಸರ್ವರ್‌ಗಳಿಂದ ಸಂಗೀತವನ್ನು ಸ್ಟ್ರೀಮ್ ಮಾಡಿ.",
+  "subsonicConfigure": "Subsonic ಅನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ",
+  "subsonicUsername": "ಬಳಕೆದಾರ ಹೆಸರು",
+  "subsonicPassword": "ಪಾಸ್ವರ್ಡ್",
+  "subsonicConnect": "ಸಂಪರ್ಕಿಸಿ",
+  "subsonicRemove": "ಸರ್ವರ್ ತೆಗೆದುಹಾಕಿ",
+  "subsonicSignIn": "ಸೈನ್ ಇನ್ ಅಗತ್ಯವಿದೆ",
+  "subsonicLoadingLibrary": "ನಿಮ್ಮ ಲೈಬ್ರರಿಯನ್ನು ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...",
+  "subsonicContinueBackground": "ಹಿನ್ನೆಲೆಯಲ್ಲಿ ಮುಂದುವರಿಸಿ",
+  "subsonicClose": "ಮುಚ್ಚಿ",
+  "subsonicIndexing": "ಇಂಡೆಕ್ಸಿಂಗ್ ಸರ್ವರ್ ಸಂಗೀತ...",
+  "subsonicUnavailable": "ಲಭ್ಯವಿಲ್ಲ",
+  "subsonicCredentialsError": "ನಿಮ್ಮ ಬಳಕೆದಾರಹೆಸರು, ಪಾಸ್‌ವರ್ಡ್ ಮತ್ತು ಸರ್ವರ್ ಅನುಮತಿಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.",
+  "subsonicStorageError": "ರುಜುವಾತುಗಳನ್ನು ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ಸುರಕ್ಷಿತ ಸಂಗ್ರಹಣೆ ಲಭ್ಯವಿದೆಯೇ ಎಂಬುದನ್ನು ಪರಿಶೀಲಿಸಿ ಹಾಗೂ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+  "subsonicTimeout": "ಸರ್ವರ್ ಸಮಯ ಮೀರಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+  "subsonicServerError": "ಸರ್ವರ್ ಲೈಬ್ರರಿಯನ್ನು ಓದಲಾಗಲಿಲ್ಲ. ಹಿಂದಿನ ಕ್ಯಾಟಲಾಗ್ ಅನ್ನು ಉಳಿಸಿಕೊಳ್ಳಲಾಗಿದೆ. ಮರುಪ್ರಯತ್ನಿಸಲು ಲೈಬ್ರರಿಯನ್ನು ರಿಫ್ರೆಶ್ ಮಾಡಿ.",
+  "libraryRetry": "ಮರುಪರಿಶೀಲಿಸು",
+  "subsonicOn": "ಮೇಲೆ",
+  "subsonicOff": "ತಟ್ಟಿಸು",
+  "sleepTimerMinutes": "{minutes} ನಿಮಿಷಗಳು",
+  "oledBlackDeviceColor": "OLED ಕಪ್ಪು",
+  "subsonicUrl": "ಸರ್ವರ್ URL",
+  "subsonicInvalidUrl": "ಪ್ರಶ್ನೆ, ತುಣುಕು ಅಥವಾ ಎಂಬೆಡೆಡ್ ಲಾಗಿನ್ ಇಲ್ಲದೆಯೇ HTTP ಅಥವಾ HTTPS ಸರ್ವರ್ URL ಅನ್ನು ನಮೂದಿಸಿ.",
+  "subsonicUnsupported": "ಈ ಸರ್ವರ್ ಅಗತ್ಯವಿರುವ Subsonic API ಅಥವಾ ಟೋಕನ್ ದೃಢೀಕರಣವನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.",
+  "subsonicConnectionError": "ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. URL, ನೆಟ್‌ವರ್ಕ್ ಮತ್ತು HTTPS ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ. ವೆಬ್‌ನಲ್ಲಿ, ಸರ್ವರ್ CORS ಅನ್ನು ಅನುಮತಿಸಬೇಕು ಮತ್ತು HTTPS ಅಪ್ಲಿಕೇಶನ್ HTTP ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
 }

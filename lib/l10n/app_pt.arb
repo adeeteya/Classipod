@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gênero",
   "editSongLyricsLabel": "Letra da Música",
   "saveChangesButton": "Salvar alterações",
-  "veryLow": "Muito Baixa"
+  "veryLow": "Muito Baixa",
+  "reindexLibrarySettingTitle": "Reindexar",
+  "reindexLibrarySettingDescription": "Leia novamente os metadados e a arte de todos os arquivos de música.",
+  "refreshLibrarySettingTitle": "Atualizar biblioteca",
+  "refreshLibrarySettingDescription": "Verifique se há músicas adicionadas ou excluídas. Mantenha os metadados e ilustrações existentes.",
+  "librarySettingsScreenTitle": "Configurações da biblioteca",
+  "librarySettingsDescription": "Gerencie a indexação de músicas e pastas excluídas.",
+  "sleepTimerTitle": "Temporizador",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fim da música atual",
+  "sleepTimerRemainingLabel": "Restante",
+  "findingSongs": "Encontrando músicas…",
+  "songsLoaded": "Músicas carregadas: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Arte em cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Não foi possível carregar a biblioteca de música. Por favor, tente novamente.",
+  "missingTracksTitle": "Faixas ausentes",
+  "missingTracksDescription": "Revise os arquivos que não puderam ser lidos.",
+  "missingTracksEmpty": "Não há faixas ilegíveis.",
+  "missingTrackRead": "Não foi possível ler os metadados deste arquivo. Verifique a localização do arquivo e as permissões de acesso e reindexe a biblioteca para tentar novamente.",
+  "missingTrackArtwork": "Não foi possível ler a arte deste arquivo. O áudio ainda pode ser reproduzido. Reindexe a biblioteca para tentar novamente.",
+  "playbackBuffering": "Buffer…",
+  "preventDuplicateTracksTitle": "Evitar faixas duplicadas",
+  "preventDuplicateTracksDescription": "Oculte faixas com nomes de arquivo duplicados.",
+  "hideLocalMusicTitle": "Ocultar música local",
+  "hideLocalMusicDescription": "Mostre apenas músicas do servidor em sua biblioteca enquanto Subsonic estiver ativado. Os arquivos locais permanecem no seu dispositivo.",
+  "subsonicTitle": "Servidor Subsonic",
+  "subsonicDescription": "Transmita música de Navidrome, gonic e servidores compatíveis.",
+  "subsonicConfigure": "Configurar Subsonic",
+  "subsonicUsername": "Nome de usuário",
+  "subsonicPassword": "Senha",
+  "subsonicConnect": "Conectar",
+  "subsonicRemove": "Remover servidor",
+  "subsonicSignIn": "É necessário fazer login",
+  "subsonicLoadingLibrary": "Carregando sua biblioteca…",
+  "subsonicContinueBackground": "Continuar em segundo plano",
+  "subsonicClose": "Fechar",
+  "subsonicIndexing": "Indexando música do servidor…",
+  "subsonicUnavailable": "Indisponível",
+  "subsonicCredentialsError": "Verifique seu nome de usuário, senha e permissões do servidor.",
+  "subsonicStorageError": "Não foi possível salvar as credenciais. Verifique se o armazenamento seguro está disponível e tente novamente.",
+  "subsonicTimeout": "O servidor expirou. Por favor, tente novamente.",
+  "subsonicServerError": "Não foi possível ler a biblioteca do servidor. O catálogo anterior é mantido. Atualize a biblioteca para tentar novamente.",
+  "libraryRetry": "Tente Novamente",
+  "subsonicOn": "Ligado",
+  "subsonicOff": "Desligado",
+  "sleepTimerMinutes": "{minutes} minutos",
+  "oledBlackDeviceColor": "OLED preto",
+  "subsonicUrl": "URL do servidor",
+  "subsonicInvalidUrl": "Insira um URL de servidor HTTP ou HTTPS sem consulta, fragmento ou login incorporado.",
+  "subsonicUnsupported": "Este servidor não oferece suporte à API Subsonic necessária ou à autenticação de token.",
+  "subsonicConnectionError": "Não é possível conectar. Verifique o URL, a rede e o certificado HTTPS. Na Web, o servidor deve permitir CORS e um aplicativo HTTPS não pode se conectar ao HTTP."
 }

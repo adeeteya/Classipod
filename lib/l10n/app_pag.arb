@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Klase",
   "editSongLyricsLabel": "Liriko",
   "saveChangesButton": "Makatipid na Panguman .",
-  "veryLow": "Masyado"
+  "veryLow": "Masyado",
+  "reindexLibrarySettingTitle": "I-index lamet",
+  "reindexLibrarySettingDescription": "Basaen lamet so metadata tan artwork parad amin ya music file.",
+  "refreshLibrarySettingTitle": "I-refresh so Library",
+  "refreshLibrarySettingDescription": "Nengnengen no wala ray inyarum o inekal ya musika. Pansiansiaen so wala lan metadata tan artwork.",
+  "librarySettingsScreenTitle": "Saray Setting na Library",
+  "librarySettingsDescription": "I-manage so music indexing tan saray ag-inlaktip ya folder.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Sampot na Kaplesan ya Kanta",
+  "sleepTimerRemainingLabel": "Natitilak",
+  "findingSongs": "Manaanap na kansion...",
+  "songsLoaded": "Songs loaded: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork ya aka-cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ag nayarin i-load so music library. Ipangasin salien lamet.",
+  "missingTracksTitle": "Nababalang iran Track",
+  "missingTracksDescription": "Repasoen iray file ya ag nabasa.",
+  "missingTracksEmpty": "Anggapoy ag nabasa ya track.",
+  "missingTrackRead": "Ag nabasa so metadata na sayan file. I-check so kawalaan na file tan saray access permissions, insan i-reindex so library pian salien lamet.",
+  "missingTrackArtwork": "Agko nabasa so artwork na sayan file. Nayarin man-play ni so audio. I-reindex so library pian salien lamet.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Ipaliis so Duplicate Tracks",
+  "preventDuplicateTracksDescription": "Itago iray track ya walaan na duplikadon ngaran na file.",
+  "hideLocalMusicTitle": "Itago so Lokal a Musika",
+  "hideLocalMusicDescription": "Ipanengneng mo labat so server music ed library mo legan ya aka-on so Subsonic. Saray lokal a file et mansiansia ed device mo.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "I-stream so musika manlapud Navidrome, gonic, tan saray compatible ya server.",
+  "subsonicConfigure": "I-configure so Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Mankonekta",
+  "subsonicRemove": "Ekalen so Serbidor",
+  "subsonicSignIn": "Kaukolan so man-sign in",
+  "subsonicLoadingLibrary": "I-load so library mo...",
+  "subsonicContinueBackground": "Ituloy ed beneg",
+  "subsonicClose": "Saraan",
+  "subsonicIndexing": "I-index so musika na server…",
+  "subsonicUnavailable": "Anggapoy naala",
+  "subsonicCredentialsError": "Nengnengen so username, password, tan server permissions mo.",
+  "subsonicStorageError": "Agnayarin i-save iray kredensyal. Nengnengen no walay maligen ya panagsimpenan tan salien lamet.",
+  "subsonicTimeout": "Na-time out so server. Ipangasin salien lamet.",
+  "subsonicServerError": "Ag nabasa so server library. Say akaunan katalogo et nansiansia. I-refresh so Library pian salien lamet.",
+  "libraryRetry": "Pawil",
+  "subsonicOn": "Diad",
+  "subsonicOff": "Akaerep",
+  "sleepTimerMinutes": "{minutes} Minutos",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "Mangiloob na HTTP o HTTPS server URL ya anggapoy query, fragment, odino embedded login.",
+  "subsonicUnsupported": "Sayan server et ag to suportaan so nakaukolan ya Subsonic API odino token authentication.",
+  "subsonicConnectionError": "Ag makakonekta. Nengnengen so URL, network, tan HTTPS certificate. Diad Web, kaukolan ya abuloyan na server so CORS tan say HTTPS app et ag makakonekta ed HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ধাৰা",
   "editSongLyricsLabel": "গীতৰ কথা",
   "saveChangesButton": "পৰিবৰ্তনসমূহ সংৰক্ষণ কৰক",
-  "veryLow": "অতি কম"
+  "veryLow": "অতি কম",
+  "reindexLibrarySettingTitle": "পুনৰ সূচীভুক্ত কৰক",
+  "reindexLibrarySettingDescription": "সকলো সংগীত ফাইলৰ বাবে মেটাডাটা আৰু আৰ্টৱৰ্ক পুনৰ পঢ়ক।",
+  "refreshLibrarySettingTitle": "লাইব্ৰেৰী সতেজ কৰক",
+  "refreshLibrarySettingDescription": "যোগ কৰা বা মচি পেলোৱা সংগীতৰ বাবে পৰীক্ষা কৰক। বৰ্তমানৰ মেটাডাটা আৰু কলাকৰ্ম ৰাখক।",
+  "librarySettingsScreenTitle": "লাইব্ৰেৰী ছেটিংছ",
+  "librarySettingsDescription": "সংগীত সূচীকৰণ আৰু বাদ দিয়া ফোল্ডাৰসমূহ পৰিচালনা কৰক।",
+  "sleepTimerTitle": "টোপনিৰ টাইমাৰ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "বৰ্তমান গীতৰ অন্ত",
+  "sleepTimerRemainingLabel": "বাকী আছে",
+  "findingSongs": "গান খুঁজছেন...",
+  "songsLoaded": "গীত লোড কৰা হৈছে: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "কলাকৰ্ম কেচ কৰা হৈছে: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "সংগীত লাইব্ৰেৰী লোড কৰিব পৰা নাই। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।",
+  "missingTracksTitle": "অনুপস্থিত ট্ৰেক",
+  "missingTracksDescription": "পঢ়িব নোৱাৰা ফাইলসমূহ পৰ্যালোচনা কৰক।",
+  "missingTracksEmpty": "কোনো অপঠনযোগ্য ট্ৰেক নাই।",
+  "missingTrackRead": "এই ফাইলৰ মেটাডাটা পঢ়িব পৰা নগ’ল। নথিপত্ৰৰ অৱস্থান আৰু অভিগমৰ অনুমতিসমূহ পৰীক্ষা কৰক, তাৰ পিছত পুনৰায় চেষ্টা কৰিবলে লাইব্ৰেৰী পুনৰায় সূচীভুক্ত কৰক।",
+  "missingTrackArtwork": "এই ফাইলৰ কলাকৰ্ম পঢ়িব পৰা নগ’ল। অডিঅ’ এতিয়াও বাজিব পাৰে। পুনৰ চেষ্টা কৰিবলৈ লাইব্ৰেৰী পুনৰ সূচীভুক্ত কৰক।",
+  "playbackBuffering": "বাফাৰিং...",
+  "preventDuplicateTracksTitle": "ডুপ্লিকেট ট্ৰেকসমূহ প্ৰতিৰোধ কৰক",
+  "preventDuplicateTracksDescription": "নকল নথিপত্ৰ নামৰ সৈতে ট্ৰেকসমূহ লুকুৱাওক।",
+  "hideLocalMusicTitle": "স্থানীয় সংগীত লুকুৱাওক",
+  "hideLocalMusicDescription": "Subsonic অন থকাৰ সময়ত আপোনাৰ লাইব্ৰেৰীত কেৱল চাৰ্ভাৰ সংগীত দেখুৱাওক। স্থানীয় ফাইলসমূহ আপোনাৰ ডিভাইচত থাকে।",
+  "subsonicTitle": "Subsonic চাৰ্ভাৰ",
+  "subsonicDescription": "Navidrome, gonic, আৰু সুসংগত চাৰ্ভাৰসমূহৰ পৰা সংগীত প্ৰবাহিত কৰক।",
+  "subsonicConfigure": "Subsonic বিন্যাস কৰক",
+  "subsonicUsername": "ব্যৱহাৰকাৰীৰ নাম",
+  "subsonicPassword": "পাছৱৰ্ড",
+  "subsonicConnect": "সংযোগ কৰক",
+  "subsonicRemove": "চাৰ্ভাৰ আঁতৰাওক",
+  "subsonicSignIn": "চাইন ইন কৰাৰ প্ৰয়োজন",
+  "subsonicLoadingLibrary": "আপোনাৰ লাইব্ৰেৰী লোড কৰি আছে...",
+  "subsonicContinueBackground": "পটভূমিত আগবাঢ়ি যাওক",
+  "subsonicClose": "বন্ধ কৰক",
+  "subsonicIndexing": "সার্ভার সঙ্গীত সূচীভুক্ত...",
+  "subsonicUnavailable": "উপলব্ধ নহয়",
+  "subsonicCredentialsError": "আপোনাৰ ব্যৱহাৰকাৰীৰ নাম, গুপ্তশব্দ, আৰু চাৰ্ভাৰৰ অনুমতিসমূহ পৰীক্ষা কৰক।",
+  "subsonicStorageError": "প্ৰমাণপত্ৰ সংৰক্ষণ কৰিব পৰা নগ'ল। সুৰক্ষিত সংৰক্ষণ উপলব্ধ নেকি পৰীক্ষা কৰক আৰু পুনৰ চেষ্টা কৰক।",
+  "subsonicTimeout": "চাৰ্ভাৰৰ সময় শেষ হৈ গ’ল। অনুগ্ৰহ কৰি পুনৰ চেষ্টা কৰক।",
+  "subsonicServerError": "চাৰ্ভাৰ লাইব্ৰেৰী পঢ়িব পৰা নগ'ল। পূৰ্বৰ কেটেলগটো ধৰি ৰখা হৈছে। পুনৰ চেষ্টা কৰিবলৈ লাইব্ৰেৰী সতেজ কৰক।",
+  "libraryRetry": "পুনৰ চেষ্টা কৰক",
+  "subsonicOn": "ওপৰত",
+  "subsonicOff": "বন্ধ কৰা",
+  "sleepTimerMinutes": "{minutes} মিনিটবোৰ",
+  "oledBlackDeviceColor": "OLED ক'লা",
+  "subsonicUrl": "চাৰ্ভাৰৰ URL",
+  "subsonicInvalidUrl": "এটা প্ৰশ্ন, খণ্ড, বা এম্বেড কৰা প্ৰৱেশ অবিহনে এটা HTTP বা HTTPS চাৰ্ভাৰ URL সুমুৱাওক।",
+  "subsonicUnsupported": "এই চাৰ্ভাৰে প্ৰয়োজনীয় Subsonic API বা টোকেন প্ৰমাণীকৰণ সমৰ্থন নকৰে।",
+  "subsonicConnectionError": "সংযোগ কৰিব নোৱাৰি। URL, নে'টৱৰ্ক, আৰু HTTPS প্ৰমাণপত্ৰ পৰীক্ষা কৰক। ৱেবত, চাৰ্ভাৰে CORS ৰ অনুমতি দিব লাগিব আৰু এটা HTTPS এপ HTTP ৰ সৈতে সংযোগ কৰিব নোৱাৰে।"
 }

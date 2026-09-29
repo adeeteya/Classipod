@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Stil",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Sove Chanjman yo",
-  "veryLow": "Trè ba"
+  "veryLow": "Trè ba",
+  "reindexLibrarySettingTitle": "Re-endèks",
+  "reindexLibrarySettingDescription": "Li metadata ak travay atistik pou tout dosye mizik ankò.",
+  "refreshLibrarySettingTitle": "Rafrechi Bibliyotèk",
+  "refreshLibrarySettingDescription": "Tcheke pou mizik ajoute oswa efase. Kenbe metadata ak travay atistik ki egziste deja.",
+  "librarySettingsScreenTitle": "Anviwònman bibliyotèk",
+  "librarySettingsDescription": "Jere Indexing mizik ak dosye eskli.",
+  "sleepTimerTitle": "Revèy dòmi",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fen chan aktyèl la",
+  "sleepTimerRemainingLabel": "Rete",
+  "findingSongs": "Jwenn chante...",
+  "songsLoaded": "Chante yo chaje: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Travay atistik nan kachèt: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Pa kapab chaje bibliyotèk mizik la. Tanpri reesye.",
+  "missingTracksTitle": "Tracks ki manke",
+  "missingTracksDescription": "Revize dosye ki pa t 'kapab li.",
+  "missingTracksEmpty": "Pa gen tras ki pa lizib.",
+  "missingTrackRead": "Pa t 'kapab li metadata dosye sa a. Tcheke kote dosye a ak otorizasyon aksè, Lè sa a, reindex bibliyotèk la pou reesye.",
+  "missingTrackArtwork": "Pa t 'kapab li travay atistik dosye sa a. Odyo ka toujou jwe. Reindex bibliyotèk la pou reesye.",
+  "playbackBuffering": "Tanpon...",
+  "preventDuplicateTracksTitle": "Anpeche tras kopi",
+  "preventDuplicateTracksDescription": "Kache tras ak non dosye kopi.",
+  "hideLocalMusicTitle": "Kache Mizik lokal yo",
+  "hideLocalMusicDescription": "Montre sèlman mizik sèvè nan bibliyotèk ou pandan Subsonic limen. Fichye lokal yo rete sou aparèy ou an.",
+  "subsonicTitle": "Subsonic sèvè",
+  "subsonicDescription": "Difize mizik nan Navidrome, gonic, ak sèvè konpatib yo.",
+  "subsonicConfigure": "Konfigirasyon Subsonic",
+  "subsonicUsername": "Non itilizatè",
+  "subsonicPassword": "Modpas",
+  "subsonicConnect": "Konekte",
+  "subsonicRemove": "Retire sèvè",
+  "subsonicSignIn": "Siyen nan obligatwa",
+  "subsonicLoadingLibrary": "Chaje bibliyotèk ou a...",
+  "subsonicContinueBackground": "Kontinye nan background",
+  "subsonicClose": "Fèmen",
+  "subsonicIndexing": "Indexing sèvè mizik...",
+  "subsonicUnavailable": "Pa disponib",
+  "subsonicCredentialsError": "Tcheke non itilizatè ou an, modpas, ak otorizasyon sèvè ou.",
+  "subsonicStorageError": "Pa t 'kapab sove kalifikasyon yo. Tcheke ke depo an sekirite ki disponib epi eseye ankò.",
+  "subsonicTimeout": "Sèvè a tan. Tanpri eseye ankò.",
+  "subsonicServerError": "Pa t 'kapab li bibliyotèk sèvè a. Katalòg anvan an konsève. Rafrechi bibliyotèk pou re-esye.",
+  "libraryRetry": "Retabli",
+  "subsonicOn": "Sou",
+  "subsonicOff": "Etenn",
+  "sleepTimerMinutes": "{minutes} minit",
+  "oledBlackDeviceColor": "OLED Nwa",
+  "subsonicUrl": "URL sèvè",
+  "subsonicInvalidUrl": "Antre yon URL sèvè HTTP oswa HTTPS san yon rekèt, fragman oswa login entegre.",
+  "subsonicUnsupported": "Sèvè sa a pa sipòte API Subsonic oswa otantifikasyon siy ki nesesè yo.",
+  "subsonicConnectionError": "Pa ka konekte. Tcheke URL, rezo a, ak sètifika HTTPS la. Sou entènèt, sèvè a dwe pèmèt CORS epi yon aplikasyon HTTPS pa ka konekte ak HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lirieke",
   "saveChangesButton": "Stoor veranderinge",
-  "veryLow": "Baie laag"
+  "veryLow": "Baie laag",
+  "reindexLibrarySettingTitle": "Herindekseer",
+  "reindexLibrarySettingDescription": "Lees weer metadata en kunswerke vir alle musieklêers.",
+  "refreshLibrarySettingTitle": "Herlaai biblioteek",
+  "refreshLibrarySettingDescription": "Kyk vir bygevoegde of verwyderde musiek. Hou bestaande metadata en kunswerke.",
+  "librarySettingsScreenTitle": "Biblioteek instellings",
+  "librarySettingsDescription": "Bestuur musiekindeksering en uitgeslote dopgehou.",
+  "sleepTimerTitle": "Slaap Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Einde van huidige liedjie",
+  "sleepTimerRemainingLabel": "Oorblywende",
+  "findingSongs": "Soek tans liedjies …",
+  "songsLoaded": "Liedjies gelaai: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Kunswerk gekas: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Kan nie die musiekbiblioteek laai nie. Probeer asseblief weer.",
+  "missingTracksTitle": "Vermiste spore",
+  "missingTracksDescription": "Hersien lêers wat nie gelees kon word nie.",
+  "missingTracksEmpty": "Geen onleesbare snitte nie.",
+  "missingTrackRead": "Kon nie hierdie lêer se metadata lees nie. Gaan die lêerligging en toegangstoestemmings na, en herindekseer dan die biblioteek om weer te probeer.",
+  "missingTrackArtwork": "Kon nie hierdie lêer se kunswerk lees nie. Oudio kan nog steeds speel. Herindekseer die biblioteek om weer te probeer.",
+  "playbackBuffering": "Buffer tans …",
+  "preventDuplicateTracksTitle": "Voorkom duplikaatsnitte",
+  "preventDuplicateTracksDescription": "Versteek snitte met duplikaat lêername.",
+  "hideLocalMusicTitle": "Versteek plaaslike musiek",
+  "hideLocalMusicDescription": "Wys slegs bedienermusiek in jou biblioteek terwyl Subsonic aan is. Plaaslike lêers bly op jou toestel.",
+  "subsonicTitle": "Subsonic-bediener",
+  "subsonicDescription": "Stroom musiek vanaf Navidrome, gonic en versoenbare bedieners.",
+  "subsonicConfigure": "Stel Subsonic op",
+  "subsonicUsername": "Gebruikersnaam",
+  "subsonicPassword": "Wagwoord",
+  "subsonicConnect": "Koppel",
+  "subsonicRemove": "Verwyder bediener",
+  "subsonicSignIn": "Aanmelding vereis",
+  "subsonicLoadingLibrary": "Laai tans jou biblioteek …",
+  "subsonicContinueBackground": "Gaan voort in agtergrond",
+  "subsonicClose": "Maak toe",
+  "subsonicIndexing": "Indekseer tans bedienermusiek …",
+  "subsonicUnavailable": "Onbeskikbaar",
+  "subsonicCredentialsError": "Gaan jou gebruikersnaam, wagwoord en bedienertoestemmings na.",
+  "subsonicStorageError": "Kon nie eiebewyse stoor nie. Maak seker dat veilige berging beskikbaar is en probeer weer.",
+  "subsonicTimeout": "Die bediener het uitgetel. Probeer asseblief weer.",
+  "subsonicServerError": "Kon nie die bedienerbiblioteek lees nie. Die vorige katalogus word behou. Herlaai biblioteek om weer te probeer.",
+  "libraryRetry": "Herver hierdie",
+  "subsonicOn": "Op",
+  "subsonicOff": "Af",
+  "sleepTimerMinutes": "{minutes} minute",
+  "oledBlackDeviceColor": "OLED Swart",
+  "subsonicUrl": "Bediener URL",
+  "subsonicInvalidUrl": "Voer 'n HTTP- of HTTPS-bediener-URL in sonder 'n navraag, fragment of ingebedde aanmelding.",
+  "subsonicUnsupported": "Hierdie bediener ondersteun nie die vereiste Subsonic API of token-verifikasie nie.",
+  "subsonicConnectionError": "Kan nie koppel nie. Gaan die URL, netwerk en HTTPS-sertifikaat na. Op die web moet die bediener CORS toelaat en 'n HTTPS-toepassing kan nie aan HTTP koppel nie."
 }

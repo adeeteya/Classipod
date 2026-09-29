@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ekika",
   "editSongLyricsLabel": "Lyrics .",
   "saveChangesButton": "okutereka enkyukakyuka .",
-  "veryLow": "Wansi nnyo ."
+  "veryLow": "Wansi nnyo .",
+  "reindexLibrarySettingTitle": "Ddamu okussaako omuwendo (index).",
+  "reindexLibrarySettingDescription": "Soma metadata ne artwork ku fayiro zonna ez'ennyimba nate.",
+  "refreshLibrarySettingTitle": "Okuzza obuggya Etterekero ly’ebitabo",
+  "refreshLibrarySettingDescription": "Kebera oba waliwo omuziki ogwongezeddwaako oba ogusaziddwamu. Kuuma metadata eziriwo n'ebifaananyi eby'emikono.",
+  "librarySettingsScreenTitle": "Enteekateeka z’Etterekero",
+  "librarySettingsDescription": "Dukanya okuwandiika ennyimba n’ebitabo ebitaliimu.",
+  "sleepTimerTitle": "Obudde bw’okwebaka",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Enkomerero y'oluyimba oluliwo kati",
+  "sleepTimerRemainingLabel": "Ebisigadde",
+  "findingSongs": "Okuzuula ennyimba...",
+  "songsLoaded": "Ennyimba ezitikkiddwa: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ebikolwa by'ebifaananyi ebiterekeddwa: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Tesobola kutikka tterekero ly'ennyimba. Nsaba oddemu okugezaako.",
+  "missingTracksTitle": "Ebiwandiiko Ebibulamu",
+  "missingTracksDescription": "Weekenneenye fayiro ezitasobodde kusomebwa.",
+  "missingTracksEmpty": "Tewali nnyimba ezitasoma.",
+  "missingTrackRead": "Teyasobodde kusoma metadata ya fayiro eno. Kebera ekifo kya fayiro n'olukusa lw'okuyingira, olwo oddemu okuwandiika mu tterekero okuddamu okugezaako.",
+  "missingTrackArtwork": "Teyasobodde kusoma bifaananyi bya fayiro eno. Amaloboozi gayinza okuba nga gakyazannya. Ddamu okuwandiika etterekero okuddamu okugezaako.",
+  "playbackBuffering": "Okuziyiza...",
+  "preventDuplicateTracksTitle": "Ziyiza Tracks ezikoppa",
+  "preventDuplicateTracksDescription": "Kweka ennyimba ezirina amannya ga fayiro agakoppa.",
+  "hideLocalMusicTitle": "Kweka Omuziki gw'Ekitundu",
+  "hideLocalMusicDescription": "Laga omuziki gwa seva gwokka mu tterekero lyo nga Subsonic eri ku. Fayiro z’omu kitundu zisigala ku kyuma kyo.",
+  "subsonicTitle": "Subsonic Omuweereza",
+  "subsonicDescription": "Stream music okuva ku Navidrome, gonic, ne servers ezikwatagana.",
+  "subsonicConfigure": "Tegeka Subsonic",
+  "subsonicUsername": "Erinnya ly'omukozesa",
+  "subsonicPassword": "Ekigambo ky'okuyita",
+  "subsonicConnect": "Okuyunga",
+  "subsonicRemove": "Ggyawo Server",
+  "subsonicSignIn": "Okuyingira kwetaagisa",
+  "subsonicLoadingLibrary": "Okutikka etterekero lyo...",
+  "subsonicContinueBackground": "Weeyongere mu maaso",
+  "subsonicClose": "Ggalawo",
+  "subsonicIndexing": "Okuwandiika ennyimba za seva...",
+  "subsonicUnavailable": "Tekiriwo",
+  "subsonicCredentialsError": "Kebera erinnya lyo ery'omukozesa, ekigambo kyo eky'okuyingira, n'olukusa lwa seva.",
+  "subsonicStorageError": "Teyasobodde kutereka biwandiiko bya bukakafu. Kebera nti ekifo ekikuumiddwa obulungi kiriwo era oddemu ogezeeko.",
+  "subsonicTimeout": "Seva yaggwaako obudde. Nsaba oddemu ogezeeko.",
+  "subsonicServerError": "Teyasobodde kusoma tterekero lya seva. Katalogu eyasooka ekuumibwa. Refresh Library okuddamu okugezaako.",
+  "libraryRetry": "Ddamu okugezaako .",
+  "subsonicOn": "Ku",
+  "subsonicOff": "Tekuli",
+  "sleepTimerMinutes": "{minutes} Eddakiika",
+  "oledBlackDeviceColor": "OLED Omuddugavu",
+  "subsonicUrl": "URL ya seva",
+  "subsonicInvalidUrl": "Yingiza URL ya seva ya HTTP oba HTTPS nga tolina kubuuza, kitundu, oba okuyingira okuteekeddwamu.",
+  "subsonicUnsupported": "Seva eno tewagira Subsonic API oba okukakasa akabonero okwetaagisa.",
+  "subsonicConnectionError": "Tesobola kuyungibwa. Kebera URL, omukutu, ne satifikeeti ya HTTPS. Ku Web, seva erina okukkiriza CORS era app ya HTTPS tesobola kuyungibwa ku HTTP."
 }

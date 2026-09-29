@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Zhanri",
   "editSongLyricsLabel": "Teksti i këngës",
   "saveChangesButton": "Ruaj Ndryshimet",
-  "veryLow": "Shumë e ulët"
+  "veryLow": "Shumë e ulët",
+  "reindexLibrarySettingTitle": "Ri-indeksimi",
+  "reindexLibrarySettingDescription": "Lexoni përsëri të dhënat meta dhe veprat artistike për të gjithë skedarët muzikorë.",
+  "refreshLibrarySettingTitle": "Rifresko Bibliotekën",
+  "refreshLibrarySettingDescription": "Kontrolloni për muzikë të shtuar ose të fshirë. Mbani të dhënat ekzistuese dhe veprat artistike.",
+  "librarySettingsScreenTitle": "Cilësimet e Bibliotekës",
+  "librarySettingsDescription": "Menaxho indeksimin e muzikës dhe dosjet e përjashtuara.",
+  "sleepTimerTitle": "Kohëmatësi i gjumit",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fundi i kenges aktuale",
+  "sleepTimerRemainingLabel": "E mbetur",
+  "findingSongs": "Po gjen këngë…",
+  "songsLoaded": "Këngët e ngarkuara: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Vepra artistike e ruajtur në memorie: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Biblioteka e muzikës nuk mund të ngarkohet. Ju lutemi riprovoni.",
+  "missingTracksTitle": "Gjurmët që mungojnë",
+  "missingTracksDescription": "Rishiko skedarët që nuk mund të lexoheshin.",
+  "missingTracksEmpty": "Nuk ka gjurmë të palexueshme.",
+  "missingTrackRead": "Nuk mund të lexoheshin meta të dhënat e këtij skedari. Kontrolloni vendndodhjen e skedarit dhe lejet e aksesit, më pas riindeksoni bibliotekën për të riprovuar.",
+  "missingTrackArtwork": "Puna artistike e këtij skedari nuk mund të lexohej. Audioja mund të luhet ende. Riindeksoni bibliotekën për të riprovuar.",
+  "playbackBuffering": "Buferimi…",
+  "preventDuplicateTracksTitle": "Parandaloni gjurmët e dyfishta",
+  "preventDuplicateTracksDescription": "Fshih gjurmët me emra skedarësh të kopjuar.",
+  "hideLocalMusicTitle": "Fshih muzikën lokale",
+  "hideLocalMusicDescription": "Shfaq vetëm muzikën e serverit në bibliotekën tënde kur Subsonic është aktiv. Skedarët lokalë qëndrojnë në pajisjen tuaj.",
+  "subsonicTitle": "Serveri Subsonic",
+  "subsonicDescription": "Transmetoni muzikë nga Navidrome, gonic dhe serverë të përputhshëm.",
+  "subsonicConfigure": "Konfiguro Subsonic",
+  "subsonicUsername": "Emri i përdoruesit",
+  "subsonicPassword": "Fjalëkalimi",
+  "subsonicConnect": "Lidheni",
+  "subsonicRemove": "Hiq serverin",
+  "subsonicSignIn": "Kërkohet identifikimi",
+  "subsonicLoadingLibrary": "Biblioteka juaj po ngarkohet…",
+  "subsonicContinueBackground": "Vazhdo në sfond",
+  "subsonicClose": "Mbylle",
+  "subsonicIndexing": "Po indekson muzikën e serverit…",
+  "subsonicUnavailable": "I padisponueshëm",
+  "subsonicCredentialsError": "Kontrolloni emrin e përdoruesit, fjalëkalimin dhe lejet e serverit.",
+  "subsonicStorageError": "Kredencialet nuk mund të ruheshin. Kontrollo që ruajtja e sigurt është e disponueshme dhe provo sërish.",
+  "subsonicTimeout": "Koha e serverit mbaroi. Ju lutemi provoni përsëri.",
+  "subsonicServerError": "Biblioteka e serverit nuk mund të lexohej. Katalogu i mëparshëm ruhet. Rifresko bibliotekën për ta riprovuar.",
+  "libraryRetry": "Rigjykoj",
+  "subsonicOn": "Në",
+  "subsonicOff": "Larg",
+  "sleepTimerMinutes": "{minutes} Minuta",
+  "oledBlackDeviceColor": "OLED E zezë",
+  "subsonicUrl": "URL e serverit",
+  "subsonicInvalidUrl": "Futni një URL të serverit HTTP ose HTTPS pa një pyetje, fragment ose hyrje të integruar.",
+  "subsonicUnsupported": "Ky server nuk e mbështet API-në e kërkuar të Subsonic ose vërtetimin e tokenit.",
+  "subsonicConnectionError": "Nuk mund të lidhet. Kontrolloni URL-në, rrjetin dhe certifikatën HTTPS. Në ueb, serveri duhet të lejojë CORS dhe një aplikacion HTTPS nuk mund të lidhet me HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Songteksten",
   "saveChangesButton": "Wijzigingen opslaan",
-  "veryLow": "Zeer laag"
+  "veryLow": "Zeer laag",
+  "reindexLibrarySettingTitle": "Opnieuw indexeren",
+  "reindexLibrarySettingDescription": "Lees metadata en artwork voor alle muziekbestanden opnieuw.",
+  "refreshLibrarySettingTitle": "Bibliotheek vernieuwen",
+  "refreshLibrarySettingDescription": "Controleer of er muziek is toegevoegd of verwijderd. Behoud bestaande metadata en illustraties.",
+  "librarySettingsScreenTitle": "Bibliotheekinstellingen",
+  "librarySettingsDescription": "Beheer muziekindexering en uitgesloten mappen.",
+  "sleepTimerTitle": "Slaaptimer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Einde van het huidige nummer",
+  "sleepTimerRemainingLabel": "Resterend",
+  "findingSongs": "Nummers zoeken…",
+  "songsLoaded": "Geladen nummers: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Kunstwerk in cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Kan de muziekbibliotheek niet laden. Probeer het opnieuw.",
+  "missingTracksTitle": "Ontbrekende nummers",
+  "missingTracksDescription": "Controleer bestanden die niet konden worden gelezen.",
+  "missingTracksEmpty": "Geen onleesbare nummers.",
+  "missingTrackRead": "Kan de metadata van dit bestand niet lezen. Controleer de bestandslocatie en toegangsrechten en indexeer de bibliotheek vervolgens opnieuw om het opnieuw te proberen.",
+  "missingTrackArtwork": "Kan de illustraties van dit bestand niet lezen. Er kan nog steeds audio worden afgespeeld. Indexeer de bibliotheek opnieuw om het opnieuw te proberen.",
+  "playbackBuffering": "Bufferen…",
+  "preventDuplicateTracksTitle": "Voorkom dubbele nummers",
+  "preventDuplicateTracksDescription": "Verberg nummers met dubbele bestandsnamen.",
+  "hideLocalMusicTitle": "Lokale muziek verbergen",
+  "hideLocalMusicDescription": "Toon alleen servermuziek in uw bibliotheek terwijl Subsonic is ingeschakeld. Lokale bestanden blijven op uw apparaat staan.",
+  "subsonicTitle": "Subsonic-server",
+  "subsonicDescription": "Stream muziek vanaf Navidrome, gonic en compatibele servers.",
+  "subsonicConfigure": "Configureer Subsonic",
+  "subsonicUsername": "Gebruikersnaam",
+  "subsonicPassword": "Wachtwoord",
+  "subsonicConnect": "Verbinden",
+  "subsonicRemove": "Server verwijderen",
+  "subsonicSignIn": "Inloggen vereist",
+  "subsonicLoadingLibrary": "Uw bibliotheek laden...",
+  "subsonicContinueBackground": "Ga verder op de achtergrond",
+  "subsonicClose": "Sluiten",
+  "subsonicIndexing": "Servermuziek indexeren…",
+  "subsonicUnavailable": "Niet beschikbaar",
+  "subsonicCredentialsError": "Controleer uw gebruikersnaam, wachtwoord en serverrechten.",
+  "subsonicStorageError": "Kon de inloggegevens niet opslaan. Controleer of er beveiligde opslag beschikbaar is en probeer het opnieuw.",
+  "subsonicTimeout": "Er is een time-out opgetreden bij de server. Probeer het opnieuw.",
+  "subsonicServerError": "Kan de serverbibliotheek niet lezen. De vorige catalogus blijft behouden. Vernieuw de bibliotheek om het opnieuw te proberen.",
+  "libraryRetry": "Opnieuw proberen",
+  "subsonicOn": "Op",
+  "subsonicOff": "Uit",
+  "sleepTimerMinutes": "{minutes} minuten",
+  "oledBlackDeviceColor": "OLED-zwart",
+  "subsonicUrl": "Server-URL",
+  "subsonicInvalidUrl": "Voer een HTTP- of HTTPS-server-URL in zonder een query, fragment of ingebedde login.",
+  "subsonicUnsupported": "Deze server ondersteunt de vereiste Subsonic API of tokenverificatie niet.",
+  "subsonicConnectionError": "Kan geen verbinding maken. Controleer de URL, het netwerk en het HTTPS-certificaat. Op internet moet de server CORS toestaan ​​en een HTTPS-app kan geen verbinding maken met HTTP."
 }

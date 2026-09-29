@@ -134,5 +134,78 @@
   "editSongGenreLabel": "തരം",
   "editSongLyricsLabel": "വരികൾ",
   "saveChangesButton": "മാറ്റങ്ങൾ സംരക്ഷിക്കുക",
-  "veryLow": "വളരെ കുറവാണ്"
+  "veryLow": "വളരെ കുറവാണ്",
+  "reindexLibrarySettingTitle": "റീ-ഇൻഡക്സ്",
+  "reindexLibrarySettingDescription": "എല്ലാ സംഗീത ഫയലുകൾക്കുമായി മെറ്റാഡാറ്റയും ആർട്ട് വർക്കുകളും വീണ്ടും വായിക്കുക.",
+  "refreshLibrarySettingTitle": "ലൈബ്രറി പുതുക്കുക",
+  "refreshLibrarySettingDescription": "ചേർത്തതോ ഇല്ലാതാക്കിയതോ ആയ സംഗീതം പരിശോധിക്കുക. നിലവിലുള്ള മെറ്റാഡാറ്റയും കലാസൃഷ്‌ടിയും സൂക്ഷിക്കുക.",
+  "librarySettingsScreenTitle": "ലൈബ്രറി ക്രമീകരണങ്ങൾ",
+  "librarySettingsDescription": "സംഗീത സൂചികയും ഒഴിവാക്കിയ ഫോൾഡറുകളും നിയന്ത്രിക്കുക.",
+  "sleepTimerTitle": "സ്ലീപ്പ് ടൈമർ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "നിലവിലെ ഗാനത്തിൻ്റെ അവസാനം",
+  "sleepTimerRemainingLabel": "ശേഷിക്കുന്നത്",
+  "findingSongs": "പാട്ടുകൾ കണ്ടെത്തുന്നു...",
+  "songsLoaded": "ലോഡുചെയ്‌ത ഗാനങ്ങൾ: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "കലാസൃഷ്‌ടി കാഷെ ചെയ്‌തു: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "സംഗീത ലൈബ്രറി ലോഡ് ചെയ്യാനായില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
+  "missingTracksTitle": "ട്രാക്കുകൾ കാണുന്നില്ല",
+  "missingTracksDescription": "വായിക്കാൻ കഴിയാത്ത ഫയലുകൾ അവലോകനം ചെയ്യുക.",
+  "missingTracksEmpty": "വായിക്കാൻ പറ്റാത്ത ട്രാക്കുകളൊന്നുമില്ല.",
+  "missingTrackRead": "ഈ ഫയലിൻ്റെ മെറ്റാഡാറ്റ വായിക്കാൻ കഴിഞ്ഞില്ല. ഫയൽ ലൊക്കേഷനും ആക്‌സസ് അനുമതികളും പരിശോധിക്കുക, തുടർന്ന് വീണ്ടും ശ്രമിക്കാൻ ലൈബ്രറി റീഇൻഡക്‌സ് ചെയ്യുക.",
+  "missingTrackArtwork": "ഈ ഫയലിൻ്റെ കലാസൃഷ്ടി വായിക്കാൻ കഴിഞ്ഞില്ല. ഓഡിയോ തുടർന്നും പ്ലേ ചെയ്‌തേക്കാം. വീണ്ടും ശ്രമിക്കാൻ ലൈബ്രറി റീഇൻഡക്സ് ചെയ്യുക.",
+  "playbackBuffering": "ബഫർ ചെയ്യുന്നു...",
+  "preventDuplicateTracksTitle": "ഡ്യൂപ്ലിക്കേറ്റ് ട്രാക്കുകൾ തടയുക",
+  "preventDuplicateTracksDescription": "ഡ്യൂപ്ലിക്കേറ്റ് ഫയൽ പേരുകളുള്ള ട്രാക്കുകൾ മറയ്ക്കുക.",
+  "hideLocalMusicTitle": "പ്രാദേശിക സംഗീതം മറയ്ക്കുക",
+  "hideLocalMusicDescription": "Subsonic ഓണായിരിക്കുമ്പോൾ നിങ്ങളുടെ ലൈബ്രറിയിൽ സെർവർ സംഗീതം മാത്രം കാണിക്കുക. പ്രാദേശിക ഫയലുകൾ നിങ്ങളുടെ ഉപകരണത്തിൽ നിലനിൽക്കും.",
+  "subsonicTitle": "Subsonic സെർവർ",
+  "subsonicDescription": "Navidrome, gonic എന്നിവയിൽ നിന്നും അനുയോജ്യമായ സെർവറുകളിൽ നിന്നും സംഗീതം സ്ട്രീം ചെയ്യുക.",
+  "subsonicConfigure": "Subsonic കോൺഫിഗർ ചെയ്യുക",
+  "subsonicUsername": "ഉപയോക്തൃനാമം",
+  "subsonicPassword": "രഹസ്യവാക്ക്",
+  "subsonicConnect": "ബന്ധിപ്പിക്കുക",
+  "subsonicRemove": "സെർവർ നീക്കം ചെയ്യുക",
+  "subsonicSignIn": "സൈൻ ഇൻ ആവശ്യമാണ്",
+  "subsonicLoadingLibrary": "നിങ്ങളുടെ ലൈബ്രറി ലോഡ് ചെയ്യുന്നു...",
+  "subsonicContinueBackground": "പശ്ചാത്തലത്തിൽ തുടരുക",
+  "subsonicClose": "അടയ്ക്കുക",
+  "subsonicIndexing": "സെർവർ സംഗീതം സൂചികയിലാക്കുന്നു...",
+  "subsonicUnavailable": "ലഭ്യമല്ല",
+  "subsonicCredentialsError": "നിങ്ങളുടെ ഉപയോക്തൃനാമം, പാസ്‌വേഡ്, സെർവർ അനുമതികൾ എന്നിവ പരിശോധിക്കുക.",
+  "subsonicStorageError": "ക്രെഡൻഷ്യലുകൾ സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല. സുരക്ഷിതമായ സംഭരണം ലഭ്യമാണോയെന്ന് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.",
+  "subsonicTimeout": "സെർവർ സമയം കഴിഞ്ഞു. ദയവായി വീണ്ടും ശ്രമിക്കുക.",
+  "subsonicServerError": "സെർവർ ലൈബ്രറി വായിക്കാൻ കഴിഞ്ഞില്ല. മുമ്പത്തെ കാറ്റലോഗ് നിലനിർത്തി. വീണ്ടും ശ്രമിക്കാൻ ലൈബ്രറി പുതുക്കുക.",
+  "libraryRetry": "വീണ്ടുംരി ചെയ്യുക",
+  "subsonicOn": "മേല്",
+  "subsonicOff": "ദൂരെ",
+  "sleepTimerMinutes": "{minutes} മിനിറ്റ്",
+  "oledBlackDeviceColor": "OLED കറുപ്പ്",
+  "subsonicUrl": "സെർവർ URL",
+  "subsonicInvalidUrl": "ഒരു ചോദ്യം, ശകലം അല്ലെങ്കിൽ ഉൾച്ചേർത്ത ലോഗിൻ ഇല്ലാതെ ഒരു HTTP അല്ലെങ്കിൽ HTTPS സെർവർ URL നൽകുക.",
+  "subsonicUnsupported": "ഈ സെർവർ ആവശ്യമായ Subsonic API അല്ലെങ്കിൽ ടോക്കൺ പ്രാമാണീകരണത്തെ പിന്തുണയ്ക്കുന്നില്ല.",
+  "subsonicConnectionError": "ബന്ധിപ്പിക്കാൻ കഴിയില്ല. URL, നെറ്റ്‌വർക്ക്, HTTPS സർട്ടിഫിക്കറ്റ് എന്നിവ പരിശോധിക്കുക. വെബിൽ, സെർവർ CORS-നെ അനുവദിക്കണം, ഒരു HTTPS ആപ്പിന് HTTP-യിലേക്ക് കണക്റ്റുചെയ്യാൻ കഴിയില്ല."
 }

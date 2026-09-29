@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Xi clase",
   "editSongLyricsLabel": "Ca letra stini",
   "saveChangesButton": "Guluu ca cambiu ca",
-  "veryLow": "Nabé nahuiiniʼ"
+  "veryLow": "Nabé nahuiiniʼ",
+  "reindexLibrarySettingTitle": "Biʼniʼ índice",
+  "reindexLibrarySettingDescription": "Biindaʼ metadatos ne obra de arte stiʼ guiráʼ archivu de música sti biaje.",
+  "refreshLibrarySettingTitle": "Biʼniʼ actualizar biblioteca",
+  "refreshLibrarySettingDescription": "Biiyaʼ pa maʼ guca agregar o maʼ guca eliminar música. Gupa ca metadatos ne ca obra de arte ni maʼ nuu.",
+  "librarySettingsScreenTitle": "Configuración stiʼ biblioteca",
+  "librarySettingsDescription": "Biʼniʼ indexar música ne ca carpeta ni maʼ guca excluir.",
+  "sleepTimerTitle": "Temporizador de gueelaʼ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ra riluxe canción ni nuu yanna",
+  "sleepTimerRemainingLabel": "Ni biaana",
+  "findingSongs": "Guyubi canción...",
+  "songsLoaded": "Canciones cargadas: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Obra de arte ni nuu lu caché: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Qué zanda diʼ gucaaluʼ biblioteca de música. Biʼniʼ ti favor sti biaje.",
+  "missingTracksTitle": "Pista ni qué gapa",
+  "missingTracksDescription": "Biiyaʼ ca archivu ni qué ñanda ñuundaluʼ.",
+  "missingTracksEmpty": "Cadi pista ni qué zanda guiuundaʼ.",
+  "missingTrackRead": "Cadi ganda di’ gu’nda’ ca metadatos sti’ archivu ri’. Biiyaʼ paraa nuu archivu ca ne permisu ni napa binni para chuʼ raqué, despué biʼniʼ reindexar biblioteca ca para guʼnuʼ sti biaje.",
+  "missingTrackArtwork": "Cadi ganda di’ gu’nda’ ca obra de arte sti’ archivu ri’. Zándaca dede yanna cayuundaluʼ audio. Biʼniʼ reindexar biblioteca ca para guʼnuʼ ni sti biaje.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Bicueeza ca pista ni raca duplicar .",
+  "preventDuplicateTracksDescription": "Bicaachiʼ ca pista ni napa lá archivu duplicadu.",
+  "hideLocalMusicTitle": "Bicaachiʼ música local",
+  "hideLocalMusicDescription": "Biluíʼ si música stiʼ servidor ni nuu ndaaniʼ biblioteca stiluʼ laga nuu Subsonic. Ca archivu local ca riaana cani lu dispositivo stiluʼ.",
+  "subsonicTitle": "Servidor Subsonic",
+  "subsonicDescription": "Bicaadiaga música ni zeeda lu Navidrome, gonic ne lu ca servidor ni nuu raqué.",
+  "subsonicConfigure": "Biʼniʼ configurar Subsonic",
+  "subsonicUsername": "Lá binni ni riquiiñeʼ",
+  "subsonicPassword": "Contraseña",
+  "subsonicConnect": "Biʼniʼ conectar",
+  "subsonicRemove": "Biree Servidor .",
+  "subsonicSignIn": "Caquiiñeʼ chuʼluʼ raqué",
+  "subsonicLoadingLibrary": "Carga stiʼ biblioteca stiluʼ...",
+  "subsonicContinueBackground": "Biiyaʼ lu fondo .",
+  "subsonicClose": "Biseeguʼ",
+  "subsonicIndexing": "Indexación de música stiʼ servidor...",
+  "subsonicUnavailable": "Cadi nuu diʼ ni",
+  "subsonicCredentialsError": "Biiyaʼ lá binni ni riquiiñeluʼ, contraseña stiluʼ ne permisu stiʼ servidor stiluʼ.",
+  "subsonicStorageError": "Qué ñanda diʼ nucaachiʼ ca credencial stiʼ. Biiyaʼ pa nuu ti almacenamiento seguru ne biʼniʼ sti biaje.",
+  "subsonicTimeout": "Servidor que biluxe tiempu stiʼ. Biʼniʼ ti favor sti biaje.",
+  "subsonicServerError": "Qué ñanda ñuundaʼ biblioteca stiʼ servidor que. Catálogo ni guyuu ante que nga rápacabe. Biʼniʼ actualizar Biblioteca para guʼnuʼ sti biaje.",
+  "libraryRetry": "Retry",
+  "subsonicOn": "Lu",
+  "subsonicOff": "Bisui",
+  "sleepTimerMinutes": "{minutes} minutu",
+  "oledBlackDeviceColor": "OLED Negro",
+  "subsonicUrl": "URL stiʼ servidor",
+  "subsonicInvalidUrl": "Bicaa ti URL stiʼ servidor HTTP o HTTPS sin ti consulta, ti fragmentu o ti login incorporado.",
+  "subsonicUnsupported": "Servidor riʼ qué racané diʼ ni API Subsonic ni caquiiñeʼ o autenticación de token.",
+  "subsonicConnectionError": "Qué zanda diʼ guidxaaga. Biiyaʼ URL, red ne certificadu HTTPS. Lu Web, servidor ca naquiiñeʼ gudii lugar CORS ne ti aplicación HTTPS qué zanda diʼ guidxaaga HTTP."
 }

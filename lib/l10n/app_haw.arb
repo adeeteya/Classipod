@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gire la",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Mālama i nā loli",
-  "veryLow": "Haʻahaʻa loa"
+  "veryLow": "Haʻahaʻa loa",
+  "reindexLibrarySettingTitle": "Papa kuhikuhi hou",
+  "reindexLibrarySettingDescription": "E heluhelu hou i ka metadata a me ka hana noʻeau no nā faila mele a pau.",
+  "refreshLibrarySettingTitle": "Hale Waihona Puke",
+  "refreshLibrarySettingDescription": "E nānā no ke mele i hoʻohui ʻia a holoi ʻia paha. E mālama i nā metadata a me nā hana noʻeau.",
+  "librarySettingsScreenTitle": "Nā hoʻonohonoho waihona",
+  "librarySettingsDescription": "Mālama i ka helu helu mele a me nā waihona i kāpae ʻia.",
+  "sleepTimerTitle": "Manawa hiamoe",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Pau o ke Mele o keia manawa",
+  "sleepTimerRemainingLabel": "Ke koena",
+  "findingSongs": "Ke ʻimi nei i nā mele…",
+  "songsLoaded": "Nā mele i hoʻouka ʻia: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Hana ʻia nā hana noʻeau: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ʻAʻole hiki ke hoʻouka i ka waihona mele. E ʻoluʻolu e hoʻāʻo hou.",
+  "missingTracksTitle": "Nalo na Track",
+  "missingTracksDescription": "E nānā i nā faila hiki ʻole ke heluhelu ʻia.",
+  "missingTracksEmpty": "ʻAʻohe mele hiki ke heluhelu ʻia.",
+  "missingTrackRead": "ʻAʻole hiki ke heluhelu i ka metadata o kēia faila. E nānā i ka wahi waihona a me ka ʻae ʻana, a laila hōʻano hou i ka waihona e hoʻāʻo hou.",
+  "missingTrackArtwork": "ʻAʻole hiki ke heluhelu i ka hana noʻeau o kēia faila. Hiki ke hoʻokani leo. E kuhikuhi hou i ka waihona e ho'āʻo hou.",
+  "playbackBuffering": "Hoʻopaʻa ʻia…",
+  "preventDuplicateTracksTitle": "Kāohi i nā Track Duplicate",
+  "preventDuplicateTracksDescription": "Hūnā nā mele me nā inoa faila pālua.",
+  "hideLocalMusicTitle": "Hūnā Mele Kaiakū",
+  "hideLocalMusicDescription": "Hōʻike wale i nā mele kikowaena ma kāu waihona i ka wā e hoʻomaka ana ʻo Subsonic. Noho nā faila kūloko ma kāu kelepona.",
+  "subsonicTitle": "Subsonic kikowaena",
+  "subsonicDescription": "Kahea mele mai Navidrome, gonic, a me nā kikowaena kūpono.",
+  "subsonicConfigure": "Hoʻonohonoho Subsonic",
+  "subsonicUsername": "inoa hoʻohana",
+  "subsonicPassword": "ʻōlelo huna",
+  "subsonicConnect": "Hoʻohui",
+  "subsonicRemove": "Wehe i ke kikowaena",
+  "subsonicSignIn": "Pono e ʻeʻe",
+  "subsonicLoadingLibrary": "Ke hoʻouka nei i kāu waihona…",
+  "subsonicContinueBackground": "E hoʻomau ma hope",
+  "subsonicClose": "Pani",
+  "subsonicIndexing": "Ke kuhikuhi nei i nā mele kikowaena…",
+  "subsonicUnavailable": "Loaʻa ʻole",
+  "subsonicCredentialsError": "E nānā i kāu inoa inoa, ʻōlelo huna, a me nā ʻae kikowaena.",
+  "subsonicStorageError": "ʻAʻole hiki ke mālama i nā hōʻoia. E hōʻoia inā loaʻa kahi waihona palekana a hoʻāʻo hou.",
+  "subsonicTimeout": "Ua pau ke kikowaena. E ʻoluʻolu e hoʻāʻo hou.",
+  "subsonicServerError": "ʻAʻole hiki ke heluhelu i ka waihona waihona. Mālama ʻia ka papa inoa mua. Hoʻohou i ka waihona e hoʻāʻo hou.",
+  "libraryRetry": "Retry",
+  "subsonicOn": "Ma",
+  "subsonicOff": "Mai",
+  "sleepTimerMinutes": "{minutes} minuke",
+  "oledBlackDeviceColor": "ʻEleʻele OLED",
+  "subsonicUrl": "HKH server",
+  "subsonicInvalidUrl": "E hoʻokomo i kahi URL server HTTP a i ʻole HTTPS me ka ʻole o kahi nīnau, ʻāpana, a i ʻole ka hoʻokomo ʻana.",
+  "subsonicUnsupported": "ʻAʻole kākoʻo kēia kikowaena i ka Subsonic API a i ʻole ka hōʻoia hōʻailona.",
+  "subsonicConnectionError": "ʻAʻole hiki ke hoʻohui. E nānā i ka URL, pūnaewele, a me ka palapala hōʻoia HTTPS. Ma ka Pūnaewele, pono e ʻae ke kikowaena iā CORS a ʻaʻole hiki i kahi polokalamu HTTPS ke hoʻopili iā HTTP."
 }

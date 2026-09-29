@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Rumang",
   "editSongLyricsLabel": "Lirik lagu batak .",
   "saveChangesButton": "Simpan Perubahan .",
-  "veryLow": "Mansai toru"
+  "veryLow": "Mansai toru",
+  "reindexLibrarySettingTitle": "Indeks ulang",
+  "reindexLibrarySettingDescription": "Jaha ma muse metadata dohot karya seni ni sude file musik.",
+  "refreshLibrarySettingTitle": "Segarkan Perpustakaan .",
+  "refreshLibrarySettingDescription": "Parrohahon ma musik na ditambai manang na dihapus. Simpan ma metadata dohot karya seni naung adong.",
+  "librarySettingsScreenTitle": "Pengaturan Perpustakaan",
+  "librarySettingsDescription": "Mangatur indeks musik dohot map na so dimasuhi.",
+  "sleepTimerTitle": "Jam Modom",
+  "sleepTimerEndOfCurrentSong": "Ujung ni Lagu Saonari .",
+  "sleepTimerRemainingLabel": "Sisa",
+  "findingSongs": "Mancari lagu...",
+  "artworkCached": "Karya seni na disimpan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Dang boi di muat perpustakaan musik. Tolong ma dicoba hamu muse.",
+  "missingTracksTitle": "Lagu na hurang",
+  "missingTracksDescription": "Ulas ma file na so boi dijaha.",
+  "missingTracksEmpty": "Ndang adong trek na so tarjaha.",
+  "missingTrackRead": "Ndang boi dijaha metadata ni berkas on. Parrohahon ma inganan ni file dohot izin akses, dung i indeks ma muse perpustakaan i laho manguji muse.",
+  "missingTrackArtwork": "Ndang boi dijaha karya seni ni file on. Audio boi dope diputar. Indeks ma muse perpustakaan i asa boi dicoba muse.",
+  "playbackBuffering": "Penyangga...",
+  "preventDuplicateTracksTitle": "Cegah ma trek na marganda .",
+  "preventDuplicateTracksDescription": "Tabunihon ma trek na margoar berkas na marganda.",
+  "hideLocalMusicTitle": "Tabunihon Musik Lokal .",
+  "hideLocalMusicDescription": "Patuduhon ma holan musik server di perpustakaanmuna tingki dihidupkon Subsonic. Berkas lokal tinggal di perangkatmuna.",
+  "subsonicConfigure": "Atur ma Subsonic",
+  "subsonicUsername": "Goar Pangguna",
+  "subsonicPassword": "Sandi",
+  "subsonicConnect": "Mardomu",
+  "subsonicRemove": "Hapus Server .",
+  "subsonicSignIn": "Sign in required",
+  "subsonicLoadingLibrary": "Loading your library…",
+  "subsonicContinueBackground": "Continue in background",
+  "subsonicClose": "Close",
+  "subsonicIndexing": "Indexing server music…",
+  "subsonicUnavailable": "Unavailable",
+  "subsonicCredentialsError": "Parrohahon ma goar pangguna, sandi, dohot izin ni servermuna.",
+  "subsonicStorageError": "Ndang boi disimpan kredensial. Parrohahon ma molo adong penyimpanan na aman jala coba ma muse.",
+  "subsonicTimeout": "The server timed out. Tolong ma dicoba hamu muse.",
+  "subsonicServerError": "Ndang boi manjaha perpustakaan server. Katalog na salpu i dipertahanhon. Segarkan Perpustakaan laho mancoba muse.",
+  "libraryRetry": "Urutan",
+  "subsonicOn": "Di",
+  "subsonicOff": "Maradian",
+  "sleepTimerMinutes": "{minutes} menit",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "OLED Hitam",
+  "songsLoaded": "Lagu na dimuat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "subsonicTitle": "Subsonic Pelayan",
+  "subsonicDescription": "Aliran musik sian . Navidrome, gonic, dohot angka pelayan na hombar.",
+  "subsonicUrl": "URL pelayan",
+  "subsonicInvalidUrl": "Masukkon ma URL ni server HTTP manang HTTPS na so pola adong pangidoan, potongan, manang login na tertanam.",
+  "subsonicUnsupported": "Server on ndang mendukung API Subsonic manang otentikasi token na dihaporluhon.",
+  "subsonicConnectionError": "Dang boi mardomu. Parrohahon ma URL, jaringan, dohot sertifikat HTTPS. Di Web, ingkon diloas server do CORS jala aplikasi HTTPS ndang boi marsambung tu HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ประเภท",
   "editSongLyricsLabel": "เนื้อเพลง",
   "saveChangesButton": "บันทึกการเปลี่ยนแปลง",
-  "veryLow": "ต่ำมาก"
+  "veryLow": "ต่ำมาก",
+  "reindexLibrarySettingTitle": "จัดทำดัชนีใหม่",
+  "reindexLibrarySettingDescription": "อ่านข้อมูลเมตาและอาร์ตเวิร์คสำหรับไฟล์เพลงทั้งหมดอีกครั้ง",
+  "refreshLibrarySettingTitle": "รีเฟรชไลบรารี",
+  "refreshLibrarySettingDescription": "ตรวจสอบเพลงที่เพิ่มหรือลบ เก็บข้อมูลเมตาและอาร์ตเวิร์คที่มีอยู่",
+  "librarySettingsScreenTitle": "การตั้งค่าห้องสมุด",
+  "librarySettingsDescription": "จัดการการจัดทำดัชนีเพลงและโฟลเดอร์ที่แยกออก",
+  "sleepTimerTitle": "ตั้งเวลาปิดเครื่อง",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "จบเพลงปัจจุบัน",
+  "sleepTimerRemainingLabel": "ที่เหลืออยู่",
+  "findingSongs": "กำลังค้นหาเพลง...",
+  "songsLoaded": "เพลงที่โหลด: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "อาร์ตเวิร์กที่เก็บไว้: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ไม่สามารถโหลดคลังเพลงได้ กรุณาลองอีกครั้ง",
+  "missingTracksTitle": "เพลงที่หายไป",
+  "missingTracksDescription": "ตรวจสอบไฟล์ที่ไม่สามารถอ่านได้",
+  "missingTracksEmpty": "ไม่มีแทร็กที่อ่านไม่ได้",
+  "missingTrackRead": "ไม่สามารถอ่านข้อมูลเมตาของไฟล์นี้ได้ ตรวจสอบตำแหน่งไฟล์และสิทธิ์การเข้าถึง จากนั้นจัดทำดัชนีไลบรารีใหม่เพื่อลองอีกครั้ง",
+  "missingTrackArtwork": "ไม่สามารถอ่านอาร์ตเวิร์กของไฟล์นี้ได้ เสียงอาจยังคงเล่นอยู่ สร้างดัชนีไลบรารีใหม่เพื่อลองอีกครั้ง",
+  "playbackBuffering": "กำลังบัฟเฟอร์...",
+  "preventDuplicateTracksTitle": "ป้องกันแทร็กที่ซ้ำกัน",
+  "preventDuplicateTracksDescription": "ซ่อนแทร็กที่มีชื่อไฟล์ซ้ำกัน",
+  "hideLocalMusicTitle": "ซ่อนเพลงท้องถิ่น",
+  "hideLocalMusicDescription": "แสดงเฉพาะเพลงเซิร์ฟเวอร์ในไลบรารีของคุณขณะที่ Subsonic เปิดอยู่ ไฟล์ในเครื่องจะยังคงอยู่ในอุปกรณ์ของคุณ",
+  "subsonicTitle": "เซิร์ฟเวอร์ Subsonic",
+  "subsonicDescription": "สตรีมเพลงจาก Navidrome, gonic และเซิร์ฟเวอร์ที่รองรับ",
+  "subsonicConfigure": "กำหนดค่า Subsonic",
+  "subsonicUsername": "ชื่อผู้ใช้",
+  "subsonicPassword": "รหัสผ่าน",
+  "subsonicConnect": "เชื่อมต่อ",
+  "subsonicRemove": "ลบเซิร์ฟเวอร์",
+  "subsonicSignIn": "ต้องลงชื่อเข้าใช้",
+  "subsonicLoadingLibrary": "กำลังโหลดห้องสมุดของคุณ...",
+  "subsonicContinueBackground": "ดำเนินการต่อในเบื้องหลัง",
+  "subsonicClose": "ปิด",
+  "subsonicIndexing": "กำลังจัดทำดัชนีเพลงเซิร์ฟเวอร์...",
+  "subsonicUnavailable": "ไม่พร้อมใช้งาน",
+  "subsonicCredentialsError": "ตรวจสอบชื่อผู้ใช้ รหัสผ่าน และการอนุญาตเซิร์ฟเวอร์ของคุณ",
+  "subsonicStorageError": "ไม่สามารถบันทึกข้อมูลประจำตัวได้ ตรวจสอบว่ามีที่เก็บข้อมูลที่ปลอดภัยแล้วลองอีกครั้ง",
+  "subsonicTimeout": "เซิร์ฟเวอร์หมดเวลา โปรดลองอีกครั้ง",
+  "subsonicServerError": "ไม่สามารถอ่านไลบรารีเซิร์ฟเวอร์ได้ แค็ตตาล็อกก่อนหน้านี้ยังคงอยู่ รีเฟรชไลบรารีเพื่อลองอีกครั้ง",
+  "libraryRetry": "ลองอีกครั้ง",
+  "subsonicOn": "บน",
+  "subsonicOff": "ปิด",
+  "sleepTimerMinutes": "{minutes} นาที",
+  "oledBlackDeviceColor": "โอแอลอีดี สีดำ",
+  "subsonicUrl": "URL ของเซิร์ฟเวอร์",
+  "subsonicInvalidUrl": "ป้อน URL เซิร์ฟเวอร์ HTTP หรือ HTTPS โดยไม่มีคำค้นหา ส่วนย่อย หรือการเข้าสู่ระบบแบบฝัง",
+  "subsonicUnsupported": "เซิร์ฟเวอร์นี้ไม่รองรับ Subsonic API หรือการตรวจสอบโทเค็นที่จำเป็น",
+  "subsonicConnectionError": "ไม่สามารถเชื่อมต่อได้ ตรวจสอบ URL, เครือข่าย และใบรับรอง HTTPS บนเว็บ เซิร์ฟเวอร์ต้องอนุญาต CORS และแอป HTTPS ไม่สามารถเชื่อมต่อกับ HTTP"
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Dalool",
   "editSongLyricsLabel": "Heesaha",
   "saveChangesButton": "Badbaadiya isbedelada",
-  "veryLow": "Aad u hooseeya"
+  "veryLow": "Aad u hooseeya",
+  "reindexLibrarySettingTitle": "Dib-u-index",
+  "reindexLibrarySettingDescription": "Akhri xogta badan iyo farshaxanimada dhammaan faylalka muusigga mar labaad.",
+  "refreshLibrarySettingTitle": "Dib u cusboonaysii maktabadda",
+  "refreshLibrarySettingDescription": "Hubi muusigga lagu daray ama la tirtiray. Hayso xogta badan ee jirta iyo farshaxanka.",
+  "librarySettingsScreenTitle": "Dejinta Maktabadda",
+  "librarySettingsDescription": "Maamul tusmaynta muusiga iyo galka laga saaray",
+  "sleepTimerTitle": "Saacadaha hurdada",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Dhamaadka Heesta Hadda",
+  "sleepTimerRemainingLabel": "Haraaga",
+  "findingSongs": "Helitaanka heesaha…",
+  "songsLoaded": "Heesaha raray: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Farshaxanka kaydsan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Aan awoodin in la raro maktabadda muusiga Fadlan isku day.",
+  "missingTracksTitle": "Wadooyinka maqan",
+  "missingTracksDescription": "Dib u eeg faylasha aan la akhrin karin",
+  "missingTracksEmpty": "Ma jiro raad aan la akhriyin",
+  "missingTrackRead": "Ma akhrin karo xogta badan ee faylkan. Hubi goobta faylka iyo ogolaanshaha gelitaanka, ka dibna dib u habayn maktabadda si aad isugu daydo.",
+  "missingTrackArtwork": "Ma akhrin karin farshaxanimada faylkan. Maqalku wali wuu ciyaari karaa Dib u tus maktabadda si aad dib isugu daydo.",
+  "playbackBuffering": "Dejinta…",
+  "preventDuplicateTracksTitle": "Kahortagga Raad-raacyada Nuqulka ah",
+  "preventDuplicateTracksDescription": "Qari raadadka leh magacyo faylal nuqul ah.",
+  "hideLocalMusicTitle": "Qari Muusiga Maxaliga",
+  "hideLocalMusicDescription": "Tus kaliya muusiga serverka maktabadaada inta Subsonic shid Faylasha maxalliga ahi waxay ku sii jiraan qalabkaaga.",
+  "subsonicTitle": "Adeegaha Subsonic",
+  "subsonicDescription": "Ka soo daadi muusik Navidrome, gonic, iyo adeegayaasha ku habboon",
+  "subsonicConfigure": "Habee Subsonic",
+  "subsonicUsername": "Magaca isticmaale",
+  "subsonicPassword": "Furaha",
+  "subsonicConnect": "Ku xidhnow",
+  "subsonicRemove": "Ka saar Server-ka",
+  "subsonicSignIn": "Saxeex ayaa loo baahan yahay",
+  "subsonicLoadingLibrary": "Soo raraysa maktabadaada…",
+  "subsonicContinueBackground": "Ku sii wad gadaal",
+  "subsonicClose": "Xir",
+  "subsonicIndexing": "Tilmaanta muusiga serverka…",
+  "subsonicUnavailable": "Lama heli karo",
+  "subsonicCredentialsError": "Hubi magacaaga isticmaale, eraygaaga sirta ah, iyo ogolaanshaha adeegaha",
+  "subsonicStorageError": "Waa la kaydin kari waayay aqoonsiga Hubi in kaydinta sugan la heli karo oo isku day mar kale.",
+  "subsonicTimeout": "Seerfarku wuu dhammaaday. Fadlan isku day mar kale",
+  "subsonicServerError": "Ma akhrin karin maktabadda server-ka Buuggii hore waa la hayaa Dib u cusboonaysii maktabadda si aad isugu daydo.",
+  "libraryRetry": "Isku tiir",
+  "subsonicOn": "Dul saaran",
+  "subsonicOff": "Damin",
+  "sleepTimerMinutes": "{minutes} daqiiqo",
+  "oledBlackDeviceColor": "OLED Madow",
+  "subsonicUrl": "URL server",
+  "subsonicInvalidUrl": "Geli URL server HTTP ama HTTPS iyada oo aan la waydiin, jajab, ama soo gelid guntan la'aan.",
+  "subsonicUnsupported": "Serfarkani ma taageerayo loo baahan yahay Subsonic API ama calaamada summada.",
+  "subsonicConnectionError": "Lama xidhi karo Hubi URL, shabakadda, iyo shahaadada HTTPS. Shabakadda, adeeguhu waa inuu oggolaadaa CORS oo abka HTTPS kuma xidhi karo HTTP."
 }

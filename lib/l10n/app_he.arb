@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ז'ָאנר",
   "editSongLyricsLabel": "מילים",
   "saveChangesButton": "שמור שינויים",
-  "veryLow": "נמוך מאוד"
+  "veryLow": "נמוך מאוד",
+  "reindexLibrarySettingTitle": "אינדקס מחדש",
+  "reindexLibrarySettingDescription": "קרא שוב מטא נתונים וגרפיקה עבור כל קובצי המוזיקה.",
+  "refreshLibrarySettingTitle": "רענן את הספרייה",
+  "refreshLibrarySettingDescription": "בדוק אם נוספה או נמחקה מוזיקה. שמור על מטא נתונים ויצירות אמנות קיימים.",
+  "librarySettingsScreenTitle": "הגדרות ספרייה",
+  "librarySettingsDescription": "נהל אינדקס מוזיקה ותיקיות שלא נכללו.",
+  "sleepTimerTitle": "טיימר שינה",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "סוף השיר הנוכחי",
+  "sleepTimerRemainingLabel": "נשאר",
+  "findingSongs": "מוצא שירים...",
+  "songsLoaded": "שירים שנטענו: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "יצירות אמנות מאוחסנות במטמון: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "לא ניתן לטעון את ספריית המוזיקה. נא לנסות שוב.",
+  "missingTracksTitle": "פסים חסרים",
+  "missingTracksDescription": "סקור קבצים שלא ניתן היה לקרוא.",
+  "missingTracksEmpty": "אין רצועות בלתי קריאות.",
+  "missingTrackRead": "לא ניתן היה לקרוא את המטא נתונים של הקובץ הזה. בדוק את מיקום הקובץ ואת הרשאות הגישה, ולאחר מכן אינדקס מחדש את הספרייה כדי לנסות שוב.",
+  "missingTrackArtwork": "לא ניתן היה לקרוא את הגרפיקה של הקובץ הזה. ייתכן ששמע עדיין מופעל. אינדקס מחדש את הספרייה כדי לנסות שוב.",
+  "playbackBuffering": "מאגר…",
+  "preventDuplicateTracksTitle": "מנע רצועות כפולות",
+  "preventDuplicateTracksDescription": "הסתר רצועות עם שמות קבצים כפולים.",
+  "hideLocalMusicTitle": "הסתר מוזיקה מקומית",
+  "hideLocalMusicDescription": "הצג רק מוזיקת שרת בספרייה שלך כאשר Subsonic פועל. קבצים מקומיים נשארים במכשיר שלך.",
+  "subsonicTitle": "שרת Subsonic",
+  "subsonicDescription": "הזרם מוזיקה מ-Navidrome, gonic ושרתים תואמים.",
+  "subsonicConfigure": "הגדר את Subsonic",
+  "subsonicUsername": "שם משתמש",
+  "subsonicPassword": "סיסמה",
+  "subsonicConnect": "התחבר",
+  "subsonicRemove": "הסר את השרת",
+  "subsonicSignIn": "נדרשת כניסה",
+  "subsonicLoadingLibrary": "טוען את הספרייה שלך...",
+  "subsonicContinueBackground": "המשך ברקע",
+  "subsonicClose": "סגור",
+  "subsonicIndexing": "מעביר לאינדקס מוזיקת שרת...",
+  "subsonicUnavailable": "לא זמין",
+  "subsonicCredentialsError": "בדוק את שם המשתמש, הסיסמה והרשאות השרת שלך.",
+  "subsonicStorageError": "לא ניתן לשמור אישורים. בדוק שאחסון מאובטח זמין ונסה שוב.",
+  "subsonicTimeout": "תם הזמן הקצוב לשרת. אנא נסה שוב.",
+  "subsonicServerError": "לא ניתן היה לקרוא את ספריית השרת. הקטלוג הקודם נשמר. רענן את הספרייה כדי לנסות שוב.",
+  "libraryRetry": "לנסות שוב",
+  "subsonicOn": "עַל",
+  "subsonicOff": "כבוי",
+  "sleepTimerMinutes": "{minutes} דקות",
+  "oledBlackDeviceColor": "OLED שחור",
+  "subsonicUrl": "כתובת האתר של השרת",
+  "subsonicInvalidUrl": "הזן כתובת URL של שרת HTTP או HTTPS ללא שאילתה, קטע או התחברות משובצת.",
+  "subsonicUnsupported": "שרת זה אינו תומך ב-Subsonic API או אימות אסימון הנדרש.",
+  "subsonicConnectionError": "לא ניתן להתחבר. בדוק את כתובת האתר, הרשת ואישור ה-HTTPS. באינטרנט, השרת חייב לאפשר CORS ואפליקציית HTTPS לא יכולה להתחבר ל-HTTP."
 }

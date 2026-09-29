@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Katung",
   "editSongLyricsLabel": "lirixe",
   "saveChangesButton": "keret",
-  "veryLow": "Seer liiwe"
+  "veryLow": "Seer liiwe",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Lees noch mool metaataate un kunst aarwayte fer ale musik fiile.",
+  "refreshLibrarySettingTitle": "Biblioteek uffrixe",
+  "refreshLibrarySettingDescription": "Kuk wën ti musik hiner kelos kep is orer aus kexmis këp is. Hal ti eksistiirente metaataate un kunstwerke.",
+  "librarySettingsScreenTitle": "Instellungen fon te Biblioteek",
+  "librarySettingsDescription": "Musik indekseere un auskexlosne folter.",
+  "sleepTimerTitle": "Xloof tsayter",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ënd fon te Aktuaal Liiter",
+  "sleepTimerRemainingLabel": "Restlich",
+  "findingSongs": "Finde lieder...",
+  "songsLoaded": "Lieder load: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Kunstwerk in te cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Niks khan ti musik biblioteek laate. Tuu tich noch mool proope.",
+  "missingTracksTitle": "Ferloerne xpuure",
+  "missingTracksDescription": "Tuu ti fiile woo nët keleest këpe khëne, noo kuke.",
+  "missingTracksEmpty": "Keen unleesbare xpuure.",
+  "missingTrackRead": "Konnt net tiise file’s metadata leese. Kuk ti positsioon fon te file un ti akses erlaupnis, tan tuu ti piplioteek noch mool indeksiire fer noch mool se proope.",
+  "missingTrackArtwork": "Konnt net tiise file’s kunstwerk leese. Audio khan noch xpiile. Reindexe ti biblioteek fer noch mool se proope.",
+  "playbackBuffering": "Puffer...",
+  "preventDuplicateTracksTitle": "Ferhëngert Duplikaat fon te xpuure",
+  "preventDuplicateTracksDescription": "Ferxtekelt xpuure mit duplikaate fiile naame.",
+  "hideLocalMusicTitle": "Lokale musik ferxtekele",
+  "hideLocalMusicDescription": "Tsaych ploos serwer musik in tayn biblioteek wën Subsonic aan is. Lokale fiile plaype uf tayn apteelung.",
+  "subsonicTitle": "Subsonic Serwer",
+  "subsonicConfigure": "Konfituer Subsonic",
+  "subsonicUsername": "Nutsernaam",
+  "subsonicPassword": "Passwort",
+  "subsonicConnect": "Ferklayche",
+  "subsonicRemove": "Server wech xafe",
+  "subsonicSignIn": "Sign in ferlangt",
+  "subsonicLoadingLibrary": "Tuu tayn biblioteek laate...",
+  "subsonicContinueBackground": "Witer in te hinerlist",
+  "subsonicClose": "Tsum",
+  "subsonicIndexing": "Indeksierung fon te serwer musik...",
+  "subsonicUnavailable": "Nicht disponibel",
+  "subsonicCredentialsError": "Kuk tayn naame, tayn pasëyert un ti erlaupnis fer tayn serwer.",
+  "subsonicStorageError": "Konnt net ti kredensiaale xpaare. Kuk wën ti sicherheet fon te xpiichle fërtich is un fersuuch noch mool.",
+  "subsonicTimeout": "Te serwer is aus kang. Tuu khanst noch mool proope.",
+  "subsonicServerError": "Konnt net ti serwer biblioteek leese. Te foerxritne katalok is kehal kep. Tuu ti Biblioteek uf muute fer noch mool se proope.",
+  "libraryRetry": "Penhërtslich",
+  "subsonicOn": "Uf",
+  "subsonicOff": "Aus",
+  "sleepTimerMinutes": "{minutes} minute",
+  "oledBlackDeviceColor": "OLED Xwart",
+  "subsonicDescription": "Stream musik fon Navidrome, gonic, un kompatiible serwer.",
+  "subsonicUrl": "URL fom serwer",
+  "subsonicInvalidUrl": "Tuu een HTTP orer HTTPS-Serwer URL in xraype oone een frooch, een fraktsioon orer een intekrierte aanmeldung.",
+  "subsonicUnsupported": "Tiise serwer tuut net ti ferlangte Subsonic API orer token autentifikatsioon unerxtitse.",
+  "subsonicConnectionError": "Kann net ferklayche. Kuk ti URL, tas network un ti HTTPS-sertifikaat. Im Web, mus te serwer CORS erlaupe un en HTTPS-app khan net mit HTTP ferklayche."
 }

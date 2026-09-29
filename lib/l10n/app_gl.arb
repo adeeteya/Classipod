@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Xénero",
   "editSongLyricsLabel": "Letras",
   "saveChangesButton": "Gardar cambios",
-  "veryLow": "Moi Baixo"
+  "veryLow": "Moi Baixo",
+  "reindexLibrarySettingTitle": "Re-indexar",
+  "reindexLibrarySettingDescription": "Lea de novo os metadatos e as ilustracións de todos os ficheiros de música.",
+  "refreshLibrarySettingTitle": "Actualizar biblioteca",
+  "refreshLibrarySettingDescription": "Busca música engadida ou eliminada. Mantén os metadatos e as obras de arte existentes.",
+  "librarySettingsScreenTitle": "Configuración da biblioteca",
+  "librarySettingsDescription": "Xestiona a indexación de música e os cartafoles excluídos.",
+  "sleepTimerTitle": "Temporizador de suspensión",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fin da canción actual",
+  "sleepTimerRemainingLabel": "Restante",
+  "findingSongs": "Buscando cancións...",
+  "songsLoaded": "Cancións cargadas: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Obra de arte almacenada na caché: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Non se puido cargar a biblioteca de música. Téntao de novo.",
+  "missingTracksTitle": "Faltan Pistas",
+  "missingTracksDescription": "Revisa os ficheiros que non se puideron ler.",
+  "missingTracksEmpty": "Non hai pistas ilexíbeis.",
+  "missingTrackRead": "Non se puideron ler os metadatos deste ficheiro. Comproba a localización do ficheiro e os permisos de acceso e, a continuación, reindexa a biblioteca para tentalo de novo.",
+  "missingTrackArtwork": "Non se puido ler a ilustración deste ficheiro. O audio aínda pode reproducirse. Reindexa a biblioteca para tentalo de novo.",
+  "playbackBuffering": "Almacenando en búfer…",
+  "preventDuplicateTracksTitle": "Evitar pistas duplicadas",
+  "preventDuplicateTracksDescription": "Ocultar pistas con nomes de ficheiro duplicados.",
+  "hideLocalMusicTitle": "Ocultar música local",
+  "hideLocalMusicDescription": "Mostra só a música do servidor na túa biblioteca mentres Subsonic estea activado. Os ficheiros locais permanecen no teu dispositivo.",
+  "subsonicTitle": "Servidor Subsonic",
+  "subsonicDescription": "Reproduce música en streaming desde Navidrome, gonic e servidores compatibles.",
+  "subsonicConfigure": "Configurar Subsonic",
+  "subsonicUsername": "Nome de usuario",
+  "subsonicPassword": "Contrasinal",
+  "subsonicConnect": "Conectar",
+  "subsonicRemove": "Eliminar servidor",
+  "subsonicSignIn": "É necesario iniciar sesión",
+  "subsonicLoadingLibrary": "Cargando a túa biblioteca...",
+  "subsonicContinueBackground": "Continuar en segundo plano",
+  "subsonicClose": "Pechar",
+  "subsonicIndexing": "Indexando música do servidor...",
+  "subsonicUnavailable": "Non dispoñible",
+  "subsonicCredentialsError": "Comproba o teu nome de usuario, contrasinal e permisos do servidor.",
+  "subsonicStorageError": "Non se puideron gardar as credenciais. Comproba que o almacenamento seguro está dispoñible e téntao de novo.",
+  "subsonicTimeout": "O servidor esgotou o tempo de espera. Téntao de novo.",
+  "subsonicServerError": "Non se puido ler a biblioteca do servidor. Mantense o catálogo anterior. Actualiza a biblioteca para tentalo de novo.",
+  "libraryRetry": "Intentar",
+  "subsonicOn": "Sobre",
+  "subsonicOff": "Off",
+  "sleepTimerMinutes": "{minutes} minutos",
+  "oledBlackDeviceColor": "OLED Negro",
+  "subsonicUrl": "URL do servidor",
+  "subsonicInvalidUrl": "Introduza un URL de servidor HTTP ou HTTPS sen unha consulta, fragmento ou inicio de sesión incorporado.",
+  "subsonicUnsupported": "Este servidor non admite a API necesaria Subsonic nin a autenticación de token.",
+  "subsonicConnectionError": "Non se pode conectar. Comprobe o URL, a rede e o certificado HTTPS. Na web, o servidor debe permitir CORS e unha aplicación HTTPS non pode conectarse a HTTP."
 }

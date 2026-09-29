@@ -134,5 +134,78 @@
   "editSongGenreLabel": "I wafa",
   "editSongLyricsLabel": "Like suanlɛ",
   "saveChangesButton": "Save",
-  "veryLow": "Dɔ"
+  "veryLow": "Dɔ",
+  "reindexLibrarySettingTitle": "Index ekun",
+  "reindexLibrarySettingDescription": "Kanngan miziki’m be kwlaa be nun metadata nin desɛn’m be nun ekun.",
+  "refreshLibrarySettingTitle": "Fa Bibliotɛki’n i uflɛ",
+  "refreshLibrarySettingDescription": "Nian sɛ be fali miziki wie mun be wlali nun annzɛ be nunnunnin be o. Fa metadata nin desɛn nga be o lɛ laa’n be sie.",
+  "librarySettingsScreenTitle": "Bibliotɛki’n i nun ninnge’m be siesielɛ",
+  "librarySettingsDescription": "Nian miziki’m be indexation nin dossier nga be nunman nun’n be su.",
+  "sleepTimerTitle": "Lafilɛ blɛ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Jue nga be o lɛ dɔ nga su’n i awieliɛ’n",
+  "sleepTimerRemainingLabel": "Be ng’ɔ ka lɛ’n",
+  "findingSongs": "Jue kunndɛlɛ...",
+  "songsLoaded": "Jue nga be fali be’n: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Desɛn nga be sieli be’n: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ɔ kwlá faman miziki fluwa siewlɛ’n. Yaki yo ekun.",
+  "missingTracksTitle": "Piste nga be nunman lɛ’n",
+  "missingTracksDescription": "Nian fluwa nga be kwlá kannganman be nun’n, be nun.",
+  "missingTracksEmpty": "Traki nga be kwlá kannganman be nun’n, be nunman lɛ.",
+  "missingTrackRead": "Ɔ kwlá kannganman file sɔ’n i nun ndɛ’m be nun. Nian lika nga file’n wo’n, ɔ nin atin nga be kwla fa wlu lɔ’n, kpɛkun fa fluwa siewlɛ’n i nun ndɛ’n sie i lika uflɛ naan w’a kwla wlu lɔ ekun.",
+  "missingTrackArtwork": "Ɔ kwlá kannganman file sɔ’n i nun desɛn’m be nun. Audio kwla te bo. Reindexe bibliothèque nun naan w’a yo i ekun.",
+  "playbackBuffering": "Tampon...",
+  "preventDuplicateTracksTitle": "Jran track nɲɔn be ɲrun",
+  "preventDuplicateTracksDescription": "Fiɛ track nga be le file dunman nɲɔn’n.",
+  "hideLocalMusicTitle": "Fiɛ lɔ miziki mun",
+  "hideLocalMusicDescription": "Kɛ Subsonic o lɛ’n, kle serveur miziki’m be ngunmin ɔ fluwa siewlɛ’n nun. Local fichiers be ka ɔ aparɛyi’n su.",
+  "subsonicTitle": "Subsonic sɛrvɛri",
+  "subsonicDescription": "Navidrome, gonic, ɔ nin serveur nga be nin be wiengu’m be kɔ likawlɛ’n, be nun miziki’m be bo.",
+  "subsonicConfigure": "Subsonic i siesielɛ",
+  "subsonicUsername": "Dunman",
+  "subsonicPassword": "Mot de passe",
+  "subsonicConnect": "Connecter",
+  "subsonicRemove": "Yi Serveur",
+  "subsonicSignIn": "Ɔ fata kɛ a wlu lɔ",
+  "subsonicLoadingLibrary": "Ɔ fluwa siewlɛ’n i nun yilɛ...",
+  "subsonicContinueBackground": "Amun wɔ i sin lɔ",
+  "subsonicClose": "Kaci",
+  "subsonicIndexing": "Indexation serveur miziki...",
+  "subsonicUnavailable": "Ɔ nunman lɛ",
+  "subsonicCredentialsError": "Nian ɔ dunman, ɔ mot de passe, eni ɔ serveur atin'm.",
+  "subsonicStorageError": "Ɔ kwlá sieman i su ndɛ’n. Nian sɛ lika nga be kwla sie ninnge mun lɔ’n, ɔ o lɛ naan yo i ekun.",
+  "subsonicTimeout": "Serveur’n i blɛ’n sinnin. Yaki yo ekun.",
+  "subsonicServerError": "Ɔ kwlá kannganman serveur bibliotɛki’n nun. Be fa katalogu ng’ɔ sinnin lɛ’n be sie i lɛ. Fa Bibliotɛki’n i uflɛ naan w’a yo sɔ ekun.",
+  "libraryRetry": "Retron",
+  "subsonicOn": "Issu",
+  "subsonicOff": "Nuan wa",
+  "sleepTimerMinutes": "Miniti {minutes}",
+  "oledBlackDeviceColor": "OLED Noir",
+  "subsonicUrl": "Serveur URL",
+  "subsonicInvalidUrl": "Klɛ HTTP annzɛ HTTPS serveur URL kun m’ɔ leman kosan, annzɛ ndɛ akpasua, annzɛ login m’ɔ o nun’n.",
+  "subsonicUnsupported": "Serveur sɔ’n suanman Subsonic API annzɛ token i su ndɛ’n i bo.",
+  "subsonicConnectionError": "Ɔ kwlá kɔman likawlɛ. Nian URL, nin réseau, ɔ nin HTTPS be su ndɛ’n. Wɛb su’n, ɔ fata kɛ serveur’n man CORS atin naan HTTPS appli kun w’a kwlá kɔman HTTP su."
 }

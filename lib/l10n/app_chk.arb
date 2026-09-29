@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Sokkun keen",
   "editSongLyricsLabel": "Ekkewe sokopaten",
   "saveChangesButton": "Safei",
-  "veryLow": "A fokkun Lo"
+  "veryLow": "A fokkun Lo",
+  "reindexLibrarySettingTitle": "Kopwe index sefan",
+  "reindexLibrarySettingDescription": "Kopwe anneani metadata me angangen art ren meinisin ekkewe taropwen nikáttik sefan.",
+  "refreshLibrarySettingTitle": "Kopwe niwinsefaniti ewe Library .",
+  "refreshLibrarySettingDescription": "Cheki ika mei wor are fen katowu ekkewe köl. Kopwe tumunu ekkewe meta me angangen art mi nom.",
+  "librarySettingsScreenTitle": "Ekkewe Setin Library",
+  "librarySettingsDescription": "Manaueni ewe indexin köl me ekkewe folder mi katowu.",
+  "sleepTimerTitle": "Fansoun Annut",
+  "sleepTimerEndOfCurrentSong": "Nesoponon ewe Song Ikenai .",
+  "sleepTimerRemainingLabel": "Lusun",
+  "findingSongs": "Kutta ekkewe kol...",
+  "songsLoaded": "Ekkewe köl ra fiti: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ekkewe pisekin angang mi kawor: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ese tongeni load ewe puken köl. Kopwe sotuni sefan.",
+  "missingTracksTitle": "Ekkewe Track mi Pout seni",
+  "missingTracksDescription": "Nengeni ekkewe file rese tongeni anneani.",
+  "missingTracksEmpty": "Ese wor ekkewe track rese tongeni alleani.",
+  "missingTrackRead": "Ese tongeni anneani ei taropwen awewe. Cheki ewe nenien file me ekkewe mumuta ne tonong, mwirin kopwe index sefani ewe library pwe kopwe sotuni sefan.",
+  "missingTrackArtwork": "Ese tongeni anneani ei file’s art. Audio mei chuen tongeni fis. Reindex ewe puk pwe kopwe sotuni sefan.",
+  "playbackBuffering": "Buffer...",
+  "preventDuplicateTracksTitle": "Kopwe eppeti ekkewe Track mi fitikoko .",
+  "preventDuplicateTracksDescription": "Kopwe suki ekkewe track ren ekkewe iten file mi fitikoko.",
+  "hideLocalMusicTitle": "Hide ewe Nikáttik",
+  "hideLocalMusicDescription": "Pwarata chok ekkewe nikáttikin server non om we nenien puk nupwen Subsonic a on. Ekkewe fail ra nom won noum we device.",
+  "subsonicTitle": "Subsonic chon angang",
+  "subsonicDescription": "Kopwe rong ekkewe köl seni Navidrome, gonic, me ekkewe server mi fich ngeni.",
+  "subsonicConfigure": "Kopwe fori Subsonic",
+  "subsonicUsername": "Iten chon aea",
+  "subsonicPassword": "Kapas",
+  "subsonicConnect": "Konek",
+  "subsonicRemove": "Angei ewe Server",
+  "subsonicSignIn": "Saini non mi namwot",
+  "subsonicLoadingLibrary": "Kopwe uwei om puk...",
+  "subsonicContinueBackground": "Sopweno non ewe mwich .",
+  "subsonicClose": "Kopwe suki",
+  "subsonicIndexing": "Indexing ekkewe kölün server...",
+  "subsonicUnavailable": "Ese wor",
+  "subsonicCredentialsError": "Cheki om kewe chon angang, om kewe kapas, me om kewe mumutan server.",
+  "subsonicStorageError": "Ese tongeni amanaua ekkewe taropwen pwarata. Cheki ika pwe a wor nenien tumun mi tumun me sotuni sefan.",
+  "subsonicTimeout": "Ewe chon angang a tori fansoun. Kopwe sotuni sefan.",
+  "subsonicServerError": "Ese tongeni anneani ewe puken server. Ewe kata me mwan a nom. Kopwe äeä ewe Library pwe kopwe sotunisefäl.",
+  "libraryRetry": "Repwe",
+  "subsonicOn": "Won",
+  "subsonicOff": "Of",
+  "sleepTimerMinutes": "{minutes} minich",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "OLED mi pwechepwech",
+  "subsonicUrl": "URL seni ewe chon angang",
+  "subsonicInvalidUrl": "Kopwe makkei ew URL ren HTTP ika HTTPS ese wor ew kapas eis, kinikin, ika ew nenien tonong.",
+  "subsonicUnsupported": "Ei chon angang ese anisi ewe API mi namwot Subsonic ika ewe token mi affat.",
+  "subsonicConnectionError": "Ese tongeni kon. Cheki ewe URL, ewe netip, me ewe taropwen HTTPS. Non ewe Web, ewe chon angang epwe mut ngeni CORS me ew appin HTTPS ese tongeni fiti HTTP."
 }

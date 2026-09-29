@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Seánra",
   "editSongLyricsLabel": "Liricí",
   "saveChangesButton": "Sábháil Athruithe",
-  "veryLow": "An-Íseal"
+  "veryLow": "An-Íseal",
+  "reindexLibrarySettingTitle": "Ath-innéacs",
+  "reindexLibrarySettingDescription": "Léigh meiteashonraí agus saothar ealaíne do gach comhad ceoil arís.",
+  "refreshLibrarySettingTitle": "Leabharlann a athnuachan",
+  "refreshLibrarySettingDescription": "Seiceáil an bhfuil ceol curtha leis nó scriosta. Coinnigh meiteashonraí agus saothar ealaíne atá ann cheana féin.",
+  "librarySettingsScreenTitle": "Socruithe Leabharlainne",
+  "librarySettingsDescription": "Bainistigh innéacsú ceoil agus fillteáin eisiata.",
+  "sleepTimerTitle": "Uaineadóir Codlata",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Deireadh an Amhrán Reatha",
+  "sleepTimerRemainingLabel": "fágtha",
+  "findingSongs": "Amhráin a aimsiú…",
+  "songsLoaded": "Amhráin luchtaithe: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Saothar ealaíne i dtaisce: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ní féidir an leabharlann ceoil a lódáil. Bain triail eile as, le do thoil.",
+  "missingTracksTitle": "Rianta ar Iarraidh",
+  "missingTracksDescription": "Athbhreithnigh comhaid nárbh fhéidir a léamh.",
+  "missingTracksEmpty": "Uimh rianta do-léite.",
+  "missingTrackRead": "Níorbh fhéidir meiteashonraí an chomhaid seo a léamh. Seiceáil suíomh an chomhaid agus na ceadanna rochtana, ansin déan an leabharlann a athinnéacsú chun triail eile a bhaint as.",
+  "missingTrackArtwork": "Níorbh fhéidir saothar ealaíne an chomhaid seo a léamh. Seans go seinntear an fhuaim fós. Déan an leabharlann a athinnéacsú chun triail a bhaint as arís.",
+  "playbackBuffering": "Ag maolánú…",
+  "preventDuplicateTracksTitle": "Cosc a chur ar Rianta Dúblach",
+  "preventDuplicateTracksDescription": "Folaigh rianta le hainmneacha comhaid dúblacha.",
+  "hideLocalMusicTitle": "Folaigh Ceol Áitiúil",
+  "hideLocalMusicDescription": "Ná taispeáin ach ceol freastalaí i do leabharlann agus Subsonic ar siúl. Fanann comhaid áitiúla ar do ghléas.",
+  "subsonicTitle": "Freastalaí Subsonic",
+  "subsonicDescription": "Sruth ceol ó Navidrome, gonic, agus freastalaithe comhoiriúnacha.",
+  "subsonicConfigure": "Cumraigh Subsonic",
+  "subsonicUsername": "Ainm úsáideora",
+  "subsonicPassword": "Pasfhocal",
+  "subsonicConnect": "Ceangail",
+  "subsonicRemove": "Bain Freastalaí",
+  "subsonicSignIn": "Sínigh isteach ag teastáil",
+  "subsonicLoadingLibrary": "Do leabharlann á lódáil…",
+  "subsonicContinueBackground": "Lean ar aghaidh sa chúlra",
+  "subsonicClose": "Dún",
+  "subsonicIndexing": "Ceol freastalaí á innéacsú…",
+  "subsonicUnavailable": "Níl fáil air",
+  "subsonicCredentialsError": "Seiceáil d'ainm úsáideora, pasfhocal, agus ceadanna freastalaí.",
+  "subsonicStorageError": "Níorbh fhéidir na dintiúir a shábháil. Cinntigh go bhfuil stóras slán ar fáil agus bain triail eile as.",
+  "subsonicTimeout": "Chuaigh an freastalaí amach. Bain triail eile as.",
+  "subsonicServerError": "Níorbh fhéidir leabharlann an fhreastalaí a léamh. Coinnítear an chatalóg roimhe seo. Athnuaigh an Leabharlann chun triail eile a bhaint as.",
+  "libraryRetry": "Ais a chur ar ais",
+  "subsonicOn": "Ar",
+  "subsonicOff": "Ar ceal",
+  "sleepTimerMinutes": "{minutes} Nóiméad",
+  "oledBlackDeviceColor": "OLED Dubh",
+  "subsonicUrl": "URL an fhreastalaí",
+  "subsonicInvalidUrl": "Cuir isteach URL freastalaí HTTP nó HTTPS gan cheist, blúire ná logáil isteach leabaithe.",
+  "subsonicUnsupported": "Ní thacaíonn an freastalaí seo leis an API Subsonic nó fíordheimhniú comhartha.",
+  "subsonicConnectionError": "Ní féidir ceangal. Seiceáil an URL, an líonra, agus an deimhniú HTTPS. Ar an nGréasán, ní mór don fhreastalaí CORS a cheadú agus ní féidir le haip HTTPS ceangal le HTTP."
 }

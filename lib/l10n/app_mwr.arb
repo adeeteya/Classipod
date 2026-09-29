@@ -134,5 +134,78 @@
   "editSongGenreLabel": "शैली",
   "editSongLyricsLabel": "लिंगां",
   "saveChangesButton": "साव चेंज",
-  "veryLow": "घणो"
+  "veryLow": "घणो",
+  "reindexLibrarySettingTitle": "फेरूं अनुक्रमित करो",
+  "reindexLibrarySettingDescription": "सगळी संगीत फाइलां रै वास्तै मेटाडाटा अर कलाकृति नै फेरूं पढ़ो।",
+  "refreshLibrarySettingTitle": "पुस्तकालय नै ताजा करो",
+  "refreshLibrarySettingDescription": "जोड़ियोड़ा या हटाया गया संगीत री जांच करो। मौजूदा मेटाडाटा अर कलाकृति नै राखो।",
+  "librarySettingsScreenTitle": "पुस्तकालय री सेटिंग्स",
+  "librarySettingsDescription": "संगीत अनुक्रमण अर बहिष्कृत फोल्डर रो प्रबंधन करो।",
+  "sleepTimerTitle": "नींद रो टाईमर",
+  "sleepTimerEndOfCurrentSong": "चालू गीत रो अंत",
+  "sleepTimerRemainingLabel": "बाकी",
+  "findingSongs": "गीत ढूंढ रिया हां...",
+  "libraryLoadError": "संगीत लाइब्रेरी नै लोड करण में असमर्थ। कृपया फेरूं कोशिश करो।",
+  "missingTracksTitle": "लापता ट्रैक",
+  "missingTracksDescription": "बां फाइलां री समीक्षा करो जिणनै पढ़ी नीं जा सकै।",
+  "missingTracksEmpty": "कोई अपठनीय पटरी कोनी।",
+  "missingTrackRead": "इण फाइल रो मेटाडाटा नीं पढ़ सक्यो। फ़ाइल री जगां अर एक्सेस अनुमतियां री जांच करो, फेर दोबारा कोशिश करण रै वास्तै लाइब्रेरी नै फेरूं अनुक्रमित करो।",
+  "missingTrackArtwork": "इण फाइल री कलाकृति नै नीं पढ़ सक्यो। ऑडियो अजै भी चाल सकै है। दोबारा कोशिश करण रै वास्तै लाइब्रेरी नै फेरूं अनुक्रमित करो।",
+  "playbackBuffering": "बफरिंग...",
+  "preventDuplicateTracksTitle": "डुप्लीकेट ट्रैक नै रोकणो",
+  "preventDuplicateTracksDescription": "डुप्लिकेट फाइल नाम वाळा ट्रैक नै छुपाओ।",
+  "hideLocalMusicTitle": "स्थानीय संगीत नै छुपाओ",
+  "hideLocalMusicDescription": "जद तांई Subsonic चालू है, आपरी लाइब्रेरी मांय फगत सर्वर संगीत दिखाओ। स्थानीय फाइलां थारै डिवाइस माथै रैवै है।",
+  "subsonicDescription": "Navidrome, gonic अर संगत सर्वर सूं संगीत स्ट्रीम करो।",
+  "subsonicConfigure": "Subsonic नै कॉन्फ़िगर करो",
+  "subsonicUsername": "उपयोगकर्ता नाम",
+  "subsonicPassword": "पासवर्ड",
+  "subsonicConnect": "जुड़ो",
+  "subsonicRemove": "सर्वर नै हटाओ",
+  "subsonicSignIn": "साइन इन करणो जरूरी है",
+  "subsonicLoadingLibrary": "थारी लाइब्रेरी नै लोड कर रिया हां...",
+  "subsonicContinueBackground": "पृष्ठभूमि रै मांय जारी राखो",
+  "subsonicClose": "बंद करो",
+  "subsonicIndexing": "सर्वर संगीत नै अनुक्रमित करणो...",
+  "subsonicUnavailable": "अनुपलब्ध छै",
+  "subsonicCredentialsError": "आपरो उपयोगकर्ता नाम, पासवर्ड अर सर्वर री अनुमतियां री जांच करो।",
+  "subsonicStorageError": "साख नीं बचा सकी। जांच करो कै सुरक्षित भंडारण उपलब्ध है अर फेरूं कोशिश करो।",
+  "subsonicTimeout": "सर्वर रो समय समाप्त होग्यो। कृपया फेरूं कोशिश करो।",
+  "subsonicServerError": "सर्वर लाइब्रेरी नै नीं पढ़ सक्यो। पिछली सूची नै राखीजी है। दोबारा कोशिश करण रै वास्तै लाइब्रेरी नै ताज़ा करो।",
+  "libraryRetry": "परिणाम",
+  "subsonicOn": "ऊपर",
+  "subsonicOff": "बंद करणा",
+  "sleepTimerMinutes": "{minutes} मिनट",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "ओएलईडी काळा",
+  "songsLoaded": "गीत लोड करिया: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "कलाकृति कैश करीजी है: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "subsonicTitle": "Subsonic सर्वर",
+  "subsonicUrl": "सर्वर रो यूआरएल",
+  "subsonicInvalidUrl": "बिना क्वेरी, फ्रैगमेंट या एम्बेडेड लॉगिन रै HTTP या HTTPS सर्वर यूआरएल दर्ज करो।",
+  "subsonicUnsupported": "यो सर्वर जरूरी Subsonic एपीआई या टोकन प्रमाणीकरण रो समर्थन कोनी करै है।",
+  "subsonicConnectionError": "कनेक्ट कोनी हो सकै। यूआरएल, नेटवर्क अर एचटीटीपीएस प्रमाणपत्र री जांच करो। वेब माथै, सर्वर नै CORS री अनुमति देणी चाइजै अर HTTPS ऐप HTTP सूं कनेक्ट नीं हो सकै।"
 }

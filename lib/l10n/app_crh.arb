@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Тюр",
   "editSongLyricsLabel": "Лирик",
   "saveChangesButton": "Денъишмелерни экономия этинъиз .",
-  "veryLow": "Пек алчакъ"
+  "veryLow": "Пек алчакъ",
+  "reindexLibrarySettingTitle": "Янъыдан индексленъиз",
+  "reindexLibrarySettingDescription": "Бутюн музыка файллары ичюн метамалюмат ве ресимлерни кене окъу.",
+  "refreshLibrarySettingTitle": "Китапханени янъыдан тиклемек .",
+  "refreshLibrarySettingDescription": "Къошулгъан я да ёкъ этильген музыканы тешкеринъиз. Мевджут метамалюмат ве ресимлерни сакъламакъ.",
+  "librarySettingsScreenTitle": "Китапханенинъ параметрлери .",
+  "librarySettingsDescription": "Музыка индексациясыны ве чыкъарылгъан папкаларны идаре этмек.",
+  "sleepTimerTitle": "Юкъу таймери",
+  "sleepTimerEndOfCurrentSong": "Шимдики йырнынъ сонъу .",
+  "sleepTimerRemainingLabel": "Къалгъан .",
+  "findingSongs": "Йырларны тапмакъ...",
+  "artworkCached": "Рессамлыкъ эсери кешленген: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Музыка китапханесини юклемек мумкюн дегиль. Риджа этем, текрар тырышынъыз.",
+  "missingTracksTitle": "Эксик излер",
+  "missingTracksDescription": "Окъулып оламагъан файлларны козьден кечиринъиз.",
+  "missingTracksEmpty": "Окъулмагъан излер ёкъ.",
+  "missingTrackRead": "Бу файлнынъ метамалюматларыны окъуп оламады. Файлнынъ ерлешкен ерини ве кириш рухсетлерини тешкеринъиз, сонъра янъыдан тырышмакъ ичюн китапханени янъыдан индексленъиз.",
+  "missingTrackArtwork": "Бу файлнынъ ресимини окъуп оламады. Аудио даа чалына биле. Янъыдан тырышмакъ ичюн китапханени янъыдан индексленъиз.",
+  "playbackBuffering": "Буферлештирюв...",
+  "preventDuplicateTracksTitle": "Дубликат излернинъ огюне кечмек .",
+  "preventDuplicateTracksDescription": "Файл адлары текрарлангъан ёлларны гизленъиз.",
+  "hideLocalMusicTitle": "Ерли музыканы гизленъиз .",
+  "hideLocalMusicDescription": "Subsonic якъылгъанда, китапханенъизде тек сервер музыкасыны косьтеринъиз. Ерли файллар сизинъ махсулатынъызда къала.",
+  "subsonicDescription": "Navidrome, gonic ве келишкен серверлерден музыканы акъынты шекилинде динъленъиз.",
+  "subsonicUsername": "Къулланыджы ады",
+  "subsonicPassword": "Пароль",
+  "subsonicConnect": "Багъламакъ .",
+  "subsonicRemove": "Серверни чыкъарынъыз .",
+  "subsonicSignIn": "Кирмек керек",
+  "subsonicLoadingLibrary": "Китапханенъизни юклей...",
+  "subsonicContinueBackground": "Фонда девам этинъиз .",
+  "subsonicClose": "Якъын",
+  "subsonicIndexing": "Сервер музыкасыны индекслемек...",
+  "subsonicUnavailable": "Эльверишсиз",
+  "subsonicCredentialsError": "Къулланыджы адыны, парольни ве сервернинъ рухсетлерини тешкеринъиз.",
+  "subsonicStorageError": "Ишанчлы малюматны сакълап оламады. Хавфсыз сакълав ери олгъаныны тешкеринъиз ве кене тырышынъыз.",
+  "subsonicTimeout": "Сервернинъ вакъты битти. Риджа этем, бир даа тырышынъыз.",
+  "subsonicServerError": "Сервер китапханесини окъуп оламады. Эвельки каталог сакъланып къалды. Янъыдан тырышмакъ ичюн Китапханени янъартынъыз.",
+  "libraryRetry": "Ресимни чекмек",
+  "subsonicOn": "1.",
+  "subsonicOff": "Къапалы",
+  "sleepTimerMinutes": "{minutes} дакъкъа",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "OLED Къара .",
+  "songsLoaded": "Юкленген йырлар: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "subsonicTitle": "Subsonic Сервер",
+  "subsonicConfigure": "Конфигурация япмакъ Subsonic",
+  "subsonicUrl": "Сервернинъ URL адреси",
+  "subsonicInvalidUrl": "HTTP я да HTTPS серверининъ URL адресини соргъусыз, фрагментсиз ве ерлештирильген логинсиз кирсетинъиз.",
+  "subsonicUnsupported": "Бу сервер керекли Subsonic API я да токенлернинъ тасдыкълавыны дестеклемей.",
+  "subsonicConnectionError": "Багълап оламай. URL, агъ ве HTTPS сертификатыны тешкеринъиз. Веб-те сервер CORS-ке рухсет бермек керек ве HTTPS къулланмасы HTTP-ге къошулып оламай."
 }

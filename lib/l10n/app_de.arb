@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Text",
   "saveChangesButton": "Änderungen speichern",
-  "veryLow": "Sehr niedrig"
+  "veryLow": "Sehr niedrig",
+  "reindexLibrarySettingTitle": "Neu indizieren",
+  "reindexLibrarySettingDescription": "Lesen Sie die Metadaten und Grafiken für alle Musikdateien erneut.",
+  "refreshLibrarySettingTitle": "Bibliothek aktualisieren",
+  "refreshLibrarySettingDescription": "Suchen Sie nach hinzugefügter oder gelöschter Musik. Behalten Sie vorhandene Metadaten und Grafiken bei.",
+  "librarySettingsScreenTitle": "Bibliothekseinstellungen",
+  "librarySettingsDescription": "Verwalten Sie die Musikindizierung und ausgeschlossene Ordner.",
+  "sleepTimerTitle": "Sleep-Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ende des aktuellen Songs",
+  "sleepTimerRemainingLabel": "Übrig",
+  "findingSongs": "Lieder finden…",
+  "songsLoaded": "Geladene Songs: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Zwischengespeichertes Kunstwerk: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Die Musikbibliothek kann nicht geladen werden. Bitte versuchen Sie es erneut.",
+  "missingTracksTitle": "Fehlende Titel",
+  "missingTracksDescription": "Überprüfen Sie Dateien, die nicht gelesen werden konnten.",
+  "missingTracksEmpty": "Keine unlesbaren Spuren.",
+  "missingTrackRead": "Die Metadaten dieser Datei konnten nicht gelesen werden. Überprüfen Sie den Dateispeicherort und die Zugriffsberechtigungen und indizieren Sie die Bibliothek erneut, um es erneut zu versuchen.",
+  "missingTrackArtwork": "Das Bildmaterial dieser Datei konnte nicht gelesen werden. Audio wird möglicherweise weiterhin abgespielt. Indizieren Sie die Bibliothek neu, um es erneut zu versuchen.",
+  "playbackBuffering": "Pufferung…",
+  "preventDuplicateTracksTitle": "Verhindern Sie doppelte Titel",
+  "preventDuplicateTracksDescription": "Titel mit doppelten Dateinamen ausblenden.",
+  "hideLocalMusicTitle": "Lokale Musik ausblenden",
+  "hideLocalMusicDescription": "Zeigen Sie nur Servermusik in Ihrer Bibliothek an, während Subsonic aktiviert ist. Lokale Dateien bleiben auf Ihrem Gerät.",
+  "subsonicTitle": "Subsonic-Server",
+  "subsonicDescription": "Streamen Sie Musik von Navidrome, gonic und kompatiblen Servern.",
+  "subsonicConfigure": "Konfigurieren Sie Subsonic",
+  "subsonicUsername": "Benutzername",
+  "subsonicPassword": "Passwort",
+  "subsonicConnect": "Verbinden",
+  "subsonicRemove": "Server entfernen",
+  "subsonicSignIn": "Anmeldung erforderlich",
+  "subsonicLoadingLibrary": "Ihre Bibliothek wird geladen…",
+  "subsonicContinueBackground": "Weiter im Hintergrund",
+  "subsonicClose": "Schließen",
+  "subsonicIndexing": "Servermusik indizieren…",
+  "subsonicUnavailable": "Nicht verfügbar",
+  "subsonicCredentialsError": "Überprüfen Sie Ihren Benutzernamen, Ihr Passwort und Ihre Serverberechtigungen.",
+  "subsonicStorageError": "Anmeldeinformationen konnten nicht gespeichert werden. Überprüfen Sie, ob sicherer Speicher verfügbar ist, und versuchen Sie es erneut.",
+  "subsonicTimeout": "Beim Server ist eine Zeitüberschreitung aufgetreten. Bitte versuchen Sie es erneut.",
+  "subsonicServerError": "Die Serverbibliothek konnte nicht gelesen werden. Der bisherige Katalog bleibt erhalten. Aktualisieren Sie die Bibliothek, um es erneut zu versuchen.",
+  "libraryRetry": "Erneut versuchen",
+  "subsonicOn": "An",
+  "subsonicOff": "Aus",
+  "sleepTimerMinutes": "{minutes} Minuten",
+  "oledBlackDeviceColor": "OLED-Schwarz",
+  "subsonicUrl": "Server-URL",
+  "subsonicInvalidUrl": "Geben Sie eine HTTP- oder HTTPS-Server-URL ohne Abfrage, Fragment oder eingebettete Anmeldung ein.",
+  "subsonicUnsupported": "Dieser Server unterstützt nicht die erforderliche Subsonic-API oder Token-Authentifizierung.",
+  "subsonicConnectionError": "Es kann keine Verbindung hergestellt werden. Überprüfen Sie die URL, das Netzwerk und das HTTPS-Zertifikat. Im Web muss der Server CORS zulassen und eine HTTPS-App kann keine Verbindung zu HTTP herstellen."
 }

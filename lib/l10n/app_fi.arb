@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Sanoitukset",
   "saveChangesButton": "Tallenna muutokset",
-  "veryLow": "Erittäin alhainen"
+  "veryLow": "Erittäin alhainen",
+  "reindexLibrarySettingTitle": "Indeksoi uudelleen",
+  "reindexLibrarySettingDescription": "Lue kaikkien musiikkitiedostojen metatiedot ja kuvitus uudelleen.",
+  "refreshLibrarySettingTitle": "Päivitä kirjasto",
+  "refreshLibrarySettingDescription": "Tarkista lisätty tai poistettu musiikki. Säilytä olemassa olevat metatiedot ja taideteokset.",
+  "librarySettingsScreenTitle": "Kirjaston asetukset",
+  "librarySettingsDescription": "Hallitse musiikin indeksointia ja poissuljettuja kansioita.",
+  "sleepTimerTitle": "Uniajastin",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Nykyisen kappaleen loppu",
+  "sleepTimerRemainingLabel": "Jäljellä",
+  "findingSongs": "Haetaan kappaleita…",
+  "songsLoaded": "Ladatut kappaleet: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Taideteos välimuistissa: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Musiikkikirjastoa ei voi ladata. Yritä uudelleen.",
+  "missingTracksTitle": "Puuttuvat kappaleet",
+  "missingTracksDescription": "Tarkista tiedostot, joita ei voitu lukea.",
+  "missingTracksEmpty": "Ei lukukelvottomia raitoja.",
+  "missingTrackRead": "Tämän tiedoston metatietoja ei voitu lukea. Tarkista tiedoston sijainti ja käyttöoikeudet ja yritä sitten uudelleen indeksoida kirjasto.",
+  "missingTrackArtwork": "Tämän tiedoston kuvitusta ei voitu lukea. Ääni saattaa silti kuulua. Indeksoi kirjasto uudelleen ja yritä uudelleen.",
+  "playbackBuffering": "Puskuroidaan…",
+  "preventDuplicateTracksTitle": "Estä kaksoiskappaleet",
+  "preventDuplicateTracksDescription": "Piilota kappaleet, joissa on päällekkäisiä tiedostonimiä.",
+  "hideLocalMusicTitle": "Piilota paikallinen musiikki",
+  "hideLocalMusicDescription": "Näytä vain palvelinmusiikkia kirjastossasi, kun Subsonic on päällä. Paikalliset tiedostot pysyvät laitteessasi.",
+  "subsonicTitle": "Subsonic palvelin",
+  "subsonicDescription": "Suoratoista musiikkia Navidrome-, gonic- ja yhteensopivilta palvelimilta.",
+  "subsonicConfigure": "Määritä Subsonic",
+  "subsonicUsername": "Käyttäjätunnus",
+  "subsonicPassword": "Salasana",
+  "subsonicConnect": "Yhdistä",
+  "subsonicRemove": "Poista palvelin",
+  "subsonicSignIn": "Kirjautuminen vaaditaan",
+  "subsonicLoadingLibrary": "Ladataan kirjastoasi…",
+  "subsonicContinueBackground": "Jatka taustalla",
+  "subsonicClose": "Sulje",
+  "subsonicIndexing": "Indeksoidaan palvelimen musiikkia…",
+  "subsonicUnavailable": "Ei saatavilla",
+  "subsonicCredentialsError": "Tarkista käyttäjätunnuksesi, salasanasi ja palvelimen käyttöoikeudet.",
+  "subsonicStorageError": "Tunnuksia ei voitu tallentaa. Tarkista, että suojattu tallennustila on käytettävissä, ja yritä uudelleen.",
+  "subsonicTimeout": "Palvelin aikakatkaistiin. Yritä uudelleen.",
+  "subsonicServerError": "Palvelinkirjastoa ei voitu lukea. Edellinen luettelo säilytetään. Yritä uudelleen päivittämällä kirjasto.",
+  "libraryRetry": "Tehdä uudelleen",
+  "subsonicOn": "-Lla",
+  "subsonicOff": "Pois",
+  "sleepTimerMinutes": "{minutes} minuuttia",
+  "oledBlackDeviceColor": "OLED musta",
+  "subsonicUrl": "Palvelimen URL-osoite",
+  "subsonicInvalidUrl": "Anna HTTP- tai HTTPS-palvelimen URL-osoite ilman kyselyä, fragmenttia tai upotettua kirjautumistunnusta.",
+  "subsonicUnsupported": "Tämä palvelin ei tue vaadittua Subsonic API- tai token-todennusta.",
+  "subsonicConnectionError": "Ei voi muodostaa yhteyttä. Tarkista URL-osoite, verkko ja HTTPS-varmenne. Webissä palvelimen on sallittava CORS, ja HTTPS-sovellus ei voi muodostaa yhteyttä HTTP:hen."
 }

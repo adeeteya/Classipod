@@ -134,5 +134,78 @@
   "editSongGenreLabel": "வகை",
   "editSongLyricsLabel": "பாடல் வரிகள்",
   "saveChangesButton": "மாற்றங்களைச் சேமிக்கவும்",
-  "veryLow": "மிகவும் குறைவு"
+  "veryLow": "மிகவும் குறைவு",
+  "reindexLibrarySettingTitle": "மறு அட்டவணை",
+  "reindexLibrarySettingDescription": "அனைத்து இசைக் கோப்புகளுக்கான மெட்டாடேட்டா மற்றும் கலைப்படைப்புகளை மீண்டும் படிக்கவும்.",
+  "refreshLibrarySettingTitle": "நூலகத்தைப் புதுப்பிக்கவும்",
+  "refreshLibrarySettingDescription": "சேர்க்கப்பட்ட அல்லது நீக்கப்பட்ட இசையைச் சரிபார்க்கவும். ஏற்கனவே உள்ள மெட்டாடேட்டா மற்றும் கலைப்படைப்புகளை வைத்திருங்கள்.",
+  "librarySettingsScreenTitle": "நூலக அமைப்புகள்",
+  "librarySettingsDescription": "இசை அட்டவணைப்படுத்தல் மற்றும் விலக்கப்பட்ட கோப்புறைகளை நிர்வகிக்கவும்.",
+  "sleepTimerTitle": "ஸ்லீப் டைமர்",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "தற்போதைய பாடலின் முடிவு",
+  "sleepTimerRemainingLabel": "மீதமுள்ளவை",
+  "findingSongs": "பாடல்களைத் தேடுகிறது…",
+  "songsLoaded": "ஏற்றப்பட்ட பாடல்கள்: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "கலைப்படைப்பு தற்காலிகமாக சேமிக்கப்பட்டது: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "இசை நூலகத்தை ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்.",
+  "missingTracksTitle": "தடங்கள் காணவில்லை",
+  "missingTracksDescription": "படிக்க முடியாத கோப்புகளை மதிப்பாய்வு செய்யவும்.",
+  "missingTracksEmpty": "படிக்க முடியாத தடங்கள் இல்லை.",
+  "missingTrackRead": "இந்தக் கோப்பின் மெட்டாடேட்டாவைப் படிக்க முடியவில்லை. கோப்பு இருப்பிடம் மற்றும் அணுகல் அனுமதிகளைச் சரிபார்த்து, மீண்டும் முயற்சிக்க நூலகத்தை மீண்டும் அட்டவணைப்படுத்தவும்.",
+  "missingTrackArtwork": "இந்தக் கோப்பின் கலைப்படைப்பைப் படிக்க முடியவில்லை. ஆடியோ இன்னும் இயங்கக்கூடும். மீண்டும் முயற்சிக்க நூலகத்தை மீண்டும் அட்டவணைப்படுத்தவும்.",
+  "playbackBuffering": "இடையகப்படுத்துகிறது…",
+  "preventDuplicateTracksTitle": "நகல் தடங்களைத் தடுக்கவும்",
+  "preventDuplicateTracksDescription": "நகல் கோப்பு பெயர்களுடன் தடங்களை மறை.",
+  "hideLocalMusicTitle": "உள்ளூர் இசையை மறை",
+  "hideLocalMusicDescription": "Subsonic இயக்கத்தில் இருக்கும்போது உங்கள் நூலகத்தில் சர்வர் இசையை மட்டும் காட்டு. உள்ளூர் கோப்புகள் உங்கள் சாதனத்தில் இருக்கும்.",
+  "subsonicTitle": "Subsonic சேவையகம்",
+  "subsonicDescription": "Navidrome, gonic மற்றும் இணக்கமான சேவையகங்களிலிருந்து இசையை ஸ்ட்ரீம் செய்யவும்.",
+  "subsonicConfigure": "Subsonic ஐ உள்ளமைக்கவும்",
+  "subsonicUsername": "பயனர் பெயர்",
+  "subsonicPassword": "கடவுச்சொல்",
+  "subsonicConnect": "இணைக்கவும்",
+  "subsonicRemove": "சேவையகத்தை அகற்று",
+  "subsonicSignIn": "உள்நுழைய வேண்டும்",
+  "subsonicLoadingLibrary": "உங்கள் நூலகத்தை ஏற்றுகிறது…",
+  "subsonicContinueBackground": "பின்னணியில் தொடரவும்",
+  "subsonicClose": "மூடு",
+  "subsonicIndexing": "சர்வர் இசையை அட்டவணைப்படுத்துகிறது…",
+  "subsonicUnavailable": "கிடைக்கவில்லை",
+  "subsonicCredentialsError": "உங்கள் பயனர்பெயர், கடவுச்சொல் மற்றும் சேவையக அனுமதிகளைச் சரிபார்க்கவும்.",
+  "subsonicStorageError": "நற்சான்றிதழ்களைச் சேமிக்க முடியவில்லை. பாதுகாப்பான சேமிப்பிடம் உள்ளதா எனச் சரிபார்த்து மீண்டும் முயலவும்.",
+  "subsonicTimeout": "சர்வர் நேரம் முடிந்தது. மீண்டும் முயற்சிக்கவும்.",
+  "subsonicServerError": "சர்வர் லைப்ரரியைப் படிக்க முடியவில்லை. முந்தைய பட்டியல் தக்கவைக்கப்பட்டுள்ளது. மீண்டும் முயற்சிக்க நூலகத்தைப் புதுப்பிக்கவும்.",
+  "libraryRetry": "மீண்டும் முயற்சிக்கவும்",
+  "subsonicOn": "ஆன்",
+  "subsonicOff": "ஆஃப்",
+  "sleepTimerMinutes": "{minutes} நிமிடங்கள்",
+  "oledBlackDeviceColor": "OLED கருப்பு",
+  "subsonicUrl": "சேவையக URL",
+  "subsonicInvalidUrl": "வினவல், துண்டு அல்லது உட்பொதிக்கப்பட்ட உள்நுழைவு இல்லாமல் HTTP அல்லது HTTPS சேவையக URL ஐ உள்ளிடவும்.",
+  "subsonicUnsupported": "இந்த சேவையகம் தேவையான Subsonic API அல்லது டோக்கன் அங்கீகாரத்தை ஆதரிக்கவில்லை.",
+  "subsonicConnectionError": "இணைக்க முடியவில்லை. URL, நெட்வொர்க் மற்றும் HTTPS சான்றிதழைச் சரிபார்க்கவும். இணையத்தில், சேவையகம் CORS ஐ அனுமதிக்க வேண்டும் மற்றும் HTTPS ஆப்ஸால் HTTP உடன் இணைக்க முடியாது."
 }

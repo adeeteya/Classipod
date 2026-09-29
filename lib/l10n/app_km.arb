@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ចងក្រង",
   "editSongLyricsLabel": "ចិង",
   "saveChangesButton": "រក្សាទុកការផ្លាស់ប្តូរ",
-  "veryLow": "ទាបណាស់"
+  "veryLow": "ទាបណាស់",
+  "reindexLibrarySettingTitle": "ធ្វើលិបិក្រមឡើងវិញ",
+  "reindexLibrarySettingDescription": "អានទិន្នន័យមេតា និងស្នាដៃសិល្បៈសម្រាប់ឯកសារតន្ត្រីទាំងអស់ម្តងទៀត។",
+  "refreshLibrarySettingTitle": "ផ្ទុកបណ្ណាល័យឡើងវិញ",
+  "refreshLibrarySettingDescription": "ពិនិត្យមើលតន្ត្រីដែលបានបន្ថែម ឬលុប។ រក្សាទិន្នន័យមេតា និងការងារសិល្បៈដែលមានស្រាប់។",
+  "librarySettingsScreenTitle": "ការកំណត់បណ្ណាល័យ",
+  "librarySettingsDescription": "គ្រប់គ្រងការដាក់លិបិក្រមតន្ត្រី និងថតឯកសារដែលមិនរាប់បញ្ចូល។",
+  "sleepTimerTitle": "កម្មវិធីកំណត់ម៉ោងគេង",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "ចុងបញ្ចប់នៃបទចម្រៀងបច្ចុប្បន្ន",
+  "sleepTimerRemainingLabel": "នៅសល់",
+  "findingSongs": "កំពុងស្វែងរកបទចម្រៀង...",
+  "songsLoaded": "បទចម្រៀងដែលបានផ្ទុក៖ {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "ការងារសិល្បៈដែលបានរក្សាទុក៖ {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "មិនអាចផ្ទុកបណ្ណាល័យតន្ត្រីបានទេ។ សូមព្យាយាមម្តងទៀត។",
+  "missingTracksTitle": "បាត់បទ",
+  "missingTracksDescription": "ពិនិត្យឯកសារដែលមិនអាចអានបាន។",
+  "missingTracksEmpty": "គ្មានបទដែលមិនអាចអានបាន។",
+  "missingTrackRead": "មិនអាចអានទិន្នន័យមេតារបស់ឯកសារនេះបានទេ។ ពិនិត្យទីតាំងឯកសារ និងសិទ្ធិចូលប្រើ បន្ទាប់មកធ្វើលិបិក្រមបណ្ណាល័យឡើងវិញ ដើម្បីព្យាយាមម្តងទៀត។",
+  "missingTrackArtwork": "មិនអាចអានស្នាដៃសិល្បៈរបស់ឯកសារនេះបានទេ។ អូឌីយ៉ូអាចនៅតែចាក់។ ធ្វើលិបិក្រមបណ្ណាល័យឡើងវិញដើម្បីព្យាយាមម្តងទៀត។",
+  "playbackBuffering": "កំពុងផ្ទុក...",
+  "preventDuplicateTracksTitle": "ទប់ស្កាត់បទចម្លង",
+  "preventDuplicateTracksDescription": "លាក់បទជាមួយឈ្មោះឯកសារស្ទួន។",
+  "hideLocalMusicTitle": "លាក់តន្ត្រីក្នុងស្រុក",
+  "hideLocalMusicDescription": "បង្ហាញតែតន្ត្រីម៉ាស៊ីនមេនៅក្នុងបណ្ណាល័យរបស់អ្នកខណៈពេលដែល Subsonic បើក។ ឯកសារ​មូលដ្ឋាន​នៅ​លើ​ឧបករណ៍​របស់​អ្នក។",
+  "subsonicTitle": "ម៉ាស៊ីនមេ Subsonic",
+  "subsonicDescription": "ស្ទ្រីមតន្ត្រីពី Navidrome, gonic និងម៉ាស៊ីនមេដែលត្រូវគ្នា។",
+  "subsonicConfigure": "កំណត់រចនាសម្ព័ន្ធ Subsonic",
+  "subsonicUsername": "ឈ្មោះអ្នកប្រើប្រាស់",
+  "subsonicPassword": "ពាក្យសម្ងាត់",
+  "subsonicConnect": "ភ្ជាប់",
+  "subsonicRemove": "លុបម៉ាស៊ីនមេ",
+  "subsonicSignIn": "តម្រូវឱ្យចូល",
+  "subsonicLoadingLibrary": "កំពុងផ្ទុកបណ្ណាល័យរបស់អ្នក...",
+  "subsonicContinueBackground": "បន្តក្នុងផ្ទៃខាងក្រោយ",
+  "subsonicClose": "បិទ",
+  "subsonicIndexing": "កំពុងធ្វើលិបិក្រមតន្ត្រីម៉ាស៊ីនមេ...",
+  "subsonicUnavailable": "មិនអាចប្រើបាន",
+  "subsonicCredentialsError": "ពិនិត្យឈ្មោះអ្នកប្រើប្រាស់ ពាក្យសម្ងាត់ និងការអនុញ្ញាតម៉ាស៊ីនមេរបស់អ្នក។",
+  "subsonicStorageError": "មិនអាចរក្សាទុកព័ត៌មានសម្ងាត់បានទេ។ ពិនិត្យមើលថាមានកន្លែងផ្ទុកសុវត្ថិភាព ហើយព្យាយាមម្តងទៀត។",
+  "subsonicTimeout": "ម៉ាស៊ីនមេបានអស់ពេលហើយ។ សូមព្យាយាមម្តងទៀត។",
+  "subsonicServerError": "មិនអាចអានបណ្ណាល័យម៉ាស៊ីនមេបានទេ។ កាតាឡុកមុនត្រូវបានរក្សាទុក។ ផ្ទុកបណ្ណាល័យឡើងវិញ ដើម្បីព្យាយាមម្តងទៀត។",
+  "libraryRetry": "ាប់រេគ្រប់យ៉ាងបី",
+  "subsonicOn": "លើ",
+  "subsonicOff": "រលត់",
+  "sleepTimerMinutes": "{minutes} នាទី។",
+  "oledBlackDeviceColor": "OLED ខ្មៅ",
+  "subsonicUrl": "URL ម៉ាស៊ីនមេ",
+  "subsonicInvalidUrl": "បញ្ចូល HTTP ឬ HTTPS server URL ដោយគ្មានសំណួរ បំណែក ឬការចូលដែលបានបង្កប់។",
+  "subsonicUnsupported": "ម៉ាស៊ីនមេនេះមិនគាំទ្រ Subsonic API ដែលត្រូវការ ឬការផ្ទៀងផ្ទាត់សញ្ញាសម្ងាត់ទេ។",
+  "subsonicConnectionError": "មិនអាចភ្ជាប់បានទេ។ ពិនិត្យ URL បណ្តាញ និងវិញ្ញាបនបត្រ HTTPS ។ នៅលើបណ្តាញ ម៉ាស៊ីនមេត្រូវតែអនុញ្ញាត CORS ហើយកម្មវិធី HTTPS មិនអាចភ្ជាប់ទៅ HTTP បានទេ។"
 }

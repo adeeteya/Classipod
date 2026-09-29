@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ba'axi",
   "editSongLyricsLabel": "Letras",
   "saveChangesButton": "Ahorrar k'eexpajal",
-  "veryLow": "Jach yáanal"
+  "veryLow": "Jach yáanal",
+  "reindexLibrarySettingTitle": "Ka'a indexar",
+  "reindexLibrarySettingDescription": "Xook metadatos yéetel yila'ob uti'al tuláakal le archivos paax tu ka'atéen.",
+  "refreshLibrarySettingTitle": "Actualizar le biblioteca",
+  "refreshLibrarySettingDescription": "Ilawil wa ts'o'ok u ts'áabal wa tselik paax. Mantenga metadatos existentes yéetel yila'ob.",
+  "librarySettingsScreenTitle": "Configuración ti' le biblioteca",
+  "librarySettingsDescription": "Gestionar indexación paax yéetel carpetas excluidas.",
+  "sleepTimerTitle": "Temporizador u weenel",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "U xuul le k'aayo' yaan te' súutukila'",
+  "sleepTimerRemainingLabel": "Ku p'áatal",
+  "findingSongs": "Kaxtik k'aayo'ob...",
+  "songsLoaded": "K'aayo'ob ku ts'a'abal: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "U yila'al ts'a'an ti' caché: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ma' tu páajtal u kuuch le biblioteca paax. Béet ka'a k'aax.",
+  "missingTracksTitle": "Pistas mina'an",
+  "missingTracksDescription": "Ilawil le archivo'ob ma' páajchaj u xo'okol.",
+  "missingTracksEmpty": "Mina'an pistas ma' u páajtal u xo'okol.",
+  "missingTrackRead": "Ma' páajchaj u xo'okol u metadatos le archivoa'. Ilawil tu'ux yaan le archivo yéetel le permisos muuk', ts'o'okole' k'a' indexar le biblioteca utia'al u ka'a intentar.",
+  "missingTrackArtwork": "Ma' páajchaj u xo'okol u yila'al le archivoa'. je'el u páajtal u báaxal le audioo'. Reindexar le biblioteca uti'al u ka'a intentar.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Je'elel u duplicar le pistas",
+  "preventDuplicateTracksDescription": "Ta'akikubáa pistas yéetel k'aaba' archivo duplicado.",
+  "hideLocalMusicTitle": "Ta'akmaj paax local",
+  "hideLocalMusicDescription": "We'esik chéen paax servidor ti' u biblioteca ka' jo'op' u Subsonic táan encendido. Le archivos locales ku p'áatal ti' a dispositivo.",
+  "subsonicTitle": "Subsonic Servidor",
+  "subsonicDescription": "Transmitir paax ti' Navidrome, gonic, yéetel servidores compatibles.",
+  "subsonicConfigure": "Configurar Subsonic",
+  "subsonicUsername": "K'aaba' usuario",
+  "subsonicPassword": "Contraseña",
+  "subsonicConnect": "Conectar",
+  "subsonicRemove": "luk'es le servidor",
+  "subsonicSignIn": "k'a'abéet u yokol",
+  "subsonicLoadingLibrary": "Táan u kuuch a biblioteca...",
+  "subsonicContinueBackground": "t'u'uchpachtik tu paachil",
+  "subsonicClose": "Muts'ik",
+  "subsonicIndexing": "Indexación u paax le servidor...",
+  "subsonicUnavailable": "Ma' yaan",
+  "subsonicCredentialsError": "Ilawil a k'aaba', a contraseña yéetel a permiso ti' le servidor.",
+  "subsonicStorageError": "Ma' páajchaj u ta'akikubáa le credenciales. Ilawil wa yaan jump'éel almacenamiento seguro yéetel intente tu ka'atéen.",
+  "subsonicTimeout": "Le servidor ts'o'ok u máan u k'iinil. Béet ka'a ilawil.",
+  "subsonicServerError": "Ma' páajchaj u xo'okol le biblioteca ti' le servidor. Le catálogo anterior ku p'áatal. Actualizar le biblioteca utia'al u ka'a intentar.",
+  "libraryRetry": "K'a' intentar",
+  "subsonicOn": "Yóok'ol",
+  "subsonicOff": "Tuupul",
+  "sleepTimerMinutes": "{minutes} Minutos",
+  "oledBlackDeviceColor": "OLED Negro",
+  "subsonicUrl": "URL ti' le servidor",
+  "subsonicInvalidUrl": "Ts'íibt jump'éel URL u servidor HTTP wa HTTPS xma' jump'éel consulta, fragmento wa Chúunul xoknáalo'obo' incrustado.",
+  "subsonicUnsupported": "Le servidor ma' soporta le API Subsonic k'a'abeto'ob wa autenticación token.",
+  "subsonicConnectionError": "Ma' tu páajtal u conectar. Ilawil le URL, páawo'ob yéetel certificado HTTPS. Te' Web, le servidor k'a'ana'an u cha'ik CORS yéetel jump'éel app HTTPS ma' je'el u páajtal u conectar u HTTP."
 }

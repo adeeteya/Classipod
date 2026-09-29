@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ބާވަތް",
   "editSongLyricsLabel": "ލިރިކްސް",
   "saveChangesButton": "ބަދަލުތައް ސަލާމަތްކުރުން",
-  "veryLow": "ވަރަށް ދަށް"
+  "veryLow": "ވަރަށް ދަށް",
+  "reindexLibrarySettingTitle": "ރީ އިންޑެކްސް",
+  "reindexLibrarySettingDescription": "ހުރިހާ މިއުޒިކް ފައިލްތަކެއްގެ މެޓަޑޭޓާ އާއި އާޓްވޯކް އަލުން ކިޔާށެވެ.",
+  "refreshLibrarySettingTitle": "ރިފްރެޝް ލައިބްރަރީ",
+  "refreshLibrarySettingDescription": "އިތުރުކޮށްފައިވާ ނުވަތަ ޑިލީޓްކޮށްފައިވާ މިއުޒިކެއް ހުރިތޯ ބަލާށެވެ. މިހާރު ހުރި މެޓަޑޭޓާއާއި އާޓްވޯކް ބެހެއްޓުން.",
+  "librarySettingsScreenTitle": "ލައިބްރަރީ ސެޓިންގސް",
+  "librarySettingsDescription": "މިއުޒިކް އިންޑެކްސް ކުރުމާއި ބާކީކޮށްފައިވާ ފޯލްޑަރުތައް ބެލެހެއްޓުން.",
+  "sleepTimerTitle": "ސްލީޕް ޓައިމަރ އެވެ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "މިހާރުގެ ލަވަ ނިމުނީ",
+  "sleepTimerRemainingLabel": "ބާކީ...",
+  "findingSongs": "ލަވަތައް ހޯދުން...",
+  "songsLoaded": "ލޯޑް ކުރެވިފައިވާ ލަވަތައް: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "އާޓްވޯކް ކެޝްކޮށްފައިވަނީ: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "މިއުޒިކް ލައިބްރަރީ ލޯޑް ނުކުރެވޭ. އަލުން މަސައްކަތް ކުރައްވާ.",
+  "missingTracksTitle": "ގެއްލިފައިވާ ޓްރެކްތަކެވެ",
+  "missingTracksDescription": "ކިޔަން ނޭނގޭ ފައިލްތައް ރިވިއުކުރުން.",
+  "missingTracksEmpty": "ކިޔަން ނޭނގޭ ޓްރެކްތަކެއް ނެތެވެ.",
+  "missingTrackRead": "މި ފައިލްގެ މެޓަޑޭޓާ ކިޔަން ނުކެރުނެވެ. ފައިލް ލޮކޭޝަން އަދި އެކްސެސް ހުއްދަތައް ޗެކްކޮށް، ދެން އަލުން މަސައްކަތް ކުރުމަށް ލައިބްރަރީ އަލުން އިންޑެކްސް ކޮށްލާށެވެ.",
+  "missingTrackArtwork": "މި ފައިލްގެ އާޓްވޯކް ކިޔަން ނުކެރުނެވެ. އަދިވެސް އޯޑިއޯ ކުޅެފާނެއެވެ. އަލުން މަސައްކަތް ކުރުމަށްޓަކައި ލައިބްރަރީ އަލުން އިންޑެކްސް ކުރާށެވެ.",
+  "playbackBuffering": "ބަފަރިންގ...",
+  "preventDuplicateTracksTitle": "ޑަޕްލިކޭޓް ޓްރެކްސް ހުއްޓުވުން",
+  "preventDuplicateTracksDescription": "ޑަބިލިކޭޓް ފައިލް ނަންތަކާއެކު ޓްރެކްތައް ފޮރުވުން.",
+  "hideLocalMusicTitle": "ލޯކަލް މިއުޒިކް ފޮރުވާށެވެ",
+  "hideLocalMusicDescription": "Subsonic އޮން ކޮށްފައި ހުންނައިރު ލައިބްރަރީގައި ހަމައެކަނި ސަރވަރ މިއުޒިކް ދައްކާށެވެ. ލޯކަލް ފައިލްތައް ޑިވައިސްގައި ހުރެއެވެ.",
+  "subsonicTitle": "Subsonic ސަރވަރ އެވެ",
+  "subsonicDescription": "Navidrome، gonic، އަދި ކޮމްޕެޓިބަލް ސަރވަރތަކުން މިއުޒިކް ސްޓްރީމްކުރުން.",
+  "subsonicConfigure": "Subsonic ކޮންފިގްރޭޓް ކުރުން",
+  "subsonicUsername": "ޔޫޒަރނޭމް",
+  "subsonicPassword": "ޕާސްވޯޑް",
+  "subsonicConnect": "ގުޅާލާށެވެ",
+  "subsonicRemove": "ސަރވަރ ނައްތާލުން",
+  "subsonicSignIn": "ސައިން އިން ކުރަން ޖެހެއެވެ",
+  "subsonicLoadingLibrary": "ތިޔަ ލައިބްރަރީ ލޯޑް ކުރަމުން...",
+  "subsonicContinueBackground": "ބެކްގްރައުންޑްގައި ކުރިއަށް ދާށެވެ",
+  "subsonicClose": "ބަންދުކޮށްލާށެވެ",
+  "subsonicIndexing": "އިންޑެކްސް ކުރަނީ ސަރވަރ މިއުޒިކް...",
+  "subsonicUnavailable": "ނުލިބޭ",
+  "subsonicCredentialsError": "ޔޫޒަރނޭމް، ޕާސްވޯޑް، އަދި ސަރވަރ ހުއްދަތައް ޗެކްކުރުން.",
+  "subsonicStorageError": "ކްރެޑިޝަންސް ސޭވް ނުކުރެވުނެވެ. ސެކިއުރިޓީ ސްޓޯރޭޖް ލިބެން ހުރިތޯ ޗެކްކޮށް އަލުން މަސައްކަތް ކުރާށެވެ.",
+  "subsonicTimeout": "ސަރވަރ ޓައިމް އައުޓް ވެއްޖެއެވެ. އަނެއްކާވެސް މަސައްކަތް ކުރައްވާށެވެ.",
+  "subsonicServerError": "ސަރވަރ ލައިބްރަރީ ކިޔަން ނުކެރުނެވެ. ކުރީގެ ކެޓަލަގް ހިފެހެއްޓިފައިވެ އެވެ. އަލުން މަސައްކަތް ކުރުމަށް ލައިބްރަރީ ރިފްރެޝް ކުރާށެވެ.",
+  "libraryRetry": "ރީޓްރައި",
+  "subsonicOn": "މަތީގައި",
+  "subsonicOff": "އޮފް",
+  "sleepTimerMinutes": "{minutes} މިނެޓް",
+  "oledBlackDeviceColor": "އޯއެލްއީޑީ ބްލެކް އެވެ",
+  "subsonicUrl": "ސަރވަރ ޔޫ.އާރ.އެލް",
+  "subsonicInvalidUrl": "ކިއުއަރީ، ފްރެގްމެންޓެއް، ނުވަތަ އެންބެޑެޑް ލޮގިންއެއް ނެތި އެޗްޓީޓީޕީ ނުވަތަ އެޗްޓީޓީޕީއެސް ސަރވަރ ޔޫއާރްއެލް އެއް ލިޔެލާށެވެ.",
+  "subsonicUnsupported": "މި ސަރވަރ އިން ބޭނުންވާ Subsonic އެޕީއައި ނުވަތަ ޓޯކަން އޮތެންޓިކޭޝަން އަށް ސަޕޯޓް ނުކުރެއެވެ.",
+  "subsonicConnectionError": "ގުޅެވޭކަށް ނެތެވެ. ޔޫއާރްއެލް، ނެޓްވޯކް، އަދި އެޗްޓީޓީޕީއެސް ސެޓްފިކެޓް ޗެކްކުރުން. ވެބްގައި ސަރވަރ އިން ކޯރސް އަށް ހުއްދަ ދޭންޖެހޭއިރު އެޗްޓީޓީޕީއެސް އެޕަކަށް އެޗްޓީޓީޕީ އާއި ގުޅެވޭކަށް ނެތެވެ."
 }

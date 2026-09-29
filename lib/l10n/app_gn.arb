@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Meña",
   "editSongLyricsLabel": "Letra .",
   "saveChangesButton": "Oñongatu ñemoambue .",
-  "veryLow": "Ijyvateterei ."
+  "veryLow": "Ijyvateterei .",
+  "reindexLibrarySettingTitle": "Ojejapo jey índice",
+  "reindexLibrarySettingDescription": "Emoñe’ẽ jey metadato ha arte rehegua opaite purahéi rembiapokue rehegua.",
+  "refreshLibrarySettingTitle": "Biblioteca Ñembopyahu",
+  "refreshLibrarySettingDescription": "Ehechápa oĩ purahéi oñembojoapýva térã oñembogueva’ekue. Eñongatu metadato ha tembiapo arte rehegua oĩmava.",
+  "librarySettingsScreenTitle": "Biblioteca Ñemboheko",
+  "librarySettingsDescription": "Emohenda purahéi indexación ha umi carpeta oñemboykéva.",
+  "sleepTimerTitle": "Temporizador de sueño rehegua",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Purahéi Ko’áĝagua paha",
+  "sleepTimerRemainingLabel": "Opytáva",
+  "findingSongs": "Ojejuhúvo purahéi...",
+  "songsLoaded": "Purahéi ojekargáva: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Tembiapo arte rehegua oĩva caché-pe: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ndaikatúi ojekarga purahéi ryru. Eñeha’ã jey.",
+  "missingTracksTitle": "Pistas Ofaltáva",
+  "missingTracksDescription": "Ehechamína umi archivo ndaikatúiva ojelee.",
+  "missingTracksEmpty": "Ndaipóri pista ndojeleekuaáiva.",
+  "missingTrackRead": "Ndaikatúi omoñe’ẽ ko vore metadato. Ehecháke vore ñemohenda ha jeike permiso, upéi emoĩ jey index-pe aranduka’i reñeha’ã jey hag̃ua.",
+  "missingTrackArtwork": "Ndaikatúi omoñe’ẽ ko vore rembiapokue. Ikatu gueteri oñembopu audio. Emoĩ jey index pe aranduka’i reñeha’ã jey hag̃ua.",
+  "playbackBuffering": "Buffering rehegua...",
+  "preventDuplicateTracksTitle": "Ojejoko umi Pista Duplicado",
+  "preventDuplicateTracksDescription": "Oñomi pista orekóva archivo réra mokõi jey.",
+  "hideLocalMusicTitle": "Oñomi Música Local",
+  "hideLocalMusicDescription": "Ehechauka servidor purahéi añoite nde aranduka’ípe Subsonic oĩ aja. Umi archivo local opyta ne tembipuru’ípe.",
+  "subsonicTitle": "Subsonic Servidor rehegua",
+  "subsonicDescription": "Embohasa purahéi Navidrome, gonic ha servidor ojoguerahávagui.",
+  "subsonicConfigure": "Emohenda Subsonic",
+  "subsonicUsername": "Pojoapy puruhára réra",
+  "subsonicPassword": "Ñe’ẽñemi",
+  "subsonicConnect": "Oñembojoaju",
+  "subsonicRemove": "Ojepe’a Servidor rehegua",
+  "subsonicSignIn": "Oñeikotevẽ ojeike",
+  "subsonicLoadingLibrary": "Ojekargávo nde biblioteca...",
+  "subsonicContinueBackground": "Econtinua pe fondo-pe",
+  "subsonicClose": "Oñemboty",
+  "subsonicIndexing": "Ojejapóvo indexación purahéi servidor rehegua...",
+  "subsonicUnavailable": "Ndojeguerekói",
+  "subsonicCredentialsError": "Ehecháke ne puruhára réra, ñe’ẽñemi ha ne servidor permiso.",
+  "subsonicStorageError": "Ndaikatúi oñongatu umi credencial. Ehecháke oĩpa ñeñongatuha seguro ha eñeha’ã jey.",
+  "subsonicTimeout": "Pe servidor oñemohu’ã tiempo. Eñeha’ã jey.",
+  "subsonicServerError": "Ndaikatúi omoñe’ẽ pe aranduka’i servidor rehegua. Ojeguereko catálogo oîva'ekue yma. Embopyahu Biblioteca oñeha’ã jey hag̃ua.",
+  "libraryRetry": "oñeha’ã jey",
+  "subsonicOn": "Pe",
+  "subsonicOff": "Oguehápe",
+  "sleepTimerMinutes": "{minutes} Minutos rehegua",
+  "oledBlackDeviceColor": "OLED Negro rehegua",
+  "subsonicUrl": "Servidor URL rehegua",
+  "subsonicInvalidUrl": "Emoinge peteĩ HTTP térã HTTPS servidor URL peteĩ porandu, pehẽngue térã jeike oñemboguapýva’ỹre.",
+  "subsonicUnsupported": "Ko servidor ndoipytyvõi Subsonic API térã token jekuaauka oñeikotevẽva.",
+  "subsonicConnectionError": "Ndaikatúi oñembojoaju. Ehecháke URL, red ha HTTPS kuatia’atâ. Web-pe, pe servidor ohejavaꞌerã CORS ha peteĩ HTTPS app ndaikatúi oñembojoaju HTTP ndive."
 }

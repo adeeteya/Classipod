@@ -134,5 +134,78 @@
   "editSongGenreLabel": "類型",
   "editSongLyricsLabel": "作詞",
   "saveChangesButton": "儲存變更",
-  "veryLow": "好低"
+  "veryLow": "好低",
+  "reindexLibrarySettingTitle": "重新索引",
+  "reindexLibrarySettingDescription": "再次讀取所有音樂檔案嘅元數據同藝術品。",
+  "refreshLibrarySettingTitle": "刷新圖書館",
+  "refreshLibrarySettingDescription": "檢查有冇加咗或者刪除咗音樂。保留現有嘅元數據同藝術品。",
+  "librarySettingsScreenTitle": "圖書館設定",
+  "librarySettingsDescription": "管理音樂索引同埋排除咗嘅資料夾。",
+  "sleepTimerTitle": "睡眠計時器",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "當前歌曲結束",
+  "sleepTimerRemainingLabel": "剩低嘅",
+  "findingSongs": "搵緊歌 …",
+  "songsLoaded": "已載入歌曲： {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "藝術品快取： {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "載入唔到音樂庫。請重試。",
+  "missingTracksTitle": "缺少曲目",
+  "missingTracksDescription": "睇返讀唔到嘅檔案。",
+  "missingTracksEmpty": "冇讀唔到嘅曲目。",
+  "missingTrackRead": "讀唔到呢個檔案嘅元數據。檢查檔案位置同存取權限，然後重新索引庫重試。",
+  "missingTrackArtwork": "睇唔到呢個檔案嘅藝術品。音訊可能仲會播放。重新索引庫嚟重試。",
+  "playbackBuffering": "緩衝 …",
+  "preventDuplicateTracksTitle": "防止重複曲目",
+  "preventDuplicateTracksDescription": "隱藏檔案名重複嘅曲目。",
+  "hideLocalMusicTitle": "隱藏本地音樂",
+  "hideLocalMusicDescription": "喺 Subsonic 開咗嗰陣，只會喺你嘅媒體庫入面顯示伺服器音樂。本機檔案會保留喺你嘅裝置上面。",
+  "subsonicTitle": "Subsonic 伺服器",
+  "subsonicDescription": "喺 Navidrome 、 gonic 同兼容伺服器串流音樂。",
+  "subsonicConfigure": "配置 Subsonic",
+  "subsonicUsername": "用戶名",
+  "subsonicPassword": "密碼",
+  "subsonicConnect": "連接",
+  "subsonicRemove": "移除伺服器",
+  "subsonicSignIn": "需要登入",
+  "subsonicLoadingLibrary": "載入緊你嘅圖書館⋯",
+  "subsonicContinueBackground": "繼續喺後台",
+  "subsonicClose": "閂咗",
+  "subsonicIndexing": "索引伺服器音樂 ...",
+  "subsonicUnavailable": "唔可以用",
+  "subsonicCredentialsError": "檢查你嘅用戶名、密碼同伺服器權限。",
+  "subsonicStorageError": "儲存唔到憑證。檢查有冇安全儲存空間，然後試多一次。",
+  "subsonicTimeout": "個伺服器超時。唔該再試多次。",
+  "subsonicServerError": "讀唔到伺服器庫。上一個目錄會被保留。重新整理媒體庫重試。",
+  "libraryRetry": "重試",
+  "subsonicOn": "喺上面",
+  "subsonicOff": "收線",
+  "sleepTimerMinutes": "{minutes}分鐘",
+  "oledBlackDeviceColor": "OLED 黑色",
+  "subsonicUrl": "伺服器網址",
+  "subsonicInvalidUrl": "輸入一個冇查詢、片段或者嵌入式登入嘅 HTTP 或者 HTTPS 伺服器網址。",
+  "subsonicUnsupported": "呢個伺服器唔支援所需嘅 Subsonic API 或者令牌認證。",
+  "subsonicConnectionError": "連接唔到。檢查網址、網絡同 HTTPS 憑證。喺網絡上面，伺服器必須允許 CORS ，而 HTTPS 應用程式就連接唔到 HTTP 。"
 }

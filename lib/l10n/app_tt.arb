@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Текст",
   "saveChangesButton": "Changesзгәрешләрне саклагыз",
-  "veryLow": "Бик түбән"
+  "veryLow": "Бик түбән",
+  "reindexLibrarySettingTitle": "Кабат индекс",
+  "reindexLibrarySettingDescription": "Барлык музыка файллары өчен мета-мәгълүматларны һәм сәнгать әсәрләрен кабат укыгыз.",
+  "refreshLibrarySettingTitle": "Китапханәне яңарту",
+  "refreshLibrarySettingDescription": "Өстәлгән яки бетерелгән музыканы тикшерегез. Хәзерге мета-мәгълүматларны һәм сәнгать әсәрләрен саклагыз.",
+  "librarySettingsScreenTitle": "Китапханә көйләүләре",
+  "librarySettingsDescription": "Музыка индексациясе һәм папкалар белән идарә итү.",
+  "sleepTimerTitle": "Йокы Таймеры",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Хәзерге җырның ахыры",
+  "sleepTimerRemainingLabel": "Калган",
+  "findingSongs": "Songsырлар табу…",
+  "songsLoaded": "Йөкләнгән җырлар: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Сәнгать әсәрләре кэшланган: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Музыка китапханәсен йөкләп булмый. Зинһар, кабатлап карагыз.",
+  "missingTracksTitle": "Ingгалган юллар",
+  "missingTracksDescription": "Укып булмый торган файлларны карау.",
+  "missingTracksEmpty": "Укылмаган юллар юк.",
+  "missingTrackRead": "Бу файлның мета-мәгълүматларын укып булмады. Файлның урнашу урынын һәм рөхсәтләрен тикшерегез, аннары кабат карау өчен китапханәне реиндекслагыз.",
+  "missingTrackArtwork": "Бу файлның әсәрләрен укып булмады. Аудио әле уйнарга мөмкин. Кабатлап карау өчен китапханәне Reindex.",
+  "playbackBuffering": "Буферлау…",
+  "preventDuplicateTracksTitle": "Күчерелгән юлларны булдырмагыз",
+  "preventDuplicateTracksDescription": "Күчерелгән файл исемнәре белән трекларны яшерегез.",
+  "hideLocalMusicTitle": "Localирле музыканы яшерегез",
+  "hideLocalMusicDescription": "Subsonic эшләгәндә китапханәгездә сервер музыкасын гына күрсәтегез. Localирле файллар сезнең җайланмада кала.",
+  "subsonicTitle": "Subsonic серверы",
+  "subsonicDescription": "Navidrome, gonic һәм туры килгән серверлардан музыка агымы.",
+  "subsonicConfigure": "Subsonic конфигурациясе",
+  "subsonicUsername": "Кулланучы исеме",
+  "subsonicPassword": "Серсүз",
+  "subsonicConnect": "Бәйләнегез",
+  "subsonicRemove": "Серверны бетерегез",
+  "subsonicSignIn": "Керү кирәк",
+  "subsonicLoadingLibrary": "Китапханәгезне йөкләү…",
+  "subsonicContinueBackground": "Фонда дәвам итегез",
+  "subsonicClose": "Ябу",
+  "subsonicIndexing": "Сервер музыкасын индексацияләү…",
+  "subsonicUnavailable": "Мөмкин түгел",
+  "subsonicCredentialsError": "Кулланучының исемен, серсүзен һәм сервер рөхсәтен тикшерегез.",
+  "subsonicStorageError": "Сертификатларны саклый алмады. Куркынычсыз саклагыч барлыгын тикшерегез һәм кабатлап карагыз.",
+  "subsonicTimeout": "Сервер бетте. Зинһар, кабатлап карагыз.",
+  "subsonicServerError": "Сервер китапханәсен укып булмады. Алдагы каталог сакланган. Кабатлап карау өчен китапханәне яңарту.",
+  "libraryRetry": "Кабатлап кара",
+  "subsonicOn": "Өстендә",
+  "subsonicOff": "Сүндерелгән",
+  "sleepTimerMinutes": "{minutes} минут",
+  "oledBlackDeviceColor": "ОЛЕД Кара",
+  "subsonicUrl": "Сервер URL",
+  "subsonicInvalidUrl": "Сорау, фрагмент яки урнаштырылган логинсыз HTTP яки HTTPS сервер URL кертегез.",
+  "subsonicUnsupported": "Бу сервер кирәкле Subsonic API яки токен аутентификациясен хупламый.",
+  "subsonicConnectionError": "Бәйләп булмый. URL, челтәр һәм HTTPS сертификатын тикшерегез. Вебда, сервер CORS рөхсәт итәргә тиеш һәм HTTPS кушымтасы HTTP белән тоташа алмый."
 }

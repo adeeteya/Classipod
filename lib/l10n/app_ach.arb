@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Kit mene",
   "editSongLyricsLabel": "Lok me wer",
   "saveChangesButton": "Gwoko alokaloka",
-  "veryLow": "Yeny tutwal"
+  "veryLow": "Yeny tutwal",
+  "reindexLibrarySettingTitle": "Medo rwom",
+  "reindexLibrarySettingDescription": "Kwan ngec ma ki coyo ki cal ma ki yubu pi wer weny.",
+  "refreshLibrarySettingTitle": "Medo ot ma ki gwoko iye buk",
+  "refreshLibrarySettingDescription": "Nen pi wer ma ki medo onyo ki kwanyo woko. Gwok ngec ma tye ki cal ma ki goyo.",
+  "librarySettingsScreenTitle": "Kit ma ki keto kwede ot ma ki gwoko iye buk",
+  "librarySettingsDescription": "Gwok wer ma ki keto i karatac ki folda ma ki kwanyo woko.",
+  "sleepTimerTitle": "Cawa me nino",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Agiki me wer ma tye i kare ni",
+  "sleepTimerRemainingLabel": "ma odong",
+  "findingSongs": "Nongo wer...",
+  "songsLoaded": "wer ma ki keto: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Cal ma ki gwoko: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Pe kitwero keto kama ki gwoko iye wer. Tim ber item doki.",
+  "missingTracksTitle": "Gin ma orweny",
+  "missingTracksDescription": "Nen karatac ma onongo pe kitwero kwano.",
+  "missingTracksEmpty": "Pe tye wer ma pe kitwero kwano.",
+  "missingTrackRead": "Pe atwero kwano lok ma mako gin ni. Nen kama karatac ni tye iye ki twero me donyo iye, ki dong idok cen i ot ma ki gwoko iye buk ni me temo odoco.",
+  "missingTrackArtwork": "Pe atwero kwano cal ma ki coyo i karatac ni. Dwan twero bedo ka winye. Lok i ot ma ki gwoko iye buk ni me temo odoco.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Gengo wer ma rwate",
+  "preventDuplicateTracksDescription": "Kano wer ma tye ki nying file ma rwate.",
+  "hideLocalMusicTitle": "Kano wer me kabedo ni",
+  "hideLocalMusicDescription": "Nyut wer ma ki keto i ot ma ki gwoko iye jami ni nongo Subsonic tye ka tic. Jami ma ki keto i cim ni bedo i cim ni.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Winy wer ki bot Navidrome, gonic, ki jami ma rwate.",
+  "subsonicConfigure": "Yub Subsonic",
+  "subsonicUsername": "Nying latic",
+  "subsonicPassword": "Nying me donyo",
+  "subsonicConnect": "Kubbe",
+  "subsonicRemove": "Kwanyo gin ma ki lwongo ni server",
+  "subsonicSignIn": "Donyo iye mitte",
+  "subsonicLoadingLibrary": "Tye ka keto ot ma ki gwoko iye buk ni...",
+  "subsonicContinueBackground": "Medo anyim",
+  "subsonicClose": "Cego",
+  "subsonicIndexing": "Keto wer ma ki keto i cim...",
+  "subsonicUnavailable": "Pe tye",
+  "subsonicCredentialsError": "Nen nying latic ni, lok ma ki keto me donyo i cim ni, ki twero pa latic ni.",
+  "subsonicStorageError": "Pe kitwero gwoko jami ma kwako in. Nen ni ka gwoko jami tye maber ki tem doki.",
+  "subsonicTimeout": "Cawa pa latic ni okato woko. Tim ber item doki.",
+  "subsonicServerError": "Pe atwero kwano jami ma ki gwoko i cim. Gin ma ki coyo ma okato ni ki gwoko. Lok ot ma ki gwoko iye buk me temo odoco.",
+  "libraryRetry": "dwogo",
+  "subsonicOn": "I",
+  "subsonicOff": "Pe tye",
+  "sleepTimerMinutes": "{minutes} Dakika",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "URL pa latic",
+  "subsonicInvalidUrl": "Ket URL me HTTP onyo HTTPS labongo lapeny, dul, onyo donyo ma ki keto iye.",
+  "subsonicUnsupported": "Gin ma ki lwongo ni server ni pe miiyo kony bot Subsonic API ma mite onyo lok ma ki keto me moko.",
+  "subsonicConnectionError": "Pe twero kubbe. Nen URL, network, ki certificate me HTTPS. I kom Web, latic myero oye CORS ki app me HTTPS pe twero kubu ki HTTP."
 }

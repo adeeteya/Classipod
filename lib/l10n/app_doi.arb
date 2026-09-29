@@ -134,5 +134,78 @@
   "editSongGenreLabel": "विधा",
   "editSongLyricsLabel": "गीत दे गीत",
   "saveChangesButton": "बदलाव बचाओ",
-  "veryLow": "बहुत कम"
+  "veryLow": "बहुत कम",
+  "reindexLibrarySettingTitle": "फिर से अनुक्रमणिका",
+  "reindexLibrarySettingDescription": "सारे संगीत फाइलें लेई मेटाडाटा ते कलाकृति गी दुबारा पढ़ो।",
+  "refreshLibrarySettingTitle": "लाइब्रेरी ताज़ा करो",
+  "refreshLibrarySettingDescription": "जोड़े गेदे जां हटाए गेदे संगीत दी जांच करो। मौजूदा मेटाडाटा ते कलाकृति रक्खो।",
+  "librarySettingsScreenTitle": "लाइब्रेरी सेटिंग्स",
+  "librarySettingsDescription": "संगीत अनुक्रमण ते बहिष्कृत फोल्डरें गी प्रबंधत करो।",
+  "sleepTimerTitle": "स्लीप टाइमर",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "वर्तमान गीत दा अंत",
+  "sleepTimerRemainingLabel": "बचे हुए",
+  "findingSongs": "गीत ढूंढदे होई...",
+  "songsLoaded": "गीत लोड होए: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "कलाकृति कैश कीती गेई: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "संगीत लाइब्रेरी गी लोड करने च असमर्थ। कृपया दोबारा कोशिश करो।",
+  "missingTracksTitle": "लापता ट्रैक",
+  "missingTracksDescription": "जेह् ड़ी फाइलें गी पढ़ेआ नेईं जाई सकेआ, उंदी समीक्षा करो।",
+  "missingTracksEmpty": "कोई अपठनीय पटरी नहीं।",
+  "missingTrackRead": "इस फाइल दा मेटाडाटा नेईं पढ़ी सकेआ. फाइल स्थान ते एक्सेस अनुमतियें दी जांच करो, फिर लाइब्रेरी गी दुबारा कोशश करने आस्तै दुबारा अनुक्रमण करो.",
+  "missingTrackArtwork": "इस फाइल दी कलाकृति नेईं पढ़ी सकेआ. ऑडियो अजे बी बज सकदा ऐ। दुबारा कोशश करने लेई लाइब्रेरी गी दुबारा अनुक्रमित करो।",
+  "playbackBuffering": "बफरिंग...",
+  "preventDuplicateTracksTitle": "डुप्लिकेट ट्रैक गी रोकना",
+  "preventDuplicateTracksDescription": "डुप्लिकेट फाइल नांऽ कन्नै ट्रैक छुपाओ।",
+  "hideLocalMusicTitle": "लोकल म्यूजिक छुपाओ",
+  "hideLocalMusicDescription": "Subsonic चालू होने पर अपनी लाइब्रेरी च सिर्फ सर्वर संगीत दस्सो. लोकल फाइलें तुंदे डिवाइस पर रौंह्दियां न।",
+  "subsonicDescription": "Navidrome, gonic, ते संगत सर्वर थमां संगीत स्ट्रीम करो।",
+  "subsonicConfigure": "Subsonic गी कॉन्फ़िगर करो",
+  "subsonicUsername": "यूजरनेम",
+  "subsonicPassword": "पासवर्ड",
+  "subsonicConnect": "कनेक्ट हो जाओ",
+  "subsonicRemove": "सर्वर हटाओ",
+  "subsonicSignIn": "साइन इन करना जरूरी ऐ",
+  "subsonicLoadingLibrary": "अपनी लाइब्रेरी लोड करदे होई...",
+  "subsonicContinueBackground": "पृष्ठभूमि में जारी रखें",
+  "subsonicClose": "बंद करो",
+  "subsonicIndexing": "सर्वर संगीत दा अनुक्रमण...",
+  "subsonicUnavailable": "अनुपलब्ध ऐ",
+  "subsonicCredentialsError": "अपने यूजरनेम, पासवर्ड, ते सर्वर दी अनुमतियें दी जांच करो.",
+  "subsonicStorageError": "क्रेडेंशियल्स बचाई नेईं सकेआ। जाँच करो जे सुरक्षत भंडारण उपलब्ध ऐ ते दुबारा कोशश करो.",
+  "subsonicTimeout": "सर्वर दा टाइम आउट हो गया। कृपा करियै दुबारा कोशश करो।",
+  "subsonicServerError": "सर्वर लाइब्रेरी गी नेईं पढ़ी सकेआ। पिछली कैटलॉग बरकरार ऐ। दुबारा कोशश करने लेई लाइब्रेरी ताज़ा करो।",
+  "libraryRetry": "पुनः कोशिश करो",
+  "subsonicOn": "पर",
+  "subsonicOff": "बंद",
+  "sleepTimerMinutes": "{minutes} मिनट दा",
+  "oledBlackDeviceColor": "ओएलईडी काला",
+  "subsonicTitle": "Subsonic सर्वर",
+  "subsonicUrl": "सर्वर यूआरएल",
+  "subsonicInvalidUrl": "बिना कुसै क्वेरी, टुकड़े, जां एम्बेडेड लॉगिन दे HTTP जां HTTPS सर्वर URL दर्ज करो.",
+  "subsonicUnsupported": "एह् सर्वर जरूरी Subsonic एपीआई जां टोकन प्रमाणीकरण दा समर्थन नेईं करदा ऐ.",
+  "subsonicConnectionError": "कनेक्ट नहीं हो सकदा। URL, नेटवर्क, ते HTTPS प्रमाणपत्र दी जांच करो. वेब पर, सर्वर गी CORS दी अनुमति होनी चाहिदी ते इक HTTPS ऐप HTTP कन्नै कनेक्ट नेईं होई सकदा।"
 }

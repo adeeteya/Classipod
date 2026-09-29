@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Žáner",
   "editSongLyricsLabel": "Texty piesní",
   "saveChangesButton": "Uložiť zmeny",
-  "veryLow": "Veľmi nízka"
+  "veryLow": "Veľmi nízka",
+  "reindexLibrarySettingTitle": "Preindexovať",
+  "reindexLibrarySettingDescription": "Znova si prečítajte metadáta a umelecké diela pre všetky hudobné súbory.",
+  "refreshLibrarySettingTitle": "Obnoviť knižnicu",
+  "refreshLibrarySettingDescription": "Skontrolujte pridanú alebo odstránenú hudbu. Ponechajte existujúce metadáta a umelecké diela.",
+  "librarySettingsScreenTitle": "Nastavenia knižnice",
+  "librarySettingsDescription": "Spravujte indexovanie hudby a vylúčené priečinky.",
+  "sleepTimerTitle": "Časovač spánku",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Koniec aktuálnej piesne",
+  "sleepTimerRemainingLabel": "Zostávajúce",
+  "findingSongs": "Hľadajú sa skladby…",
+  "songsLoaded": "Načítané skladby: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Umelecké dielo uložené vo vyrovnávacej pamäti: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nie je možné načítať hudobnú knižnicu. Skúste to znova.",
+  "missingTracksTitle": "Chýbajúce stopy",
+  "missingTracksDescription": "Skontrolujte súbory, ktoré nebolo možné prečítať.",
+  "missingTracksEmpty": "Žiadne nečitateľné stopy.",
+  "missingTrackRead": "Nepodarilo sa prečítať metadáta tohto súboru. Skontrolujte umiestnenie súboru a prístupové povolenia, potom preindexujte knižnicu a skúste to znova.",
+  "missingTrackArtwork": "Nepodarilo sa prečítať kresbu tohto súboru. Zvuk sa môže stále prehrávať. Preindexujte knižnicu a skúste to znova.",
+  "playbackBuffering": "Ukladá sa do vyrovnávacej pamäte…",
+  "preventDuplicateTracksTitle": "Zabrániť duplicitným skladbám",
+  "preventDuplicateTracksDescription": "Skryť stopy s duplicitnými názvami súborov.",
+  "hideLocalMusicTitle": "Skryť miestnu hudbu",
+  "hideLocalMusicDescription": "Keď je Subsonic zapnuté, v knižnici sa zobrazuje iba hudba zo servera. Miestne súbory zostanú vo vašom zariadení.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Streamujte hudbu zo Navidrome, gonic a kompatibilných serverov.",
+  "subsonicConfigure": "Nakonfigurujte Subsonic",
+  "subsonicUsername": "Používateľské meno",
+  "subsonicPassword": "heslo",
+  "subsonicConnect": "Pripojte sa",
+  "subsonicRemove": "Odstrániť server",
+  "subsonicSignIn": "Vyžaduje sa prihlásenie",
+  "subsonicLoadingLibrary": "Načítava sa vaša knižnica…",
+  "subsonicContinueBackground": "Pokračujte na pozadí",
+  "subsonicClose": "Zavrieť",
+  "subsonicIndexing": "Indexuje sa hudba zo servera…",
+  "subsonicUnavailable": "nedostupné",
+  "subsonicCredentialsError": "Skontrolujte svoje používateľské meno, heslo a povolenia servera.",
+  "subsonicStorageError": "Nepodarilo sa uložiť poverenia. Skontrolujte, či je k dispozícii zabezpečené úložisko, a skúste to znova.",
+  "subsonicTimeout": "Časový limit servera vypršal. Skúste to znova.",
+  "subsonicServerError": "Nepodarilo sa prečítať knižnicu servera. Predchádzajúci katalóg zostane zachovaný. Ak to chcete skúsiť znova, obnovte knižnicu.",
+  "libraryRetry": "Pokus",
+  "subsonicOn": "Na",
+  "subsonicOff": "Vypnutý",
+  "sleepTimerMinutes": "{minutes} minút",
+  "oledBlackDeviceColor": "OLED čierna",
+  "subsonicUrl": "Adresa URL servera",
+  "subsonicInvalidUrl": "Zadajte adresu URL servera HTTP alebo HTTPS bez dopytu, fragmentu alebo vloženého prihlásenia.",
+  "subsonicUnsupported": "Tento server nepodporuje požadované rozhranie API Subsonic alebo autentifikáciu pomocou tokenu.",
+  "subsonicConnectionError": "Nedá sa pripojiť. Skontrolujte adresu URL, sieť a certifikát HTTPS. Na webe musí server povoliť CORS a aplikácia HTTPS sa nemôže pripojiť k HTTP."
 }

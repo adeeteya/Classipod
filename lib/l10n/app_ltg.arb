@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Žanrs",
   "editSongLyricsLabel": "teksti",
   "saveChangesButton": "Taupeit izmainis .",
-  "veryLow": "Cīši mozs"
+  "veryLow": "Cīši mozs",
+  "reindexLibrarySettingTitle": "Pōrindeksēt",
+  "reindexLibrarySettingDescription": "Otkon puorskaiti metadatus i muokslys dorbus vysim muzykys failim.",
+  "refreshLibrarySettingTitle": "Atjaunuot biblioteku .",
+  "refreshLibrarySettingDescription": "Pārbaudiet, voi ir pīvīnuota voi izdzāsta muzyka. Saglobuot asūšūs metadatus i muokslys dorbus.",
+  "librarySettingsScreenTitle": "Bibliotekys īstatejumi",
+  "librarySettingsDescription": "Pārvaldiet muzykys indeksiešonu un izslāgtuos mapes.",
+  "sleepTimerTitle": "Mīga taimeris",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Pošreizejuos dzīsmis beigys .",
+  "sleepTimerRemainingLabel": "Atlykušais .",
+  "findingSongs": "Dzīsmu atrasšona...",
+  "songsLoaded": "Dzīsmis īluodeitys: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Muokslys dorbs kešatmiņā: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Navar īluodēt muzykys biblioteku. Lyudzu, raudzeit vēļreiz.",
+  "missingTracksTitle": "Tryukstūšī sliedzīni",
+  "missingTracksDescription": "Pārskateit failus, kurus navarēja puorskaiteit.",
+  "missingTracksEmpty": "Nikaidu nasalaseitu dzīšmu.",
+  "missingTrackRead": "Navarēja puorskaiteit ituo faila metadatus. Pōrbaudi faila atsarasšonas vītu un pīkļuves atļaujas, tod pōrindeksej biblioteku, lai mēginōtu vēļreiz.",
+  "missingTrackArtwork": "Navarēja puorskaiteit ituo faila muokslys dorbu. Audio var vēļ atskaņuot. Reindeksēt biblioteku, lai raudzeitu vēļreiz.",
+  "playbackBuffering": "Buferiešona...",
+  "preventDuplicateTracksTitle": "Nūvērst īrokstu dubliejumus .",
+  "preventDuplicateTracksDescription": "Slēpt īrokstus ar dublietim failu nūsaukumim.",
+  "hideLocalMusicTitle": "Slēpt vītejū muzyku",
+  "hideLocalMusicDescription": "Paruodi tikai serveru muzyku sovā bibliotekā, cikom ir īslāgts Subsonic. Vītejī faili palīk jūs īreicē.",
+  "subsonicTitle": "Subsonic Servers",
+  "subsonicDescription": "Straumis muzyku nu Navidrome, gonic, i sadereigim serverim.",
+  "subsonicConfigure": "Konfigurēt Subsonic",
+  "subsonicUsername": "Lītuotuoju vuords",
+  "subsonicPassword": "Parole",
+  "subsonicConnect": "Savīnuot",
+  "subsonicRemove": "Izjimt serveri",
+  "subsonicSignIn": "Vajadzeigs pīsateikt .",
+  "subsonicLoadingLibrary": "Īluodejūt sovu biblioteku...",
+  "subsonicContinueBackground": "Turpynuojums fonā .",
+  "subsonicClose": "Aizvērt",
+  "subsonicIndexing": "Servera muzykys indeksiešona...",
+  "subsonicUnavailable": "Napīejams",
+  "subsonicCredentialsError": "Pārbaudi sovu lītuotuoju vuordu, paroli i servera atļuovis.",
+  "subsonicStorageError": "Navarēja saglobuot akreditacejis datus. Pōrbaudi, voi ir pīejama drūša krōtuve un mēginoj vēļreiz.",
+  "subsonicTimeout": "Serveram izguoja laiks. Lyudzu, raugi vēļreiz.",
+  "subsonicServerError": "Navarēja puorskaiteit serveru biblioteku. Īprīkšejais katalogs ir saglobuots. Atjaunuot Biblioteku, lai raudzeitu vēļreiz.",
+  "libraryRetry": "atlaseit",
+  "subsonicOn": "Iz",
+  "subsonicOff": "Izslāgts",
+  "sleepTimerMinutes": "{minutes} Minūtis .",
+  "oledBlackDeviceColor": "OLED Malns .",
+  "subsonicUrl": "Servera URL",
+  "subsonicInvalidUrl": "Īrokstit HTTP voi HTTPS servera URL bez vaicuojuma, fragmenta voi īlyktuo pīsateikšonuos.",
+  "subsonicUnsupported": "Itys serveris naatbolsta vajadzeigū Subsonic API voi žetonu autentifikaceju.",
+  "subsonicConnectionError": "Navar pīvīnuot. Pōrbaudi URL, teikla un HTTPS sertifikatu. Web serveram ir juoļaun CORS i HTTPS līta navar pīsavīnuot HTTP."
 }

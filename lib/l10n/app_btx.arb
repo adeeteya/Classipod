@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Adum",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Simpan Perubahen",
-  "veryLow": "Sangat Bahan"
+  "veryLow": "Sangat Bahan",
+  "reindexLibrarySettingTitle": "Indeks mulihi",
+  "reindexLibrarySettingDescription": "Baca metadata ras karya seni guna kerina file musik mulihi.",
+  "refreshLibrarySettingTitle": "Segarken Perpustakaan .",
+  "refreshLibrarySettingDescription": "Perdiateken musik si itambahken ntah pe si ihapus. Simpan metadata ras karya seni si enggo lit.",
+  "librarySettingsScreenTitle": "Pengaturan Perpustakaan .",
+  "librarySettingsDescription": "Ngaturken indeksasi musik ras folder si la termasuk.",
+  "sleepTimerTitle": "Jam Tunduh",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Dungna Lagu si Genduari .",
+  "sleepTimerRemainingLabel": "Si tading",
+  "findingSongs": "Ndarami lagu...",
+  "songsLoaded": "Lagu si enggo i muat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Karya seni si isimpan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "La banci muat perpustakaan musik. Tolong cubakenndu mulihi.",
+  "missingTracksTitle": "Jejak si kurang",
+  "missingTracksDescription": "Tinjau file si la banci ibaca.",
+  "missingTracksEmpty": "La lit trek si la terbaca.",
+  "missingTrackRead": "Labo banci ibacandu metadata file enda. Perdiateken ingan file ras izin akses, kenca si e indeks mulihi perpustakaan guna icubakenndu mulihi.",
+  "missingTrackArtwork": "Labo banci ibacandu karya seni file enda. Audio banci saja tetap iputar. Indeks mulihi perpustakaan e guna icubakenndu mulihi.",
+  "playbackBuffering": "Penyangga...",
+  "preventDuplicateTracksTitle": "Cegahlah Jalur si Duplikat .",
+  "preventDuplicateTracksDescription": "Buniken trek si lit gelar file si duplikat.",
+  "hideLocalMusicTitle": "Buniken Musik Lokal .",
+  "hideLocalMusicDescription": "Cidahken saja musik server i bas perpustakaanndu sanga Subsonic erdahin. Berkas lokal tetap lit bas perangkatndu.",
+  "subsonicTitle": "Subsonic Pelayan",
+  "subsonicDescription": "Aliren musik i bas Navidrome, gonic, ras server si kompatibel nari.",
+  "subsonicConfigure": "Konfigurasiken Subsonic .",
+  "subsonicUsername": "Gelar Pengguna",
+  "subsonicPassword": "Kata sandi",
+  "subsonicConnect": "Hubungken",
+  "subsonicRemove": "Hapus Server .",
+  "subsonicSignIn": "Iperluken masuk",
+  "subsonicLoadingLibrary": "Muat perpustakaanndu...",
+  "subsonicContinueBackground": "Terusken i bas latar belakang .",
+  "subsonicClose": "Tutup",
+  "subsonicIndexing": "Indeks musik server...",
+  "subsonicUnavailable": "La tersedia",
+  "subsonicCredentialsError": "Perdiateken gelar pengguna, kata sandi, ras izin serverndu.",
+  "subsonicStorageError": "La banci isimpanna kredensialna. Perdiateken adi lit penyimpanan si aman janah cubaken mulihi.",
+  "subsonicTimeout": "Server e enggo lepas waktuna. Tolong cubakenndu mulihi.",
+  "subsonicServerError": "La banci ngoge perpustakaan server. Katalog si enggo lewat ipertahanken. Segarken Perpustakaan guna nguji mulihi.",
+  "libraryRetry": "Iusahaken",
+  "subsonicOn": "Datas",
+  "subsonicOff": "Mate",
+  "sleepTimerMinutes": "{minutes} menit",
+  "oledBlackDeviceColor": "OLED Hitam .",
+  "subsonicUrl": "URL pelayan",
+  "subsonicInvalidUrl": "Masukken URL server HTTP ntah pe HTTPS alu la lit penungkunen, pecahen, ntah pe login si tertanam.",
+  "subsonicUnsupported": "Server enda la mendukung API Subsonic ntah pe otentikasi token si iperluken.",
+  "subsonicConnectionError": "Labo banci erhubungen. Perdiateken URL, jaringan, ras sertifikat HTTPS. I bas Web, server arus ngijinken CORS ras sada aplikasi HTTPS la banci terhubung ku HTTP."
 }

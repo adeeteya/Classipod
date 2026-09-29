@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ua yeeb yam",
   "editSongLyricsLabel": "Zaj nkauj",
   "saveChangesButton": "Txuag hloov",
-  "veryLow": "Tsawg heev"
+  "veryLow": "Tsawg heev",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Nyeem metadata thiab artwork rau tag nrho cov ntaub ntawv suab paj nruag dua.",
+  "refreshLibrarySettingTitle": "Refresh Library",
+  "refreshLibrarySettingDescription": "Kos rau ntxiv lossis deleted suab paj nruag. Khaws cov metadata thiab artwork uas twb muaj lawm.",
+  "librarySettingsScreenTitle": "Cov chaw qiv ntawv",
+  "librarySettingsDescription": "Tswj cov suab paj nruag indexing thiab cais folders.",
+  "sleepTimerTitle": "Pw tsaug zog Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "End of Current Song",
+  "sleepTimerRemainingLabel": "Tseem tshuav",
+  "findingSongs": "Nrhiav nkauj…",
+  "songsLoaded": "Nkauj loaded: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork cached: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Tsis tuaj yeem thauj cov tsev qiv ntawv suab paj nruag. Thov rov sim dua.",
+  "missingTracksTitle": "Ntxim Hlub",
+  "missingTracksDescription": "Tshawb xyuas cov ntaub ntawv uas nyeem tsis tau.",
+  "missingTracksEmpty": "Tsis muaj cov ntawv nyeem tsis tau.",
+  "missingTrackRead": "Tsis tuaj yeem nyeem cov ntaub ntawv metadata no. Txheeb xyuas qhov chaw ntawm cov ntaub ntawv thiab nkag mus rau kev tso cai, tom qab ntawd rov muab lub tsev qiv ntawv rov sim dua.",
+  "missingTrackArtwork": "Tsis tuaj yeem nyeem cov ntaub ntawv kos duab no. Lub suab tseem tuaj yeem ua si. Reindex lub tsev qiv ntawv rov sim dua.",
+  "playbackBuffering": "Kev kho tsis tau…",
+  "preventDuplicateTracksTitle": "Tiv thaiv kom tsis txhob sib tw",
+  "preventDuplicateTracksDescription": "Nkaum lem nrog duplicate cov npe.",
+  "hideLocalMusicTitle": "Hide Local Music",
+  "hideLocalMusicDescription": "Qhia cov nkauj server nkaus xwb hauv koj lub tsev qiv ntawv thaum Subsonic qhib. Cov ntaub ntawv hauv zos nyob ntawm koj lub cuab yeej.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Kwj suab paj nruag los ntawm Navidrome, gonic, thiab tshaj servers.",
+  "subsonicConfigure": "Configure Subsonic",
+  "subsonicUsername": "Tus neeg siv lub npe",
+  "subsonicPassword": "Tus password",
+  "subsonicConnect": "Txuas",
+  "subsonicRemove": "Tshem tawm Server",
+  "subsonicSignIn": "Yuav tsum tau kos npe",
+  "subsonicLoadingLibrary": "Loading koj lub tsev qiv ntawv…",
+  "subsonicContinueBackground": "Mus tom ntej",
+  "subsonicClose": "Kaw",
+  "subsonicIndexing": "Indexing server music…",
+  "subsonicUnavailable": "Tsis muaj",
+  "subsonicCredentialsError": "Xyuas koj tus username, password, thiab server permissions.",
+  "subsonicStorageError": "Tsis tuaj yeem khaws cov ntawv pov thawj. Txheeb xyuas tias muaj chaw cia khoom ruaj ntseg thiab sim dua.",
+  "subsonicTimeout": "Lub server tau teem sijhawm. Thov rov sim dua.",
+  "subsonicServerError": "Tsis tuaj yeem nyeem cov tsev qiv ntawv server. Cov catalog yav dhau los tau khaws cia. Refresh Library kom rov sim dua.",
+  "libraryRetry": "Rov ua",
+  "subsonicOn": "Saum",
+  "subsonicOff": "Tawm",
+  "sleepTimerMinutes": "{minutes} mins",
+  "oledBlackDeviceColor": "OLED Dub",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "Nkag mus rau HTTP lossis HTTPS server URL yam tsis muaj lus nug, ntu, lossis kos npe nkag.",
+  "subsonicUnsupported": "Cov neeg rau zaub mov no tsis txhawb nqa Subsonic API lossis token authentication.",
+  "subsonicConnectionError": "Txuas tsis tau. Xyuas qhov URL, network, thiab HTTPS daim ntawv pov thawj. Hauv Web, tus neeg rau zaub mov yuav tsum tso cai rau CORS thiab HTTPS app tsis tuaj yeem txuas rau HTTP."
 }

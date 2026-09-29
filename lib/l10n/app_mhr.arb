@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Мутшо",
   "saveChangesButton": "Вашталтышым арален кодаш",
-  "veryLow": "Пеш изи"
+  "veryLow": "Пеш изи",
+  "reindexLibrarySettingTitle": "Уэш индексироватлаш",
+  "reindexLibrarySettingDescription": "Чыла музыкальный файллан метаданный ден сӱрет-влакым уэш лудын лекса.",
+  "refreshLibrarySettingTitle": "Библиотекым уэмдаш",
+  "refreshLibrarySettingDescription": "Ешарен але кораҥдыме музыкым тергымаш. Улшо метаданный ден сӱрет-влакым арален кодыза.",
+  "librarySettingsScreenTitle": "Библиотеке параметр-влак",
+  "librarySettingsDescription": "Музыкым индексироватлымашым да лукмо папкым виктараш.",
+  "sleepTimerTitle": "Мален колтымо таймер",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Кызытсе мурын мучашыже",
+  "sleepTimerRemainingLabel": "Кодшо",
+  "findingSongs": "Муро-влакым муын...",
+  "songsLoaded": "Муро-влак налме: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Кэшироватлыме сӱрет: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Музыкальный библиотекым загрузитлаш ок лий. Пожалуйста, угыч ыштен ончо.",
+  "missingTracksTitle": "Йомшо корно-влак",
+  "missingTracksDescription": "Лудаш лийдыме файлым ончалза.",
+  "missingTracksEmpty": "Лудаш лийдыме корно уке.",
+  "missingTrackRead": "Тиде файлын метаданныйжым лудын кертын огыл. Файл верым да пураш правам тергыза, вара угыч тӧчен ончаш библиотекым уэш индексироватлыза.",
+  "missingTrackArtwork": "Тиде файлын сӱретшым лудын кертын огыл. Аудио эше йоҥгалтеш. Библиотекым угыч тергаш манын, угыч индексироватлыза.",
+  "playbackBuffering": "Буферизаций...",
+  "preventDuplicateTracksTitle": "Дубликат трек-влакым чараш",
+  "preventDuplicateTracksDescription": "Дубликат файл лӱм дене трекым шылташ.",
+  "hideLocalMusicTitle": "Верысе музыкым шылташ",
+  "hideLocalMusicDescription": "Subsonic пашам ыштыме годым библиотекыште сервер музыкым гына ончыкто. Верысе файлым тендан ӱзгарыште кодеш.",
+  "subsonicTitle": "Subsonic сервер",
+  "subsonicDescription": "Navidrome, gonic да келшыше серверла гыч музыкым йоҥгалтарыза.",
+  "subsonicConfigure": "Subsonic-ым настройкым ыштыза",
+  "subsonicUsername": "Пайдаланыше лӱм",
+  "subsonicPassword": "Шолыпмут",
+  "subsonicConnect": "Ушымаш",
+  "subsonicRemove": "Серверым кораҥдаш",
+  "subsonicSignIn": "Пураш кӱлеш",
+  "subsonicLoadingLibrary": "Библиотекым загрузка...",
+  "subsonicContinueBackground": "Умбакыже фонышто",
+  "subsonicClose": "Петыраш",
+  "subsonicIndexing": "Сервер музыкым индексироватлымаш...",
+  "subsonicUnavailable": "Доступен огыл",
+  "subsonicCredentialsError": "Пайдаланыше лӱмым, шолыпмутым да серверын разрешенийжым тергыза.",
+  "subsonicStorageError": "Удостоверенийым арален кертме огыл. Лӱдыкшыдымӧ аралыме вер уло мо манын тергыза да угыч тӧчен ончо.",
+  "subsonicTimeout": "Серверын жапше пытен. Пожалуйста, угыч ыштен ончо.",
+  "subsonicServerError": "Сервер библиотекым лудын кертме огыл. Ончычсо каталог аралалт кодын. Уэш тӧчен ончашлан Библиотекым уэмдыза.",
+  "libraryRetry": "Сосвожда",
+  "subsonicOn": "Күйүк",
+  "subsonicOff": "ВЫКЛА",
+  "sleepTimerMinutes": "{minutes} минут",
+  "oledBlackDeviceColor": "OLED шем",
+  "subsonicUrl": "Серверын URL-адресше",
+  "subsonicInvalidUrl": "HTTP але HTTPS серверын URL-адресшым йодмаш, фрагмент але встраиваемый логин деч посна пурто.",
+  "subsonicUnsupported": "Тиде сервер кӱлеш Subsonic API але токен аутентификацийым ок поддержатле.",
+  "subsonicConnectionError": "Ушаш ок лий. URL-адресым, сетьым да HTTPS сертификатым тергыза. Веб-сервер CORS-лан эрыкым пуышаш, а HTTPS-ан приложений HTTP-лан ушен ок керт."
 }

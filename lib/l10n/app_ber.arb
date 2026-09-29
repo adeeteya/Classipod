@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ⵚⵚⴻⵏⴼ",
   "editSongLyricsLabel": "ⵍⵉⵔⵉⴽⵙ",
   "saveChangesButton": "ⵉⴱⴻⴷⴷⴻⵍ",
-  "veryLow": "ⴱⴰⵀⵔⴰ Low"
+  "veryLow": "ⴱⴰⵀⵔⴰ Low",
+  "reindexLibrarySettingTitle": "ⴰⵄⵉⵡⴻⴷ ⵏ ⵓⵙⵎⴻⵍ",
+  "reindexLibrarySettingDescription": "ⵖⴻⵔⵔⴷ ⵉⵎⴻⴹⵇⴰⵏ ⵏ ⵜⵎⴻⵥⴷⵉⵜ ⴷ ⵜⵥⵓⵔⵉ ⵉ ⵡⴰⴽⴽ ⵉⴼⵓⵢⵍⴰ ⵏ ⵓⵥⴰⵡⴰⵏ ⵜⵉⴽⴽⴻⵍⵜ ⵏⵏⵉⴹⴻⵏ.",
+  "refreshLibrarySettingTitle": "ⵙⴳⴻⵔ ⵜⴰⵎⴽⴻⵔⴷⵉⵜ",
+  "refreshLibrarySettingDescription": "ⵙⴻⴼⵇⴻⴷ ⵎⴰ ⵢⴻⵍⵍⴰ ⴰⵥⴰⵡⴰⵏ ⵢⴻⵔⵏⴰⵏ ⵏⴻⵖ ⵢⴻⵜⵜⵡⴰⵙⴼⴻⴹ. ⵃⵔⴻⵣ ⵉⵎⴻⴹⵇⴰⵏ ⵏ ⵜⵥⵓⵔⵉ ⴷ ⵜⵥⵓⵔⵉ ⵢⴻⵍⵍⴰⵏ ⵢⴰⴽⴰⵏ.",
+  "librarySettingsScreenTitle": "ⴰⵙⴻⵖⵥⴰⵏ ⵏ ⵜⴻⵎⴽⴰⵔⴹⵉⵜ",
+  "librarySettingsDescription": "ⴰⴷ ⵜⴻⵙⵙⴻⵍⵃⵓⴹ ⴰⵙⴻⵏⵇⴻⴷ ⵏ ⵓⵥⴰⵡⴰⵏ ⴷ ⵢⵉⴼⵓⵢⵍⴰ ⵢⴻⵜⵜⵡⴰⵙⴼⴻⴹⴻⵏ.",
+  "sleepTimerTitle": "ⴰⴽⵓⴷ ⵏ ⵢⵉⴹⴻⵙ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "ⵜⴰⴳⴳⴰⵔⴰ ⵏ ⵜⴻⵣⵍⵉⵜ ⵏ ⵜⵓⵔⴰ",
+  "sleepTimerRemainingLabel": "ⴰⵢⴻⵏ ⵢⴻⵇⵇⵉⵎⴻⵏ",
+  "findingSongs": "ⵜⵓⴼⴼⵖⴰ ⵏ ⵜⴻⵣⵍⴰⵜⵉⵏ...",
+  "songsLoaded": "Songs loaded: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "ⴰⵅⴻⴷⴷⵉⵎ ⵏ ⵜⵥⵓⵔⵉ ⵢⴻⵜⵜⵡⴰⵃⵔⴻⵣ: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵞⵞⴰⵔ ⵜⴰⵎⴽⴻⵔⴹⵉⵜ ⵏ ⵓⵥⴰⵡⴰⵏ. ⵜⵜⵅⵉⵍⴽ ⵄⵔⴻⴹ ⵜⵉⴽⴽⴻⵍⵜ ⵏⵏⵉⴹⴻⵏ.",
+  "missingTracksTitle": "Missing Tracks",
+  "missingTracksDescription": "ⴰⵙⴻⵏⵇⴻⴷ ⵏ ⵢⵉⴼⵓⵢⵍⴰ ⵓⵔ ⵏⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵜⴻⵏⵏⴻⵖⵔⴻⴹ.",
+  "missingTracksEmpty": "No unreadable tracks.",
+  "missingTrackRead": "ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵖⵔⴻⴹ ⵉⵎⴻⴹⵇⴰⵏ ⵏ ⵓⴼⴰⵢⵍⵓⴰ. ⵙⴻⴼⵇⴻⴷ ⴰⵎⴹⵉⵇ ⵏ ⵓⴼⴰⵢⵍⵓ ⴷ ⵜⵜⴰⵡⵉⵍⴰⵜ ⵏ ⵓⵏⴻⴽⵛⵓⵎ, ⵙⵢⴻⵏ ⵔⵥⴻⵎ ⵜⴰⵎⴻⵙⵔⵉⵜ ⴰⴽⴽⴻⵏ ⴰⴷ ⵜⵜⵄⴻⵔⴹⴻⴹ ⵜⵉⴽⴽⴻⵍⵜ ⵏⵏⵉⴹⴻⵏ.",
+  "missingTrackArtwork": "ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵖⵔⴻⴹ ⴰⵅⴻⴷⴷⵉⵎ ⵏ ⵜⵥⵓⵔⵉ ⵏ ⵓⴼⴰⵢⵍⵓⴰ. Audio may still play. ⵔⵉⵏⴷⴻⵅ ⵏ ⵜⴻⵎⴽⴰⵔⴹⵉⵜ ⴰⴽⴽⴻⵏ ⴰⴷ ⵜⵜⵄⴻⵔⴹⴻⴹ ⵜⵉⴽⴽⴻⵍⵜ ⵏⵏⵉⴹⴻⵏ.",
+  "playbackBuffering": "ⵜⴰⵃⴻⵎⵍⴰ...",
+  "preventDuplicateTracksTitle": "ⵃⴱⴻⵙ ⵉⴹⵔⵉⵙⴻⵏ ⵢⴻⵜⵜⵡⴰⵄⴻⵔⴹⴻⵏ",
+  "preventDuplicateTracksDescription": "ⵢⴻⴼⴼⴻⵔ ⵜⵉⵣⵍⴰⵜⵉⵏ ⵙ ⵢⵉⵙⵎⴰⵡⴻⵏ ⵏ ⵢⵉⴼⴰⵢⵍⵓⵜⴻⵏ ⵢⴻⵜⵜⵡⴰⵙⵏⵓⵍⴼⴰⵏ.",
+  "hideLocalMusicTitle": "ⴼⴼⴻⵔ ⴰⵥⴰⵡⴰⵏ ⴰⴷⵉⴳⴰⵏ",
+  "hideLocalMusicDescription": "Show only server music in your library while Subsonic is on. ⵉⴼⵓⵢⵍⴰ ⵉⴷⵉⴳⴰⵏⴻⵏ ⵇⵇⵉⵎⴻⵏ ⴷⴻⴳ ⵜⵎⴻⵥⴷⵉⵜⵉⴽ.",
+  "subsonicTitle": "ⴰⵇⴻⴷⴷⴰⵛ Subsonic",
+  "subsonicDescription": "Stream music from Navidrome, gonic, and compatible servers.",
+  "subsonicConfigure": "ⵙⴱⴻⴷⴷ Subsonic",
+  "subsonicUsername": "ⵉⵙⴻⵎ ⵏ ⵓⵙⴻⵇⴷⴰⵛ",
+  "subsonicPassword": "ⴰⵡⴰⵍ ⵓⴼⴼⵉⵔ",
+  "subsonicConnect": "ⵜⵓⵇⵇⵏⴰ",
+  "subsonicRemove": "ⴽⴽⴻⵙ ⴰⵇⴻⴷⴷⴰⵛ",
+  "subsonicSignIn": "Sign in required",
+  "subsonicLoadingLibrary": "Loading your library…",
+  "subsonicContinueBackground": "Continue in background",
+  "subsonicClose": "Close",
+  "subsonicIndexing": "Indexing server music…",
+  "subsonicUnavailable": "Unavailable",
+  "subsonicCredentialsError": "ⵙⴻⴼⵇⴻⴷ ⵉⵙⴻⵎⵉⴽ ⵏ ⵓⵙⴻⵇⴷⴰⵛ, ⴰⵡⴰⵍ ⵓⴼⴼⵉⵔ, ⴷ ⵉⵣⴻⵔⴼⴰⵏ ⵏ ⵓⵇⴻⴷⴷⴰⵛ.",
+  "subsonicStorageError": "ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵃⵔⴻⵣ ⵉⵙⴻⴼⴽⴰ. ⵙⴻⴼⵇⴻⴷ ⵎⴰ ⵢⴻⵍⵍⴰ ⴰⵃⴻⵣⵣⴻⴱ ⵏ ⵜⵖⴻⵍⵍⵉⵙⵜ ⵢⴻⵍⵍⴰ ⵓ ⵄⵔⴻⴹ ⵜⵉⴽⴽⴻⵍⵜ ⵏⵏⵉⴹⴻⵏ.",
+  "subsonicTimeout": "The server timed out. ⵜⵜⵅⵉⵍⴽ ⵄⵔⴻⴹ ⵜⵉⴽⴽⴻⵍⵜ ⵏⵏⵉⴹⴻⵏ.",
+  "subsonicServerError": "ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵖⵔⴻⴹ ⵜⴰⵎⴽⴻⵔⴹⵉⵜ ⵏ ⵓⵇⴻⴷⴷⴰⵛ. ⴽⴰⵜⴰⵍⵓⴳ ⵉⵄⴻⴷⴷⴰⵏ ⵢⴻⵜⵜⵡⴰⵃⵔⴻⵣ. ⵙⵙⵏⴻⴼⵍⵉ ⵜⴰⵎⴽⴻⵔⴹⵉⵜ ⴰⴽⴽⴻⵏ ⴰⴷ ⵜⵜⵄⴻⵔⴹⴻⴹ ⵜⵉⴽⴽⴻⵍⵜ ⵏⵏⵉⴹⴻⵏ.",
+  "libraryRetry": "ⴰⵔ ⵜⵜⵓⵖⵓⵍⵏ",
+  "subsonicOn": "ⵖⴻⴼ",
+  "subsonicOff": "ⵢⴻⴼⴼⴻⵖ",
+  "sleepTimerMinutes": "{minutes} ⵏ ⵜⴻⴷⵇⵉⵇⵉⵏ",
+  "oledBlackDeviceColor": "OLED ⴷ ⴰⴱⴻⵔⴽⴰⵏ",
+  "subsonicUrl": "URL ⵏ ⵓⵇⴻⴷⴷⴰⵛ",
+  "subsonicInvalidUrl": "ⵙⵙⴻⴽⵛⴻⵎ URL ⵏ ⵓⵇⴻⴷⴷⴰⵛ HTTP ⵏⴻⵖ HTTPS ⵡⴰⵔ ⴰⵙⴻⵇⴷⴻⵛ, ⴰⴼⴻⵔⴷⵉⵙ, ⵏⴻⵖ ⴰⵙⴻⴽⵛⴻⵎ ⵉ ⴷⵢⴻⵙⴱⴻⴷⴷⴻⵏ.",
+  "subsonicUnsupported": "ⴰⵇⴻⴷⴷⴰⵛⴰ ⵓⵔ ⵢⴻⵜⵜⵇⴰⴷⴰⵔ ⴰⵔⴰ API Subsonic ⵏⴻⵖ ⴰⵙⴻⴽⵛⴻⵎ ⵏ ⵜⵎⴻⵥⴷⵉⵜ ⵢⴻⵜⵜⵡⴰⵃⴻⵜⵜⵎⴻⵏ.",
+  "subsonicConnectionError": "ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵇⵇⴻⵏ. ⵙⴻⴼⵇⴻⴷ URL, ⴰⵥⴻⴹⴹⴰ, ⴷ ⵓⵙⴻⵍⴽⵉⵏ HTTPS. ⴷⴻⴳ Web, ⴰⵇⴻⴷⴷⴰⵛ ⵢⴻⵙⵙⴻⴼⴽ ⴰⴷ ⵢⴻⴵⴵ CORS ⵢⴻⵔⵏⴰ ⴰⵀⵉⵍ ⵏ HTTPS ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵇⵇⴻⵏ ⵙ HTTP."
 }

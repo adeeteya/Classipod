@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ɔfa",
   "editSongLyricsLabel": "Nsɛm a ɛwɔ mu .",
   "saveChangesButton": "Save Nsakraeɛ .",
-  "veryLow": "Ɛba fam koraa ."
+  "veryLow": "Ɛba fam koraa .",
+  "reindexLibrarySettingTitle": "San yɛ index no bio",
+  "reindexLibrarySettingDescription": "Kenkan metadata ne adwini a ɛfa nnwom fael nyinaa ho bio.",
+  "refreshLibrarySettingTitle": "Nhomakorabea a Wɔayɛ no Foforo",
+  "refreshLibrarySettingDescription": "Hwɛ sɛ wɔde nnwom aka ho anaasɛ wɔapopa anaa. Fa metadata ne adwinni a ɛwɔ hɔ dedaw no sie.",
+  "librarySettingsScreenTitle": "Nhomakorabea Nhyehyɛe",
+  "librarySettingsDescription": "Hwɛ nnwom indexing ne folda ahorow a wɔayi afi mu so.",
+  "sleepTimerTitle": "Dae Bere a Wɔde Yɛ Adwuma",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Mprempren Dwom no Awiei",
+  "sleepTimerRemainingLabel": "Nea aka",
+  "findingSongs": "Nnwom a wɔrehwehwɛ...",
+  "songsLoaded": "Nnwom a wɔde ahyɛ mu: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Adwini a wɔde asie: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Entumi nhyɛ nnwom nhomakorabea no mu. Yɛsrɛ sɛ san bɔ mmɔden bio.",
+  "missingTracksTitle": "Nnwom a Ɛyera",
+  "missingTracksDescription": "Hwɛ fael ahorow a wɔantumi ankenkan no mu.",
+  "missingTracksEmpty": "Nnwom biara nni hɔ a wontumi nkenkan.",
+  "missingTrackRead": "Entumi nkenkan fael yi metadata. Hwɛ faako a fael no wɔ ne kwan a wɔfa so kɔ hɔ, afei san kyerɛw nhomakorabea no index na san sɔ hwɛ.",
+  "missingTrackArtwork": "Entumi nkenkan fael yi adwini. Ebia ɔdio da so ara bɔ. San yɛ nhomakorabea no index na san sɔ hwɛ.",
+  "playbackBuffering": "Buffering a wɔde yɛ adwuma...",
+  "preventDuplicateTracksTitle": "Siw Duplicate Tracks ano",
+  "preventDuplicateTracksDescription": "Fa track ahorow a fael din a ɛyɛ abien wom sie.",
+  "hideLocalMusicTitle": "Fa Mpɔtam Hɔ Nnwom Sie",
+  "hideLocalMusicDescription": "Kyerɛ server nnwom nkutoo wɔ wo nhomakorabea bere a Subsonic wɔ so. Fael ahorow a ɛwɔ mpɔtam hɔ no tra wo mfiri no so.",
+  "subsonicTitle": "Subsonic Ɔsomfoɔ",
+  "subsonicDescription": "Stream nnwom fi Navidrome, gonic, ne server ahorow a ɛne no hyia.",
+  "subsonicConfigure": "Hyehyɛ Subsonic",
+  "subsonicUsername": "Edin a ɔde di dwuma",
+  "subsonicPassword": "Password a wɔde hyɛ mu",
+  "subsonicConnect": "Nkitahodi",
+  "subsonicRemove": "Yi Server no fi hɔ",
+  "subsonicSignIn": "Ɛsɛ sɛ wode wo nsa hyɛ mu",
+  "subsonicLoadingLibrary": "Loading wo nhomakorabea...",
+  "subsonicContinueBackground": "Kɔ so wɔ akyi",
+  "subsonicClose": "Bɛto mu",
+  "subsonicIndexing": "Indexing server nnwom...",
+  "subsonicUnavailable": "Ɛnyɛ nea wobetumi anya",
+  "subsonicCredentialsError": "Hwɛ wo username, password, ne server tumi krataa.",
+  "subsonicStorageError": "Entumi nkora adansedi nkrataa so. Hwɛ sɛ secure storage wɔ hɔ na sɔ hwɛ bio.",
+  "subsonicTimeout": "Server no bere twaam. Yɛsrɛ sɛ sɔ hwɛ bio.",
+  "subsonicServerError": "Entumi nkenkan server nhomakorabea no. Wɔakora nhoma a wɔadi kan ayɛ no so. Refresh Library na woasan asɔ ahwɛ.",
+  "libraryRetry": "San sɔ hwɛ .",
+  "subsonicOn": "So",
+  "subsonicOff": "Adum",
+  "sleepTimerMinutes": "{minutes} Simma a Wɔde Yɛ Adwuma",
+  "oledBlackDeviceColor": "OLED Tuntum a ɛyɛ tuntum",
+  "subsonicUrl": "Server URL no",
+  "subsonicInvalidUrl": "Hyehyɛ HTTP anaa HTTPS server URL a enni asɛmmisa, asinasin, anaa login a wɔde ahyɛ mu.",
+  "subsonicUnsupported": "Saa server yi ntumi mmoa Subsonic API anaa token nokwaredi a wɔhwehwɛ no.",
+  "subsonicConnectionError": "Entumi nkɔ nkitahodi. Hwɛ URL, ntwamutam, ne HTTPS abodin krataa no. Wɔ Wɛb so no, ɛsɛ sɛ server no ma CORS kwan na HTTPS app bi ntumi nkɔ HTTP so."
 }

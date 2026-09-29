@@ -134,5 +134,78 @@
   "editSongGenreLabel": "လူ့သပ်မျိုးိုင်",
   "editSongLyricsLabel": "သီချင်းစာသား",
   "saveChangesButton": "ပြောင်းလဲမှုများကိုသိမ်းဆည်းပါ",
-  "veryLow": "အလွန်နိမ့်"
+  "veryLow": "အလွန်နိမ့်",
+  "reindexLibrarySettingTitle": "ပြန်ညွှန်းသည်။",
+  "reindexLibrarySettingDescription": "တေးဂီတဖိုင်အားလုံးအတွက် မက်တာဒေတာနှင့် အနုပညာလက်ရာကို ထပ်မံဖတ်ရှုပါ။",
+  "refreshLibrarySettingTitle": "စာကြည့်တိုက်ကို ပြန်လည်စတင်ပါ။",
+  "refreshLibrarySettingDescription": "ထည့်ထားသော သို့မဟုတ် ဖျက်ထားသော သီချင်းရှိမရှိ စစ်ဆေးပါ။ ရှိပြီးသား မက်တာဒေတာနှင့် အနုပညာလက်ရာကို သိမ်းဆည်းပါ။",
+  "librarySettingsScreenTitle": "စာကြည့်တိုက် ဆက်တင်များ",
+  "librarySettingsDescription": "တေးဂီတ အညွှန်းဆွဲခြင်းနှင့် ဖယ်ထုတ်ထားသော ဖိုင်တွဲများကို စီမံပါ။",
+  "sleepTimerTitle": "အိပ်ချိန်ချိန်စက်",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "လက်ရှိသီချင်း၏အဆုံး",
+  "sleepTimerRemainingLabel": "လက်ကျန်",
+  "findingSongs": "သီချင်းများရှာနေသည်...",
+  "songsLoaded": "တင်ထားသော သီချင်းများ- {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "အနုပညာလက်ရာ- {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ဂီတဒစ်ဂျစ်တိုက်ကို ဖွင့်၍မရပါ။ ကျေးဇူးပြု၍ ပြန်ကြိုးစားပါ။",
+  "missingTracksTitle": "ပျောက်ဆုံးနေသော သီချင်းများ",
+  "missingTracksDescription": "ဖတ်၍မရသောဖိုင်များကို ပြန်လည်သုံးသပ်ပါ။",
+  "missingTracksEmpty": "မဖတ်နိုင်သော သီချင်းများ မရှိပါ။",
+  "missingTrackRead": "ဤဖိုင်၏ မက်တာဒေတာကို မဖတ်နိုင်ပါ။ ဖိုင်တည်နေရာကို စစ်ဆေးပြီး ခွင့်ပြုချက်များကို ဝင်ရောက်ကြည့်ရှုပြီးနောက် ထပ်စမ်းကြည့်ရန် စာကြည့်တိုက်ကို ပြန်လည်ညွှန်းပါ။",
+  "missingTrackArtwork": "ဤဖိုင်၏ အနုပညာလက်ရာကို မဖတ်နိုင်ပါ။ အသံကို ဖွင့်နိုင်သေးသည်။ ထပ်ကြိုးစားရန် စာကြည့်တိုက်ကို ပြန်ညွှန်းပါ။",
+  "playbackBuffering": "အရှိန်မြှင့်နေသည်...",
+  "preventDuplicateTracksTitle": "ထပ်နေသော သီချင်းများကို တားဆီးပါ။",
+  "preventDuplicateTracksDescription": "ထပ်နေသော ဖိုင်အမည်များဖြင့် သီချင်းများကို ဝှက်ပါ။",
+  "hideLocalMusicTitle": "ပြည်တွင်းဂီတကို ဖျောက်ပါ။",
+  "hideLocalMusicDescription": "Subsonic ဖွင့်ထားစဉ်တွင် သင့်ဒစ်ဂျစ်တိုက်တွင် ဆာဗာတေးဂီတကိုသာ ပြသပါ။ ဒေသတွင်းဖိုင်များသည် သင့်စက်ပေါ်တွင် ရှိနေသည်။",
+  "subsonicTitle": "Subsonic ဆာဗာ",
+  "subsonicDescription": "Navidrome၊ gonic နှင့် တွဲဖက်သုံးနိုင်သော ဆာဗာများမှ တေးဂီတကို တိုက်ရိုက်ကြည့်ရှုပါ။",
+  "subsonicConfigure": "Subsonic ကို စီစဉ်သတ်မှတ်ပါ။",
+  "subsonicUsername": "အသုံးပြုသူအမည်",
+  "subsonicPassword": "စကားဝှက်",
+  "subsonicConnect": "ချိတ်ဆက်ပါ။",
+  "subsonicRemove": "ဆာဗာကို ဖယ်ရှားပါ။",
+  "subsonicSignIn": "လက်မှတ်ထိုးဝင်ရန် လိုအပ်သည်။",
+  "subsonicLoadingLibrary": "သင့်စာကြည့်တိုက်ကို ဖွင့်နေသည်…",
+  "subsonicContinueBackground": "နောက်ခံတွင် ဆက်ရန်",
+  "subsonicClose": "ပိတ်လိုက်",
+  "subsonicIndexing": "ဆာဗာတေးဂီတကို အညွှန်းရေးနေသည်...",
+  "subsonicUnavailable": "မရနိုင်ပါ။",
+  "subsonicCredentialsError": "သင့်အသုံးပြုသူအမည်၊ စကားဝှက်နှင့် ဆာဗာခွင့်ပြုချက်များကို စစ်ဆေးပါ။",
+  "subsonicStorageError": "အထောက်အထားများကို မသိမ်းဆည်းနိုင်ပါ။ လုံခြုံသောသိုလှောင်မှုရနိုင်သည်ကို စစ်ဆေးပြီး ထပ်စမ်းကြည့်ပါ။",
+  "subsonicTimeout": "ဆာဗာသည် အချိန်ကုန်သွားသည်။ ထပ်စမ်းကြည့်ပါ။",
+  "subsonicServerError": "ဆာဗာစာကြည့်တိုက်ကို မဖတ်နိုင်ခဲ့ပါ။ ယခင်ကတ်တလောက်ကို ထိန်းသိမ်းထားသည်။ ထပ်စမ်းကြည့်ရန် စာကြည့်တိုက်ကို ပြန်လည်စတင်ပါ။",
+  "libraryRetry": "ကြိုးစား",
+  "subsonicOn": "အပေါ်",
+  "subsonicOff": "သွား",
+  "sleepTimerMinutes": "{minutes} မိနစ်",
+  "oledBlackDeviceColor": "OLED အနက်ရောင်",
+  "subsonicUrl": "ဆာဗာ URL",
+  "subsonicInvalidUrl": "မေးမြန်းချက်၊ အပိုင်းအစ သို့မဟုတ် ထည့်သွင်းထားသော အကောင့်ဝင်ခြင်းမရှိဘဲ HTTP သို့မဟုတ် HTTPS ဆာဗာ URL ကို ထည့်သွင်းပါ။",
+  "subsonicUnsupported": "ဤဆာဗာသည် လိုအပ်သော Subsonic API သို့မဟုတ် တိုကင်အထောက်အထားစိစစ်ခြင်းကို မပံ့ပိုးပါ။",
+  "subsonicConnectionError": "ချိတ်ဆက်၍မရပါ။ URL၊ ကွန်ရက်နှင့် HTTPS လက်မှတ်တို့ကို စစ်ဆေးပါ။ ဝဘ်ပေါ်တွင်၊ ဆာဗာသည် CORS ကို ခွင့်ပြုရမည်ဖြစ်ပြီး HTTPS အက်ပ်အား HTTP သို့ ချိတ်ဆက်၍မရပါ။"
 }

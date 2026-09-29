@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Klase",
   "editSongLyricsLabel": "Liriko .",
   "saveChangesButton": "Idulin dagiti panagbalbaliw .",
-  "veryLow": "Nababa unay ."
+  "veryLow": "Nababa unay .",
+  "reindexLibrarySettingTitle": "I-index manen",
+  "reindexLibrarySettingDescription": "Basaen manen ti metadata ken artwork para iti amin a file ti musika.",
+  "refreshLibrarySettingTitle": "Ipabaro ti Libraria",
+  "refreshLibrarySettingDescription": "Kitaen no adda nainayon wenno naikkat a musika. Idulin dagiti addan a metadata ken artwork.",
+  "librarySettingsScreenTitle": "Dagiti Setting ti Libraria",
+  "librarySettingsDescription": "Imanehar ti panag-indeks ti musika ken dagiti nailaksid a folder.",
+  "sleepTimerTitle": "Timer ti Pannaturog",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Pagpatinggaan ti Agdama a Kanta",
+  "sleepTimerRemainingLabel": "Nabati",
+  "findingSongs": "Panagbirok kadagiti kanta...",
+  "songsLoaded": "Dagiti kanta a naikarga: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Obra ti arte a nai-cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Saan a maikarga ti biblioteka ti musika. Pangngaasiyo ta padasenyo manen.",
+  "missingTracksTitle": "Dagiti Kurang a Track",
+  "missingTracksDescription": "Repasuen dagiti file a saan a mabasa.",
+  "missingTracksEmpty": "Awan dagiti di mabasa a track.",
+  "missingTrackRead": "Saan a mabasa ti metadata daytoy a file. Sukimaten ti lokasion ti file ken dagiti pammalubos ti panagserrek, kalpasanna i-index manen ti biblioteka tapno padasen manen.",
+  "missingTrackArtwork": "Saan a mabasa ti artwork daytoy a file. Mabalin nga agtokar pay laeng ti audio. I-index manen ti libraria tapno padasen manen.",
+  "playbackBuffering": "Buffering ti...",
+  "preventDuplicateTracksTitle": "Lapdan ti Duplicate Tracks",
+  "preventDuplicateTracksDescription": "Ilemmeng dagiti track nga addaan kadagiti duplikado a nagan ti file.",
+  "hideLocalMusicTitle": "Ilemmeng ti Lokal a Musika",
+  "hideLocalMusicDescription": "Ipakita laeng ti musika ti server iti library-mo bayat a nakalukat ti Subsonic. Agtalinaed dagiti lokal a file iti device-mo.",
+  "subsonicTitle": "Subsonic Serbidor",
+  "subsonicDescription": "I-stream ti musika manipud iti Navidrome, gonic, ken dagiti maitunos a server.",
+  "subsonicConfigure": "Ikonfigura ti Subsonic",
+  "subsonicUsername": "Nagan ti agar-aramat",
+  "subsonicPassword": "Password ti password",
+  "subsonicConnect": "Agkonekta",
+  "subsonicRemove": "Ikkaten ti Serbidor",
+  "subsonicSignIn": "Masapul ti ag-sign in",
+  "subsonicLoadingLibrary": "Ti panagkarga ti library-yo...",
+  "subsonicContinueBackground": "Ituloy ti likudan",
+  "subsonicClose": "Agserra",
+  "subsonicIndexing": "Panag-indeks ti musika ti server...",
+  "subsonicUnavailable": "Saan a magun-od",
+  "subsonicCredentialsError": "Kitaem dagiti pammalubos ti username, password, ken server-mo.",
+  "subsonicStorageError": "Saan a makaidulin kadagiti kredensial. Kitaen no adda natalged a pagipempenan ken padasen manen.",
+  "subsonicTimeout": "Nag-time out ti server. Pangngaasiyo ta padasenyo manen.",
+  "subsonicServerError": "Saan a mabasa ti biblioteka ti serbidor. Nataginayon ti dati a katalogo. Refresh Library tapno padasen manen.",
+  "libraryRetry": "Padasen manen .",
+  "subsonicOn": "Ayan ti",
+  "subsonicOff": "Naisina",
+  "sleepTimerMinutes": "{minutes} nga Minuto",
+  "oledBlackDeviceColor": "OLED Nangisit",
+  "subsonicUrl": "URL ti serbidor",
+  "subsonicInvalidUrl": "Iserrek ti HTTP wenno HTTPS server URL nga awan ti saludsod, pirgis, wenno naikabil a panaglogin.",
+  "subsonicUnsupported": "Daytoy a serbidor ket saan a mangsuporta ti kasapulan a Subsonic API wenno ti panagipaneknek ti token.",
+  "subsonicConnectionError": "Saan a makakonekta. Sukimaten ti URL, network, ken sertipiko ti HTTPS. Iti Web, masapul a palubosan ti server ti CORS ken ti HTTPS app ket saan a makakonekta iti HTTP."
 }

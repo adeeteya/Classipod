@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Mtundu",
   "editSongLyricsLabel": "Mazgu",
   "saveChangesButton": "Sungani vyakusintha",
-  "veryLow": "Kukhira kwapasi"
+  "veryLow": "Kukhira kwapasi",
+  "reindexLibrarySettingTitle": "Kuŵikaso indekisi",
+  "reindexLibrarySettingDescription": "Ŵazganiso metadata na vithuzithuzi vya mafayilo ghose gha sumu.",
+  "refreshLibrarySettingTitle": "Kuwezgerapo Layibulare",
+  "refreshLibrarySettingDescription": "Wonani usange mwasazgirako panji kufunyapo sumu. Sungani metadata na vyakujambula ivyo vilipo.",
+  "librarySettingsScreenTitle": "Kukonzekera kwa Layibulare",
+  "librarySettingsDescription": "Kulaŵilira indexing ya sumu na mafoda ghakupatulika.",
+  "sleepTimerTitle": "Nyengo yakugona",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Umaliro wa Nyimbo ya Sono",
+  "sleepTimerRemainingLabel": "Kukhalako",
+  "findingSongs": "Kupenja sumu...",
+  "songsLoaded": "Nyimbo zakuŵikika: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Vithuzithuzi ivyo vyasungika: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Kutondeka kuŵika laibulale ya sumu. Chonde yezgaso.",
+  "missingTracksTitle": "Ma track ghakusoŵa",
+  "missingTracksDescription": "Wonani mafayilo agho ghakaŵa kuti ghangaŵazgika yayi.",
+  "missingTracksEmpty": "Palije ma track ghambura kuŵazgika.",
+  "missingTrackRead": "Tingakwaniska yayi kuŵazga metadata ya fayilo iyi. Wonani malo gha fayilo na vizomerezgo vyakunjilirapo, ndipo pamanyuma muŵikeso index ya layibulare kuti muyezgeso.",
+  "missingTrackArtwork": "Tingakwaniska yayi kuŵazga vithuzithuzi vya fayilo iyi. Audio yingaŵa kuti yichali kuseŵera. Rendex laibulale kuti muyezgeso.",
+  "playbackBuffering": "Kusunga...",
+  "preventDuplicateTracksTitle": "Lekani Kukopera Matraki",
+  "preventDuplicateTracksDescription": "Bisani nyimbo izo zili na mazina gha mafayilo ghakuyana waka.",
+  "hideLocalMusicTitle": "Bisani sumu za mu chigaŵa chinu",
+  "hideLocalMusicDescription": "Longorani waka sumu za pa seva mu layibulare yinu apo Subsonic yili pa. Mafayilo gha mu chigaŵa chinu ghakukhala pa chipangizo chinu.",
+  "subsonicTitle": "Subsonic Seva",
+  "subsonicDescription": "Nyimbo zakufuma ku Navidrome, gonic, na maseva ghakukolerana.",
+  "subsonicConfigure": "Kukonzekera Subsonic",
+  "subsonicUsername": "Zina la munthu",
+  "subsonicPassword": "Nambala yachinsinsi",
+  "subsonicConnect": "Lumikizani",
+  "subsonicRemove": "Fumiskanipo seva",
+  "subsonicSignIn": "Kunjira kukukhumbikwa",
+  "subsonicLoadingLibrary": "Kuŵika laibulale yinu...",
+  "subsonicContinueBackground": "Lutilirani kunyuma",
+  "subsonicClose": "Jalani",
+  "subsonicIndexing": "Kuŵika nyimbo pa seva...",
+  "subsonicUnavailable": "Kusangika yayi",
+  "subsonicCredentialsError": "Wonani zina linu, nambala yachinsinsi, na vizomerezgo vya seva.",
+  "subsonicStorageError": "Tingasunga yayi viphapha vyakuzomerezga. Wonani kuti malo ghakusungirako vinthu ghakuvikilirika ghalipo ndipo yezganiso.",
+  "subsonicTimeout": "Nyengo ya seva yamara. Chonde yezgaso.",
+  "subsonicServerError": "Tingakwaniska yayi kuŵazga layibulare ya seva. Katalogu wakale wakusungika. Muŵeso na Laibulale kuti muyezgeso.",
+  "libraryRetry": "Kunozga",
+  "subsonicOn": "Pa",
+  "subsonicOff": "Kuzimwa",
+  "sleepTimerMinutes": "Mphindi {minutes}",
+  "oledBlackDeviceColor": "OLED Wakufipa",
+  "subsonicUrl": "URL ya seva",
+  "subsonicInvalidUrl": "Lembani URL ya seva ya HTTP panji HTTPS kwambura fumbo, chigaŵa, panji kuloŵamo kwakuŵikika.",
+  "subsonicUnsupported": "Seva iyi yikukhozgera yayi Subsonic API panji kukhozgera kwa chimanyikwiro.",
+  "subsonicConnectionError": "Vingakolerana yayi. Wonani URL, netiweki, na chikalata cha HTTPS. Pa webusayiti, seva yikwenera kuzomerezga CORS ndipo pulogiramu ya HTTPS yingakolerana yayi na HTTP."
 }

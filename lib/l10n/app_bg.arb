@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Текстове",
   "saveChangesButton": "Запазване на промените",
-  "veryLow": "Много ниско"
+  "veryLow": "Много ниско",
+  "reindexLibrarySettingTitle": "Повторно индексиране",
+  "reindexLibrarySettingDescription": "Прочетете отново метаданните и обложката за всички музикални файлове.",
+  "refreshLibrarySettingTitle": "Обновяване на библиотеката",
+  "refreshLibrarySettingDescription": "Проверете за добавена или изтрита музика. Запазете съществуващите метаданни и произведения на изкуството.",
+  "librarySettingsScreenTitle": "Настройки на библиотеката",
+  "librarySettingsDescription": "Управлявайте индексирането на музика и изключените папки.",
+  "sleepTimerTitle": "Таймер за заспиване",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Край на текущата песен",
+  "sleepTimerRemainingLabel": "оставащи",
+  "findingSongs": "Търсят се песни...",
+  "songsLoaded": "Заредени песни: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Кеширани произведения на изкуството: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Не може да се зареди музикалната библиотека. Моля, опитайте отново.",
+  "missingTracksTitle": "Липсващи песни",
+  "missingTracksDescription": "Прегледайте файлове, които не могат да бъдат прочетени.",
+  "missingTracksEmpty": "Няма нечетими песни.",
+  "missingTrackRead": "Не може да се прочетат метаданните на този файл. Проверете местоположението на файла и разрешенията за достъп, след което преиндексирайте библиотеката, за да опитате отново.",
+  "missingTrackArtwork": "Не можах да прочета илюстрацията на този файл. Аудиото може все още да се възпроизвежда. Индексирайте повторно библиотеката, за да опитате отново.",
+  "playbackBuffering": "Буфериране...",
+  "preventDuplicateTracksTitle": "Предотвратяване на дублиращи се записи",
+  "preventDuplicateTracksDescription": "Скриване на песни с дублиращи се имена на файлове.",
+  "hideLocalMusicTitle": "Скриване на местна музика",
+  "hideLocalMusicDescription": "Показвайте само сървърна музика във вашата библиотека, докато Subsonic е включен. Локалните файлове остават на вашето устройство.",
+  "subsonicTitle": "Subsonic сървър",
+  "subsonicDescription": "Предавайте поточно музика от Navidrome, gonic и съвместими сървъри.",
+  "subsonicConfigure": "Конфигурирайте Subsonic",
+  "subsonicUsername": "Потребителско име",
+  "subsonicPassword": "Парола",
+  "subsonicConnect": "Свържете се",
+  "subsonicRemove": "Премахване на сървъра",
+  "subsonicSignIn": "Изисква се влизане",
+  "subsonicLoadingLibrary": "Вашата библиотека се зарежда...",
+  "subsonicContinueBackground": "Продължете във фонов режим",
+  "subsonicClose": "затвори",
+  "subsonicIndexing": "Индексиране на сървърна музика...",
+  "subsonicUnavailable": "Недостъпен",
+  "subsonicCredentialsError": "Проверете вашето потребителско име, парола и разрешения на сървъра.",
+  "subsonicStorageError": "Идентификационните данни не можаха да бъдат запазени. Проверете дали има защитено хранилище и опитайте отново.",
+  "subsonicTimeout": "Времето за изчакване на сървъра изтече. Моля, опитайте отново.",
+  "subsonicServerError": "Не може да се прочете сървърната библиотека. Предишният каталог се запазва. Опреснете библиотеката, за да опитате отново.",
+  "libraryRetry": "Повторение",
+  "subsonicOn": "На",
+  "subsonicOff": "Изключване",
+  "sleepTimerMinutes": "{minutes} минути",
+  "oledBlackDeviceColor": "OLED черен",
+  "subsonicUrl": "URL адрес на сървъра",
+  "subsonicInvalidUrl": "Въведете URL адрес на HTTP или HTTPS сървър без заявка, фрагмент или вградено влизане.",
+  "subsonicUnsupported": "Този сървър не поддържа необходимия Subsonic API или удостоверяване на токени.",
+  "subsonicConnectionError": "Не може да се свърже. Проверете URL адреса, мрежата и HTTPS сертификата. В мрежата сървърът трябва да разреши CORS и HTTPS приложение не може да се свърже с HTTP."
 }

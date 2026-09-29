@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ወግዒ",
   "editSongLyricsLabel": "ግጥሚ",
   "saveChangesButton": "ለውጢ ምዕቃብ",
-  "veryLow": "ኣዝዩ ትሑት"
+  "veryLow": "ኣዝዩ ትሑት",
+  "reindexLibrarySettingTitle": "ዳግማይ ኢንዴክስ ምግባር",
+  "reindexLibrarySettingDescription": "ንኹሎም ፋይላት ሙዚቃ ዝኸውን ሜታዳታን ስነ-ጥበባዊ ስርሓት ደጊምካ ኣንብብ።",
+  "refreshLibrarySettingTitle": "ቤተ መጻሕፍቲ ምሕዳስ",
+  "refreshLibrarySettingDescription": "ተወሳኺ ወይ ዝተደምሰሰ ሙዚቃ እንተሃልዩ መርምሩ። ዝጸንሐ ሜታዳታን ስነ-ጥበባዊ ስርሓትን ምሓዝ።",
+  "librarySettingsScreenTitle": "ቅጥዕታት ቤተ-መጻሕፍቲ",
+  "librarySettingsDescription": "ናይ ሙዚቃ ኢንዴክስን ዝተገለሉ ማህደርን ምምሕዳር።",
+  "sleepTimerTitle": "ድቃስ ታይመር",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "መወዳእታ ናይ እዋናዊ ደርፊ",
+  "sleepTimerRemainingLabel": "ዝተረፈ",
+  "findingSongs": "ደርፍታት ምርካብ...",
+  "songsLoaded": "ዝተጻዕኑ ደርፍታት፡ {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "ስነ ጥበባዊ ስርሓት ተዓቂቡ: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ናይ ሙዚቃ ቤተ መጻሕፍቲ ክጽዕን ኣይከኣለን። በጃኹም ዳግማይ ፈትኑ።",
+  "missingTracksTitle": "ዝጎደሉ ትራክስ",
+  "missingTracksDescription": "ክነበቡ ዘይከኣሉ ፋይላት ምግምጋም።",
+  "missingTracksEmpty": "ዘይንበብ ትራክ የለን።",
+  "missingTrackRead": "ናይዚ ፋይል’ዚ ሜታዳታ ከንብብ ኣይከኣለን። ናይ ፋይል ቦታን ናይ ምብጻሕ ፍቓድን መርምር፣ ድሕሪኡ ነቲ ቤተ-መጻሕፍቲ ዳግማይ ኢንዴክስ ብምግባር ዳግማይ ክትፍትኖ።",
+  "missingTrackArtwork": "ናይዚ ፋይል ስነ-ጥበባዊ ስርሓት ከንብብ ኣይከኣለን። ድምጺ ገና ክጻወት ይኽእል እዩ። ዳግማይ ክትፍትን ነቲ ቤተ-መጻሕፍቲ ዳግማይ ኢንዴክስ ግበሮ።",
+  "playbackBuffering": "መከላኸሊ...",
+  "preventDuplicateTracksTitle": "ተደጋጋሚ ትራክ ምክልኻል",
+  "preventDuplicateTracksDescription": "ተደጋጋሚ ኣስማት ፋይላት ዘለዎም ትራክ ምሕባእ።",
+  "hideLocalMusicTitle": "ናይ ከባቢ ሙዚቃ ሕባእ",
+  "hideLocalMusicDescription": "Subsonic ኣብ ዝውላዕሉ እዋን ኣብ ቤተ-መጻሕፍትኻ ናይ ሰርቨር ሙዚቃ ጥራይ ኣርኢ። ናይ ከባቢ ፋይላት ኣብ መሳርሒኻ ይጸንሑ።",
+  "subsonicTitle": "Subsonic ኣገልጋሊ",
+  "subsonicDescription": "ካብ Navidrome, gonic, ከምኡ ውን ተሰማማዒ ሰርቨር ሙዚቃ ስትሪም።",
+  "subsonicConfigure": "Subsonic ምውቃር",
+  "subsonicUsername": "ስም ተጠቃሚ",
+  "subsonicPassword": "ፓስዎርድ",
+  "subsonicConnect": "ምትእስሳር",
+  "subsonicRemove": "ሰርቨር ምእላይ",
+  "subsonicSignIn": "ምእታው የድሊ",
+  "subsonicLoadingLibrary": "ቤተ መጻሕፍትኻ ኣብ ምጽዓን...",
+  "subsonicContinueBackground": "ብድሕሪት ቀጽል",
+  "subsonicClose": "ዕጸዎ።",
+  "subsonicIndexing": "ኢንዴክስ ሰርቨር ሙዚቃ...",
+  "subsonicUnavailable": "ዘይርከብ",
+  "subsonicCredentialsError": "ስም ተጠቃሚኻ፡ ምልክት ቃልካን ፍቓድ ኣገልጋሊኻን መርምር።",
+  "subsonicStorageError": "መረጋገጺታት ክዕቅብ ኣይከኣለን። ውሑስ መኽዘን ከምዘሎ ኣረጋግጽ እሞ እንደገና ፈትን።",
+  "subsonicTimeout": "እቲ ሰርቨር ግዜኡ ወዲኡ። በጃኹም ደጊምኩም ፈትኑ።",
+  "subsonicServerError": "ናይ ኣገልጋሊ ቤተ-መጻሕፍቲ ከንብብ ኣይከኣለን። እቲ ቅድሚ ሕጂ ዝነበረ ካታሎግ ተዓቂቡ ኣሎ። ዳግማይ ንምፍታን ላይብረሪ ምሕዳስ።",
+  "libraryRetry": "ዳግማይ ምፍታን",
+  "subsonicOn": "አብ ልዕሊ",
+  "subsonicOff": "ምጥፋእ",
+  "sleepTimerMinutes": "{minutes} ደቓይቕ",
+  "oledBlackDeviceColor": "OLED ጸሊም",
+  "subsonicUrl": "ናይ ኣገልጋሊ URL",
+  "subsonicInvalidUrl": "ብዘይ ሕቶ፡ ቁንጣሮ ወይ ዝተሰረተ መእተዊ HTTP ወይ HTTPS ኣገልጋሊ URL ኣእቱ።",
+  "subsonicUnsupported": "እዚ ኣገልጋሊ ነቲ ዘድሊ Subsonic API ወይ ቶከን ምርግጋጽ ኣይድግፍን እዩ።",
+  "subsonicConnectionError": "ክራኸብ ኣይክእልን እዩ። URL፣ ኔትወርክን HTTPSን ምስክር ወረቐት መርምሩ። ኣብ ዌብ እቲ ሰርቨር CORS ክፈቅድ ኣለዎ ከምኡ ውን ሓደ HTTPS app ምስ HTTP ክራኸብ ኣይክእልን እዩ።"
 }

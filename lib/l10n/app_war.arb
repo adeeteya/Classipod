@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Kategorya",
   "editSongLyricsLabel": "Mga liriko",
   "saveChangesButton": "Tipigi an mga Pagbag-o",
-  "veryLow": "Ubos nga Ubos"
+  "veryLow": "Ubos nga Ubos",
+  "reindexLibrarySettingTitle": "Indeks utro",
+  "reindexLibrarySettingDescription": "Basaha utro an metadatos ngan artwork para han ngatanan nga mga file han musika.",
+  "refreshLibrarySettingTitle": "Bag-oha an Librarya",
+  "refreshLibrarySettingDescription": "Susiha kon may-ada igindugang o ginpara nga musika. Tipigi an mga naeksister nga metadatos ngan obra han arte.",
+  "librarySettingsScreenTitle": "Mga Kabutang han Librarya",
+  "librarySettingsDescription": "Pagdumara han pag-index han musika ngan mga folder nga diri upod.",
+  "sleepTimerTitle": "Oras han Pagkaturog",
+  "sleepTimerEndOfCurrentSong": "Kataposan han Yana nga Kanta .",
+  "sleepTimerRemainingLabel": "Nahibilin",
+  "findingSongs": "Pagbiling hin mga kanta...",
+  "songsLoaded": "Songs loaded: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Gin-cache nga arte: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Diri nakakarga an librarya han musika. Alayon pagsari utro.",
+  "missingTracksTitle": "Nawawara nga mga agianan",
+  "missingTracksDescription": "Repasuha an mga file nga waray mabasa.",
+  "missingTracksEmpty": "Waray diri mababasa nga mga track.",
+  "missingTrackRead": "Waray mabasa an metadatos hini nga payl. Susiha an lokasyon han file ngan mga pagtugot ha pag-access, katapos i-index utro an librarya basi sarihan utro.",
+  "missingTrackArtwork": "Waray mabasa an buhat han arte hini nga file. Mahimo pa mag-play an audio. I-index utro an librarya basi sarihan utro.",
+  "playbackBuffering": "Pagpugong...",
+  "preventDuplicateTracksTitle": "Pugngi an Doble nga mga Track .",
+  "preventDuplicateTracksDescription": "Itago an mga track nga mayda doble nga mga ngaran han file.",
+  "hideLocalMusicTitle": "Itago an Lokal nga Musika .",
+  "hideLocalMusicDescription": "Ipakita la an musika han server ha imo librarya samtang naka-on an Subsonic. An lokal nga mga file nagpapabilin ha imo aparato.",
+  "subsonicTitle": "Subsonic nga Serbidor",
+  "subsonicDescription": "Stream nga musika gikan sa Navidrome, gonic, ug mga katugbang nga mga server.",
+  "subsonicConfigure": "Ibutang an Subsonic",
+  "subsonicUsername": "Ngaran han gumaramit",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Pagsumpay",
+  "subsonicRemove": "Kuhaa an Server",
+  "subsonicSignIn": "Kinahanglan an pag-sign in",
+  "subsonicLoadingLibrary": "Pagkarga han imo librarya...",
+  "subsonicContinueBackground": "Padayon ha luyo .",
+  "subsonicClose": "Sarado",
+  "subsonicIndexing": "Pag-indeks han musika han serbidor...",
+  "subsonicUnavailable": "Diri makukuha",
+  "subsonicCredentialsError": "Susiha an imo ngaran han gumaramit, password, ngan mga pagtugot ha server.",
+  "subsonicStorageError": "Waray makatipig hin mga kredensyal. Susiha nga may-ada talwas nga pagtipig ngan sarihi utro.",
+  "subsonicTimeout": "Naubos an oras han serbidor. Alayon pagsari utro.",
+  "subsonicServerError": "Waray makabasa han librarya han server. Gintitipigan an nauna nga katalogo. Ig-represko an Librarya basi sarihan utro.",
+  "libraryRetry": "Pangalimbasog",
+  "subsonicOn": "Ha",
+  "subsonicOff": "Ginpagawas",
+  "sleepTimerMinutes": "{minutes} nga mga minuto",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "OLED Itom",
+  "subsonicUrl": "URL han serbidor",
+  "subsonicInvalidUrl": "Pagsulod hin HTTP o HTTPS nga URL han serbidor nga waray pakiana, tipik, o nakasulod nga pagsulod.",
+  "subsonicUnsupported": "Ini nga server diri nasuporta han ginkikinahanglan nga Subsonic API o pagpamatuod han token.",
+  "subsonicConnectionError": "Diri makakonekta. Susiha an URL, network, ngan HTTPS nga sertipiko. Ha Web, an server kinahanglan magtugot han CORS ngan an usa nga HTTPS nga app diri makakakonekta ha HTTP."
 }

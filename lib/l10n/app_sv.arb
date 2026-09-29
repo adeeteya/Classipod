@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Text",
   "saveChangesButton": "Spara ändringar",
-  "veryLow": "Mycket låg"
+  "veryLow": "Mycket låg",
+  "reindexLibrarySettingTitle": "Omindexera",
+  "reindexLibrarySettingDescription": "Read metadata and artwork for all music files again.",
+  "refreshLibrarySettingTitle": "Uppdatera biblioteket",
+  "refreshLibrarySettingDescription": "Leta efter tillagd eller raderad musik. Behåll befintlig metadata och konstverk.",
+  "librarySettingsScreenTitle": "Biblioteksinställningar",
+  "librarySettingsDescription": "Hantera musikindexering och uteslutna mappar.",
+  "sleepTimerTitle": "Insomningstimer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Slut på aktuell låt",
+  "sleepTimerRemainingLabel": "Kvar",
+  "findingSongs": "Hittar låtar...",
+  "songsLoaded": "Låtar laddade: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Konstverk cachade: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Det gick inte att ladda musikbiblioteket. Försök igen.",
+  "missingTracksTitle": "Saknade spår",
+  "missingTracksDescription": "Granska filer som inte kunde läsas.",
+  "missingTracksEmpty": "Inga oläsbara spår.",
+  "missingTrackRead": "Det gick inte att läsa den här filens metadata. Kontrollera filens plats och åtkomstbehörigheter, indexera sedan om biblioteket för att försöka igen.",
+  "missingTrackArtwork": "Det gick inte att läsa den här filens konstverk. Ljudet kan fortfarande spelas upp. Indexera om biblioteket för att försöka igen.",
+  "playbackBuffering": "Buffrar...",
+  "preventDuplicateTracksTitle": "Förhindra dubbletter av spår",
+  "preventDuplicateTracksDescription": "Dölj spår med dubbletter av filnamn.",
+  "hideLocalMusicTitle": "Dölj lokal musik",
+  "hideLocalMusicDescription": "Visa endast servermusik i ditt bibliotek medan Subsonic är på. Lokala filer stannar på din enhet.",
+  "subsonicTitle": "Subsonic-server",
+  "subsonicDescription": "Strömma musik från Navidrome, gonic och kompatibla servrar.",
+  "subsonicConfigure": "Konfigurera Subsonic",
+  "subsonicUsername": "Användarnamn",
+  "subsonicPassword": "Lösenord",
+  "subsonicConnect": "Anslut",
+  "subsonicRemove": "Ta bort server",
+  "subsonicSignIn": "Logga in krävs",
+  "subsonicLoadingLibrary": "Laddar ditt bibliotek ...",
+  "subsonicContinueBackground": "Fortsätt i bakgrunden",
+  "subsonicClose": "Stäng",
+  "subsonicIndexing": "Indexerar servermusik...",
+  "subsonicUnavailable": "Ej tillgänglig",
+  "subsonicCredentialsError": "Kontrollera ditt användarnamn, lösenord och serverbehörigheter.",
+  "subsonicStorageError": "Det gick inte att spara användaruppgifter. Kontrollera att säker lagring är tillgänglig och försök igen.",
+  "subsonicTimeout": "Servern tog timeout. Försök igen.",
+  "subsonicServerError": "Kunde inte läsa serverbiblioteket. Den tidigare katalogen behålls. Uppdatera biblioteket för att försöka igen.",
+  "libraryRetry": "Försöka igen",
+  "subsonicOn": "På",
+  "subsonicOff": "Av",
+  "sleepTimerMinutes": "{minutes} minuter",
+  "oledBlackDeviceColor": "OLED Svart",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "Ange en HTTP- eller HTTPS-server-URL utan en fråga, fragment eller inbäddad inloggning.",
+  "subsonicUnsupported": "Den här servern stöder inte den nödvändiga Subsonic API eller token-autentisering.",
+  "subsonicConnectionError": "Kan inte ansluta. Kontrollera URL, nätverk och HTTPS-certifikat. På webben måste servern tillåta CORS och en HTTPS-app kan inte ansluta till HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Momo",
   "editSongLyricsLabel": "Hlrics",
   "saveChangesButton": "Whakaorangia nga huringa",
-  "veryLow": "Tino iti"
+  "veryLow": "Tino iti",
+  "reindexLibrarySettingTitle": "Taupū anō",
+  "reindexLibrarySettingDescription": "Panui ano nga raraunga meta me nga mahi toi mo nga konae puoro katoa.",
+  "refreshLibrarySettingTitle": "Whakahou Whare Pukapuka",
+  "refreshLibrarySettingDescription": "Tirohia mo te taapiri kua mukua ranei te puoro. Kia mau ki nga metadata me nga mahi toi.",
+  "librarySettingsScreenTitle": "Tautuhinga Whare Pukapuka",
+  "librarySettingsDescription": "Whakahaerehia te taupū waiata me nga kōpaki kua whakakorehia.",
+  "sleepTimerTitle": "Matawā Moe",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Mutunga o te Waiata o naianei",
+  "sleepTimerRemainingLabel": "E toe ana",
+  "findingSongs": "Kei te rapu waiata…",
+  "songsLoaded": "Waiata kua utaina: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Mahi toi keteroki: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Kāore e taea te uta te whare pukapuka waiata. Me ngana ano.",
+  "missingTracksTitle": "Nga Riu Ngaro",
+  "missingTracksDescription": "Arotakehia nga konae kaore e taea te panui.",
+  "missingTracksEmpty": "Karekau he riu kore panui.",
+  "missingTrackRead": "Kāore i taea te pānui i ngā raraunga meta o tēnei kōnae. Takina te waahi o te konae me nga whakaaetanga uru, ka tohuhia ano te whare pukapuka hei ngana ano.",
+  "missingTrackArtwork": "Kāore i taea te pānui i ngā mahi toi o tēnei kōnae. Ka purei tonu te ororongo. Tautuhi ano i te whare pukapuka hei ngana ano.",
+  "playbackBuffering": "Pupuri ana…",
+  "preventDuplicateTracksTitle": "Aukati i nga Riu Taarua",
+  "preventDuplicateTracksDescription": "Hunahia nga ara whai ingoa konae taarua.",
+  "hideLocalMusicTitle": "Huna Waiata Paetata",
+  "hideLocalMusicDescription": "Whakaatuhia te puoro tūmau anake i to whare pukapuka i te wa e ka ana a Subsonic. Ka noho tonu nga konae rohe ki to taputapu.",
+  "subsonicTitle": "Subsonic Tūmau",
+  "subsonicDescription": "Rere waiata mai i Navidrome, gonic, me nga tūmau hototahi.",
+  "subsonicConfigure": "Whakaritea Subsonic",
+  "subsonicUsername": "Ingoa Kaiwhakamahi",
+  "subsonicPassword": "Kupuhipa",
+  "subsonicConnect": "Tūhono",
+  "subsonicRemove": "Tango Tūmau",
+  "subsonicSignIn": "Me takiuru",
+  "subsonicLoadingLibrary": "Kei te uta i to whare pukapuka…",
+  "subsonicContinueBackground": "Haere tonu ki muri",
+  "subsonicClose": "Katia",
+  "subsonicIndexing": "Waitohu tūmau pūoro…",
+  "subsonicUnavailable": "Kāore i te wātea",
+  "subsonicCredentialsError": "Tirohia to ingoa kaiwhakamahi, kupuhipa, me nga whakaaetanga tūmau.",
+  "subsonicStorageError": "Kāore i taea te tiaki i ngā taipitopito tuakiri. Tirohia kei te waatea te rokiroki haumaru ka ngana ano.",
+  "subsonicTimeout": "Kua pau te wa o te tūmau. Me ngana ano.",
+  "subsonicServerError": "Kāore i taea te pānui i te whare pukapuka tūmau. Ka mau tonu te pukapuka o mua. Whakahouhia te Whare Pukapuka hei ngana ano.",
+  "libraryRetry": "Rehiry hoki",
+  "subsonicOn": "Runga",
+  "subsonicOff": "Meinga iho",
+  "sleepTimerMinutes": "{minutes} meneti",
+  "oledBlackDeviceColor": "OLED Pango",
+  "subsonicUrl": "URL Tūmau",
+  "subsonicInvalidUrl": "Whakauruhia he URL tūmau HTTP, HTTPS ranei kaore he uiui, he kongakonga, he takiuru whakauru ranei.",
+  "subsonicUnsupported": "Kaore tenei tūmau i te tautoko i te Subsonic API me te motuhēhēnga tohu.",
+  "subsonicConnectionError": "Kaore e taea te hono. Tirohia te URL, whatunga, me te tiwhikete HTTPS. I runga i te Tukutuku, me whakaae te tūmau CORS me te taupānga HTTPS e kore e taea te hono atu ki te HTTP."
 }

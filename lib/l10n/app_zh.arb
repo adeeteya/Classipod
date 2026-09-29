@@ -134,5 +134,78 @@
   "editSongGenreLabel": "类型",
   "editSongLyricsLabel": "歌词",
   "saveChangesButton": "保存更改",
-  "veryLow": "非常低"
+  "veryLow": "非常低",
+  "reindexLibrarySettingTitle": "重新索引",
+  "reindexLibrarySettingDescription": "再次读取所有音乐文件的元数据和插图。",
+  "refreshLibrarySettingTitle": "刷新库",
+  "refreshLibrarySettingDescription": "检查添加或删除的音乐。保留现有的元数据和艺术品。",
+  "librarySettingsScreenTitle": "库设置",
+  "librarySettingsDescription": "管理音乐索引和排除的文件夹。",
+  "sleepTimerTitle": "睡眠定时器",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "当前歌曲结束",
+  "sleepTimerRemainingLabel": "剩余",
+  "findingSongs": "寻找歌曲...",
+  "songsLoaded": "已加载歌曲：{loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "缓存的艺术品：{cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "无法加载音乐库。请重试。",
+  "missingTracksTitle": "失踪的曲目",
+  "missingTracksDescription": "查看无法读取的文件。",
+  "missingTracksEmpty": "没有无法读取的曲目。",
+  "missingTrackRead": "无法读取该文件的元数据。检查文件位置和访问权限，然后重新索引库以重试。",
+  "missingTrackArtwork": "无法读取该文件的插图。音频可能仍会播放。重新索引库以重试。",
+  "playbackBuffering": "缓冲中…",
+  "preventDuplicateTracksTitle": "防止重复曲目",
+  "preventDuplicateTracksDescription": "隐藏具有重复文件名的曲目。",
+  "hideLocalMusicTitle": "隐藏本地音乐",
+  "hideLocalMusicDescription": "当 Subsonic 打开时，仅显示库中的服务器音乐。本地文件保留在您的设备上。",
+  "subsonicTitle": "Subsonic 服务器",
+  "subsonicDescription": "从 Navidrome、gonic 和兼容服务器流式传输音乐。",
+  "subsonicConfigure": "配置Subsonic",
+  "subsonicUsername": "用户名",
+  "subsonicPassword": "密码",
+  "subsonicConnect": "连接",
+  "subsonicRemove": "删除服务器",
+  "subsonicSignIn": "需要登录",
+  "subsonicLoadingLibrary": "正在加载您的库...",
+  "subsonicContinueBackground": "在后台继续",
+  "subsonicClose": "关闭",
+  "subsonicIndexing": "索引服务器音乐...",
+  "subsonicUnavailable": "不可用",
+  "subsonicCredentialsError": "检查您的用户名、密码和服务器权限。",
+  "subsonicStorageError": "无法保存凭据。检查安全存储是否可用，然后重试。",
+  "subsonicTimeout": "服务器超时。请再试一次。",
+  "subsonicServerError": "无法读取服务器库。保留以前的目录。刷新库以重试。",
+  "libraryRetry": "重试",
+  "subsonicOn": "启用",
+  "subsonicOff": "禁用",
+  "sleepTimerMinutes": "{minutes} 分钟",
+  "oledBlackDeviceColor": "OLED 黑色",
+  "subsonicUrl": "服务器地址",
+  "subsonicInvalidUrl": "输入不带查询、片段或嵌入式登录的 HTTP 或 HTTPS 服务器 URL。",
+  "subsonicUnsupported": "该服务器不支持所需的 Subsonic API 或令牌身份验证。",
+  "subsonicConnectionError": "无法连接。检查 URL、网络和 HTTPS 证书。在 Web 上，服务器必须允许 CORS，并且 HTTPS 应用程序无法连接到 HTTP。"
 }

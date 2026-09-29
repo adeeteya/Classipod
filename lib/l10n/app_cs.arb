@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Žánr",
   "editSongLyricsLabel": "Text",
   "saveChangesButton": "Uložit změny",
-  "veryLow": "Velmi nízká"
+  "veryLow": "Velmi nízká",
+  "reindexLibrarySettingTitle": "Znovu indexovat",
+  "reindexLibrarySettingDescription": "Znovu si přečtěte metadata a kresby všech hudebních souborů.",
+  "refreshLibrarySettingTitle": "Obnovit knihovnu",
+  "refreshLibrarySettingDescription": "Zkontrolujte přidanou nebo smazanou hudbu. Zachovejte stávající metadata a umělecká díla.",
+  "librarySettingsScreenTitle": "Nastavení knihovny",
+  "librarySettingsDescription": "Správa indexování hudby a vyloučených složek.",
+  "sleepTimerTitle": "Časovač spánku",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Konec aktuální písně",
+  "sleepTimerRemainingLabel": "Zbývající",
+  "findingSongs": "Hledání skladeb…",
+  "songsLoaded": "Načtené skladby: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Umělecké dílo uložené v mezipaměti: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nelze načíst hudební knihovnu. Zkuste to znovu.",
+  "missingTracksTitle": "Chybějící stopy",
+  "missingTracksDescription": "Zkontrolujte soubory, které nelze přečíst.",
+  "missingTracksEmpty": "Žádné nečitelné stopy.",
+  "missingTrackRead": "Metadata tohoto souboru nelze přečíst. Zkontrolujte umístění souboru a přístupová oprávnění, poté znovu indexujte knihovnu a zkuste to znovu.",
+  "missingTrackArtwork": "Kresbu tohoto souboru nelze přečíst. Zvuk se může stále přehrávat. Přeindexujte knihovnu a zkuste to znovu.",
+  "playbackBuffering": "Ukládání do vyrovnávací paměti…",
+  "preventDuplicateTracksTitle": "Zabránit duplicitním stopám",
+  "preventDuplicateTracksDescription": "Skrýt stopy s duplicitními názvy souborů.",
+  "hideLocalMusicTitle": "Skrýt místní hudbu",
+  "hideLocalMusicDescription": "Když je Subsonic zapnutý, zobrazujte v knihovně pouze hudbu ze serveru. Místní soubory zůstanou ve vašem zařízení.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Streamujte hudbu ze Navidrome, gonic a kompatibilních serverů.",
+  "subsonicConfigure": "Nakonfigurujte Subsonic",
+  "subsonicUsername": "Uživatelské jméno",
+  "subsonicPassword": "Heslo",
+  "subsonicConnect": "Připojte se",
+  "subsonicRemove": "Odebrat server",
+  "subsonicSignIn": "Je vyžadováno přihlášení",
+  "subsonicLoadingLibrary": "Načítání vaší knihovny…",
+  "subsonicContinueBackground": "Pokračujte na pozadí",
+  "subsonicClose": "Zavřít",
+  "subsonicIndexing": "Indexování hudby na serveru…",
+  "subsonicUnavailable": "Není k dispozici",
+  "subsonicCredentialsError": "Zkontrolujte své uživatelské jméno, heslo a oprávnění serveru.",
+  "subsonicStorageError": "Nepodařilo se uložit přihlašovací údaje. Zkontrolujte, zda je k dispozici zabezpečené úložiště, a zkuste to znovu.",
+  "subsonicTimeout": "Časový limit serveru vypršel. Zkuste to prosím znovu.",
+  "subsonicServerError": "Nelze přečíst knihovnu serveru. Předchozí katalog je zachován. Obnovte knihovnu a zkuste to znovu.",
+  "libraryRetry": "Opakovat",
+  "subsonicOn": "Na",
+  "subsonicOff": "Vypnuto",
+  "sleepTimerMinutes": "{minutes} minut",
+  "oledBlackDeviceColor": "OLED černá",
+  "subsonicUrl": "Adresa URL serveru",
+  "subsonicInvalidUrl": "Zadejte adresu URL serveru HTTP nebo HTTPS bez dotazu, fragmentu nebo vloženého přihlášení.",
+  "subsonicUnsupported": "Tento server nepodporuje požadované rozhraní API Subsonic nebo autentizaci pomocí tokenu.",
+  "subsonicConnectionError": "Nelze se připojit. Zkontrolujte adresu URL, síť a certifikát HTTPS. Na webu musí server povolit CORS a aplikace HTTPS se nemůže připojit k HTTP."
 }

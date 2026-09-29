@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Oji",
   "editSongLyricsLabel": "Egwu",
   "saveChangesButton": "Chekwaa mgbanwe",
-  "veryLow": "Dị ala"
+  "veryLow": "Dị ala",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Gụọ metadata na nka maka faịlụ egwu niile ọzọ.",
+  "refreshLibrarySettingTitle": "Weghachite ọbá akwụkwọ",
+  "refreshLibrarySettingDescription": "Lelee egwu agbakwunyere ma ọ bụ ehichapụ. Debe metadata na ihe nka dị ugbu a.",
+  "librarySettingsScreenTitle": "Ntọala ọba akwụkwọ",
+  "librarySettingsDescription": "Jikwaa ndekọ ndekọ egwu yana nchekwa ewepụrụ.",
+  "sleepTimerTitle": "Oge ihi ụra",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ọgwụgwụ nke egwu dị ugbu a",
+  "sleepTimerRemainingLabel": "Nke fọdụrụ",
+  "findingSongs": "Ịchọta egwu…",
+  "songsLoaded": "Egwu juru: {loaded}/{total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Eserese echekwara: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Enweghị ike ibunye ọba akwụkwọ egwu. Biko nwaa ọzọ.",
+  "missingTracksTitle": "Egwu efu",
+  "missingTracksDescription": "Nyochaa faịlụ ndị enweghị ike ịgụ.",
+  "missingTracksEmpty": "Enweghị egwu enweghị ike ịgụ.",
+  "missingTrackRead": "Enweghị ike ịgụ metadata faịlụ a. Lelee ebe faịlụ wee nweta ikike, wee degharịa ọba akwụkwọ ka ị nwaa ọzọ.",
+  "missingTrackArtwork": "Enweghị ike ịgụ ọrụ nka faịlụ a. Ọdịda nwere ike ka na-egwu. Tinyegharịa ọba akwụkwọ ka ị nwaa ọzọ.",
+  "playbackBuffering": "Ndokwa…",
+  "preventDuplicateTracksTitle": "Gbochie egwu oyiri",
+  "preventDuplicateTracksDescription": "Zoo egwu nwere aha faịlụ oyiri.",
+  "hideLocalMusicTitle": "Zoo egwu mpaghara",
+  "hideLocalMusicDescription": "Gosi naanị egwu nkesa n'ọbá akwụkwọ gị mgbe Subsonic nọ. Faịlụ mpaghara na-anọ na ngwaọrụ gị.",
+  "subsonicTitle": "Ihe nkesa Subsonic",
+  "subsonicDescription": "Tinye egwu sitere na Navidrome, gonic, yana sava dakọtara.",
+  "subsonicConfigure": "Hazie Subsonic",
+  "subsonicUsername": "Aha njirimara",
+  "subsonicPassword": "Okwuntughe",
+  "subsonicConnect": "Jikọọ",
+  "subsonicRemove": "Wepu ihe nkesa",
+  "subsonicSignIn": "Achọrọ ịbanye",
+  "subsonicLoadingLibrary": "Na-ebunye ọba akwụkwọ gị…",
+  "subsonicContinueBackground": "Gaa n'ihu n'azụ",
+  "subsonicClose": "Mechie",
+  "subsonicIndexing": "Na-atụnye egwu ihe nkesa…",
+  "subsonicUnavailable": "Ọ dịghị",
+  "subsonicCredentialsError": "Lelee aha njirimara, paswọọdụ, na ikike nkesa gị.",
+  "subsonicStorageError": "Enweghị ike ichekwa nzere. Lelee na nchekwa echekwara dị wee nwaa ọzọ.",
+  "subsonicTimeout": "Ihe nkesa ahụ agwụla. Biko nwaa ọzọ.",
+  "subsonicServerError": "Enweghị ike ịgụ ọba akwụkwọ nkesa. A na-edobe katalọgụ gara aga. Megharịa ọba akwụkwọ ka ị nwaa ọzọ.",
+  "libraryRetry": "Vipe",
+  "subsonicOn": "Inwu",
+  "subsonicOff": "Igbanyu",
+  "sleepTimerMinutes": "{minutes} nkeji",
+  "oledBlackDeviceColor": "OLED ojii",
+  "subsonicUrl": "URL nkesa",
+  "subsonicInvalidUrl": "Tinye URL nkesa HTTP ma ọ bụ HTTPS na-enweghị ajụjụ, iberibe ma ọ bụ nbanye agbakwunyere.",
+  "subsonicUnsupported": "Ihe nkesa a anaghị akwado API Subsonic achọrọ ma ọ bụ nyocha akara.",
+  "subsonicConnectionError": "Enweghị ike ijikọ. Lelee URL, netwọkụ, na asambodo HTTPS. Na webụ, ihe nkesa ga-ahapụrịrị CORS na ngwa HTTPS enweghị ike ijikọ na HTTP."
 }

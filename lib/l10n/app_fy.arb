@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Sjenre",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Feroarings bewarje",
-  "veryLow": "Hiel leech"
+  "veryLow": "Hiel leech",
+  "reindexLibrarySettingTitle": "Re-yndeks",
+  "reindexLibrarySettingDescription": "Lês metadata en artwork foar alle muzykbestannen opnij.",
+  "refreshLibrarySettingTitle": "Bibleteek ferfarskje",
+  "refreshLibrarySettingDescription": "Kontrolearje op tafoege of wiske muzyk. Hâld besteande metadata en keunstwurken.",
+  "librarySettingsScreenTitle": "Bibleteek ynstellings",
+  "librarySettingsDescription": "Behear muzykyndeksearring en útsletten mappen.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ein fan Aktuele Song",
+  "sleepTimerRemainingLabel": "Oerbleaun",
+  "findingSongs": "Liedjes sykje...",
+  "songsLoaded": "Songs laden: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork cached: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "De muzykbibleteek kin net laden wurde. Besykje it nochris.",
+  "missingTracksTitle": "Missing Tracks",
+  "missingTracksDescription": "Besjoch bestannen dy't net lêzen wurde kinne.",
+  "missingTracksEmpty": "Gjin ûnlêsbere spoaren.",
+  "missingTrackRead": "Koe de metadata fan dit bestân net lêze. Kontrolearje de bestânlokaasje en tagongsrjochten, en yndeksearje dan de bibleteek opnij om te besykjen.",
+  "missingTrackArtwork": "Koe it keunstwurk fan dit bestân net lêze. Audio kin noch spylje. Yndeksearje de bibleteek opnij om te besykjen.",
+  "playbackBuffering": "Buffer…",
+  "preventDuplicateTracksTitle": "Dûbele spoaren foarkomme",
+  "preventDuplicateTracksDescription": "Ferbergje spoaren mei dûbele bestânsnammen.",
+  "hideLocalMusicTitle": "Ferbergje lokale muzyk",
+  "hideLocalMusicDescription": "Lit allinich servermuzyk sjen yn jo bibleteek wylst Subsonic oan is. Lokale bestannen bliuwe op jo apparaat.",
+  "subsonicTitle": "Subsonic Tsjinner",
+  "subsonicDescription": "Stream muzyk fan Navidrome, gonic, en kompatibele servers.",
+  "subsonicConfigure": "Konfigurearje Subsonic",
+  "subsonicUsername": "Brûkersnamme",
+  "subsonicPassword": "Wachtwurd",
+  "subsonicConnect": "Ferbine",
+  "subsonicRemove": "Tsjinner fuortsmite",
+  "subsonicSignIn": "Oanmelde fereaske",
+  "subsonicLoadingLibrary": "Jo biblioteek laden...",
+  "subsonicContinueBackground": "Trochgean op eftergrûn",
+  "subsonicClose": "Slút",
+  "subsonicIndexing": "Yndeksearret tsjinner muzyk...",
+  "subsonicUnavailable": "Net beskikber",
+  "subsonicCredentialsError": "Kontrolearje jo brûkersnamme, wachtwurd, en tsjinner tagongsrjochten.",
+  "subsonicStorageError": "Koe gjin bewiisbrieven bewarje. Kontrolearje dat feilige opslach beskikber is en besykje it nochris.",
+  "subsonicTimeout": "De tsjinner hat time-out. Besykje it nochris.",
+  "subsonicServerError": "Koe de tsjinner bibleteek net lêze. De foarige katalogus wurdt bewarre. Ferfarskje Bibleteek om opnij te besykjen.",
+  "libraryRetry": "Twurkje",
+  "subsonicOn": "Op",
+  "subsonicOff": "Út",
+  "sleepTimerMinutes": "{minutes} minuten",
+  "oledBlackDeviceColor": "OLED Swart",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "Fier in HTTP- of HTTPS-tsjinner URL yn sûnder in query, fragmint of ynbêde oanmelding.",
+  "subsonicUnsupported": "Dizze tsjinner net stipet de fereaske Subsonic API of token autentikaasje.",
+  "subsonicConnectionError": "Kin net ferbine. Kontrolearje de URL, netwurk en HTTPS-sertifikaat. Op it web moat de tsjinner CORS tastean en in HTTPS-app kin net ferbine mei HTTP."
 }

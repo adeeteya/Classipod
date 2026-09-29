@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Type",
   "editSongLyricsLabel": "Layics",
   "saveChangesButton": "Siev Chienj",
-  "veryLow": "Very Low"
+  "veryLow": "Very Low",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Read metadata an artwork fi all music files again.",
+  "refreshLibrarySettingTitle": "Refresh Library",
+  "refreshLibrarySettingDescription": "Check fi music weh yuh add or delete. Keep existing metadata an artwork.",
+  "librarySettingsScreenTitle": "Library Settings",
+  "librarySettingsDescription": "Manage music indexing an excluded folders.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "End a Current Song",
+  "sleepTimerRemainingLabel": "Remaining",
+  "findingSongs": "Finding songs...",
+  "songsLoaded": "Songs loaded: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork cached: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "No able fi load di music library. Please try again.",
+  "missingTracksTitle": "Missing Tracks",
+  "missingTracksDescription": "Review files weh yuh couldn't read.",
+  "missingTracksEmpty": "No unreadable tracks.",
+  "missingTrackRead": "Couldn read dis file’s metadata. Check di file location an access permissions, den reindex di library fi try again.",
+  "missingTrackArtwork": "Couldn read dis file’s artwork. Audio may still play. Reindex di library fi retry.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "Prevent Duplicate Tracks",
+  "preventDuplicateTracksDescription": "Hide tracks wid duplicate file names.",
+  "hideLocalMusicTitle": "Hide Local Music",
+  "hideLocalMusicDescription": "Show only server music inna yuh library while Subsonic deh on. Local files stay pan yuh device.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Stream music fram Navidrome, gonic, an compatible servers.",
+  "subsonicConfigure": "Configure Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Connect",
+  "subsonicRemove": "Tek weh di server",
+  "subsonicSignIn": "Sign in required",
+  "subsonicLoadingLibrary": "Loading yuh library...",
+  "subsonicContinueBackground": "Continue inna background",
+  "subsonicClose": "Close",
+  "subsonicIndexing": "Indexing server music...",
+  "subsonicUnavailable": "No available",
+  "subsonicCredentialsError": "Check yuh username, password, an server permissions.",
+  "subsonicStorageError": "Couldn save credentials. Check seh secure storage deh deh an try again.",
+  "subsonicTimeout": "Di server time out. Please try again.",
+  "subsonicServerError": "No couldn't read di server library. Di previous catalog is retained. Refresh Library fi try agen.",
+  "libraryRetry": "Retry",
+  "subsonicOn": "Pon",
+  "subsonicOff": "Aaf",
+  "sleepTimerMinutes": "{minutes} Minutes",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "Enter an HTTP or HTTPS server URL widout a query, fragment, or embedded login.",
+  "subsonicUnsupported": "Dis server no support di required Subsonic API or token authentication.",
+  "subsonicConnectionError": "Cyan connect. Check di URL, network, an HTTPS certificate. Pan Web, di server haffi allow CORS an an HTTPS app cyaan connect to HTTP."
 }

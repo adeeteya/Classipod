@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Лирика",
   "saveChangesButton": "Өзгерістерді сақтаңыз",
-  "veryLow": "Өте төмен"
+  "veryLow": "Өте төмен",
+  "reindexLibrarySettingTitle": "Қайта индекстеу",
+  "reindexLibrarySettingDescription": "Барлық музыкалық файлдар үшін метадеректер мен өнер туындыларын қайта оқыңыз.",
+  "refreshLibrarySettingTitle": "Кітапхананы жаңарту",
+  "refreshLibrarySettingDescription": "Қосылған немесе жойылған музыканы тексеріңіз. Бар метадеректер мен өнер туындыларын сақтаңыз.",
+  "librarySettingsScreenTitle": "Кітапхана параметрлері",
+  "librarySettingsDescription": "Музыканы индекстеуді және шығарылған қалталарды басқарыңыз.",
+  "sleepTimerTitle": "Ұйқы таймері",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ағымдағы әннің соңы",
+  "sleepTimerRemainingLabel": "Қалған",
+  "findingSongs": "Әндер табылуда...",
+  "songsLoaded": "Жүктелген әндер: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Өнер туындысы кэштелген: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Музыкалық кітапхананы жүктеу мүмкін емес. Қайталап көріңіз.",
+  "missingTracksTitle": "Жоқ тректер",
+  "missingTracksDescription": "Оқу мүмкін емес файлдарды қарап шығыңыз.",
+  "missingTracksEmpty": "Оқымайтын тректер жоқ.",
+  "missingTrackRead": "Бұл файлдың метадеректерін оқу мүмкін емес. Файлдың орнын және кіру рұқсаттарын тексеріңіз, содан кейін әрекетті қайталау үшін кітапхананы қайта индекстеңіз.",
+  "missingTrackArtwork": "Бұл файлдың суретін оқу мүмкін емес. Аудио әлі де ойнатылуы мүмкін. Әрекетті қайталау үшін кітапхананы қайта индекстеңіз.",
+  "playbackBuffering": "Буферлеу…",
+  "preventDuplicateTracksTitle": "Қайталанатын тректерді болдырмау",
+  "preventDuplicateTracksDescription": "Қайталанатын файл атаулары бар тректерді жасыру.",
+  "hideLocalMusicTitle": "Жергілікті музыканы жасыру",
+  "hideLocalMusicDescription": "Subsonic қосулы кезде кітапханаңызда тек сервер музыкасын көрсетіңіз. Жергілікті файлдар құрылғыңызда қалады.",
+  "subsonicTitle": "Subsonic сервері",
+  "subsonicDescription": "Navidrome, gonic және үйлесімді серверлерден музыка ағыны.",
+  "subsonicConfigure": "Subsonic конфигурациялау",
+  "subsonicUsername": "Пайдаланушы аты",
+  "subsonicPassword": "Құпия сөз",
+  "subsonicConnect": "Қосылу",
+  "subsonicRemove": "Серверді жою",
+  "subsonicSignIn": "Жүйеге кіру қажет",
+  "subsonicLoadingLibrary": "Кітапханаңыз жүктелуде…",
+  "subsonicContinueBackground": "Фондық режимде жалғастыру",
+  "subsonicClose": "Жабу",
+  "subsonicIndexing": "Сервер музыкасы индекстелуде…",
+  "subsonicUnavailable": "Қолжетімсіз",
+  "subsonicCredentialsError": "Пайдаланушы атыңызды, құпия сөзіңізді және сервер рұқсаттарын тексеріңіз.",
+  "subsonicStorageError": "Тіркелгі деректерін сақтау мүмкін болмады. Қауіпсіз жадтың қолжетімді екенін тексеріп, әрекетті қайталаңыз.",
+  "subsonicTimeout": "Сервердің уақыты аяқталды. Қайталап көріңіз.",
+  "subsonicServerError": "Сервер кітапханасын оқу мүмкін емес. Алдыңғы каталог сақталады. Әрекетті қайталау үшін кітапхананы жаңартыңыз.",
+  "libraryRetry": "Қайталау",
+  "subsonicOn": "Ішінде",
+  "subsonicOff": "Ажыратылған",
+  "sleepTimerMinutes": "{minutes} минут",
+  "oledBlackDeviceColor": "OLED қара",
+  "subsonicUrl": "Сервер URL мекенжайы",
+  "subsonicInvalidUrl": "HTTP немесе HTTPS серверінің URL мекенжайын сұраусыз, фрагментсіз немесе ендірілген логинсіз енгізіңіз.",
+  "subsonicUnsupported": "Бұл сервер қажетті Subsonic API немесе таңбалауыш аутентификацияны қолдамайды.",
+  "subsonicConnectionError": "Қосылу мүмкін емес. URL мекенжайын, желіні және HTTPS сертификатын тексеріңіз. Интернетте сервер CORS рұқсат беруі керек және HTTPS қолданбасы HTTP желісіне қосыла алмайды."
 }

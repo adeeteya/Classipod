@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Bansa",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Simpan Ubah",
-  "veryLow": "Amat Low"
+  "veryLow": "Amat Low",
+  "reindexLibrarySettingTitle": "Indeks baru",
+  "reindexLibrarySettingDescription": "Bacha metadata enggau asil seni ke semua fail muzik baru.",
+  "refreshLibrarySettingTitle": "Segarka Librari",
+  "refreshLibrarySettingDescription": "Peratika muzik ti ditambah tauka dipadam. Simpan metadata enggau asil seni ti udah bisi.",
+  "librarySettingsScreenTitle": "Atur Librari",
+  "librarySettingsDescription": "Ngatur indeks muzik enggau folder ti enda disengkaum.",
+  "sleepTimerTitle": "Pemadu Tinduk",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ujung Lagu Kediatu",
+  "sleepTimerRemainingLabel": "Ti agi tinggal",
+  "findingSongs": "Ngiga lagu...",
+  "songsLoaded": "Lagu ti udah dimuat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Asil seni ti disimpan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Enda ulih muat library muzik. Minta nuan nguji baru.",
+  "missingTracksTitle": "Trek ti lenyau",
+  "missingTracksDescription": "Tinjau baru fail ti enda ulih dibacha.",
+  "missingTracksEmpty": "Nadai trek ti enda ulih dibacha.",
+  "missingTrackRead": "Enda ulih macha metadata fail tu. Peratika endur fail enggau pemendar akses, udah nya indeks baru library ngambika ulih nguji baru.",
+  "missingTrackArtwork": "Enda ulih macha asil seni fail tu. Audio engka agi dimain. Indeks baru librari ngambika ulih nguji baru.",
+  "playbackBuffering": "Penyangga...",
+  "preventDuplicateTracksTitle": "Nagang Trek ti Duplikat",
+  "preventDuplicateTracksDescription": "Lamun trek enggau nama fail ti diduplikat.",
+  "hideLocalMusicTitle": "Lamun Muzik Setempat",
+  "hideLocalMusicDescription": "Tunjukka semina muzik pelayan ba library nuan lebuh Subsonic idup. Fail setempat mengkang ba perengka nuan.",
+  "subsonicTitle": "Pelayan Subsonic",
+  "subsonicDescription": "Arus muzik ari Navidrome, gonic, enggau pelayan ti serasi.",
+  "subsonicConfigure": "Ngatur Subsonic",
+  "subsonicUsername": "Nama Pengguna",
+  "subsonicPassword": "Jaku laluan",
+  "subsonicConnect": "Nyambung",
+  "subsonicRemove": "Buai Pelayan",
+  "subsonicSignIn": "Sign in dipinta",
+  "subsonicLoadingLibrary": "Muatka library nuan...",
+  "subsonicContinueBackground": "Terus ba latar belakang",
+  "subsonicClose": "Tutup",
+  "subsonicIndexing": "Indeks muzik pelayan...",
+  "subsonicUnavailable": "Enda ulih",
+  "subsonicCredentialsError": "Peratika nama pengguna, password, enggau pemendar pelayan nuan.",
+  "subsonicStorageError": "Enda ulih nyimpan kredensial. Peratika endur nyimpan ti likun bisi lalu uji baru.",
+  "subsonicTimeout": "Pelayan nya udah abis jam. Minta nuan nguji baru.",
+  "subsonicServerError": "Enda ulih macha library pelayan. Katalog ke dulu agi ditan. Segar Librari ngambika ulih nguji baru.",
+  "libraryRetry": "Angkat baru",
+  "subsonicOn": "Atas",
+  "subsonicOff": "Madamka",
+  "sleepTimerMinutes": "{minutes} minit",
+  "oledBlackDeviceColor": "OLED Hitam",
+  "subsonicUrl": "URL pelayan",
+  "subsonicInvalidUrl": "Masukka URL pelayan HTTP tauka HTTPS enggau nadai tanya, serpihan, tauka login ti diselitka.",
+  "subsonicUnsupported": "Pelayan tu enda nyukung API Subsonic tauka pengesah token ti diguna.",
+  "subsonicConnectionError": "Enda ulih nyambung. Peratika URL, jaringan, enggau setipikit HTTPS. Ba Web, pelayan mesti ngemendarka CORS lalu app HTTPS enda ulih nyambung ngagai HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Тексти пісень",
   "saveChangesButton": "Зберегти зміни",
-  "veryLow": "Дуже низький"
+  "veryLow": "Дуже низький",
+  "reindexLibrarySettingTitle": "Переіндексувати",
+  "reindexLibrarySettingDescription": "Ще раз прочитайте метадані та обкладинку для всіх музичних файлів.",
+  "refreshLibrarySettingTitle": "Оновити бібліотеку",
+  "refreshLibrarySettingDescription": "Перевірте наявність доданої або видаленої музики. Зберігайте існуючі метадані та ілюстрації.",
+  "librarySettingsScreenTitle": "Налаштування бібліотеки",
+  "librarySettingsDescription": "Керуйте індексуванням музики та виключеними папками.",
+  "sleepTimerTitle": "Таймер сну",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Кінець поточної пісні",
+  "sleepTimerRemainingLabel": "Залишилося",
+  "findingSongs": "Пошук пісень…",
+  "songsLoaded": "Завантажено пісні: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ілюстрація збережена в кеші: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Неможливо завантажити музичну бібліотеку. Будь ласка, повторіть спробу.",
+  "missingTracksTitle": "Відсутні треки",
+  "missingTracksDescription": "Перегляньте файли, які не вдалося прочитати.",
+  "missingTracksEmpty": "Немає нечитабельних доріжок.",
+  "missingTrackRead": "Не вдалося прочитати метадані цього файлу. Перевірте розташування файлу та права доступу, а потім переіндексуйте бібліотеку, щоб повторити спробу.",
+  "missingTrackArtwork": "Не вдалося прочитати ілюстрацію цього файлу. Аудіо все ще може відтворюватися. Переіндексуйте бібліотеку, щоб повторити спробу.",
+  "playbackBuffering": "Буферизація…",
+  "preventDuplicateTracksTitle": "Запобігання повторюваним композиціям",
+  "preventDuplicateTracksDescription": "Приховати треки з повторюваними назвами файлів.",
+  "hideLocalMusicTitle": "Приховати місцеву музику",
+  "hideLocalMusicDescription": "Показувати лише серверну музику у вашій бібліотеці, поки Subsonic увімкнено. Локальні файли залишаються на вашому пристрої.",
+  "subsonicTitle": "Сервер Subsonic",
+  "subsonicDescription": "Транслюйте музику з Navidrome, gonic і сумісних серверів.",
+  "subsonicConfigure": "Налаштувати Subsonic",
+  "subsonicUsername": "Ім'я користувача",
+  "subsonicPassword": "Пароль",
+  "subsonicConnect": "Підключитися",
+  "subsonicRemove": "Видалити сервер",
+  "subsonicSignIn": "Необхідно ввійти",
+  "subsonicLoadingLibrary": "Завантаження бібліотеки…",
+  "subsonicContinueBackground": "Продовжити у фоновому режимі",
+  "subsonicClose": "Закрити",
+  "subsonicIndexing": "Індексація музики на сервері…",
+  "subsonicUnavailable": "Недоступний",
+  "subsonicCredentialsError": "Перевірте своє ім’я користувача, пароль і дозволи сервера.",
+  "subsonicStorageError": "Не вдалося зберегти облікові дані. Перевірте, чи доступне безпечне сховище, і повторіть спробу.",
+  "subsonicTimeout": "Час очікування сервера минув. Спробуйте ще раз.",
+  "subsonicServerError": "Не вдалося прочитати бібліотеку сервера. Попередній каталог зберігається. Оновіть бібліотеку, щоб повторити спробу.",
+  "libraryRetry": "Повторити",
+  "subsonicOn": "На",
+  "subsonicOff": "Не вистачати",
+  "sleepTimerMinutes": "{minutes} хвилин",
+  "oledBlackDeviceColor": "Чорний OLED",
+  "subsonicUrl": "URL-адреса сервера",
+  "subsonicInvalidUrl": "Введіть URL-адресу сервера HTTP або HTTPS без запиту, фрагмента чи вбудованого логіна.",
+  "subsonicUnsupported": "Цей сервер не підтримує необхідну автентифікацію Subsonic API або маркер.",
+  "subsonicConnectionError": "Неможливо підключитися. Перевірте URL-адресу, мережу та сертифікат HTTPS. В Інтернеті сервер має дозволити CORS, а програма HTTPS не може підключитися до HTTP."
 }

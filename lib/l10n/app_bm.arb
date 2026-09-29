@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Sifa",
   "editSongLyricsLabel": "Lyrics .",
   "saveChangesButton": "Yɛlɛma minnu bɛ kɛ .",
-  "veryLow": "A ka dɔgɔ kosɛbɛ ."
+  "veryLow": "A ka dɔgɔ kosɛbɛ .",
+  "reindexLibrarySettingTitle": "Segin ka index (index) kɛ",
+  "reindexLibrarySettingDescription": "Aw ye metadata ni artwork kalan dɔnkilida filew bɛɛ la tugun.",
+  "refreshLibrarySettingTitle": "Kitabumaraso kura",
+  "refreshLibrarySettingDescription": "Aw ye a lajɛ ni dɔnkili dɔw farala u kan walima ni u bɔra yen. Aw bɛ metadata ni seko ni dɔnko baara minnu bɛ yen, olu mara.",
+  "librarySettingsScreenTitle": "Kitabumaraso Labɛncogo",
+  "librarySettingsDescription": "Misikili index ani foli minnu ma fara a kan, olu ɲɛnabɔ.",
+  "sleepTimerTitle": "Sunɔgɔ waati jatebɔlan",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Dɔnkili min bɛ sen na sisan, o laban",
+  "sleepTimerRemainingLabel": "Tolenw",
+  "findingSongs": "Dɔnkiliw sɔrɔli...",
+  "songsLoaded": "Dɔnkili minnu bɛ doni: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Seko ni dɔnko baara minnu bɛ cakɛda la: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Se tɛ ka dɔnkilida gafemarayɔrɔ doni. Aw ye aw jija ka segin ka a lajɛ.",
+  "missingTracksTitle": "Tracks minnu tununna",
+  "missingTracksDescription": "Dosiyɛri minnu ma se ka kalan, olu lajɛ.",
+  "missingTracksEmpty": "Track minnu tɛ se ka kalan, olu tɛ yen.",
+  "missingTrackRead": "A ma se ka nin dosiye in ka metadata kalan. Aw ye dosiye sigiyɔrɔ ni doncogo yamaruyaw lajɛ, o kɔ aw bɛ gafemarayɔrɔ index (index) kokura walasa k’a ɲini kokura.",
+  "missingTrackArtwork": "A ma se ka nin dosiye in ka ja in kalan. Odio bɛ se ka fɔ hali bi. I ka gafemarayɔrɔ index (index) kɛ kokura walasa k’a lajɛ kokura.",
+  "playbackBuffering": "Buffering (Tampon) ka...",
+  "preventDuplicateTracksTitle": "Aw ye Duplicate Tracks bali",
+  "preventDuplicateTracksDescription": "Track minnu dogo ni file tɔgɔw ye minnu bɛ ɲɔgɔn ta.",
+  "hideLocalMusicTitle": "Sigida dɔnkiliw dogo",
+  "hideLocalMusicDescription": "Server dɔnkiliw dɔrɔn jira i ka gafemarayɔrɔ la ni Subsonic bɛ kɛnɛ kan. Sigida dosiyew bɛ to i ka minɛn kɔnɔ.",
+  "subsonicTitle": "Subsonic Baarakɛla",
+  "subsonicDescription": "Aw ye dɔnkiliw lajɛ ka bɔ Navidrome, gonic, ani sèrwɛriw la minnu bɛ se ka baara kɛ ɲɔgɔn fɛ.",
+  "subsonicConfigure": "Subsonic labɛn",
+  "subsonicUsername": "Baarakɛla tɔgɔ",
+  "subsonicPassword": "Password (daɲɛ dogolen).",
+  "subsonicConnect": "Jɛɲɔgɔnya kɛ",
+  "subsonicRemove": "Server bɔ yen",
+  "subsonicSignIn": "A ka kan ka don a kɔnɔ",
+  "subsonicLoadingLibrary": "Aw ka bibliothèque chargement...",
+  "subsonicContinueBackground": "Aw bɛ taa a fɛ ka taa kɔfɛ",
+  "subsonicClose": "A da tugu",
+  "subsonicIndexing": "Indexing serveur dɔnkiliw...",
+  "subsonicUnavailable": "A tɛ sɔrɔ",
+  "subsonicCredentialsError": "I ka baarakɛla tɔgɔ, i ka tɔgɔlasɛbɛn ani i ka baarakɛminɛnw ka yamaruyaw lajɛ.",
+  "subsonicStorageError": "A ma se ka seereyaw mara. Aw ye a lajɛ ni marayɔrɔ lakananen bɛ yen ani ka segin k’a lajɛ.",
+  "subsonicTimeout": "Server ka waati tɛmɛna. Aw ye aw jija ka segin a kan.",
+  "subsonicServerError": "A ma se ka sèrvèr bibliothèque kalan. Katalogu tɛmɛnen bɛ mara. Refresh Library walasa ka segin k’a lajɛ.",
+  "libraryRetry": "Retry .",
+  "subsonicOn": "Kan",
+  "subsonicOff": "K'a bɔ a la",
+  "sleepTimerMinutes": "{minutes} Minitiw",
+  "oledBlackDeviceColor": "OLED Dugukolonɔn",
+  "subsonicUrl": "Server URL ye",
+  "subsonicInvalidUrl": "HTTP walima HTTPS baarakɛminɛn URL dɔ don k’a sɔrɔ ɲininkali ma kɛ, ni yɔrɔ dɔ ma kɛ, walima ka don yɔrɔ dɔ don min kɔnɔ.",
+  "subsonicUnsupported": "Nin baarakɛminɛn in tɛ Subsonic API walima token dantigɛli wajibiyalen dɛmɛ.",
+  "subsonicConnectionError": "Se tɛ ka ɲɔgɔn sɔrɔ. URL, réseau ani HTTPS seereyaw lajɛ. Web kan, sèrvèr ka kan ka sira di CORS ma ani HTTPS app tɛ se ka don HTTP la."
 }

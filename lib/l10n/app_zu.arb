@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Uhlobo",
   "editSongLyricsLabel": "Amazwi womculo",
   "saveChangesButton": "Gcina Izinguquko",
-  "veryLow": "Phansi kakhulu"
+  "veryLow": "Phansi kakhulu",
+  "reindexLibrarySettingTitle": "Inkomba kabusha",
+  "reindexLibrarySettingDescription": "Funda imethadatha nomsebenzi wobuciko wawo wonke amafayela omculo futhi.",
+  "refreshLibrarySettingTitle": "Vuselela Umtapo",
+  "refreshLibrarySettingDescription": "Hlola umculo owengeziwe noma osusiwe. Gcina imethadatha ekhona nomsebenzi wobuciko.",
+  "librarySettingsScreenTitle": "Izilungiselelo Zelabhulali",
+  "librarySettingsDescription": "Phatha ukukhonjwa komculo namafolda angafakiwe.",
+  "sleepTimerTitle": "Isikhathi Sokulala",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ukuphela Kwengoma Yamanje",
+  "sleepTimerRemainingLabel": "Okusele",
+  "findingSongs": "Ithola izingoma...",
+  "songsLoaded": "Izingoma ezilayishiwe: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Umsebenzi wobuciko ugcinwe kunqolobane: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ayikwazi ukulayisha ilabhulali yomculo. Sicela uzame futhi.",
+  "missingTracksTitle": "Amaculo Angekho",
+  "missingTracksDescription": "Buyekeza amafayela angafundeki.",
+  "missingTracksEmpty": "Awekho amathrekhi angafundeki.",
+  "missingTrackRead": "Ayikwazanga ukufunda imethadatha yaleli fayela. Hlola indawo yefayela nezimvume zokufinyelela, bese ukhomba kabusha ilabhulali ukuze uzame kabusha.",
+  "missingTrackArtwork": "Ayikwazanga ukufunda umsebenzi wobuciko waleli fayela. Umsindo usengadlala. Khombisa kabusha umtapo ukuze uzame futhi.",
+  "playbackBuffering": "Iyagcina...",
+  "preventDuplicateTracksTitle": "Vimbela Amathrekhi Ayimpinda",
+  "preventDuplicateTracksDescription": "Fihla amathrekhi anamagama amafayela ayimpinda.",
+  "hideLocalMusicTitle": "Fihla Umculo Wasendaweni",
+  "hideLocalMusicDescription": "Bonisa kuphela umculo weseva kumtapo wakho wezincwadi ngenkathi i-Subsonic ivuliwe. Amafayela endawo ahlala kudivayisi yakho.",
+  "subsonicTitle": "Iseva ye-Subsonic",
+  "subsonicDescription": "Sakaza umculo ovela ku-Navidrome, gonic, namaseva ahambisanayo.",
+  "subsonicConfigure": "Shintshanisa amasheya Subsonic",
+  "subsonicUsername": "Igama lomsebenzisi",
+  "subsonicPassword": "Iphasiwedi",
+  "subsonicConnect": "Xhuma",
+  "subsonicRemove": "Susa Iseva",
+  "subsonicSignIn": "Ukungena ngemvume kuyadingeka",
+  "subsonicLoadingLibrary": "Ilayisha ilabhulali yakho...",
+  "subsonicContinueBackground": "Qhubeka ngemuva",
+  "subsonicClose": "Vala",
+  "subsonicIndexing": "Ifaka inkomba umculo weseva...",
+  "subsonicUnavailable": "Ayitholakali",
+  "subsonicCredentialsError": "Hlola igama lakho lomsebenzisi, iphasiwedi, nezimvume zeseva.",
+  "subsonicStorageError": "Ayikwazanga ukulondoloza imininingwane. Hlola ukuthi isitoreji esivikelekile siyatholakala bese uzama futhi.",
+  "subsonicTimeout": "Iseva iphelelwe yisikhathi. Sicela uzame futhi.",
+  "subsonicServerError": "Ayikwazanga ukufunda umtapo weseva. Ikhathalogi yangaphambilini iyagcinwa. Vuselela Ilabhulali ukuze uzame futhi.",
+  "libraryRetry": "MuntuLALA",
+  "subsonicOn": "Phezu kwa-",
+  "subsonicOff": "Cishile",
+  "sleepTimerMinutes": "{minutes} Amaminithi",
+  "oledBlackDeviceColor": "I-OLED emnyama",
+  "subsonicUrl": "I-URL yeseva",
+  "subsonicInvalidUrl": "Faka i-URL yeseva ye-HTTP noma ye-HTTPS ngaphandle kombuzo, isiqephu, noma ukungena ngemvume okushumekiwe.",
+  "subsonicUnsupported": "Le seva ayisekeli i-Subsonic API edingekayo noma ukuqinisekiswa kwethokheni.",
+  "subsonicConnectionError": "Ayikwazi ukuxhuma. Hlola i-URL, inethiwekhi, nesitifiketi se-HTTPS. Kuwebhu, iseva kufanele ivumele i-CORS futhi uhlelo lokusebenza lwe-HTTPS alukwazi ukuxhuma ku-HTTP."
 }

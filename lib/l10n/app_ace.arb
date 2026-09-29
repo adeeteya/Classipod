@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Perubahan Perubahan",
-  "veryLow": "Lagu Acehen"
+  "veryLow": "Lagu Acehen",
+  "reindexLibrarySettingTitle": "Indeks ulang",
+  "reindexLibrarySettingDescription": "Baca metadata ngon karya seni keu mandum file musik lom.",
+  "refreshLibrarySettingTitle": "Segarkan Pustaka",
+  "refreshLibrarySettingDescription": "Cek musik nyang ka ditambahkan atawa dihapus. Simpan metadata ngon karya seni nyang ka na.",
+  "librarySettingsScreenTitle": "Peuatoe Pustaka",
+  "librarySettingsDescription": "Meuatoe indeksasi musik ngon folder nyang hana jitamong.",
+  "sleepTimerTitle": "Peu-ulang Teungeut",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Akhe Lagu Saat Nyoe .",
+  "sleepTimerRemainingLabel": "Nyang mantong na",
+  "findingSongs": "Meuturi lagu...",
+  "songsLoaded": "Lagu yang dimuat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Karya seni nyang ka geusimpan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Hana jeuet ta muat pustaka musik. Neucuba lom.",
+  "missingTracksTitle": "Trek nyang gadôh",
+  "missingTracksDescription": "Review file nyang hana jeuet tabaca.",
+  "missingTracksEmpty": "Hana trek nyang hana jeuet tabaca.",
+  "missingTrackRead": "Hana jeuet tabaca metadata beureukaih nyoe. Cek teumpat file ngon izin akses, lheuh nyan indeks ulang perpustakaan keu neucuba lom.",
+  "missingTrackArtwork": "Hana jeuet tabaca karya seni file nyoe. Audio mungken mantong meu'en. Indeks ulang perpustakaan keu neucuba lom.",
+  "playbackBuffering": "Penyangga...",
+  "preventDuplicateTracksTitle": "Cegah Trek Duplikat .",
+  "preventDuplicateTracksDescription": "Peusom trek ngon nan file nyang duplikat.",
+  "hideLocalMusicTitle": "Peusom Musik Lokal",
+  "hideLocalMusicDescription": "Peuleumah mantong musik server lam perpustakaan droeneuh watee Subsonic teungoh meuhidup. File lokal teutap na bak alat droeneuh.",
+  "subsonicTitle": "Peulayanan Subsonic",
+  "subsonicDescription": "Aliran musik dari Navidrome, gonic, dan server nyang kompatibel.",
+  "subsonicConfigure": "Peugot Subsonic",
+  "subsonicUsername": "Nan ureueng ngui",
+  "subsonicPassword": "Kata sandi",
+  "subsonicConnect": "Sambong",
+  "subsonicRemove": "Peuhah Server",
+  "subsonicSignIn": "Peureulèë tamong",
+  "subsonicLoadingLibrary": "Meumuat perpustakaan droeneuh...",
+  "subsonicContinueBackground": "Sambong bak latar .",
+  "subsonicClose": "Tutop",
+  "subsonicIndexing": "Meuindeks musik server...",
+  "subsonicUnavailable": "Hana teuseudia",
+  "subsonicCredentialsError": "Cek nan ureueng ngui, kata sandi, ngon izin server droeneuh.",
+  "subsonicStorageError": "Hana jeuet ta simpan kredensial. Cek bahwa teumpat simpan nyang aman ka na dan neucuba lom.",
+  "subsonicTimeout": "Server ka habeh watee. Neu cuba lom.",
+  "subsonicServerError": "Hana jeuet tabaca pustaka server. Katalog nyang ka lheueh nyan geupeutheun. Refresh Perpustakaan keu neucuba lom.",
+  "libraryRetry": "Barui",
+  "subsonicOn": "Di",
+  "subsonicOff": "Piyoh",
+  "sleepTimerMinutes": "{minutes} minet",
+  "oledBlackDeviceColor": "OLED Hitam",
+  "subsonicUrl": "URL pelayan",
+  "subsonicInvalidUrl": "Tapeutamong URL server HTTP atawa HTTPS hana kueri, fragmen, atawa login nyang teuseubot.",
+  "subsonicUnsupported": "Server nyoe hana jidukung API Subsonic atawa otentikasi token nyang jipeureulee.",
+  "subsonicConnectionError": "Hana jeut meusambong. Neu-eu URL, jaringan, ngon sertifikat HTTPS. Bak Web, server wajeb geubi izin CORS ngon saboh aplikasi HTTPS hana jeuet geuhubong ngon HTTP."
 }

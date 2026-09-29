@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "I-save ang mga pagbag-o",
-  "veryLow": "Ubos kaayo"
+  "veryLow": "Ubos kaayo",
+  "reindexLibrarySettingTitle": "Pag-indeks pag-usab",
+  "reindexLibrarySettingDescription": "Basaha pag-usab ang metadata ug artwork para sa tanang music files.",
+  "refreshLibrarySettingTitle": "I-refresh ang Library",
+  "refreshLibrarySettingDescription": "Susiha ang gidugang o gitangtang nga musika. Ipadayon ang kasamtangan nga metadata ug artwork.",
+  "librarySettingsScreenTitle": "Mga Setting sa Library",
+  "librarySettingsDescription": "Pagdumala sa pag-indeks sa musika ug wala iapil nga mga folder.",
+  "sleepTimerTitle": "Timer sa Pagkatulog",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Katapusan sa Karon nga Awit",
+  "sleepTimerRemainingLabel": "Nagpabilin",
+  "findingSongs": "Nangita og mga kanta…",
+  "songsLoaded": "Mga kanta nga gikarga: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Na-cache ang artwork: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Dili makarga ang librarya sa musika. Palihug sulayi pag-usab.",
+  "missingTracksTitle": "Nawala nga mga Track",
+  "missingTracksDescription": "Ribyuha ang mga file nga dili mabasa.",
+  "missingTracksEmpty": "Walay dili mabasa nga mga track.",
+  "missingTrackRead": "Dili mabasa ang metadata sa kini nga file. Susiha ang lokasyon sa file ug mga permiso sa pag-access, unya i-reindex ang library aron sulayan pag-usab.",
+  "missingTrackArtwork": "Dili mabasa ang artwork niini nga file. Mahimong magdula pa ang audio. I-reindex ang librarya aron sulayan pag-usab.",
+  "playbackBuffering": "Nag-buffer…",
+  "preventDuplicateTracksTitle": "Paglikay sa Duplicate Tracks",
+  "preventDuplicateTracksDescription": "Tagoa ang mga track nga adunay doble nga mga ngalan sa file.",
+  "hideLocalMusicTitle": "Tagoa ang Lokal nga Musika",
+  "hideLocalMusicDescription": "Ipakita lang ang musika sa server sa imong library samtang ang Subsonic anaa. Ang lokal nga mga file magpabilin sa imong device.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Pag-stream sa musika gikan sa Navidrome, gonic, ug mga compatible nga server.",
+  "subsonicConfigure": "I-configure ang Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Sumpaysumpaya",
+  "subsonicRemove": "Kuhaa ang Server",
+  "subsonicSignIn": "Gikinahanglan ang pag-sign in",
+  "subsonicLoadingLibrary": "Nagkarga sa imong library…",
+  "subsonicContinueBackground": "Padayon sa background",
+  "subsonicClose": "Duol",
+  "subsonicIndexing": "Pag-index sa musika sa server…",
+  "subsonicUnavailable": "Dili magamit",
+  "subsonicCredentialsError": "Susiha ang imong username, password, ug mga permiso sa server.",
+  "subsonicStorageError": "Dili makatipig sa mga kredensyal. Susiha nga ang luwas nga pagtipig anaa ug sulayi pag-usab.",
+  "subsonicTimeout": "Nag-time out ang server. Palihug sulayi pag-usab.",
+  "subsonicServerError": "Dili makabasa sa librarya sa server. Ang miaging katalogo gipabilin. I-refresh ang Library aron sulayan pag-usab.",
+  "libraryRetry": "Mopasundog",
+  "subsonicOn": "Ibabaw sa",
+  "subsonicOff": "Sa ngitngit",
+  "sleepTimerMinutes": "{minutes} ka minuto",
+  "oledBlackDeviceColor": "OLED Itom",
+  "subsonicUrl": "URL sa server",
+  "subsonicInvalidUrl": "Pagsulod ug HTTP o HTTPS server URL nga walay pangutana, tipik, o naka-embed nga login.",
+  "subsonicUnsupported": "Kini nga server wala mosuporta sa gikinahanglan nga Subsonic API o token authentication.",
+  "subsonicConnectionError": "Dili makakonektar. Susiha ang URL, network, ug HTTPS nga sertipiko. Sa Web, kinahanglang tugotan sa server ang CORS ug ang HTTPS app dili makakonektar sa HTTP."
 }

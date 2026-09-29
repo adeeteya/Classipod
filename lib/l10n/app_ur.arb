@@ -134,5 +134,78 @@
   "editSongGenreLabel": "صنف",
   "editSongLyricsLabel": "دھن",
   "saveChangesButton": "تبدیلیوں کو بچائیں",
-  "veryLow": "بہت کم"
+  "veryLow": "بہت کم",
+  "reindexLibrarySettingTitle": "دوبارہ اشاریہ",
+  "reindexLibrarySettingDescription": "تمام میوزک فائلوں کے لیے میٹا ڈیٹا اور آرٹ ورک دوبارہ پڑھیں۔",
+  "refreshLibrarySettingTitle": "لائبریری ریفریش کریں۔",
+  "refreshLibrarySettingDescription": "شامل یا حذف شدہ موسیقی کی جانچ کریں۔ موجودہ میٹا ڈیٹا اور آرٹ ورک رکھیں۔",
+  "librarySettingsScreenTitle": "لائبریری کی ترتیبات",
+  "librarySettingsDescription": "میوزک انڈیکسنگ اور خارج کردہ فولڈرز کا نظم کریں۔",
+  "sleepTimerTitle": "نیند کا ٹائمر",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "موجودہ گانے کا اختتام",
+  "sleepTimerRemainingLabel": "باقی",
+  "findingSongs": "گانے تلاش کیے جا رہے ہیں…",
+  "songsLoaded": "لوڈ کردہ گانے: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "آرٹ ورک کیشڈ: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "میوزک لائبریری لوڈ کرنے سے قاصر۔ براہ کرم دوبارہ کوشش کریں۔",
+  "missingTracksTitle": "لاپتہ ٹریکس",
+  "missingTracksDescription": "ان فائلوں کا جائزہ لیں جنہیں پڑھا نہیں جا سکتا۔",
+  "missingTracksEmpty": "کوئی ناقابل مطالعہ ٹریکس۔",
+  "missingTrackRead": "اس فائل کا میٹا ڈیٹا نہیں پڑھ سکا۔ فائل کے مقام اور رسائی کی اجازتوں کو چیک کریں، پھر دوبارہ کوشش کرنے کے لیے لائبریری کو دوبارہ ترتیب دیں۔",
+  "missingTrackArtwork": "اس فائل کا آرٹ ورک نہیں پڑھ سکا۔ آڈیو اب بھی چل سکتا ہے۔ دوبارہ کوشش کرنے کے لیے لائبریری کو دوبارہ ترتیب دیں۔",
+  "playbackBuffering": "بفرنگ…",
+  "preventDuplicateTracksTitle": "ڈپلیکیٹ ٹریکس کو روکیں۔",
+  "preventDuplicateTracksDescription": "ڈپلیکیٹ فائل کے ناموں کے ساتھ پٹریوں کو چھپائیں۔",
+  "hideLocalMusicTitle": "مقامی موسیقی چھپائیں۔",
+  "hideLocalMusicDescription": "Subsonic آن ہونے پر اپنی لائبریری میں صرف سرور میوزک دکھائیں۔ مقامی فائلیں آپ کے آلے پر رہتی ہیں۔",
+  "subsonicTitle": "Subsonic سرور",
+  "subsonicDescription": "Navidrome، gonic، اور ہم آہنگ سرورز سے موسیقی کو سٹریم کریں۔",
+  "subsonicConfigure": "Subsonic کو ترتیب دیں۔",
+  "subsonicUsername": "صارف نام",
+  "subsonicPassword": "پاس ورڈ",
+  "subsonicConnect": "جڑیں۔",
+  "subsonicRemove": "سرور کو ہٹا دیں۔",
+  "subsonicSignIn": "سائن ان کی ضرورت ہے۔",
+  "subsonicLoadingLibrary": "آپ کی لائبریری لوڈ ہو رہی ہے…",
+  "subsonicContinueBackground": "پس منظر میں جاری رکھیں",
+  "subsonicClose": "بند",
+  "subsonicIndexing": "سرور موسیقی کی ترتیب ہو رہی ہے…",
+  "subsonicUnavailable": "دستیاب نہیں۔",
+  "subsonicCredentialsError": "اپنا صارف نام، پاس ورڈ، اور سرور کی اجازتیں چیک کریں۔",
+  "subsonicStorageError": "اسناد کو محفوظ نہیں کیا جا سکا۔ چیک کریں کہ محفوظ اسٹوریج دستیاب ہے اور دوبارہ کوشش کریں۔",
+  "subsonicTimeout": "سرور کا وقت ختم ہو گیا۔ براہ کرم دوبارہ کوشش کریں۔",
+  "subsonicServerError": "سرور لائبریری کو نہیں پڑھ سکا۔ پچھلا کیٹلاگ برقرار ہے۔ دوبارہ کوشش کرنے کے لیے لائبریری ریفریش کریں۔",
+  "libraryRetry": "دوبارہ کوشش کریں",
+  "subsonicOn": "پر",
+  "subsonicOff": "آف",
+  "sleepTimerMinutes": "{minutes} منٹ",
+  "oledBlackDeviceColor": "OLED سیاہ",
+  "subsonicUrl": "سرور URL",
+  "subsonicInvalidUrl": "کسی سوال، ٹکڑے، یا سرایت شدہ لاگ ان کے بغیر HTTP یا HTTPS سرور URL درج کریں۔",
+  "subsonicUnsupported": "یہ سرور مطلوبہ Subsonic API یا ٹوکن تصدیق کی حمایت نہیں کرتا ہے۔",
+  "subsonicConnectionError": "مربوط نہیں ہو سکتا۔ URL، نیٹ ورک، اور HTTPS سرٹیفکیٹ چیک کریں۔ ویب پر، سرور کو CORS کی اجازت دینی چاہیے اور HTTPS ایپ HTTP سے منسلک نہیں ہو سکتی۔"
 }

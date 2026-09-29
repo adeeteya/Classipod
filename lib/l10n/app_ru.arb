@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Тексты песен",
   "saveChangesButton": "Сохранить изменения",
-  "veryLow": "Очень низкий"
+  "veryLow": "Очень низкий",
+  "reindexLibrarySettingTitle": "Переиндексация",
+  "reindexLibrarySettingDescription": "Снова прочтите метаданные и обложки для всех музыкальных файлов.",
+  "refreshLibrarySettingTitle": "Обновить библиотеку",
+  "refreshLibrarySettingDescription": "Проверьте наличие добавленной или удаленной музыки. Сохраняйте существующие метаданные и изображения.",
+  "librarySettingsScreenTitle": "Настройки библиотеки",
+  "librarySettingsDescription": "Управляйте индексацией музыки и исключенными папками.",
+  "sleepTimerTitle": "Таймер сна",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Конец текущей песни",
+  "sleepTimerRemainingLabel": "Осталось",
+  "findingSongs": "Поиск песен…",
+  "songsLoaded": "Загружены песни: {loaded} / {total}.",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Изображение в кэше: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Невозможно загрузить музыкальную библиотеку. Пожалуйста, повторите попытку.",
+  "missingTracksTitle": "Отсутствующие треки",
+  "missingTracksDescription": "Просмотрите файлы, которые не удалось прочитать.",
+  "missingTracksEmpty": "Никаких нечитаемых треков.",
+  "missingTrackRead": "Не удалось прочитать метаданные этого файла. Проверьте расположение файла и права доступа, затем переиндексируйте библиотеку и повторите попытку.",
+  "missingTrackArtwork": "Не удалось прочитать обложку этого файла. Звук все еще может воспроизводиться. Переиндексируйте библиотеку, чтобы повторить попытку.",
+  "playbackBuffering": "Буферизация…",
+  "preventDuplicateTracksTitle": "Предотвращение дублирования треков",
+  "preventDuplicateTracksDescription": "Скрыть треки с повторяющимися именами файлов.",
+  "hideLocalMusicTitle": "Скрыть местную музыку",
+  "hideLocalMusicDescription": "Пока включен Subsonic, покажите в своей библиотеке только серверную музыку. Локальные файлы остаются на вашем устройстве.",
+  "subsonicTitle": "Subsonic Сервер",
+  "subsonicDescription": "Потоковая передача музыки с Navidrome, gonic и совместимых серверов.",
+  "subsonicConfigure": "Настроить Subsonic",
+  "subsonicUsername": "Имя пользователя",
+  "subsonicPassword": "Пароль",
+  "subsonicConnect": "Подключиться",
+  "subsonicRemove": "Удалить сервер",
+  "subsonicSignIn": "Требуется вход",
+  "subsonicLoadingLibrary": "Загрузка библиотеки…",
+  "subsonicContinueBackground": "Продолжить в фоновом режиме",
+  "subsonicClose": "Закрыть",
+  "subsonicIndexing": "Индексирование серверной музыки…",
+  "subsonicUnavailable": "Недоступно",
+  "subsonicCredentialsError": "Проверьте свое имя пользователя, пароль и разрешения сервера.",
+  "subsonicStorageError": "Не удалось сохранить учетные данные. Убедитесь, что безопасное хранилище доступно, и повторите попытку.",
+  "subsonicTimeout": "Время ожидания сервера истекло. Пожалуйста, попробуйте еще раз.",
+  "subsonicServerError": "Не удалось прочитать библиотеку сервера. Предыдущий каталог сохраняется. Обновите библиотеку, чтобы повторить попытку.",
+  "libraryRetry": "Повторно",
+  "subsonicOn": "На",
+  "subsonicOff": "Выключенный",
+  "sleepTimerMinutes": "{minutes} минут",
+  "oledBlackDeviceColor": "OLED черный",
+  "subsonicUrl": "URL-адрес сервера",
+  "subsonicInvalidUrl": "Введите URL-адрес сервера HTTP или HTTPS без запроса, фрагмента или встроенного входа в систему.",
+  "subsonicUnsupported": "Этот сервер не поддерживает необходимый API Subsonic или аутентификацию по токену.",
+  "subsonicConnectionError": "Невозможно подключиться. Проверьте URL-адрес, сеть и сертификат HTTPS. В Интернете сервер должен разрешить CORS, а приложение HTTPS не может подключиться к HTTP."
 }

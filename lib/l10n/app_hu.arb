@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Műfaj",
   "editSongLyricsLabel": "Dalszöveg",
   "saveChangesButton": "Módosítások mentése",
-  "veryLow": "Nagyon alacsony"
+  "veryLow": "Nagyon alacsony",
+  "reindexLibrarySettingTitle": "Index újra",
+  "reindexLibrarySettingDescription": "Olvassa el újra az összes zenei fájl metaadatait és grafikáját.",
+  "refreshLibrarySettingTitle": "Könyvtár frissítése",
+  "refreshLibrarySettingDescription": "Ellenőrizze a hozzáadott vagy törölt zenéket. A meglévő metaadatok és grafikák megtartása.",
+  "librarySettingsScreenTitle": "Könyvtár beállításai",
+  "librarySettingsDescription": "Zenei indexelés és kizárt mappák kezelése.",
+  "sleepTimerTitle": "Elalvásidőzítő",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Az aktuális dal vége",
+  "sleepTimerRemainingLabel": "Maradt",
+  "findingSongs": "Dalok keresése…",
+  "songsLoaded": "Betöltött dalok: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Gyorsítótárazott grafika: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nem sikerült betölteni a zenei könyvtárat. Kérjük, próbálja újra.",
+  "missingTracksTitle": "Hiányzó számok",
+  "missingTracksDescription": "Tekintse át a nem olvasható fájlokat.",
+  "missingTracksEmpty": "Nincsenek olvashatatlan számok.",
+  "missingTrackRead": "Nem sikerült beolvasni a fájl metaadatait. Ellenőrizze a fájl helyét és a hozzáférési engedélyeket, majd újraindexelje a könyvtárat az újrapróbálkozáshoz.",
+  "missingTrackArtwork": "Nem sikerült beolvasni a fájl grafikáját. A hang továbbra is lejátszható. Indexelje újra a könyvtárat az újrapróbálkozáshoz.",
+  "playbackBuffering": "Pufferelés…",
+  "preventDuplicateTracksTitle": "Az ismétlődő számok megelőzése",
+  "preventDuplicateTracksDescription": "Az ismétlődő fájlnevekkel rendelkező számok elrejtése.",
+  "hideLocalMusicTitle": "Helyi zene elrejtése",
+  "hideLocalMusicDescription": "Ha a Subsonic be van kapcsolva, csak a szerverzene jelenjen meg a könyvtárában. A helyi fájlok az eszközön maradnak.",
+  "subsonicTitle": "Subsonic szerver",
+  "subsonicDescription": "Streameljen zenét a Navidrome, gonic és kompatibilis szerverekről.",
+  "subsonicConfigure": "Konfigurálja a Subsonic-t",
+  "subsonicUsername": "Felhasználónév",
+  "subsonicPassword": "Jelszó",
+  "subsonicConnect": "Csatlakozás",
+  "subsonicRemove": "Szerver eltávolítása",
+  "subsonicSignIn": "Bejelentkezés szükséges",
+  "subsonicLoadingLibrary": "Könyvtár betöltése…",
+  "subsonicContinueBackground": "Folytatás a háttérben",
+  "subsonicClose": "Bezárás",
+  "subsonicIndexing": "Szerverzene indexelése…",
+  "subsonicUnavailable": "Nem elérhető",
+  "subsonicCredentialsError": "Ellenőrizze felhasználónevét, jelszavát és szerverengedélyeit.",
+  "subsonicStorageError": "Nem sikerült menteni a hitelesítő adatokat. Ellenőrizze, hogy van-e biztonságos tárhely, és próbálja újra.",
+  "subsonicTimeout": "A szerver időtúllépést ért el. Kérjük, próbálja újra.",
+  "subsonicServerError": "Nem sikerült beolvasni a szerverkönyvtárat. A korábbi katalógus megmarad. Az újrapróbálkozáshoz frissítse a könyvtárat.",
+  "libraryRetry": "Újjáépít",
+  "subsonicOn": "On",
+  "subsonicOff": "Le",
+  "sleepTimerMinutes": "{minutes} perc",
+  "oledBlackDeviceColor": "OLED fekete",
+  "subsonicUrl": "Szerver URL",
+  "subsonicInvalidUrl": "Adjon meg egy HTTP- vagy HTTPS-kiszolgáló URL-címét lekérdezés, töredék vagy beágyazott bejelentkezés nélkül.",
+  "subsonicUnsupported": "Ez a szerver nem támogatja a szükséges Subsonic API-t vagy token hitelesítést.",
+  "subsonicConnectionError": "Nem lehet csatlakozni. Ellenőrizze az URL-t, a hálózatot és a HTTPS-tanúsítványt. A weben a kiszolgálónak engedélyeznie kell a CORS-t, és a HTTPS-alkalmazások nem csatlakozhatnak a HTTP-hez."
 }

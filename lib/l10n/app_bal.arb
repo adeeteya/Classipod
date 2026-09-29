@@ -134,5 +134,78 @@
   "editSongGenreLabel": "تهر",
   "editSongLyricsLabel": "دَزبند",
   "saveChangesButton": "دیمپان",
-  "veryLow": "باز لو"
+  "veryLow": "باز لو",
+  "reindexLibrarySettingTitle": "دوبر انڈیکس کن",
+  "reindexLibrarySettingDescription": "کلیں میوزک فائلانی واستہ میٹا ڈیٹا ءُ آرٹ ورک ءَ پدا بوان اِت۔",
+  "refreshLibrarySettingTitle": "لائبریری ئا نوخ کن",
+  "refreshLibrarySettingDescription": "ھوار بوتگیں یا گار بوتگیں موسیقی ءِ پٹ ءُ پول ءَ بکن اِت۔ استیں میٹا ڈیٹا ءُ آرٹ ورک ءَ بہ دار اِت۔",
+  "librarySettingsScreenTitle": "لائبریری ئے ترتیب",
+  "librarySettingsDescription": "موسیقی ءِ انڈیکسنگ ءُ درآمدیں فولڈرانی انتظام ءَ بکن اِت۔",
+  "sleepTimerTitle": "واب ئے ٹائمر",
+  "sleepTimerEndOfCurrentSong": "انوگیں گانا ئے آسر",
+  "sleepTimerRemainingLabel": "باقی",
+  "findingSongs": "گانا شوھازگ ءَ اَنت...",
+  "artworkCached": "آرٹ ورک کیش کنگ بوتگ: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "موسیقی لائبریری لوڈ کنگ ءَ بے سوب اِنت۔ دزبندی ایں کہ دوبر کوشش کن",
+  "missingTracksTitle": "گاریں پٹری",
+  "missingTracksDescription": "ھما فائلانی چار ءُ تپاس ءَ بہ کن اِت کہ وانگ نہ بوتگ اَنت۔",
+  "missingTracksEmpty": "ہچ وڑیں ناخواندہ ٹریک نیستیں",
+  "missingTrackRead": "اے فائل ءِ میٹا ڈیٹا ءَ وانگ نہ بوت۔ فائل ءِ جاہ ءُ رسائی ءِ اجازتاں چیک کن اِت ءُ پدا دوبر جہد کنگ ءِ ھاترا لائبریری ءَ دوبارہ انڈیکس کن اِت۔",
+  "missingTrackArtwork": "اے فائل ءِ آرٹ ورک ءَ وانگ نہ بوت۔ آڈیو انگت ءَ شنگ بوت کنت۔ دوبارہ کوشش کنغ واستا لائبریری ئا دوبر انڈیکس کن۔",
+  "playbackBuffering": "بفرنگ...",
+  "preventDuplicateTracksTitle": "نقلی پٹریانی دیم ءَ دارگ",
+  "preventDuplicateTracksDescription": "ٹریکاں گوں ڈپلیکیٹ فائل ناماں پُشدر کن اِت۔",
+  "hideLocalMusicTitle": "دمگی ساز ءُ زیمل ءَ پُشدر کن اِت",
+  "hideLocalMusicDescription": "Subsonic ءِ سرا بوھگ ءِ وھد ءَ وتی لائبریری ءَ ایوک ءَ سرور ءِ موسیقی ءَ پیش دار اِت۔ لوکل فائل تئی ڈیوائس سرا مان انت۔",
+  "subsonicDescription": "Navidrome، gonic، ءُ ہمگامیں سروراں چہ موسیقی ءِ سٹریم کنگ۔",
+  "subsonicConfigure": "Subsonic ءِ ترتیب ءَ بکن اِت",
+  "subsonicUsername": "کارمرز کنوخ ئے نام",
+  "subsonicPassword": "پاسورڈ",
+  "subsonicConnect": "جوڑ کن",
+  "subsonicRemove": "سرور ئا کش",
+  "subsonicSignIn": "سائن ان کنغ لوٹی",
+  "subsonicLoadingLibrary": "وتی لائبریری ءَ لوڈ کنگ ءَ اِنت...",
+  "subsonicContinueBackground": "پس منظر ئا برجاہ دار",
+  "subsonicClose": "بند",
+  "subsonicIndexing": "سرور موسیقی ءِ انڈیکس کنگ...",
+  "subsonicUnavailable": "دستیاب نہ ایں",
+  "subsonicCredentialsError": "وتی کارمرز کنوک ءِ نام، پاسورڈ ءُ سرور ءِ اجازتاں چیک کن اِت۔",
+  "subsonicStorageError": "اسناد ءِ رکّینگ نہ بوت۔ چیک کن کہ سیکیور اسٹوریج دستیاب اِنت ءُ پدا جہد کن۔",
+  "subsonicTimeout": "سرور ءِ وھد ھلاس بوتگ۔ دزبندی ایں کہ پذا کوشش کن",
+  "subsonicServerError": "سرور لائبریری ءَ وانگ نہ بوت۔ پیسریگیں کیٹلاگ برجاہ اِنت۔ دوبارہ جہد کنگ ءِ ھاترا لائبریری ءَ ریفریش کن اِت۔",
+  "libraryRetry": "پُشت",
+  "subsonicOn": "سرا",
+  "subsonicOff": "بند",
+  "sleepTimerMinutes": "{minutes} منٹ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "OLED سیاہ",
+  "songsLoaded": "گانا لوڈ کنگ بوتگ انت: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "subsonicTitle": "Subsonic سرور",
+  "subsonicUrl": "سرور یو آر ایل",
+  "subsonicInvalidUrl": "HTTP یا HTTPS سرور یو آر ایل ءَ چہ جست ءُ پرس ، ٹکرے یا سرایت کتگیں لاگ ان ءِ ھست نہ بوھگ ءَ درج کن اِت۔",
+  "subsonicUnsupported": "اے سرور لوٹوکیں Subsonic API یا ٹوکن ءِ تصدیق ءِ حمایت نہ کنت۔",
+  "subsonicConnectionError": "جوڑ نہ بیث کنت یو آر ایل، نیٹ ورک ءُ ایچ ٹی ٹی پی ایس سرٹیفکیٹ ءَ چیک کن اِت۔ ویب ءِ سرا سرور ءَ CORS ءِ اجازت دیگی اِنت ءُ HTTPS ایپ HTTP ءَ گوں ہمگرنچ نہ بیت۔"
 }

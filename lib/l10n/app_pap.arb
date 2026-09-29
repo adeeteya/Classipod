@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Género",
   "editSongLyricsLabel": "Letranan",
   "saveChangesButton": "Spaar Cambionan",
-  "veryLow": "Hopi Abou"
+  "veryLow": "Hopi Abou",
+  "reindexLibrarySettingTitle": "Re-indeks",
+  "reindexLibrarySettingDescription": "Lesa metadata i obra di arte pa tur archivo di músika atrobe.",
+  "refreshLibrarySettingTitle": "Refreská Biblioteka",
+  "refreshLibrarySettingDescription": "Kontrolá pa músika agregá òf eliminá. Warda metadata i obra di arte eksistente.",
+  "librarySettingsScreenTitle": "Konfigurashon di Biblioteka",
+  "librarySettingsDescription": "Manehá indeksashon di músika i mapnan ekskluí.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fin di Kantika Aktual",
+  "sleepTimerRemainingLabel": "Restante",
+  "findingSongs": "Buskando kantikanan…",
+  "songsLoaded": "Kansionnan kargá: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Obra di arte wardá: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "No por karga e biblioteka di músika. Por fabor purba di nobo.",
+  "missingTracksTitle": "Pistanan ku ta falta",
+  "missingTracksDescription": "Repasá archivonan ku no por a wòrdu lesá.",
+  "missingTracksEmpty": "No tin pistanan ilegibel.",
+  "missingTrackRead": "No por a lesa e metadata di e archivo aki. Kontrolá e lokalidat di e archivo i e pèrmitnan di akseso, despues reindeksa e biblioteka pa purba di nobo.",
+  "missingTrackArtwork": "No por a lesa e obra di arte di e archivo aki. Audio por toka ainda. Reindeks e biblioteka pa purba di nobo.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "Prevení Pistanan Dupliká",
+  "preventDuplicateTracksDescription": "Skonde pistanan ku nòmbernan di archivo duplika.",
+  "hideLocalMusicTitle": "Skonde Músika Lokal",
+  "hideLocalMusicDescription": "Mustra solamente músika di servidor den bo biblioteka miéntras Subsonic ta sendé. Archivonan lokal ta keda riba bo aparato.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Stream músika for di Navidrome, gonic, i servidornan kompatibel.",
+  "subsonicConfigure": "Konfigurá Subsonic",
+  "subsonicUsername": "Nòmber di usuario",
+  "subsonicPassword": "Kontraseña",
+  "subsonicConnect": "Konektá",
+  "subsonicRemove": "Kita e servidor",
+  "subsonicSignIn": "Ta nesesario pa drenta",
+  "subsonicLoadingLibrary": "Ta kargando bo biblioteka…",
+  "subsonicContinueBackground": "Sigui den fondo",
+  "subsonicClose": "Sera",
+  "subsonicIndexing": "Indeksashon di músika di servidor…",
+  "subsonicUnavailable": "No ta disponibel",
+  "subsonicCredentialsError": "Kontrolá bo nòmber di usuario, kontraseña i pèrmitnan di servidor.",
+  "subsonicStorageError": "No por a warda kredensialnan. Kontrolá ku almasenamentu sigur ta disponibel i purba atrobe.",
+  "subsonicTimeout": "E servidor a pasa tempu. Por fabor purba atrobe.",
+  "subsonicServerError": "No por a lesa e biblioteka di e servidor. E katalogo anterior ta wòrdu retené. Refresh Biblioteka pa purba di nobo.",
+  "libraryRetry": "Retry",
+  "subsonicOn": "Riba",
+  "subsonicOff": "Pagá",
+  "sleepTimerMinutes": "{minutes} Minuut",
+  "oledBlackDeviceColor": "OLED pretu",
+  "subsonicUrl": "URL di servidor",
+  "subsonicInvalidUrl": "Introdusí un URL di servidor HTTP òf HTTPS sin un konsulta, fragmento òf login inkorporá.",
+  "subsonicUnsupported": "E servidor aki no ta sostené e API òf autentikashon di token Subsonic nesesario.",
+  "subsonicConnectionError": "No por konektá. Kontrolá e URL, ret i sertifikado HTTPS. Riba wèp, e servidor mester permití CORS i un app HTTPS no por konektá na HTTP."
 }

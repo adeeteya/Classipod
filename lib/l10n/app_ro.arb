@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gen",
   "editSongLyricsLabel": "Versuri",
   "saveChangesButton": "Salvați modificările",
-  "veryLow": "Foarte Scăzut"
+  "veryLow": "Foarte Scăzut",
+  "reindexLibrarySettingTitle": "Reindexați",
+  "reindexLibrarySettingDescription": "Citiți din nou metadatele și ilustrațiile pentru toate fișierele muzicale.",
+  "refreshLibrarySettingTitle": "Actualizează biblioteca",
+  "refreshLibrarySettingDescription": "Verificați dacă există muzică adăugată sau ștearsă. Păstrați metadatele și lucrările de artă existente.",
+  "librarySettingsScreenTitle": "Setări bibliotecă",
+  "librarySettingsDescription": "Gestionați indexarea muzicii și folderele excluse.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Sfârșitul cântecului curent",
+  "sleepTimerRemainingLabel": "Rămânând",
+  "findingSongs": "Se caută melodii...",
+  "songsLoaded": "Cântece încărcate: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Opera de artă stocată în cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nu se poate încărca biblioteca muzicală. Vă rugăm să reîncercați.",
+  "missingTracksTitle": "Piese lipsă",
+  "missingTracksDescription": "Examinați fișierele care nu au putut fi citite.",
+  "missingTracksEmpty": "Fără piese ilizibile.",
+  "missingTrackRead": "Nu s-au putut citi metadatele acestui fișier. Verificați locația fișierului și permisiunile de acces, apoi reindexați biblioteca pentru a reîncerca.",
+  "missingTrackArtwork": "Nu s-a putut citi ilustrația acestui fișier. Sunetul poate fi încă difuzat. Reindexați biblioteca pentru a reîncerca.",
+  "playbackBuffering": "Se tamponează...",
+  "preventDuplicateTracksTitle": "Preveniți melodiile duplicate",
+  "preventDuplicateTracksDescription": "Ascunde piesele cu nume de fișiere duplicat.",
+  "hideLocalMusicTitle": "Ascundeți muzica locală",
+  "hideLocalMusicDescription": "Afișați numai muzica de server din biblioteca dvs. când Subsonic este activat. Fișierele locale rămân pe dispozitivul dvs.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Redați muzică în flux de pe Navidrome, gonic și servere compatibile.",
+  "subsonicConfigure": "Configurați Subsonic",
+  "subsonicUsername": "Nume de utilizator",
+  "subsonicPassword": "Parolă",
+  "subsonicConnect": "Conectați-vă",
+  "subsonicRemove": "Eliminați serverul",
+  "subsonicSignIn": "Este necesară conectarea",
+  "subsonicLoadingLibrary": "Se încarcă biblioteca...",
+  "subsonicContinueBackground": "Continuați în fundal",
+  "subsonicClose": "Închide",
+  "subsonicIndexing": "Se indexează muzica de pe server...",
+  "subsonicUnavailable": "Indisponibil",
+  "subsonicCredentialsError": "Verificați numele de utilizator, parola și permisiunile serverului.",
+  "subsonicStorageError": "Nu s-au putut salva acreditările. Verificați dacă spațiul de stocare securizat este disponibil și încercați din nou.",
+  "subsonicTimeout": "Serverul a expirat. Vă rugăm să încercați din nou.",
+  "subsonicServerError": "Nu s-a putut citi biblioteca serverului. Catalogul anterior este păstrat. Actualizează biblioteca pentru a reîncerca.",
+  "libraryRetry": "Din nou",
+  "subsonicOn": "Pe",
+  "subsonicOff": "OFF",
+  "sleepTimerMinutes": "{minutes} minute",
+  "oledBlackDeviceColor": "OLED negru",
+  "subsonicUrl": "Adresa URL a serverului",
+  "subsonicInvalidUrl": "Introduceți o adresă URL a unui server HTTP sau HTTPS fără o interogare, fragment sau autentificare încorporată.",
+  "subsonicUnsupported": "Acest server nu acceptă API-ul Subsonic sau autentificarea cu jeton.",
+  "subsonicConnectionError": "Nu se poate conecta. Verificați URL-ul, rețeaua și certificatul HTTPS. Pe Web, serverul trebuie să permită CORS, iar o aplicație HTTPS nu se poate conecta la HTTP."
 }

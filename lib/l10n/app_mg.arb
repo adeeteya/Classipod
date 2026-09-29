@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Aho lyrics",
   "saveChangesButton": "Tehirizo ny fanovana",
-  "veryLow": "Ambany be"
+  "veryLow": "Ambany be",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Vakio indray ny metadata sy ny zavakanto ho an'ny rakitra mozika rehetra.",
+  "refreshLibrarySettingTitle": "Refresh Library",
+  "refreshLibrarySettingDescription": "Jereo raha misy mozika nampiana na voafafa. Tazony ny metadata sy ny zavakanto efa misy.",
+  "librarySettingsScreenTitle": "Famaritana tranomboky",
+  "librarySettingsDescription": "Tantano ny fanondroana mozika sy lahatahiry voahilika.",
+  "sleepTimerTitle": "Timer torimaso",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Faran'ny hira ankehitriny",
+  "sleepTimerRemainingLabel": "sisa",
+  "findingSongs": "Mitady hira…",
+  "songsLoaded": "Hira feno: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Zavakanto voatahiry: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Tsy afaka mampiditra ny tranomboky mozika. Andramo indray azafady.",
+  "missingTracksTitle": "Hira tsy hita",
+  "missingTracksDescription": "Avereno jerena ireo rakitra tsy azo novakiana.",
+  "missingTracksEmpty": "Tsy misy hira tsy azo vakina.",
+  "missingTrackRead": "Tsy afaka namaky ny metadatan'ity rakitra ity. Hamarino ny toerana misy ny rakitra sy ny fahazoan-dàlana hidirana, dia avereno averina ny tranomboky mba hanandrana indray.",
+  "missingTrackArtwork": "Tsy afaka namaky ny sarin'ity rakitra ity. Mety mbola mandeha ny feo. Reindex ny tranomboky hanandrana indray.",
+  "playbackBuffering": "Miaro…",
+  "preventDuplicateTracksTitle": "Misoroka ny dika mitovy",
+  "preventDuplicateTracksDescription": "Afeno ny dian-tongotra misy anaran-drakitra mitovy.",
+  "hideLocalMusicTitle": "Afeno ny mozika eo an-toerana",
+  "hideLocalMusicDescription": "Asehoy fotsiny ny mozika mpizara ao amin'ny tranombokinao raha mbola mandeha ny Subsonic. Ny rakitra eo an-toerana dia mijanona amin'ny fitaovanao.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Alefaso mozika avy amin'ny Navidrome, gonic, ary mpizara mifanentana.",
+  "subsonicConfigure": "Ampifanaraho ny Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Connect",
+  "subsonicRemove": "Esory ny Server",
+  "subsonicSignIn": "Mila miditra",
+  "subsonicLoadingLibrary": "Mampiakatra ny tranombokinao…",
+  "subsonicContinueBackground": "Tohizo any ambadika",
+  "subsonicClose": "Akatona",
+  "subsonicIndexing": "Manondro mozika mpizara…",
+  "subsonicUnavailable": "Tsy misy",
+  "subsonicCredentialsError": "Hamarino ny anaranao, ny tenimiafinao ary ny fahazoan-dàlana amin'ny mpizara.",
+  "subsonicStorageError": "Tsy afaka mitahiry fahazoan-dàlana. Hamarino fa misy fitahirizana azo antoka ary andramo indray.",
+  "subsonicTimeout": "Tapitra ny fotoana. Andramo indray azafady.",
+  "subsonicServerError": "Tsy afaka namaky ny tranomboky mpizara. Ny katalaogy teo aloha dia tazonina. Havaozy ny Tranomboky hanandrana indray.",
+  "libraryRetry": "Hanandrana indray",
+  "subsonicOn": "On",
+  "subsonicOff": "NIALA",
+  "sleepTimerMinutes": "{minutes} minitra",
+  "oledBlackDeviceColor": "OLED mainty",
+  "subsonicUrl": "URL mpizara",
+  "subsonicInvalidUrl": "Ampidiro URL mpizara HTTP na HTTPS tsy misy fanontaniana, sombiny, na fidirana tafiditra.",
+  "subsonicUnsupported": "Ity mpizara ity dia tsy mahazaka ny Subsonic API na ny fanamarinana famantarana.",
+  "subsonicConnectionError": "Tsy afaka mifandray. Hamarino ny URL, tambajotra, ary fanamarinana HTTPS. Amin'ny Internet, ny mpizara dia tsy maintsy mamela ny CORS ary ny fampiharana HTTPS dia tsy afaka mifandray amin'ny HTTP."
 }

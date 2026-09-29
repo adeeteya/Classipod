@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ьаноб",
   "editSongLyricsLabel": "Суруд",
   "saveChangesButton": "Тағиротро захира кунед",
-  "veryLow": "Хеле паст"
+  "veryLow": "Хеле паст",
+  "reindexLibrarySettingTitle": "Индекс аз нав",
+  "reindexLibrarySettingDescription": "Метамаълумотҳо ва асарҳои рассомиро барои ҳама файлҳои мусиқӣ дубора хонед.",
+  "refreshLibrarySettingTitle": "Навсозии Китобхона",
+  "refreshLibrarySettingDescription": "Мусиқии иловашуда ё нестшударо санҷед. Метамаълумот ва асарҳои мавҷударо нигоҳ доред.",
+  "librarySettingsScreenTitle": "Танзимоти китобхона",
+  "librarySettingsDescription": "Индексгузории мусиқӣ ва ҷузвдонҳои хориҷшударо идора кунед.",
+  "sleepTimerTitle": "Вақтсанҷи хоб",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Охири суруди ҷорӣ",
+  "sleepTimerRemainingLabel": "Боқимонда",
+  "findingSongs": "Ҷустуҷӯи сурудҳо…",
+  "songsLoaded": "Сурудҳои боршуда: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Корҳои бадеӣ кэш карда шудаанд: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Китобхонаи мусиқиро бор кардан ғайриимкон аст. Лутфан дубора кӯшиш кунед.",
+  "missingTracksTitle": "Роҳҳои гумшуда",
+  "missingTracksDescription": "Файлҳоеро, ки хонданашон имконнопазир буд, баррасӣ кунед.",
+  "missingTracksEmpty": "Ягон сурудҳои хонданашаванда.",
+  "missingTrackRead": "Метадата ин файлро хонда натавонист. Ҷойгиршавии файл ва иҷозатҳои дастрасиро санҷед, пас китобхонаро дубора индексатсия кунед, то дубора кӯшиш кунед.",
+  "missingTrackArtwork": "Асари ин файлро хонда натавонист. Аудио метавонад то ҳол бозӣ кунад. Китобхонаро дубора индексатсия кунед, то дубора кӯшиш кунед.",
+  "playbackBuffering": "Буферӣ…",
+  "preventDuplicateTracksTitle": "Пешгирии трекҳои такрорӣ",
+  "preventDuplicateTracksDescription": "Роҳҳоро бо номҳои такрории файл пинҳон кунед.",
+  "hideLocalMusicTitle": "Пинҳон кардани мусиқии маҳаллӣ",
+  "hideLocalMusicDescription": "Ҳангоми фаъол будани Subsonic дар китобхонаи худ танҳо мусиқии серверро нишон диҳед. Файлҳои маҳаллӣ дар дастгоҳи шумо мемонанд.",
+  "subsonicTitle": "Сервери Subsonic",
+  "subsonicDescription": "Мусиқиро аз Navidrome, gonic ва серверҳои мувофиқ ҷараён диҳед.",
+  "subsonicConfigure": "Subsonic-ро танзим кунед",
+  "subsonicUsername": "Номи корбар",
+  "subsonicPassword": "Рамз",
+  "subsonicConnect": "Пайваст кунед",
+  "subsonicRemove": "Серверро нест кунед",
+  "subsonicSignIn": "Воридшавӣ лозим аст",
+  "subsonicLoadingLibrary": "Китобхонаи шумо бор карда мешавад…",
+  "subsonicContinueBackground": "Дар замина идома диҳед",
+  "subsonicClose": "Пӯшед",
+  "subsonicIndexing": "Индекс кардани мусиқии сервер…",
+  "subsonicUnavailable": "Дастнорас",
+  "subsonicCredentialsError": "Номи корбар, парол ва иҷозатҳои сервери худро тафтиш кунед.",
+  "subsonicStorageError": "Ҳисоботро захира кардан муяссар нашуд. Санҷед, ки захираи бехатар мавҷуд аст ва дубора кӯшиш кунед.",
+  "subsonicTimeout": "Сервер вақт тамом шуд. Лутфан бори дигар кӯшиш кунед.",
+  "subsonicServerError": "Китобхонаи серверро хонда натавонистам. Каталоги қаблӣ нигоҳ дошта мешавад. Китобхонаро навсозӣ кунед, то дубора кӯшиш кунед.",
+  "libraryRetry": "Такрор кардан",
+  "subsonicOn": "Даргирондан",
+  "subsonicOff": "Хомӯш",
+  "sleepTimerMinutes": "{minutes} дақиқа",
+  "oledBlackDeviceColor": "OLED сиёҳ",
+  "subsonicUrl": "URL-и сервер",
+  "subsonicInvalidUrl": "URL-и сервери HTTP ё HTTPS-ро бидуни дархост, порча ё воридшавии воридшуда ворид кунед.",
+  "subsonicUnsupported": "Ин сервер API зарурии Subsonic ё аутентификатсияи аломатро дастгирӣ намекунад.",
+  "subsonicConnectionError": "Пайваст шудан мумкин нест. URL, шабака ва сертификати HTTPS-ро санҷед. Дар веб сервер бояд ба CORS иҷозат диҳад ва барномаи HTTPS наметавонад ба HTTP пайваст шавад."
 }

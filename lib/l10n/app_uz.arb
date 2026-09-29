@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Janr",
   "editSongLyricsLabel": "Lirika",
   "saveChangesButton": "O'zgarishlarni saqlang",
-  "veryLow": "Juda past"
+  "veryLow": "Juda past",
+  "reindexLibrarySettingTitle": "Qayta indeks",
+  "reindexLibrarySettingDescription": "Barcha musiqa fayllari uchun metamaʼlumotlar va sanʼat asarlarini qayta oʻqing.",
+  "refreshLibrarySettingTitle": "Kutubxonani yangilash",
+  "refreshLibrarySettingDescription": "Qo'shilgan yoki o'chirilgan musiqalarni tekshiring. Mavjud metamaʼlumotlar va sanʼat asarlarini saqlang.",
+  "librarySettingsScreenTitle": "Kutubxona sozlamalari",
+  "librarySettingsDescription": "Musiqa indekslarini va chiqarib tashlangan papkalarni boshqaring.",
+  "sleepTimerTitle": "Uyqu taymeri",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Joriy qo'shiqning oxiri",
+  "sleepTimerRemainingLabel": "Qolgan",
+  "findingSongs": "Qoʻshiqlar topilmoqda…",
+  "songsLoaded": "Yuklangan qo'shiqlar: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "San'at asari keshlangan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Musiqa kutubxonasini yuklab bo‘lmadi. Qayta urinib koʻring.",
+  "missingTracksTitle": "Yo'qolgan treklar",
+  "missingTracksDescription": "Oʻqib boʻlmaydigan fayllarni koʻrib chiqing.",
+  "missingTracksEmpty": "O'qib bo'lmaydigan treklar yo'q.",
+  "missingTrackRead": "Bu faylning metamaʼlumotlarini oʻqib boʻlmadi. Fayl joylashuvi va kirish ruxsatlarini tekshiring, keyin qayta urinib ko'rish uchun kutubxonani qayta indekslang.",
+  "missingTrackArtwork": "Bu faylning rasmini oʻqib boʻlmadi. Audio hali ham ijro etilishi mumkin. Qayta urinish uchun kutubxonani qayta indekslang.",
+  "playbackBuffering": "Buferlash…",
+  "preventDuplicateTracksTitle": "Takroriy treklarni oldini olish",
+  "preventDuplicateTracksDescription": "Ikki nusxadagi fayl nomlari bilan treklarni yashirish.",
+  "hideLocalMusicTitle": "Mahalliy musiqani yashirish",
+  "hideLocalMusicDescription": "Subsonic yoqilgan paytda kutubxonangizda faqat server musiqasini koʻrsating. Mahalliy fayllar qurilmangizda qoladi.",
+  "subsonicTitle": "Subsonic serveri",
+  "subsonicDescription": "Navidrome, gonic va mos serverlardan musiqa tinglang.",
+  "subsonicConfigure": "Subsonic ni sozlang",
+  "subsonicUsername": "Foydalanuvchi nomi",
+  "subsonicPassword": "Parol",
+  "subsonicConnect": "Ulanish",
+  "subsonicRemove": "Serverni olib tashlang",
+  "subsonicSignIn": "Kirish talab qilinadi",
+  "subsonicLoadingLibrary": "Kutubxonangiz yuklanmoqda…",
+  "subsonicContinueBackground": "Orqa fonda davom eting",
+  "subsonicClose": "Yopish",
+  "subsonicIndexing": "Server musiqasi indekslanmoqda…",
+  "subsonicUnavailable": "Mavjud emas",
+  "subsonicCredentialsError": "Foydalanuvchi nomi, parol va server ruxsatlarini tekshiring.",
+  "subsonicStorageError": "Hisob maʼlumotlarini saqlab boʻlmadi. Xavfsiz xotira mavjudligini tekshiring va qaytadan urining.",
+  "subsonicTimeout": "Server vaqti tugadi. Iltimos, qayta urinib koʻring.",
+  "subsonicServerError": "Server kutubxonasini o‘qib bo‘lmadi. Oldingi katalog saqlanadi. Qayta urinish uchun kutubxonani yangilang.",
+  "libraryRetry": "Qaytadan urinib ko'rmoq",
+  "subsonicOn": "Yoqilgan",
+  "subsonicOff": "O'chirilgan",
+  "sleepTimerMinutes": "{minutes} daqiqa",
+  "oledBlackDeviceColor": "OLED qora",
+  "subsonicUrl": "Server URL manzili",
+  "subsonicInvalidUrl": "HTTP yoki HTTPS server URL-manzilini so‘rovsiz, fragmentsiz yoki o‘rnatilgan loginsiz kiriting.",
+  "subsonicUnsupported": "Bu server zarur Subsonic API yoki token autentifikatsiyasini qo‘llab-quvvatlamaydi.",
+  "subsonicConnectionError": "Ulanib bo‘lmadi. URL, tarmoq va HTTPS sertifikatini tekshiring. Internetda server CORS-ga ruxsat berishi kerak va HTTPS ilovasi HTTP-ga ulana olmaydi."
 }

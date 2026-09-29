@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Jener",
   "editSongLyricsLabel": "l'era",
   "saveChangesButton": "Mando",
-  "veryLow": "ematega"
+  "veryLow": "ematega",
+  "reindexLibrarySettingTitle": "Re-indici",
+  "reindexLibrarySettingDescription": "Legg ancamò i metadat e i oper per tüt i file de müsica.",
+  "refreshLibrarySettingTitle": "Aggiorna la biblioteca",
+  "refreshLibrarySettingDescription": "Verificà se la müsica l’è stada agiunta o cancelada. Mantegni i metadati e i oper d’art esistent.",
+  "librarySettingsScreenTitle": "Impostaziun de la biblioteca",
+  "librarySettingsDescription": "Gestisci l’indicizzaziun de la müsica e i cartell esclus.",
+  "sleepTimerTitle": "Timer del sonn",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fin de la canzun atual",
+  "sleepTimerRemainingLabel": "Restant",
+  "findingSongs": "Truvar canzun...",
+  "songsLoaded": "Canzon caricate: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Oper d'art memorizada: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "L’è minga pusibel cargà la biblioteca de müsica. Per piasér pruva ancamò.",
+  "missingTracksTitle": "Piste mancant",
+  "missingTracksDescription": "Revisiona i file che pœden no vèss lett.",
+  "missingTracksEmpty": "Nissun pista inlegibil.",
+  "missingTrackRead": "Pudeva minga legg i metadat de chestu file. Cuntrula la posiziun del file e i permess de acess, e dopu indiciza ancamò la biblioteca per pruvar ancamò.",
+  "missingTrackArtwork": "Pudeva minga legg l’art de chestu file. L’audio pœu ancamò riprodur. Reindicizza la biblioteca per pruvar ancamò.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Prevegnir duplicà di piste",
+  "preventDuplicateTracksDescription": "Ascünd i piste cun nomm de file duplicà.",
+  "hideLocalMusicTitle": "Ascünd la müsica local",
+  "hideLocalMusicDescription": "Mustra sultant la müsica del server in de la biblioteca menter Subsonic l’è ativa. I file locai restan sul dispositif.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Trasmett müsica de Navidrome, gonic e de server cumpatibil.",
+  "subsonicConfigure": "Cunfigurar Subsonic",
+  "subsonicUsername": "Nom utente",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Culegà",
+  "subsonicRemove": "Cancelà el server",
+  "subsonicSignIn": "Accedi l'è necessari",
+  "subsonicLoadingLibrary": "Carica la tua biblioteca...",
+  "subsonicContinueBackground": "Continua in del sfond",
+  "subsonicClose": "Serra",
+  "subsonicIndexing": "Indicizzaziun de la müsica del server...",
+  "subsonicUnavailable": "Minga disponibil",
+  "subsonicCredentialsError": "Cuntrula el nomm d’utent, la password e i permess del server.",
+  "subsonicStorageError": "Pudeva minga salvà i credenziai. Cuntrula che l’è dispunibel un spazi de memorizaziun sicüra e pruva ancamò.",
+  "subsonicTimeout": "El server l’è scadù. Per piasé pruva ancamò.",
+  "subsonicServerError": "Pudeva minga legg la biblioteca del server. El catalogh precedent l’è mantegnuu. Aggiorna la Biblioteca per pruvar ancamò.",
+  "libraryRetry": "l'è",
+  "subsonicOn": "Su",
+  "subsonicOff": "Smorz",
+  "sleepTimerMinutes": "{minutes} minut",
+  "oledBlackDeviceColor": "OLED Nero",
+  "subsonicUrl": "URL del server",
+  "subsonicInvalidUrl": "Inserir un URL del server HTTP o HTTPS senza una dumanda, un ciapell o un login incorporà.",
+  "subsonicUnsupported": "Chestu server suporta no l’API Subsonic o l’autenticaziun token dumandada.",
+  "subsonicConnectionError": "Pœu minga culegà. Cuntrula l’URL, la red e el certificà HTTPS. Sü Web, el server g’ha de cunsentir CORS e un’aplicaziun HTTPS la pœu minga cunnetass a HTTP."
 }

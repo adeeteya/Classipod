@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ᱟᱨ",
   "editSongLyricsLabel": "ᱞᱤᱢᱴᱤ",
   "saveChangesButton": "ᱵᱚᱫᱚᱞ ᱠᱚ",
-  "veryLow": "ᱟᱹᱰᱤ ᱜᱟᱱ"
+  "veryLow": "ᱟᱹᱰᱤ ᱜᱟᱱ",
+  "reindexLibrarySettingTitle": "ᱫᱚᱦᱲᱟ ᱛᱮ ᱤᱱᱰᱮᱠᱥ",
+  "reindexLibrarySettingDescription": "ᱥᱟᱱᱟᱢ ᱥᱮᱨᱮᱧ ᱨᱮᱫ ᱠᱚ ᱞᱟᱹᱜᱤᱫ ᱢᱮᱴᱟᱰᱟᱴᱟ ᱟᱨ ᱟᱨᱴᱣᱟᱨᱠ ᱫᱚᱦᱲᱟ ᱯᱟᱲᱦᱟᱣ ᱢᱮ ᱾",
+  "refreshLibrarySettingTitle": "ᱞᱟᱭᱵᱨᱮᱨᱤ ᱨᱤᱯᱷᱨᱮᱥ ᱢᱮ",
+  "refreshLibrarySettingDescription": "ᱥᱮᱞᱮᱫ ᱟᱨ ᱢᱮᱴᱟᱣ ᱟᱠᱟᱱ ᱥᱮᱨᱮᱧ ᱧᱮᱞ ᱢᱮ ᱾ ᱢᱮᱱᱟᱜ ᱢᱮᱴᱟᱰᱟᱴᱟ ᱟᱨ ᱟᱨᱴᱣᱟᱨᱠ ᱫᱚᱦᱚᱭ ᱢᱮ᱾",
+  "librarySettingsScreenTitle": "ᱞᱟᱭᱵᱨᱮᱨᱤ ᱥᱮᱴᱤᱝ",
+  "librarySettingsDescription": "ᱢᱭᱩᱡᱤᱠ ᱤᱱᱰᱮᱠᱥᱤᱝ ᱟᱨ ᱵᱟᱦᱨᱮ ᱯᱷᱚᱞᱰᱟᱨ ᱠᱚ ᱪᱟᱞᱟᱣ ᱢᱮ ᱾",
+  "sleepTimerTitle": "ᱡᱟᱹᱯᱤᱫ ᱚᱠᱛᱚ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "ᱱᱟᱦᱟᱜ ᱥᱮᱨᱮᱧ ᱨᱮᱭᱟᱜ ᱢᱩᱪᱟᱹᱫ",
+  "sleepTimerRemainingLabel": "ᱛᱟᱲᱟᱢ ᱟᱠᱟᱱ",
+  "findingSongs": "ᱥᱮᱨᱮᱧ ᱯᱟᱱᱛᱮ...",
+  "artworkCached": "ᱟᱨᱴᱣᱟᱨᱠ ᱠᱮᱪᱰ: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ᱢᱭᱩᱡᱤᱠ ᱞᱟᱭᱵᱨᱮᱨᱤ ᱞᱳᱰ ᱵᱟᱝ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ ᱾ ᱫᱟᱭᱟ ᱠᱟᱛᱮ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ᱾",
+  "missingTracksTitle": "ᱟᱫ ᱟᱠᱟᱱ ᱴᱨᱮᱠ",
+  "missingTracksDescription": "ᱚᱱᱟ ᱨᱮᱫ ᱠᱚ ᱫᱚᱦᱲᱟ ᱧᱮᱞ ᱢᱮ ᱚᱠᱟ ᱫᱚ ᱵᱟᱝ ᱯᱟᱲᱦᱟᱣ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ ᱾",
+  "missingTracksEmpty": "ᱵᱟᱝ ᱯᱟᱲᱦᱟᱣ ᱞᱮᱠᱟᱱ ᱴᱨᱮᱠ ᱵᱟᱹᱱᱩᱜᱼᱟ ᱾",
+  "missingTrackRead": "ᱱᱚᱶᱟ ᱨᱮᱫ ᱨᱮᱭᱟᱜ ᱢᱮᱴᱟᱰᱟᱴᱟ ᱵᱟᱝ ᱯᱟᱲᱦᱟᱣ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ᱾ ᱨᱮᱫ ᱴᱷᱟᱶ ᱟᱨ ᱮᱠᱥᱮᱥ ᱟᱹᱭᱫᱟᱹᱨ ᱧᱮᱞ ᱢᱮ, ᱚᱱᱟ ᱛᱟᱭᱚᱢ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩ ᱞᱟᱹᱜᱤᱫ ᱞᱟᱭᱵᱨᱮᱨᱤ ᱨᱮ ᱤᱱᱰᱮᱠᱥ ᱢᱮ ᱾",
+  "missingTrackArtwork": "ᱱᱚᱣᱟ ᱨᱮᱫ ᱨᱮᱭᱟᱜ ᱟᱨᱴᱣᱟᱨᱠ ᱵᱟᱝ ᱯᱟᱲᱦᱟᱣ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ ᱾ ᱚᱰᱤᱭᱳ ᱱᱤᱛ ᱦᱚᱸ ᱪᱟᱹᱞᱩ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ᱾ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩ ᱞᱟᱹᱜᱤᱫ ᱞᱟᱭᱵᱨᱮᱨᱤ ᱫᱚᱦᱲᱟ ᱤᱱᱰᱮᱠᱥ ᱢᱮ ᱾",
+  "playbackBuffering": "ᱵᱟᱯᱷᱟᱨᱤᱝ...",
+  "preventDuplicateTracksTitle": "ᱰᱩᱯᱞᱤᱠᱮᱴ ᱴᱨᱮᱠ ᱠᱚ ᱵᱚᱱᱫᱚᱭ ᱢᱮ",
+  "preventDuplicateTracksDescription": "ᱰᱩᱯᱞᱤᱠᱮᱴ ᱨᱮᱫ ᱧᱩᱛᱩᱢ ᱥᱟᱶ ᱴᱨᱮᱠ ᱠᱚ ᱩᱠᱩᱭ ᱢᱮ ᱾",
+  "hideLocalMusicTitle": "ᱞᱚᱠᱟᱞ ᱢᱭᱩᱡᱤᱠ ᱩᱠᱩᱭ ᱢᱮ",
+  "hideLocalMusicDescription": "Subsonic ᱪᱟᱹᱞᱩ ᱛᱟᱦᱮᱱ ᱡᱷᱚᱜ ᱟᱢᱟᱜ ᱞᱟᱭᱵᱨᱮᱨᱤ ᱨᱮ ᱥᱩᱢᱩᱝ ᱥᱮᱨᱵᱷᱟᱨ ᱢᱭᱩᱡᱤᱠ ᱩᱫᱩᱜ ᱢᱮ᱾ ᱞᱚᱠᱟᱞ ᱨᱮᱫ ᱠᱚ ᱟᱢᱟᱜ ᱰᱤᱵᱷᱟᱭᱤᱥ ᱨᱮ ᱛᱟᱦᱮᱱᱟ ᱾",
+  "subsonicTitle": "Subsonic ᱥᱮᱨᱵᱷᱟᱨ",
+  "subsonicDescription": "Navidrome, gonic, ᱟᱨ ᱟᱱᱩᱠᱩᱞ ᱥᱮᱨᱵᱷᱟᱨ ᱠᱷᱚᱱ ᱥᱮᱨᱮᱧ ᱥᱴᱨᱤᱢ ᱢᱮ ᱾",
+  "subsonicConfigure": "Subsonic ᱠᱚᱱᱯᱷᱤᱜᱟᱨ ᱢᱮ",
+  "subsonicUsername": "ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ ᱧᱩᱛᱩᱢ",
+  "subsonicPassword": "ᱫᱟᱱᱟᱝ ᱥᱟᱵᱟᱫᱽ",
+  "subsonicConnect": "ᱡᱚᱯᱲᱟᱣ ᱢᱮ",
+  "subsonicRemove": "ᱥᱮᱨᱵᱷᱟᱨ ᱚᱪᱚᱜᱽ ᱢᱮ",
+  "subsonicSignIn": "ᱥᱟᱭᱤᱱ ᱤᱱ ᱞᱟᱹᱠᱛᱤᱭᱟᱱᱟ",
+  "subsonicLoadingLibrary": "ᱟᱢᱟᱜ ᱞᱟᱭᱵᱨᱮᱨᱤ ᱞᱳᱰ ᱦᱩᱭᱩᱜ ᱠᱟᱱᱟ...",
+  "subsonicContinueBackground": "ᱯᱟᱹᱪᱷᱞᱟᱹ ᱨᱮ ᱞᱟᱦᱟᱜ ᱢᱮ",
+  "subsonicClose": "ᱵᱚᱱᱫᱚ ᱢᱮ",
+  "subsonicIndexing": "ᱥᱮᱨᱵᱷᱟᱨ ᱢᱭᱩᱡᱤᱠ ᱤᱱᱰᱮᱠᱥᱤᱝ...",
+  "subsonicUnavailable": "ᱵᱟᱝ ᱧᱟᱢᱚᱜ ᱠᱟᱱᱟ",
+  "subsonicCredentialsError": "ᱟᱢᱟᱜ ᱵᱮᱵᱷᱟᱨᱤᱭᱟᱹ ᱧᱩᱛᱩᱢ, ᱫᱟᱱᱟᱝ ᱥᱟᱵᱟᱫᱽ ᱟᱨ ᱥᱮᱨᱵᱷᱟᱨ ᱨᱮᱭᱟᱜ ᱟᱹᱭᱫᱟᱹᱨ ᱧᱮᱞ ᱢᱮ᱾",
+  "subsonicStorageError": "ᱠᱨᱮᱰᱮᱱᱥᱤᱭᱟᱞ ᱵᱟᱝ ᱥᱟᱧᱪᱟᱣ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ ᱾ ᱧᱮᱞ ᱢᱮ ᱡᱮ ᱨᱟᱠᱷᱟ ᱫᱚᱦᱚ ᱴᱷᱟᱶ ᱢᱮᱱᱟᱜᱼᱟ ᱟᱨ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ ᱾",
+  "subsonicTimeout": "ᱥᱮᱨᱵᱷᱟᱨ ᱚᱠᱛᱚ ᱪᱟᱵᱟ ᱮᱱᱟ ᱾ ᱫᱟᱭᱟ ᱠᱟᱛᱮ ᱫᱚᱦᱲᱟ ᱠᱩᱨᱩᱢᱩᱴᱩᱭ ᱢᱮ᱾",
+  "subsonicServerError": "ᱥᱮᱨᱵᱷᱟᱨ ᱞᱟᱭᱵᱨᱮᱨᱤ ᱵᱟᱝ ᱯᱟᱲᱦᱟᱣ ᱫᱟᱲᱮᱭᱟᱜ ᱠᱟᱱᱟ ᱾ ᱞᱟᱦᱟ ᱨᱮᱱᱟᱜ ᱠᱮᱴᱟᱞᱚᱜᱽ ᱫᱚᱦᱚ ᱢᱮᱱᱟᱜᱼᱟ ᱾ ᱫᱚᱦᱲᱟ ᱪᱮᱥᱴᱟ ᱞᱟᱹᱜᱤᱫ ᱞᱟᱭᱵᱨᱮᱨᱤ ᱨᱤᱯᱷᱨᱮᱥ ᱢᱮ᱾",
+  "libraryRetry": "ᱟᱨ",
+  "subsonicOn": "€ ᱖",
+  "subsonicOff": "ᱫᱟᱜ",
+  "sleepTimerMinutes": "{minutes} ᱴᱤᱲᱤᱡ",
+  "oledBlackDeviceColor": "OLED ᱦᱮᱱᱫᱮ",
+  "songsLoaded": "ᱥᱮᱨᱮᱧ ᱞᱳᱰ ᱦᱩᱭ ᱟᱠᱟᱱᱟ: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "subsonicUrl": "ᱥᱮᱨᱵᱷᱟᱨ ᱭᱩᱟᱨᱮᱞ",
+  "subsonicInvalidUrl": "ᱵᱤᱱᱟᱹ ᱠᱩᱠᱞᱤ, ᱯᱷᱨᱟᱜᱽᱢᱮᱱᱴ, ᱵᱟᱝᱠᱷᱟᱱ ᱮᱢᱵᱷᱮᱰᱰ ᱞᱚᱜᱤᱱ ᱛᱮ ᱢᱤᱫ HTTP ᱵᱟᱝᱠᱷᱟᱱ HTTPS ᱥᱮᱨᱵᱷᱟᱨ URL ᱮᱢ ᱢᱮ᱾",
+  "subsonicUnsupported": "ᱱᱚᱣᱟ ᱥᱮᱨᱵᱷᱟᱨ ᱫᱚ ᱞᱟᱹᱠᱛᱤᱭᱟᱱ Subsonic API ᱵᱟᱝᱠᱷᱟᱱ ᱴᱚᱠᱮᱱ ᱚᱛᱷᱮᱱᱴᱤᱠᱮᱥᱚᱱ ᱵᱟᱭ ᱥᱟᱯᱚᱨᱴ ᱮᱫᱟ᱾",
+  "subsonicConnectionError": "ᱡᱚᱯᱲᱟᱣ ᱵᱟᱝ ᱦᱩᱭ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ᱾ ᱭᱩᱟᱨᱮᱞ, ᱱᱮᱴᱣᱟᱨᱠ, ᱟᱨ ᱮᱪᱴᱤᱴᱤᱯᱤᱮᱥ ᱥᱮᱨᱴᱤᱯᱷᱤᱠᱮᱴ ᱧᱮᱞ ᱢᱮ ᱾ ᱣᱮᱵᱽ ᱨᱮ, ᱥᱮᱨᱵᱷᱟᱨ ᱫᱚ CORS ᱨᱮᱭᱟᱜ ᱪᱷᱟᱹᱲ ᱮᱢ ᱞᱟᱹᱠᱛᱤᱭᱟ ᱟᱨ HTTPS ᱮᱯ ᱫᱚ HTTP ᱥᱟᱶ ᱵᱟᱭ ᱡᱚᱯᱲᱟᱣ ᱫᱟᱲᱮᱭᱟᱜᱼᱟ᱾"
 }

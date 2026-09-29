@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Janr",
   "editSongLyricsLabel": "Sözləri",
   "saveChangesButton": "Dəyişikliklərə qənaət edin",
-  "veryLow": "Çox aşağı"
+  "veryLow": "Çox aşağı",
+  "reindexLibrarySettingTitle": "Yenidən indeksləşdirin",
+  "reindexLibrarySettingDescription": "Bütün musiqi faylları üçün metadata və rəsm əsərlərini yenidən oxuyun.",
+  "refreshLibrarySettingTitle": "Kitabxananı yeniləyin",
+  "refreshLibrarySettingDescription": "Əlavə edilmiş və ya silinmiş musiqiləri yoxlayın. Mövcud metadata və sənət əsərlərini saxlayın.",
+  "librarySettingsScreenTitle": "Kitabxana Parametrləri",
+  "librarySettingsDescription": "Musiqinin indeksləşdirilməsini və xaric edilmiş qovluqları idarə edin.",
+  "sleepTimerTitle": "Yuxu Taymeri",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Hazırkı Mahnının Sonu",
+  "sleepTimerRemainingLabel": "Qalan",
+  "findingSongs": "Mahnılar tapılır...",
+  "songsLoaded": "Yüklənmiş mahnılar: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Sənət əsəri keşlənib: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Musiqi kitabxanasını yükləmək mümkün deyil. Yenidən cəhd edin.",
+  "missingTracksTitle": "Yarımçıq Tracks",
+  "missingTracksDescription": "Oxumaq mümkün olmayan faylları nəzərdən keçirin.",
+  "missingTracksEmpty": "Oxunmayan trek yoxdur.",
+  "missingTrackRead": "Bu faylın metadatasını oxumaq mümkün olmadı. Fayl yerini və giriş icazələrini yoxlayın, sonra yenidən cəhd etmək üçün kitabxananı yenidən indeksləşdirin.",
+  "missingTrackArtwork": "Bu faylın rəsm əsərini oxumaq mümkün olmadı. Audio hələ də oxuna bilər. Yenidən cəhd etmək üçün kitabxananı yenidən indeksləyin.",
+  "playbackBuffering": "Buferlənir...",
+  "preventDuplicateTracksTitle": "Dublikat Tracklərin qarşısını alın",
+  "preventDuplicateTracksDescription": "Dublikat fayl adları olan trekləri gizlədin.",
+  "hideLocalMusicTitle": "Yerli Musiqini Gizlədin",
+  "hideLocalMusicDescription": "Subsonic aktiv olduqda kitabxananızda yalnız server musiqisini göstərin. Yerli fayllar cihazınızda qalır.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Navidrome, gonic və uyğun serverlərdən musiqi axını.",
+  "subsonicConfigure": "Subsonic-ni konfiqurasiya edin",
+  "subsonicUsername": "İstifadəçi adı",
+  "subsonicPassword": "parol",
+  "subsonicConnect": "Qoşun",
+  "subsonicRemove": "Serveri çıxarın",
+  "subsonicSignIn": "Giriş tələb olunur",
+  "subsonicLoadingLibrary": "Kitabxananız yüklənir...",
+  "subsonicContinueBackground": "Arxa fonda davam edin",
+  "subsonicClose": "Bağlayın",
+  "subsonicIndexing": "Server musiqisi indekslənir...",
+  "subsonicUnavailable": "Əlçatan deyil",
+  "subsonicCredentialsError": "İstifadəçi adınızı, parolunuzu və server icazələrinizi yoxlayın.",
+  "subsonicStorageError": "Etibarnamələri saxlamaq mümkün olmadı. Təhlükəsiz yaddaşın mövcud olduğunu yoxlayın və yenidən cəhd edin.",
+  "subsonicTimeout": "Server vaxtı keçdi. Yenidən cəhd edin.",
+  "subsonicServerError": "Server kitabxanasını oxumaq mümkün olmadı. Əvvəlki kataloq saxlanılır. Yenidən cəhd etmək üçün Kitabxananı yeniləyin.",
+  "libraryRetry": "Yenidən cəhd etmək",
+  "subsonicOn": "Yan",
+  "subsonicOff": "Sönük",
+  "sleepTimerMinutes": "{minutes} Dəqiqə",
+  "oledBlackDeviceColor": "OLED Qara",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "Sorğu, fraqment və ya daxil edilmiş giriş olmadan HTTP və ya HTTPS server URL-ni daxil edin.",
+  "subsonicUnsupported": "Bu server tələb olunan Subsonic API və ya token autentifikasiyasını dəstəkləmir.",
+  "subsonicConnectionError": "Qoşulmaq mümkün deyil. URL, şəbəkə və HTTPS sertifikatını yoxlayın. Vebdə server CORS-a icazə verməlidir və HTTPS proqramı HTTP-yə qoşula bilməz."
 }

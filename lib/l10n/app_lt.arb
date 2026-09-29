@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Žanras",
   "editSongLyricsLabel": "Dainos žodžiai",
   "saveChangesButton": "Išsaugoti pakeitimus",
-  "veryLow": "Labai žemas"
+  "veryLow": "Labai žemas",
+  "reindexLibrarySettingTitle": "Iš naujo indeksuoti",
+  "reindexLibrarySettingDescription": "Dar kartą perskaitykite visų muzikos failų metaduomenis ir meno kūrinius.",
+  "refreshLibrarySettingTitle": "Atnaujinti biblioteką",
+  "refreshLibrarySettingDescription": "Patikrinkite, ar nėra pridėtos ar ištrintos muzikos. Išsaugokite esamus metaduomenis ir meno kūrinius.",
+  "librarySettingsScreenTitle": "Bibliotekos nustatymai",
+  "librarySettingsDescription": "Tvarkykite muzikos indeksavimą ir neįtrauktus aplankus.",
+  "sleepTimerTitle": "Miego laikmatis",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Dabartinės dainos pabaiga",
+  "sleepTimerRemainingLabel": "Likę",
+  "findingSongs": "Ieškoma dainų…",
+  "songsLoaded": "Įkeltos dainos: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Meno kūriniai talpykloje: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nepavyko įkelti muzikos bibliotekos. Bandykite dar kartą.",
+  "missingTracksTitle": "Trūksta takelių",
+  "missingTracksDescription": "Peržiūrėkite failus, kurių nepavyko nuskaityti.",
+  "missingTracksEmpty": "Nėra neįskaitomų takelių.",
+  "missingTrackRead": "Nepavyko nuskaityti šio failo metaduomenų. Patikrinkite failo vietą ir prieigos teises, tada iš naujo indeksuokite biblioteką ir bandykite dar kartą.",
+  "missingTrackArtwork": "Nepavyko perskaityti šio failo meno kūrinio. Garsas vis tiek gali groti. Iš naujo indeksuokite biblioteką, kad galėtumėte bandyti dar kartą.",
+  "playbackBuffering": "Buferis…",
+  "preventDuplicateTracksTitle": "Neleiskite pasikartojančių takelių",
+  "preventDuplicateTracksDescription": "Slėpti takelius su pasikartojančiais failų pavadinimais.",
+  "hideLocalMusicTitle": "Slėpti vietinę muziką",
+  "hideLocalMusicDescription": "Kai įjungtas Subsonic, bibliotekoje rodykite tik serverio muziką. Vietiniai failai lieka jūsų įrenginyje.",
+  "subsonicTitle": "Subsonic serveris",
+  "subsonicDescription": "Srautu transliuokite muziką iš Navidrome, gonic ir suderinamų serverių.",
+  "subsonicConfigure": "Konfigūruoti Subsonic",
+  "subsonicUsername": "Vartotojo vardas",
+  "subsonicPassword": "Slaptažodis",
+  "subsonicConnect": "Prisijunkite",
+  "subsonicRemove": "Pašalinti serverį",
+  "subsonicSignIn": "Būtina prisijungti",
+  "subsonicLoadingLibrary": "Įkeliama jūsų biblioteka…",
+  "subsonicContinueBackground": "Tęskite fone",
+  "subsonicClose": "Uždaryti",
+  "subsonicIndexing": "Indeksuojama serverio muzika…",
+  "subsonicUnavailable": "Nepasiekiamas",
+  "subsonicCredentialsError": "Patikrinkite savo vartotojo vardą, slaptažodį ir serverio leidimus.",
+  "subsonicStorageError": "Nepavyko išsaugoti kredencialų. Patikrinkite, ar yra saugi saugykla, ir bandykite dar kartą.",
+  "subsonicTimeout": "Baigėsi serverio laikas. Bandykite dar kartą.",
+  "subsonicServerError": "Nepavyko nuskaityti serverio bibliotekos. Išsaugomas ankstesnis katalogas. Atnaujinkite biblioteką ir bandykite dar kartą.",
+  "libraryRetry": "Bandyti",
+  "subsonicOn": "Ant",
+  "subsonicOff": "Išjungtas",
+  "sleepTimerMinutes": "{minutes} minutės",
+  "oledBlackDeviceColor": "OLED juodas",
+  "subsonicUrl": "Serverio URL",
+  "subsonicInvalidUrl": "Įveskite HTTP arba HTTPS serverio URL be užklausos, fragmento ar įterptojo prisijungimo.",
+  "subsonicUnsupported": "Šis serveris nepalaiko reikiamos Subsonic API arba prieigos rakto autentifikavimo.",
+  "subsonicConnectionError": "Nepavyksta prisijungti. Patikrinkite URL, tinklą ir HTTPS sertifikatą. Žiniatinklyje serveris turi leisti CORS, o HTTPS programa negali prisijungti prie HTTP."
 }

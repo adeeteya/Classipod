@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Төлөбүрдар",
   "saveChangesButton": "Уларыйыылары харыстаа",
-  "veryLow": "Олус кыра"
+  "veryLow": "Олус кыра",
+  "reindexLibrarySettingTitle": "Хата индекстээһин",
+  "reindexLibrarySettingDescription": "Бары музыкальнай файлларга метаданнайдары уонна уруһуйдары эмиэ аах.",
+  "refreshLibrarySettingTitle": "Библиотеканы саҥардыы",
+  "refreshLibrarySettingDescription": "Эбиллибит эбэтэр суох оҥоһуллубут музыканы бэрэбиэркэлээ. Баар метаданнайдары уонна уруһуйдары тутуҥ.",
+  "librarySettingsScreenTitle": "Библиотека настройкалара",
+  "librarySettingsDescription": "Музыка индексациятын уонна таһаарыллыбыт папкалары салай.",
+  "sleepTimerTitle": "Утуйар бириэмэ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Билиҥҥи ырыа бүтүүтэ",
+  "sleepTimerRemainingLabel": "Хаалбыт",
+  "findingSongs": "Ырыалары булан...",
+  "songsLoaded": "Ырыалар киирдилэр: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Уус-уран оҥоһук кэштээх: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Музыка библиотекатын ылар кыах суох. Хата холоон көр эрэ.",
+  "missingTracksTitle": "Суох суоллар",
+  "missingTracksDescription": "Аахыллыбатах билэлэри көрүҥ.",
+  "missingTracksEmpty": "Аахыллыбат суоллар суохтар.",
+  "missingTrackRead": "Бу билэ метаданнайдарын кыайан аахпатыбыт. Файл баар сирин уонна киирии көҥүлүн бэрэбиэркэлээ, онтон бибилэтиэкэни хаттаан индексацияла.",
+  "missingTrackArtwork": "Бу билэ уруһуйун кыайан аахпатыбыт. Аудио өссө да оонньуон сөп. Библиотеканы хаттаан индексациялаа.",
+  "playbackBuffering": "Буферизация...",
+  "preventDuplicateTracksTitle": "Дубликат дорожкалары сэрэтии",
+  "preventDuplicateTracksDescription": "Дубликат ааттаах дорожкалары кистии.",
+  "hideLocalMusicTitle": "Олохтоох музыканы кистиир",
+  "hideLocalMusicDescription": "Subsonic үлэлиир кэмигэр библиотекаҕар сервер музыкатын эрэ көрдөр. Олохтоох билэлэр тэрилгэр хаалаллар.",
+  "subsonicTitle": "Subsonic Сервер",
+  "subsonicDescription": "Navidrome, gonic уонна сөп түбэһэр сервердартан музыканы истиҥ.",
+  "subsonicConfigure": "Subsonic настройка",
+  "subsonicUsername": "Туһанааччы аата",
+  "subsonicPassword": "Пароль",
+  "subsonicConnect": "Холбуу",
+  "subsonicRemove": "Серверы суох оҥор",
+  "subsonicSignIn": "Киирии ирдэнэр",
+  "subsonicLoadingLibrary": "Библиотекаҕын тиэйэн эрэбин...",
+  "subsonicContinueBackground": "Салгыы кэнники өттүгэр",
+  "subsonicClose": "Саб",
+  "subsonicIndexing": "Сервер музыкатын индексациялыыр...",
+  "subsonicUnavailable": "Суох",
+  "subsonicCredentialsError": "Туһанааччы ааккын, паролгун уонна сервер көҥүллэрин бэрэбиэркэлээ.",
+  "subsonicStorageError": "Итэҕэл дааннайдарын харыстыыр ​​кыах суох. Кутталлаах хранилище баарын бэрэбиэркэлээ уонна хаттаан көр.",
+  "subsonicTimeout": "Сервер бириэмэтэ ааспыт. Өссө төгүл оҥорон көр эрэ.",
+  "subsonicServerError": "Сервер библиотекатын кыайан аахпатах. Урукку каталог хаалбыт. Хатылаан көрөргө Библиотеканы саҥардыҥ.",
+  "libraryRetry": "Хатанансыйа",
+  "subsonicOn": "Үрдүгэр",
+  "subsonicOff": "Арахсыбыт",
+  "sleepTimerMinutes": "{minutes} мүнүүтэ",
+  "oledBlackDeviceColor": "OLED Хара",
+  "subsonicUrl": "Сервер URL",
+  "subsonicInvalidUrl": "HTTP эбэтэр HTTPS сервер URL-ын ыйытыыта, быһа тардыыта уонна киириитэ суох киллэриҥ.",
+  "subsonicUnsupported": "Бу сервер ирдэнэр Subsonic API эбэтэр токен аутентификациятын өйөөбөт.",
+  "subsonicConnectionError": "Кыайан холбоммот. URL, ситим уонна HTTPS сертификаты бэрэбиэркэлээ. Вебка сервер CORS-ы көҥүллүөхтээх уонна HTTPS-приложение HTTP-га холбонуо суохтаах."
 }

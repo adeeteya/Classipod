@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Akaakuu",
   "editSongLyricsLabel": "jechoota sirbaa .",
   "saveChangesButton": "Jijjiirama qusadhu .",
-  "veryLow": "Baayyee gadi aanaa ."
+  "veryLow": "Baayyee gadi aanaa .",
+  "reindexLibrarySettingTitle": "Irra deebiin indeksii godhaa",
+  "reindexLibrarySettingDescription": "Faayilota muuziqaa hundaaf meetadaataa fi hojii aartii irra deebi'ii dubbisi.",
+  "refreshLibrarySettingTitle": "Mana Kitaabaa Haaromsuu",
+  "refreshLibrarySettingDescription": "Muuziqaa dabalame ykn haqame jiraachuu isaa ilaali. Meetadaataa fi hojii aartii jiru eegi.",
+  "librarySettingsScreenTitle": "Sajoo Mana Kitaabaa",
+  "librarySettingsDescription": "Indeeksii muuziqaa fi galmeewwan ala ta'an bulchi.",
+  "sleepTimerTitle": "Sa'aatii Hirribaa",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Xumura Sirba Yeroo Ammaa",
+  "sleepTimerRemainingLabel": "Hafe",
+  "findingSongs": "Sirboota argachuu...",
+  "songsLoaded": "Sirboota fe'aman: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Hojiin aartii kuufame: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Mana kitaabaa muuziqaa fe'uu hin dandeenye. Mee irra deebi'aa yaalaa.",
+  "missingTracksTitle": "Tracks Dhabe",
+  "missingTracksDescription": "Faayilota dubbifamuu hin dandeenye ilaali.",
+  "missingTracksEmpty": "Track hin dubbifamne hin jiru.",
+  "missingTrackRead": "Meetadaataa faayilii kanaa dubbisuu hin dandeenye. Bakka faayilii fi hayyama qaqqabbii ilaali, sana booda irra deebi'ii yaaluuf mana kitaabaa irra deebi'ii indeksii godhi.",
+  "missingTrackArtwork": "Hojii aartii faayilii kanaa dubbisuu hin dandeenye. Sagaleen ammallee taphachuu danda'a. Irra deebi'ii yaaluuf mana kitaabaa irra deebi'ii indeksii godhi.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Tracks Dachaa Ittisuu",
+  "preventDuplicateTracksDescription": "Track maqaa faayilii dachaa qaban dhoksi.",
+  "hideLocalMusicTitle": "Muuziqaa Biyya Keessaa Dhoksaa",
+  "hideLocalMusicDescription": "Yeroo Subsonic ibsametti muuziqaa sarvarii qofa mana kitaabaa kee keessatti agarsiisi. Faayiloonni naannoo meeshaa keessan irratti turu.",
+  "subsonicTitle": "Subsonic Sarvarii",
+  "subsonicDescription": "Muuziqaa Navidrome, gonic, fi sarvaroota walsimsiisan irraa tamsaasu.",
+  "subsonicConfigure": "Subsonic qindeessuu",
+  "subsonicUsername": "Maqaa fayyadamaa",
+  "subsonicPassword": "Jecha icciitii",
+  "subsonicConnect": "Wal qunnamsiisaa",
+  "subsonicRemove": "Server balleessuu",
+  "subsonicSignIn": "Galchuu barbaachisa",
+  "subsonicLoadingLibrary": "Mana kitaabaa keessan fe'aa jira...",
+  "subsonicContinueBackground": "Duubaan itti fufi",
+  "subsonicClose": "Cufi",
+  "subsonicIndexing": "Muuziqaa sarvarii indeeksii gochuu...",
+  "subsonicUnavailable": "Hin argamne",
+  "subsonicCredentialsError": "Maqaa fayyadamaa, jecha icciitii fi hayyama sarvarii kee ilaali.",
+  "subsonicStorageError": "Mirkaneessitoota qusachuu hin dandeenye. Kuusaan nageenya qabu jiraachuu isaa mirkaneessii irra deebi'ii yaali.",
+  "subsonicTimeout": "Sarvarichi yeroon isaa darbe. Mee irra deebi'ii yaalaa.",
+  "subsonicServerError": "Mana kitaabaa sarvarii dubbisuu hin dandeenye. Kaataloogin duraanii qabamee jira. Irra deebiin yaaluuf Mana Kitaabaa Haaromsi.",
+  "libraryRetry": "Irra deebi'ii yaali .",
+  "subsonicOn": "Irra",
+  "subsonicOff": "Dhaamsuu",
+  "sleepTimerMinutes": "{minutes} Daqiiqaa",
+  "oledBlackDeviceColor": "OLED Gurraacha",
+  "subsonicUrl": "URL sarvarii",
+  "subsonicInvalidUrl": "URL sarvarii HTTP ykn HTTPS gaaffii, ciccitaa, ykn galmee ukkaamfame malee galchi.",
+  "subsonicUnsupported": "Sarvariin kun API ykn mirkaneessa mallattoo Subsonic barbaachisu hin deeggaru.",
+  "subsonicConnectionError": "Wal qunnamsiisuu hin danda'u. URL, network, fi ragaa HTTPS ilaali. Web irratti, sarvarichi CORS hayyamuu qaba akkasumas appiin HTTPS HTTP waliin wal qunnamsiisuu hin danda'u."
 }

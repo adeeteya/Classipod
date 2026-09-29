@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gèniri",
   "editSongLyricsLabel": "Terili",
   "saveChangesButton": "Sarba Cancia",
-  "veryLow": "Assai vasciu"
+  "veryLow": "Assai vasciu",
+  "reindexLibrarySettingTitle": "Ri-indici",
+  "reindexLibrarySettingDescription": "Leggi n'autra vota li metadati e l'opiri d'arti pi tutti li file musicali.",
+  "refreshLibrarySettingTitle": "Aggiorna Bibbliuteca",
+  "refreshLibrarySettingDescription": "Cuntrolla si è junciuta o cancillata musica. Mantèniri li metadati e l'òpiri d'arti esistenti.",
+  "librarySettingsScreenTitle": "Impostazzioni dâ bibbliuteca",
+  "librarySettingsDescription": "Gistisci l'indicizzazzioni dâ musica e li cartelli esclusi.",
+  "sleepTimerTitle": "Timer dû sonnu",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fini dâ canzuna attuali",
+  "sleepTimerRemainingLabel": "Ristanti",
+  "findingSongs": "Truvari canzuna...",
+  "songsLoaded": "Canzoni carricati: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Opira archiviata: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nun si po carricari la bibbliuteca musicali. Pruva n'autra vota.",
+  "missingTracksTitle": "Tracci mancanti",
+  "missingTracksDescription": "Rivìdiri li file ca nun putìanu èssiri liggiuti.",
+  "missingTracksEmpty": "Nisciuna brana nun lèggibbili.",
+  "missingTrackRead": "Nun putìa lèggiri li metadati di stu file. Cuntrolla la pusizzioni dû file e li pirmissi d'accessu, poi riindicizza la bibbliuteca pi pruvari arrè.",
+  "missingTrackArtwork": "Nun putìa lèggiri l'opira di stu file. L'àudiu pò ancora riprodurri. Riindicizza la bibbliuteca pi pruvari n'autra vota.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Evitari li tracci duplicati",
+  "preventDuplicateTracksDescription": "Nascondi li brani cu nomi di file duplicati.",
+  "hideLocalMusicTitle": "Nascondi la musica lucali",
+  "hideLocalMusicDescription": "Mustra sulu la musica dû sirver nnâ to bibbliuteca mentri Subsonic è attivatu. Li file lucali arrestanu nnô vostru dispusitivu.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Trasmèttiri musica di Navidrome, gonic e server cumpatibbili.",
+  "subsonicConfigure": "Cunfigurari Subsonic",
+  "subsonicUsername": "Nomu d'utilizaturi",
+  "subsonicPassword": "Palora d'òrdini",
+  "subsonicConnect": "Cunnetti",
+  "subsonicRemove": "Rimuovi lu server",
+  "subsonicSignIn": "Accessu è nicissariu",
+  "subsonicLoadingLibrary": "Carica la tò bibbliuteca...",
+  "subsonicContinueBackground": "Cuntinuari 'n funnu",
+  "subsonicClose": "Chiudi",
+  "subsonicIndexing": "Indicizzazzioni dâ musica dû sirver...",
+  "subsonicUnavailable": "Nun dispunìbbili",
+  "subsonicCredentialsError": "Cuntrolla lu nomu d'utilizaturi, la password e li pirmissiuna dû server.",
+  "subsonicStorageError": "Nun putìa sarbari li cridinziali. Cuntrolla ca è dispunìbbili nu spazziu di archiviazzioni sicura e pruva n'autra vota.",
+  "subsonicTimeout": "Lu sirver è scadutu. Pruva n'autra vota.",
+  "subsonicServerError": "Nun putìa lèggiri la bibbliuteca dû sirver. Lu catàlugu pricidenti è tinutu. Aggiorna la Bibbliuteca pi pruvari arrè.",
+  "libraryRetry": "Rivatu",
+  "subsonicOn": "Supra",
+  "subsonicOff": "Astutatu",
+  "sleepTimerMinutes": "{minutes} minuti",
+  "oledBlackDeviceColor": "Niuru OLED",
+  "subsonicUrl": "URL dû sirver",
+  "subsonicInvalidUrl": "Diggìri n'URL dû sirver HTTP o HTTPS senza na dumanna, nu frammentu o nu login ncorpuratu.",
+  "subsonicUnsupported": "Stu sirver nun suporta l'API Subsonic o l'autinticazzioni dû token nicissariu.",
+  "subsonicConnectionError": "Nun si po cunnèttiri. Cuntrolla l'URL, la riti e lu certificatu HTTPS. Ntô Web, lu sirver avi a cunsentiri CORS e n'app HTTPS nun si po cunnèttiri a HTTP."
 }

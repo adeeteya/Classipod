@@ -134,5 +134,78 @@
   "editSongGenreLabel": "विधा",
   "editSongLyricsLabel": "गल्ली",
   "saveChangesButton": "हिउपाः",
-  "veryLow": "तसकं म्ह्व; तसकं म्ह्व"
+  "veryLow": "तसकं म्ह्व; तसकं म्ह्व",
+  "reindexLibrarySettingTitle": "हानं सूचकांक",
+  "reindexLibrarySettingDescription": "दक्वं संगीत फाइलया मेटाडाटा व कलाकृति हानं ब्वँ ।",
+  "refreshLibrarySettingTitle": "सफूकुथियात न्हूधाः या",
+  "refreshLibrarySettingDescription": "संगीत तनातःगु बाय् हुयाछ्वःगु जाँच या । दुगु मेटाडाटा व कलाकृति तयाति ।",
+  "librarySettingsScreenTitle": "सफूकुथिया सेटिङ्ग",
+  "librarySettingsDescription": "संगीत अनुक्रमण व पिने लाःगु फोल्डरया ब्यवस्थापन या ।",
+  "sleepTimerTitle": "द्यनेगु ई",
+  "sleepTimerEndOfCurrentSong": "आःया म्येया अन्त",
+  "sleepTimerRemainingLabel": "ल्यं दुगु",
+  "findingSongs": "म्ये मालाच्वना ...",
+  "libraryLoadError": "संगीत सफूधुकू लोड याये मफुत । हानं कुतः यानादिसँ ।",
+  "missingTracksTitle": "तनाच्वंगु ट्राक",
+  "missingTracksDescription": "ब्वने मफुगु फाइलयात हानं स्व ।",
+  "missingTracksEmpty": "ब्वने मफइगु ट्राक मदु ।",
+  "missingTrackRead": "थ्व फाइलया मेटाडाटा ब्वने मफुत । फाइलया थाय् व एक्सेस अनुमति जाँच या, अले हानं कुतः यायेत लाइब्रेरीयात हानं इन्डेक्स या ।",
+  "missingTrackArtwork": "थ्व फाइलया कलाकृति ब्वने मफुत । अडियो आःतकं प्ले जुइफु । हानं कुतः यायेत लाइब्रेरियात हानं इन्डेक्स या ।",
+  "playbackBuffering": "बफरिङ्ग...",
+  "preventDuplicateTracksTitle": "डुप्लिकेट ट्राकयात पनेगु",
+  "preventDuplicateTracksDescription": "डुप्लिकेट फाइल नां दुगु ट्राकयात सुचुकि ।",
+  "hideLocalMusicTitle": "स्थानीय संगीत सुचुकि",
+  "subsonicUsername": "छ्यलामि नां",
+  "subsonicPassword": "पासवर्ड",
+  "subsonicConnect": "स्वाकि",
+  "subsonicRemove": "सर्भर लिका ।",
+  "subsonicSignIn": "साइन इन यायेमाः",
+  "subsonicLoadingLibrary": "छिगु सफूधुकू लोड जुयाच्वन ...",
+  "subsonicContinueBackground": "पृष्ठभूमिइ न्ह्याकाच्वँ ।",
+  "subsonicClose": "तिनाब्यु",
+  "subsonicIndexing": "सर्भर संगीतयात इन्डेक्स यायेगु ...",
+  "subsonicUnavailable": "उपलब्ध मजू",
+  "subsonicCredentialsError": "छिगु यूजरनेम, पासवर्ड व सर्भर अनुमति जाँच यानादिसँ ।",
+  "subsonicStorageError": "क्रेडेंशियलयात सेभ याये मफुत । सुरक्षित भण्डारण दु कि मदु धकाः जाँच या अले हानं कुतः या ।",
+  "subsonicTimeout": "सर्भरया ई फुत । हानं कुतः यानादिसँ ।",
+  "subsonicServerError": "सर्भर लाइब्रेरि ब्वने मफुत । न्हापायागु क्याटलग तयातल । हानं कुतः यायेत लाइब्रेरि रिफ्रेस या ।",
+  "libraryRetry": "पनाखं",
+  "subsonicOn": "अंके",
+  "subsonicOff": "तापा",
+  "sleepTimerMinutes": "{minutes} मिनेट",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "ओएलइडि हाकुगु",
+  "songsLoaded": "म्येत लोड जुल : {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "कलाकृति क्यास जुल : {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "hideLocalMusicDescription": "छिगु सफूकुथिइ सर्भर संगीत जक क्यनादिसँ Subsonic चालु दु । स्थानीय फाइलत छिगु डिभाइसय् च्वनी ।",
+  "subsonicTitle": "Subsonic सर्भर",
+  "subsonicDescription": "संगीत स्ट्रिम या Navidrome, gonic, व ज्वःलाःगु सर्भरत ।",
+  "subsonicConfigure": "कन्फिगर या Subsonic",
+  "subsonicUrl": "सर्भर यूआरएल",
+  "subsonicInvalidUrl": "क्वेरी, फ्राग्मेन्ट, बाय् एम्बेडेड लगइन मदयेक एचटिटिपि बाय् एचटिटिपिएस सर्भर यूआरएल दुथ्याकि ।",
+  "subsonicUnsupported": "थुगु सर्भरं माःगुयात समर्थन याइमखु । Subsonic एपिआइ बाय् टोकन प्रमाणिकरण ।",
+  "subsonicConnectionError": "स्वाये मफुत । यूआरएल, नेटवर्क, व एचटिटिपिएस दसिपौ जाँच या । वेबय्, सर्भरं सिओआरएसयात अनुमति बीमाः अले एचटिटिपिएस एपं एचटिटिपिलिसे स्वाये फै मखु ।"
 }

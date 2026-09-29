@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Төрөл",
   "editSongLyricsLabel": "Дууны үгнүүд",
   "saveChangesButton": "Өөрчлөлтүүдийг хадгалах",
-  "veryLow": "Маш бага"
+  "veryLow": "Маш бага",
+  "reindexLibrarySettingTitle": "Дахин индексжүүлэх",
+  "reindexLibrarySettingDescription": "Бүх хөгжмийн файлын мета өгөгдөл болон урлагийн бүтээлийг дахин уншина уу.",
+  "refreshLibrarySettingTitle": "Номын санг сэргээх",
+  "refreshLibrarySettingDescription": "Нэмсэн эсвэл устгасан хөгжим байгаа эсэхийг шалгана уу. Одоо байгаа мета өгөгдөл болон урлагийн бүтээлийг хадгалах.",
+  "librarySettingsScreenTitle": "Номын сангийн тохиргоо",
+  "librarySettingsDescription": "Хөгжмийн индексжүүлэлт болон хасагдсан фолдеруудыг удирдах.",
+  "sleepTimerTitle": "Унтах цаг хэмжигч",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Одоогийн дууны төгсгөл",
+  "sleepTimerRemainingLabel": "Үлдсэн",
+  "findingSongs": "Дуу хайж байна...",
+  "songsLoaded": "Ачаалагдсан дуунууд: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Уран бүтээлийн кэш: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Хөгжмийн санг ачаалах боломжгүй байна. Дахин оролдоно уу.",
+  "missingTracksTitle": "Алга болсон дуунууд",
+  "missingTracksDescription": "Унших боломжгүй файлуудыг шалгана уу.",
+  "missingTracksEmpty": "Унших боломжгүй зам байхгүй.",
+  "missingTrackRead": "Энэ файлын мета өгөгдлийг уншиж чадсангүй. Файлын байршил болон хандалтын зөвшөөрлийг шалгаад номын санг дахин индексжүүлж дахин оролдоно уу.",
+  "missingTrackArtwork": "Энэ файлын бүтээлийг уншиж чадсангүй. Аудио тоглуулсан хэвээр байж магадгүй. Дахин оролдохын тулд номын санг дахин индексжүүлнэ үү.",
+  "playbackBuffering": "Буферлэж байна...",
+  "preventDuplicateTracksTitle": "Давхардсан замаас урьдчилан сэргийлэх",
+  "preventDuplicateTracksDescription": "Давхардсан файлын нэртэй замуудыг нуу.",
+  "hideLocalMusicTitle": "Орон нутгийн хөгжмийг нуух",
+  "hideLocalMusicDescription": "Subsonic асаалттай байхад номын сандаа зөвхөн серверийн хөгжмийг харуул. Дотоод файлууд таны төхөөрөмж дээр үлдэнэ.",
+  "subsonicTitle": "Subsonic сервер",
+  "subsonicDescription": "Navidrome, gonic болон тохирох серверүүдээс хөгжим дамжуулаарай.",
+  "subsonicConfigure": "Subsonic-г тохируулна уу",
+  "subsonicUsername": "Хэрэглэгчийн нэр",
+  "subsonicPassword": "Нууц үг",
+  "subsonicConnect": "Холбох",
+  "subsonicRemove": "Серверийг устгах",
+  "subsonicSignIn": "Нэвтрэх шаардлагатай",
+  "subsonicLoadingLibrary": "Таны номын санг ачаалж байна...",
+  "subsonicContinueBackground": "Цаана нь үргэлжлүүлнэ үү",
+  "subsonicClose": "Хаах",
+  "subsonicIndexing": "Серверийн хөгжмийг индексжүүлж байна...",
+  "subsonicUnavailable": "Боломжгүй",
+  "subsonicCredentialsError": "Хэрэглэгчийн нэр, нууц үг, серверийн зөвшөөрлийг шалгана уу.",
+  "subsonicStorageError": "Итгэмжлэлийг хадгалж чадсангүй. Аюулгүй хадгалах сан байгаа эсэхийг шалгаад дахин оролдоно уу.",
+  "subsonicTimeout": "Серверийн хугацаа дууссан. Дахин оролдоно уу.",
+  "subsonicServerError": "Серверийн санг уншиж чадсангүй. Өмнөх каталогийг хадгалсан. Дахин оролдохын тулд номын санг сэргээнэ үү.",
+  "libraryRetry": "Уилах",
+  "subsonicOn": "-Тухай",
+  "subsonicOff": "Унтраах",
+  "sleepTimerMinutes": "{minutes} минут",
+  "oledBlackDeviceColor": "OLED хар",
+  "subsonicUrl": "Серверийн URL",
+  "subsonicInvalidUrl": "HTTP эсвэл HTTPS серверийн URL-г асуулга, фрагмент эсвэл суулгагдсан нэвтрэлтгүйгээр оруулна уу.",
+  "subsonicUnsupported": "Энэ сервер нь шаардлагатай Subsonic API эсвэл жетон баталгаажуулалтыг дэмждэггүй.",
+  "subsonicConnectionError": "Холбох боломжгүй байна. URL, сүлжээ болон HTTPS сертификатыг шалгана уу. Вэб дээр сервер CORS-ийг зөвшөөрөх ёстой бөгөөд HTTPS програм HTTP-д холбогдож чадахгүй."
 }

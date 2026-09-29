@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Muxaka wa vuyimbeleri",
   "editSongLyricsLabel": "Lyrics .",
   "saveChangesButton": "Hlayisa ku cinca .",
-  "veryLow": "Swinene ngopfu ."
+  "veryLow": "Swinene ngopfu .",
+  "reindexLibrarySettingTitle": "Ku tlhela u endla index",
+  "reindexLibrarySettingDescription": "Hlaya metadata na vutshila bya tifayela hinkwato ta vuyimbeleri nakambe.",
+  "refreshLibrarySettingTitle": "Layiburari yo Pfuxeta",
+  "refreshLibrarySettingDescription": "Languta vuyimbeleri lebyi engeteriweke kumbe lebyi susiweke. Hlayisa metadata leyi nga kona na ntirho wa vutshila.",
+  "librarySettingsScreenTitle": "Switirhisiwa swa Layiburari",
+  "librarySettingsDescription": "Lawula ku index ya vuyimbeleri na tifolda leti nga katsiwangiki.",
+  "sleepTimerTitle": "Xikambelo xa Vurhongo",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ku hela ka Risimu ra sweswi",
+  "sleepTimerRemainingLabel": "Ku sala",
+  "findingSongs": "Ku kuma tinsimu...",
+  "songsLoaded": "Tinsimu leti layichiweke: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ntirho wa vutshila lowu hlayisiweke: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "A swi koteki ku layicha layiburari ya vuyimbeleri. Hi kombela u ringeta nakambe.",
+  "missingTracksTitle": "Ti track leti kayivelaka",
+  "missingTracksDescription": "Pfuxeta tifayela leti a ti nga hlayiwi.",
+  "missingTracksEmpty": "Ku hava tinsimu leti nga hlayekiki.",
+  "missingTrackRead": "A swi swi kotanga ku hlaya metadata ya fayili leyi. Languta ndhawu ya fayili ni mpfumelelo wo nghena, kutani u tlhela u endla index ya layiburari leswaku u ringeta nakambe.",
+  "missingTrackArtwork": "A swi swi kotanga ku hlaya ntirho wa vutshila wa fayili leyi. Swi nga ha endleka leswaku mpfumawulo wa ha tlanga. Reindex layiburari leswaku u ringeta nakambe.",
+  "playbackBuffering": "Ku buffering...",
+  "preventDuplicateTracksTitle": "Sivela Ti track leti phindhiweke",
+  "preventDuplicateTracksDescription": "Fihla tinsimu leti nga ni mavito ya tifayela lama phindhiweke.",
+  "hideLocalMusicTitle": "Fihla Vuyimbeleri bya Ndhawu",
+  "hideLocalMusicDescription": "Kombisa ntsena vuyimbeleri bya sevha eka layiburari ya wena loko Subsonic yi ri karhi yi pfuriwa. Tifayili ta laha kaya ti tshama eka xitirhisiwa xa wena.",
+  "subsonicTitle": "Subsonic Sevha",
+  "subsonicDescription": "Hlawula vuyimbeleri ku suka eka Navidrome, gonic, na tisevha leti fambelanaka.",
+  "subsonicConfigure": "Hlela Subsonic",
+  "subsonicUsername": "Vito ra mutirhisi",
+  "subsonicPassword": "Phasiwedi",
+  "subsonicConnect": "Ku hlanganisa",
+  "subsonicRemove": "Susa Sevha",
+  "subsonicSignIn": "Ku nghena ka laveka",
+  "subsonicLoadingLibrary": "Ku layicha layiburari ya wena...",
+  "subsonicContinueBackground": "Yana emahlweni u ri endzhaku",
+  "subsonicClose": "Pfala",
+  "subsonicIndexing": "Ku indexa vuyimbeleri bya server...",
+  "subsonicUnavailable": "A swi kumeki",
+  "subsonicCredentialsError": "Languta vito ra wena ra mutirhisi, phaswedi ni mpfumelelo wa sevha.",
+  "subsonicStorageError": "A swi swi kotanga ku hlayisa switifiketi. Languta leswaku vuhlayiselo lebyi sirhelelekeke bya kumeka kutani u ringeta nakambe.",
+  "subsonicTimeout": "Seva yi herile nkarhi. Hi kombela u ringeta nakambe.",
+  "subsonicServerError": "A swi swi kotanga ku hlaya layiburari ya sevha. Khathalogi ya khale yi hlayisiwile. Pfuxeta Layiburari ku ringeta nakambe.",
+  "libraryRetry": "Ku ringeta nakambe",
+  "subsonicOn": "Eka",
+  "subsonicOff": "Timile",
+  "sleepTimerMinutes": "{minutes} Timinetse",
+  "oledBlackDeviceColor": "OLED Ntima",
+  "subsonicUrl": "URL ya sevha",
+  "subsonicInvalidUrl": "Nghenisa URL ya sevha ya HTTP kumbe HTTPS handle ka xivutiso, xiphemu, kumbe ku nghena loku nghenisiweke.",
+  "subsonicUnsupported": "Sevha leyi a yi seketeli API leyi lavekaka ya Subsonic kumbe ku tiyisisiwa ka xikombiso.",
+  "subsonicConnectionError": "A swi nge swi koti ku hlanganisa. Languta URL, netiweke, na xitifikheti xa HTTPS. Eka Webu, sevha yi fanele ku pfumelela CORS naswona app ya HTTPS a yi nge swi koti ku hlanganisa na HTTP."
 }

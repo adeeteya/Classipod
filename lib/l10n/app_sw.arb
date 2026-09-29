@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Aina",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Hifadhi mabadiliko",
-  "veryLow": "Chini sana"
+  "veryLow": "Chini sana",
+  "reindexLibrarySettingTitle": "Faharasa upya",
+  "reindexLibrarySettingDescription": "Soma metadata na mchoro wa faili zote za muziki tena.",
+  "refreshLibrarySettingTitle": "Onyesha upya Maktaba",
+  "refreshLibrarySettingDescription": "Angalia muziki ulioongezwa au uliofutwa. Weka metadata na mchoro uliopo.",
+  "librarySettingsScreenTitle": "Mipangilio ya Maktaba",
+  "librarySettingsDescription": "Dhibiti uwekaji faharasa wa muziki na folda zisizojumuishwa.",
+  "sleepTimerTitle": "Kipima saa cha Kulala",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Mwisho wa Wimbo wa Sasa",
+  "sleepTimerRemainingLabel": "Iliyosalia",
+  "findingSongs": "Inatafuta nyimbo...",
+  "songsLoaded": "Nyimbo zilizopakiwa: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Mchoro umehifadhiwa: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Haiwezi kupakia maktaba ya muziki. Tafadhali jaribu tena.",
+  "missingTracksTitle": "Nyimbo Zinazokosekana",
+  "missingTracksDescription": "Kagua faili ambazo hazikuweza kusomeka.",
+  "missingTracksEmpty": "Hakuna nyimbo zisizoweza kusomeka.",
+  "missingTrackRead": "Haikuweza kusoma metadata ya faili hii. Angalia eneo la faili na ruhusa za ufikiaji, kisha uirejeshe maktaba ili ujaribu tena.",
+  "missingTrackArtwork": "Haikuweza kusoma mchoro wa faili hii. Sauti inaweza bado kucheza. Rejesha maktaba ili kujaribu tena.",
+  "playbackBuffering": "Inaakibisha...",
+  "preventDuplicateTracksTitle": "Zuia Nyimbo Nakala",
+  "preventDuplicateTracksDescription": "Ficha nyimbo zilizo na majina ya faili mbili.",
+  "hideLocalMusicTitle": "Ficha Muziki wa Karibu",
+  "hideLocalMusicDescription": "Onyesha muziki wa seva pekee kwenye maktaba yako wakati Subsonic imewashwa. Faili za ndani hukaa kwenye kifaa chako.",
+  "subsonicTitle": "Seva ya Subsonic",
+  "subsonicDescription": "Tiririsha muziki kutoka Navidrome, gonic, na seva zinazooana.",
+  "subsonicConfigure": "Sanidi Subsonic",
+  "subsonicUsername": "Jina la mtumiaji",
+  "subsonicPassword": "Nenosiri",
+  "subsonicConnect": "Unganisha",
+  "subsonicRemove": "Ondoa Seva",
+  "subsonicSignIn": "Kuingia kunahitajika",
+  "subsonicLoadingLibrary": "Inapakia maktaba yako...",
+  "subsonicContinueBackground": "Endelea nyuma",
+  "subsonicClose": "Funga",
+  "subsonicIndexing": "Inaorodhesha muziki wa seva...",
+  "subsonicUnavailable": "Haipatikani",
+  "subsonicCredentialsError": "Angalia jina lako la mtumiaji, nenosiri, na ruhusa za seva.",
+  "subsonicStorageError": "Haikuweza kuhifadhi kitambulisho. Hakikisha kuwa hifadhi salama inapatikana na ujaribu tena.",
+  "subsonicTimeout": "Muda wa seva umekwisha. Tafadhali jaribu tena.",
+  "subsonicServerError": "Haikuweza kusoma maktaba ya seva. Katalogi iliyotangulia imehifadhiwa. Onyesha upya Maktaba ili ujaribu tena.",
+  "libraryRetry": "Jaribu tena",
+  "subsonicOn": "On",
+  "subsonicOff": "Mbali",
+  "sleepTimerMinutes": "Dakika {minutes}",
+  "oledBlackDeviceColor": "OLED Nyeusi",
+  "subsonicUrl": "URL ya seva",
+  "subsonicInvalidUrl": "Weka URL ya seva ya HTTP au HTTPS bila swali, kipande, au kuingia kwa kupachikwa.",
+  "subsonicUnsupported": "Seva hii haiauni API ya Subsonic au uthibitishaji wa tokeni.",
+  "subsonicConnectionError": "Haiwezi kuunganisha. Angalia URL, mtandao na cheti cha HTTPS. Kwenye Wavuti, seva lazima iruhusu CORS na programu ya HTTPS haiwezi kuunganisha kwenye HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Xpaayil",
   "editSongLyricsLabel": "lírico",
   "saveChangesButton": "Xk’uulankil",
-  "veryLow": "jwal Low"
+  "veryLow": "jwal Low",
+  "reindexLibrarySettingTitle": "Xk’eeb’al wi’chik li index",
+  "reindexLibrarySettingDescription": "Yaab’asi wi’chik li metadatos ut li jalam-uuch choq’ re chixjunileb’ li archivo re li son.",
+  "refreshLibrarySettingTitle": "Xk’eeb’al chi ak’ob’resiik li k’uuleb’aal hu",
+  "refreshLibrarySettingDescription": "Cheril ma wankeb’ li son li xe’k’eeman malaj xe’isiman. K’uula li metadatos ut li jalam-uuch li ak wankeb’.",
+  "librarySettingsScreenTitle": "Xk’uub’ankil li k’uuleb’aal hu",
+  "librarySettingsDescription": "Xb’eresinkil li indexación re li son ut li carpeta li ink’a’ neke’xk’ul.",
+  "sleepTimerTitle": "Xk’ehil li wark",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Xraqik li B’ich li wan anajwan .",
+  "sleepTimerRemainingLabel": "Xkanaak",
+  "findingSongs": "Xsik’b’aleb’ li b’ich...",
+  "songsLoaded": "Eb’ li b’ich li xe’k’eeman: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Li k’anjel re li b’atz’unk: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ink’a’ naru xkub’sinkil li k’uuleb’aal hu re li b’ich. B’aanu usilal, yal wi’chik.",
+  "missingTracksTitle": "Eb’ li b’e li sachenaqeb’",
+  "missingTracksDescription": "Xtz’ilb’aleb’ rix li archivo li ink’a’ ke’ru chi ilok ru hu.",
+  "missingTracksEmpty": "Maak’a’eb’ li b’e li ink’a’ naru rilb’al.",
+  "missingTrackRead": "Ink’a’ kiru chirilb’al ru li metadatos re li archivo a’in. Il b’ar wan li archivo ut li permiso re ok, toja’ naq taayiib’ wi’chik li k’uuleb’aal hu re xyalb’al wi’chik.",
+  "missingTrackArtwork": "Ink’a’ kiru chirilb’al ru li jalam-uuch re li archivo a’in. Maare toj taa’ab’imanq li son. Reindex li k’uuleb’aal hu re xyalb’al wi’chik.",
+  "playbackBuffering": "Xk'eeb'al li buffer...",
+  "preventDuplicateTracksTitle": "Xramb’al li wiib’ paay chi b’e .",
+  "preventDuplicateTracksDescription": "Muq li b’e rik’in wiib’ paay ru xk’ab’a’eb’ li archivo.",
+  "hideLocalMusicTitle": "Muq li Musiq’ej re li Na’ajej",
+  "hideLocalMusicDescription": "K’ut ka’ajwi’ li son re li servidor sa’ laa k’uuleb’aal hu naq wan li Subsonic chi k’anjelak. Eb’ li archivo re li na’ajej neke’kana sa’ laa k’anjeleb’aal.",
+  "subsonicTitle": "K’anjelob’aal Subsonic",
+  "subsonicDescription": "Xb’oqb’al li son chalen chaq Navidrome, gonic, ut eb’ li k’anjeleb’aal li neke’xk’am rib’.",
+  "subsonicConfigure": "Xk’uub’ankil li Subsonic .",
+  "subsonicUsername": "K'ab'a'ej",
+  "subsonicPassword": "K'a'uxl",
+  "subsonicConnect": "Xk’amb’al rib’",
+  "subsonicRemove": "Xrisinkil li Servidor",
+  "subsonicSignIn": "Na’ajman ru ok sa’ li k’ab’a’ej",
+  "subsonicLoadingLibrary": "Xk’eeb’al laa k’uuleb’aal hu...",
+  "subsonicContinueBackground": "Toj yooq chi b’eek sa’ li b’e .",
+  "subsonicClose": "Tz'ap",
+  "subsonicIndexing": "Xk’eeb’al li index re li son re li servidor...",
+  "subsonicUnavailable": "Ink'a' naru xtawb'al",
+  "subsonicCredentialsError": "Il ru laa k’ab’a’, laa k’ab’a’, ut laa permiso re li servidor.",
+  "subsonicStorageError": "Ink’a’ kiru xk’uulankil li k’ulub’ej. Il ru naq wan li k’uuleb’aal hu kolb’il rix ut yal wi’chik.",
+  "subsonicTimeout": "Li servidor ki’oso’ xhoonalil. B’aanu usilal, yal wi’chik.",
+  "subsonicServerError": "Ink’a’ kiru chirilb’al ru li k’uuleb’aal hu re li servidor. Nakana li catalogo li ak wan chaq. Ak’ob’resi li Biblioteca re xyalb’al wi’chik.",
+  "libraryRetry": "Xrankil",
+  "subsonicOn": "Sa",
+  "subsonicOff": "Re",
+  "sleepTimerMinutes": "{minutes} k’asal",
+  "oledBlackDeviceColor": "OLED Q’eq",
+  "subsonicUrl": "URL re li k'anjelob'aal",
+  "subsonicInvalidUrl": "K’e jun li URL re li k’anjeleb’aal HTTP malaj HTTPS chi maak’a’ jun li patz’om, jun raqal, malaj jun li k’anjeleb’aal k’eeb’il.",
+  "subsonicUnsupported": "Li k’anjeleb’aal a’in ink’a’ naxk’ulub’a li API Subsonic malaj li tz’aqal yaalil na’leb’ re li token li na’ajman ru.",
+  "subsonicConnectionError": "Ink’a’ naru xramb’al. Cheril li URL, li redes, ut li hu HTTPS. Sa’ li Web, li k’anjeleb’aal tento tixkanab’ li CORS ut jun li aplicación HTTPS ink’a’ naru naxk’am rib’ rik’in li HTTP."
 }

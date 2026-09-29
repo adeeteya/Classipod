@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Kura",
   "editSongLyricsLabel": "Lworo",
   "saveChangesButton": "Kawuono ne gin .",
-  "veryLow": "Vera"
+  "veryLow": "Vera",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Kwan metadata man cal pi wer zo kendu.",
+  "refreshLibrarySettingTitle": "Medu ot kwan manyen",
+  "refreshLibrarySettingDescription": "Nen pi wer ma jumedo nyo juweko. Gwok metadata man cal ma con.",
+  "librarySettingsScreenTitle": "Kabedo mi ot buku",
+  "librarySettingsDescription": "Gwok indexing pa wer man folda ma juwodho woko.",
+  "sleepTimerTitle": "Sawa mi nindo",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ajiki pa wer ma kawoni",
+  "sleepTimerRemainingLabel": "Mudong",
+  "findingSongs": "Nwangu wer...",
+  "songsLoaded": "Wer ma jucwalo: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Cal ma jugwoko: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ecopu ngo ni ketho ka gwoko wer. Tim kendu.",
+  "missingTracksTitle": "Track ma rwinyo",
+  "missingTracksDescription": "Nen lembe ma jucopu kwanu ngo.",
+  "missingTracksEmpty": "Lembe moko mbe ma dhanu copo kwanu ngo.",
+  "missingTrackRead": "Acopo kwanu ngo metadata pa fail eni. Nen ka ma file utiye i iye man twero mi donjo i iye, man idok i index pa library ni temo kendu.",
+  "missingTrackArtwork": "Acopo kwanu ngo cal pa fail eni. Dwol copo podi wok. Reindex library ni temo kendu.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Geng wer ma rom rom",
+  "preventDuplicateTracksDescription": "Kan track ku nying fail ma rom.",
+  "hideLocalMusicTitle": "Kan wer mi kabedu peri",
+  "hideLocalMusicDescription": "Nyuth wer mi server kende i ot kwan peri podi Subsonic utiye ka tic. Karatasi mi kabedo peri bedo iwi cim peri.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Winj wer kud i Navidrome, gonic, man server ma rwate.",
+  "subsonicConfigure": "Yub Subsonic",
+  "subsonicUsername": "Nying jatic",
+  "subsonicPassword": "Lanyuth",
+  "subsonicConnect": "Rib",
+  "subsonicRemove": "Woth server",
+  "subsonicSignIn": "Mok i iye mitire",
+  "subsonicLoadingLibrary": "Ibe ketho ot buku peri...",
+  "subsonicContinueBackground": "Med i ngeye",
+  "subsonicClose": "Cego",
+  "subsonicIndexing": "Kethu wer mi server i index...",
+  "subsonicUnavailable": "Epe",
+  "subsonicCredentialsError": "Nen nying peri mi tic, lanyuth peri, man twero peri mi server.",
+  "subsonicStorageError": "Acopo gwoko ngo lembe mi yioyic. Nen nia ka gwoko piny utiye man tem kendu.",
+  "subsonicTimeout": "Jam tic uthum kare. Tem kendu.",
+  "subsonicServerError": "Acopo kwanu ngo kabedo mi kwan pa server. Catalog mukadho judong. Medu Library ni temo kendu.",
+  "libraryRetry": "Ekwenda",
+  "subsonicOn": "Iwi",
+  "subsonicOff": "Ocidho",
+  "sleepTimerMinutes": "{minutes} Dakika",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "URL pa server",
+  "subsonicInvalidUrl": "Keth HTTP nyo HTTPS server URL manangu ipe ku penji, poko, nyo login ma juketho i iye.",
+  "subsonicUnsupported": "Server eni kony ngo Subsonic API ma mitere nyo token authentication.",
+  "subsonicConnectionError": "Copu rombo ngo. Nen URL, dul, man waraga mi HTTPS. I Web, server umaku eyiyu CORS man HTTPS app copo mako ngo HTTP."
 }

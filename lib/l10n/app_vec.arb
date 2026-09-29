@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Zénare",
   "editSongLyricsLabel": "Letra",
   "saveChangesButton": "Salva Cambi",
-  "veryLow": "Benissimo"
+  "veryLow": "Benissimo",
+  "reindexLibrarySettingTitle": "Riindicixare",
+  "reindexLibrarySettingDescription": "Lesi da novo i metadati e łe òpare d’arte pa tuti i file muxicałi.",
+  "refreshLibrarySettingTitle": "Aggiorna ła biblioteca",
+  "refreshLibrarySettingDescription": "Controla se ghe xe muxica zontà o cancełada. Tegner i metadati e łe òpare d’arte.",
+  "librarySettingsScreenTitle": "Inpostasion deła biblioteca",
+  "librarySettingsDescription": "Gestire l'indicizzazione musicale e le cartelle escluse.",
+  "sleepTimerTitle": "Cronometro del sono",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fine de ła canson de deso",
+  "sleepTimerRemainingLabel": "Restante",
+  "findingSongs": "Trovando canson…",
+  "songsLoaded": "Canzoni caricate: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Opera d’arte in cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Inposibiłe caricare ła libreria muxicałe. Par piaser, riprova.",
+  "missingTracksTitle": "Tracce mancanti",
+  "missingTracksDescription": "Revixion i file che no i xe stà leti.",
+  "missingTracksEmpty": "No tracce illegibili.",
+  "missingTrackRead": "No se pol lèxare i metadati de sto file. Controla ła posision del file e i permesi de aceso, dopo riindexa ła libreria pa riprovar.",
+  "missingTrackArtwork": "No se pol lèzare l’opera de sto file. L’audio el pol ancora sonar. Riindicizzare la libreria da riprovare.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "Evitar che łe trase łe se dopie",
+  "preventDuplicateTracksDescription": "Nascondi tracce con nomi file duplicati.",
+  "hideLocalMusicTitle": "Sconde ła muxica locałe",
+  "hideLocalMusicDescription": "Mostra soło ła muxica del server inte ła libreria fin che Subsonic ła xe ativada. I file locałi i resta sul dispoxitivo.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Stream musica da Navidrome, gonic, e server compatibili.",
+  "subsonicConfigure": "Configurà Subsonic",
+  "subsonicUsername": "Nome utente",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Conete",
+  "subsonicRemove": "Cava el server",
+  "subsonicSignIn": "Bisogna l'accesion",
+  "subsonicLoadingLibrary": "In carga ła biblioteca…",
+  "subsonicContinueBackground": "Continua in secondo piano",
+  "subsonicClose": "Chiude",
+  "subsonicIndexing": "Indexasion deła muxica del server…",
+  "subsonicUnavailable": "No disponibiłe",
+  "subsonicCredentialsError": "Controla el nome utente, ła password e i permesi del server.",
+  "subsonicStorageError": "No se pol salvar łe credensiałi. Verifega che ła memoria sicura ła sia disponibiłe e riprova.",
+  "subsonicTimeout": "El server el xe scadùo. Prova ancora.",
+  "subsonicServerError": "No se pol lèzare ła libreria del server. Se conserva el catalogo precedente. Aggiorna ła biblioteca pa riprovar.",
+  "libraryRetry": "Ripression",
+  "subsonicOn": "So",
+  "subsonicOff": "Stuà",
+  "sleepTimerMinutes": "{minutes} minuti",
+  "oledBlackDeviceColor": "OLED Nero",
+  "subsonicUrl": "URL del server",
+  "subsonicInvalidUrl": "Inserìr un URL del server HTTP o HTTPS sensa na query, un framento o un login incorporà.",
+  "subsonicUnsupported": "Sto server no el suporta l’API Subsonic richiesta o l’autenticasion dei token.",
+  "subsonicConnectionError": "No se pol cołegarse. Controla l’URL, ła rete e el certificato HTTPS. Su Web, el server el ga da permetar CORS e na aplicasion HTTPS no ła pol conetarse a HTTP."
 }

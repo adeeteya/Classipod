@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Текст",
   "saveChangesButton": "Зачувај промени",
-  "veryLow": "Многу ниско"
+  "veryLow": "Многу ниско",
+  "reindexLibrarySettingTitle": "Повторно индексирање",
+  "reindexLibrarySettingDescription": "Повторно прочитајте ги метаподатоците и уметничките дела за сите музички датотеки.",
+  "refreshLibrarySettingTitle": "Освежете ја библиотеката",
+  "refreshLibrarySettingDescription": "Проверете дали има додадена или избришана музика. Чувајте ги постоечките метаподатоци и уметнички дела.",
+  "librarySettingsScreenTitle": "Поставки за библиотека",
+  "librarySettingsDescription": "Управувајте со индексирање на музика и исклучени папки.",
+  "sleepTimerTitle": "Тајмер за спиење",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Крај на тековната песна",
+  "sleepTimerRemainingLabel": "Преостанати",
+  "findingSongs": "Се наоѓаат песни…",
+  "songsLoaded": "Вчитани песни: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Уметничко дело кеширано: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Не може да се вчита музичката библиотека. Ве молиме обидете се повторно.",
+  "missingTracksTitle": "Недостасуваат песни",
+  "missingTracksDescription": "Прегледајте ги датотеките што не може да се прочитаат.",
+  "missingTracksEmpty": "Нема нечитливи траки.",
+  "missingTrackRead": "Не може да се прочитаат метаподатоците на оваа датотека. Проверете ја локацијата на датотеката и дозволите за пристап, а потоа повторно индексирајте ја библиотеката за да се обидете повторно.",
+  "missingTrackArtwork": "Не може да се прочита уметничкото дело на оваа датотека. Аудиото сè уште може да се репродуцира. Реиндексирајте ја библиотеката за да се обидете повторно.",
+  "playbackBuffering": "Се баферира…",
+  "preventDuplicateTracksTitle": "Спречете дупликат песни",
+  "preventDuplicateTracksDescription": "Скриј песни со дупликат имиња на датотеки.",
+  "hideLocalMusicTitle": "Скриј локална музика",
+  "hideLocalMusicDescription": "Прикажувајте само музика од серверот во вашата библиотека додека Subsonic е вклучен. Локалните датотеки остануваат на вашиот уред.",
+  "subsonicTitle": "Сервер Subsonic",
+  "subsonicDescription": "Емитувајте музика од Navidrome, gonic и компатибилни сервери.",
+  "subsonicConfigure": "Конфигурирајте го Subsonic",
+  "subsonicUsername": "Корисничко име",
+  "subsonicPassword": "Лозинка",
+  "subsonicConnect": "Поврзете се",
+  "subsonicRemove": "Отстрани го серверот",
+  "subsonicSignIn": "Потребно е да се најавите",
+  "subsonicLoadingLibrary": "Се вчитува вашата библиотека…",
+  "subsonicContinueBackground": "Продолжи во позадина",
+  "subsonicClose": "Затвори",
+  "subsonicIndexing": "Се индексира музика од серверот…",
+  "subsonicUnavailable": "Недостапно",
+  "subsonicCredentialsError": "Проверете ги вашите корисничко име, лозинка и дозволи на серверот.",
+  "subsonicStorageError": "Не може да се зачуваат ингеренциите. Проверете дали е достапно безбедно складирање и обидете се повторно.",
+  "subsonicTimeout": "Времето на серверот истече. Ве молиме обидете се повторно.",
+  "subsonicServerError": "Не можев да ја прочитам библиотеката на серверот. Претходниот каталог е задржан. Освежете ја библиотеката за да се обидете повторно.",
+  "libraryRetry": "Повторно обидете се",
+  "subsonicOn": "На",
+  "subsonicOff": "Исклучено",
+  "sleepTimerMinutes": "{minutes} минути",
+  "oledBlackDeviceColor": "OLED црна",
+  "subsonicUrl": "URL на серверот",
+  "subsonicInvalidUrl": "Внесете URL-адреса на серверот HTTP или HTTPS без барање, фрагмент или вградено најавување.",
+  "subsonicUnsupported": "Овој сервер не го поддржува потребното Subsonic API или автентикација на токен.",
+  "subsonicConnectionError": "Не може да се поврзе. Проверете ги URL-то, мрежата и сертификатот HTTPS. На веб, серверот мора да дозволи CORS и апликацијата HTTPS не може да се поврзе со HTTP."
 }

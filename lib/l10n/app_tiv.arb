@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ityo",
   "editSongLyricsLabel": "Uihyundu",
   "saveChangesButton": "Umaan",
-  "veryLow": "Very Low"
+  "veryLow": "Very Low",
+  "reindexLibrarySettingTitle": "Hide nger akaa",
+  "reindexLibrarySettingDescription": "Ôr metadata man ikyav mbi eren tom a mi sha u hiden ôron ityogholough mbi kuhwan cii.",
+  "refreshLibrarySettingTitle": "Hide sôr iyou i koson ityakerada",
+  "refreshLibrarySettingDescription": "Nenge ase aluer i seer ityogholough shin i delete mbi yô. Ka i lu a metadata man akaa a i gber la.",
+  "librarySettingsScreenTitle": "Akaa a i ver ken iyou i koson ityakerada",
+  "librarySettingsDescription": "Nenge sha kwagh u indexing u ityogholough man ufolda mba i dugh ve kera la.",
+  "sleepTimerTitle": "Shighe u yaven",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Mkur u Icam i Hegen .",
+  "sleepTimerRemainingLabel": "Mba ve shi her la",
+  "findingSongs": "U keren atsam...",
+  "songsLoaded": "Icam i i we ker yô: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "I nger akaa a i er sha mi la: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ka u eren tom a library u ityogholough. We a rumun yô, hide nôngo.",
+  "missingTracksTitle": "Tracks mba ve lu ga",
+  "missingTracksDescription": "Hide nenge sha ufiim mba yange i lu u a ôr ga la.",
+  "missingTracksEmpty": "Ityough ki ôron ga ki lu ga.",
+  "missingTrackRead": "Ka m ôr metadata u faile ne ga. Nenge ijiir i faile la a lu la man ian i u lu a mi i nyôron ker la, maa hide nger ikyav i library la sha er u hide u nôngo yô.",
+  "missingTrackArtwork": "Ka m ôr kwagh u i nger ken faile ne ga. Alaghga Audio una lu her. Reindex library la sha er u hide u nôngo yô.",
+  "playbackBuffering": "U buffer...",
+  "preventDuplicateTracksTitle": "Yangen u eren akaa ahar .",
+  "preventDuplicateTracksDescription": "Hide a ityogholough mbi lun a ati a fail a a lu kwagh môm la.",
+  "hideLocalMusicTitle": "Hide ityogholough mbi hen ijiir you",
+  "hideLocalMusicDescription": "Tese ityogholough mbi server tseegh ken iyou you i koson ityakerada shighe u Subsonic a lu eren tom la. Fayili u hen ijiir you la ka a lu sha ikyagh you ki tomough.",
+  "subsonicTitle": "Subsonic Or u nan tom",
+  "subsonicDescription": "Ior mba ve lu a ityogholough mbi Navidrome, gonic, man mba ve lu a ikyav mbi tomov mbigenev la.",
+  "subsonicConfigure": "Mzough u Subsonic",
+  "subsonicUsername": "Iti i ortom",
+  "subsonicPassword": "Kwagh u yeren",
+  "subsonicConnect": "Zua a",
+  "subsonicRemove": "Dugh Server kera",
+  "subsonicSignIn": "I gba u u nyôr ker",
+  "subsonicLoadingLibrary": "U eren tom a iyou yough i oron ityakerada...",
+  "subsonicContinueBackground": "Za hemen u lun ken ijime .",
+  "subsonicClose": "Cir",
+  "subsonicIndexing": "U tesen icam i sha server...",
+  "subsonicUnavailable": "Ngu ga",
+  "subsonicCredentialsError": "Nenge iti you i eren tom a mi la, kwagh u u yer ér password la, man ian i u lu a mi sha server la.",
+  "subsonicStorageError": "Ka m kera fatyo u koson akaa a tesen ér m ngu or u mimi ga. Nenge wer ijiir i koson akaa i i lu a mkor ker la ngi, nahan hide nôngo.",
+  "subsonicTimeout": "Server la yange bee shighe. We kpa hide nôngo.",
+  "subsonicServerError": "Ka m ôr kwagh u server la ga. I nger katalog u yange i vande ngeren la her. Hide sôr Library sha er u hide u nôngo yô.",
+  "libraryRetry": "kimbir ôron",
+  "subsonicOn": "Sha",
+  "subsonicOff": "Pir",
+  "sleepTimerMinutes": "Miniti {minutes}",
+  "oledBlackDeviceColor": "OLED u nyian",
+  "subsonicUrl": "URL u nan akaa",
+  "subsonicInvalidUrl": "Nyôr a URL u HTTP shin HTTPS u a lu a mpin shin ikyav shin ikyav i nyôron ker shio.",
+  "subsonicUnsupported": "Server ne ngu a zua a kwagh u i gbe u a er sha u eren tom a Subsonic API shin token u tesen ér or nan ngu or u mimi ga.",
+  "subsonicConnectionError": "Ka m zua a mi ga. Nenge ase URL man network man takerada u HTTPS. Sha Intanet yô, gba u server la una na CORS ian shi app u HTTPS una kera zua a HTTP ga."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "శైలి",
   "editSongLyricsLabel": "సాహిత్యం",
   "saveChangesButton": "మార్పులను సేవ్ చేయండి",
-  "veryLow": "చాలా తక్కువ"
+  "veryLow": "చాలా తక్కువ",
+  "reindexLibrarySettingTitle": "రీ-ఇండెక్స్",
+  "reindexLibrarySettingDescription": "అన్ని మ్యూజిక్ ఫైల్‌ల కోసం మెటాడేటా మరియు ఆర్ట్‌వర్క్‌ని మళ్లీ చదవండి.",
+  "refreshLibrarySettingTitle": "లైబ్రరీని రిఫ్రెష్ చేయండి",
+  "refreshLibrarySettingDescription": "జోడించిన లేదా తొలగించబడిన సంగీతం కోసం తనిఖీ చేయండి. ఇప్పటికే ఉన్న మెటాడేటా మరియు కళాకృతిని ఉంచండి.",
+  "librarySettingsScreenTitle": "లైబ్రరీ సెట్టింగ్‌లు",
+  "librarySettingsDescription": "మ్యూజిక్ ఇండెక్సింగ్ మరియు మినహాయించబడిన ఫోల్డర్‌లను నిర్వహించండి.",
+  "sleepTimerTitle": "స్లీప్ టైమర్",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "ప్రస్తుత పాట ముగింపు",
+  "sleepTimerRemainingLabel": "మిగిలింది",
+  "findingSongs": "పాటలను కనుగొంటోంది...",
+  "songsLoaded": "లోడ్ చేయబడిన పాటలు: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "కళాకృతి కాష్ చేయబడింది: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "సంగీత లైబ్రరీని లోడ్ చేయడం సాధ్యపడలేదు. దయచేసి మళ్లీ ప్రయత్నించండి.",
+  "missingTracksTitle": "ట్రాక్‌లు లేవు",
+  "missingTracksDescription": "చదవలేని ఫైల్‌లను సమీక్షించండి.",
+  "missingTracksEmpty": "చదవలేని ట్రాక్‌లు లేవు.",
+  "missingTrackRead": "ఈ ఫైల్ మెటాడేటాను చదవడం సాధ్యపడలేదు. ఫైల్ స్థానాన్ని మరియు యాక్సెస్ అనుమతులను తనిఖీ చేయండి, ఆపై మళ్లీ ప్రయత్నించడానికి లైబ్రరీని రీఇండెక్స్ చేయండి.",
+  "missingTrackArtwork": "ఈ ఫైల్ ఆర్ట్‌వర్క్‌ని చదవడం సాధ్యపడలేదు. ఆడియో ఇప్పటికీ ప్లే కావచ్చు. మళ్లీ ప్రయత్నించడానికి లైబ్రరీని రీఇండెక్స్ చేయండి.",
+  "playbackBuffering": "బఫరింగ్…",
+  "preventDuplicateTracksTitle": "డూప్లికేట్ ట్రాక్‌లను నిరోధించండి",
+  "preventDuplicateTracksDescription": "డూప్లికేట్ ఫైల్ పేర్లతో ట్రాక్‌లను దాచండి.",
+  "hideLocalMusicTitle": "స్థానిక సంగీతాన్ని దాచండి",
+  "hideLocalMusicDescription": "Subsonic ఆన్‌లో ఉన్నప్పుడు మీ లైబ్రరీలో సర్వర్ సంగీతాన్ని మాత్రమే చూపండి. స్థానిక ఫైల్‌లు మీ పరికరంలో ఉంటాయి.",
+  "subsonicTitle": "Subsonic సర్వర్",
+  "subsonicDescription": "Navidrome, gonic మరియు అనుకూల సర్వర్‌ల నుండి సంగీతాన్ని ప్రసారం చేయండి.",
+  "subsonicConfigure": "Subsonicని కాన్ఫిగర్ చేయండి",
+  "subsonicUsername": "వినియోగదారు పేరు",
+  "subsonicPassword": "పాస్వర్డ్",
+  "subsonicConnect": "కనెక్ట్ చేయండి",
+  "subsonicRemove": "సర్వర్‌ని తీసివేయండి",
+  "subsonicSignIn": "సైన్ ఇన్ అవసరం",
+  "subsonicLoadingLibrary": "మీ లైబ్రరీని లోడ్ చేస్తోంది...",
+  "subsonicContinueBackground": "నేపథ్యంలో కొనసాగించండి",
+  "subsonicClose": "మూసివేయి",
+  "subsonicIndexing": "సర్వర్ సంగీతాన్ని సూచిక చేస్తోంది…",
+  "subsonicUnavailable": "అందుబాటులో లేదు",
+  "subsonicCredentialsError": "మీ వినియోగదారు పేరు, పాస్‌వర్డ్ మరియు సర్వర్ అనుమతులను తనిఖీ చేయండి.",
+  "subsonicStorageError": "ఆధారాలను సేవ్ చేయడం సాధ్యపడలేదు. సురక్షిత నిల్వ అందుబాటులో ఉందో లేదో తనిఖీ చేసి, మళ్లీ ప్రయత్నించండి.",
+  "subsonicTimeout": "సర్వర్ సమయం ముగిసింది. దయచేసి మళ్లీ ప్రయత్నించండి.",
+  "subsonicServerError": "సర్వర్ లైబ్రరీని చదవడం సాధ్యపడలేదు. మునుపటి కేటలాగ్ అలాగే ఉంచబడింది. మళ్లీ ప్రయత్నించడానికి లైబ్రరీని రిఫ్రెష్ చేయండి.",
+  "libraryRetry": "మళ్లీ ప్రయత్నించండి",
+  "subsonicOn": "ఆన్",
+  "subsonicOff": "ఆఫ్",
+  "sleepTimerMinutes": "{minutes} నిమిషాలు",
+  "oledBlackDeviceColor": "OLED నలుపు",
+  "subsonicUrl": "సర్వర్ URL",
+  "subsonicInvalidUrl": "ప్రశ్న, భాగం లేదా ఎంబెడెడ్ లాగిన్ లేకుండా HTTP లేదా HTTPS సర్వర్ URLని నమోదు చేయండి.",
+  "subsonicUnsupported": "ఈ సర్వర్ అవసరమైన Subsonic API లేదా టోకెన్ ప్రమాణీకరణకు మద్దతు ఇవ్వదు.",
+  "subsonicConnectionError": "కనెక్ట్ చేయడం సాధ్యపడదు. URL, నెట్‌వర్క్ మరియు HTTPS ప్రమాణపత్రాన్ని తనిఖీ చేయండి. వెబ్‌లో, సర్వర్ తప్పనిసరిగా CORSని అనుమతించాలి మరియు HTTPS యాప్ HTTPకి కనెక్ట్ చేయబడదు."
 }

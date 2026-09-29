@@ -134,5 +134,78 @@
   "editSongGenreLabel": "मातुर्",
   "editSongLyricsLabel": "गीत 1 .",
   "saveChangesButton": "परिवर्तनं रक्षतु .",
-  "veryLow": "अतीव नीचम् ."
+  "veryLow": "अतीव नीचम् .",
+  "reindexLibrarySettingTitle": "पुनः अनुक्रमणिका",
+  "reindexLibrarySettingDescription": "पुनः सर्वेषां सङ्गीतसञ्चिकानां कृते मेटाडाटा कलाकृती च पठन्तु ।",
+  "refreshLibrarySettingTitle": "पुस्तकालयं ताजगीं कुर्वन्तु",
+  "refreshLibrarySettingDescription": "योजितं वा विलोपितं वा सङ्गीतं पश्यन्तु। विद्यमानं मेटाडाटा कलाकृतिं च स्थापयन्तु।",
+  "librarySettingsScreenTitle": "पुस्तकालयस्य सेटिंग्स्",
+  "librarySettingsDescription": "संगीतसूचीकरणं बहिष्कृतपुटं च प्रबन्धयन्तु ।",
+  "sleepTimerTitle": "स्लीप टाइमर",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "वर्तमान गीतस्य समाप्ति",
+  "sleepTimerRemainingLabel": "अवशिष्टः",
+  "findingSongs": "गीतानि अन्विष्य...",
+  "songsLoaded": "गीत लोड: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "कलाकृति संग्रहीत: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "सङ्गीतपुस्तकालयं लोड् कर्तुं असमर्थः। कृपया पुनः प्रयास करें।",
+  "missingTracksTitle": "लुप्ताः पटलाः",
+  "missingTracksDescription": "पठितुं न शक्यमाणानां सञ्चिकानां समीक्षां कुर्वन्तु।",
+  "missingTracksEmpty": "अपठनीयाः पटलाः नास्ति।",
+  "missingTrackRead": "अस्याः सञ्चिकायाः ​​मेटाडाटा पठितुं न शक्तवान् । सञ्चिकास्थानं अभिगमस्य अनुमतिः च पश्यन्तु, ततः पुनः प्रयासं कर्तुं पुस्तकालयं पुनः अनुक्रमणं कुर्वन्तु ।",
+  "missingTrackArtwork": "अस्याः सञ्चिकायाः ​​कलाकृतिं पठितुं न शक्तवान् । अद्यापि श्रव्यं वादयितुं शक्नोति। पुनः प्रयासं कर्तुं पुस्तकालयं पुनः अनुक्रमणं कुर्वन्तु ।",
+  "playbackBuffering": "बफरिंग...",
+  "preventDuplicateTracksTitle": "डुप्लिकेट् ट्रैक्स् निवारयन्तु",
+  "preventDuplicateTracksDescription": "द्वितीयकसञ्चिकानामभिः सह पङ्क्तयः गोपयन्तु ।",
+  "hideLocalMusicTitle": "स्थानीय संगीतं गोपयन्तु",
+  "hideLocalMusicDescription": "Subsonic चालू भवति चेत् केवलं सर्वर संगीतं स्वस्य पुस्तकालये दर्शयन्तु। स्थानीयसञ्चिकाः भवतः उपकरणे तिष्ठन्ति ।",
+  "subsonicTitle": "Subsonic सर्वर",
+  "subsonicDescription": "Navidrome, gonic, तथा च संगतसर्वरतः संगीतं प्रवाहयन्तु।",
+  "subsonicConfigure": "Subsonic विन्यस्तं कुर्वन्तु",
+  "subsonicUsername": "उपयोक्तृनाम",
+  "subsonicPassword": "गुप्तशब्दः",
+  "subsonicConnect": "संयोजयन्तु",
+  "subsonicRemove": "सर्वरं निष्कासयन्तु",
+  "subsonicSignIn": "प्रवेशः आवश्यकः",
+  "subsonicLoadingLibrary": "भवतः पुस्तकालयं लोड् कुर्वन्...",
+  "subsonicContinueBackground": "पृष्ठभूमितः निरन्तरं कुर्वन्तु",
+  "subsonicClose": "निमील्यताम्",
+  "subsonicIndexing": "सर्वर संगीतस्य अनुक्रमणिका...",
+  "subsonicUnavailable": "अनुपलब्धम्",
+  "subsonicCredentialsError": "स्वस्य उपयोक्तृनाम, गुप्तशब्दः, सर्वरस्य अनुमतिः च पश्यन्तु ।",
+  "subsonicStorageError": "प्रमाणपत्राणि रक्षितुं न शक्तवान्। सुरक्षितं भण्डारणं उपलब्धम् इति पश्यन्तु पुनः प्रयासं कुर्वन्तु ।",
+  "subsonicTimeout": "सर्वरस्य समयः समाप्तः अभवत् । कृपया पुनः प्रयासं कुर्वन्तु।",
+  "subsonicServerError": "सर्वर पुस्तकालयं पठितुं न शक्तवान्। पूर्वसूची अवशिष्टा अस्ति। पुनः प्रयासं कर्तुं पुस्तकालयं ताजगं कुर्वन्तु।",
+  "libraryRetry": "पुनः प्रयास करें",
+  "subsonicOn": "इत्युपरि",
+  "subsonicOff": "दूरे",
+  "sleepTimerMinutes": "{minutes} पन्चनिमेषः",
+  "oledBlackDeviceColor": "ओएलईडी कृष्णा",
+  "subsonicUrl": "सर्वर URL",
+  "subsonicInvalidUrl": "प्रश्नं, खण्डं, एम्बेडेड् लॉगिन् वा विना HTTP अथवा HTTPS सर्वर URL प्रविष्टं कुर्वन्तु ।",
+  "subsonicUnsupported": "अयं सर्वरः आवश्यकं Subsonic API अथवा टोकन प्रमाणीकरणं समर्थयति न ।",
+  "subsonicConnectionError": "संयोजितुं न शक्नोति। URL, संजालं, HTTPS प्रमाणपत्रं च पश्यन्तु । जालपुटे सर्वरेण CORS इत्यस्य अनुमतिः भवितुमर्हति तथा च HTTPS एप् HTTP इत्यनेन सह सम्बद्धं कर्तुं न शक्नोति ।"
 }

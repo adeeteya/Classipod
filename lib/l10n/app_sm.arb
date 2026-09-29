@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ituaiga",
   "editSongLyricsLabel": "Fatuga",
   "saveChangesButton": "Sefe suiga",
-  "veryLow": "Maualalo maualalo"
+  "veryLow": "Maualalo maualalo",
+  "reindexLibrarySettingTitle": "Toe fa'asino igoa",
+  "reindexLibrarySettingDescription": "Toe faitau metadata ma faatufugaga mo faila musika uma.",
+  "refreshLibrarySettingTitle": "Toe faafou le Faletusi",
+  "refreshLibrarySettingDescription": "Siaki mo musika faaopoopo pe tape. Taofi metadata o iai ma galuega taulima.",
+  "librarySettingsScreenTitle": "Fa'atonuga o Faletusi",
+  "librarySettingsDescription": "Pulea le faasinoupuina o musika ma le aofia ai faila.",
+  "sleepTimerTitle": "Taimi moe",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fa'ai'uga o Pese nei",
+  "sleepTimerRemainingLabel": "O totoe",
+  "findingSongs": "Su'e pese…",
+  "songsLoaded": "Pese ua utaina: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "O galuega taulima o lo'o teuina: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Le mafai ona utaina le faletusi musika. Faamolemole toe taumafai.",
+  "missingTracksTitle": "Ua misi Tracks",
+  "missingTracksDescription": "Toe iloilo faila e le mafai ona faitau.",
+  "missingTracksEmpty": "Leai ni pese e le mafai ona faitau.",
+  "missingTrackRead": "Le mafai ona faitau le metadata a lenei faila. Siaki le nofoaga o faila ma fa'atagaga avanoa, ona toe fa'asino le faletusi e toe taumafai.",
+  "missingTrackArtwork": "E le mafai ona faitau le ata o lenei faila. Atonu e tā pea le leo. Toe fa'asino le faletusi e toe taumafai.",
+  "playbackBuffering": "Puipuia…",
+  "preventDuplicateTracksTitle": "Puipuia Auala Faalua",
+  "preventDuplicateTracksDescription": "Natia ala e iai igoa faila faila.",
+  "hideLocalMusicTitle": "Natia Musika Faalelotoifale",
+  "hideLocalMusicDescription": "Faaali atu na'o musika server i lau faletusi a'o ola le Subsonic. O faila fa'apitonu'u e tumau i lau masini.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Fa'asolo musika mai le Navidrome, gonic, ma 'au'aunaga talafeagai.",
+  "subsonicConfigure": "Fa'atulaga Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Feso'ota'i",
+  "subsonicRemove": "Aveese le Server",
+  "subsonicSignIn": "Saini e mana'omia",
+  "subsonicLoadingLibrary": "O lo'o uta lau faletusi...",
+  "subsonicContinueBackground": "Fa'aauau i tua",
+  "subsonicClose": "Tapuni",
+  "subsonicIndexing": "Fa'asinomaga musika a le server...",
+  "subsonicUnavailable": "Le avanoa",
+  "subsonicCredentialsError": "Siaki lou username, password, ma faatagaga a le server.",
+  "subsonicStorageError": "Le mafai ona sefe fa'amatalaga. Siaki po'o avanoa le teuina malu ma toe taumafai.",
+  "subsonicTimeout": "Ua uma le taimi o le server. Fa'amolemole toe taumafai.",
+  "subsonicServerError": "Le mafai ona faitau le faletusi a le server. O lo'o taofia le fa'amaumauga muamua. Toe faafou le Faletusi e toe taumafai.",
+  "libraryRetry": "Toe taumafai",
+  "subsonicOn": "On",
+  "subsonicOff": "Ese",
+  "sleepTimerMinutes": "{minutes} minute",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "Ulufale i le HTTP po'o le HTTPS server URL e aunoa ma se fesili, vaega, po'o le saini fa'apipi'i.",
+  "subsonicUnsupported": "E le lagolagoina e lenei 'auʻaunaga le manaʻomia Subsonic API poʻo faʻamaoniga faʻamaonia.",
+  "subsonicConnectionError": "Le mafai ona feso'ota'i. Siaki le URL, feso'otaiga, ma le tusi faamaonia HTTPS. I luga o le Upega Tafaʻilagi, e tatau i le 'auʻaunaga ona faʻatagaina CORS ma le HTTPS app e le mafai ona faʻafesoʻotaʻi i HTTP."
 }

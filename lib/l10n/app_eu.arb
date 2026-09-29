@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Generoa",
   "editSongLyricsLabel": "Letra",
   "saveChangesButton": "Gorde aldaketak",
-  "veryLow": "Oso baxua"
+  "veryLow": "Oso baxua",
+  "reindexLibrarySettingTitle": "Berriz indexatu",
+  "reindexLibrarySettingDescription": "Irakurri berriro musika fitxategi guztien metadatuak eta artelanak.",
+  "refreshLibrarySettingTitle": "Liburutegia freskatu",
+  "refreshLibrarySettingDescription": "Egiaztatu musika gehitu edo ezabatu den. Mantendu lehendik dauden metadatuak eta artelanak.",
+  "librarySettingsScreenTitle": "Liburutegiaren ezarpenak",
+  "librarySettingsDescription": "Kudeatu musika indexatzea eta baztertutako karpetak.",
+  "sleepTimerTitle": "Lo egiteko tenporizadorea",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Oraingo Abestiaren amaiera",
+  "sleepTimerRemainingLabel": "Gainerakoak",
+  "findingSongs": "Abestiak bilatzen...",
+  "songsLoaded": "Kargatutako abestiak: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Cachean gordetako artelana: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ezin da musika liburutegia kargatu. Saiatu berriro.",
+  "missingTracksTitle": "Pista faltak",
+  "missingTracksDescription": "Irakurri ezin izan diren fitxategiak berrikusi.",
+  "missingTracksEmpty": "Ez dago irakurri ezinezko pistarik.",
+  "missingTrackRead": "Ezin izan dira irakurri fitxategi honen metadatuak. Egiaztatu fitxategiaren kokapena eta atzitzeko baimenak, eta berriro indexatu liburutegia berriro saiatzeko.",
+  "missingTrackArtwork": "Ezin izan da fitxategi honen artelana irakurri. Baliteke audioa erreproduzitzea oraindik. Berriro indexatu liburutegia berriro saiatzeko.",
+  "playbackBuffering": "Buffera egiten…",
+  "preventDuplicateTracksTitle": "Saihestu pista bikoiztuak",
+  "preventDuplicateTracksDescription": "Ezkutatu fitxategi-izen bikoiztuak dituzten ibilbideak.",
+  "hideLocalMusicTitle": "Ezkutatu tokiko musika",
+  "hideLocalMusicDescription": "Erakutsi zerbitzariaren musika zure liburutegian Subsonic aktibatuta dagoen bitartean. Tokiko fitxategiak zure gailuan geratzen dira.",
+  "subsonicTitle": "Subsonic Zerbitzaria",
+  "subsonicDescription": "Erreproduzitu musika Navidrome, gonic eta zerbitzari bateragarrietatik.",
+  "subsonicConfigure": "Konfiguratu Subsonic",
+  "subsonicUsername": "Erabiltzaile izena",
+  "subsonicPassword": "Pasahitza",
+  "subsonicConnect": "Konektatu",
+  "subsonicRemove": "Kendu zerbitzaria",
+  "subsonicSignIn": "Saioa hasi behar da",
+  "subsonicLoadingLibrary": "Zure liburutegia kargatzen…",
+  "subsonicContinueBackground": "Jarraitu atzeko planoan",
+  "subsonicClose": "Itxi",
+  "subsonicIndexing": "Zerbitzariaren musika indexatzen…",
+  "subsonicUnavailable": "Ez dago erabilgarri",
+  "subsonicCredentialsError": "Egiaztatu zure erabiltzaile-izena, pasahitza eta zerbitzariaren baimenak.",
+  "subsonicStorageError": "Ezin izan dira gorde kredentzialak. Egiaztatu biltegiratze segurua erabilgarri dagoela eta saiatu berriro.",
+  "subsonicTimeout": "Zerbitzariak denbora-muga gainditu du. Mesedez, saiatu berriro.",
+  "subsonicServerError": "Ezin izan da zerbitzariaren liburutegia irakurri. Aurreko katalogoa mantentzen da. Freskatu liburutegia berriro saiatzeko.",
+  "libraryRetry": "Berrirohartu",
+  "subsonicOn": "-En gainean",
+  "subsonicOff": "Amatatuta",
+  "sleepTimerMinutes": "{minutes} minutu",
+  "oledBlackDeviceColor": "OLED beltza",
+  "subsonicUrl": "Zerbitzariaren URLa",
+  "subsonicInvalidUrl": "Sartu HTTP edo HTTPS zerbitzariaren URL bat kontsultarik, zatirik edo kapsulatutako saio-hasierarik gabe.",
+  "subsonicUnsupported": "Zerbitzari honek ez du onartzen beharrezko Subsonic API edo token autentifikazioa.",
+  "subsonicConnectionError": "Ezin da konektatu. Egiaztatu URLa, sarea eta HTTPS ziurtagiria. Webean, zerbitzariak CORS baimendu behar du eta HTTPS aplikazio batek ezin du HTTPra konektatu."
 }

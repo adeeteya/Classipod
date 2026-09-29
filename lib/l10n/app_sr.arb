@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Лирицс",
   "saveChangesButton": "Сачувај промене",
-  "veryLow": "Веома ниска"
+  "veryLow": "Веома ниска",
+  "reindexLibrarySettingTitle": "Поново индексирај",
+  "reindexLibrarySettingDescription": "Поново прочитајте метаподатке и илустрације за све музичке датотеке.",
+  "refreshLibrarySettingTitle": "Освежите библиотеку",
+  "refreshLibrarySettingDescription": "Проверите да ли постоји додата или избрисана музика. Задржите постојеће метаподатке и уметничка дела.",
+  "librarySettingsScreenTitle": "Подешавања библиотеке",
+  "librarySettingsDescription": "Управљајте индексирањем музике и изузетим фасциклама.",
+  "sleepTimerTitle": "Слееп Тимер",
+  "sleepTimerEndOfCurrentSong": "Крај тренутне песме",
+  "sleepTimerRemainingLabel": "Преостало",
+  "findingSongs": "Проналажење песама…",
+  "libraryLoadError": "Није могуће учитати музичку библиотеку. Молимо покушајте поново.",
+  "missingTracksTitle": "Недостају трагови",
+  "missingTracksDescription": "Прегледајте датотеке које није било могуће прочитати.",
+  "missingTracksEmpty": "Нема нечитљивих нумера.",
+  "missingTrackRead": "Није могуће прочитати метаподатке ове датотеке. Проверите локацију датотеке и дозволе за приступ, а затим поново индексирајте библиотеку да бисте покушали поново.",
+  "missingTrackArtwork": "Није могуће прочитати илустрацију ове датотеке. Звук се можда и даље репродукује. Поново индексирајте библиотеку да бисте покушали поново.",
+  "playbackBuffering": "Пуферовање…",
+  "preventDuplicateTracksTitle": "Спречите дуплирање нумера",
+  "preventDuplicateTracksDescription": "Сакријте нумере са дуплираним називима датотека.",
+  "hideLocalMusicTitle": "Сакриј локалну музику",
+  "subsonicUsername": "Корисничко име",
+  "subsonicPassword": "Лозинка",
+  "subsonicConnect": "Повежите се",
+  "subsonicRemove": "Уклони сервер",
+  "subsonicSignIn": "Пријава је обавезна",
+  "subsonicLoadingLibrary": "Учитавање ваше библиотеке…",
+  "subsonicContinueBackground": "Наставите у позадини",
+  "subsonicClose": "Затвори",
+  "subsonicIndexing": "Индексирање музике сервера…",
+  "subsonicUnavailable": "Недоступно",
+  "subsonicCredentialsError": "Проверите своје корисничко име, лозинку и дозволе сервера.",
+  "subsonicStorageError": "Није могуће сачувати акредитиве. Проверите да ли је безбедно складиште доступно и покушајте поново.",
+  "subsonicTimeout": "Сервер је истекао. Покушајте поново.",
+  "subsonicServerError": "Није могуће прочитати библиотеку сервера. Претходни каталог се задржава. Освежите библиотеку да бисте покушали поново.",
+  "libraryRetry": "Поново покушати",
+  "subsonicOn": "У",
+  "subsonicOff": "Искључен",
+  "sleepTimerMinutes": "{minutes} минута",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "ОЛЕД црна",
+  "songsLoaded": "Учитане песме: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Уметничко дело је кеширано: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "hideLocalMusicDescription": "Док се приказује само серверска музика у библиотеци Subsonic је укључен. Локалне датотеке остају на вашем уређају.",
+  "subsonicTitle": "Subsonic Сервер",
+  "subsonicDescription": "Стримујте музику са Navidrome, gonic, и компатибилне сервере.",
+  "subsonicConfigure": "Конфигуришите Subsonic",
+  "subsonicUrl": "УРЛ сервера",
+  "subsonicInvalidUrl": "Унесите УРЛ ХТТП или ХТТПС сервера без упита, фрагмента или уграђене пријаве.",
+  "subsonicUnsupported": "Овај сервер не подржава потребну Subsonic АПИ или токен аутентикација.",
+  "subsonicConnectionError": "Повезивање није могуће. Проверите УРЛ, мрежу и ХТТПС сертификат. На вебу, сервер мора да дозволи ЦОРС и ХТТПС апликација не може да се повеже на ХТТП."
 }

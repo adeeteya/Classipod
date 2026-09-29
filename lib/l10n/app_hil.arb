@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Sahi sang musika",
   "editSongLyricsLabel": "Lyrics .",
   "saveChangesButton": "Pagluwas sa mga Pagbag-o .",
-  "veryLow": "Manubo gid"
+  "veryLow": "Manubo gid",
+  "reindexLibrarySettingTitle": "I-index liwat",
+  "reindexLibrarySettingDescription": "Basaha liwat ang metadata kag artwork para sa tanan nga mga file sang musika.",
+  "refreshLibrarySettingTitle": "I-refresh ang Librarya",
+  "refreshLibrarySettingDescription": "Tan-awa kon may gindugang ukon ginpanas nga musika. Hupti ang nagaluntad nga metadata kag artwork.",
+  "librarySettingsScreenTitle": "Mga Setting sang Librarya",
+  "librarySettingsDescription": "Pagdumala sang pag-indeks sang musika kag mga wala ginlakip nga mga folder.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Katapusan sang Karon nga Kanta",
+  "sleepTimerRemainingLabel": "Nabilin",
+  "findingSongs": "Nagapangita sang mga kanta...",
+  "songsLoaded": "Mga kanta nga ginkarga: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork nga gintago: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Indi ma-load ang librarya sang musika. Palihog tilawi liwat.",
+  "missingTracksTitle": "Nadula nga mga Track",
+  "missingTracksDescription": "Repasuha ang mga file nga indi mabasa.",
+  "missingTracksEmpty": "Wala sing indi mabasa nga mga track.",
+  "missingTrackRead": "Indi mabasa ang metadata sini nga file. Tan-awa ang lokasyon sang file kag mga pahanugot sa pag-access, dayon i-reindex ang librarya agud tilawan liwat.",
+  "missingTrackArtwork": "Indi mabasa ang artwork sini nga file. Ang audio mahimo gihapon nga magdula. I-reindex ang librarya para tilawan liwat.",
+  "playbackBuffering": "Pag-buffer...",
+  "preventDuplicateTracksTitle": "Likayi ang mga Duplicate nga Track",
+  "preventDuplicateTracksDescription": "Itago ang mga track nga may doble nga mga ngalan sang file.",
+  "hideLocalMusicTitle": "Itago ang Lokal nga Musika",
+  "hideLocalMusicDescription": "Ipakita lamang ang musika sang server sa imo librarya samtang naka-on ang Subsonic. Ang mga lokal nga file nagapabilin sa imo device.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Mag-stream sang musika gikan sa Navidrome, gonic, kag mga compatible server.",
+  "subsonicConfigure": "I-configure ang Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Magkonektar",
+  "subsonicRemove": "Kuhaa ang Server",
+  "subsonicSignIn": "Kinahanglan ang pag-sign in",
+  "subsonicLoadingLibrary": "Gina-load ang imo librarya...",
+  "subsonicContinueBackground": "Padayon sa likod",
+  "subsonicClose": "Magsira",
+  "subsonicIndexing": "Pag-index sang musika sa server...",
+  "subsonicUnavailable": "Indi matigayon",
+  "subsonicCredentialsError": "Tan-awa ang imo username, password, kag mga pahanugot sa server.",
+  "subsonicStorageError": "Indi ma-save ang mga kredensyal. Tan-awa kon may yara sang luwas nga bodega kag tilawi liwat.",
+  "subsonicTimeout": "Ang server nag-time out. Palihog tilawi liwat.",
+  "subsonicServerError": "Indi mabasa ang librarya sang server. Ang naunang katalogo gipabilin. I-refresh ang Library agud tilawan liwat.",
+  "libraryRetry": "Tinguhai liwat",
+  "subsonicOn": "Sa",
+  "subsonicOff": "Patya",
+  "sleepTimerMinutes": "{minutes} ka minuto",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "URL sang server",
+  "subsonicInvalidUrl": "Magsulod sang HTTP ukon HTTPS server URL nga wala sing pamangkot, fragment, ukon embedded login.",
+  "subsonicUnsupported": "Ini nga server wala nagasuporta sang kinahanglanon nga Subsonic API ukon token authentication.",
+  "subsonicConnectionError": "Indi makakonektar. Tan-awa ang URL, network, kag sertipiko sang HTTPS. Sa Web, ang server dapat magtugot sang CORS kag ang HTTPS app indi makakonektar sa HTTP."
 }

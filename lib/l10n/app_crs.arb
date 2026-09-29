@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Zanr",
   "editSongLyricsLabel": "Bann parol",
   "saveChangesButton": "Sanzman save",
-  "veryLow": "Tre ba"
+  "veryLow": "Tre ba",
+  "reindexLibrarySettingTitle": "re-indeks",
+  "reindexLibrarySettingDescription": "lir metadata ek travay lar pou tou bann dosye lanmizik ankor.",
+  "refreshLibrarySettingTitle": "Rafresi Bibliotek",
+  "refreshLibrarySettingDescription": "Tyek pour lanmizik azoute oubyen efase. gard bann metadata ek travay lar ki egziste.",
+  "librarySettingsScreenTitle": "Laranzman Bibliotek",
+  "librarySettingsDescription": "zer indexasyon lanmizik ek bann dosye ekskli.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "lafen sanson aktyel",
+  "sleepTimerRemainingLabel": "Reste",
+  "findingSongs": "pe rod bann sanson...",
+  "songsLoaded": "bann sanson in ganny sarze: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Travay lar dan cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "pa kapab load bibliotek lanmizik. silvouple esey ankor.",
+  "missingTracksTitle": "bann tras ki manke",
+  "missingTracksDescription": "revwar bann dosye ki pa'n kapab ganny lir.",
+  "missingTracksEmpty": "napa bann morso ki pa kapab ganny lir.",
+  "missingTrackRead": "pa’n kapab lir metadata sa dosye. Tyek lokasyon dosye e permisyon akse, apre re-indeks bibliotek pou esey ankor.",
+  "missingTrackArtwork": "pa'n kapab lir travay lar sa dosye. Odyo i kapab ankor zwe. re-indeks bibliotek pou esey ankor.",
+  "playbackBuffering": "Tampon...",
+  "preventDuplicateTracksTitle": "anpes bann sanson doub",
+  "preventDuplicateTracksDescription": "kasyet bann sanson avek bann non dosye doub.",
+  "hideLocalMusicTitle": "kasyet lanmizik lokal",
+  "hideLocalMusicDescription": "montre zis lanmizik server dan ou bibliotek anmenmtan ki Subsonic i alimen. bann dosye lokal i reste lo ou laparey.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "stream lanmizik sorti kot Navidrome, gonic, e bann server konpatib.",
+  "subsonicConfigure": "konfigir Subsonic",
+  "subsonicUsername": "non itilizater",
+  "subsonicPassword": "Modpas",
+  "subsonicConnect": "konekte",
+  "subsonicRemove": "retir server",
+  "subsonicSignIn": "sinyen i neseser",
+  "subsonicLoadingLibrary": "pe load ou bibliotek...",
+  "subsonicContinueBackground": "kontinyen dan fon",
+  "subsonicClose": "fermen",
+  "subsonicIndexing": "Pe index lanmizik server...",
+  "subsonicUnavailable": "Pa disponib",
+  "subsonicCredentialsError": "Tyek ou non itilizater, mo pas, ek permisyon server.",
+  "subsonicStorageError": "pa'n kapab prezerv bann kredansyel. tyeke ki stokaz sekirize i disponib e esey ankor.",
+  "subsonicTimeout": "server in fini. silvouple esey ankor.",
+  "subsonicServerError": "pa'n kapab lir bibliotek server. katalog presedan i ganny retenir. Rafresi Bibliotek pou esey ankor.",
+  "libraryRetry": "Re-esey",
+  "subsonicOn": "Lo",
+  "subsonicOff": "Of",
+  "sleepTimerMinutes": "{minutes} minit",
+  "oledBlackDeviceColor": "OLED Nwanr",
+  "subsonicUrl": "URL server",
+  "subsonicInvalidUrl": "Fer antre en URL server HTTP ou HTTPS san en kestyon, fragman, ou login entegre.",
+  "subsonicUnsupported": "sa server pa siport Subsonic API oubyen lotantifikasyon token neseser.",
+  "subsonicConnectionError": "pa kapab konekte. Tyek URL, rezo, ek sertifika HTTPS. lo web, server i bezwen les CORS e en HTTPS app pa kapab konekte avek HTTP."
 }

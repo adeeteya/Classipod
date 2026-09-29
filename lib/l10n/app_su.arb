@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gabrre",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Simpen parobihan",
-  "veryLow": "Low pisan"
+  "veryLow": "Low pisan",
+  "reindexLibrarySettingTitle": "Indéks ulang",
+  "reindexLibrarySettingDescription": "Baca metadata sareng karya seni pikeun sadaya file musik deui.",
+  "refreshLibrarySettingTitle": "Refresh Perpustakaan",
+  "refreshLibrarySettingDescription": "Pariksa musik nu ditambahkeun atawa dihapus. Simpen metadata sareng karya seni anu tos aya.",
+  "librarySettingsScreenTitle": "Setélan Perpustakaan",
+  "librarySettingsDescription": "Atur indéks musik sareng polder anu teu kalebet.",
+  "sleepTimerTitle": "Timer Saré",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Tungtung Lagu Ayeuna",
+  "sleepTimerRemainingLabel": "Sésana",
+  "findingSongs": "Milarian lagu…",
+  "songsLoaded": "Lagu dimuat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Karya seni sindangan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Teu tiasa ngamuat perpustakaan musik. Mangga cobian deui.",
+  "missingTracksTitle": "Lagu leungit",
+  "missingTracksDescription": "Pariksa file nu teu bisa dibaca.",
+  "missingTracksEmpty": "Taya lagu nu teu bisa dibaca.",
+  "missingTrackRead": "Teu bisa maca metadata file ieu. Pariksa lokasi file sareng idin aksés, teras indéks deui perpustakaan pikeun dicobian deui.",
+  "missingTrackArtwork": "Teu bisa maca karya seni file ieu. Audio masih tiasa diputer. Reindex perpustakaan pikeun nyobaan deui.",
+  "playbackBuffering": "Nyanggakeun…",
+  "preventDuplicateTracksTitle": "Nyegah Duplikat Lagu",
+  "preventDuplicateTracksDescription": "Sumputkeun lagu sareng nami file duplikat.",
+  "hideLocalMusicTitle": "Sumputkeun Musik Lokal",
+  "hideLocalMusicDescription": "Tampilkeun ukur musik pangladén di perpustakaan anjeun nalika Subsonic hurung. Payil lokal tetep dina alat anjeun.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Aliran musik tina Navidrome, gonic, sareng server anu cocog.",
+  "subsonicConfigure": "Ngonpigurasikeun Subsonic",
+  "subsonicUsername": "Ngaran pamaké",
+  "subsonicPassword": "Sandi",
+  "subsonicConnect": "Nyambung",
+  "subsonicRemove": "Leupaskeun Server",
+  "subsonicSignIn": "Asup diperlukeun",
+  "subsonicLoadingLibrary": "Ngamuat perpustakaan anjeun…",
+  "subsonicContinueBackground": "Terus di tukang",
+  "subsonicClose": "Tutup",
+  "subsonicIndexing": "Pangindeks musik pangladén…",
+  "subsonicUnavailable": "Teu sadia",
+  "subsonicCredentialsError": "Pariksa nami pangguna, kecap akses, sareng idin pangladén anjeun.",
+  "subsonicStorageError": "Teu bisa nyimpen kredensial. Pariksa yen gudang aman sadia tur cobian deui.",
+  "subsonicTimeout": "server timed kaluar. Mangga cobian deui.",
+  "subsonicServerError": "Teu bisa maca perpustakaan server. Katalog saméméhna disimpen. Refresh Perpustakaan pikeun nyobaan deui.",
+  "libraryRetry": "Percobaan langkung lami",
+  "subsonicOn": "Dina",
+  "subsonicOff": "Pareum",
+  "sleepTimerMinutes": "{minutes} Menit",
+  "oledBlackDeviceColor": "OLED Hideung",
+  "subsonicUrl": "URL server",
+  "subsonicInvalidUrl": "Asupkeun URL pangladén HTTP atawa HTTPS tanpa query, fragmén, atawa login embedded.",
+  "subsonicUnsupported": "server ieu teu ngarojong diperlukeun Subsonic API atawa auténtikasi token.",
+  "subsonicConnectionError": "Teu bisa nyambung. Pariksa URL, jaringan, sareng sertipikat HTTPS. Dina Wéb, server kedah ngijinkeun CORS sareng aplikasi HTTPS teu tiasa nyambung ka HTTP."
 }

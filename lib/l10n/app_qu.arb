@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ima kaynin",
   "editSongLyricsLabel": "Letras .",
   "saveChangesButton": "Waqaychay tikraykunata .",
-  "veryLow": "Ancha pisi ."
+  "veryLow": "Ancha pisi .",
+  "reindexLibrarySettingTitle": "Re-index nisqa",
+  "reindexLibrarySettingDescription": "Llapa takiy willañiqikunapaq metadatukunata, dibujokunatapas musuqmanta ñawiriy.",
+  "refreshLibrarySettingTitle": "Biblioteca musuqyachiy",
+  "refreshLibrarySettingDescription": "Qhaway yapasqa utaq qullusqa takikuna. Kaq metadatos nisqakunata, arte nisqakunatapas waqaychay.",
+  "librarySettingsScreenTitle": "Biblioteca nisqapi churaykuna",
+  "librarySettingsDescription": "Musiku indexacionta chaymanta mana churasqa qillqana mayt'ukunata kamachiy.",
+  "sleepTimerTitle": "Puñuy Tiempo",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Kunan Takipa tukukuynin",
+  "sleepTimerRemainingLabel": "Puchuq",
+  "findingSongs": "Takikunata tariy...",
+  "songsLoaded": "Takikuna cargasqa: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Obra de arte caché: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Mana atispa takikuna waqaychanata kargayta. Ama hina kaspa, hukmanta kallpachakuy.",
+  "missingTracksTitle": "Pistas faltantes",
+  "missingTracksDescription": "Mana ñawiriy atikuq willañiqikunata qhaway.",
+  "missingTracksEmpty": "Mana mana ñawinchanapaq takikuna.",
+  "missingTrackRead": "Kay willañiqip metadatunta manam ñawiriyta atirqanchu. Willañiqip maypi kayninta chaymanta yaykuy atiykunata qhaway, chaymanta bibliotecata musuqmanta indexay wakmanta kallpachakunaykipaq.",
+  "missingTrackArtwork": "Kay willañiqip llamk’aynintaqa manam ñawiriyta atirqanchu. Audioqa uyarikunmanraqmi. Bibliotecata musuqmanta indexay, musuqmanta kallpachakunaykipaq.",
+  "playbackBuffering": "Buffering nisqa...",
+  "preventDuplicateTracksTitle": "Iskay kuti Pistakunata hark’ay",
+  "preventDuplicateTracksDescription": "Iskay kuti willañiqi sutikunawan takikunata pakay.",
+  "hideLocalMusicTitle": "Local Musicata pakay",
+  "hideLocalMusicDescription": "Subsonic llamk'achkaptin bibliotecaykipi servidor takikunallata rikuchiy. Llaqta archivokuna dispositivoykipi qhipakunku.",
+  "subsonicTitle": "Subsonic Servidor nisqa",
+  "subsonicDescription": "Navidrome, gonic, chaymanta tupaq servidorkunamanta takikunata purichiy.",
+  "subsonicConfigure": "Subsonic nisqa ruway",
+  "subsonicUsername": "Ruraqpa sutin",
+  "subsonicPassword": "Yaykuna rimay",
+  "subsonicConnect": "T’inkinakuy",
+  "subsonicRemove": "Servidor nisqamanta hurquy",
+  "subsonicSignIn": "Yaykunan necesitakun",
+  "subsonicLoadingLibrary": "Bibliotecaykita cargaspa...",
+  "subsonicContinueBackground": "Qhipaman hinalla ruway",
+  "subsonicClose": "Wichqay",
+  "subsonicIndexing": "Servidor takikunata indexay...",
+  "subsonicUnavailable": "Mana tarikuq",
+  "subsonicCredentialsError": "Ruwaqpa sutin, contraseñayki chaymanta sirwiqpa atiyninkunata qhaway.",
+  "subsonicStorageError": "Mana atirqanchu credencialkunata waqaychayta. Allin waqaychasqa kasqanmanta qhaway chaymanta wakmanta ruway.",
+  "subsonicTimeout": "Servidorpa pachan tukusqa. Ama hina kaspa, hukmanta kallpachakuy.",
+  "subsonicServerError": "Mana servidor bibliotecata ñawiriyta atirqanchu. Ñawpaq catálogo nisqa waqaychasqa kachkan. Musuqyachiy Biblioteca kaqmanta kallpachakunaykipaq.",
+  "libraryRetry": "Retry .",
+  "subsonicOn": "on .",
+  "subsonicOff": "Wañuchisqa",
+  "sleepTimerMinutes": "{minutes} Minutos",
+  "oledBlackDeviceColor": "OLED Yana",
+  "subsonicUrl": "Servidorpa URL nisqa",
+  "subsonicInvalidUrl": "HTTP icha HTTPS sirwiq URL nisqata qillqay mana tapusqa, t'aqa utaq churasqa yaykuyniyuq.",
+  "subsonicUnsupported": "Kay sirwiq mana yanapanchu munasqa Subsonic API utaq token chiqaqchayta.",
+  "subsonicConnectionError": "Mana tinkiyta atinchu. URL, llika, HTTPS certificadota qhaway. Web kaqpi, sirwiq CORS saqinan tiyan chaymanta huk HTTPS ruwana mana HTTP kaqman tinkiyta atinchu."
 }

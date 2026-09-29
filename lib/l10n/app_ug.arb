@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ژانىر",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "ئۆزگەرتىشلەرنى ساقلاڭ",
-  "veryLow": "بەك تۆۋەن"
+  "veryLow": "بەك تۆۋەن",
+  "reindexLibrarySettingTitle": "قايتا كۆرسەتكۈچ",
+  "reindexLibrarySettingDescription": "بارلىق مۇزىكا ھۆججەتلىرىنىڭ مېتا سانلىق مەلۇماتلىرى ۋە سەنئەت ئەسەرلىرىنى قايتا ئوقۇڭ.",
+  "refreshLibrarySettingTitle": "كۈتۈپخانىنى يېڭىلاش",
+  "refreshLibrarySettingDescription": "قوشۇلغان ياكى ئۆچۈرۈلگەن مۇزىكىنى تەكشۈرۈڭ. مەۋجۇت مېتا سانلىق مەلۇمات ۋە سەنئەت ئەسەرلىرىنى ساقلاڭ.",
+  "librarySettingsScreenTitle": "كۈتۈپخانا تەڭشىكى",
+  "librarySettingsDescription": "مۇزىكا كۆرسەتكۈچى ۋە چىقىرىۋېتىلگەن ھۆججەت قىسقۇچلارنى باشقۇرۇش.",
+  "sleepTimerTitle": "ئۇخلاش ۋاقتى",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "ھازىرقى ناخشىنىڭ ئاخىرى",
+  "sleepTimerRemainingLabel": "قالدۇق",
+  "findingSongs": "ناخشىلارنى تېپىش…",
+  "songsLoaded": "يۈكلەنگەن ناخشىلار: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "سەنئەت ئەسەرلىرى ساقلانغان: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "مۇزىكا ئامبىرىنى يۈكلىيەلمىدى. قايتا سىناڭ.",
+  "missingTracksTitle": "يوقاپ كەتكەن ئىزلار",
+  "missingTracksDescription": "ئوقۇغىلى بولمايدىغان ھۆججەتلەرنى تەكشۈرۈڭ.",
+  "missingTracksEmpty": "ئوقۇغىلى بولمايدىغان ئىزلار يوق.",
+  "missingTrackRead": "بۇ ھۆججەتنىڭ مېتا سانلىق مەلۇماتلىرىنى ئوقۇيالمىدى. ھۆججەت ئورنى ۋە زىيارەت ئىجازەتلىرىنى تەكشۈرۈڭ ، ئاندىن قايتا كۈتۈپخانىنى قايتا كۆرۈڭ.",
+  "missingTrackArtwork": "بۇ ھۆججەتنىڭ ئەسەرلىرىنى ئوقۇيالمىدى. ئاۋاز يەنىلا قويۇلۇشى مۇمكىن. كۈتۈپخانىنى قايتا سىناپ بېقىڭ.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "تەكرار يوللارنىڭ ئالدىنى ئېلىش",
+  "preventDuplicateTracksDescription": "كۆپەيتىلگەن ھۆججەت ئىسمى بىلەن ئىزلارنى يوشۇرۇش.",
+  "hideLocalMusicTitle": "يەرلىك مۇزىكىنى يوشۇرۇش",
+  "hideLocalMusicDescription": "Subsonic ئېچىلغاندا كۈتۈپخانىڭىزدا پەقەت مۇلازىمېتىر مۇزىكىسىنىلا كۆرسىتىڭ. يەرلىك ھۆججەتلەر ئۈسكۈنىڭىزدە تۇرىدۇ.",
+  "subsonicTitle": "Subsonic مۇلازىمىتىرى",
+  "subsonicDescription": "Navidrome ، gonic ۋە ماس كېلىدىغان مۇلازىمېتىرلاردىن ئېقىم مۇزىكىسى.",
+  "subsonicConfigure": "Subsonic نى سەپلەڭ",
+  "subsonicUsername": "ئىشلەتكۈچى ئىسمى",
+  "subsonicPassword": "پارول",
+  "subsonicConnect": "ئۇلاڭ",
+  "subsonicRemove": "مۇلازىمېتىرنى ئۆچۈرۈڭ",
+  "subsonicSignIn": "تىزىملىتىڭ",
+  "subsonicLoadingLibrary": "كۈتۈپخانىڭىزنى يۈكلەۋاتىدۇ…",
+  "subsonicContinueBackground": "ئارقا سۇپىدا داۋاملاشتۇرۇڭ",
+  "subsonicClose": "تاقاش",
+  "subsonicIndexing": "مۇلازىمېتىر مۇزىكىسىنى كۆرسەتكۈچ…",
+  "subsonicUnavailable": "Unavailable",
+  "subsonicCredentialsError": "ئىشلەتكۈچى ئىسمىڭىز ، پارولىڭىز ۋە مۇلازىمېتىر ئىجازەتلىرىڭىزنى تەكشۈرۈڭ.",
+  "subsonicStorageError": "كىنىشكىنى ساقلىيالمىدى. بىخەتەر ساقلاش بوشلۇقىنىڭ بار-يوقلۇقىنى تەكشۈرۈپ قايتا سىناڭ.",
+  "subsonicTimeout": "مۇلازىمېتىر ۋاقتى ئۆتۈپ كەتتى. قايتا سىناڭ.",
+  "subsonicServerError": "مۇلازىمېتىر ئامبىرىنى ئوقۇيالمىدى. ئالدىنقى مۇندەرىجە ساقلاپ قېلىندى. كۈتۈپخانىنى قايتا سىناڭ.",
+  "libraryRetry": "قايتا سىناڭ",
+  "subsonicOn": "On",
+  "subsonicOff": "Off",
+  "sleepTimerMinutes": "{minutes} مىنۇت",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "مۇلازىمېتىر URL",
+  "subsonicInvalidUrl": "سوئال ، بۆلەك ياكى قىستۇرۇلمىغان HTTP ياكى HTTPS مۇلازىمېتىر URL نى كىرگۈزۈڭ.",
+  "subsonicUnsupported": "بۇ مۇلازىمېتىر تەلەپ قىلىنغان Subsonic API ياكى بەلگە دەلىللەشنى قوللىمايدۇ.",
+  "subsonicConnectionError": "ئۇلىنالمايدۇ. URL ، تور ۋە HTTPS گۇۋاھنامىسىنى تەكشۈرۈڭ. توردا ، مۇلازىمېتىر چوقۇم CORS غا يول قويۇشى كېرەك ، HTTPS دېتالى HTTP غا ئۇلىنالمايدۇ."
 }

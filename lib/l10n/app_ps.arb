@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ژانر",
   "editSongLyricsLabel": "غزل",
   "saveChangesButton": "بدلونونه خوندي کړئ",
-  "veryLow": "ډیر ټیټ"
+  "veryLow": "ډیر ټیټ",
+  "reindexLibrarySettingTitle": "بیا شاخص",
+  "reindexLibrarySettingDescription": "د ټولو میوزیک فایلونو لپاره میټاډاټا او هنر کار بیا ولولئ.",
+  "refreshLibrarySettingTitle": "کتابتون تازه کړئ",
+  "refreshLibrarySettingDescription": "د اضافه شوي یا حذف شوي میوزیک لپاره چیک کړئ. موجوده میټاډاټا او هنري کار وساتئ.",
+  "librarySettingsScreenTitle": "د کتابتون ترتیبات",
+  "librarySettingsDescription": "د میوزیک لیست کول او خارج شوي فولډرې اداره کړئ.",
+  "sleepTimerTitle": "د خوب ټیمر",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "د اوسنۍ سندرې پای",
+  "sleepTimerRemainingLabel": "پاتې",
+  "findingSongs": "سندرې موندل…",
+  "songsLoaded": "ډک شوي سندرې: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "اثار ساتل شوي: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "د میوزیک کتابتون د پورته کولو توان نلري. مهرباني وکړئ بیا هڅه وکړئ.",
+  "missingTracksTitle": "ورک شوي ټریکونه",
+  "missingTracksDescription": "هغه فایلونه بیاکتنه وکړئ چې نشي لوستل کیدی.",
+  "missingTracksEmpty": "د نه لوستلو وړ ټریکونه.",
+  "missingTrackRead": "د دې فایل میټاډاټا نشي لوستلی. د فایل موقعیت او د لاسرسي اجازه چیک کړئ ، بیا د بیا هڅه کولو لپاره کتابتون بیا تنظیم کړئ.",
+  "missingTrackArtwork": "د دې دوتنې اثار لوستل نشو کولی. آډیو کولی شي لاهم پلی شي. د بیا هڅه کولو لپاره کتابتون بیا تنظیم کړئ.",
+  "playbackBuffering": "بفرینګ…",
+  "preventDuplicateTracksTitle": "د دوه اړخیزو لارو مخه ونیسئ",
+  "preventDuplicateTracksDescription": "د نقل شوي فایل نومونو سره ټریکونه پټ کړئ.",
+  "hideLocalMusicTitle": "ځایی میوزیک پټ کړئ",
+  "hideLocalMusicDescription": "په خپل کتابتون کې یوازې د سرور میوزیک وښایاست پداسې حال کې چې Subsonic فعال وي. ځایی فایلونه ستاسو په وسیله کې پاتې کیږي.",
+  "subsonicTitle": "Subsonic سرور",
+  "subsonicDescription": "د Navidrome، gonic، او مناسب سرورونو څخه میوزیک جریان کړئ.",
+  "subsonicConfigure": "Subsonic ترتیب کړئ",
+  "subsonicUsername": "کارن نوم",
+  "subsonicPassword": "پټنوم",
+  "subsonicConnect": "نښلول",
+  "subsonicRemove": "سرور لرې کړئ",
+  "subsonicSignIn": "ننوتل اړین دي",
+  "subsonicLoadingLibrary": "ستاسو کتابتون پورته کول…",
+  "subsonicContinueBackground": "په پس منظر کې دوام ورکړئ",
+  "subsonicClose": "تړل",
+  "subsonicIndexing": "د سرور میوزیک لیست کول…",
+  "subsonicUnavailable": "نه شته",
+  "subsonicCredentialsError": "خپل کارن-نوم، پټنوم، او د سرور اجازه چیک کړئ.",
+  "subsonicStorageError": "اسناد خوندي نشو کړای. وګورئ چې خوندي ذخیره شتون لري او بیا هڅه وکړئ.",
+  "subsonicTimeout": "د سرور وخت تېر شو. مهرباني وکړئ بیا هڅه وکړئ.",
+  "subsonicServerError": "د سرور کتابتون لوستل نشو کولی. پخوانۍ کتلاګ ساتل کیږي. د بیا هڅه کولو لپاره کتابتون تازه کړئ.",
+  "libraryRetry": "بیا هڅه",
+  "subsonicOn": "پر",
+  "subsonicOff": "بندول",
+  "sleepTimerMinutes": "{minutes} دقیقې",
+  "oledBlackDeviceColor": "OLED تور",
+  "subsonicUrl": "د سرور URL",
+  "subsonicInvalidUrl": "د HTTP یا HTTPS سرور یو آر ایل داخل کړئ پرته له پوښتنې، ټوټې، یا سرایت شوي ننوتل.",
+  "subsonicUnsupported": "دا سرور د اړتیا وړ Subsonic API یا د نښه تصدیق کولو ملاتړ نه کوي.",
+  "subsonicConnectionError": "نښلولی نشي URL، شبکه، او HTTPS سند وګورئ. په ویب کې، سرور باید CORS ته اجازه ورکړي او د HTTPS ایپ نشي کولی HTTP سره وصل شي."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Žanr",
   "editSongLyricsLabel": "Besedila",
   "saveChangesButton": "Shrani spremembe",
-  "veryLow": "Zelo nizko"
+  "veryLow": "Zelo nizko",
+  "reindexLibrarySettingTitle": "Ponovno indeksiraj",
+  "reindexLibrarySettingDescription": "Ponovno preberite metapodatke in slike za vse glasbene datoteke.",
+  "refreshLibrarySettingTitle": "Osveži knjižnico",
+  "refreshLibrarySettingDescription": "Preverite dodano ali izbrisano glasbo. Ohranite obstoječe metapodatke in umetnine.",
+  "librarySettingsScreenTitle": "Nastavitve knjižnice",
+  "librarySettingsDescription": "Upravljajte indeksiranje glasbe in izključene mape.",
+  "sleepTimerTitle": "Časovnik za izklop",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Konec trenutne pesmi",
+  "sleepTimerRemainingLabel": "Preostalo",
+  "findingSongs": "Iskanje pesmi ...",
+  "songsLoaded": "Naložene pesmi: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Umetniško delo predpomnjeno: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ni mogoče naložiti glasbene knjižnice. Poskusite znova.",
+  "missingTracksTitle": "Manjkajoče skladbe",
+  "missingTracksDescription": "Preglejte datoteke, ki jih ni bilo mogoče prebrati.",
+  "missingTracksEmpty": "Ni neberljivih skladb.",
+  "missingTrackRead": "Metapodatkov te datoteke ni bilo mogoče prebrati. Preverite lokacijo datoteke in dovoljenja za dostop, nato ponovno indeksirajte knjižnico in poskusite znova.",
+  "missingTrackArtwork": "Ilustracije te datoteke ni bilo mogoče prebrati. Zvok se lahko še vedno predvaja. Ponovno indeksirajte knjižnico, da poskusite znova.",
+  "playbackBuffering": "Medpomnjenje ...",
+  "preventDuplicateTracksTitle": "Preprečite podvojene skladbe",
+  "preventDuplicateTracksDescription": "Skrij skladbe s podvojenimi imeni datotek.",
+  "hideLocalMusicTitle": "Skrij lokalno glasbo",
+  "hideLocalMusicDescription": "Pokaži samo strežniško glasbo v svoji knjižnici, ko je Subsonic vklopljen. Lokalne datoteke ostanejo v vaši napravi.",
+  "subsonicTitle": "Strežnik Subsonic",
+  "subsonicDescription": "Pretakajte glasbo iz Navidrome, gonic in združljivih strežnikov.",
+  "subsonicConfigure": "Konfigurirajte Subsonic",
+  "subsonicUsername": "Uporabniško ime",
+  "subsonicPassword": "Geslo",
+  "subsonicConnect": "Povežite se",
+  "subsonicRemove": "Odstrani strežnik",
+  "subsonicSignIn": "Prijava je obvezna",
+  "subsonicLoadingLibrary": "Nalaganje vaše knjižnice …",
+  "subsonicContinueBackground": "Nadaljuj v ozadju",
+  "subsonicClose": "Zapri",
+  "subsonicIndexing": "Indeksiranje glasbe strežnika ...",
+  "subsonicUnavailable": "Ni na voljo",
+  "subsonicCredentialsError": "Preverite uporabniško ime, geslo in dovoljenja strežnika.",
+  "subsonicStorageError": "Poverilnic ni bilo mogoče shraniti. Preverite, ali je varna shramba na voljo, in poskusite znova.",
+  "subsonicTimeout": "Časovna omejitev strežnika je potekla. prosim poskusite znova",
+  "subsonicServerError": "Ni bilo mogoče prebrati strežniške knjižnice. Prejšnji katalog je ohranjen. Osvežite knjižnico za ponovni poskus.",
+  "libraryRetry": "Poskusiti",
+  "subsonicOn": "Naprej",
+  "subsonicOff": "OFF",
+  "sleepTimerMinutes": "{minutes} minut",
+  "oledBlackDeviceColor": "OLED črna",
+  "subsonicUrl": "URL strežnika",
+  "subsonicInvalidUrl": "Vnesite URL strežnika HTTP ali HTTPS brez poizvedbe, fragmenta ali vdelane prijave.",
+  "subsonicUnsupported": "Ta strežnik ne podpira zahtevanega API-ja Subsonic ali preverjanja pristnosti žetona.",
+  "subsonicConnectionError": "Ni mogoče vzpostaviti povezave. Preverite URL, omrežje in potrdilo HTTPS. V spletu mora strežnik dovoliti CORS in aplikacija HTTPS se ne more povezati s HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Zar",
   "editSongLyricsLabel": "Bann parol",
   "saveChangesButton": "Anrezistre bann sanzman",
-  "veryLow": "Bien Ba"
+  "veryLow": "Bien Ba",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Lir metadone ek travay lar pou tou bann fisie lamizik ankor enn fwa.",
+  "refreshLibrarySettingTitle": "Rafresi Bibliotek",
+  "refreshLibrarySettingDescription": "Verifie si ena lamizik ki finn azoute ouswa efase. Gard bann metadone ek bann travay lar ki deza existe.",
+  "librarySettingsScreenTitle": "Paramet Bibliotek",
+  "librarySettingsDescription": "Zer indexasion lamizik ek bann dosye ki finn exklir.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Lafin sante aktyel",
+  "sleepTimerRemainingLabel": "Reste",
+  "findingSongs": "Pe rod bann sante...",
+  "songsLoaded": "Songs loaded: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Travay lar ki finn cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Pa pe kapav charge bibliotek lamizik. Silvouple re-esey.",
+  "missingTracksTitle": "Bann tras ki manke",
+  "missingTracksDescription": "Get bann fisie ki pa finn kapav lir.",
+  "missingTracksEmpty": "Pena okenn tras ki pa kapav lir.",
+  "missingTrackRead": "Pa finn kapav lir metadone sa fisie-la. Verifie lokalizasion fisie-la ek bann permision pou akse, apre re-index bibliotek-la pou re-eseye.",
+  "missingTrackArtwork": "Pa finn kapav lir travay lar sa fisie-la. Odio kapav ankor pe zwe. Re-index bibliotek-la pou re-eseye.",
+  "playbackBuffering": "Tampon...",
+  "preventDuplicateTracksTitle": "Anpes bann tras double",
+  "preventDuplicateTracksDescription": "Kasyet bann morso avek bann nom fisie doub.",
+  "hideLocalMusicTitle": "Kasyet lamizik lokal",
+  "hideLocalMusicDescription": "Montre zis lamizik server dan ou bibliotek letan Subsonic alime. Bann fisie lokal res lor ou laparey.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Difiz lamizik depi Navidrome, gonic, ek bann server konpatib.",
+  "subsonicConfigure": "Konfigir Subsonic",
+  "subsonicUsername": "Nom itilizater",
+  "subsonicPassword": "Modpas",
+  "subsonicConnect": "Konekte",
+  "subsonicRemove": "Retir server",
+  "subsonicSignIn": "Konekte obligatwar",
+  "subsonicLoadingLibrary": "Pe charz ou bibliotek...",
+  "subsonicContinueBackground": "Kontign dan aryer-plan",
+  "subsonicClose": "Ferme",
+  "subsonicIndexing": "Pe index lamizik lor server...",
+  "subsonicUnavailable": "Pa disponib",
+  "subsonicCredentialsError": "Verifie ou nom itilizater, modpas, ek permision server.",
+  "subsonicStorageError": "Pa finn kapav anrezistre bann linformasion. Verifie ki stokaz sekirize disponib e sey ankor.",
+  "subsonicTimeout": "Server-la finn fini. Silvouple sey ankor.",
+  "subsonicServerError": "Pa finn kapav lir bibliotek server. Katalog avan finn garde. Rafresi Bibliotek pou re-esey.",
+  "libraryRetry": "Re-esey",
+  "subsonicOn": "Lor",
+  "subsonicOff": "Teign",
+  "sleepTimerMinutes": "{minutes} minit",
+  "oledBlackDeviceColor": "Nwar OLED",
+  "subsonicUrl": "URL server",
+  "subsonicInvalidUrl": "Met enn URL server HTTP ou HTTPS san enn query, enn fragman, ou enn login inkorpore.",
+  "subsonicUnsupported": "Sa server-la pa siport Subsonic API ou otantifikasion token neseser.",
+  "subsonicConnectionError": "Pa pe kapav konekte. Verifie URL, rezo, ek sertifika HTTPS. Lor Web, server-la bizin permet CORS ek enn aplikasion HTTPS pa kapav konekte ar HTTP."
 }

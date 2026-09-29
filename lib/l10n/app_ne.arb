@@ -134,5 +134,78 @@
   "editSongGenreLabel": "विधा",
   "editSongLyricsLabel": "गीत",
   "saveChangesButton": "परिवर्तनहरू बचत गर्नुहोस्",
-  "veryLow": "धेरै कम"
+  "veryLow": "धेरै कम",
+  "reindexLibrarySettingTitle": "पुन: अनुक्रमणिका",
+  "reindexLibrarySettingDescription": "फेरि सबै संगीत फाइलहरूको लागि मेटाडेटा र कलाकृति पढ्नुहोस्।",
+  "refreshLibrarySettingTitle": "पुस्तकालय रिफ्रेस गर्नुहोस्",
+  "refreshLibrarySettingDescription": "थपिएको वा मेटाइएको संगीतको लागि जाँच गर्नुहोस्। अवस्थित मेटाडेटा र कलाकृति राख्नुहोस्।",
+  "librarySettingsScreenTitle": "पुस्तकालय सेटिङहरू",
+  "librarySettingsDescription": "संगीत अनुक्रमणिका र बहिष्कृत फोल्डरहरू प्रबन्ध गर्नुहोस्।",
+  "sleepTimerTitle": "निद्रा टाइमर",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "वर्तमान गीतको अन्त्य",
+  "sleepTimerRemainingLabel": "बाँकी",
+  "findingSongs": "गीतहरू खोज्दै...",
+  "songsLoaded": "गीतहरू लोड गरियो: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "कलाकृति क्यास: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "संगीत पुस्तकालय लोड गर्न असमर्थ। कृपया पुन: प्रयास गर्नुहोस्।",
+  "missingTracksTitle": "हराइरहेको ट्र्याकहरू",
+  "missingTracksDescription": "पढ्न नसकिने फाइलहरूको समीक्षा गर्नुहोस्।",
+  "missingTracksEmpty": "कुनै अपठनीय ट्र्याकहरू छैनन्।",
+  "missingTrackRead": "यो फाइलको मेटाडेटा पढ्न सकिएन। फाइल स्थान र पहुँच अनुमतिहरू जाँच गर्नुहोस्, त्यसपछि पुन: प्रयास गर्न पुस्तकालय पुन: अनुक्रमणिका।",
+  "missingTrackArtwork": "यो फाइलको कलाकृति पढ्न सकिएन। अडियो अझै प्ले हुन सक्छ। पुन: प्रयास गर्न लाइब्रेरीलाई पुन: अनुक्रमणिका गर्नुहोस्।",
+  "playbackBuffering": "बफरिङ…",
+  "preventDuplicateTracksTitle": "डुप्लिकेट ट्र्याकहरू रोक्नुहोस्",
+  "preventDuplicateTracksDescription": "डुप्लिकेट फाइल नामहरु संग ट्रयाकहरु लुकाउनुहोस्।",
+  "hideLocalMusicTitle": "स्थानीय संगीत लुकाउनुहोस्",
+  "hideLocalMusicDescription": "Subsonic सक्रिय हुँदा तपाईंको पुस्तकालयमा सर्भर संगीत मात्र देखाउनुहोस्। स्थानीय फाइलहरू तपाईंको उपकरणमा रहन्छन्।",
+  "subsonicTitle": "Subsonic सर्भर",
+  "subsonicDescription": "Navidrome, gonic, र उपयुक्त सर्भरहरूबाट संगीत स्ट्रिम गर्नुहोस्।",
+  "subsonicConfigure": "Subsonic कन्फिगर गर्नुहोस्",
+  "subsonicUsername": "प्रयोगकर्ता नाम",
+  "subsonicPassword": "पासवर्ड",
+  "subsonicConnect": "जडान गर्नुहोस्",
+  "subsonicRemove": "सर्भर हटाउनुहोस्",
+  "subsonicSignIn": "साइन इन आवश्यक छ",
+  "subsonicLoadingLibrary": "तपाईंको पुस्तकालय लोड गर्दै...",
+  "subsonicContinueBackground": "पृष्ठभूमिमा जारी राख्नुहोस्",
+  "subsonicClose": "बन्द गर्नुहोस्",
+  "subsonicIndexing": "अनुक्रमणिका सर्भर संगीत...",
+  "subsonicUnavailable": "अनुपलब्ध",
+  "subsonicCredentialsError": "आफ्नो प्रयोगकर्ता नाम, पासवर्ड, र सर्भर अनुमतिहरू जाँच गर्नुहोस्।",
+  "subsonicStorageError": "प्रमाणहरू बचत गर्न सकिएन। सुरक्षित भण्डारण उपलब्ध छ भनी जाँच्नुहोस् र फेरि प्रयास गर्नुहोस्।",
+  "subsonicTimeout": "सर्भरको समय सकियो। कृपया पुन: प्रयास गर्नुहोस्।",
+  "subsonicServerError": "सर्भर लाइब्रेरी पढ्न सकिएन। अघिल्लो सूची राखिएको छ। पुन: प्रयास गर्न लाइब्रेरी रिफ्रेस गर्नुहोस्।",
+  "libraryRetry": "ीक आचरण",
+  "subsonicOn": "माथी",
+  "subsonicOff": "बती निभाउनु",
+  "sleepTimerMinutes": "{minutes} मिनेट",
+  "oledBlackDeviceColor": "OLED कालो",
+  "subsonicUrl": "सर्भर URL",
+  "subsonicInvalidUrl": "क्वेरी, टुक्रा, वा इम्बेडेड लगइन बिना HTTP वा HTTPS सर्भर URL प्रविष्ट गर्नुहोस्।",
+  "subsonicUnsupported": "यो सर्भरले आवश्यक Subsonic API वा टोकन प्रमाणीकरण समर्थन गर्दैन।",
+  "subsonicConnectionError": "जडान गर्न सकिँदैन। URL, नेटवर्क, र HTTPS प्रमाणपत्र जाँच गर्नुहोस्। वेबमा, सर्भरले CORS लाई अनुमति दिनुपर्छ र HTTPS एप HTTP मा जडान हुन सक्दैन।"
 }

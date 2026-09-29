@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ժանր",
   "editSongLyricsLabel": "Երգի խոսքեր",
   "saveChangesButton": "Պահպանել փոփոխությունները",
-  "veryLow": "Շատ ցածր"
+  "veryLow": "Շատ ցածր",
+  "reindexLibrarySettingTitle": "Վերինդեքսավորում",
+  "reindexLibrarySettingDescription": "Կրկին կարդացեք բոլոր երաժշտական ֆայլերի մետատվյալներն ու ստեղծագործությունները:",
+  "refreshLibrarySettingTitle": "Թարմացրեք գրադարանը",
+  "refreshLibrarySettingDescription": "Ստուգեք ավելացված կամ ջնջված երաժշտության առկայությունը: Պահպանեք առկա մետատվյալներն ու արվեստի գործերը:",
+  "librarySettingsScreenTitle": "Գրադարանի կարգավորումներ",
+  "librarySettingsDescription": "Կառավարեք երաժշտության ինդեքսավորումը և բացառված թղթապանակները:",
+  "sleepTimerTitle": "Քնի ժամանակաչափ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ընթացիկ երգի ավարտը",
+  "sleepTimerRemainingLabel": "Մնացած",
+  "findingSongs": "Երգերի որոնում…",
+  "songsLoaded": "Ներբեռնված երգեր՝ {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Արվեստի գործը պահված է՝ {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Հնարավոր չէ բեռնել երաժշտական գրադարանը: Խնդրում ենք նորից փորձել:",
+  "missingTracksTitle": "Բացակայող հետքեր",
+  "missingTracksDescription": "Դիտեք ֆայլերը, որոնք հնարավոր չէ կարդալ:",
+  "missingTracksEmpty": "Անընթեռնելի հետքեր չկան:",
+  "missingTrackRead": "Չհաջողվեց կարդալ այս ֆայլի մետատվյալները: Ստուգեք ֆայլի գտնվելու վայրը և մուտքի թույլտվությունները, այնուհետև նորից ինդեքսավորեք գրադարանը՝ նորից փորձելու համար:",
+  "missingTrackArtwork": "Չհաջողվեց կարդալ այս ֆայլի ստեղծագործությունը: Աուդիոն կարող է դեռ նվագարկվել: Կրկին փորձելու համար գրադարանը վերաինդեքսավորելու համար:",
+  "playbackBuffering": "Բուֆերացում…",
+  "preventDuplicateTracksTitle": "Կանխել կրկնվող հետքերը",
+  "preventDuplicateTracksDescription": "Թաքցնել հետքերը կրկնօրինակ ֆայլերի անուններով:",
+  "hideLocalMusicTitle": "Թաքցնել տեղական երաժշտությունը",
+  "hideLocalMusicDescription": "Ցույց տվեք միայն սերվերի երաժշտությունը ձեր գրադարանում, քանի դեռ Subsonic-ը միացված է: Տեղական ֆայլերը մնում են ձեր սարքում:",
+  "subsonicTitle": "Subsonic սերվեր",
+  "subsonicDescription": "Հեռարձակեք երաժշտություն Navidrome, gonic և համատեղելի սերվերներից:",
+  "subsonicConfigure": "Կարգավորել Subsonic",
+  "subsonicUsername": "Օգտվողի անունը",
+  "subsonicPassword": "Գաղտնաբառ",
+  "subsonicConnect": "Միացնել",
+  "subsonicRemove": "Հեռացնել սերվերը",
+  "subsonicSignIn": "Մուտք գործեք պարտադիր",
+  "subsonicLoadingLibrary": "Ձեր գրադարանը բեռնվում է…",
+  "subsonicContinueBackground": "Շարունակեք հետին պլանում",
+  "subsonicClose": "Փակել",
+  "subsonicIndexing": "Սերվերի երաժշտության ինդեքսավորում…",
+  "subsonicUnavailable": "Անհասանելի է",
+  "subsonicCredentialsError": "Ստուգեք ձեր օգտվողի անունը, գաղտնաբառը և սերվերի թույլտվությունները:",
+  "subsonicStorageError": "Չհաջողվեց պահպանել հավատարմագրերը: Ստուգեք, որ ապահով պահեստը հասանելի է և նորից փորձեք:",
+  "subsonicTimeout": "Սերվերի ժամանակը սպառվել է: Խնդրում ենք կրկին փորձել:",
+  "subsonicServerError": "Չհաջողվեց կարդալ սերվերի գրադարանը: Նախորդ կատալոգը պահպանվում է: Թարմացրեք գրադարանը՝ նորից փորձելու համար:",
+  "libraryRetry": "Փորձել",
+  "subsonicOn": "Մի կողմ",
+  "subsonicOff": "Անկայուն",
+  "sleepTimerMinutes": "{minutes} րոպե",
+  "oledBlackDeviceColor": "OLED սև",
+  "subsonicUrl": "Սերվերի URL",
+  "subsonicInvalidUrl": "Մուտքագրեք HTTP կամ HTTPS սերվերի URL առանց հարցման, հատվածի կամ ներկառուցված մուտքի:",
+  "subsonicUnsupported": "Այս սերվերը չի աջակցում պահանջվող Subsonic API-ին կամ նշանային նույնականացմանը:",
+  "subsonicConnectionError": "Հնարավոր չէ միանալ: Ստուգեք URL-ը, ցանցը և HTTPS վկայագիրը: Համացանցում սերվերը պետք է թույլ տա CORS-ին, իսկ HTTPS հավելվածը չի կարող միանալ HTTP-ին:"
 }

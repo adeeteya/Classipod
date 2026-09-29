@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Oriṣi",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Fi awọn ayipada pamọ",
-  "veryLow": "Pupo kekere"
+  "veryLow": "Pupo kekere",
+  "reindexLibrarySettingTitle": "Tun-index",
+  "reindexLibrarySettingDescription": "Ka metadata ati iṣẹ ọna fun gbogbo awọn faili orin lẹẹkansi.",
+  "refreshLibrarySettingTitle": "Tuntun Library",
+  "refreshLibrarySettingDescription": "Ṣayẹwo fun fikun tabi orin ti paarẹ. Jeki metadata ti o wa tẹlẹ ati iṣẹ ọna.",
+  "librarySettingsScreenTitle": "Awọn Eto Ile-ikawe",
+  "librarySettingsDescription": "Ṣakoso atọka orin ati awọn folda ti a yọkuro.",
+  "sleepTimerTitle": "Aago orun",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Opin ti isiyi Song",
+  "sleepTimerRemainingLabel": "Ti o ku",
+  "findingSongs": "Wiwa awọn orin…",
+  "songsLoaded": "Awọn orin ti kojọpọ: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ti fipamọ aworan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ko le kojọpọ ile-ikawe orin. Jọwọ tun gbiyanju.",
+  "missingTracksTitle": "Awọn orin ti o padanu",
+  "missingTracksDescription": "Ṣe ayẹwo awọn faili ti ko le ka.",
+  "missingTracksEmpty": "Ko si awọn orin ti a ko le ka.",
+  "missingTrackRead": "Ko le ka metadata faili yii. Ṣayẹwo ipo faili ati awọn igbanilaaye wiwọle, lẹhinna tun ṣe atọkasi ile-ikawe lati tun gbiyanju.",
+  "missingTrackArtwork": "Ko le ka iṣẹ-ọnà faili yii. Ohùn le ṣi ṣiṣẹ. Tun ile-ikawe ṣe lati tun gbiyanju.",
+  "playbackBuffering": "Ifipamọ…",
+  "preventDuplicateTracksTitle": "Dena Awọn orin Duplicate",
+  "preventDuplicateTracksDescription": "Tọju awọn orin pẹlu awọn orukọ faili ẹda-iwe.",
+  "hideLocalMusicTitle": "Tọju Orin Agbegbe",
+  "hideLocalMusicDescription": "Ṣe afihan orin olupin nikan ni ile-ikawe rẹ lakoko ti Subsonic wa ni titan. Awọn faili agbegbe duro lori ẹrọ rẹ.",
+  "subsonicTitle": "olupin Subsonic",
+  "subsonicDescription": "Ṣiṣan orin lati Navidrome, gonic, ati awọn olupin ibaramu.",
+  "subsonicConfigure": "Ṣe atunto Subsonic",
+  "subsonicUsername": "Orukọ olumulo",
+  "subsonicPassword": "Ọrọigbaniwọle",
+  "subsonicConnect": "Sopọ",
+  "subsonicRemove": "Yọ olupin kuro",
+  "subsonicSignIn": "Wọle beere",
+  "subsonicLoadingLibrary": "Nkojọpọ ile-ikawe rẹ…",
+  "subsonicContinueBackground": "Tẹsiwaju ni abẹlẹ",
+  "subsonicClose": "Sunmọ",
+  "subsonicIndexing": "Titọka orin olupin…",
+  "subsonicUnavailable": "Ko si",
+  "subsonicCredentialsError": "Ṣayẹwo orukọ olumulo rẹ, ọrọ igbaniwọle, ati awọn igbanilaaye olupin.",
+  "subsonicStorageError": "Ko le fi awọn iwe-ẹri pamọ. Ṣayẹwo pe ibi ipamọ to ni aabo wa ki o tun gbiyanju lẹẹkansi.",
+  "subsonicTimeout": "Awọn olupin akoko jade. Jọwọ gbiyanju lẹẹkansi.",
+  "subsonicServerError": "Ko le ka ile-ikawe olupin naa. Ti tẹlẹ katalogi ti wa ni idaduro. Tun ile-ikawe lati tun gbiyanju.",
+  "libraryRetry": "Reti",
+  "subsonicOn": "Lori",
+  "subsonicOff": "Kuro",
+  "sleepTimerMinutes": "{minutes} iṣẹju",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "URL olupin",
+  "subsonicInvalidUrl": "Tẹ HTTP tabi URL olupin HTTPS sii laisi ibeere, ajẹkù, tabi iwọle ti a fi sii.",
+  "subsonicUnsupported": "Olupin yii ko ṣe atilẹyin Subsonic API ti o nilo tabi ijẹrisi ami.",
+  "subsonicConnectionError": "Ko le sopọ. Ṣayẹwo URL, nẹtiwọki, ati ijẹrisi HTTPS. Lori Oju opo wẹẹbu, olupin gbọdọ gba CORS laaye ati pe ohun elo HTTPS ko le sopọ si HTTP."
 }

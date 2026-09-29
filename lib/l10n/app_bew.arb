@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Aliran",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Simpan Perubahan",
-  "veryLow": "Rendah banget"
+  "veryLow": "Rendah banget",
+  "reindexLibrarySettingTitle": "Indeks ulang",
+  "reindexLibrarySettingDescription": "Baca metadata dan karya seni untuk semua file musik lagi.",
+  "refreshLibrarySettingTitle": "Segerin Perpustakaan",
+  "refreshLibrarySettingDescription": "Cek musik yang ditambahin atau dihapus. Simpan metadata dan karya seni yang ada.",
+  "librarySettingsScreenTitle": "Pengaturan Perpustakaan",
+  "librarySettingsDescription": "Kelola indeksasi musik dan folder yang dikecualikan.",
+  "sleepTimerTitle": "Pengatur Tidur",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Akhir dari lagu yang sekarang",
+  "sleepTimerRemainingLabel": "Sisa",
+  "findingSongs": "Nyari lagu...",
+  "songsLoaded": "Lagu yang dimuat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Karya seni yang disimpan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Gak bisa muat perpustakaan musik. Tolong coba lagi.",
+  "missingTracksTitle": "Trek yang hilang",
+  "missingTracksDescription": "Tinjau file yang kagak bisa dibaca.",
+  "missingTracksEmpty": "Gak ada trek yang kagak bisa dibaca.",
+  "missingTrackRead": "Gak bisa baca metadata file ini. Cek lokasi file dan izin akses, trus indeks ulang perpustakaan buat dicoba lagi.",
+  "missingTrackArtwork": "Gak bisa baca karya seni file ini. Audio mungkin masih diputar. Indeks ulang perpustakaan untuk dicoba ulang.",
+  "playbackBuffering": "Penyangga...",
+  "preventDuplicateTracksTitle": "Cegah Duplikat Trek",
+  "preventDuplicateTracksDescription": "Sembunyikan trek dengan nama file duplikat.",
+  "hideLocalMusicTitle": "Sembunyiin Musik Lokal",
+  "hideLocalMusicDescription": "Cuma tunjukin musik server di perpustakaan lu pas Subsonic nyala. File lokal tetep di perangkat lu.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Stream musik dari Navidrome, gonic, dan server yang kompatibel.",
+  "subsonicConfigure": "Konfigurasi Subsonic",
+  "subsonicUsername": "Nama Pengguna",
+  "subsonicPassword": "Kata sandi",
+  "subsonicConnect": "Nyambung",
+  "subsonicRemove": "Hapus server",
+  "subsonicSignIn": "Masuk wajib",
+  "subsonicLoadingLibrary": "Lagi muat perpustakaan lu...",
+  "subsonicContinueBackground": "Lanjutin di latar belakang",
+  "subsonicClose": "Tutup",
+  "subsonicIndexing": "Ngeindeks musik server...",
+  "subsonicUnavailable": "Kagak tersedia",
+  "subsonicCredentialsError": "Cek nama pengguna, kata sandi, dan izin server lu.",
+  "subsonicStorageError": "Gak bisa nyimpen kredensial. Cek kalo penyimpanan aman udah tersedia dan coba lagi.",
+  "subsonicTimeout": "Servernya abis. Tolong coba lagi.",
+  "subsonicServerError": "Gak bisa baca perpustakaan server. Katalog sebelumnya dipertahankan. Refresh Library buat nyoba lagi.",
+  "libraryRetry": "Coba lagi",
+  "subsonicOn": "Di",
+  "subsonicOff": "Modar",
+  "sleepTimerMinutes": "{minutes} Menit",
+  "oledBlackDeviceColor": "OLED Hitam",
+  "subsonicUrl": "URL server",
+  "subsonicInvalidUrl": "Masukin URL server HTTP atau HTTPS tanpa kueri, fragmen, atau login tertanam.",
+  "subsonicUnsupported": "Server ini kagak mendukung API Subsonic yang dibutuhin atau otentikasi token.",
+  "subsonicConnectionError": "Kagak bisa nyambung. Cek URL, jaringan, dan sertifikat HTTPS. Di Web, server harus ngijinin CORS dan aplikasi HTTPS kagak bisa nyambung ke HTTP."
 }

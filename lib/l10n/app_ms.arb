@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Simpan perubahan",
-  "veryLow": "Sangat rendah"
+  "veryLow": "Sangat rendah",
+  "reindexLibrarySettingTitle": "Indeks semula",
+  "reindexLibrarySettingDescription": "Baca metadata dan karya seni untuk semua fail muzik sekali lagi.",
+  "refreshLibrarySettingTitle": "Muat semula Perpustakaan",
+  "refreshLibrarySettingDescription": "Semak untuk menambah atau memadam muzik. Kekalkan metadata dan karya seni sedia ada.",
+  "librarySettingsScreenTitle": "Tetapan Perpustakaan",
+  "librarySettingsDescription": "Urus pengindeksan muzik dan folder yang dikecualikan.",
+  "sleepTimerTitle": "Pemasa Tidur",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Tamat Lagu Semasa",
+  "sleepTimerRemainingLabel": "yang tinggal",
+  "findingSongs": "Mencari lagu…",
+  "songsLoaded": "Lagu dimuatkan: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Karya seni dicache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Tidak dapat memuatkan pustaka muzik. Sila cuba semula.",
+  "missingTracksTitle": "Trek Hilang",
+  "missingTracksDescription": "Semak fail yang tidak boleh dibaca.",
+  "missingTracksEmpty": "Tiada trek yang tidak boleh dibaca.",
+  "missingTrackRead": "Tidak dapat membaca metadata fail ini. Semak lokasi fail dan kebenaran akses, kemudian indeks semula perpustakaan untuk mencuba semula.",
+  "missingTrackArtwork": "Tidak dapat membaca karya seni fail ini. Audio masih boleh dimainkan. Indeks semula perpustakaan untuk mencuba semula.",
+  "playbackBuffering": "Menampan…",
+  "preventDuplicateTracksTitle": "Cegah Lagu Pendua",
+  "preventDuplicateTracksDescription": "Sembunyikan trek dengan nama fail pendua.",
+  "hideLocalMusicTitle": "Sembunyikan Muzik Tempatan",
+  "hideLocalMusicDescription": "Tunjukkan hanya muzik pelayan dalam pustaka anda semasa Subsonic dihidupkan. Fail tempatan kekal pada peranti anda.",
+  "subsonicTitle": "Pelayan Subsonic",
+  "subsonicDescription": "Strim muzik daripada Navidrome, gonic dan pelayan yang serasi.",
+  "subsonicConfigure": "Konfigurasikan Subsonic",
+  "subsonicUsername": "Nama pengguna",
+  "subsonicPassword": "Kata laluan",
+  "subsonicConnect": "Sambung",
+  "subsonicRemove": "Alih keluar Pelayan",
+  "subsonicSignIn": "Log masuk diperlukan",
+  "subsonicLoadingLibrary": "Memuatkan pustaka anda…",
+  "subsonicContinueBackground": "Teruskan di latar belakang",
+  "subsonicClose": "tutup",
+  "subsonicIndexing": "Mengindeks muzik pelayan…",
+  "subsonicUnavailable": "Tidak tersedia",
+  "subsonicCredentialsError": "Semak nama pengguna, kata laluan dan kebenaran pelayan anda.",
+  "subsonicStorageError": "Tidak dapat menyimpan bukti kelayakan. Semak sama ada storan selamat tersedia dan cuba lagi.",
+  "subsonicTimeout": "Pelayan tamat masa. Sila cuba lagi.",
+  "subsonicServerError": "Tidak dapat membaca pustaka pelayan. Katalog sebelumnya dikekalkan. Muat semula Pustaka untuk mencuba semula.",
+  "libraryRetry": "Cuba semula",
+  "subsonicOn": "Pada",
+  "subsonicOff": "Mati",
+  "sleepTimerMinutes": "{minutes} Minit",
+  "oledBlackDeviceColor": "OLED Hitam",
+  "subsonicUrl": "URL pelayan",
+  "subsonicInvalidUrl": "Masukkan URL pelayan HTTP atau HTTPS tanpa pertanyaan, serpihan atau log masuk terbenam.",
+  "subsonicUnsupported": "Pelayan ini tidak menyokong API Subsonic atau pengesahan token yang diperlukan.",
+  "subsonicConnectionError": "Tidak boleh menyambung. Semak URL, rangkaian dan sijil HTTPS. Di Web, pelayan mesti membenarkan CORS dan apl HTTPS tidak boleh menyambung ke HTTP."
 }

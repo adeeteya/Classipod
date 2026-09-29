@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genere",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Salvà i cambiamenti",
-  "veryLow": "Assai Bassu"
+  "veryLow": "Assai Bassu",
+  "reindexLibrarySettingTitle": "Riindici",
+  "reindexLibrarySettingDescription": "Leghjite di novu metadati è opere d'arte per tutti i fugliali di musica.",
+  "refreshLibrarySettingTitle": "Refresh Library",
+  "refreshLibrarySettingDescription": "Verificate a musica aghjunta o eliminata. Mantene i metadati è l'artwork esistenti.",
+  "librarySettingsScreenTitle": "Settings Library",
+  "librarySettingsDescription": "Gestisce l'indexazione di musica è i cartulare esclusi.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fine di a canzone attuale",
+  "sleepTimerRemainingLabel": "Restendu",
+  "findingSongs": "Truvà canzoni...",
+  "songsLoaded": "Canzoni caricate: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Opere d'arte in cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Impossibile di carricà a biblioteca di musica. Per piacè riprova.",
+  "missingTracksTitle": "Tracce mancanti",
+  "missingTracksDescription": "Revisione i schedari chì ùn pudianu esse leghje.",
+  "missingTracksEmpty": "Nisuna traccia illegibile.",
+  "missingTrackRead": "Ùn pudia micca leghje i metadati di stu schedariu. Verificate u locu di u schedariu è i permessi d'accessu, dopu reindexate a biblioteca per ripruvà.",
+  "missingTrackArtwork": "Ùn pudia micca leghje l'artwork di stu schedariu. L'audio pò ancu ghjucà. Reindexa a biblioteca per ripruvà.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "Impedisce i tracce duplicate",
+  "preventDuplicateTracksDescription": "Oculte e tracce cù nomi di file duplicati.",
+  "hideLocalMusicTitle": "Oculta a Musica Locale",
+  "hideLocalMusicDescription": "Mostra solu a musica di u servitore in a vostra biblioteca mentre Subsonic hè attivatu. I schedarii lucali stanu nantu à u vostru dispositivu.",
+  "subsonicTitle": "Servitore Subsonic",
+  "subsonicDescription": "Stream music da Navidrome, gonic, è servitori cumpatibili.",
+  "subsonicConfigure": "Configurate Subsonic",
+  "subsonicUsername": "Nome d'utilizatore",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Cunnette",
+  "subsonicRemove": "Elimina u Servitore",
+  "subsonicSignIn": "Sign in necessariu",
+  "subsonicLoadingLibrary": "Carica a vostra biblioteca…",
+  "subsonicContinueBackground": "Cuntinuà in fondo",
+  "subsonicClose": "Chiudi",
+  "subsonicIndexing": "Indexazione di a musica di u servitore...",
+  "subsonicUnavailable": "Indisponibile",
+  "subsonicCredentialsError": "Verificate u vostru nome d'utilizatore, password è permessi di u servitore.",
+  "subsonicStorageError": "Ùn pudia micca salvà credenziali. Verificate chì u almacenamentu sicuru hè dispunibule è pruvate di novu.",
+  "subsonicTimeout": "U servitore hè scadutu. Per piacè pruvate di novu.",
+  "subsonicServerError": "Ùn pudia micca leghje a biblioteca di u servitore. U catalogu precedente hè conservatu. Refresh Library per ripruvà.",
+  "libraryRetry": "Ritruvà",
+  "subsonicOn": "Avanti",
+  "subsonicOff": "Spinu",
+  "sleepTimerMinutes": "{minutes} minuti",
+  "oledBlackDeviceColor": "OLED Negru",
+  "subsonicUrl": "URL di u servitore",
+  "subsonicInvalidUrl": "Inserite un URL di u servitore HTTP o HTTPS senza una dumanda, frammentu o login incrustatu.",
+  "subsonicUnsupported": "Stu servitore ùn sustene micca l'API Subsonic o l'autenticazione token.",
+  "subsonicConnectionError": "Ùn pò micca cunnette. Verificate l'URL, a rete è u certificatu HTTPS. In u Web, u servitore deve permette CORS è una app HTTPS ùn pò micca cunnette à HTTP."
 }

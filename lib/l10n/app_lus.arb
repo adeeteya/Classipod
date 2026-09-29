@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Lampang",
   "editSongLyricsLabel": "Lyrics 1000 a ni.",
   "saveChangesButton": "Save thlak danglamna .",
-  "veryLow": "A hniam hle mai ."
+  "veryLow": "A hniam hle mai .",
+  "reindexLibrarySettingTitle": "Re-index leh rawh",
+  "reindexLibrarySettingDescription": "Music file zawng zawng metadata leh artwork chhiar leh rawh.",
+  "refreshLibrarySettingTitle": "Library tih thar leh rawh",
+  "refreshLibrarySettingDescription": "Music added emaw delete emaw a awm leh awm loh enfiah rawh. Metadata leh artwork awmsa te chu vawng reng rawh.",
+  "librarySettingsScreenTitle": "Library Settings te chu a hnuaia mi ang hian a ni",
+  "librarySettingsDescription": "Music indexing leh excluded folder te enkawl.",
+  "sleepTimerTitle": "Mut Timer a ni",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Tuna Hla tawp",
+  "sleepTimerRemainingLabel": "A la awm",
+  "findingSongs": "Hla zawng chhuak...",
+  "songsLoaded": "Hla load: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork cached a ni: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Music library a load theih loh. Khawngaihin lo en leh rawh.",
+  "missingTracksTitle": "Track awm lo",
+  "missingTracksDescription": "File chhiar theih lohte chu enfiah leh rawh.",
+  "missingTracksEmpty": "Chhiar theih loh track a awm lo.",
+  "missingTrackRead": "He file’s metadata hi a chhiar thei lo. File awmna leh access permission te check la, library chu reindex la, retry rawh.",
+  "missingTrackArtwork": "He file’s artwork hi a chhiar thei lo. Audio a la play thei tho. Library chu reindex la, retry rawh.",
+  "playbackBuffering": "Buffering a awm...",
+  "preventDuplicateTracksTitle": "Duplicate Tracks awm loh nan",
+  "preventDuplicateTracksDescription": "File hming duplicate nei track te chu thup rawh.",
+  "hideLocalMusicTitle": "Tualchhung Music thup rawh",
+  "hideLocalMusicDescription": "Subsonic on laiin i library-ah server music chauh entir rawh. Local files te chu i device ah a awm reng thin.",
+  "subsonicTitle": "Subsonic Server a ni",
+  "subsonicDescription": "Navidrome, gonic, leh a inmil server atanga music stream theih a ni.",
+  "subsonicConfigure": "Subsonic chu configure rawh",
+  "subsonicUsername": "Username tih hi a ni",
+  "subsonicPassword": "Password hmangin thu a sawi",
+  "subsonicConnect": "Connect rawh",
+  "subsonicRemove": "Server chu paih chhuak rawh",
+  "subsonicSignIn": "Sign in a ngai a ni",
+  "subsonicLoadingLibrary": "I library i load lai hian...",
+  "subsonicContinueBackground": "Background-ah chhunzawm leh rawh",
+  "subsonicClose": "Khar rawh",
+  "subsonicIndexing": "Server music indexing a awm...",
+  "subsonicUnavailable": "A awm lo",
+  "subsonicCredentialsError": "I username, password leh server permission te kha check la.",
+  "subsonicStorageError": "Credentials a save thei lo. Secure storage a awm leh awm loh enfiah la, han tum leh rawh.",
+  "subsonicTimeout": "Server chu a time out ta. Khawngaihin han lo try leh teh.",
+  "subsonicServerError": "Server library a chhiar thei lo. A hmaa catalog kha vawng reng a ni. Library chu refresh la, tih leh rawh.",
+  "libraryRetry": "ꯑꯃꯨꯛ ꯍꯟꯅꯥ ꯍꯣꯠꯅꯕꯥ",
+  "subsonicOn": "on ꯒꯤ ꯃꯇꯥꯡꯗꯥ ꯋꯥ ꯉꯥꯡꯈꯤ꯫",
+  "subsonicOff": "ꯑꯣꯐ ꯇꯧꯕꯥ",
+  "sleepTimerMinutes": "{minutes} Minute a ni",
+  "oledBlackDeviceColor": "OLED Black a ni",
+  "subsonicUrl": "Server URL a ni",
+  "subsonicInvalidUrl": "HTTP emaw HTTPS server URL emaw chu query, fragment, embedded login awm lovin ziak lut rawh.",
+  "subsonicUnsupported": "He server hian Subsonic API emaw token authentication emaw mamawh chu a support lo.",
+  "subsonicConnectionError": "Connect thei lo. URL, network leh HTTPS certificate te chu enfiah rawh. Web-ah chuan server chuan CORS a phal tur a ni a, HTTPS app chu HTTP-ah a connect thei lo."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Jenis",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Simpen Pauwahan",
-  "veryLow": "Andah pisan"
+  "veryLow": "Andah pisan",
+  "reindexLibrarySettingTitle": "Indeks malih",
+  "reindexLibrarySettingDescription": "Wacén malih metadata lan karya seni anggén berkas musik makasami.",
+  "refreshLibrarySettingTitle": "Segerang Perpustakaan",
+  "refreshLibrarySettingDescription": "Priksa musik sané kawewehin utawi kaicalang. Simpen metadata lan karya seni sané sampun wénten.",
+  "librarySettingsScreenTitle": "Setélan Perpustakaan",
+  "librarySettingsDescription": "Ngatur indeksasi musik lan folder sané nénten kasarengin.",
+  "sleepTimerTitle": "Pangatur Jam Sirep",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Puput Tembang Sané Mangkin",
+  "sleepTimerRemainingLabel": "Sisannyané",
+  "findingSongs": "Ngrereh tembang...",
+  "songsLoaded": "Lagu sané sampun kamuat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Karya seni sané kasimpen: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nénten prasida ngunggahang perpustakaan musik. Indayang malih.",
+  "missingTracksTitle": "Trek sané kirang",
+  "missingTracksDescription": "Tinjau berkas sané nénten prasida kawacén.",
+  "missingTracksEmpty": "Nénten wénten trek sané nénten prasida kawacén.",
+  "missingTrackRead": "Nénten prasida ngwacén metadata berkas puniki. Priksa genah berkas lan ijin akses, raris indeks malih perpustakaan mangda prasida kacoba malih.",
+  "missingTrackArtwork": "Nénten prasida ngwacén karya seni berkas puniki. Audio minab kantun kaputer. Indeks malih perpustakaan anggén nyobak malih.",
+  "playbackBuffering": "Penyangga...",
+  "preventDuplicateTracksTitle": "Cegah Trek Duplikat",
+  "preventDuplicateTracksDescription": "Ilidang trek nganggén wastan berkas sané duplikat.",
+  "hideLocalMusicTitle": "Ilidang Musik Lokal",
+  "hideLocalMusicDescription": "Wantah tampilang musik server ring perpustakaan Sametoné ritatkala Subsonic idup. Berkas lokal tetep ring piranti Sametoné.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Aliran musik saking Navidrome, gonic, lan server sané kompatibel.",
+  "subsonicConfigure": "Konfigurasiang Subsonic",
+  "subsonicUsername": "Wastan Pangguna",
+  "subsonicPassword": "Sandi",
+  "subsonicConnect": "Nyambungang",
+  "subsonicRemove": "Icalang Server",
+  "subsonicSignIn": "Kaperluang ngranjing",
+  "subsonicLoadingLibrary": "Muat perpustakaan Sametoné...",
+  "subsonicContinueBackground": "Lanturang ring latar belakang",
+  "subsonicClose": "Tutup",
+  "subsonicIndexing": "Ngindeks musik server...",
+  "subsonicUnavailable": "Nénten katadongang",
+  "subsonicCredentialsError": "Priksa wastan panganggé, sandi, lan ijin server Sametoné.",
+  "subsonicStorageError": "Nénten prasida nyimpen kredensial. Priksa napiké panyimpenan sané aman sampun wénten lan indayang malih.",
+  "subsonicTimeout": "Server sampun telas galahnyané. Indayang malih.",
+  "subsonicServerError": "Nénten prasida ngwacén perpustakaan server. Katalog sadurungnyané kasimpen. Segerang Perpustakaan anggén nyobak malih.",
+  "libraryRetry": "Selamé",
+  "subsonicOn": "Ring",
+  "subsonicOff": "Mati",
+  "sleepTimerMinutes": "{minutes} Menit",
+  "oledBlackDeviceColor": "OLED Ireng",
+  "subsonicUrl": "URL sérver",
+  "subsonicInvalidUrl": "Unggahang URL server HTTP utawi HTTPS nénten nganggén kuéri, fragmen, utawi login sané tertanam.",
+  "subsonicUnsupported": "Server puniki nénten nyokong API Subsonic utawi otentikasi token sané kaperluang.",
+  "subsonicConnectionError": "Nénten prasida nyambung. Priksa URL, jaringan, lan sertifikat HTTPS. Ring Web, server mangda ngicénin CORS lan aplikasi HTTPS nénten prasida nyambung sareng HTTP."
 }

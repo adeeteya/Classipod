@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Telyneg",
   "saveChangesButton": "Cadw Newidiadau",
-  "veryLow": "Isel Iawn"
+  "veryLow": "Isel Iawn",
+  "reindexLibrarySettingTitle": "Ail-fynegai",
+  "reindexLibrarySettingDescription": "Darllen metadata a gwaith celf ar gyfer pob ffeil cerddoriaeth eto.",
+  "refreshLibrarySettingTitle": "Adnewyddu'r Llyfrgell",
+  "refreshLibrarySettingDescription": "Gwiriwch am gerddoriaeth sydd wedi'i hychwanegu neu ei dileu. Cadw metadata a gwaith celf presennol.",
+  "librarySettingsScreenTitle": "Gosodiadau Llyfrgell",
+  "librarySettingsDescription": "Rheoli mynegeio cerddoriaeth a ffolderi sydd wedi'u heithrio.",
+  "sleepTimerTitle": "Amserydd Cwsg",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Diwedd y Gân Bresennol",
+  "sleepTimerRemainingLabel": "Gweddill",
+  "findingSongs": "Dod o hyd i ganeuon…",
+  "songsLoaded": "Caneuon wedi'u llwytho: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Gwaith celf wedi'i storio: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Methu llwytho'r llyfrgell gerddoriaeth. Rhowch gynnig arall arni.",
+  "missingTracksTitle": "Traciau Coll",
+  "missingTracksDescription": "Adolygu ffeiliau nad oedd modd eu darllen.",
+  "missingTracksEmpty": "Dim traciau annarllenadwy.",
+  "missingTrackRead": "Methu darllen metadata'r ffeil hon. Gwiriwch leoliad y ffeil a chaniatâd mynediad, yna ail-fynegai'r llyfrgell i roi cynnig arall arni.",
+  "missingTrackArtwork": "Methu darllen gwaith celf y ffeil hon. Efallai y bydd sain yn dal i chwarae. Ail-fynegai'r llyfrgell i roi cynnig arall arni.",
+  "playbackBuffering": "Wrthi'n byffro…",
+  "preventDuplicateTracksTitle": "Atal Traciau Dyblyg",
+  "preventDuplicateTracksDescription": "Cuddio traciau gydag enwau ffeiliau dyblyg.",
+  "hideLocalMusicTitle": "Cuddio Cerddoriaeth Leol",
+  "hideLocalMusicDescription": "Dangos cerddoriaeth gweinydd yn unig yn eich llyfrgell tra bod Subsonic ymlaen. Mae ffeiliau lleol yn aros ar eich dyfais.",
+  "subsonicTitle": "Gweinydd Subsonic",
+  "subsonicDescription": "Ffrydio cerddoriaeth o Navidrome, gonic, a gweinyddwyr cydnaws.",
+  "subsonicConfigure": "Ffurfweddu Subsonic",
+  "subsonicUsername": "Enw defnyddiwr",
+  "subsonicPassword": "Cyfrinair",
+  "subsonicConnect": "Cyswllt",
+  "subsonicRemove": "Dileu Gweinydd",
+  "subsonicSignIn": "Angen mewngofnodi",
+  "subsonicLoadingLibrary": "Wrthi'n llwytho eich llyfrgell…",
+  "subsonicContinueBackground": "Parhewch yn y cefndir",
+  "subsonicClose": "Cau",
+  "subsonicIndexing": "Wrthi'n mynegeio cerddoriaeth gweinydd…",
+  "subsonicUnavailable": "Ddim ar gael",
+  "subsonicCredentialsError": "Gwiriwch eich enw defnyddiwr, cyfrinair, a chaniatâd gweinydd.",
+  "subsonicStorageError": "Methu cadw manylion. Gwiriwch fod storfa ddiogel ar gael a rhowch gynnig arall arni.",
+  "subsonicTimeout": "Daeth y gweinydd i ben. Ceisiwch eto.",
+  "subsonicServerError": "Methu darllen llyfrgell y gweinydd. Mae'r catalog blaenorol yn cael ei gadw. Adnewyddu'r Llyfrgell i roi cynnig arall arni.",
+  "libraryRetry": "Chyrchwch",
+  "subsonicOn": "Ymlaen",
+  "subsonicOff": "I ffwrdd",
+  "sleepTimerMinutes": "{minutes} Munud",
+  "oledBlackDeviceColor": "OLED Du",
+  "subsonicUrl": "URL gweinydd",
+  "subsonicInvalidUrl": "Rhowch URL gweinydd HTTP neu HTTPS heb ymholiad, darn, na mewngofnodi wedi'i fewnosod.",
+  "subsonicUnsupported": "Nid yw'r gweinydd hwn yn cefnogi'r API Subsonic gofynnol na'r dilysiad tocyn.",
+  "subsonicConnectionError": "Methu cysylltu. Gwiriwch yr URL, rhwydwaith, a thystysgrif HTTPS. Ar y We, rhaid i'r gweinydd ganiatáu CORS ac ni all app HTTPS gysylltu â HTTP."
 }

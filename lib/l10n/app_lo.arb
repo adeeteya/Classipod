@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ປະເພດ",
   "editSongLyricsLabel": "ເນື້ອເພງ",
   "saveChangesButton": "ບັນທຶກການປ່ຽນແປງ",
-  "veryLow": "ຕໍ່າຫຼາຍ"
+  "veryLow": "ຕໍ່າຫຼາຍ",
+  "reindexLibrarySettingTitle": "ດັດ​ຊະ​ນີ​ຄືນ​ໃຫມ່",
+  "reindexLibrarySettingDescription": "ອ່ານ metadata ແລະ artwork ສໍາລັບໄຟລ໌ເພງທັງຫມົດອີກເທື່ອຫນຶ່ງ.",
+  "refreshLibrarySettingTitle": "ໂຫຼດຂໍ້ມູນຫ້ອງສະໝຸດຄືນໃໝ່",
+  "refreshLibrarySettingDescription": "ກວດເບິ່ງເພງທີ່ເພີ່ມ ຫຼືລຶບອອກ. ຮັກສາ metadata ແລະ artwork ທີ່ມີຢູ່ແລ້ວ.",
+  "librarySettingsScreenTitle": "ການຕັ້ງຄ່າຫ້ອງສະໝຸດ",
+  "librarySettingsDescription": "ການ​ຄຸ້ມ​ຄອງ​ການ​ດັດ​ຊະ​ນີ​ເພງ​ແລະ​ໂຟ​ເດີ​ທີ່​ບໍ່​ລວມ​.",
+  "sleepTimerTitle": "ຈັບເວລານອນ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "ສິ້ນສຸດເພງປັດຈຸບັນ",
+  "sleepTimerRemainingLabel": "ຍັງເຫຼືອ",
+  "findingSongs": "ກຳລັງຊອກຫາເພງ...",
+  "songsLoaded": "ເພງທີ່ໂຫລດ: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork ເກັບໄວ້: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ບໍ່ສາມາດໂຫຼດຫ້ອງສະໝຸດເພງໄດ້. ກະລຸນາລອງໃໝ່.",
+  "missingTracksTitle": "ເພງທີ່ຂາດຫາຍໄປ",
+  "missingTracksDescription": "ກວດເບິ່ງໄຟລ໌ທີ່ບໍ່ສາມາດອ່ານໄດ້.",
+  "missingTracksEmpty": "ບໍ່ມີເພງທີ່ບໍ່ສາມາດອ່ານໄດ້.",
+  "missingTrackRead": "ບໍ່ສາມາດອ່ານ metadata ຂອງໄຟລ໌ນີ້ໄດ້. ກວດເບິ່ງທີ່ຕັ້ງຂອງໄຟລ໌ ແລະການເຂົ້າເຖິງການອະນຸຍາດ, ຫຼັງຈາກນັ້ນ reindex ຫ້ອງສະໝຸດເພື່ອລອງອີກຄັ້ງ.",
+  "missingTrackArtwork": "ບໍ່ສາມາດອ່ານສິນລະປະຂອງໄຟລ໌ນີ້ໄດ້. ສຽງອາດຈະຍັງຫຼິ້ນຢູ່. Reindex ຫ້ອງສະຫມຸດເພື່ອລອງໃຫມ່.",
+  "playbackBuffering": "ກຳລັງໂຫຼດຂໍ້ມູນ...",
+  "preventDuplicateTracksTitle": "ປ້ອງກັນການຊໍ້າຊ້ອນ",
+  "preventDuplicateTracksDescription": "ເຊື່ອງເພງທີ່ມີຊື່ໄຟລ໌ຊໍ້າກັນ.",
+  "hideLocalMusicTitle": "ເຊື່ອງເພງທ້ອງຖິ່ນ",
+  "hideLocalMusicDescription": "ສະແດງສະເພາະເພງເຊີບເວີໃນຫ້ອງສະໝຸດຂອງທ່ານໃນຂະນະທີ່ Subsonic ເປີດຢູ່. ໄຟລ໌ທ້ອງຖິ່ນຢູ່ໃນອຸປະກອນຂອງທ່ານ.",
+  "subsonicTitle": "ເຊີບເວີ Subsonic",
+  "subsonicDescription": "ຖ່າຍທອດເພງຈາກ Navidrome, gonic, ແລະເຊີບເວີທີ່ເຂົ້າກັນໄດ້.",
+  "subsonicConfigure": "ຕັ້ງຄ່າ Subsonic",
+  "subsonicUsername": "ຊື່ຜູ້ໃຊ້",
+  "subsonicPassword": "ລະຫັດຜ່ານ",
+  "subsonicConnect": "ເຊື່ອມຕໍ່",
+  "subsonicRemove": "ລຶບເຊີບເວີ",
+  "subsonicSignIn": "ຕ້ອງເຂົ້າສູ່ລະບົບ",
+  "subsonicLoadingLibrary": "ກຳລັງໂຫຼດຫ້ອງສະໝຸດຂອງທ່ານ...",
+  "subsonicContinueBackground": "ສືບຕໍ່ໃນພື້ນຫຼັງ",
+  "subsonicClose": "ປິດ",
+  "subsonicIndexing": "ກຳລັງດັດສະນີເພງເຊີບເວີ...",
+  "subsonicUnavailable": "ບໍ່ສາມາດໃຊ້ໄດ້",
+  "subsonicCredentialsError": "ກວດເບິ່ງຊື່ຜູ້ໃຊ້, ລະຫັດຜ່ານ, ແລະການອະນຸຍາດເຊີບເວີຂອງທ່ານ.",
+  "subsonicStorageError": "ບໍ່ສາມາດບັນທຶກຂໍ້ມູນປະຈໍາຕົວໄດ້. ກວດເບິ່ງວ່າບ່ອນເກັບມ້ຽນທີ່ປອດໄພມີໃຫ້ແລ້ວ ແລະລອງໃໝ່ອີກ.",
+  "subsonicTimeout": "ເຊີບເວີໝົດເວລາ. ກະລຸນາລອງອີກຄັ້ງ.",
+  "subsonicServerError": "ບໍ່ສາມາດອ່ານຫ້ອງສະໝຸດເຊີບເວີໄດ້. ລາຍການກ່ອນໜ້າແມ່ນເກັບຮັກສາໄວ້. ໂຫຼດຂໍ້ມູນຫ້ອງສະໝຸດຄືນໃໝ່ເພື່ອລອງອີກຄັ້ງ.",
+  "libraryRetry": "ລອງໃຫມ່",
+  "subsonicOn": "ຕໍ່ໆໄປ",
+  "subsonicOff": "ປິດ",
+  "sleepTimerMinutes": "{minutes} ນາທີ",
+  "oledBlackDeviceColor": "OLED ດຳ",
+  "subsonicUrl": "URL ເຊີບເວີ",
+  "subsonicInvalidUrl": "ໃສ່ URL ເຊີບເວີ HTTP ຫຼື HTTPS ໂດຍບໍ່ມີການສອບຖາມ, fragment, ຫຼືການເຂົ້າສູ່ລະບົບຝັງ.",
+  "subsonicUnsupported": "ເຊີບເວີນີ້ບໍ່ຮອງຮັບ Subsonic API ຫຼື token authentication ທີ່ຕ້ອງການ.",
+  "subsonicConnectionError": "ບໍ່ສາມາດເຊື່ອມຕໍ່ໄດ້. ກວດເບິ່ງ URL, ເຄືອຂ່າຍ, ແລະໃບຢັ້ງຢືນ HTTPS. ໃນເວັບ, ເຊີບເວີຕ້ອງອະນຸຍາດໃຫ້ CORS ແລະແອັບຯ HTTPS ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບ HTTP ໄດ້."
 }

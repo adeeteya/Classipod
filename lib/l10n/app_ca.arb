@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gènere",
   "editSongLyricsLabel": "Lletres",
   "saveChangesButton": "Desa els canvis",
-  "veryLow": "Molt Baix"
+  "veryLow": "Molt Baix",
+  "reindexLibrarySettingTitle": "Torna a indexar",
+  "reindexLibrarySettingDescription": "Torna a llegir les metadades i les il·lustracions de tots els fitxers de música.",
+  "refreshLibrarySettingTitle": "Actualitzar la biblioteca",
+  "refreshLibrarySettingDescription": "Comproveu si hi ha música afegida o suprimida. Conserveu les metadades i les obres d'art existents.",
+  "librarySettingsScreenTitle": "Configuració de la biblioteca",
+  "librarySettingsDescription": "Gestioneu la indexació de música i les carpetes excloses.",
+  "sleepTimerTitle": "Temporitzador de dormir",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Final de la cançó actual",
+  "sleepTimerRemainingLabel": "Restant",
+  "findingSongs": "S'estan buscant cançons...",
+  "songsLoaded": "Cançons carregades: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Il·lustració guardada a la memòria cau: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "No es pot carregar la biblioteca de música. Si us plau, torna-ho a provar.",
+  "missingTracksTitle": "Falten pistes",
+  "missingTracksDescription": "Reviseu els fitxers que no s'han pogut llegir.",
+  "missingTracksEmpty": "No hi ha pistes il·legibles.",
+  "missingTrackRead": "No s'han pogut llegir les metadades d'aquest fitxer. Comproveu la ubicació del fitxer i els permisos d'accés i, a continuació, torneu a indexar la biblioteca per tornar-ho a provar.",
+  "missingTrackArtwork": "No s'ha pogut llegir l'il·lustració d'aquest fitxer. L'àudio encara es pot reproduir. Torna a indexar la biblioteca per tornar-ho a provar.",
+  "playbackBuffering": "S'està guardant la memòria intermèdia…",
+  "preventDuplicateTracksTitle": "Evitar pistes duplicades",
+  "preventDuplicateTracksDescription": "Amaga pistes amb noms de fitxer duplicats.",
+  "hideLocalMusicTitle": "Amaga la música local",
+  "hideLocalMusicDescription": "Mostra només la música del servidor a la biblioteca mentre Subsonic està activat. Els fitxers locals romanen al vostre dispositiu.",
+  "subsonicTitle": "Servidor Subsonic",
+  "subsonicDescription": "Reprodueix música en temps real des de Navidrome, gonic i servidors compatibles.",
+  "subsonicConfigure": "Configura Subsonic",
+  "subsonicUsername": "Nom d'usuari",
+  "subsonicPassword": "Contrasenya",
+  "subsonicConnect": "Connecta't",
+  "subsonicRemove": "Elimina el servidor",
+  "subsonicSignIn": "Cal iniciar sessió",
+  "subsonicLoadingLibrary": "S'està carregant la teva biblioteca...",
+  "subsonicContinueBackground": "Continueu en segon pla",
+  "subsonicClose": "Tancar",
+  "subsonicIndexing": "S'està indexant la música del servidor...",
+  "subsonicUnavailable": "No disponible",
+  "subsonicCredentialsError": "Comproveu el vostre nom d'usuari, contrasenya i permisos del servidor.",
+  "subsonicStorageError": "No s'han pogut desar les credencials. Comproveu que l'emmagatzematge segur estigui disponible i torneu-ho a provar.",
+  "subsonicTimeout": "El servidor s'ha esgotat. Si us plau, torna-ho a provar.",
+  "subsonicServerError": "No s'ha pogut llegir la biblioteca del servidor. Es conserva el catàleg anterior. Actualitza la biblioteca per tornar-ho a provar.",
+  "libraryRetry": "Tornar a ratllar",
+  "subsonicOn": "Al damunt de",
+  "subsonicOff": "Apagada",
+  "sleepTimerMinutes": "{minutes} minuts",
+  "oledBlackDeviceColor": "OLED negre",
+  "subsonicUrl": "URL del servidor",
+  "subsonicInvalidUrl": "Introduïu un URL de servidor HTTP o HTTPS sense cap consulta, fragment o inici de sessió incrustat.",
+  "subsonicUnsupported": "Aquest servidor no admet l'autenticació de testimoni ni l'API Subsonic necessària.",
+  "subsonicConnectionError": "No es pot connectar. Comproveu l'URL, la xarxa i el certificat HTTPS. Al web, el servidor ha de permetre CORS i una aplicació HTTPS no es pot connectar a HTTP."
 }

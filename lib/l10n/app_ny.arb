@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Mtundu",
   "editSongLyricsLabel": "Ndi mawu",
   "saveChangesButton": "Sungani Kusintha",
-  "veryLow": "Otsika kwambiri"
+  "veryLow": "Otsika kwambiri",
+  "reindexLibrarySettingTitle": "Lembaninso",
+  "reindexLibrarySettingDescription": "Werenganinso metadata ndi zojambulajambula zamafayilo onse anyimbo.",
+  "refreshLibrarySettingTitle": "Tsitsani Laibulale",
+  "refreshLibrarySettingDescription": "Chongani anawonjezera kapena zichotsedwa nyimbo. Sungani metadata ndi zojambulajambula zomwe zilipo kale.",
+  "librarySettingsScreenTitle": "Zokonda pa Library",
+  "librarySettingsDescription": "Konzani masanjidwe a nyimbo ndi mafoda osaphatikizidwa.",
+  "sleepTimerTitle": "Nthawi Yogona",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Mapeto a Nyimbo Yamakono",
+  "sleepTimerRemainingLabel": "Zotsalira",
+  "findingSongs": "Kupeza nyimbo…",
+  "songsLoaded": "Nyimbo zodzaza: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Zithunzi zosungidwa: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Takanika kutsegula laibulale yanyimbo. Chonde yesaninso.",
+  "missingTracksTitle": "Nyimbo Zosowa",
+  "missingTracksDescription": "Onaninso mafayilo omwe sanawerengedwe.",
+  "missingTracksEmpty": "Palibe nyimbo zosawerengeka.",
+  "missingTrackRead": "Sitinathe kuwerenga metadata ya fayiloyi. Yang'anani malo afayilo ndi zilolezo zolowa, kenako sankhaninso laibulale kuti muyesenso.",
+  "missingTrackArtwork": "Sindinathe kuwerenga zojambula za fayiloyi. Audio ikhoza kuyimbabe. Lembaninso laibulale kuti muyesenso.",
+  "playbackBuffering": "Kusungitsa…",
+  "preventDuplicateTracksTitle": "Pewani Nyimbo Zobwerezedwa",
+  "preventDuplicateTracksDescription": "Bisani nyimbo zomwe zili ndi mayina obwereza.",
+  "hideLocalMusicTitle": "Bisani Nyimbo Zakwanu",
+  "hideLocalMusicDescription": "Onetsani nyimbo za seva mulaibulale yanu pomwe Subsonic yayatsidwa. Mafayilo am'deralo amakhala pachida chanu.",
+  "subsonicTitle": "Zithunzi za Subsonic",
+  "subsonicDescription": "Sungani nyimbo kuchokera ku Navidrome, gonic, ndi ma seva ogwirizana.",
+  "subsonicConfigure": "Sinthani Subsonic",
+  "subsonicUsername": "Dzina lolowera",
+  "subsonicPassword": "Mawu achinsinsi",
+  "subsonicConnect": "Lumikizani",
+  "subsonicRemove": "Chotsani Seva",
+  "subsonicSignIn": "Lowani mukufunika",
+  "subsonicLoadingLibrary": "Tikutsegula laibulale yanu…",
+  "subsonicContinueBackground": "Pitirizani chakumbuyo",
+  "subsonicClose": "Tsekani",
+  "subsonicIndexing": "Kuwonetsa nyimbo za seva…",
+  "subsonicUnavailable": "Palibe",
+  "subsonicCredentialsError": "Onani dzina lanu lolowera, mawu achinsinsi, ndi zilolezo za seva.",
+  "subsonicStorageError": "Sizinathe kusunga mbiri. Onetsetsani kuti malo otetezedwa alipo ndikuyesanso.",
+  "subsonicTimeout": "Nthawi ya seva yatha. Chonde yesaninso.",
+  "subsonicServerError": "Sitinathe kuwerenga laibulale ya seva. Katundu wam'mbuyo adasungidwa. Tsitsani Laibulale kuti muyesenso.",
+  "libraryRetry": "Yelekeza",
+  "subsonicOn": "Pa",
+  "subsonicOff": "Pa",
+  "sleepTimerMinutes": "{minutes} mphindi",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "URL ya seva",
+  "subsonicInvalidUrl": "Lowetsani ulalo wa seva ya HTTP kapena HTTPS popanda funso, chidutswa, kapena malowedwe ophatikizidwa.",
+  "subsonicUnsupported": "Seva iyi sigwirizana ndi Subsonic API kapena chizindikiro chotsimikizika.",
+  "subsonicConnectionError": "Sitingathe kulumikiza. Onani ulalo, netiweki, ndi satifiketi ya HTTPS. Pa Webusaiti, seva iyenera kuloleza CORS ndipo pulogalamu ya HTTPS siyingalumikizane ndi HTTP."
 }

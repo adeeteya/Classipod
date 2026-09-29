@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Phun",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Thlennak kha chiah",
-  "veryLow": "A niam tukmi"
+  "veryLow": "A niam tukmi",
+  "reindexLibrarySettingTitle": "Index tuah ṭhan",
+  "reindexLibrarySettingDescription": "Music file vialte caah metadata le zuk suaimi kha rel tthan.",
+  "refreshLibrarySettingTitle": "Cauk chiahnak kha tharchuah",
+  "refreshLibrarySettingDescription": "Hla chapmi le hlohmi a um maw um lo zoh. A um cangmi metadata le zuk suaimi kha chiah.",
+  "librarySettingsScreenTitle": "Cauk chiahnak chiahnak",
+  "librarySettingsDescription": "Hla cazin le aa tel lomi folder pawl kha tawlrel.",
+  "sleepTimerTitle": "Ihnak Caan",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "A tu hla a donghnak",
+  "sleepTimerRemainingLabel": "A tangmi",
+  "findingSongs": "Hla kawl...",
+  "songsLoaded": "Hla pawl: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Zukcawl chiahmi: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Music library kha load khawh a si lo. Zaangfahnak tein i zuam ṭhan.",
+  "missingTracksTitle": "A tlaumi lam",
+  "missingTracksDescription": "Rel khawh lomi file pawl kha zohfel hna.",
+  "missingTracksEmpty": "Rel khawh lomi hla a um lo.",
+  "missingTrackRead": "Hi file metadata rel khawh a si lo. File umnak le luh khawhnak nawl kha zoh, cun i zuam ṭhan awkah library kha index tuah ṭhan.",
+  "missingTrackArtwork": "Hi file hmanthlak rel khawh a si lo. Aw cu a chuak rih ko lai. Hneksak ṭhan awkah cauk chiahnak kha index tuah ṭhan.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Aa khatmi hla kha kham",
+  "preventDuplicateTracksDescription": "File min aa khatmi hla pawl kha thuh hna.",
+  "hideLocalMusicTitle": "Khuachung hlasaknak thuh",
+  "hideLocalMusicDescription": "Subsonic a on lio ah na cauk chiahnak ah server hla lawng langhter. Local file pawl cu na thilri ah an um peng.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Navidrome, gonic, le aa tlakmi server hna in hlasaknak kha thlah.",
+  "subsonicConfigure": "Subsonic kha remh",
+  "subsonicUsername": "Hmantu min",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Pehtlai",
+  "subsonicRemove": "Server hloh",
+  "subsonicSignIn": "Sign in tuah a hau",
+  "subsonicLoadingLibrary": "Na cauk chiahnak khaan na luhter...",
+  "subsonicContinueBackground": "Hnulei ah pehzulh",
+  "subsonicClose": "Khar",
+  "subsonicIndexing": "Server hlasaknak index tuah...",
+  "subsonicUnavailable": "Hmuh khawh a si lo",
+  "subsonicCredentialsError": "Na hmanmi min, password le server nawlpeknak hna kha zoh.",
+  "subsonicStorageError": "Hmannak ca pawl kha chiah khawh a si lo. A himmi chiahnak a um le um lo zoh law i zuam ṭhan.",
+  "subsonicTimeout": "Server cu a caan a dih cang. Zaangfahnak tein rak i zuam tthan.",
+  "subsonicServerError": "Server cauk chiahnak kha rel khawh a si lo. A hlan catalog cu chiah a si. Hneksak ṭhan awkah Library kha tharchuah.",
+  "libraryRetry": "I zuam than",
+  "subsonicOn": "Cung ah",
+  "subsonicOff": "I dinh",
+  "sleepTimerMinutes": "Minute {minutes}",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "HTTP asiloah HTTPS server URL kha halnak, tthencheunak, asiloah luhternak um loin khumh.",
+  "subsonicUnsupported": "Hi server nih a herhmi Subsonic API asiloah token hngalhternak kha a dirpi lo.",
+  "subsonicConnectionError": "Peh khawh a si lo. URL, network, le HTTPS certificate kha zoh. Web ah, server nih CORS a onh a hau i HTTPS app cu HTTP he aa pehtlaih kho lo."
 }

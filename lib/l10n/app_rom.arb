@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Spècia",
   "editSongLyricsLabel": "Lìkcură",
   "saveChangesButton": "Save paruvimata",
-  "veryLow": "But"
+  "veryLow": "But",
+  "reindexLibrarySettingTitle": "Re-indekso",
+  "reindexLibrarySettingDescription": "Gindin metadata thaj artoske buća vaś sa e muzikake lilǎ pale.",
+  "refreshLibrarySettingTitle": "Refresh Biblioteka",
+  "refreshLibrarySettingDescription": "Dikh te si thodi vaj xasardi muzika. Te arakhen e egzistuime metadate thaj artoske buća.",
+  "librarySettingsScreenTitle": "Bibliotekake paramètrură",
+  "librarySettingsDescription": "Keren o indeksiripe e muzikako thaj e avri shudine folderura.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Agor e akanutne giljako",
+  "sleepTimerRemainingLabel": "Ačhile",
+  "findingSongs": "Arakhindoj gilja...",
+  "songsLoaded": "Gilja pherdo: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artoski buti garavdi: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nashti te lav e muzikaki biblioteka. Mangav tumen te zumaven pale.",
+  "missingTracksTitle": "Xasarde droma",
+  "missingTracksDescription": "Dikh e dokumentură save naśti te aven xramosarde.",
+  "missingTracksEmpty": "Naj bi-xramosarde droma.",
+  "missingTrackRead": "Nashti te ginavav e metadate kadale lileske. Dikh o than e lilăqo thaj e permisie vaś o akceso, palal kodoja indeksisarel pes i biblioteka te zumaves pale.",
+  "missingTrackArtwork": "Nashti te ginavav o arto kadale lilesko. O audio śaj te khelel pes. Reindeksisaren i biblioteka te zumaven pale.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "Te na avel duplikàto drom",
+  "preventDuplicateTracksDescription": "Garav e droma saven si len duplikàto anav e lilǎqo.",
+  "hideLocalMusicTitle": "Garav e lokalno muzika",
+  "hideLocalMusicDescription": "Sikav numaj e serveresqi muzika anθ-i tumari biblioteka kana o Subsonic si phandlo. Le lokalno dokumentura ačhon pe tumaro aparato.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Stream muzika katar Navidrome, gonic, thaj kompatibilno serverura.",
+  "subsonicConfigure": "Konfigurisar o Subsonic",
+  "subsonicUsername": "Anav e uźitorosqo",
+  "subsonicPassword": "Paròla",
+  "subsonicConnect": "Konektisaren",
+  "subsonicRemove": "Te lel pes o Servero",
+  "subsonicSignIn": "Trubul te xramosares tut",
+  "subsonicLoadingLibrary": "Te ćhivav tumari biblioteka...",
+  "subsonicContinueBackground": "Te źas maj dur anθ-o fundo",
+  "subsonicClose": "Phande",
+  "subsonicIndexing": "Indeksiribe e muzikako e serveresko…",
+  "subsonicUnavailable": "Na si disponibilo",
+  "subsonicCredentialsError": "Dikh tiro anav e uźitorosqo, o lav, thaj e permisie pal-o server.",
+  "subsonicStorageError": "Nashti te garavav e kredencialura. Dikh te si sekurno garavipe disponiblo thaj zumav pale.",
+  "subsonicTimeout": "O serveri nakhlo o vaxt. Mangav tumen te zumaven pale.",
+  "subsonicServerError": "Nashti te ginavav e servereski biblioteka. O angluno katalogo si garavdo. Refresh e Biblioteka te zumaves pale.",
+  "libraryRetry": "Rezènto",
+  "subsonicOn": "Pa",
+  "subsonicOff": "Mesto",
+  "sleepTimerMinutes": "{minutes} minutură",
+  "oledBlackDeviceColor": "OLED Kalo",
+  "subsonicUrl": "URL le serverosqo",
+  "subsonicInvalidUrl": "Thov jekh HTTP vaj HTTPS server URL bi te avel tut pućhipen, fragmento vaj bi te avel tut login.",
+  "subsonicUnsupported": "Kado servero na suportil o trubujipe Subsonic API vaj tokenoski autentifikacia.",
+  "subsonicConnectionError": "Nashti te konektirinel pes. Dikh o URL, o netvorko thaj o HTTPS certifikàto. Pe Web, o serveri trubul te mukhel CORS thaj jekh HTTPS app nashti te phandel pes ko HTTP."
 }

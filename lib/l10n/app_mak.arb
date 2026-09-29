@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Sikamma tau a'ra'a",
   "saveChangesButton": "Sarah Perubahan",
-  "veryLow": "sanna' sanna'na"
+  "veryLow": "sanna' sanna'na",
+  "reindexLibrarySettingTitle": "Indeks ulang",
+  "reindexLibrarySettingDescription": "Bacai pole metadata siagang karya seni untuk sikontu file musik.",
+  "refreshLibrarySettingTitle": "Refresh Perpustakaan",
+  "refreshLibrarySettingDescription": "Paressai punna rie' musik nitambai iareka ni hapus. Paentengi metadata siagang karya seni niaka.",
+  "librarySettingsScreenTitle": "Pangngatoroang perpustakaan",
+  "librarySettingsDescription": "Atoroki indeksasi musik siagang folder yang terkecuali.",
+  "sleepTimerTitle": "Wattu attinro",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Pa'le'ba'na lagu kamma-kammaya anne",
+  "sleepTimerRemainingLabel": "sisa",
+  "findingSongs": "A'boya lagu...",
+  "songsLoaded": "Lagu-lagu yang dimuat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Karya seni yang disimpan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Tena nakkulle antama perpustakaan musik. Cobai pole.",
+  "missingTracksTitle": "Jalur yang hilang",
+  "missingTracksDescription": "Paressai file yang tena nakkulle ni baca.",
+  "missingTracksEmpty": "Tena lagu yang tena nakkulle ni baca.",
+  "missingTrackRead": "Tena nakkulle ambaca metadata anne file. Paressai tampa file siagang ijin akses, nampa indeks poleang perpustakaan untuk ancobai pole.",
+  "missingTrackArtwork": "Tena nakkulle ambaca karya seni anne file. Audio akkulleiji a'musik. Indeks ulang perpustakaan untuk dicoba ulang.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Cegah trek duplikat",
+  "preventDuplicateTracksDescription": "Ancokkoi trek siagang areng file duplikat.",
+  "hideLocalMusicTitle": "Ancokkoi musik lokal",
+  "hideLocalMusicDescription": "Pappicinikangi bawang musik server ri perpustakaannu ri wattu Subsonic nia. File lokal ammantang ri perangkatnu.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Aliran musik battu ri Navidrome, gonic, siagang server yang kompatibel.",
+  "subsonicConfigure": "Konfigurasi Subsonic",
+  "subsonicUsername": "Areng pangnguppa",
+  "subsonicPassword": "Kata sandi",
+  "subsonicConnect": "Sambungang",
+  "subsonicRemove": "Pasuluki server",
+  "subsonicSignIn": "Antama parallui",
+  "subsonicLoadingLibrary": "Muat perpustakaannu...",
+  "subsonicContinueBackground": "tulusu ri boko",
+  "subsonicClose": "tutupi",
+  "subsonicIndexing": "Indeks musik server...",
+  "subsonicUnavailable": "Tena nakkulle",
+  "subsonicCredentialsError": "Paressai areng pangnguppa, kata sandi, siagang ijin server.",
+  "subsonicStorageError": "Tena nakkulle anjagai kredensial. Paressai punna rie' pammolikang aman siagang cobai pole.",
+  "subsonicTimeout": "Server lebaki wattu. Cobai pole.",
+  "subsonicServerError": "Tena nakkulle ambaca perpustakaan server. Katalog rioloa nijagaiji. Refresh Library untuk ancobai pole.",
+  "libraryRetry": "silahkan",
+  "subsonicOn": "Rinra",
+  "subsonicOff": "Mate",
+  "sleepTimerMinutes": "{minutes} menit",
+  "oledBlackDeviceColor": "OLED Hitam",
+  "subsonicUrl": "URL server",
+  "subsonicInvalidUrl": "Pa'nassaang URL server HTTP atau HTTPS tanpa kueri, fragmen, atau login tertanam.",
+  "subsonicUnsupported": "Anne server tena na dukungi API Subsonic yang dibutuhkan atau otentikasi token.",
+  "subsonicConnectionError": "Tena nakkulle assileo. Paressai URL, jaringan, siagang sertifikat HTTPS. Ri web, server musti na iji CORS siagang aplikasi HTTPS takkulleai assileo mange ri HTTP."
 }

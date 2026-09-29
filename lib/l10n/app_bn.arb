@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ধারা",
   "editSongLyricsLabel": "গানের কথা",
   "saveChangesButton": "পরিবর্তনগুলি সংরক্ষণ করুন",
-  "veryLow": "খুব কম"
+  "veryLow": "খুব কম",
+  "reindexLibrarySettingTitle": "পুনরায় সূচক",
+  "reindexLibrarySettingDescription": "আবার সমস্ত সঙ্গীত ফাইলের জন্য মেটাডেটা এবং আর্টওয়ার্ক পড়ুন।",
+  "refreshLibrarySettingTitle": "লাইব্রেরি রিফ্রেশ করুন",
+  "refreshLibrarySettingDescription": "যোগ করা বা মুছে ফেলা সঙ্গীত চেক করুন. বিদ্যমান মেটাডেটা এবং আর্টওয়ার্ক রাখুন।",
+  "librarySettingsScreenTitle": "লাইব্রেরি সেটিংস",
+  "librarySettingsDescription": "সঙ্গীত সূচী এবং বাদ ফোল্ডার পরিচালনা করুন.",
+  "sleepTimerTitle": "স্লিপ টাইমার",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "বর্তমান গানের সমাপ্তি",
+  "sleepTimerRemainingLabel": "অবশিষ্ট",
+  "findingSongs": "গান খোঁজা হচ্ছে...",
+  "songsLoaded": "লোড করা গান: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "আর্টওয়ার্ক ক্যাশে: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "সঙ্গীত লাইব্রেরি লোড করতে অক্ষম. আবার চেষ্টা করুন.",
+  "missingTracksTitle": "অনুপস্থিত ট্র্যাক",
+  "missingTracksDescription": "যে ফাইলগুলি পড়া যায়নি সেগুলি পর্যালোচনা করুন৷",
+  "missingTracksEmpty": "কোন অপঠিত ট্র্যাক.",
+  "missingTrackRead": "এই ফাইলের মেটাডেটা পড়া যায়নি। ফাইলের অবস্থান এবং অ্যাক্সেসের অনুমতিগুলি পরীক্ষা করুন, তারপরে পুনরায় চেষ্টা করার জন্য লাইব্রেরিটি পুনঃসূচীকরণ করুন৷",
+  "missingTrackArtwork": "এই ফাইলের আর্টওয়ার্ক পড়া যায়নি. অডিও এখনও প্লে হতে পারে। পুনরায় চেষ্টা করার জন্য লাইব্রেরিটি পুনঃসূচীকরণ করুন।",
+  "playbackBuffering": "বাফারিং...",
+  "preventDuplicateTracksTitle": "ডুপ্লিকেট ট্র্যাক প্রতিরোধ করুন",
+  "preventDuplicateTracksDescription": "ডুপ্লিকেট ফাইলের নাম দিয়ে ট্র্যাক লুকান।",
+  "hideLocalMusicTitle": "স্থানীয় সঙ্গীত লুকান",
+  "hideLocalMusicDescription": "Subsonic চালু থাকা অবস্থায় আপনার লাইব্রেরিতে শুধুমাত্র সার্ভার সঙ্গীত দেখান। স্থানীয় ফাইলগুলি আপনার ডিভাইসে থাকে।",
+  "subsonicTitle": "Subsonic সার্ভার",
+  "subsonicDescription": "Navidrome, gonic এবং সামঞ্জস্যপূর্ণ সার্ভার থেকে সঙ্গীত স্ট্রিম করুন।",
+  "subsonicConfigure": "Subsonic কনফিগার করুন",
+  "subsonicUsername": "ব্যবহারকারীর নাম",
+  "subsonicPassword": "পাসওয়ার্ড",
+  "subsonicConnect": "সংযোগ করুন",
+  "subsonicRemove": "সার্ভার সরান",
+  "subsonicSignIn": "সাইন ইন প্রয়োজন",
+  "subsonicLoadingLibrary": "আপনার লাইব্রেরি লোড হচ্ছে...",
+  "subsonicContinueBackground": "পটভূমিতে চালিয়ে যান",
+  "subsonicClose": "বন্ধ",
+  "subsonicIndexing": "সার্ভার মিউজিক ইন্ডেক্স করা হচ্ছে...",
+  "subsonicUnavailable": "অনুপলব্ধ",
+  "subsonicCredentialsError": "আপনার ব্যবহারকারীর নাম, পাসওয়ার্ড, এবং সার্ভার অনুমতি পরীক্ষা করুন.",
+  "subsonicStorageError": "শংসাপত্র সংরক্ষণ করা যায়নি. নিরাপদ সঞ্চয়স্থান উপলব্ধ আছে কিনা পরীক্ষা করুন এবং আবার চেষ্টা করুন।",
+  "subsonicTimeout": "সার্ভার টাইম আউট. আবার চেষ্টা করুন.",
+  "subsonicServerError": "সার্ভার লাইব্রেরি পড়া যায়নি. পূর্ববর্তী ক্যাটালগ বজায় রাখা হয়. পুনরায় চেষ্টা করতে লাইব্রেরি রিফ্রেশ করুন।",
+  "libraryRetry": "পুনরায় চেষ্টা করুন",
+  "subsonicOn": "চালু",
+  "subsonicOff": "বন্ধ",
+  "sleepTimerMinutes": "{minutes} মিনিট",
+  "oledBlackDeviceColor": "OLED কালো",
+  "subsonicUrl": "সার্ভার URL",
+  "subsonicInvalidUrl": "একটি ক্যোয়ারী, খণ্ড বা এমবেডেড লগইন ছাড়াই একটি HTTP বা HTTPS সার্ভার URL লিখুন৷",
+  "subsonicUnsupported": "এই সার্ভারটি প্রয়োজনীয় Subsonic API বা টোকেন প্রমাণীকরণ সমর্থন করে না।",
+  "subsonicConnectionError": "সংযোগ করা যাবে না। URL, নেটওয়ার্ক এবং HTTPS শংসাপত্র পরীক্ষা করুন। ওয়েবে, সার্ভারকে অবশ্যই CORS-এর অনুমতি দিতে হবে এবং একটি HTTPS অ্যাপ HTTP-তে সংযোগ করতে পারবে না।"
 }

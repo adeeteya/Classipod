@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Tegund",
   "editSongLyricsLabel": "Textar",
   "saveChangesButton": "Vista breytingar",
-  "veryLow": "Mjög lágt"
+  "veryLow": "Mjög lágt",
+  "reindexLibrarySettingTitle": "Endurtryggja",
+  "reindexLibrarySettingDescription": "Lestu lýsigögn og listaverk fyrir allar tónlistarskrár aftur.",
+  "refreshLibrarySettingTitle": "Endurnýja bókasafn",
+  "refreshLibrarySettingDescription": "Athugaðu hvort tónlist hefur verið bætt við eða eytt. Haltu núverandi lýsigögnum og listaverkum.",
+  "librarySettingsScreenTitle": "Bókasafnsstillingar",
+  "librarySettingsDescription": "Hafa umsjón með skráningu tónlistar og útilokuðum möppum.",
+  "sleepTimerTitle": "Svefntímamælir",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Lok núverandi lags",
+  "sleepTimerRemainingLabel": "Eftir",
+  "findingSongs": "Finnur lög...",
+  "songsLoaded": "Lög hlaðin: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Listaverk í skyndiminni: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ekki tókst að hlaða tónlistarsafninu. Vinsamlegast reyndu aftur.",
+  "missingTracksTitle": "Vantar lög",
+  "missingTracksDescription": "Skoðaðu skrár sem ekki var hægt að lesa.",
+  "missingTracksEmpty": "Engin ólæsileg lög.",
+  "missingTrackRead": "Gat ekki lesið lýsigögn þessarar skráar. Athugaðu staðsetningu skráar og aðgangsheimildir og endurskráðu síðan safnið til að reyna aftur.",
+  "missingTrackArtwork": "Gat ekki lesið listaverk þessarar skráar. Hljóð gæti enn spilað. Endurskráðu safnið til að reyna aftur.",
+  "playbackBuffering": "Búður…",
+  "preventDuplicateTracksTitle": "Koma í veg fyrir afrit lög",
+  "preventDuplicateTracksDescription": "Fela lög með afritum skráarheita.",
+  "hideLocalMusicTitle": "Fela staðbundna tónlist",
+  "hideLocalMusicDescription": "Sýndu aðeins netþjónstónlist á bókasafninu þínu á meðan kveikt er á Subsonic. Staðbundnar skrár verða áfram í tækinu þínu.",
+  "subsonicTitle": "Subsonic þjónn",
+  "subsonicDescription": "Straumaðu tónlist frá Navidrome, gonic og samhæfum netþjónum.",
+  "subsonicConfigure": "Stilla Subsonic",
+  "subsonicUsername": "Notandanafn",
+  "subsonicPassword": "Lykilorð",
+  "subsonicConnect": "Tengdu",
+  "subsonicRemove": "Fjarlægðu netþjón",
+  "subsonicSignIn": "Innskráning krafist",
+  "subsonicLoadingLibrary": "Hleður bókasafnið þitt...",
+  "subsonicContinueBackground": "Haltu áfram í bakgrunni",
+  "subsonicClose": "Loka",
+  "subsonicIndexing": "Skráir tónlist þjóns...",
+  "subsonicUnavailable": "Ekki tiltækt",
+  "subsonicCredentialsError": "Athugaðu notendanafn, lykilorð og heimildir netþjóns.",
+  "subsonicStorageError": "Ekki tókst að vista skilríki. Athugaðu hvort örugg geymsla sé tiltæk og reyndu aftur.",
+  "subsonicTimeout": "Miðlarinn rann út á tíma. Vinsamlegast reyndu aftur.",
+  "subsonicServerError": "Gat ekki lesið netþjónasafnið. Fyrri vörulisti er geymdur. Endurnýjaðu bókasafnið til að reyna aftur.",
+  "libraryRetry": "Reyni aftur",
+  "subsonicOn": "Á",
+  "subsonicOff": "Off",
+  "sleepTimerMinutes": "{minutes} mínútur",
+  "oledBlackDeviceColor": "OLED Svartur",
+  "subsonicUrl": "Vefslóð netþjóns",
+  "subsonicInvalidUrl": "Sláðu inn HTTP eða HTTPS netþjónsslóð án fyrirspurnar, brots eða innbyggðrar innskráningar.",
+  "subsonicUnsupported": "Þessi þjónn styður ekki nauðsynlega Subsonic API eða auðkenningu auðkenningar.",
+  "subsonicConnectionError": "Get ekki tengst. Athugaðu slóðina, netkerfið og HTTPS vottorðið. Á vefnum verður þjónninn að leyfa CORS og HTTPS app getur ekki tengst HTTP."
 }

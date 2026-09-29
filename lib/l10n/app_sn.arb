@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Sevha Shanduko",
-  "veryLow": "Zvakaderera kwazvo"
+  "veryLow": "Zvakaderera kwazvo",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Verenga metadata nemifananidzo yemafaira ese emimhanzi zvakare.",
+  "refreshLibrarySettingTitle": "Refresh Library",
+  "refreshLibrarySettingDescription": "Tarisa mimhanzi yakawedzerwa kana kudzimwa. Chengetedza iripo metadata uye mifananidzo.",
+  "librarySettingsScreenTitle": "Library Settings",
+  "librarySettingsDescription": "Tonga mimhanzi indexing uye maforodha asina kubatanidzwa.",
+  "sleepTimerTitle": "Kurara Nguva",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Kupera kweRwiyo Rwazvino",
+  "sleepTimerRemainingLabel": "Kusara",
+  "findingSongs": "Kutsvaga nziyo...",
+  "songsLoaded": "Nziyo dzakatakurwa: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork cached: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Tatadza kurodha muraibhurari yemimhanzi. Ndapota edzai zvakare.",
+  "missingTracksTitle": "Asipo Makwara",
+  "missingTracksDescription": "Wongorora mafaera asina kuverengwa.",
+  "missingTracksEmpty": "Hapana nziyo dzisingaverengeki.",
+  "missingTrackRead": "Hatina kukwanisa kuverenga metadata yefaira iri. Tarisa nzvimbo yefaira uye mvumo yekuwana, wobva waisa zvakare raibhurari kuti uedze zvakare.",
+  "missingTrackArtwork": "Hatina kukwanisa kuverenga mifananidzo yefaira iri. Audio inogona kuramba ichirira. Reindex raibhurari kuti uedze zvakare.",
+  "playbackBuffering": "Kuvhara...",
+  "preventDuplicateTracksTitle": "Dzivirira Duplicate Tracks",
+  "preventDuplicateTracksDescription": "Viga nziyo dzine mazita efaira akadzokororwa.",
+  "hideLocalMusicTitle": "Viga Local Music",
+  "hideLocalMusicDescription": "Ratidza chete server mimhanzi muraibhurari yako apo Subsonic iripo. Mafaira emunharaunda anogara pachishandiso chako.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Ridza mimhanzi kubva kuNavidrome, gonic, uye maseva anowirirana.",
+  "subsonicConfigure": "Gadzirisa Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Connect",
+  "subsonicRemove": "Bvisa Server",
+  "subsonicSignIn": "Kupinda kunodiwa",
+  "subsonicLoadingLibrary": "Kuisa raibhurari yako…",
+  "subsonicContinueBackground": "Ramba uri kumashure",
+  "subsonicClose": "Close",
+  "subsonicIndexing": "Kurongedza mimhanzi yepaseva…",
+  "subsonicUnavailable": "Hauwanikwi",
+  "subsonicCredentialsError": "Tarisa zita rako rekushandisa, password, uye server mvumo.",
+  "subsonicStorageError": "Hatina kukwanisa kuchengetedza magwaro. Tarisa kuti chengetedzo iripo uye edza zvakare.",
+  "subsonicTimeout": "Sevha yapera nguva. Ndapota edza zvakare.",
+  "subsonicServerError": "Hatina kukwanisa kuverenga raibhurari yeseva. Katalog yapfuura inochengetwa. Zokisa Raibhurari kuti uedze zvakare.",
+  "libraryRetry": "Dzokorora",
+  "subsonicOn": "On",
+  "subsonicOff": "Off",
+  "sleepTimerMinutes": "{minutes} Maminitsi",
+  "oledBlackDeviceColor": "OLED Nhema",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "Pinda HTTP kana HTTPS sevha URL usina mubvunzo, chidimbu, kana kupinda mukati.",
+  "subsonicUnsupported": "Iyi sevha haitsigire inodiwa Subsonic API kana chiratidzo chechokwadi.",
+  "subsonicConnectionError": "Haikwanisi kubatana. Tarisa URL, network, uye HTTPS chitupa. PaWebhu, sevha inofanirwa kubvumira CORS uye HTTPS app haigone kubatana neHTTP."
 }

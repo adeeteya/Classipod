@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Είδος",
   "editSongLyricsLabel": "Στίχοι",
   "saveChangesButton": "Αποθήκευση αλλαγών",
-  "veryLow": "Πολύ Χαμηλό"
+  "veryLow": "Πολύ Χαμηλό",
+  "reindexLibrarySettingTitle": "Εκ νέου ευρετηρίαση",
+  "reindexLibrarySettingDescription": "Διαβάστε ξανά τα μεταδεδομένα και τα έργα τέχνης για όλα τα αρχεία μουσικής.",
+  "refreshLibrarySettingTitle": "Ανανέωση βιβλιοθήκης",
+  "refreshLibrarySettingDescription": "Ελέγξτε για προστιθέμενη ή διαγραμμένη μουσική. Διατηρήστε τα υπάρχοντα μεταδεδομένα και έργα τέχνης.",
+  "librarySettingsScreenTitle": "Ρυθμίσεις βιβλιοθήκης",
+  "librarySettingsDescription": "Διαχειριστείτε την ευρετηρίαση μουσικής και τους αποκλεισμένους φακέλους.",
+  "sleepTimerTitle": "Χρονοδιακόπτης ύπνου",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Τέλος τρέχοντος τραγουδιού",
+  "sleepTimerRemainingLabel": "Απομένουν",
+  "findingSongs": "Εύρεση τραγουδιών…",
+  "songsLoaded": "Φορτωμένα τραγούδια: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Αποθηκευμένο έργο τέχνης: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Δεν είναι δυνατή η φόρτωση της μουσικής βιβλιοθήκης. Παρακαλώ δοκιμάστε ξανά.",
+  "missingTracksTitle": "Λείπουν κομμάτια",
+  "missingTracksDescription": "Ελέγξτε τα αρχεία που δεν ήταν δυνατό να διαβαστούν.",
+  "missingTracksEmpty": "Δεν υπάρχουν αδιάβαστα κομμάτια.",
+  "missingTrackRead": "Δεν ήταν δυνατή η ανάγνωση των μεταδεδομένων αυτού του αρχείου. Ελέγξτε τη θέση του αρχείου και τα δικαιώματα πρόσβασης και, στη συνέχεια, εκ νέου ευρετηρίαση της βιβλιοθήκης για να προσπαθήσετε ξανά.",
+  "missingTrackArtwork": "Δεν ήταν δυνατή η ανάγνωση του γραφικού αυτού του αρχείου. Ο ήχος μπορεί να παίζει ακόμα. Εκ νέου ευρετηρίαση της βιβλιοθήκης για να προσπαθήσετε ξανά.",
+  "playbackBuffering": "Αποθήκευση…",
+  "preventDuplicateTracksTitle": "Αποτροπή διπλότυπων κομματιών",
+  "preventDuplicateTracksDescription": "Απόκρυψη κομματιών με διπλά ονόματα αρχείων.",
+  "hideLocalMusicTitle": "Απόκρυψη τοπικής μουσικής",
+  "hideLocalMusicDescription": "Εμφάνιση μόνο μουσικής διακομιστή στη βιβλιοθήκη σας ενώ το Subsonic είναι ενεργοποιημένο. Τα τοπικά αρχεία παραμένουν στη συσκευή σας.",
+  "subsonicTitle": "Διακομιστής Subsonic",
+  "subsonicDescription": "Μεταδώστε μουσική από Navidrome, gonic και συμβατούς διακομιστές.",
+  "subsonicConfigure": "Διαμόρφωση Subsonic",
+  "subsonicUsername": "Όνομα χρήστη",
+  "subsonicPassword": "Κωδικός πρόσβασης",
+  "subsonicConnect": "Συνδεθείτε",
+  "subsonicRemove": "Κατάργηση διακομιστή",
+  "subsonicSignIn": "Απαιτείται σύνδεση",
+  "subsonicLoadingLibrary": "Φόρτωση της βιβλιοθήκης σας…",
+  "subsonicContinueBackground": "Συνέχεια στο παρασκήνιο",
+  "subsonicClose": "Κλείσιμο",
+  "subsonicIndexing": "Ευρετηρίαση μουσικής διακομιστή…",
+  "subsonicUnavailable": "Μη διαθέσιμο",
+  "subsonicCredentialsError": "Ελέγξτε το όνομα χρήστη, τον κωδικό πρόσβασης και τα δικαιώματα διακομιστή.",
+  "subsonicStorageError": "Δεν ήταν δυνατή η αποθήκευση των διαπιστευτηρίων. Ελέγξτε ότι ο ασφαλής χώρος αποθήκευσης είναι διαθέσιμος και δοκιμάστε ξανά.",
+  "subsonicTimeout": "Ο διακομιστής έληξε. Δοκιμάστε ξανά.",
+  "subsonicServerError": "Δεν ήταν δυνατή η ανάγνωση της βιβλιοθήκης διακομιστή. Ο προηγούμενος κατάλογος διατηρείται. Ανανεώστε τη βιβλιοθήκη για να προσπαθήσετε ξανά.",
+  "libraryRetry": "Δοκιμάζω πάλι",
+  "subsonicOn": "Επί",
+  "subsonicOff": "Μακριά από",
+  "sleepTimerMinutes": "{minutes} Λεπτά",
+  "oledBlackDeviceColor": "OLED Μαύρο",
+  "subsonicUrl": "URL διακομιστή",
+  "subsonicInvalidUrl": "Εισαγάγετε μια διεύθυνση URL διακομιστή HTTP ή HTTPS χωρίς ερώτημα, τμήμα ή ενσωματωμένη σύνδεση.",
+  "subsonicUnsupported": "Αυτός ο διακομιστής δεν υποστηρίζει το απαιτούμενο Subsonic API ή έλεγχο ταυτότητας διακριτικού.",
+  "subsonicConnectionError": "Δεν είναι δυνατή η σύνδεση. Ελέγξτε τη διεύθυνση URL, το δίκτυο και το πιστοποιητικό HTTPS. Στον Ιστό, ο διακομιστής πρέπει να επιτρέπει το CORS και μια εφαρμογή HTTPS δεν μπορεί να συνδεθεί σε HTTP."
 }

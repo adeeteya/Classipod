@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Topik",
   "editSongLyricsLabel": "Ol toktok",
   "saveChangesButton": "Sevim Senis",
-  "veryLow": "Low Low tru"
+  "veryLow": "Low Low tru",
+  "reindexLibrarySettingTitle": "Indeks gen",
+  "reindexLibrarySettingDescription": "Ritim metadata na artwok bilong olgeta musik fail gen.",
+  "refreshLibrarySettingTitle": "Refresim Laibreri",
+  "refreshLibrarySettingDescription": "Sekim sapos ol i putim o rausim ol musik. Holim ol metadata na artwok i stap pinis.",
+  "librarySettingsScreenTitle": "Ol Seting bilong Laibreri",
+  "librarySettingsDescription": "Lukautim musik indeksing na ol folda we i no stap insait.",
+  "sleepTimerTitle": "Taim bilong slip",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Pinis bilong Nau Song",
+  "sleepTimerRemainingLabel": "I stap yet",
+  "findingSongs": "Painim ol singsing...",
+  "songsLoaded": "Ol singsing i stap: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ol piksa i stap long hait: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "No inap long putim musik laibreri. Plis traim gen.",
+  "missingTracksTitle": "Ol trek i lus",
+  "missingTracksDescription": "Lukluk gen long ol fail we yu no inap long ritim.",
+  "missingTracksEmpty": "Nogat ol 'track' we yu no inap ritim.",
+  "missingTrackRead": "Mi no inap ritim metadata bilong dispela fail. Sekim ples bilong fail na ol tok orait bilong kisim, na bihain putim gen laibreri long traim gen.",
+  "missingTrackArtwork": "Mi no inap ritim piksa bilong dispela fail. Odio i ken pilai yet. Indeks gen laibreri long traim gen.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Stopim ol wankain trek",
+  "preventDuplicateTracksDescription": "Haitim ol 'track' wantaim wankain nem bilong ol fail.",
+  "hideLocalMusicTitle": "Haitim musik bilong ples",
+  "hideLocalMusicDescription": "Soim tasol seva musik insait long laibreri bilong yu taim Subsonic i on. Ol lokal fail i stap long divais bilong yu.",
+  "subsonicTitle": "Subsonic Seva",
+  "subsonicDescription": "Harim musik long Navidrome, gonic, na ol narapela seva.",
+  "subsonicConfigure": "Konfigurim Subsonic",
+  "subsonicUsername": "Nem bilong yusa",
+  "subsonicPassword": "Paswod",
+  "subsonicConnect": "Konektim",
+  "subsonicRemove": "Rausim seva",
+  "subsonicSignIn": "Yu mas sainim",
+  "subsonicLoadingLibrary": "Lodim laibreri bilong yu...",
+  "subsonicContinueBackground": "Go het long bekgraun",
+  "subsonicClose": "Klosim",
+  "subsonicIndexing": "Indeksim musik bilong seva...",
+  "subsonicUnavailable": "Nogat",
+  "subsonicCredentialsError": "Sekim yusa nem, paswod, na ol tok orait bilong seva bilong yu.",
+  "subsonicStorageError": "No inap long sevim ol 'credentials'. Sekim olsem gutpela ples bilong putim ol samting i stap na traim gen.",
+  "subsonicTimeout": "Seva i pinis taim. Plis traim gen.",
+  "subsonicServerError": "Mi no inap ritim 'server library'. Katalog bilong bipo i stap yet. Refresim Laibreri long traim gen.",
+  "libraryRetry": "Ritri",
+  "subsonicOn": "Antap",
+  "subsonicOff": "I of",
+  "sleepTimerMinutes": "{minutes} minit",
+  "oledBlackDeviceColor": "OLED Blak",
+  "subsonicUrl": "URL bilong seva",
+  "subsonicInvalidUrl": "Putim wanpela HTTP o HTTPS seva URL na i no gat wanpela askim, hap, o 'embedded login'.",
+  "subsonicUnsupported": "Dispela seva i no sapotim Subsonic API o token otentikesen we ol i nidim.",
+  "subsonicConnectionError": "No inap konektim. Sekim URL, netwok, na HTTPS setifiket. Long Web, seva i mas larim CORS na wanpela HTTPS ap i no inap konektim long HTTP."
 }

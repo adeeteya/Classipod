@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ප්‍රභේදය",
   "editSongLyricsLabel": "ගී පද",
   "saveChangesButton": "වෙනස්කම් සුරකින්න",
-  "veryLow": "ඉතා අඩුයි"
+  "veryLow": "ඉතා අඩුයි",
+  "reindexLibrarySettingTitle": "නැවත දර්ශක",
+  "reindexLibrarySettingDescription": "සියලුම සංගීත ගොනු සඳහා පාර-දත්ත සහ කලා කෘති නැවත කියවන්න.",
+  "refreshLibrarySettingTitle": "පුස්තකාලය නැවුම් කරන්න",
+  "refreshLibrarySettingDescription": "එකතු කරන ලද හෝ මකා දැමූ සංගීතය සඳහා පරීක්ෂා කරන්න. පවතින පාරදත්ත සහ කලා කෘති තබා ගන්න.",
+  "librarySettingsScreenTitle": "පුස්තකාල සැකසුම්",
+  "librarySettingsDescription": "සංගීත සුචිගත කිරීම සහ බැහැර කළ ෆෝල්ඩර කළමනාකරණය කරන්න.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "වත්මන් ගීතයේ අවසානය",
+  "sleepTimerRemainingLabel": "ඉතිරි",
+  "findingSongs": "ගීත සොයමින්...",
+  "songsLoaded": "පූරණය කළ ගීත: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "කලා කෘති හැඹිලිගත: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "සංගීත පුස්තකාලය පූරණය කළ නොහැක. කරුණාකර නැවත උත්සාහ කරන්න.",
+  "missingTracksTitle": "මග හැරුණු පීලි",
+  "missingTracksDescription": "කියවිය නොහැකි ගොනු සමාලෝචනය කරන්න.",
+  "missingTracksEmpty": "කියවිය නොහැකි ගීත නොමැත.",
+  "missingTrackRead": "මෙම ගොනුවේ පාරදත්ත කියවීමට නොහැකි විය. ගොනු ස්ථානය සහ ප්‍රවේශ අවසර පරීක්ෂා කරන්න, පසුව නැවත උත්සාහ කිරීමට පුස්තකාලය නැවත සුචිගත කරන්න.",
+  "missingTrackArtwork": "මෙම ගොනුවේ කලා කෘති කියවීමට නොහැකි විය. ශ්‍රව්‍ය තවමත් වාදනය විය හැක. නැවත උත්සාහ කිරීමට පුස්තකාලය නැවත සුචිගත කරන්න.",
+  "playbackBuffering": "බෆරය කරමින්...",
+  "preventDuplicateTracksTitle": "අනුපිටපත් පීලි වලක්වන්න",
+  "preventDuplicateTracksDescription": "අනුපිටපත් ගොනු නාම සහිත ධාවන පථ සඟවන්න.",
+  "hideLocalMusicTitle": "දේශීය සංගීතය සඟවන්න",
+  "hideLocalMusicDescription": "Subsonic ක්‍රියාත්මක වන විට ඔබේ පුස්තකාලයේ සේවාදායක සංගීතය පමණක් පෙන්වන්න. දේශීය ගොනු ඔබගේ උපාංගයේ පවතී.",
+  "subsonicTitle": "Subsonic සේවාදායකය",
+  "subsonicDescription": "Navidrome, gonic, සහ ගැළපෙන සේවාදායකයන්ගෙන් සංගීතය ප්‍රවාහ කරන්න.",
+  "subsonicConfigure": "Subsonic වින්‍යාස කරන්න",
+  "subsonicUsername": "පරිශීලක නාමය",
+  "subsonicPassword": "මුරපදය",
+  "subsonicConnect": "සම්බන්ධ කරන්න",
+  "subsonicRemove": "සේවාදායකය ඉවත් කරන්න",
+  "subsonicSignIn": "පුරනය වීම අවශ්‍යයි",
+  "subsonicLoadingLibrary": "ඔබේ පුස්තකාලය පූරණය කරමින්...",
+  "subsonicContinueBackground": "පසුබිමේ ඉදිරියට යන්න",
+  "subsonicClose": "වසන්න",
+  "subsonicIndexing": "සේවාදායක සංගීතය සුචිගත කරමින්...",
+  "subsonicUnavailable": "ලබා ගත නොහැක",
+  "subsonicCredentialsError": "ඔබගේ පරිශීලක නාමය, මුරපදය සහ සේවාදායක අවසර පරීක්ෂා කරන්න.",
+  "subsonicStorageError": "අක්තපත්‍ර සුරැකීමට නොහැකි විය. ආරක්ෂිත ගබඩාව තිබේදැයි පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
+  "subsonicTimeout": "සේවාදායකයේ කාලය අවසන් විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+  "subsonicServerError": "සේවාදායක පුස්තකාලය කියවීමට නොහැකි විය. පෙර නාමාවලිය රඳවා ඇත. නැවත උත්සාහ කිරීමට පුස්තකාලය නැවුම් කරන්න.",
+  "libraryRetry": "නැවත උත්සාහ කරන්න",
+  "subsonicOn": "මත",
+  "subsonicOff": "අක්රිය කරන්න",
+  "sleepTimerMinutes": "විනාඩි {minutes}",
+  "oledBlackDeviceColor": "OLED කළු",
+  "subsonicUrl": "සේවාදායක URL",
+  "subsonicInvalidUrl": "විමසුමක්, ඛණ්ඩනයක් හෝ කාවැද්දූ පිවිසුමක් නොමැතිව HTTP හෝ HTTPS සේවාදායක URL එකක් ඇතුළු කරන්න.",
+  "subsonicUnsupported": "මෙම සේවාදායකය අවශ්‍ය Subsonic API හෝ ටෝකන් සත්‍යාපනය සඳහා සහය නොදක්වයි.",
+  "subsonicConnectionError": "සම්බන්ධ විය නොහැක. URL, ජාලය සහ HTTPS සහතිකය පරීක්ෂා කරන්න. වෙබයේ, සේවාදායකය CORS වලට ඉඩ දිය යුතු අතර HTTPS යෙදුමකට HTTP වෙත සම්බන්ධ විය නොහැක."
 }

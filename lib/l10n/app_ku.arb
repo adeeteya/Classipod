@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Save Changes",
-  "veryLow": "Pir kêm"
+  "veryLow": "Pir kêm",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Ji bo hemî pelên muzîkê dîsa metadata û hunerê bixwînin.",
+  "refreshLibrarySettingTitle": "Pirtûkxaneya nûve bike",
+  "refreshLibrarySettingDescription": "Ji bo muzîka zêde an jêbirin kontrol bikin. Metadata û karên hunerî yên heyî biparêzin.",
+  "librarySettingsScreenTitle": "Mîhengên Pirtûkxaneyê",
+  "librarySettingsDescription": "Indeksa muzîkê û peldankên jêderkirî birêve bibin.",
+  "sleepTimerTitle": "Demjimêra xewê",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Dawiya Strana Niha",
+  "sleepTimerRemainingLabel": "Dimîne",
+  "findingSongs": "Dîtina stranan…",
+  "songsLoaded": "Stranên barkirî: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Karên hunerî yên veşartî: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nikare pirtûkxaneya muzîkê bar bike. Ji kerema xwe dîsa biceribîne.",
+  "missingTracksTitle": "Tracks winda",
+  "missingTracksDescription": "Pelên ku nehatine xwendin binirxînin.",
+  "missingTracksEmpty": "No tracks nexwendî.",
+  "missingTrackRead": "Nekarî metadata vê pelê bixwîne. Cihê pelê û destûrên gihîştinê kontrol bikin, dûv re pirtûkxaneyê ji nû ve biceribîne.",
+  "missingTrackArtwork": "Nekarî xebata hunerî ya vê pelê bixwîne. Dibe ku deng hîn jî bilîze. Pirtûkxaneyê ji nû ve biceribîne.",
+  "playbackBuffering": "Tampkirin…",
+  "preventDuplicateTracksTitle": "Pêşîgirtina Tracks Duplicate",
+  "preventDuplicateTracksDescription": "Rêçên bi navên pelên dubare veşêrin.",
+  "hideLocalMusicTitle": "Muzîka Herêmî veşêre",
+  "hideLocalMusicDescription": "Dema ku Subsonic çalak e, tenê muzîka serverê di pirtûkxaneya xwe de nîşan bide. Pelên herêmî li ser cîhaza we dimînin.",
+  "subsonicTitle": "Pêşkêşkara Subsonic",
+  "subsonicDescription": "Muzîka ji Navidrome, gonic, û serverên lihevhatî biherikînin.",
+  "subsonicConfigure": "Subsonic mîheng bike",
+  "subsonicUsername": "Navê bikarhêner",
+  "subsonicPassword": "Şîfre",
+  "subsonicConnect": "Girêdan",
+  "subsonicRemove": "Serverê jêbirin",
+  "subsonicSignIn": "Sign in pêwîst",
+  "subsonicLoadingLibrary": "Pirtûkxaneya we tê barkirin…",
+  "subsonicContinueBackground": "Di paşnavê de berdewam bikin",
+  "subsonicClose": "Close",
+  "subsonicIndexing": "Muzîka servera îndekskirinê…",
+  "subsonicUnavailable": "Unavailable",
+  "subsonicCredentialsError": "Navê bikarhêner, şîfre, û destûrên servera xwe kontrol bikin.",
+  "subsonicStorageError": "Nekarî pêbaweriyan tomar bike. Kontrol bikin ku hilanîna ewle heye û dîsa biceribîne.",
+  "subsonicTimeout": "Dema serverê bi dawî bû. Ji kerema xwe dîsa biceribîne.",
+  "subsonicServerError": "Nekarî pirtûkxaneya serverê bixwîne. Kataloga berê tê parastin. Pirtûkxaneyê nûve bike ku ji nû ve biceribîne.",
+  "libraryRetry": "Xweberbawer",
+  "subsonicOn": "Li",
+  "subsonicOff": "Ji",
+  "sleepTimerMinutes": "{minutes} Minutes",
+  "oledBlackDeviceColor": "OLED Reş",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "URL-ya servera HTTP an HTTPS bêyî pirsek, parçe, an têketinek pêvekirî têkevin.",
+  "subsonicUnsupported": "Ev server piştgirî nade Subsonic API an rastkirina tokenê ya pêwîst.",
+  "subsonicConnectionError": "Nikare girêdan. Sertîfîkaya URL, torê û HTTPS-ê kontrol bikin. Li ser Webê, server divê destûrê bide CORS û sepanek HTTPS nikare bi HTTP-ê ve girêbide."
 }

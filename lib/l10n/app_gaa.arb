@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Abɔ",
   "editSongLyricsLabel": "Wiemɔi",
   "saveChangesButton": "Satsakemɔi",
-  "veryLow": "Hemɔ kwraa"
+  "veryLow": "Hemɔ kwraa",
+  "reindexLibrarySettingTitle": "Index ekoŋŋ",
+  "reindexLibrarySettingDescription": "Kanemɔ metadata kɛ mfonirifeemɔ kɛha lalai faili fɛɛ ekoŋŋ.",
+  "refreshLibrarySettingTitle": "Tsɔɔmɔ Woji Atoohe lɛ Hee",
+  "refreshLibrarySettingDescription": "Kwɛmɔ lalai ni akɛfata he loo ajie. Kɛ metadata kɛ nitɛŋmɔ ni yɔɔ momo lɛ ato.",
+  "librarySettingsScreenTitle": "Wolotoohe He Gbɛjianɔtoi",
+  "librarySettingsDescription": "Kwɛmɔ lala indexing kɛ folda ni ajie kɛjɛ mli.",
+  "sleepTimerTitle": "Wɔɔ Be",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Lala ni Amrɔ nɛɛ Naagbee",
+  "sleepTimerRemainingLabel": "Nɔ ni eshwɛ",
+  "findingSongs": "Lalai taomɔ...",
+  "songsLoaded": "Lalai ni awo mli: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Nitsumɔi ni akɛto: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Anyɛɛɛ awo lala wojiatoohe lɛ. Ofainɛ kaa ekoŋŋ.",
+  "missingTracksTitle": "Traki ni elaaje",
+  "missingTracksDescription": "Kwɛmɔ faili ni anyɛɛɛ akane lɛ mli.",
+  "missingTracksEmpty": "Traki ni anyɛɛɛ akane lɛ bɛ.",
+  "missingTrackRead": "Enyɛɛɛ ekane faili nɛɛ mli saji. Kwɛmɔ he ni faili lɛ yɔɔ kɛ hegbɛi ni akɛboteɔ mli lɛ, no sɛɛ lɛ, okɛ wojiatoohe lɛ awo mli ekoŋŋ koni oka ekoŋŋ.",
+  "missingTrackArtwork": "Anyɛɛɛ akane faili nɛɛ mfoniri. Odio baanyɛ atswa lolo. Reindex wolotoohe lɛ koni oka ekoŋŋ.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Tsi Traki ni Feɔ Ekome lɛ Naa",
+  "preventDuplicateTracksDescription": "Tee lalai ni faili gbɛi enyɔ yɔɔ mli lɛ.",
+  "hideLocalMusicTitle": "Teemɔ Akutsoŋ Lala",
+  "hideLocalMusicDescription": "Tsɔɔmɔ sɛɛva lalai pɛ yɛ owolotoohe lɛ be mli ni Subsonic lɛ miitsu nii. Faili ni yɔɔ maŋ lɛ mli lɛ hiɔ otsɔne lɛ nɔ.",
+  "subsonicTitle": "Subsonic Sɛɛva",
+  "subsonicDescription": "Lala ni jɛ Navidrome, gonic, kɛ sɛɛvai ni kɛ amɛhe kpãa gbee lɛ anɔ.",
+  "subsonicConfigure": "Subsonic lɛ he gbɛjianɔtoo",
+  "subsonicUsername": "Gbɛi ni akɛtsuɔ nii",
+  "subsonicPassword": "Paswɛd",
+  "subsonicConnect": "Tsa",
+  "subsonicRemove": "Jiemɔ Sɛrva lɛ",
+  "subsonicSignIn": "Ehe miihia ni obote mli",
+  "subsonicLoadingLibrary": "Okɛ owolotoohe lɛ miiwo mli...",
+  "subsonicContinueBackground": "Tsa nɔ yɛ sɛɛgbɛ",
+  "subsonicClose": "Gbalamɔ",
+  "subsonicIndexing": "Sɛɛva lalai ahe mfonirifeemɔ...",
+  "subsonicUnavailable": "Ebɛ",
+  "subsonicCredentialsError": "Kwɛmɔ ogbɛi, paswɛd, kɛ sɛɛva hegbɛi.",
+  "subsonicStorageError": "Enyɛɛɛ ekɛ hegbɛi ato. Kwɛmɔ akɛ he ko ni akɛtoɔ nii jogbaŋŋ yɛ ni oka ekoŋŋ.",
+  "subsonicTimeout": "Sɛɛva lɛ be eho. Ofainɛ kaa ekoŋŋ.",
+  "subsonicServerError": "Enyɛɛɛ ekane sɛɛva wolotoohe lɛ. Ahiɛ wolo ni tsɔ hiɛ lɛ mli. Tsɔɔmɔ Woji Atoohe lɛ koni oka ekoŋŋ.",
+  "libraryRetry": "kaimɔ",
+  "subsonicOn": "Nɔ",
+  "subsonicOff": "Gbeenaa",
+  "sleepTimerMinutes": "Minitii {minutes}",
+  "oledBlackDeviceColor": "OLED Diŋ",
+  "subsonicUrl": "Sɛɛva URL",
+  "subsonicInvalidUrl": "Ŋmaa HTTP loo HTTPS sɛɛva URL ni sanebimɔ, fã, loo nɔ ni akɛwo mli bɛ mli.",
+  "subsonicUnsupported": "Sɛrva nɛɛ fioo Subsonic API loo token he odaseyeli ni he hiaa lɛ sɛɛ.",
+  "subsonicConnectionError": "Enyɛɛɛ ekɛtsa. Kwɛmɔ URL, nɛtwɛk, kɛ HTTPS wolo lɛ. Yɛ Wɛb lɛ nɔ lɛ, esa akɛ sɛɛva lɛ aŋmɛ gbɛ ni CORS kɛ HTTPS app ko nyɛŋ atswa HTTP."
 }

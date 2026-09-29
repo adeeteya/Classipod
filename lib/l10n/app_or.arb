@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ଶ re ଳୀ",
   "editSongLyricsLabel": "ଗୀତ",
   "saveChangesButton": "ପରିବର୍ତ୍ତନଗୁଡିକ ସଞ୍ଚୟ କରନ୍ତୁ |",
-  "veryLow": "ବହୁତ କମ୍ |"
+  "veryLow": "ବହୁତ କମ୍ |",
+  "reindexLibrarySettingTitle": "ପୁନ index- ସୂଚକାଙ୍କ |",
+  "reindexLibrarySettingDescription": "ସମସ୍ତ ମ୍ୟୁଜିକ୍ ଫାଇଲ୍ ପାଇଁ ମେଟାଡାଟା ଏବଂ ଚିତ୍ରକଳା ପୁନର୍ବାର ପ .଼ନ୍ତୁ |",
+  "refreshLibrarySettingTitle": "ଲାଇବ୍ରେରୀ ସତେଜ କରନ୍ତୁ |",
+  "refreshLibrarySettingDescription": "ଯୋଡା ଯାଇଥିବା କିମ୍ବା ଡିଲିଟ୍ ହୋଇଥିବା ମ୍ୟୁଜିକ୍ ପାଇଁ ଯାଞ୍ଚ କରନ୍ତୁ | ବିଦ୍ୟମାନ ମେଟାଡାଟା ଏବଂ ଚିତ୍ରକଳା ରଖନ୍ତୁ |",
+  "librarySettingsScreenTitle": "ଲାଇବ୍ରେରୀ ସେଟିଂସମୂହ |",
+  "librarySettingsDescription": "ମ୍ୟୁଜିକ୍ ଇଣ୍ଡେକ୍ସିଂ ଏବଂ ଫୋଲ୍ଡରଗୁଡ଼ିକୁ ବାଦ ଦିଅନ୍ତୁ |",
+  "sleepTimerTitle": "ଶୋଇବା ସମୟ",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "ସାମ୍ପ୍ରତିକ ଗୀତର ସମାପ୍ତି |",
+  "sleepTimerRemainingLabel": "ଅବଶିଷ୍ଟ |",
+  "findingSongs": "ଗୀତ ଖୋଜିବା…",
+  "songsLoaded": "ଗୀତ ଲୋଡ୍ ହୋଇଛି: {loaded} / {total} |",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "ଚିତ୍ରକଳା କ୍ୟାଚ୍: {cached} |",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ମ୍ୟୁଜିକ୍ ଲାଇବ୍ରେରୀ ଲୋଡ୍ କରିବାକୁ ଅସମର୍ଥ | ଦୟାକରି ପୁନ ry ଚେଷ୍ଟା କରନ୍ତୁ |",
+  "missingTracksTitle": "ନିଖୋଜ ଟ୍ରାକଗୁଡିକ |",
+  "missingTracksDescription": "ଫାଇଲଗୁଡିକ ସମୀକ୍ଷା କରନ୍ତୁ ଯାହା ପ read ିହେବ ନାହିଁ |",
+  "missingTracksEmpty": "କ un ଣସି ପଠନୀୟ ଟ୍ରାକ୍ ନାହିଁ |",
+  "missingTrackRead": "ଏହି ଫାଇଲ୍ ର ମେଟାଡାଟା ପ read ିପାରିଲା ନାହିଁ | ଫାଇଲ୍ ଅବସ୍ଥାନ ଏବଂ ଆକ୍ସେସ୍ ଅନୁମତିଗୁଡିକ ଯାଞ୍ଚ କରନ୍ତୁ, ତାପରେ ପୁନ ry ଚେଷ୍ଟା କରିବାକୁ ଲାଇବ୍ରେରୀକୁ ପୁନ ind ନିର୍ଦ୍ଦେଶ କରନ୍ତୁ |",
+  "missingTrackArtwork": "ଏହି ଫାଇଲ୍ ର କଳାକୃତି ପ read ିପାରିଲା ନାହିଁ | ଅଡିଓ ତଥାପି ଖେଳିପାରେ | ପୁନ ry ଚେଷ୍ଟା କରିବାକୁ ଲାଇବ୍ରେରୀକୁ ରେଣ୍ଡେକ୍ସ କରନ୍ତୁ |",
+  "playbackBuffering": "ବଫରିଂ…",
+  "preventDuplicateTracksTitle": "ନକଲ ଟ୍ରାକକୁ ପ୍ରତିରୋଧ କରନ୍ତୁ |",
+  "preventDuplicateTracksDescription": "ନକଲ ଫାଇଲ ନାମ ସହିତ ଟ୍ରାକ୍ ଲୁଚାନ୍ତୁ |",
+  "hideLocalMusicTitle": "ସ୍ଥାନୀୟ ସଙ୍ଗୀତ ଲୁଚାନ୍ତୁ |",
+  "hideLocalMusicDescription": "Subsonic ଚାଲୁଥିବାବେଳେ କେବଳ ଆପଣଙ୍କ ଲାଇବ୍ରେରୀରେ ସର୍ଭର ମ୍ୟୁଜିକ୍ ଦେଖାନ୍ତୁ | ସ୍ଥାନୀୟ ଡିଭାଇସ୍ ଆପଣଙ୍କ ଡିଭାଇସରେ ରହିଥାଏ |",
+  "subsonicTitle": "Subsonic ସର୍ଭର |",
+  "subsonicDescription": "Navidrome, gonic, ଏବଂ ସୁସଙ୍ଗତ ସର୍ଭରରୁ ଷ୍ଟ୍ରିମ୍ ମ୍ୟୁଜିକ୍ |",
+  "subsonicConfigure": "Subsonic କୁ ବିନ୍ୟାସ କରନ୍ତୁ |",
+  "subsonicUsername": "ଉପଯୋଗକର୍ତ୍ତା ନାମ",
+  "subsonicPassword": "ପାସୱାର୍ଡ",
+  "subsonicConnect": "ସଂଯୋଗ କରନ୍ତୁ |",
+  "subsonicRemove": "ସର୍ଭର ଅପସାରଣ କରନ୍ତୁ |",
+  "subsonicSignIn": "ଆବଶ୍ୟକ ସାଇନ୍ ଇନ୍ କରନ୍ତୁ |",
+  "subsonicLoadingLibrary": "ତୁମର ଲାଇବ୍ରେରୀ ଲୋଡ୍ କରୁଛି…",
+  "subsonicContinueBackground": "ପୃଷ୍ଠଭୂମିରେ ଜାରି ରଖ |",
+  "subsonicClose": "ବନ୍ଦ",
+  "subsonicIndexing": "ସର୍ଭର ମ୍ୟୁଜିକ୍ ଇଣ୍ଡେକ୍ସ କରୁଛି…",
+  "subsonicUnavailable": "ଉପଲବ୍ଧ ନାହିଁ",
+  "subsonicCredentialsError": "ଆପଣଙ୍କର ଉପଯୋଗକର୍ତ୍ତା ନାମ, ପାସୱାର୍ଡ, ଏବଂ ସର୍ଭର ଅନୁମତି ଯାଞ୍ଚ କରନ୍ତୁ |",
+  "subsonicStorageError": "ପରିଚୟପତ୍ର ସଞ୍ଚୟ କରିପାରିଲା ନାହିଁ | ସୁରକ୍ଷିତ ଷ୍ଟୋରେଜ୍ ଉପଲବ୍ଧ ଅଛି କି ନାହିଁ ଯାଞ୍ଚ କରନ୍ତୁ ଏବଂ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |",
+  "subsonicTimeout": "ସର୍ଭର ସମୟ ସମାପ୍ତ ହୋଇଛି | ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |",
+  "subsonicServerError": "ସର୍ଭର ଲାଇବ୍ରେରୀ ପ read ିପାରିଲା ନାହିଁ | ପୂର୍ବ କାଟାଲଗ୍ ରଖାଯାଇଛି | ପୁନ ry ଚେଷ୍ଟା କରିବାକୁ ଲାଇବ୍ରେରୀ ସତେଜ କରନ୍ତୁ |",
+  "libraryRetry": "ପୁନ ry ଚେଷ୍ଟା କର",
+  "subsonicOn": "ଉପରେ",
+  "subsonicOff": "ବନ୍ଦ",
+  "sleepTimerMinutes": "{minutes} ମିନିଟ୍ |",
+  "oledBlackDeviceColor": "OLED କଳା",
+  "subsonicUrl": "ସର୍ଭର URL",
+  "subsonicInvalidUrl": "ଜିଜ୍ଞାସା, ଖଣ୍ଡ, କିମ୍ବା ଏମ୍ବେଡ୍ ଲଗଇନ୍ ବିନା ଏକ HTTP କିମ୍ବା HTTPS ସର୍ଭର URL ପ୍ରବେଶ କରନ୍ତୁ |",
+  "subsonicUnsupported": "ଏହି ସର୍ଭର ଆବଶ୍ୟକୀୟ Subsonic API କିମ୍ବା ଟୋକେନ୍ ପ୍ରାମାଣିକିକରଣକୁ ସମର୍ଥନ କରେନାହିଁ |",
+  "subsonicConnectionError": "ସଂଯୋଗ ହୋଇପାରିବ ନାହିଁ | URL, ନେଟୱାର୍କ, ଏବଂ HTTPS ସାର୍ଟିଫିକେଟ୍ ଯାଞ୍ଚ କରନ୍ତୁ | ୱେବରେ, ସର୍ଭର ନିଶ୍ଚିତ ଭାବରେ CORS କୁ ଅନୁମତି ଦେବ ଏବଂ ଏକ HTTPS ଆପ୍ HTTP ସହିତ ସଂଯୋଗ ହୋଇପାରିବ ନାହିଁ |"
 }

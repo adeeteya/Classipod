@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Sesentlamantli",
   "editSongLyricsLabel": "listas",
   "saveChangesButton": "Tlamantli tlen mopatla",
-  "veryLow": "Tlahuel huejca"
+  "veryLow": "Tlahuel huejca",
+  "reindexLibrarySettingTitle": "Xikijkuilo",
+  "reindexLibrarySettingDescription": "Xijpoua nopa metadatos uan tlaixkopinkayomej tlen nochi tlatsotsonali.",
+  "refreshLibrarySettingTitle": "Xijyankuili nopa amochtli",
+  "refreshLibrarySettingDescription": "Xikita tla onka tlatsotsonali tlen kitlalijtokej o tlen kiixpolojtokej. Xijpixto nopa metadatos uan tlaixkopinkayomej tlen ya eltok.",
+  "librarySettingsScreenTitle": "Tlayejyekoli tlen biblioteca",
+  "librarySettingsDescription": "Xij tlachili nopa tlatsotsonali uan nopa carpetas tlen amo eltok.",
+  "sleepTimerTitle": "Tlajtlanili tlen kochilistli",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Tlami nopa tlatsotsonali",
+  "sleepTimerRemainingLabel": "tlen poliui",
+  "findingSongs": "Nijtemoua tlatsotsonalismej...",
+  "songsLoaded": "Tlatsotsonali tlen kitlalijkej: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Tlaixkopinkayotl tlen tlaatitok: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ax ueli tij tlaliliaj nopa tlatsotsonali. Xijyejyeko sempa.",
+  "missingTracksTitle": "Pistas tlen poliui",
+  "missingTracksDescription": "Xikita nopa archivos tlen axuelij tijpouaj.",
+  "missingTracksEmpty": "Ax onka tlajtoli tlen ax ueli mopoua.",
+  "missingTrackRead": "Ax uelki nijpoua nopa metadatos tlen ni amatl. Xikita kanke eltok nopa amatl uan kanke uelis tias, teipa xikijkuilo nopa biblioteca uan xijyejyeko.",
+  "missingTrackArtwork": "Ax ueliyaya nijpoua nopa tlaixkopinkayotl tlen ni amatl. Uelis nojua tlatsotsonas nopa tlajtoli. Xij tlalili sempa nopa biblioteca para tijyejyekos.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Amo ma mochiua ome tlamantli",
+  "preventDuplicateTracksDescription": "Xikin tlaati nopa tlatsotsonali ika ome inintoka.",
+  "hideLocalMusicTitle": "Xijtlaati nopa tlatsotsonali",
+  "hideLocalMusicDescription": "Xikinnextili san tlatsotsonali tlen eltok ipan mo biblioteca kemaj Subsonic eltok. Nopa archivos locales mokaua ipan mo dispositivo.",
+  "subsonicTitle": "Subsonic tlatekipanojketl",
+  "subsonicDescription": "Xijkaki tlatsotsonali tlen Navidrome, gonic, uan tlen sekinok tlen sanse.",
+  "subsonicConfigure": "Xij tlali Subsonic",
+  "subsonicUsername": "itoka",
+  "subsonicPassword": "Tlajtoli",
+  "subsonicConnect": "Ximonechiko",
+  "subsonicRemove": "Xikixti tlatekipanojketl",
+  "subsonicSignIn": "Xikalaki moneki",
+  "subsonicLoadingLibrary": "Tij tlalijtok mo biblioteca...",
+  "subsonicContinueBackground": "Ximosentlali ipan tlakuitlapan",
+  "subsonicClose": "Xitlatsakuili",
+  "subsonicIndexing": "Kiixtoma tlatsotsonali tlen tlatekipanojketl...",
+  "subsonicUnavailable": "Ax onka",
+  "subsonicCredentialsError": "Xikita motoka, motlajtol uan tlen mitskauilia ipan mo servidor.",
+  "subsonicStorageError": "Ax uelki tijtlaati nopa credenciales. Xikita tla onka se tlaajokuiloyan tlen tlamokuitlauijtok uan xijyejyeko sempa.",
+  "subsonicTimeout": "Nopa tlatekipanojketl tlami tonali. Xijyejyeko sempa.",
+  "subsonicServerError": "Ax ueliyaya tijpoua nopa biblioteca tlen nopa servidor. Nopa achtoui catálogo nojua eltok. Xijyankuili nopa biblioteca para tijyejyekos.",
+  "libraryRetry": "ixtlalis",
+  "subsonicOn": "Tlen",
+  "subsonicOff": "Sejtok",
+  "sleepTimerMinutes": "{minutes} minutos",
+  "oledBlackDeviceColor": "OLED Negro",
+  "subsonicUrl": "URL tlen tlatekipanojketl",
+  "subsonicInvalidUrl": "Xikijkuilo se URL tlen HTTP o HTTPS tlen amo kipia se tlajtlanili, se tlajko o se tlajtoli tlen ijkuilijtok.",
+  "subsonicUnsupported": "Ni tlatekipanojketl ax kipaleuia nopa API Subsonic tlen moneki o nopa autenticación tlen token.",
+  "subsonicConnectionError": "Ax ueli timonechkauia. Xikita nopa URL, red uan HTTPS certificado. Ipan Web, nopa tlatekipanojketl moneki kikauas CORS uan se aplicación HTTPS amo uelis mosentlalis ika HTTP."
 }

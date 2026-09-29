@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Tëŋ",
   "editSongLyricsLabel": "Lik",
   "saveChangesButton": "Kä bï röt looi",
-  "veryLow": "Lɔ path"
+  "veryLow": "Lɔ path",
+  "reindexLibrarySettingTitle": "Dhuɔ̈kë nyuɔɔth",
+  "reindexLibrarySettingDescription": "Kuen wël ë lëk ku thuɔ̈ɔ̈r ë wël ë lëk kedhiɛ.",
+  "refreshLibrarySettingTitle": "Ɣön de kuɛ̈n ye cɔ̈kpiny",
+  "refreshLibrarySettingDescription": "Tïŋ ë mɛ̈ɛ̈th cï keek juak thïn wala cï keek nyaai. Tääu ë wël tɔ̈u ku luɔi de thuur.",
+  "librarySettingsScreenTitle": "Ajuɛɛr de Ɣön de Kuɛ̈n",
+  "librarySettingsDescription": "Tïŋ ë thööŋ de diɛt ku kä cï keek nyaai.",
+  "sleepTimerTitle": "Thaar de Nïn",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Thök de Diɛt ke Yemɛɛn",
+  "sleepTimerRemainingLabel": "Kë cï döŋ",
+  "findingSongs": "Yök de diɛt...",
+  "songsLoaded": "Diɛt cï keek tääu thïn: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Thura cï tɔ̈ɔ̈u: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Acïï lëu bï ɣön de kuɛ̈n de diɛt tääu thïn. Yïn thiëcku ba bɛɛr them.",
+  "missingTracksTitle": "Kä cï määr",
+  "missingTracksDescription": "Cɛɛth ë wël cï keek kueen.",
+  "missingTracksEmpty": "Acïn dhɔ̈l cïï lëu bï ke kueen.",
+  "missingTrackRead": "Acï lëu bï athör kënë kueen. Tïŋ të tɔ̈u file thïn ku lööŋ ke yök, ku jal ɣön ë kuɛ̈n reindex bï them.",
+  "missingTrackArtwork": "Acï lëu ba thuur de file kënë kueen. Audio alëu bë ŋot ke cë thök. Reindex ë ɣön ë kuɛ̈n bï yïn bɛɛr them.",
+  "playbackBuffering": "Gël...",
+  "preventDuplicateTracksTitle": "Gël kä ye röt dhuɔ̈kpiny",
+  "preventDuplicateTracksDescription": "Hide tracks ke rin ke file thöŋ.",
+  "hideLocalMusicTitle": "Thiaan ë diɛt ke baai",
+  "hideLocalMusicDescription": "Nyuɔɔthë ë thäät ë thäät ë thäät ë thäät ë Subsonic tɔ̈u. Käk ë thäät ë thäät ë thäät ë thäät ë thäät.",
+  "subsonicTitle": "Subsonic Sërvër",
+  "subsonicDescription": "Tääu ë mɛ̈ɛ̈th ë Navidrome, gonic, ku käk ë thäät thöŋ.",
+  "subsonicConfigure": "Juiir Subsonic",
+  "subsonicUsername": "Rinke luui",
+  "subsonicPassword": "Wɛ̈tde thiaan",
+  "subsonicConnect": "Rek",
+  "subsonicRemove": "Nyaai kë ye käŋ tɔ̈ɔ̈u",
+  "subsonicSignIn": "Ba lɔ thïn akɔɔr",
+  "subsonicLoadingLibrary": "Tääu ë ɣön duɔ̈ɔ̈n de kuɛ̈n...",
+  "subsonicContinueBackground": "Lɔ tueŋ ke yïn lɔ tueŋ",
+  "subsonicClose": "Thiök",
+  "subsonicIndexing": "Tääu ë diɛt ke server...",
+  "subsonicUnavailable": "Acïï tɔ̈u",
+  "subsonicCredentialsError": "Tïŋ rinkuun ë luɔi, wɛ̈t ë gël, ku lööŋ ë tɔ̈ɔ̈u.",
+  "subsonicStorageError": "Acïï lëu bï kä ke gɛ̈tgɛ̈t tɔ̈ɔ̈u. Tïŋ lɔn cï tɔ̈ɔ̈u ë käŋ tɔ̈u thïn ku them ba bɛɛr them.",
+  "subsonicTimeout": "Thɛɛr ke kë ye käŋ tɔ̈ɔ̈u acï thök. Yïn thiëcku ba bɛɛr them.",
+  "subsonicServerError": "Acï lëu bï kueen në ɣön de kuɛ̈n de server. Kë cï gɔ̈t wënthɛɛr acï tɔ̈ɔ̈u. Tääu ë Ɣön ë Kuɛ̈n yic ba bɛɛr them.",
+  "libraryRetry": "Riɔɔk",
+  "subsonicOn": "Nhial",
+  "subsonicOff": "Cuëc",
+  "sleepTimerMinutes": "{minutes} minit",
+  "oledBlackDeviceColor": "OLED col",
+  "subsonicUrl": "URL de kë ye käŋ tɔ̈ɔ̈u",
+  "subsonicInvalidUrl": "Tääu HTTP wala HTTPS URL ë thäät yiic ke cïn kë thiëc, thäät, wala thäät cï keek tääu thïn.",
+  "subsonicUnsupported": "Yen ë thäät kënë acie thäät wïc Subsonic API wala thäät ë thäät ë thäät.",
+  "subsonicConnectionError": "Acïï lëu bï yök. Tïŋ URL, thäät, ku HTTPS ë thäät. Në Web, ë thäät ë thäät adhil CORS puɔ̈l ku app HTTPS acïï lëu bï thäät ë thäät ë HTTP."
 }

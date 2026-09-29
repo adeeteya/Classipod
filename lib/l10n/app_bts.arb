@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gaya",
   "editSongLyricsLabel": "Lyric",
   "saveChangesButton": "paluahkon",
-  "veryLow": "Sangat rendah"
+  "veryLow": "Sangat rendah",
+  "reindexLibrarySettingTitle": "Indeks use",
+  "reindexLibrarySettingDescription": "Basa ma use metadata pakon karya seni bani ganup file musik.",
+  "refreshLibrarySettingTitle": "Pabayuhon Perpustakaan",
+  "refreshLibrarySettingDescription": "Pareksa ma musik na dob itambahkon atap na ihapus. Simpan ma metadata pakon karya seni na dong.",
+  "librarySettingsScreenTitle": "Pengaturan Perpustakaan",
+  "librarySettingsDescription": "Atur ma indeks musik pakon folder na lang dihut.",
+  "sleepTimerTitle": "Panorang modom",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ujung ni Doding Sonari",
+  "sleepTimerRemainingLabel": "Na tading",
+  "findingSongs": "Mangindahi doding...",
+  "songsLoaded": "Doding na dob i muat: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Karya seni na isimpan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Lang boi mamuat perpustakaan musik. Coba ma use.",
+  "missingTracksTitle": "Jalur na magou",
+  "missingTracksDescription": "Pareksa ma file na lang boi ibasa.",
+  "missingTracksEmpty": "Lang dong trek na lang boi ibasa.",
+  "missingTrackRead": "Lang boi mambasa metadata ni file on. Pareksa ma ianan ni file pakon ijin akses, dob ai indeks ma use perpustakaan ai laho mancuba use.",
+  "missingTrackArtwork": "Lang boi mambasa karya seni ni file on. Audio boi ope iputar. Indeks use perpustakaan ai laho mancuba use.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Manlanglangi Duplikat Trek",
+  "preventDuplicateTracksDescription": "Bunihon ma trek na margoran file na marganda.",
+  "hideLocalMusicTitle": "Bunihon Musik Lokal",
+  "hideLocalMusicDescription": "Patuduhkon pitah musik server i perpustakaan nassiam sanggah Subsonic marhorja. Berkas lokal totap do i perangkat nassiam.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Stream musik humbani Navidrome, gonic, pakon server na kompatibel.",
+  "subsonicConfigure": "Atur Subsonic",
+  "subsonicUsername": "Goran pangguna",
+  "subsonicPassword": "Sandi",
+  "subsonicConnect": "Mardomu",
+  "subsonicRemove": "Padaoh Server",
+  "subsonicSignIn": "Porlu do masuk",
+  "subsonicLoadingLibrary": "Mamuat perpustakaan nassiam...",
+  "subsonicContinueBackground": "Toruskon ma i pudi",
+  "subsonicClose": "Tutup",
+  "subsonicIndexing": "Mangindeks musik server...",
+  "subsonicUnavailable": "Lang sirsir",
+  "subsonicCredentialsError": "Pareksa ma goran pangguna, sandi, pakon ijin server nassiam.",
+  "subsonicStorageError": "Lang boi isimpan kredensial. Pareksa ma atap na dong do penyimpanan na aman janah coba use.",
+  "subsonicTimeout": "Server domma habis panorangni. Uji ma use.",
+  "subsonicServerError": "Lang boi mambasa perpustakaan server. Katalog na sebelumni ipertahankon. Segarkan Perpustakaan laho mancuba use.",
+  "libraryRetry": "suratkon",
+  "subsonicOn": "Bani",
+  "subsonicOff": "Libur",
+  "sleepTimerMinutes": "{minutes} Menit",
+  "oledBlackDeviceColor": "OLED Hitam",
+  "subsonicUrl": "URL server",
+  "subsonicInvalidUrl": "Masukkon URL server HTTP atap HTTPS tanpa kueri, fragmen, atap login na tertanam.",
+  "subsonicUnsupported": "Server on lang mendukung API Subsonic na ihaporluhon atap otentikasi token.",
+  "subsonicConnectionError": "Lang boi mardomu. Pareksa ma URL, jaringan, pakon sertifikat HTTPS. Bani Web, server maningon mangijinhon CORS pakon aplikasi HTTPS lang boi marhubungan hubani HTTP."
 }

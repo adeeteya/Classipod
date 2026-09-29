@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Umutundu",
   "editSongLyricsLabel": "Ifishibilo",
   "saveChangesButton": "Sunga Ifya Kupilibula",
-  "veryLow": "Ukucepa nga nshi"
+  "veryLow": "Ukucepa nga nshi",
+  "reindexLibrarySettingTitle": "Ukubwekeshapo ukutantika",
+  "reindexLibrarySettingDescription": "Belengeni ifyebo ne fyakupangapanga ifya nyimbo shonse nakabili.",
+  "refreshLibrarySettingTitle": "Ukubwekeshapo ibuuku lya fitabo",
+  "refreshLibrarySettingDescription": "Moneni inyimbo ishalundwako nangu ishafuutwa. Sunga ifyebo ifyabako kale ne fyakupangapanga.",
+  "librarySettingsScreenTitle": "Imitantikile ya Laibulale",
+  "librarySettingsDescription": "Ukutungulula ukutantika kwa nyimbo na ma folda ayafumishiwapo.",
+  "sleepTimerTitle": "Inshita ya Kusendama",
+  "sleepTimerEndOfCurrentSong": "Ukulekelesha kwa Lumbo lwa nomba",
+  "sleepTimerRemainingLabel": "Ifyashala",
+  "findingSongs": "Ukusanga inyimbo...",
+  "songsLoaded": "Inyimbo shabikwa: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Imilimo ya fikope iyasungilwe: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Tacikweteko amaka yakubika ibuuku lya nyimbo. Mukwai esheni nakabili.",
+  "missingTracksTitle": "Imisango iyabula",
+  "missingTracksDescription": "Moneni amafailo ayashingabelengwa.",
+  "missingTracksEmpty": "Tapali ama track ayashibelengwa.",
+  "missingTrackRead": "Tatwakonkelepo ukubelenga ifishinka fya iyi failo. Moneni icifulo ca fayelo ne nsambu sha kwingilamo, lyena bwekeshenipo ibuuku lya fitabo pa kwesha nakabili.",
+  "missingTrackArtwork": "Tatwakwanishe ukubelenga ifikope fya iyi failo. Amashiwi kuti yacili yalembwa. Ukubwekeshapo ibuuku lya fitabo pakwesha nakabili.",
+  "playbackBuffering": "Ukucingilila...",
+  "preventDuplicateTracksTitle": "Cingilileni Amatraki ayapalana",
+  "preventDuplicateTracksDescription": "Fiseni amashiwi ayakwata amashina ya ma fayelo ayapalana.",
+  "hideLocalMusicTitle": "Hide Local Music",
+  "hideLocalMusicDescription": "Show only server music in your library while Subsonic is on. Amafailo ya mu ncende yenu yashala pa cibombelo cenu.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Stream music from Navidrome, gonic, and compatible servers.",
+  "subsonicConfigure": "Configure Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Ishiwi lya kwisalilako",
+  "subsonicConnect": "Connect",
+  "subsonicRemove": "Fumyapo icibombelo",
+  "subsonicSignIn": "Sign in required",
+  "subsonicLoadingLibrary": "Loading your library…",
+  "subsonicContinueBackground": "Continue in background",
+  "subsonicClose": "Close",
+  "subsonicIndexing": "Indexing server music…",
+  "subsonicUnavailable": "Unavailable",
+  "subsonicCredentialsError": "Mumone ishina lyenu ilya kubomfya, ishina lya kwingililapo, ne fitupa fya kubomfya.",
+  "subsonicStorageError": "Teti musunge ifishinka fyakushininkisha. Moneni nga cakuti ukusungila ukwacingililwa kulipo elyo esheni nakabili.",
+  "subsonicTimeout": "The server timed out. Mukwai esheniko nakabili.",
+  "subsonicServerError": "Tatwakwanishe ukubelenga ibuuku lya fitabo. Icitabo ca kale calisungwa. Bwekeshapo Laibulale pakuti weshe nakabili.",
+  "libraryRetry": "Icakulya",
+  "subsonicOn": "Pa",
+  "subsonicOff": "Ukuleka",
+  "sleepTimerMinutes": "Amamineti {minutes}",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "OLED iyafiita",
+  "subsonicUrl": "URL ya cibombelo",
+  "subsonicInvalidUrl": "Ingisha HTTP nangu HTTPS URL iya cibombelo ukwabula ilipusho, iciputulwa, nangu ukwingila ukwabikwamo.",
+  "subsonicUnsupported": "Iyi umubomfi tasuminisha API iya Subsonic iyafwaikwa nangu ukushininkisha kwa cishibilo.",
+  "subsonicConnectionError": "Tekuti isuntinkanye. Moneni URL, umutande, na icitupa ca HTTPS. Pa Webu, umubomfi afwile ukusuminisha CORS kabili ububomfi bwa HTTPS tekuti busuntinkanishiwe ku HTTP."
 }

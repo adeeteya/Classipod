@@ -134,5 +134,78 @@
   "editSongGenreLabel": "शैली",
   "editSongLyricsLabel": "गाण्याचे बोल",
   "saveChangesButton": "बदल जतन करा",
-  "veryLow": "खूप कमी"
+  "veryLow": "खूप कमी",
+  "reindexLibrarySettingTitle": "पुन्हा अनुक्रमणिका",
+  "reindexLibrarySettingDescription": "सर्व संगीत फायलींसाठी मेटाडेटा आणि कलाकृती पुन्हा वाचा.",
+  "refreshLibrarySettingTitle": "लायब्ररी रिफ्रेश करा",
+  "refreshLibrarySettingDescription": "जोडलेले किंवा हटवलेले संगीत तपासा. विद्यमान मेटाडेटा आणि कलाकृती ठेवा.",
+  "librarySettingsScreenTitle": "लायब्ररी सेटिंग्ज",
+  "librarySettingsDescription": "संगीत अनुक्रमणिका आणि वगळलेले फोल्डर व्यवस्थापित करा.",
+  "sleepTimerTitle": "स्लीप टाइमर",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "चालू गाण्याचा शेवट",
+  "sleepTimerRemainingLabel": "बाकी",
+  "findingSongs": "गाणी शोधत आहे...",
+  "songsLoaded": "लोड केलेली गाणी: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "कलाकृती कॅशे: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "संगीत लायब्ररी लोड करण्यात अक्षम. कृपया पुन्हा प्रयत्न करा.",
+  "missingTracksTitle": "गहाळ ट्रॅक",
+  "missingTracksDescription": "वाचता येत नसलेल्या फायलींचे पुनरावलोकन करा.",
+  "missingTracksEmpty": "कोणतेही वाचनीय ट्रॅक नाहीत.",
+  "missingTrackRead": "या फाइलचा मेटाडेटा वाचू शकलो नाही. फाइल स्थान आणि प्रवेश परवानग्या तपासा, नंतर पुन्हा प्रयत्न करण्यासाठी लायब्ररी पुन्हा अनुक्रमित करा.",
+  "missingTrackArtwork": "या फाइलची कलाकृती वाचता आली नाही. ऑडिओ अजूनही प्ले होऊ शकतो. पुन्हा प्रयत्न करण्यासाठी लायब्ररी पुन्हा अनुक्रमित करा.",
+  "playbackBuffering": "बफरिंग…",
+  "preventDuplicateTracksTitle": "डुप्लिकेट ट्रॅक प्रतिबंधित करा",
+  "preventDuplicateTracksDescription": "डुप्लिकेट फाइल नावांसह ट्रॅक लपवा.",
+  "hideLocalMusicTitle": "स्थानिक संगीत लपवा",
+  "hideLocalMusicDescription": "Subsonic चालू असताना तुमच्या लायब्ररीमध्ये फक्त सर्व्हर संगीत दाखवा. स्थानिक फाइल तुमच्या डिव्हाइसवर राहतात.",
+  "subsonicTitle": "Subsonic सर्व्हर",
+  "subsonicDescription": "Navidrome, gonic आणि सुसंगत सर्व्हरवरून संगीत प्रवाहित करा.",
+  "subsonicConfigure": "Subsonic कॉन्फिगर करा",
+  "subsonicUsername": "वापरकर्तानाव",
+  "subsonicPassword": "पासवर्ड",
+  "subsonicConnect": "कनेक्ट करा",
+  "subsonicRemove": "सर्व्हर काढा",
+  "subsonicSignIn": "साइन इन करणे आवश्यक आहे",
+  "subsonicLoadingLibrary": "तुमची लायब्ररी लोड करत आहे...",
+  "subsonicContinueBackground": "पार्श्वभूमीत सुरू ठेवा",
+  "subsonicClose": "बंद करा",
+  "subsonicIndexing": "सर्व्हर संगीत अनुक्रमित करत आहे...",
+  "subsonicUnavailable": "अनुपलब्ध",
+  "subsonicCredentialsError": "तुमचे वापरकर्तानाव, पासवर्ड आणि सर्व्हर परवानग्या तपासा.",
+  "subsonicStorageError": "क्रेडेन्शियल सेव्ह करू शकलो नाही. सुरक्षित स्टोरेज उपलब्ध असल्याचे तपासा आणि पुन्हा प्रयत्न करा.",
+  "subsonicTimeout": "सर्व्हर कालबाह्य झाला. कृपया पुन्हा प्रयत्न करा.",
+  "subsonicServerError": "सर्व्हर लायब्ररी वाचू शकलो नाही. मागील कॅटलॉग ठेवला आहे. पुन्हा प्रयत्न करण्यासाठी लायब्ररी रिफ्रेश करा.",
+  "libraryRetry": "पुन्हा प्रयत्न करा",
+  "subsonicOn": "चालू",
+  "subsonicOff": "बंद",
+  "sleepTimerMinutes": "{minutes} मिनिटे",
+  "oledBlackDeviceColor": "OLED काळा",
+  "subsonicUrl": "सर्व्हर URL",
+  "subsonicInvalidUrl": "क्वेरी, फ्रॅगमेंट किंवा एम्बेडेड लॉगिनशिवाय HTTP किंवा HTTPS सर्व्हर URL एंटर करा.",
+  "subsonicUnsupported": "हा सर्व्हर आवश्यक Subsonic API किंवा टोकन प्रमाणीकरणास समर्थन देत नाही.",
+  "subsonicConnectionError": "कनेक्ट करू शकत नाही. URL, नेटवर्क आणि HTTPS प्रमाणपत्र तपासा. वेबवर, सर्व्हरने CORS ला अनुमती दिली पाहिजे आणि HTTPS ॲप HTTP शी कनेक्ट करू शकत नाही."
 }

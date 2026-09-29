@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Kayn",
   "editSongLyricsLabel": "Di wɔd dɛn we de na di wɔl",
   "saveChangesButton": "Sev chenj dɛn .",
-  "veryLow": "I rili smɔl ."
+  "veryLow": "I rili smɔl .",
+  "reindexLibrarySettingTitle": "Ri-indeks bak",
+  "reindexLibrarySettingDescription": "Rid mɛtadata ɛn artwok fɔ ɔl di myuzik fayl dɛn bak.",
+  "refreshLibrarySettingTitle": "Rifresh Laybri",
+  "refreshLibrarySettingDescription": "Chek fɔ si if dɛn ad ɔ dilit myuzik. Kip di mɛtadata ɛn art wok we dɔn de.",
+  "librarySettingsScreenTitle": "Laybri Sɛtin dɛn",
+  "librarySettingsDescription": "Manej di myuzik indeks ɛn fɔlda dɛn we dɛn nɔ put insay.",
+  "sleepTimerTitle": "Tayma fɔ Slip",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "End of Kɔrɛnt Sɔng",
+  "sleepTimerRemainingLabel": "Di wan dɛn we lɛf",
+  "findingSongs": "Fɔ fɛn siŋ dɛn...",
+  "songsLoaded": "Siŋ dɛn we dɛn lod: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwok we dɛn kech: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nɔ ebul fɔ lod di myuzik laybri. Duya, tray bak.",
+  "missingTracksTitle": "Trak dɛn we nɔ de",
+  "missingTracksDescription": "Rivyu fayl dɛn we dɛn nɔ bin ebul fɔ rid.",
+  "missingTracksEmpty": "No trak dɛn we pɔsin nɔ go ebul fɔ rid.",
+  "missingTrackRead": "Nɔ bin ebul fɔ rid dis fayl in mɛtadata. Chek di say we di fayl de ɛn di akses permishɔn dɛn, dɔn ri-indeks di laybri fɔ tray bak.",
+  "missingTrackArtwork": "Nɔ bin ebul fɔ rid dis fayl in artwok. Odio kin stil ple. Riindeks di laybri fɔ tray bak.",
+  "playbackBuffering": "Buffering we dɛn de yuz...",
+  "preventDuplicateTracksTitle": "Fɔ mek dɛn nɔ gɛt Dupliket Trak dɛn",
+  "preventDuplicateTracksDescription": "Ayd trak dɛn wit dupliket fayl nem dɛn.",
+  "hideLocalMusicTitle": "Ayd Lokal Myuzik",
+  "hideLocalMusicDescription": "Sho ɔl di sava myuzik na yu laybri we Subsonic de on. Lokal fayl dɛn kin de na yu divays.",
+  "subsonicTitle": "Subsonic Sava",
+  "subsonicDescription": "Strim myusik frɔm Navidrome, gonic, ɛn kɔmpitabl sava dɛn.",
+  "subsonicConfigure": "Konfigyuret Subsonic",
+  "subsonicUsername": "Yuz nem",
+  "subsonicPassword": "Paswɔd fɔ yuz",
+  "subsonicConnect": "Kɔnekt",
+  "subsonicRemove": "Rimov di Sava",
+  "subsonicSignIn": "Sayn in nid fɔ de",
+  "subsonicLoadingLibrary": "We yu de lod yu laybri...",
+  "subsonicContinueBackground": "Kɔntinyu fɔ de na bakgrɔn",
+  "subsonicClose": "Klos",
+  "subsonicIndexing": "Indeks sava myusik...",
+  "subsonicUnavailable": "Nɔ de fɔ yuz am",
+  "subsonicCredentialsError": "Chek yu yuzɛn nem, paswɔd, ɛn sava pɔmishɔn.",
+  "subsonicStorageError": "Nɔ bin ebul fɔ kip kredɛns. Chek if sikrit stɔrɔj ​​de ɛn tray bak.",
+  "subsonicTimeout": "Di sava bin taym aut. Duya tray bak.",
+  "subsonicServerError": "Nɔ bin ebul fɔ rid di sava laybri. Dɛn kip di katalog we bin de bifo. Rifresh Laybri fɔ tray bak.",
+  "libraryRetry": "Ritray fɔ mek yu go bak .",
+  "subsonicOn": "Pantap",
+  "subsonicOff": "Ɔf",
+  "sleepTimerMinutes": "{minutes} Minit dɛn",
+  "oledBlackDeviceColor": "OLED Blak we yu de yuz",
+  "subsonicUrl": "URL fɔ di sava",
+  "subsonicInvalidUrl": "Ɛntay HTTP ɔ HTTPS sava URL we nɔ gɛt kwɛstyɔn, fragmɛnt, ɔ ɛmbaded lɔgin.",
+  "subsonicUnsupported": "Dis sava nɔ de sɔpɔt di Subsonic API ɔ token ɔthɛntishɔn we dɛn nid.",
+  "subsonicConnectionError": "Nɔ ebul fɔ kɔnɛkt. Chek di URL, nɛtwɔk, ɛn HTTPS sɛtifiket. Na Wɛb, di sava fɔ alaw CORS ɛn wan HTTPS ap nɔ go ebul fɔ kɔnɛkt to HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "I -save ang mga pagbabago",
-  "veryLow": "Napakababa"
+  "veryLow": "Napakababa",
+  "reindexLibrarySettingTitle": "Muling i-index",
+  "reindexLibrarySettingDescription": "Basahin muli ang metadata at likhang sining para sa lahat ng mga file ng musika.",
+  "refreshLibrarySettingTitle": "I-refresh ang Library",
+  "refreshLibrarySettingDescription": "Tingnan kung may idinagdag o tinanggal na musika. Panatilihin ang kasalukuyang metadata at likhang sining.",
+  "librarySettingsScreenTitle": "Mga Setting ng Library",
+  "librarySettingsDescription": "Pamahalaan ang pag-index ng musika at mga hindi kasamang folder.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Katapusan ng Kasalukuyang Awit",
+  "sleepTimerRemainingLabel": "Natitira",
+  "findingSongs": "Naghahanap ng mga kanta…",
+  "songsLoaded": "Na-load ang mga kanta: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Naka-cache ang likhang sining: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Hindi ma-load ang library ng musika. Pakisubukang muli.",
+  "missingTracksTitle": "Mga Nawawalang Track",
+  "missingTracksDescription": "Suriin ang mga file na hindi mabasa.",
+  "missingTracksEmpty": "Walang hindi nababasang mga track.",
+  "missingTrackRead": "Hindi mabasa ang metadata ng file na ito. Suriin ang lokasyon ng file at mga pahintulot sa pag-access, pagkatapos ay muling i-index ang library upang muling subukan.",
+  "missingTrackArtwork": "Hindi mabasa ang artwork ng file na ito. Maaaring mag-play pa rin ang audio. I-reindex ang library upang muling subukan.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Pigilan ang Mga Duplicate na Track",
+  "preventDuplicateTracksDescription": "Itago ang mga track na may mga duplicate na pangalan ng file.",
+  "hideLocalMusicTitle": "Itago ang Lokal na Musika",
+  "hideLocalMusicDescription": "Ipakita lamang ang musika ng server sa iyong library habang naka-on ang Subsonic. Ang mga lokal na file ay mananatili sa iyong device.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Mag-stream ng musika mula sa Navidrome, gonic, at mga katugmang server.",
+  "subsonicConfigure": "I-configure ang Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Kumonekta",
+  "subsonicRemove": "Alisin ang Server",
+  "subsonicSignIn": "Kailangang mag-sign in",
+  "subsonicLoadingLibrary": "Nilo-load ang iyong library…",
+  "subsonicContinueBackground": "Magpatuloy sa background",
+  "subsonicClose": "Isara",
+  "subsonicIndexing": "Ini-index ang musika ng server…",
+  "subsonicUnavailable": "Hindi magagamit",
+  "subsonicCredentialsError": "Suriin ang iyong username, password, at mga pahintulot ng server.",
+  "subsonicStorageError": "Hindi ma-save ang mga kredensyal. Tingnan kung available ang secure na storage at subukang muli.",
+  "subsonicTimeout": "Nag-time out ang server. Pakisubukang muli.",
+  "subsonicServerError": "Hindi mabasa ang library ng server. Ang nakaraang catalog ay pinanatili. I-refresh ang Library para subukang muli.",
+  "libraryRetry": "Muling",
+  "subsonicOn": "Sa",
+  "subsonicOff": "Off",
+  "sleepTimerMinutes": "{minutes} Minuto",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "URL ng server",
+  "subsonicInvalidUrl": "Maglagay ng URL ng server ng HTTP o HTTPS nang walang query, fragment, o naka-embed na login.",
+  "subsonicUnsupported": "Hindi sinusuportahan ng server na ito ang kinakailangang Subsonic API o token authentication.",
+  "subsonicConnectionError": "Hindi makakonekta. Suriin ang URL, network, at HTTPS certificate. Sa Web, dapat payagan ng server ang CORS at hindi makakonekta ang isang HTTPS app sa HTTP."
 }

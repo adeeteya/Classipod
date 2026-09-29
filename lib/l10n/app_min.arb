@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Aliran",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Simpan Parubahan",
-  "veryLow": "Sangaik Randah"
+  "veryLow": "Sangaik Randah",
+  "reindexLibrarySettingTitle": "Indeks ulang",
+  "reindexLibrarySettingDescription": "Baco metadata jo karya seni untuak sado file musik lai.",
+  "refreshLibrarySettingTitle": "Segarkan Pustaka",
+  "refreshLibrarySettingDescription": "Pareso musik nan ditambahkan atau diapuih. Simpan metadata jo karya seni nan alah ado.",
+  "librarySettingsScreenTitle": "Pangaturan Pustaka",
+  "librarySettingsDescription": "Mangalola indeksasi musik jo folder nan dikaluakan.",
+  "sleepTimerTitle": "Jam Lalok",
+  "sleepTimerEndOfCurrentSong": "Akhir Lagu Kini",
+  "sleepTimerRemainingLabel": "Tingga",
+  "findingSongs": "Mancari lagu...",
+  "artworkCached": "Karya seni nan disimpan: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Indak dapek mamuek pustaka musik. Tolong cubo baliak.",
+  "missingTracksTitle": "Jajak nan hilang",
+  "missingTracksDescription": "Tinjau file nan indak bisa dibaco.",
+  "missingTracksEmpty": "Indak ado jajak nan indak tabaco.",
+  "missingTrackRead": "Indak dapek mambaco metadata berkas ko. Pareso lokasi berkas jo izin akses, kamudian indeks ulang pustaka untuak dicubo baliak.",
+  "missingTrackArtwork": "Indak dapek mambaco karya seni berkas ko. Audio mungkin masih diputa. Indeks ulang perpustakaan untuak dicubo baliak.",
+  "playbackBuffering": "Penyangga...",
+  "preventDuplicateTracksTitle": "Cegah Jajak Duplikat",
+  "preventDuplicateTracksDescription": "Sambunyikan jajak jo namo berkas nan duplikat.",
+  "hideLocalMusicTitle": "Sambunyikan Musik Lokal",
+  "hideLocalMusicDescription": "Tampilkan hanyo musik server di pustaka Sanak samantaro Subsonic iduik. File lokal tatap ado di perangkat Sanak.",
+  "subsonicTitle": "Palayan Subsonic",
+  "subsonicDescription": "Aliran musik dari Navidrome, gonic, jo server nan kompatibel.",
+  "subsonicConfigure": "Atur Subsonic",
+  "subsonicUsername": "Namo pangguno",
+  "subsonicPassword": "Kato sandi",
+  "subsonicConnect": "Sambuang",
+  "subsonicRemove": "Hapuih Palayan",
+  "subsonicSignIn": "Diparalukan masuak",
+  "subsonicLoadingLibrary": "Mamuek pustaka Sanak...",
+  "subsonicContinueBackground": "Taruih di latar balakang",
+  "subsonicClose": "Tutuik",
+  "subsonicIndexing": "Mangindeks musik palayan...",
+  "subsonicUnavailable": "Indak tasadio",
+  "subsonicCredentialsError": "Pareso namo pangguno, kato sandi, jo izin server Sanak.",
+  "subsonicStorageError": "Indak bisa manyimpan kredensial. Pareso apokah panyimpanan aman tasadio dan cubo baliak.",
+  "subsonicTimeout": "Server lah habih wakatunyo. Tolong cubo baliak.",
+  "subsonicServerError": "Indak bisa mambaco perpustakaan server. Katalog sabalunnyo dipertahankan. Segarkan Perpustakaan untuak mancubo baliak.",
+  "libraryRetry": "Uriman",
+  "subsonicOn": "Pado",
+  "subsonicOff": "Pudua",
+  "sleepTimerMinutes": "{minutes} minik",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "OLED Hitam",
+  "songsLoaded": "Lagu nan dimuek: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "subsonicUrl": "URL palayan",
+  "subsonicInvalidUrl": "Masuakkan URL palayan HTTP atau HTTPS tanpa kueri, pacahan, atau login nan tatanam.",
+  "subsonicUnsupported": "Server ko indak mandukuang API atau otentikasi token Subsonic nan diparaluan.",
+  "subsonicConnectionError": "Indak bisa basambuang. Pareso URL, jaringan, jo sertifikat HTTPS. Di Web, server harus mamungkinkan CORS dan aplikasi HTTPS indak dapek mahubuangkan ka HTTP."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Xleé",
   "editSongLyricsLabel": "wema",
   "saveChangesButton": "Hɛn huzuhuzu lɛ",
-  "veryLow": "Lown"
+  "veryLow": "Lown",
+  "reindexLibrarySettingTitle": "Vɔ jlaɖó",
+  "reindexLibrarySettingDescription": "Xà metadata kpo ɖiɖe lɛ kpo nú hanwema lɛ bǐ.",
+  "refreshLibrarySettingTitle": "Vɔ wemaxɔ ɔ jlaɖó",
+  "refreshLibrarySettingDescription": "Kpɔ́n ɖɔ han ɖevo lɛ gɔ́ na alǒ súnsún à jí. Hɛn metadata kpo nǔɖiɖó lɛ kpo e ko tíìn lɛ é.",
+  "librarySettingsScreenTitle": "Wemaxɔmɛ sín Nǔ lɛ",
+  "librarySettingsDescription": "Kpɔ́n han lɛ sín ɖiɖexlɛ́ kpo folder e è ɖè sín mɛ lɛ é kpo.",
+  "sleepTimerTitle": "Amlɔ didó hwenu",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Han E Ðò Dìn É sín Fífó",
+  "sleepTimerRemainingLabel": "Nǔ e kpò lɛ é",
+  "findingSongs": "Han lɛ biba...",
+  "songsLoaded": "Han e è hɛn lɛ é: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Nǔɖiɖó e è hɛn ɖ'ayǐ é: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "È sixu hɛn hanwema ɔ ǎ. Kɛnklɛn bo lɛ vɔ tɛnkpɔn.",
+  "missingTracksTitle": "Afɔ e bú lɛ é",
+  "missingTracksDescription": "Kpɔ́n wema ɖěɖee è ma sixu xà ǎ lɛ é.",
+  "missingTracksEmpty": "Track e è ma sixu xà ǎ lɛ é ɖě ǎ.",
+  "missingTrackRead": "Sixu xa xójlawema elɔ sín xójlawema lɛ ă. Kpɔ́n fí e file ɔ ɖè é kpo acɛ e è na mɛ bɔ è na mɔ é kpo, enɛ gudo hǔn, vɔ́ wemaxɔ ɔ sín wěma lɛ jlaɖó bo na dó vɔ́ tɛ́n kpɔ́n.",
+  "missingTrackArtwork": "Sixu xa ɖiɖe file elɔ tɔn ă. Audio sixu kpó ɖò xixo wɛ. Vɔ wemaxɔ ɔ xlɛ́ bo vɔ́ tɛ́n kpɔ́n.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Gbɔn Track We lɛ Gbɔn",
+  "preventDuplicateTracksDescription": "Hwla han e ɖó file nyikɔ we lɛ é.",
+  "hideLocalMusicTitle": "Hwla Han Toxo ɔ Tɔn lɛ",
+  "hideLocalMusicDescription": "Xlɛ́ han serveur tɔn lɛ kɛɖɛ ɖò wemaxɔ towe mɛ hwenu e Subsonic ɖò jiji wɛ é. Fímu xá ɔ mɛ tɔn lɛ nɔ nɔ alokan towe jí.",
+  "subsonicTitle": "Subsonic Mɛsɛntɔ́",
+  "subsonicDescription": "Sɔ́ han lɛ sín Navidrome, gonic, kpo serveur e sɔgbe lɛ é kpo jí.",
+  "subsonicConfigure": "Mi bló tuto nú Subsonic",
+  "subsonicUsername": "Mɛ e nɔ zán é sín nyikɔ",
+  "subsonicPassword": "Xógbe hwláhwlá",
+  "subsonicConnect": "Mi cá",
+  "subsonicRemove": "Sún Serveur ɔ síìn",
+  "subsonicSignIn": "È byɔ ɖɔ è ni byɔ mɛ",
+  "subsonicLoadingLibrary": "Wemaxɔ mitɔn ɖo yiyi wɛ...",
+  "subsonicContinueBackground": "Nɔ yì nukɔn ɖò gudo",
+  "subsonicClose": "Sú",
+  "subsonicIndexing": "Han serveur tɔn ɖiɖe ɖ'ayi...",
+  "subsonicUnavailable": "É ɖò finɛ ǎ",
+  "subsonicCredentialsError": "Kpɔ́n nyikɔ mitɔn‚ xogbe hwláhwlá mitɔn‚ kpo acɛ mitɔn lɛ kpo.",
+  "subsonicStorageError": "Sixu hɛn wema mɛɖesunɔ tɔn lɛ ɖ'ayi ǎ. Kpɔ́n ɖɔ fí e è nɔ hɛn nǔ ɖó é ka tíìn à jí, bo lɛ́vɔ tɛ́n kpɔ́n.",
+  "subsonicTimeout": "Serveur ɔ sín hwenu ko wá yì. Kɛnklɛn bo lɛ vɔ tɛnkpɔn.",
+  "subsonicServerError": "Sixu xa wemaxɔ serveur tɔn ǎ. È hɛn wema e mɛ è wlan nǔ dó ɖ’ayǐ é. Vɔ́ Wemaxɔmɛ ɔ jlaɖó bo na dó vɔ́ tɛ́n kpɔ́n.",
+  "libraryRetry": "tɔn",
+  "subsonicOn": "Ɖò",
+  "subsonicOff": "E ɖo azɔ́",
+  "sleepTimerMinutes": "Cɛju {minutes}",
+  "oledBlackDeviceColor": "OLED Wiwi",
+  "subsonicUrl": "URL serveur tɔn",
+  "subsonicInvalidUrl": "Wlan URL serveur HTTP alǒ HTTPS tɔn ɖé mɛvo, bo ma byɔ nǔkanbyɔ, akpáxwé ɖé, alǒ xójlawema ɖé ɖ’emɛ ǎ.",
+  "subsonicUnsupported": "Serveur élɔ́ nɔ ɖ'alɔ Subsonic API abǐ token sín kúnnuɖenú e è byɔ́ é ǎ.",
+  "subsonicConnectionError": "Sixu cá ǎ. Kpɔ́n URL, réseau kpo HTTPS sín kúnnuɖewema ɔ kpo. Ðò Wɛb jí ɔ, serveur ɔ ɖó na yí gbè nú CORS bɔ HTTPS appli ɖé sixu cá kàn xá HTTP ǎ."
 }

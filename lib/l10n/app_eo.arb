@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ĝenro",
   "editSongLyricsLabel": "Kantotekstoj",
   "saveChangesButton": "Konservu Ŝanĝojn",
-  "veryLow": "Tre Malalta"
+  "veryLow": "Tre Malalta",
+  "reindexLibrarySettingTitle": "Reindikigi",
+  "reindexLibrarySettingDescription": "Legu metadatenojn kaj artaĵojn por ĉiuj muzikdosieroj denove.",
+  "refreshLibrarySettingTitle": "Refreŝigi Bibliotekon",
+  "refreshLibrarySettingDescription": "Kontrolu por aldonita aŭ forigita muziko. Konservu ekzistantajn metadatumojn kaj artaĵojn.",
+  "librarySettingsScreenTitle": "Biblioteko Agordoj",
+  "librarySettingsDescription": "Administri muzikon indeksadon kaj ekskluditaj dosierujoj.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fino de Nuna Kanto",
+  "sleepTimerRemainingLabel": "Restanta",
+  "findingSongs": "Trovante kantojn...",
+  "songsLoaded": "Ŝargitaj kantoj: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artaĵo konservita en kaŝmemoro: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ne eblas ŝargi la muzikbibliotekon. Bonvolu reprovi.",
+  "missingTracksTitle": "Mankas Trakoj",
+  "missingTracksDescription": "Revizu dosierojn, kiuj ne estis legitaj.",
+  "missingTracksEmpty": "Neniuj nelegeblaj spuroj.",
+  "missingTrackRead": "Ne eblis legi la metadatumojn de ĉi tiu dosiero. Kontrolu la dosierlokon kaj alirpermesojn, tiam reindeksu la bibliotekon por reprovi.",
+  "missingTrackArtwork": "Ne eblis legi la artaĵon de ĉi tiu dosiero. Aŭdio ankoraŭ povas ludi. Reindeksu la bibliotekon por reprovi.",
+  "playbackBuffering": "Bufrado…",
+  "preventDuplicateTracksTitle": "Malhelpi Duplikatajn Trakojn",
+  "preventDuplicateTracksDescription": "Kaŝi spurojn kun duplikataj dosiernomoj.",
+  "hideLocalMusicTitle": "Kaŝi Lokan Muzikon",
+  "hideLocalMusicDescription": "Montru nur servilan muzikon en via biblioteko dum Subsonic estas ŝaltita. Lokaj dosieroj restas en via aparato.",
+  "subsonicTitle": "Subsonic Servilo",
+  "subsonicDescription": "Fluu muzikon de Navidrome, gonic kaj kongruaj serviloj.",
+  "subsonicConfigure": "Agordu Subsonic",
+  "subsonicUsername": "Uzantnomo",
+  "subsonicPassword": "Pasvorto",
+  "subsonicConnect": "Konekti",
+  "subsonicRemove": "Forigi Servilon",
+  "subsonicSignIn": "Ensalutu necesa",
+  "subsonicLoadingLibrary": "Ŝargante vian bibliotekon...",
+  "subsonicContinueBackground": "Daŭrigu fone",
+  "subsonicClose": "Fermu",
+  "subsonicIndexing": "Indeksante servilan muzikon...",
+  "subsonicUnavailable": "Nedisponebla",
+  "subsonicCredentialsError": "Kontrolu vian uzantnomon, pasvorton kaj servilpermesojn.",
+  "subsonicStorageError": "Ne eblis konservi akreditaĵojn. Kontrolu, ke sekura stokado disponeblas kaj provu denove.",
+  "subsonicTimeout": "La servilo elĉerpiĝis. Bonvolu provi denove.",
+  "subsonicServerError": "Ne eblis legi la servilan bibliotekon. La antaŭa katalogo estas konservita. Refreŝigu Bibliotekon por reprovi.",
+  "libraryRetry": "Retrovu",
+  "subsonicOn": "ON",
+  "subsonicOff": "For",
+  "sleepTimerMinutes": "{minutes} Protokolo",
+  "oledBlackDeviceColor": "OLED Nigra",
+  "subsonicUrl": "Servila URL",
+  "subsonicInvalidUrl": "Enigu HTTP aŭ HTTPS-servila URL sen demando, fragmento aŭ enigita ensaluto.",
+  "subsonicUnsupported": "Ĉi tiu servilo ne subtenas la bezonatan Subsonic API aŭ ĵetonan aŭtentikigon.",
+  "subsonicConnectionError": "Ne povas konekti. Kontrolu la URL, reton kaj HTTPS-atestilon. En Retejo, la servilo devas permesi CORS kaj HTTPS-aplikaĵo ne povas konekti al HTTP."
 }

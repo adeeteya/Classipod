@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Түхэл хэлбэри",
   "editSongLyricsLabel": "Дуунай үгэнүүд",
   "saveChangesButton": "Хубилалтануудые хэмнэхэ",
-  "veryLow": "Ехэ бага"
+  "veryLow": "Ехэ бага",
+  "reindexLibrarySettingTitle": "Дахин индексировалха",
+  "reindexLibrarySettingDescription": "Бүхы хүгжэмэй файлнуудай метадата ба уран бүтээлнүүдые дахин уншагты.",
+  "refreshLibrarySettingTitle": "Номой сан шэнэлхэ",
+  "refreshLibrarySettingDescription": "Нэмэгдэһэн гү, али усадхагдаһан хүгжэм шалгаха. Байһан метадата болон уран бүтээлнүүдые хадагалха.",
+  "librarySettingsScreenTitle": "Номой сангай тохиргоонууд",
+  "librarySettingsDescription": "Хүгжэмэй индексировалга ба хасагдаһан папкануудые ударидаха.",
+  "sleepTimerTitle": "Унтаха саг хэмжүүр",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Мүнөөнэй дуунай түгэсхэл",
+  "sleepTimerRemainingLabel": "Үлэһэн",
+  "findingSongs": "Дуунуудые оложо байнаб...",
+  "songsLoaded": "Дуунууд ашаглагдаа: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Уран бүтээл хадгалагдаһан: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Хүгжэмэй номой сан ашаглажа шадахагүй. Дахин туршагты.",
+  "missingTracksTitle": "Үгы болоһон мүрнүүд",
+  "missingTracksDescription": "Уншажа шадаагүй файлнуудые шалгаха.",
+  "missingTracksEmpty": "Уншагдахагүй мүрнүүд үгы.",
+  "missingTrackRead": "Энэ файлай метадата уншажа шадаагүй. Файлай байра ба нэбтэрхэ эрхэ шалгаад, дахин туршахын тулада номой сангай дахин индексировал.",
+  "missingTrackArtwork": "Энэ файлай уран бүтээл уншажа шадаагүй. Аудио үшөө наадажа магадгүй. Дахин туршахын тулада номой сан дахин индексировал.",
+  "playbackBuffering": "Буферизаци...",
+  "preventDuplicateTracksTitle": "Дабтагдаһан замуудые һэргылхэ",
+  "preventDuplicateTracksDescription": "Дабтагдаһан файлай нэрэтэй замуудые нюуха.",
+  "hideLocalMusicTitle": "Нютагай хүгжэм нюуха",
+  "hideLocalMusicDescription": "Subsonic асарагданхай байхада номой сандаа гансал серверэй хүгжэм харуулха. Нютагай файлнууд танай түхеэрэлгэ дээрэ үлэнэ.",
+  "subsonicTitle": "Subsonic сервер",
+  "subsonicDescription": "Navidrome, gonic болон тааруу сервернүүдһээ хүгжэм дамжуулха.",
+  "subsonicConfigure": "Subsonic тохируулха",
+  "subsonicUsername": "Хэрэглэгшын нэрэ",
+  "subsonicPassword": "Нуурай үгэ",
+  "subsonicConnect": "Холбоо",
+  "subsonicRemove": "Сервер усадхаха",
+  "subsonicSignIn": "Нэгэ нэбтэрхэ хэрэгтэй",
+  "subsonicLoadingLibrary": "Номой сангаа ашаглажа байнаб...",
+  "subsonicContinueBackground": "Ара талаһаа үргэлжэлүүлхэ",
+  "subsonicClose": "Хааха",
+  "subsonicIndexing": "Серверэй хүгжэмые индексировална...",
+  "subsonicUnavailable": "Үгы",
+  "subsonicCredentialsError": "Хэрэглэгшын нэрэ, нууц үгэ, серверэй эрхэнүүдые шалгагты.",
+  "subsonicStorageError": "Дансануудые хадагалжа шадаагүй. Аюулгүй хадагалха газар бии гү гэжэ шалгаад, дахин туршагты.",
+  "subsonicTimeout": "Сервер саг үнгэрөө. Дахин туршагты.",
+  "subsonicServerError": "Серверэй номой сан уншажа шадаагүй. Урданай каталог үлэбэ. Дахин туршахын тулада Номой сан шэнэлхэ.",
+  "libraryRetry": "Дахин туршаха",
+  "subsonicOn": "Дээрэ",
+  "subsonicOff": "Унтарһан",
+  "sleepTimerMinutes": "{minutes} минута",
+  "oledBlackDeviceColor": "OLED Хара",
+  "subsonicUrl": "Серверэй URL",
+  "subsonicInvalidUrl": "Асуудал, хэһэг, нэбтэрүүлһэн нэбтэрэлгэгүйгөөр HTTP гү, али HTTPS серверэй URL оруулха.",
+  "subsonicUnsupported": "Энэ сервер хэрэгтэй Subsonic API гү, али токен үнэмшэлгэ дэмжэнэгүй.",
+  "subsonicConnectionError": "Холбожо шадахагүй. URL, сүлжээн, HTTPS гэршэлгэ шалгаха. Веб дээрэ сервер CORS-ые зүбшөөрхэ ёһотой ба HTTPS апп HTTP-тэй холбогдожо шадахагүй."
 }

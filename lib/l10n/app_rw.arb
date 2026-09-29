@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ubwoko",
   "editSongLyricsLabel": "Amagambo",
   "saveChangesButton": "Bika impinduka",
-  "veryLow": "Hasi cyane"
+  "veryLow": "Hasi cyane",
+  "reindexLibrarySettingTitle": "Ongera usuzume",
+  "reindexLibrarySettingDescription": "Ongera usome metadata nibikorwa byamadosiye yose yumuziki.",
+  "refreshLibrarySettingTitle": "Kuvugurura Isomero",
+  "refreshLibrarySettingDescription": "Reba umuziki wongeyeho cyangwa wasibwe. Komeza metadata iriho nubuhanzi.",
+  "librarySettingsScreenTitle": "Igenamiterere ry'isomero",
+  "librarySettingsDescription": "Gucunga urutonde rwumuziki kandi usibye ububiko.",
+  "sleepTimerTitle": "Ibitotsi",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Iherezo ryindirimbo",
+  "sleepTimerRemainingLabel": "Ibisigaye",
+  "findingSongs": "Kubona indirimbo…",
+  "songsLoaded": "Indirimbo zipakiye: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ibikorwa byubuhanzi: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ntibishobora gupakira isomero ryumuziki. Nyamuneka ongera ugerageze.",
+  "missingTracksTitle": "Kubura inzira",
+  "missingTracksDescription": "Ongera usuzume dosiye zidashobora gusomwa.",
+  "missingTracksEmpty": "Nta nzira idasomeka.",
+  "missingTrackRead": "Ntushobora gusoma metadata yiyi dosiye. Reba aho dosiye iherereye hanyuma ubone uburenganzira, hanyuma reindex isomero kugirango wongere ugerageze.",
+  "missingTrackArtwork": "Ntushobora gusoma ibihangano bya dosiye. Ijwi rirashobora gukina. Reindex isomero kugirango wongere ugerageze.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "Irinde Inzira Zigana",
+  "preventDuplicateTracksDescription": "Hisha inzira hamwe namazina ya dosiye.",
+  "hideLocalMusicTitle": "Hisha umuziki waho",
+  "hideLocalMusicDescription": "Erekana umuziki wa seriveri gusa mubitabo byawe mugihe Subsonic iri. Amadosiye yaho aguma kubikoresho byawe.",
+  "subsonicTitle": "Seriveri Subsonic",
+  "subsonicDescription": "Umuziki utemba kuva Navidrome, gonic, hamwe na seriveri ihuza.",
+  "subsonicConfigure": "Hindura Subsonic",
+  "subsonicUsername": "Izina ryukoresha",
+  "subsonicPassword": "Ijambobanga",
+  "subsonicConnect": "Ihuze",
+  "subsonicRemove": "Kuraho Seriveri",
+  "subsonicSignIn": "Injira",
+  "subsonicLoadingLibrary": "Gutwara isomero ryawe…",
+  "subsonicContinueBackground": "Komeza inyuma",
+  "subsonicClose": "Funga",
+  "subsonicIndexing": "Kwerekana seriveri ya muzika…",
+  "subsonicUnavailable": "Ntibishoboka",
+  "subsonicCredentialsError": "Reba izina ukoresha, ijambo ryibanga, hamwe na seriveri.",
+  "subsonicStorageError": "Ntushobora kubika ibyangombwa. Reba neza ko ububiko butekanye burahari hanyuma ugerageze.",
+  "subsonicTimeout": "Seriveri yarengeje igihe. Nyamuneka gerageza.",
+  "subsonicServerError": "Ntushobora gusoma isomero rya seriveri. Urutonde rwabanje rwagumishijwe. Kuvugurura Isomero kugirango wongere ugerageze.",
+  "libraryRetry": "Gusubiramo",
+  "subsonicOn": "Kuri",
+  "subsonicOff": "Hanze",
+  "sleepTimerMinutes": "Iminota {minutes}",
+  "oledBlackDeviceColor": "OLED Umukara",
+  "subsonicUrl": "Seriveri URL",
+  "subsonicInvalidUrl": "Injira seriveri ya HTTP cyangwa HTTPS idafite ikibazo, igice, cyangwa winjiye.",
+  "subsonicUnsupported": "Iyi seriveri ntabwo ishigikira Subsonic API isabwa cyangwa kwemeza ibimenyetso.",
+  "subsonicConnectionError": "Ntushobora guhuza. Reba URL, umuyoboro, hamwe nicyemezo cya HTTPS. Kurubuga, seriveri igomba kwemerera CORS kandi porogaramu ya HTTPS ntishobora guhuza na HTTP."
 }

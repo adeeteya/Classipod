@@ -134,5 +134,78 @@
   "editSongGenreLabel": "النوع",
   "editSongLyricsLabel": "كلمات",
   "saveChangesButton": "حفظ التغييرات",
-  "veryLow": "منخفض جدًا"
+  "veryLow": "منخفض جدًا",
+  "reindexLibrarySettingTitle": "إعادة الفهرسة",
+  "reindexLibrarySettingDescription": "اقرأ البيانات الوصفية والأعمال الفنية لجميع ملفات الموسيقى مرة أخرى.",
+  "refreshLibrarySettingTitle": "تحديث المكتبة",
+  "refreshLibrarySettingDescription": "التحقق من الموسيقى المضافة أو المحذوفة. احتفظ بالبيانات الوصفية والأعمال الفنية الموجودة.",
+  "librarySettingsScreenTitle": "إعدادات المكتبة",
+  "librarySettingsDescription": "إدارة فهرسة الموسيقى والمجلدات المستبعدة.",
+  "sleepTimerTitle": "مؤقت النوم",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "نهاية الأغنية الحالية",
+  "sleepTimerRemainingLabel": "المتبقي",
+  "findingSongs": "جارٍ البحث عن الأغاني…",
+  "songsLoaded": "الأغاني المحملة: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "العمل الفني المخبأ: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "غير قادر على تحميل مكتبة الموسيقى. يرجى إعادة المحاولة.",
+  "missingTracksTitle": "المسارات المفقودة",
+  "missingTracksDescription": "مراجعة الملفات التي لا يمكن قراءتها.",
+  "missingTracksEmpty": "لا توجد مسارات غير قابلة للقراءة.",
+  "missingTrackRead": "تعذرت قراءة البيانات الوصفية لهذا الملف. تحقق من موقع الملف وأذونات الوصول، ثم أعد فهرسة المكتبة لإعادة المحاولة.",
+  "missingTrackArtwork": "لا يمكن قراءة العمل الفني لهذا الملف. قد يستمر تشغيل الصوت. أعد فهرسة المكتبة لإعادة المحاولة.",
+  "playbackBuffering": "جارٍ التخزين المؤقت…",
+  "preventDuplicateTracksTitle": "منع المسارات المكررة",
+  "preventDuplicateTracksDescription": "إخفاء المسارات بأسماء الملفات المكررة.",
+  "hideLocalMusicTitle": "إخفاء الموسيقى المحلية",
+  "hideLocalMusicDescription": "قم بعرض موسيقى الخادم فقط في مكتبتك أثناء تشغيل Subsonic. تبقى الملفات المحلية على جهازك.",
+  "subsonicTitle": "خادم Subsonic",
+  "subsonicDescription": "يمكنك بث الموسيقى من Navidrome وgonic والخوادم المتوافقة.",
+  "subsonicConfigure": "تكوين Subsonic",
+  "subsonicUsername": "اسم المستخدم",
+  "subsonicPassword": "كلمة المرور",
+  "subsonicConnect": "الاتصال",
+  "subsonicRemove": "إزالة الخادم",
+  "subsonicSignIn": "تسجيل الدخول مطلوب",
+  "subsonicLoadingLibrary": "جارٍ تحميل مكتبتك…",
+  "subsonicContinueBackground": "الاستمرار في الخلفية",
+  "subsonicClose": "إغلاق",
+  "subsonicIndexing": "جارٍ فهرسة موسيقى الخادم…",
+  "subsonicUnavailable": "غير متاح",
+  "subsonicCredentialsError": "تحقق من اسم المستخدم وكلمة المرور وأذونات الخادم.",
+  "subsonicStorageError": "تعذر حفظ بيانات الاعتماد. تأكد من توفر مساحة تخزين آمنة وحاول مرة أخرى.",
+  "subsonicTimeout": "انتهت مهلة الخادم. يرجى المحاولة مرة أخرى.",
+  "subsonicServerError": "لا يمكن قراءة مكتبة الخادم. يتم الاحتفاظ بالكتالوج السابق. قم بتحديث المكتبة لإعادة المحاولة.",
+  "libraryRetry": "إعادة المحاولة",
+  "subsonicOn": "على",
+  "subsonicOff": "عن",
+  "sleepTimerMinutes": "{minutes} دقيقة",
+  "oledBlackDeviceColor": "أوليد أسود",
+  "subsonicUrl": "عنوان URL للخادم",
+  "subsonicInvalidUrl": "أدخل عنوان URL لخادم HTTP أو HTTPS بدون استعلام أو جزء أو تسجيل دخول مضمن.",
+  "subsonicUnsupported": "لا يدعم هذا الخادم واجهة برمجة التطبيقات Subsonic المطلوبة أو مصادقة الرمز المميز.",
+  "subsonicConnectionError": "لا يمكن الاتصال. تحقق من عنوان URL والشبكة وشهادة HTTPS. على الويب، يجب أن يسمح الخادم بـ CORS ولا يمكن لتطبيق HTTPS الاتصال بـ HTTP."
 }

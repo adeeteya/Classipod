@@ -134,5 +134,78 @@
   "editSongGenreLabel": "မဵဝ်းသႅၼ်းပၢႆးမွၼ်း",
   "editSongLyricsLabel": "ၶေႃႈမၢႆမီႈ",
   "saveChangesButton": "လွင်ႈလႅၵ်ႈလၢႆႈ Save",
-  "veryLow": "ဢေႇၼႃႇ"
+  "veryLow": "ဢေႇၼႃႇ",
+  "reindexLibrarySettingTitle": "ၶိုၼ်းႁဵတ်း Index",
+  "reindexLibrarySettingDescription": "ဢၢၼ်ႇတူၺ်း metadata လႄႈ ၵၢၼ်ပၢႆးမွၼ်း တွၼ်ႈတႃႇ ၾၢႆႇၽဵင်းၵႂၢမ်းတင်းမူတ်းၶိုၼ်း။",
+  "refreshLibrarySettingTitle": "ႁူင်းတူၺ်းလိၵ်ႈ Refresh",
+  "refreshLibrarySettingDescription": "တူၺ်းၽဵင်းၵႂၢမ်းဢၼ်သႂ်ႇဝႆႉ ဢမ်ႇၼၼ် ဢၼ်မွတ်ႇဝႆႉ။ သိမ်းဝႆႉ မႅတ်ႉတႃႇ လႄႈ ၵၢၼ်ပၢႆးမွၼ်း ဢၼ်မီးဝႆႉ။",
+  "librarySettingsScreenTitle": "လွင်ႈတမ်းဝၢင်းႁူင်းတူၺ်းလိၵ်ႈ",
+  "librarySettingsDescription": "ၸတ်းၵၢၼ် လွင်ႈႁဵတ်း Index ၽဵင်းၵႂၢမ်း လႄႈ ၽူဝ်ႇတႃႇ ဢၼ်ဢမ်ႇပႃး။",
+  "sleepTimerTitle": "ၶၢဝ်းယၢမ်းၼွၼ်း",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "သုတ်းၽဵင်းၵႂၢမ်းယၢမ်းလဵဝ်",
+  "sleepTimerRemainingLabel": "ဢၼ်ၵိုတ်းဝႆႉ",
+  "findingSongs": "ႁႃၽဵင်းၵႂၢမ်း...",
+  "artworkCached": "ၶႅပ်းႁၢင်ႈဢၼ်သိမ်းဝႆႉ : {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ဢမ်ႇၸၢင်ႈဢဝ်ႁူင်းတူၺ်းၽဵင်းၵႂၢမ်း မႃးသႂ်ႇလႆႈ။ ၶိုၼ်းၶတ်းၸႂ်တူၺ်းၶႃႈ။",
+  "missingTracksTitle": "ၽဵင်းၵႂၢမ်းဢၼ်ႁၢႆၵႂႃႇ",
+  "missingTracksDescription": "ထတ်းတူၺ်း ၾၢႆႇဢၼ်ဢမ်ႇၸၢင်ႈလူလႆႈ။",
+  "missingTracksEmpty": "ဢမ်ႇမီးၽဵင်းၵႂၢမ်းဢၼ်ဢမ်ႇလူလႆႈ။",
+  "missingTrackRead": "ဢမ်ႇၸၢင်ႈဢၢၼ်ႇလႆႈ ၶေႃႈမုၼ်း ၾၢႆႇၼႆႉ။ တူၺ်းတီႈယူႇ ၾၢႆႇ လႄႈ သုၼ်ႇၶဝ်ႈတူၺ်း ယဝ်ႉၵေႃႈ ၶိုၼ်းႁဵတ်း Index ႁူင်းတူၺ်းလိၵ်ႈ တႃႇၶိုၼ်းၶတ်းၸႂ်။",
+  "missingTrackArtwork": "ဢမ်ႇၸၢင်ႈဢၢၼ်ႇလႆႈ ႁၢင်ႈၽၢင် ၾၢႆႇၼႆႉ။ သဵင်တိုၵ်ႉတေလဵၼ်ႈယူႇ။ ၶိုၼ်းႁဵတ်း Index ႁူင်းတူၺ်းလိၵ်ႈ တႃႇၶိုၼ်းၸၢမ်းတူၺ်း။",
+  "playbackBuffering": "လွင်ႈၵမ်ႉယၼ်...",
+  "preventDuplicateTracksTitle": "ႁႄႉၵင်ႈ လွင်ႈထရႅၵ်ႉ ဢၼ်မိူၼ်ၵၼ်",
+  "preventDuplicateTracksDescription": "လပ်ႉဝႆႉ ၽဵင်းၵႂၢမ်း ဢၼ်မီးၸိုဝ်ႈၾၢႆႇ ဢၼ်မိူၼ်ၵၼ်။",
+  "hideLocalMusicTitle": "လပ်ႉၽဵင်းၵႂၢမ်းၼႂ်းပိုၼ်ႉတီႈ",
+  "hideLocalMusicDescription": "ၼႄၽဵင်းၵႂၢမ်း Server ၼႂ်းႁူင်းတူၺ်းလိၵ်ႈၸဝ်ႈၵဝ်ႇ ၽွင်းမိူဝ်ႈ Subsonic ပိုတ်ႇဝႆႉၼၼ်ႉၵူၺ်း။ ၾၢႆႇၼႂ်းပိုၼ်ႉတီႈ တေယူႇဝႆႉတီႈၼႂ်းၶိူင်ႈၸဝ်ႈၵဝ်ႇ။",
+  "subsonicTitle": "Subsonic သႃႇဝႃႇ",
+  "subsonicConfigure": "ၶပ်ႉတမ်း Subsonic",
+  "subsonicUsername": "ၸိုဝ်ႈၽူႈၸႂ်ႉတိုဝ်း",
+  "subsonicPassword": "ၶေႃႈလပ်ႉ",
+  "subsonicConnect": "ၵွင်ႉသၢၼ်",
+  "subsonicRemove": "ဢဝ်ဢွၵ်ႇ Server",
+  "subsonicSignIn": "လူဝ်ႇၶဝ်ႈၵႂႃႇ",
+  "subsonicLoadingLibrary": "ဢဝ်ႁူင်းတူၺ်းလိၵ်ႈၸဝ်ႈၵဝ်ႇ...",
+  "subsonicContinueBackground": "သိုပ်ႇပိုၼ်ႉလင်",
+  "subsonicClose": "ဢိုတ်း",
+  "subsonicIndexing": "ႁဵတ်း Index ၽဵင်းၵႂၢမ်း Server...",
+  "subsonicUnavailable": "ဢမ်ႇလႆႈ",
+  "subsonicCredentialsError": "တူၺ်းၸိုဝ်ႈၽူႈၸႂ်ႉတိုဝ်း မၢႆလပ်ႉ လႄႈ သုၼ်ႇလႆႈ Server ၸဝ်ႈၵဝ်ႇ။",
+  "subsonicStorageError": "ဢမ်ႇၸၢင်ႈသိမ်းဝႆႉ ၶေႃႈမုၼ်း။ တူၺ်းဝႃႈ တီႈသိမ်းဝႆႉ ဢၼ်ႁူမ်ႇလူမ်ႈၼၼ်ႉ မီးဝႆႉယူႇႁႃႉၼႆသေ ၶိုၼ်းၶတ်းၸႂ်တူၺ်း။",
+  "subsonicTimeout": "ၶၢဝ်းယၢမ်း Server မၼ်းႁၢႆၵႂႃႇ။ ၶိုၼ်းၶတ်းၸႂ်တူၺ်းၶႃႈ။",
+  "subsonicServerError": "ဢမ်ႇၸၢင်ႈလူဢၢၼ်ႇ ႁူင်းတူၺ်းလိၵ်ႈ Server လႆႈ။ သဵၼ်ႈမၢႆဢၼ်ၵဝ်ႇၼၼ်ႉ သိမ်းဝႆႉ။ ၶိုၼ်းႁဵတ်း Refresh ႁူင်းတူၺ်းလိၵ်ႈ တႃႇၶိုၼ်းၸၢမ်းတူၺ်း။",
+  "libraryRetry": "ၵမ်ႉ",
+  "subsonicOn": "တၢင်းၼိူဝ်",
+  "subsonicOff": "ႁပ်း",
+  "sleepTimerMinutes": "{minutes} မိၼိတ်ႉ",
+  "oledBlackDeviceColor": "OLED သီလမ်",
+  "songsLoaded": "ၽဵင်းၵႂၢမ်းဢၼ်တၢင်ႇဝႆႉ: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "subsonicDescription": "Stream ၽဵင်းၵႂၢမ်း တီႈ Navidrome၊ gonic၊လႄႈ သႃႇဝႃႇ ဢၼ်ၵိုင်ႇငၢမ်ႇၵၼ်။",
+  "subsonicUrl": "URL သႃႇဝႃႇ",
+  "subsonicInvalidUrl": "ၶဝ်ႈသႂ်ႇ HTTP ဢမ်ႇၼၼ် HTTPS Server URL ဢၼ်ဢမ်ႇပႃး ၶေႃႈထၢမ်၊",
+  "subsonicUnsupported": "သိူဝ်ႇဝႃႇၼႆႉ ဢမ်ႇၵမ်ႉထႅမ်ပၼ် Subsonic API ဢမ်ႇၼၼ် လွင်ႈမၵ်းမၼ်ႈ တူဝ်ၼပ်ႉ ဢၼ်လူဝ်ႇၼၼ်ႉ။",
+  "subsonicConnectionError": "ဢမ်ႇၸၢင်ႈၵပ်းသိုပ်ႇ။ တူၺ်း URL ၼႅတ်ႉ လႄႈ ဝႂ် HTTPS ၸိူဝ်းၼႆႉ။ တီႈၼိူဝ် Web ၼၼ်ႉ Server တေလႆႈပၼ်ၶႂၢင်ႉ CORS လႄႈ ဢႅပ်ႉ HTTPS ဢၼ်ၼိုင်ႈ ဢမ်ႇၸၢင်ႈၵွင်ႉသၢၼ်ၵၼ်တင်း HTTP လႆႈ။"
 }

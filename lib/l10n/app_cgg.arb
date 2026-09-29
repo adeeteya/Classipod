@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Omuzani",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Biika Empinda",
-  "veryLow": "Enyima"
+  "veryLow": "Enyima",
+  "reindexLibrarySettingTitle": "Garuka ohandiike",
+  "reindexLibrarySettingDescription": "Shoma metadata n’ebishushani bya fairo z’ebyeshongoro zoona kandi.",
+  "refreshLibrarySettingTitle": "Garuzaho eibiikiro ry'ebitabo",
+  "refreshLibrarySettingDescription": "Reeba ebyeshongoro ebiyongyeirweho nari ebisaasirwe. Guma oine metadata n’ebishushani ebiriho.",
+  "librarySettingsScreenTitle": "Okutebekanisa kw'eibiikiro ry'ebitabo",
+  "librarySettingsDescription": "Baasa okuhandiika ebyeshongoro hamwe na folda ezitarimu.",
+  "sleepTimerTitle": "Obwire bwokubyama",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Enkomerero y'ekyeshongoro ekiriho hati",
+  "sleepTimerRemainingLabel": "Ebisigaire",
+  "findingSongs": "Okuronda ebyeshongoro...",
+  "songsLoaded": "Ebyeshongoro ebiteirweho: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ebishushani ebibiikire: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Titurikubaasa kutaho eibiikiro ry'ebyeshongoro. Nyabura we garukamu ogyezeho.",
+  "missingTracksTitle": "Ebibungo ebibuzire",
+  "missingTracksDescription": "Reeba fairo ezitarikubaasa kushomwa.",
+  "missingTracksEmpty": "Tihariho nshonga ezitarikushoma.",
+  "missingTrackRead": "Titurikubaasa kushoma metadata ya fairo egi. Reeba ahu fairo eri n’orusa rw’okugitunga, reero ogarukye ohindure eibiikiro ry’ebitabo kugaruka kugyezaho.",
+  "missingTrackArtwork": "Titurikubaasa kushoma ebishushani bya fairo egi. Amakuru nigabaasa kuguma nigateera. Garuka ohandiike eibiikiro ry’ebitabo kugaruka kugyezaho.",
+  "playbackBuffering": "Okuzibira...",
+  "preventDuplicateTracksTitle": "Zibira emihanda erikugarukagaruka",
+  "preventDuplicateTracksDescription": "Shereka ebirahuri ebiine amaziina ga fairo agarikushushana.",
+  "hideLocalMusicTitle": "Shereka Ebyeshongoro by'omukicweka",
+  "hideLocalMusicDescription": "Yoreka ebyeshongoro bya server byonka omu ibiikiro ryawe obwo Subsonic eriho. Fayiro z’omu kicweka niziguma aha kikwato kyawe.",
+  "subsonicTitle": "Subsonic Omuhereza",
+  "subsonicDescription": "Ebyeshongoro bya Navidrome, gonic, na za saava ezirikuhikaana.",
+  "subsonicConfigure": "Tebeekanisa Subsonic",
+  "subsonicUsername": "Eiziina ry'omukozesa",
+  "subsonicPassword": "Ekigambo ky'okukingaho",
+  "subsonicConnect": "Kwatanisa",
+  "subsonicRemove": "Yihaho Saava",
+  "subsonicSignIn": "Taahamu nikyetengyesa",
+  "subsonicLoadingLibrary": "Okutaho eibiikiro ryawe...",
+  "subsonicContinueBackground": "Gumizamu omuby'enyima",
+  "subsonicClose": "Kwinga",
+  "subsonicIndexing": "Okuhandiika ebyeshongoro bya saava...",
+  "subsonicUnavailable": "Tikiriho",
+  "subsonicCredentialsError": "Reeba eiziina ryawe ry'okukozesa, ekishumuruzo, hamwe n'orusa rwa saava.",
+  "subsonicStorageError": "Tibarikubaasa kubiika ebihandiiko by'okuhamya. Reeba ngu hariho okubiika okurinzirwe kandi ogyezeho ogundi murundi.",
+  "subsonicTimeout": "Obwire bwa server bukahwaho. Hakyiri ogyezeho ogundi murundi.",
+  "subsonicServerError": "Tibarikubaasa kushoma eibiikiro ry'ebitabo erya saava. Katalogi eyabandize neegumaho. Rekaho Laiburare kugaruka kugyezaho.",
+  "libraryRetry": "okugaruzaho",
+  "subsonicOn": "Aha",
+  "subsonicOff": "Kuhumura",
+  "sleepTimerMinutes": "Edakiika {minutes}",
+  "oledBlackDeviceColor": "OLED erikwiragura",
+  "subsonicUrl": "URL ya saava",
+  "subsonicInvalidUrl": "Tamu HTTP nari HTTPS server URL otaine kibuuzo, ekicweka, nari okutaaha omunda.",
+  "subsonicUnsupported": "Server egi terikushagika Subsonic API erikwetengyesa nari okuhamya akabonero.",
+  "subsonicConnectionError": "Tikirikubaasa kukwatiraine. Reeba URL, omukutu, na satifikeeti ya HTTPS. Aha Web, server eine kwikiriza CORS kandi app ya HTTPS terikubaasa kukwatiraine na HTTP."
 }

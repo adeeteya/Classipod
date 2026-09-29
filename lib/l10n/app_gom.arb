@@ -134,5 +134,78 @@
   "editSongGenreLabel": "प्रकार",
   "editSongLyricsLabel": "गीत 1000 .",
   "saveChangesButton": "बदल जतनाय घेयात",
-  "veryLow": "खूप उणें 1 ."
+  "veryLow": "खूप उणें 1 .",
+  "reindexLibrarySettingTitle": "परतून अनुक्रमणिका करप",
+  "reindexLibrarySettingDescription": "सगळ्या संगीत फायलीं खातीर मेटाडेटा आनी कलाकृती परतून वाचात.",
+  "refreshLibrarySettingTitle": "लायब्ररी ताजें करचें",
+  "refreshLibrarySettingDescription": "जोडिल्लें वा काडून उडयल्लें संगीत तपासात. सद्याचो मेटाडेटा आनी कलाकृती दवरात.",
+  "librarySettingsScreenTitle": "लायब्ररी सेटिंग्ज",
+  "librarySettingsDescription": "संगीत अनुक्रमणिका आनी वगळिल्ले फोल्डर वेवस्थापन करात.",
+  "sleepTimerTitle": "न्हीद टाइमर",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "सध्याच्या गीताचो शेवट",
+  "sleepTimerRemainingLabel": "उरिल्लें",
+  "findingSongs": "गितां सोदप...",
+  "songsLoaded": "गीत लोड: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "कलाकृती कॅश केल्ली: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "संगीत लायब्ररी लोड करूंक शकना. उपकार करून परतून यत्न करात.",
+  "missingTracksTitle": "गळून पडपी ट्रॅक्स",
+  "missingTracksDescription": "वाचूंक मेळनाशिल्ल्या फायलींचें पुनरावलोकन करचें.",
+  "missingTracksEmpty": "वाचूंक शकना अशे ट्रॅक नात.",
+  "missingTrackRead": "हे फायलीन मेटाडेटा वाचूंक शकलो ना. फायल थळ आनी प्रवेश परवानगी तपासात, मागीर परतून यत्न करपाक लायब्ररी परतून अनुक्रमीत करात.",
+  "missingTrackArtwork": "हे फायलीन कलाकृती वाचूंक शकली ना. ऑडियो अजूनय वाजूंक शकता. परतून यत्न करपाक लायब्ररी परतून अनुक्रमीत करात.",
+  "playbackBuffering": "बफरिंग...",
+  "preventDuplicateTracksTitle": "डुप्लीकेट ट्रॅक आडावप",
+  "preventDuplicateTracksDescription": "डुप्लीकेट फायल नांवां आशिल्ले ट्रॅक लिपोवचे.",
+  "hideLocalMusicTitle": "थळावें संगीत लिपोवप",
+  "hideLocalMusicDescription": "Subsonic चालू आसतना तुमच्या लायब्ररींत फकत सर्वर संगीत दाखोवचें. थळावी फायली तुमच्या डिव्हायसाचेर रावतात.",
+  "subsonicTitle": "Subsonic सर्वर",
+  "subsonicDescription": "Navidrome, gonic, आनी सुसंगत सर्वरां कडल्यान संगीत प्रवाहीत करात.",
+  "subsonicConfigure": "Subsonic संरचीत करात",
+  "subsonicUsername": "वापरप्याचें नांव",
+  "subsonicPassword": "पासवर्ड",
+  "subsonicConnect": "कनॅक्ट करचें",
+  "subsonicRemove": "सर्वर काडून उडोवप",
+  "subsonicSignIn": "सायन इन करपाची गरज आसा",
+  "subsonicLoadingLibrary": "तुमची लायब्ररी लोड करतना...",
+  "subsonicContinueBackground": "पार्श्वभूंयेर चालू दवरात",
+  "subsonicClose": "बंद करचें",
+  "subsonicIndexing": "सर्वर संगीत अनुक्रमणिका करप...",
+  "subsonicUnavailable": "उपलब्ध ना",
+  "subsonicCredentialsError": "तुमचें वापरप्याचें नांव, पासवर्ड, आनी सर्वर परवानगी तपासात.",
+  "subsonicStorageError": "प्रमाणपत्रां जतनाय घेवंक शकले नात. सुरक्षीत साठवण उपलब्ध आसा काय ना तें तपासात आनी परतून यत्न करात.",
+  "subsonicTimeout": "सर्वराचो वेळ सोंपलो. उपकार करून परतून यत्न करात.",
+  "subsonicServerError": "सर्वर लायब्ररी वाचूंक शकली ना. आदलो कॅटलॉग तिगून उरला. परतून यत्न करपाक लायब्ररी ताजें करचें.",
+  "libraryRetry": "परतून यत्न 1000",
+  "subsonicOn": "हाचेर",
+  "subsonicOff": "बंद करचें",
+  "sleepTimerMinutes": "{minutes} मिनटां",
+  "oledBlackDeviceColor": "ओएलईडी ब्लॅक",
+  "subsonicUrl": "सर्वर URL",
+  "subsonicInvalidUrl": "क्वेरी, तुकडो वा एम्बेडेड लॉगीन नासतना HTTP वा HTTPS सर्वर URL दाखयात.",
+  "subsonicUnsupported": "हो सर्वर गरजेच्या Subsonic API वा टोकन प्रमाणीकरणाक तेंको दिना.",
+  "subsonicConnectionError": "कनॅक्ट करपाक मेळना. URL, नेटवर्क, आनी HTTPS प्रमाणपत्र तपासात. वेबचेर, सर्वरान CORS परवानगी दिवंक जाय आनी HTTPS ऍप्लिकेशन HTTP कडेन जोडूंक शकना."
 }

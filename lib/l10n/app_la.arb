@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Servare Mutationes",
-  "veryLow": "Minimum"
+  "veryLow": "Minimum",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Lege metadata et ingenuarum omnium imaginum musicarum iterum.",
+  "refreshLibrarySettingTitle": "Renovare Library",
+  "refreshLibrarySettingDescription": "Perscriptio musica addita vel deleta. Metadata et ingenuarum existentia serva.",
+  "librarySettingsScreenTitle": "Bibliotheca Occasus",
+  "librarySettingsDescription": "Curo musicam indexing et exclusis folder.",
+  "sleepTimerTitle": "somnus Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Finis Current Canticum",
+  "sleepTimerRemainingLabel": "reliquiae",
+  "findingSongs": "carmina invenire…",
+  "songsLoaded": "Carmina onerata: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork conditivo: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "'Non potest load musicae bibliothecam. Quaeso retry.",
+  "missingTracksTitle": "Absentis Tracks",
+  "missingTracksDescription": "Recognoscendi fasciculi qui legi non potuerunt.",
+  "missingTracksEmpty": "Vestigia nulla unreadable.",
+  "missingTrackRead": "Fasciculus huius fasciculi non poterat legere. Compesce tabellam locationis et accessum permissionum, deinde bibliothecam retractare retexere.",
+  "missingTrackArtwork": "Artificium fasciculi huius fasciculi non legere. Audio adhuc ludere. Reindex bibliothecae ad retry.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "Preoccupo Effingo Tracks",
+  "preventDuplicateTracksDescription": "Vestigia celare cum duplicata lima nomina.",
+  "hideLocalMusicTitle": "Musica Loci celare",
+  "hideLocalMusicDescription": "Tantum ostende musicam servo in bibliotheca tua dum Subsonic in die est. Locus lima in tuom manere.",
+  "subsonicTitle": "Subsonic Servo",
+  "subsonicDescription": "Amnis musicorum ex Navidrome, gonic, et servientibus compatibilis.",
+  "subsonicConfigure": "Configurare Subsonic",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Connect",
+  "subsonicRemove": "Aufer Servo",
+  "subsonicSignIn": "Signum in requiratur",
+  "subsonicLoadingLibrary": "Loading bibliothecam tuam ...",
+  "subsonicContinueBackground": "Continue in background",
+  "subsonicClose": "Close",
+  "subsonicIndexing": "Indexing server music…",
+  "subsonicUnavailable": "Unavailable",
+  "subsonicCredentialsError": "Perscriptio usoris, tesserae et servo permissiones.",
+  "subsonicStorageError": "Non poterat nisi documentorum. Reprehendo securam repono quod praesto est et iterum conare.",
+  "subsonicTimeout": "De servo opportuno. Quaeso, iterum conare.",
+  "subsonicServerError": "Servi bibliothecam legere non poterant. Prior catalogus retinetur. Renovare Library ad retry.",
+  "libraryRetry": "Retry",
+  "subsonicOn": "In",
+  "subsonicOff": "Off",
+  "sleepTimerMinutes": "{minutes} Minuta",
+  "oledBlackDeviceColor": "OLED Niger",
+  "subsonicUrl": "Servo URL",
+  "subsonicInvalidUrl": "Intrant HTTP vel HTTPS servo URL sine interrogatione, fragmento, aut login infixa.",
+  "subsonicUnsupported": "Hic servo Subsonic API requisitam vel tesseram authenticas non sustinet.",
+  "subsonicConnectionError": "Non potest coniungere. Compesce Domicilium, retiaculum, et libellum HTTPS. In Tela, server debet CORS et app HTTPS ad HTTP coniungere non possunt."
 }

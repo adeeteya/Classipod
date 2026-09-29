@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Sifa",
   "editSongLyricsLabel": "Lini",
   "saveChangesButton": "Yɛlɛmaniw kisi",
-  "veryLow": "Low"
+  "veryLow": "Low",
+  "reindexLibrarySettingTitle": "Index kokura",
+  "reindexLibrarySettingDescription": "A’ ye metadata ani jaa minw be sɔrɔ miziki filɛriw bɛɛ la tugun.",
+  "refreshLibrarySettingTitle": "Bibiliyotɛki kurakuraya",
+  "refreshLibrarySettingDescription": "A filɛ ni miziki dɔ farala a kan wala n’a jɔsira. A’ ye metadata ani jaa minw be yen, aw k’u mara.",
+  "librarySettingsScreenTitle": "Bibiliyotɛki labɛnw",
+  "librarySettingsDescription": "Aw ye miziki index ani dosiye minw bɔra, olu mara.",
+  "sleepTimerTitle": "Sinɔgɔ wagati",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Sisan dɔnkili laban",
+  "sleepTimerRemainingLabel": "Tɔɔ",
+  "findingSongs": "Dɔnkiliw ɲini...",
+  "songsLoaded": "Dɔnkili minw be sɔrɔ: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Jaa minw maranin be: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "A tɛ se ka miziki biblotɛki ladon. A lajɛ tugun.",
+  "missingTracksTitle": "Tɛrɛn minw tununa",
+  "missingTracksDescription": "Dosiye minw tun tɛ se ka kalan, i k’u lajɛ.",
+  "missingTracksEmpty": "Track minw tɛ se ka kalan, olu tɛ yen.",
+  "missingTrackRead": "A ma se ka nin file ka metadata kalan. A filɛ file be yɔrɔ min na ani a be se ka don yɔrɔ min na, o kɔ, i ka biblotɛki index kɛ tugun walisa k’a lajɛ tugun.",
+  "missingTrackArtwork": "A ma se ka file nin ka jaa kalan. Odio be se ka fɔ hali bi. Bibiliyotɛki index tugun walisa k’a lajɛ tugun.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Aw ye sira fila bali",
+  "preventDuplicateTracksDescription": "Aw ye tɛrɛnw dogo minw tɔgɔw ye fila ye.",
+  "hideLocalMusicTitle": "Sigida dɔnkiliw dogo",
+  "hideLocalMusicDescription": "Aw ka serveur miziki dɔrɔn lo yira aw ka biblotɛki kɔnɔ k’a sɔrɔ Subsonic be baara la. Sigiyɔrɔ ka dosiyew be to i ka ɔridinatɛri kɔnɔ.",
+  "subsonicTitle": "Subsonic baarakɛla",
+  "subsonicDescription": "Navidrome, gonic ani serveur minw be bɛn ɲɔgɔn ma, u ka miziki lamɛn.",
+  "subsonicConfigure": "Subsonic labɛn",
+  "subsonicUsername": "Tɔgɔ",
+  "subsonicPassword": "Kunnafoni",
+  "subsonicConnect": "Ka ɲɔgɔn minɛ",
+  "subsonicRemove": "Sɛrivɛri bɔ",
+  "subsonicSignIn": "A ka kan ka don",
+  "subsonicLoadingLibrary": "I b'i ka biblotɛki donna...",
+  "subsonicContinueBackground": "Tɛmɛ ni kɔfɛla ye",
+  "subsonicClose": "Datugu",
+  "subsonicIndexing": "Ka dɔnkiliw yira...",
+  "subsonicUnavailable": "A tɛ sɔrɔ",
+  "subsonicCredentialsError": "I ka baarakɛla tɔgɔ, i ka gundolafɛnw ani i ka sɛriwɛri ka yamaruyaw sɛgɛsɛgɛ.",
+  "subsonicStorageError": "A ma se ka danbew mara. A filɛ ni marayɔrɔ latanganin be yen ani i k’a lajɛ tugun.",
+  "subsonicTimeout": "Servɛri ka wagati banna. Sabari k'a lajɛ tugun.",
+  "subsonicServerError": "A ma se ka biblotɛki min be serveur kɔnɔ, o kalan. Katalogu tɛmɛnin be mara. Bibiliyotɛki lakuraya walisa k’a lajɛ tugun.",
+  "libraryRetry": "segi",
+  "subsonicOn": "Kan",
+  "subsonicOff": "Te yen",
+  "sleepTimerMinutes": "miniti {minutes}",
+  "oledBlackDeviceColor": "OLED Fiman",
+  "subsonicUrl": "Servɛri URL",
+  "subsonicInvalidUrl": "HTTP wala HTTPS ka sɛrivɛri URL don k’a sɔrɔ ɲiningali, yɔrɔ dɔ wala donyɔrɔ tɛ yen.",
+  "subsonicUnsupported": "O sɛriwɛri tɛ Subsonic API wala tagamasiɲɛw lɔnniya dɛmɛ.",
+  "subsonicConnectionError": "Ti se ka ɲɔgɔn minɛ. URL, réseau ani HTTPS sɛbɛ sɛgɛsɛgɛ. Ɛntɛrɛnɛti kan, sɛriwɛri ka ɲi ka sɔn CORS ma ani HTTPS porogramu dɔ tɛ se ka jɛn ni HTTP ye."
 }

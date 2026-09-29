@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ژانر",
   "editSongLyricsLabel": "متن ترانه",
   "saveChangesButton": "ذخیره تغییرات",
-  "veryLow": "خیلی کم"
+  "veryLow": "خیلی کم",
+  "reindexLibrarySettingTitle": "فهرست مجدد",
+  "reindexLibrarySettingDescription": "متادیتا و آثار هنری را برای همه فایل‌های موسیقی دوباره بخوانید.",
+  "refreshLibrarySettingTitle": "بازخوانی کتابخانه",
+  "refreshLibrarySettingDescription": "موسیقی اضافه یا حذف شده را بررسی کنید. ابرداده ها و آثار هنری موجود را حفظ کنید.",
+  "librarySettingsScreenTitle": "تنظیمات کتابخانه",
+  "librarySettingsDescription": "فهرست بندی موسیقی و پوشه های حذف شده را مدیریت کنید.",
+  "sleepTimerTitle": "تایمر خواب",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "پایان آهنگ فعلی",
+  "sleepTimerRemainingLabel": "باقی مانده است",
+  "findingSongs": "پیدا کردن آهنگ…",
+  "songsLoaded": "آهنگ های بارگذاری شده: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "آثار هنری ذخیره شده: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "کتابخانه موسیقی بارگیری نمی شود. لطفا دوباره امتحان کنید.",
+  "missingTracksTitle": "آهنگ های گم شده",
+  "missingTracksDescription": "فایل هایی را که قابل خواندن نیستند مرور کنید.",
+  "missingTracksEmpty": "بدون آهنگ ناخوانا",
+  "missingTrackRead": "نمی توان فراداده این فایل را خواند. مکان فایل و مجوزهای دسترسی را بررسی کنید، سپس کتابخانه را مجددا فهرست کنید تا دوباره امتحان کنید.",
+  "missingTrackArtwork": "نمی توان آثار هنری این فایل را خواند. ممکن است صدا همچنان پخش شود. کتابخانه را مجددا فهرست کنید تا دوباره امتحان کنید.",
+  "playbackBuffering": "بافر کردن…",
+  "preventDuplicateTracksTitle": "جلوگیری از تکرار آهنگ",
+  "preventDuplicateTracksDescription": "مخفی کردن آهنگ های با نام فایل های تکراری",
+  "hideLocalMusicTitle": "مخفی کردن موسیقی محلی",
+  "hideLocalMusicDescription": "در حالی که Subsonic روشن است، فقط موسیقی سرور را در کتابخانه خود نشان دهید. فایل های محلی در دستگاه شما باقی می مانند.",
+  "subsonicTitle": "سرور Subsonic",
+  "subsonicDescription": "پخش موسیقی از Navidrome، gonic، و سرورهای سازگار.",
+  "subsonicConfigure": "Subsonic را پیکربندی کنید",
+  "subsonicUsername": "نام کاربری",
+  "subsonicPassword": "رمز عبور",
+  "subsonicConnect": "اتصال",
+  "subsonicRemove": "سرور را حذف کنید",
+  "subsonicSignIn": "ورود به سیستم الزامی است",
+  "subsonicLoadingLibrary": "در حال بارگیری کتابخانه شما…",
+  "subsonicContinueBackground": "در پس زمینه ادامه دهید",
+  "subsonicClose": "بستن",
+  "subsonicIndexing": "در حال نمایه سازی موسیقی سرور…",
+  "subsonicUnavailable": "در دسترس نیست",
+  "subsonicCredentialsError": "نام کاربری، رمز عبور و مجوزهای سرور خود را بررسی کنید.",
+  "subsonicStorageError": "اطلاعات کاربری ذخیره نشد. بررسی کنید که فضای ذخیره‌سازی ایمن در دسترس است و دوباره امتحان کنید.",
+  "subsonicTimeout": "زمان سرور تمام شد. لطفا دوباره امتحان کنید.",
+  "subsonicServerError": "نمی توان کتابخانه سرور را خواند. کاتالوگ قبلی حفظ می شود. برای امتحان مجدد، کتابخانه را بازخوانی کنید.",
+  "libraryRetry": "مجدداً",
+  "subsonicOn": "در",
+  "subsonicOff": "از روی",
+  "sleepTimerMinutes": "{minutes} دقیقه",
+  "oledBlackDeviceColor": "OLED مشکی",
+  "subsonicUrl": "آدرس سرور",
+  "subsonicInvalidUrl": "URL سرور HTTP یا HTTPS را بدون پرس و جو، قطعه یا ورود به سیستم جاسازی شده وارد کنید.",
+  "subsonicUnsupported": "این سرور از Subsonic API یا احراز هویت رمز پشتیبانی نمی کند.",
+  "subsonicConnectionError": "نمی توان وصل شد. نشانی وب، شبکه و گواهی HTTPS را بررسی کنید. در وب، سرور باید به CORS اجازه دهد و یک برنامه HTTPS نمی تواند به HTTP متصل شود."
 }

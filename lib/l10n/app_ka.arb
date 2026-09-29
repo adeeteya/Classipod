@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ჟანრი",
   "editSongLyricsLabel": "ტექსტი",
   "saveChangesButton": "ცვლილებების შენახვა",
-  "veryLow": "ძალიან დაბალი"
+  "veryLow": "ძალიან დაბალი",
+  "reindexLibrarySettingTitle": "ხელახალი ინდექსირება",
+  "reindexLibrarySettingDescription": "ხელახლა წაიკითხეთ ყველა მუსიკალური ფაილის მეტამონაცემები და ნამუშევრები.",
+  "refreshLibrarySettingTitle": "ბიბლიოთეკის განახლება",
+  "refreshLibrarySettingDescription": "შეამოწმეთ დამატებული ან წაშლილი მუსიკა. შეინახეთ არსებული მეტამონაცემები და ნამუშევრები.",
+  "librarySettingsScreenTitle": "ბიბლიოთეკის პარამეტრები",
+  "librarySettingsDescription": "მართეთ მუსიკის ინდექსირება და გამორიცხული საქაღალდეები.",
+  "sleepTimerTitle": "ძილის ტაიმერი",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "მიმდინარე სიმღერის დასასრული",
+  "sleepTimerRemainingLabel": "დარჩენილი",
+  "findingSongs": "სიმღერების პოვნა…",
+  "songsLoaded": "ჩატვირთული სიმღერები: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "ნამუშევრები ქეშირებულია: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "მუსიკალური ბიბლიოთეკის ჩატვირთვა ვერ ხერხდება. გთხოვთ ხელახლა სცადოთ.",
+  "missingTracksTitle": "ტრეკები აკლია",
+  "missingTracksDescription": "გადახედეთ ფაილებს, რომელთა წაკითხვა შეუძლებელია.",
+  "missingTracksEmpty": "არ არის წაუკითხავი ბილიკები.",
+  "missingTrackRead": "ამ ფაილის მეტამონაცემების წაკითხვა ვერ მოხერხდა. შეამოწმეთ ფაილის მდებარეობა და წვდომის ნებართვები, შემდეგ ხელახლა სცადეთ ბიბლიოთეკის ხელახალი ინდექსირება.",
+  "missingTrackArtwork": "ამ ფაილის ნამუშევრის წაკითხვა ვერ მოხერხდა. აუდიო შეიძლება კვლავ დაკვრა. ხელახლა საცდელად ბიბლიოთეკის ხელახალი ინდექსირება.",
+  "playbackBuffering": "ბუფერირება…",
+  "preventDuplicateTracksTitle": "თავიდან აიცილეთ დუბლიკატი სიმღერები",
+  "preventDuplicateTracksDescription": "დამალე ტრეკები დუბლიკატი ფაილის სახელებით.",
+  "hideLocalMusicTitle": "ადგილობრივი მუსიკის დამალვა",
+  "hideLocalMusicDescription": "აჩვენეთ მხოლოდ სერვერის მუსიკა თქვენს ბიბლიოთეკაში, სანამ Subsonic ჩართულია. ლოკალური ფაილები თქვენს მოწყობილობაზე რჩება.",
+  "subsonicTitle": "Subsonic სერვერი",
+  "subsonicDescription": "მუსიკის სტრიმინგი Navidrome, gonic და თავსებადი სერვერებიდან.",
+  "subsonicConfigure": "Subsonic კონფიგურაცია",
+  "subsonicUsername": "მომხმარებლის სახელი",
+  "subsonicPassword": "პაროლი",
+  "subsonicConnect": "დაკავშირება",
+  "subsonicRemove": "სერვერის ამოღება",
+  "subsonicSignIn": "საჭიროა შესვლა",
+  "subsonicLoadingLibrary": "მიმდინარეობს თქვენი ბიბლიოთეკის ჩატვირთვა…",
+  "subsonicContinueBackground": "განაგრძეთ ფონზე",
+  "subsonicClose": "დახურვა",
+  "subsonicIndexing": "სერვერის მუსიკის ინდექსირება…",
+  "subsonicUnavailable": "მიუწვდომელია",
+  "subsonicCredentialsError": "შეამოწმეთ თქვენი მომხმარებლის სახელი, პაროლი და სერვერის ნებართვები.",
+  "subsonicStorageError": "ავტორიზაციის მონაცემების შენახვა ვერ მოხერხდა. შეამოწმეთ, რომ უსაფრთხო მეხსიერება ხელმისაწვდომია და სცადეთ ხელახლა.",
+  "subsonicTimeout": "სერვერის დრო ამოიწურა. გთხოვთ, სცადოთ ხელახლა.",
+  "subsonicServerError": "სერვერის ბიბლიოთეკის წაკითხვა ვერ მოხერხდა. წინა კატალოგი შენახულია. განაახლეთ ბიბლიოთეკა ხელახლა საცდელად.",
+  "libraryRetry": "გამოცხადება",
+  "subsonicOn": "-ზე",
+  "subsonicOff": "-დან",
+  "sleepTimerMinutes": "{minutes} წუთი",
+  "oledBlackDeviceColor": "OLED შავი",
+  "subsonicUrl": "სერვერის URL",
+  "subsonicInvalidUrl": "შეიყვანეთ HTTP ან HTTPS სერვერის URL შეკითხვის, ფრაგმენტის ან ჩაშენებული შესვლის გარეშე.",
+  "subsonicUnsupported": "ეს სერვერი მხარს არ უჭერს საჭირო Subsonic API-ს ან ჟეტონ ავთენტიფიკაციას.",
+  "subsonicConnectionError": "დაკავშირება შეუძლებელია. შეამოწმეთ URL, ქსელი და HTTPS სერთიფიკატი. ვებში, სერვერმა უნდა დაუშვას CORS და HTTPS აპი ვერ დაუკავშირდება HTTP-ს."
 }

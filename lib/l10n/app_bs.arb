@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Žanr",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Sačuvaj promjene",
-  "veryLow": "Vrlo niska"
+  "veryLow": "Vrlo niska",
+  "reindexLibrarySettingTitle": "Ponovno indeksiranje",
+  "reindexLibrarySettingDescription": "Ponovo pročitajte metapodatke i ilustracije za sve muzičke fajlove.",
+  "refreshLibrarySettingTitle": "Osvježi biblioteku",
+  "refreshLibrarySettingDescription": "Provjerite ima li dodane ili izbrisane muzike. Zadržite postojeće metapodatke i umjetnička djela.",
+  "librarySettingsScreenTitle": "Postavke biblioteke",
+  "librarySettingsDescription": "Upravljajte indeksiranjem muzike i izuzetim folderima.",
+  "sleepTimerTitle": "Sleep Timer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Kraj trenutne pjesme",
+  "sleepTimerRemainingLabel": "Preostalo",
+  "findingSongs": "Traženje pjesama…",
+  "songsLoaded": "Učitane pjesme: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Ilustracija je keširana: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nije moguće učitati muzičku biblioteku. Molimo pokušajte ponovo.",
+  "missingTracksTitle": "Nedostaju tragovi",
+  "missingTracksDescription": "Pregledajte fajlove koje nije bilo moguće pročitati.",
+  "missingTracksEmpty": "Nema nečitljivih pjesama.",
+  "missingTrackRead": "Nije moguće pročitati metapodatke ovog fajla. Provjerite lokaciju datoteke i dozvole pristupa, a zatim ponovno indeksirajte biblioteku da pokušate ponovo.",
+  "missingTrackArtwork": "Nije moguće pročitati ilustraciju ovog fajla. Zvuk se i dalje može reproducirati. Ponovno indeksirajte biblioteku za ponovni pokušaj.",
+  "playbackBuffering": "Puferiranje…",
+  "preventDuplicateTracksTitle": "Sprečavanje dupliranja staza",
+  "preventDuplicateTracksDescription": "Sakrij zapise s duplim nazivima datoteka.",
+  "hideLocalMusicTitle": "Sakrij lokalnu muziku",
+  "hideLocalMusicDescription": "Prikaži samo serversku muziku u biblioteci dok je Subsonic uključen. Lokalni fajlovi ostaju na vašem uređaju.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Stream muziku sa Navidrome, gonic i kompatibilnih servera.",
+  "subsonicConfigure": "Konfigurirajte Subsonic",
+  "subsonicUsername": "Korisničko ime",
+  "subsonicPassword": "Lozinka",
+  "subsonicConnect": "Povežite se",
+  "subsonicRemove": "Ukloni server",
+  "subsonicSignIn": "Prijava je obavezna",
+  "subsonicLoadingLibrary": "Učitavanje vaše biblioteke…",
+  "subsonicContinueBackground": "Nastavite u pozadini",
+  "subsonicClose": "Zatvori",
+  "subsonicIndexing": "Indeksiranje muzike na serveru…",
+  "subsonicUnavailable": "Nedostupno",
+  "subsonicCredentialsError": "Provjerite svoje korisničko ime, lozinku i dozvole servera.",
+  "subsonicStorageError": "Nije moguće sačuvati vjerodajnice. Provjerite da li je sigurna pohrana dostupna i pokušajte ponovo.",
+  "subsonicTimeout": "Server je istekao. Molimo pokušajte ponovo.",
+  "subsonicServerError": "Nije moguće pročitati biblioteku servera. Prethodni katalog se zadržava. Osvježite biblioteku za ponovni pokušaj.",
+  "libraryRetry": "Pokušati",
+  "subsonicOn": "Na",
+  "subsonicOff": "Off",
+  "sleepTimerMinutes": "{minutes} minuta",
+  "oledBlackDeviceColor": "OLED crna",
+  "subsonicUrl": "URL servera",
+  "subsonicInvalidUrl": "Unesite URL HTTP ili HTTPS servera bez upita, fragmenta ili ugrađene prijave.",
+  "subsonicUnsupported": "Ovaj server ne podržava potreban Subsonic API ili token autentifikaciju.",
+  "subsonicConnectionError": "Povezivanje nije moguće. Provjerite URL, mrežu i HTTPS certifikat. Na webu, server mora dozvoliti CORS, a HTTPS aplikacija ne može se povezati na HTTP."
 }

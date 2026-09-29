@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Buɔ̱n thurɛ kiɛ kët diin",
   "editSongLyricsLabel": "Lëk cirikä",
   "saveChangesButton": "thok Wäl",
-  "veryLow": "mi ca ŋa̱c a jɛ"
+  "veryLow": "mi ca ŋa̱c a jɛ",
+  "reindexLibrarySettingTitle": "Ri-indek",
+  "reindexLibrarySettingDescription": "Kuɛn metadata kɛnɛ artwork kɛ kui̱ pai̱li̱ mudhikni̱ diaal ɛ nyɔk.",
+  "refreshLibrarySettingTitle": "Ri̱prɛth Library",
+  "refreshLibrarySettingDescription": "Check mi ca mat thi̱n kiɛ ca mudhik woc. Käp metadata min te thi̱n kɛnɛ lät thuurɛni̱.",
+  "librarySettingsScreenTitle": "Gua̱th tin ca la̱th thi̱n kä Library",
+  "librarySettingsDescription": "La̱tdɛ indexing mudhik kɛnɛ pöldɛri̱ tin ca woc.",
+  "sleepTimerTitle": "Gua̱th ni̱n",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Guut Diit in Täämɛ",
+  "sleepTimerRemainingLabel": "Min ci̱ duɔth",
+  "findingSongs": "Gör diitni̱...",
+  "songsLoaded": "Kä diit tin ca la̱th thi̱n: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Thurɛ min ca tɔ̱w: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "/Cɛ rɔ luäŋ kɛ la̱th rɛy library mudhik. Ɣän la̱ŋä ji̱ i̱ nyɔkɛ jɛ kɛ ɣɔ̱n.",
+  "missingTracksTitle": "Trakni̱ tin ci̱ bath",
+  "missingTracksDescription": "Guic pai̱li̱ tin /ka̱n luäŋ kɛ kuɛn.",
+  "missingTracksEmpty": "Thiɛlɛ trackni̱ ti̱ /ca kuɛn.",
+  "missingTrackRead": "/Ka̱n metadata pai̱li̱ ɛmɛ kuɛn. Guic gua̱a̱th in ca pai̱l thi̱n kɛnɛ permi̱cini̱ tin ca jiek thi̱n, kɛ kɔrɛ bi̱ library nyɔk kɛ index kɛ ɣöö bɛ nyɔk kɛ ɣɔ̱n.",
+  "missingTrackArtwork": "/Ka̱n thurɛ min ca la̱t ɛ pai̱l ɛmɛ luäŋ kɛ kuɛn. Audio dɔ̱ŋ bɛ ŋot kɛ mi̱ lätdɛ. Reindex kä library kɛ ɣöö ba nyɔk kɛ ɣɔ̱n.",
+  "playbackBuffering": "Bupperiŋ...",
+  "preventDuplicateTracksTitle": "Ga̱ŋ Dupli̱kët Trakni̱",
+  "preventDuplicateTracksDescription": "Hide tracks tin tekɛ ciööt pai̱li̱ ti̱ gööl.",
+  "hideLocalMusicTitle": "Hide Local Muthik",
+  "hideLocalMusicDescription": "Nyuɔ̱thɛ ni̱ muthik thärbä kärɔa rɛy librarydu gua̱a̱th in te Subsonic thi̱n. Local files tin te rɛy device du.",
+  "subsonicTitle": "Subsonic Tha̱rbɛr",
+  "subsonicDescription": "I̱thti̱riɛm mudhikni̱ kä Navidrome, gonic, kɛnɛ thärbɛri̱ tin lät kɛɛl.",
+  "subsonicConfigure": "Kɔnpi̱e̱gi̱r Subsonic",
+  "subsonicUsername": "Ciöt läätdä",
+  "subsonicPassword": "Pa̱thwɔd",
+  "subsonicConnect": "Kɔnɛk",
+  "subsonicRemove": "Kämni Tharbɛr raar",
+  "subsonicSignIn": "Sign in görkɛ",
+  "subsonicLoadingLibrary": "La̱tdɛ library du...",
+  "subsonicContinueBackground": "Guɔ̱r rɛy bɛkgi̱rɔɔn",
+  "subsonicClose": "Ga̱ŋ",
+  "subsonicIndexing": "Indekthiŋ thärbä mudhik...",
+  "subsonicUnavailable": "/Cɛ te thi̱n",
+  "subsonicCredentialsError": "Guic ciötdu, passworddu, kɛnɛ permi̱cini̱ thärbädu.",
+  "subsonicStorageError": "/Cɛ kredɛnciali̱ luäŋ kɛ ga̱ŋ. Guɛc ɛ gɔaa ɛn ɣöö gua̱a̱th in ca tɔ̱w thi̱n kä nyɔkɛ jɛ kɛ ɣɔ̱n.",
+  "subsonicTimeout": "Kä thärber cuɛ gua̱a̱thdɛ thuɔ̱k. Ɣän göörä ɣöö bä nyɔk kɛ ɣɔ̱n.",
+  "subsonicServerError": "/Cɛ luäŋ kɛ kuën kä thärbä library. Kä katalɔg ëë nhiam cua rɔm thi̱n. Ri̱prɛth Library kɛ ɣöö biɛ nyɔk kɛ ɣɔ̱n.",
+  "libraryRetry": "gɔa̱r",
+  "subsonicOn": "Wi̱c",
+  "subsonicOff": "Gäk",
+  "sleepTimerMinutes": "{minutes} minitni̱",
+  "oledBlackDeviceColor": "OLED mi̱ Ca̱r",
+  "subsonicUrl": "Tharbɛr URL",
+  "subsonicInvalidUrl": "Gɔ̱ri HTTP kiɛ HTTPS thärbä URL ɛ thiɛl thi̱e̱c, fragmɛn, kiɛ lögin mi̱ ca la̱th thi̱n.",
+  "subsonicUnsupported": "Tharber ɛmɛ /cɛ Subsonic API min görkɛ kiɛ tokɛn authentikëcin luäk.",
+  "subsonicConnectionError": "/Cɛ rɔ de mat. Guɛc URL, netwɔk, kɛnɛ HTTPS thärti̱pi̱kɛt. Kä Wɛb, ɛn thärbä bɛ CORS nhɔk kä ɛn HTTPS app /cɛ rɔ bi̱ mat kɛ HTTP."
 }

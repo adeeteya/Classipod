@@ -134,5 +134,78 @@
   "editSongGenreLabel": "صنف",
   "editSongLyricsLabel": "غزل",
   "saveChangesButton": "تبديليون محفوظ ڪريو",
-  "veryLow": "تمام گھٽ"
+  "veryLow": "تمام گھٽ",
+  "reindexLibrarySettingTitle": "ٻيهر انڊيڪس",
+  "reindexLibrarySettingDescription": "سڀني ميوزڪ فائلن لاءِ ميٽا ڊيٽا ۽ آرٽ ورڪ ٻيهر پڙهو.",
+  "refreshLibrarySettingTitle": "ريفريش لائبريري",
+  "refreshLibrarySettingDescription": "شامل ٿيل يا ختم ٿيل موسيقي لاء چيڪ ڪريو. موجوده ميٽاداٽا ۽ آرٽ ورڪ رکو.",
+  "librarySettingsScreenTitle": "لائبريري سيٽنگون",
+  "librarySettingsDescription": "منظم ڪريو ميوزڪ انڊيڪسنگ ۽ خارج ٿيل فولڊر.",
+  "sleepTimerTitle": "سمهڻ جو ٽائيم",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "موجوده گيت جي پڄاڻي",
+  "sleepTimerRemainingLabel": "باقي رهيل",
+  "findingSongs": "گيت ڳولهي رهيا آهن…",
+  "songsLoaded": "گيت لوڊ ٿيل: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "آرٽيڪل محفوظ ٿيل: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "موسيقي لائبريري لوڊ ڪرڻ جي قابل نه. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
+  "missingTracksTitle": "غائب ٽريڪ",
+  "missingTracksDescription": "فائلن جو جائزو وٺو جيڪي پڙهي نه سگھن ٿيون.",
+  "missingTracksEmpty": "اڻ پڙهيل ٽريڪ.",
+  "missingTrackRead": "هن فائل جي ميٽا ڊيٽا کي پڙهي نه سگهيو. چيڪ ڪريو فائل جي جڳھ ۽ رسائي جي اجازت، پوء ٻيهر ڪوشش ڪرڻ لاء لائبريري کي ٻيهر ترتيب ڏيو.",
+  "missingTrackArtwork": "هن فائل جي آرٽ ورڪ کي پڙهي نه سگهيو. آڊيو اڃا به هلائي سگھي ٿو. ٻيهر ڪوشش ڪرڻ لاءِ لائبريري کي ٻيهر ترتيب ڏيو.",
+  "playbackBuffering": "بفرنگ…",
+  "preventDuplicateTracksTitle": "نقلي ٽريڪ کي روڪيو",
+  "preventDuplicateTracksDescription": "نقل ٿيل فائل نالن سان ٽريڪ لڪايو.",
+  "hideLocalMusicTitle": "مقامي موسيقي لڪايو",
+  "hideLocalMusicDescription": "Subsonic آن ھجڻ دوران پنھنجي لائبريري ۾ صرف سرور ميوزڪ ڏيکاريو. مقامي فائلون توهان جي ڊوائيس تي رهن ٿيون.",
+  "subsonicTitle": "Subsonic سرور",
+  "subsonicDescription": "Navidrome، gonic، ۽ مطابقت رکندڙ سرورز تان موسيقي کي وهڪرو ڪريو.",
+  "subsonicConfigure": "Subsonic ترتيب ڏيو",
+  "subsonicUsername": "يوزر نالو",
+  "subsonicPassword": "پاسورڊ",
+  "subsonicConnect": "ڳنڍڻ",
+  "subsonicRemove": "هٽايو سرور",
+  "subsonicSignIn": "سائن ان گهربل",
+  "subsonicLoadingLibrary": "توهان جي لائبريري لوڊ ٿي رهي آهي…",
+  "subsonicContinueBackground": "پس منظر ۾ جاري رکو",
+  "subsonicClose": "بند",
+  "subsonicIndexing": "سرور موسيقي کي ترتيب ڏيڻ…",
+  "subsonicUnavailable": "غير موجود",
+  "subsonicCredentialsError": "چيڪ ڪريو پنهنجو يوزر نالو، پاسورڊ، ۽ سرور جي اجازت.",
+  "subsonicStorageError": "سندون محفوظ نه ٿي سگھيون. چيڪ ڪريو ته محفوظ اسٽوريج موجود آهي ۽ ٻيهر ڪوشش ڪريو.",
+  "subsonicTimeout": "سرور جو وقت ختم ٿي ويو. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
+  "subsonicServerError": "سرور لائبريري پڙهي نه سگهيو اڳوڻو فهرست برقرار رکيو ويو آهي. ٻيهر ڪوشش ڪرڻ لاءِ لائبريري ريفريش ڪريو.",
+  "libraryRetry": "ٻيهر ڪوشش ڪريو",
+  "subsonicOn": "ان تي",
+  "subsonicOff": "پري",
+  "sleepTimerMinutes": "{minutes} منٽ",
+  "oledBlackDeviceColor": "OLED ڪارو",
+  "subsonicUrl": "سرور URL",
+  "subsonicInvalidUrl": "داخل ڪريو HTTP يا HTTPS سرور URL بغير سوال، ٽڪرا، يا داخل ٿيل لاگ ان.",
+  "subsonicUnsupported": "هي سرور گهربل Subsonic API يا ٽوڪن جي تصديق جي حمايت نٿو ڪري.",
+  "subsonicConnectionError": "ڳنڍي نٿو سگهي. URL، نيٽ ورڪ، ۽ HTTPS سرٽيفڪيٽ چيڪ ڪريو. ويب تي، سرور کي CORS جي اجازت ڏيڻ گهرجي ۽ هڪ HTTPS ايپ HTTP سان ڳنڍي نه ٿي سگهي."
 }

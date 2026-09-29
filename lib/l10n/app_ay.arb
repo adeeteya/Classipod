@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Chacha warmi",
   "editSongLyricsLabel": "Letras ukax mä juk’a pachanakanwa.",
   "saveChangesButton": "Mayjt’awinaka imaña .",
-  "veryLow": "Wali jisk’a ."
+  "veryLow": "Wali jisk’a .",
+  "reindexLibrarySettingTitle": "Wasitat uñacht’ayaña",
+  "reindexLibrarySettingDescription": "Taqi musica archivonakataki metadatos ukatxa arte ukanaka mayampi uñakipt’aña.",
+  "refreshLibrarySettingTitle": "Refrescar Biblioteca ukax mä juk’a pachanakanwa",
+  "refreshLibrarySettingDescription": "Uñakipt’añatakix yapxatat jan ukax chhaqtayat musica. Jichha utjki uka metadatos ukat arte ukanakax utjañapawa.",
+  "librarySettingsScreenTitle": "Biblioteca ukan utt’ayatanakapa",
+  "librarySettingsDescription": "Musica indexación ukat carpetas excluidas ukanaka apnaqaña.",
+  "sleepTimerTitle": "Ikit pachar uñt’ayaña",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Jichha Q’uchu tukuyaña",
+  "sleepTimerRemainingLabel": "Qhipharxañani",
+  "findingSongs": "Q’uchunak jikxataña...",
+  "songsLoaded": "Q’uchunakax akhamawa: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Arte ukan lurawipax caché ukankiwa: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Janiw musica biblioteca ukar apkatañjamäkiti. Ukhamaraki, mayampi yant’apxañani.",
+  "missingTracksTitle": "Chhaqhat Pistas ukanaka",
+  "missingTracksDescription": "Jan liyt’añjamäki uka archivonaka uñakipaña.",
+  "missingTracksEmpty": "Janiw jan liyt’añjam pistas ukanakax utjkiti.",
+  "missingTrackRead": "Aka qillqatan metadatos ukanakax janiw uñakipt’añjamäkiti. Archivo ukan uñstawipa ukat mantañ permisonak uñakipt’aña, ukatx biblioteca ukar mayamp yant’añatakix mayamp uñakipt’aña.",
+  "missingTrackArtwork": "Aka qillqatanx janiw uñakipt’añjamäkiti. Inas audiojj wali istʼasirïchispa. Biblioteca ukar wasitat yant’añataki.",
+  "playbackBuffering": "Buffering ukax...",
+  "preventDuplicateTracksTitle": "Pistas Duplicadas ukanaka jark’aqaña",
+  "preventDuplicateTracksDescription": "Pistas ukanakax duplicado archivo sutinakampi imantatawa.",
+  "hideLocalMusicTitle": "Local Musica imantaña",
+  "hideLocalMusicDescription": "Subsonic ukax utjkipanx biblioteca ukan servidor musica ukak uñacht’ayaña. Local archivonakax dispositivo ukan qhiparapxi.",
+  "subsonicTitle": "Subsonic Servidor ukax mä juk’a pachanakanwa",
+  "subsonicDescription": "Navidrome, gonic, ukat servidores compatibles ukanakat musica uñt’ayaña.",
+  "subsonicConfigure": "Subsonic ukar uñt’ayaña",
+  "subsonicUsername": "Usuario ukan sutipa",
+  "subsonicPassword": "Contraseña ukat juk’ampinaka",
+  "subsonicConnect": "Ukax mä juk’a pachanakanwa",
+  "subsonicRemove": "Servidor ukax apsutawa",
+  "subsonicSignIn": "Ukar mantañax wakisiwa",
+  "subsonicLoadingLibrary": "Biblioteca ukar apkatañataki...",
+  "subsonicContinueBackground": "Qhipäxat sarantaskakïna",
+  "subsonicClose": "Jist’antaña",
+  "subsonicIndexing": "Servidor musica ukar indexaña...",
+  "subsonicUnavailable": "Janiw kunas utjkiti",
+  "subsonicCredentialsError": "Usuario suti, contraseña ukat servidor ukan permisonakap uñakipt’añamawa.",
+  "subsonicStorageError": "Janiw credenciales ukanakax imatäkaspati. Uñakipt’añani seguro almacenamiento ukaxa utjiti janicha ukatxa mayampi yant’añani.",
+  "subsonicTimeout": "Servidor ukax pachaparuw puri. Ukhamaraki, mayampi yant’apxañani.",
+  "subsonicServerError": "Janiw servidor biblioteca uñxatañjamäkiti. Nayra catálogo ukax imatäxiwa. Refresh Library ukax wasitat yant’añataki.",
+  "libraryRetry": "Ukax wasitat yant’atawa.",
+  "subsonicOn": "Ukana",
+  "subsonicOff": "Jiwata",
+  "sleepTimerMinutes": "{minutes} Minutos ukat juk’ampinaka",
+  "oledBlackDeviceColor": "OLED Ch’iyara",
+  "subsonicUrl": "URL ukax servidor ukankiwa",
+  "subsonicInvalidUrl": "Mä HTTP jan ukax HTTPS servidor URL ukar mantañamawa jan jiskt’ata, fragmento, jan ukax incorporado ukar mantañapataki.",
+  "subsonicUnsupported": "Aka servidor ukax janiw Subsonic API jan ukax token uñt’ayañax wakiskiti.",
+  "subsonicConnectionError": "Janiw conectatäkaspati. URL, red ukat HTTPS certificado uñakipt’aña. Web tuqinxa, servidor ukax CORS ukarux jaysañapawa ukatx mä HTTPS app ukax janiw HTTP ukar mantañapakiti."
 }

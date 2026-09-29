@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Өзгөрүүлөрдү сактоо",
-  "veryLow": "Абдан аз"
+  "veryLow": "Абдан аз",
+  "reindexLibrarySettingTitle": "Ре-индекс",
+  "reindexLibrarySettingDescription": "Бардык музыка файлдары үчүн метадайындарды жана көркөм чыгармаларды кайра окуңуз.",
+  "refreshLibrarySettingTitle": "Китепкананы жаңылоо",
+  "refreshLibrarySettingDescription": "Кошулган же жок кылынган музыканы текшериңиз. Учурдагы метадайындарды жана көркөм чыгармаларды сактаңыз.",
+  "librarySettingsScreenTitle": "Китепкана орнотуулары",
+  "librarySettingsDescription": "Музыкалык индекстөө жана алынып салынган папкаларды башкарыңыз.",
+  "sleepTimerTitle": "Уйку таймери",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Учурдагы ырдын аягы",
+  "sleepTimerRemainingLabel": "Калган",
+  "findingSongs": "Ырлар табылууда…",
+  "songsLoaded": "Жүктөлгөн ырлар: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Көркөм чыгарма кэштелген: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Музыка китепканасын жүктөө мүмкүн эмес. Сураныч, кайталап көрүңүз.",
+  "missingTracksTitle": "Missing Tracks",
+  "missingTracksDescription": "Окууга мүмкүн болбогон файлдарды карап чыгыңыз.",
+  "missingTracksEmpty": "Окулбай турган тректер жок.",
+  "missingTrackRead": "Бул файлдын метадайындары окулбай койду. Файлдын жайгашкан жерин жана кирүү уруксаттарын текшериңиз, анан кайра аракет кылуу үчүн китепкананы кайра индекстеңиз.",
+  "missingTrackArtwork": "Бул файлдын көркөм чыгармасын окуй алган жок. Аудио дагы деле ойношу мүмкүн. Кайра аракет кылуу үчүн китепкананы кайра индекстеңиз.",
+  "playbackBuffering": "Буферлөө…",
+  "preventDuplicateTracksTitle": "Кайталануучу тректерди болтурбоо",
+  "preventDuplicateTracksDescription": "Кайталануучу файл аттары менен тректерди жашыруу.",
+  "hideLocalMusicTitle": "Жергиликтүү музыканы жашыруу",
+  "hideLocalMusicDescription": "Subsonic күйүп турганда китепканаңызда сервер музыкасын гана көрсөтүңүз. Жергиликтүү файлдар түзмөгүңүздө кала берет.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Navidrome, gonic жана шайкеш серверлерден музыка агымы.",
+  "subsonicConfigure": "Subsonic конфигурациялоо",
+  "subsonicUsername": "Колдонуучунун аты",
+  "subsonicPassword": "Сырсөз",
+  "subsonicConnect": "Туташуу",
+  "subsonicRemove": "Серверди алып салуу",
+  "subsonicSignIn": "Кирүү талап кылынат",
+  "subsonicLoadingLibrary": "Китепканаңыз жүктөлүүдө…",
+  "subsonicContinueBackground": "Фондо улантуу",
+  "subsonicClose": "Жабуу",
+  "subsonicIndexing": "Сервер музыкасы индекстелүүдө…",
+  "subsonicUnavailable": "Жеткиликсиз",
+  "subsonicCredentialsError": "Колдонуучу атыңызды, сырсөзүңүздү жана сервер уруксаттарын текшериңиз.",
+  "subsonicStorageError": "Эсептик дайындар сакталган жок. Коопсуз сактагычтын жеткиликтүү экенин текшерип, кайра аракет кылыңыз.",
+  "subsonicTimeout": "Сервердин убактысы бүттү. Сураныч, кайра аракет кылыңыз.",
+  "subsonicServerError": "Сервер китепканасын окуй алган жок. Мурунку каталог сакталган. Кайра аракет кылуу үчүн китепкананы жаңыртыңыз.",
+  "libraryRetry": "Кайра аракет кылуу",
+  "subsonicOn": "Боюнча",
+  "subsonicOff": "Өчүрүү",
+  "sleepTimerMinutes": "{minutes} мүнөт",
+  "oledBlackDeviceColor": "OLED кара",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "HTTP же HTTPS серверинин URL дарегин суроосуз, фрагментсиз же кыстарылган логинсиз киргизиңиз.",
+  "subsonicUnsupported": "Бул сервер талап кылынган Subsonic API же токендин аутентификациясын колдоого албайт.",
+  "subsonicConnectionError": "Туташуу мүмкүн эмес. URL, тармак жана HTTPS тастыктамасын текшериңиз. Вебде сервер CORSга уруксат бериши керек жана HTTPS колдонмосу HTTP менен туташа албайт."
 }

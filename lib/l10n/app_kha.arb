@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Ka bynta",
   "editSongLyricsLabel": "ki Lynric",
   "saveChangesButton": "Ki jingkylla kiba jur",
-  "veryLow": "Kylla"
+  "veryLow": "Kylla",
+  "reindexLibrarySettingTitle": "Pynkylla biang",
+  "reindexLibrarySettingDescription": "Pule biang ia ka metadata bad artwork na ka bynta baroh ki music files.",
+  "refreshLibrarySettingTitle": "Pynthymmai ia ka Laibrari",
+  "refreshLibrarySettingDescription": "Peit ia ki jingrwai ba la pynrung ne pyndam. Pynsah ia ki metadata bad ki jingdro ba la don lypa.",
+  "librarySettingsScreenTitle": "Ki jingpynbeit ia ka Laibrari",
+  "librarySettingsDescription": "Pyniaid ia ka jingpynkylla ia ki jingrwai bad ki folder ba la kyntait.",
+  "sleepTimerTitle": "Ka por thiah",
+  "sleepTimerEndOfCurrentSong": "Ka jingkut jong ka jingrwai ba mynta",
+  "sleepTimerRemainingLabel": "Ka jingsah",
+  "findingSongs": "Ka jingwad ia ki jingrwai...",
+  "artworkCached": "Ki jingdro ba la buh: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ym lah ban load ia ka library jingrwai. Sngewbha pyrshang biang.",
+  "missingTracksTitle": "Ki jingrwai ba la jah",
+  "missingTracksDescription": "Peit bniah ia ki file kiba lah ban pule.",
+  "missingTracksEmpty": "Ki trak bym lah ban pule.",
+  "missingTrackRead": "Ym lah ban pule ia ka jingthoh jong kane ka file. Peit ia ka jaka jong ka file bad ki jingbit ban ioh, nangta index biang ia ka library ban pyrshang biang.",
+  "missingTrackArtwork": "Ngam lah ban pule ia kane ka file. Ka audio ka lah ban dang sawa. Reindex biang ia ka library ban pyrshang biang.",
+  "playbackBuffering": "Ka jingpynkylla...",
+  "preventDuplicateTracksTitle": "Pynsangeh ia ki jingbud ba arsien",
+  "preventDuplicateTracksDescription": "Pynsah ia ki track kiba don ki kyrteng file kiba iadei.",
+  "hideLocalMusicTitle": "Pynrieh ia ki jingrwai ba la thain",
+  "hideLocalMusicDescription": "Pyni tang ki jingrwai server ha ka library jong phi katba ka Subsonic ka dang on. Ki file ba kyrpang ki sah ha ka tiar jong phi.",
+  "subsonicTitle": "Subsonic ka shakri",
+  "subsonicConfigure": "Pynbeit ia ka Subsonic",
+  "subsonicUsername": "Kyrteng nongpyndonkam",
+  "subsonicPassword": "Ka ktien rieh",
+  "subsonicConnect": "Pyniasoh",
+  "subsonicRemove": "Pynduh ia ka Server",
+  "subsonicSignIn": "Donkam ban sign in",
+  "subsonicLoadingLibrary": "Ka jingpynrung ia ka library jong phi...",
+  "subsonicContinueBackground": "Bteng ha ka liang ba shadien",
+  "subsonicClose": "Khang",
+  "subsonicIndexing": "Ka jingpynkylla ia ka jingrwai jong ka server...",
+  "subsonicUnavailable": "Ym lah ban ioh",
+  "subsonicCredentialsError": "Peit ia ka kyrteng nongpyndonkam, ka ktien pass, bad ki jingbit jong ka server.",
+  "subsonicStorageError": "Ym lah ban save ia ki jingpynshisha. Peit ba ka jaka buh jingkynmaw ka don bad pyrshang biang.",
+  "subsonicTimeout": "Ka por jong ka server ka la kut. Sngewbha pyrshang biang.",
+  "subsonicServerError": "Ym lah ban pule ia ka library jong ka server. Ka katalog kaba mynshuwa ka la sah. Pynthymmai ia ka Library ban pyrshang biang.",
+  "libraryRetry": "Pynkylla",
+  "subsonicOn": "Halor",
+  "subsonicOff": "Lip",
+  "sleepTimerMinutes": "{minutes} minit",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "oledBlackDeviceColor": "Ka OLED kaba lieh",
+  "songsLoaded": "Ki jingrwai ba la buh: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "subsonicDescription": "Stream jingrwai na ka Navidrome, gonic, bad ki server kiba iadei.",
+  "subsonicUrl": "URL jong ka shakri",
+  "subsonicInvalidUrl": "Pynrung ia ka URL jong ka HTTP lane HTTPS khlem ka jingkylli, ka bynta, lane ka jingpynrung ba la buh.",
+  "subsonicUnsupported": "Kane ka server kam kyrshan ia ka jingdonkam jong ka Subsonic API lane ka jingpynshisha ia ka token.",
+  "subsonicConnectionError": "Ym lah ban pyniasoh. Peit ia ka URL, ka network, bad ka HTTPS certificate. Ha ka Web, u server u dei ban shah ia ka CORS bad ka HTTPS app kam lah ban pyniasoh bad ka HTTP."
 }

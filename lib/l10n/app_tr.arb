@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Tür",
   "editSongLyricsLabel": "Şarkı sözleri",
   "saveChangesButton": "Değişiklikleri Kaydet",
-  "veryLow": "Çok Düşük"
+  "veryLow": "Çok Düşük",
+  "reindexLibrarySettingTitle": "Yeniden indeksle",
+  "reindexLibrarySettingDescription": "Tüm müzik dosyalarının meta verilerini ve çizimlerini tekrar okuyun.",
+  "refreshLibrarySettingTitle": "Kitaplığı Yenile",
+  "refreshLibrarySettingDescription": "Eklenen veya silinen müziği kontrol edin. Mevcut meta verileri ve resmi koruyun.",
+  "librarySettingsScreenTitle": "Kütüphane Ayarları",
+  "librarySettingsDescription": "Müzik indekslemeyi ve hariç tutulan klasörleri yönetin.",
+  "sleepTimerTitle": "Uyku Zamanlayıcısı",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Mevcut Şarkının Sonu",
+  "sleepTimerRemainingLabel": "Kalan",
+  "findingSongs": "Şarkılar bulunuyor…",
+  "songsLoaded": "Yüklenen şarkılar: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Önbelleğe alınan sanat eseri: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Müzik kitaplığı yüklenemiyor. Lütfen tekrar deneyin.",
+  "missingTracksTitle": "Eksik Parçalar",
+  "missingTracksDescription": "Okunamayan dosyaları inceleyin.",
+  "missingTracksEmpty": "Okunamayan parça yok.",
+  "missingTrackRead": "Bu dosyanın meta verileri okunamadı. Dosya konumunu ve erişim izinlerini kontrol edin, ardından yeniden denemek için kitaplığı yeniden dizinleyin.",
+  "missingTrackArtwork": "Bu dosyanın resmi okunamadı. Ses hâlâ çalınabilir. Yeniden denemek için kitaplığı yeniden dizinleyin.",
+  "playbackBuffering": "Ara belleğe alınıyor…",
+  "preventDuplicateTracksTitle": "Yinelenen Parçaları Önleyin",
+  "preventDuplicateTracksDescription": "Yinelenen dosya adlarına sahip parçaları gizleyin.",
+  "hideLocalMusicTitle": "Yerel Müziği Gizle",
+  "hideLocalMusicDescription": "Subsonic açıkken kitaplığınızdaki yalnızca sunucu müziğini gösterin. Yerel dosyalar cihazınızda kalır.",
+  "subsonicTitle": "Subsonic Sunucu",
+  "subsonicDescription": "Navidrome, gonic ve uyumlu sunuculardan müzik akışı yapın.",
+  "subsonicConfigure": "Subsonic'yi yapılandırın",
+  "subsonicUsername": "Kullanıcı adı",
+  "subsonicPassword": "Şifre",
+  "subsonicConnect": "Bağlan",
+  "subsonicRemove": "Sunucuyu Kaldır",
+  "subsonicSignIn": "Oturum açmanız gerekiyor",
+  "subsonicLoadingLibrary": "Kitaplığınız yükleniyor…",
+  "subsonicContinueBackground": "Arka planda devam et",
+  "subsonicClose": "Kapat",
+  "subsonicIndexing": "Sunucu müziği indeksleniyor…",
+  "subsonicUnavailable": "Kullanılamıyor",
+  "subsonicCredentialsError": "Kullanıcı adınızı, şifrenizi ve sunucu izinlerinizi kontrol edin.",
+  "subsonicStorageError": "Kimlik bilgileri kaydedilemedi. Güvenli depolama alanının mevcut olup olmadığını kontrol edin ve tekrar deneyin.",
+  "subsonicTimeout": "Sunucu zaman aşımına uğradı. Lütfen tekrar deneyin.",
+  "subsonicServerError": "Sunucu kitaplığı okunamadı. Önceki katalog korunur. Yeniden denemek için Kitaplığı yenileyin.",
+  "libraryRetry": "Yeniden yapmak",
+  "subsonicOn": "Açık",
+  "subsonicOff": "Kapalı",
+  "sleepTimerMinutes": "{minutes} Dakika",
+  "oledBlackDeviceColor": "OLED Siyah",
+  "subsonicUrl": "Sunucu URL'si",
+  "subsonicInvalidUrl": "Sorgu, parça veya yerleşik oturum açma işlemi olmadan bir HTTP veya HTTPS sunucusu URL'si girin.",
+  "subsonicUnsupported": "Bu sunucu gerekli Subsonic API'sini veya belirteç kimlik doğrulamasını desteklemiyor.",
+  "subsonicConnectionError": "Bağlantı kurulamıyor. URL'yi, ağı ve HTTPS sertifikasını kontrol edin. Web'de sunucunun CORS'a izin vermesi gerekir ve bir HTTPS uygulaması HTTP'ye bağlanamaz."
 }

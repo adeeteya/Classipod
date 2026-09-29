@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Žanr",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Spremi promjene",
-  "veryLow": "Vrlo nisko"
+  "veryLow": "Vrlo nisko",
+  "reindexLibrarySettingTitle": "Ponovno indeksiranje",
+  "reindexLibrarySettingDescription": "Ponovno pročitajte metapodatke i ilustracije za sve glazbene datoteke.",
+  "refreshLibrarySettingTitle": "Osvježi biblioteku",
+  "refreshLibrarySettingDescription": "Provjerite dodanu ili izbrisanu glazbu. Zadržite postojeće metapodatke i ilustracije.",
+  "librarySettingsScreenTitle": "Postavke knjižnice",
+  "librarySettingsDescription": "Upravljajte indeksiranjem glazbe i izuzetim mapama.",
+  "sleepTimerTitle": "Mjerač vremena za isključivanje",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Kraj trenutne pjesme",
+  "sleepTimerRemainingLabel": "Preostalo",
+  "findingSongs": "Traženje pjesama…",
+  "songsLoaded": "Učitane pjesme: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Umjetnina spremljena u predmemoriju: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nije moguće učitati glazbenu biblioteku. Molimo pokušajte ponovo.",
+  "missingTracksTitle": "Tragovi koji nedostaju",
+  "missingTracksDescription": "Pregledajte datoteke koje se ne mogu pročitati.",
+  "missingTracksEmpty": "Nema nečitljivih zapisa.",
+  "missingTrackRead": "Nije moguće pročitati metapodatke ove datoteke. Provjerite lokaciju datoteke i dopuštenja pristupa, a zatim ponovno indeksirajte biblioteku za ponovni pokušaj.",
+  "missingTrackArtwork": "Nije moguće pročitati sliku ove datoteke. Audio se još uvijek može reproducirati. Ponovno indeksirajte biblioteku za ponovni pokušaj.",
+  "playbackBuffering": "Spremanje u međuspremnik...",
+  "preventDuplicateTracksTitle": "Spriječite duple zapise",
+  "preventDuplicateTracksDescription": "Sakrij pjesme s dvostrukim nazivima datoteka.",
+  "hideLocalMusicTitle": "Sakrij lokalnu glazbu",
+  "hideLocalMusicDescription": "Dok je Subsonic uključen, prikazuj samo glazbu poslužitelja u svojoj knjižnici. Lokalne datoteke ostaju na vašem uređaju.",
+  "subsonicTitle": "Subsonic poslužitelj",
+  "subsonicDescription": "Prenesite glazbu sa Navidrome, gonic i kompatibilnih poslužitelja.",
+  "subsonicConfigure": "Konfigurirajte Subsonic",
+  "subsonicUsername": "Korisničko ime",
+  "subsonicPassword": "Lozinka",
+  "subsonicConnect": "Poveži se",
+  "subsonicRemove": "Ukloni poslužitelj",
+  "subsonicSignIn": "Potrebna je prijava",
+  "subsonicLoadingLibrary": "Učitavanje vaše biblioteke...",
+  "subsonicContinueBackground": "Nastavi u pozadini",
+  "subsonicClose": "Zatvori",
+  "subsonicIndexing": "Indeksiranje glazbe poslužitelja...",
+  "subsonicUnavailable": "Nedostupan",
+  "subsonicCredentialsError": "Provjerite svoje korisničko ime, lozinku i dopuštenja poslužitelja.",
+  "subsonicStorageError": "Nije moguće spremiti vjerodajnice. Provjerite je li sigurna pohrana dostupna i pokušajte ponovno.",
+  "subsonicTimeout": "Poslužitelj je istekao. Molimo pokušajte ponovo.",
+  "subsonicServerError": "Nije moguće pročitati knjižnicu poslužitelja. Prethodni katalog je zadržan. Osvježite biblioteku za ponovni pokušaj.",
+  "libraryRetry": "Ponovo namotati",
+  "subsonicOn": "Na",
+  "subsonicOff": "Izvan",
+  "sleepTimerMinutes": "{minutes} minuta",
+  "oledBlackDeviceColor": "OLED crna",
+  "subsonicUrl": "URL poslužitelja",
+  "subsonicInvalidUrl": "Unesite URL HTTP ili HTTPS poslužitelja bez upita, fragmenta ili ugrađene prijave.",
+  "subsonicUnsupported": "Ovaj poslužitelj ne podržava potrebni Subsonic API ili provjeru autentičnosti tokena.",
+  "subsonicConnectionError": "Ne mogu se spojiti. Provjerite URL, mrežu i HTTPS certifikat. Na webu poslužitelj mora dopustiti CORS, a HTTPS aplikacija ne može se povezati na HTTP."
 }

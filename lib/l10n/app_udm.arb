@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Жанр",
   "editSongLyricsLabel": "текстъёс",
   "saveChangesButton": "Экономить карыны воштӥськонъёс",
-  "veryLow": "Туж Кужым"
+  "veryLow": "Туж Кужым",
+  "reindexLibrarySettingTitle": "Переиндексировать",
+  "reindexLibrarySettingDescription": "Лыдӟе метаданнойёсты но вань крезьгур файлъёсты выльысь.",
+  "refreshLibrarySettingTitle": "Библиотекаез выльдыны",
+  "refreshLibrarySettingDescription": "Эскерыны, ватсаса яке утялтэмын крезьгур. Вань метаданнойёсты но суредъёсты возе.",
+  "librarySettingsScreenTitle": "Библиотекалэн настройкаосыз",
+  "librarySettingsDescription": "Крезьгур индексированиез но палэнтэм папкаосты кивалтон.",
+  "sleepTimerTitle": "Уйвӧт таймер",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Туала кырӟанлэн пумыз",
+  "sleepTimerRemainingLabel": "Кылем",
+  "findingSongs": "Кырӟанъёс шедьтон…",
+  "songsLoaded": "Кырӟанъёс загружены: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Арт-произведениос кэшировать каремын: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Крезьгуръя библиотекаез загрузить карыны уг луы. Пожалуйста, выльысь тырше.",
+  "missingTracksTitle": "Ӧвӧл сюресъёс",
+  "missingTracksDescription": "Лыдӟыны ӧз луы файлъёсты эскерыны.",
+  "missingTracksEmpty": "Лыдӟыны луонтэм сюресъёс ӧвӧл.",
+  "missingTrackRead": "Та файллэсь метаданнойёссэ лыдӟыны ӧз быгаты. Файллэсь интызэ но пырон правооссэ эскере, собере библиотекаез выльысь индексировать каре, выльысь тыршыны.",
+  "missingTrackArtwork": "Та файллэсь ужзэ лыдӟыны ӧз быгаты. Аудио али но шудыны быгатоз. Библиотекаез выльысь индексировать кароно, выльысь тыршыны.",
+  "playbackBuffering": "Буферизация...",
+  "preventDuplicateTracksTitle": "Дублировать карем трекъёсты алон",
+  "preventDuplicateTracksDescription": "Дубликатной файл нимъёсын трекъёсты лушканы.",
+  "hideLocalMusicTitle": "Интыысь крезьгурез лушканы",
+  "hideLocalMusicDescription": "Subsonic дыръя библиотекаын сервер крезьгур гинэ возьматэ. Интыысь файлъёс тӥляд устройстводы вылын кылё.",
+  "subsonicTitle": "Subsonic Сервер",
+  "subsonicDescription": "Navidrome, gonic но совместимый серверъёсысь крезьгурез лэзьыны.",
+  "subsonicConfigure": "Subsonic настройка",
+  "subsonicUsername": "Пользователь ним",
+  "subsonicPassword": "Пароль",
+  "subsonicConnect": "Подключаться",
+  "subsonicRemove": "Серверез поттыны",
+  "subsonicSignIn": "Пырон кулэ",
+  "subsonicLoadingLibrary": "Библиотекадэ загрузка...",
+  "subsonicContinueBackground": "Азьланяз фонын",
+  "subsonicClose": "Матысь",
+  "subsonicIndexing": "Серверлэсь крезьгурзэ индексировать карон...",
+  "subsonicUnavailable": "Ӧвӧл",
+  "subsonicCredentialsError": "Эскере пользователь нимдэс, парольдэс но серверлэсь правооссэс.",
+  "subsonicStorageError": "Удостоверениез утён понна ӧз быгаты. Эскере, вань-а кышкыттэмлыко утён инты но выльысь тырше.",
+  "subsonicTimeout": "Серверлэн дырыз ортчиз. Пожалуйста, выльысь тырше.",
+  "subsonicServerError": "Сервер библиотекаез лыдӟыны ӧз быгаты. Азьвыл каталог возиське. Библиотекаез выльдыны, выльысь тыршыны.",
+  "libraryRetry": "пенсие потыны",
+  "subsonicOn": "Вылтӥ",
+  "subsonicOff": "Питыртӥз",
+  "sleepTimerMinutes": "{minutes} минут",
+  "oledBlackDeviceColor": "OLED сьӧд",
+  "subsonicUrl": "Серверлэн URL-адресэз",
+  "subsonicInvalidUrl": "HTTP яке HTTPS серверлэн URL-адресэз пыртэ, юантэк, фрагменттэк яке встраиваемой логинтэк.",
+  "subsonicUnsupported": "Та сервер уг юртты кулэ Subsonic API яке токен аутентификация.",
+  "subsonicConnectionError": "Уг быгаты герӟаськыны. Эскерыны URL, сеть, но HTTPS сертификат. Веб-ын сервер CORS-эз лэзьыны кулэ, нош HTTPS-приложение HTTP-лы герӟаськыны уг быгаты."
 }

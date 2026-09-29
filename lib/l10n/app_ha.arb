@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Sashi",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Ajiye canje-canje",
-  "veryLow": "M"
+  "veryLow": "M",
+  "reindexLibrarySettingTitle": "Sake fihirisa",
+  "reindexLibrarySettingDescription": "Karanta metadata da zane-zane don duk fayilolin kiɗa kuma.",
+  "refreshLibrarySettingTitle": "Refresh Library",
+  "refreshLibrarySettingDescription": "Bincika ƙara ko share kida. Ci gaba da wanzuwar metadata da zane-zane.",
+  "librarySettingsScreenTitle": "Saitunan Laburare",
+  "librarySettingsDescription": "Sarrafa firikwensin kiɗa da manyan fayilolin da aka cire.",
+  "sleepTimerTitle": "Lokacin bacci",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ƙarshen Waƙar Yanzu",
+  "sleepTimerRemainingLabel": "Ya rage",
+  "findingSongs": "Neman waƙoƙi…",
+  "songsLoaded": "Waƙoƙin da aka ɗora: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "An adana zane-zane: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "An kasa loda ɗakin karatu na kiɗa. Da fatan za a sake gwadawa.",
+  "missingTracksTitle": "Rasa Waƙoƙi",
+  "missingTracksDescription": "Bita fayilolin da ba a iya karantawa ba.",
+  "missingTracksEmpty": "Babu waƙoƙin da ba za a iya karantawa ba.",
+  "missingTrackRead": "An kasa karanta metadata na wannan fayil. Bincika wurin fayil ɗin da samun izini, sa'an nan kuma sake tsara ɗakin karatu don sake gwadawa.",
+  "missingTrackArtwork": "An kasa karanta zane-zanen wannan fayil ɗin. Mai jiwuwa na iya yin wasa. Sake gwada ɗakin karatu don sake gwadawa.",
+  "playbackBuffering": "Buffering…",
+  "preventDuplicateTracksTitle": "Hana Kwafin Waƙoƙi",
+  "preventDuplicateTracksDescription": "Ɓoye waƙoƙi tare da kwafin sunayen fayil.",
+  "hideLocalMusicTitle": "Ɓoye Kiɗan Gida",
+  "hideLocalMusicDescription": "Nuna kiɗan uwar garken kawai a cikin ɗakin karatu yayin da Subsonic ke kunne. Fayilolin gida suna tsayawa akan na'urarka.",
+  "subsonicTitle": "Mai Rarraba Subsonic",
+  "subsonicDescription": "Yada kiɗa daga Navidrome, gonic, da sabar masu jituwa.",
+  "subsonicConfigure": "Sanya Subsonic",
+  "subsonicUsername": "Sunan mai amfani",
+  "subsonicPassword": "Kalmar wucewa",
+  "subsonicConnect": "Haɗa",
+  "subsonicRemove": "Cire uwar garken",
+  "subsonicSignIn": "Ana buƙatar shiga",
+  "subsonicLoadingLibrary": "Ana loda ɗakin karatu…",
+  "subsonicContinueBackground": "Ci gaba a bango",
+  "subsonicClose": "Kusa",
+  "subsonicIndexing": "Kiɗar uwar garken fihirisa…",
+  "subsonicUnavailable": "Babu",
+  "subsonicCredentialsError": "Duba sunan mai amfani, kalmar sirri, da izinin uwar garke.",
+  "subsonicStorageError": "Ba za a iya ajiye takaddun shaida ba. Bincika cewa akwai amintaccen ma'aji kuma a sake gwadawa.",
+  "subsonicTimeout": "Sabar ya ƙare. Da fatan za a sake gwadawa.",
+  "subsonicServerError": "An kasa karanta ɗakin karatu na uwar garken. Ana adana kasidar da ta gabata. Sake sabunta Labura don sake gwadawa.",
+  "libraryRetry": "Sake gwadawa",
+  "subsonicOn": "A kan",
+  "subsonicOff": "Katse lantarki",
+  "sleepTimerMinutes": "Minti {minutes}",
+  "oledBlackDeviceColor": "OLED Black",
+  "subsonicUrl": "URL uwar garke",
+  "subsonicInvalidUrl": "Shigar da URL na uwar garken HTTP ko HTTPS ba tare da tambaya, guntu, ko shigar da aka shigar ba.",
+  "subsonicUnsupported": "Wannan uwar garken baya goyan bayan Subsonic API da ake buƙata ko tantancewar alama.",
+  "subsonicConnectionError": "Ba za a iya haɗawa ba. Duba URL, cibiyar sadarwa, da takardar shaidar HTTPS. A Yanar Gizo, dole ne uwar garken ya ƙyale CORS kuma HTTPS app ba zai iya haɗawa da HTTP ba."
 }

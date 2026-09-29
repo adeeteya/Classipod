@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gnè",
   "editSongLyricsLabel": "Lyrics",
   "saveChangesButton": "Sàbhail Atharrachaidhean",
-  "veryLow": "Gu math ìosal"
+  "veryLow": "Gu math ìosal",
+  "reindexLibrarySettingTitle": "Ath-chlàr-amais",
+  "reindexLibrarySettingDescription": "Leugh meata-dàta agus obair-ealain airson a h-uile faidhle ciùil a-rithist.",
+  "refreshLibrarySettingTitle": "Luchdaich a-nuas an leabharlann",
+  "refreshLibrarySettingDescription": "Thoir sùil airson ceòl a chaidh a chur ris no a dhubhadh às. Cùm meata-dàta agus obair-ealain a tha ann mar-thà.",
+  "librarySettingsScreenTitle": "Suidheachaidhean leabharlainn",
+  "librarySettingsDescription": "Stiùirich clàr-amais ciùil agus pasganan air an dùnadh a-mach.",
+  "sleepTimerTitle": "Ùine cadail",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Deireadh an òrain làithreach",
+  "sleepTimerRemainingLabel": "Air fhàgail",
+  "findingSongs": "A’ lorg òrain…",
+  "songsLoaded": "Òrain air an luchdachadh: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Obair-ealain air a thasgadh: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Chan urrainn dhuinn an leabharlann ciùil a luchdachadh. Feuch a-rithist.",
+  "missingTracksTitle": "Ceòl air chall",
+  "missingTracksDescription": "Dèan lèirmheas air faidhlichean nach b' urrainn dhuinn a leughadh.",
+  "missingTracksEmpty": "Chan eil sgrìoban nach gabh leughadh.",
+  "missingTrackRead": "Cha b' urrainn dhuinn meata-dàta an fhaidhle seo a leughadh. Thoir sùil air suidheachadh an fhaidhle agus ceadan ruigsinneachd, an uairsin ath-chlàraich an leabharlann gus feuchainn a-rithist.",
+  "missingTrackArtwork": "Cha b' urrainn dhuinn obair-ealain an fhaidhle seo a leughadh. Faodaidh fuaim a chluich fhathast. Luchdaich a-nuas an leabharlann gus feuchainn a-rithist.",
+  "playbackBuffering": "A’ buffering…",
+  "preventDuplicateTracksTitle": "Cuir casg air slighean dùblaichte",
+  "preventDuplicateTracksDescription": "Falaich slighean le ainmean faidhle dùblaichte.",
+  "hideLocalMusicTitle": "Falaich Ceòl Ionadail",
+  "hideLocalMusicDescription": "Na seall ach ceòl frithealaiche san leabharlann agad fhad ‘s a tha Subsonic ann. Bidh faidhlichean ionadail a’ fuireach air an inneal agad.",
+  "subsonicTitle": "Am frithealaiche Subsonic",
+  "subsonicDescription": "Sruth ceòl bho Navidrome, gonic, agus frithealaichean co-fhreagarrach.",
+  "subsonicConfigure": "Dèan rèiteachadh air Subsonic",
+  "subsonicUsername": "Ainm-cleachdaidh",
+  "subsonicPassword": "Facal-faire",
+  "subsonicConnect": "Ceangail",
+  "subsonicRemove": "Thoir air falbh am frithealaiche",
+  "subsonicSignIn": "Clàraich a-steach a dhìth",
+  "subsonicLoadingLibrary": "A’ luchdachadh suas do leabharlann…",
+  "subsonicContinueBackground": "Lean air adhart air a 'chùl",
+  "subsonicClose": "Dùin",
+  "subsonicIndexing": "A’ clàradh ceòl an fhrithealaiche…",
+  "subsonicUnavailable": "Chan eil ri fhaighinn",
+  "subsonicCredentialsError": "Thoir sùil air d’ ainm-cleachdaidh, facal-faire, agus ceadan frithealaiche.",
+  "subsonicStorageError": "Cha b' urrainn dhuinn na teisteasan a shàbhaladh. Dèan cinnteach gu bheil stòradh tèarainte ri fhaighinn is feuch ris a-rithist.",
+  "subsonicTimeout": "Dh'fhalbh an ùine air an fhrithealaiche. Feuch ris a-rithist.",
+  "subsonicServerError": "Cha b' urrainn dhuinn leabharlann an fhrithealaiche a leughadh. Tha an catalog roimhe air a chumail. Luchdaich a-nuas an leabharlann gus feuchainn a-rithist.",
+  "libraryRetry": "Ath-ghairm",
+  "subsonicOn": "Air",
+  "subsonicOff": "Dheth",
+  "sleepTimerMinutes": "{minutes} mionaid",
+  "oledBlackDeviceColor": "OLED Dubh",
+  "subsonicUrl": "URL an fhrithealaiche",
+  "subsonicInvalidUrl": "Cuir a-steach URL frithealaiche HTTP no HTTPS gun cheist, criomag no logadh a-steach freumhaichte.",
+  "subsonicUnsupported": "Chan eil am frithealaiche seo a’ toirt taic don Subsonic API no dearbhadh tòcan.",
+  "subsonicConnectionError": "Chan urrainn ceangal a dhèanamh. Thoir sùil air an URL, lìonra, agus teisteanas HTTPS. Air an lìon, feumaidh am frithealaiche CORS a cheadachadh agus chan urrainn dha app HTTPS ceangal ri HTTP."
 }

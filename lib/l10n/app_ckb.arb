@@ -134,5 +134,78 @@
   "editSongGenreLabel": "ژانرا",
   "editSongLyricsLabel": "تێکستەکان",
   "saveChangesButton": "گۆڕانکارییەکان هەڵبگرە",
-  "veryLow": "زۆر نزمە"
+  "veryLow": "زۆر نزمە",
+  "reindexLibrarySettingTitle": "دووبارە ئیندێکسکردنەوە",
+  "reindexLibrarySettingDescription": "دووبارە میتاداتا و کاری هونەری بۆ هەموو فایلەکانی مۆسیقا بخوێنەرەوە.",
+  "refreshLibrarySettingTitle": "کتێبخانەی نوێکردنەوە",
+  "refreshLibrarySettingDescription": "پشکنین بکە بۆ ئەوەی مۆسیقای زیادکراو یان سڕاوە. مێتاداتا و کاری هونەری هەبوو بهێڵەرەوە.",
+  "librarySettingsScreenTitle": "ڕێکخستنەکانی کتێبخانە",
+  "librarySettingsDescription": "بەڕێوەبردنی ئیندێکسی مۆسیقا و فۆڵدەرەکانی دەرکراو.",
+  "sleepTimerTitle": "کاتی خەوتن",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "کۆتایی گۆرانی ئێستا",
+  "sleepTimerRemainingLabel": "ماوەتەوە",
+  "findingSongs": "دۆزینەوەی گۆرانی...",
+  "songsLoaded": "گۆرانییەکانی بارکراو: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "کارە هونەریەکان لە کاشدا: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ناتوانرێت کتێبخانەی مۆسیقا باربکرێت. تکایە دووبارە هەوڵبدەرەوە.",
+  "missingTracksTitle": "تراکی ونبوو",
+  "missingTracksDescription": "پێداچوونەوە بەو فایلانە بکە کە نەتوانرا بخوێنرێنەوە.",
+  "missingTracksEmpty": "هیچ تراکێکی نەخوێندراو نییە.",
+  "missingTrackRead": "نەتوانرا مێتاداتای ئەم پەڕگەیە بخوێنرێتەوە. شوێنی پەڕگەکە و مۆڵەتی دەستگەیشتن بپشکنە، پاشان کتێبخانەکە دووبارە ئیندێکس بکەرەوە بۆ ئەوەی هەوڵی دووبارە بدەیتەوە.",
+  "missingTrackArtwork": "نەتوانرا کارە هونەریەکانی ئەم فایلە بخوێنرێتەوە. ڕەنگە هێشتا دەنگ لێبدات. کتێبخانەکە دووبارە ئیندێکس بکەرەوە بۆ ئەوەی هەوڵی دووبارە بدەیتەوە.",
+  "playbackBuffering": "بافەرکردن...",
+  "preventDuplicateTracksTitle": "ڕێگری لە دووبارەبوونەوەی تراکەکان",
+  "preventDuplicateTracksDescription": "شاردنەوەی تراکەکان بە ناوی فایلەکانی دووبارە.",
+  "hideLocalMusicTitle": "شاردنەوەی مۆسیقای ناوخۆیی",
+  "hideLocalMusicDescription": "تەنها مۆسیقای سێرڤەر لە کتێبخانەکەتدا پیشان بدە لەکاتێکدا Subsonic چالاکە. فایلە ناوخۆییەکان لەسەر ئامێرەکەت دەمێننەوە.",
+  "subsonicTitle": "Subsonic سێرڤەر",
+  "subsonicDescription": "سترێمی مۆسیقا لە Navidrome، gonic، و سێرڤەرە گونجاوەکانەوە.",
+  "subsonicConfigure": "ڕێکخستنی Subsonic",
+  "subsonicUsername": "ناوی بەکارهێنەر",
+  "subsonicPassword": "وشەی نهێنی",
+  "subsonicConnect": "پەیوەندی بکە",
+  "subsonicRemove": "لابردنی سێرڤەر",
+  "subsonicSignIn": "پێویستە بچۆرە ژوورەوە",
+  "subsonicLoadingLibrary": "بارکردنی کتێبخانەکەت...",
+  "subsonicContinueBackground": "لە پاشخاندا بەردەوام بە",
+  "subsonicClose": "دابخە",
+  "subsonicIndexing": "ئیندێکسکردنی مۆسیقای سێرڤەر...",
+  "subsonicUnavailable": "بەردەست نییە",
+  "subsonicCredentialsError": "ناوی بەکارهێنەر و وشەی نهێنی و مۆڵەتی سێرڤەرەکەت بپشکنە.",
+  "subsonicStorageError": "نەتوانرا بڕوانامەکان پاشەکەوت بکرێت. بزانە کە هەڵگرتنی پارێزراو بەردەستە و دووبارە هەوڵبدەرەوە.",
+  "subsonicTimeout": "سێرڤەرەکە کاتەکەی تەواو بوو. تکایە دووبارە هەوڵبدەرەوە.",
+  "subsonicServerError": "نەتوانرا کتێبخانەی سێرڤەر بخوێنرێتەوە. کەتەلۆگی پێشوو هێڵراوەتەوە. کتێبخانە نوێ بکەرەوە بۆ دووبارە هەوڵدانەوە.",
+  "libraryRetry": "دووبارە هەوڵبدەرەوە",
+  "subsonicOn": "لەسەر",
+  "subsonicOff": "کوژاوە",
+  "sleepTimerMinutes": "{minutes} خولەک",
+  "oledBlackDeviceColor": "OLED ڕەش",
+  "subsonicUrl": "URL ی سێرڤەر",
+  "subsonicInvalidUrl": "URLی ڕاژەکاری HTTP یان HTTPS بەبێ پرسیار، پارچە، یان چوونەژوورەوەی جێگیرکراو داخڵ بکە.",
+  "subsonicUnsupported": "ئەم سێرڤەرە پشتگیری لە Subsonic API یان ڕەسەنایەتی نیشانەی پێویست ناکات.",
+  "subsonicConnectionError": "ناتوانرێت پەیوەندی بکات. URL و تۆڕ و بڕوانامەی HTTPS بپشکنە. لە وێبدا، سێرڤەرەکە دەبێت ڕێگە بە CORS بدات و ئەپی HTTPS ناتوانێت پەیوەندی بە HTTPەوە بکات."
 }

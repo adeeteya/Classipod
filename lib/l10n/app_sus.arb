@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Céé kiya",
   "editSongLyricsLabel": "Liriki",
   "saveChangesButton": "Wo xa na fe mɔɔli ratanga",
-  "veryLow": "Low"
+  "veryLow": "Low",
+  "reindexLibrarySettingTitle": "Re-index",
+  "reindexLibrarySettingDescription": "Wo xa metadata xaran a nun wo xa sEbEli birin xaran.",
+  "refreshLibrarySettingTitle": "Biblioteki rafelen",
+  "refreshLibrarySettingDescription": "Wo xa a mato xa wo bara sigi sa a fari xa na mu wo bara ba. Wo xa metadata nun artwork ragata.",
+  "librarySettingsScreenTitle": "BibliotekE paramEtrE",
+  "librarySettingsDescription": "Musiki indexing nun folder naxan mu na a kui.",
+  "sleepTimerTitle": "Xi waxati",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Yi sigi raɲɔnyi",
+  "sleepTimerRemainingLabel": "naxan luxi",
+  "findingSongs": "Yire fenfe...",
+  "songsLoaded": "Yi sigi saxi: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Artwork cached: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "A mu nOma sigi sade buki rafelen de. Wo man xa kata.",
+  "missingTracksTitle": "kira lOE xi",
+  "missingTracksDescription": "Wo yi bukie mato naxee mu nOma xaran de.",
+  "missingTracksEmpty": "Fe yo mu na naxan mu xaranma.",
+  "missingTrackRead": "Wo mu nOma yi buki xa metadata xaran de. Wo yi buki yire mato a nun wo xa tinxin gni, na xanbi wo buki ragatade manE ala ko wo xa gbilen a matode.",
+  "missingTrackArtwork": "Wo mu nOma yi buki xaran de. Audio nO ma minide han ya. Wo xa bukie ragata ala ko wo xa a mato.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Track duplicate ratanga",
+  "preventDuplicateTracksDescription": "Wo xa kEdie nOxun naxee xili firin.",
+  "hideLocalMusicTitle": "Wo xa sigie nOxun",
+  "hideLocalMusicDescription": "Wo xa serveur sigi nan gbansan masen wo xa buki malande kui Subsonic na walife tEmui. Local files na wo xa masini nan kui.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Wo xa sigi sa Navidrome, gonic, a nun sErvEr gbEtE.",
+  "subsonicConfigure": "Subsonic rafala",
+  "subsonicUsername": "Username",
+  "subsonicPassword": "mot de passe",
+  "subsonicConnect": "Wo wo maso",
+  "subsonicRemove": "Server ba",
+  "subsonicSignIn": "Wo lanma wo xa wo xili sa",
+  "subsonicLoadingLibrary": "Wo xa buki malande rafefe...",
+  "subsonicContinueBackground": "Wo siga xanbi ra",
+  "subsonicClose": "balan",
+  "subsonicIndexing": "Server xa sigi safe...",
+  "subsonicUnavailable": "A mu na",
+  "subsonicCredentialsError": "Wo wo xili mato, wo xa mot de passe, a nun wo xa sErvEr sEmbE.",
+  "subsonicStorageError": "Wo mu nOma kEdi ragatade. Wo xa a mato xa yire makantaxi na wo yi ra wo man xa kata.",
+  "subsonicTimeout": "Server waxati bara dangi. Wo man xa kata.",
+  "subsonicServerError": "A mu nOma sErvEr buki xaran de. Katalogi fori nan na. Wo buki ragatade ra gbilen ala ko wo xa gbilen a matode.",
+  "libraryRetry": "na ba fé",
+  "subsonicOn": "Afari",
+  "subsonicOff": "Dounougna",
+  "sleepTimerMinutes": "{minutes} miniti",
+  "oledBlackDeviceColor": "OLED gbeli",
+  "subsonicUrl": "serveur URL",
+  "subsonicInvalidUrl": "Wo HTTP xa na mu HTTPS sErvEr URL sEbE wo mu maxOrin gni, fragment, xa na mu login naxan na a kui.",
+  "subsonicUnsupported": "Yi sErvEr mu Subsonic API xa na mu token authentication suxu ma.",
+  "subsonicConnectionError": "A mu nOma lan de. Wo URL mato, reso, a nun HTTPS sErtifika. Web ma, sErvEr lan ma a tin CORS ra a nun HTTPS appli mu nOma HTTP raso de."
 }

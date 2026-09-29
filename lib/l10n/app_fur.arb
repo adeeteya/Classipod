@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Gjenar",
   "editSongLyricsLabel": "Lyrichis",
   "saveChangesButton": "Salvâ cambiaments",
-  "veryLow": "Une vore basse"
+  "veryLow": "Une vore basse",
+  "reindexLibrarySettingTitle": "Ri-indiçâ",
+  "reindexLibrarySettingDescription": "Leî di gnûf i metadâts e lis oparis di art par ducj i file di musiche.",
+  "refreshLibrarySettingTitle": "Rifrescjâ la biblioteche",
+  "refreshLibrarySettingDescription": "Controlâ se e je musiche zontade o cancelade. Mantignî i metadâts e lis oparis di art esistents.",
+  "librarySettingsScreenTitle": "Impostazions de biblioteche",
+  "librarySettingsDescription": "Gjestî l’indicizazion de musiche e lis cjartis esclududis.",
+  "sleepTimerTitle": "Cronometrât dal son",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fin de cjançon corint",
+  "sleepTimerRemainingLabel": "Restant",
+  "findingSongs": "Cjatâ cjançons...",
+  "songsLoaded": "Cjançons cjariadis: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Oparis di art memorizadis: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "No si pues cjargjâ la biblioteche di musiche. Par plasê tornâ a provâ.",
+  "missingTracksTitle": "Tracis mancjants",
+  "missingTracksDescription": "Revisionâ i file che no puedin jessi lets.",
+  "missingTracksEmpty": "Nissune trace inlesibibil.",
+  "missingTrackRead": "No si è rivât a leî i metadâts di chest file. Controlâ la posizion dal file e i permès di acès, daspò tornâ a indicizâ la biblioteche par tornâ a provâ.",
+  "missingTrackArtwork": "No si pues lei lis oparis di chest file. L’audio al pues ancjemò riprodusi. Tornâ a indiçâ la biblioteche par tornâ a provâ.",
+  "playbackBuffering": "Tamponâ...",
+  "preventDuplicateTracksTitle": "Prevignî tracis doplis",
+  "preventDuplicateTracksDescription": "Scuindi tracis cun nons di file dopli.",
+  "hideLocalMusicTitle": "Scuindi la musiche locâl",
+  "hideLocalMusicDescription": "Mostra dome la musiche dal servidôr inte tô biblioteche intant che Subsonic al è accedût. I file locâi a restin sul dispositîf.",
+  "subsonicTitle": "Servidôr Subsonic",
+  "subsonicDescription": "Trasmeti musiche di Navidrome, gonic e dai servidôrs compatibii.",
+  "subsonicConfigure": "Configurâ Subsonic",
+  "subsonicUsername": "Nome di utent",
+  "subsonicPassword": "Cjave",
+  "subsonicConnect": "Conetî",
+  "subsonicRemove": "Elimina il servidôr",
+  "subsonicSignIn": "Accedi al è necessari",
+  "subsonicLoadingLibrary": "Caricant la tô biblioteche...",
+  "subsonicContinueBackground": "Continuâ in fonts",
+  "subsonicClose": "Sierâ",
+  "subsonicIndexing": "Indiçâ la musiche dal servidôr...",
+  "subsonicUnavailable": "No disponibil",
+  "subsonicCredentialsError": "Controlâ il non di utent, la peraule di cjase e i permès dal servidôr.",
+  "subsonicStorageError": "No si è rivât a salvâ lis credenziâi. Verificâ che il spazi di archiviazion sigûr al sedi disponibil e provâ di gnûf.",
+  "subsonicTimeout": "Il servidôr al è finît. Par plasê tornâ a provâ.",
+  "subsonicServerError": "No si pues lei la biblioteche dal servidôr. Il catalic precedent al è conservât. Agjiornâ la Biblioteche par tornâ a provâ.",
+  "libraryRetry": "Cori",
+  "subsonicOn": "Su",
+  "subsonicOff": "Studât",
+  "sleepTimerMinutes": "{minutes} minûts",
+  "oledBlackDeviceColor": "Neri OLED",
+  "subsonicUrl": "URL dal servidôr",
+  "subsonicInvalidUrl": "Inserî un URL dal servidôr HTTP o HTTPS cence une interogazion, un frament o un login incorporât.",
+  "subsonicUnsupported": "Chest servidôr nol supuarte la API Subsonic o la autenticazion dal token necessariis.",
+  "subsonicConnectionError": "No pues conetisi. Controlâ l’URL, la rêt e il certificât HTTPS. Sul Web, il servidôr al à di permeti CORS e une aplicazion HTTPS no pues conetisi al HTTP."
 }

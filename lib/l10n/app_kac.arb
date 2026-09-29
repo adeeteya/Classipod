@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "NA",
   "saveChangesButton": "Galai shai ai lam ni",
-  "veryLow": "Grai hkrat ai"
+  "veryLow": "Grai hkrat ai",
+  "reindexLibrarySettingTitle": "Bai index galaw u",
+  "reindexLibrarySettingDescription": "Mahkawn file yawng a matu metadata hte artwork hpe bai hti yu u.",
+  "refreshLibrarySettingTitle": "Laika dum hpe bai gram lajang u",
+  "refreshLibrarySettingDescription": "Add (sh) delete galaw da ai mahkawn ni hpe yu u. Ya nga ai metadata hte sumla hkrung ni hpe tawn da u.",
+  "librarySettingsScreenTitle": "Laika dum hpe lajang da ai",
+  "librarySettingsDescription": "Mahkawn indexing hte n lawm ai folder ni hpe hparan u.",
+  "sleepTimerTitle": "Yup ai aten",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Ya na mahkawn ngut ai",
+  "sleepTimerRemainingLabel": "Ngam ai",
+  "findingSongs": "Mahkawn ni hpe tam ai...",
+  "songsLoaded": "Mahkawn ni hpe bang da ai: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Hkrang sumla hpe shinggyin tawn da ai: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Music library hpe n mai hpaw ai. Chyeju hte bai shakut yu ga.",
+  "missingTracksTitle": "N nga mat ai mahkawn ni",
+  "missingTracksDescription": "N lu hti ai file ni hpe bai maram yu u.",
+  "missingTracksEmpty": "N mai hti ai track ni n nga ai.",
+  "missingTrackRead": "Ndai file a metadata hpe n lu hti ai. File nga ai shara hte shang na ahkang ni hpe yu nna, bai shakut na matu library hpe reindex galaw u.",
+  "missingTrackArtwork": "Ndai file’s a sumla hpe n lu hti ai. Audio hpe naw play galaw mai ai. Bai shakut na matu library hpe bai index galaw u.",
+  "playbackBuffering": "Buffer galaw ai...",
+  "preventDuplicateTracksTitle": "Duplicate Track ni hpe pat shingdang u",
+  "preventDuplicateTracksDescription": "File mying n bung ai track ni hpe makoi da u.",
+  "hideLocalMusicTitle": "Local mahkawn ni hpe makoi da u",
+  "hideLocalMusicDescription": "Subsonic hpe hpaw tawn da ai aten hta na a library kaw na server music hpe sha madun u. Local file ni gaw na a device kaw sha nga ai.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Navidrome, gonic, hte htuk manu ai server ni kaw na mahkawn ni hpe stream galaw u.",
+  "subsonicConfigure": "Subsonic hpe gram lajang u",
+  "subsonicUsername": "lang ai mying",
+  "subsonicPassword": "Password",
+  "subsonicConnect": "Matut mahkai",
+  "subsonicRemove": "Server hpe shaw kau u",
+  "subsonicSignIn": "Sign in galaw ra ai",
+  "subsonicLoadingLibrary": "Na a laika dum hpe load galaw nga ai...",
+  "subsonicContinueBackground": "Background kaw matut na",
+  "subsonicClose": "pat kau u",
+  "subsonicIndexing": "Server mahkawn ni hpe index galaw ai...",
+  "subsonicUnavailable": "N lu ai",
+  "subsonicCredentialsError": "Na a lang ai mying, password, server ahkang ni hpe yu u.",
+  "subsonicStorageError": "Credential ni hpe n mai hkoi ya ai. Secure storage nga ai kun ngu ai hpe yu nna bai shakut yu u.",
+  "subsonicTimeout": "Server aten htum mat sai. Chyeju hte bai shakut yu ga.",
+  "subsonicServerError": "Server library hpe n lu hti ai. Shawng na catalog hpe naw tawn da ai. Bai shakut na matu Library hpe bai gram u.",
+  "libraryRetry": "Bai nhtang wa ai; bai htang ai",
+  "subsonicOn": "Ntsa hta",
+  "subsonicOff": "Jahkring ai",
+  "sleepTimerMinutes": "Minit {minutes}",
+  "oledBlackDeviceColor": "OLED Hpraw",
+  "subsonicUrl": "Server URL",
+  "subsonicInvalidUrl": "HTTP (sh) HTTPS server URL hpe san ai, daw chyen, shing nrai, n lawm ai sha bang u.",
+  "subsonicUnsupported": "Ndai server gaw ra ai Subsonic API (sh) token hpe n madi shadaw ya ai.",
+  "subsonicConnectionError": "N mai matut mahkai ai. URL, network, HTTPS ni hpe yu yu ga. Web kaw gaw server gaw CORS hpe ahkang jaw ra nna HTTPS app langai gaw HTTP hte n mai matut mahkai ai."
 }

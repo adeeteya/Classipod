@@ -134,5 +134,78 @@
   "editSongGenreLabel": "शैली",
   "editSongLyricsLabel": "गीतक बोल",
   "saveChangesButton": "परिवर्तन सहेजें",
-  "veryLow": "बहुत कम"
+  "veryLow": "बहुत कम",
+  "reindexLibrarySettingTitle": "पुनः अनुक्रमणिका",
+  "reindexLibrarySettingDescription": "सब संगीत फाइल के लेल मेटाडाटा आ कलाकृति के फेर सं पढ़ू.",
+  "refreshLibrarySettingTitle": "लाइब्रेरी ताज़ा करू",
+  "refreshLibrarySettingDescription": "जोडल गेल वा मेटाओल गेल संगीतक जाँच करू। मौजूदा मेटाडाटा आ कलाकृति राखू।",
+  "librarySettingsScreenTitle": "पुस्तकालय सेटिंग्स",
+  "librarySettingsDescription": "संगीत अनुक्रमणिका आओर बहिष्कृत फोल्डर प्रबंधित करू.",
+  "sleepTimerTitle": "नींद टाइमर",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "वर्तमान गीत के अंत",
+  "sleepTimerRemainingLabel": "शेष",
+  "findingSongs": "गीत खोजैत...",
+  "songsLoaded": "गीत लोड: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "कलाकृति कैश: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "संगीत पुस्तकालय लोड करबामे असमर्थ. कृपया दोबारा प्रयास करू।",
+  "missingTracksTitle": "लापता पटरी",
+  "missingTracksDescription": "जे फाइल पढ़ल नहि जा सकल।",
+  "missingTracksEmpty": "कोनो अपठनीय पटरी नहि।",
+  "missingTrackRead": "एहि फाइल’क मेटाडाटा नहि पढ़ि सकल. फाइल स्थान आओर पहुँच अनुमति सभक जाँच करू, फेर लाइब्रेरी केँ पुनः प्रयास करबाक लेल पुनः अनुक्रमणिका करू.",
+  "missingTrackArtwork": "एहि फाइल’क कलाकृति नहि पढ़ि सकल. ऑडियो एखनो बाजि सकैत अछि। पुनः प्रयास करबाक लेल पुस्तकालय केँ पुनः अनुक्रमणिका करू.",
+  "playbackBuffering": "बफरिंग...",
+  "preventDuplicateTracksTitle": "डुप्लिकेट ट्रैक रोकब",
+  "preventDuplicateTracksDescription": "डुप्लिकेट फाइल नामक संग ट्रैक नुकाउ.",
+  "hideLocalMusicTitle": "स्थानीय संगीत नुकाउ",
+  "hideLocalMusicDescription": "Subsonic चालू रहला पर अपन लाइब्रेरी मे केवल सर्वर संगीत देखाउ. स्थानीय फाइल अहाँक डिवाइस पर रहैत अछि.",
+  "subsonicTitle": "Subsonic सर्वर",
+  "subsonicDescription": "Navidrome, gonic, आओर संगत सर्वर स संगीत स्ट्रीम करू.",
+  "subsonicConfigure": "Subsonic कॉन्फ़िगर करू",
+  "subsonicUsername": "प्रयोक्ता नाम",
+  "subsonicPassword": "पासवर्ड",
+  "subsonicConnect": "कनेक्ट करू",
+  "subsonicRemove": "सर्वर हटाउ",
+  "subsonicSignIn": "साइन इन करब आवश्यक",
+  "subsonicLoadingLibrary": "अपन पुस्तकालय लोड भ रहल अछि...",
+  "subsonicContinueBackground": "पृष्ठभूमि में जारी रखें",
+  "subsonicClose": "बंद करू",
+  "subsonicIndexing": "सर्वर संगीत अनुक्रमणिका...",
+  "subsonicUnavailable": "अनुपलब्ध अछि",
+  "subsonicCredentialsError": "अपन प्रयोक्तानाम, पासवर्ड आओर सर्वर अनुमति जाँचू.",
+  "subsonicStorageError": "क्रेडेंशियल सहेजल नहि जा सकल. जाँचू जे सुरक्षित भंडारण उपलब्ध अछि आओर फेर सँ प्रयास करू.",
+  "subsonicTimeout": "सर्वर टाइम आउट भ गेल। कृपया पुनः प्रयास करू।",
+  "subsonicServerError": "सर्वर लाइब्रेरी नहि पढ़ि सकल. पिछला कैटलॉग बरकरार अछि। पुनः प्रयास करबाक लेल लाइब्रेरी ताज़ा करू.",
+  "libraryRetry": "पुनः प्रयास ८.",
+  "subsonicOn": "उपर",
+  "subsonicOff": "बंद",
+  "sleepTimerMinutes": "{minutes} मिनट",
+  "oledBlackDeviceColor": "ओएलईडी ब्लैक",
+  "subsonicUrl": "सर्वर यूआरएल",
+  "subsonicInvalidUrl": "बिना कोनों क्वेरी, टुकड़ा, या एम्बेडेड लॉगिन कें HTTP या HTTPS सर्वर यूआरएल दर्ज करू.",
+  "subsonicUnsupported": "इ सर्वर आवश्यक Subsonic एपीआई या टोकन प्रमाणीकरण कें समर्थन नहि करएयत छै.",
+  "subsonicConnectionError": "कनेक्ट नहि भ सकैत अछि। URL, नेटवर्क, आओर HTTPS प्रमाणपत्र जाँचू. वेब पर सर्वर कें CORS कें अनुमति देनाय आवश्यक छै आ कोनों HTTPS ऐप HTTP सं कनेक्ट नहि भ सकय छै."
 }

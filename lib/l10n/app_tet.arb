@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Jeneru",
   "editSongLyricsLabel": "Lirik",
   "saveChangesButton": "Mudansa Poupa",
-  "veryLow": "Menus tebes"
+  "veryLow": "Menus tebes",
+  "reindexLibrarySettingTitle": "Re-indeksa",
+  "reindexLibrarySettingDescription": "Lee fali metadata no obra arte ba arkivu múzika hotu-hotu.",
+  "refreshLibrarySettingTitle": "Atualiza Biblioteka",
+  "refreshLibrarySettingDescription": "Verifika ba múzika ne'ebé aumenta ka apaga ona. Mantein metadata no obra arte ne'ebé eziste.",
+  "librarySettingsScreenTitle": "Konfigurasaun Biblioteka nian",
+  "librarySettingsDescription": "Jere indeksasaun múzika no pasta sira ne'ebé eskluidu.",
+  "sleepTimerTitle": "Temporizador ba toba",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Knananuk atuál nia rohan",
+  "sleepTimerRemainingLabel": "Restu",
+  "findingSongs": "Buka hela knananuk sira...",
+  "songsLoaded": "Songs loaded: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Obra arte nian ne'ebé rai hela: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Labele loke biblioteka múzika nian. Favor koko fali.",
+  "missingTracksTitle": "Faixa sira ne'ebé lakon",
+  "missingTracksDescription": "Haree fali arkivu sira ne'ebé labele lee.",
+  "missingTracksEmpty": "Laiha faixa sira ne'ebé labele lee.",
+  "missingTrackRead": "La konsege lee arkivu ida-ne'e nia metadadus. Verifika fatin arkivu nian no lisensa asesu nian, hafoin indeks fali biblioteka hodi koko fali.",
+  "missingTrackArtwork": "Labele lee arkivu ida-ne'e nia obra arte. Áudiu bele toka nafatin. Indeksa filafali biblioteka hodi koko filafali.",
+  "playbackBuffering": "Buffering...",
+  "preventDuplicateTracksTitle": "Prevene Duplikadu Faixa sira",
+  "preventDuplicateTracksDescription": "Subar múzika sira ho naran arkivu duplikadu.",
+  "hideLocalMusicTitle": "Subar Múzika Lokál",
+  "hideLocalMusicDescription": "Hatudu de'it múzika servidór nian iha ita-boot nia biblioteka enkuantu Subsonic lakan hela. Arkivu lokál sira hela iha ita-boot nia dispozitivu.",
+  "subsonicTitle": "Subsonic Server",
+  "subsonicDescription": "Stream múzika husi Navidrome, gonic, no servidór kompativel sira.",
+  "subsonicConfigure": "Konfigura Subsonic",
+  "subsonicUsername": "Naran Uzuáriu",
+  "subsonicPassword": "Liafuan-xave",
+  "subsonicConnect": "Liga",
+  "subsonicRemove": "Hasai Servidor",
+  "subsonicSignIn": "Presiza atu tama",
+  "subsonicLoadingLibrary": "Karrega hela ita-boot nia biblioteka...",
+  "subsonicContinueBackground": "Kontinua iha fundo",
+  "subsonicClose": "Taka",
+  "subsonicIndexing": "Indeksa múzika servidór nian...",
+  "subsonicUnavailable": "La disponivel",
+  "subsonicCredentialsError": "Verifika ita-boot nia naran utilizadór, senha, no lisensa sira ba servidór.",
+  "subsonicStorageError": "La konsege rai kredensial sira. Verifika katak armazenamentu seguru disponivel no koko fali.",
+  "subsonicTimeout": "Servidor nia tempu liu ona. Favor ida koko fali.",
+  "subsonicServerError": "Labele lee biblioteka servidór nian. Katálgu anteriór sei mantein. Atualiza Biblioteka hodi koko fali.",
+  "libraryRetry": "Koko",
+  "subsonicOn": "Iha",
+  "subsonicOff": "Sai",
+  "sleepTimerMinutes": "{minutes} Minutu",
+  "oledBlackDeviceColor": "OLED Metan",
+  "subsonicUrl": "URL servidór nian",
+  "subsonicInvalidUrl": "Hatama URL servidór HTTP ka HTTPS ida lahó pergunta, fragmentu, ka login inkorporadu.",
+  "subsonicUnsupported": "Server ida-ne'e la suporta API Subsonic ne'ebé presiza ka autentikasaun token.",
+  "subsonicConnectionError": "Labele liga. Verifika URL, rede, no sertifikadu HTTPS. Iha Web, servidór tenke permite CORS no aplikasaun HTTPS ida labele liga ba HTTP."
 }

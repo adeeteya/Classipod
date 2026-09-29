@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Mohuta",
   "editSongLyricsLabel": "Lyrics .",
   "saveChangesButton": "Boloka diphetogo .",
-  "veryLow": "Tlase kudu ."
+  "veryLow": "Tlase kudu .",
+  "reindexLibrarySettingTitle": "Re-index gape",
+  "reindexLibrarySettingDescription": "Bala metadata le mošomo wa bokgabo bakeng sa difaele ka moka tša mmino gape.",
+  "refreshLibrarySettingTitle": "Laeborari ya go Hlabolla",
+  "refreshLibrarySettingDescription": "Lekola mmino wo o okeditšwego goba wo o phumotšwego. Boloka metadata ye e lego gona le mošomo wa bokgabo.",
+  "librarySettingsScreenTitle": "Dipeakanyo tša Bokgobapuku",
+  "librarySettingsDescription": "Laola ditšhupetšo tša mmino le difoldara tše di sa akaretšwago.",
+  "sleepTimerTitle": "Sešupanako sa go Robala",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Mafelelo a Pina ya Bjale",
+  "sleepTimerRemainingLabel": "Go šala",
+  "findingSongs": "Go hwetša dikoša...",
+  "songsLoaded": "Dipina tše di imetšwego: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Mošomo wa bokgabo o bolokilwego: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Ga e kgone go laetša bokgobapuku bja mmino. Hle leka gape.",
+  "missingTracksTitle": "Dipina tše di Hlokagalago",
+  "missingTracksDescription": "Boeletša difaele tšeo di bego di sa kgone go balwa.",
+  "missingTracksEmpty": "Ga go na dipina tšeo di sa balegego.",
+  "missingTrackRead": "Ga se ya kgona go bala metadata ya faele ye. Lekola lefelo la faele le ditumelelo tša phihlelelo, ke moka o tšhupa bokgobapuku gape go leka gape.",
+  "missingTrackArtwork": "Ga se ya kgona go bala mošomo wa bokgabo wa faele ye. Audio e ka no ba e sa bapala. Reindex bokgobapuku go leka gape.",
+  "playbackBuffering": "Go buffering...",
+  "preventDuplicateTracksTitle": "Thibela Dipina tše di Phetoleditšwego",
+  "preventDuplicateTracksDescription": "Pata dipina le maina a faele a pheta-pheta.",
+  "hideLocalMusicTitle": "Pata Mmino wa Selegae",
+  "hideLocalMusicDescription": "Bontšha fela mmino wa seva bokgobapukung bja gago ge Subsonic e butšwe. Difaele tša lefelong leo di dula sedirišweng sa gago.",
+  "subsonicTitle": "Subsonic Seva",
+  "subsonicDescription": "Phala mmino go tšwa go Navidrome, gonic, le di-server tše di sepelelanago.",
+  "subsonicConfigure": "Beakanya Subsonic",
+  "subsonicUsername": "Lebitso la mosebedisi",
+  "subsonicPassword": "Phasewete",
+  "subsonicConnect": "Kgokaganya",
+  "subsonicRemove": "Tlosa Seva",
+  "subsonicSignIn": "Saena go a nyakega",
+  "subsonicLoadingLibrary": "Go laetša bokgobapuku bja gago...",
+  "subsonicContinueBackground": "Tswela pele ka morago",
+  "subsonicClose": "Tswala",
+  "subsonicIndexing": "Indexing mmino wa seva...",
+  "subsonicUnavailable": "Ga e hwetšagale",
+  "subsonicCredentialsError": "Lekola leina la gago la mosediriši, phasewete, le ditumelelo tša seva.",
+  "subsonicStorageError": "Ga se ya kgona go boloka mangwalo a go hlatsela. Lekola gore polokelo ye e šireletšegilego e a hwetšagala gomme o leke gape.",
+  "subsonicTimeout": "Seva e ile ya fela nako. Hle leka gape.",
+  "subsonicServerError": "Ga se ya kgona go bala bokgobapuku bja seva. Lethathamo la peleng le bolokilwe. Hlabolla Laeborari go leka gape.",
+  "libraryRetry": "Leka gape",
+  "subsonicOn": "Go",
+  "subsonicOff": "Tima",
+  "sleepTimerMinutes": "{minutes} Metsotso",
+  "oledBlackDeviceColor": "OLED E Ntsho",
+  "subsonicUrl": "URL ya Seva",
+  "subsonicInvalidUrl": "Tsenya URL ya seva ya HTTP goba HTTPS ntle le potšišo, karolwana, goba go tsena mo go tsentšwego.",
+  "subsonicUnsupported": "Seva ye ga e thekge API ye e nyakegago ya Subsonic goba netefatšo ya leswao.",
+  "subsonicConnectionError": "E ka se kgone go kgokagana. Lekola URL, netweke, le setifikeiti sa HTTPS. Go Wepe, seva e swanetše go dumelela CORS gomme tirišo ya HTTPS e ka se kgokagane le HTTP."
 }

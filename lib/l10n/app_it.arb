@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genere",
   "editSongLyricsLabel": "Testi",
   "saveChangesButton": "Salva modifiche",
-  "veryLow": "Molto basso"
+  "veryLow": "Molto basso",
+  "reindexLibrarySettingTitle": "Reindicizzare",
+  "reindexLibrarySettingDescription": "Leggi nuovamente i metadati e la grafica di tutti i file musicali.",
+  "refreshLibrarySettingTitle": "Aggiorna libreria",
+  "refreshLibrarySettingDescription": "Controlla la musica aggiunta o eliminata. Mantieni i metadati e la grafica esistenti.",
+  "librarySettingsScreenTitle": "Impostazioni della libreria",
+  "librarySettingsDescription": "Gestisci l'indicizzazione della musica e le cartelle escluse.",
+  "sleepTimerTitle": "Temporizzatore di spegnimento",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Fine del brano corrente",
+  "sleepTimerRemainingLabel": "Rimanente",
+  "findingSongs": "Ricerca di brani…",
+  "songsLoaded": "Canzoni caricate: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Opera d'arte memorizzata nella cache: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Impossibile caricare la libreria musicale. Per favore riprova.",
+  "missingTracksTitle": "Tracce mancanti",
+  "missingTracksDescription": "Esaminare i file che non è stato possibile leggere.",
+  "missingTracksEmpty": "Nessuna traccia illeggibile.",
+  "missingTrackRead": "Impossibile leggere i metadati di questo file. Controlla il percorso del file e le autorizzazioni di accesso, quindi reindicizza la libreria per riprovare.",
+  "missingTrackArtwork": "Impossibile leggere l'artwork di questo file. L'audio potrebbe ancora essere riprodotto. Reindicizzare la libreria per riprovare.",
+  "playbackBuffering": "Bufferizzazione…",
+  "preventDuplicateTracksTitle": "Previeni tracce duplicate",
+  "preventDuplicateTracksDescription": "Nascondi le tracce con nomi di file duplicati.",
+  "hideLocalMusicTitle": "Nascondi musica locale",
+  "hideLocalMusicDescription": "Mostra solo la musica del server nella tua libreria mentre Subsonic è attivo. I file locali rimangono sul tuo dispositivo.",
+  "subsonicTitle": "Server Subsonic",
+  "subsonicDescription": "Ascolta musica in streaming da Navidrome, gonic e server compatibili.",
+  "subsonicConfigure": "Configura Subsonic",
+  "subsonicUsername": "Nome utente",
+  "subsonicPassword": "Parola d'ordine",
+  "subsonicConnect": "Connettiti",
+  "subsonicRemove": "Rimuovi server",
+  "subsonicSignIn": "È richiesto l'accesso",
+  "subsonicLoadingLibrary": "Caricamento della tua libreria…",
+  "subsonicContinueBackground": "Continua in sottofondo",
+  "subsonicClose": "Chiudi",
+  "subsonicIndexing": "Indicizzazione della musica del server…",
+  "subsonicUnavailable": "Non disponibile",
+  "subsonicCredentialsError": "Controlla il tuo nome utente, password e autorizzazioni del server.",
+  "subsonicStorageError": "Impossibile salvare le credenziali. Verifica che sia disponibile un archivio sicuro e riprova.",
+  "subsonicTimeout": "Il server è scaduto. Per favore riprova.",
+  "subsonicServerError": "Impossibile leggere la libreria del server. Viene mantenuto il catalogo precedente. Aggiorna la libreria per riprovare.",
+  "libraryRetry": "Riprovare",
+  "subsonicOn": "SU",
+  "subsonicOff": "Spento",
+  "sleepTimerMinutes": "{minutes} minuti",
+  "oledBlackDeviceColor": "OLED Nero",
+  "subsonicUrl": "URL del server",
+  "subsonicInvalidUrl": "Inserisci l'URL di un server HTTP o HTTPS senza una query, un frammento o un accesso incorporato.",
+  "subsonicUnsupported": "Questo server non supporta l'API Subsonic richiesta o l'autenticazione token.",
+  "subsonicConnectionError": "Impossibile connettersi. Controlla l'URL, la rete e il certificato HTTPS. Sul Web, il server deve consentire CORS e un'app HTTPS non può connettersi a HTTP."
 }

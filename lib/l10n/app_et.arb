@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Žanr",
   "editSongLyricsLabel": "Laulusõnad",
   "saveChangesButton": "Salvesta muudatused",
-  "veryLow": "Väga madal"
+  "veryLow": "Väga madal",
+  "reindexLibrarySettingTitle": "Indekseeri uuesti",
+  "reindexLibrarySettingDescription": "Lugege uuesti kõigi muusikafailide metaandmeid ja kunstiteoseid.",
+  "refreshLibrarySettingTitle": "Värskenda raamatukogu",
+  "refreshLibrarySettingDescription": "Kontrollige lisatud või kustutatud muusikat. Säilitage olemasolevad metaandmed ja kunstiteosed.",
+  "librarySettingsScreenTitle": "Teegi sätted",
+  "librarySettingsDescription": "Hallake muusika indekseerimist ja välistatud kaustu.",
+  "sleepTimerTitle": "Unetaimer",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Praeguse laulu lõpp",
+  "sleepTimerRemainingLabel": "Ülejäänud",
+  "findingSongs": "Laulude otsimine…",
+  "songsLoaded": "Laaditud laulud: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Vahemällu salvestatud kunstiteos: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Muusikakogu ei saa laadida. Palun proovi uuesti.",
+  "missingTracksTitle": "Puuduvad rajad",
+  "missingTracksDescription": "Vaadake üle failid, mida ei saanud lugeda.",
+  "missingTracksEmpty": "Lugematuid lugusid pole.",
+  "missingTrackRead": "Selle faili metaandmeid ei õnnestunud lugeda. Kontrollige faili asukohta ja juurdepääsuõigusi, seejärel indekseerige teek uuesti proovimiseks.",
+  "missingTrackArtwork": "Selle faili kujundust ei õnnestunud lugeda. Heli võib siiski esitada. Uuesti proovimiseks indekseerige raamatukogu uuesti.",
+  "playbackBuffering": "Puhverdamine…",
+  "preventDuplicateTracksTitle": "Vältige lugude dubleerimist",
+  "preventDuplicateTracksDescription": "Peida rajad dubleerivate failinimedega.",
+  "hideLocalMusicTitle": "Peida kohalik muusika",
+  "hideLocalMusicDescription": "Kui Subsonic on sisse lülitatud, kuvage oma teegis ainult serverimuusikat. Kohalikud failid jäävad teie seadmesse.",
+  "subsonicTitle": "Subsonic server",
+  "subsonicDescription": "Voogesitage muusikat Navidrome, gonic ja ühilduvatest serveritest.",
+  "subsonicConfigure": "Seadistage Subsonic",
+  "subsonicUsername": "Kasutajanimi",
+  "subsonicPassword": "Parool",
+  "subsonicConnect": "Ühendage",
+  "subsonicRemove": "Eemalda server",
+  "subsonicSignIn": "Sisselogimine on vajalik",
+  "subsonicLoadingLibrary": "Teie kogu laadimine…",
+  "subsonicContinueBackground": "Jätkake taustal",
+  "subsonicClose": "Sule",
+  "subsonicIndexing": "Serverimuusika indekseerimine…",
+  "subsonicUnavailable": "Pole saadaval",
+  "subsonicCredentialsError": "Kontrollige oma kasutajanime, parooli ja serveri õigusi.",
+  "subsonicStorageError": "Mandaate ei saanud salvestada. Kontrollige, kas turvaline salvestusruum on saadaval, ja proovige uuesti.",
+  "subsonicTimeout": "Server aegus. Palun proovi uuesti.",
+  "subsonicServerError": "Serveri teeki ei õnnestunud lugeda. Säilitatakse eelmine kataloog. Uuesti proovimiseks värskendage raamatukogu.",
+  "libraryRetry": "Uuesti proovima",
+  "subsonicOn": "Edasi",
+  "subsonicOff": "Ära",
+  "sleepTimerMinutes": "{minutes} minutit",
+  "oledBlackDeviceColor": "OLED must",
+  "subsonicUrl": "Serveri URL",
+  "subsonicInvalidUrl": "Sisestage HTTP- või HTTPS-serveri URL ilma päringu, fragmendi või manustatud sisselogimiseta.",
+  "subsonicUnsupported": "See server ei toeta nõutavat Subsonic API või loa autentimist.",
+  "subsonicConnectionError": "Ühendust ei saa. Kontrollige URL-i, võrku ja HTTPS-i sertifikaati. Veebis peab server lubama CORS-i ja HTTPS-i rakendus ei saa HTTP-ga ühendust luua."
 }

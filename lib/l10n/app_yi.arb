@@ -134,5 +134,78 @@
   "editSongGenreLabel": "זשאַנראַ",
   "editSongLyricsLabel": "ליריקס",
   "saveChangesButton": "היט ענדערונגען",
-  "veryLow": "זייער נידעריק"
+  "veryLow": "זייער נידעריק",
+  "reindexLibrarySettingTitle": "שייַעך-אינדעקס",
+  "reindexLibrarySettingDescription": "לייענען מעטאַדאַטאַ און אַרטוואָרק פֿאַר אַלע מוזיק טעקעס ווידער.",
+  "refreshLibrarySettingTitle": "דערפרישן ביבליאָטעק",
+  "refreshLibrarySettingDescription": "קוק פֿאַר צוגעלייגט אָדער אויסגעמעקט מוזיק. האַלטן יגזיסטינג מעטאַדאַטאַ און אַרטוואָרק.",
+  "librarySettingsScreenTitle": "ביבליאָטעק סעטטינגס",
+  "librarySettingsDescription": "פירן מוזיק ינדעקסינג און יקסקלודיד פאָלדערס.",
+  "sleepTimerTitle": "שלאָף טיימער",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "סוף פון קראַנט ליד",
+  "sleepTimerRemainingLabel": "געבליבן",
+  "findingSongs": "געפֿינען לידער...",
+  "songsLoaded": "לאָודיד לידער: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "אַרטוואָרק קאַשט: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "ניט געקענט צו לאָדן די מוזיק ביבליאָטעק. ביטע פרובירט ווידער.",
+  "missingTracksTitle": "פעלנדיק טראַקס",
+  "missingTracksDescription": "איבערקוקן טעקעס וואָס קען ניט זיין לייענען.",
+  "missingTracksEmpty": "קיין אַנרידאַבאַל טראַקס.",
+  "missingTrackRead": "קען נישט לייענען די מעטאַדאַטאַ פון דעם טעקע. קאָנטראָלירן די טעקע אָרט און אַקסעס פּערמישאַנז, און רעינעקס די ביבליאָטעק צו פּרובירן ווידער.",
+  "missingTrackArtwork": "קען נישט לייענען די אַרטוואָרק פון דעם טעקע. אַודיאָ קען נאָך שפּילן. רעינעקס די ביבליאָטעק צו פּרובירן ווידער.",
+  "playbackBuffering": "באַפערן…",
+  "preventDuplicateTracksTitle": "פאַרהיטן דופּליקאַט טראַקס",
+  "preventDuplicateTracksDescription": "באַהאַלטן טראַקס מיט דופּליקאַט טעקע נעמען.",
+  "hideLocalMusicTitle": "באַהאַלטן לאקאלע מוזיק",
+  "hideLocalMusicDescription": "ווייַזן בלויז סערווער מוזיק אין דיין ביבליאָטעק בשעת Subsonic איז אויף. לאקאלע טעקעס בלייבן אויף דיין מיטל.",
+  "subsonicTitle": "Subsonic סערווירער",
+  "subsonicDescription": "סטרים מוזיק פֿון Navidrome, gonic און קאַמפּאַטאַבאַל סערווערס.",
+  "subsonicConfigure": "קאַנפיגיער Subsonic",
+  "subsonicUsername": "נאמען",
+  "subsonicPassword": "שפּריכוואָרט",
+  "subsonicConnect": "פאַרבינדן",
+  "subsonicRemove": "אַראָפּנעמען סערווירער",
+  "subsonicSignIn": "צייכן אין פארלאנגט",
+  "subsonicLoadingLibrary": "לאָודינג דיין ביבליאָטעק...",
+  "subsonicContinueBackground": "פאָרזעצן אין הינטערגרונט",
+  "subsonicClose": "נאָענט",
+  "subsonicIndexing": "ינדעקסינג סערווער מוזיק ...",
+  "subsonicUnavailable": "ניט בנימצא",
+  "subsonicCredentialsError": "קאָנטראָלירן דיין נאמען, פּאַראָל און סערווער פּערמישאַנז.",
+  "subsonicStorageError": "קען נישט ראַטעווען קראַדענטשאַלז. קוק אַז זיכער סטאָרידזש איז בנימצא און פּרובירן ווידער.",
+  "subsonicTimeout": "דער סערווער האט צייט אויס. ביטע פּרוּווט ווידער.",
+  "subsonicServerError": "קען נישט לייענען די סערווער ביבליאָטעק. דער פריערדיקער קאַטאַלאָג איז ריטיינד. דערפרישן ביבליאָטעק צו פּרובירן ווידער.",
+  "libraryRetry": "פריין",
+  "subsonicOn": "אַף",
+  "subsonicOff": "אַוועק",
+  "sleepTimerMinutes": "{minutes} מינוט",
+  "oledBlackDeviceColor": "OLED שווארצע",
+  "subsonicUrl": "סערווירער URL",
+  "subsonicInvalidUrl": "אַרייַן אַ HTTP אָדער HTTPS סערווער URL אָן אַ אָנפֿרעג, פראַגמענט אָדער עמבעדיד לאָגין.",
+  "subsonicUnsupported": "דער סערווער שטיצט נישט די פארלאנגט Subsonic API אָדער טאָקען אָטענטאַקיישאַן.",
+  "subsonicConnectionError": "קענען ניט פאַרבינדן. קאָנטראָלירן די URL, נעץ און הטטפּס באַווייַזן. אויף וועב, דער סערווער מוזן לאָזן CORS און אַ HTTPS אַפּ קען נישט פאַרבינדן צו הטטפּ."
 }

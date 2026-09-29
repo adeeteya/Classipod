@@ -134,5 +134,78 @@
   "editSongGenreLabel": "장르",
   "editSongLyricsLabel": "가사",
   "saveChangesButton": "변경 사항 저장",
-  "veryLow": "매우 낮음"
+  "veryLow": "매우 낮음",
+  "reindexLibrarySettingTitle": "재인덱싱",
+  "reindexLibrarySettingDescription": "모든 음악 파일의 메타데이터와 아트워크를 다시 읽어보세요.",
+  "refreshLibrarySettingTitle": "라이브러리 새로 고침",
+  "refreshLibrarySettingDescription": "추가되거나 삭제된 음악을 확인하세요. 기존 메타데이터와 아트워크를 유지합니다.",
+  "librarySettingsScreenTitle": "라이브러리 설정",
+  "librarySettingsDescription": "음악 색인 및 제외 폴더를 관리합니다.",
+  "sleepTimerTitle": "수면 타이머",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "현재 노래의 끝",
+  "sleepTimerRemainingLabel": "남은",
+  "findingSongs": "노래 찾는 중…",
+  "songsLoaded": "로드된 노래: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "캐시된 작품: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "음악 라이브러리를 로드할 수 없습니다. 다시 시도해 주세요.",
+  "missingTracksTitle": "누락된 트랙",
+  "missingTracksDescription": "읽을 수 없는 파일을 검토합니다.",
+  "missingTracksEmpty": "읽을 수 없는 트랙이 없습니다.",
+  "missingTrackRead": "이 파일의 메타데이터를 읽을 수 없습니다. 파일 위치와 액세스 권한을 확인한 후 라이브러리를 다시 색인화하여 다시 시도하세요.",
+  "missingTrackArtwork": "이 파일의 아트워크를 읽을 수 없습니다. 오디오는 계속 재생될 수 있습니다. 다시 시도하려면 라이브러리를 다시 색인화하세요.",
+  "playbackBuffering": "버퍼링 중…",
+  "preventDuplicateTracksTitle": "중복 트랙 방지",
+  "preventDuplicateTracksDescription": "파일 이름이 중복된 트랙을 숨깁니다.",
+  "hideLocalMusicTitle": "지역 음악 숨기기",
+  "hideLocalMusicDescription": "Subsonic가 켜져 있는 동안 라이브러리의 서버 음악만 표시합니다. 로컬 파일은 장치에 유지됩니다.",
+  "subsonicTitle": "Subsonic 서버",
+  "subsonicDescription": "Navidrome, gonic 및 호환 서버에서 음악을 스트리밍하세요.",
+  "subsonicConfigure": "Subsonic 구성",
+  "subsonicUsername": "사용자 이름",
+  "subsonicPassword": "비밀번호",
+  "subsonicConnect": "연결하다",
+  "subsonicRemove": "서버 제거",
+  "subsonicSignIn": "로그인이 필요합니다",
+  "subsonicLoadingLibrary": "라이브러리 로드 중…",
+  "subsonicContinueBackground": "백그라운드에서 계속",
+  "subsonicClose": "닫기",
+  "subsonicIndexing": "서버 음악 인덱싱 중…",
+  "subsonicUnavailable": "이용 불가",
+  "subsonicCredentialsError": "사용자 이름, 비밀번호, 서버 권한을 확인하세요.",
+  "subsonicStorageError": "자격 증명을 저장할 수 없습니다. 보안 저장소를 사용할 수 있는지 확인하고 다시 시도하세요.",
+  "subsonicTimeout": "서버 시간이 초과되었습니다. 다시 시도해 주세요.",
+  "subsonicServerError": "서버 라이브러리를 읽을 수 없습니다. 이전 카탈로그가 유지됩니다. 다시 시도하려면 라이브러리를 새로고침하세요.",
+  "libraryRetry": "다시 해 보다",
+  "subsonicOn": "~에",
+  "subsonicOff": "끄다",
+  "sleepTimerMinutes": "{minutes}분",
+  "oledBlackDeviceColor": "OLED 블랙",
+  "subsonicUrl": "서버 URL",
+  "subsonicInvalidUrl": "쿼리, 조각 또는 내장된 로그인 없이 HTTP 또는 HTTPS 서버 URL을 입력하세요.",
+  "subsonicUnsupported": "이 서버는 필수 Subsonic API 또는 토큰 인증을 지원하지 않습니다.",
+  "subsonicConnectionError": "연결할 수 없습니다. URL, 네트워크, HTTPS 인증서를 확인하세요. 웹에서는 서버가 CORS를 허용해야 하며 HTTPS 앱은 HTTP에 연결할 수 없습니다."
 }

@@ -134,5 +134,78 @@
   "editSongGenreLabel": "Genre",
   "editSongLyricsLabel": "Teksty",
   "saveChangesButton": "Zapisz zmiany",
-  "veryLow": "Bardzo niski"
+  "veryLow": "Bardzo niski",
+  "reindexLibrarySettingTitle": "Ponowne indeksowanie",
+  "reindexLibrarySettingDescription": "Przeczytaj ponownie metadane i grafikę wszystkich plików muzycznych.",
+  "refreshLibrarySettingTitle": "Odśwież bibliotekę",
+  "refreshLibrarySettingDescription": "Sprawdź dodaną lub usuniętą muzykę. Zachowaj istniejące metadane i grafikę.",
+  "librarySettingsScreenTitle": "Ustawienia biblioteki",
+  "librarySettingsDescription": "Zarządzaj indeksowaniem muzyki i wykluczonymi folderami.",
+  "sleepTimerTitle": "Zegar uśpienia",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "Koniec bieżącego utworu",
+  "sleepTimerRemainingLabel": "Pozostało",
+  "findingSongs": "Znajdowanie utworów…",
+  "songsLoaded": "Załadowane utwory: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "Grafika w pamięci podręcznej: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "Nie można załadować biblioteki muzycznej. Spróbuj ponownie.",
+  "missingTracksTitle": "Brakujące utwory",
+  "missingTracksDescription": "Przejrzyj pliki, których nie można odczytać.",
+  "missingTracksEmpty": "Żadnych nieczytelnych śladów.",
+  "missingTrackRead": "Nie można odczytać metadanych tego pliku. Sprawdź lokalizację pliku i uprawnienia dostępu, a następnie ponownie zindeksuj bibliotekę i spróbuj ponownie.",
+  "missingTrackArtwork": "Nie można odczytać grafiki tego pliku. Dźwięk może nadal być odtwarzany. Zindeksuj ponownie bibliotekę, aby ponowić próbę.",
+  "playbackBuffering": "Buforowanie…",
+  "preventDuplicateTracksTitle": "Zapobiegaj duplikacjom utworów",
+  "preventDuplicateTracksDescription": "Ukryj utwory ze zduplikowanymi nazwami plików.",
+  "hideLocalMusicTitle": "Ukryj lokalną muzykę",
+  "hideLocalMusicDescription": "Wyświetlaj tylko muzykę z serwera w swojej bibliotece, gdy Subsonic jest włączony. Pliki lokalne pozostają na Twoim urządzeniu.",
+  "subsonicTitle": "Serwer Subsonic",
+  "subsonicDescription": "Przesyłaj strumieniowo muzykę z Navidrome, gonic i kompatybilnych serwerów.",
+  "subsonicConfigure": "Skonfiguruj Subsonic",
+  "subsonicUsername": "Nazwa użytkownika",
+  "subsonicPassword": "Hasło",
+  "subsonicConnect": "Połącz",
+  "subsonicRemove": "Usuń serwer",
+  "subsonicSignIn": "Wymagane zalogowanie się",
+  "subsonicLoadingLibrary": "Ładowanie biblioteki…",
+  "subsonicContinueBackground": "Kontynuuj w tle",
+  "subsonicClose": "Zamknij",
+  "subsonicIndexing": "Indeksowanie muzyki z serwera…",
+  "subsonicUnavailable": "Niedostępne",
+  "subsonicCredentialsError": "Sprawdź swoją nazwę użytkownika, hasło i uprawnienia serwera.",
+  "subsonicStorageError": "Nie można zapisać danych uwierzytelniających. Sprawdź, czy dostępna jest bezpieczna pamięć i spróbuj ponownie.",
+  "subsonicTimeout": "Przekroczono limit czasu serwera. Spróbuj ponownie.",
+  "subsonicServerError": "Nie można odczytać biblioteki serwera. Poprzedni katalog zostaje zachowany. Odśwież bibliotekę, aby spróbować ponownie.",
+  "libraryRetry": "Spróbować ponownie",
+  "subsonicOn": "NA",
+  "subsonicOff": "Wyłączony",
+  "sleepTimerMinutes": "{minutes} minut",
+  "oledBlackDeviceColor": "OLED-owy czarny",
+  "subsonicUrl": "Adres URL serwera",
+  "subsonicInvalidUrl": "Wprowadź adres URL serwera HTTP lub HTTPS bez zapytania, fragmentu lub osadzonego loginu.",
+  "subsonicUnsupported": "Ten serwer nie obsługuje wymaganego uwierzytelniania API Subsonic ani tokena.",
+  "subsonicConnectionError": "Nie można połączyć. Sprawdź adres URL, sieć i certyfikat HTTPS. W Internecie serwer musi zezwalać na CORS, a aplikacja HTTPS nie może połączyć się z HTTP."
 }

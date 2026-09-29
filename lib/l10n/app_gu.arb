@@ -134,5 +134,78 @@
   "editSongGenreLabel": "શૈલી",
   "editSongLyricsLabel": "ગીતો",
   "saveChangesButton": "ફેરફારો સાચવો",
-  "veryLow": "બહુ નીચું"
+  "veryLow": "બહુ નીચું",
+  "reindexLibrarySettingTitle": "ફરીથી અનુક્રમણિકા",
+  "reindexLibrarySettingDescription": "ફરીથી બધી સંગીત ફાઇલો માટે મેટાડેટા અને આર્ટવર્ક વાંચો.",
+  "refreshLibrarySettingTitle": "લાઇબ્રેરી રિફ્રેશ કરો",
+  "refreshLibrarySettingDescription": "ઉમેરાયેલ અથવા કાઢી નાખેલ સંગીત માટે તપાસો. વર્તમાન મેટાડેટા અને આર્ટવર્ક રાખો.",
+  "librarySettingsScreenTitle": "લાઇબ્રેરી સેટિંગ્સ",
+  "librarySettingsDescription": "સંગીત અનુક્રમણિકા અને બાકાત ફોલ્ડર્સનું સંચાલન કરો.",
+  "sleepTimerTitle": "સ્લીપ ટાઈમર",
+  "@sleepTimerMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "sleepTimerEndOfCurrentSong": "વર્તમાન ગીતનો અંત",
+  "sleepTimerRemainingLabel": "બાકી",
+  "findingSongs": "ગીતો શોધી રહ્યાં છીએ…",
+  "songsLoaded": "લોડ કરેલા ગીતો: {loaded} / {total}",
+  "@songsLoaded": {
+    "placeholders": {
+      "loaded": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "artworkCached": "આર્ટવર્ક કેશ્ડ: {cached}",
+  "@artworkCached": {
+    "placeholders": {
+      "cached": {
+        "type": "int"
+      }
+    }
+  },
+  "libraryLoadError": "સંગીત લાઇબ્રેરી લોડ કરવામાં અસમર્થ. કૃપા કરીને ફરી પ્રયાસ કરો.",
+  "missingTracksTitle": "ખૂટતા ટ્રેક",
+  "missingTracksDescription": "વાંચી શકાતી ન હોય તેવી ફાઇલોની સમીક્ષા કરો.",
+  "missingTracksEmpty": "કોઈ વાંચી ન શકાય તેવા ટ્રેક નથી.",
+  "missingTrackRead": "આ ફાઇલનો મેટાડેટા વાંચી શકાયો નથી. ફાઇલ સ્થાન અને ઍક્સેસ પરવાનગીઓ તપાસો, પછી ફરીથી પ્રયાસ કરવા માટે લાઇબ્રેરીને ફરીથી અનુક્રમિત કરો.",
+  "missingTrackArtwork": "આ ફાઇલનું આર્ટવર્ક વાંચી શકાયું નથી. ઑડિયો હજી પણ પ્લે થઈ શકે છે. ફરીથી પ્રયાસ કરવા માટે લાઇબ્રેરીને ફરીથી અનુક્રમિત કરો.",
+  "playbackBuffering": "બફરિંગ...",
+  "preventDuplicateTracksTitle": "ડુપ્લિકેટ ટ્રેક અટકાવો",
+  "preventDuplicateTracksDescription": "ડુપ્લિકેટ ફાઇલ નામો સાથે ટ્રેક છુપાવો.",
+  "hideLocalMusicTitle": "સ્થાનિક સંગીત છુપાવો",
+  "hideLocalMusicDescription": "Subsonic ચાલુ હોય ત્યારે તમારી લાઇબ્રેરીમાં માત્ર સર્વર સંગીત બતાવો. સ્થાનિક ફાઇલો તમારા ઉપકરણ પર રહે છે.",
+  "subsonicTitle": "Subsonic સર્વર",
+  "subsonicDescription": "Navidrome, gonic અને સુસંગત સર્વર પરથી સંગીત સ્ટ્રીમ કરો.",
+  "subsonicConfigure": "Subsonic ગોઠવો",
+  "subsonicUsername": "વપરાશકર્તા નામ",
+  "subsonicPassword": "પાસવર્ડ",
+  "subsonicConnect": "કનેક્ટ કરો",
+  "subsonicRemove": "સર્વર દૂર કરો",
+  "subsonicSignIn": "સાઇન ઇન જરૂરી છે",
+  "subsonicLoadingLibrary": "તમારી લાઇબ્રેરી લોડ કરી રહ્યું છે...",
+  "subsonicContinueBackground": "પૃષ્ઠભૂમિમાં ચાલુ રાખો",
+  "subsonicClose": "બંધ કરો",
+  "subsonicIndexing": "સર્વર સંગીતને અનુક્રમિત કરી રહ્યું છે...",
+  "subsonicUnavailable": "અનુપલબ્ધ",
+  "subsonicCredentialsError": "તમારું વપરાશકર્તા નામ, પાસવર્ડ અને સર્વર પરવાનગીઓ તપાસો.",
+  "subsonicStorageError": "ઓળખપત્ર સાચવી શકાયું નથી. તપાસો કે સુરક્ષિત સ્ટોરેજ ઉપલબ્ધ છે અને ફરી પ્રયાસ કરો.",
+  "subsonicTimeout": "સર્વરનો સમય સમાપ્ત થયો. કૃપા કરીને ફરી પ્રયાસ કરો.",
+  "subsonicServerError": "સર્વર લાઇબ્રેરી વાંચી શકાઈ નથી. અગાઉનો કેટલોગ જાળવી રાખ્યો છે. ફરી પ્રયાસ કરવા માટે લાઇબ્રેરી રિફ્રેશ કરો.",
+  "libraryRetry": "ફરી કોશિશ કરવી",
+  "subsonicOn": "ચાલુ",
+  "subsonicOff": "Offંચું",
+  "sleepTimerMinutes": "{minutes} મિનિટ",
+  "oledBlackDeviceColor": "OLED બ્લેક",
+  "subsonicUrl": "સર્વર URL",
+  "subsonicInvalidUrl": "ક્વેરી, ફ્રેગમેન્ટ અથવા એમ્બેડેડ લોગિન વિના HTTP અથવા HTTPS સર્વર URL દાખલ કરો.",
+  "subsonicUnsupported": "આ સર્વર જરૂરી Subsonic API અથવા ટોકન પ્રમાણીકરણને સપોર્ટ કરતું નથી.",
+  "subsonicConnectionError": "કનેક્ટ કરી શકાતું નથી. URL, નેટવર્ક અને HTTPS પ્રમાણપત્ર તપાસો. વેબ પર, સર્વરે CORS ને મંજૂરી આપવી જોઈએ અને HTTPS એપ્લિકેશન HTTP સાથે કનેક્ટ થઈ શકતી નથી."
 }

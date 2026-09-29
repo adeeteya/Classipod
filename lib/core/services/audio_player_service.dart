@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/constants/keys.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/playback/library_audio_handler.dart';
 import 'package:classipod/core/subsonic/subsonic_controller.dart';
@@ -106,18 +107,15 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   }
 
   Future<void> toggleShuffleMode() async {
-    await setShuffleMode(!ref.read(nowPlayingDetailsProvider).isShuffleEnabled);
+    await setShuffleMode(
+      ref.read(libraryAudioHandlerProvider).logicalQueue.shuffleMode.next,
+    );
   }
 
-  Future<void> setShuffleMode(bool enabled) async {
+  Future<void> setShuffleMode(PlaybackShuffleMode mode) async {
     state = await AsyncValue.guard(() async {
-      await ref
-          .read(libraryAudioHandlerProvider)
-          .setShuffleMode(
-            enabled
-                ? AudioServiceShuffleMode.all
-                : AudioServiceShuffleMode.none,
-          );
+      final handler = ref.read(libraryAudioHandlerProvider);
+      await handler.setShuffleMode(mode.audioServiceMode);
     });
   }
 
@@ -133,7 +131,7 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
         );
       }
 
-      await setShuffleMode(true);
+      await setShuffleMode(PlaybackShuffleMode.songs);
       await nextSong();
       Future.delayed(const Duration(milliseconds: 100), play);
 
@@ -214,7 +212,6 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
           musicMetadataList: albumDetail.albumSongs,
         );
         await playSongAtIndex(songIndex);
-        await setShuffleMode(false);
         Future.delayed(const Duration(milliseconds: 100), play);
       }
     });
@@ -245,7 +242,6 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
           musicMetadataList: playlistDetail.songs,
         );
         await playSongAtIndex(songIndex);
-        await setShuffleMode(false);
         Future.delayed(const Duration(milliseconds: 100), play);
       }
     });

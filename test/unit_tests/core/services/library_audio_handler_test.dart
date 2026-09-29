@@ -1,12 +1,16 @@
 import 'dart:async';
+import 'dart:collection';
 import 'dart:math';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/models/playback_shuffle_mode.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/services/playback/library_audio_handler.dart';
 import 'package:classipod/core/services/playback/logical_queue.dart';
+import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -668,13 +672,151 @@ void main() {
     },
   );
 
+  test('album shuffle orders playlist tracks by disc and track', () async {
+    final songs = [
+      song(0).copyWith(albumName: 'A', discNumber: 1, trackNumber: 1),
+      song(1).copyWith(albumName: 'B', discNumber: 1, trackNumber: 2),
+      song(2).copyWith(albumName: 'A', discNumber: 2, trackNumber: 1),
+      song(3).copyWith(albumName: 'B', discNumber: 1, trackNumber: 1),
+      song(4).copyWith(albumName: 'A', discNumber: 1, trackNumber: 2),
+    ];
+    await handler.setSongs(songs);
+    await handler.setShuffleMode(AudioServiceShuffleMode.group);
+    expect(
+      handler.playbackState.value.shuffleMode,
+      AudioServiceShuffleMode.group,
+    );
+    final order = <int>[handler.currentIndex!];
+    while (handler.logicalQueue.next() != null) {
+      await handler.skipToNext();
+      order.add(handler.currentIndex!);
+    }
+    expect(order, [0, 4, 2, 3, 1]);
+    await handler.skipToPrevious();
+    expect(handler.currentIndex, 3);
+    await handler.skipToPrevious();
+    expect(handler.currentIndex, 2);
+    await handler.setShuffleMode(AudioServiceShuffleMode.none);
+    expect(handler.currentIndex, 2);
+    expect(handler.logicalQueue.position, 2);
+    await handler.skipToNext();
+    expect(handler.currentIndex, 3);
+  });
+
+  test(
+    'album shuffle distinguishes artists and remote album identities',
+    () async {
+      final songs = [
+        song(0).copyWith(
+          albumName: 'Hits',
+          albumArtistNames: ['Artist A'],
+          trackNumber: 1,
+        ),
+        song(1).copyWith(
+          albumName: 'Hits',
+          albumArtistNames: ['Artist B'],
+          trackNumber: 1,
+        ),
+        song(2).copyWith(
+          albumName: 'Hits',
+          albumArtistNames: ['Artist A'],
+          trackNumber: 2,
+        ),
+        song(3).copyWith(
+          albumName: 'Hits',
+          albumArtistNames: ['Artist B'],
+          trackNumber: 2,
+        ),
+        song(4).copyWith(
+          serverId: 'one',
+          remoteSongId: '4',
+          remoteAlbumId: 'album',
+          trackNumber: 1,
+        ),
+        song(5).copyWith(
+          serverId: 'two',
+          remoteSongId: '5',
+          remoteAlbumId: 'album',
+          trackNumber: 1,
+        ),
+        song(6).copyWith(
+          serverId: 'one',
+          remoteSongId: '6',
+          remoteAlbumId: 'album',
+          trackNumber: 2,
+        ),
+      ];
+      // Preloading is unnecessary for testing grouping of remote metadata.
+      await handler.setSongs(songs, preload: false);
+      await handler.setShuffleMode(AudioServiceShuffleMode.group);
+      final order = <int>[handler.logicalQueue.index];
+      while (handler.logicalQueue.next() != null) {
+        handler.logicalQueue.index = handler.logicalQueue.next()!;
+        order.add(handler.logicalQueue.index);
+      }
+      expect(order.toSet().length, songs.length);
+      for (final album in [
+        [0, 2],
+        [1, 3],
+        [4, 6],
+      ]) {
+        final start = order.indexOf(album.first);
+        expect(order.sublist(start, start + album.length), album);
+      }
+    },
+  );
+
+  test('settings cycle all modes within the current playlist', () async {
+    final library = List.generate(5, song);
+    final container = ProviderContainer(
+      overrides: [
+        audioPlayerProvider.overrideWithValue(player),
+        libraryAudioHandlerProvider.overrideWithValue(handler),
+        filteredAudioFilesProvider.overrideWith(
+          (_) async => UnmodifiableListView(library),
+        ),
+      ],
+    );
+    addTearDown(container.dispose);
+    await container.read(filteredAudioFilesProvider.future);
+    await container.read(audioPlayerServiceProvider.future);
+    final service = container.read(audioPlayerServiceProvider.notifier);
+    await service.setAudioSource(
+      nowPlayingType: NowPlayingType.playlist,
+      musicMetadataList: [library[3], library[1]],
+    );
+    await handler.select(0);
+    await handler.seek(const Duration(seconds: 4));
+    await flushEvents();
+    await service.toggleShuffleMode();
+    await flushEvents();
+    var details = container.read(nowPlayingDetailsProvider);
+    expect(details.shuffleMode, PlaybackShuffleMode.songs);
+    expect(details.metadataList, [library[3], library[1]]);
+    expect(details.currentMetadata, library[3]);
+    expect(details.queuePosition, 0);
+    expect(player.position, const Duration(seconds: 4));
+    expect(player.playing, isTrue);
+    await service.toggleShuffleMode();
+    await flushEvents();
+    details = container.read(nowPlayingDetailsProvider);
+    expect(details.shuffleMode, PlaybackShuffleMode.albums);
+    expect(details.isShuffleEnabled, isTrue);
+    await service.toggleShuffleMode();
+    await flushEvents();
+    details = container.read(nowPlayingDetailsProvider);
+    expect(details.shuffleMode, PlaybackShuffleMode.off);
+    expect(details.queuePosition, 0);
+    expect(details.isShuffleEnabled, isFalse);
+  });
+
   test(
     'shuffle visits all 50k positions once and restores sequential order',
     () {
       final queue = LogicalQueue(random: Random(42));
       queue.reset(50000);
       queue.index = 123;
-      queue.setShuffle(true);
+      queue.setShuffle(PlaybackShuffleMode.songs);
       expect(queue.position, 0);
       final visited = <int>{queue.index};
       while (queue.next() != null) {
@@ -684,7 +826,7 @@ void main() {
         expect(queue.position, visited.length - 1);
       }
       expect(visited.length, 50000);
-      queue.setShuffle(false);
+      queue.setShuffle(PlaybackShuffleMode.off);
       queue.index = 123;
       expect(queue.next(), 124);
       expect(queue.previous(), 122);

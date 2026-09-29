@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
+import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
@@ -42,7 +43,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   final ScrollController _lyricsScrollController = ScrollController();
   late Timer _longPressTimer;
   Timer _lastVolumeChangeTimer = Timer(Duration.zero, () {});
-  bool _isShuffleEnabled = false;
+  PlaybackShuffleMode _shuffleMode = PlaybackShuffleMode.off;
   _NowPlayingBottomBarPage _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
   String? _lastLyricsSongIndex;
 
@@ -71,12 +72,13 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
         curve: Curves.ease,
       );
       setState(() {
+        _shuffleMode = ref.read(nowPlayingDetailsProvider).shuffleMode;
         _bottomBarPage = _NowPlayingBottomBarPage.shuffleBar;
       });
     } else if (_bottomBarPage == _NowPlayingBottomBarPage.shuffleBar) {
       await ref
           .read(audioPlayerServiceProvider.notifier)
-          .setShuffleMode(_isShuffleEnabled);
+          .setShuffleMode(_shuffleMode);
       await _bottomBarPageController.animateToPage(
         3,
         duration: const Duration(milliseconds: 300),
@@ -165,7 +167,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       return;
     } else if (_bottomBarPage == _NowPlayingBottomBarPage.shuffleBar) {
       setState(() {
-        _isShuffleEnabled = true;
+        _shuffleMode =
+            PlaybackShuffleMode.values[(_shuffleMode.index + 1).clamp(0, 2)];
       });
       return;
     } else if (_bottomBarPage == _NowPlayingBottomBarPage.ratingBar) {
@@ -192,7 +195,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       return;
     } else if (_bottomBarPage == _NowPlayingBottomBarPage.shuffleBar) {
       setState(() {
-        _isShuffleEnabled = false;
+        _shuffleMode =
+            PlaybackShuffleMode.values[(_shuffleMode.index - 1).clamp(0, 2)];
       });
       return;
     } else if (_bottomBarPage == _NowPlayingBottomBarPage.ratingBar) {
@@ -443,10 +447,10 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                           const NowPlayingBottomBar(),
                           const NowPlayingBottomBar(showScrubber: true),
                           ShuffleSegmentedControl(
-                            isShuffleEnabled: _isShuffleEnabled,
+                            shuffleMode: _shuffleMode,
                             onValueChanged: (value) {
                               setState(() {
-                                _isShuffleEnabled = value ?? _isShuffleEnabled;
+                                _shuffleMode = value ?? _shuffleMode;
                               });
                             },
                           ),

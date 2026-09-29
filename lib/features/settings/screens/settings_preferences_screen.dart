@@ -188,8 +188,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     _SettingsDisplayItems settingsItem,
   ) {
     switch (settingsItem) {
-      case _SettingsDisplayItems.shuffle:
-        return ref.watch(nowPlayingDetailsProvider).isShuffleEnabled;
       case _SettingsDisplayItems.isTouchScreenEnabled:
         return settingsState.isTouchScreenEnabled;
       case _SettingsDisplayItems.vibrate:
@@ -210,6 +208,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     _SettingsDisplayItems settingsItem,
   ) {
     switch (settingsItem) {
+      case _SettingsDisplayItems.shuffle:
+        return ref.watch(nowPlayingDetailsProvider).shuffleMode.title(context);
       case _SettingsDisplayItems.deviceColor:
         return settingsState.deviceColor.title(context);
       case _SettingsDisplayItems.clickWheelSize:

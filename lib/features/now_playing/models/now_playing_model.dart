@@ -1,4 +1,5 @@
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:just_audio/just_audio.dart';
 
 enum NowPlayingType { album, playlist, songs }
@@ -10,7 +11,9 @@ class NowPlayingModel {
   final NowPlayingType nowPlayingType;
   final MusicMetadata? currentMetadata;
   final List<MusicMetadata> metadataList;
-  final bool isShuffleEnabled;
+  final PlaybackShuffleMode shuffleMode;
+
+  bool get isShuffleEnabled => shuffleMode != PlaybackShuffleMode.off;
   final LoopMode loopMode;
 
   NowPlayingModel({
@@ -20,7 +23,7 @@ class NowPlayingModel {
     required this.nowPlayingType,
     this.currentMetadata,
     required this.metadataList,
-    required this.isShuffleEnabled,
+    required this.shuffleMode,
     required this.loopMode,
   }) : queuePosition = queuePosition ?? currentIndex;
 
@@ -31,7 +34,7 @@ class NowPlayingModel {
     NowPlayingType? nowPlayingType,
     MusicMetadata? currentMetadata,
     List<MusicMetadata>? metadataList,
-    bool? isShuffleEnabled,
+    PlaybackShuffleMode? shuffleMode,
     LoopMode? loopMode,
   }) {
     return NowPlayingModel(
@@ -41,7 +44,7 @@ class NowPlayingModel {
       nowPlayingType: nowPlayingType ?? this.nowPlayingType,
       currentMetadata: currentMetadata ?? this.currentMetadata,
       metadataList: metadataList ?? this.metadataList,
-      isShuffleEnabled: isShuffleEnabled ?? this.isShuffleEnabled,
+      shuffleMode: shuffleMode ?? this.shuffleMode,
       loopMode: loopMode ?? this.loopMode,
     );
   }
@@ -57,7 +60,7 @@ class NowPlayingModel {
         other.nowPlayingType == nowPlayingType &&
         other.currentMetadata == currentMetadata &&
         other.metadataList == metadataList &&
-        other.isShuffleEnabled == isShuffleEnabled &&
+        other.shuffleMode == shuffleMode &&
         other.loopMode == loopMode;
   }
 
@@ -70,13 +73,13 @@ class NowPlayingModel {
       nowPlayingType,
       currentMetadata,
       metadataList,
-      isShuffleEnabled,
+      shuffleMode,
       loopMode,
     );
   }
 
   @override
   String toString() {
-    return "NowPlayingModel(currentIndex: $currentIndex, queuePosition: $queuePosition, isPlaying: $isPlaying, nowPlayingType: $nowPlayingType, currentMetadata: $currentMetadata, metadataList: $metadataList, isShuffleEnabled: $isShuffleEnabled, loopMode: $loopMode)";
+    return "NowPlayingModel(currentIndex: $currentIndex, queuePosition: $queuePosition, isPlaying: $isPlaying, nowPlayingType: $nowPlayingType, currentMetadata: $currentMetadata, metadataList: $metadataList, shuffleMode: $shuffleMode, loopMode: $loopMode)";
   }
 }

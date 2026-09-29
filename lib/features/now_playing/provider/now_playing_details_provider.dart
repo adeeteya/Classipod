@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/repositories/library/library_repository.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
@@ -67,7 +68,9 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
     final queueOrderStream = handler.playbackState
         .map(
           (value) => (
-            isShuffleEnabled: value.shuffleMode != AudioServiceShuffleMode.none,
+            shuffleMode: PlaybackShuffleMode.fromAudioService(
+              value.shuffleMode,
+            ),
             position: handler.logicalQueue.position,
           ),
         )
@@ -75,7 +78,7 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
     subscriptions.add(
       queueOrderStream.listen((order) {
         state = state.copyWith(
-          isShuffleEnabled: order.isShuffleEnabled,
+          shuffleMode: order.shuffleMode,
           queuePosition: order.position,
         );
       }),
@@ -92,7 +95,7 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
       nowPlayingType: NowPlayingType.songs,
       metadataList: [],
       loopMode: LoopMode.off,
-      isShuffleEnabled: false,
+      shuffleMode: PlaybackShuffleMode.off,
     );
   }
 
@@ -109,7 +112,7 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
           .position,
       currentMetadata: songs.isEmpty ? null : songs[index < 0 ? 0 : index],
       isPlaying: index >= 0 && state.isPlaying,
-      isShuffleEnabled: state.isShuffleEnabled,
+      shuffleMode: state.shuffleMode,
       loopMode: state.loopMode,
       nowPlayingType: state.nowPlayingType,
     );
@@ -121,7 +124,7 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
   }) {
     state = NowPlayingModel(
       isPlaying: state.isPlaying,
-      isShuffleEnabled: state.isShuffleEnabled,
+      shuffleMode: state.shuffleMode,
       loopMode: state.loopMode,
       currentIndex: 0,
       nowPlayingType: nowPlayingType ?? state.nowPlayingType,

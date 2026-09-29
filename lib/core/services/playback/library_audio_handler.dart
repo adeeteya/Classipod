@@ -2,7 +2,9 @@ import 'dart:async';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/services/playback/logical_queue.dart';
+import 'package:classipod/core/utils/album_order.dart';
 import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -125,6 +127,30 @@ class LibraryAudioHandler extends BaseAudioHandler {
     return result;
   }
 
+  void _resetQueue({int initialIndex = 0}) {
+    final albums = <Object, List<int>>{};
+    for (var index = 0; index < _songs.length; index++) {
+      final song = _songs[index];
+      final Object key =
+          (song.albumName?.trim().isNotEmpty ?? false) ||
+              song.remoteAlbumId != null
+          ? albumIdentityOf(song)
+          : index;
+      albums.putIfAbsent(key, () => []).add(index);
+    }
+    for (final album in albums.values) {
+      album.sort((a, b) {
+        final comparison = compareAlbumTracks(_songs[a], _songs[b]);
+        return comparison == 0 ? a.compareTo(b) : comparison;
+      });
+    }
+    logicalQueue.reset(
+      _songs.length,
+      albums: albums.values.toList(),
+      initialIndex: initialIndex,
+    );
+  }
+
   Future<void> setSongs(List<MusicMetadata> songs, {bool preload = true}) {
     _interruptSeek();
     _wantPlayback = false;
@@ -133,7 +159,7 @@ class LibraryAudioHandler extends BaseAudioHandler {
       final hadSongs = _songs.isNotEmpty;
       if (hadSongs) await player.pause();
       _songs = List.unmodifiable(songs);
-      logicalQueue.reset(songs.length);
+      _resetQueue();
       if (songs.isEmpty) {
         _error = null;
         if (hadSongs) await player.clearAudioSources();
@@ -182,9 +208,8 @@ class LibraryAudioHandler extends BaseAudioHandler {
           : _songs[logicalQueue.index].identity;
       final nextIndex = songs.indexWhere((song) => song.identity == identity);
       _songs = List.unmodifiable(songs);
-      logicalQueue.reset(songs.length);
+      _resetQueue(initialIndex: nextIndex < 0 ? 0 : nextIndex);
       if (nextIndex >= 0) {
-        logicalQueue.index = nextIndex;
         _indices.add(nextIndex);
       } else {
         await player.stop();
@@ -373,7 +398,7 @@ class LibraryAudioHandler extends BaseAudioHandler {
 
   @override
   Future<void> setShuffleMode(AudioServiceShuffleMode shuffleMode) async {
-    logicalQueue.setShuffle(shuffleMode != AudioServiceShuffleMode.none);
+    logicalQueue.setShuffle(PlaybackShuffleMode.fromAudioService(shuffleMode));
     _broadcast();
   }
 
@@ -476,9 +501,7 @@ class LibraryAudioHandler extends BaseAudioHandler {
           LoopMode.one => AudioServiceRepeatMode.one,
           LoopMode.all => AudioServiceRepeatMode.all,
         },
-        shuffleMode: logicalQueue.shuffled
-            ? AudioServiceShuffleMode.all
-            : AudioServiceShuffleMode.none,
+        shuffleMode: logicalQueue.shuffleMode.audioServiceMode,
       ),
     );
   }

@@ -1,5 +1,9 @@
 ## 2.0.0 (Unreleased)
 
+- Add Off, Songs, and Albums shuffle modes to Now Playing and Settings.
+  Shuffle songs or whole albums within the current library or playlist,
+  keeping album tracks together in disc and track order.
+
 - Align platform release metadata, citation, security policy, and release
   documentation with app version 2.0.0.
 

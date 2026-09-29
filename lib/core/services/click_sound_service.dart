@@ -20,6 +20,11 @@ class ClickSoundService {
   ClickSoundService(this._player);
 
   static const asset = 'assets/sounds/ipod_click.wav';
+  static final bool _reopenForClick =
+      !kIsWeb &&
+      (defaultTargetPlatform == TargetPlatform.windows ||
+          defaultTargetPlatform == TargetPlatform.linux);
+
   final AudioPlayer _player;
   Future<void>? _loading;
   bool _ready = false;
@@ -33,7 +38,7 @@ class ClickSoundService {
 
   Future<void> _load() async {
     try {
-      await _player.setAsset(asset);
+      await _player.setAsset(asset, preload: !_reopenForClick);
       if (!_disposed) _ready = true;
     } catch (error) {
       _report(error);
@@ -54,7 +59,13 @@ class ClickSoundService {
 
   Future<void> _restart() async {
     try {
-      await _player.seek(Duration.zero);
+      if (_reopenForClick) {
+        await _player.pause();
+        if (_disposed) return;
+        await _player.setAsset(asset, preload: false);
+      } else {
+        await _player.seek(Duration.zero);
+      }
       if (_disposed) return;
       unawaited(_player.play().catchError(_report));
     } catch (error) {

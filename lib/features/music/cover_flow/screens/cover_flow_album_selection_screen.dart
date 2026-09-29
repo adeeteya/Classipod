@@ -1,3 +1,4 @@
+import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -59,8 +60,8 @@ class _CoverFlowAlbumSelectionScreenState
           padding: const EdgeInsets.fromLTRB(40, 10, 40, 0),
           child: DecoratedBox(
             decoration: BoxDecoration(
-              color: CupertinoColors.white,
-              border: Border.all(),
+              color: context.appSurfaceColor,
+              border: Border.all(color: context.appOutlineColor),
             ),
             child: Column(
               children: [
@@ -68,8 +69,8 @@ class _CoverFlowAlbumSelectionScreenState
                   height: 50,
                   width: double.infinity,
                   child: DecoratedBox(
-                    decoration: const BoxDecoration(
-                      gradient: IpodGradients.selection,
+                    decoration: BoxDecoration(
+                      gradient: IpodGradients.selectionFor(context),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),

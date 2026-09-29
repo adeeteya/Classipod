@@ -1,4 +1,3 @@
-import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
@@ -76,12 +75,16 @@ class NowPlayingWidget extends ConsumerWidget {
                   Row(
                     children: List.generate(
                       nowPlayingDetails.currentMetadata?.rating ?? 0,
-                      (index) => const Padding(
-                        padding: EdgeInsets.only(right: 2, top: 4, bottom: 4),
+                      (index) => Padding(
+                        padding: const EdgeInsets.only(
+                          right: 2,
+                          top: 4,
+                          bottom: 4,
+                        ),
                         child: Icon(
                           CupertinoIcons.star_fill,
                           size: 14,
-                          color: AppPalette.ratingIcon,
+                          color: context.appRatingIconColor,
                         ),
                       ),
                     ),

@@ -35,7 +35,7 @@ class DisplayListTile extends StatelessWidget {
                     ),
                   )
                 : null,
-            gradient: isSelected ? IpodGradients.selection : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),

@@ -1,3 +1,4 @@
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -45,18 +46,18 @@ enum AppTheme {
       case AppTheme.dark:
         return CupertinoThemeData(
           brightness: Brightness.dark,
-          scaffoldBackgroundColor: const Color(0xFF1F1F21),
-          barBackgroundColor: const Color(0xFF2C2C2E),
+          scaffoldBackgroundColor: AppPalette.darkScreenBackground,
+          barBackgroundColor: AppPalette.darkSurface,
           primaryColor: CupertinoColors.activeBlue,
           textTheme: CupertinoTextThemeData(
             navTitleTextStyle: IpodTypography.screenTitle.copyWith(
-              color: CupertinoColors.white,
+              color: AppPalette.darkPrimaryText,
             ),
             navLargeTitleTextStyle: IpodTypography.title.copyWith(
-              color: CupertinoColors.white,
+              color: AppPalette.darkPrimaryText,
             ),
             textStyle: IpodTypography.body.copyWith(
-              color: CupertinoColors.white,
+              color: AppPalette.darkPrimaryText,
             ),
           ),
         );

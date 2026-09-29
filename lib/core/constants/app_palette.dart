@@ -145,6 +145,16 @@ class AppPalette {
   );
   static const Color brownDeviceButtonAccentColor = Color(0xFFEDE0D4);
 
+  static const Color darkScreenBackground = Color(0xFF121418);
+  static const Color darkSurface = Color(0xFF1C2026);
+  static const Color darkPrimaryText = Color(0xFFE8EAED);
+  static const Color darkSecondaryText = Color(0xFFB0B6C0);
+  static const Color darkRatingIcon = Color(0xFFD6DBE3);
+  static const Color darkSelectionTop = Color(0xFF245F95);
+  static const Color darkSelectionBottom = Color(0xFF194775);
+  static const Color darkPreviewTop = Color(0xFF303741);
+  static const Color darkPreviewBottom = Color(0xFF1A1F26);
+
   static const Color screenBackground = Color(0xFFFFFFFF);
   static const Color primaryText = Color(0xFF000000);
   static const Color selectedText = Color(0xFFFFFFFF);
@@ -176,8 +186,8 @@ class AppPalette {
   static const Color statusBarGradientColor1 = Color(0xFFFAFAFA);
   static const Color statusBarGradientColor2 = Color(0xFFABABAB);
   static const Color statusBarBorderColor = Color(0xFF6A6A6A);
-  static const Color darkStatusBarGradientColor1 = Color(0xFFB5B7BC);
-  static const Color darkStatusBarGradientColor2 = Color(0xFF5E6166);
+  static const Color darkStatusBarGradientColor1 = Color(0xFF333942);
+  static const Color darkStatusBarGradientColor2 = Color(0xFF22272E);
   static const Color darkStatusBarBorderColor = Color(0xFF3E4045);
   static const Color hintTextColor = Color(0xFF333333);
   static const Color inActiveSliderGradientColor1 = Color(0xFFFFFFFF);

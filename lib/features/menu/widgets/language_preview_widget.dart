@@ -10,7 +10,9 @@ class LanguagePreviewWidget extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: DecoratedBox(
-        decoration: const BoxDecoration(gradient: IpodGradients.splitPreview),
+        decoration: BoxDecoration(
+          gradient: IpodGradients.splitPreviewFor(context),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Stack(

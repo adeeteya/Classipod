@@ -46,7 +46,7 @@ class AlbumListTile extends ConsumerWidget {
         child: DecoratedBox(
           decoration: BoxDecoration(
             border: tileBorder,
-            gradient: isSelected ? IpodGradients.selection : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
           ),
           child: Row(
             children: [

@@ -43,7 +43,9 @@ class _SleepTimerPreviewWidgetState
       key: const ValueKey(SplitScreenType.sleepTimer),
       width: double.infinity,
       child: DecoratedBox(
-        decoration: const BoxDecoration(gradient: IpodGradients.splitPreview),
+        decoration: BoxDecoration(
+          gradient: IpodGradients.splitPreviewFor(context),
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
           child: Column(

@@ -41,7 +41,7 @@ class SongListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: isSelected ? IpodGradients.selection : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
             border: tileBorder,
           ),
           child: Padding(

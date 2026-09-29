@@ -33,7 +33,7 @@ class AlbumArtSongListTile extends ConsumerWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: isSelected ? IpodGradients.selection : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
           ),
           child: Row(
             children: [

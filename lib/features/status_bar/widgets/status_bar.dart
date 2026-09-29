@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
@@ -40,7 +41,7 @@ class StatusBar extends StatelessWidget {
                 child: Text(
                   title,
                   style: IpodTypography.screenTitle.copyWith(
-                    color: AppPalette.primaryText,
+                    color: context.appPrimaryTextColor,
                   ),
                   maxLines: 1,
                 ),

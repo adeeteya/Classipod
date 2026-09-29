@@ -14,6 +14,7 @@ class RatingBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(
@@ -23,15 +24,21 @@ class RatingBar extends StatelessWidget {
           child: GestureDetector(
             onTap: () => onRatingClicked(index + 1),
             child: (currentRating > index)
-                ? ShaderMask(
-                    shaderCallback: IpodGradients.selection.createShader,
-                    blendMode: BlendMode.srcIn,
-                    child: const Icon(
-                      CupertinoIcons.star_fill,
-                      size: 24,
-                      color: CupertinoColors.white,
-                    ),
-                  )
+                ? isDark
+                      ? Icon(
+                          CupertinoIcons.star_fill,
+                          size: 24,
+                          color: context.appRatingIconColor,
+                        )
+                      : ShaderMask(
+                          shaderCallback: IpodGradients.selection.createShader,
+                          blendMode: BlendMode.srcIn,
+                          child: const Icon(
+                            CupertinoIcons.star_fill,
+                            size: 24,
+                            color: CupertinoColors.white,
+                          ),
+                        )
                 : SizedBox(
                     height: 24,
                     width: 24,
@@ -39,7 +46,7 @@ class RatingBar extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       child: DecoratedBox(
                         decoration: ShapeDecoration(
-                          color: context.appPrimaryTextColor,
+                          color: context.appSecondaryTextColor,
                           shape: const CircleBorder(),
                         ),
                       ),

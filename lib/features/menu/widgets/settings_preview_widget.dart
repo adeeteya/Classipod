@@ -15,7 +15,9 @@ class SettingsPreviewWidget extends StatelessWidget {
       key: const ValueKey(SplitScreenType.settings),
       width: double.infinity,
       child: DecoratedBox(
-        decoration: const BoxDecoration(gradient: IpodGradients.splitPreview),
+        decoration: BoxDecoration(
+          gradient: IpodGradients.splitPreviewFor(context),
+        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: Stack(

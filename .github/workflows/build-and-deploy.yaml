@@ -137,7 +137,14 @@ jobs:
           sudo apt-get -y install patchelf rpm
       
       - name: Build and release
-        run: fastforge release --name production
+        run: |
+          mkdir -p "$RUNNER_TEMP/fastforge-bin"
+          cat > "$RUNNER_TEMP/fastforge-bin/cp" <<'SH'
+          #!/usr/bin/env bash
+          exec flock "$RUNNER_TEMP/classipod-appimage-copy.lock" /usr/bin/cp "$@"
+          SH
+          chmod +x "$RUNNER_TEMP/fastforge-bin/cp"
+          PATH="$RUNNER_TEMP/fastforge-bin:$PATH" fastforge release --name production
       
       - name: "Publish Linux Release"
         env:

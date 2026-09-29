@@ -65,7 +65,7 @@ if(POLICY CMP0175)
 endif()
 
 if(MSVC AND TARGET audio_service_win_plugin)
-  target_compile_features(audio_service_win_plugin PRIVATE cxx_std_20)
+  target_compile_options(audio_service_win_plugin PRIVATE /await:strict)
 endif()
 
 # permission_handler_windows 0.2.2 enables C++20 but also adds legacy /await.

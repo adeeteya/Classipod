@@ -10,6 +10,23 @@ final albumDetailsProvider = Provider<List<AlbumModel>>((ref) {
   return buildAlbumDetails(metadataList);
 });
 
+final songAlbumArtworkProvider = Provider.autoDispose
+    .family<String?, MusicMetadata?>((ref, song) {
+      if (song == null) return null;
+      if (!song.isSubsonic || song.remoteAlbumId == null) {
+        return song.thumbnailPath;
+      }
+      final albums = ref.watch(albumDetailsProvider);
+      for (final album in albums) {
+        final first = album.albumSongs.firstOrNull;
+        if (first?.serverId == song.serverId &&
+            first?.remoteAlbumId == song.remoteAlbumId) {
+          return album.albumArtPath ?? song.thumbnailPath;
+        }
+      }
+      return song.thumbnailPath;
+    });
+
 List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
   final albumsByIdentity = <String, List<MusicMetadata>>{};
 

@@ -9,6 +9,7 @@ import 'package:classipod/features/menu/widgets/icon_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/language_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/now_playing_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/settings_preview_widget.dart';
+import 'package:classipod/features/menu/widgets/split_screen_preview_transition.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
@@ -291,27 +292,8 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
                 Expanded(
                   child: SlideTransition(
                     position: _rightSlideAnimation,
-                    child: AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 500),
-                      transitionBuilder: (widget, animation) {
-                        if (splitScreenType == SplitScreenType.albumArt) {
-                          final slideAnimation = Tween<Offset>(
-                            begin: const Offset(1, 0),
-                            end: Offset.zero,
-                          ).animate(animation);
-                          return FadeTransition(
-                            opacity: animation,
-                            child: SlideTransition(
-                              position: slideAnimation,
-                              child: widget,
-                            ),
-                          );
-                        }
-                        return FadeTransition(
-                          opacity: animation,
-                          child: widget,
-                        );
-                      },
+                    child: SplitScreenPreviewTransition(
+                      type: splitScreenType,
                       child: splitScreenWidget,
                     ),
                   ),

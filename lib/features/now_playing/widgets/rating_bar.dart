@@ -1,5 +1,5 @@
-import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class RatingBar extends StatelessWidget {
@@ -23,10 +23,14 @@ class RatingBar extends StatelessWidget {
           child: GestureDetector(
             onTap: () => onRatingClicked(index + 1),
             child: (currentRating > index)
-                ? const Icon(
-                    CupertinoIcons.star_fill,
-                    size: 24,
-                    color: AppPalette.selectedTileGradientColor2,
+                ? ShaderMask(
+                    shaderCallback: IpodGradients.selection.createShader,
+                    blendMode: BlendMode.srcIn,
+                    child: const Icon(
+                      CupertinoIcons.star_fill,
+                      size: 24,
+                      color: CupertinoColors.white,
+                    ),
                   )
                 : SizedBox(
                     height: 24,

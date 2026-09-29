@@ -1,6 +1,6 @@
-import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/duration_extensions.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -30,16 +30,7 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient: isSelected ? IpodGradients.selection : null,
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),

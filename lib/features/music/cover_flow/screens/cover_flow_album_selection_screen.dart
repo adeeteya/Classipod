@@ -1,7 +1,7 @@
-import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
@@ -69,14 +69,7 @@ class _CoverFlowAlbumSelectionScreenState
                   width: double.infinity,
                   child: DecoratedBox(
                     decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          AppPalette.selectedTileGradientColor1,
-                          AppPalette.selectedTileGradientColor2,
-                        ],
-                      ),
+                      gradient: IpodGradients.selection,
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),

@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/status_bar/widgets/battery_indicator.dart';
@@ -16,15 +17,9 @@ class StatusBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDarkTheme =
         CupertinoTheme.of(context).brightness == Brightness.dark;
-    final gradientColors = isDarkTheme
-        ? const [
-            AppPalette.darkStatusBarGradientColor1,
-            AppPalette.darkStatusBarGradientColor2,
-          ]
-        : const [
-            AppPalette.statusBarGradientColor1,
-            AppPalette.statusBarGradientColor2,
-          ];
+    final gradient = isDarkTheme
+        ? IpodGradients.darkStatusBar
+        : IpodGradients.statusBar;
     final borderColor = isDarkTheme
         ? AppPalette.darkStatusBarBorderColor
         : AppPalette.statusBarBorderColor;
@@ -34,11 +29,7 @@ class StatusBar extends StatelessWidget {
       width: double.infinity,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: gradientColors,
-          ),
+          gradient: gradient,
           border: Border(bottom: BorderSide(color: borderColor)),
         ),
         child: Padding(
@@ -49,7 +40,7 @@ class StatusBar extends StatelessWidget {
                 child: Text(
                   title,
                   style: IpodTypography.screenTitle.copyWith(
-                    color: CupertinoColors.black,
+                    color: AppPalette.primaryText,
                   ),
                   maxLines: 1,
                 ),
@@ -63,7 +54,7 @@ class StatusBar extends StatelessWidget {
                     isPlaying
                         ? CupertinoIcons.play_fill
                         : CupertinoIcons.pause_fill,
-                    color: AppPalette.selectedTileGradientColor1,
+                    color: AppPalette.playbackIcon,
                   );
                 },
               ),

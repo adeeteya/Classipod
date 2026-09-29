@@ -6,19 +6,19 @@ class AppColorScheme {
 
   static const CupertinoDynamicColor screenBackground =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
+        color: AppPalette.screenBackground,
         darkColor: Color(0xFF0F1115),
       );
 
   static const CupertinoDynamicColor surface =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
+        color: AppPalette.screenBackground,
         darkColor: Color(0xFF1C1D21),
       );
 
   static const CupertinoDynamicColor primaryText =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.black,
+        color: AppPalette.primaryText,
         darkColor: Color(0xFFE6E7EA),
       );
 
@@ -30,7 +30,7 @@ class AppColorScheme {
 
   static const CupertinoDynamicColor inverseText =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
+        color: AppPalette.selectedText,
         darkColor: Color(0xFF101214),
       );
 
@@ -48,25 +48,25 @@ class AppColorScheme {
 
   static const CupertinoDynamicColor deviceScreenBackground =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
+        color: AppPalette.screenBackground,
         darkColor: AppPalette.darkDeviceScreenColor,
       );
 
   static const CupertinoDynamicColor controlSurface =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
+        color: AppPalette.screenBackground,
         darkColor: AppPalette.darkDeviceControlBackgroundColor,
       );
 
   static const CupertinoDynamicColor iconEmphasis =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.black,
+        color: AppPalette.primaryText,
         darkColor: CupertinoColors.white,
       );
 
   static const CupertinoDynamicColor iconMuted =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
+        color: AppPalette.screenBackground,
         darkColor: Color(0xFF1A1C1F),
       );
 }

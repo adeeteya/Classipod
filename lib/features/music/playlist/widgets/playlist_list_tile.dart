@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -34,16 +35,7 @@ class PlaylistListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient: isSelected ? IpodGradients.selection : null,
             border: tileBorder,
           ),
           child: Padding(

@@ -1,4 +1,4 @@
-import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
@@ -11,16 +11,7 @@ class EmptyStateWidget extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppPalette.darkScreenBackgroundGradient1,
-              AppPalette.darkScreenBackgroundGradient2,
-            ],
-          ),
-        ),
+        decoration: const BoxDecoration(gradient: IpodGradients.splitPreview),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

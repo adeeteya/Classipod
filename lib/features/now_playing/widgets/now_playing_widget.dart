@@ -81,7 +81,7 @@ class NowPlayingWidget extends ConsumerWidget {
                         child: Icon(
                           CupertinoIcons.star_fill,
                           size: 14,
-                          color: AppPalette.selectedTileGradientColor2,
+                          color: AppPalette.ratingIcon,
                         ),
                       ),
                     ),

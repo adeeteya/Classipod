@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -13,15 +14,9 @@ class ScrubberBar extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isDarkTheme =
         CupertinoTheme.of(context).brightness == Brightness.dark;
-    final gradientColors = isDarkTheme
-        ? const [
-            AppPalette.darkSliderGradientColor1,
-            AppPalette.darkSliderGradientColor2,
-          ]
-        : const [
-            AppPalette.inActiveSliderGradientColor1,
-            AppPalette.inActiveSliderGradientColor2,
-          ];
+    final gradient = isDarkTheme
+        ? IpodGradients.darkSliderTrack
+        : IpodGradients.sliderTrack;
     final borderColor = isDarkTheme
         ? AppPalette.darkSliderBorderColor
         : AppPalette.sliderBorderColor;
@@ -48,11 +43,7 @@ class ScrubberBar extends ConsumerWidget {
                     width: constraints.maxWidth,
                     child: DecoratedBox(
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: gradientColors,
-                        ),
+                        gradient: gradient,
                         border: Border.all(color: borderColor),
                       ),
                     ),

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/volume_mode.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -56,15 +57,9 @@ class _VolumeBarState extends ConsumerState<VolumeBar> {
   Widget build(BuildContext context) {
     final isDarkTheme =
         CupertinoTheme.of(context).brightness == Brightness.dark;
-    final inactiveGradientColors = isDarkTheme
-        ? const [
-            AppPalette.darkSliderGradientColor1,
-            AppPalette.darkSliderGradientColor2,
-          ]
-        : const [
-            AppPalette.inActiveSliderGradientColor1,
-            AppPalette.inActiveSliderGradientColor2,
-          ];
+    final gradient = isDarkTheme
+        ? IpodGradients.darkSliderTrack
+        : IpodGradients.sliderTrack;
     final borderColor = isDarkTheme
         ? AppPalette.darkSliderBorderColor
         : AppPalette.sliderBorderColor;
@@ -93,11 +88,7 @@ class _VolumeBarState extends ConsumerState<VolumeBar> {
                         width: constraints.maxWidth,
                         child: DecoratedBox(
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                              begin: Alignment.topCenter,
-                              end: Alignment.bottomCenter,
-                              colors: inactiveGradientColors,
-                            ),
+                            gradient: gradient,
                             border: Border.all(color: borderColor),
                           ),
                         ),
@@ -109,21 +100,7 @@ class _VolumeBarState extends ConsumerState<VolumeBar> {
                       margin: const EdgeInsets.symmetric(horizontal: 8),
                       duration: const Duration(milliseconds: 10),
                       decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            AppPalette.nowProgressBarGradientColor1,
-                            AppPalette.nowProgressBarGradientColor2,
-                            AppPalette.nowProgressBarGradientColor1,
-                            AppPalette.nowProgressBarGradientColor3,
-                            AppPalette.nowProgressBarGradientColor4,
-                            AppPalette.nowProgressBarGradientColor5,
-                            AppPalette.nowProgressBarGradientColor6,
-                            AppPalette.nowProgressBarGradientColor7,
-                            AppPalette.nowProgressBarGradientColor8,
-                          ],
-                        ),
+                        gradient: IpodGradients.progress,
                         boxShadow: [
                           BoxShadow(
                             color: progressShadowColor,

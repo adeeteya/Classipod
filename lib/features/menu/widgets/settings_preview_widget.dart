@@ -1,6 +1,7 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -14,16 +15,7 @@ class SettingsPreviewWidget extends StatelessWidget {
       key: const ValueKey(SplitScreenType.settings),
       width: double.infinity,
       child: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppPalette.darkScreenBackgroundGradient1,
-              AppPalette.darkScreenBackgroundGradient2,
-            ],
-          ),
-        ),
+        decoration: const BoxDecoration(gradient: IpodGradients.splitPreview),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: Stack(
@@ -37,7 +29,7 @@ class SettingsPreviewWidget extends StatelessWidget {
                   maxLines: 1,
                   textAlign: TextAlign.center,
                   style: IpodTypography.title.copyWith(
-                    color: CupertinoColors.white,
+                    color: AppPalette.previewForeground,
                   ),
                 ),
               ),
@@ -46,7 +38,7 @@ class SettingsPreviewWidget extends StatelessWidget {
                   Assets.appIcon,
                   height: 64,
                   width: 64,
-                  color: CupertinoColors.white,
+                  color: AppPalette.previewForeground,
                 ),
               ),
             ],

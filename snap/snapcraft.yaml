@@ -13,6 +13,9 @@ base: core22
 grade: stable
 
 slots:
+  mpris:
+    interface: mpris
+    name: classipod
   dbus-classipod:
     interface: dbus
     bus: session
@@ -29,6 +32,7 @@ apps:
       - desktop-legacy
       - home
     slots:
+      - mpris
       - dbus-classipod
 parts:
   classipod:

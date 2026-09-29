@@ -11,6 +11,8 @@ environment:
 
 dependencies:
   audio_service: ^0.18.19
+  audio_service_mpris: ^0.2.1
+  audio_service_win: ^0.0.3
   battery_plus: ^7.1.1
   crypto: ^3.0.7
   cupertino_icons: ^1.0.9

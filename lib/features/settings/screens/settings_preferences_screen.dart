@@ -147,7 +147,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.clickWheelSound:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
-            .toggleClickWheelSound(context);
+            .toggleClickWheelSound();
         break;
       case _SettingsDisplayItems.volumeMode:
         await ref

@@ -1,5 +1,9 @@
 ## 2.0.0 (Unreleased)
 
+- Add Windows system media controls and Linux MPRIS integration for track
+  information, play/pause, and previous/next controls through the existing
+  playback handler.
+
 - Replace system wheel sounds with a bundled iPod-inspired click on all
   platforms, using a separate player without taking audio focus from music.
   Avoid duplicate click and vibration feedback for each scroll step.

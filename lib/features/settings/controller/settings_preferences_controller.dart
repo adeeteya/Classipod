@@ -1,9 +1,7 @@
 import 'dart:async';
 import 'dart:io' as io;
 
-import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/constants/constants.dart';
-import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:classipod/core/repositories/library/library_provider.dart';
@@ -260,20 +258,12 @@ class SettingsPreferencesControllerNotifier
         .setVibrate(isVibrateEnabled: state.vibrate);
   }
 
-  Future<void> toggleClickWheelSound(BuildContext context) async {
+  Future<void> toggleClickWheelSound() async {
     state = state.copyWith(clickWheelSound: !state.clickWheelSound);
 
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setClickWheelSound(isClickWheelSoundEnabled: state.clickWheelSound);
-
-    if (state.clickWheelSound && context.mounted) {
-      await Dialogs.showInfoDialog(
-        context: context,
-        title: context.localization.touchSoundsDialogTitle,
-        content: context.localization.touchSoundsDialogContent,
-      );
-    }
   }
 
   Future<void> toggleVolumeMode() async {

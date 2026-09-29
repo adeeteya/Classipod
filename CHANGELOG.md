@@ -1,5 +1,8 @@
 ## 2.0.0 (Unreleased)
 
+- Make Immersive Mode toggle native fullscreen on macOS, Windows, and Linux,
+  restoring the saved preference at startup.
+
 - Add a saved filename-based duplicate filter in Library Settings. Keep
   the first visible copy without deleting files or saved playlist entries.
 

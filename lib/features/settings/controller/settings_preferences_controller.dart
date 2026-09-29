@@ -29,6 +29,7 @@ import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:universal_html/html.dart';
 import 'package:volume_controller/volume_controller.dart';
+import 'package:window_manager/window_manager.dart';
 
 final settingsPreferencesControllerProvider =
     NotifierProvider<
@@ -86,6 +87,11 @@ class SettingsPreferencesControllerNotifier
       } else {
         await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
       }
+    } else if (io.Platform.isMacOS ||
+        io.Platform.isWindows ||
+        io.Platform.isLinux) {
+      await windowManager.ensureInitialized();
+      await windowManager.setFullScreen(state.immersiveMode);
     }
   }
 

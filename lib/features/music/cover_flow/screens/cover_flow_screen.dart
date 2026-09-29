@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_page_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
@@ -118,9 +119,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                         Text(
                           displayItems[selectedDisplayItem].albumName,
                           maxLines: 1,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                          style: IpodTypography.metadata.copyWith(
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
@@ -128,9 +127,7 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
                         Text(
                           displayItems[selectedDisplayItem].albumArtistName,
                           maxLines: 1,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                          style: IpodTypography.metadata.copyWith(
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),

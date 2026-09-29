@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class SongListTile extends StatelessWidget {
@@ -62,24 +63,20 @@ class SongListTile extends StatelessWidget {
                     children: [
                       Text(
                         songName ?? context.localization.unknownSong,
-                        style: CupertinoTheme.of(context).textTheme.textStyle
-                            .copyWith(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: isSelected
-                                  ? context.appInverseTextColor
-                                  : context.appPrimaryTextColor,
-                            ),
+                        style: IpodTypography.title.copyWith(
+                          color: isSelected
+                              ? context.appInverseTextColor
+                              : context.appPrimaryTextColor,
+                        ),
                         maxLines: 1,
                       ),
                       Text(
                         trackArtistNames ?? context.localization.unknownArtist,
-                        style: CupertinoTheme.of(context).textTheme.textStyle
-                            .copyWith(
-                              color: isSelected
-                                  ? context.appInverseTextColor
-                                  : context.appSecondaryTextColor,
-                            ),
+                        style: IpodTypography.metadata.copyWith(
+                          color: isSelected
+                              ? context.appInverseTextColor
+                              : context.appSecondaryTextColor,
+                        ),
                         maxLines: 1,
                       ),
                     ],

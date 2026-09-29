@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
@@ -44,10 +45,7 @@ class NowPlayingWidget extends ConsumerWidget {
                 MarqueeText(
                   nowPlayingDetails.currentMetadata?.trackName ??
                       context.localization.unknownSong,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: IpodTypography.title,
                   delayBefore: const Duration(seconds: 2),
                   pauseBetween: const Duration(seconds: 2),
                   pauseOnBounce: const Duration(seconds: 2),
@@ -56,10 +54,8 @@ class NowPlayingWidget extends ConsumerWidget {
                 MarqueeText(
                   nowPlayingDetails.currentMetadata?.getTrackArtistNames ??
                       context.localization.unknownArtist,
-                  style: context.appTextStyle.copyWith(
+                  style: IpodTypography.metadata.copyWith(
                     color: context.appSecondaryTextColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
                   ),
                   delayBefore: const Duration(seconds: 2),
                   pauseBetween: const Duration(seconds: 2),
@@ -69,10 +65,8 @@ class NowPlayingWidget extends ConsumerWidget {
                 MarqueeText(
                   nowPlayingDetails.currentMetadata?.albumName ??
                       context.localization.unknownAlbum,
-                  style: context.appTextStyle.copyWith(
+                  style: IpodTypography.metadata.copyWith(
                     color: context.appSecondaryTextColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
                   ),
                   delayBefore: const Duration(seconds: 2),
                   pauseBetween: const Duration(seconds: 2),
@@ -96,10 +90,7 @@ class NowPlayingWidget extends ConsumerWidget {
                   const SizedBox(height: 22),
                 Text(
                   "${nowPlayingDetails.currentIndex + 1} ${context.localization.commonOfText} ${nowPlayingDetails.metadataList.length}",
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: IpodTypography.caption,
                 ),
                 const Spacer(),
               ],

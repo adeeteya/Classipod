@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class AboutListTile extends StatelessWidget {
@@ -20,17 +21,13 @@ class AboutListTile extends StatelessWidget {
         children: [
           Text(
             titleText,
-            style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+            style: IpodTypography.title.copyWith(
               color: context.appPrimaryTextColor,
             ),
           ),
           Text(
             valueText,
-            style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
+            style: IpodTypography.title.copyWith(
               color: context.appPrimaryTextColor,
             ),
           ),

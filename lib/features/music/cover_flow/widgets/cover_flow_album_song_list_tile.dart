@@ -1,6 +1,7 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/duration_extensions.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
@@ -49,14 +50,11 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                   flex: 5,
                   child: MarqueeText(
                     songName,
-                    style: CupertinoTheme.of(context).textTheme.textStyle
-                        .copyWith(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: isSelected
-                              ? context.appInverseTextColor
-                              : context.appPrimaryTextColor,
-                        ),
+                    style: IpodTypography.menu.copyWith(
+                      color: isSelected
+                          ? context.appInverseTextColor
+                          : context.appPrimaryTextColor,
+                    ),
                   ),
                 ),
                 Flexible(
@@ -70,14 +68,11 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                         )
                       : Text(
                           songDuration.getMinuteAndSecondString,
-                          style: CupertinoTheme.of(context).textTheme.textStyle
-                              .copyWith(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: isSelected
-                                    ? context.appInverseTextColor
-                                    : context.appPrimaryTextColor,
-                              ),
+                          style: IpodTypography.menu.copyWith(
+                            color: isSelected
+                                ? context.appInverseTextColor
+                                : context.appPrimaryTextColor,
+                          ),
                           maxLines: 1,
                         ),
                 ),

@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/scrubber_bar.dart';
 import 'package:classipod/features/now_playing/widgets/seek_bar.dart';
@@ -65,10 +66,7 @@ class NowPlayingBottomBar extends ConsumerWidget {
                     "$elapsedTimeInMinutes:${elapsedTimeInSeconds < 10 ? "0$elapsedTimeInSeconds" : elapsedTimeInSeconds}",
                     maxLines: 1,
                     softWrap: false,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: IpodTypography.caption,
                   ),
                 ),
               ),
@@ -100,10 +98,7 @@ class NowPlayingBottomBar extends ConsumerWidget {
                     "- $remainingTimeInMinutes:${remainingTimeInSeconds < 10 ? "0$remainingTimeInSeconds" : remainingTimeInSeconds}",
                     maxLines: 1,
                     softWrap: false,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: IpodTypography.caption,
                   ),
                 ),
               ),

@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
@@ -40,10 +41,8 @@ class IconPreviewWidget extends StatelessWidget {
                 child: Text(
                   titleText,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 20,
+                  style: IpodTypography.title.copyWith(
                     color: CupertinoColors.white,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -53,8 +52,7 @@ class IconPreviewWidget extends StatelessWidget {
                 child: Text(
                   contentText,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: (contentText.length > 10) ? 14 : 20,
+                  style: IpodTypography.description.copyWith(
                     color: CupertinoColors.white,
                   ),
                 ),

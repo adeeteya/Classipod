@@ -1,6 +1,7 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
@@ -35,10 +36,8 @@ class SettingsPreviewWidget extends StatelessWidget {
                   context.localization.appTitle,
                   maxLines: 1,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 20,
+                  style: IpodTypography.title.copyWith(
                     color: CupertinoColors.white,
-                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),

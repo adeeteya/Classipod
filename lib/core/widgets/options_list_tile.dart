@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class OptionsListTile extends StatelessWidget {
@@ -49,9 +50,7 @@ class OptionsListTile extends StatelessWidget {
             child: Center(
               child: Text(
                 text,
-                style: CupertinoTheme.of(context).textTheme.textStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
+                style: IpodTypography.menu.copyWith(
                   color: isSelected
                       ? context.appInverseTextColor
                       : context.appPrimaryTextColor,

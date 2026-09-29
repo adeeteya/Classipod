@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/music/playlist/models/playlist_option_type.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
@@ -79,14 +80,11 @@ class PlaylistOptionListTile extends StatelessWidget {
               Expanded(
                 child: Text(
                   title,
-                  style: CupertinoTheme.of(context).textTheme.textStyle
-                      .copyWith(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: isSelected
-                            ? context.appInverseTextColor
-                            : context.appPrimaryTextColor,
-                      ),
+                  style: IpodTypography.title.copyWith(
+                    color: isSelected
+                        ? context.appInverseTextColor
+                        : context.appPrimaryTextColor,
+                  ),
                   maxLines: 1,
                 ),
               ),

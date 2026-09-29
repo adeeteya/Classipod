@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class EmptyStateWidget extends StatelessWidget {
@@ -31,10 +32,8 @@ class EmptyStateWidget extends StatelessWidget {
             const SizedBox(height: 20),
             Text(
               emptyDescription,
-              style: const TextStyle(
-                fontSize: 20,
+              style: IpodTypography.description.copyWith(
                 color: CupertinoColors.white,
-                fontWeight: FontWeight.bold,
               ),
             ),
           ],

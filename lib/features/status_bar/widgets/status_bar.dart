@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/status_bar/widgets/battery_indicator.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -47,10 +48,8 @@ class StatusBar extends StatelessWidget {
               Expanded(
                 child: Text(
                   title,
-                  style: const TextStyle(
+                  style: IpodTypography.screenTitle.copyWith(
                     color: CupertinoColors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
                   ),
                   maxLines: 1,
                 ),

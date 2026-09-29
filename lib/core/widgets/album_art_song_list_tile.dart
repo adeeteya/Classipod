@@ -2,6 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/artwork_image.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -63,26 +64,22 @@ class AlbumArtSongListTile extends ConsumerWidget {
                     Text(
                       songMetadata.trackName ??
                           context.localization.unknownSong,
-                      style: CupertinoTheme.of(context).textTheme.textStyle
-                          .copyWith(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: isSelected
-                                ? context.appInverseTextColor
-                                : context.appPrimaryTextColor,
-                          ),
+                      style: IpodTypography.title.copyWith(
+                        color: isSelected
+                            ? context.appInverseTextColor
+                            : context.appPrimaryTextColor,
+                      ),
                       maxLines: 1,
                     ),
                     const SizedBox(height: 2),
                     Text(
                       songMetadata.getTrackArtistNames ??
                           context.localization.unknownArtist,
-                      style: CupertinoTheme.of(context).textTheme.textStyle
-                          .copyWith(
-                            color: isSelected
-                                ? context.appInverseTextColor
-                                : context.appSecondaryTextColor,
-                          ),
+                      style: IpodTypography.metadata.copyWith(
+                        color: isSelected
+                            ? context.appInverseTextColor
+                            : context.appSecondaryTextColor,
+                      ),
                       maxLines: 1,
                     ),
                   ],

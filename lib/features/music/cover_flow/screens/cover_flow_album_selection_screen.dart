@@ -2,6 +2,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/cover_flow/widgets/cover_flow_album_song_list_tile.dart';
@@ -85,17 +86,14 @@ class _CoverFlowAlbumSelectionScreenState
                         children: [
                           Text(
                             widget.albumDetail.albumName,
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
+                            style: IpodTypography.title.copyWith(
                               color: CupertinoColors.white,
                             ),
                             maxLines: 1,
                           ),
                           Text(
                             widget.albumDetail.albumArtistName,
-                            style: const TextStyle(
-                              fontSize: 16,
+                            style: IpodTypography.metadata.copyWith(
                               color: CupertinoColors.white,
                             ),
                             maxLines: 1,

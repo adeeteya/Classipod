@@ -55,9 +55,16 @@ Name: "{app}\uninstall-{#MyAppName}"; Filename: "{uninstallexe}"
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
 
 [UninstallDelete]
-Type: files; Name: "{userdocs}\ClassiPod\metadata_box.hive"
-Type: files; Name: "{userdocs}\ClassiPod\metadata_box.lock"
-Type: files; Name: "{userdocs}\ClassiPod\playlist_box.hive"
-Type: files; Name: "{userdocs}\ClassiPod\playlist_box.lock"
-Type: files; Name: "{userdocs}\ClassiPod\excluded_directories_box.hive"
-Type: files; Name: "{userdocs}\ClassiPod\excluded_directories_box.lock"
+; Hive databases (including library_v1, playlists, exclusions and Subsonic).
+; Only remove app data here: users may also put music in this directory.
+Type: files; Name: "{userdocs}\ClassiPod\*.hive"
+Type: files; Name: "{userdocs}\ClassiPod\*.hivec"
+Type: files; Name: "{userdocs}\ClassiPod\*.lock"
+Type: filesandordirs; Name: "{userdocs}\ClassiPod\artwork-v1"
+Type: dirifempty; Name: "{userdocs}\ClassiPod"
+; Preferences share this directory with secure storage; preserve other files.
+Type: files; Name: "{userappdata}\com.adeeteya\classipod\shared_preferences.json"
+Type: dirifempty; Name: "{userappdata}\com.adeeteya\classipod"
+Type: filesandordirs; Name: "{localappdata}\com.adeeteya\classipod"
+; just_audio's temporary directory is shared: remove only our cached asset.
+Type: files; Name: "{%TEMP}\just_audio_cache\assets\assets\sounds\ipod_click.wav"

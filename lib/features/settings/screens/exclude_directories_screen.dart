@@ -5,7 +5,6 @@ import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/settings/controller/exclude_directories_controller.dart';
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
 import 'package:classipod/features/settings/widgets/exclude_directory_tile.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -49,7 +48,6 @@ class _ExcludeDirectoriesScreenState
       return CupertinoPageScaffold(
         child: Column(
           children: [
-            StatusBar(title: Routes.excludeDirectories.title(context)),
             Expanded(
               child: EmptyStateWidget(
                 emptyDescription: context.localization.noMusicFilesFound,
@@ -62,7 +60,6 @@ class _ExcludeDirectoriesScreenState
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.excludeDirectories.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

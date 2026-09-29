@@ -4,7 +4,6 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/repositories/library/missing_tracks_provider.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -44,7 +43,6 @@ class _MissingTracksScreenState extends ConsumerState<MissingTracksScreen>
       resizeToAvoidBottomInset: false,
       child: Column(
         children: [
-          StatusBar(title: context.localization.missingTracksTitle),
           Expanded(
             child: tracks.isEmpty
                 ? Center(child: Text(context.localization.missingTracksEmpty))

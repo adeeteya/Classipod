@@ -7,7 +7,6 @@ import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/songs/widgets/condensed_song_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -59,7 +58,6 @@ class _AlbumSongsScreenState extends ConsumerState<AlbumSongsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: widget.albumDetail.albumName),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

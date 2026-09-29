@@ -1,4 +1,3 @@
-import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -8,7 +7,6 @@ import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:classipod/features/music/search/provider/search_provider.dart';
 import 'package:classipod/features/music/search/widgets/search_list_tile.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -22,6 +20,14 @@ class SearchScreen extends ConsumerStatefulWidget {
 
 class _SearchScreenState extends ConsumerState<SearchScreen>
     with CustomInputTextScreen {
+  @override
+  String get inputText => ref.watch(searchQueryProvider);
+
+  @override
+  set inputText(String value) {
+    ref.read(searchQueryProvider.notifier).query = value;
+  }
+
   @override
   int get extraDisplayItems => 1;
 
@@ -98,14 +104,6 @@ class _SearchScreenState extends ConsumerState<SearchScreen>
 
   @override
   Widget build(BuildContext context) {
-    late final String statusBarTitle;
-    if (displayItems.isEmpty) {
-      statusBarTitle = Routes.search.title(context);
-    } else {
-      statusBarTitle =
-          "${context.localization.searchResultsText} ${displayItems.length}";
-    }
-
     return CupertinoPageScaffold(
       resizeToAvoidBottomInset: false,
       child: Stack(
@@ -113,7 +111,6 @@ class _SearchScreenState extends ConsumerState<SearchScreen>
         children: [
           Column(
             children: [
-              StatusBar(title: statusBarTitle),
               Flexible(
                 child: CupertinoScrollbar(
                   controller: scrollController,

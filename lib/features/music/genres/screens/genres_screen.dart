@@ -4,7 +4,6 @@ import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/genres/providers/genres_provider.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -42,7 +41,6 @@ class _GenresScreenState extends ConsumerState<GenresScreen> with CustomScreen {
       return CupertinoPageScaffold(
         child: Column(
           children: [
-            StatusBar(title: Routes.genres.title(context)),
             Expanded(
               child: EmptyStateWidget(
                 emptyDescription: context.localization.noMusicFilesFound,
@@ -56,7 +54,6 @@ class _GenresScreenState extends ConsumerState<GenresScreen> with CustomScreen {
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.genres.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

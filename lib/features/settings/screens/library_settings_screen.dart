@@ -15,7 +15,6 @@ import 'package:classipod/features/settings/controller/prevent_duplicate_tracks_
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
 import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -182,7 +181,6 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
       resizeToAvoidBottomInset: false,
       child: Column(
         children: [
-          StatusBar(title: Routes.librarySettings.title(context)),
           if (local.hasError)
             Padding(
               padding: const EdgeInsets.all(4),

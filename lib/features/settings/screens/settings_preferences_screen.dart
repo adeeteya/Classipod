@@ -12,7 +12,6 @@ import 'package:classipod/features/now_playing/provider/now_playing_details_prov
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -327,7 +326,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.settings.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

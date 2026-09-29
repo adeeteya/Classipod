@@ -7,7 +7,6 @@ import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/music/songs/widgets/song_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -64,7 +63,6 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
       return CupertinoPageScaffold(
         child: Column(
           children: [
-            StatusBar(title: Routes.songs.title(context)),
             Expanded(
               child: EmptyStateWidget(
                 emptyDescription: context.localization.noMusicFilesFound,
@@ -78,7 +76,6 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.songs.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

@@ -5,6 +5,8 @@ import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class StatusBar extends StatelessWidget {
+  static const double height = 30;
+
   final String title;
 
   const StatusBar({super.key, required this.title});
@@ -27,7 +29,7 @@ class StatusBar extends StatelessWidget {
         : AppPalette.statusBarBorderColor;
 
     return SizedBox(
-      height: 30,
+      height: height,
       width: double.infinity,
       child: DecoratedBox(
         decoration: BoxDecoration(

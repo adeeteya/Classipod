@@ -5,7 +5,6 @@ import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/genres/providers/genre_songs_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -68,7 +67,6 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: widget.genreName),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

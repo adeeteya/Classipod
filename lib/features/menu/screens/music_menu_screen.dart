@@ -4,7 +4,6 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -99,7 +98,6 @@ class _MusicMenuScreenState extends ConsumerState<MusicMenuScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.musicMenu.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

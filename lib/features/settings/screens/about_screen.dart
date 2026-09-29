@@ -7,7 +7,6 @@ import 'package:classipod/features/device/services/device_buttons_service_provid
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/artists/providers/artist_names_provider.dart';
 import 'package:classipod/features/settings/widgets/about_list_tile.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -29,7 +28,6 @@ class AboutScreen extends ConsumerWidget {
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.about.title(context)),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(

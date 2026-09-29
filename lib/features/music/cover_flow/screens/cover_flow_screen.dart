@@ -7,7 +7,6 @@ import 'package:classipod/features/custom_screen_elements/custom_page_screen.dar
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -47,7 +46,6 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
       return CupertinoPageScaffold(
         child: Column(
           children: [
-            StatusBar(title: Routes.coverFlow.title(context)),
             Expanded(
               child: EmptyStateWidget(
                 emptyDescription: context.localization.noMusicFilesFound,
@@ -61,7 +59,6 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.coverFlow.title(context)),
           const SizedBox(height: 10),
           Expanded(
             child: Stack(

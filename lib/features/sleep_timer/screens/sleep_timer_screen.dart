@@ -8,7 +8,6 @@ import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/sleep_timer/models/sleep_timer_model.dart';
 import 'package:classipod/features/sleep_timer/provider/sleep_timer_provider.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -134,7 +133,6 @@ class _SleepTimerScreenState extends ConsumerState<SleepTimerScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.sleepTimer.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

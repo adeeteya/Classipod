@@ -13,7 +13,6 @@ import 'package:classipod/features/music/playlist/widgets/playlist_option_list_t
 import 'package:classipod/features/music/playlist/widgets/playlist_song_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -175,7 +174,6 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
       return CupertinoPageScaffold(
         child: Column(
           children: [
-            StatusBar(title: playlist.name),
             Expanded(
               child: EmptyStateWidget(
                 emptyDescription: context.localization.noMusicFilesFound,
@@ -193,7 +191,6 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: playlist.name),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

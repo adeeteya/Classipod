@@ -3,7 +3,6 @@ import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/music/playlist/widgets/playlist_list_tile.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -43,7 +42,6 @@ class _PlaylistsScreenState extends ConsumerState<PlaylistsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.playlists.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

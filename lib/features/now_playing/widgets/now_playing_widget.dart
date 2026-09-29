@@ -45,31 +45,29 @@ class NowPlayingWidget extends ConsumerWidget {
                   nowPlayingDetails.currentMetadata?.trackName ??
                       context.localization.unknownSong,
                   style: IpodTypography.title,
-                  delayBefore: const Duration(seconds: 2),
-                  pauseBetween: const Duration(seconds: 2),
-                  pauseOnBounce: const Duration(seconds: 2),
+                  delayBefore: const Duration(seconds: 1),
+                  pauseBetween: const Duration(seconds: 1),
+                  velocity: const Velocity(pixelsPerSecond: Offset(30, 0)),
                 ),
                 const SizedBox(height: 5),
-                MarqueeText(
+                Text(
                   nowPlayingDetails.currentMetadata?.getTrackArtistNames ??
                       context.localization.unknownArtist,
                   style: IpodTypography.metadata.copyWith(
                     color: context.appSecondaryTextColor,
                   ),
-                  delayBefore: const Duration(seconds: 2),
-                  pauseBetween: const Duration(seconds: 2),
-                  pauseOnBounce: const Duration(seconds: 2),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(height: 5),
-                MarqueeText(
+                Text(
                   nowPlayingDetails.currentMetadata?.albumName ??
                       context.localization.unknownAlbum,
                   style: IpodTypography.metadata.copyWith(
                     color: context.appSecondaryTextColor,
                   ),
-                  delayBefore: const Duration(seconds: 2),
-                  pauseBetween: const Duration(seconds: 2),
-                  pauseOnBounce: const Duration(seconds: 2),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 if ((nowPlayingDetails.currentMetadata?.rating ?? 0) != 0)
                   Row(

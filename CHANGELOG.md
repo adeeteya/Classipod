@@ -1,5 +1,14 @@
 ## 2.0.0 (Unreleased)
 
+- Align platform release metadata, citation, security policy, and release
+  documentation with app version 2.0.0.
+
+- Download a pinned Inno Setup compiler from its official GitHub release,
+  verify its checksum, and package Windows with the existing installer script.
+
+- Avoid upgrading unrelated runner packages during Linux CI setup, preventing
+  Firefox/Snap update failures from blocking the build.
+
 - Add Windows system media controls and Linux MPRIS integration for track
   information, play/pause, and previous/next controls through the existing
   playback handler.

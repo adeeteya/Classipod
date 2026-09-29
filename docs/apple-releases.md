@@ -16,11 +16,11 @@ signatures. The app's sandbox and folder-access entitlements are retained.
 ## Run the release workflow
 
 1. Set `version:` in `pubspec.yaml` to the intended app version and build number
-   (for example, `1.12.0+25`) and commit the release changes.
+   (for example, `2.0.0+26`) and commit the release changes.
 2. Open **Actions → Build and Deploy Releases → Run workflow**.
-3. Choose the branch/ref and release tag (`version_number`, for example
-   `v1.12.0`). The tag input names the GitHub release; Apple app versions come
-   from `pubspec.yaml`, not the tag input.
+3. Choose the branch/ref. The workflow reads `pubspec.yaml` automatically:
+   `2.0.0+26` creates or reuses the `2.0.0` GitHub release, and Apple builds
+   use version `2.0.0` with build number `26`.
 4. Enable **iOS**, **macOS**, or both. Disable Android, Linux, Windows, and web
    if only Apple downloads are wanted. Existing Android store deployment still
    runs when Android is enabled.
@@ -42,7 +42,7 @@ The other platform jobs retain their existing credential requirements.
 
 Use a Mac with Xcode selected by `xcode-select`, its platform SDKs installed,
 and the Flutter version required by `pubspec.yaml`. Install the Ruby version
-used by the workflow (currently 3.2.2) and Bundler, then run:
+used by the workflow (currently 3.4) and Bundler, then run:
 
 ```sh
 cd ios

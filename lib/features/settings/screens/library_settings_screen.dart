@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
@@ -149,8 +147,7 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
     return true;
   }
 
-  Future<void> _changeSplitScreenType() async {
-    await Future<void>.delayed(const Duration(milliseconds: 150));
+  void _changeSplitScreenType() {
     if (!mounted || context.router.locationNamed != routeName) return;
     ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
         displayItems[selectedDisplayItem].preview;
@@ -158,7 +155,7 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
 
   @override
   Widget build(BuildContext context) {
-    unawaited(_changeSplitScreenType());
+    _changeSplitScreenType();
     final preventDuplicates = ref.watch(preventDuplicateTracksProvider);
     final hideLocalMusic = ref.watch(hideLocalMusicProvider);
     final remote = ref.watch(subsonicControllerProvider).value;

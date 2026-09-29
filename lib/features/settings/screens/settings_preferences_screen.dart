@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
@@ -237,8 +235,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     }
   }
 
-  Future<void> _changeSplitScreenType() async {
-    await Future.delayed(const Duration(milliseconds: 150));
+  void _changeSplitScreenType() {
     if (!mounted || context.router.locationNamed != routeName) return;
     switch (displayItems[selectedDisplayItem]) {
       case _SettingsDisplayItems.language:
@@ -321,7 +318,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   Widget build(BuildContext context) {
     final settingsState = ref.watch(settingsPreferencesControllerProvider);
 
-    unawaited(_changeSplitScreenType());
+    _changeSplitScreenType();
 
     return CupertinoPageScaffold(
       child: Column(

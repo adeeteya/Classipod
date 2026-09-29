@@ -85,8 +85,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
     unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
   }
 
-  Future<void> _changeSplitScreenType() async {
-    await Future.delayed(const Duration(milliseconds: 150));
+  void _changeSplitScreenType() {
     if (!mounted || context.router.locationNamed != routeName) return;
     switch (displayItems[selectedDisplayItem]) {
       case _MainMenuDisplayItems.music:
@@ -126,7 +125,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
 
   @override
   Widget build(BuildContext context) {
-    unawaited(_changeSplitScreenType());
+    _changeSplitScreenType();
     if (!ref.read(splitScreenViewControllerProvider).isScreenVisible) {
       unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
     }

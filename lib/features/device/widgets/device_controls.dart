@@ -10,6 +10,7 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
+import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
@@ -34,6 +35,7 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
     required double smallThresholdRotationalChange,
     required double bigThresholdRotationalChange,
   }) async {
+    ref.read(splitScreenControllerProvider.notifier).onClickWheelScroll();
     // Pan location on the wheel
     final bool onTop = dragUpdateDetails.localPosition.dy <= radius;
     final bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;

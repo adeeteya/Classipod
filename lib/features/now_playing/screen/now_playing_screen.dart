@@ -404,9 +404,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
                           lyrics: lyrics,
                           scrollController: _lyricsScrollController,
                         )
-                      : NowPlayingWidget(
-                          key: const ValueKey('now-playing-view'),
-                          nowPlayingDetails: nowPlayingDetails,
+                      : const NowPlayingWidget(
+                          key: ValueKey('now-playing-view'),
                         ),
                 ),
               ),

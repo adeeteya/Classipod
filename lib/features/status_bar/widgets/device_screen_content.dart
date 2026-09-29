@@ -5,6 +5,7 @@ import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/music/search/provider/search_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/status_bar/controller/status_bar_entrance_controller.dart';
 import 'package:classipod/features/status_bar/controller/status_bar_transition_observer.dart';
 import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -26,7 +27,17 @@ class DeviceScreenContent extends ConsumerStatefulWidget {
       _DeviceScreenContentState();
 }
 
-class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent> {
+class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent>
+    with SingleTickerProviderStateMixin {
+  late final StatusBarEntranceController _entrance =
+      StatusBarEntranceController(vsync: this);
+
+  @override
+  void dispose() {
+    _entrance.dispose();
+    super.dispose();
+  }
+
   _Header? _current;
   _Header? _previous;
   String? _location;
@@ -52,6 +63,9 @@ class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent> {
             title: _title(context, ref, state),
             split: splitEnabled && _usesSplitScreen(state),
             visible: state.name != Routes.splash.name,
+            delayedEntrance:
+                state.name == Routes.coverFlow.name ||
+                state.name == Routes.nowPlaying.name,
             splitController:
                 splitEnabled &&
                     _usesSplitScreen(state) &&
@@ -70,6 +84,14 @@ class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent> {
             _waitingForTransition =
                 _changesLayout && _transitionRevision == observer.revision;
             _location = location;
+            _entrance.cancelEntrance();
+            if (header.delayedEntrance) {
+              _entrance.prepare();
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                if (!mounted || _location != location) return;
+                _entrance.startAfterTransition(observer.animation);
+              });
+            }
           }
           if (_transitionRevision != observer.revision) {
             _waitingForTransition = false;
@@ -130,7 +152,7 @@ class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent> {
     child: FractionallySizedBox(
       widthFactor: header.split ? 0.5 : 1,
       child: header.splitController == null
-          ? StatusBar(title: header.title)
+          ? _statusBar(header)
           : AnimatedBuilder(
               animation: header.splitController!,
               child: StatusBar(title: header.title),
@@ -141,6 +163,22 @@ class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent> {
             ),
     ),
   );
+
+  Widget _statusBar(_Header header) {
+    final bar = StatusBar(title: header.title);
+    if (!header.delayedEntrance) return bar;
+    return AnimatedBuilder(
+      animation: _entrance,
+      child: bar,
+      builder: (context, child) => FractionalTranslation(
+        translation: Offset(
+          0,
+          Curves.easeOutCubic.transform(_entrance.value) - 1,
+        ),
+        child: child,
+      ),
+    );
+  }
 
   Widget _transition(
     BuildContext context,
@@ -227,12 +265,14 @@ class _Header {
   final String title;
   final bool split;
   final bool visible;
+  final bool delayedEntrance;
   final SplitScreenViewController? splitController;
 
   const _Header({
     required this.title,
     required this.split,
     required this.visible,
+    required this.delayedEntrance,
     required this.splitController,
   });
 }

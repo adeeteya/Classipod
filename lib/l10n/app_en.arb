@@ -172,14 +172,6 @@
   "@splitScreenSettingTitle": {
     "description": "The title of the split screen mode setting"
   },
-  "touchSoundsDialogTitle": "Touch Sounds",
-  "@touchSoundsDialogTitle": {
-    "description": "The title of the touch sounds dialog"
-  },
-  "touchSoundsDialogContent": "Please Enable Touch Sounds from System Settings to hear the click wheel sounds",
-  "@touchSoundsDialogContent": {
-    "description": "The contents of the touch sounds dialog"
-  },
   "immersiveModeSettingTitle": "Immersive Mode",
   "@immersiveModeSettingTitle": {
     "description": "The title of the immersive mode setting"
@@ -187,10 +179,6 @@
   "showAppTutorialSettingTitle": "Show Tutorial",
   "@showAppTutorialSettingTitle": {
     "description": "The title of the show app tutorial setting"
-  },
-  "changeDirectorySettingTitle": "Change Directory",
-  "@changeDirectorySettingTitle": {
-    "description": "The title of the change directory setting"
   },
   "donateSettingTitle": "Donate",
   "@donateSettingTitle": {
@@ -212,10 +200,6 @@
   "@noMusicFilesFound": {
     "description": "The message displayed when no music files are found"
   },
-  "noArtistsFound": "No Artists",
-  "@noArtistsFound": {
-    "description": "The message displayed when no artists are found"
-  },
   "noAlbumsFound": "No Albums",
   "@noAlbumsFound": {
     "description": "The message displayed when no albums are found"
@@ -231,10 +215,6 @@
   "unknownAlbum": "Unknown Album",
   "@unknownAlbum": {
     "description": "When the album of a song is unknown"
-  },
-  "unknownGenre": "Unknown Genre",
-  "@unknownGenre": {
-    "description": "When the genre of a song is unknown"
   },
   "buttonConfirmText": "OK",
   "@buttonConfirmText": {
@@ -263,10 +243,6 @@
   "retryButtonText": "Retry",
   "@retryButtonText": {
     "description": "The text of the retry button"
-  },
-  "filePickerDialogTitle": "Select a Directory to Scan for Music",
-  "@filePickerDialogTitle": {
-    "description": "The title of the file picker dialog"
   },
   "searchScreenTitle": "Search",
   "@searchScreenTitle": {
@@ -396,10 +372,6 @@
   "@allAlbums": {
     "description": "The text of the all albums playlist"
   },
-  "scanningMusicFiles": "Scanning Music Files",
-  "@scanningMusicFiles": {
-    "description": "The text of the scanning music in splash screen"
-  },
   "newPlaylist": "New Playlist",
   "@newPlaylist": {
     "description": "The text of the new playlist list tile"
@@ -411,10 +383,6 @@
   "clearPlaylist": "Clear Playlist",
   "@clearPlaylist": {
     "description": "The text of the clear playlist list tile"
-  },
-  "rescanMusicFilesSettingTitle": "Rescan Music Files",
-  "@rescanMusicFilesSettingTitle": {
-    "description": "The text of the rescan music files settings tile"
   },
   "deviceControlMenuTutorialText": "Move your thumb lightly around the Click Wheel to navigate the menu",
   "@deviceControlMenuTutorialText": {
@@ -574,7 +542,6 @@
   },
   "songsLoaded": "Songs loaded: {loaded} / {total}",
   "artworkCached": "Artwork cached: {cached}",
-  "libraryReadFailures": "Could not read {count} items",
   "libraryLoadError": "Unable to load the music library. Please retry.",
   "@libraryLoadError": {
     "description": "The splash screen error when loading the music library fails"
@@ -598,14 +565,6 @@
     "description": "Library indexing progress; cached is the number of artwork items cached",
     "placeholders": {
       "cached": {
-        "type": "int"
-      }
-    }
-  },
-  "@libraryReadFailures": {
-    "description": "A summary of library read failures; count is the number of items that could not be read",
-    "placeholders": {
-      "count": {
         "type": "int"
       }
     }

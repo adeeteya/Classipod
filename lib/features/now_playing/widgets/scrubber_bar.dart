@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
@@ -20,56 +22,60 @@ class ScrubberBar extends ConsumerWidget {
     final borderColor = isDarkTheme
         ? AppPalette.darkSliderBorderColor
         : AppPalette.sliderBorderColor;
+    final hasDuration = max.isFinite && max > 0;
+    final progress = hasDuration && value.isFinite
+        ? (value / max).clamp(0.0, 1.0)
+        : 0.0;
+    const markerSize = 15.0;
+    const trackHeight = 20.0;
 
     return Expanded(
-      child: LayoutBuilder(
-        builder: (context, constraints) {
-          return Stack(
-            clipBehavior: Clip.none,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: GestureDetector(
-                  onTapDown: (tapDownDetails) async {
-                    final targetSeekValue =
-                        (tapDownDetails.localPosition.dx * max) /
-                        constraints.maxWidth;
-                    await ref
-                        .read(audioPlayerServiceProvider.notifier)
-                        .seekToDuration(targetSeekValue.floor());
-                  },
-                  child: SizedBox(
-                    height: 20,
-                    width: constraints.maxWidth,
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        gradient: gradient,
-                        border: Border.all(color: borderColor),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8),
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTapDown: !hasDuration
+                  ? null
+                  : (tapDownDetails) async {
+                      final fraction =
+                          (tapDownDetails.localPosition.dx /
+                                  constraints.maxWidth)
+                              .clamp(0.0, 1.0);
+                      await ref
+                          .read(audioPlayerServiceProvider.notifier)
+                          .seekToDuration((fraction * max).floor());
+                    },
+              child: Container(
+                height: trackHeight,
+                decoration: BoxDecoration(gradient: gradient),
+                foregroundDecoration: BoxDecoration(
+                  border: Border.all(color: borderColor),
+                ),
+                clipBehavior: Clip.hardEdge,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: (trackHeight - markerSize) / 2,
+                      left: progress * constraints.maxWidth - markerSize / 2,
+                      child: Transform.rotate(
+                        angle: math.pi / 4,
+                        child: const SizedBox(
+                          height: markerSize,
+                          width: markerSize,
+                          child: ColoredBox(
+                            color: AppPalette.nowProgressBarGradientColor8,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
               ),
-              Positioned(
-                top: 2,
-                left: ((value / max) * (constraints.maxWidth - 30)).clamp(
-                  0,
-                  constraints.maxWidth - 30,
-                ),
-                child: Transform.rotate(
-                  angle: 3.14 / 4,
-                  child: const SizedBox(
-                    height: 15,
-                    width: 15,
-                    child: ColoredBox(
-                      color: AppPalette.nowProgressBarGradientColor8,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }

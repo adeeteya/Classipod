@@ -26,8 +26,8 @@ enum _NowPlayingBottomBarPage {
   seekBar,
   scrubberBar,
   volumeBar,
-  shuffleBar,
   ratingBar,
+  shuffleBar,
   lyrics,
 }
 
@@ -46,6 +46,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   PlaybackShuffleMode _shuffleMode = PlaybackShuffleMode.off;
   _NowPlayingBottomBarPage _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
   String? _lastLyricsSongIndex;
+  Future<void>? _volumeReturnTransition;
 
   String get routeName => Routes.nowPlaying.name;
 
@@ -72,6 +73,15 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
         curve: Curves.ease,
       );
       setState(() {
+        _bottomBarPage = _NowPlayingBottomBarPage.ratingBar;
+      });
+    } else if (_bottomBarPage == _NowPlayingBottomBarPage.ratingBar) {
+      await _bottomBarPageController.animateToPage(
+        3,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.ease,
+      );
+      setState(() {
         _shuffleMode = ref.read(nowPlayingDetailsProvider).shuffleMode;
         _bottomBarPage = _NowPlayingBottomBarPage.shuffleBar;
       });
@@ -79,15 +89,6 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       await ref
           .read(audioPlayerServiceProvider.notifier)
           .setShuffleMode(_shuffleMode);
-      await _bottomBarPageController.animateToPage(
-        3,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.ease,
-      );
-      setState(() {
-        _bottomBarPage = _NowPlayingBottomBarPage.ratingBar;
-      });
-    } else if (_bottomBarPage == _NowPlayingBottomBarPage.ratingBar) {
       if (hasLyrics) {
         await _bottomBarPageController.animateToPage(
           4,
@@ -99,20 +100,22 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
         });
       } else {
         await _bottomBarPageController.animateToPage(
-          0,
+          4,
           duration: const Duration(milliseconds: 300),
           curve: Curves.ease,
         );
+        _bottomBarPageController.jumpToPage(0);
         setState(() {
           _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
         });
       }
     } else if (_bottomBarPage == _NowPlayingBottomBarPage.lyrics) {
       await _bottomBarPageController.animateToPage(
-        0,
+        5,
         duration: const Duration(milliseconds: 300),
         curve: Curves.ease,
       );
+      _bottomBarPageController.jumpToPage(0);
       setState(() {
         _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
       });
@@ -145,19 +148,50 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     );
   }
 
-  void startVolumeTimer() {
-    if (_lastVolumeChangeTimer.isActive) {
-      _lastVolumeChangeTimer.cancel();
+  Future<void> showVolumeBar() async {
+    await _volumeReturnTransition;
+    if (!mounted || _bottomBarPage == _NowPlayingBottomBarPage.volumeBar) {
+      return;
     }
-    _lastVolumeChangeTimer = Timer.periodic(const Duration(seconds: 1), (
-      timer,
-    ) {
-      if (timer.tick >= 3) {
-        setState(() {
-          _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
-        });
-        timer.cancel();
-      }
+    setState(() {
+      _bottomBarPage = _NowPlayingBottomBarPage.volumeBar;
+    });
+    await WidgetsBinding.instance.endOfFrame;
+    if (!mounted || !_bottomBarPageController.hasClients) {
+      return;
+    }
+    await _bottomBarPageController.animateToPage(
+      1,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.ease,
+    );
+  }
+
+  Future<void> returnFromVolumeBar() async {
+    if (!mounted || !_bottomBarPageController.hasClients) {
+      return;
+    }
+    await _bottomBarPageController.animateToPage(
+      2,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.ease,
+    );
+    if (!mounted || !_bottomBarPageController.hasClients) {
+      return;
+    }
+    _bottomBarPageController.jumpToPage(0);
+    setState(() {
+      _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
+    });
+    await WidgetsBinding.instance.endOfFrame;
+  }
+
+  void startVolumeTimer() {
+    _lastVolumeChangeTimer.cancel();
+    _lastVolumeChangeTimer = Timer(const Duration(seconds: 3), () {
+      _volumeReturnTransition = returnFromVolumeBar().whenComplete(() {
+        _volumeReturnTransition = null;
+      });
     });
   }
 
@@ -180,13 +214,14 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       await scrollLyrics(60);
       return;
     }
-    setState(() {
-      _bottomBarPage = _NowPlayingBottomBarPage.volumeBar;
-    });
-    await ref
-        .read(settingsPreferencesControllerProvider.notifier)
-        .increaseVolume();
-    startVolumeTimer();
+    _lastVolumeChangeTimer.cancel();
+    await Future.wait([
+      showVolumeBar(),
+      ref.read(settingsPreferencesControllerProvider.notifier).increaseVolume(),
+    ]);
+    if (mounted) {
+      startVolumeTimer();
+    }
   }
 
   Future<void> rotateBackward() async {
@@ -208,13 +243,14 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       await scrollLyrics(-60);
       return;
     }
-    setState(() {
-      _bottomBarPage = _NowPlayingBottomBarPage.volumeBar;
-    });
-    await ref
-        .read(settingsPreferencesControllerProvider.notifier)
-        .decreaseVolume();
-    startVolumeTimer();
+    _lastVolumeChangeTimer.cancel();
+    await Future.wait([
+      showVolumeBar(),
+      ref.read(settingsPreferencesControllerProvider.notifier).decreaseVolume(),
+    ]);
+    if (mounted) {
+      startVolumeTimer();
+    }
   }
 
   Future<void> seekForward() async {
@@ -416,56 +452,38 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
             height: 30,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: AnimatedSwitcher(
-                duration: const Duration(milliseconds: 300),
-                transitionBuilder: (child, animation) {
-                  final begin = Offset(
-                    _bottomBarPage == _NowPlayingBottomBarPage.volumeBar
-                        ? 1.0
-                        : -0.5,
-                    0.0,
-                  );
-                  final tween = Tween(begin: begin, end: Offset.zero);
-                  final offsetAnimation = animation.drive(tween);
-
-                  return FadeTransition(
-                    key: ValueKey<Key?>(child.key),
-                    opacity: animation,
-                    child: SlideTransition(
-                      key: ValueKey<Key?>(child.key),
-                      position: offsetAnimation,
-                      child: child,
-                    ),
-                  );
-                },
-                child: _bottomBarPage == _NowPlayingBottomBarPage.volumeBar
-                    ? const VolumeBar()
-                    : PageView(
-                        controller: _bottomBarPageController,
-                        physics: const NeverScrollableScrollPhysics(),
-                        children: [
-                          const NowPlayingBottomBar(),
-                          const NowPlayingBottomBar(showScrubber: true),
-                          ShuffleSegmentedControl(
-                            shuffleMode: _shuffleMode,
-                            onValueChanged: (value) {
-                              setState(() {
-                                _shuffleMode = value ?? _shuffleMode;
-                              });
-                            },
-                          ),
-                          RatingBar(
-                            currentRating:
-                                nowPlayingDetails.currentMetadata?.rating ?? 0,
-                            onRatingClicked: (val) async {
-                              await ref
-                                  .read(nowPlayingDetailsProvider.notifier)
-                                  .setCurrentMetadataRating(val ?? 0);
-                            },
-                          ),
-                          if (hasLyrics) const SizedBox(height: 10),
-                        ],
-                      ),
+              child: PageView(
+                controller: _bottomBarPageController,
+                physics: const NeverScrollableScrollPhysics(),
+                children: _bottomBarPage == _NowPlayingBottomBarPage.volumeBar
+                    ? const [
+                        NowPlayingBottomBar(),
+                        VolumeBar(),
+                        NowPlayingBottomBar(),
+                      ]
+                    : [
+                        const NowPlayingBottomBar(),
+                        const NowPlayingBottomBar(showScrubber: true),
+                        RatingBar(
+                          currentRating:
+                              nowPlayingDetails.currentMetadata?.rating ?? 0,
+                          onRatingClicked: (val) async {
+                            await ref
+                                .read(nowPlayingDetailsProvider.notifier)
+                                .setCurrentMetadataRating(val ?? 0);
+                          },
+                        ),
+                        ShuffleSegmentedControl(
+                          shuffleMode: _shuffleMode,
+                          onValueChanged: (value) {
+                            setState(() {
+                              _shuffleMode = value ?? _shuffleMode;
+                            });
+                          },
+                        ),
+                        if (hasLyrics) const SizedBox(height: 10),
+                        const NowPlayingBottomBar(),
+                      ],
               ),
             ),
           ),

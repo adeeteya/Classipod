@@ -700,5 +700,17 @@
   "subsonicServerError": "Could not read the server library. The previous catalog is retained. Refresh Library to retry.",
   "@subsonicServerError": {
     "description": "The server indexing error explaining that the previously cached catalog is preserved and Refresh Library can retry the scan"
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "@coverFlowAppearanceSettingTitle": {
+    "description": "The title of the setting that switches the Cover Flow album artwork layout between Original and Big"
+  },
+  "coverFlowOriginalTitle": "Original",
+  "@coverFlowOriginalTitle": {
+    "description": "The default Cover Flow appearance option, showing a centered album cover with three smaller tilted covers on each side, up to seven covers total"
+  },
+  "coverFlowBigTitle": "Big",
+  "@coverFlowBigTitle": {
+    "description": "The Cover Flow appearance option with larger album artwork, showing a centered cover and one tilted cover on each side, up to three covers total"
   }
 }

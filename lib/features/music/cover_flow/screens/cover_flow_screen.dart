@@ -7,25 +7,45 @@ import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_page_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
-import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
+import 'package:classipod/features/music/cover_flow/widgets/big_cover_flow_carousel.dart';
+import 'package:classipod/features/music/cover_flow/widgets/cover_flow_carousel.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
+import 'package:classipod/features/settings/models/cover_flow_appearance.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-class CoverFlowScreen extends ConsumerStatefulWidget {
+class CoverFlowScreen extends ConsumerWidget {
   const CoverFlowScreen({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final appearance = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.coverFlowAppearance,
+      ),
+    );
+    return _CoverFlowView(key: ValueKey(appearance), appearance: appearance);
+  }
+}
+
+class _CoverFlowView extends ConsumerStatefulWidget {
+  const _CoverFlowView({super.key, required this.appearance});
+
+  final CoverFlowAppearance appearance;
 
   @override
   ConsumerState createState() => _CoverFlowScreenState();
 }
 
-class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
+class _CoverFlowScreenState extends ConsumerState<_CoverFlowView>
     with CustomPageScreen {
   @override
   String get routeName => Routes.coverFlow.name;
 
   @override
-  double get viewPortFraction => 0.54;
+  double get viewPortFraction =>
+      widget.appearance == CoverFlowAppearance.big ? 0.54 : 0.14;
 
   @override
   List<AlbumModel> get displayItems => ref.read(albumDetailsProvider);
@@ -65,49 +85,23 @@ class _CoverFlowScreenState extends ConsumerState<CoverFlowScreen>
             child: Stack(
               clipBehavior: Clip.none,
               children: [
-                SizedBox(
-                  height: 230,
-                  child: PageView.builder(
+                if (widget.appearance == CoverFlowAppearance.big)
+                  BigCoverFlowCarousel(
                     controller: pageController,
-                    itemCount: displayItems.length,
-                    itemBuilder: (context, index) {
-                      final double relativePosition = index - currentPage;
-                      return GestureDetector(
-                        onTap: relativePosition == 0
-                            ? () => _chooseAlbum(index)
-                            : () async => pageController.animateToPage(
-                                index,
-                                duration: const Duration(milliseconds: 300),
-                                curve: Curves.ease,
-                              ),
-                        child: Transform(
-                          transform: Matrix4.identity()
-                            ..setEntry(3, 2, 0.003)
-                            ..scaleByDouble(
-                              (1 - relativePosition.abs()).clamp(0.2, 0.6) +
-                                  0.4,
-                              (1 - relativePosition.abs()).clamp(0.2, 0.6) +
-                                  0.4,
-                              (1 - relativePosition.abs()).clamp(0.2, 0.6) +
-                                  0.4,
-                              1,
-                            )
-                            ..rotateY(relativePosition * 0.9),
-                          alignment: relativePosition >= 0
-                              ? Alignment.centerLeft
-                              : Alignment.centerRight,
-                          child: AlbumReflectiveArt(
-                            imageWidth: 230,
-                            thumbnailPath: displayItems[index].albumArtPath,
-                            isOnDevice: displayItems[index].isOnDevice(),
-                            heroTag:
-                                "${displayItems[index].albumName}-${displayItems[index].albumArtistName}",
-                          ),
-                        ),
-                      );
-                    },
+                    currentPage: currentPage,
+                    albums: displayItems,
+                    onSelect: _chooseAlbum,
+                  )
+                else
+                  Positioned.fill(
+                    bottom: 55,
+                    child: CoverFlowCarousel(
+                      controller: pageController,
+                      currentPage: currentPage,
+                      albums: displayItems,
+                      onSelect: _chooseAlbum,
+                    ),
                   ),
-                ),
                 Positioned(
                   bottom: 0,
                   left: 0,

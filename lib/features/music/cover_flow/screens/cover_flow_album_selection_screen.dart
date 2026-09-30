@@ -25,9 +25,6 @@ class _CoverFlowAlbumSelectionScreenState
     extends ConsumerState<CoverFlowAlbumSelectionScreen>
     with CustomScreen {
   @override
-  int get topStatusBarHeight => 60;
-
-  @override
   String get routeName => Routes.coverFlowSelection.name;
 
   @override
@@ -35,6 +32,41 @@ class _CoverFlowAlbumSelectionScreenState
 
   @override
   Future<void> onSelectPressed() => _playSongFromAlbum(selectedDisplayItem);
+
+  @override
+  void scrollForward() {
+    if (selectedDisplayItem < displayItems.length - 1) {
+      setState(() => selectedDisplayItem++);
+    }
+    _revealSelection();
+  }
+
+  @override
+  void scrollBackward() {
+    if (selectedDisplayItem > 0) {
+      setState(() => selectedDisplayItem--);
+    }
+    _revealSelection();
+  }
+
+  void _revealSelection() {
+    if (!scrollController.hasClients || displayItems.isEmpty) return;
+    final position = scrollController.position;
+    if (!position.hasContentDimensions) return;
+    final top = selectedDisplayItem * displayTileHeight;
+    final bottom = top + displayTileHeight;
+    final double target;
+    if (top < position.pixels) {
+      target = top;
+    } else if (bottom > position.pixels + position.viewportDimension) {
+      target = bottom - position.viewportDimension;
+    } else {
+      return;
+    }
+    scrollController.jumpTo(
+      target.clamp(position.minScrollExtent, position.maxScrollExtent),
+    );
+  }
 
   Future<void> _playSongFromAlbum(int index) async {
     setState(() => selectedDisplayItem = index);
@@ -103,13 +135,8 @@ class _CoverFlowAlbumSelectionScreenState
                     child: ListView.builder(
                       controller: scrollController,
                       itemCount: displayItems.length,
-                      prototypeItem: CoverFlowAlbumSongListTile(
-                        songName: '',
-                        songDuration: Duration.zero,
-                        isSelected: false,
-                        isCurrentlyPlaying: false,
-                        onTap: () {},
-                      ),
+                      padding: EdgeInsets.zero,
+                      itemExtent: displayTileHeight,
                       itemBuilder: (context, index) =>
                           CoverFlowAlbumSongListTile(
                             songName: displayItems[index].getTrackName,

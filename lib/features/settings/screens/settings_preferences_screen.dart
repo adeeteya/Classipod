@@ -21,6 +21,7 @@ enum _SettingsDisplayItems {
   repeat,
   language,
   appTheme,
+  coverFlowAppearance,
   deviceColor,
   clickWheelSize,
   clickWheelSensitivity,
@@ -45,6 +46,8 @@ enum _SettingsDisplayItems {
         return context.localization.repeatModeSettingTitle;
       case language:
         return context.localization.languageScreenTitle;
+      case coverFlowAppearance:
+        return context.localization.coverFlowAppearanceSettingTitle;
       case appTheme:
         return context.localization.themeSettingTitle;
       case isTouchScreenEnabled:
@@ -112,6 +115,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleRepeatMode();
+        break;
+      case _SettingsDisplayItems.coverFlowAppearance:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleCoverFlowAppearance();
         break;
       case _SettingsDisplayItems.appTheme:
         await ref
@@ -216,6 +224,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         return settingsState.clickWheelSize.title(context);
       case _SettingsDisplayItems.clickWheelSensitivity:
         return settingsState.clickWheelSensitivity.title(context);
+      case _SettingsDisplayItems.coverFlowAppearance:
+        return settingsState.coverFlowAppearance.title(context);
       case _SettingsDisplayItems.appTheme:
         return settingsState.appTheme.title(context);
       case _SettingsDisplayItems.repeat:

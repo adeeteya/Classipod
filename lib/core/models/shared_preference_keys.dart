@@ -9,6 +9,7 @@ enum SharedPreferencesKeys {
   clickWheelSound,
   volumeMode,
   appTheme,
+  coverFlowAppearance,
   splitScreenEnabled,
   immersiveMode,
   hideLocalMusic,

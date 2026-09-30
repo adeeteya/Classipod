@@ -42,11 +42,13 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   final PageController _bottomBarPageController = PageController();
   final ScrollController _lyricsScrollController = ScrollController();
   late Timer _longPressTimer;
-  Timer _lastVolumeChangeTimer = Timer(Duration.zero, () {});
+  Timer? _barInactivityTimer;
   PlaybackShuffleMode _shuffleMode = PlaybackShuffleMode.off;
   _NowPlayingBottomBarPage _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
   String? _lastLyricsSongIndex;
-  Future<void>? _volumeReturnTransition;
+  Future<void>? _progressReturnTransition;
+  int? _progressReturnPage;
+  int _activeInputs = 0;
 
   String get routeName => Routes.nowPlaying.name;
 
@@ -149,7 +151,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   }
 
   Future<void> showVolumeBar() async {
-    await _volumeReturnTransition;
+    await _progressReturnTransition;
     if (!mounted || _bottomBarPage == _NowPlayingBottomBarPage.volumeBar) {
       return;
     }
@@ -167,12 +169,28 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     );
   }
 
-  Future<void> returnFromVolumeBar() async {
+  Future<void> returnToProgressBar() async {
+    if (!mounted || !_bottomBarPageController.hasClients) {
+      return;
+    }
+    if (_bottomBarPage == _NowPlayingBottomBarPage.shuffleBar) {
+      await ref
+          .read(audioPlayerServiceProvider.notifier)
+          .setShuffleMode(_shuffleMode);
+      if (!mounted || !_bottomBarPageController.hasClients) {
+        return;
+      }
+    }
+    final nextPage = _bottomBarPageController.page!.round() + 1;
+    setState(() {
+      _progressReturnPage = nextPage;
+    });
+    await WidgetsBinding.instance.endOfFrame;
     if (!mounted || !_bottomBarPageController.hasClients) {
       return;
     }
     await _bottomBarPageController.animateToPage(
-      2,
+      nextPage,
       duration: const Duration(milliseconds: 300),
       curve: Curves.ease,
     );
@@ -182,17 +200,39 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     _bottomBarPageController.jumpToPage(0);
     setState(() {
       _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
+      _progressReturnPage = null;
     });
     await WidgetsBinding.instance.endOfFrame;
   }
 
-  void startVolumeTimer() {
-    _lastVolumeChangeTimer.cancel();
-    _lastVolumeChangeTimer = Timer(const Duration(seconds: 3), () {
-      _volumeReturnTransition = returnFromVolumeBar().whenComplete(() {
-        _volumeReturnTransition = null;
+  void restartBarInactivityTimer() {
+    _barInactivityTimer?.cancel();
+    if (!mounted ||
+        _activeInputs > 0 ||
+        _progressReturnTransition != null ||
+        _bottomBarPage == _NowPlayingBottomBarPage.seekBar ||
+        _bottomBarPage == _NowPlayingBottomBarPage.lyrics) {
+      return;
+    }
+    _barInactivityTimer = Timer(const Duration(seconds: 4), () {
+      _progressReturnTransition = returnToProgressBar().whenComplete(() {
+        _progressReturnTransition = null;
       });
     });
+  }
+
+  Future<void> handleUserInput(FutureOr<void> Function() action) async {
+    _barInactivityTimer?.cancel();
+    _activeInputs++;
+    try {
+      await _progressReturnTransition;
+      if (mounted) {
+        await action();
+      }
+    } finally {
+      _activeInputs--;
+      restartBarInactivityTimer();
+    }
   }
 
   Future<void> rotateForward() async {
@@ -214,14 +254,10 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       await scrollLyrics(60);
       return;
     }
-    _lastVolumeChangeTimer.cancel();
     await Future.wait([
       showVolumeBar(),
       ref.read(settingsPreferencesControllerProvider.notifier).increaseVolume(),
     ]);
-    if (mounted) {
-      startVolumeTimer();
-    }
   }
 
   Future<void> rotateBackward() async {
@@ -243,14 +279,10 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       await scrollLyrics(-60);
       return;
     }
-    _lastVolumeChangeTimer.cancel();
     await Future.wait([
       showVolumeBar(),
       ref.read(settingsPreferencesControllerProvider.notifier).decreaseVolume(),
     ]);
-    if (mounted) {
-      startVolumeTimer();
-    }
   }
 
   Future<void> seekForward() async {
@@ -265,6 +297,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (
       _,
     ) async {
+      restartBarInactivityTimer();
       await ref.read(audioPlayerServiceProvider.notifier).seekForward();
     });
   }
@@ -273,6 +306,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (
       _,
     ) async {
+      restartBarInactivityTimer();
       await ref.read(audioPlayerServiceProvider.notifier).seekBackward();
     });
   }
@@ -298,7 +332,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
 
   @override
   void dispose() {
-    _lastVolumeChangeTimer.cancel();
+    _barInactivityTimer?.cancel();
     _bottomBarPageController.dispose();
     _lyricsScrollController.dispose();
     super.dispose();
@@ -308,40 +342,42 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     if (newState == null || context.router.locationNamed != routeName) {
       return;
     }
-    switch (newState) {
-      case DeviceAction.menu:
-        onMenuButtonPressed();
-        break;
-      case DeviceAction.select:
-        await onSelectPressed();
-        break;
-      case DeviceAction.selectLongPress:
-        onSelectLongPress();
-        break;
-      case DeviceAction.rotateForward:
-        await rotateForward();
-        break;
-      case DeviceAction.rotateBackward:
-        await rotateBackward();
-        break;
-      case DeviceAction.seekForward:
-        await seekForward();
-        break;
-      case DeviceAction.seekBackward:
-        await seekBackward();
-        break;
-      case DeviceAction.seekForwardLongPress:
-        seekForwardLongPress();
-        break;
-      case DeviceAction.seekBackwardLongPress:
-        seekBackwardLongPress();
-        break;
-      case DeviceAction.playPause:
-        break;
-      case DeviceAction.longPressEnd:
-        onLongPressEnd();
-        break;
-    }
+    await handleUserInput(() async {
+      switch (newState) {
+        case DeviceAction.menu:
+          onMenuButtonPressed();
+          break;
+        case DeviceAction.select:
+          await onSelectPressed();
+          break;
+        case DeviceAction.selectLongPress:
+          onSelectLongPress();
+          break;
+        case DeviceAction.rotateForward:
+          await rotateForward();
+          break;
+        case DeviceAction.rotateBackward:
+          await rotateBackward();
+          break;
+        case DeviceAction.seekForward:
+          await seekForward();
+          break;
+        case DeviceAction.seekBackward:
+          await seekBackward();
+          break;
+        case DeviceAction.seekForwardLongPress:
+          seekForwardLongPress();
+          break;
+        case DeviceAction.seekBackwardLongPress:
+          seekBackwardLongPress();
+          break;
+        case DeviceAction.playPause:
+          break;
+        case DeviceAction.longPressEnd:
+          onLongPressEnd();
+          break;
+      }
+    });
   }
 
   @override
@@ -362,7 +398,9 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       });
     }
 
-    if (!hasLyrics && _bottomBarPage == _NowPlayingBottomBarPage.lyrics) {
+    if (!hasLyrics &&
+        _bottomBarPage == _NowPlayingBottomBarPage.lyrics &&
+        _progressReturnTransition == null) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (!mounted) {
           return;
@@ -392,103 +430,116 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
       );
     }
 
-    return CupertinoPageScaffold(
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              if (nowPlayingDetails.isShuffleEnabled)
-                Padding(
-                  padding: const EdgeInsets.only(right: 10),
-                  child: Icon(
-                    CupertinoIcons.shuffle,
-                    size: 20,
-                    color: context.appPrimaryTextColor,
+    final bottomBarPages = <Widget>[
+      ...(_bottomBarPage == _NowPlayingBottomBarPage.volumeBar
+          ? const [NowPlayingBottomBar(), VolumeBar(), NowPlayingBottomBar()]
+          : [
+              const NowPlayingBottomBar(),
+              const NowPlayingBottomBar(showScrubber: true),
+              RatingBar(
+                currentRating: nowPlayingDetails.currentMetadata?.rating ?? 0,
+                onRatingClicked: (val) async {
+                  await ref
+                      .read(nowPlayingDetailsProvider.notifier)
+                      .setCurrentMetadataRating(val ?? 0);
+                },
+              ),
+              ShuffleSegmentedControl(
+                shuffleMode: _shuffleMode,
+                onValueChanged: (value) {
+                  setState(() {
+                    _shuffleMode = value ?? _shuffleMode;
+                  });
+                },
+              ),
+              if (hasLyrics) const SizedBox(height: 10),
+              const NowPlayingBottomBar(),
+            ]),
+    ];
+    final returnPage = _progressReturnPage;
+    if (returnPage != null) {
+      while (bottomBarPages.length <= returnPage) {
+        bottomBarPages.add(const NowPlayingBottomBar());
+      }
+      bottomBarPages[returnPage] = const NowPlayingBottomBar();
+    }
+
+    return Listener(
+      onPointerDown: (_) => restartBarInactivityTimer(),
+      onPointerMove: (_) => restartBarInactivityTimer(),
+      onPointerUp: (_) => restartBarInactivityTimer(),
+      onPointerSignal: (_) => restartBarInactivityTimer(),
+      child: CupertinoPageScaffold(
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                if (nowPlayingDetails.isShuffleEnabled)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Icon(
+                      CupertinoIcons.shuffle,
+                      size: 20,
+                      color: context.appPrimaryTextColor,
+                    ),
                   ),
-                ),
-              if (nowPlayingDetails.loopMode != LoopMode.off)
-                Padding(
-                  padding: const EdgeInsets.only(right: 10),
-                  child: Icon(
-                    (nowPlayingDetails.loopMode == LoopMode.all)
-                        ? CupertinoIcons.repeat
-                        : CupertinoIcons.repeat_1,
-                    size: 20,
-                    color: context.appPrimaryTextColor,
+                if (nowPlayingDetails.loopMode != LoopMode.off)
+                  Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: Icon(
+                      (nowPlayingDetails.loopMode == LoopMode.all)
+                          ? CupertinoIcons.repeat
+                          : CupertinoIcons.repeat_1,
+                      size: 20,
+                      color: context.appPrimaryTextColor,
+                    ),
                   ),
-                ),
-              if (!nowPlayingDetails.isShuffleEnabled &&
-                  nowPlayingDetails.loopMode == LoopMode.off)
-                const SizedBox(height: 20),
-            ],
-          ),
-          Expanded(
-            child: GestureDetector(
-              onTap: onSelectPressed,
-              onLongPress: onSelectLongPress,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 300),
-                  child:
-                      (_bottomBarPage == _NowPlayingBottomBarPage.lyrics &&
-                          hasLyrics)
-                      ? LyricsView(
-                          key: ValueKey(
-                            'lyrics-view-${nowPlayingDetails.currentMetadata?.identity ?? 0}',
+                if (!nowPlayingDetails.isShuffleEnabled &&
+                    nowPlayingDetails.loopMode == LoopMode.off)
+                  const SizedBox(height: 20),
+              ],
+            ),
+            Expanded(
+              child: GestureDetector(
+                onTap: () => unawaited(handleUserInput(onSelectPressed)),
+                onLongPress: () =>
+                    unawaited(handleUserInput(onSelectLongPress)),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 10),
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 300),
+                    child:
+                        (_bottomBarPage == _NowPlayingBottomBarPage.lyrics &&
+                            hasLyrics)
+                        ? LyricsView(
+                            key: ValueKey(
+                              'lyrics-view-${nowPlayingDetails.currentMetadata?.identity ?? 0}',
+                            ),
+                            lyrics: lyrics,
+                            scrollController: _lyricsScrollController,
+                          )
+                        : const NowPlayingWidget(
+                            key: ValueKey('now-playing-view'),
                           ),
-                          lyrics: lyrics,
-                          scrollController: _lyricsScrollController,
-                        )
-                      : const NowPlayingWidget(
-                          key: ValueKey('now-playing-view'),
-                        ),
+                  ),
                 ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 30,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: PageView(
-                controller: _bottomBarPageController,
-                physics: const NeverScrollableScrollPhysics(),
-                children: _bottomBarPage == _NowPlayingBottomBarPage.volumeBar
-                    ? const [
-                        NowPlayingBottomBar(),
-                        VolumeBar(),
-                        NowPlayingBottomBar(),
-                      ]
-                    : [
-                        const NowPlayingBottomBar(),
-                        const NowPlayingBottomBar(showScrubber: true),
-                        RatingBar(
-                          currentRating:
-                              nowPlayingDetails.currentMetadata?.rating ?? 0,
-                          onRatingClicked: (val) async {
-                            await ref
-                                .read(nowPlayingDetailsProvider.notifier)
-                                .setCurrentMetadataRating(val ?? 0);
-                          },
-                        ),
-                        ShuffleSegmentedControl(
-                          shuffleMode: _shuffleMode,
-                          onValueChanged: (value) {
-                            setState(() {
-                              _shuffleMode = value ?? _shuffleMode;
-                            });
-                          },
-                        ),
-                        if (hasLyrics) const SizedBox(height: 10),
-                        const NowPlayingBottomBar(),
-                      ],
+            SizedBox(
+              height: 30,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: PageView(
+                  controller: _bottomBarPageController,
+                  physics: const NeverScrollableScrollPhysics(),
+                  children: bottomBarPages,
+                ),
               ),
             ),
-          ),
-          const SizedBox(height: 10),
-        ],
+            const SizedBox(height: 10),
+          ],
+        ),
       ),
     );
   }

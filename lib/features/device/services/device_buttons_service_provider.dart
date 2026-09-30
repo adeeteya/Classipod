@@ -40,6 +40,8 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
 
   Future<void> playPauseButtonClick() async {
     await Future.wait([buttonPressVibrate(), clickWheelSound()]);
+    state = null;
+    state = DeviceAction.playPause;
     await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
   }
 

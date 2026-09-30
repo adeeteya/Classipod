@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -38,7 +39,7 @@ class _AlbumSongsScreenState extends ConsumerState<AlbumSongsScreen>
         .playAlbum(albumDetail: widget.albumDetail, songIndex: index);
 
     if (mounted) {
-      await context.pushNamed(Routes.nowPlaying.name);
+      await context.openUniqueNamed(Routes.nowPlaying.name);
     }
   }
 

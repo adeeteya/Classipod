@@ -42,7 +42,7 @@ class NowPlayingScreen extends ConsumerStatefulWidget {
 class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   final PageController _bottomBarPageController = PageController();
   final ScrollController _lyricsScrollController = ScrollController();
-  late Timer _longPressTimer;
+  Timer? _longPressTimer;
   Timer? _barInactivityTimer;
   PlaybackShuffleMode _shuffleMode = PlaybackShuffleMode.off;
   _NowPlayingBottomBarPage _bottomBarPage = _NowPlayingBottomBarPage.seekBar;
@@ -227,7 +227,9 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
     _activeInputs++;
     try {
       await _progressReturnTransition;
-      if (mounted) {
+      if (mounted &&
+          ModalRoute.of(context)?.isCurrent == true &&
+          context.router.locationNamed == routeName) {
         await action();
       }
     } finally {
@@ -295,6 +297,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   }
 
   void seekForwardLongPress() {
+    _longPressTimer?.cancel();
     _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (
       _,
     ) async {
@@ -304,6 +307,7 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   }
 
   void seekBackwardLongPress() {
+    _longPressTimer?.cancel();
     _longPressTimer = Timer.periodic(const Duration(milliseconds: 50), (
       _,
     ) async {
@@ -313,8 +317,8 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   }
 
   void onLongPressEnd() {
-    if (_longPressTimer.isActive) {
-      _longPressTimer.cancel();
+    if (_longPressTimer?.isActive ?? false) {
+      _longPressTimer?.cancel();
       ref.read(deviceButtonsServiceProvider.notifier).resetDeviceAction();
     }
   }
@@ -334,13 +338,17 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   @override
   void dispose() {
     _barInactivityTimer?.cancel();
+    _longPressTimer?.cancel();
     _bottomBarPageController.dispose();
     _lyricsScrollController.dispose();
     super.dispose();
   }
 
   Future<void> deviceControlHandler(_, DeviceAction? newState) async {
-    if (newState == null || context.router.locationNamed != routeName) {
+    if (!mounted ||
+        newState == null ||
+        ModalRoute.of(context)?.isCurrent != true ||
+        context.router.locationNamed != routeName) {
       return;
     }
     await handleUserInput(() async {

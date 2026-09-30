@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/options_list_tile.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -67,8 +68,9 @@ class _AlbumMoreOptionsModalState extends ConsumerState<AlbumMoreOptionsModal>
         context.pop();
         break;
       case _AlbumMoreOptions.browseArtist:
-        context.pushReplacementNamed(
+        await context.openUniqueNamed(
           Routes.artistAlbums.name,
+          replaceCurrent: true,
           pathParameters: {"artistName": widget.albumDetail.albumArtistName},
         );
         break;

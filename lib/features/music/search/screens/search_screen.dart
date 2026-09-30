@@ -1,3 +1,4 @@
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -56,17 +57,20 @@ class _SearchScreenState extends ConsumerState<SearchScreen>
             .read(audioPlayerServiceProvider.notifier)
             .playSongFromLibrary(metadata.identity);
         if (mounted) {
-          await context.pushNamed(Routes.nowPlaying.name);
+          await context.openUniqueNamed(Routes.nowPlaying.name);
         }
       } else if (searchResult.searchResultType == SearchResultType.artist) {
         final selectedArtistName = searchResult.result as String;
-        await context.pushNamed(
+        await context.openUniqueNamed(
           Routes.artistAlbums.name,
           pathParameters: {"artistName": selectedArtistName},
         );
       } else if (searchResult.searchResultType == SearchResultType.album) {
         final albumDetail = searchResult.result as AlbumModel;
-        await context.pushNamed(Routes.albumSongs.name, extra: albumDetail);
+        await context.openUniqueNamed(
+          Routes.albumSongs.name,
+          extra: albumDetail,
+        );
       }
     }
   }

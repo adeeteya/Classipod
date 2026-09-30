@@ -80,7 +80,10 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
 
   Future<void> _navigateToNowPlayingScreen() async {
     unawaited(ref.read(splitScreenViewControllerProvider).closeSplitView());
-    await context.pushNamed(Routes.nowPlaying.name, extra: Routes.menu.name);
+    await context.openUniqueNamed(
+      Routes.nowPlaying.name,
+      extra: Routes.menu.name,
+    );
     if (!mounted) return;
     unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
   }

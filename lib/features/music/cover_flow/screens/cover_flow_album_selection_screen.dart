@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -10,7 +11,6 @@ import 'package:classipod/features/music/cover_flow/widgets/cover_flow_album_son
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 
 class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
   final AlbumModel albumDetail;
@@ -43,7 +43,7 @@ class _CoverFlowAlbumSelectionScreenState
         .playAlbum(albumDetail: widget.albumDetail, songIndex: index);
 
     if (mounted) {
-      await context.pushNamed(Routes.nowPlaying.name);
+      await context.openUniqueNamed(Routes.nowPlaying.name);
     }
   }
 

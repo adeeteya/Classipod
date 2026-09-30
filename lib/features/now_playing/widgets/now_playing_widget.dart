@@ -18,6 +18,14 @@ class NowPlayingWidget extends ConsumerWidget {
     );
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 300),
+      layoutBuilder: (currentChild, previousChildren) => Stack(
+        alignment: Alignment.center,
+        children: [
+          for (final child in previousChildren)
+            HeroMode(enabled: false, child: child),
+          ?currentChild,
+        ],
+      ),
       child: Row(
         key: ValueKey(
           "Now Playing-${nowPlayingDetails.currentMetadata?.identity}",

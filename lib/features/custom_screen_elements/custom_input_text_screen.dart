@@ -98,7 +98,10 @@ mixin CustomInputTextScreen<T extends ConsumerStatefulWidget>
   }
 
   Future<void> deviceControlHandler(_, DeviceAction? newState) async {
-    if (newState == null || context.router.locationNamed != routeName) {
+    if (!mounted ||
+        newState == null ||
+        ModalRoute.of(context)?.isCurrent != true ||
+        context.router.locationNamed != routeName) {
       return;
     }
     switch (newState) {

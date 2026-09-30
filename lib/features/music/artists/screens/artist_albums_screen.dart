@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -73,9 +74,12 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
   Future<void> _navigateToAlbumSelectionScreen(int index) async {
     setState(() => selectedDisplayItem = index);
     if (index == 0) {
-      await context.pushNamed(Routes.albumSongs.name, extra: allSongsAlbum());
+      await context.openUniqueNamed(
+        Routes.albumSongs.name,
+        extra: allSongsAlbum(),
+      );
     } else {
-      await context.pushNamed(
+      await context.openUniqueNamed(
         Routes.albumSongs.name,
         extra: displayItems[index - 1],
       );

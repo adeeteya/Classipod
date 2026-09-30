@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
@@ -136,7 +137,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
             songIndex: playable.indexOf(selected),
           );
       if (mounted) {
-        await context.pushNamed(Routes.nowPlaying.name);
+        await context.openUniqueNamed(Routes.nowPlaying.name);
       }
     }
   }

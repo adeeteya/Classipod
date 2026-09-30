@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -49,7 +50,7 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
         .playSongFromLibrary(songId);
 
     if (mounted) {
-      await context.pushNamed(Routes.nowPlaying.name);
+      await context.openUniqueNamed(Routes.nowPlaying.name);
     }
   }
 

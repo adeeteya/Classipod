@@ -1,3 +1,4 @@
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -54,7 +55,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
         .read(audioPlayerServiceProvider.notifier)
         .playSongFromLibrary(displayItems[index].identity);
     if (mounted) {
-      await context.pushNamed(Routes.nowPlaying.name);
+      await context.openUniqueNamed(Routes.nowPlaying.name);
     }
   }
 

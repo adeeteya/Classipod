@@ -1,4 +1,5 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/options_list_tile.dart';
@@ -76,15 +77,17 @@ class _SongsMoreOptionsModalState extends ConsumerState<SongsMoreOptionsModal>
             .read(albumDetailsProvider)
             .indexWhere((e) => e == widget.currentSongMetadata.getAlbumDetail);
         if (albumDetailIndex != -1) {
-          context.pushReplacementNamed(
+          await context.openUniqueNamed(
             Routes.albumSongs.name,
+            replaceCurrent: true,
             extra: ref.read(albumDetailsProvider)[albumDetailIndex],
           );
         }
         break;
       case _SongsMoreOptions.browseArtist:
-        context.pushReplacementNamed(
+        await context.openUniqueNamed(
           Routes.artistAlbums.name,
+          replaceCurrent: true,
           pathParameters: {
             "artistName": widget.currentSongMetadata.getMainArtistName,
           },

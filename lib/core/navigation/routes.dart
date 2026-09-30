@@ -27,7 +27,7 @@ import 'package:classipod/features/music/search/screens/search_more_options_moda
 import 'package:classipod/features/music/search/screens/search_screen.dart';
 import 'package:classipod/features/music/songs/screens/songs_more_options_modal.dart';
 import 'package:classipod/features/music/songs/screens/songs_screen.dart';
-import 'package:classipod/features/now_playing/screen/now_playing_more_options_modal.dart';
+import 'package:classipod/features/now_playing/screen/now_playing_more_options_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
 import 'package:classipod/features/settings/controller/exclude_directories_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -341,11 +341,11 @@ final routerProvider = Provider(
                         path: Routes.nowPlayingMoreOptions.name,
                         name: Routes.nowPlayingMoreOptions.name,
                         parentNavigatorKey: rootNavigatorKey,
-                        pageBuilder: (context, state) => OptionsModalPage(
-                          context: context,
-                          title: Routes.nowPlayingMoreOptions.title(context),
-                          builder: (context) =>
-                              const NowPlayingMoreOptionsModal(),
+                        pageBuilder: (context, state) => CupertinoPage(
+                          key: state.pageKey,
+                          child: const ScreenPageContent(
+                            child: NowPlayingMoreOptionsScreen(),
+                          ),
                         ),
                       ),
                       GoRoute(

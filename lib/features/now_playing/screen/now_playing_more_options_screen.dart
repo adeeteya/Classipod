@@ -1,6 +1,8 @@
+import 'dart:async';
+
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/widgets/options_list_tile.dart';
+import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
@@ -36,15 +38,15 @@ enum _NowPlayingMoreOptions {
   }
 }
 
-class NowPlayingMoreOptionsModal extends ConsumerStatefulWidget {
-  const NowPlayingMoreOptionsModal({super.key});
+class NowPlayingMoreOptionsScreen extends ConsumerStatefulWidget {
+  const NowPlayingMoreOptionsScreen({super.key});
 
   @override
-  ConsumerState createState() => _NowPlayingMoreOptionsModalState();
+  ConsumerState createState() => _NowPlayingMoreOptionsScreenState();
 }
 
-class _NowPlayingMoreOptionsModalState
-    extends ConsumerState<NowPlayingMoreOptionsModal>
+class _NowPlayingMoreOptionsScreenState
+    extends ConsumerState<NowPlayingMoreOptionsScreen>
     with CustomScreen {
   @override
   String get routeName => Routes.nowPlayingMoreOptions.name;
@@ -57,6 +59,19 @@ class _NowPlayingMoreOptionsModalState
   Future<void> onSelectPressed() =>
       _navigateToScreen(_NowPlayingMoreOptions.values[selectedDisplayItem]);
 
+  @override
+  void onMenuButtonPressed() => _closeScreen();
+
+  void _closeScreen() {
+    // Let every device-action listener see the options route before popping.
+    // Otherwise Now Playing can handle the same Menu/Select press again.
+    scheduleMicrotask(() {
+      if (mounted && ModalRoute.of(context)?.isCurrent == true) {
+        context.pop();
+      }
+    });
+  }
+
   Future<void> _navigateToScreen(_NowPlayingMoreOptions optionItem) async {
     setState(() => selectedDisplayItem = displayItems.indexOf(optionItem));
     final currentSongMetadata = ref
@@ -67,7 +82,7 @@ class _NowPlayingMoreOptionsModalState
         ref
             .read(playlistsProvider.notifier)
             .addSongToPlaylist(currentSongMetadata);
-        context.pop();
+        _closeScreen();
         break;
       case _NowPlayingMoreOptions.browseAlbum:
         final albumDetailIndex = ref
@@ -91,7 +106,7 @@ class _NowPlayingMoreOptionsModalState
         break;
       case _NowPlayingMoreOptions.editSong:
         if (currentSongMetadata == null) {
-          context.pop();
+          _closeScreen();
           return;
         }
         await showCupertinoDialog(
@@ -100,37 +115,35 @@ class _NowPlayingMoreOptionsModalState
               SongEditScreen(songMetadata: currentSongMetadata),
         );
         if (mounted) {
-          context.pop();
+          _closeScreen();
         }
         break;
       case _NowPlayingMoreOptions.sleepTimer:
         await context.pushNamed(Routes.sleepTimer.name);
         break;
       case _NowPlayingMoreOptions.cancel:
-        context.pop();
+        _closeScreen();
         break;
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        color: context.appSurfaceColor,
-        border: Border.all(color: context.appOutlineColor),
-      ),
-      child: ListView.builder(
-        shrinkWrap: true,
+    return CupertinoPageScaffold(
+      child: CupertinoScrollbar(
         controller: scrollController,
-        itemCount: displayItems.length,
-        prototypeItem: const OptionsListTile(text: '', isSelected: false),
-        itemBuilder: (context, index) {
-          return OptionsListTile(
-            text: displayItems[index].title(context),
-            isSelected: index == selectedDisplayItem,
-            onTap: () async => _navigateToScreen(displayItems[index]),
-          );
-        },
+        child: ListView.builder(
+          controller: scrollController,
+          itemCount: displayItems.length,
+          prototypeItem: const DisplayListTile(text: '', isSelected: false),
+          itemBuilder: (context, index) {
+            return DisplayListTile(
+              text: displayItems[index].title(context),
+              isSelected: index == selectedDisplayItem,
+              onTap: () async => _navigateToScreen(displayItems[index]),
+            );
+          },
+        ),
       ),
     );
   }

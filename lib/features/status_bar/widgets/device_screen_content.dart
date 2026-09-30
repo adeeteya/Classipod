@@ -80,6 +80,11 @@ class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent>
                 _routeName == Routes.coverFlowSelection.name &&
                 (state.name == Routes.coverFlow.name ||
                     state.name == Routes.nowPlaying.name);
+            final preserveNowPlayingHeader =
+                (_routeName == Routes.nowPlaying.name &&
+                    state.name == Routes.nowPlayingMoreOptions.name) ||
+                (_routeName == Routes.nowPlayingMoreOptions.name &&
+                    state.name == Routes.nowPlaying.name);
             _routeName = state.name;
             _previous = _current;
             _changesLayout =
@@ -91,7 +96,7 @@ class _DeviceScreenContentState extends ConsumerState<DeviceScreenContent>
                 _changesLayout && _transitionRevision == observer.revision;
             _location = location;
             _entrance.cancelEntrance();
-            if (preserveCoverFlowSelectionHeader) {
+            if (preserveCoverFlowSelectionHeader || preserveNowPlayingHeader) {
               _entrance.value = 1;
             } else if (header.delayedEntrance) {
               _entrance.prepare();

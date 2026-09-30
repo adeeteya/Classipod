@@ -1,6 +1,7 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/widgets/subtle_reflection.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -20,9 +21,6 @@ class SeekBar extends ConsumerWidget {
     final borderColor = isDarkTheme
         ? AppPalette.darkSliderBorderColor
         : AppPalette.sliderBorderColor;
-    final progressShadowColor = isDarkTheme
-        ? AppPalette.darkNowProgressBarShadowColor
-        : AppPalette.nowProgressBarShadowColor;
 
     return Expanded(
       child: LayoutBuilder(
@@ -59,16 +57,17 @@ class SeekBar extends ConsumerWidget {
                   width: (value / max) * constraints.maxWidth,
                   margin: const EdgeInsets.symmetric(horizontal: 8),
                   duration: const Duration(milliseconds: 10),
-                  decoration: BoxDecoration(
-                    gradient: IpodGradients.progress,
-                    boxShadow: [
-                      BoxShadow(
-                        color: progressShadowColor,
-                        spreadRadius: 1,
-                        blurRadius: 2,
-                        offset: const Offset(0, 8),
+                  child: const SubtleReflection(
+                    height: 20,
+                    child: SizedBox(
+                      width: double.infinity,
+                      height: 20,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          gradient: IpodGradients.progress,
+                        ),
                       ),
-                    ],
+                    ),
                   ),
                 ),
               ),

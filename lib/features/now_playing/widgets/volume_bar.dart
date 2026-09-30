@@ -4,6 +4,7 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/widgets/subtle_reflection.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/volume_mode.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -63,9 +64,6 @@ class _VolumeBarState extends ConsumerState<VolumeBar> {
     final borderColor = isDarkTheme
         ? AppPalette.darkSliderBorderColor
         : AppPalette.sliderBorderColor;
-    final progressShadowColor = isDarkTheme
-        ? AppPalette.darkNowProgressBarShadowColor
-        : AppPalette.nowProgressBarShadowColor;
 
     return RepaintBoundary(
       child: Row(
@@ -99,16 +97,17 @@ class _VolumeBarState extends ConsumerState<VolumeBar> {
                       width: _volumeLevel * constraints.maxWidth,
                       margin: const EdgeInsets.symmetric(horizontal: 8),
                       duration: const Duration(milliseconds: 10),
-                      decoration: BoxDecoration(
-                        gradient: IpodGradients.progress,
-                        boxShadow: [
-                          BoxShadow(
-                            color: progressShadowColor,
-                            spreadRadius: 1,
-                            blurRadius: 2,
-                            offset: const Offset(0, 8),
+                      child: const SubtleReflection(
+                        height: 20,
+                        child: SizedBox(
+                          width: double.infinity,
+                          height: 20,
+                          child: DecoratedBox(
+                            decoration: BoxDecoration(
+                              gradient: IpodGradients.progress,
+                            ),
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   ],

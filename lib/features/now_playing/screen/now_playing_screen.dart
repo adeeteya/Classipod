@@ -6,6 +6,7 @@ import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
+import 'package:classipod/core/widgets/subtle_reflection.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
@@ -527,13 +528,21 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
               ),
             ),
             SizedBox(
-              height: 30,
+              height: 24 + SubtleReflection.visibleHeight,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: PageView(
                   controller: _bottomBarPageController,
                   physics: const NeverScrollableScrollPhysics(),
-                  children: bottomBarPages,
+                  children: [
+                    for (final page in bottomBarPages)
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          bottom: SubtleReflection.visibleHeight,
+                        ),
+                        child: page,
+                      ),
+                  ],
                 ),
               ),
             ),

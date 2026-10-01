@@ -1,161 +1,132 @@
-## 2.1.0 (Unreleased)
+# Changelog
 
-- Restore the last playback queue and song when reopening the app, paused at
-  the beginning. Save queue changes separately from song selection, without
-  periodic position writes. Resolve remote streams on demand and skip
-  unavailable library tracks. Start fresh if the saved song is missing or
-  its first playback attempt fails.
+## 2.1.0
+### New features
 
-- Add Off, Songs, and Albums shuffle modes to Now Playing and Settings.
-  Shuffle songs or whole albums within the current library or playlist,
-  keeping album tracks together in disc and track order.
+- Stream from Subsonic-compatible servers, including Navidrome. Configure and
+  validate a connection in Library Settings; combine server and local tracks
+  on native apps or replace the demo library on web.
+- Cache server catalogs and artwork, refresh or reindex them, and keep saved
+  ClassiPod playlist entries when disconnecting. Store native credentials in
+  OS secure storage; keep web passwords only for the current session.
+- Add Hide Local Music while Subsonic is enabled and a saved duplicate-filename
+  filter that hides tracks without deleting files or playlist entries.
+- Add Library Settings with refresh/reindex controls and a conditional Missing
+  Tracks page listing unreadable files, their locations, and retry guidance.
+- Add a sleep timer: 15, 30, 45, or 60 minutes, or the end of the current song.
+- Add Off, Songs, and Albums shuffle modes in Settings and Now Playing. Album
+  shuffle keeps disc and track order within each album.
+- Restore the last queue and selected song after restarting, paused at the
+  beginning. Skip unavailable tracks; start fresh if the selected track is
+  missing or its first playback attempt fails.
+- Add light/dark screen themes and an OLED Black device color.
+- Add Original and Big Cover Flow layouts, spring-based wheel movement,
+  custom artwork flight previews, and improved reflection/transition effects.
+- Remember screen selection and scroll positions; scroll selected artist and
+  album entries into view. Show an initial-letter indicator during fast scroll.
+- Return to Now Playing after inactivity during playback. Return temporary
+  rating/shuffle controls to progress after inactivity, while leaving lyrics
+  open until the user advances manually.
+- Preview scrubber positions and commit the seek after interaction, display
+  queue position, and open More Options as a full screen.
+- Add Windows system media controls and Linux MPRIS for track information,
+  play/pause, and previous/next actions.
+- Add native fullscreen Immersive Mode on macOS, Windows, and Linux, with the
+  preference restored at startup.
+- Bundle an iPod-inspired click sound on every platform, enabled by default
+  for new preferences and settings resets.
+- Add functional iOS support and remembered parent-folder access on iOS/macOS,
+  including recursive scans of nested folders.
+- Provide optional unsigned iOS IPA and universal Apple Silicon/Intel macOS
+  DMG release downloads, with checksums and installation instructions.
 
-- Align platform release metadata, citation, security policy, and release
-  documentation with app version 2.1.0.
+### Library and browsing improvements
 
-- Download a pinned Inno Setup compiler from its official GitHub release,
-  verify its checksum, and package Windows with the existing installer script.
+- Use TagLib for metadata and embedded artwork on all native platforms, reading
+  both in one file pass. Share incremental indexing, caching, and progress
+  across Android MediaStore and native folder/file discovery.
+- Keep metadata parsing off the UI isolate on desktop/iOS, remember selected
+  folders/files, repair missing artwork, and reconcile library changes at startup.
+- Show song/artwork counters during initial indexing or reindexing, without
+  briefly displaying them during a normal cached startup.
+- Expand documented format support to MP4, Opus, AIFF, APE, and MOV, subject
+  to the playback capabilities of each platform.
+- Sort album songs by disc and track number; improve album-artist handling,
+  artist-name parsing, and consistent name/song ordering. Split multi-artist
+  tags while preserving single slashes and unsplit genre names.
+- Show artist/album counts for genres, artist names in album views, and direct
+  song navigation for artists with a single album.
+- Refresh browsing screens, artwork, and menu counts as local/server catalogs
+  change, without requiring playback to start.
+- Improve typography, selected-title marquees, split-screen preview timing,
+  status-bar entrances, progress/volume controls, and artwork animations.
+- Improve French, Brazilian Portuguese, and Spanish translations and add
+  localized strings for the new controls and server features.
 
-- Avoid upgrading unrelated runner packages during Linux CI setup, preventing
-  Firefox/Snap update failures from blocking the build.
+### Bug fixes
 
-- Add Windows system media controls and Linux MPRIS integration for track
-  information, play/pause, and previous/next controls through the existing
-  playback handler.
+- Fix Android crashes with large libraries by keeping a bounded queue in Dart
+  and loading only the current track into the native player/media session.
+  Use the shared queue behavior across native platforms and web.
+- Fix first-run splash hangs after indexing and when the first local file is
+  unavailable. Prepare the initial queue without opening audio until playback.
+- Restart splash initialization and playback setup after a manual reindex;
+  avoid rebuilding catalogs for progress-only or unchanged-folder updates.
+- Continue indexing after per-file tag-reader failures. Keep errors out of the
+  splash screen and hide Missing Tracks entries from excluded directories.
+- Fix web playback repeating the first loaded song when selecting/skipping.
+- Retry remote audio after temporary network failures while retaining playback
+  position; release stalled native seeks and recover at the requested position.
+  Show a connection-lost message with Retry when recovery needs user input.
+- Handle playback errors without uncaught UI exceptions; explain blocked HTTP
+  streams. Allow configured native HTTP servers, including LAN addresses.
+- Delay the buffering spinner to avoid flashes during short transitions/seeks.
+- Keep the prior server catalog after failed scans; show first-scan progress,
+  retry, and continue-in-background actions in the connection dialog.
+- Keep Library Settings and its preview stable when the server dialog keyboard
+  opens, with fields and actions remaining accessible.
+- Fix artwork cleanup awaiting itself, image-loading failures, incorrect online
+  thumbnail paths, and unexpected album-art scrolling.
+- Prevent duplicate-route/navigation races and late preview updates targeting
+  disposed screens. Preserve Cover Flow headers during route transitions.
+- Guard actions on empty playlists/song lists; improve search-field text/cursor
+  contrast and allow a long press on the back-seek button to clear text.
+- Correct elapsed/remaining-time display and Now Playing shuffle/seek actions.
+- Avoid duplicate click/vibration feedback per scroll step; fix click sounds
+  on Windows/Linux without interrupting music audio focus.
 
-- Replace system wheel sounds with a bundled iPod-inspired click on all
-  platforms, using a separate player without taking audio focus from music.
-  Avoid duplicate click and vibration feedback for each scroll step.
-  Enable click sounds by default for new preferences and settings resets.
+### Platforms and release tooling
 
-- Make Immersive Mode toggle native fullscreen on macOS, Windows, and Linux,
-  restoring the saved preference at startup.
+- Move iOS/macOS plugins to Swift Package Manager, use forked TagLib and
+  on_audio_query integrations, and enable Android built-in Kotlin.
+- Update Flutter and dependencies, Android SDK/NDK settings, and Apple minimum
+  deployment targets. Add Linux secure-storage dependencies and Windows build
+  compatibility fixes.
+- Add macOS development/production schemes and local ad-hoc development signing.
+- Derive release versions from pubspec, select Google Play build numbers from
+  existing uploads, and align platform metadata with 2.1.0.
+- Package Windows with a pinned, checksum-verified Inno Setup compiler and
+  improve uninstaller cleanup of app data/caches.
+- Add Apple packaging/checksum jobs and web WebAssembly builds; improve native
+  CI setup and avoid unrelated Linux runner package upgrades.
+- Add large-library stress tooling and coverage for indexing, playback recovery,
+  server integration, navigation, shuffle, and timers.
+- Update README, store descriptions, Linux desktop/package metadata, web
+  descriptions, and citation text for local music and Subsonic/Navidrome.
+  Upload store descriptions and release notes with Google Play releases;
+  keep image and screenshot uploads disabled.
 
-- Add a saved filename-based duplicate filter in Library Settings. Keep
-  the first visible copy without deleting files or saved playlist entries.
+### Upgrading from 1.12.0
 
-- Add a saved Hide Local Music setting while Subsonic is enabled, with
-  immediate catalog updates and local music restored when Subsonic is off.
-
-- Update music browsing screens when the library changes so Subsonic songs
-  appear after connection or enabling without starting playback. Avoid
-  awaiting an artwork request from its own cleanup callback.
-
-- Fix first-run splash hanging after local indexing by preventing newly
-  discovered folders from invalidating the pending library load.
-
-- Delay the Now Playing buffering spinner by one second to avoid flashing
-  during brief track changes and seeks.
-
-- Prepare the initial library queue without native playback calls; avoid
-  rebuilding the catalog for scan progress or unchanged directory lists.
-  Update menu counts and artwork when the library arrives asynchronously.
-
-- Release stalled native seeks after stream failures so recovery and track
-  controls remain responsive; resume at the requested seek position.
-
-- Preserve server playback position across network interruptions, show a
-  spinner on the Now Playing progress bar, and retry with backoff to resume.
-
-- Show a connection-lost message and Retry action in Now Playing when a
-  server stream fails due to a network interruption.
-
-- Hide errors from excluded folders in Missing Tracks, updating immediately
-  when directory exclusions change.
-
-- Ignore delayed menu preview updates after navigation or library refresh
-  removes the originating screen, preventing disposed-widget errors.
-
-- Move per-file read failures from splash into a conditional Missing Tracks
-  settings page with song names, file locations, and retry guidance. Continue
-  indexing other songs when a tag reader throws.
-
-- Show initial server indexing in the connection dialog with retry and
-  continue-in-background actions; move background status into its preview.
-
-- Keep Library Settings and its preview stable behind the Subsonic dialog
-  when the keyboard opens; keep dialog fields and actions above the keyboard.
-
-- Defer opening local audio until playback so an unavailable first track
-  cannot leave startup waiting on the splash screen.
-
-- Allow native HTTP Subsonic connections to user-configured hosts, including
-  local IP addresses, for indexing, artwork, and audio playback.
-
-- Handle playback failures without uncaught UI exceptions and identify
-  platform-blocked HTTP streams with an actionable HTTPS message.
-
-- Update flutter_secure_storage to 11.2.0.
-
-- Add a Subsonic server connection in Library Settings, with secure native
-  credentials, session-only Web sign-in, cached catalog/artwork, and streaming.
-  Merge server music with local tracks and preserve server playlist entries
-  when disconnected. Web servers must allow CORS; HTTP access follows each
-  platform's transport restrictions.
-
-- Add optional iOS and macOS GitHub release jobs: an unsigned sideloadable IPA
-  and a universal, ad-hoc-signed DMG without Developer ID or notarization.
-  Include SHA-256 checksums and Apple installation/build documentation.
-
-- Select a parent music folder on iOS and macOS on first launch or Settings
-  rescan, remember access across launches, and recursively cache metadata and
-  artwork using the shared library indexer.
-
-- Show song and artwork counters only for initial indexing or re-indexing,
-  keeping normal cached startup free of briefly flashing totals.
-
-- Restart splash initialization on manual rescan, resetting progress and
-  rebuilding playback after forced metadata and artwork extraction.
-
-- Split artist and album-artist tags on &, ;, commas, //, ft., x, featuring,
-  and feat, while preserving single slashes and genre names.
-
-- Read metadata and cache embedded artwork in one file open per song, with
-  live startup counts and repair of missing artwork on cached songs.
-
-- Fix web playback repeating the first loaded song when selecting or skipping
-  tracks; reset the web audio backend before replacing its source.
-
-- Enable built-in Kotlin for the Android app and both audio plugins.
-- Pin flutter_taglib to the adeeteya fork, with native binaries and source
-  archives hosted in that fork’s releases.
-
-- Remove obsolete iOS CocoaPods integration; use Swift Package Manager
-  for all iOS plugin dependencies.
-
-- Update on_audio_query to use its iOS Swift Package Manager implementation.
-
-- Remove obsolete macOS CocoaPods integration; use Swift Package Manager
-  for macOS plugin dependencies.
-
-- Add the missing macOS dev scheme and CocoaPods configuration mapping so
-  the Android Studio development configuration can select the dev flavor.
-  Use local ad-hoc signing for Debug-dev without a development certificate.
-
-- Use TagLib for metadata and artwork on every native platform; remove
-  audio_metadata_reader while keeping cache version 1.
-
-- Share bounded playback queues across Android, iOS, macOS, Windows, Linux,
-  and web; remove the separate full-native-queue playback path.
-- Share incremental indexing, artwork caching, progress, and `library_v1`
-  storage for native libraries, with MediaStore and file-picker adapters.
-- Remember selected folders/files between launches and keep metadata parsing
-  off the UI isolate on desktop and iOS.
-
-- Fix Android playback crashes on large libraries by keeping the queue in Dart
-  and loading only the current track into the native player and media session.
-
-- Refactor Android library discovery and incremental metadata indexing with TagLib.
-- Preserve album artists and ambiguous artist names.
-- Delete the legacy Android metadata cache and scan afresh for 2.0; old ratings
-  are not migrated. Subsequent scans retain ratings from the new library.
-- Show song and artwork cache progress above the startup loader.
-- Repair missing artwork caches and reconcile library changes on startup.
-
-[🚀 updated CI/CD to build Windows installer](https://github.com/adeeteya/Classipod/commit/3fc038606228a9c1e70404b7b902806a97c89324)
-
-[✨ added ability to run debug app without keystore](https://github.com/adeeteya/Classipod/commit/549c6cfec0bb33ae0b565b42a8077dc458a9ac1e)
-
-[🐛 fixed playlist deletion bugs](https://github.com/adeeteya/Classipod/commit/ca6409c3a59346090b417392ddef53bdc3bd4a22)
-
-[✨ added CI/CD with build boolean inputs](https://github.com/adeeteya/Classipod/commit/6f7846d7dd17f824e7da79bad5c867b9ddc511fd)
+- The legacy Android metadata cache is rebuilt. Ratings stored in that old
+  cache are not migrated; later scans retain ratings in the new library.
+- Local files remain playable offline. Server audio is streamed and needs a
+  connection; only metadata/artwork are cached. Server playlist syncing and
+  offline audio downloads are not included. Ratings/edits remain in ClassiPod.
+- Web server access requires CORS and a browser-compatible HTTPS configuration;
+  web passwords must be entered again after reload. Native HTTP is supported,
+  but HTTPS is preferred. Linux credentials require a Secret Service provider.
+- Restoring a session restores the song and queue, not its previous timestamp
+  or automatic playback.
+- iOS downloads require sideloading/signing. macOS downloads use ad-hoc signing
+  and are not notarized. See [Apple releases](docs/apple-releases.md).

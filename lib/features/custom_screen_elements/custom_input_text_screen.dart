@@ -25,6 +25,7 @@ mixin CustomInputTextScreen<T extends ConsumerStatefulWidget>
     _selectedDisplayItem = value;
     _viewState?.selectedIndex = value;
   }
+
   int extraDisplayItems = 0;
   int topStatusBarHeight = 30;
   final double displayTileHeight = 54;

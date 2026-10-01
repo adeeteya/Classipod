@@ -92,7 +92,9 @@ void main() {
     final box = RecordingBox();
     final store = PlaybackSessionStore(box);
     await store.save(session());
-    final checkpoint = Map<dynamic, dynamic>.from(box.storedRecords['checkpoint']);
+    final checkpoint = Map<dynamic, dynamic>.from(
+      box.storedRecords['checkpoint'],
+    );
     box.storedRecords['checkpoint'] = {...checkpoint, 'revision': 999};
     expect(store.read(), isNull);
     box.storedRecords['checkpoint'] = {...checkpoint, 'songId': 'wrong-song'};

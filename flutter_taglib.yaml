@@ -1,6 +1,0 @@
-platforms:
-  android: true
-  ios: true
-  macos: true
-  windows: true
-  linux: true

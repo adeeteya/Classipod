@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Classipod
-Comment=iPod Classic-inspired player for local music and Subsonic/Navidrome streaming
-Exec=/usr/bin/classipod
-Icon=/usr/share/icons/classipod/classipod.png
-Terminal=false
-Type=Application
-Categories=AudioVideo;Audio;Player;Music;
-StartupWMClass=classipod

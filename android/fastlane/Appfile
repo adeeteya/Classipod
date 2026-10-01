@@ -1,2 +1,0 @@
-json_key_file("../google_service_account.json")
-package_name(ENV["APP_PACKAGE_NAME"])

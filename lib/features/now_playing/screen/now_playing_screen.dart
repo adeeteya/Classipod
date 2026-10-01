@@ -289,10 +289,18 @@ class _NowPlayingScreenState extends ConsumerState<NowPlayingScreen> {
   }
 
   Future<void> seekForward() async {
+    if (_bottomBarPage == _NowPlayingBottomBarPage.shuffleBar) {
+      await rotateForward();
+      return;
+    }
     await ref.read(audioPlayerServiceProvider.notifier).nextSong();
   }
 
   Future<void> seekBackward() async {
+    if (_bottomBarPage == _NowPlayingBottomBarPage.shuffleBar) {
+      await rotateBackward();
+      return;
+    }
     await ref.read(audioPlayerServiceProvider.notifier).seekBackwards();
   }
 

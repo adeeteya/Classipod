@@ -4,6 +4,7 @@ import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/songs/widgets/condensed_song_list_tile.dart';
@@ -60,23 +61,29 @@ class _AlbumSongsScreenState extends ConsumerState<AlbumSongsScreen>
       child: Column(
         children: [
           Flexible(
-            child: CupertinoScrollbar(
-              controller: scrollController,
-              child: ListView.builder(
+            child: FastScrollIndicator(
+              wheelScrollIndex: wheelScrollIndex,
+              itemCount: displayItems.length,
+              itemExtent: displayTileHeight,
+              labelAt: (index) => displayItems[index].getTrackName,
+              child: CupertinoScrollbar(
                 controller: scrollController,
-                itemCount: displayItems.length,
-                prototypeItem: const CondensedSongListTile(
-                  songName: '',
-                  isSelected: false,
-                  isCurrentlyPlaying: false,
-                ),
-                itemBuilder: (context, index) => CondensedSongListTile(
-                  songName: displayItems[index].getTrackName,
-                  isSelected: selectedDisplayItem == index,
-                  isCurrentlyPlaying:
-                      currentlyPlayingOriginalIndex ==
-                      displayItems[index].identity,
-                  onTap: () async => _playSongFromAlbum(index),
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: displayItems.length,
+                  prototypeItem: const CondensedSongListTile(
+                    songName: '',
+                    isSelected: false,
+                    isCurrentlyPlaying: false,
+                  ),
+                  itemBuilder: (context, index) => CondensedSongListTile(
+                    songName: displayItems[index].getTrackName,
+                    isSelected: selectedDisplayItem == index,
+                    isCurrentlyPlaying:
+                        currentlyPlayingOriginalIndex ==
+                        displayItems[index].identity,
+                    onTap: () async => _playSongFromAlbum(index),
+                  ),
                 ),
               ),
             ),

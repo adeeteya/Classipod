@@ -2,6 +2,7 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/album/widgets/album_list_tile.dart';
@@ -93,43 +94,50 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
       child: Column(
         children: [
           Flexible(
-            child: CupertinoScrollbar(
-              controller: scrollController,
-              child: ListView.builder(
+            child: FastScrollIndicator(
+              wheelScrollIndex: wheelScrollIndex,
+              itemCount: displayItems.length + 1,
+              itemExtent: displayTileHeight,
+              labelAt: (index) =>
+                  index == 0 ? '' : displayItems[index - 1].albumName,
+              child: CupertinoScrollbar(
                 controller: scrollController,
-                itemCount: displayItems.length + 1,
-                prototypeItem: AlbumListTile(
-                  albumDetails: AlbumModel(
-                    albumName: '',
-                    albumArtistName: '',
-                    albumSongs: [],
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: displayItems.length + 1,
+                  prototypeItem: AlbumListTile(
+                    albumDetails: AlbumModel(
+                      albumName: '',
+                      albumArtistName: '',
+                      albumSongs: [],
+                    ),
+                    isSelected: false,
+                    onTap: () {},
+                    onLongPress: () {},
                   ),
-                  isSelected: false,
-                  onTap: () {},
-                  onLongPress: () {},
-                ),
-                itemBuilder: (context, index) {
-                  if (index == 0) {
-                    return AlbumListTile(
-                      albumDetails: allSongsAlbum(),
-                      isSelected: selectedDisplayItem == 0,
-                      showArtistName: false,
-                      isAllSongsAlbum: true,
-                      onTap: () async => _navigateToAlbumSelectionScreen(0),
-                      onLongPress: () async =>
-                          _navigateToAlbumMoreOptionsScreen(0),
-                    );
-                  }
+                  itemBuilder: (context, index) {
+                    if (index == 0) {
+                      return AlbumListTile(
+                        albumDetails: allSongsAlbum(),
+                        isSelected: selectedDisplayItem == 0,
+                        showArtistName: false,
+                        isAllSongsAlbum: true,
+                        onTap: () async => _navigateToAlbumSelectionScreen(0),
+                        onLongPress: () async =>
+                            _navigateToAlbumMoreOptionsScreen(0),
+                      );
+                    }
 
-                  return AlbumListTile(
-                    albumDetails: displayItems[index - 1],
-                    isSelected: selectedDisplayItem == index,
-                    showArtistName: false,
-                    onTap: () async => _navigateToAlbumSelectionScreen(index),
-                    onLongPress: () async =>
-                        _navigateToAlbumMoreOptionsScreen(index),
-                  );
-                },
+                    return AlbumListTile(
+                      albumDetails: displayItems[index - 1],
+                      isSelected: selectedDisplayItem == index,
+                      showArtistName: false,
+                      onTap: () async => _navigateToAlbumSelectionScreen(index),
+                      onLongPress: () async =>
+                          _navigateToAlbumMoreOptionsScreen(index),
+                    );
+                  },
+                ),
               ),
             ),
           ),

@@ -6,6 +6,7 @@ import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
+import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_option_type.dart';
@@ -193,50 +194,57 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
       child: Column(
         children: [
           Flexible(
-            child: CupertinoScrollbar(
-              controller: scrollController,
-              child: ListView.builder(
+            child: FastScrollIndicator(
+              wheelScrollIndex: wheelScrollIndex,
+              itemCount: displayItems.length + 2,
+              itemExtent: displayTileHeight,
+              labelAt: (index) =>
+                  index < 2 ? '' : displayItems[index - 2].getTrackName,
+              child: CupertinoScrollbar(
                 controller: scrollController,
-                itemCount: displayItems.length + 2,
-                prototypeItem: PlaylistOptionListTile(
-                  onTap: () {},
-                  isSelected: false,
-                  type: PlaylistOptionType.savePlaylist,
-                ),
-                itemBuilder: (context, index) {
-                  if (index == 0) {
-                    return PlaylistOptionListTile(
-                      onTap: () async => _performAction(0),
-                      isSelected: selectedDisplayItem == 0,
-                      type: widget.playlistKey == null
-                          ? PlaylistOptionType.savePlaylist
-                          : PlaylistOptionType.renamePlaylist,
-                    );
-                  } else if (index == 1) {
-                    return PlaylistOptionListTile(
-                      onTap: () async => _performAction(1),
-                      isSelected: selectedDisplayItem == 1,
-                      type: PlaylistOptionType.clearPlaylist,
-                    );
-                  }
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: displayItems.length + 2,
+                  prototypeItem: PlaylistOptionListTile(
+                    onTap: () {},
+                    isSelected: false,
+                    type: PlaylistOptionType.savePlaylist,
+                  ),
+                  itemBuilder: (context, index) {
+                    if (index == 0) {
+                      return PlaylistOptionListTile(
+                        onTap: () async => _performAction(0),
+                        isSelected: selectedDisplayItem == 0,
+                        type: widget.playlistKey == null
+                            ? PlaylistOptionType.savePlaylist
+                            : PlaylistOptionType.renamePlaylist,
+                      );
+                    } else if (index == 1) {
+                      return PlaylistOptionListTile(
+                        onTap: () async => _performAction(1),
+                        isSelected: selectedDisplayItem == 1,
+                        type: PlaylistOptionType.clearPlaylist,
+                      );
+                    }
 
-                  return PlaylistSongListTile(
-                    songMetadata: displayItems[index - 2],
-                    unavailable:
-                        displayItems[index - 2].isSubsonic &&
-                        !(ref
-                                .watch(subsonicControllerProvider)
-                                .value
-                                ?.available(displayItems[index - 2]) ??
-                            false),
-                    isSelected: selectedDisplayItem == index,
-                    isCurrentlyPlaying:
-                        currentlyPlayingOriginalIndex ==
-                        displayItems[index - 2].identity,
-                    onTap: () async => _performAction(index),
-                    onLongPress: () async => _performLongPressAction(index),
-                  );
-                },
+                    return PlaylistSongListTile(
+                      songMetadata: displayItems[index - 2],
+                      unavailable:
+                          displayItems[index - 2].isSubsonic &&
+                          !(ref
+                                  .watch(subsonicControllerProvider)
+                                  .value
+                                  ?.available(displayItems[index - 2]) ??
+                              false),
+                      isSelected: selectedDisplayItem == index,
+                      isCurrentlyPlaying:
+                          currentlyPlayingOriginalIndex ==
+                          displayItems[index - 2].identity,
+                      onTap: () async => _performAction(index),
+                      onLongPress: () async => _performLongPressAction(index),
+                    );
+                  },
+                ),
               ),
             ),
           ),

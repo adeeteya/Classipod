@@ -3,6 +3,7 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
+import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/artists/providers/artist_names_provider.dart';
@@ -74,30 +75,36 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
       child: Column(
         children: [
           Flexible(
-            child: CupertinoScrollbar(
-              controller: scrollController,
-              child: ListView.builder(
+            child: FastScrollIndicator(
+              wheelScrollIndex: wheelScrollIndex,
+              itemCount: displayItems.length + 1,
+              itemExtent: displayTileHeight,
+              labelAt: (index) => index == 0 ? '' : displayItems[index - 1],
+              child: CupertinoScrollbar(
                 controller: scrollController,
-                itemCount: displayItems.length + 1,
-                prototypeItem: const DisplayListTile(
-                  text: '',
-                  isSelected: false,
-                ),
-                itemBuilder: (context, index) {
-                  if (index == 0) {
-                    return DisplayListTile(
-                      text: context.localization.allAlbums,
-                      isSelected: selectedDisplayItem == 0,
-                      onTap: () => _selectArtist(0),
-                    );
-                  }
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: displayItems.length + 1,
+                  prototypeItem: const DisplayListTile(
+                    text: '',
+                    isSelected: false,
+                  ),
+                  itemBuilder: (context, index) {
+                    if (index == 0) {
+                      return DisplayListTile(
+                        text: context.localization.allAlbums,
+                        isSelected: selectedDisplayItem == 0,
+                        onTap: () => _selectArtist(0),
+                      );
+                    }
 
-                  return DisplayListTile(
-                    text: displayItems[index - 1],
-                    isSelected: selectedDisplayItem == index,
-                    onTap: () => _selectArtist(index),
-                  );
-                },
+                    return DisplayListTile(
+                      text: displayItems[index - 1],
+                      isSelected: selectedDisplayItem == index,
+                      onTap: () => _selectArtist(index),
+                    );
+                  },
+                ),
               ),
             ),
           ),

@@ -198,8 +198,15 @@ void main() {
       await handler.seek(const Duration(seconds: 3));
       await flushEvents();
       expect(PlaybackSessionStore(box).read()!.index, 1);
+      // Checkpoint writes run independently of the playback command. Wait for
+      // Hive to publish the selected index instead of assuming a disk latency.
+      final selectionSaved = box
+          .watch(key: 'checkpoint')
+          .where((event) => event.value is Map && event.value['index'] == 0)
+          .timeout(const Duration(seconds: 10))
+          .first;
       await handler.select(0);
-      await flushEvents();
+      await selectionSaved;
       expect(PlaybackSessionStore(box).read()!.index, 0);
       await container.read(audioPlayerServiceProvider.notifier).restoreSession([
         song(0),

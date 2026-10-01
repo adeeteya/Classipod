@@ -129,7 +129,7 @@ class SearchListTile extends ConsumerWidget {
                     const SizedBox(height: 2),
                     Text(
                       description,
-                      style: IpodTypography.metadata.copyWith(
+                      style: IpodTypography.description.copyWith(
                         color: isSelected
                             ? context.appInverseTextColor
                             : context.appSecondaryTextColor,

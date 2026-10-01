@@ -27,7 +27,7 @@ class ScrubberBar extends ConsumerWidget {
     final progress = hasDuration && value.isFinite
         ? (value / max).clamp(0.0, 1.0)
         : 0.0;
-    const markerSize = 15.0;
+    const markerSize = 12.5;
     const trackHeight = 20.0;
 
     return Expanded(

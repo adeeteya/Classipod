@@ -59,24 +59,24 @@ class _Details extends NowPlayingDetailsNotifier {
 }
 
 class _AudioService extends AudioPlayerServiceNotifier {
-  PlaybackShuffleMode? appliedShuffle;
-  int playbackToggles = 0;
-  int nextSongCalls = 0;
-  int previousSongCalls = 0;
+  PlaybackShuffleMode? _appliedShuffle;
+  int _playbackToggles = 0;
+  int _nextSongCalls = 0;
+  int _previousSongCalls = 0;
 
   @override
   Future<void> nextSong() async {
-    nextSongCalls++;
+    _nextSongCalls++;
   }
 
   @override
   Future<void> seekBackwards() async {
-    previousSongCalls++;
+    _previousSongCalls++;
   }
 
   @override
   Future<void> togglePlayback() async {
-    playbackToggles++;
+    _playbackToggles++;
   }
 
   @override
@@ -84,7 +84,7 @@ class _AudioService extends AudioPlayerServiceNotifier {
 
   @override
   Future<void> setShuffleMode(PlaybackShuffleMode mode) async {
-    appliedShuffle = mode;
+    _appliedShuffle = mode;
   }
 }
 
@@ -283,11 +283,11 @@ void main() {
     expect(selection(), PlaybackShuffleMode.values[1]);
     await tester.pump(const Duration(seconds: 3));
     expect(controller(tester).page, 3);
-    expect(audio.nextSongCalls, 0);
-    expect(audio.previousSongCalls, 0);
+    expect(audio._nextSongCalls, 0);
+    expect(audio._previousSongCalls, 0);
     await tester.pump(const Duration(seconds: 1));
     await tester.pumpAndSettle();
-    expect(audio.appliedShuffle, PlaybackShuffleMode.values[1]);
+    expect(audio._appliedShuffle, PlaybackShuffleMode.values[1]);
     expect(controller(tester).page, 0);
     await tester.pumpWidget(const SizedBox.shrink());
   });
@@ -302,8 +302,8 @@ void main() {
       }
       await input(tester, DeviceAction.seekForward);
       await input(tester, DeviceAction.seekBackward);
-      expect(audio.nextSongCalls, 1);
-      expect(audio.previousSongCalls, 1);
+      expect(audio._nextSongCalls, 1);
+      expect(audio._previousSongCalls, 1);
       await tester.pumpWidget(const SizedBox.shrink());
     });
   }
@@ -318,7 +318,7 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 301));
     await tester.pump();
-    expect(audio.appliedShuffle, PlaybackShuffleMode.values[1]);
+    expect(audio._appliedShuffle, PlaybackShuffleMode.values[1]);
     expect(controller(tester).page, 0);
     await tester.pumpWidget(const SizedBox.shrink());
   });
@@ -338,7 +338,7 @@ void main() {
         await container
             .read(deviceButtonsServiceProvider.notifier)
             .playPauseButtonClick();
-        expect(audio.playbackToggles, 1);
+        expect(audio._playbackToggles, 1);
       }
       await tester.pump();
       await tester.pump(const Duration(milliseconds: 3999));

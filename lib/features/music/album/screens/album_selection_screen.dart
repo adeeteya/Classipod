@@ -60,8 +60,9 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
     if (index == 0) {
       context.goNamed(
         Routes.albumSongs.name,
+        queryParameters: const {'showArtistNames': 'true'},
         extra: AlbumModel(
-          albumName: context.localization.allAlbums,
+          albumName: context.localization.allSongs,
           albumArtistName: "",
           albumSongs: ref.read(filteredAudioFilesProvider).requireValue,
         ),

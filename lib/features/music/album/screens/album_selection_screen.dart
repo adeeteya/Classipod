@@ -27,6 +27,9 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   AlbumModel? _revealedAlbum;
 
   @override
+  String get screenStateKey => routeName;
+
+  @override
   double get displayTileHeight => 54;
 
   @override

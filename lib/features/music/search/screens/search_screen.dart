@@ -22,6 +22,9 @@ class SearchScreen extends ConsumerStatefulWidget {
 class _SearchScreenState extends ConsumerState<SearchScreen>
     with CustomInputTextScreen {
   @override
+  String get screenStateKey => routeName;
+
+  @override
   String get inputText => ref.watch(searchQueryProvider);
 
   @override

@@ -25,6 +25,9 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   String? _revealedArtist;
 
   @override
+  String get screenStateKey => routeName;
+
+  @override
   String get routeName => Routes.artists.name;
 
   @override

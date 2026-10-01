@@ -18,6 +18,9 @@ class GenresScreen extends ConsumerStatefulWidget {
 
 class _GenresScreenState extends ConsumerState<GenresScreen> with CustomScreen {
   @override
+  String get screenStateKey => routeName;
+
+  @override
   double get displayTileHeight => 54;
 
   @override

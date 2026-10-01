@@ -44,6 +44,9 @@ class _CoverFlowScreenState extends ConsumerState<_CoverFlowView>
   String get routeName => Routes.coverFlow.name;
 
   @override
+  String get screenStateKey => routeName;
+
+  @override
   double get viewPortFraction =>
       widget.appearance == CoverFlowAppearance.big ? 0.54 : 0.14;
 
@@ -63,6 +66,7 @@ class _CoverFlowScreenState extends ConsumerState<_CoverFlowView>
   @override
   Widget build(BuildContext context) {
     ref.watch(albumDetailsProvider);
+    restorePageSelection();
     if (displayItems.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(

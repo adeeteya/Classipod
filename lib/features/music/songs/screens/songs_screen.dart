@@ -22,6 +22,9 @@ class SongsScreen extends ConsumerStatefulWidget {
 
 class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
   @override
+  String get screenStateKey => routeName;
+
+  @override
   double get displayTileHeight => 54;
 
   @override

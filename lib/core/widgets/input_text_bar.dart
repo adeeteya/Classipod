@@ -4,7 +4,7 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class InputTextBarController {
-  final String initialText;
+  String initialText;
   _InputTextBarState? _state;
 
   InputTextBarController({this.initialText = ''});
@@ -54,11 +54,13 @@ class _InputTextBarState extends State<InputTextBar> {
   }
 
   void _onTextChanged() {
+    widget.inputTextBarController.initialText = _inputTextController.text;
     widget.onSearchTextChanged(_inputTextController.text);
   }
 
   @override
   void dispose() {
+    widget.inputTextBarController._state = null;
     _inputTextController.removeListener(_onTextChanged);
     _inputTextController.dispose();
     _scrollController.dispose();

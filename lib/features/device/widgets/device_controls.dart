@@ -168,6 +168,12 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         final double screenWidth = constraints.maxWidth + 40;
 
         return GestureDetector(
+          onPanDown: (_) =>
+              ref.read(clickWheelGestureProvider.notifier).active = true,
+          onPanEnd: (_) =>
+              ref.read(clickWheelGestureProvider.notifier).active = false,
+          onPanCancel: () =>
+              ref.read(clickWheelGestureProvider.notifier).active = false,
           onPanUpdate: (dragUpdateDetails) => onClickWheelScroll(
             dragUpdateDetails: dragUpdateDetails,
             radius: (screenWidth * clickWheelRadiusRatio) / 2,

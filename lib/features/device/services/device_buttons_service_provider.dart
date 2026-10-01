@@ -8,6 +8,18 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vibration/vibration.dart';
 
+final clickWheelGestureProvider =
+    NotifierProvider<ClickWheelGestureNotifier, bool>(
+      ClickWheelGestureNotifier.new,
+    );
+
+class ClickWheelGestureNotifier extends Notifier<bool> {
+  @override
+  bool build() => false;
+
+  set active(bool value) => state = value;
+}
+
 final deviceButtonsServiceProvider =
     NotifierProvider<DeviceButtonsServiceNotifier, DeviceAction?>(
       DeviceButtonsServiceNotifier.new,

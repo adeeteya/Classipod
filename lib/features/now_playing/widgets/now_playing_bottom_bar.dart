@@ -12,8 +12,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class NowPlayingBottomBar extends ConsumerWidget {
   final bool showScrubber;
+  final ScrubberController? scrubberController;
+  final bool scrubberActive;
+  final VoidCallback? onScrubChanged;
 
-  const NowPlayingBottomBar({super.key, this.showScrubber = false});
+  const NowPlayingBottomBar({
+    super.key,
+    this.showScrubber = false,
+    this.scrubberController,
+    this.scrubberActive = false,
+    this.onScrubChanged,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -34,7 +43,12 @@ class NowPlayingBottomBar extends ConsumerWidget {
           final buffering =
               playback.processingState == AudioProcessingState.buffering ||
               playback.processingState == AudioProcessingState.loading;
-          double currentDuration = playback.updatePosition.inSeconds.toDouble();
+          double currentDuration =
+              (showScrubber && scrubberActive
+                      ? scrubberController?.position
+                      : null)
+                  ?.toDouble() ??
+              playback.updatePosition.inSeconds.toDouble();
           currentDuration = currentDuration.clamp(
             0,
             totalDuration > 0 ? totalDuration : 0,
@@ -80,6 +94,9 @@ class NowPlayingBottomBar extends ConsumerWidget {
                           ScrubberBar(
                             max: totalDuration,
                             value: currentDuration,
+                            controller: scrubberController,
+                            active: scrubberActive,
+                            onChanged: onScrubChanged,
                           ),
                         if (!showScrubber)
                           SeekBar(max: totalDuration, value: currentDuration),

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ເຊີບເວີ",
   "subsonicInvalidUrl": "ໃສ່ URL ເຊີບເວີ HTTP ຫຼື HTTPS ໂດຍບໍ່ມີການສອບຖາມ, fragment, ຫຼືການເຂົ້າສູ່ລະບົບຝັງ.",
   "subsonicUnsupported": "ເຊີບເວີນີ້ບໍ່ຮອງຮັບ Subsonic API ຫຼື token authentication ທີ່ຕ້ອງການ.",
-  "subsonicConnectionError": "ບໍ່ສາມາດເຊື່ອມຕໍ່ໄດ້. ກວດເບິ່ງ URL, ເຄືອຂ່າຍ, ແລະໃບຢັ້ງຢືນ HTTPS. ໃນເວັບ, ເຊີບເວີຕ້ອງອະນຸຍາດໃຫ້ CORS ແລະແອັບຯ HTTPS ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບ HTTP ໄດ້."
+  "subsonicConnectionError": "ບໍ່ສາມາດເຊື່ອມຕໍ່ໄດ້. ກວດເບິ່ງ URL, ເຄືອຂ່າຍ, ແລະໃບຢັ້ງຢືນ HTTPS. ໃນເວັບ, ເຊີບເວີຕ້ອງອະນຸຍາດໃຫ້ CORS ແລະແອັບຯ HTTPS ບໍ່ສາມາດເຊື່ອມຕໍ່ກັບ HTTP ໄດ້.",
+  "nArtists": "{count, plural, =0{ບໍ່ມີສິນລະປິນ} =1{1 ສິນລະປິນ} other{{count} ສິນລະປິນ}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "ຕົ້ນສະບັບ",
+  "coverFlowBigTitle": "ໃຫຍ່"
 }

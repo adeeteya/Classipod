@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL ye",
   "subsonicInvalidUrl": "HTTP walima HTTPS baarakɛminɛn URL dɔ don k’a sɔrɔ ɲininkali ma kɛ, ni yɔrɔ dɔ ma kɛ, walima ka don yɔrɔ dɔ don min kɔnɔ.",
   "subsonicUnsupported": "Nin baarakɛminɛn in tɛ Subsonic API walima token dantigɛli wajibiyalen dɛmɛ.",
-  "subsonicConnectionError": "Se tɛ ka ɲɔgɔn sɔrɔ. URL, réseau ani HTTPS seereyaw lajɛ. Web kan, sèrvèr ka kan ka sira di CORS ma ani HTTPS app tɛ se ka don HTTP la."
+  "subsonicConnectionError": "Se tɛ ka ɲɔgɔn sɔrɔ. URL, réseau ani HTTPS seereyaw lajɛ. Web kan, sèrvèr ka kan ka sira di CORS ma ani HTTPS app tɛ se ka don HTTP la.",
+  "nArtists": "{count, plural, =0{Dɔnkilidala si tɛ} =1{Sɔnnikɛla 1} other{{count} Dɔnkilidalaw}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Couverture Flow (Dɔgɔtɔrɔso).",
+  "coverFlowOriginalTitle": "Yɛrɛyɛrɛ",
+  "coverFlowBigTitle": "Belebele"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL serwera",
   "subsonicInvalidUrl": "Wkludź URL serwera HTTP abo HTTPS bez zapytanio, fragmyntu abo wbudowanego logowanio.",
   "subsonicUnsupported": "Tyn serwer niy ôbsługuje wymoganego API Subsonic ani autoryzacyje tokenōw.",
-  "subsonicConnectionError": "Niy może sie łōnczyć. Sprawdź URL, nec i certyfikat HTTPS. W necie serwer musi przizwolić na CORS, a aplikacyjo HTTPS niy może sie łōnczyć ze HTTP."
+  "subsonicConnectionError": "Niy może sie łōnczyć. Sprawdź URL, nec i certyfikat HTTPS. W necie serwer musi przizwolić na CORS, a aplikacyjo HTTPS niy może sie łōnczyć ze HTTP.",
+  "nArtists": "{count, plural, =0{Brak Artystōw} =1{1 Artyst} other{{count} Artystōw}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Przepływ pokrywy",
+  "coverFlowOriginalTitle": "Ôryginalny",
+  "coverFlowBigTitle": "Srogi"
 }

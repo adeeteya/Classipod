@@ -207,5 +207,17 @@
   "subsonicUrl": "כתובת האתר של השרת",
   "subsonicInvalidUrl": "הזן כתובת URL של שרת HTTP או HTTPS ללא שאילתה, קטע או התחברות משובצת.",
   "subsonicUnsupported": "שרת זה אינו תומך ב-Subsonic API או אימות אסימון הנדרש.",
-  "subsonicConnectionError": "לא ניתן להתחבר. בדוק את כתובת האתר, הרשת ואישור ה-HTTPS. באינטרנט, השרת חייב לאפשר CORS ואפליקציית HTTPS לא יכולה להתחבר ל-HTTP."
+  "subsonicConnectionError": "לא ניתן להתחבר. בדוק את כתובת האתר, הרשת ואישור ה-HTTPS. באינטרנט, השרת חייב לאפשר CORS ואפליקציית HTTPS לא יכולה להתחבר ל-HTTP.",
+  "nArtists": "{count, plural, =0{ללא אמנים} =1{1 אמן} other{{count} אמנים}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "זרימת כיסוי",
+  "coverFlowOriginalTitle": "מְקוֹרִי",
+  "coverFlowBigTitle": "גָדוֹל"
 }

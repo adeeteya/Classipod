@@ -207,5 +207,17 @@
   "subsonicUrl": "URL သႃႇဝႃႇ",
   "subsonicInvalidUrl": "ၶဝ်ႈသႂ်ႇ HTTP ဢမ်ႇၼၼ် HTTPS Server URL ဢၼ်ဢမ်ႇပႃး ၶေႃႈထၢမ်၊",
   "subsonicUnsupported": "သိူဝ်ႇဝႃႇၼႆႉ ဢမ်ႇၵမ်ႉထႅမ်ပၼ် Subsonic API ဢမ်ႇၼၼ် လွင်ႈမၵ်းမၼ်ႈ တူဝ်ၼပ်ႉ ဢၼ်လူဝ်ႇၼၼ်ႉ။",
-  "subsonicConnectionError": "ဢမ်ႇၸၢင်ႈၵပ်းသိုပ်ႇ။ တူၺ်း URL ၼႅတ်ႉ လႄႈ ဝႂ် HTTPS ၸိူဝ်းၼႆႉ။ တီႈၼိူဝ် Web ၼၼ်ႉ Server တေလႆႈပၼ်ၶႂၢင်ႉ CORS လႄႈ ဢႅပ်ႉ HTTPS ဢၼ်ၼိုင်ႈ ဢမ်ႇၸၢင်ႈၵွင်ႉသၢၼ်ၵၼ်တင်း HTTP လႆႈ။"
+  "subsonicConnectionError": "ဢမ်ႇၸၢင်ႈၵပ်းသိုပ်ႇ။ တူၺ်း URL ၼႅတ်ႉ လႄႈ ဝႂ် HTTPS ၸိူဝ်းၼႆႉ။ တီႈၼိူဝ် Web ၼၼ်ႉ Server တေလႆႈပၼ်ၶႂၢင်ႉ CORS လႄႈ ဢႅပ်ႉ HTTPS ဢၼ်ၼိုင်ႈ ဢမ်ႇၸၢင်ႈၵွင်ႉသၢၼ်ၵၼ်တင်း HTTP လႆႈ။",
+  "nArtists": "{count, plural, =0{ဢမ်ႇမီးၽူႈႁွင်ႉၵႂၢမ်း} =1{ၽူႈႁွင်ႉၵႂၢမ်း 1 ၵေႃႉ} other{{count} ၽူႈႁွင်ႉၵႂၢမ်း}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "ႁူမ်ႇငမ်းလႆ",
+  "coverFlowOriginalTitle": "ငဝ်ႈတိုၼ်း",
+  "coverFlowBigTitle": "ယႂ်ႇ"
 }

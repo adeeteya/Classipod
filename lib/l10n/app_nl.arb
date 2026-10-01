@@ -207,5 +207,17 @@
   "subsonicUrl": "Server-URL",
   "subsonicInvalidUrl": "Voer een HTTP- of HTTPS-server-URL in zonder een query, fragment of ingebedde login.",
   "subsonicUnsupported": "Deze server ondersteunt de vereiste Subsonic API of tokenverificatie niet.",
-  "subsonicConnectionError": "Kan geen verbinding maken. Controleer de URL, het netwerk en het HTTPS-certificaat. Op internet moet de server CORS toestaan ​​en een HTTPS-app kan geen verbinding maken met HTTP."
+  "subsonicConnectionError": "Kan geen verbinding maken. Controleer de URL, het netwerk en het HTTPS-certificaat. Op internet moet de server CORS toestaan ​​en een HTTPS-app kan geen verbinding maken met HTTP.",
+  "nArtists": "{count, plural, =0{Geen artiesten} =1{1 Artiest} other{{count} Artiesten}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Dekkingsstroom",
+  "coverFlowOriginalTitle": "Origineel",
+  "coverFlowBigTitle": "Groot"
 }

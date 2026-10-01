@@ -207,5 +207,17 @@
   "subsonicUrl": "URL uwar garke",
   "subsonicInvalidUrl": "Shigar da URL na uwar garken HTTP ko HTTPS ba tare da tambaya, guntu, ko shigar da aka shigar ba.",
   "subsonicUnsupported": "Wannan uwar garken baya goyan bayan Subsonic API da ake buƙata ko tantancewar alama.",
-  "subsonicConnectionError": "Ba za a iya haɗawa ba. Duba URL, cibiyar sadarwa, da takardar shaidar HTTPS. A Yanar Gizo, dole ne uwar garken ya ƙyale CORS kuma HTTPS app ba zai iya haɗawa da HTTP ba."
+  "subsonicConnectionError": "Ba za a iya haɗawa ba. Duba URL, cibiyar sadarwa, da takardar shaidar HTTPS. A Yanar Gizo, dole ne uwar garken ya ƙyale CORS kuma HTTPS app ba zai iya haɗawa da HTTP ba.",
+  "nArtists": "{count, plural, =0{Babu Mawaƙi} =1{1 Artist} other{{count} Masu fasaha}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Ruwan Rufe",
+  "coverFlowOriginalTitle": "Na asali",
+  "coverFlowBigTitle": "Babban"
 }

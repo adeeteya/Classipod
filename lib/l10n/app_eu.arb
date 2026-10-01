@@ -207,5 +207,17 @@
   "subsonicUrl": "Zerbitzariaren URLa",
   "subsonicInvalidUrl": "Sartu HTTP edo HTTPS zerbitzariaren URL bat kontsultarik, zatirik edo kapsulatutako saio-hasierarik gabe.",
   "subsonicUnsupported": "Zerbitzari honek ez du onartzen beharrezko Subsonic API edo token autentifikazioa.",
-  "subsonicConnectionError": "Ezin da konektatu. Egiaztatu URLa, sarea eta HTTPS ziurtagiria. Webean, zerbitzariak CORS baimendu behar du eta HTTPS aplikazio batek ezin du HTTPra konektatu."
+  "subsonicConnectionError": "Ezin da konektatu. Egiaztatu URLa, sarea eta HTTPS ziurtagiria. Webean, zerbitzariak CORS baimendu behar du eta HTTPS aplikazio batek ezin du HTTPra konektatu.",
+  "nArtists": "{count, plural, =0{Artistarik ez} =1{1 Artista} other{{count} Artistak}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Estalkiaren fluxua",
+  "coverFlowOriginalTitle": "Jatorrizkoa",
+  "coverFlowBigTitle": "Handia"
 }

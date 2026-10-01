@@ -207,5 +207,17 @@
   "subsonicUrl": "URL nkesa",
   "subsonicInvalidUrl": "Tinye URL nkesa HTTP ma ọ bụ HTTPS na-enweghị ajụjụ, iberibe ma ọ bụ nbanye agbakwunyere.",
   "subsonicUnsupported": "Ihe nkesa a anaghị akwado API Subsonic achọrọ ma ọ bụ nyocha akara.",
-  "subsonicConnectionError": "Enweghị ike ijikọ. Lelee URL, netwọkụ, na asambodo HTTPS. Na webụ, ihe nkesa ga-ahapụrịrị CORS na ngwa HTTPS enweghị ike ijikọ na HTTP."
+  "subsonicConnectionError": "Enweghị ike ijikọ. Lelee URL, netwọkụ, na asambodo HTTPS. Na webụ, ihe nkesa ga-ahapụrịrị CORS na ngwa HTTPS enweghị ike ijikọ na HTTP.",
+  "nArtists": "{count, plural, =0{Enweghị ndị nka} =1{1 Artist} other{{count} Artists}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Mkpuchi Mkpuchi",
+  "coverFlowOriginalTitle": "Nke mbụ",
+  "coverFlowBigTitle": "Nnukwu"
 }

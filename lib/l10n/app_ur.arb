@@ -207,5 +207,17 @@
   "subsonicUrl": "سرور URL",
   "subsonicInvalidUrl": "کسی سوال، ٹکڑے، یا سرایت شدہ لاگ ان کے بغیر HTTP یا HTTPS سرور URL درج کریں۔",
   "subsonicUnsupported": "یہ سرور مطلوبہ Subsonic API یا ٹوکن تصدیق کی حمایت نہیں کرتا ہے۔",
-  "subsonicConnectionError": "مربوط نہیں ہو سکتا۔ URL، نیٹ ورک، اور HTTPS سرٹیفکیٹ چیک کریں۔ ویب پر، سرور کو CORS کی اجازت دینی چاہیے اور HTTPS ایپ HTTP سے منسلک نہیں ہو سکتی۔"
+  "subsonicConnectionError": "مربوط نہیں ہو سکتا۔ URL، نیٹ ورک، اور HTTPS سرٹیفکیٹ چیک کریں۔ ویب پر، سرور کو CORS کی اجازت دینی چاہیے اور HTTPS ایپ HTTP سے منسلک نہیں ہو سکتی۔",
+  "nArtists": "{count, plural, =0{کوئی فنکار نہیں} =1{1 فنکار} other{{count} فنکار}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "کور فلو",
+  "coverFlowOriginalTitle": "اصل",
+  "coverFlowBigTitle": "بڑا"
 }

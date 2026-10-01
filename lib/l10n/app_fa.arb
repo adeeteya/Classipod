@@ -207,5 +207,17 @@
   "subsonicUrl": "آدرس سرور",
   "subsonicInvalidUrl": "URL سرور HTTP یا HTTPS را بدون پرس و جو، قطعه یا ورود به سیستم جاسازی شده وارد کنید.",
   "subsonicUnsupported": "این سرور از Subsonic API یا احراز هویت رمز پشتیبانی نمی کند.",
-  "subsonicConnectionError": "نمی توان وصل شد. نشانی وب، شبکه و گواهی HTTPS را بررسی کنید. در وب، سرور باید به CORS اجازه دهد و یک برنامه HTTPS نمی تواند به HTTP متصل شود."
+  "subsonicConnectionError": "نمی توان وصل شد. نشانی وب، شبکه و گواهی HTTPS را بررسی کنید. در وب، سرور باید به CORS اجازه دهد و یک برنامه HTTPS نمی تواند به HTTP متصل شود.",
+  "nArtists": "{count, plural, =0{هنرمندی وجود ندارد} =1{1 هنرمند} other{{count} هنرمندان}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "جریان پوششی",
+  "coverFlowOriginalTitle": "اصل",
+  "coverFlowBigTitle": "بزرگ"
 }

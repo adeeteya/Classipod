@@ -207,5 +207,17 @@
   "subsonicUrl": "УРЛ сервера",
   "subsonicInvalidUrl": "Унесите УРЛ ХТТП или ХТТПС сервера без упита, фрагмента или уграђене пријаве.",
   "subsonicUnsupported": "Овај сервер не подржава потребну Subsonic АПИ или токен аутентикација.",
-  "subsonicConnectionError": "Повезивање није могуће. Проверите УРЛ, мрежу и ХТТПС сертификат. На вебу, сервер мора да дозволи ЦОРС и ХТТПС апликација не може да се повеже на ХТТП."
+  "subsonicConnectionError": "Повезивање није могуће. Проверите УРЛ, мрежу и ХТТПС сертификат. На вебу, сервер мора да дозволи ЦОРС и ХТТПС апликација не може да се повеже на ХТТП.",
+  "nArtists": "{count, plural, =0{Но Артистс} =1{1 Артист} other{{count} Артистс}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Цовер Флов",
+  "coverFlowOriginalTitle": "Оригинал",
+  "coverFlowBigTitle": "Велики"
 }

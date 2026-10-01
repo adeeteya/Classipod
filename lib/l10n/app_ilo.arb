@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ti serbidor",
   "subsonicInvalidUrl": "Iserrek ti HTTP wenno HTTPS server URL nga awan ti saludsod, pirgis, wenno naikabil a panaglogin.",
   "subsonicUnsupported": "Daytoy a serbidor ket saan a mangsuporta ti kasapulan a Subsonic API wenno ti panagipaneknek ti token.",
-  "subsonicConnectionError": "Saan a makakonekta. Sukimaten ti URL, network, ken sertipiko ti HTTPS. Iti Web, masapul a palubosan ti server ti CORS ken ti HTTPS app ket saan a makakonekta iti HTTP."
+  "subsonicConnectionError": "Saan a makakonekta. Sukimaten ti URL, network, ken sertipiko ti HTTPS. Iti Web, masapul a palubosan ti server ti CORS ken ti HTTPS app ket saan a makakonekta iti HTTP.",
+  "nArtists": "{count, plural, =0{Awan dagiti Artista} =1{1 nga Artista} other{{count} Dagiti Artista}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Agayus ti Akkub",
+  "coverFlowOriginalTitle": "Orihinal",
+  "coverFlowBigTitle": "Dakkel"
 }

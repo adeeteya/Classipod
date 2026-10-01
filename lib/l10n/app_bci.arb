@@ -207,5 +207,17 @@
   "subsonicUrl": "Serveur URL",
   "subsonicInvalidUrl": "Klɛ HTTP annzɛ HTTPS serveur URL kun m’ɔ leman kosan, annzɛ ndɛ akpasua, annzɛ login m’ɔ o nun’n.",
   "subsonicUnsupported": "Serveur sɔ’n suanman Subsonic API annzɛ token i su ndɛ’n i bo.",
-  "subsonicConnectionError": "Ɔ kwlá kɔman likawlɛ. Nian URL, nin réseau, ɔ nin HTTPS be su ndɛ’n. Wɛb su’n, ɔ fata kɛ serveur’n man CORS atin naan HTTPS appli kun w’a kwlá kɔman HTTP su."
+  "subsonicConnectionError": "Ɔ kwlá kɔman likawlɛ. Nian URL, nin réseau, ɔ nin HTTPS be su ndɛ’n. Wɛb su’n, ɔ fata kɛ serveur’n man CORS atin naan HTTPS appli kun w’a kwlá kɔman HTTP su.",
+  "nArtists": "{count, plural, =0{Sran nga be yi ninnge mun’n be nunman lɛ} =1{Sran nga be yi ninnge mun’n be nun kun} other{{count} Sran nga be yi ninnge mun’n}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Couverture Flux",
+  "coverFlowOriginalTitle": "Iba kpa",
+  "coverFlowBigTitle": "Dan"
 }

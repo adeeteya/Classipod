@@ -207,5 +207,17 @@
   "subsonicUrl": "Vefslóð netþjóns",
   "subsonicInvalidUrl": "Sláðu inn HTTP eða HTTPS netþjónsslóð án fyrirspurnar, brots eða innbyggðrar innskráningar.",
   "subsonicUnsupported": "Þessi þjónn styður ekki nauðsynlega Subsonic API eða auðkenningu auðkenningar.",
-  "subsonicConnectionError": "Get ekki tengst. Athugaðu slóðina, netkerfið og HTTPS vottorðið. Á vefnum verður þjónninn að leyfa CORS og HTTPS app getur ekki tengst HTTP."
+  "subsonicConnectionError": "Get ekki tengst. Athugaðu slóðina, netkerfið og HTTPS vottorðið. Á vefnum verður þjónninn að leyfa CORS og HTTPS app getur ekki tengst HTTP.",
+  "nArtists": "{count, plural, =0{Engir listamenn} =1{1 Listamaður} other{{count} Listamenn}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Upprunalegt",
+  "coverFlowBigTitle": "Stórt"
 }

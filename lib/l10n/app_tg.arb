@@ -207,5 +207,17 @@
   "subsonicUrl": "URL-и сервер",
   "subsonicInvalidUrl": "URL-и сервери HTTP ё HTTPS-ро бидуни дархост, порча ё воридшавии воридшуда ворид кунед.",
   "subsonicUnsupported": "Ин сервер API зарурии Subsonic ё аутентификатсияи аломатро дастгирӣ намекунад.",
-  "subsonicConnectionError": "Пайваст шудан мумкин нест. URL, шабака ва сертификати HTTPS-ро санҷед. Дар веб сервер бояд ба CORS иҷозат диҳад ва барномаи HTTPS наметавонад ба HTTP пайваст шавад."
+  "subsonicConnectionError": "Пайваст шудан мумкин нест. URL, шабака ва сертификати HTTPS-ро санҷед. Дар веб сервер бояд ба CORS иҷозат диҳад ва барномаи HTTPS наметавонад ба HTTP пайваст шавад.",
+  "nArtists": "{count, plural, =0{Рассомон нест} =1{1 Ҳунарманд} other{{count} Ҳунармандон}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Сарпӯши ҷараёни",
+  "coverFlowOriginalTitle": "Асли",
+  "coverFlowBigTitle": "калон"
 }

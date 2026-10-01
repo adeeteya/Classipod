@@ -207,5 +207,17 @@
   "subsonicUrl": "URL palayan",
   "subsonicInvalidUrl": "Masuakkan URL palayan HTTP atau HTTPS tanpa kueri, pacahan, atau login nan tatanam.",
   "subsonicUnsupported": "Server ko indak mandukuang API atau otentikasi token Subsonic nan diparaluan.",
-  "subsonicConnectionError": "Indak bisa basambuang. Pareso URL, jaringan, jo sertifikat HTTPS. Di Web, server harus mamungkinkan CORS dan aplikasi HTTPS indak dapek mahubuangkan ka HTTP."
+  "subsonicConnectionError": "Indak bisa basambuang. Pareso URL, jaringan, jo sertifikat HTTPS. Di Web, server harus mamungkinkan CORS dan aplikasi HTTPS indak dapek mahubuangkan ka HTTP.",
+  "nArtists": "{count, plural, =0{Indak Ado Artis} =1{1 Artis} other{{count} Artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Aliran Panutuik",
+  "coverFlowOriginalTitle": "Asli",
+  "coverFlowBigTitle": "Gadang"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL an fhrithealaiche",
   "subsonicInvalidUrl": "Cuir a-steach URL frithealaiche HTTP no HTTPS gun cheist, criomag no logadh a-steach freumhaichte.",
   "subsonicUnsupported": "Chan eil am frithealaiche seo a’ toirt taic don Subsonic API no dearbhadh tòcan.",
-  "subsonicConnectionError": "Chan urrainn ceangal a dhèanamh. Thoir sùil air an URL, lìonra, agus teisteanas HTTPS. Air an lìon, feumaidh am frithealaiche CORS a cheadachadh agus chan urrainn dha app HTTPS ceangal ri HTTP."
+  "subsonicConnectionError": "Chan urrainn ceangal a dhèanamh. Thoir sùil air an URL, lìonra, agus teisteanas HTTPS. Air an lìon, feumaidh am frithealaiche CORS a cheadachadh agus chan urrainn dha app HTTPS ceangal ri HTTP.",
+  "nArtists": "{count, plural, =0{Gun neach-ealain} =1{1 Neach-ealain} other{{count} Luchd-ealain}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Sruth Còmhdaich",
+  "coverFlowOriginalTitle": "tùsail",
+  "coverFlowBigTitle": "Mòr"
 }

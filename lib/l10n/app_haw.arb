@@ -207,5 +207,17 @@
   "subsonicUrl": "HKH server",
   "subsonicInvalidUrl": "E hoʻokomo i kahi URL server HTTP a i ʻole HTTPS me ka ʻole o kahi nīnau, ʻāpana, a i ʻole ka hoʻokomo ʻana.",
   "subsonicUnsupported": "ʻAʻole kākoʻo kēia kikowaena i ka Subsonic API a i ʻole ka hōʻoia hōʻailona.",
-  "subsonicConnectionError": "ʻAʻole hiki ke hoʻohui. E nānā i ka URL, pūnaewele, a me ka palapala hōʻoia HTTPS. Ma ka Pūnaewele, pono e ʻae ke kikowaena iā CORS a ʻaʻole hiki i kahi polokalamu HTTPS ke hoʻopili iā HTTP."
+  "subsonicConnectionError": "ʻAʻole hiki ke hoʻohui. E nānā i ka URL, pūnaewele, a me ka palapala hōʻoia HTTPS. Ma ka Pūnaewele, pono e ʻae ke kikowaena iā CORS a ʻaʻole hiki i kahi polokalamu HTTPS ke hoʻopili iā HTTP.",
+  "nArtists": "{count, plural, =0{ʻAʻohe Mea Kiʻi} =1{1 Mea Hana} other{{count} Mea Hana}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kahe Uhi",
+  "coverFlowOriginalTitle": "Kumu",
+  "coverFlowBigTitle": "Nui"
 }

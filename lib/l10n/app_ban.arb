@@ -207,5 +207,17 @@
   "subsonicUrl": "URL sérver",
   "subsonicInvalidUrl": "Unggahang URL server HTTP utawi HTTPS nénten nganggén kuéri, fragmen, utawi login sané tertanam.",
   "subsonicUnsupported": "Server puniki nénten nyokong API Subsonic utawi otentikasi token sané kaperluang.",
-  "subsonicConnectionError": "Nénten prasida nyambung. Priksa URL, jaringan, lan sertifikat HTTPS. Ring Web, server mangda ngicénin CORS lan aplikasi HTTPS nénten prasida nyambung sareng HTTP."
+  "subsonicConnectionError": "Nénten prasida nyambung. Priksa URL, jaringan, lan sertifikat HTTPS. Ring Web, server mangda ngicénin CORS lan aplikasi HTTPS nénten prasida nyambung sareng HTTP.",
+  "nArtists": "{count, plural, =0{Nénten Wénten Artis} =1{1 Artis} other{{count} Artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Aliran Tutup",
+  "coverFlowOriginalTitle": "Aseli",
+  "coverFlowBigTitle": "Gedé"
 }

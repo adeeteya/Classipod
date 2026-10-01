@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya sevha",
   "subsonicInvalidUrl": "Nghenisa URL ya sevha ya HTTP kumbe HTTPS handle ka xivutiso, xiphemu, kumbe ku nghena loku nghenisiweke.",
   "subsonicUnsupported": "Sevha leyi a yi seketeli API leyi lavekaka ya Subsonic kumbe ku tiyisisiwa ka xikombiso.",
-  "subsonicConnectionError": "A swi nge swi koti ku hlanganisa. Languta URL, netiweke, na xitifikheti xa HTTPS. Eka Webu, sevha yi fanele ku pfumelela CORS naswona app ya HTTPS a yi nge swi koti ku hlanganisa na HTTP."
+  "subsonicConnectionError": "A swi nge swi koti ku hlanganisa. Languta URL, netiweke, na xitifikheti xa HTTPS. Eka Webu, sevha yi fanele ku pfumelela CORS naswona app ya HTTPS a yi nge swi koti ku hlanganisa na HTTP.",
+  "nArtists": "{count, plural, =0{Ku hava Vatshila} =1{1 Mutshila} other{{count} Vatshila}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Ku Famba ka Xifunengeto",
+  "coverFlowOriginalTitle": "Mampela",
+  "coverFlowBigTitle": "Lexikulu"
 }

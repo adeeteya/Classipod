@@ -207,5 +207,17 @@
   "subsonicUrl": "सर्वर रो यूआरएल",
   "subsonicInvalidUrl": "बिना क्वेरी, फ्रैगमेंट या एम्बेडेड लॉगिन रै HTTP या HTTPS सर्वर यूआरएल दर्ज करो।",
   "subsonicUnsupported": "यो सर्वर जरूरी Subsonic एपीआई या टोकन प्रमाणीकरण रो समर्थन कोनी करै है।",
-  "subsonicConnectionError": "कनेक्ट कोनी हो सकै। यूआरएल, नेटवर्क अर एचटीटीपीएस प्रमाणपत्र री जांच करो। वेब माथै, सर्वर नै CORS री अनुमति देणी चाइजै अर HTTPS ऐप HTTP सूं कनेक्ट नीं हो सकै।"
+  "subsonicConnectionError": "कनेक्ट कोनी हो सकै। यूआरएल, नेटवर्क अर एचटीटीपीएस प्रमाणपत्र री जांच करो। वेब माथै, सर्वर नै CORS री अनुमति देणी चाइजै अर HTTPS ऐप HTTP सूं कनेक्ट नीं हो सकै।",
+  "nArtists": "{count, plural, =0{कोई कलाकार कोनी} =1{1 कलाकार} other{{count} कलाकार}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "कवर फ्लो",
+  "coverFlowOriginalTitle": "मूल",
+  "coverFlowBigTitle": "बडो"
 }

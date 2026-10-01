@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya seva",
   "subsonicInvalidUrl": "Lembani URL ya seva ya HTTP panji HTTPS kwambura fumbo, chigaŵa, panji kuloŵamo kwakuŵikika.",
   "subsonicUnsupported": "Seva iyi yikukhozgera yayi Subsonic API panji kukhozgera kwa chimanyikwiro.",
-  "subsonicConnectionError": "Vingakolerana yayi. Wonani URL, netiweki, na chikalata cha HTTPS. Pa webusayiti, seva yikwenera kuzomerezga CORS ndipo pulogiramu ya HTTPS yingakolerana yayi na HTTP."
+  "subsonicConnectionError": "Vingakolerana yayi. Wonani URL, netiweki, na chikalata cha HTTPS. Pa webusayiti, seva yikwenera kuzomerezga CORS ndipo pulogiramu ya HTTPS yingakolerana yayi na HTTP.",
+  "nArtists": "{count, plural, =0{Palije ŵakwimba} =1{1 wakwimba} other{{count} ŵakwimba}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kusuntha kwa Chivundikiro",
+  "coverFlowOriginalTitle": "Cheneko",
+  "coverFlowBigTitle": "Kukula"
 }

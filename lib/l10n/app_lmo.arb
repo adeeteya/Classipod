@@ -207,5 +207,17 @@
   "subsonicUrl": "URL del server",
   "subsonicInvalidUrl": "Inserir un URL del server HTTP o HTTPS senza una dumanda, un ciapell o un login incorporà.",
   "subsonicUnsupported": "Chestu server suporta no l’API Subsonic o l’autenticaziun token dumandada.",
-  "subsonicConnectionError": "Pœu minga culegà. Cuntrula l’URL, la red e el certificà HTTPS. Sü Web, el server g’ha de cunsentir CORS e un’aplicaziun HTTPS la pœu minga cunnetass a HTTP."
+  "subsonicConnectionError": "Pœu minga culegà. Cuntrula l’URL, la red e el certificà HTTPS. Sü Web, el server g’ha de cunsentir CORS e un’aplicaziun HTTPS la pœu minga cunnetass a HTTP.",
+  "nArtists": "{count, plural, =0{Nissun Artist} =1{1 Artist} other{{count} Artist}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Fluss de copertura",
+  "coverFlowOriginalTitle": "Orijenal",
+  "coverFlowBigTitle": "Grand"
 }

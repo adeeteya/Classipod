@@ -207,5 +207,17 @@
   "subsonicUrl": "I-URL yeseva",
   "subsonicInvalidUrl": "Faka i-URL yeseva ye-HTTP noma ye-HTTPS ngaphandle kombuzo, isiqephu, noma ukungena ngemvume okushumekiwe.",
   "subsonicUnsupported": "Le seva ayisekeli i-Subsonic API edingekayo noma ukuqinisekiswa kwethokheni.",
-  "subsonicConnectionError": "Ayikwazi ukuxhuma. Hlola i-URL, inethiwekhi, nesitifiketi se-HTTPS. Kuwebhu, iseva kufanele ivumele i-CORS futhi uhlelo lokusebenza lwe-HTTPS alukwazi ukuxhuma ku-HTTP."
+  "subsonicConnectionError": "Ayikwazi ukuxhuma. Hlola i-URL, inethiwekhi, nesitifiketi se-HTTPS. Kuwebhu, iseva kufanele ivumele i-CORS futhi uhlelo lokusebenza lwe-HTTPS alukwazi ukuxhuma ku-HTTP.",
+  "nArtists": "{count, plural, =0{Abekho Abaculi} =1{1 Umculi} other{{count} Abaculi}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Ukugeleza Kwekhava",
+  "coverFlowOriginalTitle": "Okwangempela",
+  "coverFlowBigTitle": "Okukhulu"
 }

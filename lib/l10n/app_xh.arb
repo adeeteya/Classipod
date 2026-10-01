@@ -207,5 +207,17 @@
   "subsonicUrl": "Iseva ye-URL",
   "subsonicInvalidUrl": "Ngenisa i-HTTP okanye i-URL yeseva ye-HTTPS ngaphandle kombuzo, iqhekeza, okanye ukungena okuzinzisiweyo.",
   "subsonicUnsupported": "Lo mncedisi akayixhasi i-Subsonic API efunekayo okanye uqinisekiso lophawu.",
-  "subsonicConnectionError": "Ayinakunxibelelana. Jonga i-URL, inethiwekhi, kunye nesatifikethi se-HTTPS. KwiWebhu, umncedisi kufuneka avumele i-CORS kunye ne-app ye-HTTPS ayikwazi ukuxhuma kwi-HTTP."
+  "subsonicConnectionError": "Ayinakunxibelelana. Jonga i-URL, inethiwekhi, kunye nesatifikethi se-HTTPS. KwiWebhu, umncedisi kufuneka avumele i-CORS kunye ne-app ye-HTTPS ayikwazi ukuxhuma kwi-HTTP.",
+  "nArtists": "{count, plural, =0{Akukho Amagcisa} =1{1 Igcisa} other{{count} Amagcisa}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "I-Cover Flow",
+  "coverFlowOriginalTitle": "Eyoqobo",
+  "coverFlowBigTitle": "Enkulu"
 }

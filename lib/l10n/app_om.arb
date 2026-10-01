@@ -207,5 +207,17 @@
   "subsonicUrl": "URL sarvarii",
   "subsonicInvalidUrl": "URL sarvarii HTTP ykn HTTPS gaaffii, ciccitaa, ykn galmee ukkaamfame malee galchi.",
   "subsonicUnsupported": "Sarvariin kun API ykn mirkaneessa mallattoo Subsonic barbaachisu hin deeggaru.",
-  "subsonicConnectionError": "Wal qunnamsiisuu hin danda'u. URL, network, fi ragaa HTTPS ilaali. Web irratti, sarvarichi CORS hayyamuu qaba akkasumas appiin HTTPS HTTP waliin wal qunnamsiisuu hin danda'u."
+  "subsonicConnectionError": "Wal qunnamsiisuu hin danda'u. URL, network, fi ragaa HTTPS ilaali. Web irratti, sarvarichi CORS hayyamuu qaba akkasumas appiin HTTPS HTTP waliin wal qunnamsiisuu hin danda'u.",
+  "nArtists": "{count, plural, =0{Aartistoota Hin Qabu} =1{1 Artist} other{{count} Artistoota}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Dhangala'aa Haguuggii",
+  "coverFlowOriginalTitle": "Kan jalqabaa",
+  "coverFlowBigTitle": "Guddaa"
 }

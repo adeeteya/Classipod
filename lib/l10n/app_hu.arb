@@ -207,5 +207,17 @@
   "subsonicUrl": "Szerver URL",
   "subsonicInvalidUrl": "Adjon meg egy HTTP- vagy HTTPS-kiszolgáló URL-címét lekérdezés, töredék vagy beágyazott bejelentkezés nélkül.",
   "subsonicUnsupported": "Ez a szerver nem támogatja a szükséges Subsonic API-t vagy token hitelesítést.",
-  "subsonicConnectionError": "Nem lehet csatlakozni. Ellenőrizze az URL-t, a hálózatot és a HTTPS-tanúsítványt. A weben a kiszolgálónak engedélyeznie kell a CORS-t, és a HTTPS-alkalmazások nem csatlakozhatnak a HTTP-hez."
+  "subsonicConnectionError": "Nem lehet csatlakozni. Ellenőrizze az URL-t, a hálózatot és a HTTPS-tanúsítványt. A weben a kiszolgálónak engedélyeznie kell a CORS-t, és a HTTPS-alkalmazások nem csatlakozhatnak a HTTP-hez.",
+  "nArtists": "{count, plural, =0{Nincs előadó} =1{1 Előadó} other{{count} Előadók}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Eredeti",
+  "coverFlowBigTitle": "Nagy"
 }

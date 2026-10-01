@@ -207,5 +207,17 @@
   "subsonicUrl": "Bediener URL",
   "subsonicInvalidUrl": "Voer 'n HTTP- of HTTPS-bediener-URL in sonder 'n navraag, fragment of ingebedde aanmelding.",
   "subsonicUnsupported": "Hierdie bediener ondersteun nie die vereiste Subsonic API of token-verifikasie nie.",
-  "subsonicConnectionError": "Kan nie koppel nie. Gaan die URL, netwerk en HTTPS-sertifikaat na. Op die web moet die bediener CORS toelaat en 'n HTTPS-toepassing kan nie aan HTTP koppel nie."
+  "subsonicConnectionError": "Kan nie koppel nie. Gaan die URL, netwerk en HTTPS-sertifikaat na. Op die web moet die bediener CORS toelaat en 'n HTTPS-toepassing kan nie aan HTTP koppel nie.",
+  "nArtists": "{count, plural, =0{Geen Kunstenaars} =1{1 Kunstenaar} other{{count} Kunstenaars}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Dekvloei",
+  "coverFlowOriginalTitle": "Oorspronklik",
+  "coverFlowBigTitle": "Groot"
 }

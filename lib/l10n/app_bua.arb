@@ -207,5 +207,17 @@
   "subsonicUrl": "Серверэй URL",
   "subsonicInvalidUrl": "Асуудал, хэһэг, нэбтэрүүлһэн нэбтэрэлгэгүйгөөр HTTP гү, али HTTPS серверэй URL оруулха.",
   "subsonicUnsupported": "Энэ сервер хэрэгтэй Subsonic API гү, али токен үнэмшэлгэ дэмжэнэгүй.",
-  "subsonicConnectionError": "Холбожо шадахагүй. URL, сүлжээн, HTTPS гэршэлгэ шалгаха. Веб дээрэ сервер CORS-ые зүбшөөрхэ ёһотой ба HTTPS апп HTTP-тэй холбогдожо шадахагүй."
+  "subsonicConnectionError": "Холбожо шадахагүй. URL, сүлжээн, HTTPS гэршэлгэ шалгаха. Веб дээрэ сервер CORS-ые зүбшөөрхэ ёһотой ба HTTPS апп HTTP-тэй холбогдожо шадахагүй.",
+  "nArtists": "{count, plural, =0{Уран зураашад үгы} =1{1 Уран зурааша} other{{count} Уран зураашад}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Хабтагай урсалга",
+  "coverFlowOriginalTitle": "Эхэ",
+  "coverFlowBigTitle": "Томо"
 }

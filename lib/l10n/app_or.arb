@@ -207,5 +207,17 @@
   "subsonicUrl": "ସର୍ଭର URL",
   "subsonicInvalidUrl": "ଜିଜ୍ଞାସା, ଖଣ୍ଡ, କିମ୍ବା ଏମ୍ବେଡ୍ ଲଗଇନ୍ ବିନା ଏକ HTTP କିମ୍ବା HTTPS ସର୍ଭର URL ପ୍ରବେଶ କରନ୍ତୁ |",
   "subsonicUnsupported": "ଏହି ସର୍ଭର ଆବଶ୍ୟକୀୟ Subsonic API କିମ୍ବା ଟୋକେନ୍ ପ୍ରାମାଣିକିକରଣକୁ ସମର୍ଥନ କରେନାହିଁ |",
-  "subsonicConnectionError": "ସଂଯୋଗ ହୋଇପାରିବ ନାହିଁ | URL, ନେଟୱାର୍କ, ଏବଂ HTTPS ସାର୍ଟିଫିକେଟ୍ ଯାଞ୍ଚ କରନ୍ତୁ | ୱେବରେ, ସର୍ଭର ନିଶ୍ଚିତ ଭାବରେ CORS କୁ ଅନୁମତି ଦେବ ଏବଂ ଏକ HTTPS ଆପ୍ HTTP ସହିତ ସଂଯୋଗ ହୋଇପାରିବ ନାହିଁ |"
+  "subsonicConnectionError": "ସଂଯୋଗ ହୋଇପାରିବ ନାହିଁ | URL, ନେଟୱାର୍କ, ଏବଂ HTTPS ସାର୍ଟିଫିକେଟ୍ ଯାଞ୍ଚ କରନ୍ତୁ | ୱେବରେ, ସର୍ଭର ନିଶ୍ଚିତ ଭାବରେ CORS କୁ ଅନୁମତି ଦେବ ଏବଂ ଏକ HTTPS ଆପ୍ HTTP ସହିତ ସଂଯୋଗ ହୋଇପାରିବ ନାହିଁ |",
+  "nArtists": "{count, plural, =0{କ Artists ଣସି କଳାକାର ନାହାଁନ୍ତି |} =1{1 କଳାକାର} other{{count} କଳାକାର}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "କଭର୍ ଫ୍ଲୋ |",
+  "coverFlowOriginalTitle": "ମୂଳ",
+  "coverFlowBigTitle": "ବଡ"
 }

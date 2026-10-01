@@ -207,5 +207,17 @@
   "subsonicUrl": "URL pelayan",
   "subsonicInvalidUrl": "Masukkon ma URL ni server HTTP manang HTTPS na so pola adong pangidoan, potongan, manang login na tertanam.",
   "subsonicUnsupported": "Server on ndang mendukung API Subsonic manang otentikasi token na dihaporluhon.",
-  "subsonicConnectionError": "Dang boi mardomu. Parrohahon ma URL, jaringan, dohot sertifikat HTTPS. Di Web, ingkon diloas server do CORS jala aplikasi HTTPS ndang boi marsambung tu HTTP."
+  "subsonicConnectionError": "Dang boi mardomu. Parrohahon ma URL, jaringan, dohot sertifikat HTTPS. Di Web, ingkon diloas server do CORS jala aplikasi HTTPS ndang boi marsambung tu HTTP.",
+  "nArtists": "{count, plural, =0{Ndang adong Artis} =1{1 Artis} other{{count} Artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Aliran Sampul .",
+  "coverFlowOriginalTitle": "Tulen",
+  "coverFlowBigTitle": "Bolon"
 }

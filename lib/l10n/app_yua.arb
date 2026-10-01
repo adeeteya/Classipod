@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ti' le servidor",
   "subsonicInvalidUrl": "Ts'íibt jump'éel URL u servidor HTTP wa HTTPS xma' jump'éel consulta, fragmento wa Chúunul xoknáalo'obo' incrustado.",
   "subsonicUnsupported": "Le servidor ma' soporta le API Subsonic k'a'abeto'ob wa autenticación token.",
-  "subsonicConnectionError": "Ma' tu páajtal u conectar. Ilawil le URL, páawo'ob yéetel certificado HTTPS. Te' Web, le servidor k'a'ana'an u cha'ik CORS yéetel jump'éel app HTTPS ma' je'el u páajtal u conectar u HTTP."
+  "subsonicConnectionError": "Ma' tu páajtal u conectar. Ilawil le URL, páawo'ob yéetel certificado HTTPS. Te' Web, le servidor k'a'ana'an u cha'ik CORS yéetel jump'éel app HTTPS ma' je'el u páajtal u conectar u HTTP.",
+  "nArtists": "{count, plural, =0{Mina'an artistas} =1{1 Artista} other{{count} Artistas}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Flujo de cubierta",
+  "coverFlowOriginalTitle": "Yáax",
+  "coverFlowBigTitle": "Nojoch"
 }

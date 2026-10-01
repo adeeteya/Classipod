@@ -207,5 +207,17 @@
   "subsonicUrl": "URL jong ka shakri",
   "subsonicInvalidUrl": "Pynrung ia ka URL jong ka HTTP lane HTTPS khlem ka jingkylli, ka bynta, lane ka jingpynrung ba la buh.",
   "subsonicUnsupported": "Kane ka server kam kyrshan ia ka jingdonkam jong ka Subsonic API lane ka jingpynshisha ia ka token.",
-  "subsonicConnectionError": "Ym lah ban pyniasoh. Peit ia ka URL, ka network, bad ka HTTPS certificate. Ha ka Web, u server u dei ban shah ia ka CORS bad ka HTTPS app kam lah ban pyniasoh bad ka HTTP."
+  "subsonicConnectionError": "Ym lah ban pyniasoh. Peit ia ka URL, ka network, bad ka HTTPS certificate. Ha ka Web, u server u dei ban shah ia ka CORS bad ka HTTPS app kam lah ban pyniasoh bad ka HTTP.",
+  "nArtists": "{count, plural, =0{Ym don nongrwai} =1{1 Nongrwai} other{{count} Ki nongrwai}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Ka jingtuid jong ka jingtap",
+  "coverFlowOriginalTitle": "Ba long tynrai",
+  "coverFlowBigTitle": "Ba heh"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL server",
   "subsonicInvalidUrl": "Asupkeun URL pangladén HTTP atawa HTTPS tanpa query, fragmén, atawa login embedded.",
   "subsonicUnsupported": "server ieu teu ngarojong diperlukeun Subsonic API atawa auténtikasi token.",
-  "subsonicConnectionError": "Teu bisa nyambung. Pariksa URL, jaringan, sareng sertipikat HTTPS. Dina Wéb, server kedah ngijinkeun CORS sareng aplikasi HTTPS teu tiasa nyambung ka HTTP."
+  "subsonicConnectionError": "Teu bisa nyambung. Pariksa URL, jaringan, sareng sertipikat HTTPS. Dina Wéb, server kedah ngijinkeun CORS sareng aplikasi HTTPS teu tiasa nyambung ka HTTP.",
+  "nArtists": "{count, plural, =0{Teu aya Artis} =1{1 Artis} other{{count} Artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Aliran Panutup",
+  "coverFlowOriginalTitle": "Aslina",
+  "coverFlowBigTitle": "Gede"
 }

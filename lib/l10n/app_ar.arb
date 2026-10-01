@@ -207,5 +207,17 @@
   "subsonicUrl": "عنوان URL للخادم",
   "subsonicInvalidUrl": "أدخل عنوان URL لخادم HTTP أو HTTPS بدون استعلام أو جزء أو تسجيل دخول مضمن.",
   "subsonicUnsupported": "لا يدعم هذا الخادم واجهة برمجة التطبيقات Subsonic المطلوبة أو مصادقة الرمز المميز.",
-  "subsonicConnectionError": "لا يمكن الاتصال. تحقق من عنوان URL والشبكة وشهادة HTTPS. على الويب، يجب أن يسمح الخادم بـ CORS ولا يمكن لتطبيق HTTPS الاتصال بـ HTTP."
+  "subsonicConnectionError": "لا يمكن الاتصال. تحقق من عنوان URL والشبكة وشهادة HTTPS. على الويب، يجب أن يسمح الخادم بـ CORS ولا يمكن لتطبيق HTTPS الاتصال بـ HTTP.",
+  "nArtists": "{count, plural, =0{لا يوجد فنانون} =1{1 فنان} other{{count} فنانون}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "تدفق الغطاء",
+  "coverFlowOriginalTitle": "إبداعي",
+  "coverFlowBigTitle": "كبير"
 }

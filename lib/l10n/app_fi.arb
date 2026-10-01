@@ -207,5 +207,17 @@
   "subsonicUrl": "Palvelimen URL-osoite",
   "subsonicInvalidUrl": "Anna HTTP- tai HTTPS-palvelimen URL-osoite ilman kyselyä, fragmenttia tai upotettua kirjautumistunnusta.",
   "subsonicUnsupported": "Tämä palvelin ei tue vaadittua Subsonic API- tai token-todennusta.",
-  "subsonicConnectionError": "Ei voi muodostaa yhteyttä. Tarkista URL-osoite, verkko ja HTTPS-varmenne. Webissä palvelimen on sallittava CORS, ja HTTPS-sovellus ei voi muodostaa yhteyttä HTTP:hen."
+  "subsonicConnectionError": "Ei voi muodostaa yhteyttä. Tarkista URL-osoite, verkko ja HTTPS-varmenne. Webissä palvelimen on sallittava CORS, ja HTTPS-sovellus ei voi muodostaa yhteyttä HTTP:hen.",
+  "nArtists": "{count, plural, =0{Ei artisteja} =1{1 Artisti} other{{count} Artistit}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Alkuperäinen",
+  "coverFlowBigTitle": "Iso"
 }

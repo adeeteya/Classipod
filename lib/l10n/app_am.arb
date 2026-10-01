@@ -207,5 +207,17 @@
   "subsonicUrl": "የአገልጋይ URL",
   "subsonicInvalidUrl": "ያለ ጥያቄ፣ ቁርጥራጭ ወይም የተከተተ መግቢያ የኤችቲቲፒ ወይም HTTPS አገልጋይ ዩአርኤል ያስገቡ።",
   "subsonicUnsupported": "ይህ አገልጋይ የሚፈለገውን Subsonic API ወይም token ማረጋገጥን አይደግፍም።",
-  "subsonicConnectionError": "መገናኘት አልተቻለም። የዩአርኤል፣ የአውታረ መረብ እና የኤችቲቲፒኤስ የምስክር ወረቀት ያረጋግጡ። በድር ላይ አገልጋዩ CORS መፍቀድ አለበት እና የኤችቲቲፒኤስ መተግበሪያ ከኤችቲቲፒ ጋር መገናኘት አይችልም።"
+  "subsonicConnectionError": "መገናኘት አልተቻለም። የዩአርኤል፣ የአውታረ መረብ እና የኤችቲቲፒኤስ የምስክር ወረቀት ያረጋግጡ። በድር ላይ አገልጋዩ CORS መፍቀድ አለበት እና የኤችቲቲፒኤስ መተግበሪያ ከኤችቲቲፒ ጋር መገናኘት አይችልም።",
+  "nArtists": "{count, plural, =0{አርቲስቶች የሉም} =1{1 አርቲስት} other{{count} አርቲስቶች}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "የሽፋን ፍሰት",
+  "coverFlowOriginalTitle": "ኦሪጅናል",
+  "coverFlowBigTitle": "ትልቅ"
 }

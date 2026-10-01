@@ -207,5 +207,17 @@
   "subsonicUrl": "চাৰ্ভাৰৰ URL",
   "subsonicInvalidUrl": "এটা প্ৰশ্ন, খণ্ড, বা এম্বেড কৰা প্ৰৱেশ অবিহনে এটা HTTP বা HTTPS চাৰ্ভাৰ URL সুমুৱাওক।",
   "subsonicUnsupported": "এই চাৰ্ভাৰে প্ৰয়োজনীয় Subsonic API বা টোকেন প্ৰমাণীকৰণ সমৰ্থন নকৰে।",
-  "subsonicConnectionError": "সংযোগ কৰিব নোৱাৰি। URL, নে'টৱৰ্ক, আৰু HTTPS প্ৰমাণপত্ৰ পৰীক্ষা কৰক। ৱেবত, চাৰ্ভাৰে CORS ৰ অনুমতি দিব লাগিব আৰু এটা HTTPS এপ HTTP ৰ সৈতে সংযোগ কৰিব নোৱাৰে।"
+  "subsonicConnectionError": "সংযোগ কৰিব নোৱাৰি। URL, নে'টৱৰ্ক, আৰু HTTPS প্ৰমাণপত্ৰ পৰীক্ষা কৰক। ৱেবত, চাৰ্ভাৰে CORS ৰ অনুমতি দিব লাগিব আৰু এটা HTTPS এপ HTTP ৰ সৈতে সংযোগ কৰিব নোৱাৰে।",
+  "nArtists": "{count, plural, =0{কোনো শিল্পী নাই} =1{১ জন শিল্পী} other{{count} শিল্পী}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "কভাৰ ফ্ল'",
+  "coverFlowOriginalTitle": "মূল",
+  "coverFlowBigTitle": "ডাঙৰ"
 }

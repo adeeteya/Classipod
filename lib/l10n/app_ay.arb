@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ukax servidor ukankiwa",
   "subsonicInvalidUrl": "Mä HTTP jan ukax HTTPS servidor URL ukar mantañamawa jan jiskt’ata, fragmento, jan ukax incorporado ukar mantañapataki.",
   "subsonicUnsupported": "Aka servidor ukax janiw Subsonic API jan ukax token uñt’ayañax wakiskiti.",
-  "subsonicConnectionError": "Janiw conectatäkaspati. URL, red ukat HTTPS certificado uñakipt’aña. Web tuqinxa, servidor ukax CORS ukarux jaysañapawa ukatx mä HTTPS app ukax janiw HTTP ukar mantañapakiti."
+  "subsonicConnectionError": "Janiw conectatäkaspati. URL, red ukat HTTPS certificado uñakipt’aña. Web tuqinxa, servidor ukax CORS ukarux jaysañapawa ukatx mä HTTPS app ukax janiw HTTP ukar mantañapakiti.",
+  "nArtists": "{count, plural, =0{Janiw Artistas utjkiti} =1{1 Artista} other{{count} Artistas}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Tapa Flujo ukaxa",
+  "coverFlowOriginalTitle": "Urijinala",
+  "coverFlowBigTitle": "Jach'a"
 }

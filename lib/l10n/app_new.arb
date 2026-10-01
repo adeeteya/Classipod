@@ -207,5 +207,17 @@
   "subsonicUrl": "सर्भर यूआरएल",
   "subsonicInvalidUrl": "क्वेरी, फ्राग्मेन्ट, बाय् एम्बेडेड लगइन मदयेक एचटिटिपि बाय् एचटिटिपिएस सर्भर यूआरएल दुथ्याकि ।",
   "subsonicUnsupported": "थुगु सर्भरं माःगुयात समर्थन याइमखु । Subsonic एपिआइ बाय् टोकन प्रमाणिकरण ।",
-  "subsonicConnectionError": "स्वाये मफुत । यूआरएल, नेटवर्क, व एचटिटिपिएस दसिपौ जाँच या । वेबय्, सर्भरं सिओआरएसयात अनुमति बीमाः अले एचटिटिपिएस एपं एचटिटिपिलिसे स्वाये फै मखु ।"
+  "subsonicConnectionError": "स्वाये मफुत । यूआरएल, नेटवर्क, व एचटिटिपिएस दसिपौ जाँच या । वेबय्, सर्भरं सिओआरएसयात अनुमति बीमाः अले एचटिटिपिएस एपं एचटिटिपिलिसे स्वाये फै मखु ।",
+  "nArtists": "{count, plural, =0{कलाकार मदु} =1{१ कलाकार} other{{count} कलाकार ३.}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "कभर फ्लो",
+  "coverFlowOriginalTitle": "मौलिक",
+  "coverFlowBigTitle": "त र्हङु"
 }

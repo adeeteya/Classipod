@@ -207,5 +207,17 @@
   "subsonicUrl": "සේවාදායක URL",
   "subsonicInvalidUrl": "විමසුමක්, ඛණ්ඩනයක් හෝ කාවැද්දූ පිවිසුමක් නොමැතිව HTTP හෝ HTTPS සේවාදායක URL එකක් ඇතුළු කරන්න.",
   "subsonicUnsupported": "මෙම සේවාදායකය අවශ්‍ය Subsonic API හෝ ටෝකන් සත්‍යාපනය සඳහා සහය නොදක්වයි.",
-  "subsonicConnectionError": "සම්බන්ධ විය නොහැක. URL, ජාලය සහ HTTPS සහතිකය පරීක්ෂා කරන්න. වෙබයේ, සේවාදායකය CORS වලට ඉඩ දිය යුතු අතර HTTPS යෙදුමකට HTTP වෙත සම්බන්ධ විය නොහැක."
+  "subsonicConnectionError": "සම්බන්ධ විය නොහැක. URL, ජාලය සහ HTTPS සහතිකය පරීක්ෂා කරන්න. වෙබයේ, සේවාදායකය CORS වලට ඉඩ දිය යුතු අතර HTTPS යෙදුමකට HTTP වෙත සම්බන්ධ විය නොහැක.",
+  "nArtists": "{count, plural, =0{කලාකරුවන් නැත} =1{1 කලාකරු} other{{count} කලාකරුවන්}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "ආවරණ ප්රවාහය",
+  "coverFlowOriginalTitle": "මුල්",
+  "coverFlowBigTitle": "විශාලයි"
 }

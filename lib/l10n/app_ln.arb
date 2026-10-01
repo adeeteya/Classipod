@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya serveur",
   "subsonicInvalidUrl": "Tyá URL ya mosaleli HTTP to HTTPS kozanga motuna, eteni, to bokɔti oyo ekɔtisami.",
   "subsonicUnsupported": "Serveur oyo esimbaka te API ya Subsonic oyo esengeli to bondimi ya jeton.",
-  "subsonicConnectionError": "Ekoki ko connecter te. Tala URL, réseau, mpe certificat HTTPS. Na Web, serveur esengeli kopesa nzela na CORS mpe appli HTTPS ekoki kozala na boyokani na HTTP te."
+  "subsonicConnectionError": "Ekoki ko connecter te. Tala URL, réseau, mpe certificat HTTPS. Na Web, serveur esengeli kopesa nzela na CORS mpe appli HTTPS ekoki kozala na boyokani na HTTP te.",
+  "nArtists": "{count, plural, =0{Ba Artistes te} =1{1 Artiste} other{{count} Ba Artistes}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Flow ya Couverture",
+  "coverFlowOriginalTitle": "Esika euti",
+  "coverFlowBigTitle": "Monene"
 }

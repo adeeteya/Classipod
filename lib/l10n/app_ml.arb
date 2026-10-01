@@ -207,5 +207,17 @@
   "subsonicUrl": "സെർവർ URL",
   "subsonicInvalidUrl": "ഒരു ചോദ്യം, ശകലം അല്ലെങ്കിൽ ഉൾച്ചേർത്ത ലോഗിൻ ഇല്ലാതെ ഒരു HTTP അല്ലെങ്കിൽ HTTPS സെർവർ URL നൽകുക.",
   "subsonicUnsupported": "ഈ സെർവർ ആവശ്യമായ Subsonic API അല്ലെങ്കിൽ ടോക്കൺ പ്രാമാണീകരണത്തെ പിന്തുണയ്ക്കുന്നില്ല.",
-  "subsonicConnectionError": "ബന്ധിപ്പിക്കാൻ കഴിയില്ല. URL, നെറ്റ്‌വർക്ക്, HTTPS സർട്ടിഫിക്കറ്റ് എന്നിവ പരിശോധിക്കുക. വെബിൽ, സെർവർ CORS-നെ അനുവദിക്കണം, ഒരു HTTPS ആപ്പിന് HTTP-യിലേക്ക് കണക്റ്റുചെയ്യാൻ കഴിയില്ല."
+  "subsonicConnectionError": "ബന്ധിപ്പിക്കാൻ കഴിയില്ല. URL, നെറ്റ്‌വർക്ക്, HTTPS സർട്ടിഫിക്കറ്റ് എന്നിവ പരിശോധിക്കുക. വെബിൽ, സെർവർ CORS-നെ അനുവദിക്കണം, ഒരു HTTPS ആപ്പിന് HTTP-യിലേക്ക് കണക്റ്റുചെയ്യാൻ കഴിയില്ല.",
+  "nArtists": "{count, plural, =0{ആർട്ടിസ്റ്റുകൾ ഇല്ല} =1{1 ആർട്ടിസ്റ്റ്} other{{count} കലാകാരന്മാർ}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "കവർ ഫ്ലോ",
+  "coverFlowOriginalTitle": "ഒറിജിനൽ",
+  "coverFlowBigTitle": "വലിയ"
 }

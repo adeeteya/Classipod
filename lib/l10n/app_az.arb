@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "Sorğu, fraqment və ya daxil edilmiş giriş olmadan HTTP və ya HTTPS server URL-ni daxil edin.",
   "subsonicUnsupported": "Bu server tələb olunan Subsonic API və ya token autentifikasiyasını dəstəkləmir.",
-  "subsonicConnectionError": "Qoşulmaq mümkün deyil. URL, şəbəkə və HTTPS sertifikatını yoxlayın. Vebdə server CORS-a icazə verməlidir və HTTPS proqramı HTTP-yə qoşula bilməz."
+  "subsonicConnectionError": "Qoşulmaq mümkün deyil. URL, şəbəkə və HTTPS sertifikatını yoxlayın. Vebdə server CORS-a icazə verməlidir və HTTPS proqramı HTTP-yə qoşula bilməz.",
+  "nArtists": "{count, plural, =0{Sənətçi yoxdur} =1{1 Rəssam} other{{count} Rəssamlar}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Qapaq axını",
+  "coverFlowOriginalTitle": "Orijinal",
+  "coverFlowBigTitle": "Böyük"
 }

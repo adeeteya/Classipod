@@ -207,5 +207,17 @@
   "subsonicUrl": "सर्वर यूआरएल",
   "subsonicInvalidUrl": "बिना कुसै क्वेरी, टुकड़े, जां एम्बेडेड लॉगिन दे HTTP जां HTTPS सर्वर URL दर्ज करो.",
   "subsonicUnsupported": "एह् सर्वर जरूरी Subsonic एपीआई जां टोकन प्रमाणीकरण दा समर्थन नेईं करदा ऐ.",
-  "subsonicConnectionError": "कनेक्ट नहीं हो सकदा। URL, नेटवर्क, ते HTTPS प्रमाणपत्र दी जांच करो. वेब पर, सर्वर गी CORS दी अनुमति होनी चाहिदी ते इक HTTPS ऐप HTTP कन्नै कनेक्ट नेईं होई सकदा।"
+  "subsonicConnectionError": "कनेक्ट नहीं हो सकदा। URL, नेटवर्क, ते HTTPS प्रमाणपत्र दी जांच करो. वेब पर, सर्वर गी CORS दी अनुमति होनी चाहिदी ते इक HTTPS ऐप HTTP कन्नै कनेक्ट नेईं होई सकदा।",
+  "nArtists": "{count, plural, =0{कोई कलाकार नहीं} =1{1 कलाकार} other{{count} कलाकार}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "कवर फ्लो",
+  "coverFlowOriginalTitle": "मूल",
+  "coverFlowBigTitle": "बड्डा"
 }

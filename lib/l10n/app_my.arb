@@ -207,5 +207,17 @@
   "subsonicUrl": "ဆာဗာ URL",
   "subsonicInvalidUrl": "မေးမြန်းချက်၊ အပိုင်းအစ သို့မဟုတ် ထည့်သွင်းထားသော အကောင့်ဝင်ခြင်းမရှိဘဲ HTTP သို့မဟုတ် HTTPS ဆာဗာ URL ကို ထည့်သွင်းပါ။",
   "subsonicUnsupported": "ဤဆာဗာသည် လိုအပ်သော Subsonic API သို့မဟုတ် တိုကင်အထောက်အထားစိစစ်ခြင်းကို မပံ့ပိုးပါ။",
-  "subsonicConnectionError": "ချိတ်ဆက်၍မရပါ။ URL၊ ကွန်ရက်နှင့် HTTPS လက်မှတ်တို့ကို စစ်ဆေးပါ။ ဝဘ်ပေါ်တွင်၊ ဆာဗာသည် CORS ကို ခွင့်ပြုရမည်ဖြစ်ပြီး HTTPS အက်ပ်အား HTTP သို့ ချိတ်ဆက်၍မရပါ။"
+  "subsonicConnectionError": "ချိတ်ဆက်၍မရပါ။ URL၊ ကွန်ရက်နှင့် HTTPS လက်မှတ်တို့ကို စစ်ဆေးပါ။ ဝဘ်ပေါ်တွင်၊ ဆာဗာသည် CORS ကို ခွင့်ပြုရမည်ဖြစ်ပြီး HTTPS အက်ပ်အား HTTP သို့ ချိတ်ဆက်၍မရပါ။",
+  "nArtists": "{count, plural, =0{အနုပညာရှင်များမရှိပါ} =1{1 Artist} other{{count} အနုပညာရှင်များ}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "မူရင်း",
+  "coverFlowBigTitle": "ကြီးတယ်။"
 }

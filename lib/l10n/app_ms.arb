@@ -207,5 +207,17 @@
   "subsonicUrl": "URL pelayan",
   "subsonicInvalidUrl": "Masukkan URL pelayan HTTP atau HTTPS tanpa pertanyaan, serpihan atau log masuk terbenam.",
   "subsonicUnsupported": "Pelayan ini tidak menyokong API Subsonic atau pengesahan token yang diperlukan.",
-  "subsonicConnectionError": "Tidak boleh menyambung. Semak URL, rangkaian dan sijil HTTPS. Di Web, pelayan mesti membenarkan CORS dan apl HTTPS tidak boleh menyambung ke HTTP."
+  "subsonicConnectionError": "Tidak boleh menyambung. Semak URL, rangkaian dan sijil HTTPS. Di Web, pelayan mesti membenarkan CORS dan apl HTTPS tidak boleh menyambung ke HTTP.",
+  "nArtists": "{count, plural, =0{Tiada Artis} =1{1 Artis} other{{count} Artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Aliran Penutup",
+  "coverFlowOriginalTitle": "Asal",
+  "coverFlowBigTitle": "besar"
 }

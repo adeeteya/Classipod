@@ -207,5 +207,17 @@
   "subsonicUrl": "URL pelayan",
   "subsonicInvalidUrl": "Tapeutamong URL server HTTP atawa HTTPS hana kueri, fragmen, atawa login nyang teuseubot.",
   "subsonicUnsupported": "Server nyoe hana jidukung API Subsonic atawa otentikasi token nyang jipeureulee.",
-  "subsonicConnectionError": "Hana jeut meusambong. Neu-eu URL, jaringan, ngon sertifikat HTTPS. Bak Web, server wajeb geubi izin CORS ngon saboh aplikasi HTTPS hana jeuet geuhubong ngon HTTP."
+  "subsonicConnectionError": "Hana jeut meusambong. Neu-eu URL, jaringan, ngon sertifikat HTTPS. Bak Web, server wajeb geubi izin CORS ngon saboh aplikasi HTTPS hana jeuet geuhubong ngon HTTP.",
+  "nArtists": "{count, plural, =0{Hana Artis} =1{1 Artis} other{{count} Artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Aliran Tutup",
+  "coverFlowOriginalTitle": "Aseuli",
+  "coverFlowBigTitle": "Rayeuk"
 }

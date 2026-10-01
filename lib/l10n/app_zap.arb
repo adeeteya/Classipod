@@ -207,5 +207,17 @@
   "subsonicUrl": "URL stiʼ servidor",
   "subsonicInvalidUrl": "Bicaa ti URL stiʼ servidor HTTP o HTTPS sin ti consulta, ti fragmentu o ti login incorporado.",
   "subsonicUnsupported": "Servidor riʼ qué racané diʼ ni API Subsonic ni caquiiñeʼ o autenticación de token.",
-  "subsonicConnectionError": "Qué zanda diʼ guidxaaga. Biiyaʼ URL, red ne certificadu HTTPS. Lu Web, servidor ca naquiiñeʼ gudii lugar CORS ne ti aplicación HTTPS qué zanda diʼ guidxaaga HTTP."
+  "subsonicConnectionError": "Qué zanda diʼ guidxaaga. Biiyaʼ URL, red ne certificadu HTTPS. Lu Web, servidor ca naquiiñeʼ gudii lugar CORS ne ti aplicación HTTPS qué zanda diʼ guidxaaga HTTP.",
+  "nArtists": "{count, plural, =0{Cadi nuu diʼ artista} =1{1 artista} other{{count} artista}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Flujo de tapa",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Naro'ba"
 }

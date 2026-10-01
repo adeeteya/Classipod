@@ -207,5 +207,17 @@
   "subsonicUrl": "URL han serbidor",
   "subsonicInvalidUrl": "Pagsulod hin HTTP o HTTPS nga URL han serbidor nga waray pakiana, tipik, o nakasulod nga pagsulod.",
   "subsonicUnsupported": "Ini nga server diri nasuporta han ginkikinahanglan nga Subsonic API o pagpamatuod han token.",
-  "subsonicConnectionError": "Diri makakonekta. Susiha an URL, network, ngan HTTPS nga sertipiko. Ha Web, an server kinahanglan magtugot han CORS ngan an usa nga HTTPS nga app diri makakakonekta ha HTTP."
+  "subsonicConnectionError": "Diri makakonekta. Susiha an URL, network, ngan HTTPS nga sertipiko. Ha Web, an server kinahanglan magtugot han CORS ngan an usa nga HTTPS nga app diri makakakonekta ha HTTP.",
+  "nArtists": "{count, plural, =0{Waray Mga Artist} =1{1 Artist} other{{count} Mga Artist}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Pag-agos han Tabon",
+  "coverFlowOriginalTitle": "Orihinal",
+  "coverFlowBigTitle": "Daku"
 }

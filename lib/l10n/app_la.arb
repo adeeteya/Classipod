@@ -207,5 +207,17 @@
   "subsonicUrl": "Servo URL",
   "subsonicInvalidUrl": "Intrant HTTP vel HTTPS servo URL sine interrogatione, fragmento, aut login infixa.",
   "subsonicUnsupported": "Hic servo Subsonic API requisitam vel tesseram authenticas non sustinet.",
-  "subsonicConnectionError": "Non potest coniungere. Compesce Domicilium, retiaculum, et libellum HTTPS. In Tela, server debet CORS et app HTTPS ad HTTP coniungere non possunt."
+  "subsonicConnectionError": "Non potest coniungere. Compesce Domicilium, retiaculum, et libellum HTTPS. In Tela, server debet CORS et app HTTPS ad HTTP coniungere non possunt.",
+  "nArtists": "{count, plural, =0{No Artificium} =1{1 Artist} other{{count} Artificis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover flow",
+  "coverFlowOriginalTitle": "Originale",
+  "coverFlowBigTitle": "Magnus"
 }

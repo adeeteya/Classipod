@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ของเซิร์ฟเวอร์",
   "subsonicInvalidUrl": "ป้อน URL เซิร์ฟเวอร์ HTTP หรือ HTTPS โดยไม่มีคำค้นหา ส่วนย่อย หรือการเข้าสู่ระบบแบบฝัง",
   "subsonicUnsupported": "เซิร์ฟเวอร์นี้ไม่รองรับ Subsonic API หรือการตรวจสอบโทเค็นที่จำเป็น",
-  "subsonicConnectionError": "ไม่สามารถเชื่อมต่อได้ ตรวจสอบ URL, เครือข่าย และใบรับรอง HTTPS บนเว็บ เซิร์ฟเวอร์ต้องอนุญาต CORS และแอป HTTPS ไม่สามารถเชื่อมต่อกับ HTTP"
+  "subsonicConnectionError": "ไม่สามารถเชื่อมต่อได้ ตรวจสอบ URL, เครือข่าย และใบรับรอง HTTPS บนเว็บ เซิร์ฟเวอร์ต้องอนุญาต CORS และแอป HTTPS ไม่สามารถเชื่อมต่อกับ HTTP",
+  "nArtists": "{count, plural, =0{ไม่มีศิลปิน} =1{1 ศิลปิน} other{{count} ศิลปิน}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "ครอบคลุมการไหล",
+  "coverFlowOriginalTitle": "ต้นฉบับ",
+  "coverFlowBigTitle": "ใหญ่"
 }

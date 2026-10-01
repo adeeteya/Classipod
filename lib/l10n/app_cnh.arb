@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "HTTP asiloah HTTPS server URL kha halnak, tthencheunak, asiloah luhternak um loin khumh.",
   "subsonicUnsupported": "Hi server nih a herhmi Subsonic API asiloah token hngalhternak kha a dirpi lo.",
-  "subsonicConnectionError": "Peh khawh a si lo. URL, network, le HTTPS certificate kha zoh. Web ah, server nih CORS a onh a hau i HTTPS app cu HTTP he aa pehtlaih kho lo."
+  "subsonicConnectionError": "Peh khawh a si lo. URL, network, le HTTPS certificate kha zoh. Web ah, server nih CORS a onh a hau i HTTPS app cu HTTP he aa pehtlaih kho lo.",
+  "nArtists": "{count, plural, =0{An um lo} =1{1 Artist} other{{count} Artists}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "A hmasa bik a simi",
+  "coverFlowBigTitle": "A ngan"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "सर्वर के यूआरएल बा",
   "subsonicInvalidUrl": "बिना कवनो क्वेरी, टुकड़ा, भा एम्बेडेड लॉगिन के HTTP भा HTTPS सर्वर यूआरएल दर्ज करीं.",
   "subsonicUnsupported": "ई सर्वर जरूरी Subsonic एपीआई भा टोकन प्रमाणीकरण के सपोर्ट ना करे ला।",
-  "subsonicConnectionError": "कनेक्ट नइखे हो सकत। यूआरएल, नेटवर्क, आ एचटीटीपीएस प्रमाणपत्र के जांच करीं। वेब पर सर्वर के CORS के अनुमति देबे के पड़ी आ एचटीटीपीएस ऐप एचटीटीपी से कनेक्ट ना हो सके."
+  "subsonicConnectionError": "कनेक्ट नइखे हो सकत। यूआरएल, नेटवर्क, आ एचटीटीपीएस प्रमाणपत्र के जांच करीं। वेब पर सर्वर के CORS के अनुमति देबे के पड़ी आ एचटीटीपीएस ऐप एचटीटीपी से कनेक्ट ना हो सके.",
+  "nArtists": "{count, plural, =0{कोई कलाकार ना} =1{1 कलाकार} other{{count} कलाकार}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "कवर फ्लो के बा",
+  "coverFlowOriginalTitle": "असली",
+  "coverFlowBigTitle": "बड़हन"
 }

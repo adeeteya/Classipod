@@ -207,5 +207,17 @@
   "subsonicUrl": "URL dal servidôr",
   "subsonicInvalidUrl": "Inserî un URL dal servidôr HTTP o HTTPS cence une interogazion, un frament o un login incorporât.",
   "subsonicUnsupported": "Chest servidôr nol supuarte la API Subsonic o la autenticazion dal token necessariis.",
-  "subsonicConnectionError": "No pues conetisi. Controlâ l’URL, la rêt e il certificât HTTPS. Sul Web, il servidôr al à di permeti CORS e une aplicazion HTTPS no pues conetisi al HTTP."
+  "subsonicConnectionError": "No pues conetisi. Controlâ l’URL, la rêt e il certificât HTTPS. Sul Web, il servidôr al à di permeti CORS e une aplicazion HTTPS no pues conetisi al HTTP.",
+  "nArtists": "{count, plural, =0{Nissun artiscj} =1{1 artist} other{{count} artiscj}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Fluss di cuvierture",
+  "coverFlowOriginalTitle": "Origjinâl",
+  "coverFlowBigTitle": "Grant"
 }

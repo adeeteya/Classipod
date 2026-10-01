@@ -207,5 +207,17 @@
   "subsonicUrl": "URL le serverosqo",
   "subsonicInvalidUrl": "Thov jekh HTTP vaj HTTPS server URL bi te avel tut pućhipen, fragmento vaj bi te avel tut login.",
   "subsonicUnsupported": "Kado servero na suportil o trubujipe Subsonic API vaj tokenoski autentifikacia.",
-  "subsonicConnectionError": "Nashti te konektirinel pes. Dikh o URL, o netvorko thaj o HTTPS certifikàto. Pe Web, o serveri trubul te mukhel CORS thaj jekh HTTPS app nashti te phandel pes ko HTTP."
+  "subsonicConnectionError": "Nashti te konektirinel pes. Dikh o URL, o netvorko thaj o HTTPS certifikàto. Pe Web, o serveri trubul te mukhel CORS thaj jekh HTTPS app nashti te phandel pes ko HTTP.",
+  "nArtists": "{count, plural, =0{Na si artistura} =1{1 artisto} other{{count} Artistura}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kaver Flow",
+  "coverFlowOriginalTitle": "Originàlo",
+  "coverFlowBigTitle": "Baro"
 }

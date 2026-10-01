@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL no",
   "subsonicInvalidUrl": "Hyehyɛ HTTP anaa HTTPS server URL a enni asɛmmisa, asinasin, anaa login a wɔde ahyɛ mu.",
   "subsonicUnsupported": "Saa server yi ntumi mmoa Subsonic API anaa token nokwaredi a wɔhwehwɛ no.",
-  "subsonicConnectionError": "Entumi nkɔ nkitahodi. Hwɛ URL, ntwamutam, ne HTTPS abodin krataa no. Wɔ Wɛb so no, ɛsɛ sɛ server no ma CORS kwan na HTTPS app bi ntumi nkɔ HTTP so."
+  "subsonicConnectionError": "Entumi nkɔ nkitahodi. Hwɛ URL, ntwamutam, ne HTTPS abodin krataa no. Wɔ Wɛb so no, ɛsɛ sɛ server no ma CORS kwan na HTTPS app bi ntumi nkɔ HTTP so.",
+  "nArtists": "{count, plural, =0{Adwumfo biara nni hɔ} =1{1 Mfoniniyɛfo} other{{count} Mfoniniyɛfo}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow a Wɔde Kata So",
+  "coverFlowOriginalTitle": "Ankasa",
+  "coverFlowBigTitle": "Kɛseɛ"
 }

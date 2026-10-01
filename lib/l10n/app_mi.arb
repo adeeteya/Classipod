@@ -207,5 +207,17 @@
   "subsonicUrl": "URL Tūmau",
   "subsonicInvalidUrl": "Whakauruhia he URL tūmau HTTP, HTTPS ranei kaore he uiui, he kongakonga, he takiuru whakauru ranei.",
   "subsonicUnsupported": "Kaore tenei tūmau i te tautoko i te Subsonic API me te motuhēhēnga tohu.",
-  "subsonicConnectionError": "Kaore e taea te hono. Tirohia te URL, whatunga, me te tiwhikete HTTPS. I runga i te Tukutuku, me whakaae te tūmau CORS me te taupānga HTTPS e kore e taea te hono atu ki te HTTP."
+  "subsonicConnectionError": "Kaore e taea te hono. Tirohia te URL, whatunga, me te tiwhikete HTTPS. I runga i te Tukutuku, me whakaae te tūmau CORS me te taupānga HTTPS e kore e taea te hono atu ki te HTTP.",
+  "nArtists": "{count, plural, =0{Kaore he Kaitoi} =1{1 Kaitoi} other{{count} Kaitoi}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Rere Uhi",
+  "coverFlowOriginalTitle": "Taketake",
+  "coverFlowBigTitle": "Nui"
 }

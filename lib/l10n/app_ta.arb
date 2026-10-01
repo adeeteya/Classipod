@@ -207,5 +207,17 @@
   "subsonicUrl": "சேவையக URL",
   "subsonicInvalidUrl": "வினவல், துண்டு அல்லது உட்பொதிக்கப்பட்ட உள்நுழைவு இல்லாமல் HTTP அல்லது HTTPS சேவையக URL ஐ உள்ளிடவும்.",
   "subsonicUnsupported": "இந்த சேவையகம் தேவையான Subsonic API அல்லது டோக்கன் அங்கீகாரத்தை ஆதரிக்கவில்லை.",
-  "subsonicConnectionError": "இணைக்க முடியவில்லை. URL, நெட்வொர்க் மற்றும் HTTPS சான்றிதழைச் சரிபார்க்கவும். இணையத்தில், சேவையகம் CORS ஐ அனுமதிக்க வேண்டும் மற்றும் HTTPS ஆப்ஸால் HTTP உடன் இணைக்க முடியாது."
+  "subsonicConnectionError": "இணைக்க முடியவில்லை. URL, நெட்வொர்க் மற்றும் HTTPS சான்றிதழைச் சரிபார்க்கவும். இணையத்தில், சேவையகம் CORS ஐ அனுமதிக்க வேண்டும் மற்றும் HTTPS ஆப்ஸால் HTTP உடன் இணைக்க முடியாது.",
+  "nArtists": "{count, plural, =0{கலைஞர்கள் இல்லை} =1{1 கலைஞர்} other{{count} கலைஞர்கள்}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "கவர் ஓட்டம்",
+  "coverFlowOriginalTitle": "அசல்",
+  "coverFlowBigTitle": "பெரிய"
 }

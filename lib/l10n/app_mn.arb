@@ -207,5 +207,17 @@
   "subsonicUrl": "Серверийн URL",
   "subsonicInvalidUrl": "HTTP эсвэл HTTPS серверийн URL-г асуулга, фрагмент эсвэл суулгагдсан нэвтрэлтгүйгээр оруулна уу.",
   "subsonicUnsupported": "Энэ сервер нь шаардлагатай Subsonic API эсвэл жетон баталгаажуулалтыг дэмждэггүй.",
-  "subsonicConnectionError": "Холбох боломжгүй байна. URL, сүлжээ болон HTTPS сертификатыг шалгана уу. Вэб дээр сервер CORS-ийг зөвшөөрөх ёстой бөгөөд HTTPS програм HTTP-д холбогдож чадахгүй."
+  "subsonicConnectionError": "Холбох боломжгүй байна. URL, сүлжээ болон HTTPS сертификатыг шалгана уу. Вэб дээр сервер CORS-ийг зөвшөөрөх ёстой бөгөөд HTTPS програм HTTP-д холбогдож чадахгүй.",
+  "nArtists": "{count, plural, =0{Уран бүтээлчгүй} =1{1 Уран бүтээлч} other{{count} Уран бүтээлч}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Хавтасны урсгал",
+  "coverFlowOriginalTitle": "Жинхэнэ",
+  "coverFlowBigTitle": "Том"
 }

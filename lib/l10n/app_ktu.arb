@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya serveur",
   "subsonicInvalidUrl": "Kota na URL ya serveur HTTP to HTTPS kukonda ngiufula, kitini, to kukota ya bo me kotisa.",
   "subsonicUnsupported": "Serveur yai ke ndimaka ve API ya Subsonic to nzikisa ya kidimbu yina bo ke lombaka.",
-  "subsonicConnectionError": "Lenda kukangama ve. Tala URL, réseau, mpi mukanda ya HTTPS. Na Web, serveur fwete pesa nzila na CORS mpi appli mosi ya HTTPS lenda vukana ve ti HTTP."
+  "subsonicConnectionError": "Lenda kukangama ve. Tala URL, réseau, mpi mukanda ya HTTPS. Na Web, serveur fwete pesa nzila na CORS mpi appli mosi ya HTTPS lenda vukana ve ti HTTP.",
+  "nArtists": "{count, plural, =0{Bantu ya ke salaka miziki ve} =1{Muntu ya ke salaka miziki 1} other{{count} Bantu ya ke salaka miziki}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kuzikisa Kutambula",
+  "coverFlowOriginalTitle": "Ya kisina",
+  "coverFlowBigTitle": "Nene"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "सर्वर URL",
   "subsonicInvalidUrl": "प्रश्नं, खण्डं, एम्बेडेड् लॉगिन् वा विना HTTP अथवा HTTPS सर्वर URL प्रविष्टं कुर्वन्तु ।",
   "subsonicUnsupported": "अयं सर्वरः आवश्यकं Subsonic API अथवा टोकन प्रमाणीकरणं समर्थयति न ।",
-  "subsonicConnectionError": "संयोजितुं न शक्नोति। URL, संजालं, HTTPS प्रमाणपत्रं च पश्यन्तु । जालपुटे सर्वरेण CORS इत्यस्य अनुमतिः भवितुमर्हति तथा च HTTPS एप् HTTP इत्यनेन सह सम्बद्धं कर्तुं न शक्नोति ।"
+  "subsonicConnectionError": "संयोजितुं न शक्नोति। URL, संजालं, HTTPS प्रमाणपत्रं च पश्यन्तु । जालपुटे सर्वरेण CORS इत्यस्य अनुमतिः भवितुमर्हति तथा च HTTPS एप् HTTP इत्यनेन सह सम्बद्धं कर्तुं न शक्नोति ।",
+  "nArtists": "{count, plural, =0{कोऽपि कलाकाराः} =1{1 कलाकाराः} other{{count} कलाकाराः}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "आवरण प्रवाह",
+  "coverFlowOriginalTitle": "मूल",
+  "coverFlowBigTitle": "विशालः"
 }

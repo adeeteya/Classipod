@@ -207,5 +207,17 @@
   "subsonicUrl": "Adresa URL servera",
   "subsonicInvalidUrl": "Zadajte adresu URL servera HTTP alebo HTTPS bez dopytu, fragmentu alebo vloženého prihlásenia.",
   "subsonicUnsupported": "Tento server nepodporuje požadované rozhranie API Subsonic alebo autentifikáciu pomocou tokenu.",
-  "subsonicConnectionError": "Nedá sa pripojiť. Skontrolujte adresu URL, sieť a certifikát HTTPS. Na webe musí server povoliť CORS a aplikácia HTTPS sa nemôže pripojiť k HTTP."
+  "subsonicConnectionError": "Nedá sa pripojiť. Skontrolujte adresu URL, sieť a certifikát HTTPS. Na webe musí server povoliť CORS a aplikácia HTTPS sa nemôže pripojiť k HTTP.",
+  "nArtists": "{count, plural, =0{Žiadni umelci} =1{1 umelci} other{{count} umelci}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kryt Prietok",
+  "coverFlowOriginalTitle": "Originál",
+  "coverFlowBigTitle": "Veľký"
 }

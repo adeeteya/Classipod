@@ -207,5 +207,17 @@
   "subsonicUrl": "URL del servidor",
   "subsonicInvalidUrl": "Introduïu un URL de servidor HTTP o HTTPS sense cap consulta, fragment o inici de sessió incrustat.",
   "subsonicUnsupported": "Aquest servidor no admet l'autenticació de testimoni ni l'API Subsonic necessària.",
-  "subsonicConnectionError": "No es pot connectar. Comproveu l'URL, la xarxa i el certificat HTTPS. Al web, el servidor ha de permetre CORS i una aplicació HTTPS no es pot connectar a HTTP."
+  "subsonicConnectionError": "No es pot connectar. Comproveu l'URL, la xarxa i el certificat HTTPS. Al web, el servidor ha de permetre CORS i una aplicació HTTPS no es pot connectar a HTTP.",
+  "nArtists": "{count, plural, =0{Sense artistes} =1{1 artista} other{{count} Artistes}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Flux de coberta",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Gran"
 }

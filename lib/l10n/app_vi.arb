@@ -207,5 +207,17 @@
   "subsonicUrl": "URL máy chủ",
   "subsonicInvalidUrl": "Nhập URL máy chủ HTTP hoặc HTTPS mà không có truy vấn, đoạn hoặc thông tin đăng nhập được nhúng.",
   "subsonicUnsupported": "Máy chủ này không hỗ trợ xác thực mã thông báo hoặc API Subsonic được yêu cầu.",
-  "subsonicConnectionError": "Không thể kết nối. Kiểm tra URL, mạng và chứng chỉ HTTPS. Trên Web, máy chủ phải cho phép CORS và ứng dụng HTTPS không thể kết nối với HTTP."
+  "subsonicConnectionError": "Không thể kết nối. Kiểm tra URL, mạng và chứng chỉ HTTPS. Trên Web, máy chủ phải cho phép CORS và ứng dụng HTTPS không thể kết nối với HTTP.",
+  "nArtists": "{count, plural, =0{Không có nghệ sĩ} =1{1 nghệ sĩ} other{{count} Nghệ sĩ}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Dòng chảy che phủ",
+  "coverFlowOriginalTitle": "Nguyên bản",
+  "coverFlowBigTitle": "To lớn"
 }

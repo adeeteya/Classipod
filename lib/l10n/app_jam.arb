@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "Enter an HTTP or HTTPS server URL widout a query, fragment, or embedded login.",
   "subsonicUnsupported": "Dis server no support di required Subsonic API or token authentication.",
-  "subsonicConnectionError": "Cyan connect. Check di URL, network, an HTTPS certificate. Pan Web, di server haffi allow CORS an an HTTPS app cyaan connect to HTTP."
+  "subsonicConnectionError": "Cyan connect. Check di URL, network, an HTTPS certificate. Pan Web, di server haffi allow CORS an an HTTPS app cyaan connect to HTTP.",
+  "nArtists": "{count, plural, =0{No Artists} =1{1 Artist} other{{count} Artists}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Big"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "Servidor URL rehegua",
   "subsonicInvalidUrl": "Emoinge peteĩ HTTP térã HTTPS servidor URL peteĩ porandu, pehẽngue térã jeike oñemboguapýva’ỹre.",
   "subsonicUnsupported": "Ko servidor ndoipytyvõi Subsonic API térã token jekuaauka oñeikotevẽva.",
-  "subsonicConnectionError": "Ndaikatúi oñembojoaju. Ehecháke URL, red ha HTTPS kuatia’atâ. Web-pe, pe servidor ohejavaꞌerã CORS ha peteĩ HTTPS app ndaikatúi oñembojoaju HTTP ndive."
+  "subsonicConnectionError": "Ndaikatúi oñembojoaju. Ehecháke URL, red ha HTTPS kuatia’atâ. Web-pe, pe servidor ohejavaꞌerã CORS ha peteĩ HTTPS app ndaikatúi oñembojoaju HTTP ndive.",
+  "nArtists": "{count, plural, =0{Ndaipóri Artista} =1{1 Artista} other{{count} Artista}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Flujo de Cubierta rehegua",
+  "coverFlowOriginalTitle": "Ypykue",
+  "coverFlowBigTitle": "Tuicha"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL на серверот",
   "subsonicInvalidUrl": "Внесете URL-адреса на серверот HTTP или HTTPS без барање, фрагмент или вградено најавување.",
   "subsonicUnsupported": "Овој сервер не го поддржува потребното Subsonic API или автентикација на токен.",
-  "subsonicConnectionError": "Не може да се поврзе. Проверете ги URL-то, мрежата и сертификатот HTTPS. На веб, серверот мора да дозволи CORS и апликацијата HTTPS не може да се поврзе со HTTP."
+  "subsonicConnectionError": "Не може да се поврзе. Проверете ги URL-то, мрежата и сертификатот HTTPS. На веб, серверот мора да дозволи CORS и апликацијата HTTPS не може да се поврзе со HTTP.",
+  "nArtists": "{count, plural, =0{Нема изведувачи} =1{1 изведувач} other{{count} Изведувачи}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Проток на покривка",
+  "coverFlowOriginalTitle": "Оригинален",
+  "coverFlowBigTitle": "Голема"
 }

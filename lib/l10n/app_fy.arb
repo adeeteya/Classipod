@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "Fier in HTTP- of HTTPS-tsjinner URL yn sûnder in query, fragmint of ynbêde oanmelding.",
   "subsonicUnsupported": "Dizze tsjinner net stipet de fereaske Subsonic API of token autentikaasje.",
-  "subsonicConnectionError": "Kin net ferbine. Kontrolearje de URL, netwurk en HTTPS-sertifikaat. Op it web moat de tsjinner CORS tastean en in HTTPS-app kin net ferbine mei HTTP."
+  "subsonicConnectionError": "Kin net ferbine. Kontrolearje de URL, netwurk en HTTPS-sertifikaat. Op it web moat de tsjinner CORS tastean en in HTTPS-app kin net ferbine mei HTTP.",
+  "nArtists": "{count, plural, =0{Gjin artysten} =1{1 artyst} other{{count} artysten}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Oarspronklik",
+  "coverFlowBigTitle": "Grut"
 }

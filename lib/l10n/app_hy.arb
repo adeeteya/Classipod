@@ -207,5 +207,17 @@
   "subsonicUrl": "Սերվերի URL",
   "subsonicInvalidUrl": "Մուտքագրեք HTTP կամ HTTPS սերվերի URL առանց հարցման, հատվածի կամ ներկառուցված մուտքի:",
   "subsonicUnsupported": "Այս սերվերը չի աջակցում պահանջվող Subsonic API-ին կամ նշանային նույնականացմանը:",
-  "subsonicConnectionError": "Հնարավոր չէ միանալ: Ստուգեք URL-ը, ցանցը և HTTPS վկայագիրը: Համացանցում սերվերը պետք է թույլ տա CORS-ին, իսկ HTTPS հավելվածը չի կարող միանալ HTTP-ին:"
+  "subsonicConnectionError": "Հնարավոր չէ միանալ: Ստուգեք URL-ը, ցանցը և HTTPS վկայագիրը: Համացանցում սերվերը պետք է թույլ տա CORS-ին, իսկ HTTPS հավելվածը չի կարող միանալ HTTP-ին:",
+  "nArtists": "{count, plural, =0{Արվեստագետներ չկան} =1{1 Արվեստագետ} other{{count} Արվեստագետներ}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Ծածկույթի հոսք",
+  "coverFlowOriginalTitle": "Օրիգինալ",
+  "coverFlowBigTitle": "Մեծ"
 }

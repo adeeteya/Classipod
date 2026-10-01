@@ -207,5 +207,17 @@
   "subsonicUrl": "ಸರ್ವರ್ URL",
   "subsonicInvalidUrl": "ಪ್ರಶ್ನೆ, ತುಣುಕು ಅಥವಾ ಎಂಬೆಡೆಡ್ ಲಾಗಿನ್ ಇಲ್ಲದೆಯೇ HTTP ಅಥವಾ HTTPS ಸರ್ವರ್ URL ಅನ್ನು ನಮೂದಿಸಿ.",
   "subsonicUnsupported": "ಈ ಸರ್ವರ್ ಅಗತ್ಯವಿರುವ Subsonic API ಅಥವಾ ಟೋಕನ್ ದೃಢೀಕರಣವನ್ನು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.",
-  "subsonicConnectionError": "ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. URL, ನೆಟ್‌ವರ್ಕ್ ಮತ್ತು HTTPS ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ. ವೆಬ್‌ನಲ್ಲಿ, ಸರ್ವರ್ CORS ಅನ್ನು ಅನುಮತಿಸಬೇಕು ಮತ್ತು HTTPS ಅಪ್ಲಿಕೇಶನ್ HTTP ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ."
+  "subsonicConnectionError": "ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ. URL, ನೆಟ್‌ವರ್ಕ್ ಮತ್ತು HTTPS ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪರಿಶೀಲಿಸಿ. ವೆಬ್‌ನಲ್ಲಿ, ಸರ್ವರ್ CORS ಅನ್ನು ಅನುಮತಿಸಬೇಕು ಮತ್ತು HTTPS ಅಪ್ಲಿಕೇಶನ್ HTTP ಗೆ ಸಂಪರ್ಕಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.",
+  "nArtists": "{count, plural, =0{ಕಲಾವಿದರು ಇಲ್ಲ} =1{1 ಕಲಾವಿದ} other{{count} ಕಲಾವಿದರು}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "ಕವರ್ ಫ್ಲೋ",
+  "coverFlowOriginalTitle": "ಮೂಲ",
+  "coverFlowBigTitle": "ದೊಡ್ಡದು"
 }

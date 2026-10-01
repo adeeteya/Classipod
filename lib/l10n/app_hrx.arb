@@ -207,5 +207,17 @@
   "subsonicUrl": "URL fom serwer",
   "subsonicInvalidUrl": "Tuu een HTTP orer HTTPS-Serwer URL in xraype oone een frooch, een fraktsioon orer een intekrierte aanmeldung.",
   "subsonicUnsupported": "Tiise serwer tuut net ti ferlangte Subsonic API orer token autentifikatsioon unerxtitse.",
-  "subsonicConnectionError": "Kann net ferklayche. Kuk ti URL, tas network un ti HTTPS-sertifikaat. Im Web, mus te serwer CORS erlaupe un en HTTPS-app khan net mit HTTP ferklayche."
+  "subsonicConnectionError": "Kann net ferklayche. Kuk ti URL, tas network un ti HTTPS-sertifikaat. Im Web, mus te serwer CORS erlaupe un en HTTPS-app khan net mit HTTP ferklayche.",
+  "nArtists": "{count, plural, =0{Khee Kunstler} =1{1 Kunstler} other{{count} Kunstler}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Orixinaal",
+  "coverFlowBigTitle": "Kroos"
 }

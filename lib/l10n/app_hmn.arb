@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "Nkag mus rau HTTP lossis HTTPS server URL yam tsis muaj lus nug, ntu, lossis kos npe nkag.",
   "subsonicUnsupported": "Cov neeg rau zaub mov no tsis txhawb nqa Subsonic API lossis token authentication.",
-  "subsonicConnectionError": "Txuas tsis tau. Xyuas qhov URL, network, thiab HTTPS daim ntawv pov thawj. Hauv Web, tus neeg rau zaub mov yuav tsum tso cai rau CORS thiab HTTPS app tsis tuaj yeem txuas rau HTTP."
+  "subsonicConnectionError": "Txuas tsis tau. Xyuas qhov URL, network, thiab HTTPS daim ntawv pov thawj. Hauv Web, tus neeg rau zaub mov yuav tsum tso cai rau CORS thiab HTTPS app tsis tuaj yeem txuas rau HTTP.",
+  "nArtists": "{count, plural, =0{Tsis muaj Artists} =1{1 Artist} other{{count} Artists}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Keeb kwm",
+  "coverFlowBigTitle": "Loj"
 }

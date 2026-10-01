@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ng server",
   "subsonicInvalidUrl": "Maglagay ng URL ng server ng HTTP o HTTPS nang walang query, fragment, o naka-embed na login.",
   "subsonicUnsupported": "Hindi sinusuportahan ng server na ito ang kinakailangang Subsonic API o token authentication.",
-  "subsonicConnectionError": "Hindi makakonekta. Suriin ang URL, network, at HTTPS certificate. Sa Web, dapat payagan ng server ang CORS at hindi makakonekta ang isang HTTPS app sa HTTP."
+  "subsonicConnectionError": "Hindi makakonekta. Suriin ang URL, network, at HTTPS certificate. Sa Web, dapat payagan ng server ang CORS at hindi makakonekta ang isang HTTPS app sa HTTP.",
+  "nArtists": "{count, plural, =0{Walang Artist} =1{1 Artist} other{{count} Mga Artist}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Daloy ng Pabalat",
+  "coverFlowOriginalTitle": "Orihinal",
+  "coverFlowBigTitle": "Malaki"
 }

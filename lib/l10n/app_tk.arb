@@ -207,5 +207,17 @@
   "subsonicUrl": "Serwer URL",
   "subsonicInvalidUrl": "Talap, bölek ýa-da oturdylan girişsiz HTTP ýa-da HTTPS serwer URL-i giriziň.",
   "subsonicUnsupported": "Bu serwer zerur Subsonic API ýa-da token tassyklamasyny goldamaýar.",
-  "subsonicConnectionError": "Birikip bolmaýar. URL, tor we HTTPS şahadatnamasyny barlaň. Webde, serwer CORS-a rugsat bermeli we HTTPS programmasy HTTP-e birigip bilmeýär."
+  "subsonicConnectionError": "Birikip bolmaýar. URL, tor we HTTPS şahadatnamasyny barlaň. Webde, serwer CORS-a rugsat bermeli we HTTPS programmasy HTTP-e birigip bilmeýär.",
+  "nArtists": "{count, plural, =0{Aýdymçy ýok} =1{1 Aýdymçy} other{{count} Aýdymçylar}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Gaplaň akymy",
+  "coverFlowOriginalTitle": "Asyl",
+  "coverFlowBigTitle": "Uly"
 }

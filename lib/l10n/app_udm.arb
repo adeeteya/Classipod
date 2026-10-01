@@ -207,5 +207,17 @@
   "subsonicUrl": "Серверлэн URL-адресэз",
   "subsonicInvalidUrl": "HTTP яке HTTPS серверлэн URL-адресэз пыртэ, юантэк, фрагменттэк яке встраиваемой логинтэк.",
   "subsonicUnsupported": "Та сервер уг юртты кулэ Subsonic API яке токен аутентификация.",
-  "subsonicConnectionError": "Уг быгаты герӟаськыны. Эскерыны URL, сеть, но HTTPS сертификат. Веб-ын сервер CORS-эз лэзьыны кулэ, нош HTTPS-приложение HTTP-лы герӟаськыны уг быгаты."
+  "subsonicConnectionError": "Уг быгаты герӟаськыны. Эскерыны URL, сеть, но HTTPS сертификат. Веб-ын сервер CORS-эз лэзьыны кулэ, нош HTTPS-приложение HTTP-лы герӟаськыны уг быгаты.",
+  "nArtists": "{count, plural, =0{Артистъёс ӧвӧл} =1{1 Артист} other{{count} Артистъёс}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Кавер Флоу",
+  "coverFlowOriginalTitle": "Зэмосэз",
+  "coverFlowBigTitle": "Бадӟым дыр"
 }

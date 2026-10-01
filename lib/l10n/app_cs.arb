@@ -207,5 +207,17 @@
   "subsonicUrl": "Adresa URL serveru",
   "subsonicInvalidUrl": "Zadejte adresu URL serveru HTTP nebo HTTPS bez dotazu, fragmentu nebo vloženého přihlášení.",
   "subsonicUnsupported": "Tento server nepodporuje požadované rozhraní API Subsonic nebo autentizaci pomocí tokenu.",
-  "subsonicConnectionError": "Nelze se připojit. Zkontrolujte adresu URL, síť a certifikát HTTPS. Na webu musí server povolit CORS a aplikace HTTPS se nemůže připojit k HTTP."
+  "subsonicConnectionError": "Nelze se připojit. Zkontrolujte adresu URL, síť a certifikát HTTPS. Na webu musí server povolit CORS a aplikace HTTPS se nemůže připojit k HTTP.",
+  "nArtists": "{count, plural, =0{Žádní umělci} =1{1 Interpret} other{{count} Interpreti}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Krycí průtok",
+  "coverFlowOriginalTitle": "Originál",
+  "coverFlowBigTitle": "Velký"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL a ni",
   "subsonicInvalidUrl": "HTTP emaw HTTPS server URL emaw chu query, fragment, embedded login awm lovin ziak lut rawh.",
   "subsonicUnsupported": "He server hian Subsonic API emaw token authentication emaw mamawh chu a support lo.",
-  "subsonicConnectionError": "Connect thei lo. URL, network leh HTTPS certificate te chu enfiah rawh. Web-ah chuan server chuan CORS a phal tur a ni a, HTTPS app chu HTTP-ah a connect thei lo."
+  "subsonicConnectionError": "Connect thei lo. URL, network leh HTTPS certificate te chu enfiah rawh. Web-ah chuan server chuan CORS a phal tur a ni a, HTTPS app chu HTTP-ah a connect thei lo.",
+  "nArtists": "{count, plural, =0{Artist nei lo} =1{1 Artist} other{{count} Artists}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow a ni",
+  "coverFlowOriginalTitle": "Dik tak",
+  "coverFlowBigTitle": "Lian"
 }

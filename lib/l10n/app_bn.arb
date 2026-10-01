@@ -207,5 +207,17 @@
   "subsonicUrl": "সার্ভার URL",
   "subsonicInvalidUrl": "একটি ক্যোয়ারী, খণ্ড বা এমবেডেড লগইন ছাড়াই একটি HTTP বা HTTPS সার্ভার URL লিখুন৷",
   "subsonicUnsupported": "এই সার্ভারটি প্রয়োজনীয় Subsonic API বা টোকেন প্রমাণীকরণ সমর্থন করে না।",
-  "subsonicConnectionError": "সংযোগ করা যাবে না। URL, নেটওয়ার্ক এবং HTTPS শংসাপত্র পরীক্ষা করুন। ওয়েবে, সার্ভারকে অবশ্যই CORS-এর অনুমতি দিতে হবে এবং একটি HTTPS অ্যাপ HTTP-তে সংযোগ করতে পারবে না।"
+  "subsonicConnectionError": "সংযোগ করা যাবে না। URL, নেটওয়ার্ক এবং HTTPS শংসাপত্র পরীক্ষা করুন। ওয়েবে, সার্ভারকে অবশ্যই CORS-এর অনুমতি দিতে হবে এবং একটি HTTPS অ্যাপ HTTP-তে সংযোগ করতে পারবে না।",
+  "nArtists": "{count, plural, =0{কোন শিল্পী নেই} =1{1 শিল্পী} other{{count} শিল্পী}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "কভার ফ্লো",
+  "coverFlowOriginalTitle": "আসল",
+  "coverFlowBigTitle": "বড়"
 }

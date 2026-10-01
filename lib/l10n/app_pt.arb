@@ -207,5 +207,17 @@
   "subsonicUrl": "URL do servidor",
   "subsonicInvalidUrl": "Insira um URL de servidor HTTP ou HTTPS sem consulta, fragmento ou login incorporado.",
   "subsonicUnsupported": "Este servidor não oferece suporte à API Subsonic necessária ou à autenticação de token.",
-  "subsonicConnectionError": "Não é possível conectar. Verifique o URL, a rede e o certificado HTTPS. Na Web, o servidor deve permitir CORS e um aplicativo HTTPS não pode se conectar ao HTTP."
+  "subsonicConnectionError": "Não é possível conectar. Verifique o URL, a rede e o certificado HTTPS. Na Web, o servidor deve permitir CORS e um aplicativo HTTPS não pode se conectar ao HTTP.",
+  "nArtists": "{count, plural, =0{Nenhum artista} =1{1 artista} other{{count} Artistas}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Fluxo de cobertura",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Grande"
 }

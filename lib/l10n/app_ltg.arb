@@ -207,5 +207,17 @@
   "subsonicUrl": "Servera URL",
   "subsonicInvalidUrl": "Īrokstit HTTP voi HTTPS servera URL bez vaicuojuma, fragmenta voi īlyktuo pīsateikšonuos.",
   "subsonicUnsupported": "Itys serveris naatbolsta vajadzeigū Subsonic API voi žetonu autentifikaceju.",
-  "subsonicConnectionError": "Navar pīvīnuot. Pōrbaudi URL, teikla un HTTPS sertifikatu. Web serveram ir juoļaun CORS i HTTPS līta navar pīsavīnuot HTTP."
+  "subsonicConnectionError": "Navar pīvīnuot. Pōrbaudi URL, teikla un HTTPS sertifikatu. Web serveram ir juoļaun CORS i HTTPS līta navar pīsavīnuot HTTP.",
+  "nArtists": "{count, plural, =0{Nav muokslinīku} =1{1 muokslinīks} other{{count} Muokslinīki}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Vāka plyusma",
+  "coverFlowOriginalTitle": "Originals",
+  "coverFlowBigTitle": "Lels"
 }

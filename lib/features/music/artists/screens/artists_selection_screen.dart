@@ -1,11 +1,11 @@
+import 'dart:async';
+
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
-import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
-import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/artists/providers/artist_names_provider.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -35,14 +35,7 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   void _selectArtist(int index) {
     setState(() => selectedDisplayItem = index);
     if (index == 0) {
-      context.goNamed(
-        Routes.albumSongs.name,
-        extra: AlbumModel(
-          albumName: context.localization.allAlbums,
-          albumArtistName: "",
-          albumSongs: ref.read(filteredAudioFilesProvider).requireValue,
-        ),
-      );
+      unawaited(context.pushNamed<void>(Routes.albums.name));
     } else {
       final selectedArtistName = ref
           .read(artistNamesProvider)

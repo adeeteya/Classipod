@@ -24,6 +24,7 @@ extension UniqueRouteNavigation on BuildContext {
   Future<void> openUniqueNamed(
     String name, {
     Map<String, String> pathParameters = const {},
+    Map<String, dynamic> queryParameters = const {},
     Object? extra,
     bool replaceCurrent = false,
   }) async {
@@ -71,6 +72,7 @@ extension UniqueRouteNavigation on BuildContext {
       final destination = router.namedLocation(
         name,
         pathParameters: pathParameters,
+        queryParameters: queryParameters,
       );
       if (matches.uri.toString() == destination &&
           (extra == null || matches.extra == extra)) {
@@ -83,12 +85,14 @@ extension UniqueRouteNavigation on BuildContext {
       await router.pushReplacementNamed<void>(
         name,
         pathParameters: pathParameters,
+        queryParameters: queryParameters,
         extra: extra,
       );
     } else {
       await router.pushNamed<void>(
         name,
         pathParameters: pathParameters,
+        queryParameters: queryParameters,
         extra: extra,
       );
     }

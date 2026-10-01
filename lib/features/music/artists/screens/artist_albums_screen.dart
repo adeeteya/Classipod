@@ -5,22 +5,41 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
+import 'package:classipod/features/music/album/screens/album_songs_screen.dart';
 import 'package:classipod/features/music/album/widgets/album_list_tile.dart';
 import 'package:classipod/features/music/artists/providers/artist_albums_provider.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-class ArtistAlbumsScreen extends ConsumerStatefulWidget {
+class ArtistAlbumsScreen extends ConsumerWidget {
   final String artistName;
 
   const ArtistAlbumsScreen({super.key, required this.artistName});
 
   @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final albums = ref.watch(artistAlbumDetailListProvider(artistName));
+    if (albums.length == 1) {
+      return AlbumSongsScreen(
+        albumDetail: albums.single,
+        routeName: Uri.encodeComponent(artistName),
+      );
+    }
+    return _ArtistAlbumSelector(artistName: artistName);
+  }
+}
+
+class _ArtistAlbumSelector extends ConsumerStatefulWidget {
+  final String artistName;
+
+  const _ArtistAlbumSelector({required this.artistName});
+
+  @override
   ConsumerState createState() => _ArtistAlbumsScreenState();
 }
 
-class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
+class _ArtistAlbumsScreenState extends ConsumerState<_ArtistAlbumSelector>
     with CustomScreen {
   @override
   double get displayTileHeight => 54;
@@ -77,6 +96,7 @@ class _ArtistAlbumsScreenState extends ConsumerState<ArtistAlbumsScreen>
     if (index == 0) {
       await context.openUniqueNamed(
         Routes.albumSongs.name,
+        queryParameters: const {'showArtistNames': 'true'},
         extra: allSongsAlbum(),
       );
     } else {

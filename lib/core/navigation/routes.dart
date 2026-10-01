@@ -497,6 +497,11 @@ final routerProvider = Provider(
                               child: ScreenPageContent(
                                 child: AlbumSongsScreen(
                                   albumDetail: state.extra as AlbumModel,
+                                  showArtistNames:
+                                      state
+                                          .uri
+                                          .queryParameters['showArtistNames'] ==
+                                      'true',
                                 ),
                               ),
                             ),

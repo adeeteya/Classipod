@@ -2,6 +2,7 @@ import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
+import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/genres/providers/genres_provider.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -55,19 +56,25 @@ class _GenresScreenState extends ConsumerState<GenresScreen> with CustomScreen {
       child: Column(
         children: [
           Flexible(
-            child: CupertinoScrollbar(
-              controller: scrollController,
-              child: ListView.builder(
+            child: FastScrollIndicator(
+              wheelScrollIndex: wheelScrollIndex,
+              itemCount: displayItems.length,
+              itemExtent: displayTileHeight,
+              labelAt: (index) => displayItems[index],
+              child: CupertinoScrollbar(
                 controller: scrollController,
-                itemCount: displayItems.length,
-                prototypeItem: const DisplayListTile(
-                  text: '',
-                  isSelected: false,
-                ),
-                itemBuilder: (context, index) => DisplayListTile(
-                  text: displayItems[index],
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () => _selectGenre(index),
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: displayItems.length,
+                  prototypeItem: const DisplayListTile(
+                    text: '',
+                    isSelected: false,
+                  ),
+                  itemBuilder: (context, index) => DisplayListTile(
+                    text: displayItems[index],
+                    isSelected: selectedDisplayItem == index,
+                    onTap: () => _selectGenre(index),
+                  ),
                 ),
               ),
             ),

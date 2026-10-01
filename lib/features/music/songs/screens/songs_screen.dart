@@ -4,6 +4,7 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/empty_state_widget.dart';
+import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/music/songs/widgets/song_list_tile.dart';
@@ -78,28 +79,36 @@ class _SongsScreenState extends ConsumerState<SongsScreen> with CustomScreen {
       child: Column(
         children: [
           Flexible(
-            child: CupertinoScrollbar(
-              controller: scrollController,
-              child: ListView.builder(
+            child: FastScrollIndicator(
+              wheelScrollIndex: wheelScrollIndex,
+              itemCount: displayItems.length,
+              itemExtent: displayTileHeight,
+              labelAt: (index) =>
+                  displayItems[index].trackName ??
+                  context.localization.unknownSong,
+              child: CupertinoScrollbar(
                 controller: scrollController,
-                itemCount: displayItems.length,
-                prototypeItem: SongListTile(
-                  songName: '',
-                  trackArtistNames: '',
-                  isSelected: false,
-                  isCurrentlyPlaying: false,
-                  onTap: () {},
-                  onLongPress: () {},
-                ),
-                itemBuilder: (context, index) => SongListTile(
-                  songName: displayItems[index].trackName,
-                  trackArtistNames: displayItems[index].getTrackArtistNames,
-                  isSelected: selectedDisplayItem == index,
-                  isCurrentlyPlaying:
-                      currentlyPlayingOriginalIndex ==
-                      displayItems[index].identity,
-                  onTap: () async => _playSong(index),
-                  onLongPress: () => _navigateToSongMoreOptionsModal(index),
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: displayItems.length,
+                  prototypeItem: SongListTile(
+                    songName: '',
+                    trackArtistNames: '',
+                    isSelected: false,
+                    isCurrentlyPlaying: false,
+                    onTap: () {},
+                    onLongPress: () {},
+                  ),
+                  itemBuilder: (context, index) => SongListTile(
+                    songName: displayItems[index].trackName,
+                    trackArtistNames: displayItems[index].getTrackArtistNames,
+                    isSelected: selectedDisplayItem == index,
+                    isCurrentlyPlaying:
+                        currentlyPlayingOriginalIndex ==
+                        displayItems[index].identity,
+                    onTap: () async => _playSong(index),
+                    onLongPress: () => _navigateToSongMoreOptionsModal(index),
+                  ),
                 ),
               ),
             ),

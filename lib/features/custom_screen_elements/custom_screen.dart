@@ -16,6 +16,8 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   final double displayTileHeight = 30;
   final ScrollController scrollController = ScrollController();
 
+  final ValueNotifier<int> wheelScrollIndex = ValueNotifier(-1);
+
   void onSelectPressed();
 
   void onSelectLongPress() {}
@@ -24,6 +26,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     if (selectedDisplayItem < displayItems.length + extraDisplayItems - 1) {
       setState(() {
         selectedDisplayItem++;
+        wheelScrollIndex.value = selectedDisplayItem;
       });
 
       final double currentSelectedDisplayItemsHeight =
@@ -42,6 +45,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     if (selectedDisplayItem > 0) {
       setState(() {
         selectedDisplayItem--;
+        wheelScrollIndex.value = selectedDisplayItem;
       });
     }
 
@@ -110,6 +114,7 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   @override
   void dispose() {
+    wheelScrollIndex.dispose();
     scrollController.dispose();
     super.dispose();
   }

@@ -122,6 +122,16 @@
       }
     }
   },
+  "nArtists": "{count, plural, =0{No Artists} =1{1 Artist} other{{count} Artists}}",
+  "@nArtists": {
+    "description": "A message to show number of distinct artists",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
   "nAlbums": "{count, plural, =0{No Albums} =1{1 Album} other{{count} Albums}}",
   "@nAlbums": {
     "description": "A message to show number of albums",

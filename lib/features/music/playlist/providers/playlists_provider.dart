@@ -1,5 +1,6 @@
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/utils/name_order.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -19,13 +20,17 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
   List<PlaylistModel> build() {
     return [
       PlaylistModel(name: 'On The Go', songs: []),
-      ..._playlistBox.values,
+      ..._sortedSavedPlaylists(),
     ];
   }
 
   void refreshProvider() {
-    state = [state[0], ..._playlistBox.values];
+    state = [state[0], ..._sortedSavedPlaylists()];
   }
+
+  List<PlaylistModel> _sortedSavedPlaylists() =>
+      _playlistBox.values.toList()
+        ..sort((a, b) => compareNames(a.name, b.name));
 
   Future<void> saveNewPlaylist({
     required String newPlaylistPlaceholderString,

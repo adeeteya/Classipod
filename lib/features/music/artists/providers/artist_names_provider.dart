@@ -1,4 +1,5 @@
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
+import 'package:classipod/core/utils/name_order.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final artistNamesProvider = Provider<List<String>>((ref) {
@@ -13,7 +14,7 @@ final artistNamesProvider = Provider<List<String>>((ref) {
   }
 
   final artistNames = artistNamesSet.toList();
-  artistNames.sort();
+  artistNames.sort(compareNames);
 
   return artistNames;
 });

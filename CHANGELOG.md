@@ -1,4 +1,4 @@
-## 2.0.0 (Unreleased)
+## 2.1.0 (Unreleased)
 
 - Restore the last playback queue and song when reopening the app, paused at
   the beginning. Save queue changes separately from song selection, without
@@ -11,7 +11,7 @@
   keeping album tracks together in disc and track order.
 
 - Align platform release metadata, citation, security policy, and release
-  documentation with app version 2.0.0.
+  documentation with app version 2.1.0.
 
 - Download a pinned Inno Setup compiler from its official GitHub release,
   verify its checksum, and package Windows with the existing installer script.

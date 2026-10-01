@@ -106,11 +106,11 @@ platform :android do
         # release_status: 'draft',
         aab: "../build/app/outputs/bundle/productionRelease/app-production-release.aab",
         mapping_paths: [symbolsFilePath, "../build/app/outputs/mapping/productionRelease/mapping.txt"],
-        metadata_path:"../fastlane/metadata/android",
+        metadata_path: File.expand_path("../../fastlane/metadata/android", __dir__),
         json_key: google_service_account_json_path,
         skip_upload_apk: true, # Upload the aab instead of apk
-        skip_upload_metadata: true,
-        skip_upload_changelogs: true,
+        skip_upload_metadata: false,
+        skip_upload_changelogs: false,
         skip_upload_images: true,
         skip_upload_screenshots: true,
         timeout: 600

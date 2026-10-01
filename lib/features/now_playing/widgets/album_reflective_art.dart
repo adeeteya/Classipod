@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/widgets/artwork_image.dart';
+import 'package:classipod/core/widgets/hero_flight_content.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -88,11 +89,11 @@ class _AlbumReflectiveArtState extends ConsumerState<AlbumReflectiveArt>
             late final Widget destinationWidget;
             switch (flightDirection) {
               case HeroFlightDirection.push:
-                sourceWidget = fromHeroContext.widget;
-                destinationWidget = toHeroContext.widget;
+                sourceWidget = HeroFlightContent.preview(fromHeroContext);
+                destinationWidget = HeroFlightContent.preview(toHeroContext);
               case HeroFlightDirection.pop:
-                sourceWidget = toHeroContext.widget;
-                destinationWidget = fromHeroContext.widget;
+                sourceWidget = HeroFlightContent.preview(toHeroContext);
+                destinationWidget = HeroFlightContent.preview(fromHeroContext);
             }
             return AnimatedBuilder(
               animation: animation,

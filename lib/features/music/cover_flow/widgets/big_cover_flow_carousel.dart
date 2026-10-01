@@ -1,4 +1,5 @@
 import 'package:classipod/features/music/album/models/album_model.dart';
+import 'package:classipod/features/music/cover_flow/cover_flow_motion.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:flutter/widgets.dart';
 
@@ -21,6 +22,7 @@ class BigCoverFlowCarousel extends StatelessWidget {
     return SizedBox(
       height: 230,
       child: PageView.builder(
+        physics: const CoverFlowScrollPhysics(),
         controller: controller,
         itemCount: albums.length,
         itemBuilder: (context, index) {
@@ -30,8 +32,8 @@ class BigCoverFlowCarousel extends StatelessWidget {
                 ? () => onSelect(index)
                 : () async => controller.animateToPage(
                     index,
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.ease,
+                    duration: CoverFlowMotion.duration,
+                    curve: CoverFlowMotion.curve,
                   ),
             child: Transform(
               transform: Matrix4.identity()

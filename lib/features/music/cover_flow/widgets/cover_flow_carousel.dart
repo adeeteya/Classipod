@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:classipod/features/music/album/models/album_model.dart';
+import 'package:classipod/features/music/cover_flow/cover_flow_motion.dart';
 import 'package:classipod/features/now_playing/widgets/album_reflective_art.dart';
 import 'package:flutter/widgets.dart';
 
@@ -97,12 +98,13 @@ class CoverFlowCarousel extends StatelessWidget {
                   } else {
                     controller.animateToPage(
                       index,
-                      duration: const Duration(milliseconds: 300),
-                      curve: Curves.ease,
+                      duration: CoverFlowMotion.duration,
+                      curve: CoverFlowMotion.curve,
                     );
                   }
                 },
                 child: PageView.builder(
+                  physics: const CoverFlowScrollPhysics(),
                   controller: controller,
                   itemCount: albums.length,
                   itemBuilder: (context, index) => const SizedBox.expand(),

@@ -7,6 +7,7 @@ import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/features/custom_screen_elements/custom_page_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
+import 'package:classipod/features/music/cover_flow/cover_flow_wheel_controller.dart';
 import 'package:classipod/features/music/cover_flow/widgets/big_cover_flow_carousel.dart';
 import 'package:classipod/features/music/cover_flow/widgets/cover_flow_carousel.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -39,12 +40,39 @@ class _CoverFlowView extends ConsumerStatefulWidget {
 }
 
 class _CoverFlowScreenState extends ConsumerState<_CoverFlowView>
-    with CustomPageScreen {
+    with SingleTickerProviderStateMixin, CustomPageScreen {
+  late final CoverFlowWheelController _wheelMotion;
+
+  @override
+  void initState() {
+    super.initState();
+    _wheelMotion = CoverFlowWheelController(
+      pageController: pageController,
+      vsync: this,
+    );
+  }
+
+  @override
+  void dispose() {
+    _wheelMotion.dispose();
+    super.dispose();
+  }
+
   @override
   String get routeName => Routes.coverFlow.name;
 
   @override
   String get screenStateKey => routeName;
+
+  @override
+  Future<void> scrollForward() async {
+    _wheelMotion.step(1, displayItems.length);
+  }
+
+  @override
+  Future<void> scrollBackward() async {
+    _wheelMotion.step(-1, displayItems.length);
+  }
 
   @override
   double get viewPortFraction =>
@@ -54,7 +82,8 @@ class _CoverFlowScreenState extends ConsumerState<_CoverFlowView>
   List<AlbumModel> get displayItems => ref.read(albumDetailsProvider);
 
   @override
-  void onSelectPressed() => _chooseAlbum(selectedDisplayItem);
+  void onSelectPressed() =>
+      _chooseAlbum(_wheelMotion.target ?? selectedDisplayItem);
 
   void _chooseAlbum(int index) {
     final albumDetail = ref.read(albumDetailsProvider).elementAt(index);
@@ -81,63 +110,70 @@ class _CoverFlowScreenState extends ConsumerState<_CoverFlowView>
       );
     }
 
-    return CupertinoPageScaffold(
-      child: Column(
-        children: [
-          const SizedBox(height: 10),
-          Expanded(
-            child: Stack(
-              clipBehavior: Clip.none,
-              children: [
-                if (widget.appearance == CoverFlowAppearance.big)
-                  BigCoverFlowCarousel(
-                    controller: pageController,
-                    currentPage: currentPage,
-                    albums: displayItems,
-                    onSelect: _chooseAlbum,
-                  )
-                else
-                  Positioned.fill(
-                    bottom: 55,
-                    child: CoverFlowCarousel(
+    final selectedIndex = (_wheelMotion.target ?? selectedDisplayItem).clamp(
+      0,
+      displayItems.length - 1,
+    );
+    return Listener(
+      onPointerDown: (_) => _wheelMotion.stop(),
+      child: CupertinoPageScaffold(
+        child: Column(
+          children: [
+            const SizedBox(height: 10),
+            Expanded(
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  if (widget.appearance == CoverFlowAppearance.big)
+                    BigCoverFlowCarousel(
                       controller: pageController,
                       currentPage: currentPage,
                       albums: displayItems,
                       onSelect: _chooseAlbum,
+                    )
+                  else
+                    Positioned.fill(
+                      bottom: 55,
+                      child: CoverFlowCarousel(
+                        controller: pageController,
+                        currentPage: currentPage,
+                        albums: displayItems,
+                        onSelect: _chooseAlbum,
+                      ),
+                    ),
+                  Positioned(
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Column(
+                        children: [
+                          Text(
+                            displayItems[selectedIndex].albumName,
+                            maxLines: 1,
+                            style: IpodTypography.metadata.copyWith(
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          const SizedBox(height: 5),
+                          Text(
+                            displayItems[selectedIndex].albumArtistName,
+                            maxLines: 1,
+                            style: IpodTypography.metadata.copyWith(
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                Positioned(
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Column(
-                      children: [
-                        Text(
-                          displayItems[selectedDisplayItem].albumName,
-                          maxLines: 1,
-                          style: IpodTypography.metadata.copyWith(
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                        const SizedBox(height: 5),
-                        Text(
-                          displayItems[selectedDisplayItem].albumArtistName,
-                          maxLines: 1,
-                          style: IpodTypography.metadata.copyWith(
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const SizedBox(height: 10),
-        ],
+            const SizedBox(height: 10),
+          ],
+        ),
       ),
     );
   }

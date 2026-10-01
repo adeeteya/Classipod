@@ -103,7 +103,7 @@ class AlbumListTile extends ConsumerWidget {
                           : context.localization.nSongs(
                               albumDetails.albumSongs.length,
                             ),
-                      style: IpodTypography.metadata.copyWith(
+                      style: IpodTypography.description.copyWith(
                         color: isSelected
                             ? context.appInverseTextColor
                             : context.appSecondaryTextColor,

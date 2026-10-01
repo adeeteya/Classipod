@@ -217,7 +217,7 @@ void main() {
     await tester.tap(find.text('Connect'));
     await tester.pumpAndSettle();
     expect(
-      find.text('Check your username, password, and server permissions.'),
+      find.text('Check your username, password and server permissions.'),
       findsOneWidget,
     );
     final container = ProviderScope.containerOf(

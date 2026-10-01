@@ -207,5 +207,17 @@
   "subsonicUrl": "Sunucu URL'si",
   "subsonicInvalidUrl": "Sorgu, parça veya yerleşik oturum açma işlemi olmadan bir HTTP veya HTTPS sunucusu URL'si girin.",
   "subsonicUnsupported": "Bu sunucu gerekli Subsonic API'sini veya belirteç kimlik doğrulamasını desteklemiyor.",
-  "subsonicConnectionError": "Bağlantı kurulamıyor. URL'yi, ağı ve HTTPS sertifikasını kontrol edin. Web'de sunucunun CORS'a izin vermesi gerekir ve bir HTTPS uygulaması HTTP'ye bağlanamaz."
+  "subsonicConnectionError": "Bağlantı kurulamıyor. URL'yi, ağı ve HTTPS sertifikasını kontrol edin. Web'de sunucunun CORS'a izin vermesi gerekir ve bir HTTPS uygulaması HTTP'ye bağlanamaz.",
+  "nArtists": "{count, plural, =0{Sanatçı Yok} =1{1 Sanatçı} other{{count} Sanatçılar}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kapak Akışı",
+  "coverFlowOriginalTitle": "Orijinal",
+  "coverFlowBigTitle": "Büyük"
 }

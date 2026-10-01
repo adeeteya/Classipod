@@ -207,5 +207,17 @@
   "subsonicUrl": "Serveri URL",
   "subsonicInvalidUrl": "Sisestage HTTP- või HTTPS-serveri URL ilma päringu, fragmendi või manustatud sisselogimiseta.",
   "subsonicUnsupported": "See server ei toeta nõutavat Subsonic API või loa autentimist.",
-  "subsonicConnectionError": "Ühendust ei saa. Kontrollige URL-i, võrku ja HTTPS-i sertifikaati. Veebis peab server lubama CORS-i ja HTTPS-i rakendus ei saa HTTP-ga ühendust luua."
+  "subsonicConnectionError": "Ühendust ei saa. Kontrollige URL-i, võrku ja HTTPS-i sertifikaati. Veebis peab server lubama CORS-i ja HTTPS-i rakendus ei saa HTTP-ga ühendust luua.",
+  "nArtists": "{count, plural, =0{Esitajaid pole} =1{1 Esitaja} other{{count} Esitajad}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Originaal",
+  "coverFlowBigTitle": "Suur"
 }

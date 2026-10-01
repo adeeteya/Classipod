@@ -207,5 +207,17 @@
   "subsonicUrl": "URL διακομιστή",
   "subsonicInvalidUrl": "Εισαγάγετε μια διεύθυνση URL διακομιστή HTTP ή HTTPS χωρίς ερώτημα, τμήμα ή ενσωματωμένη σύνδεση.",
   "subsonicUnsupported": "Αυτός ο διακομιστής δεν υποστηρίζει το απαιτούμενο Subsonic API ή έλεγχο ταυτότητας διακριτικού.",
-  "subsonicConnectionError": "Δεν είναι δυνατή η σύνδεση. Ελέγξτε τη διεύθυνση URL, το δίκτυο και το πιστοποιητικό HTTPS. Στον Ιστό, ο διακομιστής πρέπει να επιτρέπει το CORS και μια εφαρμογή HTTPS δεν μπορεί να συνδεθεί σε HTTP."
+  "subsonicConnectionError": "Δεν είναι δυνατή η σύνδεση. Ελέγξτε τη διεύθυνση URL, το δίκτυο και το πιστοποιητικό HTTPS. Στον Ιστό, ο διακομιστής πρέπει να επιτρέπει το CORS και μια εφαρμογή HTTPS δεν μπορεί να συνδεθεί σε HTTP.",
+  "nArtists": "{count, plural, =0{Όχι καλλιτέχνες} =1{1 Καλλιτέχνης} other{{count} Καλλιτέχνες}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Ροή κάλυψης",
+  "coverFlowOriginalTitle": "Πρωτότυπο",
+  "coverFlowBigTitle": "Μεγάλος"
 }

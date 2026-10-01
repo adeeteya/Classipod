@@ -207,5 +207,17 @@
   "subsonicUrl": "URL serveur tɔn",
   "subsonicInvalidUrl": "Wlan URL serveur HTTP alǒ HTTPS tɔn ɖé mɛvo, bo ma byɔ nǔkanbyɔ, akpáxwé ɖé, alǒ xójlawema ɖé ɖ’emɛ ǎ.",
   "subsonicUnsupported": "Serveur élɔ́ nɔ ɖ'alɔ Subsonic API abǐ token sín kúnnuɖenú e è byɔ́ é ǎ.",
-  "subsonicConnectionError": "Sixu cá ǎ. Kpɔ́n URL, réseau kpo HTTPS sín kúnnuɖewema ɔ kpo. Ðò Wɛb jí ɔ, serveur ɔ ɖó na yí gbè nú CORS bɔ HTTPS appli ɖé sixu cá kàn xá HTTP ǎ."
+  "subsonicConnectionError": "Sixu cá ǎ. Kpɔ́n URL, réseau kpo HTTPS sín kúnnuɖewema ɔ kpo. Ðò Wɛb jí ɔ, serveur ɔ ɖó na yí gbè nú CORS bɔ HTTPS appli ɖé sixu cá kàn xá HTTP ǎ.",
+  "nArtists": "{count, plural, =0{Nùxotɔ́ ɖě ɖò finɛ ǎ} =1{Nùxotɔ́ 1} other{{count} Nǔxotɔ́}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Nukúnnúmɔjɛnǔmɛ",
+  "coverFlowOriginalTitle": "Tòxó",
+  "coverFlowBigTitle": "Ɖaxó"
 }

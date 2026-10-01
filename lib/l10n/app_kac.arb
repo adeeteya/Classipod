@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "HTTP (sh) HTTPS server URL hpe san ai, daw chyen, shing nrai, n lawm ai sha bang u.",
   "subsonicUnsupported": "Ndai server gaw ra ai Subsonic API (sh) token hpe n madi shadaw ya ai.",
-  "subsonicConnectionError": "N mai matut mahkai ai. URL, network, HTTPS ni hpe yu yu ga. Web kaw gaw server gaw CORS hpe ahkang jaw ra nna HTTPS app langai gaw HTTP hte n mai matut mahkai ai."
+  "subsonicConnectionError": "N mai matut mahkai ai. URL, network, HTTPS ni hpe yu yu ga. Web kaw gaw server gaw CORS hpe ahkang jaw ra nna HTTPS app langai gaw HTTP hte n mai matut mahkai ai.",
+  "nArtists": "{count, plural, =0{Sumla hkrung galaw ai ni n nga ai} =1{Sumla hkrung galaw ai ni marai langai} other{{count} Sumla hkrung galaw ai ni}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Hka-up lwi ai",
+  "coverFlowOriginalTitle": "Madung re ai",
+  "coverFlowBigTitle": "Kaba ai"
 }

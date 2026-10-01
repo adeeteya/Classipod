@@ -207,5 +207,17 @@
   "subsonicUrl": "URL te servidor",
   "subsonicInvalidUrl": "tz´ib´inxa jun HTTP mo HTTPS URL te t-xilen t-xilen ex mya jun xjelb´itz, jun t-xaq, moqa jun t-xilen t-xilen.",
   "subsonicUnsupported": "A t-xnaq´tzb´en lu mya n-ok t-xnaq´tza´n ti´j Subsonic API moqa ti´j t-xnaq´tzb´il token.",
-  "subsonicConnectionError": "Mya b´a´n tu´n t-xi tmojb´an tib´a. Qʼonka twitza tiʼj URL, tiʼj ttxolil ex tiʼj uʼj HTTPS. Toj Web, a servidor il ti´j tu´n t-xi tq´o´n amb´il te CORS extzen jun aplicación HTTPS mya b´a´n tu´n t-xi tmojb´an tib´ tuk´il HTTP."
+  "subsonicConnectionError": "Mya b´a´n tu´n t-xi tmojb´an tib´a. Qʼonka twitza tiʼj URL, tiʼj ttxolil ex tiʼj uʼj HTTPS. Toj Web, a servidor il ti´j tu´n t-xi tq´o´n amb´il te CORS extzen jun aplicación HTTPS mya b´a´n tu´n t-xi tmojb´an tib´ tuk´il HTTP.",
+  "nArtists": "{count, plural, =0{myia jun b´inchal b´itz} =1{1 Artista} other{{count} b´inchal b´itz}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Flujo de cubierta",
+  "coverFlowOriginalTitle": "Axixju",
+  "coverFlowBigTitle": "Nimin"
 }

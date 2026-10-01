@@ -4,7 +4,7 @@ This document provides a comprehensive overview of the ClassiPod project, includ
 
 ## Project Overview
 
-ClassiPod is a local music player app designed to emulate the nostalgic experience of the iPod Classic. It features a click wheel interface and focuses on providing a simple, distraction-free music listening experience. The app is built with Flutter and supports Android, iOS, Linux, macOS, Windows, and web.
+ClassiPod is an iPod Classic-inspired music player for local audio and streaming from Subsonic-compatible servers, including Navidrome. It features a click wheel interface and focuses on providing a simple, distraction-free music listening experience. The app is built with Flutter and supports Android, iOS, Linux, macOS, Windows, and web.
 
 ### Key Technologies
 

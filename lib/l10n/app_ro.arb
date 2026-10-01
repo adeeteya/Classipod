@@ -207,5 +207,17 @@
   "subsonicUrl": "Adresa URL a serverului",
   "subsonicInvalidUrl": "Introduceți o adresă URL a unui server HTTP sau HTTPS fără o interogare, fragment sau autentificare încorporată.",
   "subsonicUnsupported": "Acest server nu acceptă API-ul Subsonic sau autentificarea cu jeton.",
-  "subsonicConnectionError": "Nu se poate conecta. Verificați URL-ul, rețeaua și certificatul HTTPS. Pe Web, serverul trebuie să permită CORS, iar o aplicație HTTPS nu se poate conecta la HTTP."
+  "subsonicConnectionError": "Nu se poate conecta. Verificați URL-ul, rețeaua și certificatul HTTPS. Pe Web, serverul trebuie să permită CORS, iar o aplicație HTTPS nu se poate conecta la HTTP.",
+  "nArtists": "{count, plural, =0{Fără artiști} =1{1 artist} other{{count} Artiști}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Flux de acoperire",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Mare"
 }

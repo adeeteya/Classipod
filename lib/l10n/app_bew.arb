@@ -207,5 +207,17 @@
   "subsonicUrl": "URL server",
   "subsonicInvalidUrl": "Masukin URL server HTTP atau HTTPS tanpa kueri, fragmen, atau login tertanam.",
   "subsonicUnsupported": "Server ini kagak mendukung API Subsonic yang dibutuhin atau otentikasi token.",
-  "subsonicConnectionError": "Kagak bisa nyambung. Cek URL, jaringan, dan sertifikat HTTPS. Di Web, server harus ngijinin CORS dan aplikasi HTTPS kagak bisa nyambung ke HTTP."
+  "subsonicConnectionError": "Kagak bisa nyambung. Cek URL, jaringan, dan sertifikat HTTPS. Di Web, server harus ngijinin CORS dan aplikasi HTTPS kagak bisa nyambung ke HTTP.",
+  "nArtists": "{count, plural, =0{Gak ada Artis} =1{1 Artis} other{{count} Artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Aliran Penutup",
+  "coverFlowOriginalTitle": "Asli",
+  "coverFlowBigTitle": "Gede"
 }

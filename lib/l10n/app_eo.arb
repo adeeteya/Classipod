@@ -207,5 +207,17 @@
   "subsonicUrl": "Servila URL",
   "subsonicInvalidUrl": "Enigu HTTP aŭ HTTPS-servila URL sen demando, fragmento aŭ enigita ensaluto.",
   "subsonicUnsupported": "Ĉi tiu servilo ne subtenas la bezonatan Subsonic API aŭ ĵetonan aŭtentikigon.",
-  "subsonicConnectionError": "Ne povas konekti. Kontrolu la URL, reton kaj HTTPS-atestilon. En Retejo, la servilo devas permesi CORS kaj HTTPS-aplikaĵo ne povas konekti al HTTP."
+  "subsonicConnectionError": "Ne povas konekti. Kontrolu la URL, reton kaj HTTPS-atestilon. En Retejo, la servilo devas permesi CORS kaj HTTPS-aplikaĵo ne povas konekti al HTTP.",
+  "nArtists": "{count, plural, =0{Neniu Artistoj} =1{1 Artisto} other{{count} Artistoj}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kovrilo Fluo",
+  "coverFlowOriginalTitle": "Originala",
+  "coverFlowBigTitle": "Granda"
 }

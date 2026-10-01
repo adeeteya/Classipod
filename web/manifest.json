@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A ipod Classic Emulator",
+    "description": "An iPod Classic-inspired music player with Subsonic/Navidrome streaming.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

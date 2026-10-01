@@ -1,5 +1,6 @@
-import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/widgets/subtle_reflection.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class RatingBar extends StatelessWidget {
@@ -14,6 +15,7 @@ class RatingBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(
@@ -23,10 +25,24 @@ class RatingBar extends StatelessWidget {
           child: GestureDetector(
             onTap: () => onRatingClicked(index + 1),
             child: (currentRating > index)
-                ? const Icon(
-                    CupertinoIcons.star_fill,
-                    size: 24,
-                    color: AppPalette.selectedTileGradientColor2,
+                ? SubtleReflection(
+                    height: 24,
+                    child: isDark
+                        ? Icon(
+                            CupertinoIcons.star_fill,
+                            size: 24,
+                            color: context.appRatingIconColor,
+                          )
+                        : ShaderMask(
+                            shaderCallback:
+                                IpodGradients.selection.createShader,
+                            blendMode: BlendMode.srcIn,
+                            child: const Icon(
+                              CupertinoIcons.star_fill,
+                              size: 24,
+                              color: CupertinoColors.white,
+                            ),
+                          ),
                   )
                 : SizedBox(
                     height: 24,
@@ -35,7 +51,7 @@ class RatingBar extends StatelessWidget {
                       padding: const EdgeInsets.all(10),
                       child: DecoratedBox(
                         decoration: ShapeDecoration(
-                          color: context.appPrimaryTextColor,
+                          color: context.appSecondaryTextColor,
                           shape: const CircleBorder(),
                         ),
                       ),

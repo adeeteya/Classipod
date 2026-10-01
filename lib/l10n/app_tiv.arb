@@ -207,5 +207,17 @@
   "subsonicUrl": "URL u nan akaa",
   "subsonicInvalidUrl": "Nyôr a URL u HTTP shin HTTPS u a lu a mpin shin ikyav shin ikyav i nyôron ker shio.",
   "subsonicUnsupported": "Server ne ngu a zua a kwagh u i gbe u a er sha u eren tom a Subsonic API shin token u tesen ér or nan ngu or u mimi ga.",
-  "subsonicConnectionError": "Ka m zua a mi ga. Nenge ase URL man network man takerada u HTTPS. Sha Intanet yô, gba u server la una na CORS ian shi app u HTTPS una kera zua a HTTP ga."
+  "subsonicConnectionError": "Ka m zua a mi ga. Nenge ase URL man network man takerada u HTTPS. Sha Intanet yô, gba u server la una na CORS ian shi app u HTTPS una kera zua a HTTP ga.",
+  "nArtists": "{count, plural, =0{Mba eren ityogholough mba ga} =1{Or u eren ityogholough môm} other{{count} Mba eren ityogholough}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kwagh u eren",
+  "coverFlowOriginalTitle": "Uhiihii",
+  "coverFlowBigTitle": "Zege"
 }

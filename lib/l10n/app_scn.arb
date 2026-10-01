@@ -207,5 +207,17 @@
   "subsonicUrl": "URL dû sirver",
   "subsonicInvalidUrl": "Diggìri n'URL dû sirver HTTP o HTTPS senza na dumanna, nu frammentu o nu login ncorpuratu.",
   "subsonicUnsupported": "Stu sirver nun suporta l'API Subsonic o l'autinticazzioni dû token nicissariu.",
-  "subsonicConnectionError": "Nun si po cunnèttiri. Cuntrolla l'URL, la riti e lu certificatu HTTPS. Ntô Web, lu sirver avi a cunsentiri CORS e n'app HTTPS nun si po cunnèttiri a HTTP."
+  "subsonicConnectionError": "Nun si po cunnèttiri. Cuntrolla l'URL, la riti e lu certificatu HTTPS. Ntô Web, lu sirver avi a cunsentiri CORS e n'app HTTPS nun si po cunnèttiri a HTTP.",
+  "nArtists": "{count, plural, =0{Nudda Artista} =1{1 Artista} other{{count} Artisti}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Flussu di cupirtura",
+  "coverFlowOriginalTitle": "Urìgginali",
+  "coverFlowBigTitle": "Granni"
 }

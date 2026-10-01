@@ -8,8 +8,11 @@ keywords:
   - Local
   - Songs
   - Offline
+  - Subsonic
+  - Navidrome
+  - Streaming
 
-generic_name: Local Music Player
+generic_name: Music Player
 categories:
   - Music
 

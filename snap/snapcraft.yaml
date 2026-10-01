@@ -1,7 +1,25 @@
 name: classipod
-version: 2.0.0
-summary: Local Music Player Inspired by the iPod Classic
-description: ClassiPod is a lightweight, offline music player app that emulates the experience of the legendary iPod Classic. It supports local music playback, shuffle/repeat, custom playlists, cover art, and more — all in a nostalgic design.
+version: 2.1.0
+summary: iPod Classic-inspired player for local music and Subsonic/Navidrome streaming
+description: |
+  ClassiPod brings an iPod Classic-inspired interface to local music and your
+  own Subsonic-compatible server, including Navidrome. Browse both collections
+  together or hide local tracks while your server is enabled.
+
+  Explore songs, artists, albums and genres with a click wheel or touch controls.
+  Create ClassiPod playlists, view embedded lyrics, rate songs, shuffle songs or
+  whole albums, repeat tracks, and set a sleep timer. Restore your previous queue
+  and selected song after reopening, paused at the beginning.
+
+  Choose light/dark themes, device colors including OLED Black, and Original or
+  Big Cover Flow layouts. Enjoy artwork reflections, split-screen previews,
+  fullscreen Immersive Mode, bundled click sounds and Linux MPRIS media controls.
+  Cache metadata/artwork, refresh or reindex, exclude folders, inspect missing
+  tracks, and optionally hide duplicate filenames.
+
+  Local files work offline. Streaming requires your own compatible server,
+  account and network connection. Server audio is not cached for offline use;
+  server playlists are not synchronized. Ratings and edits stay in ClassiPod.
 icon: snap/gui/classipod.png
 contact: mailto:adeeteya@gmail.com
 source-code: https://github.com/adeeteya/Classipod

@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "Gitt eng HTTP oder HTTPS Server URL ouni Ufro, Fragment oder Embedded Login un.",
   "subsonicUnsupported": "Dëse Server ënnerstëtzt net déi néideg Subsonic API oder Token Authentifikatioun.",
-  "subsonicConnectionError": "Kann net konnektéieren. Kontrolléiert d'URL, Netzwierk an HTTPS Zertifikat. Um Web muss de Server CORS erlaben an eng HTTPS App kann net mat HTTP verbannen."
+  "subsonicConnectionError": "Kann net konnektéieren. Kontrolléiert d'URL, Netzwierk an HTTPS Zertifikat. Um Web muss de Server CORS erlaben an eng HTTPS App kann net mat HTTP verbannen.",
+  "nArtists": "{count, plural, =0{Keng Kënschtler} =1{1 Kënschtler} other{{count} Kënschtler}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Grouss"
 }

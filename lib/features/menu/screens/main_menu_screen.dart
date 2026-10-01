@@ -8,7 +8,6 @@ import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:classipod/features/tutorial/controller/tutorial_controller.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -81,13 +80,15 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
 
   Future<void> _navigateToNowPlayingScreen() async {
     unawaited(ref.read(splitScreenViewControllerProvider).closeSplitView());
-    await context.pushNamed(Routes.nowPlaying.name, extra: Routes.menu.name);
+    await context.openUniqueNamed(
+      Routes.nowPlaying.name,
+      extra: Routes.menu.name,
+    );
     if (!mounted) return;
     unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
   }
 
-  Future<void> _changeSplitScreenType() async {
-    await Future.delayed(const Duration(milliseconds: 150));
+  void _changeSplitScreenType() {
     if (!mounted || context.router.locationNamed != routeName) return;
     switch (displayItems[selectedDisplayItem]) {
       case _MainMenuDisplayItems.music:
@@ -127,7 +128,7 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
 
   @override
   Widget build(BuildContext context) {
-    unawaited(_changeSplitScreenType());
+    _changeSplitScreenType();
     if (!ref.read(splitScreenViewControllerProvider).isScreenVisible) {
       unawaited(ref.read(splitScreenViewControllerProvider).openSplitView());
     }
@@ -135,7 +136,6 @@ class _MainMenuScreenState extends ConsumerState<MainMenuScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.menu.title(context)),
           Expanded(
             child: CupertinoScrollbar(
               controller: scrollController,

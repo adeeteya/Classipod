@@ -1,4 +1,5 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class LanguagePreviewWidget extends StatelessWidget {
@@ -9,15 +10,8 @@ class LanguagePreviewWidget extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppPalette.darkScreenBackgroundGradient1,
-              AppPalette.darkScreenBackgroundGradient2,
-            ],
-          ),
+        decoration: BoxDecoration(
+          gradient: IpodGradients.splitPreviewFor(context),
         ),
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -71,7 +65,7 @@ class LanguagePreviewWidget extends StatelessWidget {
                   "Welcome",
                   style: TextStyle(
                     fontSize: 25,
-                    color: CupertinoColors.white,
+                    color: AppPalette.previewForeground,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

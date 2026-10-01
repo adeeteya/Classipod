@@ -207,5 +207,17 @@
   "subsonicUrl": "URL pelayan",
   "subsonicInvalidUrl": "Masukka URL pelayan HTTP tauka HTTPS enggau nadai tanya, serpihan, tauka login ti diselitka.",
   "subsonicUnsupported": "Pelayan tu enda nyukung API Subsonic tauka pengesah token ti diguna.",
-  "subsonicConnectionError": "Enda ulih nyambung. Peratika URL, jaringan, enggau setipikit HTTPS. Ba Web, pelayan mesti ngemendarka CORS lalu app HTTPS enda ulih nyambung ngagai HTTP."
+  "subsonicConnectionError": "Enda ulih nyambung. Peratika URL, jaringan, enggau setipikit HTTPS. Ba Web, pelayan mesti ngemendarka CORS lalu app HTTPS enda ulih nyambung ngagai HTTP.",
+  "nArtists": "{count, plural, =0{Nadai Artis} =1{1 Artis} other{{count} Artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Penutup Alir",
+  "coverFlowOriginalTitle": "Asal",
+  "coverFlowBigTitle": "Besai"
 }

@@ -11,11 +11,11 @@ class MarqueeText extends StatefulWidget {
     this.textAlign = TextAlign.left,
     this.textDirection = TextDirection.ltr,
     this.numberOfReps,
-    this.delayBefore,
-    this.pauseBetween,
+    this.delayBefore = const Duration(seconds: 1),
+    this.pauseBetween = const Duration(seconds: 1),
     this.pauseOnBounce,
     this.mode = TextScrollMode.endless,
-    this.velocity = const Velocity(pixelsPerSecond: Offset(15, 0)),
+    this.velocity = const Velocity(pixelsPerSecond: Offset(30, 0)),
     this.intervalSpaces = 5,
     this.fadedBorder = false,
     this.fadedBorderWidth = 0.2,
@@ -201,11 +201,13 @@ class _MarqueeTextState extends State<MarqueeText> {
   }
 
   Future<void> _initScroller(_) async {
+    if (!_available) return;
     setState(() {
       _textMinWidth = _scrollController.position.viewportDimension;
     });
 
     await _delayBefore();
+    if (!_available) return;
     _setTimer();
   }
 

@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "Ilub me ing HTTP o HTTPS server URL a alang query, fragment, o embedded login.",
   "subsonicUnsupported": "E na suportan ning server ayni ing kailangan a Subsonic API o token authentication.",
-  "subsonicConnectionError": "E makakonekta. Lawen me ing URL, network, ampo ing HTTPS certificate. keng web, ing server kailangan yang paintulutan ing CORS ampo ing HTTPS app e ya malyaring makakonekta keng HTTP."
+  "subsonicConnectionError": "E makakonekta. Lawen me ing URL, network, ampo ing HTTPS certificate. keng web, ing server kailangan yang paintulutan ing CORS ampo ing HTTPS app e ya malyaring makakonekta keng HTTP.",
+  "nArtists": "{count, plural, =0{Alang Artista} =1{1 Artista} other{{count} Artista}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Orihinal or kalalapit",
+  "coverFlowBigTitle": "Maragul"
 }

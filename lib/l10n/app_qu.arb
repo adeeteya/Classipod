@@ -207,5 +207,17 @@
   "subsonicUrl": "Servidorpa URL nisqa",
   "subsonicInvalidUrl": "HTTP icha HTTPS sirwiq URL nisqata qillqay mana tapusqa, t'aqa utaq churasqa yaykuyniyuq.",
   "subsonicUnsupported": "Kay sirwiq mana yanapanchu munasqa Subsonic API utaq token chiqaqchayta.",
-  "subsonicConnectionError": "Mana tinkiyta atinchu. URL, llika, HTTPS certificadota qhaway. Web kaqpi, sirwiq CORS saqinan tiyan chaymanta huk HTTPS ruwana mana HTTP kaqman tinkiyta atinchu."
+  "subsonicConnectionError": "Mana tinkiyta atinchu. URL, llika, HTTPS certificadota qhaway. Web kaqpi, sirwiq CORS saqinan tiyan chaymanta huk HTTPS ruwana mana HTTP kaqman tinkiyta atinchu.",
+  "nArtists": "{count, plural, =0{Mana Artistakuna} =1{1 Artista} other{{count} Artistakuna}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Tapa Flujo",
+  "coverFlowOriginalTitle": "Kikin",
+  "coverFlowBigTitle": "Hatun"
 }

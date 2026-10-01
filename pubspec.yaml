@@ -1,9 +1,9 @@
 name: classipod
-description: "A ipod Classic Emulator"
+description: "An iPod Classic-inspired player for local music and Subsonic/Navidrome streaming."
 
 publish_to: 'none'
 
-version: 2.0.0+26
+version: 2.1.0+27
 
 environment:
   sdk: ^3.13.2
@@ -15,7 +15,7 @@ dependencies:
   audio_service_win: ^0.0.3
   battery_plus: ^7.1.1
   crypto: ^3.0.7
-  cupertino_icons: ^1.0.9
+  cupertino_icons: ^2.0.0
   cupertino_ui: ^1.1.1
   device_preview_plus: ^2.9.4
   disable_battery_optimization:

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL tas-server",
   "subsonicInvalidUrl": "Daħħal URL ta' server HTTP jew HTTPS mingħajr mistoqsija, framment jew login inkorporat.",
   "subsonicUnsupported": "Dan is-server ma jappoġġjax l-API Subsonic jew l-awtentikazzjoni token meħtieġa.",
-  "subsonicConnectionError": "Ma tistax tikkonnettja. Iċċekkja l-URL, in-netwerk, u ċ-ċertifikat HTTPS. Fuq il-Web, is-server għandu jippermetti CORS u app HTTPS ma tistax tikkonnettja ma' HTTP."
+  "subsonicConnectionError": "Ma tistax tikkonnettja. Iċċekkja l-URL, in-netwerk, u ċ-ċertifikat HTTPS. Fuq il-Web, is-server għandu jippermetti CORS u app HTTPS ma tistax tikkonnettja ma' HTTP.",
+  "nArtists": "{count, plural, =0{Ebda Artisti} =1{1 Artist} other{{count} Artisti}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Qoxra Fluss",
+  "coverFlowOriginalTitle": "Oriġinali",
+  "coverFlowBigTitle": "Kbir"
 }

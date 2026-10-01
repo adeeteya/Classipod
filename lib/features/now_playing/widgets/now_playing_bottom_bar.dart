@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/widgets/scrubber_bar.dart';
 import 'package:classipod/features/now_playing/widgets/seek_bar.dart';
@@ -11,8 +12,17 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class NowPlayingBottomBar extends ConsumerWidget {
   final bool showScrubber;
+  final ScrubberController? scrubberController;
+  final bool scrubberActive;
+  final VoidCallback? onScrubChanged;
 
-  const NowPlayingBottomBar({super.key, this.showScrubber = false});
+  const NowPlayingBottomBar({
+    super.key,
+    this.showScrubber = false,
+    this.scrubberController,
+    this.scrubberActive = false,
+    this.onScrubChanged,
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -33,7 +43,12 @@ class NowPlayingBottomBar extends ConsumerWidget {
           final buffering =
               playback.processingState == AudioProcessingState.buffering ||
               playback.processingState == AudioProcessingState.loading;
-          double currentDuration = playback.updatePosition.inSeconds.toDouble();
+          double currentDuration =
+              (showScrubber && scrubberActive
+                      ? scrubberController?.position
+                      : null)
+                  ?.toDouble() ??
+              playback.updatePosition.inSeconds.toDouble();
           currentDuration = currentDuration.clamp(
             0,
             totalDuration > 0 ? totalDuration : 0,
@@ -65,10 +80,7 @@ class NowPlayingBottomBar extends ConsumerWidget {
                     "$elapsedTimeInMinutes:${elapsedTimeInSeconds < 10 ? "0$elapsedTimeInSeconds" : elapsedTimeInSeconds}",
                     maxLines: 1,
                     softWrap: false,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: IpodTypography.caption,
                   ),
                 ),
               ),
@@ -82,6 +94,9 @@ class NowPlayingBottomBar extends ConsumerWidget {
                           ScrubberBar(
                             max: totalDuration,
                             value: currentDuration,
+                            controller: scrubberController,
+                            active: scrubberActive,
+                            onChanged: onScrubChanged,
                           ),
                         if (!showScrubber)
                           SeekBar(max: totalDuration, value: currentDuration),
@@ -100,10 +115,7 @@ class NowPlayingBottomBar extends ConsumerWidget {
                     "- $remainingTimeInMinutes:${remainingTimeInSeconds < 10 ? "0$remainingTimeInSeconds" : remainingTimeInSeconds}",
                     maxLines: 1,
                     softWrap: false,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
+                    style: IpodTypography.caption,
                   ),
                 ),
               ),

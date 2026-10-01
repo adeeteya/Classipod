@@ -207,5 +207,17 @@
   "subsonicUrl": "სერვერის URL",
   "subsonicInvalidUrl": "შეიყვანეთ HTTP ან HTTPS სერვერის URL შეკითხვის, ფრაგმენტის ან ჩაშენებული შესვლის გარეშე.",
   "subsonicUnsupported": "ეს სერვერი მხარს არ უჭერს საჭირო Subsonic API-ს ან ჟეტონ ავთენტიფიკაციას.",
-  "subsonicConnectionError": "დაკავშირება შეუძლებელია. შეამოწმეთ URL, ქსელი და HTTPS სერთიფიკატი. ვებში, სერვერმა უნდა დაუშვას CORS და HTTPS აპი ვერ დაუკავშირდება HTTP-ს."
+  "subsonicConnectionError": "დაკავშირება შეუძლებელია. შეამოწმეთ URL, ქსელი და HTTPS სერთიფიკატი. ვებში, სერვერმა უნდა დაუშვას CORS და HTTPS აპი ვერ დაუკავშირდება HTTP-ს.",
+  "nArtists": "{count, plural, =0{მხატვრები არ არის} =1{1 შემსრულებელი} other{{count} შემსრულებლები}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "საფარის ნაკადი",
+  "coverFlowOriginalTitle": "ორიგინალი",
+  "coverFlowBigTitle": "დიდი"
 }

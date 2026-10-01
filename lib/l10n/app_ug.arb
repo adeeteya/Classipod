@@ -207,5 +207,17 @@
   "subsonicUrl": "مۇلازىمېتىر URL",
   "subsonicInvalidUrl": "سوئال ، بۆلەك ياكى قىستۇرۇلمىغان HTTP ياكى HTTPS مۇلازىمېتىر URL نى كىرگۈزۈڭ.",
   "subsonicUnsupported": "بۇ مۇلازىمېتىر تەلەپ قىلىنغان Subsonic API ياكى بەلگە دەلىللەشنى قوللىمايدۇ.",
-  "subsonicConnectionError": "ئۇلىنالمايدۇ. URL ، تور ۋە HTTPS گۇۋاھنامىسىنى تەكشۈرۈڭ. توردا ، مۇلازىمېتىر چوقۇم CORS غا يول قويۇشى كېرەك ، HTTPS دېتالى HTTP غا ئۇلىنالمايدۇ."
+  "subsonicConnectionError": "ئۇلىنالمايدۇ. URL ، تور ۋە HTTPS گۇۋاھنامىسىنى تەكشۈرۈڭ. توردا ، مۇلازىمېتىر چوقۇم CORS غا يول قويۇشى كېرەك ، HTTPS دېتالى HTTP غا ئۇلىنالمايدۇ.",
+  "nArtists": "{count, plural, =0{سەنئەتكار يوق} =1{1 سەنئەتكار} other{{count} سەنئەتكارلار}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "ئەسلى",
+  "coverFlowBigTitle": "چوڭ"
 }

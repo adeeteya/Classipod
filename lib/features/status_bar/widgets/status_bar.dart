@@ -1,10 +1,15 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/status_bar/widgets/battery_indicator.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class StatusBar extends StatelessWidget {
+  static const double height = 30;
+
   final String title;
 
   const StatusBar({super.key, required this.title});
@@ -13,29 +18,19 @@ class StatusBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDarkTheme =
         CupertinoTheme.of(context).brightness == Brightness.dark;
-    final gradientColors = isDarkTheme
-        ? const [
-            AppPalette.darkStatusBarGradientColor1,
-            AppPalette.darkStatusBarGradientColor2,
-          ]
-        : const [
-            AppPalette.statusBarGradientColor1,
-            AppPalette.statusBarGradientColor2,
-          ];
+    final gradient = isDarkTheme
+        ? IpodGradients.darkStatusBar
+        : IpodGradients.statusBar;
     final borderColor = isDarkTheme
         ? AppPalette.darkStatusBarBorderColor
         : AppPalette.statusBarBorderColor;
 
     return SizedBox(
-      height: 30,
+      height: height,
       width: double.infinity,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: gradientColors,
-          ),
+          gradient: gradient,
           border: Border(bottom: BorderSide(color: borderColor)),
         ),
         child: Padding(
@@ -45,10 +40,8 @@ class StatusBar extends StatelessWidget {
               Expanded(
                 child: Text(
                   title,
-                  style: const TextStyle(
-                    color: CupertinoColors.black,
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
+                  style: IpodTypography.screenTitle.copyWith(
+                    color: context.appPrimaryTextColor,
                   ),
                   maxLines: 1,
                 ),
@@ -62,7 +55,7 @@ class StatusBar extends StatelessWidget {
                     isPlaying
                         ? CupertinoIcons.play_fill
                         : CupertinoIcons.pause_fill,
-                    color: AppPalette.selectedTileGradientColor1,
+                    color: AppPalette.playbackIcon,
                   );
                 },
               ),

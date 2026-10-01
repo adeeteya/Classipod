@@ -207,5 +207,17 @@
   "subsonicUrl": "URL di u servitore",
   "subsonicInvalidUrl": "Inserite un URL di u servitore HTTP o HTTPS senza una dumanda, frammentu o login incrustatu.",
   "subsonicUnsupported": "Stu servitore ùn sustene micca l'API Subsonic o l'autenticazione token.",
-  "subsonicConnectionError": "Ùn pò micca cunnette. Verificate l'URL, a rete è u certificatu HTTPS. In u Web, u servitore deve permette CORS è una app HTTPS ùn pò micca cunnette à HTTP."
+  "subsonicConnectionError": "Ùn pò micca cunnette. Verificate l'URL, a rete è u certificatu HTTPS. In u Web, u servitore deve permette CORS è una app HTTPS ùn pò micca cunnette à HTTP.",
+  "nArtists": "{count, plural, =0{Nessun Artista} =1{1 Artista} other{{count} Artisti}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Uriginale",
+  "coverFlowBigTitle": "Grande"
 }

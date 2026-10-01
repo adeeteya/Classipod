@@ -32,6 +32,8 @@ extension BuildContextColorExtensions on BuildContext {
 
   Color get appInverseTextColor => AppColorScheme.inverseText.resolveFrom(this);
 
+  Color get appRatingIconColor => AppColorScheme.ratingIcon.resolveFrom(this);
+
   Color get appOutlineColor => AppColorScheme.outline.resolveFrom(this);
 
   Color get appDeviceScreenBorderColor =>

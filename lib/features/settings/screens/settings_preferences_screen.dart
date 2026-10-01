@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
@@ -12,7 +10,6 @@ import 'package:classipod/features/now_playing/provider/now_playing_details_prov
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -24,6 +21,7 @@ enum _SettingsDisplayItems {
   repeat,
   language,
   appTheme,
+  coverFlowAppearance,
   deviceColor,
   clickWheelSize,
   clickWheelSensitivity,
@@ -48,6 +46,8 @@ enum _SettingsDisplayItems {
         return context.localization.repeatModeSettingTitle;
       case language:
         return context.localization.languageScreenTitle;
+      case coverFlowAppearance:
+        return context.localization.coverFlowAppearanceSettingTitle;
       case appTheme:
         return context.localization.themeSettingTitle;
       case isTouchScreenEnabled:
@@ -115,6 +115,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleRepeatMode();
+        break;
+      case _SettingsDisplayItems.coverFlowAppearance:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleCoverFlowAppearance();
         break;
       case _SettingsDisplayItems.appTheme:
         await ref
@@ -191,8 +196,6 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     _SettingsDisplayItems settingsItem,
   ) {
     switch (settingsItem) {
-      case _SettingsDisplayItems.shuffle:
-        return ref.watch(nowPlayingDetailsProvider).isShuffleEnabled;
       case _SettingsDisplayItems.isTouchScreenEnabled:
         return settingsState.isTouchScreenEnabled;
       case _SettingsDisplayItems.vibrate:
@@ -213,12 +216,16 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     _SettingsDisplayItems settingsItem,
   ) {
     switch (settingsItem) {
+      case _SettingsDisplayItems.shuffle:
+        return ref.watch(nowPlayingDetailsProvider).shuffleMode.title(context);
       case _SettingsDisplayItems.deviceColor:
         return settingsState.deviceColor.title(context);
       case _SettingsDisplayItems.clickWheelSize:
         return settingsState.clickWheelSize.title(context);
       case _SettingsDisplayItems.clickWheelSensitivity:
         return settingsState.clickWheelSensitivity.title(context);
+      case _SettingsDisplayItems.coverFlowAppearance:
+        return settingsState.coverFlowAppearance.title(context);
       case _SettingsDisplayItems.appTheme:
         return settingsState.appTheme.title(context);
       case _SettingsDisplayItems.repeat:
@@ -238,8 +245,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
     }
   }
 
-  Future<void> _changeSplitScreenType() async {
-    await Future.delayed(const Duration(milliseconds: 150));
+  void _changeSplitScreenType() {
     if (!mounted || context.router.locationNamed != routeName) return;
     switch (displayItems[selectedDisplayItem]) {
       case _SettingsDisplayItems.language:
@@ -322,12 +328,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
   Widget build(BuildContext context) {
     final settingsState = ref.watch(settingsPreferencesControllerProvider);
 
-    unawaited(_changeSplitScreenType());
+    _changeSplitScreenType();
 
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.settings.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,

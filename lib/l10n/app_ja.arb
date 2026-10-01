@@ -207,5 +207,17 @@
   "subsonicUrl": "サーバーURL",
   "subsonicInvalidUrl": "クエリ、フラグメント、または埋め込みログインを使用せずに、HTTP または HTTPS サーバー URL を入力します。",
   "subsonicUnsupported": "このサーバーは、必要な Subsonic API またはトークン認証をサポートしていません。",
-  "subsonicConnectionError": "接続できません。 URL、ネットワーク、HTTPS 証明書を確認してください。 Web では、サーバーは CORS を許可する必要があり、HTTPS アプリは HTTP に接続できません。"
+  "subsonicConnectionError": "接続できません。 URL、ネットワーク、HTTPS 証明書を確認してください。 Web では、サーバーは CORS を許可する必要があり、HTTPS アプリは HTTP に接続できません。",
+  "nArtists": "{count, plural, =0{アーティストなし} =1{1 アーティスト} other{{count} アーティスト}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "カバーフロー",
+  "coverFlowOriginalTitle": "オリジナル",
+  "coverFlowBigTitle": "大きい"
 }

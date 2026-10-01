@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "Mangiloob na HTTP o HTTPS server URL ya anggapoy query, fragment, odino embedded login.",
   "subsonicUnsupported": "Sayan server et ag to suportaan so nakaukolan ya Subsonic API odino token authentication.",
-  "subsonicConnectionError": "Ag makakonekta. Nengnengen so URL, network, tan HTTPS certificate. Diad Web, kaukolan ya abuloyan na server so CORS tan say HTTPS app et ag makakonekta ed HTTP."
+  "subsonicConnectionError": "Ag makakonekta. Nengnengen so URL, network, tan HTTPS certificate. Diad Web, kaukolan ya abuloyan na server so CORS tan say HTTPS app et ag makakonekta ed HTTP.",
+  "nArtists": "{count, plural, =0{Anggapoy Artista} =1{1 Artist} other{{count} Saray Artista}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Orihinal",
+  "coverFlowBigTitle": "Baleg"
 }

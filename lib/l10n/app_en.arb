@@ -122,6 +122,16 @@
       }
     }
   },
+  "nArtists": "{count, plural, =0{No Artists} =1{1 Artist} other{{count} Artists}}",
+  "@nArtists": {
+    "description": "A message to show number of distinct artists",
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
   "nAlbums": "{count, plural, =0{No Albums} =1{1 Album} other{{count} Albums}}",
   "@nAlbums": {
     "description": "A message to show number of albums",
@@ -605,7 +615,7 @@
   "@hideLocalMusicTitle": {
     "description": "The Library Settings toggle that hides device music while the Subsonic server is enabled"
   },
-  "hideLocalMusicDescription": "Show only server music in your library while Subsonic is on. Local files stay on your device.",
+  "hideLocalMusicDescription": "Show only server music in your library while Subsonic is on",
   "@hideLocalMusicDescription": {
     "description": "The split-screen preview explaining the Hide Local Music setting"
   },
@@ -613,7 +623,7 @@
   "@subsonicTitle": {
     "description": "The Library Settings title and configuration dialog title for a Subsonic-compatible music server; Subsonic is the protocol name"
   },
-  "subsonicDescription": "Stream music from Navidrome, gonic, and compatible servers.",
+  "subsonicDescription": "Stream music from Navidrome, gonic and other compatible servers.",
   "@subsonicDescription": {
     "description": "The split-screen preview describing compatible music servers; Navidrome and gonic are product names and should not be translated"
   },
@@ -677,7 +687,7 @@
   "@subsonicInvalidUrl": {
     "description": "The configuration dialog validation error for an invalid server URL or an address containing unsupported URL components"
   },
-  "subsonicCredentialsError": "Check your username, password, and server permissions.",
+  "subsonicCredentialsError": "Check your username, password and server permissions.",
   "@subsonicCredentialsError": {
     "description": "The server error asking the user to check their login credentials and access permissions"
   },
@@ -693,12 +703,24 @@
   "@subsonicTimeout": {
     "description": "The error when a request to the music server exceeds its time limit"
   },
-  "subsonicConnectionError": "Cannot connect. Check the URL, network, and HTTPS certificate. On Web, the server must allow CORS and an HTTPS app cannot connect to HTTP.",
+  "subsonicConnectionError": "Cannot connect. Check the URL, network and HTTPS certificate. On Web, the server must allow CORS and an HTTPS app cannot connect to HTTP.",
   "@subsonicConnectionError": {
     "description": "The server connection error with network, certificate, and Web browser troubleshooting guidance; CORS means Cross-Origin Resource Sharing"
   },
   "subsonicServerError": "Could not read the server library. The previous catalog is retained. Refresh Library to retry.",
   "@subsonicServerError": {
     "description": "The server indexing error explaining that the previously cached catalog is preserved and Refresh Library can retry the scan"
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "@coverFlowAppearanceSettingTitle": {
+    "description": "The title of the setting that switches the Cover Flow album artwork layout between Original and Big"
+  },
+  "coverFlowOriginalTitle": "Original",
+  "@coverFlowOriginalTitle": {
+    "description": "The default Cover Flow appearance option, showing a centered album cover with three smaller tilted covers on each side, up to seven covers total"
+  },
+  "coverFlowBigTitle": "Big",
+  "@coverFlowBigTitle": {
+    "description": "The Cover Flow appearance option with larger album artwork, showing a centered cover and one tilted cover on each side, up to three covers total"
   }
 }

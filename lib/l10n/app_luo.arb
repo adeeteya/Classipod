@@ -207,5 +207,17 @@
   "subsonicUrl": "URL mar sava",
   "subsonicInvalidUrl": "Inyalo keto URL mar sava mar HTTP kata HTTPS maonge penjo, ng’injo, kata donjo ma oketi.",
   "subsonicUnsupported": "Sava ni ok oyie gi API ma dwarore mar Subsonic kata ng’eyo adier mar token.",
-  "subsonicConnectionError": "Ok nyal tudruok. Rang’ URL, mbui, kod oboke mar HTTPS. E mbui, sava nyaka oyiene CORS kendo program mar HTTPS ok nyal tudruok gi HTTP."
+  "subsonicConnectionError": "Ok nyal tudruok. Rang’ URL, mbui, kod oboke mar HTTPS. E mbui, sava nyaka oyiene CORS kendo program mar HTTPS ok nyal tudruok gi HTTP.",
+  "nArtists": "{count, plural, =0{Onge Jotugo} =1{Jatugo 1} other{Jotugo {count}}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Oboke Flow",
+  "coverFlowOriginalTitle": "Mokuongo",
+  "coverFlowBigTitle": "Maduong"
 }

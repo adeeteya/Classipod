@@ -207,5 +207,17 @@
   "subsonicUrl": "Сервернинъ URL адреси",
   "subsonicInvalidUrl": "HTTP я да HTTPS серверининъ URL адресини соргъусыз, фрагментсиз ве ерлештирильген логинсиз кирсетинъиз.",
   "subsonicUnsupported": "Бу сервер керекли Subsonic API я да токенлернинъ тасдыкълавыны дестеклемей.",
-  "subsonicConnectionError": "Багълап оламай. URL, агъ ве HTTPS сертификатыны тешкеринъиз. Веб-те сервер CORS-ке рухсет бермек керек ве HTTPS къулланмасы HTTP-ге къошулып оламай."
+  "subsonicConnectionError": "Багълап оламай. URL, агъ ве HTTPS сертификатыны тешкеринъиз. Веб-те сервер CORS-ке рухсет бермек керек ве HTTPS къулланмасы HTTP-ге къошулып оламай.",
+  "nArtists": "{count, plural, =0{Рессамлар ёкъ} =1{1 Рессам} other{{count} Рессамлар}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Къапакъ акъымы .",
+  "coverFlowOriginalTitle": "Асыл нусха",
+  "coverFlowBigTitle": "Балабан"
 }

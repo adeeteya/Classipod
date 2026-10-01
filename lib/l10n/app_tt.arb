@@ -207,5 +207,17 @@
   "subsonicUrl": "Сервер URL",
   "subsonicInvalidUrl": "Сорау, фрагмент яки урнаштырылган логинсыз HTTP яки HTTPS сервер URL кертегез.",
   "subsonicUnsupported": "Бу сервер кирәкле Subsonic API яки токен аутентификациясен хупламый.",
-  "subsonicConnectionError": "Бәйләп булмый. URL, челтәр һәм HTTPS сертификатын тикшерегез. Вебда, сервер CORS рөхсәт итәргә тиеш һәм HTTPS кушымтасы HTTP белән тоташа алмый."
+  "subsonicConnectionError": "Бәйләп булмый. URL, челтәр һәм HTTPS сертификатын тикшерегез. Вебда, сервер CORS рөхсәт итәргә тиеш һәм HTTPS кушымтасы HTTP белән тоташа алмый.",
+  "nArtists": "{count, plural, =0{Рәссамнар юк} =1{1 Рәссам} other{{count} Рәссамнар}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Капка агымы",
+  "coverFlowOriginalTitle": "Оригиналь",
+  "coverFlowBigTitle": "Зур"
 }

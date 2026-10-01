@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:classipod/core/alerts/dialogs.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
@@ -15,7 +13,6 @@ import 'package:classipod/features/settings/controller/prevent_duplicate_tracks_
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/widgets/settings_list_tile.dart';
 import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -150,8 +147,7 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
     return true;
   }
 
-  Future<void> _changeSplitScreenType() async {
-    await Future<void>.delayed(const Duration(milliseconds: 150));
+  void _changeSplitScreenType() {
     if (!mounted || context.router.locationNamed != routeName) return;
     ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
         displayItems[selectedDisplayItem].preview;
@@ -159,7 +155,7 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
 
   @override
   Widget build(BuildContext context) {
-    unawaited(_changeSplitScreenType());
+    _changeSplitScreenType();
     final preventDuplicates = ref.watch(preventDuplicateTracksProvider);
     final hideLocalMusic = ref.watch(hideLocalMusicProvider);
     final remote = ref.watch(subsonicControllerProvider).value;
@@ -182,7 +178,6 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
       resizeToAvoidBottomInset: false,
       child: Column(
         children: [
-          StatusBar(title: Routes.librarySettings.title(context)),
           if (local.hasError)
             Padding(
               padding: const EdgeInsets.all(4),

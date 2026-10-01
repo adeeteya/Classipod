@@ -207,5 +207,17 @@
   "subsonicUrl": "URL server",
   "subsonicInvalidUrl": "Fer antre en URL server HTTP ou HTTPS san en kestyon, fragman, ou login entegre.",
   "subsonicUnsupported": "sa server pa siport Subsonic API oubyen lotantifikasyon token neseser.",
-  "subsonicConnectionError": "pa kapab konekte. Tyek URL, rezo, ek sertifika HTTPS. lo web, server i bezwen les CORS e en HTTPS app pa kapab konekte avek HTTP."
+  "subsonicConnectionError": "pa kapab konekte. Tyek URL, rezo, ek sertifika HTTPS. lo web, server i bezwen les CORS e en HTTPS app pa kapab konekte avek HTTP.",
+  "nArtists": "{count, plural, =0{napa artis} =1{1 Artis} other{{count} bann artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Koule Kouvertir",
+  "coverFlowOriginalTitle": "Orizinal",
+  "coverFlowBigTitle": "Gro"
 }

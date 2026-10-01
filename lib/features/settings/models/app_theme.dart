@@ -1,5 +1,6 @@
-import 'package:classipod/core/constants/assets.dart';
+import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 enum AppTheme {
@@ -25,28 +26,38 @@ enum AppTheme {
   CupertinoThemeData toCupertinoTheme() {
     switch (this) {
       case AppTheme.light:
-        return const CupertinoThemeData(
+        return CupertinoThemeData(
           brightness: Brightness.light,
           scaffoldBackgroundColor: CupertinoColors.white,
           barBackgroundColor: CupertinoColors.white,
           primaryColor: CupertinoColors.activeBlue,
           textTheme: CupertinoTextThemeData(
-            textStyle: TextStyle(
+            navTitleTextStyle: IpodTypography.screenTitle.copyWith(
               color: CupertinoColors.black,
-              fontFamily: Assets.helveticaFont,
+            ),
+            navLargeTitleTextStyle: IpodTypography.title.copyWith(
+              color: CupertinoColors.black,
+            ),
+            textStyle: IpodTypography.body.copyWith(
+              color: CupertinoColors.black,
             ),
           ),
         );
       case AppTheme.dark:
-        return const CupertinoThemeData(
+        return CupertinoThemeData(
           brightness: Brightness.dark,
-          scaffoldBackgroundColor: Color(0xFF1F1F21),
-          barBackgroundColor: Color(0xFF2C2C2E),
+          scaffoldBackgroundColor: AppPalette.darkScreenBackground,
+          barBackgroundColor: AppPalette.darkSurface,
           primaryColor: CupertinoColors.activeBlue,
           textTheme: CupertinoTextThemeData(
-            textStyle: TextStyle(
-              color: CupertinoColors.white,
-              fontFamily: Assets.helveticaFont,
+            navTitleTextStyle: IpodTypography.screenTitle.copyWith(
+              color: AppPalette.darkPrimaryText,
+            ),
+            navLargeTitleTextStyle: IpodTypography.title.copyWith(
+              color: AppPalette.darkPrimaryText,
+            ),
+            textStyle: IpodTypography.body.copyWith(
+              color: AppPalette.darkPrimaryText,
             ),
           ),
         );

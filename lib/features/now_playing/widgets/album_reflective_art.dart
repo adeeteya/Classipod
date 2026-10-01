@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/widgets/artwork_image.dart';
+import 'package:classipod/core/widgets/hero_flight_content.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -88,11 +89,11 @@ class _AlbumReflectiveArtState extends ConsumerState<AlbumReflectiveArt>
             late final Widget destinationWidget;
             switch (flightDirection) {
               case HeroFlightDirection.push:
-                sourceWidget = fromHeroContext.widget;
-                destinationWidget = toHeroContext.widget;
+                sourceWidget = HeroFlightContent.preview(fromHeroContext);
+                destinationWidget = HeroFlightContent.preview(toHeroContext);
               case HeroFlightDirection.pop:
-                sourceWidget = toHeroContext.widget;
-                destinationWidget = fromHeroContext.widget;
+                sourceWidget = HeroFlightContent.preview(toHeroContext);
+                destinationWidget = HeroFlightContent.preview(fromHeroContext);
             }
             return AnimatedBuilder(
               animation: animation,
@@ -115,83 +116,84 @@ class _AlbumReflectiveArtState extends ConsumerState<AlbumReflectiveArt>
           },
       child: Transform(
         transform: transform,
-        child: Column(
-          children: [
-            Flexible(
-              child: Image(
-                image: artworkImage(ref, widget.thumbnailPath),
-                errorBuilder: (_, _, _) => Image.asset(
-                  Assets.defaultAlbumCoverImage,
-                  height: widget.imageWidth,
-                  width: widget.imageWidth ?? double.infinity,
-                  fit: (widget.imageWidth == null)
-                      ? BoxFit.fitWidth
-                      : BoxFit.scaleDown,
-                ),
-                height: widget.imageWidth,
-                width: widget.imageWidth ?? double.infinity,
-                fit: (widget.imageWidth == null)
-                    ? BoxFit.fitWidth
-                    : BoxFit.scaleDown,
-              ),
-            ),
-            FadeTransition(
-              opacity: _animation,
-              child: Stack(
-                clipBehavior: Clip.none,
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final width = min(
+              widget.imageWidth ?? constraints.maxWidth,
+              constraints.maxWidth,
+            );
+            final height = min(
+              widget.imageWidth ?? constraints.maxHeight,
+              max(0.0, constraints.maxHeight - widget.reflectedImageHeight),
+            );
+
+            Widget artwork() => Image(
+              image: artworkImage(ref, widget.thumbnailPath),
+              width: width,
+              height: height,
+              alignment: Alignment.bottomCenter,
+              fit: BoxFit.scaleDown,
+              errorBuilder: (_, _, _) => Image.asset(
+                Assets.defaultAlbumCoverImage,
+                width: width,
+                height: height,
                 alignment: Alignment.bottomCenter,
-                children: [
-                  Transform.flip(
-                    flipY: true,
-                    child: Image(
-                      image: artworkImage(ref, widget.thumbnailPath),
-                      errorBuilder: (_, _, _) => Image.asset(
-                        Assets.defaultAlbumCoverImage,
-                        height: widget.reflectedImageHeight,
-                        width: widget.imageWidth != null
-                            ? (widget.imageWidth! - widget.reflectedImageHeight)
-                            : double.infinity,
-                        alignment: Alignment.bottomCenter,
-                        fit: BoxFit.fitWidth,
-                      ),
-                      height: widget.reflectedImageHeight,
-                      width: widget.imageWidth != null
-                          ? (widget.imageWidth! - widget.reflectedImageHeight)
-                          : double.infinity,
-                      alignment: Alignment.bottomCenter,
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
-                  SizedBox(
-                    height: widget.reflectedImageHeight,
-                    width: widget.imageWidth != null
-                        ? (widget.imageWidth! - widget.reflectedImageHeight)
-                        : double.infinity,
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        border: Border(
-                          left: BorderSide(color: overlayBorderColor, width: 0),
-                          right: BorderSide(
-                            color: overlayBorderColor,
-                            width: 0,
-                          ),
-                          bottom: BorderSide(
-                            color: overlayBorderColor,
-                            width: 0,
-                          ),
-                        ),
-                        gradient: LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [overlayTopColor, overlayBottomColor],
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+                fit: BoxFit.scaleDown,
               ),
-            ),
-          ],
+            );
+
+            return Column(
+              children: [
+                artwork(),
+                FadeTransition(
+                  opacity: _animation,
+                  child: SizedBox(
+                    width: width,
+                    height: widget.reflectedImageHeight,
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        ClipRect(
+                          child: OverflowBox(
+                            alignment: Alignment.topCenter,
+                            minHeight: height,
+                            maxHeight: height,
+                            child: Transform.flip(
+                              flipY: true,
+                              child: artwork(),
+                            ),
+                          ),
+                        ),
+                        DecoratedBox(
+                          decoration: BoxDecoration(
+                            border: Border(
+                              left: BorderSide(
+                                color: overlayBorderColor,
+                                width: 0,
+                              ),
+                              right: BorderSide(
+                                color: overlayBorderColor,
+                                width: 0,
+                              ),
+                              bottom: BorderSide(
+                                color: overlayBorderColor,
+                                width: 0,
+                              ),
+                            ),
+                            gradient: LinearGradient(
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                              colors: [overlayTopColor, overlayBottomColor],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );

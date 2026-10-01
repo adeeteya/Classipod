@@ -207,5 +207,17 @@
   "subsonicUrl": "सर्भर URL",
   "subsonicInvalidUrl": "क्वेरी, टुक्रा, वा इम्बेडेड लगइन बिना HTTP वा HTTPS सर्भर URL प्रविष्ट गर्नुहोस्।",
   "subsonicUnsupported": "यो सर्भरले आवश्यक Subsonic API वा टोकन प्रमाणीकरण समर्थन गर्दैन।",
-  "subsonicConnectionError": "जडान गर्न सकिँदैन। URL, नेटवर्क, र HTTPS प्रमाणपत्र जाँच गर्नुहोस्। वेबमा, सर्भरले CORS लाई अनुमति दिनुपर्छ र HTTPS एप HTTP मा जडान हुन सक्दैन।"
+  "subsonicConnectionError": "जडान गर्न सकिँदैन। URL, नेटवर्क, र HTTPS प्रमाणपत्र जाँच गर्नुहोस्। वेबमा, सर्भरले CORS लाई अनुमति दिनुपर्छ र HTTPS एप HTTP मा जडान हुन सक्दैन।",
+  "nArtists": "{count, plural, =0{कुनै पनि कलाकार छैन} =1{1 कलाकार} other{{count} कलाकार}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "आवरण प्रवाह",
+  "coverFlowOriginalTitle": "मौलिक",
+  "coverFlowBigTitle": "ठूलो"
 }

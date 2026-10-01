@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:just_audio/just_audio.dart';
 
 class LogicalQueue {
@@ -7,35 +8,49 @@ class LogicalQueue {
   List<int> _order = [];
   List<int> _positions = [];
   int index = 0;
-  bool shuffled = false;
+  PlaybackShuffleMode shuffleMode = PlaybackShuffleMode.off;
+  List<List<int>> _albums = [];
   LoopMode loopMode = LoopMode.off;
 
   LogicalQueue({Random? random}) : random = random ?? Random();
 
   int get length => _order.length;
 
-  void reset(int length) {
-    index = 0;
+  int get position => _positions.isEmpty ? 0 : _positions[index];
+
+  void reset(int length, {List<List<int>>? albums, int initialIndex = 0}) {
+    index = initialIndex;
     _order = List.generate(length, (index) => index);
-    if (shuffled) reshuffle();
-    _indexPositions();
+    _albums =
+        albums ??
+        [
+          for (final index in _order) [index],
+        ];
+    _reorder();
   }
 
-  void setShuffle(bool enabled) {
-    shuffled = enabled;
-    if (enabled) {
-      reshuffle();
-    } else {
-      _order.sort();
-      _indexPositions();
+  void setShuffle(PlaybackShuffleMode mode) {
+    if (shuffleMode == mode) return;
+    shuffleMode = mode;
+    _reorder();
+  }
+
+  void _reorder() {
+    switch (shuffleMode) {
+      case PlaybackShuffleMode.off:
+        _order.sort();
+      case PlaybackShuffleMode.songs:
+        _order.shuffle(random);
+        if (_order.isNotEmpty) {
+          _order.remove(index);
+          _order.insert(0, index);
+        }
+      case PlaybackShuffleMode.albums:
+        final albums = _albums.toList()..shuffle(random);
+        final current = albums.indexWhere((album) => album.contains(index));
+        if (current >= 0) albums.insert(0, albums.removeAt(current));
+        _order = albums.expand((album) => album).toList();
     }
-  }
-
-  void reshuffle() {
-    _order.shuffle(random);
-    if (_order.isEmpty) return;
-    _order.remove(index);
-    _order.insert(0, index);
     _indexPositions();
   }
 

@@ -1,5 +1,6 @@
 import 'package:battery_plus/battery_plus.dart';
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/features/status_bar/controller/battery_controller.dart';
 import 'package:classipod/features/status_bar/model/battery_model.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -71,14 +72,7 @@ class BatteryIndicatorWidget extends StatelessWidget {
       width: trackHeight * trackAspectRatio,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppPalette.batteryBarBackgroundGradientColor1,
-              AppPalette.batteryBarBackgroundGradientColor2,
-            ],
-          ),
+          gradient: IpodGradients.batteryTrack,
           border: Border.all(
             color: AppPalette.batteryBarOutlineColor,
             width: 0.5,
@@ -100,25 +94,9 @@ class BatteryIndicatorWidget extends StatelessWidget {
         height: double.infinity,
         curve: curve,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: (batteryDetails.level <= 20)
-                ? [
-                    AppPalette.lowBatteryBarGradientColor1,
-                    AppPalette.lowBatteryBarGradientColor2,
-                  ]
-                : [
-                    AppPalette.batteryBarGradientColor1,
-                    AppPalette.batteryBarGradientColor2,
-                    AppPalette.batteryBarGradientColor3,
-                    AppPalette.batteryBarGradientColor4,
-                    AppPalette.batteryBarGradientColor5,
-                    AppPalette.batteryBarGradientColor6,
-                    AppPalette.batteryBarGradientColor7,
-                    AppPalette.batteryBarGradientColor6,
-                  ],
-          ),
+          gradient: batteryDetails.level <= 20
+              ? IpodGradients.lowBattery
+              : IpodGradients.battery,
         ),
       ),
     );

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL server",
   "subsonicInvalidUrl": "Geli URL server HTTP ama HTTPS iyada oo aan la waydiin, jajab, ama soo gelid guntan la'aan.",
   "subsonicUnsupported": "Serfarkani ma taageerayo loo baahan yahay Subsonic API ama calaamada summada.",
-  "subsonicConnectionError": "Lama xidhi karo Hubi URL, shabakadda, iyo shahaadada HTTPS. Shabakadda, adeeguhu waa inuu oggolaadaa CORS oo abka HTTPS kuma xidhi karo HTTP."
+  "subsonicConnectionError": "Lama xidhi karo Hubi URL, shabakadda, iyo shahaadada HTTPS. Shabakadda, adeeguhu waa inuu oggolaadaa CORS oo abka HTTPS kuma xidhi karo HTTP.",
+  "nArtists": "{count, plural, =0{Maya fanaaniin} =1{1 Fanaan} other{{count} Fanaaniinta}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Socodka Daboolka",
+  "coverFlowOriginalTitle": "Asalka",
+  "coverFlowBigTitle": "Wayn"
 }

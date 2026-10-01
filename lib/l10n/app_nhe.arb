@@ -207,5 +207,17 @@
   "subsonicUrl": "URL tlen tlatekipanojketl",
   "subsonicInvalidUrl": "Xikijkuilo se URL tlen HTTP o HTTPS tlen amo kipia se tlajtlanili, se tlajko o se tlajtoli tlen ijkuilijtok.",
   "subsonicUnsupported": "Ni tlatekipanojketl ax kipaleuia nopa API Subsonic tlen moneki o nopa autenticación tlen token.",
-  "subsonicConnectionError": "Ax ueli timonechkauia. Xikita nopa URL, red uan HTTPS certificado. Ipan Web, nopa tlatekipanojketl moneki kikauas CORS uan se aplicación HTTPS amo uelis mosentlalis ika HTTP."
+  "subsonicConnectionError": "Ax ueli timonechkauia. Xikita nopa URL, red uan HTTPS certificado. Ipan Web, nopa tlatekipanojketl moneki kikauas CORS uan se aplicación HTTPS amo uelis mosentlalis ika HTTP.",
+  "nArtists": "{count, plural, =0{Ax onka tlaixnextiani} =1{1 Tlaixnextijketl} other{{count} Tlaixkopinkej}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Tlense",
+  "coverFlowBigTitle": "Ueyi"
 }

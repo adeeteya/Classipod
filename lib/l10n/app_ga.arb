@@ -207,5 +207,17 @@
   "subsonicUrl": "URL an fhreastalaí",
   "subsonicInvalidUrl": "Cuir isteach URL freastalaí HTTP nó HTTPS gan cheist, blúire ná logáil isteach leabaithe.",
   "subsonicUnsupported": "Ní thacaíonn an freastalaí seo leis an API Subsonic nó fíordheimhniú comhartha.",
-  "subsonicConnectionError": "Ní féidir ceangal. Seiceáil an URL, an líonra, agus an deimhniú HTTPS. Ar an nGréasán, ní mór don fhreastalaí CORS a cheadú agus ní féidir le haip HTTPS ceangal le HTTP."
+  "subsonicConnectionError": "Ní féidir ceangal. Seiceáil an URL, an líonra, agus an deimhniú HTTPS. Ar an nGréasán, ní mór don fhreastalaí CORS a cheadú agus ní féidir le haip HTTPS ceangal le HTTP.",
+  "nArtists": "{count, plural, =0{Gan Ealaíontóir} =1{1 Ealaíontóir} other{{count} Ealaíontóirí}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Sreabhadh Clúdaigh",
+  "coverFlowOriginalTitle": "Bunaidh",
+  "coverFlowBigTitle": "Mór"
 }

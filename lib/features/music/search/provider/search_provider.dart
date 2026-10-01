@@ -58,3 +58,14 @@ final searchProvider = Provider.autoDispose
 
       return searchResults;
     });
+
+final searchQueryProvider = NotifierProvider<SearchQueryNotifier, String>(
+  SearchQueryNotifier.new,
+);
+
+class SearchQueryNotifier extends Notifier<String> {
+  @override
+  String build() => '';
+
+  set query(String value) => state = value;
+}

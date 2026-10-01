@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "Pinda HTTP kana HTTPS sevha URL usina mubvunzo, chidimbu, kana kupinda mukati.",
   "subsonicUnsupported": "Iyi sevha haitsigire inodiwa Subsonic API kana chiratidzo chechokwadi.",
-  "subsonicConnectionError": "Haikwanisi kubatana. Tarisa URL, network, uye HTTPS chitupa. PaWebhu, sevha inofanirwa kubvumira CORS uye HTTPS app haigone kubatana neHTTP."
+  "subsonicConnectionError": "Haikwanisi kubatana. Tarisa URL, network, uye HTTPS chitupa. PaWebhu, sevha inofanirwa kubvumira CORS uye HTTPS app haigone kubatana neHTTP.",
+  "nArtists": "{count, plural, =0{Hapana Vanyori} =1{1 Artist} other{{count} Artists}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kuyerera kwekuvhara",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Big"
 }

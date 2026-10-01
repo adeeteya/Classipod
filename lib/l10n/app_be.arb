@@ -207,5 +207,17 @@
   "subsonicUrl": "URL сервера",
   "subsonicInvalidUrl": "Увядзіце URL-адрас сервера HTTP або HTTPS без запыту, фрагмента або ўбудаванага лагіна.",
   "subsonicUnsupported": "Гэты сервер не падтрымлівае неабходны Subsonic API або аўтэнтыфікацыю токена.",
-  "subsonicConnectionError": "Немагчыма падключыцца. Праверце URL, сетку і сертыфікат HTTPS. У Інтэрнэце сервер павінен дазваляць CORS, а праграма HTTPS не можа падключацца да HTTP."
+  "subsonicConnectionError": "Немагчыма падключыцца. Праверце URL, сетку і сертыфікат HTTPS. У Інтэрнэце сервер павінен дазваляць CORS, а праграма HTTPS не можа падключацца да HTTP.",
+  "nArtists": "{count, plural, =0{Няма выканаўцаў} =1{1 Выканаўца} other{{count} Выканаўцы}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Вокладка Flow",
+  "coverFlowOriginalTitle": "Арыгінал",
+  "coverFlowBigTitle": "вялікі"
 }

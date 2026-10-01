@@ -1,14 +1,17 @@
-import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
+import 'package:classipod/core/widgets/hero_flight_content.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/cover_flow/widgets/cover_flow_album_song_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 
 class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
   final AlbumModel albumDetail;
@@ -23,16 +26,50 @@ class _CoverFlowAlbumSelectionScreenState
     extends ConsumerState<CoverFlowAlbumSelectionScreen>
     with CustomScreen {
   @override
-  int get topStatusBarHeight => 60;
-
-  @override
   String get routeName => Routes.coverFlowSelection.name;
+
+  final GlobalKey _contentKey = GlobalKey();
 
   @override
   List<MusicMetadata> get displayItems => widget.albumDetail.albumSongs;
 
   @override
   Future<void> onSelectPressed() => _playSongFromAlbum(selectedDisplayItem);
+
+  @override
+  void scrollForward() {
+    if (selectedDisplayItem < displayItems.length - 1) {
+      setState(() => selectedDisplayItem++);
+    }
+    _revealSelection();
+  }
+
+  @override
+  void scrollBackward() {
+    if (selectedDisplayItem > 0) {
+      setState(() => selectedDisplayItem--);
+    }
+    _revealSelection();
+  }
+
+  void _revealSelection() {
+    if (!scrollController.hasClients || displayItems.isEmpty) return;
+    final position = scrollController.position;
+    if (!position.hasContentDimensions) return;
+    final top = selectedDisplayItem * displayTileHeight;
+    final bottom = top + displayTileHeight;
+    final double target;
+    if (top < position.pixels) {
+      target = top;
+    } else if (bottom > position.pixels + position.viewportDimension) {
+      target = bottom - position.viewportDimension;
+    } else {
+      return;
+    }
+    scrollController.jumpTo(
+      target.clamp(position.minScrollExtent, position.maxScrollExtent),
+    );
+  }
 
   Future<void> _playSongFromAlbum(int index) async {
     setState(() => selectedDisplayItem = index);
@@ -41,7 +78,7 @@ class _CoverFlowAlbumSelectionScreenState
         .playAlbum(albumDetail: widget.albumDetail, songIndex: index);
 
     if (mounted) {
-      await context.pushNamed(Routes.nowPlaying.name);
+      await context.openUniqueNamed(Routes.nowPlaying.name);
     }
   }
 
@@ -53,92 +90,132 @@ class _CoverFlowAlbumSelectionScreenState
     return Hero(
       tag:
           "${widget.albumDetail.albumName}-${widget.albumDetail.albumArtistName}",
-      child: SizedBox(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(40, 10, 40, 0),
-          child: DecoratedBox(
-            decoration: BoxDecoration(
-              color: CupertinoColors.white,
-              border: Border.all(),
-            ),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 50,
-                  width: double.infinity,
-                  child: DecoratedBox(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [
-                          AppPalette.selectedTileGradientColor1,
-                          AppPalette.selectedTileGradientColor2,
-                        ],
-                      ),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            widget.albumDetail.albumName,
-                            style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: CupertinoColors.white,
-                            ),
-                            maxLines: 1,
+      placeholderBuilder: (_, size, child) => SizedBox.fromSize(
+        size: size,
+        child: Offstage(child: TickerMode(enabled: false, child: child)),
+      ),
+      child: HeroFlightContent(
+        key: _contentKey,
+        flightBuilder: (_) => _CoverFlowFlightPreview(
+          initialOffset: scrollController.hasClients
+              ? scrollController.offset
+              : 0,
+          builder: (controller) =>
+              _buildPanel(context, currentlyPlayingOriginalIndex, controller),
+        ),
+        child: _buildPanel(
+          context,
+          currentlyPlayingOriginalIndex,
+          scrollController,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPanel(
+    BuildContext context,
+    String? currentlyPlayingOriginalIndex,
+    ScrollController controller,
+  ) {
+    return SizedBox(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(40, 10, 40, 0),
+        child: DecoratedBox(
+          decoration: BoxDecoration(
+            color: context.appSurfaceColor,
+            border: Border.all(color: context.appOutlineColor),
+          ),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+                width: double.infinity,
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: IpodGradients.selectionFor(context),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          widget.albumDetail.albumName,
+                          style: IpodTypography.title.copyWith(
+                            color: CupertinoColors.white,
                           ),
-                          Text(
-                            widget.albumDetail.albumArtistName,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              color: CupertinoColors.white,
-                            ),
-                            maxLines: 1,
+                          maxLines: 1,
+                        ),
+                        Text(
+                          widget.albumDetail.albumArtistName,
+                          style: IpodTypography.metadata.copyWith(
+                            color: CupertinoColors.white,
                           ),
-                        ],
-                      ),
+                          maxLines: 1,
+                        ),
+                      ],
                     ),
                   ),
                 ),
-                Flexible(
-                  child: CupertinoScrollbar(
-                    controller: scrollController,
-                    child: ListView.builder(
-                      controller: scrollController,
-                      itemCount: displayItems.length,
-                      prototypeItem: CoverFlowAlbumSongListTile(
-                        songName: '',
-                        songDuration: Duration.zero,
-                        isSelected: false,
-                        isCurrentlyPlaying: false,
-                        onTap: () {},
+              ),
+              Flexible(
+                child: CupertinoScrollbar(
+                  controller: controller,
+                  child: ListView.builder(
+                    controller: controller,
+                    itemCount: displayItems.length,
+                    padding: EdgeInsets.zero,
+                    itemExtent: displayTileHeight,
+                    itemBuilder: (context, index) => CoverFlowAlbumSongListTile(
+                      songName: displayItems[index].getTrackName,
+                      songDuration: Duration(
+                        milliseconds: displayItems[index].getTrackDuration,
                       ),
-                      itemBuilder: (context, index) =>
-                          CoverFlowAlbumSongListTile(
-                            songName: displayItems[index].getTrackName,
-                            songDuration: Duration(
-                              milliseconds:
-                                  displayItems[index].getTrackDuration,
-                            ),
-                            isSelected: selectedDisplayItem == index,
-                            isCurrentlyPlaying:
-                                currentlyPlayingOriginalIndex ==
-                                displayItems[index].identity,
-                            onTap: () async => _playSongFromAlbum(index),
-                          ),
+                      isSelected: selectedDisplayItem == index,
+                      isCurrentlyPlaying:
+                          currentlyPlayingOriginalIndex ==
+                          displayItems[index].identity,
+                      onTap: () async => _playSongFromAlbum(index),
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
     );
+  }
+}
+
+class _CoverFlowFlightPreview extends StatefulWidget {
+  const _CoverFlowFlightPreview({
+    required this.initialOffset,
+    required this.builder,
+  });
+
+  final double initialOffset;
+  final Widget Function(ScrollController) builder;
+
+  @override
+  State<_CoverFlowFlightPreview> createState() =>
+      _CoverFlowFlightPreviewState();
+}
+
+class _CoverFlowFlightPreviewState extends State<_CoverFlowFlightPreview> {
+  late final ScrollController _controller = ScrollController(
+    initialScrollOffset: widget.initialOffset,
+    keepScrollOffset: false,
+  );
+
+  @override
+  Widget build(BuildContext context) =>
+      IgnorePointer(child: widget.builder(_controller));
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 }

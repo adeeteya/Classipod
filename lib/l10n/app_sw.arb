@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya seva",
   "subsonicInvalidUrl": "Weka URL ya seva ya HTTP au HTTPS bila swali, kipande, au kuingia kwa kupachikwa.",
   "subsonicUnsupported": "Seva hii haiauni API ya Subsonic au uthibitishaji wa tokeni.",
-  "subsonicConnectionError": "Haiwezi kuunganisha. Angalia URL, mtandao na cheti cha HTTPS. Kwenye Wavuti, seva lazima iruhusu CORS na programu ya HTTPS haiwezi kuunganisha kwenye HTTP."
+  "subsonicConnectionError": "Haiwezi kuunganisha. Angalia URL, mtandao na cheti cha HTTPS. Kwenye Wavuti, seva lazima iruhusu CORS na programu ya HTTPS haiwezi kuunganisha kwenye HTTP.",
+  "nArtists": "{count, plural, =0{Hakuna Wasanii} =1{1 Msanii} other{{count} Wasanii}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Mtiririko wa Jalada",
+  "coverFlowOriginalTitle": "Asili",
+  "coverFlowBigTitle": "Kubwa"
 }

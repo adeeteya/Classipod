@@ -207,5 +207,17 @@
   "subsonicUrl": "ናይ ኣገልጋሊ URL",
   "subsonicInvalidUrl": "ብዘይ ሕቶ፡ ቁንጣሮ ወይ ዝተሰረተ መእተዊ HTTP ወይ HTTPS ኣገልጋሊ URL ኣእቱ።",
   "subsonicUnsupported": "እዚ ኣገልጋሊ ነቲ ዘድሊ Subsonic API ወይ ቶከን ምርግጋጽ ኣይድግፍን እዩ።",
-  "subsonicConnectionError": "ክራኸብ ኣይክእልን እዩ። URL፣ ኔትወርክን HTTPSን ምስክር ወረቐት መርምሩ። ኣብ ዌብ እቲ ሰርቨር CORS ክፈቅድ ኣለዎ ከምኡ ውን ሓደ HTTPS app ምስ HTTP ክራኸብ ኣይክእልን እዩ።"
+  "subsonicConnectionError": "ክራኸብ ኣይክእልን እዩ። URL፣ ኔትወርክን HTTPSን ምስክር ወረቐት መርምሩ። ኣብ ዌብ እቲ ሰርቨር CORS ክፈቅድ ኣለዎ ከምኡ ውን ሓደ HTTPS app ምስ HTTP ክራኸብ ኣይክእልን እዩ።",
+  "nArtists": "{count, plural, =0{ስነጥበባውያን የለን} =1{1 ስነጥበባዊ} other{{count} ስነጥበባውያን}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "ሽፋን ዋሕዚ",
+  "coverFlowOriginalTitle": "ኦርጂናል",
+  "coverFlowBigTitle": "ዓብይ"
 }

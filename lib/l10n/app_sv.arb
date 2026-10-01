@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "Ange en HTTP- eller HTTPS-server-URL utan en fråga, fragment eller inbäddad inloggning.",
   "subsonicUnsupported": "Den här servern stöder inte den nödvändiga Subsonic API eller token-autentisering.",
-  "subsonicConnectionError": "Kan inte ansluta. Kontrollera URL, nätverk och HTTPS-certifikat. På webben måste servern tillåta CORS och en HTTPS-app kan inte ansluta till HTTP."
+  "subsonicConnectionError": "Kan inte ansluta. Kontrollera URL, nätverk och HTTPS-certifikat. På webben måste servern tillåta CORS och en HTTPS-app kan inte ansluta till HTTP.",
+  "nArtists": "{count, plural, =0{Inga artister} =1{1 Artist} other{{count} Artister}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Stor"
 }

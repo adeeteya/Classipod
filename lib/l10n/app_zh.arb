@@ -207,5 +207,17 @@
   "subsonicUrl": "服务器地址",
   "subsonicInvalidUrl": "输入不带查询、片段或嵌入式登录的 HTTP 或 HTTPS 服务器 URL。",
   "subsonicUnsupported": "该服务器不支持所需的 Subsonic API 或令牌身份验证。",
-  "subsonicConnectionError": "无法连接。检查 URL、网络和 HTTPS 证书。在 Web 上，服务器必须允许 CORS，并且 HTTPS 应用程序无法连接到 HTTP。"
+  "subsonicConnectionError": "无法连接。检查 URL、网络和 HTTPS 证书。在 Web 上，服务器必须允许 CORS，并且 HTTPS 应用程序无法连接到 HTTP。",
+  "nArtists": "{count, plural, =0{没有艺术家} =1{1 个艺术家} other{{count} 艺术家}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "封面流程",
+  "coverFlowOriginalTitle": "原来的",
+  "coverFlowBigTitle": "大的"
 }

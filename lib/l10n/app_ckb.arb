@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ی سێرڤەر",
   "subsonicInvalidUrl": "URLی ڕاژەکاری HTTP یان HTTPS بەبێ پرسیار، پارچە، یان چوونەژوورەوەی جێگیرکراو داخڵ بکە.",
   "subsonicUnsupported": "ئەم سێرڤەرە پشتگیری لە Subsonic API یان ڕەسەنایەتی نیشانەی پێویست ناکات.",
-  "subsonicConnectionError": "ناتوانرێت پەیوەندی بکات. URL و تۆڕ و بڕوانامەی HTTPS بپشکنە. لە وێبدا، سێرڤەرەکە دەبێت ڕێگە بە CORS بدات و ئەپی HTTPS ناتوانێت پەیوەندی بە HTTPەوە بکات."
+  "subsonicConnectionError": "ناتوانرێت پەیوەندی بکات. URL و تۆڕ و بڕوانامەی HTTPS بپشکنە. لە وێبدا، سێرڤەرەکە دەبێت ڕێگە بە CORS بدات و ئەپی HTTPS ناتوانێت پەیوەندی بە HTTPەوە بکات.",
+  "nArtists": "{count, plural, =0{هیچ هونەرمەندێک} =1{1 هونەرمەند} other{{count} هونەرمەندان}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "کۆڤەر فلۆ",
+  "coverFlowOriginalTitle": "ڕەسەن",
+  "coverFlowBigTitle": "گەورە"
 }

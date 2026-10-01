@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ម៉ាស៊ីនមេ",
   "subsonicInvalidUrl": "បញ្ចូល HTTP ឬ HTTPS server URL ដោយគ្មានសំណួរ បំណែក ឬការចូលដែលបានបង្កប់។",
   "subsonicUnsupported": "ម៉ាស៊ីនមេនេះមិនគាំទ្រ Subsonic API ដែលត្រូវការ ឬការផ្ទៀងផ្ទាត់សញ្ញាសម្ងាត់ទេ។",
-  "subsonicConnectionError": "មិនអាចភ្ជាប់បានទេ។ ពិនិត្យ URL បណ្តាញ និងវិញ្ញាបនបត្រ HTTPS ។ នៅលើបណ្តាញ ម៉ាស៊ីនមេត្រូវតែអនុញ្ញាត CORS ហើយកម្មវិធី HTTPS មិនអាចភ្ជាប់ទៅ HTTP បានទេ។"
+  "subsonicConnectionError": "មិនអាចភ្ជាប់បានទេ។ ពិនិត្យ URL បណ្តាញ និងវិញ្ញាបនបត្រ HTTPS ។ នៅលើបណ្តាញ ម៉ាស៊ីនមេត្រូវតែអនុញ្ញាត CORS ហើយកម្មវិធី HTTPS មិនអាចភ្ជាប់ទៅ HTTP បានទេ។",
+  "nArtists": "{count, plural, =0{គ្មានសិល្បករ} =1{1 សិល្បករ} other{{count} សិល្បករ}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "លំហូរគម្រប",
+  "coverFlowOriginalTitle": "ដើម",
+  "coverFlowBigTitle": "ធំ"
 }

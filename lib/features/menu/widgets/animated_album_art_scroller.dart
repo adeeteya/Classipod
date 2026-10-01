@@ -23,7 +23,19 @@ class _AnimatedAlbumArtScrollerState
   String? _albumArtPath;
   late final AnimationController _animationController;
   late Animation<Alignment> _alignmentAnimation;
-  double alignment = 0;
+  final Random _random = Random();
+  int? _directionIndex;
+  static const _displayDuration = Duration(seconds: 7);
+  static const _directions = [
+    (Alignment.topLeft, Alignment.bottomRight),
+    (Alignment.centerRight, Alignment.centerLeft),
+    (Alignment.topCenter, Alignment.bottomCenter),
+    (Alignment.bottomCenter, Alignment.topCenter),
+    (Alignment.bottomLeft, Alignment.topRight),
+    (Alignment.centerLeft, Alignment.centerRight),
+    (Alignment.topRight, Alignment.bottomLeft),
+    (Alignment.bottomRight, Alignment.topLeft),
+  ];
   bool _isEmptyState = false;
 
   void _getRandomAlbumArt() {
@@ -48,44 +60,41 @@ class _AnimatedAlbumArtScrollerState
       if (albumsWithArtwork.isEmpty) {
         _albumArtPath = null;
       } else {
-        final randomAlbum = albumsWithArtwork.elementAt(
-          Random().nextInt(albumsWithArtwork.length),
-        );
+        final otherAlbums = albumsWithArtwork
+            .where((album) => album.albumArtPath != _albumArtPath)
+            .toList();
+        final candidates = otherAlbums.isEmpty
+            ? albumsWithArtwork
+            : otherAlbums;
+        final randomAlbum = candidates[_random.nextInt(candidates.length)];
         _albumArtPath = randomAlbum.albumArtPath;
       }
     });
   }
 
   void _setRandomAnimationDirection() {
-    final randomNumber = Random().nextInt(4);
-    if (randomNumber == 0) {
-      _alignmentAnimation = Tween<Alignment>(
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      ).animate(_animationController);
-    } else if (randomNumber == 1) {
-      _alignmentAnimation = Tween<Alignment>(
-        begin: Alignment.topRight,
-        end: Alignment.bottomLeft,
-      ).animate(_animationController);
-    } else if (randomNumber == 2) {
-      _alignmentAnimation = Tween<Alignment>(
-        begin: Alignment.bottomLeft,
-        end: Alignment.topRight,
-      ).animate(_animationController);
-    } else {
-      _alignmentAnimation = Tween<Alignment>(
-        begin: Alignment.bottomRight,
-        end: Alignment.topLeft,
-      ).animate(_animationController);
+    final previousIndex = _directionIndex;
+    var nextIndex = _random.nextInt(
+      _directions.length - (previousIndex == null ? 0 : 1),
+    );
+    if (previousIndex != null && nextIndex >= previousIndex) {
+      nextIndex++;
     }
+    _directionIndex = nextIndex;
+    final (begin, end) = _directions[nextIndex];
+    _alignmentAnimation = Tween<Alignment>(
+      begin: begin,
+      end: Alignment.lerp(begin, end, 0.35),
+    ).animate(_animationController);
   }
 
-  void _repeatAnimation() {
-    if (_animationController.isCompleted) {
+  void _repeatAnimation(AnimationStatus status) {
+    if (status == AnimationStatus.completed) {
       _setRandomAnimationDirection();
       _getRandomAlbumArt();
-      unawaited(_animationController.repeat(count: 1));
+      if (!_isEmptyState) {
+        unawaited(_animationController.forward(from: 0));
+      }
     }
   }
 
@@ -95,16 +104,16 @@ class _AnimatedAlbumArtScrollerState
     _getRandomAlbumArt();
     _animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 10),
+      duration: _displayDuration,
     );
     _setRandomAnimationDirection();
-    _animationController.addListener(_repeatAnimation);
+    _animationController.addStatusListener(_repeatAnimation);
     if (!_isEmptyState) unawaited(_animationController.forward());
     ref.listenManual(albumDetailsProvider, (_, albums) {
       _getRandomAlbumArt();
       if (albums.isEmpty) {
         _animationController.stop();
-      } else if (!_animationController.isAnimating) {
+      } else {
         _setRandomAnimationDirection();
         unawaited(_animationController.forward(from: 0));
       }
@@ -113,7 +122,7 @@ class _AnimatedAlbumArtScrollerState
 
   @override
   void dispose() {
-    _animationController.removeListener(_repeatAnimation);
+    _animationController.removeStatusListener(_repeatAnimation);
     _animationController.dispose();
     super.dispose();
   }

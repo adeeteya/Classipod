@@ -13,6 +13,7 @@ import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
+import 'package:classipod/features/settings/models/cover_flow_appearance.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
@@ -67,6 +68,9 @@ class SettingsPreferencesControllerNotifier
       ),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
+      coverFlowAppearance: CoverFlowAppearance.fromName(
+        settingsPreferencesRepository.getCoverFlowAppearance(),
+      ),
       appTheme: AppTheme.fromName(settingsPreferencesRepository.getAppTheme()),
     );
   }
@@ -290,6 +294,16 @@ class SettingsPreferencesControllerNotifier
         .setSplitScreenEnabled(isSplitScreenEnabled: state.splitScreenEnabled);
   }
 
+  Future<void> toggleCoverFlowAppearance() async {
+    final appearance = state.coverFlowAppearance == CoverFlowAppearance.original
+        ? CoverFlowAppearance.big
+        : CoverFlowAppearance.original;
+    state = state.copyWith(coverFlowAppearance: appearance);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setCoverFlowAppearance(appearance);
+  }
+
   Future<void> toggleAppTheme() async {
     final AppTheme updatedTheme = state.appTheme == AppTheme.light
         ? AppTheme.dark
@@ -365,6 +379,9 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setAppTheme(appThemeName: AppTheme.light.name);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setCoverFlowAppearance(CoverFlowAppearance.original);
     ref.invalidateSelf();
   }
 

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ea seva",
   "subsonicInvalidUrl": "Kenya seva sa HTTP kapa HTTPS URL ntle le potso, sekhechana, kapa ho kena ho kenyelelitsoeng.",
   "subsonicUnsupported": "Seva ena ha e tšehetse Subsonic API kapa netefatso ea matšoao.",
-  "subsonicConnectionError": "Ha e khone ho hokela. Sheba URL, marang-rang, le setifikeiti sa HTTPS. Oebong, seva se tlameha ho lumella CORS 'me sesebelisoa sa HTTPS ha se khone ho hokela HTTP."
+  "subsonicConnectionError": "Ha e khone ho hokela. Sheba URL, marang-rang, le setifikeiti sa HTTPS. Oebong, seva se tlameha ho lumella CORS 'me sesebelisoa sa HTTPS ha se khone ho hokela HTTP.",
+  "nArtists": "{count, plural, =0{Ha ho Baetsi} =1{1 Artist} other{{count} Baetsi}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Sekoahelo Phallo",
+  "coverFlowOriginalTitle": "Ea mantlha",
+  "coverFlowBigTitle": "E kholo"
 }

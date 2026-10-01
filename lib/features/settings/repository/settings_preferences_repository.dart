@@ -4,6 +4,7 @@ import 'package:classipod/core/providers/shared_preferences_with_cache_provider.
 import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
+import 'package:classipod/features/settings/models/cover_flow_appearance.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
 import 'package:classipod/features/settings/models/volume_mode.dart';
@@ -90,6 +91,20 @@ class SettingsPreferencesRepository {
           SharedPreferencesKeys.volumeMode.name,
         ) ??
         VolumeMode.app.name;
+  }
+
+  String getCoverFlowAppearance() {
+    return _sharedPreferencesWithCache.getString(
+          SharedPreferencesKeys.coverFlowAppearance.name,
+        ) ??
+        CoverFlowAppearance.original.name;
+  }
+
+  Future<void> setCoverFlowAppearance(CoverFlowAppearance appearance) {
+    return _sharedPreferencesWithCache.setString(
+      SharedPreferencesKeys.coverFlowAppearance.name,
+      appearance.name,
+    );
   }
 
   String getAppTheme() {

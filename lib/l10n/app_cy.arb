@@ -207,5 +207,17 @@
   "subsonicUrl": "URL gweinydd",
   "subsonicInvalidUrl": "Rhowch URL gweinydd HTTP neu HTTPS heb ymholiad, darn, na mewngofnodi wedi'i fewnosod.",
   "subsonicUnsupported": "Nid yw'r gweinydd hwn yn cefnogi'r API Subsonic gofynnol na'r dilysiad tocyn.",
-  "subsonicConnectionError": "Methu cysylltu. Gwiriwch yr URL, rhwydwaith, a thystysgrif HTTPS. Ar y We, rhaid i'r gweinydd ganiatáu CORS ac ni all app HTTPS gysylltu â HTTP."
+  "subsonicConnectionError": "Methu cysylltu. Gwiriwch yr URL, rhwydwaith, a thystysgrif HTTPS. Ar y We, rhaid i'r gweinydd ganiatáu CORS ac ni all app HTTPS gysylltu â HTTP.",
+  "nArtists": "{count, plural, =0{Dim Artistiaid} =1{1 Artist} other{{count} Artistiaid}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Llif Clawr",
+  "coverFlowOriginalTitle": "Gwreiddiol",
+  "coverFlowBigTitle": "Mawr"
 }

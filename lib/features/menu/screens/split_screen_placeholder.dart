@@ -9,19 +9,26 @@ import 'package:classipod/features/menu/widgets/icon_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/language_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/now_playing_preview_widget.dart';
 import 'package:classipod/features/menu/widgets/settings_preview_widget.dart';
+import 'package:classipod/features/menu/widgets/split_screen_preview_transition.dart';
 import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
 import 'package:classipod/features/sleep_timer/widgets/sleep_timer_preview_widget.dart';
+import 'package:classipod/features/status_bar/widgets/screen_page_content.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class SplitScreenViewController {
+class SplitScreenViewController extends ChangeNotifier {
   _SplitScreenPlaceholderState? _state;
 
   Future<void>? openSplitView() => _state?._forwardAnimation();
 
   Future<void>? closeSplitView() => _state?._backwardAnimation();
+
+  Offset get leftSlideOffset =>
+      _state?._leftSlideAnimation.value ?? Offset.zero;
+
+  void _notifySlideChanged() => notifyListeners();
 
   bool get isScreenVisible => _state?._isScreenVisible ?? true;
 }
@@ -63,12 +70,18 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
       begin: const Offset(1, 0),
       end: Offset.zero,
     ).animate(_animationController);
+    _animationController.addListener(
+      widget.splitScreenController._notifySlideChanged,
+    );
     unawaited(_forwardAnimation());
     super.initState();
   }
 
   @override
   void dispose() {
+    if (widget.splitScreenController._state == this) {
+      widget.splitScreenController._state = null;
+    }
     _animationController.dispose();
     super.dispose();
   }
@@ -265,7 +278,6 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
       }
     }
     return CupertinoPageScaffold(
-      // Dialogs handle keyboard insets above the fixed-height device screen.
       resizeToAvoidBottomInset: false,
       child: currentSettings.splitScreenEnabled
           ? Row(
@@ -273,40 +285,46 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
                 Expanded(
                   child: SlideTransition(
                     position: _leftSlideAnimation,
-                    child: widget.child,
+                    child: ScreenPageContent(child: widget.child),
                   ),
                 ),
                 Expanded(
                   child: SlideTransition(
                     position: _rightSlideAnimation,
-                    child: AnimatedSwitcher(
-                      duration: const Duration(milliseconds: 500),
-                      transitionBuilder: (widget, animation) {
-                        if (splitScreenType == SplitScreenType.albumArt) {
-                          final slideAnimation = Tween<Offset>(
-                            begin: const Offset(1, 0),
-                            end: Offset.zero,
-                          ).animate(animation);
-                          return FadeTransition(
-                            opacity: animation,
-                            child: SlideTransition(
-                              position: slideAnimation,
-                              child: widget,
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        SplitScreenPreviewTransition(
+                          type: splitScreenType,
+                          child: splitScreenWidget,
+                        ),
+                        const Positioned(
+                          left: 0,
+                          top: 0,
+                          bottom: 0,
+                          width: 8,
+                          child: IgnorePointer(
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color(0x52000000),
+                                    Color(0x1F000000),
+                                    Color(0x00000000),
+                                  ],
+                                  stops: [0, 0.4, 1],
+                                ),
+                              ),
                             ),
-                          );
-                        }
-                        return FadeTransition(
-                          opacity: animation,
-                          child: widget,
-                        );
-                      },
-                      child: splitScreenWidget,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
               ],
             )
-          : widget.child,
+          : ScreenPageContent(child: widget.child),
     );
   }
 }

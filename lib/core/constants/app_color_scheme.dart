@@ -6,32 +6,38 @@ class AppColorScheme {
 
   static const CupertinoDynamicColor screenBackground =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
-        darkColor: Color(0xFF0F1115),
+        color: AppPalette.screenBackground,
+        darkColor: AppPalette.darkScreenBackground,
       );
 
   static const CupertinoDynamicColor surface =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
-        darkColor: Color(0xFF1C1D21),
+        color: AppPalette.screenBackground,
+        darkColor: AppPalette.darkSurface,
       );
 
   static const CupertinoDynamicColor primaryText =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.black,
-        darkColor: Color(0xFFE6E7EA),
+        color: AppPalette.primaryText,
+        darkColor: AppPalette.darkPrimaryText,
       );
 
   static const CupertinoDynamicColor secondaryText =
       CupertinoDynamicColor.withBrightness(
         color: AppPalette.hintTextColor,
-        darkColor: Color(0xFF9FA4B5),
+        darkColor: AppPalette.darkSecondaryText,
       );
 
   static const CupertinoDynamicColor inverseText =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
-        darkColor: Color(0xFF101214),
+        color: AppPalette.selectedText,
+        darkColor: AppPalette.selectedText,
+      );
+
+  static const CupertinoDynamicColor ratingIcon =
+      CupertinoDynamicColor.withBrightness(
+        color: AppPalette.ratingIcon,
+        darkColor: AppPalette.darkRatingIcon,
       );
 
   static const CupertinoDynamicColor outline =
@@ -48,25 +54,25 @@ class AppColorScheme {
 
   static const CupertinoDynamicColor deviceScreenBackground =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
-        darkColor: AppPalette.darkDeviceScreenColor,
+        color: AppPalette.screenBackground,
+        darkColor: AppPalette.darkScreenBackground,
       );
 
   static const CupertinoDynamicColor controlSurface =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
+        color: AppPalette.screenBackground,
         darkColor: AppPalette.darkDeviceControlBackgroundColor,
       );
 
   static const CupertinoDynamicColor iconEmphasis =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.black,
-        darkColor: CupertinoColors.white,
+        color: AppPalette.primaryText,
+        darkColor: AppPalette.darkPrimaryText,
       );
 
   static const CupertinoDynamicColor iconMuted =
       CupertinoDynamicColor.withBrightness(
-        color: CupertinoColors.white,
+        color: AppPalette.screenBackground,
         darkColor: Color(0xFF1A1C1F),
       );
 }

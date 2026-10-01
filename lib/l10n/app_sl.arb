@@ -207,5 +207,17 @@
   "subsonicUrl": "URL strežnika",
   "subsonicInvalidUrl": "Vnesite URL strežnika HTTP ali HTTPS brez poizvedbe, fragmenta ali vdelane prijave.",
   "subsonicUnsupported": "Ta strežnik ne podpira zahtevanega API-ja Subsonic ali preverjanja pristnosti žetona.",
-  "subsonicConnectionError": "Ni mogoče vzpostaviti povezave. Preverite URL, omrežje in potrdilo HTTPS. V spletu mora strežnik dovoliti CORS in aplikacija HTTPS se ne more povezati s HTTP."
+  "subsonicConnectionError": "Ni mogoče vzpostaviti povezave. Preverite URL, omrežje in potrdilo HTTPS. V spletu mora strežnik dovoliti CORS in aplikacija HTTPS se ne more povezati s HTTP.",
+  "nArtists": "{count, plural, =0{Ni izvajalcev} =1{1 izvajalec} other{{count} izvajalci}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Velik"
 }

@@ -1,7 +1,10 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/artwork_image.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -26,6 +29,11 @@ class AlbumListTile extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final titleStyle = IpodTypography.title.copyWith(
+      color: isSelected
+          ? context.appInverseTextColor
+          : context.appPrimaryTextColor,
+    );
     final isDarkTheme =
         CupertinoTheme.of(context).brightness == Brightness.dark;
     final borderColor = isDarkTheme
@@ -44,16 +52,7 @@ class AlbumListTile extends ConsumerWidget {
         child: DecoratedBox(
           decoration: BoxDecoration(
             border: tileBorder,
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
           ),
           child: Row(
             children: [
@@ -88,17 +87,14 @@ class AlbumListTile extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    SelectedMarqueeText(
                       albumDetails.albumName,
-                      style: CupertinoTheme.of(context).textTheme.textStyle
-                          .copyWith(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: isSelected
-                                ? context.appInverseTextColor
-                                : context.appPrimaryTextColor,
-                          ),
-                      maxLines: 1,
+                      key: ValueKey((
+                        albumDetails.albumName,
+                        albumDetails.albumArtistName,
+                      )),
+                      isSelected: isSelected,
+                      style: titleStyle,
                     ),
                     const SizedBox(height: 2),
                     Text(
@@ -107,13 +103,13 @@ class AlbumListTile extends ConsumerWidget {
                           : context.localization.nSongs(
                               albumDetails.albumSongs.length,
                             ),
-                      style: CupertinoTheme.of(context).textTheme.textStyle
-                          .copyWith(
-                            color: isSelected
-                                ? context.appInverseTextColor
-                                : context.appSecondaryTextColor,
-                          ),
+                      style: IpodTypography.description.copyWith(
+                        color: isSelected
+                            ? context.appInverseTextColor
+                            : context.appSecondaryTextColor,
+                      ),
                       maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),

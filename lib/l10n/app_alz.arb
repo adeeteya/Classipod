@@ -207,5 +207,17 @@
   "subsonicUrl": "URL pa server",
   "subsonicInvalidUrl": "Keth HTTP nyo HTTPS server URL manangu ipe ku penji, poko, nyo login ma juketho i iye.",
   "subsonicUnsupported": "Server eni kony ngo Subsonic API ma mitere nyo token authentication.",
-  "subsonicConnectionError": "Copu rombo ngo. Nen URL, dul, man waraga mi HTTPS. I Web, server umaku eyiyu CORS man HTTPS app copo mako ngo HTTP."
+  "subsonicConnectionError": "Copu rombo ngo. Nen URL, dul, man waraga mi HTTPS. I Web, server umaku eyiyu CORS man HTTPS app copo mako ngo HTTP.",
+  "nArtists": "{count, plural, =0{Juruwer epe} =1{1 Jagor} other{{count} Juwer}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Matek",
+  "coverFlowBigTitle": "Dit"
 }

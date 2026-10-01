@@ -207,5 +207,17 @@
   "subsonicUrl": "सर्वर यूआरएल",
   "subsonicInvalidUrl": "किसी क्वेरी, फ़्रैगमेंट या एम्बेडेड लॉगिन के बिना HTTP या HTTPS सर्वर URL दर्ज करें।",
   "subsonicUnsupported": "यह सर्वर आवश्यक Subsonic API या टोकन प्रमाणीकरण का समर्थन नहीं करता है।",
-  "subsonicConnectionError": "जुड़ नहीं रहा है। यूआरएल, नेटवर्क और HTTPS प्रमाणपत्र की जांच करें। वेब पर, सर्वर को CORS की अनुमति देनी होगी और HTTPS ऐप HTTP से कनेक्ट नहीं हो सकता है।"
+  "subsonicConnectionError": "जुड़ नहीं रहा है। यूआरएल, नेटवर्क और HTTPS प्रमाणपत्र की जांच करें। वेब पर, सर्वर को CORS की अनुमति देनी होगी और HTTPS ऐप HTTP से कनेक्ट नहीं हो सकता है।",
+  "nArtists": "{count, plural, =0{कोई कलाकार नहीं} =1{1 कलाकार} other{{count} कलाकार}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "कवर फ्लो",
+  "coverFlowOriginalTitle": "मूल",
+  "coverFlowBigTitle": "बड़ा"
 }

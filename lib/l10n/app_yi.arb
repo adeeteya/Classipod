@@ -207,5 +207,17 @@
   "subsonicUrl": "סערווירער URL",
   "subsonicInvalidUrl": "אַרייַן אַ HTTP אָדער HTTPS סערווער URL אָן אַ אָנפֿרעג, פראַגמענט אָדער עמבעדיד לאָגין.",
   "subsonicUnsupported": "דער סערווער שטיצט נישט די פארלאנגט Subsonic API אָדער טאָקען אָטענטאַקיישאַן.",
-  "subsonicConnectionError": "קענען ניט פאַרבינדן. קאָנטראָלירן די URL, נעץ און הטטפּס באַווייַזן. אויף וועב, דער סערווער מוזן לאָזן CORS און אַ HTTPS אַפּ קען נישט פאַרבינדן צו הטטפּ."
+  "subsonicConnectionError": "קענען ניט פאַרבינדן. קאָנטראָלירן די URL, נעץ און הטטפּס באַווייַזן. אויף וועב, דער סערווער מוזן לאָזן CORS און אַ HTTPS אַפּ קען נישט פאַרבינדן צו הטטפּ.",
+  "nArtists": "{count, plural, =0{קיין קינסטלער} =1{1 קינסטלער} other{{count} קינסטלער}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "קאָווער פלאָו",
+  "coverFlowOriginalTitle": "אָריגינעל",
+  "coverFlowBigTitle": "גרויס"
 }

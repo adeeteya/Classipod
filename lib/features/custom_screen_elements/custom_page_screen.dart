@@ -1,5 +1,6 @@
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
+import 'package:classipod/features/custom_screen_elements/screen_view_state.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -12,8 +13,28 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   late final PageController pageController;
   final double viewPortFraction = 1;
   final int initialPage = 0;
+  String? get screenStateKey => null;
+  ScreenViewState? _viewState;
+  int? _pendingRestoredPage;
   double currentPage = 0;
   int selectedDisplayItem = 0;
+
+  void restorePageSelection() {
+    if (displayItems.isEmpty) return;
+    final target = (_pendingRestoredPage ?? selectedDisplayItem).clamp(
+      0,
+      displayItems.length - 1,
+    );
+    _pendingRestoredPage = null;
+    if (target == selectedDisplayItem) return;
+    selectedDisplayItem = target;
+    currentPage = target.toDouble();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted && pageController.hasClients) {
+        pageController.jumpToPage(target);
+      }
+    });
+  }
 
   void onSelectPressed();
 
@@ -64,7 +85,10 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   void onLongPressEnd() {}
 
   Future<void> deviceControlHandler(_, DeviceAction? newState) async {
-    if (newState == null || context.router.locationNamed != routeName) {
+    if (!mounted ||
+        newState == null ||
+        ModalRoute.of(context)?.isCurrent != true ||
+        context.router.locationNamed != routeName) {
       return;
     }
     switch (newState) {
@@ -107,13 +131,29 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
     setState(() {
       currentPage = pageController.page ?? currentPage;
       selectedDisplayItem = currentPage.toInt();
+      _viewState?.selectedIndex = selectedDisplayItem;
     });
   }
 
   @override
   void initState() {
+    final key = screenStateKey;
+    if (key != null) {
+      _viewState = ref
+          .read(screenViewStatesProvider)
+          .putIfAbsent(key, ScreenViewState.new);
+    }
+    final count = displayItems.length;
+    if (count == 0) _pendingRestoredPage = _viewState?.selectedIndex;
+    final restoredPage = _viewState == null
+        ? initialPage
+        : count == 0
+        ? 0
+        : _viewState!.selectedIndex.clamp(0, count - 1);
+    currentPage = restoredPage.toDouble();
+    selectedDisplayItem = restoredPage;
     pageController = PageController(
-      initialPage: initialPage,
+      initialPage: restoredPage,
       viewportFraction: viewPortFraction,
       keepPage: false,
     );
@@ -124,6 +164,7 @@ mixin CustomPageScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
 
   @override
   void dispose() {
+    _viewState?.selectedIndex = _pendingRestoredPage ?? selectedDisplayItem;
     pageController.removeListener(_updatePage);
     pageController.dispose();
     super.dispose();

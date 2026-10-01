@@ -207,5 +207,17 @@
   "subsonicUrl": "Servera URL",
   "subsonicInvalidUrl": "Ievadiet HTTP vai HTTPS servera URL bez vaicājuma, fragmenta vai iegulta pieteikšanās.",
   "subsonicUnsupported": "Šis serveris neatbalsta nepieciešamo Subsonic API vai marķiera autentifikāciju.",
-  "subsonicConnectionError": "Nevar izveidot savienojumu. Pārbaudiet URL, tīklu un HTTPS sertifikātu. Tīmeklī serverim ir jāatļauj CORS, un HTTPS lietotne nevar izveidot savienojumu ar HTTP."
+  "subsonicConnectionError": "Nevar izveidot savienojumu. Pārbaudiet URL, tīklu un HTTPS sertifikātu. Tīmeklī serverim ir jāatļauj CORS, un HTTPS lietotne nevar izveidot savienojumu ar HTTP.",
+  "nArtists": "{count, plural, =0{Nav izpildītāju} =1{1 Izpildītājs} other{{count} Izpildītāji}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Oriģināls",
+  "coverFlowBigTitle": "Liels"
 }

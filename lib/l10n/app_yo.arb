@@ -207,5 +207,17 @@
   "subsonicUrl": "URL olupin",
   "subsonicInvalidUrl": "Tẹ HTTP tabi URL olupin HTTPS sii laisi ibeere, ajẹkù, tabi iwọle ti a fi sii.",
   "subsonicUnsupported": "Olupin yii ko ṣe atilẹyin Subsonic API ti o nilo tabi ijẹrisi ami.",
-  "subsonicConnectionError": "Ko le sopọ. Ṣayẹwo URL, nẹtiwọki, ati ijẹrisi HTTPS. Lori Oju opo wẹẹbu, olupin gbọdọ gba CORS laaye ati pe ohun elo HTTPS ko le sopọ si HTTP."
+  "subsonicConnectionError": "Ko le sopọ. Ṣayẹwo URL, nẹtiwọki, ati ijẹrisi HTTPS. Lori Oju opo wẹẹbu, olupin gbọdọ gba CORS laaye ati pe ohun elo HTTPS ko le sopọ si HTTP.",
+  "nArtists": "{count, plural, =0{Ko si awon olorin} =1{1 olorin} other{{count} Awọn olorin}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Bo Sisan",
+  "coverFlowOriginalTitle": "Atilẹba",
+  "coverFlowBigTitle": "Nla"
 }

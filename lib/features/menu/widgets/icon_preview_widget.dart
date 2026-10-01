@@ -1,4 +1,6 @@
 import 'package:classipod/core/constants/app_palette.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
@@ -20,15 +22,8 @@ class IconPreviewWidget extends StatelessWidget {
       key: const ValueKey(SplitScreenType.shuffle),
       width: double.infinity,
       child: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              AppPalette.darkScreenBackgroundGradient1,
-              AppPalette.darkScreenBackgroundGradient2,
-            ],
-          ),
+        decoration: BoxDecoration(
+          gradient: IpodGradients.splitPreviewFor(context),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
@@ -40,22 +35,19 @@ class IconPreviewWidget extends StatelessWidget {
                 child: Text(
                   titleText,
                   textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: CupertinoColors.white,
-                    fontWeight: FontWeight.bold,
+                  style: IpodTypography.title.copyWith(
+                    color: AppPalette.previewForeground,
                   ),
                 ),
               ),
-              Icon(icon, size: 70, color: CupertinoColors.white),
+              Icon(icon, size: 70, color: AppPalette.previewForeground),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   contentText,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: (contentText.length > 10) ? 14 : 20,
-                    color: CupertinoColors.white,
+                  style: IpodTypography.description.copyWith(
+                    color: AppPalette.previewForeground,
                   ),
                 ),
               ),

@@ -207,5 +207,17 @@
   "subsonicUrl": "د سرور URL",
   "subsonicInvalidUrl": "د HTTP یا HTTPS سرور یو آر ایل داخل کړئ پرته له پوښتنې، ټوټې، یا سرایت شوي ننوتل.",
   "subsonicUnsupported": "دا سرور د اړتیا وړ Subsonic API یا د نښه تصدیق کولو ملاتړ نه کوي.",
-  "subsonicConnectionError": "نښلولی نشي URL، شبکه، او HTTPS سند وګورئ. په ویب کې، سرور باید CORS ته اجازه ورکړي او د HTTPS ایپ نشي کولی HTTP سره وصل شي."
+  "subsonicConnectionError": "نښلولی نشي URL، شبکه، او HTTPS سند وګورئ. په ویب کې، سرور باید CORS ته اجازه ورکړي او د HTTPS ایپ نشي کولی HTTP سره وصل شي.",
+  "nArtists": "{count, plural, =0{نه هنرمندان} =1{1 هنرمند} other{{count} هنرمندان}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "د پوښ فلو",
+  "coverFlowOriginalTitle": "اصلي",
+  "coverFlowBigTitle": "لوی"
 }

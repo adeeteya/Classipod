@@ -207,5 +207,17 @@
   "subsonicUrl": "Сервер URL мекенжайы",
   "subsonicInvalidUrl": "HTTP немесе HTTPS серверінің URL мекенжайын сұраусыз, фрагментсіз немесе ендірілген логинсіз енгізіңіз.",
   "subsonicUnsupported": "Бұл сервер қажетті Subsonic API немесе таңбалауыш аутентификацияны қолдамайды.",
-  "subsonicConnectionError": "Қосылу мүмкін емес. URL мекенжайын, желіні және HTTPS сертификатын тексеріңіз. Интернетте сервер CORS рұқсат беруі керек және HTTPS қолданбасы HTTP желісіне қосыла алмайды."
+  "subsonicConnectionError": "Қосылу мүмкін емес. URL мекенжайын, желіні және HTTPS сертификатын тексеріңіз. Интернетте сервер CORS рұқсат беруі керек және HTTPS қолданбасы HTTP желісіне қосыла алмайды.",
+  "nArtists": "{count, plural, =0{Орындаушылар жоқ} =1{1 Орындаушы} other{{count} Орындаушылар}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Қабық ағыны",
+  "coverFlowOriginalTitle": "Түпнұсқа",
+  "coverFlowBigTitle": "Үлкен"
 }

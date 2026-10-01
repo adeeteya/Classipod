@@ -1,5 +1,8 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class SongListTile extends StatelessWidget {
@@ -39,16 +42,7 @@ class SongListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
             border: tileBorder,
           ),
           child: Padding(
@@ -60,27 +54,24 @@ class SongListTile extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      SelectedMarqueeText(
                         songName ?? context.localization.unknownSong,
-                        style: CupertinoTheme.of(context).textTheme.textStyle
-                            .copyWith(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              color: isSelected
-                                  ? context.appInverseTextColor
-                                  : context.appPrimaryTextColor,
-                            ),
-                        maxLines: 1,
+                        isSelected: isSelected,
+                        style: IpodTypography.title.copyWith(
+                          color: isSelected
+                              ? context.appInverseTextColor
+                              : context.appPrimaryTextColor,
+                        ),
                       ),
                       Text(
                         trackArtistNames ?? context.localization.unknownArtist,
-                        style: CupertinoTheme.of(context).textTheme.textStyle
-                            .copyWith(
-                              color: isSelected
-                                  ? context.appInverseTextColor
-                                  : context.appSecondaryTextColor,
-                            ),
+                        style: IpodTypography.description.copyWith(
+                          color: isSelected
+                              ? context.appInverseTextColor
+                              : context.appSecondaryTextColor,
+                        ),
                         maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ],
                   ),

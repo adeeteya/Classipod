@@ -207,5 +207,17 @@
   "subsonicUrl": "Сервер URL",
   "subsonicInvalidUrl": "HTTP эбэтэр HTTPS сервер URL-ын ыйытыыта, быһа тардыыта уонна киириитэ суох киллэриҥ.",
   "subsonicUnsupported": "Бу сервер ирдэнэр Subsonic API эбэтэр токен аутентификациятын өйөөбөт.",
-  "subsonicConnectionError": "Кыайан холбоммот. URL, ситим уонна HTTPS сертификаты бэрэбиэркэлээ. Вебка сервер CORS-ы көҥүллүөхтээх уонна HTTPS-приложение HTTP-га холбонуо суохтаах."
+  "subsonicConnectionError": "Кыайан холбоммот. URL, ситим уонна HTTPS сертификаты бэрэбиэркэлээ. Вебка сервер CORS-ы көҥүллүөхтээх уонна HTTPS-приложение HTTP-га холбонуо суохтаах.",
+  "nArtists": "{count, plural, =0{Худуоһунньук суох} =1{1 Худуоһунньук} other{{count} Худуоһунньуктар}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Кавер Флоу",
+  "coverFlowOriginalTitle": "Дьиҥнээх",
+  "coverFlowBigTitle": "Улахан"
 }

@@ -16,11 +16,11 @@ signatures. The app's sandbox and folder-access entitlements are retained.
 ## Run the release workflow
 
 1. Set `version:` in `pubspec.yaml` to the intended app version and build number
-   (for example, `2.0.0+26`) and commit the release changes.
+   (for example, `2.1.0+27`) and commit the release changes.
 2. Open **Actions → Build and Deploy Releases → Run workflow**.
 3. Choose the branch/ref. The workflow reads `pubspec.yaml` automatically:
-   `2.0.0+26` creates or reuses the `2.0.0` GitHub release, and Apple builds
-   use version `2.0.0` with build number `26`.
+   `2.1.0+27` creates or reuses the `2.1.0` GitHub release, and Apple builds
+   use version `2.1.0` with build number `27`.
 4. Enable **iOS**, **macOS**, or both. Disable Android, Linux, Windows, and web
    if only Apple downloads are wanted. Existing Android store deployment still
    runs when Android is enabled.
@@ -93,7 +93,7 @@ Before publishing a release:
 - Sideload the IPA onto a physical iPhone/iPad and verify folder selection,
   indexing, artwork, playback, and reopening the saved folder after relaunch.
 - Install the DMG on Apple Silicon and Intel Macs. Verify folder access after
-  relaunch, artwork, playback, and Settings → Rescan Music Files.
+  relaunch, artwork, playback, and Settings → Library Settings → Re-index.
 - Test a browser-downloaded DMG to exercise Gatekeeper; a local build does not
   reproduce the downloaded-file quarantine behavior.
 

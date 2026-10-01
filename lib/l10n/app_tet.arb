@@ -207,5 +207,17 @@
   "subsonicUrl": "URL servidór nian",
   "subsonicInvalidUrl": "Hatama URL servidór HTTP ka HTTPS ida lahó pergunta, fragmentu, ka login inkorporadu.",
   "subsonicUnsupported": "Server ida-ne'e la suporta API Subsonic ne'ebé presiza ka autentikasaun token.",
-  "subsonicConnectionError": "Labele liga. Verifika URL, rede, no sertifikadu HTTPS. Iha Web, servidór tenke permite CORS no aplikasaun HTTPS ida labele liga ba HTTP."
+  "subsonicConnectionError": "Labele liga. Verifika URL, rede, no sertifikadu HTTPS. Iha Web, servidór tenke permite CORS no aplikasaun HTTPS ida labele liga ba HTTP.",
+  "nArtists": "{count, plural, =0{Laiha Artista sira} =1{Artista 1} other{{count} Artista sira}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Fluxu Taka nian",
+  "coverFlowOriginalTitle": "Orijinál",
+  "coverFlowBigTitle": "Boot"
 }

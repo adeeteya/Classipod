@@ -207,5 +207,17 @@
   "subsonicUrl": "सर्वर यूआरएल",
   "subsonicInvalidUrl": "क्वेरी, टुकड़ा या एम्बेडेड लॉगिन के बिना एक HTTP या HTTPS सर्वर यूआरएल दर्ज करा।",
   "subsonicUnsupported": "ई सर्वर आवश्यक Subsonic एपीआई या टोकन प्रमाणीकरण का समर्थन नाहीं करत है।",
-  "subsonicConnectionError": "कनेक्ट नाहीं होइ सकत है। यूआरएल, नेटवर्क अऊर एचटीटीपीएस प्रमाणपत्र का जाँच करा। वेब पर, सर्वर का सीओआरएस के अनुमति देय का चाही अऊर एक एचटीटीपीएस ऐप एचटीटीपी से कनेक्ट नाहीं होइ सकत है।"
+  "subsonicConnectionError": "कनेक्ट नाहीं होइ सकत है। यूआरएल, नेटवर्क अऊर एचटीटीपीएस प्रमाणपत्र का जाँच करा। वेब पर, सर्वर का सीओआरएस के अनुमति देय का चाही अऊर एक एचटीटीपीएस ऐप एचटीटीपी से कनेक्ट नाहीं होइ सकत है।",
+  "nArtists": "{count, plural, =0{कोई कलाकार नाहीं} =1{1 कलाकार} other{{count} कलाकार}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "कवर फ्लो",
+  "coverFlowOriginalTitle": "मूल",
+  "coverFlowBigTitle": "बड़ा"
 }

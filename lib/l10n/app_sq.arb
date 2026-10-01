@@ -207,5 +207,17 @@
   "subsonicUrl": "URL e serverit",
   "subsonicInvalidUrl": "Futni një URL të serverit HTTP ose HTTPS pa një pyetje, fragment ose hyrje të integruar.",
   "subsonicUnsupported": "Ky server nuk e mbështet API-në e kërkuar të Subsonic ose vërtetimin e tokenit.",
-  "subsonicConnectionError": "Nuk mund të lidhet. Kontrolloni URL-në, rrjetin dhe certifikatën HTTPS. Në ueb, serveri duhet të lejojë CORS dhe një aplikacion HTTPS nuk mund të lidhet me HTTP."
+  "subsonicConnectionError": "Nuk mund të lidhet. Kontrolloni URL-në, rrjetin dhe certifikatën HTTPS. Në ueb, serveri duhet të lejojë CORS dhe një aplikacion HTTPS nuk mund të lidhet me HTTP.",
+  "nArtists": "{count, plural, =0{Nuk ka artistë} =1{1 Artist} other{{count} Artistë}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Rrjedha e Mbulesës",
+  "coverFlowOriginalTitle": "Origjinale",
+  "coverFlowBigTitle": "I madh"
 }

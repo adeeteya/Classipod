@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL manzili",
   "subsonicInvalidUrl": "HTTP yoki HTTPS server URL-manzilini so‘rovsiz, fragmentsiz yoki o‘rnatilgan loginsiz kiriting.",
   "subsonicUnsupported": "Bu server zarur Subsonic API yoki token autentifikatsiyasini qo‘llab-quvvatlamaydi.",
-  "subsonicConnectionError": "Ulanib bo‘lmadi. URL, tarmoq va HTTPS sertifikatini tekshiring. Internetda server CORS-ga ruxsat berishi kerak va HTTPS ilovasi HTTP-ga ulana olmaydi."
+  "subsonicConnectionError": "Ulanib bo‘lmadi. URL, tarmoq va HTTPS sertifikatini tekshiring. Internetda server CORS-ga ruxsat berishi kerak va HTTPS ilovasi HTTP-ga ulana olmaydi.",
+  "nArtists": "{count, plural, =0{Ijrochi yo'q} =1{1 Ijrochi} other{{count} Ijrochi}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Qopqoq oqimi",
+  "coverFlowOriginalTitle": "Asl",
+  "coverFlowBigTitle": "Katta"
 }

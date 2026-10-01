@@ -207,5 +207,17 @@
   "subsonicUrl": "URL sèvè",
   "subsonicInvalidUrl": "Antre yon URL sèvè HTTP oswa HTTPS san yon rekèt, fragman oswa login entegre.",
   "subsonicUnsupported": "Sèvè sa a pa sipòte API Subsonic oswa otantifikasyon siy ki nesesè yo.",
-  "subsonicConnectionError": "Pa ka konekte. Tcheke URL, rezo a, ak sètifika HTTPS la. Sou entènèt, sèvè a dwe pèmèt CORS epi yon aplikasyon HTTPS pa ka konekte ak HTTP."
+  "subsonicConnectionError": "Pa ka konekte. Tcheke URL, rezo a, ak sètifika HTTPS la. Sou entènèt, sèvè a dwe pèmèt CORS epi yon aplikasyon HTTPS pa ka konekte ak HTTP.",
+  "nArtists": "{count, plural, =0{Pa gen Atis} =1{1 Atis} other{{count} Atis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kouvèti Koule",
+  "coverFlowOriginalTitle": "Orijinal",
+  "coverFlowBigTitle": "Gwo"
 }

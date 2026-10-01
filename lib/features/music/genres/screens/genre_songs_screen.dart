@@ -1,11 +1,12 @@
+import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/widgets/album_art_song_list_tile.dart';
+import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/genres/providers/genre_songs_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -55,7 +56,7 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
         .read(audioPlayerServiceProvider.notifier)
         .playSongFromLibrary(displayItems[index].identity);
     if (mounted) {
-      await context.pushNamed(Routes.nowPlaying.name);
+      await context.openUniqueNamed(Routes.nowPlaying.name);
     }
   }
 
@@ -68,28 +69,33 @@ class _GenreSongsScreenState extends ConsumerState<GenreSongsScreen>
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: widget.genreName),
           Flexible(
-            child: CupertinoScrollbar(
-              controller: scrollController,
-              child: ListView.builder(
+            child: FastScrollIndicator(
+              wheelScrollIndex: wheelScrollIndex,
+              itemCount: displayItems.length,
+              itemExtent: displayTileHeight,
+              labelAt: (index) => displayItems[index].getTrackName,
+              child: CupertinoScrollbar(
                 controller: scrollController,
-                itemCount: displayItems.length,
-                prototypeItem: AlbumArtSongListTile(
-                  songMetadata: MusicMetadata(),
-                  isSelected: false,
-                  isCurrentlyPlaying: false,
-                  onTap: () {},
-                  onLongPress: () {},
-                ),
-                itemBuilder: (context, index) => AlbumArtSongListTile(
-                  songMetadata: displayItems[index],
-                  isSelected: selectedDisplayItem == index,
-                  isCurrentlyPlaying:
-                      currentlyPlayingOriginalIndex ==
-                      displayItems[index].identity,
-                  onTap: () async => _playSong(index),
-                  onLongPress: () => _navigateToGenreMoreOptionsModal(index),
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: displayItems.length,
+                  prototypeItem: AlbumArtSongListTile(
+                    songMetadata: MusicMetadata(),
+                    isSelected: false,
+                    isCurrentlyPlaying: false,
+                    onTap: () {},
+                    onLongPress: () {},
+                  ),
+                  itemBuilder: (context, index) => AlbumArtSongListTile(
+                    songMetadata: displayItems[index],
+                    isSelected: selectedDisplayItem == index,
+                    isCurrentlyPlaying:
+                        currentlyPlayingOriginalIndex ==
+                        displayItems[index].identity,
+                    onTap: () async => _playSong(index),
+                    onLongPress: () => _navigateToGenreMoreOptionsModal(index),
+                  ),
                 ),
               ),
             ),

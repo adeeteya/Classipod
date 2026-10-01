@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
+import 'package:classipod/features/status_bar/widgets/screen_page_content.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class OptionsModalPage<T> extends Page<T> {
@@ -121,17 +121,13 @@ class OptionsModalPopupRoute<T> extends PopupRoute<T> {
     Animation<double> secondaryAnimation,
     Widget child,
   ) {
-    return Align(
-      alignment: Alignment.topCenter,
-      child: Column(
-        children: [
-          if (animation.status != AnimationStatus.reverse)
-            StatusBar(title: title),
-          FractionalTranslation(
-            translation: _offsetTween.evaluate(_animation!),
-            child: child,
-          ),
-        ],
+    return ScreenPageContent(
+      child: Align(
+        alignment: Alignment.topCenter,
+        child: FractionalTranslation(
+          translation: _offsetTween.evaluate(_animation!),
+          child: child,
+        ),
       ),
     );
   }

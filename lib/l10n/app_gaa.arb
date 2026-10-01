@@ -207,5 +207,17 @@
   "subsonicUrl": "Sɛɛva URL",
   "subsonicInvalidUrl": "Ŋmaa HTTP loo HTTPS sɛɛva URL ni sanebimɔ, fã, loo nɔ ni akɛwo mli bɛ mli.",
   "subsonicUnsupported": "Sɛrva nɛɛ fioo Subsonic API loo token he odaseyeli ni he hiaa lɛ sɛɛ.",
-  "subsonicConnectionError": "Enyɛɛɛ ekɛtsa. Kwɛmɔ URL, nɛtwɛk, kɛ HTTPS wolo lɛ. Yɛ Wɛb lɛ nɔ lɛ, esa akɛ sɛɛva lɛ aŋmɛ gbɛ ni CORS kɛ HTTPS app ko nyɛŋ atswa HTTP."
+  "subsonicConnectionError": "Enyɛɛɛ ekɛtsa. Kwɛmɔ URL, nɛtwɛk, kɛ HTTPS wolo lɛ. Yɛ Wɛb lɛ nɔ lɛ, esa akɛ sɛɛva lɛ aŋmɛ gbɛ ni CORS kɛ HTTPS app ko nyɛŋ atswa HTTP.",
+  "nArtists": "{count, plural, =0{Nitɛŋmɔlɔi bɛ} =1{Nitɛŋmɔlɔ kome} other{{count} Nitɛŋmɔlɔi}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Hamɔ Flow",
+  "coverFlowOriginalTitle": "Blema",
+  "coverFlowBigTitle": "Agbo"
 }

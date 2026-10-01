@@ -207,5 +207,17 @@
   "subsonicUrl": "URL bilong seva",
   "subsonicInvalidUrl": "Putim wanpela HTTP o HTTPS seva URL na i no gat wanpela askim, hap, o 'embedded login'.",
   "subsonicUnsupported": "Dispela seva i no sapotim Subsonic API o token otentikesen we ol i nidim.",
-  "subsonicConnectionError": "No inap konektim. Sekim URL, netwok, na HTTPS setifiket. Long Web, seva i mas larim CORS na wanpela HTTPS ap i no inap konektim long HTTP."
+  "subsonicConnectionError": "No inap konektim. Sekim URL, netwok, na HTTPS setifiket. Long Web, seva i mas larim CORS na wanpela HTTPS ap i no inap konektim long HTTP.",
+  "nArtists": "{count, plural, =0{Nogat Atis} =1{1 Atis} other{{count} Atis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kava Flo",
+  "coverFlowOriginalTitle": "Orijinel",
+  "coverFlowBigTitle": "Bikpela"
 }

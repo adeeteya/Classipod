@@ -207,5 +207,17 @@
   "subsonicUrl": "URL seni ewe chon angang",
   "subsonicInvalidUrl": "Kopwe makkei ew URL ren HTTP ika HTTPS ese wor ew kapas eis, kinikin, ika ew nenien tonong.",
   "subsonicUnsupported": "Ei chon angang ese anisi ewe API mi namwot Subsonic ika ewe token mi affat.",
-  "subsonicConnectionError": "Ese tongeni kon. Cheki ewe URL, ewe netip, me ewe taropwen HTTPS. Non ewe Web, ewe chon angang epwe mut ngeni CORS me ew appin HTTPS ese tongeni fiti HTTP."
+  "subsonicConnectionError": "Ese tongeni kon. Cheki ewe URL, ewe netip, me ewe taropwen HTTPS. Non ewe Web, ewe chon angang epwe mut ngeni CORS me ew appin HTTPS ese tongeni fiti HTTP.",
+  "nArtists": "{count, plural, =0{Ese wor chon fiti} =1{1 Chon fiti} other{{count} Chon fiti}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kopwe Flow",
+  "coverFlowOriginalTitle": "Popun",
+  "coverFlowBigTitle": "Watte"
 }

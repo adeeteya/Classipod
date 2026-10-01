@@ -8,6 +8,18 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vibration/vibration.dart';
 
+final clickWheelGestureProvider =
+    NotifierProvider<ClickWheelGestureNotifier, bool>(
+      ClickWheelGestureNotifier.new,
+    );
+
+class ClickWheelGestureNotifier extends Notifier<bool> {
+  @override
+  bool build() => false;
+
+  set active(bool value) => state = value;
+}
+
 final deviceButtonsServiceProvider =
     NotifierProvider<DeviceButtonsServiceNotifier, DeviceAction?>(
       DeviceButtonsServiceNotifier.new,
@@ -40,6 +52,8 @@ class DeviceButtonsServiceNotifier extends Notifier<DeviceAction?> {
 
   Future<void> playPauseButtonClick() async {
     await Future.wait([buttonPressVibrate(), clickWheelSound()]);
+    state = null;
+    state = DeviceAction.playPause;
     await ref.read(audioPlayerServiceProvider.notifier).togglePlayback();
   }
 

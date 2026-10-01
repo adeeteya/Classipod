@@ -207,5 +207,17 @@
   "subsonicUrl": "URL kan server",
   "subsonicInvalidUrl": "Maglaog nin HTTP o HTTPS server URL na mayong kahaputan, fragment, o naka-embed na login.",
   "subsonicUnsupported": "An server na ini dai nagsusuportar kan kinakaipuhan na Subsonic API o token authentication.",
-  "subsonicConnectionError": "Dai makakonektar. Hilingon an URL, network, asin sertipiko kan HTTPS. Sa Web, an server dapat na magtugot sa CORS asin an sarong HTTPS app dai pwedeng magkonektar sa HTTP."
+  "subsonicConnectionError": "Dai makakonektar. Hilingon an URL, network, asin sertipiko kan HTTPS. Sa Web, an server dapat na magtugot sa CORS asin an sarong HTTPS app dai pwedeng magkonektar sa HTTP.",
+  "nArtists": "{count, plural, =0{Mayo nin mga Artista} =1{1 Artista} other{{count} Mga Artista}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Dalagan nin Takop",
+  "coverFlowOriginalTitle": "Orihinal",
+  "coverFlowBigTitle": "Dakula"
 }

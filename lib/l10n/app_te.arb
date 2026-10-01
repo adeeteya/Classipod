@@ -207,5 +207,17 @@
   "subsonicUrl": "సర్వర్ URL",
   "subsonicInvalidUrl": "ప్రశ్న, భాగం లేదా ఎంబెడెడ్ లాగిన్ లేకుండా HTTP లేదా HTTPS సర్వర్ URLని నమోదు చేయండి.",
   "subsonicUnsupported": "ఈ సర్వర్ అవసరమైన Subsonic API లేదా టోకెన్ ప్రమాణీకరణకు మద్దతు ఇవ్వదు.",
-  "subsonicConnectionError": "కనెక్ట్ చేయడం సాధ్యపడదు. URL, నెట్‌వర్క్ మరియు HTTPS ప్రమాణపత్రాన్ని తనిఖీ చేయండి. వెబ్‌లో, సర్వర్ తప్పనిసరిగా CORSని అనుమతించాలి మరియు HTTPS యాప్ HTTPకి కనెక్ట్ చేయబడదు."
+  "subsonicConnectionError": "కనెక్ట్ చేయడం సాధ్యపడదు. URL, నెట్‌వర్క్ మరియు HTTPS ప్రమాణపత్రాన్ని తనిఖీ చేయండి. వెబ్‌లో, సర్వర్ తప్పనిసరిగా CORSని అనుమతించాలి మరియు HTTPS యాప్ HTTPకి కనెక్ట్ చేయబడదు.",
+  "nArtists": "{count, plural, =0{కళాకారులు లేరు} =1{1 కళాకారుడు} other{{count} కళాకారులు}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "కవర్ ఫ్లో",
+  "coverFlowOriginalTitle": "అసలైనది",
+  "coverFlowBigTitle": "పెద్దది"
 }

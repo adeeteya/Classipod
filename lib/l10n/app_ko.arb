@@ -207,5 +207,17 @@
   "subsonicUrl": "서버 URL",
   "subsonicInvalidUrl": "쿼리, 조각 또는 내장된 로그인 없이 HTTP 또는 HTTPS 서버 URL을 입력하세요.",
   "subsonicUnsupported": "이 서버는 필수 Subsonic API 또는 토큰 인증을 지원하지 않습니다.",
-  "subsonicConnectionError": "연결할 수 없습니다. URL, 네트워크, HTTPS 인증서를 확인하세요. 웹에서는 서버가 CORS를 허용해야 하며 HTTPS 앱은 HTTP에 연결할 수 없습니다."
+  "subsonicConnectionError": "연결할 수 없습니다. URL, 네트워크, HTTPS 인증서를 확인하세요. 웹에서는 서버가 CORS를 허용해야 하며 HTTPS 앱은 HTTP에 연결할 수 없습니다.",
+  "nArtists": "{count, plural, =0{아티스트 없음} =1{1 아티스트} other{{count} 아티스트}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "커버 플로우",
+  "coverFlowOriginalTitle": "원래의",
+  "coverFlowBigTitle": "큰"
 }

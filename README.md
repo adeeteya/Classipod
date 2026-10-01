@@ -4,79 +4,77 @@
 
 ![Classipod App Screenshots](screenshots/combined.jpg)
 
-Introducing "ClassiPod" – Your Timeless Audio Experience
-
-Step back in time with ClassiPod, a local music player app designed to capture the nostalgic essence
-of the iconic iPod Classic. Immerse yourself in the familiar click wheel interface and relive the
-joy of navigating your music library with a touch of retro charm.
+ClassiPod brings an iPod Classic-inspired click wheel to your music collection.
+Play local audio files or stream from a Subsonic-compatible server, including
+Navidrome. Browse both libraries together, or focus on your server collection.
 
 </div>
 
-🧭 Intuitive Navigation: Navigate through your music library effortlessly using the virtual click
-wheel. Scroll, click, and feel the tactile response as you rediscover the joy of selecting your
-favorite tracks with the same ease as the original iPod.
+Available for Android, iOS, macOS, Windows, Linux and web. Native apps support
+local music and server streaming. The web app plays demo songs or connects to
+your server; it does not import local folders.
 
-🗃️ Local Music Library: ClassiPod is focused on your locally stored music files, ensuring that your
-personal music collection takes center stage. Organize your tracks, albums, and playlists just like
-you did on your trusty iPod Classic.
-
-🖌️ Customizable Themes: Personalize your ClassiPod experience with the option of silver or grey
-device frame. Choose from the two different color schemes to tailor the app's appearance to your
-unique style.
-
-🖼️ Cover Art Display: Immerse yourself in your music by appreciating album artwork on the vibrant
-display. ClassiPod pays homage to the visual appeal of classic iPods by showcasing your favorite
-album covers in a retro-inspired format.
-
-🎼 No Frills, Just Music: ClassiPod stays true to the essence of a music player – no distractions, no
-unnecessary features. Focus solely on the joy of listening to your favorite tunes without the
-complexities of a modern streaming service.
-
-🎧 Offline Listening: Enjoy your music without relying on an internet connection. ClassiPod is
-perfect for those moments when you want to disconnect and savor the tunes stored locally on your
-device.
-
-Relive the magic of the iPod Classic with ClassiPod – where timeless design meets the convenience of
-today. Download now and embark on a journey down memory lane with your music in the palm of your
-hand.
-
-If you like what you see, please ⭐ the repo.
+Local files play offline. Server music requires your own compatible server,
+an account on that server, and a network connection. ClassiPod does not include
+a music subscription, offline server downloads, or server playlist syncing.
 
 ## ✨ Features
 
-- 🗃️ Plays MP3, WAV, FLAC, M4A, MP4, Ogg, Opus, AAC, AIFF, APE, and MOV audio
-- 🔎 Discover music through Android MediaStore, or select a parent music folder
-  on iOS, macOS, Windows, and Linux; nested folders are scanned automatically
-- 🎨 Multiple Ipod Classic Device Colors (Silver and Black)
-- 🖼️ Displays the Music Metadata (Album Art, Artist Names)
-- ⏩ Ability to seek forward and backwards on a audio file (By Long Pressing the seek
-  forward/backwards buttons)
-- ⏮️ Ability to go to previous and next track in the playlist
-- 📱 Ipod Classic User Interface
-- 🎞️ Cover Flow View
-- 🎡 Click Wheel with Scrollable Rotation Enabled
-- 💿 Now Playing Screen with current music progress displayed
-- 🎶 Songs Screen with all the possible songs from the selected directory
-- 🧑‍🎤 Ability to Filter and Select From a Particular Artist, Album or Genre
-- 📲 Responsive Design For all Different Types of Screen Sizes
-- 🔋 Displays the current device battery level and charging status on the status bar
-- 🎧 Background Playback with Notification Control
-- 🔀 Shuffle Songs Feature
-- ➰ Loop Songs Feature (Loop one song or an entire playlist)
-- 🔉 Click Wheel Sounds
-- 📳 Vibration when clicking buttons and scrolling through the scroll wheel
-- 🔇 In App Volume Control
-- 🪞 Reflective Cover Art
-- ℹ️ About Screen
-- 🌍 Multi Language Support (Over 197 Languages Supported)
-- 👆 Touch Screen Support
-- 📺 Split Screen View (6th and 7th Gen iPod Classic)
-- 🔍 Ability to search songs, artists, playlists and albums
-- ⬇️ Caching Metadata of the songs for faster boot up times
-- 📃 Ability to Create and Store Custom User Created Playlists
-- 📖 App Usage Tutorial
-- ⭐ Song Rating Feature
-- 📝 Displays embedded lyrics in Now Playing
+### 🗃️ Your library, local and streamed
+
+- 🌐 Stream from Subsonic-compatible servers such as Navidrome through
+  **Settings → Library Settings → Subsonic**.
+- 🏠 Combine local and server tracks, or use **Hide Local Music** while streaming.
+- 🧑‍🎤 Browse songs, artists, album artists, albums, and genres.
+- 🔍 Search songs, artists, albums, and your ClassiPod playlists.
+- 📂 Discover Android music through MediaStore. Select a parent music folder on
+  iOS, macOS, Windows, or Linux and scan its subfolders automatically.
+- ⚡ Cache metadata and artwork for faster startup, refresh the library,
+  rebuild the index and exclude folders.
+- 📋 Inspect unreadable files and retry guidance in **Missing Tracks**.
+- 🧹 Optionally hide duplicate filenames without deleting music files.
+- 📃 Create and save custom ClassiPod playlists.
+- ⭐ Rate songs, with ratings and edits stored in ClassiPod.
+- 📝 View embedded lyrics when available.
+- 🎶 Play MP3, WAV, FLAC, M4A, MP4, Ogg, Opus, AAC, AIFF, APE, and MOV audio,
+  subject to the platform's playback support.
+
+### 🎧 Playback and controls
+
+- 🎡 Navigate with the rotating click wheel or touchscreen.
+- ⏮️ Skip tracks, seek forward or backward, and adjust volume in the app.
+- 🔀 Shuffle songs or whole albums, keeping album tracks in disc/track order.
+- ➰ Repeat one song or the current queue.
+- 💾 Restore the previous queue and selected song after reopening, paused at
+  the beginning of the song.
+- 💤 Set a sleep timer for 15, 30, 45, or 60 minutes, or the end of the song.
+- 📱 Enjoy background playback and mobile media controls, Windows system media
+  controls, and Linux MPRIS controls where supported.
+- 📡 Recover server playback after temporary connection failures, with buffering
+  feedback and a Retry action when needed.
+- ⏩ Scrub to a previewed position before committing the seek.
+- 💿 See queue position and progress in Now Playing, with access to ratings,
+  shuffle controls, and available lyrics.
+
+### 📱 The iPod Classic-inspired interface
+
+- 🎞️ Explore Cover Flow with **Original** and **Big** layouts, smooth wheel
+  motion, and animated transitions.
+- 🪞 Enjoy reflective album artwork.
+- 🎨 Choose light and dark screen themes and device colors including Silver,
+  Black, OLED Black, and more.
+- 📺 Browse with split-screen previews and scrolling titles.
+- 🔤 See a letter indicator while scrolling quickly through your collection.
+- 📌 Return to remembered selections and scroll positions when navigating back.
+- ⏱️ Automatically return to Now Playing after inactivity during playback;
+  temporary Now Playing controls also return to the progress view.
+- 🔉 Hear bundled iPod-inspired click wheel sounds.
+- 📳 Enable vibration feedback on supported devices.
+- 🖥️ Use responsive layouts and fullscreen Immersive Mode.
+- 🔋 View battery level and charging status where supported.
+- 📖 Get started with the introductory tutorial.
+- ℹ️ Find app information in the About screen.
+- 🌍 Use ClassiPod in your language with a multilingual interface.
 
 ### 🎵 Supported audio formats
 
@@ -101,6 +99,38 @@ by platform:
 
 - 🎮 Ipod Built-in Games
 - 📸 Ability to View Photos and Videos from the device
+
+## Connect to Subsonic or Navidrome
+
+Open **Settings → Library Settings → Subsonic** and enter the server's base
+URL (including any reverse-proxy path), username and password. ClassiPod
+supports token-authenticated Subsonic API 1.13+ servers, including Navidrome.
+The connection is checked before saving. Native apps combine server and local music; Web shows
+the server library instead of demo songs while enabled.
+
+**Configure Subsonic** edits the connection or removes it. Turning Subsonic off
+keeps its configuration and cache, hides its tracks, and stops server playback.
+**Hide Local Music** shows only server music while Subsonic is enabled.
+**Prevent Duplicate Tracks** hides matching filenames without deleting files.
+Saved playlist entries remain available when the same server is reconnected.
+**Refresh Library** fetches a new catalog; **Re-index** also clears cached
+server artwork. Failed scans retain the previous catalog. Ratings and edits
+stay in ClassiPod and are not written back to the server.
+
+Native passwords use OS secure storage. Web passwords last only until reload;
+re-enter the password through Configure Subsonic or when starting playback.
+Metadata and artwork are cached, but audio is streamed and requires a connection.
+Server playlist synchronization and offline audio downloads are not included.
+
+Web servers must allow CORS from the ClassiPod origin. Browsers block HTTP
+servers from an HTTPS app. Native apps allow HTTP for user-configured servers,
+including LAN IP addresses, using app-wide Android and Apple transport
+exceptions because server hosts are not known at build time. HTTPS certificates
+are still validated. HTTP traffic is unencrypted; prefer HTTPS when available.
+Transport configuration changes require rebuilding and reinstalling the app;
+hot reload does not apply them.
+Linux secure storage requires the system Secret Service/libsecret; Windows
+builds require the Visual Studio ATL component used by flutter_secure_storage.
 
 ## 💻 Installation links
 
@@ -211,19 +241,25 @@ release, try opening the app, then use **System Settings → Privacy & Security 
 Open Anyway** and confirm. See [Apple's instructions](https://support.apple.com/en-us/102445).
 
 On both platforms, choose a parent music folder when prompted. ClassiPod scans
-its subfolders and caches metadata and artwork. Use **Settings → Rescan Music
-Files** to select a folder again and rebuild the index.
+its subfolders and caches metadata and artwork. Use
+**Settings → Library Settings → Re-index** to select a folder again and rebuild
+the index.
 
 Apple downloads appear only on releases built with their platform options
 selected. See [Apple release documentation](docs/apple-releases.md) for build
-commands, checksums, and release configuration. The web version remains an
-online demo and does not import local folders.
+commands, checksums, and release configuration. The web app can play demo songs
+or stream from a Subsonic/Navidrome server.
+It does not import local folders.
 
 ## 🔌 Plugins
 
 | Name                                                                                          | Usage                                                                               |
 |-----------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
 | [**audio_service**](https://pub.dev/packages/audio_service)                                   | To support background audio playback                                                |
+| [**audio_service_mpris**](https://pub.dev/packages/audio_service_mpris) | Linux system media controls |
+| [**audio_service_win**](https://pub.dev/packages/audio_service_win) | Windows system media controls |
+| [**flutter_secure_storage**](https://pub.dev/packages/flutter_secure_storage) | Store native server credentials securely |
+| [**http**](https://pub.dev/packages/http) | Connect to Subsonic-compatible servers |
 | [**battery_plus**](https://pub.dev/packages/battery_plus)                                     | Shows phone battery level and status                                                |
 | [**cupertino_icons**](https://pub.dev/packages/cupertino_icons)                               | For ios style icons                                                                 |
 | [**device_preview_plus**](https://pub.dev/packages/device_preview_plus)                       | For visualizing how the app looks on different devices and screens                  |
@@ -231,13 +267,12 @@ online demo and does not import local folders.
 | [**file_picker**](https://pub.dev/packages/file_picker)                                       | To select the directory from which the music files are scanned                      |
 | [**flutter_localizations**](https://pub.dev/packages/flutter_localizations)                   | For in-app localization map data                                                    |
 | [**flutter_riverpod**](https://pub.dev/packages/flutter_riverpod)                             | For State Management                                                                |
-| [**flutter_taglib**](https://github.com/MSOB7YY/flutter_taglib)                               | To read local audio metadata and embedded artwork                                   |
+| [**flutter_taglib**](https://github.com/adeeteya/flutter_taglib)                               | To read local audio metadata and embedded artwork                                   |
 | [**go_router**](https://pub.dev/packages/go_router)                                           | To handle routing within the app                                                    |
 | [**hive_ce**](https://pub.dev/packages/hive_ce)                                               | To Cache Auio Metadata and store playlists                                          |
 | [**hive_ce_flutter**](https://pub.dev/packages/hive_ce_flutter)                               | For flutter specific libs of hive                                                   |
 | [**intl**](https://pub.dev/packages/intl)                                                     | For internalization and localization of the app                                     |
 | [**just_audio**](https://pub.dev/packages/just_audio)                                         | To play audio files                                                                 |
-| [**just_audio_background**](https://pub.dev/packages/just_audio_background)                   | To control audio through media notification                                         |
 | [**just_audio_media_kit**](https://pub.dev/packages/just_audio_media_kit)                     | To play audio files on Windows and Linux                                            |
 | [**media_kit_libs_linux**](https://pub.dev/packages/media_kit_libs_linux)                     | Media kit Libraries for Linux                                                       |
 | [**media_kit_libs_windows_audio**](https://pub.dev/packages/media_kit_libs_windows_audio)     | Media kit Libraries for Windows                                                     |
@@ -251,7 +286,6 @@ online demo and does not import local folders.
 | [**vibration**](https://pub.dev/packages/vibration)                                           | Used for vibration while using device controls                                      |
 | [**vibration_web**](https://pub.dev/packages/vibration_web)                                   | Used for vibration on the webapp version                                            |
 | [**build_runner**](https://pub.dev/packages/build_runner)                                     | For code generation                                                                 |
-| [**custom_lint**](https://pub.dev/packages/custom_lint)                                       | For using custom lint rules                                                         |
 | [**flutter_lints**](https://pub.dev/packages/flutter_lints)                                   | For using recommended flutter lints                                                 |
 | [**flutter_test**](https://pub.dev/packages/flutter_test)                                     | For unit and widget testing the app                                                 |
 | [**hive_ce_generator**](https://pub.dev/packages/hive_ce_generator)                           | For automatically generating Hive TypeAdapters                                      |
@@ -270,33 +304,3 @@ Copyright (c) 2025 Aditya R
 
 <a href="https://www.flaticon.com/free-icons/ipod" title="ipod icons">Ipod icons created by
 Freepik - Flaticon</a>
-
-## Subsonic servers
-
-Open **Settings → Library Settings → Subsonic** and enter the server's base
-URL (including any reverse-proxy path), username and password. ClassiPod
-supports token-authenticated Subsonic API 1.13+ servers. The connection is
-checked before saving. Native apps combine server and local music; Web shows
-the server library instead of demo songs while enabled.
-
-**Configure Subsonic** edits the connection or removes it. Turning Subsonic off
-keeps its configuration and cache, hides its tracks, and stops server playback.
-Saved playlist entries remain available when the same server is reconnected.
-**Refresh Library** fetches a new catalog; **Reindex Library** also clears cached
-server artwork. Failed scans retain the previous catalog. Ratings and edits
-stay in ClassiPod and are not written back to the server.
-
-Native passwords use OS secure storage. Web passwords last only until reload;
-re-enter the password through Configure Subsonic or when starting playback.
-Metadata and artwork are cached, but audio is streamed and requires a connection.
-Server playlist synchronization and offline audio downloads are not included.
-
-Web servers must allow CORS from the ClassiPod origin. Browsers block HTTP
-servers from an HTTPS app. Native apps allow HTTP for user-configured servers,
-including LAN IP addresses, using app-wide Android and Apple transport
-exceptions because server hosts are not known at build time. HTTPS certificates
-are still validated. HTTP traffic is unencrypted; prefer HTTPS when available.
-Transport configuration changes require rebuilding and reinstalling the app;
-hot reload does not apply them.
-Linux secure storage requires the system Secret Service/libsecret; Windows
-builds require the Visual Studio ATL component used by flutter_secure_storage.

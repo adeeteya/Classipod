@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya Seva",
   "subsonicInvalidUrl": "Tsenya URL ya seva ya HTTP goba HTTPS ntle le potšišo, karolwana, goba go tsena mo go tsentšwego.",
   "subsonicUnsupported": "Seva ye ga e thekge API ye e nyakegago ya Subsonic goba netefatšo ya leswao.",
-  "subsonicConnectionError": "E ka se kgone go kgokagana. Lekola URL, netweke, le setifikeiti sa HTTPS. Go Wepe, seva e swanetše go dumelela CORS gomme tirišo ya HTTPS e ka se kgokagane le HTTP."
+  "subsonicConnectionError": "E ka se kgone go kgokagana. Lekola URL, netweke, le setifikeiti sa HTTPS. Go Wepe, seva e swanetše go dumelela CORS gomme tirišo ya HTTPS e ka se kgokagane le HTTP.",
+  "nArtists": "{count, plural, =0{Ga go na Bataki} =1{1 Motaki} other{{count} Bataki}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Phallo ya Sekhurumetšo",
+  "coverFlowOriginalTitle": "Mathomo",
+  "coverFlowBigTitle": "Kgolo"
 }

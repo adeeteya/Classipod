@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "URL-ya servera HTTP an HTTPS bêyî pirsek, parçe, an têketinek pêvekirî têkevin.",
   "subsonicUnsupported": "Ev server piştgirî nade Subsonic API an rastkirina tokenê ya pêwîst.",
-  "subsonicConnectionError": "Nikare girêdan. Sertîfîkaya URL, torê û HTTPS-ê kontrol bikin. Li ser Webê, server divê destûrê bide CORS û sepanek HTTPS nikare bi HTTP-ê ve girêbide."
+  "subsonicConnectionError": "Nikare girêdan. Sertîfîkaya URL, torê û HTTPS-ê kontrol bikin. Li ser Webê, server divê destûrê bide CORS û sepanek HTTPS nikare bi HTTP-ê ve girêbide.",
+  "nArtists": "{count, plural, =0{Hunermend tune} =1{1 Hunermend} other{{count} Hunermend}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Eslî",
+  "coverFlowBigTitle": "Mezin"
 }

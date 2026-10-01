@@ -207,5 +207,17 @@
   "subsonicUrl": "URL re li k'anjelob'aal",
   "subsonicInvalidUrl": "K’e jun li URL re li k’anjeleb’aal HTTP malaj HTTPS chi maak’a’ jun li patz’om, jun raqal, malaj jun li k’anjeleb’aal k’eeb’il.",
   "subsonicUnsupported": "Li k’anjeleb’aal a’in ink’a’ naxk’ulub’a li API Subsonic malaj li tz’aqal yaalil na’leb’ re li token li na’ajman ru.",
-  "subsonicConnectionError": "Ink’a’ naru xramb’al. Cheril li URL, li redes, ut li hu HTTPS. Sa’ li Web, li k’anjeleb’aal tento tixkanab’ li CORS ut jun li aplicación HTTPS ink’a’ naru naxk’am rib’ rik’in li HTTP."
+  "subsonicConnectionError": "Ink’a’ naru xramb’al. Cheril li URL, li redes, ut li hu HTTPS. Sa’ li Web, li k’anjeleb’aal tento tixkanab’ li CORS ut jun li aplicación HTTPS ink’a’ naru naxk’am rib’ rik’in li HTTP.",
+  "nArtists": "{count, plural, =0{Maak’a’eb’ aj b’atz’unel} =1{1 aj b’atz’unel} other{{count} aj b’atz’unel}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Xb’ehil li tz’apleb’",
+  "coverFlowOriginalTitle": "Xbenil",
+  "coverFlowBigTitle": "Nim"
 }

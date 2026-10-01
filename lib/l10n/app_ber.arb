@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ⵏ ⵓⵇⴻⴷⴷⴰⵛ",
   "subsonicInvalidUrl": "ⵙⵙⴻⴽⵛⴻⵎ URL ⵏ ⵓⵇⴻⴷⴷⴰⵛ HTTP ⵏⴻⵖ HTTPS ⵡⴰⵔ ⴰⵙⴻⵇⴷⴻⵛ, ⴰⴼⴻⵔⴷⵉⵙ, ⵏⴻⵖ ⴰⵙⴻⴽⵛⴻⵎ ⵉ ⴷⵢⴻⵙⴱⴻⴷⴷⴻⵏ.",
   "subsonicUnsupported": "ⴰⵇⴻⴷⴷⴰⵛⴰ ⵓⵔ ⵢⴻⵜⵜⵇⴰⴷⴰⵔ ⴰⵔⴰ API Subsonic ⵏⴻⵖ ⴰⵙⴻⴽⵛⴻⵎ ⵏ ⵜⵎⴻⵥⴷⵉⵜ ⵢⴻⵜⵜⵡⴰⵃⴻⵜⵜⵎⴻⵏ.",
-  "subsonicConnectionError": "ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵇⵇⴻⵏ. ⵙⴻⴼⵇⴻⴷ URL, ⴰⵥⴻⴹⴹⴰ, ⴷ ⵓⵙⴻⵍⴽⵉⵏ HTTPS. ⴷⴻⴳ Web, ⴰⵇⴻⴷⴷⴰⵛ ⵢⴻⵙⵙⴻⴼⴽ ⴰⴷ ⵢⴻⴵⴵ CORS ⵢⴻⵔⵏⴰ ⴰⵀⵉⵍ ⵏ HTTPS ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵇⵇⴻⵏ ⵙ HTTP."
+  "subsonicConnectionError": "ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵇⵇⴻⵏ. ⵙⴻⴼⵇⴻⴷ URL, ⴰⵥⴻⴹⴹⴰ, ⴷ ⵓⵙⴻⵍⴽⵉⵏ HTTPS. ⴷⴻⴳ Web, ⴰⵇⴻⴷⴷⴰⵛ ⵢⴻⵙⵙⴻⴼⴽ ⴰⴷ ⵢⴻⴵⴵ CORS ⵢⴻⵔⵏⴰ ⴰⵀⵉⵍ ⵏ HTTPS ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵇⵇⴻⵏ ⵙ HTTP.",
+  "nArtists": "{count, plural, =0{ⵓⵍⴰⵛ ⵉⵏⴰⵥⵓⵔⴻⵏ} =1{1 ⵏ ⵓⵏⴰⵥⵓⵔ} other{{count} ⵉⵏⴰⵥⵓⵔⴻⵏ}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "ⴰⵙⵓⴷⴷⴻⵎ ⵏ ⵓⴹⴼⴰⵔ",
+  "coverFlowOriginalTitle": "ⵜⴰⵏⴻⵚⵍⵉⵜ",
+  "coverFlowBigTitle": "ⴰⵎⴻⵇⵇⵔⴰⵏ"
 }

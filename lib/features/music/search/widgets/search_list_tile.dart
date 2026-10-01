@@ -2,7 +2,10 @@ import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/constants/assets.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/artwork_image.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/search/model/search_model.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
@@ -66,16 +69,7 @@ class SearchListTile extends ConsumerWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
             border: tileBorder,
           ),
           child: Row(
@@ -123,28 +117,25 @@ class SearchListTile extends ConsumerWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    SelectedMarqueeText(
                       title,
-                      style: CupertinoTheme.of(context).textTheme.textStyle
-                          .copyWith(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: isSelected
-                                ? context.appInverseTextColor
-                                : context.appPrimaryTextColor,
-                          ),
-                      maxLines: 1,
+                      isSelected: isSelected,
+                      style: IpodTypography.title.copyWith(
+                        color: isSelected
+                            ? context.appInverseTextColor
+                            : context.appPrimaryTextColor,
+                      ),
                     ),
                     const SizedBox(height: 2),
                     Text(
                       description,
-                      style: CupertinoTheme.of(context).textTheme.textStyle
-                          .copyWith(
-                            color: isSelected
-                                ? context.appInverseTextColor
-                                : context.appSecondaryTextColor,
-                          ),
+                      style: IpodTypography.description.copyWith(
+                        color: isSelected
+                            ? context.appInverseTextColor
+                            : context.appSecondaryTextColor,
+                      ),
                       maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),

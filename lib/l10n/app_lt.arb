@@ -207,5 +207,17 @@
   "subsonicUrl": "Serverio URL",
   "subsonicInvalidUrl": "Įveskite HTTP arba HTTPS serverio URL be užklausos, fragmento ar įterptojo prisijungimo.",
   "subsonicUnsupported": "Šis serveris nepalaiko reikiamos Subsonic API arba prieigos rakto autentifikavimo.",
-  "subsonicConnectionError": "Nepavyksta prisijungti. Patikrinkite URL, tinklą ir HTTPS sertifikatą. Žiniatinklyje serveris turi leisti CORS, o HTTPS programa negali prisijungti prie HTTP."
+  "subsonicConnectionError": "Nepavyksta prisijungti. Patikrinkite URL, tinklą ir HTTPS sertifikatą. Žiniatinklyje serveris turi leisti CORS, o HTTPS programa negali prisijungti prie HTTP.",
+  "nArtists": "{count, plural, =0{Nėra atlikėjų} =1{1 Atlikėjas} other{{count} Atlikėjai}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Viršelio srautas",
+  "coverFlowOriginalTitle": "Originalus",
+  "coverFlowBigTitle": "Didelis"
 }

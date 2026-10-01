@@ -1,6 +1,8 @@
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
+import 'package:classipod/core/utils/album_order.dart';
 import 'package:classipod/core/utils/artist_name_utils.dart';
+import 'package:classipod/core/utils/name_order.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -31,15 +33,7 @@ List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
   final albumsByIdentity = <String, List<MusicMetadata>>{};
 
   for (final metadata in metadataList) {
-    final albumName = metadata.getAlbumName.trim().toLowerCase();
-    final primaryArtist = metadata.songId == null
-        ? metadata.getPrimaryAlbumArtistName.trim().toLowerCase()
-        : (metadata.albumArtistNames ?? metadata.trackArtistNames ?? [])
-              .map((name) => name.trim().toLowerCase())
-              .join('\u0001');
-    final albumIdentity = metadata.isSubsonic
-        ? '${metadata.serverId}:${metadata.remoteAlbumId ?? albumName}'
-        : '$albumName\u0000$primaryArtist';
+    final albumIdentity = albumIdentityOf(metadata);
     albumsByIdentity.putIfAbsent(albumIdentity, () => []).add(metadata);
   }
 
@@ -67,50 +61,17 @@ List<AlbumModel> buildAlbumDetails(Iterable<MusicMetadata> metadataList) {
     );
   }).toList();
 
-  // Sort the album details by artist name, album name
+  // Sort by album name, using artist names to break ties.
   albumDetails.sort((a, b) {
-    final artistCompare = a.albumArtistName.compareTo(b.albumArtistName);
-    if (artistCompare != 0) return artistCompare;
-    return a.albumName.compareTo(b.albumName);
+    final albumComparison = compareNames(a.albumName, b.albumName);
+    if (albumComparison != 0) return albumComparison;
+    return compareNames(a.albumArtistName, b.albumArtistName);
   });
 
   // Sort the songs in each album by disc number, then track number.
   for (final album in albumDetails) {
-    album.albumSongs.sort(_compareAlbumTracks);
+    album.albumSongs.sort(compareAlbumTracks);
   }
 
   return albumDetails;
-}
-
-int _compareAlbumTracks(MusicMetadata a, MusicMetadata b) {
-  final aDiscNumber = (a.discNumber ?? 0) > 0 ? a.discNumber! : 1;
-  final bDiscNumber = (b.discNumber ?? 0) > 0 ? b.discNumber! : 1;
-  final discComparison = aDiscNumber.compareTo(bDiscNumber);
-  if (discComparison != 0) {
-    return discComparison;
-  }
-
-  final aTrackNumber = (a.trackNumber ?? 0) > 0 ? a.trackNumber : null;
-  final bTrackNumber = (b.trackNumber ?? 0) > 0 ? b.trackNumber : null;
-  if (aTrackNumber == null && bTrackNumber != null) {
-    return 1;
-  }
-  if (aTrackNumber != null && bTrackNumber == null) {
-    return -1;
-  }
-  if (aTrackNumber != null && bTrackNumber != null) {
-    final trackComparison = aTrackNumber.compareTo(bTrackNumber);
-    if (trackComparison != 0) {
-      return trackComparison;
-    }
-  }
-
-  final songNameComparison = a.getTrackName.toLowerCase().compareTo(
-    b.getTrackName.toLowerCase(),
-  );
-  if (songNameComparison != 0) {
-    return songNameComparison;
-  }
-
-  return a.originalSongIndex.compareTo(b.originalSongIndex);
 }

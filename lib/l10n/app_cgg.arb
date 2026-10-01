@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya saava",
   "subsonicInvalidUrl": "Tamu HTTP nari HTTPS server URL otaine kibuuzo, ekicweka, nari okutaaha omunda.",
   "subsonicUnsupported": "Server egi terikushagika Subsonic API erikwetengyesa nari okuhamya akabonero.",
-  "subsonicConnectionError": "Tikirikubaasa kukwatiraine. Reeba URL, omukutu, na satifikeeti ya HTTPS. Aha Web, server eine kwikiriza CORS kandi app ya HTTPS terikubaasa kukwatiraine na HTTP."
+  "subsonicConnectionError": "Tikirikubaasa kukwatiraine. Reeba URL, omukutu, na satifikeeti ya HTTPS. Aha Web, server eine kwikiriza CORS kandi app ya HTTPS terikubaasa kukwatiraine na HTTP.",
+  "nArtists": "{count, plural, =0{Tihariho Abanyabwengye} =1{Omweshongozi 1} other{{count} Abanyabwengye}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Okutambura kw'ekikingirizo",
+  "coverFlowOriginalTitle": "Ekyokubanza",
+  "coverFlowBigTitle": "Ekihango"
 }

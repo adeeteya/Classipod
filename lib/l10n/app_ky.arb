@@ -207,5 +207,17 @@
   "subsonicUrl": "Server URL",
   "subsonicInvalidUrl": "HTTP же HTTPS серверинин URL дарегин суроосуз, фрагментсиз же кыстарылган логинсиз киргизиңиз.",
   "subsonicUnsupported": "Бул сервер талап кылынган Subsonic API же токендин аутентификациясын колдоого албайт.",
-  "subsonicConnectionError": "Туташуу мүмкүн эмес. URL, тармак жана HTTPS тастыктамасын текшериңиз. Вебде сервер CORSга уруксат бериши керек жана HTTPS колдонмосу HTTP менен туташа албайт."
+  "subsonicConnectionError": "Туташуу мүмкүн эмес. URL, тармак жана HTTPS тастыктамасын текшериңиз. Вебде сервер CORSга уруксат бериши керек жана HTTPS колдонмосу HTTP менен туташа албайт.",
+  "nArtists": "{count, plural, =0{Аткаруучу жок} =1{1 Аткаруучу} other{{count} Сүрөтчүлөр}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Чоң"
 }

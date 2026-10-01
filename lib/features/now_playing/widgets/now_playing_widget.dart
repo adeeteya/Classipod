@@ -1,5 +1,5 @@
-import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/marquee_text.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
@@ -18,6 +18,14 @@ class NowPlayingWidget extends ConsumerWidget {
     );
     return AnimatedSwitcher(
       duration: const Duration(milliseconds: 300),
+      layoutBuilder: (currentChild, previousChildren) => Stack(
+        alignment: Alignment.center,
+        children: [
+          for (final child in previousChildren)
+            HeroMode(enabled: false, child: child),
+          ?currentChild,
+        ],
+      ),
       child: Row(
         key: ValueKey(
           "Now Playing-${nowPlayingDetails.currentMetadata?.identity}",
@@ -44,50 +52,42 @@ class NowPlayingWidget extends ConsumerWidget {
                 MarqueeText(
                   nowPlayingDetails.currentMetadata?.trackName ??
                       context.localization.unknownSong,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  delayBefore: const Duration(seconds: 2),
-                  pauseBetween: const Duration(seconds: 2),
-                  pauseOnBounce: const Duration(seconds: 2),
+                  style: IpodTypography.title,
                 ),
                 const SizedBox(height: 5),
-                MarqueeText(
+                Text(
                   nowPlayingDetails.currentMetadata?.getTrackArtistNames ??
                       context.localization.unknownArtist,
-                  style: context.appTextStyle.copyWith(
+                  style: IpodTypography.metadata.copyWith(
                     color: context.appSecondaryTextColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
                   ),
-                  delayBefore: const Duration(seconds: 2),
-                  pauseBetween: const Duration(seconds: 2),
-                  pauseOnBounce: const Duration(seconds: 2),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(height: 5),
-                MarqueeText(
+                Text(
                   nowPlayingDetails.currentMetadata?.albumName ??
                       context.localization.unknownAlbum,
-                  style: context.appTextStyle.copyWith(
+                  style: IpodTypography.metadata.copyWith(
                     color: context.appSecondaryTextColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
                   ),
-                  delayBefore: const Duration(seconds: 2),
-                  pauseBetween: const Duration(seconds: 2),
-                  pauseOnBounce: const Duration(seconds: 2),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
                 if ((nowPlayingDetails.currentMetadata?.rating ?? 0) != 0)
                   Row(
                     children: List.generate(
                       nowPlayingDetails.currentMetadata?.rating ?? 0,
-                      (index) => const Padding(
-                        padding: EdgeInsets.only(right: 2, top: 4, bottom: 4),
+                      (index) => Padding(
+                        padding: const EdgeInsets.only(
+                          right: 2,
+                          top: 4,
+                          bottom: 4,
+                        ),
                         child: Icon(
                           CupertinoIcons.star_fill,
                           size: 14,
-                          color: AppPalette.selectedTileGradientColor2,
+                          color: context.appRatingIconColor,
                         ),
                       ),
                     ),
@@ -95,11 +95,8 @@ class NowPlayingWidget extends ConsumerWidget {
                 if ((nowPlayingDetails.currentMetadata?.rating ?? 0) == 0)
                   const SizedBox(height: 22),
                 Text(
-                  "${nowPlayingDetails.currentIndex + 1} ${context.localization.commonOfText} ${nowPlayingDetails.metadataList.length}",
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  "${nowPlayingDetails.queuePosition + 1} ${context.localization.commonOfText} ${nowPlayingDetails.metadataList.length}",
+                  style: IpodTypography.caption,
                 ),
                 const Spacer(),
               ],

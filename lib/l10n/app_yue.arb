@@ -207,5 +207,17 @@
   "subsonicUrl": "伺服器網址",
   "subsonicInvalidUrl": "輸入一個冇查詢、片段或者嵌入式登入嘅 HTTP 或者 HTTPS 伺服器網址。",
   "subsonicUnsupported": "呢個伺服器唔支援所需嘅 Subsonic API 或者令牌認證。",
-  "subsonicConnectionError": "連接唔到。檢查網址、網絡同 HTTPS 憑證。喺網絡上面，伺服器必須允許 CORS ，而 HTTPS 應用程式就連接唔到 HTTP 。"
+  "subsonicConnectionError": "連接唔到。檢查網址、網絡同 HTTPS 憑證。喺網絡上面，伺服器必須允許 CORS ，而 HTTPS 應用程式就連接唔到 HTTP 。",
+  "nArtists": "{count, plural, =0{冇藝術家} =1{1 藝術家} other{{count}個藝術家}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "封面流程",
+  "coverFlowOriginalTitle": "原本",
+  "coverFlowBigTitle": "大"
 }

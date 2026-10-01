@@ -207,5 +207,17 @@
   "subsonicUrl": "Серверын URL-адресше",
   "subsonicInvalidUrl": "HTTP але HTTPS серверын URL-адресшым йодмаш, фрагмент але встраиваемый логин деч посна пурто.",
   "subsonicUnsupported": "Тиде сервер кӱлеш Subsonic API але токен аутентификацийым ок поддержатле.",
-  "subsonicConnectionError": "Ушаш ок лий. URL-адресым, сетьым да HTTPS сертификатым тергыза. Веб-сервер CORS-лан эрыкым пуышаш, а HTTPS-ан приложений HTTP-лан ушен ок керт."
+  "subsonicConnectionError": "Ушаш ок лий. URL-адресым, сетьым да HTTPS сертификатым тергыза. Веб-сервер CORS-лан эрыкым пуышаш, а HTTPS-ан приложений HTTP-лан ушен ок керт.",
+  "nArtists": "{count, plural, =0{Артист-влак уке} =1{1 Артист} other{{count} Артист-влак}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Кавер йогын",
+  "coverFlowOriginalTitle": "Оригинал",
+  "coverFlowBigTitle": "Кугу"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya seva",
   "subsonicInvalidUrl": "Lowetsani ulalo wa seva ya HTTP kapena HTTPS popanda funso, chidutswa, kapena malowedwe ophatikizidwa.",
   "subsonicUnsupported": "Seva iyi sigwirizana ndi Subsonic API kapena chizindikiro chotsimikizika.",
-  "subsonicConnectionError": "Sitingathe kulumikiza. Onani ulalo, netiweki, ndi satifiketi ya HTTPS. Pa Webusaiti, seva iyenera kuloleza CORS ndipo pulogalamu ya HTTPS siyingalumikizane ndi HTTP."
+  "subsonicConnectionError": "Sitingathe kulumikiza. Onani ulalo, netiweki, ndi satifiketi ya HTTPS. Pa Webusaiti, seva iyenera kuloleza CORS ndipo pulogalamu ya HTTPS siyingalumikizane ndi HTTP.",
+  "nArtists": "{count, plural, =0{Palibe Ojambula} =1{1 Artist} other{{count} Ojambula}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kuphimba Kuyenda",
+  "coverFlowOriginalTitle": "Choyambirira",
+  "coverFlowBigTitle": "Chachikulu"
 }

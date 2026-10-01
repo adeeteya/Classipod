@@ -207,5 +207,17 @@
   "subsonicUrl": "serveur URL",
   "subsonicInvalidUrl": "Wo HTTP xa na mu HTTPS sErvEr URL sEbE wo mu maxOrin gni, fragment, xa na mu login naxan na a kui.",
   "subsonicUnsupported": "Yi sErvEr mu Subsonic API xa na mu token authentication suxu ma.",
-  "subsonicConnectionError": "A mu nOma lan de. Wo URL mato, reso, a nun HTTPS sErtifika. Web ma, sErvEr lan ma a tin CORS ra a nun HTTPS appli mu nOma HTTP raso de."
+  "subsonicConnectionError": "A mu nOma lan de. Wo URL mato, reso, a nun HTTPS sErtifika. Web ma, sErvEr lan ma a tin CORS ra a nun HTTPS appli mu nOma HTTP raso de.",
+  "nArtists": "{count, plural, =0{artiste yo mu na} =1{1 artiste} other{{count} artiste}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "Yètè yètè",
+  "coverFlowBigTitle": "Khoungbé"
 }

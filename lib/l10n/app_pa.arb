@@ -207,5 +207,17 @@
   "subsonicUrl": "ਸਰਵਰ URL",
   "subsonicInvalidUrl": "ਇੱਕ ਪੁੱਛਗਿੱਛ, ਟੁਕੜੇ, ਜਾਂ ਏਮਬੈਡ ਕੀਤੇ ਲੌਗਇਨ ਤੋਂ ਬਿਨਾਂ ਇੱਕ HTTP ਜਾਂ HTTPS ਸਰਵਰ URL ਦਾਖਲ ਕਰੋ।",
   "subsonicUnsupported": "ਇਹ ਸਰਵਰ ਲੋੜੀਂਦੇ Subsonic API ਜਾਂ ਟੋਕਨ ਪ੍ਰਮਾਣੀਕਰਨ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ ਹੈ।",
-  "subsonicConnectionError": "ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ। URL, ਨੈੱਟਵਰਕ, ਅਤੇ HTTPS ਸਰਟੀਫਿਕੇਟ ਦੀ ਜਾਂਚ ਕਰੋ। ਵੈੱਬ 'ਤੇ, ਸਰਵਰ ਨੂੰ CORS ਦੀ ਇਜਾਜ਼ਤ ਦੇਣੀ ਚਾਹੀਦੀ ਹੈ ਅਤੇ ਇੱਕ HTTPS ਐਪ HTTP ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕਰ ਸਕਦਾ ਹੈ।"
+  "subsonicConnectionError": "ਕਨੈਕਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ। URL, ਨੈੱਟਵਰਕ, ਅਤੇ HTTPS ਸਰਟੀਫਿਕੇਟ ਦੀ ਜਾਂਚ ਕਰੋ। ਵੈੱਬ 'ਤੇ, ਸਰਵਰ ਨੂੰ CORS ਦੀ ਇਜਾਜ਼ਤ ਦੇਣੀ ਚਾਹੀਦੀ ਹੈ ਅਤੇ ਇੱਕ HTTPS ਐਪ HTTP ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕਰ ਸਕਦਾ ਹੈ।",
+  "nArtists": "{count, plural, =0{ਕੋਈ ਕਲਾਕਾਰ ਨਹੀਂ} =1{1 ਕਲਾਕਾਰ} other{{count} ਕਲਾਕਾਰ}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "ਕਵਰ ਫਲੋ",
+  "coverFlowOriginalTitle": "ਮੂਲ",
+  "coverFlowBigTitle": "ਵੱਡਾ"
 }

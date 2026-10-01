@@ -1,5 +1,8 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class CondensedSongListTile extends StatelessWidget {
@@ -35,16 +38,7 @@ class CondensedSongListTile extends StatelessWidget {
                     ),
                   )
                 : null,
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),
@@ -52,17 +46,14 @@ class CondensedSongListTile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Flexible(
-                  child: Text(
+                  child: SelectedMarqueeText(
                     songName,
-                    style: CupertinoTheme.of(context).textTheme.textStyle
-                        .copyWith(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: isSelected
-                              ? context.appInverseTextColor
-                              : context.appPrimaryTextColor,
-                        ),
-                    maxLines: 1,
+                    isSelected: isSelected,
+                    style: IpodTypography.menu.copyWith(
+                      color: isSelected
+                          ? context.appInverseTextColor
+                          : context.appPrimaryTextColor,
+                    ),
                   ),
                 ),
                 if (isCurrentlyPlaying)

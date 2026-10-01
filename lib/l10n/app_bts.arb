@@ -207,5 +207,17 @@
   "subsonicUrl": "URL server",
   "subsonicInvalidUrl": "Masukkon URL server HTTP atap HTTPS tanpa kueri, fragmen, atap login na tertanam.",
   "subsonicUnsupported": "Server on lang mendukung API Subsonic na ihaporluhon atap otentikasi token.",
-  "subsonicConnectionError": "Lang boi mardomu. Pareksa ma URL, jaringan, pakon sertifikat HTTPS. Bani Web, server maningon mangijinhon CORS pakon aplikasi HTTPS lang boi marhubungan hubani HTTP."
+  "subsonicConnectionError": "Lang boi mardomu. Pareksa ma URL, jaringan, pakon sertifikat HTTPS. Bani Web, server maningon mangijinhon CORS pakon aplikasi HTTPS lang boi marhubungan hubani HTTP.",
+  "nArtists": "{count, plural, =0{Seng dong Seniman} =1{1 Seniman} other{{count} Seniman}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Aliran Tutup",
+  "coverFlowOriginalTitle": "Asli",
+  "coverFlowBigTitle": "Banggal"
 }

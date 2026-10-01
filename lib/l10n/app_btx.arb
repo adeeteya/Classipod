@@ -207,5 +207,17 @@
   "subsonicUrl": "URL pelayan",
   "subsonicInvalidUrl": "Masukken URL server HTTP ntah pe HTTPS alu la lit penungkunen, pecahen, ntah pe login si tertanam.",
   "subsonicUnsupported": "Server enda la mendukung API Subsonic ntah pe otentikasi token si iperluken.",
-  "subsonicConnectionError": "Labo banci erhubungen. Perdiateken URL, jaringan, ras sertifikat HTTPS. I bas Web, server arus ngijinken CORS ras sada aplikasi HTTPS la banci terhubung ku HTTP."
+  "subsonicConnectionError": "Labo banci erhubungen. Perdiateken URL, jaringan, ras sertifikat HTTPS. I bas Web, server arus ngijinken CORS ras sada aplikasi HTTPS la banci terhubung ku HTTP.",
+  "nArtists": "{count, plural, =0{La lit Artis} =1{1 Artis} other{{count} Artis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Tutup Aliren .",
+  "coverFlowOriginalTitle": "Asli",
+  "coverFlowBigTitle": "Galang"
 }

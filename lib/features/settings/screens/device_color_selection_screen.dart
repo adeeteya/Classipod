@@ -1,10 +1,11 @@
 import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
-import 'package:classipod/features/status_bar/widgets/status_bar.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -37,7 +38,6 @@ class _DeviceColorSelectionScreenState extends ConsumerState with CustomScreen {
     return CupertinoPageScaffold(
       child: Column(
         children: [
-          StatusBar(title: Routes.deviceColor.title(context)),
           Flexible(
             child: CupertinoScrollbar(
               controller: scrollController,
@@ -99,16 +99,7 @@ class _DeviceColorOptionTile extends StatelessWidget {
                     ),
                   )
                 : null,
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4),
@@ -134,8 +125,9 @@ class _DeviceColorOptionTile extends StatelessWidget {
                 ),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
+                  child: SelectedMarqueeText(
                     deviceColor.title(context),
+                    isSelected: isSelected,
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -143,7 +135,6 @@ class _DeviceColorOptionTile extends StatelessWidget {
                           ? CupertinoColors.white
                           : context.appPrimaryTextColor,
                     ),
-                    maxLines: 1,
                   ),
                 ),
                 if (isSelected)

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL mpizara",
   "subsonicInvalidUrl": "Ampidiro URL mpizara HTTP na HTTPS tsy misy fanontaniana, sombiny, na fidirana tafiditra.",
   "subsonicUnsupported": "Ity mpizara ity dia tsy mahazaka ny Subsonic API na ny fanamarinana famantarana.",
-  "subsonicConnectionError": "Tsy afaka mifandray. Hamarino ny URL, tambajotra, ary fanamarinana HTTPS. Amin'ny Internet, ny mpizara dia tsy maintsy mamela ny CORS ary ny fampiharana HTTPS dia tsy afaka mifandray amin'ny HTTP."
+  "subsonicConnectionError": "Tsy afaka mifandray. Hamarino ny URL, tambajotra, ary fanamarinana HTTPS. Amin'ny Internet, ny mpizara dia tsy maintsy mamela ny CORS ary ny fampiharana HTTPS dia tsy afaka mifandray amin'ny HTTP.",
+  "nArtists": "{count, plural, =0{Tsy misy Mpanakanto} =1{1 Mpanakanto} other{{count} Mpanakanto}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Cover Flow",
+  "coverFlowOriginalTitle": "tamin'ny fototra",
+  "coverFlowBigTitle": "Lehibe"
 }

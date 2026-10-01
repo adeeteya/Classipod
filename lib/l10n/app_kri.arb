@@ -207,5 +207,17 @@
   "subsonicUrl": "URL fɔ di sava",
   "subsonicInvalidUrl": "Ɛntay HTTP ɔ HTTPS sava URL we nɔ gɛt kwɛstyɔn, fragmɛnt, ɔ ɛmbaded lɔgin.",
   "subsonicUnsupported": "Dis sava nɔ de sɔpɔt di Subsonic API ɔ token ɔthɛntishɔn we dɛn nid.",
-  "subsonicConnectionError": "Nɔ ebul fɔ kɔnɛkt. Chek di URL, nɛtwɔk, ɛn HTTPS sɛtifiket. Na Wɛb, di sava fɔ alaw CORS ɛn wan HTTPS ap nɔ go ebul fɔ kɔnɛkt to HTTP."
+  "subsonicConnectionError": "Nɔ ebul fɔ kɔnɛkt. Chek di URL, nɛtwɔk, ɛn HTTPS sɛtifiket. Na Wɛb, di sava fɔ alaw CORS ɛn wan HTTPS ap nɔ go ebul fɔ kɔnɛkt to HTTP.",
+  "nArtists": "{count, plural, =0{Nɔ Atis} =1{1 Atis} other{{count} Atis}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kɔva Flɔ",
+  "coverFlowOriginalTitle": "Fɔstɛm",
+  "coverFlowBigTitle": "Big"
 }

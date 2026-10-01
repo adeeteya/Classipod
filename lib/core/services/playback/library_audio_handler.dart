@@ -2,7 +2,9 @@ import 'dart:async';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/services/playback/logical_queue.dart';
+import 'package:classipod/core/utils/album_order.dart';
 import 'package:flutter/foundation.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -11,6 +13,14 @@ class LibraryAudioHandler extends BaseAudioHandler {
   final Duration retryDelay;
   Timer? _retryTimer;
   bool _disposed = false;
+  bool restoringSession = false;
+  VoidCallback? onCheckpoint;
+  VoidCallback? onRestoreFailure;
+  bool _restoredSongPending = false;
+  Duration? _initialPosition;
+
+  List<MusicMetadata> get songs => _songs;
+  bool get loading => _loading;
   bool _wantPlayback = false;
   bool _recovering = false;
   int _retryAttempt = 0;
@@ -81,10 +91,14 @@ class LibraryAudioHandler extends BaseAudioHandler {
     _subscriptions.add(
       player.positionStream.listen((position) {
         if (!_loading &&
+            _sourceLoaded &&
             _pendingSeek == null &&
             !_recovering &&
             player.processingState == ProcessingState.ready) {
-          if (position > Duration.zero) _lastPosition = position;
+          if (position > Duration.zero) {
+            _lastPosition = position;
+            _restoredSongPending = false;
+          }
         }
         _broadcast();
       }),
@@ -120,12 +134,43 @@ class LibraryAudioHandler extends BaseAudioHandler {
   int? get currentIndex => _songs.isEmpty ? null : logicalQueue.index;
 
   Future<void> _serialize(Future<void> Function() action) {
-    final result = _pending.then((_) => action());
+    final result = _pending.then((_) async {
+      try {
+        await action();
+      } finally {
+        onCheckpoint?.call();
+      }
+    });
     _pending = result.catchError((Object _) {});
     return result;
   }
 
+  void _resetQueue({int initialIndex = 0}) {
+    final albums = <Object, List<int>>{};
+    for (var index = 0; index < _songs.length; index++) {
+      final song = _songs[index];
+      final Object key =
+          (song.albumName?.trim().isNotEmpty ?? false) ||
+              song.remoteAlbumId != null
+          ? albumIdentityOf(song)
+          : index;
+      albums.putIfAbsent(key, () => []).add(index);
+    }
+    for (final album in albums.values) {
+      album.sort((a, b) {
+        final comparison = compareAlbumTracks(_songs[a], _songs[b]);
+        return comparison == 0 ? a.compareTo(b) : comparison;
+      });
+    }
+    logicalQueue.reset(
+      _songs.length,
+      albums: albums.values.toList(),
+      initialIndex: initialIndex,
+    );
+  }
+
   Future<void> setSongs(List<MusicMetadata> songs, {bool preload = true}) {
+    _restoredSongPending = false;
     _interruptSeek();
     _wantPlayback = false;
     _cancelRecovery();
@@ -133,7 +178,9 @@ class LibraryAudioHandler extends BaseAudioHandler {
       final hadSongs = _songs.isNotEmpty;
       if (hadSongs) await player.pause();
       _songs = List.unmodifiable(songs);
-      logicalQueue.reset(songs.length);
+      _resetQueue();
+      _initialPosition = null;
+      _lastPosition = Duration.zero;
       if (songs.isEmpty) {
         _error = null;
         if (hadSongs) await player.clearAudioSources();
@@ -147,7 +194,26 @@ class LibraryAudioHandler extends BaseAudioHandler {
     });
   }
 
+  Future<void> restoreSongs(
+    List<MusicMetadata> songs, {
+    required int index,
+    required Duration position,
+    bool resetOnFailure = false,
+  }) async {
+    await setSongs(songs, preload: false);
+    if (songs.isEmpty) return;
+    await _serialize(() async {
+      logicalQueue.index = index;
+      _restoredSongPending = resetOnFailure;
+      _initialPosition = position;
+      _lastPosition = position;
+      _indices.add(index);
+      _broadcast();
+    });
+  }
+
   Future<void> select(int index, {bool startPlaying = true}) {
+    _restoredSongPending = false;
     if (index < 0 || index >= _songs.length) return Future.value();
     _interruptSeek();
     _wantPlayback = startPlaying;
@@ -182,11 +248,12 @@ class LibraryAudioHandler extends BaseAudioHandler {
           : _songs[logicalQueue.index].identity;
       final nextIndex = songs.indexWhere((song) => song.identity == identity);
       _songs = List.unmodifiable(songs);
-      logicalQueue.reset(songs.length);
+      _resetQueue(initialIndex: nextIndex < 0 ? 0 : nextIndex);
       if (nextIndex >= 0) {
-        logicalQueue.index = nextIndex;
         _indices.add(nextIndex);
       } else {
+        _initialPosition = null;
+        _lastPosition = Duration.zero;
         await player.stop();
         await player.clearAudioSources();
         _sourceLoaded = false;
@@ -202,10 +269,12 @@ class LibraryAudioHandler extends BaseAudioHandler {
     bool startPlaying = false,
     bool preload = true,
     bool recovering = false,
+    Duration initialPosition = Duration.zero,
   }) async {
     if (!recovering) {
       _cancelRecovery();
-      _lastPosition = Duration.zero;
+      _initialPosition = null;
+      _lastPosition = initialPosition;
     }
     _loading = true;
     final version = _sourceVersion;
@@ -224,12 +293,14 @@ class LibraryAudioHandler extends BaseAudioHandler {
       // the first track. https://github.com/ryanheise/just_audio/issues/1513
       if (kIsWeb) await player.stop();
       _sourceLoaded = false;
+      // Commit identity before resolution, including failures on another track.
+      logicalQueue.index = index;
+      _indices.add(index);
+      _initialPosition = recovering ? _resumePosition : initialPosition;
       final source = resolveSource == null
           ? _songs[index].toAudioSource() as UriAudioSource
           : await resolveSource!(_songs[index]);
       if (version != _sourceVersion) return;
-      logicalQueue.index = index;
-      _indices.add(index);
       final item = source.tag as MediaItem;
       mediaItem.add(
         item.copyWith(
@@ -240,10 +311,11 @@ class LibraryAudioHandler extends BaseAudioHandler {
       await player.setAudioSource(
         source,
         preload: preload,
-        initialPosition: recovering ? _resumePosition : Duration.zero,
+        initialPosition: recovering ? _resumePosition : initialPosition,
       );
       if (version != _sourceVersion) return;
       _sourceLoaded = true;
+      _initialPosition = null;
       if (recovering) _lastPosition = _resumePosition;
       _cancelRecovery();
       if (startPlaying && _wantPlayback) _startPlayer();
@@ -275,11 +347,16 @@ class LibraryAudioHandler extends BaseAudioHandler {
         return;
       }
       if (!_sourceLoaded) {
-        await _load(logicalQueue.index, startPlaying: true);
+        await _load(
+          logicalQueue.index,
+          startPlaying: true,
+          initialPosition: _initialPosition ?? Duration.zero,
+        );
         return;
       }
       if (player.processingState == ProcessingState.completed) {
         await player.seek(Duration.zero);
+        _lastPosition = Duration.zero;
       }
       _startPlayer();
     });
@@ -323,6 +400,9 @@ class LibraryAudioHandler extends BaseAudioHandler {
         if (_recovering) {
           _resumePosition = position;
           _broadcast();
+        } else if (!_sourceLoaded) {
+          _initialPosition = position;
+          _broadcast();
         } else {
           await Future.any<void>([player.seek(position), interrupted.future]);
         }
@@ -347,7 +427,7 @@ class LibraryAudioHandler extends BaseAudioHandler {
 
   @override
   Future<void> skipToPrevious() {
-    if ((_recovering ? _resumePosition : player.position) >
+    if ((_sourceLoaded && !_recovering ? player.position : displayPosition) >
         const Duration(seconds: 3)) {
       return seek(Duration.zero);
     }
@@ -369,15 +449,31 @@ class LibraryAudioHandler extends BaseAudioHandler {
       AudioServiceRepeatMode.none => LoopMode.off,
     };
     _broadcast();
+    onCheckpoint?.call();
   }
 
   @override
   Future<void> setShuffleMode(AudioServiceShuffleMode shuffleMode) async {
-    logicalQueue.setShuffle(shuffleMode != AudioServiceShuffleMode.none);
+    logicalQueue.setShuffle(PlaybackShuffleMode.fromAudioService(shuffleMode));
     _broadcast();
+    onCheckpoint?.call();
   }
 
   void _reportError(Object error) {
+    if (_restoredSongPending && onRestoreFailure != null) {
+      _restoredSongPending = false;
+      _sourceVersion++;
+      _wantPlayback = false;
+      _cancelRecovery();
+      _interruptSeek();
+      _sourceLoaded = false;
+      _initialPosition = null;
+      _lastPosition = Duration.zero;
+      _error = null;
+      onRestoreFailure!();
+      _broadcast();
+      return;
+    }
     final remote = _songs.isNotEmpty && _songs[logicalQueue.index].isSubsonic;
     final message = error.toString().toLowerCase();
     final blockedHttp =
@@ -418,8 +514,8 @@ class LibraryAudioHandler extends BaseAudioHandler {
         : error.toString();
     if (connectionFailed) {
       if (!_recovering) {
-        if (_seekTarget != null) {
-          _lastPosition = _seekTarget!;
+        if (_seekTarget != null || _initialPosition != null) {
+          _lastPosition = _seekTarget ?? _initialPosition!;
         } else if (player.position > _lastPosition) {
           _lastPosition = player.position;
         }
@@ -476,14 +572,15 @@ class LibraryAudioHandler extends BaseAudioHandler {
           LoopMode.one => AudioServiceRepeatMode.one,
           LoopMode.all => AudioServiceRepeatMode.all,
         },
-        shuffleMode: logicalQueue.shuffled
-            ? AudioServiceShuffleMode.all
-            : AudioServiceShuffleMode.none,
+        shuffleMode: logicalQueue.shuffleMode.audioServiceMode,
       ),
     );
   }
 
   Future<void> dispose() async {
+    onCheckpoint?.call();
+    onCheckpoint = null;
+    onRestoreFailure = null;
     _disposed = true;
     _interruptSeek();
     _wantPlayback = false;

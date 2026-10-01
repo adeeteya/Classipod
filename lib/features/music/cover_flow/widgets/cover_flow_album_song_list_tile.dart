@@ -1,7 +1,8 @@
-import 'package:classipod/core/constants/app_palette.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/duration_extensions.dart';
-import 'package:classipod/core/widgets/marquee_text.dart';
+import 'package:classipod/core/theme/ipod_gradients.dart';
+import 'package:classipod/core/theme/ipod_typography.dart';
+import 'package:classipod/core/widgets/selected_marquee_text.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 
 class CoverFlowAlbumSongListTile extends StatelessWidget {
@@ -29,16 +30,7 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
         width: double.infinity,
         child: DecoratedBox(
           decoration: BoxDecoration(
-            gradient: isSelected
-                ? const LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      AppPalette.selectedTileGradientColor1,
-                      AppPalette.selectedTileGradientColor2,
-                    ],
-                  )
-                : null,
+            gradient: isSelected ? IpodGradients.selectionFor(context) : null,
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -47,16 +39,14 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
               children: [
                 Flexible(
                   flex: 5,
-                  child: MarqueeText(
+                  child: SelectedMarqueeText(
                     songName,
-                    style: CupertinoTheme.of(context).textTheme.textStyle
-                        .copyWith(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: isSelected
-                              ? context.appInverseTextColor
-                              : context.appPrimaryTextColor,
-                        ),
+                    isSelected: isSelected,
+                    style: IpodTypography.menu.copyWith(
+                      color: isSelected
+                          ? context.appInverseTextColor
+                          : context.appPrimaryTextColor,
+                    ),
                   ),
                 ),
                 Flexible(
@@ -70,14 +60,11 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                         )
                       : Text(
                           songDuration.getMinuteAndSecondString,
-                          style: CupertinoTheme.of(context).textTheme.textStyle
-                              .copyWith(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                color: isSelected
-                                    ? context.appInverseTextColor
-                                    : context.appPrimaryTextColor,
-                              ),
+                          style: IpodTypography.menu.copyWith(
+                            color: isSelected
+                                ? context.appInverseTextColor
+                                : context.appPrimaryTextColor,
+                          ),
                           maxLines: 1,
                         ),
                 ),

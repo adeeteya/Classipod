@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya seva",
   "subsonicInvalidUrl": "Yingiza URL ya seva ya HTTP oba HTTPS nga tolina kubuuza, kitundu, oba okuyingira okuteekeddwamu.",
   "subsonicUnsupported": "Seva eno tewagira Subsonic API oba okukakasa akabonero okwetaagisa.",
-  "subsonicConnectionError": "Tesobola kuyungibwa. Kebera URL, omukutu, ne satifikeeti ya HTTPS. Ku Web, seva erina okukkiriza CORS era app ya HTTPS tesobola kuyungibwa ku HTTP."
+  "subsonicConnectionError": "Tesobola kuyungibwa. Kebera URL, omukutu, ne satifikeeti ya HTTPS. Ku Web, seva erina okukkiriza CORS era app ya HTTPS tesobola kuyungibwa ku HTTP.",
+  "nArtists": "{count, plural, =0{Tewali Bayimbi} =1{1 Omuyimbi} other{{count} Abayimbi}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Okukulukuta kw’Ebibikka",
+  "coverFlowOriginalTitle": "Yiiye",
+  "coverFlowBigTitle": "Obunene"
 }

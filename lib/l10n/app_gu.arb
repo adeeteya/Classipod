@@ -207,5 +207,17 @@
   "subsonicUrl": "સર્વર URL",
   "subsonicInvalidUrl": "ક્વેરી, ફ્રેગમેન્ટ અથવા એમ્બેડેડ લોગિન વિના HTTP અથવા HTTPS સર્વર URL દાખલ કરો.",
   "subsonicUnsupported": "આ સર્વર જરૂરી Subsonic API અથવા ટોકન પ્રમાણીકરણને સપોર્ટ કરતું નથી.",
-  "subsonicConnectionError": "કનેક્ટ કરી શકાતું નથી. URL, નેટવર્ક અને HTTPS પ્રમાણપત્ર તપાસો. વેબ પર, સર્વરે CORS ને મંજૂરી આપવી જોઈએ અને HTTPS એપ્લિકેશન HTTP સાથે કનેક્ટ થઈ શકતી નથી."
+  "subsonicConnectionError": "કનેક્ટ કરી શકાતું નથી. URL, નેટવર્ક અને HTTPS પ્રમાણપત્ર તપાસો. વેબ પર, સર્વરે CORS ને મંજૂરી આપવી જોઈએ અને HTTPS એપ્લિકેશન HTTP સાથે કનેક્ટ થઈ શકતી નથી.",
+  "nArtists": "{count, plural, =0{કોઈ કલાકાર નથી} =1{1 કલાકાર} other{{count} કલાકારો}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "કવર ફ્લો",
+  "coverFlowOriginalTitle": "મૂળ",
+  "coverFlowBigTitle": "મોટા"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL di servidor",
   "subsonicInvalidUrl": "Introdusí un URL di servidor HTTP òf HTTPS sin un konsulta, fragmento òf login inkorporá.",
   "subsonicUnsupported": "E servidor aki no ta sostené e API òf autentikashon di token Subsonic nesesario.",
-  "subsonicConnectionError": "No por konektá. Kontrolá e URL, ret i sertifikado HTTPS. Riba wèp, e servidor mester permití CORS i un app HTTPS no por konektá na HTTP."
+  "subsonicConnectionError": "No por konektá. Kontrolá e URL, ret i sertifikado HTTPS. Riba wèp, e servidor mester permití CORS i un app HTTPS no por konektá na HTTP.",
+  "nArtists": "{count, plural, =0{No Artista} =1{1 Artista} other{{count} Artista}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Fluho di Tapa",
+  "coverFlowOriginalTitle": "Original",
+  "coverFlowBigTitle": "Grandi"
 }

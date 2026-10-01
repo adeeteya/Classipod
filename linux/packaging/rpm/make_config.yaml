@@ -1,5 +1,5 @@
 icon: snap/gui/classipod.png
-summary: Local Music Player Inspired by the iPod Classic
+summary: iPod Classic-inspired player for local music and Subsonic/Navidrome streaming
 group: Applications/Multimedia
 vendor: adeeteya
 packager: Aditya R
@@ -38,8 +38,11 @@ keywords:
   - Local
   - Songs
   - Offline
+  - Subsonic
+  - Navidrome
+  - Streaming
 
-generic_name: Local Music Player
+generic_name: Music Player
 categories:
   - Music
 

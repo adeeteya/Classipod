@@ -207,5 +207,17 @@
   "subsonicUrl": "Seriveri URL",
   "subsonicInvalidUrl": "Injira seriveri ya HTTP cyangwa HTTPS idafite ikibazo, igice, cyangwa winjiye.",
   "subsonicUnsupported": "Iyi seriveri ntabwo ishigikira Subsonic API isabwa cyangwa kwemeza ibimenyetso.",
-  "subsonicConnectionError": "Ntushobora guhuza. Reba URL, umuyoboro, hamwe nicyemezo cya HTTPS. Kurubuga, seriveri igomba kwemerera CORS kandi porogaramu ya HTTPS ntishobora guhuza na HTTP."
+  "subsonicConnectionError": "Ntushobora guhuza. Reba URL, umuyoboro, hamwe nicyemezo cya HTTPS. Kurubuga, seriveri igomba kwemerera CORS kandi porogaramu ya HTTPS ntishobora guhuza na HTTP.",
+  "nArtists": "{count, plural, =0{Nta bahanzi} =1{1 Umuhanzi} other{{count} Abahanzi}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Igipfukisho",
+  "coverFlowOriginalTitle": "Umwimerere",
+  "coverFlowBigTitle": "Kinini"
 }

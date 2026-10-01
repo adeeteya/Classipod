@@ -207,5 +207,17 @@
   "subsonicUrl": "سرور URL",
   "subsonicInvalidUrl": "داخل ڪريو HTTP يا HTTPS سرور URL بغير سوال، ٽڪرا، يا داخل ٿيل لاگ ان.",
   "subsonicUnsupported": "هي سرور گهربل Subsonic API يا ٽوڪن جي تصديق جي حمايت نٿو ڪري.",
-  "subsonicConnectionError": "ڳنڍي نٿو سگهي. URL، نيٽ ورڪ، ۽ HTTPS سرٽيفڪيٽ چيڪ ڪريو. ويب تي، سرور کي CORS جي اجازت ڏيڻ گهرجي ۽ هڪ HTTPS ايپ HTTP سان ڳنڍي نه ٿي سگهي."
+  "subsonicConnectionError": "ڳنڍي نٿو سگهي. URL، نيٽ ورڪ، ۽ HTTPS سرٽيفڪيٽ چيڪ ڪريو. ويب تي، سرور کي CORS جي اجازت ڏيڻ گهرجي ۽ هڪ HTTPS ايپ HTTP سان ڳنڍي نه ٿي سگهي.",
+  "nArtists": "{count, plural, =0{نه فنڪار} =1{1 فنڪار} other{{count} فنڪار}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "ڍڪڻ جو وهڪرو",
+  "coverFlowOriginalTitle": "اصل",
+  "coverFlowBigTitle": "وڏو"
 }

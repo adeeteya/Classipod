@@ -207,5 +207,17 @@
   "subsonicUrl": "URL pa latic",
   "subsonicInvalidUrl": "Ket URL me HTTP onyo HTTPS labongo lapeny, dul, onyo donyo ma ki keto iye.",
   "subsonicUnsupported": "Gin ma ki lwongo ni server ni pe miiyo kony bot Subsonic API ma mite onyo lok ma ki keto me moko.",
-  "subsonicConnectionError": "Pe twero kubbe. Nen URL, network, ki certificate me HTTPS. I kom Web, latic myero oye CORS ki app me HTTPS pe twero kubu ki HTTP."
+  "subsonicConnectionError": "Pe twero kubbe. Nen URL, network, ki certificate me HTTPS. I kom Web, latic myero oye CORS ki app me HTTPS pe twero kubu ki HTTP.",
+  "nArtists": "{count, plural, =0{Pe tye ludiro} =1{1 Ladiro} other{{count} Ludiro}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Kit ma ki umu kwede",
+  "coverFlowOriginalTitle": "Orijinol",
+  "coverFlowBigTitle": "Dwong"
 }

@@ -207,5 +207,17 @@
   "subsonicUrl": "URL ya cibombelo",
   "subsonicInvalidUrl": "Ingisha HTTP nangu HTTPS URL iya cibombelo ukwabula ilipusho, iciputulwa, nangu ukwingila ukwabikwamo.",
   "subsonicUnsupported": "Iyi umubomfi tasuminisha API iya Subsonic iyafwaikwa nangu ukushininkisha kwa cishibilo.",
-  "subsonicConnectionError": "Tekuti isuntinkanye. Moneni URL, umutande, na icitupa ca HTTPS. Pa Webu, umubomfi afwile ukusuminisha CORS kabili ububomfi bwa HTTPS tekuti busuntinkanishiwe ku HTTP."
+  "subsonicConnectionError": "Tekuti isuntinkanye. Moneni URL, umutande, na icitupa ca HTTPS. Pa Webu, umubomfi afwile ukusuminisha CORS kabili ububomfi bwa HTTPS tekuti busuntinkanishiwe ku HTTP.",
+  "nArtists": "{count, plural, =0{Takuli Abakupanga} =1{Kalemba umo} other{{count} Abakupanga}}",
+  "@nArtists": {
+    "placeholders": {
+      "count": {
+        "type": "num",
+        "format": "compact"
+      }
+    }
+  },
+  "coverFlowAppearanceSettingTitle": "Ukupita kwa cifimba",
+  "coverFlowOriginalTitle": "Kubalilapo",
+  "coverFlowBigTitle": "Icikulu"
 }

@@ -1,14 +1,22 @@
 import 'dart:async';
+import 'dart:collection';
+import 'dart:io';
 import 'dart:math';
 
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/models/playback_shuffle_mode.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/services/playback/library_audio_handler.dart';
 import 'package:classipod/core/services/playback/logical_queue.dart';
+import 'package:classipod/core/services/playback/playback_session.dart';
+import 'package:classipod/features/now_playing/models/now_playing_model.dart';
+import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hive_ce/hive.dart';
 import 'package:just_audio/just_audio.dart';
 
 class TestPlayer extends Fake implements AudioPlayer {
@@ -107,6 +115,23 @@ class TestPlayer extends Fake implements AudioPlayer {
   }
 }
 
+class MemoryPlaybackBox extends Fake implements Box<dynamic> {
+  final storedRecords = <dynamic, dynamic>{};
+  int writes = 0;
+
+  @override
+  dynamic get(dynamic key, {dynamic defaultValue}) => storedRecords[key];
+
+  @override
+  Future<void> put(dynamic key, dynamic value) async {
+    storedRecords[key] = value;
+    writes++;
+  }
+
+  @override
+  Future<void> flush() async {}
+}
+
 MusicMetadata song(int index) => MusicMetadata(
   originalSongIndex: index,
   songId: 'song-$index',
@@ -117,6 +142,7 @@ MusicMetadata song(int index) => MusicMetadata(
 Future<void> flushEvents() => Future.delayed(const Duration(milliseconds: 10));
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   late TestPlayer player;
   late LibraryAudioHandler handler;
   setUp(() {
@@ -126,6 +152,270 @@ void main() {
   tearDown(() async {
     await handler.dispose();
     await player.close();
+  });
+
+  test(
+    'startup restores Now Playing and persists subsequent controls',
+    () async {
+      final directory = await Directory.systemTemp.createTemp(
+        'session-startup',
+      );
+      Hive.init(directory.path);
+      final box = await Hive.openBox<dynamic>('playback-session-v1');
+      await box.put('session', {
+        ...const PlaybackSession(
+          ids: ['song-0', 'song-1'],
+          index: 1,
+          type: NowPlayingType.playlist,
+          shuffle: PlaybackShuffleMode.albums,
+          loop: LoopMode.all,
+        ).toMap(),
+        'position': 42000,
+      });
+      final container = ProviderContainer(
+        overrides: [
+          audioPlayerProvider.overrideWithValue(player),
+          libraryAudioHandlerProvider.overrideWithValue(handler),
+          filteredAudioFilesProvider.overrideWith(
+            (_) async => UnmodifiableListView([song(0), song(1)]),
+          ),
+        ],
+      );
+      await container.read(audioPlayerServiceProvider.future);
+      await container.read(audioPlayerServiceProvider.notifier).restoreSession([
+        song(0),
+        song(1),
+      ]);
+      await flushEvents();
+      final now = container.read(nowPlayingDetailsProvider);
+      expect(now.currentMetadata?.identity, 'song-1');
+      expect(now.nowPlayingType, NowPlayingType.playlist);
+      expect(now.shuffleMode, PlaybackShuffleMode.albums);
+      expect(now.loopMode, LoopMode.all);
+      expect(now.isPlaying, isFalse);
+      expect(handler.displayPosition, Duration.zero);
+      expect(player.loadedIds, isEmpty);
+      await handler.seek(const Duration(seconds: 3));
+      await flushEvents();
+      expect(PlaybackSessionStore(box).read()!.index, 1);
+      // Checkpoint writes run independently of the playback command. Wait for
+      // Hive to publish the selected index instead of assuming a disk latency.
+      final selectionSaved = box
+          .watch(key: 'checkpoint')
+          .where((event) => event.value is Map && event.value['index'] == 0)
+          .timeout(const Duration(seconds: 10))
+          .first;
+      await handler.select(0);
+      await selectionSaved;
+      expect(PlaybackSessionStore(box).read()!.index, 0);
+      await container.read(audioPlayerServiceProvider.notifier).restoreSession([
+        song(0),
+        song(1),
+      ]);
+      expect(handler.displayPosition, Duration.zero);
+      container.dispose();
+      await flushEvents();
+      await box.close();
+      await directory.delete(recursive: true);
+    },
+  );
+
+  for (final remote in [false, true]) {
+    test(
+      'failed restored ${remote ? 'remote' : 'local'} song starts fresh',
+      () async {
+        final directory = await Directory.systemTemp.createTemp(
+          'restore-error',
+        );
+        Hive.init(directory.path);
+        final box = await Hive.openBox<dynamic>('playback-session-v1');
+        final failedSong = remote
+            ? MusicMetadata(
+                songId: 'remote',
+                serverId: 'server',
+                remoteSongId: 'id',
+                isOnDevice: false,
+              )
+            : song(1);
+        final library = [song(0), failedSong];
+        await box.put(
+          'session',
+          PlaybackSession(
+            ids: [failedSong.identity],
+            index: 0,
+            type: NowPlayingType.playlist,
+            shuffle: PlaybackShuffleMode.off,
+            loop: LoopMode.off,
+          ).toMap(),
+        );
+        await handler.dispose();
+        handler = LibraryAudioHandler(
+          player,
+          retryDelay: const Duration(milliseconds: 10),
+          resolveSource: (song) async => AudioSource.uri(
+            Uri.parse('https://example.test/stream'),
+            tag: MediaItem(id: song.identity, title: 'Song'),
+          ),
+        );
+        final container = ProviderContainer(
+          overrides: [
+            audioPlayerProvider.overrideWithValue(player),
+            libraryAudioHandlerProvider.overrideWithValue(handler),
+            filteredAudioFilesProvider.overrideWith(
+              (_) async => UnmodifiableListView(library),
+            ),
+          ],
+        );
+        await container.read(audioPlayerServiceProvider.future);
+        await container
+            .read(audioPlayerServiceProvider.notifier)
+            .restoreSession(library);
+        player.loadError = PlayerException(
+          0,
+          remote ? 'Source error: failed host lookup' : 'File not found',
+          null,
+        );
+        await expectLater(handler.play(), throwsStateError);
+        await Future<void>.delayed(const Duration(milliseconds: 50));
+        expect(handler.recovering, isFalse);
+        expect(handler.wantsPlayback, isFalse);
+        expect(player.playing, isFalse);
+        expect(handler.currentIndex, 0);
+        expect(
+          handler.songs.map((song) => song.identity),
+          library.map((song) => song.identity),
+        );
+        expect(
+          container.read(nowPlayingDetailsProvider).nowPlayingType,
+          NowPlayingType.songs,
+        );
+        expect(PlaybackSessionStore(box).read(), isNull);
+        player.loadError = null;
+        await handler.select(0);
+        await flushEvents();
+        expect(player.playing, isTrue);
+        expect(PlaybackSessionStore(box).read()!.ids.first, 'song-0');
+        container.dispose();
+        await flushEvents();
+        await box.close();
+        await directory.delete(recursive: true);
+      },
+    );
+  }
+
+  test('position and unchanged controls do not write song selection', () async {
+    final box = MemoryPlaybackBox();
+    final store = PlaybackSessionStore(box);
+    await handler.setSongs([song(0), song(1)]);
+    store.attach(handler, () => NowPlayingType.songs);
+    await handler.select(1);
+    await store.dispose();
+    final writes = box.writes;
+    player.position = const Duration(seconds: 8);
+    player.positions.add(player.position);
+    await flushEvents();
+    await handler.seek(const Duration(seconds: 9));
+    await handler.pause();
+    await store.dispose();
+    expect(box.writes, writes);
+    expect(store.read()!.index, 1);
+    expect(box.storedRecords['checkpoint'], isNot(contains('position')));
+    handler.onCheckpoint = null;
+  });
+
+  test(
+    'restores paused without resolving until play, including seek',
+    () async {
+      await handler.restoreSongs(
+        [song(0), song(1)],
+        index: 1,
+        position: const Duration(seconds: 7),
+      );
+      expect(handler.currentIndex, 1);
+      expect(handler.displayPosition, const Duration(seconds: 7));
+      expect(player.loadedIds, isEmpty);
+      expect(player.playing, isFalse);
+      await handler.seek(const Duration(seconds: 5));
+      await handler.play();
+      expect(player.loadedIds, ['song-1']);
+      expect(player.position, const Duration(seconds: 5));
+      expect(player.playing, isTrue);
+    },
+  );
+
+  test('failed restore load retains position for retry', () async {
+    await handler.restoreSongs(
+      [song(0)],
+      index: 0,
+      position: const Duration(seconds: 7),
+    );
+    player.failLoad = true;
+    await expectLater(handler.play(), throwsStateError);
+    expect(handler.displayPosition, const Duration(seconds: 7));
+    player.failLoad = false;
+    await handler.play();
+    expect(player.position, const Duration(seconds: 7));
+  });
+
+  test('selecting another track discards restored seek', () async {
+    await handler.restoreSongs(
+      [song(0), song(1)],
+      index: 1,
+      position: const Duration(seconds: 7),
+    );
+    await handler.select(0);
+    expect(player.position, Duration.zero);
+    expect(handler.displayPosition, Duration.zero);
+  });
+
+  test(
+    'remote restore stays at saved position through connection failure',
+    () async {
+      final remote = MusicMetadata(
+        songId: 'remote',
+        serverId: 'server',
+        remoteSongId: 'id',
+        isOnDevice: false,
+      );
+      await handler.dispose();
+      var offline = true;
+      handler = LibraryAudioHandler(
+        player,
+        resolveSource: (_) async {
+          if (offline) throw StateError('Failed host lookup');
+          return AudioSource.uri(
+            Uri.parse('https://example.test/fresh'),
+            tag: const MediaItem(id: 'remote', title: 'Remote'),
+          );
+        },
+      );
+      await handler.restoreSongs(
+        [remote],
+        index: 0,
+        position: const Duration(seconds: 7),
+      );
+      await expectLater(handler.play(), throwsStateError);
+      await handler.pause();
+      expect(handler.displayPosition, const Duration(seconds: 7));
+      offline = false;
+      await handler.play();
+      expect(player.position, const Duration(seconds: 7));
+    },
+  );
+
+  test('checkpoints seek, pause, stop and track changes', () async {
+    final checkpoints = <(int?, Duration)>[];
+    handler.onCheckpoint = () =>
+        checkpoints.add((handler.currentIndex, handler.displayPosition));
+    await handler.setSongs([song(0), song(1)]);
+    await handler.seek(const Duration(seconds: 4));
+    expect(checkpoints.last, (0, const Duration(seconds: 4)));
+    await handler.pause();
+    expect(checkpoints.last, (0, const Duration(seconds: 4)));
+    await handler.stop();
+    expect(checkpoints.last, (0, const Duration(seconds: 4)));
+    await handler.select(1);
+    expect(checkpoints.last, (1, Duration.zero));
   });
 
   test(
@@ -617,20 +907,211 @@ void main() {
   });
 
   test(
+    'Now Playing follows shuffle order and restores the original index',
+    () async {
+      final container = ProviderContainer(
+        overrides: [
+          audioPlayerProvider.overrideWithValue(player),
+          libraryAudioHandlerProvider.overrideWithValue(handler),
+        ],
+      );
+      addTearDown(container.dispose);
+      final songs = List.generate(309, song);
+      container
+          .read(nowPlayingDetailsProvider.notifier)
+          .setNewMetadataList(newMetadataList: songs);
+      await handler.setSongs(songs);
+      await handler.select(70);
+      await flushEvents();
+      expect(container.read(nowPlayingDetailsProvider).queuePosition, 70);
+
+      await handler.setShuffleMode(AudioServiceShuffleMode.all);
+      await flushEvents();
+      var details = container.read(nowPlayingDetailsProvider);
+      expect(details.queuePosition, 0);
+      expect(details.currentIndex, 70);
+      expect(details.currentMetadata, songs[70]);
+      expect(details.metadataList.length, 309);
+
+      await handler.skipToNext();
+      await flushEvents();
+      details = container.read(nowPlayingDetailsProvider);
+      expect(details.queuePosition, 1);
+      expect(details.currentMetadata, songs[handler.currentIndex!]);
+
+      await handler.skipToPrevious();
+      await flushEvents();
+      expect(container.read(nowPlayingDetailsProvider).queuePosition, 0);
+      expect(handler.currentIndex, 70);
+
+      await handler.setShuffleMode(AudioServiceShuffleMode.none);
+      await flushEvents();
+      details = container.read(nowPlayingDetailsProvider);
+      expect(details.queuePosition, 70);
+      expect(details.currentIndex, 70);
+      expect(details.currentMetadata, songs[70]);
+
+      await handler.skipToNext();
+      await flushEvents();
+      expect(container.read(nowPlayingDetailsProvider).queuePosition, 71);
+    },
+  );
+
+  test('album shuffle orders playlist tracks by disc and track', () async {
+    final songs = [
+      song(0).copyWith(albumName: 'A', discNumber: 1, trackNumber: 1),
+      song(1).copyWith(albumName: 'B', discNumber: 1, trackNumber: 2),
+      song(2).copyWith(albumName: 'A', discNumber: 2, trackNumber: 1),
+      song(3).copyWith(albumName: 'B', discNumber: 1, trackNumber: 1),
+      song(4).copyWith(albumName: 'A', discNumber: 1, trackNumber: 2),
+    ];
+    await handler.setSongs(songs);
+    await handler.setShuffleMode(AudioServiceShuffleMode.group);
+    expect(
+      handler.playbackState.value.shuffleMode,
+      AudioServiceShuffleMode.group,
+    );
+    final order = <int>[handler.currentIndex!];
+    while (handler.logicalQueue.next() != null) {
+      await handler.skipToNext();
+      order.add(handler.currentIndex!);
+    }
+    expect(order, [0, 4, 2, 3, 1]);
+    await handler.skipToPrevious();
+    expect(handler.currentIndex, 3);
+    await handler.skipToPrevious();
+    expect(handler.currentIndex, 2);
+    await handler.setShuffleMode(AudioServiceShuffleMode.none);
+    expect(handler.currentIndex, 2);
+    expect(handler.logicalQueue.position, 2);
+    await handler.skipToNext();
+    expect(handler.currentIndex, 3);
+  });
+
+  test(
+    'album shuffle distinguishes artists and remote album identities',
+    () async {
+      final songs = [
+        song(0).copyWith(
+          albumName: 'Hits',
+          albumArtistNames: ['Artist A'],
+          trackNumber: 1,
+        ),
+        song(1).copyWith(
+          albumName: 'Hits',
+          albumArtistNames: ['Artist B'],
+          trackNumber: 1,
+        ),
+        song(2).copyWith(
+          albumName: 'Hits',
+          albumArtistNames: ['Artist A'],
+          trackNumber: 2,
+        ),
+        song(3).copyWith(
+          albumName: 'Hits',
+          albumArtistNames: ['Artist B'],
+          trackNumber: 2,
+        ),
+        song(4).copyWith(
+          serverId: 'one',
+          remoteSongId: '4',
+          remoteAlbumId: 'album',
+          trackNumber: 1,
+        ),
+        song(5).copyWith(
+          serverId: 'two',
+          remoteSongId: '5',
+          remoteAlbumId: 'album',
+          trackNumber: 1,
+        ),
+        song(6).copyWith(
+          serverId: 'one',
+          remoteSongId: '6',
+          remoteAlbumId: 'album',
+          trackNumber: 2,
+        ),
+      ];
+      // Preloading is unnecessary for testing grouping of remote metadata.
+      await handler.setSongs(songs, preload: false);
+      await handler.setShuffleMode(AudioServiceShuffleMode.group);
+      final order = <int>[handler.logicalQueue.index];
+      while (handler.logicalQueue.next() != null) {
+        handler.logicalQueue.index = handler.logicalQueue.next()!;
+        order.add(handler.logicalQueue.index);
+      }
+      expect(order.toSet().length, songs.length);
+      for (final album in [
+        [0, 2],
+        [1, 3],
+        [4, 6],
+      ]) {
+        final start = order.indexOf(album.first);
+        expect(order.sublist(start, start + album.length), album);
+      }
+    },
+  );
+
+  test('settings cycle all modes within the current playlist', () async {
+    final library = List.generate(5, song);
+    final container = ProviderContainer(
+      overrides: [
+        audioPlayerProvider.overrideWithValue(player),
+        libraryAudioHandlerProvider.overrideWithValue(handler),
+        filteredAudioFilesProvider.overrideWith(
+          (_) async => UnmodifiableListView(library),
+        ),
+      ],
+    );
+    addTearDown(container.dispose);
+    await container.read(filteredAudioFilesProvider.future);
+    await container.read(audioPlayerServiceProvider.future);
+    final service = container.read(audioPlayerServiceProvider.notifier);
+    await service.setAudioSource(
+      nowPlayingType: NowPlayingType.playlist,
+      musicMetadataList: [library[3], library[1]],
+    );
+    await handler.select(0);
+    await handler.seek(const Duration(seconds: 4));
+    await flushEvents();
+    await service.toggleShuffleMode();
+    await flushEvents();
+    var details = container.read(nowPlayingDetailsProvider);
+    expect(details.shuffleMode, PlaybackShuffleMode.songs);
+    expect(details.metadataList, [library[3], library[1]]);
+    expect(details.currentMetadata, library[3]);
+    expect(details.queuePosition, 0);
+    expect(player.position, const Duration(seconds: 4));
+    expect(player.playing, isTrue);
+    await service.toggleShuffleMode();
+    await flushEvents();
+    details = container.read(nowPlayingDetailsProvider);
+    expect(details.shuffleMode, PlaybackShuffleMode.albums);
+    expect(details.isShuffleEnabled, isTrue);
+    await service.toggleShuffleMode();
+    await flushEvents();
+    details = container.read(nowPlayingDetailsProvider);
+    expect(details.shuffleMode, PlaybackShuffleMode.off);
+    expect(details.queuePosition, 0);
+    expect(details.isShuffleEnabled, isFalse);
+  });
+
+  test(
     'shuffle visits all 50k positions once and restores sequential order',
     () {
       final queue = LogicalQueue(random: Random(42));
       queue.reset(50000);
       queue.index = 123;
-      queue.setShuffle(true);
+      queue.setShuffle(PlaybackShuffleMode.songs);
+      expect(queue.position, 0);
       final visited = <int>{queue.index};
       while (queue.next() != null) {
         final next = queue.next()!;
         queue.index = next;
         expect(visited.add(next), isTrue);
+        expect(queue.position, visited.length - 1);
       }
       expect(visited.length, 50000);
-      queue.setShuffle(false);
+      queue.setShuffle(PlaybackShuffleMode.off);
       queue.index = 123;
       expect(queue.next(), 124);
       expect(queue.previous(), 122);

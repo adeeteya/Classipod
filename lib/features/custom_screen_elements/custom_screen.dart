@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -17,6 +19,26 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   final ScrollController scrollController = ScrollController();
 
   final ValueNotifier<int> wheelScrollIndex = ValueNotifier(-1);
+
+  void revealDisplayItem(int index) {
+    selectedDisplayItem = index;
+    void reveal(Duration _) {
+      if (!mounted || !scrollController.hasClients) return;
+      final position = scrollController.position;
+      if (!position.hasContentDimensions) {
+        WidgetsBinding.instance.addPostFrameCallback(reveal);
+        return;
+      }
+      scrollController.jumpTo(
+        (index * displayTileHeight).clamp(
+          position.minScrollExtent,
+          position.maxScrollExtent,
+        ),
+      );
+    }
+
+    WidgetsBinding.instance.addPostFrameCallback(reveal);
+  }
 
   void onSelectPressed();
 
@@ -55,7 +77,11 @@ mixin CustomScreen<T extends ConsumerStatefulWidget> on ConsumerState<T> {
   }
 
   void onMenuButtonPressed() {
-    context.pop();
+    scheduleMicrotask(() {
+      if (mounted && ModalRoute.of(context)?.isCurrent == true) {
+        context.pop();
+      }
+    });
   }
 
   Future<void> seekForward() async {

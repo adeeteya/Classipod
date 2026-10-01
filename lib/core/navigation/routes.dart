@@ -436,9 +436,12 @@ final routerProvider = Provider(
                         path: Routes.artists.name,
                         name: Routes.artists.name,
                         parentNavigatorKey: rootNavigatorKey,
-                        pageBuilder: (context, state) => const CupertinoPage(
+                        pageBuilder: (context, state) => CupertinoPage(
                           child: ScreenPageContent(
-                            child: ArtistsSelectionScreen(),
+                            child: ArtistsSelectionScreen(
+                              selectedArtist:
+                                  state.uri.queryParameters['selectedArtist'],
+                            ),
                           ),
                         ),
                         routes: [
@@ -483,9 +486,16 @@ final routerProvider = Provider(
                         path: Routes.albums.name,
                         name: Routes.albums.name,
                         parentNavigatorKey: rootNavigatorKey,
-                        pageBuilder: (context, state) => const CupertinoPage(
+                        pageBuilder: (context, state) => CupertinoPage(
                           child: ScreenPageContent(
-                            child: AlbumsSelectionScreen(),
+                            child: AlbumsSelectionScreen(
+                              selectedAlbum:
+                                  state.uri.queryParameters['selectAlbum'] ==
+                                          'true' &&
+                                      state.extra is AlbumModel
+                                  ? state.extra as AlbumModel
+                                  : null,
+                            ),
                           ),
                         ),
                         routes: [

@@ -14,7 +14,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 class AlbumsSelectionScreen extends ConsumerStatefulWidget {
-  const AlbumsSelectionScreen({super.key});
+  final AlbumModel? selectedAlbum;
+
+  const AlbumsSelectionScreen({super.key, this.selectedAlbum});
 
   @override
   ConsumerState createState() => _AlbumsSelectionScreenState();
@@ -22,6 +24,8 @@ class AlbumsSelectionScreen extends ConsumerStatefulWidget {
 
 class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
     with CustomScreen {
+  AlbumModel? _revealedAlbum;
+
   @override
   double get displayTileHeight => 54;
 
@@ -75,6 +79,14 @@ class _AlbumsSelectionScreenState extends ConsumerState<AlbumsSelectionScreen>
   @override
   Widget build(BuildContext context) {
     ref.watch(albumDetailsProvider);
+    final album = widget.selectedAlbum;
+    if (album != null && album != _revealedAlbum) {
+      final index = displayItems.indexOf(album);
+      if (index >= 0) {
+        _revealedAlbum = album;
+        revealDisplayItem(index + 1);
+      }
+    }
     if (displayItems.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(

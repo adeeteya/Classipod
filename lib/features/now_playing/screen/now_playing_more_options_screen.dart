@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:classipod/core/extensions/build_context_extensions.dart';
-import 'package:classipod/core/extensions/go_router_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/display_list_tile.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
@@ -90,21 +89,24 @@ class _NowPlayingMoreOptionsScreenState
             .read(albumDetailsProvider)
             .indexWhere((e) => e == currentSongMetadata?.getAlbumDetail);
         if (albumDetailIndex != -1) {
-          await context.openUniqueNamed(
+          await Future<void>.value();
+          if (!mounted) return;
+          context.goNamed(
             Routes.albumSongs.name,
-            replaceCurrent: true,
+            queryParameters: const {'selectAlbum': 'true'},
             extra: ref.read(albumDetailsProvider)[albumDetailIndex],
           );
         }
         break;
       case _NowPlayingMoreOptions.browseArtist:
-        await context.openUniqueNamed(
+        final artistName =
+            currentSongMetadata?.getMainArtistName ?? 'Unknown Artist';
+        await Future<void>.value();
+        if (!mounted) return;
+        context.goNamed(
           Routes.artistAlbums.name,
-          replaceCurrent: true,
-          pathParameters: {
-            "artistName":
-                currentSongMetadata?.getMainArtistName ?? "Unknown Artist",
-          },
+          pathParameters: {'artistName': artistName},
+          queryParameters: {'selectedArtist': artistName},
         );
         break;
       case _NowPlayingMoreOptions.editSong:

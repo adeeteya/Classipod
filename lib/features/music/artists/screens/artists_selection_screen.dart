@@ -12,7 +12,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 class ArtistsSelectionScreen extends ConsumerStatefulWidget {
-  const ArtistsSelectionScreen({super.key});
+  final String? selectedArtist;
+
+  const ArtistsSelectionScreen({super.key, this.selectedArtist});
 
   @override
   ConsumerState createState() => _ArtistsSelectionScreenState();
@@ -20,6 +22,8 @@ class ArtistsSelectionScreen extends ConsumerStatefulWidget {
 
 class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
     with CustomScreen {
+  String? _revealedArtist;
+
   @override
   String get routeName => Routes.artists.name;
 
@@ -50,6 +54,14 @@ class _ArtistsSelectionScreenState extends ConsumerState<ArtistsSelectionScreen>
   @override
   Widget build(BuildContext context) {
     ref.watch(artistNamesProvider);
+    final artist = widget.selectedArtist;
+    if (artist != null && artist != _revealedArtist) {
+      final index = displayItems.indexOf(artist);
+      if (index >= 0) {
+        _revealedArtist = artist;
+        revealDisplayItem(index + 1);
+      }
+    }
     if (displayItems.isEmpty) {
       return CupertinoPageScaffold(
         child: Column(

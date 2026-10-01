@@ -40,6 +40,13 @@ class _SearchScreenState extends ConsumerState<SearchScreen>
       ref.watch(searchProvider(inputText));
 
   @override
+  void seekBackwardLongPress() {
+    if (isInputTextBarActive) {
+      inputTextBarController.clearText();
+    }
+  }
+
+  @override
   Future<void> onSelectAction() async {
     await _onSearchResultAction(selectedDisplayItem);
   }

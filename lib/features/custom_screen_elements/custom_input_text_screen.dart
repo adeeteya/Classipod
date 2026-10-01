@@ -97,6 +97,8 @@ mixin CustomInputTextScreen<T extends ConsumerStatefulWidget>
     inputTextBarController.removeCharacter();
   }
 
+  void seekBackwardLongPress() {}
+
   Future<void> deviceControlHandler(_, DeviceAction? newState) async {
     if (!mounted ||
         newState == null ||
@@ -129,6 +131,7 @@ mixin CustomInputTextScreen<T extends ConsumerStatefulWidget>
       case DeviceAction.seekForwardLongPress:
         break;
       case DeviceAction.seekBackwardLongPress:
+        seekBackwardLongPress();
         break;
       case DeviceAction.playPause:
         break;

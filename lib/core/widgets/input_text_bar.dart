@@ -18,6 +18,8 @@ class InputTextBarController {
   void addSpace() => _state?._addSpace();
 
   void removeCharacter() => _state?._removeCharacter();
+
+  void clearText() => _state?._inputTextController.clear();
 }
 
 class InputTextBar extends StatefulWidget {
@@ -108,6 +110,9 @@ class _InputTextBarState extends State<InputTextBar> {
   }
 
   void _removeCharacter() {
+    if (_inputTextController.text.isEmpty) {
+      return;
+    }
     _inputTextController.text = _inputTextController.text.substring(
       0,
       _inputTextController.text.length - 1,

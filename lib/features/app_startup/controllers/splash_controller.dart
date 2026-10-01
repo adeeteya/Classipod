@@ -48,23 +48,12 @@ class SplashControllerNotifier extends AsyncNotifier<void> {
         .read(filteredAudioFilesProvider.future)
         .then((value) => value.toList());
 
-    // Set the audio source
-    await ref
-        .read(audioPlayerServiceProvider.notifier)
-        .setAudioSource(
-          musicMetadataList: filteredAudioFilesMetadata,
-          preload: false,
-        );
-
-    final playbackError = ref.read(audioPlayerServiceProvider).error;
-    if (playbackError != null) {
-      throw StateError('Playback initialization failed: $playbackError');
-    }
-
-    // Set the initial loop mode
     await ref
         .read(settingsPreferencesControllerProvider.notifier)
         .setInitialRepeatMode();
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .restoreSession(filteredAudioFilesMetadata);
 
     // Invalidate the providers that depend on the audio files metadata
     ref.invalidate(albumDetailsProvider);

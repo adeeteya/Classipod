@@ -48,6 +48,11 @@ class RecordingPlayback extends AudioPlayerServiceNotifier {
   final queues = <List<MusicMetadata>>[];
 
   @override
+  Future<void> restoreSession(List<MusicMetadata> library) async {
+    queues.add(library);
+  }
+
+  @override
   Future<void> setAudioSource({
     NowPlayingType nowPlayingType = NowPlayingType.songs,
     bool preload = true,

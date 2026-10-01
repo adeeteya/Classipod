@@ -6,6 +6,7 @@ import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/playback/library_audio_handler.dart';
+import 'package:classipod/core/services/playback/playback_session.dart';
 import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
@@ -15,6 +16,7 @@ import 'package:classipod/features/settings/controller/settings_preferences_cont
 import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_ce/hive.dart';
 import 'package:just_audio/just_audio.dart';
 
 final audioPlayerProvider = Provider<AudioPlayer>((_) {
@@ -47,6 +49,7 @@ final libraryAudioHandlerProvider = Provider<LibraryAudioHandler>((ref) {
 });
 
 void _reconcileLibrary(Ref ref, LibraryAudioHandler handler) {
+  if (handler.restoringSession) return;
   final now = ref.read(nowPlayingDetailsProvider);
   final remote = ref.read(subsonicControllerProvider).value;
   final library = ref.read(filteredAudioFilesProvider).value;
@@ -73,6 +76,8 @@ final audioPlayerServiceProvider =
 class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   AudioPlayerServiceNotifier() : super();
 
+  bool _sessionRestored = false;
+
   @override
   Future<void> build() async {
     final handler = ref.watch(libraryAudioHandlerProvider);
@@ -81,6 +86,107 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
         _reconcileLibrary(ref, handler);
       }
     });
+  }
+
+  Future<void> restoreSession(List<MusicMetadata> library) async {
+    final handler = ref.read(libraryAudioHandlerProvider);
+    if (_sessionRestored) {
+      _reconcileLibrary(ref, handler);
+      return;
+    }
+    handler.restoringSession = true;
+    try {
+      PlaybackSessionStore? store;
+      try {
+        store = PlaybackSessionStore(
+          await Hive.openBox<dynamic>('playback-session-v1'),
+        );
+      } catch (error) {
+        debugPrint('Could not open playback session: ${error.runtimeType}');
+      }
+      final initialRepeatMode = handler.playbackState.value.repeatMode;
+      final savedSession = store?.read();
+      final session =
+          savedSession != null &&
+              library.any(
+                (song) => song.identity == savedSession.ids[savedSession.index],
+              )
+          ? savedSession
+          : null;
+      if (savedSession != null && session == null) await store?.clear();
+      final restored = session?.resolve(library);
+      final songs = restored?.songs ?? library;
+      ref
+          .read(nowPlayingDetailsProvider.notifier)
+          .setNewMetadataList(
+            nowPlayingType: session?.type ?? NowPlayingType.songs,
+            newMetadataList: songs,
+          );
+      await handler.restoreSongs(
+        songs,
+        index: restored?.index ?? 0,
+        position: Duration.zero,
+        resetOnFailure: session != null,
+      );
+      if (session != null) {
+        await handler.setShuffleMode(session.shuffle.audioServiceMode);
+        await handler.setRepeatMode(switch (session.loop) {
+          LoopMode.off => AudioServiceRepeatMode.none,
+          LoopMode.one => AudioServiceRepeatMode.one,
+          LoopMode.all => AudioServiceRepeatMode.all,
+        });
+      }
+      handler.onRestoreFailure = () {
+        handler.onCheckpoint = null;
+        unawaited(_resetRestoredSession(handler, store, initialRepeatMode));
+      };
+      ref.onDispose(() => handler.onRestoreFailure = null);
+      if (store != null) {
+        store.attach(
+          handler,
+          () => ref.read(nowPlayingDetailsProvider).nowPlayingType,
+        );
+        ref.onDispose(() {
+          handler.onCheckpoint = null;
+          unawaited(store!.dispose());
+        });
+      }
+      _sessionRestored = true;
+    } finally {
+      handler.restoringSession = false;
+    }
+  }
+
+  Future<void> _resetRestoredSession(
+    LibraryAudioHandler handler,
+    PlaybackSessionStore? store,
+    AudioServiceRepeatMode initialRepeatMode,
+  ) async {
+    await store?.clear();
+    if (!ref.mounted) return;
+    final library =
+        ref.read(filteredAudioFilesProvider).value?.toList() ??
+        <MusicMetadata>[];
+    ref
+        .read(nowPlayingDetailsProvider.notifier)
+        .setNewMetadataList(
+          nowPlayingType: NowPlayingType.songs,
+          newMetadataList: library,
+        );
+    try {
+      await handler.setSongs(library, preload: false);
+      await handler.setShuffleMode(AudioServiceShuffleMode.none);
+      await handler.setRepeatMode(initialRepeatMode);
+    } catch (error) {
+      debugPrint('Could not reset playback: ${error.runtimeType}');
+    } finally {
+      if (ref.mounted) {
+        store?.attach(
+          handler,
+          () => ref.read(nowPlayingDetailsProvider).nowPlayingType,
+        );
+      }
+    }
   }
 
   Future<void> play() async {

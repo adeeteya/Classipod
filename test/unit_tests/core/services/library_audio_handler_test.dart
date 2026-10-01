@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:collection';
+import 'dart:io';
 import 'dart:math';
 
 import 'package:audio_service/audio_service.dart';
@@ -10,10 +11,12 @@ import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/services/playback/library_audio_handler.dart';
 import 'package:classipod/core/services/playback/logical_queue.dart';
+import 'package:classipod/core/services/playback/playback_session.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hive_ce/hive.dart';
 import 'package:just_audio/just_audio.dart';
 
 class TestPlayer extends Fake implements AudioPlayer {
@@ -112,6 +115,23 @@ class TestPlayer extends Fake implements AudioPlayer {
   }
 }
 
+class MemoryPlaybackBox extends Fake implements Box<dynamic> {
+  final storedRecords = <dynamic, dynamic>{};
+  int writes = 0;
+
+  @override
+  dynamic get(dynamic key, {dynamic defaultValue}) => storedRecords[key];
+
+  @override
+  Future<void> put(dynamic key, dynamic value) async {
+    storedRecords[key] = value;
+    writes++;
+  }
+
+  @override
+  Future<void> flush() async {}
+}
+
 MusicMetadata song(int index) => MusicMetadata(
   originalSongIndex: index,
   songId: 'song-$index',
@@ -122,6 +142,7 @@ MusicMetadata song(int index) => MusicMetadata(
 Future<void> flushEvents() => Future.delayed(const Duration(milliseconds: 10));
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   late TestPlayer player;
   late LibraryAudioHandler handler;
   setUp(() {
@@ -131,6 +152,263 @@ void main() {
   tearDown(() async {
     await handler.dispose();
     await player.close();
+  });
+
+  test(
+    'startup restores Now Playing and persists subsequent controls',
+    () async {
+      final directory = await Directory.systemTemp.createTemp(
+        'session-startup',
+      );
+      Hive.init(directory.path);
+      final box = await Hive.openBox<dynamic>('playback-session-v1');
+      await box.put('session', {
+        ...const PlaybackSession(
+          ids: ['song-0', 'song-1'],
+          index: 1,
+          type: NowPlayingType.playlist,
+          shuffle: PlaybackShuffleMode.albums,
+          loop: LoopMode.all,
+        ).toMap(),
+        'position': 42000,
+      });
+      final container = ProviderContainer(
+        overrides: [
+          audioPlayerProvider.overrideWithValue(player),
+          libraryAudioHandlerProvider.overrideWithValue(handler),
+          filteredAudioFilesProvider.overrideWith(
+            (_) async => UnmodifiableListView([song(0), song(1)]),
+          ),
+        ],
+      );
+      await container.read(audioPlayerServiceProvider.future);
+      await container.read(audioPlayerServiceProvider.notifier).restoreSession([
+        song(0),
+        song(1),
+      ]);
+      await flushEvents();
+      final now = container.read(nowPlayingDetailsProvider);
+      expect(now.currentMetadata?.identity, 'song-1');
+      expect(now.nowPlayingType, NowPlayingType.playlist);
+      expect(now.shuffleMode, PlaybackShuffleMode.albums);
+      expect(now.loopMode, LoopMode.all);
+      expect(now.isPlaying, isFalse);
+      expect(handler.displayPosition, Duration.zero);
+      expect(player.loadedIds, isEmpty);
+      await handler.seek(const Duration(seconds: 3));
+      await flushEvents();
+      expect(PlaybackSessionStore(box).read()!.index, 1);
+      await handler.select(0);
+      await flushEvents();
+      expect(PlaybackSessionStore(box).read()!.index, 0);
+      await container.read(audioPlayerServiceProvider.notifier).restoreSession([
+        song(0),
+        song(1),
+      ]);
+      expect(handler.displayPosition, Duration.zero);
+      container.dispose();
+      await flushEvents();
+      await box.close();
+      await directory.delete(recursive: true);
+    },
+  );
+
+  for (final remote in [false, true]) {
+    test(
+      'failed restored ${remote ? 'remote' : 'local'} song starts fresh',
+      () async {
+        final directory = await Directory.systemTemp.createTemp(
+          'restore-error',
+        );
+        Hive.init(directory.path);
+        final box = await Hive.openBox<dynamic>('playback-session-v1');
+        final failedSong = remote
+            ? MusicMetadata(
+                songId: 'remote',
+                serverId: 'server',
+                remoteSongId: 'id',
+                isOnDevice: false,
+              )
+            : song(1);
+        final library = [song(0), failedSong];
+        await box.put(
+          'session',
+          PlaybackSession(
+            ids: [failedSong.identity],
+            index: 0,
+            type: NowPlayingType.playlist,
+            shuffle: PlaybackShuffleMode.off,
+            loop: LoopMode.off,
+          ).toMap(),
+        );
+        await handler.dispose();
+        handler = LibraryAudioHandler(
+          player,
+          retryDelay: const Duration(milliseconds: 10),
+          resolveSource: (song) async => AudioSource.uri(
+            Uri.parse('https://example.test/stream'),
+            tag: MediaItem(id: song.identity, title: 'Song'),
+          ),
+        );
+        final container = ProviderContainer(
+          overrides: [
+            audioPlayerProvider.overrideWithValue(player),
+            libraryAudioHandlerProvider.overrideWithValue(handler),
+            filteredAudioFilesProvider.overrideWith(
+              (_) async => UnmodifiableListView(library),
+            ),
+          ],
+        );
+        await container.read(audioPlayerServiceProvider.future);
+        await container
+            .read(audioPlayerServiceProvider.notifier)
+            .restoreSession(library);
+        player.loadError = PlayerException(
+          0,
+          remote ? 'Source error: failed host lookup' : 'File not found',
+          null,
+        );
+        await expectLater(handler.play(), throwsStateError);
+        await Future<void>.delayed(const Duration(milliseconds: 50));
+        expect(handler.recovering, isFalse);
+        expect(handler.wantsPlayback, isFalse);
+        expect(player.playing, isFalse);
+        expect(handler.currentIndex, 0);
+        expect(
+          handler.songs.map((song) => song.identity),
+          library.map((song) => song.identity),
+        );
+        expect(
+          container.read(nowPlayingDetailsProvider).nowPlayingType,
+          NowPlayingType.songs,
+        );
+        expect(PlaybackSessionStore(box).read(), isNull);
+        player.loadError = null;
+        await handler.select(0);
+        await flushEvents();
+        expect(player.playing, isTrue);
+        expect(PlaybackSessionStore(box).read()!.ids.first, 'song-0');
+        container.dispose();
+        await flushEvents();
+        await box.close();
+        await directory.delete(recursive: true);
+      },
+    );
+  }
+
+  test('position and unchanged controls do not write song selection', () async {
+    final box = MemoryPlaybackBox();
+    final store = PlaybackSessionStore(box);
+    await handler.setSongs([song(0), song(1)]);
+    store.attach(handler, () => NowPlayingType.songs);
+    await handler.select(1);
+    await store.dispose();
+    final writes = box.writes;
+    player.position = const Duration(seconds: 8);
+    player.positions.add(player.position);
+    await flushEvents();
+    await handler.seek(const Duration(seconds: 9));
+    await handler.pause();
+    await store.dispose();
+    expect(box.writes, writes);
+    expect(store.read()!.index, 1);
+    expect(box.storedRecords['checkpoint'], isNot(contains('position')));
+    handler.onCheckpoint = null;
+  });
+
+  test(
+    'restores paused without resolving until play, including seek',
+    () async {
+      await handler.restoreSongs(
+        [song(0), song(1)],
+        index: 1,
+        position: const Duration(seconds: 7),
+      );
+      expect(handler.currentIndex, 1);
+      expect(handler.displayPosition, const Duration(seconds: 7));
+      expect(player.loadedIds, isEmpty);
+      expect(player.playing, isFalse);
+      await handler.seek(const Duration(seconds: 5));
+      await handler.play();
+      expect(player.loadedIds, ['song-1']);
+      expect(player.position, const Duration(seconds: 5));
+      expect(player.playing, isTrue);
+    },
+  );
+
+  test('failed restore load retains position for retry', () async {
+    await handler.restoreSongs(
+      [song(0)],
+      index: 0,
+      position: const Duration(seconds: 7),
+    );
+    player.failLoad = true;
+    await expectLater(handler.play(), throwsStateError);
+    expect(handler.displayPosition, const Duration(seconds: 7));
+    player.failLoad = false;
+    await handler.play();
+    expect(player.position, const Duration(seconds: 7));
+  });
+
+  test('selecting another track discards restored seek', () async {
+    await handler.restoreSongs(
+      [song(0), song(1)],
+      index: 1,
+      position: const Duration(seconds: 7),
+    );
+    await handler.select(0);
+    expect(player.position, Duration.zero);
+    expect(handler.displayPosition, Duration.zero);
+  });
+
+  test(
+    'remote restore stays at saved position through connection failure',
+    () async {
+      final remote = MusicMetadata(
+        songId: 'remote',
+        serverId: 'server',
+        remoteSongId: 'id',
+        isOnDevice: false,
+      );
+      await handler.dispose();
+      var offline = true;
+      handler = LibraryAudioHandler(
+        player,
+        resolveSource: (_) async {
+          if (offline) throw StateError('Failed host lookup');
+          return AudioSource.uri(
+            Uri.parse('https://example.test/fresh'),
+            tag: const MediaItem(id: 'remote', title: 'Remote'),
+          );
+        },
+      );
+      await handler.restoreSongs(
+        [remote],
+        index: 0,
+        position: const Duration(seconds: 7),
+      );
+      await expectLater(handler.play(), throwsStateError);
+      await handler.pause();
+      expect(handler.displayPosition, const Duration(seconds: 7));
+      offline = false;
+      await handler.play();
+      expect(player.position, const Duration(seconds: 7));
+    },
+  );
+
+  test('checkpoints seek, pause, stop and track changes', () async {
+    final checkpoints = <(int?, Duration)>[];
+    handler.onCheckpoint = () =>
+        checkpoints.add((handler.currentIndex, handler.displayPosition));
+    await handler.setSongs([song(0), song(1)]);
+    await handler.seek(const Duration(seconds: 4));
+    expect(checkpoints.last, (0, const Duration(seconds: 4)));
+    await handler.pause();
+    expect(checkpoints.last, (0, const Duration(seconds: 4)));
+    await handler.stop();
+    expect(checkpoints.last, (0, const Duration(seconds: 4)));
+    await handler.select(1);
+    expect(checkpoints.last, (1, Duration.zero));
   });
 
   test(

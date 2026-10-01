@@ -1,5 +1,11 @@
 ## 2.0.0 (Unreleased)
 
+- Restore the last playback queue and song when reopening the app, paused at
+  the beginning. Save queue changes separately from song selection, without
+  periodic position writes. Resolve remote streams on demand and skip
+  unavailable library tracks. Start fresh if the saved song is missing or
+  its first playback attempt fails.
+
 - Add Off, Songs, and Albums shuffle modes to Now Playing and Settings.
   Shuffle songs or whole albums within the current library or playlist,
   keeping album tracks together in disc and track order.

@@ -9,6 +9,7 @@ import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
 import 'package:classipod/features/now_playing/widgets/now_playing_bottom_bar.dart';
+import 'package:classipod/features/now_playing/widgets/shuffle_segmented_control.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/models/volume_mode.dart';
@@ -60,6 +61,18 @@ class _Details extends NowPlayingDetailsNotifier {
 class _AudioService extends AudioPlayerServiceNotifier {
   PlaybackShuffleMode? appliedShuffle;
   int playbackToggles = 0;
+  int nextSongCalls = 0;
+  int previousSongCalls = 0;
+
+  @override
+  Future<void> nextSong() async {
+    nextSongCalls++;
+  }
+
+  @override
+  Future<void> seekBackwards() async {
+    previousSongCalls++;
+  }
 
   @override
   Future<void> togglePlayback() async {
@@ -245,6 +258,55 @@ void main() {
     expect(controller(tester).page, 0);
     await tester.pumpWidget(const SizedBox.shrink());
   });
+
+  testWidgets('seek buttons move shuffle selection without changing songs', (
+    tester,
+  ) async {
+    await mount(tester);
+    for (var i = 0; i < 3; i++) {
+      await input(tester, DeviceAction.select);
+    }
+    PlaybackShuffleMode selection() => tester
+        .widget<ShuffleSegmentedControl>(find.byType(ShuffleSegmentedControl))
+        .shuffleMode;
+
+    await input(tester, DeviceAction.seekBackward);
+    expect(selection(), PlaybackShuffleMode.values.first);
+    await input(tester, DeviceAction.seekForward);
+    expect(selection(), PlaybackShuffleMode.values[1]);
+    await input(tester, DeviceAction.seekForward);
+    expect(selection(), PlaybackShuffleMode.values.last);
+    await input(tester, DeviceAction.seekForward);
+    expect(selection(), PlaybackShuffleMode.values.last);
+    await tester.pump(const Duration(seconds: 3));
+    await input(tester, DeviceAction.seekBackward);
+    expect(selection(), PlaybackShuffleMode.values[1]);
+    await tester.pump(const Duration(seconds: 3));
+    expect(controller(tester).page, 3);
+    expect(audio.nextSongCalls, 0);
+    expect(audio.previousSongCalls, 0);
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pumpAndSettle();
+    expect(audio.appliedShuffle, PlaybackShuffleMode.values[1]);
+    expect(controller(tester).page, 0);
+    await tester.pumpWidget(const SizedBox.shrink());
+  });
+
+  for (final page in [0, 1, 2, 4]) {
+    testWidgets('seek buttons retain playback behavior on page $page', (
+      tester,
+    ) async {
+      await mount(tester);
+      for (var i = 0; i < page; i++) {
+        await input(tester, DeviceAction.select);
+      }
+      await input(tester, DeviceAction.seekForward);
+      await input(tester, DeviceAction.seekBackward);
+      expect(audio.nextSongCalls, 1);
+      expect(audio.previousSongCalls, 1);
+      await tester.pumpWidget(const SizedBox.shrink());
+    });
+  }
 
   testWidgets('shuffle selection is applied on inactivity', (tester) async {
     await mount(tester);

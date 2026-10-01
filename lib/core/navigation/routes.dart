@@ -29,6 +29,7 @@ import 'package:classipod/features/music/songs/screens/songs_more_options_modal.
 import 'package:classipod/features/music/songs/screens/songs_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_more_options_screen.dart';
 import 'package:classipod/features/now_playing/screen/now_playing_screen.dart';
+import 'package:classipod/features/now_playing/widgets/now_playing_idle_navigation.dart';
 import 'package:classipod/features/settings/controller/exclude_directories_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/screens/about_screen.dart';
@@ -182,13 +183,15 @@ final routerProvider = Provider(
               behavior: CustomScrollBehavior(),
               child: CupertinoPageScaffold(
                 resizeToAvoidBottomInset: false,
-                child: DeviceFrame(
-                  key: deviceFrameGlobalKey,
-                  child: DeviceScreenContent(
-                    transitionObserver: ref.read(
-                      statusBarTransitionObserverProvider,
+                child: NowPlayingIdleNavigation(
+                  child: DeviceFrame(
+                    key: deviceFrameGlobalKey,
+                    child: DeviceScreenContent(
+                      transitionObserver: ref.read(
+                        statusBarTransitionObserverProvider,
+                      ),
+                      child: child,
                     ),
-                    child: child,
                   ),
                 ),
               ),

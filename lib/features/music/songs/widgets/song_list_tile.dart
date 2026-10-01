@@ -65,7 +65,7 @@ class SongListTile extends StatelessWidget {
                       ),
                       Text(
                         trackArtistNames ?? context.localization.unknownArtist,
-                        style: IpodTypography.metadata.copyWith(
+                        style: IpodTypography.description.copyWith(
                           color: isSelected
                               ? context.appInverseTextColor
                               : context.appSecondaryTextColor,

@@ -1,1 +1,1 @@
-A local music player app designed to capture the essence of the iPod Classic.
+🎵 iPod Classic player for local music and Subsonic/Navidrome streaming

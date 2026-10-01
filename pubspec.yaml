@@ -1,5 +1,5 @@
 name: classipod
-description: "A ipod Classic Emulator"
+description: "An iPod Classic-inspired player for local music and Subsonic/Navidrome streaming."
 
 publish_to: 'none'
 

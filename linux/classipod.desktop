@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Classipod
-Comment=An iPod Classic-inspired local music player with playlists, cover art, and shuffle mode and dark mode support
+Comment=iPod Classic-inspired player for local music and Subsonic/Navidrome streaming
 Exec=/usr/bin/classipod
 Icon=/usr/share/icons/classipod/classipod.png
 Terminal=false

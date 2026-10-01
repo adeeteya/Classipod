@@ -93,7 +93,7 @@ Before publishing a release:
 - Sideload the IPA onto a physical iPhone/iPad and verify folder selection,
   indexing, artwork, playback, and reopening the saved folder after relaunch.
 - Install the DMG on Apple Silicon and Intel Macs. Verify folder access after
-  relaunch, artwork, playback, and Settings → Rescan Music Files.
+  relaunch, artwork, playback, and Settings → Library Settings → Re-index.
 - Test a browser-downloaded DMG to exercise Gatekeeper; a local build does not
   reproduce the downloaded-file quarantine behavior.
 

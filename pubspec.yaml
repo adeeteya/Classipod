@@ -7,13 +7,13 @@ version: 2.1.0+27
 
 environment:
   sdk: ^3.13.2
-  flutter: 3.47.5
+  flutter: 3.47.6
 
 dependencies:
   audio_service: ^0.18.19
   audio_service_mpris: ^0.2.1
   audio_service_win: ^0.0.3
-  battery_plus: ^7.1.1
+  battery_plus: ^7.1.2
   crypto: ^3.0.7
   cupertino_icons: ^2.0.0
   cupertino_ui: ^1.1.1

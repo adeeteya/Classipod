@@ -114,6 +114,20 @@ class SettingsPreferencesRepository {
         AppTheme.light.name;
   }
 
+  bool getKeepScreenAwakeWhilePlaying() {
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.keepScreenAwakeWhilePlaying.name,
+        ) ??
+        false;
+  }
+
+  Future<void> setKeepScreenAwakeWhilePlaying({required bool enabled}) {
+    return _sharedPreferencesWithCache.setBool(
+      SharedPreferencesKeys.keepScreenAwakeWhilePlaying.name,
+      enabled,
+    );
+  }
+
   bool getImmersiveMode() {
     return _sharedPreferencesWithCache.getBool(
           SharedPreferencesKeys.immersiveMode.name,

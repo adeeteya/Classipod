@@ -18,6 +18,7 @@ class SettingsPreferencesModel {
   final VolumeMode volumeMode;
   final bool splitScreenEnabled;
   final bool immersiveMode;
+  final bool keepScreenAwakeWhilePlaying;
   final bool fetchOnlineMusic;
   final AppTheme appTheme;
   final CoverFlowAppearance coverFlowAppearance;
@@ -35,6 +36,7 @@ class SettingsPreferencesModel {
     required this.splitScreenEnabled,
     required this.immersiveMode,
     required this.appTheme,
+    this.keepScreenAwakeWhilePlaying = false,
     this.fetchOnlineMusic = false,
     this.coverFlowAppearance = CoverFlowAppearance.original,
   });
@@ -51,6 +53,7 @@ class SettingsPreferencesModel {
     VolumeMode? volumeMode,
     bool? splitScreenEnabled,
     bool? immersiveMode,
+    bool? keepScreenAwakeWhilePlaying,
     bool? fetchOnlineMusic,
     AppTheme? appTheme,
     CoverFlowAppearance? coverFlowAppearance,
@@ -68,6 +71,8 @@ class SettingsPreferencesModel {
       volumeMode: volumeMode ?? this.volumeMode,
       splitScreenEnabled: splitScreenEnabled ?? this.splitScreenEnabled,
       immersiveMode: immersiveMode ?? this.immersiveMode,
+      keepScreenAwakeWhilePlaying:
+          keepScreenAwakeWhilePlaying ?? this.keepScreenAwakeWhilePlaying,
       appTheme: appTheme ?? this.appTheme,
       coverFlowAppearance: coverFlowAppearance ?? this.coverFlowAppearance,
       fetchOnlineMusic: fetchOnlineMusic ?? this.fetchOnlineMusic,
@@ -88,6 +93,7 @@ class SettingsPreferencesModel {
         other.volumeMode == volumeMode &&
         other.splitScreenEnabled == splitScreenEnabled &&
         other.immersiveMode == immersiveMode &&
+        other.keepScreenAwakeWhilePlaying == keepScreenAwakeWhilePlaying &&
         other.fetchOnlineMusic == fetchOnlineMusic &&
         other.appTheme == appTheme &&
         other.coverFlowAppearance == coverFlowAppearance;
@@ -106,6 +112,7 @@ class SettingsPreferencesModel {
     volumeMode,
     splitScreenEnabled,
     immersiveMode,
+    keepScreenAwakeWhilePlaying,
     appTheme,
     fetchOnlineMusic,
     coverFlowAppearance,

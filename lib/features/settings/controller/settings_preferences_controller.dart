@@ -68,6 +68,8 @@ class SettingsPreferencesControllerNotifier
       ),
       splitScreenEnabled: settingsPreferencesRepository.getSplitScreenEnabled(),
       immersiveMode: settingsPreferencesRepository.getImmersiveMode(),
+      keepScreenAwakeWhilePlaying: settingsPreferencesRepository
+          .getKeepScreenAwakeWhilePlaying(),
       coverFlowAppearance: CoverFlowAppearance.fromName(
         settingsPreferencesRepository.getCoverFlowAppearance(),
       ),
@@ -314,6 +316,14 @@ class SettingsPreferencesControllerNotifier
         .setAppTheme(appThemeName: updatedTheme.name);
   }
 
+  Future<void> toggleKeepScreenAwakeWhilePlaying() async {
+    final enabled = !state.keepScreenAwakeWhilePlaying;
+    state = state.copyWith(keepScreenAwakeWhilePlaying: enabled);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setKeepScreenAwakeWhilePlaying(enabled: enabled);
+  }
+
   Future<void> toggleImmersiveMode() async {
     state = state.copyWith(immersiveMode: !state.immersiveMode);
     await ref
@@ -382,6 +392,9 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setCoverFlowAppearance(CoverFlowAppearance.original);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setKeepScreenAwakeWhilePlaying(enabled: false);
     ref.invalidateSelf();
   }
 

@@ -31,6 +31,7 @@ enum _SettingsDisplayItems {
   volumeMode,
   splitScreenEnabled,
   immersiveMode,
+  keepScreenAwakeWhilePlaying,
   showAppTutorial,
   librarySettings,
   resetSettings,
@@ -68,6 +69,8 @@ enum _SettingsDisplayItems {
         return context.localization.splitScreenSettingTitle;
       case immersiveMode:
         return context.localization.immersiveModeSettingTitle;
+      case keepScreenAwakeWhilePlaying:
+        return 'Keep Screen Awake';
       case showAppTutorial:
         return context.localization.showAppTutorialSettingTitle;
       case librarySettings:
@@ -169,6 +172,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleImmersiveMode();
         break;
+      case _SettingsDisplayItems.keepScreenAwakeWhilePlaying:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleKeepScreenAwakeWhilePlaying();
+        break;
       case _SettingsDisplayItems.showAppTutorial:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
@@ -206,6 +214,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         return settingsState.splitScreenEnabled;
       case _SettingsDisplayItems.immersiveMode:
         return settingsState.immersiveMode;
+      case _SettingsDisplayItems.keepScreenAwakeWhilePlaying:
+        return settingsState.keepScreenAwakeWhilePlaying;
       default:
         return null;
     }

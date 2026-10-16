@@ -14,6 +14,7 @@ enum SplitScreenType {
   deviceColor,
   clickWheelSize,
   clickWheelSensitivity,
+  clickWheelStep,
   touchScreen,
   repeat,
   vibrate,

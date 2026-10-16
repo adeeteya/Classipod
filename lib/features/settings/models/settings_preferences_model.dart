@@ -1,6 +1,7 @@
 import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
+import 'package:classipod/features/settings/models/click_wheel_step.dart';
 import 'package:classipod/features/settings/models/cover_flow_appearance.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
@@ -11,6 +12,7 @@ class SettingsPreferencesModel {
   final DeviceColor deviceColor;
   final ClickWheelSize clickWheelSize;
   final ClickWheelSensitivity clickWheelSensitivity;
+  final ClickWheelStep clickWheelStep;
   final bool isTouchScreenEnabled;
   final RepeatMode repeatMode;
   final bool vibrate;
@@ -27,6 +29,7 @@ class SettingsPreferencesModel {
     required this.deviceColor,
     required this.clickWheelSize,
     required this.clickWheelSensitivity,
+    required this.clickWheelStep,
     required this.isTouchScreenEnabled,
     required this.repeatMode,
     required this.vibrate,
@@ -44,6 +47,7 @@ class SettingsPreferencesModel {
     DeviceColor? deviceColor,
     ClickWheelSize? clickWheelSize,
     ClickWheelSensitivity? clickWheelSensitivity,
+    ClickWheelStep? clickWheelStep,
     bool? isTouchScreenEnabled,
     RepeatMode? repeatMode,
     bool? vibrate,
@@ -61,6 +65,7 @@ class SettingsPreferencesModel {
       clickWheelSize: clickWheelSize ?? this.clickWheelSize,
       clickWheelSensitivity:
           clickWheelSensitivity ?? this.clickWheelSensitivity,
+      clickWheelStep: clickWheelStep ?? this.clickWheelStep,
       isTouchScreenEnabled: isTouchScreenEnabled ?? this.isTouchScreenEnabled,
       repeatMode: repeatMode ?? this.repeatMode,
       vibrate: vibrate ?? this.vibrate,
@@ -81,6 +86,7 @@ class SettingsPreferencesModel {
         other.deviceColor == deviceColor &&
         other.clickWheelSize == clickWheelSize &&
         other.clickWheelSensitivity == clickWheelSensitivity &&
+        other.clickWheelStep == clickWheelStep &&
         other.isTouchScreenEnabled == isTouchScreenEnabled &&
         other.repeatMode == repeatMode &&
         other.vibrate == vibrate &&
@@ -99,6 +105,7 @@ class SettingsPreferencesModel {
     deviceColor,
     clickWheelSize,
     clickWheelSensitivity,
+    clickWheelStep,
     isTouchScreenEnabled,
     repeatMode,
     vibrate,

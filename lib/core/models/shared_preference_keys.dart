@@ -3,6 +3,7 @@ enum SharedPreferencesKeys {
   deviceColor,
   clickWheelSize,
   clickWheelSensitivity,
+  clickWheelStep,
   isTouchScreenEnabled,
   repeatMode,
   vibrate,

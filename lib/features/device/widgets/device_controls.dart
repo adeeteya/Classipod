@@ -8,6 +8,7 @@ import 'package:classipod/core/custom_painter/play_pause_button_custom_painter.d
 import 'package:classipod/core/custom_painter/previous_button_custom_painter.dart';
 import 'package:classipod/core/extensions/build_context_extensions.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/features/device/models/click_wheel_rotation_tracker.dart';
 import 'package:classipod/features/device/models/device_action.dart';
 import 'package:classipod/features/device/services/device_buttons_service_provider.dart';
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
@@ -27,76 +28,72 @@ class DeviceControls extends ConsumerStatefulWidget {
 }
 
 class _DeviceControlsState extends ConsumerState<DeviceControls> {
-  Duration durationSinceLastScroll = Duration.zero;
+  final GlobalKey _wheelBoxKey = GlobalKey();
+  ClickWheelRotationTracker? _rotationTracker;
 
-  Future<void> onClickWheelScroll({
-    required DragUpdateDetails dragUpdateDetails,
-    required double radius,
-    required double smallThresholdRotationalChange,
-    required double bigThresholdRotationalChange,
-  }) async {
+  void onWheelPointerDown(
+    PointerDownEvent event, {
+    required double innerDeadzoneRadius,
+    required double thresholdDegrees,
+  }) {
+    ref.read(clickWheelGestureProvider.notifier).active = true;
+    if (_rotationTracker != null) {
+      return;
+    }
+    final RenderObject? renderObject = _wheelBoxKey.currentContext
+        ?.findRenderObject();
+    if (renderObject is! RenderBox || !renderObject.hasSize) {
+      return;
+    }
+    final ClickWheelRotationTracker tracker = ClickWheelRotationTracker(
+      thresholdDegrees: thresholdDegrees,
+      minVelocityDegreesPerSecond:
+          Constants.clickWheelAccelerationMinVelocityDegreesPerSecond,
+      maxVelocityDegreesPerSecond:
+          Constants.clickWheelMaxAngularVelocityDegreesPerSecond,
+      accelerationFactor: Constants.clickWheelAccelerationFactor,
+      maxStepsPerEvent: Constants.clickWheelMaxStepsPerPointerEvent,
+    );
+    tracker.begin(
+      pointerId: event.pointer,
+      // The click wheel circle is centered inside its box.
+      wheelCenter: renderObject.size.center(Offset.zero),
+      innerDeadzoneRadius: innerDeadzoneRadius,
+    );
+    _rotationTracker = tracker;
+  }
+
+  Future<void> onWheelPointerMove(PointerMoveEvent event) async {
+    final ClickWheelRotationTracker? tracker = _rotationTracker;
+    if (tracker == null || tracker.activePointerId != event.pointer) {
+      return;
+    }
     ref.read(splitScreenControllerProvider.notifier).onClickWheelScroll();
-    // Pan location on the wheel
-    final bool onTop = dragUpdateDetails.localPosition.dy <= radius;
-    final bool onLeftSide = dragUpdateDetails.localPosition.dx <= radius;
-    final bool onRightSide = !onLeftSide;
-    final bool onBottom = !onTop;
-
-    // Pan movements
-    final bool panUp = dragUpdateDetails.delta.dy <= 0.0;
-    final bool panLeft = dragUpdateDetails.delta.dx <= 0.0;
-    final bool panRight = !panLeft;
-    final bool panDown = !panUp;
-
-    // Absolute change on axis
-    final double yChange = dragUpdateDetails.delta.dy.abs();
-    final double xChange = dragUpdateDetails.delta.dx.abs();
-
-    // Directional change on wheel
-    final double verticalRotation =
-        (onRightSide && panDown) || (onLeftSide && panUp)
-        ? yChange
-        : yChange * -1;
-
-    final double horizontalRotation =
-        (onTop && panRight) || (onBottom && panLeft) ? xChange : xChange * -1;
-
-    // Total computed change
-    final double rotationalChange =
-        (verticalRotation + horizontalRotation) *
-        (dragUpdateDetails.delta.distance * 0.8);
-
-    int millisecondsSinceLastScroll = 0;
-    if (durationSinceLastScroll.inMinutes ==
-            dragUpdateDetails.sourceTimeStamp?.inMinutes &&
-        durationSinceLastScroll.inSeconds ==
-            dragUpdateDetails.sourceTimeStamp?.inSeconds) {
-      millisecondsSinceLastScroll =
-          dragUpdateDetails.sourceTimeStamp!.inMilliseconds -
-          durationSinceLastScroll.inMilliseconds;
-    } else {
-      durationSinceLastScroll =
-          dragUpdateDetails.sourceTimeStamp ?? Duration.zero;
+    final int steps = tracker.update(
+      pointerId: event.pointer,
+      localPosition: event.localPosition,
+      timeStamp: event.timeStamp,
+    );
+    if (steps == 0) {
+      return;
     }
-
-    final bool isForwardDirection = rotationalChange > 0;
-    final double absRotationalChange = rotationalChange.abs();
-
-    if ((absRotationalChange > bigThresholdRotationalChange) ||
-        (absRotationalChange > smallThresholdRotationalChange &&
-            millisecondsSinceLastScroll >
-                Constants.milliSecondsBeforeNextScroll)) {
-      if (isForwardDirection) {
-        await ref
-            .read(deviceButtonsServiceProvider.notifier)
-            .setDeviceAction(DeviceAction.rotateForward);
-      } else {
-        await ref
-            .read(deviceButtonsServiceProvider.notifier)
-            .setDeviceAction(DeviceAction.rotateBackward);
-      }
-      durationSinceLastScroll = Duration.zero;
+    final DeviceAction deviceAction = steps.isNegative
+        ? DeviceAction.rotateBackward
+        : DeviceAction.rotateForward;
+    for (int i = 0; i < steps.abs(); i++) {
+      await ref
+          .read(deviceButtonsServiceProvider.notifier)
+          .setDeviceAction(deviceAction);
     }
+  }
+
+  void onWheelPointerEnd(PointerEvent event) {
+    if (_rotationTracker?.activePointerId != event.pointer) {
+      return;
+    }
+    _rotationTracker?.end(pointerId: event.pointer);
+    _rotationTracker = null;
+    ref.read(clickWheelGestureProvider.notifier).active = false;
   }
 
   @override
@@ -117,6 +114,11 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         (settings) => settings.clickWheelSensitivity,
       ),
     );
+    final clickWheelStep = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.clickWheelStep,
+      ),
+    );
     late final double clickWheelRadiusRatio;
     late final double selectButtonRadiusRatio;
     switch (clickWheelSize) {
@@ -134,55 +136,48 @@ class _DeviceControlsState extends ConsumerState<DeviceControls> {
         break;
     }
 
-    late final double smallThresholdRotationalChange;
-    late final double bigThresholdRotationalChange;
+    late final double baseThresholdDegrees;
     switch (clickWheelSensitivity) {
       case ClickWheelSensitivity.veryLow:
-        smallThresholdRotationalChange =
-            Constants.clickWheelVeryLowSensitivitySmallThreshold;
-        bigThresholdRotationalChange =
-            Constants.clickWheelVeryLowSensitivityBigThreshold;
+        baseThresholdDegrees = Constants.clickWheelVeryLowSensitivityThreshold;
         break;
       case ClickWheelSensitivity.low:
-        smallThresholdRotationalChange =
-            Constants.clickWheelLowSensitivitySmallThreshold;
-        bigThresholdRotationalChange =
-            Constants.clickWheelLowSensitivityBigThreshold;
+        baseThresholdDegrees = Constants.clickWheelLowSensitivityThreshold;
         break;
       case ClickWheelSensitivity.medium:
-        smallThresholdRotationalChange =
-            Constants.clickWheelMediumSensitivitySmallThreshold;
-        bigThresholdRotationalChange =
-            Constants.clickWheelMediumSensitivityBigThreshold;
+        baseThresholdDegrees = Constants.clickWheelMediumSensitivityThreshold;
+        break;
+      case ClickWheelSensitivity.mediumHigh:
+        baseThresholdDegrees =
+            Constants.clickWheelMediumHighSensitivityThreshold;
         break;
       case ClickWheelSensitivity.high:
-        smallThresholdRotationalChange =
-            Constants.clickWheelHighSensitivitySmallThreshold;
-        bigThresholdRotationalChange =
-            Constants.clickWheelHighSensitivityBigThreshold;
+        baseThresholdDegrees = Constants.clickWheelHighSensitivityThreshold;
         break;
     }
+    final double thresholdDegrees =
+        baseThresholdDegrees / clickWheelStep.multiplier;
 
     return LayoutBuilder(
       builder: (context, constraints) {
         final double screenWidth = constraints.maxWidth + 40;
+        final double wheelSize = screenWidth * clickWheelRadiusRatio;
+        final double innerDeadzoneRadius =
+            screenWidth * selectButtonRadiusRatio / 2;
 
-        return GestureDetector(
-          onPanDown: (_) =>
-              ref.read(clickWheelGestureProvider.notifier).active = true,
-          onPanEnd: (_) =>
-              ref.read(clickWheelGestureProvider.notifier).active = false,
-          onPanCancel: () =>
-              ref.read(clickWheelGestureProvider.notifier).active = false,
-          onPanUpdate: (dragUpdateDetails) => onClickWheelScroll(
-            dragUpdateDetails: dragUpdateDetails,
-            radius: (screenWidth * clickWheelRadiusRatio) / 2,
-            smallThresholdRotationalChange: smallThresholdRotationalChange,
-            bigThresholdRotationalChange: bigThresholdRotationalChange,
+        return Listener(
+          key: _wheelBoxKey,
+          onPointerDown: (event) => onWheelPointerDown(
+            event,
+            innerDeadzoneRadius: innerDeadzoneRadius,
+            thresholdDegrees: thresholdDegrees,
           ),
+          onPointerMove: onWheelPointerMove,
+          onPointerUp: onWheelPointerEnd,
+          onPointerCancel: onWheelPointerEnd,
           child: Container(
-            height: screenWidth * clickWheelRadiusRatio,
-            width: screenWidth * clickWheelRadiusRatio,
+            height: wheelSize,
+            width: wheelSize,
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               shape: BoxShape.circle,

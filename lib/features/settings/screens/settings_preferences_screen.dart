@@ -25,6 +25,7 @@ enum _SettingsDisplayItems {
   deviceColor,
   clickWheelSize,
   clickWheelSensitivity,
+  clickWheelStep,
   isTouchScreenEnabled,
   vibrate,
   clickWheelSound,
@@ -58,6 +59,8 @@ enum _SettingsDisplayItems {
         return context.localization.clickWheelSizeSettingTitle;
       case clickWheelSensitivity:
         return context.localization.clickWheelSensitivitySettingTitle;
+      case clickWheelStep:
+        return context.localization.clickWheelStepSettingTitle;
       case volumeMode:
         return context.localization.volumeModeSettingTitle;
       case vibrate:
@@ -138,6 +141,11 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleClickWheelSensitivity();
+        break;
+      case _SettingsDisplayItems.clickWheelStep:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleClickWheelStep();
         break;
       case _SettingsDisplayItems.isTouchScreenEnabled:
         await ref
@@ -224,6 +232,8 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         return settingsState.clickWheelSize.title(context);
       case _SettingsDisplayItems.clickWheelSensitivity:
         return settingsState.clickWheelSensitivity.title(context);
+      case _SettingsDisplayItems.clickWheelStep:
+        return settingsState.clickWheelStep.title(context);
       case _SettingsDisplayItems.coverFlowAppearance:
         return settingsState.coverFlowAppearance.title(context);
       case _SettingsDisplayItems.appTheme:
@@ -268,6 +278,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
       case _SettingsDisplayItems.clickWheelSensitivity:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
             SplitScreenType.clickWheelSensitivity;
+        break;
+      case _SettingsDisplayItems.clickWheelStep:
+        ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =
+            SplitScreenType.clickWheelStep;
         break;
       case _SettingsDisplayItems.isTouchScreenEnabled:
         ref.read(splitScreenControllerProvider.notifier).changeSplitScreenType =

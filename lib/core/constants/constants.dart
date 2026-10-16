@@ -16,16 +16,18 @@ class Constants {
   //If you are seeing this please consider donating to the below link😉
   static const String donationLinkUrl = "https://buymeacoffee.com/adeeteya";
 
-  // Click Wheel Sensitivity Constants
-  static const double clickWheelVeryLowSensitivitySmallThreshold = 64;
-  static const double clickWheelVeryLowSensitivityBigThreshold = 800;
-  static const double clickWheelLowSensitivitySmallThreshold = 16;
-  static const double clickWheelLowSensitivityBigThreshold = 200;
-  static const double clickWheelMediumSensitivitySmallThreshold = 4;
-  static const double clickWheelMediumSensitivityBigThreshold = 50;
-  static const double clickWheelHighSensitivitySmallThreshold = 0.2;
-  static const double clickWheelHighSensitivityBigThreshold = 10;
-  static const int milliSecondsBeforeNextScroll = 75;
+  // Click Wheel Sensitivity Constants (degrees of rotation per scroll step)
+  static const double clickWheelVeryLowSensitivityThreshold = 90;
+  static const double clickWheelLowSensitivityThreshold = 60;
+  static const double clickWheelMediumSensitivityThreshold = 45;
+  static const double clickWheelMediumHighSensitivityThreshold = 36;
+  static const double clickWheelHighSensitivityThreshold = 22.5;
+
+  // Click Wheel Acceleration Constants
+  static const double clickWheelAccelerationMinVelocityDegreesPerSecond = 90;
+  static const double clickWheelMaxAngularVelocityDegreesPerSecond = 1080;
+  static const double clickWheelAccelerationFactor = 4;
+  static const int clickWheelMaxStepsPerPointerEvent = 8;
 
   static const double screenHeight = 300;
   static const double deviceClickWheelSmallRadiusRatio = 0.45;

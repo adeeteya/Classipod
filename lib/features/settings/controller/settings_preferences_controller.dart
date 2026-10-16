@@ -13,6 +13,7 @@ import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
+import 'package:classipod/features/settings/models/click_wheel_step.dart';
 import 'package:classipod/features/settings/models/cover_flow_appearance.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
@@ -55,6 +56,9 @@ class SettingsPreferencesControllerNotifier
       ),
       clickWheelSensitivity: ClickWheelSensitivity.values.byName(
         settingsPreferencesRepository.getClickWheelSensitivity(),
+      ),
+      clickWheelStep: ClickWheelStep.values.byName(
+        settingsPreferencesRepository.getClickWheelStep(),
       ),
       isTouchScreenEnabled: settingsPreferencesRepository
           .getTouchScreenEnabled(),
@@ -200,6 +204,16 @@ class SettingsPreferencesControllerNotifier
         await ref
             .read(settingsPreferencesRepositoryProvider)
             .setClickWheelSensitivity(
+              clickWheelSensitivityName: ClickWheelSensitivity.mediumHigh.name,
+            );
+        state = state.copyWith(
+          clickWheelSensitivity: ClickWheelSensitivity.mediumHigh,
+        );
+        break;
+      case ClickWheelSensitivity.mediumHigh:
+        await ref
+            .read(settingsPreferencesRepositoryProvider)
+            .setClickWheelSensitivity(
               clickWheelSensitivityName: ClickWheelSensitivity.high.name,
             );
         state = state.copyWith(
@@ -217,6 +231,16 @@ class SettingsPreferencesControllerNotifier
         );
         break;
     }
+  }
+
+  Future<void> toggleClickWheelStep() async {
+    final int nextIndex =
+        (state.clickWheelStep.index + 1) % ClickWheelStep.values.length;
+    final ClickWheelStep nextStep = ClickWheelStep.values[nextIndex];
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setClickWheelStep(clickWheelStepName: nextStep.name);
+    state = state.copyWith(clickWheelStep: nextStep);
   }
 
   Future<void> toggleTouchScreen() async {

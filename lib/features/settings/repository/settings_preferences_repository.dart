@@ -4,6 +4,7 @@ import 'package:classipod/core/providers/shared_preferences_with_cache_provider.
 import 'package:classipod/features/settings/models/app_theme.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
+import 'package:classipod/features/settings/models/click_wheel_step.dart';
 import 'package:classipod/features/settings/models/cover_flow_appearance.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/repeat_mode.dart';
@@ -49,6 +50,13 @@ class SettingsPreferencesRepository {
           SharedPreferencesKeys.clickWheelSensitivity.name,
         ) ??
         ClickWheelSensitivity.medium.name;
+  }
+
+  String getClickWheelStep() {
+    return _sharedPreferencesWithCache.getString(
+          SharedPreferencesKeys.clickWheelStep.name,
+        ) ??
+        ClickWheelStep.normal.name;
   }
 
   bool getTouchScreenEnabled() {
@@ -150,6 +158,13 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache.setString(
       SharedPreferencesKeys.clickWheelSensitivity.name,
       clickWheelSensitivityName,
+    );
+  }
+
+  Future<void> setClickWheelStep({required String clickWheelStepName}) async {
+    return _sharedPreferencesWithCache.setString(
+      SharedPreferencesKeys.clickWheelStep.name,
+      clickWheelStepName,
     );
   }
 

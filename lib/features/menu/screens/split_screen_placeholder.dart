@@ -146,6 +146,12 @@ class _SplitScreenPlaceholderState extends ConsumerState<SplitScreenPlaceholder>
           icon: CupertinoIcons.memories_badge_plus,
           contentText: currentSettings.clickWheelSensitivity.title(context),
         );
+      } else if (splitScreenType == SplitScreenType.clickWheelStep) {
+        splitScreenWidget = IconPreviewWidget(
+          titleText: context.localization.clickWheelStepSettingTitle,
+          icon: CupertinoIcons.gauge,
+          contentText: currentSettings.clickWheelStep.title(context),
+        );
       } else if (splitScreenType == SplitScreenType.touchScreen) {
         splitScreenWidget = IconPreviewWidget(
           titleText: context.localization.touchScreenSettingTitle,

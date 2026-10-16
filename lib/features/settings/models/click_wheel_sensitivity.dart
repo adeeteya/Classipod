@@ -5,6 +5,7 @@ enum ClickWheelSensitivity {
   veryLow,
   low,
   medium,
+  mediumHigh,
   high;
 
   String title(BuildContext context) {
@@ -15,6 +16,8 @@ enum ClickWheelSensitivity {
         return context.localization.low;
       case medium:
         return context.localization.medium;
+      case mediumHigh:
+        return context.localization.mediumHigh;
       case high:
         return context.localization.high;
     }

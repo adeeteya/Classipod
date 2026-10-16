@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/constants/keys.dart';
@@ -18,6 +19,7 @@ import 'package:classipod/features/now_playing/widgets/shuffle_segmented_control
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/click_wheel_sensitivity.dart';
 import 'package:classipod/features/settings/models/click_wheel_size.dart';
+import 'package:classipod/features/settings/models/click_wheel_step.dart';
 import 'package:classipod/features/settings/models/device_color.dart';
 import 'package:classipod/features/settings/models/settings_preferences_model.dart';
 import 'package:classipod/features/settings/models/volume_mode.dart';
@@ -156,6 +158,9 @@ class _SettingsModel extends Fake implements SettingsPreferencesModel {
       ClickWheelSensitivity.medium;
 
   @override
+  ClickWheelStep get clickWheelStep => ClickWheelStep.normal;
+
+  @override
   bool get vibrate => false;
 
   @override
@@ -201,6 +206,27 @@ class _Buttons extends DeviceButtonsServiceNotifier {
     state = null;
     state = action;
   }
+}
+
+// Returns a function that maps degrees to a global point on the scroll ring
+// of the click wheel using the screen coordinate system (the y axis points
+// downwards) so increasing degrees rotate the point clockwise.
+Offset Function(double) wheelPointAt(WidgetTester tester) {
+  final RenderBox wheelBox = tester.renderObject<RenderBox>(
+    find.byType(DeviceControls),
+  );
+  final Offset wheelCenter = wheelBox.localToGlobal(
+    wheelBox.size.center(Offset.zero),
+  );
+  final double scrollRadius = wheelBox.size.shortestSide * 0.4;
+  return (double degrees) {
+    final double radians = degrees * math.pi / 180;
+    return wheelCenter +
+        Offset(
+          scrollRadius * math.cos(radians),
+          scrollRadius * math.sin(radians),
+        );
+  };
 }
 
 void main() {
@@ -431,16 +457,18 @@ void main() {
     ]);
     expect(container.read(clickWheelGestureProvider), isFalse);
     actions.clear();
-    final gesture = await tester.startGesture(
-      tester.getCenter(find.byKey(nextButtonGlobalKey)),
-    );
+    // Rotate the finger clockwise along the scroll ring of the wheel. Six
+    // 10 degree ticks sweep 60 degrees which crosses the 45 degrees needed
+    // for a single scroll step at the medium sensitivity setting.
+    final pointAtDegrees = wheelPointAt(tester);
+    final gesture = await tester.startGesture(pointAtDegrees(0));
     await tester.pump();
     expect(container.read(clickWheelGestureProvider), isTrue);
     expect(actions, isEmpty);
-    await gesture.moveBy(const Offset(0, 30));
-    await tester.pump();
-    await gesture.moveBy(const Offset(0, 30));
-    await tester.pump();
+    for (final degrees in [10, 20, 30, 40, 50, 60]) {
+      await gesture.moveTo(pointAtDegrees(degrees.toDouble()));
+      await tester.pump();
+    }
     expect(actions, contains(DeviceAction.rotateForward));
     await gesture.up();
     await tester.pump();
@@ -457,6 +485,61 @@ void main() {
     await cancelled.cancel();
     await tester.pump();
     expect(container.read(clickWheelGestureProvider), isFalse);
+    await tester.pumpWidget(const SizedBox.shrink());
+  });
+
+  testWidgets('fast wheel gestures emit accelerated scroll steps', (
+    tester,
+  ) async {
+    await mount(tester);
+    await tester.pumpWidget(
+      UncontrolledProviderScope(
+        container: container,
+        child: const CupertinoApp(
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          home: Center(child: SizedBox(width: 300, child: DeviceControls())),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    await tester.pump(const Duration(seconds: 1));
+    final actions = <DeviceAction>[];
+    final subscription = container.listen(deviceButtonsServiceProvider, (
+      _,
+      action,
+    ) {
+      if (action != null) actions.add(action);
+    });
+    addTearDown(subscription.close);
+    final pointAtDegrees = wheelPointAt(tester);
+    final gesture = await tester.startGesture(pointAtDegrees(0));
+    await tester.pump();
+    expect(container.read(clickWheelGestureProvider), isTrue);
+    expect(actions, isEmpty);
+    // Eleven 10 degree moves spaced two milliseconds apart spin the wheel at
+    // 5000 degrees per second which maxes out the acceleration. The first
+    // move only anchors the angle so the sweep covers 100 degrees which
+    // emits eight accelerated steps instead of the slow two.
+    for (var i = 1; i <= 11; i++) {
+      await gesture.moveTo(
+        pointAtDegrees(i * 10),
+        timeStamp: Duration(milliseconds: i * 2),
+      );
+    }
+    await tester.pump();
+    await tester.pump();
+    expect(
+      actions.where((action) => action == DeviceAction.rotateForward),
+      hasLength(8),
+    );
+    await gesture.up();
+    await tester.pump();
+    expect(container.read(clickWheelGestureProvider), isFalse);
+    expect(
+      actions.every((action) => action == DeviceAction.rotateForward),
+      isTrue,
+    );
     await tester.pumpWidget(const SizedBox.shrink());
   });
 

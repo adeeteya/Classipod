@@ -1,4 +1,5 @@
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/subsonic/remote_playlist.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
@@ -23,7 +24,15 @@ class _PlaylistsScreenState extends ConsumerState<PlaylistsScreen>
   String get routeName => Routes.playlists.name;
 
   @override
-  List<PlaylistModel> get displayItems => ref.watch(playlistsProvider);
+  List<PlaylistModel> get displayItems {
+    final local = ref.watch(playlistsProvider);
+    final remote = ref.watch(remotePlaylistsProvider).value ?? [];
+    return [
+      ...local,
+      for (final item in remote)
+        PlaylistModel(name: '${item.name} (Navidrome)', songs: []),
+    ];
+  }
 
   @override
   Future<void> onSelectPressed() =>
@@ -31,10 +40,21 @@ class _PlaylistsScreenState extends ConsumerState<PlaylistsScreen>
 
   Future<void> _navigateToPlaylistSongsScreen(int displayIndex) async {
     setState(() => selectedDisplayItem = displayIndex);
-    context.goNamed(
-      Routes.playlistSongs.name,
-      extra: displayItems[displayIndex].key.toString(),
-    );
+    final local = ref.read(playlistsProvider);
+    if (displayIndex < local.length) {
+      context.goNamed(
+        Routes.playlistSongs.name,
+        extra: local[displayIndex].key.toString(),
+      );
+    } else {
+      final remote = ref.read(remotePlaylistsProvider).value ?? [];
+      final remoteIndex = displayIndex - local.length;
+      if (remoteIndex >= remote.length) return;
+      context.goNamed(
+        Routes.remotePlaylistSongs.name,
+        extra: remote[remoteIndex].id,
+      );
+    }
   }
 
   @override
@@ -53,11 +73,19 @@ class _PlaylistsScreenState extends ConsumerState<PlaylistsScreen>
                   isSelected: false,
                   onTap: () {},
                 ),
-                itemBuilder: (context, index) => PlaylistListTile(
-                  playlistModel: displayItems[index],
-                  isSelected: selectedDisplayItem == index,
-                  onTap: () async => _navigateToPlaylistSongsScreen(index),
-                ),
+                itemBuilder: (context, index) {
+                  final localCount = ref.read(playlistsProvider).length;
+                  final remote = ref.read(remotePlaylistsProvider).value ?? [];
+                  final remoteIndex = index - localCount;
+                  return PlaylistListTile(
+                    playlistModel: displayItems[index],
+                    songCount: remoteIndex >= 0 && remoteIndex < remote.length
+                        ? remote[remoteIndex].songCount
+                        : null,
+                    isSelected: selectedDisplayItem == index,
+                    onTap: () async => _navigateToPlaylistSongsScreen(index),
+                  );
+                },
               ),
             ),
           ),

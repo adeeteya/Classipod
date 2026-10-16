@@ -10,12 +10,14 @@ class PlaylistListTile extends StatelessWidget {
   final PlaylistModel playlistModel;
   final bool isSelected;
   final VoidCallback onTap;
+  final int? songCount;
 
   const PlaylistListTile({
     super.key,
     required this.playlistModel,
     required this.isSelected,
     required this.onTap,
+    this.songCount,
   });
 
   @override
@@ -58,7 +60,9 @@ class PlaylistListTile extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        context.localization.nSongs(playlistModel.songs.length),
+                        context.localization.nSongs(
+                          songCount ?? playlistModel.songs.length,
+                        ),
                         style: IpodTypography.metadata.copyWith(
                           color: isSelected
                               ? context.appInverseTextColor

@@ -23,6 +23,7 @@ import 'package:classipod/features/music/playlist/screens/playlist_rename_screen
 import 'package:classipod/features/music/playlist/screens/playlist_songs_more_options_modal.dart';
 import 'package:classipod/features/music/playlist/screens/playlist_songs_screen.dart';
 import 'package:classipod/features/music/playlist/screens/playlists_screen.dart';
+import 'package:classipod/features/music/playlist/screens/remote_playlist_songs_screen.dart';
 import 'package:classipod/features/music/search/screens/search_more_options_modal.dart';
 import 'package:classipod/features/music/search/screens/search_screen.dart';
 import 'package:classipod/features/music/songs/screens/songs_more_options_modal.dart';
@@ -72,6 +73,7 @@ enum Routes {
   albumSongsMoreOptions,
   playlists,
   playlistSongs,
+  remotePlaylistSongs,
   playlistRename,
   playlistSongsMoreOptions,
   songs,
@@ -136,6 +138,7 @@ enum Routes {
       case playlists:
         return context.localization.playlistsScreenTitle;
       case playlistSongs:
+      case remotePlaylistSongs:
         return context.localization.playlistsScreenTitle;
       case playlistRename:
         return context.localization.playlistsScreenTitle;
@@ -563,6 +566,18 @@ final routerProvider = Provider(
                           child: ScreenPageContent(child: PlaylistsScreen()),
                         ),
                         routes: [
+                          GoRoute(
+                            path: Routes.remotePlaylistSongs.name,
+                            name: Routes.remotePlaylistSongs.name,
+                            parentNavigatorKey: rootNavigatorKey,
+                            pageBuilder: (context, state) => CupertinoPage(
+                              child: ScreenPageContent(
+                                child: RemotePlaylistSongsScreen(
+                                  playlistId: state.extra as String,
+                                ),
+                              ),
+                            ),
+                          ),
                           GoRoute(
                             path: Routes.playlistSongs.name,
                             name: Routes.playlistSongs.name,

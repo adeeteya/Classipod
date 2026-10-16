@@ -5,6 +5,7 @@ import 'dart:typed_data';
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/providers/shared_preferences_with_cache_provider.dart';
+import 'package:classipod/core/subsonic/remote_playlist.dart';
 import 'package:classipod/core/subsonic/subsonic_client.dart';
 import 'package:classipod/core/subsonic/subsonic_credentials.dart';
 import 'package:classipod/core/subsonic/subsonic_repository.dart';
@@ -269,6 +270,52 @@ class SubsonicController extends AsyncNotifier<SubsonicState> {
         error: old.error,
       ),
     );
+  }
+
+  Future<List<RemotePlaylist>> fetchPlaylists() async {
+    final client = _client;
+    if (!_current.enabled || client == null) return [];
+    final response = await client.request('getPlaylists');
+    final container = response['playlists'];
+    if (container is! Map) throw const SubsonicException('response');
+    final raw = container['playlist'] ?? [];
+    if (raw is! List) throw const SubsonicException('response');
+    return [
+      for (final item in raw)
+        if (item is Map && item['id'] != null)
+          RemotePlaylist(
+            id: item['id'].toString(),
+            name: item['name']?.toString() ?? 'Unnamed Playlist',
+            songCount: int.tryParse('${item['songCount']}') ?? 0,
+          ),
+    ];
+  }
+
+  Future<List<MusicMetadata>> fetchPlaylistSongs(String id) async {
+    final client = _client;
+    if (!_current.enabled || client == null) {
+      throw const SubsonicException('unavailable');
+    }
+    final response = await client.request('getPlaylist', {'id': id});
+    final playlist = response['playlist'];
+    if (playlist is! Map) throw const SubsonicException('response');
+    final entries = playlist['entry'] ?? [];
+    if (entries is! List) throw const SubsonicException('response');
+    final repository = await ref.read(subsonicRepositoryProvider.future);
+    final known = {
+      for (final song in repository.cached(client.config.id))
+        song.remoteSongId: song,
+    };
+    return [
+      for (final entry in entries)
+        if (entry is Map && entry['id'] != null)
+          known[entry['id'].toString()] ??
+              SubsonicRepository.parseSong(
+                Map<String, dynamic>.from(entry),
+                <String, dynamic>{},
+                client.config.id,
+              ),
+    ];
   }
 
   Future<Uint8List> artwork(String reference) async {

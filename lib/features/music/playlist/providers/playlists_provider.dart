@@ -104,6 +104,59 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
     }
   }
 
+  /// Adds [songs] to the in-memory on-the-go playlist.
+  ///
+  /// The on-the-go playlist is never persisted, which is why it needs its own
+  /// path instead of [addSongsToPlaylist]: that one addresses playlists by
+  /// Hive key and this one has none.
+  void addSongsToOnTheGoPlaylist(List<MusicMetadata> songs) {
+    if (songs.isEmpty) return;
+    var onTheGo = state[0];
+    for (final song in songs) {
+      onTheGo = onTheGo.addSongToPlaylist(song);
+    }
+    state = [onTheGo, if (state.length > 1) ...state.sublist(1)];
+  }
+
+  /// Adds [songs] to an existing saved playlist, identified by its Hive [key].
+  /// The on-the-go playlist (key null) is handled by [addSongToPlaylist] and
+  /// cannot be targeted here. Returns false when the playlist no longer exists.
+  Future<bool> addSongsToPlaylist({
+    required dynamic playlistKey,
+    required List<MusicMetadata> songs,
+  }) async {
+    if (playlistKey == null || songs.isEmpty) return false;
+
+    final currentPlaylist = _playlistBox.get(playlistKey);
+    if (currentPlaylist == null) return false;
+
+    var updatedPlaylist = currentPlaylist;
+    for (final song in songs) {
+      updatedPlaylist = updatedPlaylist.addSongToPlaylist(song);
+    }
+    await _playlistBox.put(playlistKey, updatedPlaylist);
+    refreshProvider();
+    return true;
+  }
+
+  /// Creates a saved playlist named [playlistName] holding [songs].
+  /// Returns false when [songs] is empty, matching [saveNewPlaylist].
+  Future<bool> createPlaylist({
+    required String playlistName,
+    required List<MusicMetadata> songs,
+  }) async {
+    if (songs.isEmpty) return false;
+
+    final trimmedName = playlistName.trim();
+    final newPlaylist = PlaylistModel(
+      name: trimmedName.isEmpty ? 'New Playlist' : trimmedName,
+      songs: songs,
+    );
+    await _playlistBox.add(newPlaylist);
+    refreshProvider();
+    return true;
+  }
+
   Future<void> removeSongFromPlaylist({
     required PlaylistModel playlistModel,
     MusicMetadata? song,

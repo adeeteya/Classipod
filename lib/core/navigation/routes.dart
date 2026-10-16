@@ -19,7 +19,9 @@ import 'package:classipod/features/music/cover_flow/screens/cover_flow_album_sel
 import 'package:classipod/features/music/cover_flow/screens/cover_flow_screen.dart';
 import 'package:classipod/features/music/genres/screens/genre_songs_screen.dart';
 import 'package:classipod/features/music/genres/screens/genres_screen.dart';
+import 'package:classipod/features/music/playlist/screens/playlist_name_screen.dart';
 import 'package:classipod/features/music/playlist/screens/playlist_rename_screen.dart';
+import 'package:classipod/features/music/playlist/screens/playlist_selection_screen.dart';
 import 'package:classipod/features/music/playlist/screens/playlist_songs_more_options_modal.dart';
 import 'package:classipod/features/music/playlist/screens/playlist_songs_screen.dart';
 import 'package:classipod/features/music/playlist/screens/playlists_screen.dart';
@@ -74,6 +76,8 @@ enum Routes {
   playlistSongs,
   playlistRename,
   playlistSongsMoreOptions,
+  playlistSelection,
+  playlistName,
   songs,
   songsMoreOptions,
   genres,
@@ -141,6 +145,10 @@ enum Routes {
         return context.localization.playlistsScreenTitle;
       case playlistSongsMoreOptions:
         return context.localization.playlistsScreenTitle;
+      case playlistSelection:
+        return context.localization.addToPlaylistTitle;
+      case playlistName:
+        return context.localization.newPlaylist;
       case songs:
         return context.localization.songsScreenTitle;
       case songsMoreOptions:
@@ -602,9 +610,32 @@ final routerProvider = Provider(
                                   ),
                                 ),
                               ),
+                              GoRoute(
+                                path: Routes.playlistName.name,
+                                name: Routes.playlistName.name,
+                                parentNavigatorKey: rootNavigatorKey,
+                                pageBuilder: (context, state) =>
+                                    const CupertinoPage(
+                                      child: ScreenPageContent(
+                                        child: PlaylistNameScreen(),
+                                      ),
+                                    ),
+                              ),
                             ],
                           ),
                         ],
+                      ),
+                      GoRoute(
+                        path: Routes.playlistSelection.name,
+                        name: Routes.playlistSelection.name,
+                        parentNavigatorKey: rootNavigatorKey,
+                        pageBuilder: (context, state) => CupertinoPage(
+                          child: ScreenPageContent(
+                            child: PlaylistSelectionScreen(
+                              songs: state.extra as List<MusicMetadata>,
+                            ),
+                          ),
+                        ),
                       ),
                       GoRoute(
                         path: Routes.songs.name,

@@ -17,7 +17,11 @@ try {
 
 android {
     namespace = "com.adeeteya.classipod"
-    compileSdk = 37
+    compileSdk {
+        version = release(37) {
+            minorApiLevel = 0
+        }
+    }
     ndkVersion = "28.2.13676358"
 
     compileOptions {
@@ -31,7 +35,24 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
-        ndk.abiFilters.addAll(arrayOf("armeabi-v7a", "arm64-v8a", "x86_64"))
+        // ABI(s) a empacotar. O Flutter passa -Ptarget-platform=android-arm,
+        // android-arm64, android-x64 ou android-x86 (lista separada por vírgula
+        // quando há mais de uma); sem essa propriedade, empacota todas.
+        val flutterTargetAbis =
+            (project.findProperty("target-platform") as String?)
+                ?.split(",")
+                ?.mapNotNull { target ->
+                    when (target.trim()) {
+                        "android-arm" -> "armeabi-v7a"
+                        "android-arm64" -> "arm64-v8a"
+                        "android-x64" -> "x86_64"
+                        "android-x86" -> "x86"
+                        else -> null
+                    }
+                }
+                ?.takeIf { it.isNotEmpty() }
+                ?: listOf("armeabi-v7a", "arm64-v8a", "x86_64")
+        ndk.abiFilters.addAll(flutterTargetAbis)
     }
 
     buildFeatures {
@@ -55,7 +76,14 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
         getByName("release") {
-            signingConfig = signingConfigs.getByName("release")
+            // Sem keystore configurado (key.properties ausente), cai para a
+            // debug key. Isso mantém o release instalável localmente sem
+            // quebrar o build oficial, que fornece key.properties no CI.
+            signingConfig = if (keystoreProperties["storeFile"] != null) {
+                signingConfigs.getByName("release")
+            } else {
+                signingConfigs.getByName("debug")
+            }
         }
     }
 

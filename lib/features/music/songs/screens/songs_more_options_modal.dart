@@ -5,21 +5,21 @@ import 'package:classipod/core/navigation/routes.dart';
 import 'package:classipod/core/widgets/options_list_tile.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
-import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
+import 'package:classipod/features/music/playlist/widgets/add_to_playlist_helper.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 enum _SongsMoreOptions {
-  addToOnTheGo,
+  addToPlaylist,
   browseAlbum,
   browseArtist,
   cancel;
 
   String title(BuildContext context) {
     switch (this) {
-      case addToOnTheGo:
-        return context.localization.addToOnTheGoPlaylist;
+      case addToPlaylist:
+        return context.localization.addToPlaylist;
       case browseAlbum:
         return context.localization.browseAlbum;
       case browseArtist:
@@ -53,7 +53,7 @@ class _SongsMoreOptionsModalState extends ConsumerState<SongsMoreOptionsModal>
 
   @override
   List<_SongsMoreOptions> get displayItems => [
-    _SongsMoreOptions.addToOnTheGo,
+    _SongsMoreOptions.addToPlaylist,
     if (widget.showAdditionalOptions) _SongsMoreOptions.browseAlbum,
     if (widget.showAdditionalOptions) _SongsMoreOptions.browseArtist,
     _SongsMoreOptions.cancel,
@@ -66,11 +66,11 @@ class _SongsMoreOptionsModalState extends ConsumerState<SongsMoreOptionsModal>
   Future<void> _navigateToScreen(_SongsMoreOptions optionItem) async {
     setState(() => selectedDisplayItem = displayItems.indexOf(optionItem));
     switch (optionItem) {
-      case _SongsMoreOptions.addToOnTheGo:
-        ref
-            .read(playlistsProvider.notifier)
-            .addSongToPlaylist(widget.currentSongMetadata);
-        context.pop();
+      case _SongsMoreOptions.addToPlaylist:
+        await addSongsToChosenPlaylist(context, ref, [
+          widget.currentSongMetadata,
+        ]);
+        if (mounted) context.pop();
         break;
       case _SongsMoreOptions.browseAlbum:
         final albumDetailIndex = ref

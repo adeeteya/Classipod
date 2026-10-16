@@ -69,9 +69,11 @@ types:
         index: 25
   ExcludeDirectoryModel:
     typeId: 3
-    nextIndex: 2
+    nextIndex: 3
     fields:
       directoryPath:
         index: 0
       isExcluded:
         index: 1
+      isUserCustomized:
+        index: 2

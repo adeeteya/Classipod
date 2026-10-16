@@ -7,11 +7,16 @@ import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/services/playback/library_audio_handler.dart';
 import 'package:classipod/core/services/playback/playback_session.dart';
+import 'package:classipod/core/services/song_deletion_service.dart';
 import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
+import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
+import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
+import 'package:classipod/features/music/songs/provider/songs_provider.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
+import 'package:classipod/features/settings/controller/delete_podcasts_after_playing_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/widgets/subsonic_dialog.dart';
 import 'package:flutter/foundation.dart';
@@ -81,11 +86,28 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
   @override
   Future<void> build() async {
     final handler = ref.watch(libraryAudioHandlerProvider);
+    handler.onSongCompleted = _deleteCompletedPodcast;
+    ref.onDispose(() => handler.onSongCompleted = null);
     ref.listen(filteredAudioFilesProvider, (previous, next) {
       if (next.hasValue && previous?.value != next.value) {
         _reconcileLibrary(ref, handler);
       }
     });
+  }
+
+  Future<void> _deleteCompletedPodcast(MusicMetadata song) async {
+    if (!shouldDeleteAfterPlaying(
+      song: song,
+      enabled: ref.read(deletePodcastsAfterPlayingProvider),
+    )) {
+      return;
+    }
+    await deleteSongFromDevice(song);
+    if (!ref.mounted) return;
+    ref.invalidate(filteredAudioFilesProvider);
+    ref.invalidate(albumDetailsProvider);
+    ref.invalidate(songsProvider);
+    ref.invalidate(playlistsProvider);
   }
 
   Future<void> restoreSession(List<MusicMetadata> library) async {
@@ -116,6 +138,13 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
       if (savedSession != null && session == null) await store?.clear();
       final restored = session?.resolve(library);
       final songs = restored?.songs ?? library;
+      final resumePosition =
+          session != null &&
+              restored != null &&
+              restored.songs.isNotEmpty &&
+              resumesPlaybackPosition(restored.songs[restored.index])
+          ? session.position
+          : Duration.zero;
       ref
           .read(nowPlayingDetailsProvider.notifier)
           .setNewMetadataList(
@@ -125,7 +154,7 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
       await handler.restoreSongs(
         songs,
         index: restored?.index ?? 0,
-        position: Duration.zero,
+        position: resumePosition,
         resetOnFailure: session != null,
       );
       if (session != null) {
@@ -181,6 +210,7 @@ class AudioPlayerServiceNotifier extends AsyncNotifier<void> {
       debugPrint('Could not reset playback: ${error.runtimeType}');
     } finally {
       if (ref.mounted) {
+        store?.resetPosition();
         store?.attach(
           handler,
           () => ref.read(nowPlayingDetailsProvider).nowPlayingType,

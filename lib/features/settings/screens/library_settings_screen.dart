@@ -8,6 +8,7 @@ import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/menu/controller/split_screen_controller.dart';
 import 'package:classipod/features/menu/models/split_screen_type.dart';
+import 'package:classipod/features/settings/controller/delete_podcasts_after_playing_controller.dart';
 import 'package:classipod/features/settings/controller/hide_local_music_controller.dart';
 import 'package:classipod/features/settings/controller/prevent_duplicate_tracks_controller.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
@@ -22,6 +23,7 @@ enum _LibrarySettingsItems {
   configureSubsonic,
   hideLocalMusic,
   preventDuplicateTracks,
+  deletePodcastsAfterPlaying,
   reindex,
   refreshLibrary,
   missingTracks,
@@ -31,6 +33,8 @@ enum _LibrarySettingsItems {
     subsonic => context.localization.subsonicTitle,
     preventDuplicateTracks => context.localization.preventDuplicateTracksTitle,
     hideLocalMusic => context.localization.hideLocalMusicTitle,
+    deletePodcastsAfterPlaying =>
+      context.localization.deletePodcastsAfterPlayingTitle,
     missingTracks => context.localization.missingTracksTitle,
     configureSubsonic => context.localization.subsonicConfigure,
     excludeDirectories => context.localization.excludeDirectoriesScreenTitle,
@@ -42,6 +46,7 @@ enum _LibrarySettingsItems {
     subsonic || configureSubsonic => SplitScreenType.subsonic,
     hideLocalMusic => SplitScreenType.hideLocalMusic,
     preventDuplicateTracks => SplitScreenType.preventDuplicateTracks,
+    deletePodcastsAfterPlaying => SplitScreenType.preventDuplicateTracks,
     excludeDirectories => SplitScreenType.excludeDirectories,
     missingTracks => SplitScreenType.missingTracks,
     reindex => SplitScreenType.rescanMusicFiles,
@@ -111,6 +116,11 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
               .read(hideLocalMusicProvider.notifier)
               .setHidden(!ref.read(hideLocalMusicProvider));
           break;
+        case _LibrarySettingsItems.deletePodcastsAfterPlaying:
+          await ref
+              .read(deletePodcastsAfterPlayingProvider.notifier)
+              .setEnabled(!ref.read(deletePodcastsAfterPlayingProvider));
+          break;
         case _LibrarySettingsItems.configureSubsonic:
           await showSubsonicDialog(context);
           break;
@@ -158,6 +168,7 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
     _changeSplitScreenType();
     final preventDuplicates = ref.watch(preventDuplicateTracksProvider);
     final hideLocalMusic = ref.watch(hideLocalMusicProvider);
+    final deletePodcasts = ref.watch(deletePodcastsAfterPlayingProvider);
     final remote = ref.watch(subsonicControllerProvider).value;
     final local = ref.watch(localLibraryProvider);
     final missingTracks = ref.watch(missingTracksProvider);
@@ -208,6 +219,11 @@ class _LibrarySettingsScreenState extends ConsumerState<LibrarySettingsScreen>
                       : displayItems[index] ==
                             _LibrarySettingsItems.preventDuplicateTracks
                       ? preventDuplicates
+                            ? context.localization.subsonicOn
+                            : context.localization.subsonicOff
+                      : displayItems[index] ==
+                            _LibrarySettingsItems.deletePodcastsAfterPlaying
+                      ? deletePodcasts
                             ? context.localization.subsonicOn
                             : context.localization.subsonicOff
                       : null,

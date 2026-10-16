@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/services/playback/library_audio_handler.dart';
+import 'package:classipod/core/utils/library_filter.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hive_ce/hive.dart';
@@ -14,6 +15,7 @@ class PlaybackSession {
   final NowPlayingType type;
   final PlaybackShuffleMode shuffle;
   final LoopMode loop;
+  final Duration position;
 
   const PlaybackSession({
     required this.ids,
@@ -21,6 +23,7 @@ class PlaybackSession {
     required this.type,
     required this.shuffle,
     required this.loop,
+    this.position = Duration.zero,
   });
 
   Map<String, dynamic> toMap() => {
@@ -30,6 +33,7 @@ class PlaybackSession {
     'type': type.name,
     'shuffle': shuffle.name,
     'loop': loop.name,
+    'positionMs': position.inMilliseconds,
   };
 
   static PlaybackSession? decode(dynamic value) {
@@ -40,12 +44,16 @@ class PlaybackSession {
       if (ids.isEmpty || index < 0 || index >= ids.length) {
         return null;
       }
+      final positionMs = value['positionMs'];
       return PlaybackSession(
         ids: ids,
         index: index,
         type: NowPlayingType.values.byName(value['type'] as String),
         shuffle: PlaybackShuffleMode.values.byName(value['shuffle'] as String),
         loop: LoopMode.values.byName(value['loop'] as String),
+        position: positionMs is int && positionMs > 0
+            ? Duration(milliseconds: positionMs)
+            : Duration.zero,
       );
     } catch (_) {
       return null;
@@ -120,13 +128,13 @@ class PlaybackSessionStore {
     _pending = _pending.then((_) async {
       final last = _last;
       final sameQueue = last != null && listEquals(last.ids, session.ids);
-      if (sameQueue &&
+      final sameItem =
+          sameQueue &&
           last.index == session.index &&
           last.type == session.type &&
           last.shuffle == session.shuffle &&
-          last.loop == session.loop) {
-        return;
-      }
+          last.loop == session.loop;
+      if (sameItem && last.position == session.position) return;
       try {
         final previous = box.get('checkpoint');
         final previousSlot = previous is Map ? previous['slot'] : null;
@@ -152,6 +160,7 @@ class PlaybackSessionStore {
           'type': session.type.name,
           'shuffle': session.shuffle.name,
           'loop': session.loop.name,
+          'positionMs': session.position.inMilliseconds,
         });
         await box.flush();
         _last = session;
@@ -168,19 +177,22 @@ class PlaybackSessionStore {
     List<String> ids = const [];
     void checkpoint() {
       final songs = handler.songs;
-      if (songs.isEmpty || handler.loading) return;
+      if (songs.isEmpty) return;
       if (!identical(songs, previousSongs)) {
         ids = List.unmodifiable(songs.map((song) => song.identity));
         previousSongs = songs;
       }
+      final index = handler.currentIndex!;
+      final songId = ids[index];
       unawaited(
         save(
           PlaybackSession(
             ids: ids,
-            index: handler.currentIndex!,
+            index: index,
             type: type(),
             shuffle: handler.logicalQueue.shuffleMode,
             loop: handler.logicalQueue.loopMode,
+            position: _positionFor(handler, songId),
           ),
         ),
       );
@@ -189,7 +201,38 @@ class PlaybackSessionStore {
     handler.onCheckpoint = checkpoint;
   }
 
+  Duration _positionFor(LibraryAudioHandler handler, String songId) {
+    final live = resumePositionOf(handler);
+    if (live > Duration.zero) {
+      handler.resumePositions[songId] = live;
+      return live;
+    }
+    return handler.resumePositions[songId] ?? Duration.zero;
+  }
+
   Future<void> dispose() async {
     await _pending;
   }
+
+  void resetPosition() {
+    _last = null;
+  }
 }
+
+@visibleForTesting
+Duration resumePositionOf(LibraryAudioHandler handler, [Duration? previous]) {
+  if (handler.recovering || !handler.isSourceLoaded) {
+    return handler.displayPosition;
+  }
+  final position = handler.player.position;
+  if (previous != null && position < previous) return previous;
+  return position;
+}
+
+bool resumesPlaybackPosition(MusicMetadata song) =>
+    isPodcastPath(song.filePath) || isAudiobookPath(song.filePath);
+
+bool shouldDeleteAfterPlaying({
+  required MusicMetadata song,
+  required bool enabled,
+}) => enabled && isPodcastPath(song.filePath) && !song.isSubsonic;

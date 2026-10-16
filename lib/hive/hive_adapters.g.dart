@@ -54,6 +54,10 @@ class MusicMetadataAdapter extends TypeAdapter<MusicMetadata> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return MusicMetadata(
+      serverId: fields[22] as String?,
+      remoteSongId: fields[23] as String?,
+      remoteAlbumId: fields[24] as String?,
+      remoteArtworkId: fields[25] as String?,
       songId: fields[18] as String?,
       sourceVolume: fields[19] as String?,
       contentUri: fields[20] as String?,
@@ -82,7 +86,7 @@ class MusicMetadataAdapter extends TypeAdapter<MusicMetadata> {
   @override
   void write(BinaryWriter writer, MusicMetadata obj) {
     writer
-      ..writeByte(22)
+      ..writeByte(26)
       ..writeByte(0)
       ..write(obj.trackName)
       ..writeByte(1)
@@ -126,7 +130,15 @@ class MusicMetadataAdapter extends TypeAdapter<MusicMetadata> {
       ..writeByte(20)
       ..write(obj.contentUri)
       ..writeByte(21)
-      ..write(obj.albumArtistNames);
+      ..write(obj.albumArtistNames)
+      ..writeByte(22)
+      ..write(obj.serverId)
+      ..writeByte(23)
+      ..write(obj.remoteSongId)
+      ..writeByte(24)
+      ..write(obj.remoteAlbumId)
+      ..writeByte(25)
+      ..write(obj.remoteArtworkId);
   }
 
   @override
@@ -153,17 +165,20 @@ class ExcludeDirectoryModelAdapter extends TypeAdapter<ExcludeDirectoryModel> {
     return ExcludeDirectoryModel(
       directoryPath: fields[0] as String,
       isExcluded: fields[1] as bool,
+      isUserCustomized: fields[2] == null ? false : fields[2] as bool,
     );
   }
 
   @override
   void write(BinaryWriter writer, ExcludeDirectoryModel obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(3)
       ..writeByte(0)
       ..write(obj.directoryPath)
       ..writeByte(1)
-      ..write(obj.isExcluded);
+      ..write(obj.isExcluded)
+      ..writeByte(2)
+      ..write(obj.isUserCustomized);
   }
 
   @override

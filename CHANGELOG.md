@@ -1,5 +1,37 @@
 # Changelog
 
+## Unreleased
+### New features
+
+- Add a Podcasts entry to the main menu. Audio files whose parent folder name
+  contains `pod` or `cast` (case insensitive) are listed under Podcasts, and the
+  rest under Music.
+- Add an Audiobooks entry to the main menu, following the same rule as Podcasts:
+  folders whose name contains `book` are listed under Audiobooks. A folder
+  matching both rules (like `Audiobooks`) counts as an audiobook only, so every
+  file appears in exactly one of Music, Podcasts or Audiobooks. `Audiobooks/` is
+  also a default included folder on Android, alongside `Music/` and `Podcasts/`.
+- Adding songs to a playlist now asks which playlist to use. Pick any saved
+  playlist, create a new one with a typed name, or fall back to On-The-Go, from
+  songs, albums, search results and Now Playing alike. Saving the On-The-Go
+  playlist also asks for a name instead of auto-numbering it.
+- Podcasts and audiobooks now remember where you stopped. The playback position
+  is stored with the saved session and resumed on the next launch, so a long
+  episode or chapter continues where it left off. Music still starts from the
+  beginning.
+- The status bar shows the system time next to the play/pause icon, refreshed
+  when the minute changes.
+- Returning to a podcast or audiobook keeps its playback position within the
+  session: switching to another item and back resumes where it stopped instead
+  of restarting from the beginning.
+- Now Playing has a Delete option in its menu. It asks for confirmation and
+  removes the file from the device, dropping it from the library index and from
+  every playlist that contained it.
+- Library Settings has a Delete Podcasts After Playing switch. With it on, a
+  podcast file is removed from the device as soon as it finishes playing, so
+  listened episodes clean themselves up. Music and audiobooks are never
+  touched.
+
 ## 2.1.0
 ### New features
 

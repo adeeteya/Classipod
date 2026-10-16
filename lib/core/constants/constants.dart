@@ -36,5 +36,14 @@ class Constants {
   static const double deviceSelectButtonLargeRadiusRatio = 0.3000;
 
   static const double inputTextAlphabetContainerWidth = 180;
-  static const double inputTextAlphabetSize = 15;
+
+  /// Altura/quadrado de cada letra da roda. Precisa ser maior que
+  /// [inputTextAlphabetFontSize] para a letra caber com o line-height: a
+  /// caixa preta tem exatamente essa altura e o texto fica centrado nela.
+  static const double inputTextAlphabetSize = 24;
+
+  /// Corpo da letra desenhada na roda. Menor que [inputTextAlphabetSize]
+  /// para sobrar folga vertical; igualar os dois faz a letra vazar da
+  /// caixa preta em telas com densidade maior.
+  static const double inputTextAlphabetFontSize = 15;
 }

@@ -4,6 +4,7 @@ import 'package:classipod/core/theme/ipod_gradients.dart';
 import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
 import 'package:classipod/features/status_bar/widgets/battery_indicator.dart';
+import 'package:classipod/features/status_bar/widgets/clock_indicator.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -59,7 +60,9 @@ class StatusBar extends StatelessWidget {
                   );
                 },
               ),
-              const SizedBox(width: 2),
+              const SizedBox(width: 4),
+              const ClockIndicator(),
+              const SizedBox(width: 4),
               const RepaintBoundary(child: BatteryIndicator()),
             ],
           ),

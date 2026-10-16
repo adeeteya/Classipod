@@ -184,7 +184,7 @@ class _InputTextBarState extends State<InputTextBar> {
                               child: Text(
                                 alphabets[index],
                                 style: const TextStyle(
-                                  fontSize: Constants.inputTextAlphabetSize,
+                                  fontSize: Constants.inputTextAlphabetFontSize,
                                   color: CupertinoColors.white,
                                   fontWeight: FontWeight.bold,
                                 ),

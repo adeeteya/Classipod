@@ -73,6 +73,36 @@ class LibraryRepository {
     await box.flush();
   }
 
+  static Future<void> deleteSong(MusicMetadata song) async {
+    final box = await Hive.openBox<dynamic>(boxName);
+    final snapshot = Map<dynamic, dynamic>.from(box.get('snapshot') as Map);
+    snapshot['records'] = [
+      for (final dynamic value in snapshot['records'] as List)
+        if ((value as Map)['music'] is! MusicMetadata ||
+            (value['music'] as MusicMetadata).identity != song.identity)
+          value,
+    ];
+    await box.put('snapshot', snapshot);
+    await box.flush();
+    final playlists = Hive.box<PlaylistModel>(Constants.playlistBoxName);
+    for (final key in playlists.keys.toList()) {
+      final playlist = playlists.get(key)!;
+      if (!playlist.songs.any((entry) => entry.identity == song.identity)) {
+        continue;
+      }
+      await playlists.put(
+        key,
+        playlist.copyWith(
+          songs: [
+            for (final entry in playlist.songs)
+              if (entry.identity != song.identity) entry,
+          ],
+        ),
+      );
+    }
+    await playlists.flush();
+  }
+
   Future<List<MusicMetadata>> _load(
     void Function(LibraryProgress) report,
   ) async {

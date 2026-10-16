@@ -55,6 +55,14 @@
   "@musicMenuScreenTitle": {
     "description": "The title of the music menu screen"
   },
+  "podcastsMenuScreenTitle": "Podcasts",
+  "@podcastsMenuScreenTitle": {
+    "description": "The title of the podcasts menu screen"
+  },
+  "audiobooksMenuScreenTitle": "Audiobooks",
+  "@audiobooksMenuScreenTitle": {
+    "description": "The title of the audiobooks menu screen"
+  },
   "nowPlayingScreenTitle": "Now Playing",
   "@nowPlayingScreenTitle": {
     "description": "The title of the now playing screen"
@@ -370,6 +378,26 @@
   "@addToOnTheGoPlaylist": {
     "description": "The text of the add to on-the-go playlist option"
   },
+  "addToPlaylist": "Add to Playlist",
+  "@addToPlaylist": {
+    "description": "The text of the add to playlist option"
+  },
+  "addAlbumToPlaylist": "Add Album to Playlist",
+  "@addAlbumToPlaylist": {
+    "description": "The text of the add album to playlist option"
+  },
+  "addToPlaylistTitle": "Add to Playlist",
+  "@addToPlaylistTitle": {
+    "description": "The title of the playlist selection screen"
+  },
+  "choosePlaylist": "Choose a Playlist",
+  "@choosePlaylist": {
+    "description": "Message shown when no saved playlist exists yet"
+  },
+  "onTheGoPlaylist": "On-The-Go",
+  "@onTheGoPlaylist": {
+    "description": "The name of the on-the-go playlist"
+  },
   "addAlbumToOnTheGoPlaylist": "Add Album to On-The-Go",
   "@addAlbumToOnTheGoPlaylist": {
     "description": "The text of the add album to on-the-go playlist option"
@@ -441,6 +469,22 @@
   "editSongOption": "Edit Song",
   "@editSongOption": {
     "description": "Label for the option to edit the current song metadata"
+  },
+  "deleteSongOption": "Delete",
+  "@deleteSongOption": {
+    "description": "Label for the option to delete the current song from the device"
+  },
+  "deleteSongConfirmTitle": "Delete Song",
+  "@deleteSongConfirmTitle": {
+    "description": "Title of the dialog that confirms deleting a song from the device"
+  },
+  "deleteSongConfirmMessage": "This deletes the file from your device. This cannot be undone.",
+  "@deleteSongConfirmMessage": {
+    "description": "Body of the dialog that confirms deleting a song from the device"
+  },
+  "deleteSongFailedMessage": "Could not delete this file.",
+  "@deleteSongFailedMessage": {
+    "description": "Shown when deleting a song file fails"
   },
   "editSongScreenTitle": "Edit Song",
   "@editSongScreenTitle": {
@@ -604,6 +648,10 @@
     "description": "The accessibility label for the buffering indicator on the Now Playing progress bar"
   },
   "preventDuplicateTracksTitle": "Prevent Duplicate Tracks",
+  "deletePodcastsAfterPlayingTitle": "Delete Podcasts After Playing",
+  "@deletePodcastsAfterPlayingTitle": {
+    "description": "Setting that deletes a podcast file from the device once it finishes playing"
+  },
   "@preventDuplicateTracksTitle": {
     "description": "Library Settings toggle to hide tracks with duplicate file names"
   },

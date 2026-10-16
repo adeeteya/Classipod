@@ -148,6 +148,7 @@ void main() {
   setUp(() {
     player = TestPlayer();
     handler = LibraryAudioHandler(player);
+    player.processingState = ProcessingState.ready;
   });
   tearDown(() async {
     await handler.dispose();
@@ -303,24 +304,111 @@ void main() {
     );
   }
 
-  test('position and unchanged controls do not write song selection', () async {
+  test('position writes are monotonic and survive controls', () async {
     final box = MemoryPlaybackBox();
     final store = PlaybackSessionStore(box);
     await handler.setSongs([song(0), song(1)]);
     store.attach(handler, () => NowPlayingType.songs);
     await handler.select(1);
     await store.dispose();
-    final writes = box.writes;
     player.position = const Duration(seconds: 8);
     player.positions.add(player.position);
     await flushEvents();
     await handler.seek(const Duration(seconds: 9));
     await handler.pause();
     await store.dispose();
-    expect(box.writes, writes);
     expect(store.read()!.index, 1);
-    expect(box.storedRecords['checkpoint'], isNot(contains('position')));
+    expect(store.read()!.position, const Duration(seconds: 9));
+
+    final writes = box.writes;
+    player.position = Duration.zero;
+    player.positions.add(player.position);
+    await flushEvents();
+    await handler.stop();
+    await store.dispose();
+    expect(store.read()!.position, const Duration(seconds: 9));
+
+    player.position = const Duration(seconds: 12);
+    player.positions.add(player.position);
+    await flushEvents();
+    await handler.pause();
+    await store.dispose();
+    expect(box.writes, greaterThan(writes));
+    expect(store.read()!.position, const Duration(seconds: 12));
+    expect(box.storedRecords['checkpoint'], contains('positionMs'));
     handler.onCheckpoint = null;
+  });
+
+  test('switching away and back keeps each item position', () async {
+    final box = MemoryPlaybackBox();
+    final store = PlaybackSessionStore(box);
+    await handler.setSongs([song(0), song(1)]);
+    store.attach(handler, () => NowPlayingType.songs);
+
+    await handler.select(0);
+    player.position = const Duration(minutes: 20);
+    player.positions.add(player.position);
+    await flushEvents();
+    await handler.pause();
+
+    await handler.select(1);
+    player.position = const Duration(minutes: 30);
+    player.positions.add(player.position);
+    await flushEvents();
+    await handler.pause();
+    await store.dispose();
+    expect(store.read()!.position, const Duration(minutes: 30));
+
+    await handler.select(0);
+    player.position = const Duration(minutes: 20, seconds: 5);
+    player.positions.add(player.position);
+    await flushEvents();
+    await handler.pause();
+    await store.dispose();
+
+    final stored = store.read()!;
+    expect(stored.index, 0);
+    expect(stored.position, const Duration(minutes: 20, seconds: 5));
+    handler.onCheckpoint = null;
+  });
+
+  test('a stop on the current item does not clear its position', () async {
+    final box = MemoryPlaybackBox();
+    final store = PlaybackSessionStore(box);
+    await handler.setSongs([song(0)]);
+    store.attach(handler, () => NowPlayingType.songs);
+
+    await handler.select(0);
+    player.position = const Duration(minutes: 12);
+    player.positions.add(player.position);
+    await flushEvents();
+    await handler.pause();
+    await store.dispose();
+    expect(store.read()!.position, const Duration(minutes: 12));
+
+    player.position = Duration.zero;
+    player.positions.add(player.position);
+    await flushEvents();
+    await handler.stop();
+    await store.dispose();
+
+    expect(store.read()!.position, const Duration(minutes: 12));
+    handler.onCheckpoint = null;
+  });
+
+  test('returning to a previous item resumes where it stopped', () async {
+    await handler.setSongs([song(0), song(1)]);
+
+    await handler.select(0);
+    player.position = const Duration(minutes: 20);
+    player.positions.add(player.position);
+    await flushEvents();
+
+    await handler.select(1);
+    expect(player.position, Duration.zero);
+
+    await handler.select(0);
+    expect(player.position, const Duration(minutes: 20));
   });
 
   test(

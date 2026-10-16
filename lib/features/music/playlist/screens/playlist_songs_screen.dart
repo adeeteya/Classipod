@@ -9,6 +9,7 @@ import 'package:classipod/core/widgets/empty_state_widget.dart';
 import 'package:classipod/core/widgets/fast_scroll_indicator.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
+import 'package:classipod/features/music/playlist/models/playlist_name_result.dart';
 import 'package:classipod/features/music/playlist/models/playlist_option_type.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/music/playlist/widgets/playlist_option_list_tile.dart';
@@ -78,15 +79,14 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
     setState(() => selectedDisplayItem = index);
     if (index == 0) {
       if (widget.playlistKey == null) {
+        final result = await context.pushNamed(Routes.playlistName.name);
+        if (!mounted || result is! PlaylistNameResult || !result.isSubmitted) {
+          return;
+        }
         await ref
             .read(playlistsProvider.notifier)
-            .saveNewPlaylist(
-              newPlaylistPlaceholderString: context.localization.newPlaylist,
-              songs: playlist.songs,
-            );
-        if (mounted) {
-          context.pop();
-        }
+            .createPlaylist(playlistName: result.name!, songs: playlist.songs);
+        if (mounted) context.pop();
       }
       // If the playlist is not on-the-go, it means we are renaming an existing playlist
       else {

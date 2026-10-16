@@ -6,24 +6,24 @@ import 'package:classipod/core/widgets/options_list_tile.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
-import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
+import 'package:classipod/features/music/playlist/widgets/add_to_playlist_helper.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 enum _SearchMoreOptions {
-  addToOnTheGo,
-  addAlbumToOnTheGo,
+  addToPlaylist,
+  addAlbumToPlaylist,
   browseAlbum,
   browseArtist,
   cancel;
 
   String title(BuildContext context) {
     switch (this) {
-      case addToOnTheGo:
-        return context.localization.addToOnTheGoPlaylist;
-      case addAlbumToOnTheGo:
-        return context.localization.addAlbumToOnTheGoPlaylist;
+      case addToPlaylist:
+        return context.localization.addToPlaylist;
+      case addAlbumToPlaylist:
+        return context.localization.addAlbumToPlaylist;
       case browseAlbum:
         return context.localization.browseAlbum;
       case browseArtist:
@@ -55,8 +55,8 @@ class _SearchMoreOptionsModalState extends ConsumerState<SearchMoreOptionsModal>
 
   @override
   List<_SearchMoreOptions> get displayItems => [
-    if (widget.songMetadata != null) _SearchMoreOptions.addToOnTheGo,
-    if (widget.albumDetail != null) _SearchMoreOptions.addAlbumToOnTheGo,
+    if (widget.songMetadata != null) _SearchMoreOptions.addToPlaylist,
+    if (widget.albumDetail != null) _SearchMoreOptions.addAlbumToPlaylist,
     if (widget.songMetadata != null) _SearchMoreOptions.browseAlbum,
     _SearchMoreOptions.browseArtist,
     _SearchMoreOptions.cancel,
@@ -69,17 +69,17 @@ class _SearchMoreOptionsModalState extends ConsumerState<SearchMoreOptionsModal>
   Future<void> _performAction(_SearchMoreOptions optionItem) async {
     setState(() => selectedDisplayItem = displayItems.indexOf(optionItem));
     switch (optionItem) {
-      case _SearchMoreOptions.addToOnTheGo:
-        ref
-            .read(playlistsProvider.notifier)
-            .addSongToPlaylist(widget.songMetadata);
-        context.pop();
+      case _SearchMoreOptions.addToPlaylist:
+        final song = widget.songMetadata;
+        if (song == null) break;
+        await addSongsToChosenPlaylist(context, ref, [song]);
+        if (mounted) context.pop();
         break;
-      case _SearchMoreOptions.addAlbumToOnTheGo:
-        ref
-            .read(playlistsProvider.notifier)
-            .addAlbumToPlaylist(widget.albumDetail);
-        context.pop();
+      case _SearchMoreOptions.addAlbumToPlaylist:
+        final album = widget.albumDetail;
+        if (album == null) break;
+        await addSongsToChosenPlaylist(context, ref, album.albumSongs);
+        if (mounted) context.pop();
         break;
       case _SearchMoreOptions.browseAlbum:
         final albumDetailIndex = ref

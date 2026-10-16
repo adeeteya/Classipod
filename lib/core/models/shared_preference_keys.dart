@@ -14,6 +14,7 @@ enum SharedPreferencesKeys {
   immersiveMode,
   hideLocalMusic,
   preventDuplicateTracks,
+  deletePodcastsAfterPlaying,
   isMenuFirstTime,
   isNowPlayingFirstTime,
   isInputTextBarFirstTime,

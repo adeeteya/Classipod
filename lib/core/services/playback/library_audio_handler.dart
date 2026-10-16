@@ -36,6 +36,8 @@ class LibraryAudioHandler extends BaseAudioHandler {
 
   bool get recovering => _recovering;
   bool get wantsPlayback => _wantPlayback;
+  bool get isSourceLoaded => _sourceLoaded;
+  final Map<String, Duration> resumePositions = {};
   Duration get displayPosition => _recovering ? _resumePosition : _lastPosition;
 
   void _cancelRecovery() {
@@ -116,6 +118,7 @@ class LibraryAudioHandler extends BaseAudioHandler {
                   player.processingState != ProcessingState.completed) {
                 return;
               }
+              notifyPlaybackCompleted();
               final next = logicalQueue.next(automatic: true);
               if (next == null) {
                 await player.pause();
@@ -132,6 +135,14 @@ class LibraryAudioHandler extends BaseAudioHandler {
 
   Stream<int?> get indexStream => _indices.stream;
   int? get currentIndex => _songs.isEmpty ? null : logicalQueue.index;
+
+  void Function(MusicMetadata song)? onSongCompleted;
+
+  void notifyPlaybackCompleted() {
+    if (_songs.isEmpty) return;
+    final song = _songs[logicalQueue.index];
+    onSongCompleted?.call(song);
+  }
 
   Future<void> _serialize(Future<void> Function() action) {
     final result = _pending.then((_) async {
@@ -221,7 +232,12 @@ class LibraryAudioHandler extends BaseAudioHandler {
     _sourceVersion++;
     return _serialize(() async {
       if (index < 0 || index >= _songs.length) return;
-      await _load(index, startPlaying: startPlaying);
+      final resume = resumePositions[_songs[index].identity];
+      await _load(
+        index,
+        startPlaying: startPlaying,
+        initialPosition: resume ?? Duration.zero,
+      );
     });
   }
 
@@ -275,6 +291,13 @@ class LibraryAudioHandler extends BaseAudioHandler {
       _cancelRecovery();
       _initialPosition = null;
       _lastPosition = initialPosition;
+    }
+    final outgoing = _songs.isEmpty ? null : _songs[logicalQueue.index];
+    if (outgoing != null && !_recovering && _sourceLoaded) {
+      final position = player.position;
+      if (position > Duration.zero) {
+        resumePositions[outgoing.identity] = position;
+      }
     }
     _loading = true;
     final version = _sourceVersion;

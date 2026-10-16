@@ -7,6 +7,7 @@ import 'package:classipod/core/providers/shared_preferences_with_cache_provider.
 import 'package:classipod/core/services/audio_player_service.dart';
 import 'package:classipod/core/services/click_sound_service.dart';
 import 'package:classipod/core/services/playback/playback_bootstrap.dart';
+import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:classipod/features/settings/models/exclude_directory_model.dart';
@@ -38,6 +39,9 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
     JustAudioMediaKit.ensureInitialized();
     JustAudioMediaKit.title = 'ClassiPod';
   }
+  // Load cached Navidrome songs and refresh asynchronously on launch.
+  ref.read(subsonicControllerProvider);
+
   await initializeMediaSession(ref.read(libraryAudioHandlerProvider));
   unawaited(ref.read(clickSoundServiceProvider).preload());
   ref

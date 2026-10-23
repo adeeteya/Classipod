@@ -546,6 +546,18 @@
   "@excludeDirectoriesScreenTitle": {
     "description": "The title of the exclude directories screen"
   },
+  "addFolderNameFilterTile": "Add Folder Filter",
+  "@addFolderNameFilterTile": {
+    "description": "The text of the tile that starts adding a folder filter on the exclude directories screen"
+  },
+  "folderNameFilterHint": "Type a folder name to hide it and all its subfolders",
+  "@folderNameFilterHint": {
+    "description": "The hint shown while typing a folder filter on the exclude directories screen"
+  },
+  "noFoldersMatchFilter": "No Folders",
+  "@noFoldersMatchFilter": {
+    "description": "The empty state description when no directories match the typed folder filter"
+  },
   "findingSongs": "Finding songs…",
   "@findingSongs": {
     "description": "The library loading status shown while searching for music files"

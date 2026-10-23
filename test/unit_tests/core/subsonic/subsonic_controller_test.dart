@@ -168,6 +168,7 @@ void main() {
       final box = await Hive.openBox<ExcludeDirectoryModel>(
         Constants.excludedDirectoriesBoxName,
       );
+      await Hive.openBox<String>(Constants.excludedNameFiltersBoxName);
       await box.add(
         ExcludeDirectoryModel(directoryPath: '/excluded', isExcluded: true),
       );
@@ -241,6 +242,7 @@ void main() {
     await Hive.openBox<ExcludeDirectoryModel>(
       Constants.excludedDirectoriesBoxName,
     );
+    await Hive.openBox<String>(Constants.excludedNameFiltersBoxName);
     final subscription = container.listen(
       filteredAudioFilesProvider,
       (_, _) {},

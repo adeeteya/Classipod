@@ -10,16 +10,51 @@ class ExcludeDirectoryTile extends StatelessWidget {
   final ExcludeDirectoryModel excludeDirectoryModel;
   final bool isSelected;
   final VoidCallback onTap;
+  final List<String> nameFilters;
 
   const ExcludeDirectoryTile({
     super.key,
     required this.excludeDirectoryModel,
     required this.isSelected,
     required this.onTap,
+    this.nameFilters = const [],
   });
+
+  bool get _isExcludedByNameFilter {
+    if (excludeDirectoryModel.isExcluded) {
+      return false;
+    }
+    final String path = excludeDirectoryModel.directoryPath.toLowerCase();
+    return nameFilters.any((filter) => path.contains(filter.toLowerCase()));
+  }
 
   @override
   Widget build(BuildContext context) {
+    final bool isExcludedByNameFilter = _isExcludedByNameFilter;
+    final TextStyle textStyle = IpodTypography.menu.copyWith(
+      color: isSelected
+          ? context.appInverseTextColor
+          : isExcludedByNameFilter
+          ? context.appSecondaryTextColor
+          : context.appPrimaryTextColor,
+    );
+    final Widget trailingIcon;
+    if (excludeDirectoryModel.isExcluded) {
+      trailingIcon = const Icon(
+        CupertinoIcons.xmark_square_fill,
+        color: AppPalette.lowBatteryBarGradientColor2,
+      );
+    } else if (isExcludedByNameFilter) {
+      trailingIcon = const Icon(
+        CupertinoIcons.minus_circle,
+        color: AppPalette.lowBatteryBarGradientColor2,
+      );
+    } else {
+      trailingIcon = const Icon(
+        CupertinoIcons.checkmark_alt_circle_fill,
+        color: AppPalette.batteryBarGradientColor6,
+      );
+    }
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
@@ -47,23 +82,11 @@ class ExcludeDirectoryTile extends StatelessWidget {
                   child: SelectedMarqueeText(
                     excludeDirectoryModel.directoryPath,
                     isSelected: isSelected,
-                    style: IpodTypography.menu.copyWith(
-                      color: isSelected
-                          ? context.appInverseTextColor
-                          : context.appPrimaryTextColor,
-                    ),
+                    style: textStyle,
                   ),
                 ),
                 const SizedBox(width: 5),
-                (excludeDirectoryModel.isExcluded)
-                    ? const Icon(
-                        CupertinoIcons.xmark_square_fill,
-                        color: AppPalette.lowBatteryBarGradientColor2,
-                      )
-                    : const Icon(
-                        CupertinoIcons.checkmark_alt_circle_fill,
-                        color: AppPalette.batteryBarGradientColor6,
-                      ),
+                trailingIcon,
               ],
             ),
           ),

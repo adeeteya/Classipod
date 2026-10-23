@@ -6,6 +6,7 @@ class Constants {
   static const String legacyMetadataBoxName = "metadata_box";
   static const String playlistBoxName = "playlist_box";
   static const String excludedDirectoriesBoxName = "excluded_directories_box";
+  static const String excludedNameFiltersBoxName = "excluded_name_filters_box";
 
   static const String defaultLanguageLocaleCode = "en";
   static const String androidDefaultMusicFolderPath =

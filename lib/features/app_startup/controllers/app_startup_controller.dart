@@ -34,6 +34,7 @@ final appStartupControllerProvider = FutureProvider<void>((ref) async {
   await Hive.openBox<ExcludeDirectoryModel>(
     Constants.excludedDirectoriesBoxName,
   );
+  await Hive.openBox<String>(Constants.excludedNameFiltersBoxName);
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux)) {
     JustAudioMediaKit.ensureInitialized();
     JustAudioMediaKit.title = 'ClassiPod';

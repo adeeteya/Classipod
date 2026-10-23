@@ -84,6 +84,7 @@ void main() {
     await Hive.openBox<ExcludeDirectoryModel>(
       Constants.excludedDirectoriesBoxName,
     );
+    await Hive.openBox<String>(Constants.excludedNameFiltersBoxName);
     discovered = snapshot([record(1), record(2)]);
     reads = [];
     progress = [];

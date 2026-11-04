@@ -8,6 +8,8 @@ import 'package:cupertino_ui/cupertino_ui.dart';
 class CoverFlowAlbumSongListTile extends StatelessWidget {
   final String songName;
   final Duration songDuration;
+  final int rating;
+  final bool showRating;
   final bool isSelected;
   final bool isCurrentlyPlaying;
   final VoidCallback onTap;
@@ -16,6 +18,8 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
     super.key,
     required this.songName,
     required this.songDuration,
+    required this.rating,
+    required this.showRating,
     required this.isSelected,
     required this.isCurrentlyPlaying,
     required this.onTap,
@@ -23,6 +27,10 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    debugPrint(
+      '[Classipod][cover-flow-rating] song=$songName '
+      'showRating=$showRating rating=$rating',
+    );
     return GestureDetector(
       onTap: onTap,
       child: SizedBox(
@@ -37,8 +45,7 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Flexible(
-                  flex: 5,
+                Expanded(
                   child: SelectedMarqueeText(
                     songName,
                     isSelected: isSelected,
@@ -49,24 +56,44 @@ class CoverFlowAlbumSongListTile extends StatelessWidget {
                     ),
                   ),
                 ),
-                Flexible(
-                  child: isCurrentlyPlaying
-                      ? Icon(
-                          CupertinoIcons.volume_up,
-                          size: 16,
-                          color: isSelected
-                              ? context.appInverseTextColor
-                              : context.appPrimaryTextColor,
-                        )
-                      : Text(
-                          songDuration.getMinuteAndSecondString,
-                          style: IpodTypography.menu.copyWith(
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (showRating && rating > 0)
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: List.generate(
+                          5,
+                          (index) => Icon(
+                            index < rating
+                                ? CupertinoIcons.star_fill
+                                : CupertinoIcons.star,
+                            size: 12,
+                            color: isSelected
+                                ? context.appInverseTextColor
+                                : context.appRatingIconColor,
+                          ),
+                        ),
+                      ),
+                    if (showRating) const SizedBox(width: 8),
+                    isCurrentlyPlaying
+                        ? Icon(
+                            CupertinoIcons.volume_up,
+                            size: 16,
                             color: isSelected
                                 ? context.appInverseTextColor
                                 : context.appPrimaryTextColor,
+                          )
+                        : Text(
+                            songDuration.getMinuteAndSecondString,
+                            style: IpodTypography.menu.copyWith(
+                              color: isSelected
+                                  ? context.appInverseTextColor
+                                  : context.appPrimaryTextColor,
+                            ),
+                            maxLines: 1,
                           ),
-                          maxLines: 1,
-                        ),
+                  ],
                 ),
               ],
             ),

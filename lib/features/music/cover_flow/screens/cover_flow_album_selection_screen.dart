@@ -8,8 +8,10 @@ import 'package:classipod/core/theme/ipod_typography.dart';
 import 'package:classipod/core/widgets/hero_flight_content.dart';
 import 'package:classipod/features/custom_screen_elements/custom_screen.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
+import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/cover_flow/widgets/cover_flow_album_song_list_tile.dart';
 import 'package:classipod/features/now_playing/provider/now_playing_details_provider.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -25,13 +27,21 @@ class CoverFlowAlbumSelectionScreen extends ConsumerStatefulWidget {
 class _CoverFlowAlbumSelectionScreenState
     extends ConsumerState<CoverFlowAlbumSelectionScreen>
     with CustomScreen {
+  late AlbumModel _currentAlbumDetail;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentAlbumDetail = widget.albumDetail;
+  }
+
   @override
   String get routeName => Routes.coverFlowSelection.name;
 
   final GlobalKey _contentKey = GlobalKey();
 
   @override
-  List<MusicMetadata> get displayItems => widget.albumDetail.albumSongs;
+  List<MusicMetadata> get displayItems => _currentAlbumDetail.albumSongs;
 
   @override
   Future<void> onSelectPressed() => _playSongFromAlbum(selectedDisplayItem);
@@ -75,7 +85,7 @@ class _CoverFlowAlbumSelectionScreenState
     setState(() => selectedDisplayItem = index);
     await ref
         .read(audioPlayerServiceProvider.notifier)
-        .playAlbum(albumDetail: widget.albumDetail, songIndex: index);
+        .playAlbum(albumDetail: _currentAlbumDetail, songIndex: index);
 
     if (mounted) {
       await context.openUniqueNamed(Routes.nowPlaying.name);
@@ -84,12 +94,22 @@ class _CoverFlowAlbumSelectionScreenState
 
   @override
   Widget build(BuildContext context) {
+    final albums = ref.watch(albumDetailsProvider);
+    _currentAlbumDetail = albums.firstWhere(
+      (album) => album == widget.albumDetail,
+      orElse: () => widget.albumDetail,
+    );
     final String? currentlyPlayingOriginalIndex = ref
         .watch(nowPlayingDetailsProvider.select((e) => e.currentMetadata))
         ?.identity;
+    final showRating = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.showCoverFlowRatings,
+      ),
+    );
     return Hero(
       tag:
-          "${widget.albumDetail.albumName}-${widget.albumDetail.albumArtistName}",
+          "${_currentAlbumDetail.albumName}-${_currentAlbumDetail.albumArtistName}",
       placeholderBuilder: (_, size, child) => SizedBox.fromSize(
         size: size,
         child: Offstage(child: TickerMode(enabled: false, child: child)),
@@ -100,13 +120,18 @@ class _CoverFlowAlbumSelectionScreenState
           initialOffset: scrollController.hasClients
               ? scrollController.offset
               : 0,
-          builder: (controller) =>
-              _buildPanel(context, currentlyPlayingOriginalIndex, controller),
+          builder: (controller) => _buildPanel(
+            context,
+            currentlyPlayingOriginalIndex,
+            controller,
+            showRating,
+          ),
         ),
         child: _buildPanel(
           context,
           currentlyPlayingOriginalIndex,
           scrollController,
+          showRating,
         ),
       ),
     );
@@ -116,6 +141,7 @@ class _CoverFlowAlbumSelectionScreenState
     BuildContext context,
     String? currentlyPlayingOriginalIndex,
     ScrollController controller,
+    bool showRating,
   ) {
     return SizedBox(
       child: Padding(
@@ -128,7 +154,7 @@ class _CoverFlowAlbumSelectionScreenState
           child: Column(
             children: [
               SizedBox(
-                height: 50,
+                height: 65,
                 width: double.infinity,
                 child: DecoratedBox(
                   decoration: BoxDecoration(
@@ -141,15 +167,23 @@ class _CoverFlowAlbumSelectionScreenState
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          widget.albumDetail.albumName,
+                          _currentAlbumDetail.albumName,
                           style: IpodTypography.title.copyWith(
                             color: CupertinoColors.white,
                           ),
                           maxLines: 1,
                         ),
                         Text(
-                          widget.albumDetail.albumArtistName,
+                          _currentAlbumDetail.albumArtistName,
                           style: IpodTypography.metadata.copyWith(
+                            color: CupertinoColors.white,
+                          ),
+                          maxLines: 1,
+                        ),
+                        Text(
+                          '${context.localization.nSongs(_currentAlbumDetail.trackCount)} - '
+                          '${_currentAlbumDetail.totalDurationString}',
+                          style: IpodTypography.caption.copyWith(
                             color: CupertinoColors.white,
                           ),
                           maxLines: 1,
@@ -168,10 +202,16 @@ class _CoverFlowAlbumSelectionScreenState
                     padding: EdgeInsets.zero,
                     itemExtent: displayTileHeight,
                     itemBuilder: (context, index) => CoverFlowAlbumSongListTile(
+                      key: ValueKey(
+                        '${displayItems[index].identity}-'
+                        '${displayItems[index].rating}',
+                      ),
                       songName: displayItems[index].getTrackName,
                       songDuration: Duration(
                         milliseconds: displayItems[index].getTrackDuration,
                       ),
+                      rating: displayItems[index].rating,
+                      showRating: showRating,
                       isSelected: selectedDisplayItem == index,
                       isCurrentlyPlaying:
                           currentlyPlayingOriginalIndex ==

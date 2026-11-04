@@ -26,14 +26,28 @@ class CoverFlowScreen extends ConsumerWidget {
         (settings) => settings.coverFlowAppearance,
       ),
     );
-    return _CoverFlowView(key: ValueKey(appearance), appearance: appearance);
+    final showRatings = ref.watch(
+      settingsPreferencesControllerProvider.select(
+        (settings) => settings.showCoverFlowRatings,
+      ),
+    );
+    return _CoverFlowView(
+      key: ValueKey((appearance, showRatings)),
+      appearance: appearance,
+      showRatings: showRatings,
+    );
   }
 }
 
 class _CoverFlowView extends ConsumerStatefulWidget {
-  const _CoverFlowView({super.key, required this.appearance});
+  const _CoverFlowView({
+    super.key,
+    required this.appearance,
+    required this.showRatings,
+  });
 
   final CoverFlowAppearance appearance;
+  final bool showRatings;
 
   @override
   ConsumerState createState() => _CoverFlowScreenState();
@@ -114,6 +128,9 @@ class _CoverFlowScreenState extends ConsumerState<_CoverFlowView>
       0,
       displayItems.length - 1,
     );
+    final albumRating = widget.showRatings
+        ? displayItems[selectedIndex].albumRating
+        : null;
     return Listener(
       onPointerDown: (_) => _wheelMotion.stop(),
       child: CupertinoPageScaffold(
@@ -149,6 +166,24 @@ class _CoverFlowScreenState extends ConsumerState<_CoverFlowView>
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Column(
                         children: [
+                          if (albumRating != null)
+                            Opacity(
+                              opacity: 0.7,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: List.generate(
+                                  5,
+                                  (index) => Icon(
+                                    index < albumRating
+                                        ? CupertinoIcons.star_fill
+                                        : CupertinoIcons.star,
+                                    size: 12,
+                                    color: context.appRatingIconColor,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          if (albumRating != null) const SizedBox(height: 5),
                           Text(
                             displayItems[selectedIndex].albumName,
                             maxLines: 1,
@@ -156,7 +191,7 @@ class _CoverFlowScreenState extends ConsumerState<_CoverFlowView>
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
-                          const SizedBox(height: 5),
+                          const SizedBox(height: 3),
                           Text(
                             displayItems[selectedIndex].albumArtistName,
                             maxLines: 1,

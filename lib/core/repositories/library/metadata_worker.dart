@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer' as developer;
 import 'dart:io';
 import 'dart:isolate';
 
@@ -11,6 +12,10 @@ class MetadataWorker {
   final SendPort _requests;
 
   MetadataWorker._(this._isolate, this._requests);
+
+  static void _log(String message) {
+    developer.log(message, name: 'Classipod.rating');
+  }
 
   static Future<MetadataWorker> start() async {
     final ready = ReceivePort();
@@ -44,6 +49,29 @@ class MetadataWorker {
     }
   }
 
+  Future<void> writeRating(String uri, int rating) async {
+    final response = ReceivePort();
+    try {
+      _log('request uri=$uri rating=$rating');
+      _requests.send((response.sendPort, uri, rating));
+      final result = Map<String, dynamic>.from(
+        await response.first.timeout(const Duration(seconds: 60)) as Map,
+      );
+      final error = result['error'] as String?;
+      if (error != null) {
+        _log('failed uri=$uri error=$error');
+        throw StateError(error);
+      }
+      if (result['saved'] != true) {
+        _log('save returned false uri=$uri');
+        throw StateError('Failed to save rating metadata');
+      }
+      _log('save completed uri=$uri');
+    } finally {
+      response.close();
+    }
+  }
+
   Future<void> close() async {
     final stopped = ReceivePort();
     try {
@@ -67,14 +95,69 @@ class MetadataWorker {
         message.send(null);
         return;
       }
-      final (reply, uri, directory) = message as (SendPort, String, String?);
+      final (reply, uri, argument) = message as (SendPort, String, Object?);
       TagLibFile? file;
       try {
         final path = uri.startsWith('file:')
             ? Uri.parse(uri).toFilePath()
             : uri;
-        file = await TagLibFile.openAsync(path);
+        file = await TagLibFile.openAsync(path, writeAccess: argument is int);
         if (file == null) throw StateError('Cannot read tags');
+        if (argument is int) {
+          MetadataWorker._log(
+            'opened path=$path '
+            'format=${file.format} existingRATING=${file.properties['RATING']}',
+          );
+          final existingProperties = file.properties;
+          if (existingProperties.isEmpty ||
+              (existingProperties.length == 1 &&
+                  existingProperties.containsKey('RATING'))) {
+            throw StateError(
+              'Refusing to save rating because existing metadata was '
+              'not read safely',
+            );
+          }
+          final updatedProperties = {
+            ...existingProperties,
+            'RATING': [argument.toString()],
+          };
+          final unsupported = file.setProperties(updatedProperties);
+          if (unsupported.containsKey('RATING')) {
+            MetadataWorker._log(
+              'RATING unsupported path=$path '
+              'unsupported=$unsupported',
+            );
+            throw StateError('Audio format does not support RATING metadata');
+          }
+          MetadataWorker._log(
+            'RATING set path=$path '
+            'properties=${file.properties['RATING']}',
+          );
+          final saved = file.save();
+          MetadataWorker._log(
+            'save result=$saved path=$path '
+            'propertiesAfterSave=${file.properties['RATING']}',
+          );
+          file.close();
+          file = null;
+
+          final reopened = await TagLibFile.openAsync(path);
+          final persistedRating = reopened?.properties['RATING'];
+          final persistedValues = persistedRating is List
+              ? List<dynamic>.from(persistedRating!)
+              : const <dynamic>[];
+          final persisted = persistedValues.any(
+            (value) => value.toString() == argument.toString(),
+          );
+          MetadataWorker._log(
+            'reopen verification path=$path '
+            'persistedRating=$persistedRating persisted=$persisted',
+          );
+          reopened?.close();
+          reply.send({'saved': saved && persisted});
+          continue;
+        }
+        final directory = argument as String?;
         final result = <String, dynamic>{
           'properties': file.properties,
           'duration': file.duration.inMilliseconds,

@@ -38,4 +38,15 @@ void main() {
 
     expect("132:30", durationString);
   });
+  test('Getting the correct hour and minute string', () {
+    const duration = Duration(hours: 2, minutes: 5, seconds: 30);
+    final durationString = duration.getHourAndMinuteString;
+
+    expect("2h 05m", durationString);
+  });
+  test('Omitting hours when duration is less than one hour', () {
+    const duration = Duration(minutes: 5);
+
+    expect("05m", duration.getHourAndMinuteString);
+  });
 }

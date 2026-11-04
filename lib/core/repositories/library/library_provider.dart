@@ -37,6 +37,10 @@ final libraryRepositoryProvider = Provider<LibraryRepository>((ref) {
       worker ??= await MetadataWorker.start();
       return worker!.read(uri, artworkDirectory: artworkDirectory);
     },
+    writeRating: (uri, rating) async {
+      worker ??= await MetadataWorker.start();
+      await worker!.writeRating(uri, rating);
+    },
     closeReader: () async {
       final previous = worker;
       worker = null;

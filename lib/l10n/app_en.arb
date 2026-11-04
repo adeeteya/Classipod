@@ -722,5 +722,13 @@
   "coverFlowBigTitle": "Big",
   "@coverFlowBigTitle": {
     "description": "The Cover Flow appearance option with larger album artwork, showing a centered cover and one tilted cover on each side, up to three covers total"
+  },
+  "showCoverFlowRatingsSettingTitle": "Show Ratings in Cover Flow",
+  "allowFileModificationSettingTitle": "Allow modifying music files",
+  "@showCoverFlowRatingsSettingTitle": {
+    "description": "Whether to show song ratings in the Cover Flow album list"
+  },
+  "@allowFileModificationSettingTitle": {
+    "description": "Whether the app may write ratings to local music files"
   }
 }

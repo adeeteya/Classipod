@@ -31,6 +31,8 @@ enum _SettingsDisplayItems {
   volumeMode,
   splitScreenEnabled,
   immersiveMode,
+  showCoverFlowRatings,
+  allowFileModification,
   showAppTutorial,
   librarySettings,
   resetSettings,
@@ -68,6 +70,10 @@ enum _SettingsDisplayItems {
         return context.localization.splitScreenSettingTitle;
       case immersiveMode:
         return context.localization.immersiveModeSettingTitle;
+      case showCoverFlowRatings:
+        return context.localization.showCoverFlowRatingsSettingTitle;
+      case allowFileModification:
+        return context.localization.allowFileModificationSettingTitle;
       case showAppTutorial:
         return context.localization.showAppTutorialSettingTitle;
       case librarySettings:
@@ -169,6 +175,16 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
             .read(settingsPreferencesControllerProvider.notifier)
             .toggleImmersiveMode();
         break;
+      case _SettingsDisplayItems.showCoverFlowRatings:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleShowCoverFlowRatings();
+        break;
+      case _SettingsDisplayItems.allowFileModification:
+        await ref
+            .read(settingsPreferencesControllerProvider.notifier)
+            .toggleAllowFileModification();
+        break;
       case _SettingsDisplayItems.showAppTutorial:
         await ref
             .read(settingsPreferencesControllerProvider.notifier)
@@ -206,6 +222,10 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen>
         return settingsState.splitScreenEnabled;
       case _SettingsDisplayItems.immersiveMode:
         return settingsState.immersiveMode;
+      case _SettingsDisplayItems.showCoverFlowRatings:
+        return settingsState.showCoverFlowRatings;
+      case _SettingsDisplayItems.allowFileModification:
+        return settingsState.allowFileModification;
       default:
         return null;
     }

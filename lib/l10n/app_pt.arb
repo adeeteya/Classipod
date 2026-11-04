@@ -219,5 +219,13 @@
   },
   "coverFlowAppearanceSettingTitle": "Fluxo de cobertura",
   "coverFlowOriginalTitle": "Original",
-  "coverFlowBigTitle": "Grande"
+  "coverFlowBigTitle": "Grande",
+  "showCoverFlowRatingsSettingTitle": "Mostrar classificações no Cover Flow",
+  "allowFileModificationSettingTitle": "Permitir modificar arquivos de música",
+  "@showCoverFlowRatingsSettingTitle": {
+    "description": "Mostrar as avaliações das músicas na lista de álbuns do Cover Flow"
+  },
+  "@allowFileModificationSettingTitle": {
+    "description": "Permitir que o app grave avaliações nos arquivos de música locais"
+  }
 }

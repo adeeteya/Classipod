@@ -2,14 +2,16 @@ import 'package:classipod/core/models/music_metadata.dart';
 
 String albumIdentityOf(MusicMetadata metadata) {
   final albumName = metadata.getAlbumName.trim().toLowerCase();
-  final primaryArtist = metadata.songId == null
-      ? metadata.getPrimaryAlbumArtistName.trim().toLowerCase()
-      : (metadata.albumArtistNames ?? metadata.trackArtistNames ?? [])
-            .map((name) => name.trim().toLowerCase())
-            .join('\u0001');
+  final artistIdentity =
+      metadata.songId == null
+            ? <String>[metadata.getPrimaryAlbumArtistName.trim().toLowerCase()]
+            : (metadata.albumArtistNames ?? metadata.trackArtistNames ?? [])
+                  .map((name) => name.trim().toLowerCase())
+                  .toList()
+        ..sort();
   return metadata.isSubsonic
       ? '${metadata.serverId}:${metadata.remoteAlbumId ?? albumName}'
-      : '$albumName\u0000$primaryArtist';
+      : '$albumName\u0000${artistIdentity.join('\u0001')}';
 }
 
 int compareAlbumTracks(MusicMetadata a, MusicMetadata b) {

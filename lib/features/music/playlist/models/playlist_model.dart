@@ -43,3 +43,16 @@ class PlaylistModel extends HiveObject {
     return 'PlaylistModel(name: $name, songs: $songs)';
   }
 }
+
+class VirtualPlaylistModel extends PlaylistModel {
+  final dynamic virtualKey;
+
+  VirtualPlaylistModel({
+    required super.name,
+    required super.songs,
+    required this.virtualKey,
+  });
+
+  @override
+  dynamic get key => virtualKey;
+}

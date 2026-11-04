@@ -121,6 +121,20 @@ class SettingsPreferencesRepository {
         false;
   }
 
+  bool getShowCoverFlowRatings() {
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.showCoverFlowRatings.name,
+        ) ??
+        false;
+  }
+
+  bool getAllowFileModification() {
+    return _sharedPreferencesWithCache.getBool(
+          SharedPreferencesKeys.allowFileModification.name,
+        ) ??
+        false;
+  }
+
   Future<void> setLanguageLocaleCode({
     required String languageLocaleCode,
   }) async {
@@ -212,6 +226,22 @@ class SettingsPreferencesRepository {
     return _sharedPreferencesWithCache.setBool(
       SharedPreferencesKeys.immersiveMode.name,
       isImmersiveModeEnabled,
+    );
+  }
+
+  Future<void> setShowCoverFlowRatings({
+    required bool showCoverFlowRatings,
+  }) async {
+    return _sharedPreferencesWithCache.setBool(
+      SharedPreferencesKeys.showCoverFlowRatings.name,
+      showCoverFlowRatings,
+    );
+  }
+
+  Future<void> setAllowFileModification({required bool allowFileModification}) {
+    return _sharedPreferencesWithCache.setBool(
+      SharedPreferencesKeys.allowFileModification.name,
+      allowFileModification,
     );
   }
 }

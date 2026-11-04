@@ -3,6 +3,7 @@ import 'dart:io' as io;
 
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/navigation/routes.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/repositories/library/library_progress.dart';
 import 'package:classipod/core/repositories/library/library_provider.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
@@ -24,6 +25,7 @@ import 'package:cupertino_ui/cupertino_ui.dart' hide RepeatMode;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_taglib/flutter_taglib.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:universal_html/html.dart';
@@ -72,6 +74,10 @@ class SettingsPreferencesControllerNotifier
         settingsPreferencesRepository.getCoverFlowAppearance(),
       ),
       appTheme: AppTheme.fromName(settingsPreferencesRepository.getAppTheme()),
+      showCoverFlowRatings: settingsPreferencesRepository
+          .getShowCoverFlowRatings(),
+      allowFileModification: settingsPreferencesRepository
+          .getAllowFileModification(),
     );
   }
 
@@ -322,6 +328,38 @@ class SettingsPreferencesControllerNotifier
     await setSystemUiMode();
   }
 
+  Future<void> toggleShowCoverFlowRatings() async {
+    state = state.copyWith(showCoverFlowRatings: !state.showCoverFlowRatings);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setShowCoverFlowRatings(
+          showCoverFlowRatings: state.showCoverFlowRatings,
+        );
+  }
+
+  Future<void> toggleAllowFileModification() async {
+    if (state.allowFileModification) {
+      state = state.copyWith(allowFileModification: false);
+      await ref
+          .read(settingsPreferencesRepositoryProvider)
+          .setAllowFileModification(allowFileModification: false);
+      return;
+    }
+
+    if (io.Platform.isAndroid) {
+      final songs = ref.read(filteredAudioFilesProvider).value ?? [];
+      if (!songs.any((song) => song.isOnDevice)) return;
+
+      final granted = await TagLibFile.pickSafDirectory();
+      if (granted == null) return;
+    }
+
+    state = state.copyWith(allowFileModification: true);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setAllowFileModification(allowFileModification: true);
+  }
+
   Future<void> rescanMusicFiles({bool clearPlaylists = false}) async {
     if (!state.fetchOnlineMusic) {
       ref.read(libraryRepositoryProvider).requestRescan();
@@ -382,6 +420,12 @@ class SettingsPreferencesControllerNotifier
     await ref
         .read(settingsPreferencesRepositoryProvider)
         .setCoverFlowAppearance(CoverFlowAppearance.original);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setShowCoverFlowRatings(showCoverFlowRatings: false);
+    await ref
+        .read(settingsPreferencesRepositoryProvider)
+        .setAllowFileModification(allowFileModification: false);
     ref.invalidateSelf();
   }
 

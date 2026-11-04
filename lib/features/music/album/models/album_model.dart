@@ -1,3 +1,4 @@
+import 'package:classipod/core/extensions/duration_extensions.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/utils/artist_name_utils.dart';
 
@@ -62,5 +63,27 @@ class AlbumModel {
 
   bool isOnDevice() {
     return albumSongs.first.isOnDevice;
+  }
+
+  int get trackCount => albumSongs.length;
+
+  Duration get totalDuration => Duration(
+    milliseconds: albumSongs.fold(
+      0,
+      (total, song) => total + song.getTrackDuration,
+    ),
+  );
+
+  String get totalDurationString => totalDuration.getHourAndMinuteString;
+
+  int? get albumRating {
+    if (albumSongs.isEmpty || albumSongs.any((song) => song.rating == 0)) {
+      return null;
+    }
+    final totalRating = albumSongs.fold(
+      0,
+      (total, song) => total + song.rating,
+    );
+    return (totalRating / albumSongs.length).round();
   }
 }

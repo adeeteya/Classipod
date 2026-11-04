@@ -1,3 +1,4 @@
+import 'dart:developer' as developer;
 import 'dart:io';
 
 import 'package:classipod/core/constants/constants.dart';
@@ -12,6 +13,7 @@ typedef ReadTags = Future<Map<String, dynamic>> Function(
   String uri, {
   String? artworkDirectory,
 });
+typedef WriteRating = Future<void> Function(String uri, int rating);
 
 class LibraryRepository {
   static const boxName = Constants.libraryBoxName;
@@ -19,6 +21,7 @@ class LibraryRepository {
   final String artworkDirectory;
   final Future<LibrarySnapshot> Function() discover;
   final ReadTags readTags;
+  final WriteRating? writeRating;
   final Future<void> Function()? closeReader;
   final void Function()? selectSource;
   bool forceNextScan = false;
@@ -29,6 +32,7 @@ class LibraryRepository {
     required this.artworkDirectory,
     required this.discover,
     required this.readTags,
+    this.writeRating,
     this.closeReader,
     this.selectSource,
   });
@@ -37,6 +41,23 @@ class LibraryRepository {
     forceNextScan = true;
     _refreshNextScan = false;
     selectSource?.call();
+  }
+
+  Future<void> writeSongRating(MusicMetadata song) async {
+    final path = song.filePath ?? song.contentUri;
+    developer.log(
+      'writeSongRating identity=${song.identity} '
+      'path=$path rating=${song.rating}',
+      name: 'Classipod.rating',
+    );
+    if (path == null || path.isEmpty) {
+      throw StateError('Song has no writable file path');
+    }
+    final writer = writeRating;
+    if (writer == null) {
+      throw UnsupportedError('Writing metadata is unavailable');
+    }
+    await writer(path, song.rating);
   }
 
   void requestRefresh() {
@@ -119,7 +140,6 @@ class LibraryRepository {
         failures: failures,
       ),
     );
-
     Future<Map<String, dynamic>> readSongTags(String uri) async {
       try {
         return await readTags(uri, artworkDirectory: artworkDirectory);
@@ -165,7 +185,9 @@ class LibraryRepository {
           if (!refresh &&
               row['hasCover'] == true &&
               !await artworkExists(previous.thumbnailPath)) {
-            final result = await readSongTags(song.path ?? song.uri);
+            final result = await readSongTags(
+              Platform.isAndroid ? song.uri : song.path ?? song.uri,
+            );
             final path = result['artworkPath'] as String?;
             if (path != null) {
               row['music'] = (row['music'] as MusicMetadata).copyWith(
@@ -174,21 +196,30 @@ class LibraryRepository {
             }
           }
         } else {
-          final tags = await readSongTags(song.path ?? song.uri);
+          final tags = await readSongTags(
+            Platform.isAndroid ? song.uri : song.path ?? song.uri,
+          );
           final success = !tags.containsKey('error');
           if (!success) failures++;
+          final music = success
+              ? libraryMetadata(
+                  song,
+                  tags,
+                  index: previous?.originalSongIndex ?? nextIndex++,
+                  previous: previous,
+                )
+              : previous?.copyWith(
+                      contentUri: song.uri,
+                      sourceVolume: song.volume,
+                    ) ??
+                    libraryMetadata(song, tags, index: nextIndex++);
           row = {
             'uri': song.uri,
             'size': song.size,
             'modified': song.modified,
             'readSuccess': success,
             'hasCover': tags['hasCover'] == true,
-            'music': libraryMetadata(
-              song,
-              tags,
-              index: previous?.originalSongIndex ?? nextIndex++,
-              previous: previous,
-            ),
+            'music': music,
           };
         }
         row['artworkReadFailed'] = false;
@@ -210,14 +241,6 @@ class LibraryRepository {
       final active = records
           .map((row) => row['music'] as MusicMetadata)
           .toList();
-      final activeIds = active.map((song) => song.identity).toSet();
-      for (final old in oldRecords) {
-        final song = old['music'] as MusicMetadata;
-        if (!activeIds.contains(song.identity) &&
-            !snapshot.volumes.contains(song.sourceVolume)) {
-          records.add(old);
-        }
-      }
       emit(LibraryPhase.saving);
       await box.put('snapshot', {'version': cacheVersion, 'records': records});
       await box.flush();

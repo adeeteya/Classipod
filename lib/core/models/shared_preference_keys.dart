@@ -12,6 +12,8 @@ enum SharedPreferencesKeys {
   coverFlowAppearance,
   splitScreenEnabled,
   immersiveMode,
+  showCoverFlowRatings,
+  allowFileModification,
   hideLocalMusic,
   preventDuplicateTracks,
   isMenuFirstTime,

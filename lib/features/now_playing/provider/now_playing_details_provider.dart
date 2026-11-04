@@ -1,9 +1,11 @@
 import 'dart:async';
+import 'dart:developer' as developer;
 
 import 'package:audio_service/audio_service.dart';
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:classipod/core/models/playback_shuffle_mode.dart';
 import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
+import 'package:classipod/core/repositories/library/library_provider.dart';
 import 'package:classipod/core/repositories/library/library_repository.dart';
 import 'package:classipod/core/services/audio_files_service.dart';
 import 'package:classipod/core/services/audio_player_service.dart';
@@ -11,6 +13,7 @@ import 'package:classipod/core/subsonic/subsonic_controller.dart';
 import 'package:classipod/features/music/album/providers/album_details_provider.dart';
 import 'package:classipod/features/music/playlist/providers/playlists_provider.dart';
 import 'package:classipod/features/now_playing/models/now_playing_model.dart';
+import 'package:classipod/features/settings/controller/settings_preferences_controller.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -135,6 +138,12 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
 
   Future<void> setCurrentMetadataRating(int val) async {
     if (0 <= val && val <= 5 && state.currentMetadata != null) {
+      developer.log(
+        'UI rating change '
+        'identity=${state.currentMetadata!.identity} '
+        'from=${state.currentMetadata!.rating} to=$val',
+        name: 'Classipod.rating',
+      );
       final newMetadata = state.currentMetadata!.copyWith(rating: val);
       await updateMetadata(newMetadata);
     }
@@ -155,6 +164,16 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
   }
 
   Future<void> updateMetadata(MusicMetadata updatedMetadata) async {
+    final oldRating = state.metadataList
+        .where((metadata) => metadata.identity == updatedMetadata.identity)
+        .firstOrNull
+        ?.rating;
+    developer.log(
+      'updateMetadata identity=${updatedMetadata.identity} '
+      'old=$oldRating new=${updatedMetadata.rating} '
+      'isSubsonic=${updatedMetadata.isSubsonic} file=${updatedMetadata.filePath}',
+      name: 'Classipod.rating',
+    );
     state = state.copyWith(
       currentMetadata:
           state.currentMetadata?.identity == updatedMetadata.identity
@@ -178,6 +197,18 @@ class NowPlayingDetailsNotifier extends Notifier<NowPlayingModel> {
       ref
           .read(audioFilesServiceProvider.notifier)
           .replaceMetadata(updatedMetadata);
+      ref.invalidate(filteredAudioFilesProvider);
+      ref.invalidate(albumDetailsProvider);
+      ref.invalidate(playlistsProvider);
+      if (updatedMetadata.rating != oldRating &&
+          ref
+              .read(settingsPreferencesControllerProvider)
+              .allowFileModification) {
+        await ref
+            .read(libraryRepositoryProvider)
+            .writeSongRating(updatedMetadata);
+      }
+      return;
     }
     ref.invalidate(filteredAudioFilesProvider);
     ref.invalidate(albumDetailsProvider);

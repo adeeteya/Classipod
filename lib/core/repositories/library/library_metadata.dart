@@ -86,7 +86,7 @@ MusicMetadata libraryMetadata(
     filePath: song.path ?? song.uri,
     thumbnailPath: tags['artworkPath'] as String?,
     originalSongIndex: index,
-    rating: previous?.rating ?? 0,
+    rating: number('RATING') ?? previous?.rating ?? 0,
   );
 }
 

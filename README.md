@@ -34,7 +34,9 @@ a music subscription, offline server downloads, or server playlist syncing.
 - 📋 Inspect unreadable files and retry guidance in **Missing Tracks**.
 - 🧹 Optionally hide duplicate filenames without deleting music files.
 - 📃 Create and save custom ClassiPod playlists.
-- ⭐ Rate songs, with ratings and edits stored in ClassiPod.
+- ⭐ Rate songs and view their ratings in Now Playing and Cover Flow.
+- 💾 Optionally write ratings to local files' `RATING` metadata tag after
+  granting folder access once in **Settings**.
 - 📝 View embedded lyrics when available.
 - 🎶 Play MP3, WAV, FLAC, M4A, MP4, Ogg, Opus, AAC, AIFF, APE, and MOV audio,
   subject to the platform's playback support.
@@ -60,6 +62,8 @@ a music subscription, offline server downloads, or server playlist syncing.
 
 - 🎞️ Explore Cover Flow with **Original** and **Big** layouts, smooth wheel
   motion, and animated transitions.
+- 📊 View each album's track count, total duration, and aggregate rating, plus
+  optional per-song ratings in the album track list.
 - 🪞 Enjoy reflective album artwork.
 - 🎨 Choose light and dark screen themes and device colors including Silver,
   Black, OLED Black, and more.

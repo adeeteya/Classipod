@@ -7,8 +7,6 @@ import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 
-const starredPlaylistKey = '__starred__';
-
 final starredPlaylistProvider = Provider<List<MusicMetadata>>((ref) {
   final List<MusicMetadata> songs =
       ref.watch(filteredAudioFilesProvider).value ?? [];
@@ -83,7 +81,7 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
   }
 
   Future<void> renamePlaylist({
-    required dynamic playlistKey,
+    required int? playlistKey,
     required String newPlaylistName,
   }) async {
     // Can't rename virtual playlist options.
@@ -101,7 +99,7 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
     }
   }
 
-  Future<void> clearPlaylist({required dynamic playlistKey}) async {
+  Future<void> clearPlaylist({required int? playlistKey}) async {
     // Can't remove virtual playlist options.
     if (playlistKey == starredPlaylistKey) {
       return;

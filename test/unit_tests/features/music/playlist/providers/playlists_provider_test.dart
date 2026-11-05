@@ -69,6 +69,7 @@ void main() {
         'Saved',
       ]);
       expect(playlists[1].key, starredPlaylistKey);
+      expect(playlists[1].key, isA<int>());
     },
   );
 

@@ -1,10 +1,17 @@
 import 'package:classipod/core/constants/constants.dart';
 import 'package:classipod/core/models/music_metadata.dart';
+import 'package:classipod/core/providers/filtered_audio_files_provider.dart';
 import 'package:classipod/core/utils/name_order.dart';
 import 'package:classipod/features/music/album/models/album_model.dart';
 import 'package:classipod/features/music/playlist/models/playlist_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
+
+final starredPlaylistProvider = Provider<List<MusicMetadata>>((ref) {
+  final List<MusicMetadata> songs =
+      ref.watch(filteredAudioFilesProvider).value ?? [];
+  return songs.where((song) => song.rating >= 1).toList();
+});
 
 final playlistsProvider =
     NotifierProvider<PlaylistsNotifier, List<PlaylistModel>>(
@@ -18,14 +25,38 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
 
   @override
   List<PlaylistModel> build() {
+    ref.listen(starredPlaylistProvider, (_, starredSongs) {
+      state = [
+        state[0],
+        VirtualPlaylistModel(
+          name: 'Starred',
+          songs: starredSongs,
+          virtualKey: starredPlaylistKey,
+        ),
+        ...state.skip(2),
+      ];
+    });
     return [
       PlaylistModel(name: 'On The Go', songs: []),
+      VirtualPlaylistModel(
+        name: 'Starred',
+        songs: ref.read(starredPlaylistProvider),
+        virtualKey: starredPlaylistKey,
+      ),
       ..._sortedSavedPlaylists(),
     ];
   }
 
   void refreshProvider() {
-    state = [state[0], ..._sortedSavedPlaylists()];
+    state = [
+      state[0],
+      VirtualPlaylistModel(
+        name: 'Starred',
+        songs: ref.read(starredPlaylistProvider),
+        virtualKey: starredPlaylistKey,
+      ),
+      ..._sortedSavedPlaylists(),
+    ];
   }
 
   List<PlaylistModel> _sortedSavedPlaylists() =>
@@ -50,11 +81,11 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
   }
 
   Future<void> renamePlaylist({
-    required dynamic playlistKey,
+    required int? playlistKey,
     required String newPlaylistName,
   }) async {
-    // Can't rename the on-the-go-playlist option
-    if (playlistKey == null) {
+    // Can't rename virtual playlist options.
+    if (playlistKey == null || playlistKey == starredPlaylistKey) {
       return;
     } else {
       final currentPlaylist = _playlistBox.get(playlistKey);
@@ -68,9 +99,11 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
     }
   }
 
-  Future<void> clearPlaylist({required dynamic playlistKey}) async {
-    // Can't remove the on-the-go-playlist option
-    if (playlistKey == null) {
+  Future<void> clearPlaylist({required int? playlistKey}) async {
+    // Can't remove virtual playlist options.
+    if (playlistKey == starredPlaylistKey) {
+      return;
+    } else if (playlistKey == null) {
       Future.delayed(const Duration(milliseconds: 350), () {
         state = [
           for (final playlist in state)
@@ -108,7 +141,7 @@ class PlaylistsNotifier extends Notifier<List<PlaylistModel>> {
     required PlaylistModel playlistModel,
     MusicMetadata? song,
   }) async {
-    if (song != null) {
+    if (song != null && playlistModel.key != starredPlaylistKey) {
       await _playlistBox.put(
         playlistModel.key,
         playlistModel.removeSongFromPlaylist(song),

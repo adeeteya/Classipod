@@ -37,14 +37,17 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
   double get displayTileHeight => 54;
 
   @override
-  int get extraDisplayItems => 2;
+  int get extraDisplayItems => playlistOptionCount;
 
   @override
   List<MusicMetadata> get displayItems {
-    final stored = ref
+    final playlist = ref
         .watch(playlistsProvider)
-        .firstWhere((e) => e.key == widget.playlistKey)
-        .songs;
+        .firstWhere((e) => e.key == widget.playlistKey);
+    final stored = playlist.songs;
+    if (widget.playlistKey == starredPlaylistKey) {
+      return stored;
+    }
     final library = ref.watch(filteredAudioFilesProvider).value;
     if (library == null || !stored.any((song) => song.songId != null)) {
       return stored;
@@ -61,6 +64,10 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
       .read(playlistsProvider)
       .firstWhere((e) => e.key == widget.playlistKey);
 
+  bool get isVirtualPlaylist => widget.playlistKey == starredPlaylistKey;
+
+  int get playlistOptionCount => isVirtualPlaylist ? 0 : 2;
+
   @override
   Future<void> onSelectPressed() => _performAction(selectedDisplayItem);
 
@@ -69,6 +76,11 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
       _performLongPressAction(selectedDisplayItem);
 
   Future<void> _performAction(int index) async {
+    if (isVirtualPlaylist) {
+      await _playSelectedSong(index);
+      return;
+    }
+
     final isSavingEmptyOnTheGoPlaylist =
         index == 0 && widget.playlistKey == null && displayItems.isEmpty;
     if (isSavingEmptyOnTheGoPlaylist) {
@@ -113,38 +125,47 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
         context.pop();
       }
     } else {
-      final selected = displayItems[index - 2];
-      var remote = ref.read(subsonicControllerProvider).value;
-      if (selected.isSubsonic &&
-          remote?.enabled == true &&
-          remote?.config?.id == selected.serverId &&
-          remote?.signedIn != true) {
-        await showSubsonicDialog(context);
-        if (!mounted) return;
-        remote = ref.read(subsonicControllerProvider).value;
-      }
-      if (selected.isSubsonic && !(remote?.available(selected) ?? false)) {
-        return;
-      }
-      final playable = displayItems
-          .where(
-            (song) => !song.isSubsonic || (remote?.available(song) ?? false),
-          )
-          .toList();
-      await ref
-          .read(audioPlayerServiceProvider.notifier)
-          .playPlaylist(
-            playlistDetail: playlist.copyWith(songs: playable),
-            songIndex: playable.indexOf(selected),
-          );
-      if (mounted) {
-        await context.openUniqueNamed(Routes.nowPlaying.name);
-      }
+      await _playSelectedSong(index);
+    }
+  }
+
+  Future<void> _playSelectedSong(int index) async {
+    final selected = displayItems[index - playlistOptionCount];
+    var remote = ref.read(subsonicControllerProvider).value;
+    if (selected.isSubsonic &&
+        remote?.enabled == true &&
+        remote?.config?.id == selected.serverId &&
+        remote?.signedIn != true) {
+      await showSubsonicDialog(context);
+      if (!mounted) return;
+      remote = ref.read(subsonicControllerProvider).value;
+    }
+    if (selected.isSubsonic && !(remote?.available(selected) ?? false)) {
+      return;
+    }
+    final playable = displayItems
+        .where((song) => !song.isSubsonic || (remote?.available(song) ?? false))
+        .toList();
+    await ref
+        .read(audioPlayerServiceProvider.notifier)
+        .playPlaylist(
+          playlistDetail: playlist.copyWith(songs: playable),
+          songIndex: playable.indexOf(selected),
+        );
+    if (mounted) {
+      await context.openUniqueNamed(Routes.nowPlaying.name);
     }
   }
 
   Future<void> _performLongPressAction(int index) async {
     if (displayItems.isEmpty) return;
+    if (isVirtualPlaylist) {
+      final selected = displayItems[index];
+      await ref
+          .read(nowPlayingDetailsProvider.notifier)
+          .updateMetadata(selected.copyWith(rating: 0));
+      return;
+    }
     setState(() => selectedDisplayItem = index);
     if (index < 2) {
       return;
@@ -157,7 +178,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
             .read(playlistsProvider.notifier)
             .removeSongFromPlaylist(
               playlistModel: playlist,
-              song: displayItems[index - 2],
+              song: displayItems[index - playlistOptionCount],
             );
         if (playlist.songs.isEmpty) {
           return _performAction(1);
@@ -196,22 +217,23 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
           Flexible(
             child: FastScrollIndicator(
               wheelScrollIndex: wheelScrollIndex,
-              itemCount: displayItems.length + 2,
+              itemCount: displayItems.length + playlistOptionCount,
               itemExtent: displayTileHeight,
-              labelAt: (index) =>
-                  index < 2 ? '' : displayItems[index - 2].getTrackName,
+              labelAt: (index) => index < playlistOptionCount
+                  ? ''
+                  : displayItems[index - playlistOptionCount].getTrackName,
               child: CupertinoScrollbar(
                 controller: scrollController,
                 child: ListView.builder(
                   controller: scrollController,
-                  itemCount: displayItems.length + 2,
+                  itemCount: displayItems.length + playlistOptionCount,
                   prototypeItem: PlaylistOptionListTile(
                     onTap: () {},
                     isSelected: false,
                     type: PlaylistOptionType.savePlaylist,
                   ),
                   itemBuilder: (context, index) {
-                    if (index == 0) {
+                    if (!isVirtualPlaylist && index == 0) {
                       return PlaylistOptionListTile(
                         onTap: () async => _performAction(0),
                         isSelected: selectedDisplayItem == 0,
@@ -219,7 +241,7 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
                             ? PlaylistOptionType.savePlaylist
                             : PlaylistOptionType.renamePlaylist,
                       );
-                    } else if (index == 1) {
+                    } else if (!isVirtualPlaylist && index == 1) {
                       return PlaylistOptionListTile(
                         onTap: () async => _performAction(1),
                         isSelected: selectedDisplayItem == 1,
@@ -228,18 +250,21 @@ class _PlaylistsSongsScreenState extends ConsumerState<PlaylistSongsScreen>
                     }
 
                     return PlaylistSongListTile(
-                      songMetadata: displayItems[index - 2],
+                      songMetadata: displayItems[index - playlistOptionCount],
                       unavailable:
-                          displayItems[index - 2].isSubsonic &&
+                          displayItems[index - playlistOptionCount]
+                              .isSubsonic &&
                           !(ref
                                   .watch(subsonicControllerProvider)
                                   .value
-                                  ?.available(displayItems[index - 2]) ??
+                                  ?.available(
+                                    displayItems[index - playlistOptionCount],
+                                  ) ??
                               false),
                       isSelected: selectedDisplayItem == index,
                       isCurrentlyPlaying:
                           currentlyPlayingOriginalIndex ==
-                          displayItems[index - 2].identity,
+                          displayItems[index - playlistOptionCount].identity,
                       onTap: () async => _performAction(index),
                       onLongPress: () async => _performLongPressAction(index),
                     );

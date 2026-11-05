@@ -1,6 +1,8 @@
 import 'package:classipod/core/models/music_metadata.dart';
 import 'package:hive_ce_flutter/hive_flutter.dart';
 
+const starredPlaylistKey = -1;
+
 class PlaylistModel extends HiveObject {
   String name;
 
@@ -42,4 +44,17 @@ class PlaylistModel extends HiveObject {
   String toString() {
     return 'PlaylistModel(name: $name, songs: $songs)';
   }
+}
+
+class VirtualPlaylistModel extends PlaylistModel {
+  final int virtualKey;
+
+  VirtualPlaylistModel({
+    required super.name,
+    required super.songs,
+    required this.virtualKey,
+  });
+
+  @override
+  int get key => virtualKey;
 }

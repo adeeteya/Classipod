@@ -34,6 +34,7 @@ a music subscription, offline server downloads, or server playlist syncing.
 - 📋 Inspect unreadable files and retry guidance in **Missing Tracks**.
 - 🧹 Optionally hide duplicate filenames without deleting music files.
 - 📃 Create and save custom ClassiPod playlists.
+- ⭐ Browse a read-only Starred playlist built from songs rated 1–5 stars.
 - ⭐ Rate songs, with ratings and edits stored in ClassiPod.
 - 📝 View embedded lyrics when available.
 - 🎶 Play MP3, WAV, FLAC, M4A, MP4, Ogg, Opus, AAC, AIFF, APE, and MOV audio,
